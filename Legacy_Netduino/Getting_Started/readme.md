@@ -14,17 +14,19 @@ Download and run the following:
 
 Download and install the following:
 
-1) Xamarin Studio 6 (also works with v5)
-2) Netduino SDK v5 (for Mac)
+ 1) Xamarin Studio 6 (also works with v5)
+ 2) Netduino SDK v5 (for Mac)
 
 Launch Xamarin Studio and install the NETMF plug-in:
 
-1) Open the *Xamarin Studio* menu and select *Add-ins...*.
-2) Select the *Gallery* Tab
-3) In the *search* box, type `MicroFramework`:
+ 1) Open the *Xamarin Studio* menu and select *Add-ins...*.
+ 2) Select the *Gallery* Tab
+ 3) In the *search* box, type `MicroFramework`:
+
 ![MicroFramework Search Dialog](XS_AddIns_MicroFramework_Search.png)
-4) Click *install* and follow the directions
-5) Restart Xamarin Studio
+
+ 4) Click *install* and follow the directions
+ 5) Restart Xamarin Studio
 
 ## 2) Check your Board Firmware
 
