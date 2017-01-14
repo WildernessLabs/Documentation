@@ -26,7 +26,7 @@ Launch Xamarin Studio and install the NETMF plug-in:
 4. Click *install* and follow the directions.
 5. Restart Xamarin Studio.
 
-#  Make Sure the Board Firmware is Up to Date
+# Make Sure the Board Firmware is Up to Date
 Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware. Firmware update instructions are [here](../About/Updating_Firmware).
 
 # Create your First App
@@ -52,7 +52,7 @@ Once your development environment is configured, make sure your board has the la
  	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
 
 
-# Add the Code
+## Add the Code
 
 After you've created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet's name:
 
@@ -96,9 +96,9 @@ This code does the following things:
  2. Loops forever, writing to the port on, then waiting 250ms, then turning it on.
  3. Prints to the Debug window the loop iteration it's on.
 
-# Deploy
+## Deploy
 
-## Xamarin Studio
+### Xamarin Studio
 
  1. Make sure your Netduino is plugged in. It should show up in the build bar at the top:
 ![Xamarin Studio Build Bar](03-Build_Bar.png)
@@ -123,7 +123,7 @@ Looping2
 Looping3
 ```
  
-## Visual Studio
+### Visual Studio
 
  1. Make sure your Netduino is plugged in.
   	
