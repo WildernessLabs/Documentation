@@ -38,6 +38,11 @@ Once your development environment is configured, make sure your board has the la
 
 1. Open either Visual Studio (windows) or Xamarin Studio (mac)
 2. Create a new Netduino application
+3. Add the following references
+  * `Microsoft.SPOT.Hardware`
+  * `Microsoft.SPOT.Native`
+  * `SecretLabs.NETMF.Hardware.Netduino`
+4. And the following code:
 
 ```CSharp
 using System;
