@@ -2,7 +2,7 @@
 
 ## Netduino
  * [Getting Started](Legacy_Netduino/Getting_Started)
- * [About](About Netduino)
+ * [About Netduino](About)
 
 ### Peripherals
  * LEDs
