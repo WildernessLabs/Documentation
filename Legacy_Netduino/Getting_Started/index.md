@@ -34,7 +34,7 @@ Once your development environment is configured, make sure your board has the la
 ## Xamarin Studio
 
  1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Applicaiton** and name it whatever you want:
-![New Solution Dialog](Images/FirstApp/01%20-%20New%20Solution.png)
+![New Solution Dialog](01-NewSolution_XS.png)
 
  2. Double-click on the **References** folder in the Solution Pad and add:
  	* Microsoft.Spot.Hardware
@@ -44,7 +44,7 @@ Once your development environment is configured, make sure your board has the la
 ## Visual Studio
 
  1. Launch Visual Studio and create a new solution of type **Visual C# > Micro Framework > Console Application** and name it whatever you want:
- ![New Solution Dialog](02%20-%20New%20Solution%20(VS).png)
+ ![New Solution Dialog](02-New_Solution_VS.png)
  
 2. Right-click on the **References** folder in the Solution Explorer and add:
  	* Microsoft.Spot.Hardware
@@ -101,13 +101,13 @@ This code does the following things:
 ## Xamarin Studio
 
  1. Make sure your Netduino is plugged in. It should show up in the build bar at the top:
-![Xamarin Studio Build Bar](03%20-%20Build%20Bar.png)
+![Xamarin Studio Build Bar](03-Build_Bar.png)
 
  2. Hit the ">" button to deploy.
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05%20-%20blinking%20Netduino.gif)
+![](05-blinking_Netduino.gif)
 
 You should also see the debug output in the **Application Output** window:
 
@@ -128,10 +128,10 @@ Looping3
  1. Make sure your Netduino is plugged in.
   	
  2. Double-click on the **Properties** item in the Solution Explorer, select **.NET Micro Framework** on the left, and the under **Deployment** choose **USB** and in the **Device** drop down, choose your Netduino device:
- ![Device Chooser](04%20-%20VS%20Device%20Choose.png)
+ ![Device Chooser](04-VS_Device_Choose.png)
 
  3. Click the **Start >** button in the toolbar to deploy to yoru device.
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05%20-%20blinking%20Netduino.gif)
+![](05-blinking_Netduino.gif)
