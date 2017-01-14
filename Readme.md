@@ -1,7 +1,7 @@
 # Wilderness Labs Documentation
 
 ## Netduino
- * [Getting Started](Legacy_Netduino/Getting_Started/)
+ * [Getting Started](Legacy_Netduino/Getting_Started)
 
 ### Peripherals
  * LEDs
