@@ -22,7 +22,7 @@ Launch Xamarin Studio and install the NETMF plug-in:
 1. Open the *Xamarin Studio* menu and select *Add-ins...*.
 2. Select the *Gallery* Tab.
 3. In the *search* box, type `MicroFramework`:
-![MicroFramework Search Dialog](MicroFramework_Addin.png)
+![MicroFramework Search Dialog](Getting_Started/MicroFramework_Addin.png)
 4. Click *install* and follow the directions.
 5. Restart Xamarin Studio.
 
