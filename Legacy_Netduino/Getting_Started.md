@@ -27,12 +27,7 @@ Launch Xamarin Studio and install the NETMF plug-in:
 5. Restart Xamarin Studio.
 
 #  Configure the Board Firmware
-Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware.
-
-1. Plug your Netduino into your computer.
-2. Launch *Netduino Utils* application.
-3. Select the board in the left nav.
-4. To the right of the firmware info, click *Check for Update*
+Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware. Firmware update instructions are [here](../About/Updating_Firmware).
 
 # Create your First App
 

@@ -12,4 +12,4 @@ Ensuring that your Netduino has the latest firmware means that it will be up to 
 
 ![](Updating_Firmware/EnteringBootMode.gif)
 
-2. Select your device from the left, click *Check for Update*, and follow the instructions.
+2. Select your device from the left, click **Check for Update**, and follow the instructions.
