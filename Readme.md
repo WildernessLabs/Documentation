@@ -30,11 +30,19 @@
  * Conceptual Design
  * Schematic
  * PCB Design
+ * PCB Fabrication
+ * PCB Assembly
 
 ## Hardware Reference
 
  * Component Basics
+   * Types of Components
+   * Package Sizes
  * Form Factors
  * PCB Basics
+   * Ordering PCBs
+   * Solder Masks
+   * Surface Finishes
+   * Copper Thickness
 
  
