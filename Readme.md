@@ -49,7 +49,8 @@
    * Types of Components
    * Package Sizes
    * Form Factors
- * PCB Fundamentals
+ * Printed Circuit Board (PCB) Fundamentals
+   * Anatomy of a PCB
    * PCB Fabrication
    * PCB Assembly
    * Ordering PCBs
