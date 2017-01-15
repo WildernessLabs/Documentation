@@ -2,15 +2,21 @@
  * [Getting Started](Legacy_Netduino/Getting_Started)
 
 ## [About Netduino](Legacy_Netduino/About)
-  * [I/O](Legacy_Netduino/About/Input_Output)
-    * Analog
-    * Digital
-    * PWM
-    * Serial Communication
-  * [Updating Firmware](Legacy_Netduino/About/Updating_Firmware)
+ * [I/O](Legacy_Netduino/About/Input_Output)
+   * Analog
+   * Digital
+   * PWM
+   * UART (Serial)
+   * I2C
+   * CAN
+   * SPI
+ * [Updating Firmware](Legacy_Netduino/About/Updating_Firmware)
 
 # App Fundamentals
-  * Networking
+ * .NET MicroFramework (NETMF)
+ * Networking
+ * File Storage
+ * Memory Management
 
 ## Peripherals
  * LEDs
@@ -28,21 +34,27 @@
 ## Designing Hardware
 
  * Conceptual Design
- * Schematic
+ * Schematic Design
  * PCB Design
- * PCB Fabrication
- * PCB Assembly
+ * Prototyping
+ * Mass Production
+ 	* USB Vendor ID
+ 	* MAC Addresses
+ 	* UPCs
+ 	* Important Certifications
 
 ## Hardware Reference
 
- * Component Basics
-   * Types of Components
-   * Package Sizes
- * Form Factors
- * PCB Basics
-   * Ordering PCBs
-   * Solder Masks
-   * Surface Finishes
-   * Copper Thickness
+ * Component Fundamentals
+  * Types of Components
+  * Package Sizes
+  * Form Factors
+ * PCB Fundamentals
+  * PCB Fabrication
+  * PCB Assembly
+  * Ordering PCBs
+  * Solder Masks
+  * Surface Finishes
+  * Copper Thickness
 
  
