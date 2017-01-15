@@ -40,7 +40,7 @@
  * [Mass Production](Product_Design_Lifecycle/Mass_Production)
    * [USB Vendor IDs](Product_Design_Lifecycle/Mass_Production/USB_VendorIDs)
    * [MAC Addresses](Product_Design_Lifecycle/Mass_Production/MAC_Addresses)
-   * [UPCs](Product_Design_Lifecycle/Mass_Production/UPCs)
+   * [UPCs and EANs](Product_Design_Lifecycle/Mass_Production/UPCs_EANs)
    * [Important Certifications](Product_Design_Lifecycle/Mass_Production/Certifications)
 
 # Hardware Fundamentals
