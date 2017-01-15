@@ -28,34 +28,36 @@
 
 ## Sample Projects
 
-# Hardware Fundamentals
- * Hardware Design Lifecycle
-
-## Designing Hardware
+# Product Lifecycle
 
  * Conceptual Design
  * Schematic Design
+ * Breadboard Prototyping
  * PCB Design
- * Prototyping
+ * PCB Prototyping
+ * Software
+ * Industrial Design
  * Mass Production
    * USB Vendor ID
    * MAC Addresses
    * UPCs
    * Important Certifications
 
-## Hardware Reference
+# Hardware Fundamentals
 
- * Component Fundamentals
-   * Types of Components
-   * Package Sizes
-   * Form Factors
- * Printed Circuit Board (PCB) Fundamentals
-   * Anatomy of a PCB
-   * PCB Fabrication
-   * PCB Assembly
-   * Ordering PCBs
-   * [Solder Masks](Hardware/Reference/PCB_Fundamentals/Solder_Masks)
-   * [Surface Finishes](Hardware/Reference/PCB_Fundamentals/Surface_Finishes)
+ * Overview
+
+## [Printed Circuit Board (PCB) Fundamentals](Hardware/PCBs)
+   * [PCB Fabrication](Hardware/PCBs/Fabrication)
+   * [PCB Assembly](Hardware/PCBs/Assembly)
+   * [Solder Masks](Hardware/PCBs/Solder_Masks)
+   * [Surface Finishes](Hardware/PCBs/Surface_Finishes)
    * Copper Thickness
+
+## Component Fundamentals
+   * [Component Types]
+   * [Component Packages and Sizes]
+   * [Choosing Componennts]
+
 
  
