@@ -43,7 +43,7 @@
    * [UPCs and EANs](Product_Design_Lifecycle/Mass_Production/UPCs_EANs)
    * [Important Certifications](Product_Design_Lifecycle/Mass_Production/Certifications)
 
-# Hardware Fundamentals
+# Hardware
 
  * Overview
 
