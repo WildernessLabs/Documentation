@@ -37,11 +37,11 @@
  * PCB Prototyping
  * Software
  * Industrial Design
- * Mass Production
-   * USB Vendor ID
-   * MAC Addresses
-   * UPCs
-   * Important Certifications
+ * [Mass Production](Product_Design_Lifecycle/Mass_Production)
+   * [USB Vendor IDs](Product_Design_Lifecycle/Mass_Production/USB_VendorIDs)
+   * [MAC Addresses](Product_Design_Lifecycle/Mass_Production/MAC_Addresses)
+   * [UPCs](Product_Design_Lifecycle/Mass_Production/UPCs)
+   * [Important Certifications](Product_Design_Lifecycle/Mass_Production/Certifications)
 
 # Hardware Fundamentals
 
