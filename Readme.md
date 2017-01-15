@@ -54,8 +54,8 @@
    * PCB Fabrication
    * PCB Assembly
    * Ordering PCBs
-   * Solder Masks
-   * Surface Finishes
+   * [Solder Masks](Hardware/Reference/Solder_Masks)
+   * [Surface Finishes](Hardware/Referece/Surface_Finishes)
    * Copper Thickness
 
  
