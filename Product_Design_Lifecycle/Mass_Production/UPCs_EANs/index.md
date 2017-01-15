@@ -22,4 +22,6 @@ Like MAC addresses, they're purchased in different block sizes. UPCs are:
 |1 - 10,000      | $6,500       |$1,300          |
 |1 - 100,000     | $10,500      |$2,100          |
 
+# Further Reading
 
+[Wall Street Journal - How to get UPC codes for your products](http://guides.wsj.com/small-business/starting-a-business/how-to-get-upc-codes-for-your-products-2/)
