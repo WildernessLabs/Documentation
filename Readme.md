@@ -38,23 +38,23 @@
  * PCB Design
  * Prototyping
  * Mass Production
- 	* USB Vendor ID
- 	* MAC Addresses
- 	* UPCs
- 	* Important Certifications
+   * USB Vendor ID
+   * MAC Addresses
+   * UPCs
+   * Important Certifications
 
 ## Hardware Reference
 
  * Component Fundamentals
-  * Types of Components
-  * Package Sizes
-  * Form Factors
+   * Types of Components
+   * Package Sizes
+   * Form Factors
  * PCB Fundamentals
-  * PCB Fabrication
-  * PCB Assembly
-  * Ordering PCBs
-  * Solder Masks
-  * Surface Finishes
-  * Copper Thickness
+   * PCB Fabrication
+   * PCB Assembly
+   * Ordering PCBs
+   * Solder Masks
+   * Surface Finishes
+   * Copper Thickness
 
  
