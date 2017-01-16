@@ -55,9 +55,8 @@
    * Copper Thickness
 
 ## Component Fundamentals
-   * [Component Types]
-   * [Component Packages and Sizes]
-   * [Choosing Componennts]
-
+   * [Component Types](Hardware/Components/Component_Types)
+   * [Component Packages and Sizes](Hardware/Components/Packages_and_Sizes)
+   * [Choosing Components](Hardware/Components/Choosing_Components)
 
  
