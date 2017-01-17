@@ -1,5 +1,10 @@
 # SMD Packages and Sizes
 
+Surface Mounted Devices 
+
+package standards specified by the Joint Electron Device Engineering Council (JEDEC) Solid State Technology Association.
+
+
 # Common Passive Rectangular Components
 
 [Resistors and capacitors]
@@ -28,6 +33,12 @@
 
 ## Transitors & Diodes
 
+Transistors and diodes are usually packaged the same way. Even though a diode only requires two leads, they are given three so they can be oriented properly.
+
+Most popular:
+
+ * **SOT-23 (Small Outline Transistor)** - (3 leads for diodes or transistors, but some ICs can come in this form factor too, and have more pins. 3 x 1.75 x 1.3mm.
+ * **SOT-223 (Small Outline Tansistor)** - (for high powered devices, 6.7 x 3.7 x 1.8Mmm. Usually 3 leads plus a large one that acts as a heat-sink/transfer pad)
 
 ## IC Packages
 
@@ -45,7 +56,7 @@
 (generic square, flat package)
  
  * **LQFP (Low-profile Quad Flat Pack)** - (pins on all four sides, height is 1.4mm, pin spacing varies)
- * **PQFP (Plastic Quad Flat Pack)** - (gull wing style pins on all four sides. Usually narrow spacing with 44 or more pins for [VLSI](https://www.wikiwand.com/en/Very-large-scale_integration) circuits.)
+ * **PQFP (Plastic Quad Flat Pack)** - (pins on all four sides. Usually narrow spacing with 44 or more pins for [VLSI](https://www.wikiwand.com/en/Very-large-scale_integration) circuits such as CPUs.)
  * **CQFP (Ceramic Quat Flat Pack)** - Same as PQFP but ceramic construction.
  * **TQFP (Thin Quad Flat Pack)** - PQFP, but thinner.
 
@@ -60,8 +71,11 @@ Square carrier that chips sit in. For removable chips.
 [typically 1.27mm pin spacing]
 [J-Lead pins]
 
-http://www.radio-electronics.com/info/data/smt/smt_packages.php
+# Further Reading
 
+https://www.jedec.org/
+
+http://www.radio-electronics.com/info/data/smt/smt_packages.php
 
 https://www.wikiwand.com/en/Surface-mount_technology
 
