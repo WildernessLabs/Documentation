@@ -12,7 +12,7 @@ Download and run the following:
 3. Netduino SDK v5
 
 ## Mac
-Download and install the following Xamarin Studio 6.
+Download and install the latest Xamarin Studio.
 
 Launch Xamarin Studio and install the NETMF plug-in:
 
