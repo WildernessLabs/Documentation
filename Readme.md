@@ -47,6 +47,16 @@
 
  * Overview
 
+## Circuit Fundamentals
+ * [Ohm's Law](Hardware/Circuits/OHMs_Law)
+ * [Resistors](Hardware/Circuits/Resistors)
+   * [Reading a Resistor's Value](Hardware/Circuits/Resistors/Reading)
+ * [Capacitors](Hardware/Circuits/Capacitors)
+ * [Diodes](Hardware/Circuits/Diodes)
+ * [LEDs](Hardware/Circuits/LEDs)
+   * [Driving an LED w/a Resistor](Hardware/Circuits/LEDs/Driving_w_Resistor)
+   * [Driving an LED w/PWM](Hardware/Circuits/LEDs/Driving_w_PWM)
+
 ## [Printed Circuit Board (PCB) Fundamentals](Hardware/PCBs)
    * [PCB Fabrication](Hardware/PCBs/Fabrication)
    * [PCB Assembly](Hardware/PCBs/Assembly)
