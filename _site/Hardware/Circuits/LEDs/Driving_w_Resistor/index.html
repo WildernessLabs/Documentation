@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Wilderness Labs : Driving an LED with a Resistor</title>
+        <meta name="description" content="Documentation">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">Wilderness Labs</a>
+    <small>Documentation</small>
+</h4>
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    <li><a href="/">Home</a></li>
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Documentation</li>
+            
+            <li data-order=""><a href="/doc/getting-started.html">Getting Started</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>Driving an LED with a Resistor
+        
+    </h2>
+</div>
+
+<h1 id="driving-an-led-with-a-resistor">Driving an LED with a Resistor</h1>
+
+<p>Generally, when driving (powering) an LED, you must use a current limiting resistor, which prevents the LED from receiving too much power and burning out.</p>
+
+<h1 id="forward-voltage">Forward Voltage</h1>
+
+<p>An LED is a <a href="../../Diodes">diode</a> that requires a certain amount of voltage in order for it to open it’s pn-gate and light up. This threshold is called the <em>Forward Voltage</em> (VF). However once that voltage is met, there is a limited operating range of voltage that is safe for the LED:</p>
+
+<p>[need a graph here of FV of an LED]</p>
+
+<h2 id="typical-forward-voltages-and-current">Typical Forward Voltages and Current</h2>
+
+<p>[run of the mill 5MM LEDs usually have:]</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>LED Color</th>
+      <th>Typical VF</th>
+      <th>Max VF</th>
+      <th>Max Current</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Red, Yellow, Orange</td>
+      <td>1.8v</td>
+      <td>2.3v</td>
+      <td>20mA</td>
+    </tr>
+    <tr>
+      <td>Green, Blue, White</td>
+      <td>3.2v</td>
+      <td>3.4v</td>
+      <td>20mA</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>[LEDs may vary, so it’s good to check the datasheet of yours]</p>
+
+<h1 id="maximum-ratings">Maximum Ratings</h1>
+
+<p>Exceeding the maximum rating for an LED by very much will usually burn out an LED quite quickly.</p>
+
+<p>[datasheet for your LED will have the maximum VF rating]</p>
+
+<h1 id="computing-the-resistance-needed-to-safely-operate">Computing The Resistance Needed to Safely Operate</h1>
+
+<p>Let’s say that you have a red LED (1.8v VF), and you’re driving it off a 5v circuit. That means you need to reduce it by 3.2v.</p>
+
+<p>[use OHM’s law: ]
+`R = V / I = (5v - 1.8v) / 20 = 64Ω</p>
+
+<p>[to be safe, need a 64Ω or better resistor (probably 100Ω is the next higher up)]</p>
+
+<p><img src="circuit.png" alt="" /></p>
+
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="https://github.com/wildernesslabs">Wilderness Labs</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>

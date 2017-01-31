@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Wilderness Labs : SMD Packages and Sizes</title>
+        <meta name="description" content="Documentation">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">Wilderness Labs</a>
+    <small>Documentation</small>
+</h4>
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    <li><a href="/">Home</a></li>
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Documentation</li>
+            
+            <li data-order=""><a href="/doc/getting-started.html">Getting Started</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>SMD Packages and Sizes
+        
+    </h2>
+</div>
+
+<h1 id="smd-packages-and-sizes">SMD Packages and Sizes</h1>
+
+<p>Surface Mounted Devices</p>
+
+<p>package standards specified by the Joint Electron Device Engineering Council (JEDEC) Solid State Technology Association.</p>
+
+<h1 id="common-passive-rectangular-components">Common Passive Rectangular Components</h1>
+
+<p>[Resistors and capacitors]</p>
+
+<p>[numbers are width * height, so in imperial, an 0402 is 0.04” x 0.02”. The metric equivalent of 1005 is 1.0mm x 0.5mm]</p>
+
+<p>[Make sure when buying them that you know whether Imperial or Metric is being specified, since 0402, and 0603 are found in both Imperial and Metric codes, but specify different sizes of components]</p>
+
+<p><img src="Component_Sizes.png" alt="sizes" /></p>
+
+<p>[1812 and 1206 (Imperial) are specialized sizes, most commonly used for components that require heat dissipation]</p>
+
+<p>[smaller tends to be cheaper]</p>
+
+<h1 id="tantalum-capicitors-smd">Tantalum Capicitors (SMD)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package Size</th>
+      <th>Imperial Dimensions (EIA Standard)</th>
+      <th>Metric Dimensions (mm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Size A</td>
+      <td>EIA 3216-18</td>
+      <td>3.2 x 1.6 x 1.6</td>
+    </tr>
+    <tr>
+      <td>Size B</td>
+      <td>EIA 3528-21</td>
+      <td>3.5 x 2.8 x 1.9</td>
+    </tr>
+    <tr>
+      <td>Size C</td>
+      <td>EIA 6032-28</td>
+      <td>6.0 x 3.2 x 2.2</td>
+    </tr>
+    <tr>
+      <td>Size D</td>
+      <td>EIA 7343-31</td>
+      <td>7.3 x 4.3 x 2.4</td>
+    </tr>
+    <tr>
+      <td>Size E</td>
+      <td>EIA 7343-43</td>
+      <td>7.3 x 4.3 x 4.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="semiconductors">Semiconductors</h1>
+
+<h2 id="transitors--diodes">Transitors &amp; Diodes</h2>
+
+<p>Transistors and diodes are usually packaged the same way. Even though a diode only requires two leads, they are given three so they can be oriented properly.</p>
+
+<p>Most popular:</p>
+
+<ul>
+  <li><strong>SOT-23 (Small Outline Transistor)</strong> - (3 leads for diodes or transistors, but some ICs can come in this form factor too, and have more pins. 3 x 1.75 x 1.3mm.</li>
+  <li><strong>SOT-223 (Small Outline Tansistor)</strong> - (for high powered devices, 6.7 x 3.7 x 1.8Mmm. Usually 3 leads plus a large one that acts as a heat-sink/transfer pad)</li>
+</ul>
+
+<h2 id="ic-packages">IC Packages</h2>
+
+<h3 id="small-outline-integrated-circuit-soic">Small Outline Integrated Circuit (SOIC)</h3>
+
+<h3 id="small-outline-package-sop">Small Outline Package (SOP)</h3>
+
+<ul>
+  <li><strong>TSOP (Thin Small Outline Package)</strong> - (0.5mm pin spacing, thinner than SOIC)</li>
+  <li><strong>SSOP (Shrink Small Outline Package)</strong> - (0.635mm pin spacing)</li>
+  <li><strong>TSSOP (Thin Shrink Small Outline Package)</strong> -</li>
+  <li><strong>QSOP (Quarter-size Small Outline Package)</strong> - (0.635mm pin spacing)</li>
+  <li><strong>VSOP (Very Small Outline Package)</strong> - (0.4, 0.5, or 0.65mm pin spacing and smaller than QSOP)</li>
+</ul>
+
+<h3 id="quad-flat-pack-qfp">Quad Flat Pack (QFP)</h3>
+<p>(generic square, flat package)</p>
+
+<ul>
+  <li><strong>LQFP (Low-profile Quad Flat Pack)</strong> - (pins on all four sides, height is 1.4mm, pin spacing varies)</li>
+  <li><strong>PQFP (Plastic Quad Flat Pack)</strong> - (pins on all four sides. Usually narrow spacing with 44 or more pins for <a href="https://www.wikiwand.com/en/Very-large-scale_integration">VLSI</a> circuits such as CPUs.)</li>
+  <li><strong>CQFP (Ceramic Quat Flat Pack)</strong> - Same as PQFP but ceramic construction.</li>
+  <li><strong>TQFP (Thin Quad Flat Pack)</strong> - PQFP, but thinner.</li>
+</ul>
+
+<h3 id="ball-grid-array-bga">Ball Grid Array (BGA)</h3>
+
+<p>[array of solder balls on the bottom of the chip, instead of pins]
+[usually glued afterward]
+[typically 1.27mm ball spacing]</p>
+
+<h3 id="plastic-leaded-chip-carrier">Plastic Leaded Chip Carrier</h3>
+<p>Square carrier that chips sit in. For removable chips.
+[typically 1.27mm pin spacing]
+[J-Lead pins]</p>
+
+<h1 id="further-reading">Further Reading</h1>
+
+<p>https://www.jedec.org/</p>
+
+<p>http://www.radio-electronics.com/info/data/smt/smt_packages.php</p>
+
+<p>https://www.wikiwand.com/en/Surface-mount_technology</p>
+
+<p>https://www.wikiwand.com/en/Through-hole_technology</p>
+
+<p>http://www.topline.tv/SizeChart.html</p>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="https://github.com/wildernesslabs">Wilderness Labs</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>

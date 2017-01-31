@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Wilderness Labs</title>
+        <meta name="description" content="Documentation">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">Wilderness Labs</a>
+    <small>Documentation</small>
+</h4>
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    <li><a href="/">Home</a></li>
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Documentation</li>
+            
+            <li data-order=""><a href="/doc/getting-started.html">Getting Started</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>
+        
+    </h2>
+</div>
+
+<h1 id="getting-started-with-netduino">Getting Started with Netduino</h1>
+<p>Instructions for Netduino 2, 3, and Go! boards.</p>
+
+<h1 id="installation">Installation</h1>
+<p>First, configure your development environment by installing the necessary software.</p>
+
+<h2 id="windows">Windows</h2>
+<p>Download and run the following:</p>
+
+<ol>
+  <li><a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/MicroFrameworkSDK.MSI">.NET Micro Framework (NETMF) SDK (v4.3.2. QFE2)</a></li>
+  <li>NETMF Plugin for Visual Studio (VS) 2015 or <a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/netmfvs2013.vsix">VS 2013</a></li>
+  <li>Netduino SDK v5</li>
+</ol>
+
+<h2 id="mac">Mac</h2>
+<p>Download and install the latest Xamarin Studio.</p>
+
+<p>Launch Xamarin Studio and install the NETMF plug-in:</p>
+
+<ol>
+  <li>Open the <em>Xamarin Studio</em> menu and select <em>Add-ins…</em>.</li>
+  <li>Select the <em>Gallery</em> Tab.</li>
+  <li>In the <em>search</em> box, type <code class="highlighter-rouge">MicroFramework</code>:
+<img src="MicroFramework_Addin.png" alt="MicroFramework Search Dialog" /></li>
+  <li>Click <em>install</em> and follow the directions.</li>
+  <li>Restart Xamarin Studio.</li>
+</ol>
+
+<h1 id="make-sure-the-board-firmware-is-up-to-date">Make Sure the Board Firmware is Up to Date</h1>
+<p>Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware. Firmware update instructions are <a href="../About/Updating_Firmware">here</a>.</p>
+
+<h1 id="create-your-first-app">Create your First App</h1>
+
+<h2 id="xamarin-studio">Xamarin Studio</h2>
+
+<ol>
+  <li>
+    <p>Launch Xamarin Studio and create a new solution of type <strong>C# &gt; MicroFramework &gt; MicroFramework Console Applicaiton</strong> and name it whatever you want:
+<img src="01-NewSolution_XS.png" alt="New Solution Dialog" /></p>
+  </li>
+  <li>
+    <p>Double-click on the <strong>References</strong> folder in the Solution Pad and add:
+ 	* Microsoft.Spot.Hardware
+ 	* SecretLabs.NETMF.Hardware
+ 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that’s what you’re using)</p>
+  </li>
+</ol>
+
+<h2 id="visual-studio">Visual Studio</h2>
+
+<ol>
+  <li>
+    <p>Launch Visual Studio and create a new solution of type <strong>Visual C# &gt; Micro Framework &gt; Console Application</strong> and name it whatever you want:
+ <img src="02-New_Solution_VS.png" alt="New Solution Dialog" /></p>
+  </li>
+  <li>
+    <p>Right-click on the <strong>References</strong> folder in the Solution Explorer and add:
+ 	* Microsoft.Spot.Hardware
+ 	* SecretLabs.NETMF.Hardware
+ 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that’s what you’re using)</p>
+  </li>
+</ol>
+
+<h2 id="add-the-code">Add the Code</h2>
+
+<p>After you’ve created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet’s name:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>using System;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using System.Threading;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace NetduinoBlink
+{
+	public class Program
+	{
+		public static void Main()
+		{
+			// configure an output port for us to "write" to the LED
+			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false); 
+			// note that if we didn't have the SecretLabs.NETMF.Hardware.Netduino DLL, we could also manually access it this way:
+			//OutputPort led = new OutputPort(Cpu.Pin.GPIO_Pin10, false); 
+			int i = 0;
+			while (true) 
+			{ 
+				led.Write(true); // turn on the LED 
+				Thread.Sleep(250); // sleep for 250ms 
+				led.Write(false); // turn off the LED 
+				Thread.Sleep(250); // sleep for 250ms 
+
+				Debug.Print ("Looping" + i);
+				i++;
+			} 
+
+		}
+	}
+}
+</code></pre>
+</div>
+
+<p>This code does the following things:</p>
+
+<ol>
+  <li>It creates an OutputPort. An OutputPort allows you to “Write” to a pin, e.g. power it on or off.</li>
+  <li>Loops forever, writing to the port on, then waiting 250ms, then turning it on.</li>
+  <li>Prints to the Debug window the loop iteration it’s on.</li>
+</ol>
+
+<h2 id="deploy">Deploy</h2>
+
+<h3 id="xamarin-studio-1">Xamarin Studio</h3>
+
+<ol>
+  <li>
+    <p>Make sure your Netduino is plugged in. It should show up in the build bar at the top:
+<img src="03-Build_Bar.png" alt="Xamarin Studio Build Bar" /></p>
+  </li>
+  <li>
+    <p>Hit the “&gt;” button to deploy.</p>
+  </li>
+</ol>
+
+<p>The app should deploy and after a moment, the LED should start blinking on the Netduino:</p>
+
+<p><img src="05-blinking_Netduino.gif" alt="" /></p>
+
+<p>You should also see the debug output in the <strong>Application Output</strong> window:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Deploy: Deploying assemblies to device
+Deploy: Deploying assemblies for a total size of 560 bytes
+Deploy: Assemblies successfully deployed to device.
+
+...
+Looping0
+Looping1
+Looping2
+Looping3
+</code></pre>
+</div>
+
+<h3 id="visual-studio-1">Visual Studio</h3>
+
+<ol>
+  <li>
+    <p>Make sure your Netduino is plugged in.</p>
+  </li>
+  <li>
+    <p>Double-click on the <strong>Properties</strong> item in the Solution Explorer, select <strong>.NET Micro Framework</strong> on the left, and the under <strong>Deployment</strong> choose <strong>USB</strong> and in the <strong>Device</strong> drop down, choose your Netduino device:
+ <img src="04-VS_Device_Choose.png" alt="Device Chooser" /></p>
+  </li>
+  <li>
+    <p>Click the <strong>Start &gt;</strong> button in the toolbar to deploy to yoru device.</p>
+  </li>
+</ol>
+
+<p>The app should deploy and after a moment, the LED should start blinking on the Netduino:</p>
+
+<p><img src="05-blinking_Netduino.gif" alt="" /></p>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="https://github.com/wildernesslabs">Wilderness Labs</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>
