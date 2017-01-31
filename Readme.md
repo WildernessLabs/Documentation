@@ -1,6 +1,3 @@
----
-title: my title
----
 # Netduino
  * [Getting Started](Legacy_Netduino/Getting_Started)
 
