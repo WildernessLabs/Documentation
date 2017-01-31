@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Documentation Home"
+category: ref
+order: 1
+---
+
 # Netduino
  * [Getting Started](Legacy_Netduino/Getting_Started)
 
