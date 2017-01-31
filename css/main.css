@@ -51,6 +51,10 @@ code {
     font-size: 0.9em;
 }
 
+#navigation li {
+    margin-left: 5px;
+}
+
 /*#navigation li a {
     padding-left: 10px;
     padding-right: 10px;
