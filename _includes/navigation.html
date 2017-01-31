@@ -1,5 +1,5 @@
-<ul class="nav nav-list">
-    <li class="nav-header">Netduino</li>
+<ul>
+    <li>Netduino</li>
         <ul>
             <li><a href="Legacy_Netduino/Getting_Started">Getting Started</a></li>
         </ul>
@@ -7,11 +7,36 @@
             <li><a href="Legacy_Netduino/About">About Netduino</></li>
             <ul>
                 <li><a href="Legacy_Netduino/About/Input_Output">IO</a></li>
+                <ul>
+                    <li>Analog</li>
+                    <li>Digital</li>
+                    <li>PWM</li>
+                    <li>UART (Serial)</li>
+                    <li>I2C</li>
+                    <li>CAN</li>
+                    <li>SPI</li>
+                </ul>
             </ul>
+            <li><a href="Legacy_Netduino/About/Updating_Firmware">Updating Firmware</></li>
         </ul>
+    <li>App Fundamentals</li>
+        <ul>
+            <li>.NET MicroFramework (NETMF)</li>
+            <li>Networking</li>
+            <li>File Storage</li>
+            <li>Memory Management</li>
+            <li>Peripherals</li>
+                <ul>
+                    <li>LEDs</li>
+                    <li>Switches</li>
+                    <li>Sensors</li>
+                    <li>Motors</li>
+                    <li>Shields</li>
+                    <li>Bluetooth</li>
+                </ul>
+            <li>Sample Projects</li>
 
-    
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
+<!--    <li><a href="{{ site.baseurl }}/">Home</a></li>
     {% for section in site.sections %}
         {% assign attr = section[0] %}
         {% assign label = section[1] %}
@@ -22,7 +47,8 @@
             {% endif %}
             <li data-order="{{ page.order }}"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
-    {% endfor %}
+    {% endfor %}-->
 <!-- List additional links. It is recommended to add a divider
     e.g. <li class="divider"></li> first to break up the content. -->
+
 </ul>
