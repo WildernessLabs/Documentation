@@ -51,7 +51,7 @@ code {
     font-size: 0.9em;
 }
 
-#navigation li a {
+/*#navigation li a {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -59,7 +59,7 @@ code {
 #navigation .nav-header {
     padding-left: 0;
     padding-right: 0;
-}
+}*/
 
 body.rtl {
 	direction: rtl;

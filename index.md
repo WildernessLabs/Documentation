@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Documentation Home"
-category: ref
-order: 1
 ---
 
 # Netduino

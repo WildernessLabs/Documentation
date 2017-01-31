@@ -1,4 +1,7 @@
-# Getting Started with Netduino
+---
+title: Getting Started with Netduino
+---
+
 Instructions for Netduino 2, 3, and Go! boards.
 
 # Installation
