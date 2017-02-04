@@ -14,23 +14,57 @@
     </head>
     <body>
 
-        <div class="container">
-            <div class="row">
-                <div id="header" class="col-sm-12">
-                    <h4><a class="brand" href="/">Wilderness Labs</a>
+        <div class="top-container">
+            <!--<h4><a class="brand" href="/">Wilderness Labs</a>
     <small>Documentation</small>
-</h4>
-
-                </div>
-            </div>
-
-            <div class="row">
-                
-                
-                    <div id="navigation" class="col-sm-2">
-                        <div class="NavHeader">Netduino</div>
+</h4>-->
+ <!-- Static navbar -->
+ <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="/"><img src="/images/WLabsHeaderLogo.png" ></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Netduino</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li class="dropdown">
+                <a href="#" >Blog <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../navbar-fixed-top/">Sign in</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+            
+        </div>
+			<div class="container">
+                <div class="row">
+                    
+                    
+                        <div id="navigation" class="col-sm-3">
+                            <div class="NavHeader">Netduino</div>
 <ul class="navigation">
-    <li><a href="/Legacy_Netduino/Getting_Started">Getting Started</a></li>
+    <li class="active"><a href="/Legacy_Netduino/Getting_Started">Getting Started</a></li>
     <li><a href="/Legacy_Netduino/About">About Netduino</a>
         <ul>
             <li><a href="/Legacy_Netduino/About/Input_Output">IO</a>
@@ -125,10 +159,10 @@
         </ul>
     </li> 
 </ul>
-                    </div>
-
-                    <div id="content" class="col-sm-10">
-                        <div class="page-header">
+                        </div>
+    
+                        <div id="content" class="col-sm-9">
+                            <div class="page-header">
     <h2>LEDs
         
     </h2>
@@ -153,21 +187,27 @@
 <p>[come in many colors, packages, and powers]</p>
 
 
-                    </div>
-                
-            </div>
-
-            
-
-            <div class="row">
-                <div id="footer" class="col-sm-12">
-                    Documentation for <a href="https://github.com/wildernesslabs">Wilderness Labs</a>
-
+                        </div>
+                    
                 </div>
-            </div>
-        </div>
+    
+                
+			
+                <div class="row">
+                    <div id="footer" class="col-sm-12">
+                        Documentation for <a href="https://github.com/wildernesslabs">Wilderness Labs</a>
 
+                    </div>
+                </div>
+        	</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script>
+			 $('ul.nav li.dropdown').hover(function() {
+				  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+				  }, function() {
+				  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+			 });
             function orderNav() {
                 var list,
                     section,
