@@ -19,6 +19,7 @@
             
         </div>
 			<div class="container">
+            	<div class="main-content">
                 <div class="row">
                     {% assign post_count = site.posts|size %}
                     {% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
@@ -56,10 +57,14 @@
                         {% include footer.html %}
                     </div>
                 </div>
-        	</div>
+             </div>
+        </div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{{ site.baseurl }}js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/retina.min.js"></script>
+        <script src="{{ site.baseurl }}js/retina.js"></script>
         <script>
+			
 			 $('ul.nav li.dropdown').hover(function() {
 				  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
 				  }, function() {
@@ -112,6 +117,16 @@
             }
 
             if (document.querySelectorAll) orderNav();
+			retinajs();
+			// Attempts to process all participating elements that
+			// haven't been processed before.
+			
+			retinajs( [img, img, img] );
+			retinajs( $('img') );
+			retinajs( document.querySelectorAll('img') );
+			// Attempts to process only the elements in the collection.
+			// Each one still needs to be marked with `data-rjs` and
+			// will still be ignored if it has already been processed.
         </script>
         {% if site.google_analytics_id != "" %}
         {% include google_analytics.html %}
