@@ -50,8 +50,6 @@ code {
 #content > .page-header:first-child h2 {
     margin-top: 0;
 }
-
-
 .NavHeader {
     font-size: 1.4em;
     background-color: #555;
@@ -173,8 +171,8 @@ td, th {
 	margin:0px 2px;
 }
 .navbar-nav>li>a{
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 	font-family: 'Raleway', sans-serif;
 }
 .navbar{
@@ -202,4 +200,5 @@ td, th {
 div#navigation{background-color:#fff; padding-top:15px; }
 h2{font-family: Lato light;}
 li img, p img{ width:100%;} 
-	
+nav.navbar.navbar-default{padding-top: 7px;
+padding-bottom: 3px}
