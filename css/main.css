@@ -98,7 +98,10 @@ ul.navigation li a{
     font-family: 'Conv_Raleway-Light';
 	letter-spacing:1px;
 	font-size:1em;
-	color:#23abe3;
+	color:#555;
+}
+ul.navigation li a:hover{
+	color:#23ABE3;
 }
 
 body.rtl {
