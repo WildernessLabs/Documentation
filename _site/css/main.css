@@ -5,7 +5,7 @@
 body {
     font-weight: 400;
     /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);*/
-	background:url(../images/bg.jpg) top right no-repeat; background-attachment:fixed;
+	background:url(../images/bg.jpg) top right repeat; background-attachment:fixed;
 	
 }
 pre, code, pre code {
@@ -54,7 +54,8 @@ code {
     font-size: 1.4em;
     background-color: #555;
     color: #eee;
-    padding: 5px 5px 5px 10px
+    padding: 5px 5px 5px 10px;
+	font-family:'Raleway', sans-serif;
 }
 
 .navigation {
@@ -162,7 +163,7 @@ td, th {
 }
 .navbar-nav{
 	margin-top: 8px;
-	margin-left: 60px
+	margin-left: 40px
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
 	color: #fff;
@@ -184,7 +185,6 @@ td, th {
 	color:#fff;
 	font-size: 16px;
 	letter-spacing: 2px;
-	font-weight:bold;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
 	color: #fff;
@@ -202,3 +202,17 @@ h2{font-family: Lato light;}
 li img, p img{ width:100%;} 
 nav.navbar.navbar-default{padding-top: 7px;
 padding-bottom: 3px}
+div.navbar-header{ padding-left:10px;}
+ul.nav.navbar-nav.navbar-right{padding-right: 10px}
+@media only screen and (min-width:980px) and (max-width: 1024px)  {
+	.navbar-nav{
+	margin-top: 8px;
+	margin-left: 0px;
+}
+	.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 5px;
+}
+	
+	}
