@@ -187,7 +187,7 @@ td, th {
 }
 .top-container{border:8px solid #fff;}
 .main-content{ background-color:#fff; margin-top:10px; padding-left: 15px; margin-right: 15px}
-div#navigation{background-color:#fff; padding-top:15px; }
+div#navigation{background-color:#fff; padding-top: 10px; padding-left: 10px; }
 h2{font-family: 'Conv_Lato-Light'; color:#555; font-size:33px;}
 h1{ font-size:28px; font-family: 'Conv_Lato-Light'; }
 li img, p img{ width:100%; padding-right: 15px} 
