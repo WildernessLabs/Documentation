@@ -201,7 +201,8 @@ td, th {
 .top-container{border:8px solid #fff;}
 .main-content{ background-color:#fff; margin-top:10px; padding-left: 15px; margin-right: 15px}
 div#navigation{background-color:#fff; padding-top:15px; }
-h2{font-family: Lato light;}
+h2{font-family: 'Conv_Raleway-Light'; color:#555; font-size:33px;}
+h1{ font-size:28px;}
 li img, p img{ width:100%;} 
 nav.navbar.navbar-default{padding-top: 7px;
 padding-bottom: 3px}
