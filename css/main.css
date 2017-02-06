@@ -98,31 +98,8 @@ ul.navigation li a{
     font-family: 'Conv_Raleway-Light';
 	letter-spacing:1px;
 	font-size:1em;
-	color:#555;
+	color:#23abe3;
 }
-
-/*ul.navigation a {
-    color: blue;
-}*/
-
-/*ul.navigation li ul li{
-    color: orange;
-    text-decoration: underline;
-    font-size: 11.0em;
-    list-style: initial;
-    list-style-type: disc;
-    
-}​*/
-
-/*#navigation li a {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#navigation .nav-header {
-    padding-left: 0;
-    padding-right: 0;
-}*/
 
 body.rtl {
 	direction: rtl;
