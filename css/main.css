@@ -5,7 +5,12 @@
 body {
     font-weight: 400;
     /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);*/
-	background:url(../images/bg.jpg) top right repeat; background-attachment:fixed;
+	
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	font-family: 'Conv_Lato-Regular';
 	
 }
