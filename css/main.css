@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('fonts.css');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
@@ -6,6 +6,7 @@ body {
     font-weight: 400;
     /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);*/
 	background:url(../images/bg.jpg) top right repeat; background-attachment:fixed;
+	font-family: 'Conv_Raleway-Light';
 	
 }
 pre, code, pre code {
@@ -55,7 +56,8 @@ code {
     background-color: #555;
     color: #eee;
     padding: 5px 5px 5px 10px;
-	font-family:'Raleway', sans-serif;
+	font-family: 'Conv_Raleway-Light';
+	letter-spacing:1px;
 }
 
 .navigation {
@@ -91,11 +93,12 @@ ul.navigation > ul > li {
     color: springgreen;
     font-weight: bold;
 }
-/*ul.navigation li a{
-    font-size: 1.5em;
-    color: purple;
-    margin-left: 10%;
-}*/
+ul.navigation li a{
+    font-family: 'Conv_Raleway-Light';
+	letter-spacing:1px;
+	font-size:1em;
+	color:#555;
+}
 
 /*ul.navigation a {
     color: blue;
@@ -156,7 +159,7 @@ td, th {
 	
 }
 .navbar-brand{
-	padding: 5px 15px;
+	padding: 5px 15px 5px 20px;
 }
 .navbar-default{ 
 	background-color:#524740;
@@ -171,10 +174,10 @@ td, th {
 	border-radius: 3px;
 	margin:0px 2px;
 }
-.navbar-nav>li>a{
+.navbar-nav > li >a{
 	padding-top: 9px;
 	padding-bottom: 9px;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Conv_Raleway-ExtraLight';
 }
 .navbar{
 	border-radius: 0px;
@@ -183,7 +186,7 @@ td, th {
 }
 .navbar-default .navbar-nav>li>a{
 	color:#fff;
-	font-size: 16px;
+	font-size: 16.4px;
 	letter-spacing: 2px;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
@@ -203,8 +206,8 @@ li img, p img{ width:100%;}
 nav.navbar.navbar-default{padding-top: 7px;
 padding-bottom: 3px}
 div.navbar-header{ padding-left:10px;}
-ul.nav.navbar-nav.navbar-right{padding-right: 10px}
-@media only screen and (min-width:980px) and (max-width: 1024px)  {
+ul.nav.navbar-nav.navbar-right{padding-right: 20px}
+@media only screen and (min-width:1000px) and (max-width: 1205px)  {
 	.navbar-nav{
 	margin-top: 8px;
 	margin-left: 0px;
@@ -215,4 +218,40 @@ ul.nav.navbar-nav.navbar-right{padding-right: 10px}
     padding: 10px 5px;
 }
 	
+}
+@media (max-width: 999px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
 	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
