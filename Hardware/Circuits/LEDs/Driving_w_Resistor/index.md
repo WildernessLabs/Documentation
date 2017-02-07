@@ -1,4 +1,6 @@
-# Driving an LED with a Resistor
+---
+title: Driving an LED with a Resistor
+---
 
 Generally, when driving (powering) an LED, you must use a current limiting resistor, which prevents the LED from receiving too much power and burning out.
 

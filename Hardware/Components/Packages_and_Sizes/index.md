@@ -1,4 +1,6 @@
-# SMD Packages and Sizes
+---
+title: SMD Packages and Sizes
+---
 
 Surface Mounted Devices 
 

@@ -1,4 +1,6 @@
-# Printed Circuit Board (PCB) Fundamentals
+---
+title: Printed Circuit Board (PCB) Fundamentals
+---
 
 [Breadboards allow prototyping and developing. PCBs provide the necessary infrastructure to permanently hold electrical components together.]
 

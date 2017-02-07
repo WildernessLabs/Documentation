@@ -1,4 +1,6 @@
-# Universal Product Codes (UPCs) and International Article Numbers (EANs)
+---
+title: Universal Product Codes (UPCs) and International Article Numbers (EANs)
+---
 
 When selling a product, most retail distributors want a unique barcode that identifies your product. [The choice between a [UPC](https://www.wikiwand.com/en/Universal_Product_Code) and an [EAN](https://www.wikiwand.com/en/International_Article_Number) is largely one of where you and/or your distributors are located]. [Both are managed by the same organization, [GS1](GS1.org). Unique UPCs/EANs are needed for each product you sell, and different sizes and colors of the same product require unique UPCs/EANs. As such, the number needed can add up quickly.
 

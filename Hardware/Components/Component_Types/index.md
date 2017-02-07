@@ -1,1 +1,3 @@
-# Component Types
+---
+title: Component Types
+---

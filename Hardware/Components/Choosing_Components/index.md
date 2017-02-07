@@ -1,3 +1,5 @@
-# Choosing Components
+---
+title: Choosing Components
+---
 
 [availability + price]

@@ -1,4 +1,6 @@
-# About Netduino
+---
+title: About Netduino
+---
 
 (general info)
 

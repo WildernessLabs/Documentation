@@ -1,4 +1,6 @@
-# PCB Assembly
+---
+title: PCB Assembly
+---
 
 [how assembly works]
 

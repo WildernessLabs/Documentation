@@ -1,4 +1,6 @@
-# MAC Addresses
+---
+title: MAC Addresses
+---
 
 If your product has a network adapter, regardless of how it connects (WiFi, Ethernet, other), the network adapter needs to have a unique [MAC address](https://www.wikiwand.com/en/MAC_address) (Wikipedia link). A unique MAC address ensures that a device can have network traffic directed to it without conflicts with other devices.
 

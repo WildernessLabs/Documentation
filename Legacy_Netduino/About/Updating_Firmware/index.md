@@ -1,4 +1,6 @@
-# Updating Netduino Firmware
+---
+title: Updating Netduino Firmware
+---
 
 Ensuring that your Netduino has the latest firmware means that it will be up to date with the current Netduino-specific .NET Micro Framework runtime. Additionally, unless your Netduino has the latest firmware, you may have issues deploying your application to it.
 

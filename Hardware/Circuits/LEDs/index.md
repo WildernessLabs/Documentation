@@ -1,4 +1,6 @@
-# LEDs
+---
+title: LEDs
+---
 
 [Light Emitting Diode - a diode that lights up!]
 

@@ -1,1 +1,3 @@
-# Driving an LED with a PWM Signal
+---
+title: Driving an LED with a PWM Signal
+---

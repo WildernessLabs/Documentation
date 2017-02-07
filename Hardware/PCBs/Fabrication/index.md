@@ -1,4 +1,6 @@
-# PCB Fabrication
+---
+title: PCB Fabrication
+---
 
 [How PCB fabrication works]
 

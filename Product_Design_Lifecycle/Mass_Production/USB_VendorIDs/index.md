@@ -1,4 +1,6 @@
-# USB Vendor IDs
+---
+title: USB Vendor IDs
+---
 
 If your product is accessible/connectable via USB, then you'll need to purchase a USB Vendor ID that uniquely identifies the product as yours. 
 

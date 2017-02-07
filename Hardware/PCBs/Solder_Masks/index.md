@@ -1,4 +1,6 @@
-# Solder Masks
+---
+title: Solder Masks
+---
 
 Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won't be soldered to
 

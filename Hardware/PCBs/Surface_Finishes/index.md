@@ -1,4 +1,6 @@
-# Surface Finishes [Draft]
+---
+title: Surface Finishes
+---
 
 Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won't be soldered to. However, the copper areas that are exposed need also be protected and [solderability]
 

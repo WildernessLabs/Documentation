@@ -1,3 +1,0 @@
-# Choosing Components
-
-[availability + price]
