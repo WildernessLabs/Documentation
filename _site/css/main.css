@@ -190,7 +190,8 @@ td, th {
 div#navigation{background-color:#fff; padding-top: 10px; padding-left: 10px; padding-right: 10px }
 h2{font-family: 'Conv_Lato-Light'; color:#555; font-size:33px;}
 h1{ font-size:28px; font-family: 'Conv_Lato-Light'; }
-li img, p img{ width:100%; padding-right: 15px} 
+li img, p img{ width:100%; } 
+p img{padding-right: 15px}
 nav.navbar.navbar-default{padding-top: 7px;
 padding-bottom: 3px}
 div.navbar-header{ padding-left:10px;}
@@ -243,7 +244,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
   		display:block !important;
 	}
 }
-@media (max-width: 980px) {
+@media (max-width: 1199px) {
 	.container{ width:100%;}
 	.navbar-brand {
     	padding: 5px 15px 5px 10px;
