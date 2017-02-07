@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : PCB Prototyping</title>
+        <title>Wilderness Labs : Printed Circuit Board (PCB) Fundamentals</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -103,25 +103,6 @@
     </li>
 </ul>
 
-<div class="NavHeader">Product Lifecycle</div>
-<ul class="navigation">
-    <li><a href="/Product_Design_Lifecycle/Conceptual_Design/">Conceptual Design</a></li>
-    <li><a href="/Product_Design_Lifecycle/Schematic_Design">Schematic Design</a></li>
-    <li><a href="/Product_Design_Lifecycle/Breadboard_Prototyping">Breadboard Prototyping</a></li>
-    <li><a href="/Product_Design_Lifecycle/PCB_Design">PCB Design</a></li>
-    <li><a href="/Product_Design_Lifecycle/PCB_Prototyping">PCB Prototyping</a></li>
-    <li><a href="/Product_Design_Lifecycle/Programming">Programming</a></li>
-    <li><a href="/Product_Design_Lifecycle/Industrial_Design">Industrial Design</a></li>
-    <li><a href="/Product_Design_Lifecycle/Mass_Production">Mass Production</a>
-        <ul>
-            <li><a href="/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs">USB Vendor IDs</a></li>
-            <li><a href="/Product_Design_Lifecycle/Mass_Production/MAC_Addresses">MAC Addresses</a></li>
-            <li><a href="/Product_Design_Lifecycle/Mass_Production/UPCs_EANs">UPCs and EANs</a></li>
-            <li><a href="/Product_Design_Lifecycle/Mass_Production/Certifications">Important Certifications</a></li>
-        </ul>
-    </li>
-</ul>
-
 <div class="NavHeader">Hardware</div>
 <ul class="navigation">
     <li><a href="/Hardware/Overview/">Overview</a></li>
@@ -143,15 +124,6 @@
             </li>
         </ul>
     </li>
-    <li><a href="/Hardware/PCBs">Printed Circuit Board (PCB) Fundamentals</a>
-        <ul>
-            <li><a href="/Hardware/PCBs/Fabrication">PCB Fabrication</a></li>
-            <li><a href="/Hardware/PCBs/Assembly">PCB Assembly</a></li>
-            <li><a href="/Hardware/PCBs/Solder_Masks">Solder Masks</a></li>
-            <li><a href="/Hardware/PCBs/Surface_Finishes">PCB Finishes</a></li>
-            <li><a href="/"></a>Copper Thickness</li>
-        </ul>
-    </li>
     <li><a href="/Hardware/Components/">Component Fundamentals<a/>
         <ul>
             <li><a href="/Hardware/Components/Component_Types">Component Types</a></li>
@@ -160,15 +132,78 @@
         </ul>
     </li> 
 </ul>
+
+<div class="NavHeader">Product Lifecycle</div>
+<ul class="navigation">
+    <li><a href="/Product_Design_Lifecycle/Conceptual_Design/">Conceptual Design</a></li>
+    <li><a href="/Product_Design_Lifecycle/Schematic_Design">Schematic Design</a></li>
+    <li><a href="/Product_Design_Lifecycle/Breadboard_Prototyping">Breadboard Prototyping</a></li>
+    <li><a href="/Product_Design_Lifecycle/Programming">Programming</a></li>
+    <li><a href="/Product_Design_Lifecycle/PCBs">PCBs</a>
+        <ul>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Prototyping">PCB Prototyping</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Fabrication">PCB Fabrication</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Assembly">PCB Assembly</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Solder_Masks">Solder Masks</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Surface_Finishes">PCB Finishes</a></li>
+        </ul>
+    </li>
+    <li><a href="/Product_Design_Lifecycle/Industrial_Design">Industrial Design</a></li>
+    <li><a href="/Product_Design_Lifecycle/Mass_Production">Mass Production</a>
+        <ul>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs">USB Vendor IDs</a></li>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/MAC_Addresses">MAC Addresses</a></li>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/UPCs_EANs">UPCs and EANs</a></li>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/Certifications">Important Certifications</a></li>
+        </ul>
+    </li>
+</ul>
+
                         </div>
     
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>PCB Prototyping
+    <h2>Printed Circuit Board (PCB) Fundamentals
         
     </h2>
 </div>
 
+<p>[Breadboards allow prototyping and developing. PCBs provide the necessary infrastructure to permanently hold electrical components together.]</p>
+
+<h2 id="anatomy-of-a-pcb">Anatomy of a PCB?</h2>
+<p>[maybe a cross section of a netduino?]</p>
+
+<h2 id="multilayer-pcbs">Multilayer PCBs</h2>
+
+<p>[multilayer to provide crossing circuits across various planes. 2 layer is the minimum to allow crossing, but most modern PCB designs require more layers than that to provide efficient routing when many</p>
+
+<p>[because many components share power and ground, often times, the middle two layers consist of a ground plane layer, and a power layer, with the power plane being further subdivided (usually with 5v, 3.3v, and 1.8v being common component VCC voltages). sometimes, a layer with a heavier duty copper gauge will also be used for higher operating currents for things like motor control, etc.]</p>
+
+<h2 id="components">Components</h2>
+
+<p>[historically, PCBs were populated with through-hole components; components that had legs that went through the board:]</p>
+
+<p>[image]</p>
+
+<p>[however, through-hole components have several disadvantages: ]</p>
+
+<ul>
+  <li>They require more real estate</li>
+  <li>They’re more expensive to place</li>
+  <li>others</li>
+</ul>
+
+<p>[so Surface Mount Technology (SMD) is now the gold-standard]</p>
+
+<p>[Surface Mount Devices (SMD) are the components that replace through-hole devices by having flat feet or balls that sit on top of the PCB and solder directly to that layer, rather than going through all the layers.]</p>
+
+<h3 id="component-fundamentals">Component Fundamentals</h3>
+
+<ul>
+  <li>[Component Types]</li>
+  <li>[Component Packages and Sizes]</li>
+  <li>[Choosing Componennts]</li>
+</ul>
 
 
 
