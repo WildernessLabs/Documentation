@@ -4,7 +4,13 @@ title: PCB Assembly
 
 [how assembly works]
 
-[pick and place machines, solder flux, reflow]
+ 1. Solder paste applied through a silk screen mask
+ 2. Pick and Place machine places components on solder paste
+ 3. Hot air reflow machine bakes the board and melts the solder paste to the component pads
+ 4. Board is flipped and process repeated (if two sided)
+ 5. Any through hole components are placed and wave-soldered on the bottom (assuming there are no SMD components on the bottom), or soldered by hand (if SMD components on bottom)
+
+
 
 # Business Of
 
