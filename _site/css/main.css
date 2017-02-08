@@ -193,7 +193,7 @@ div#navigation{background-color:#fff; padding-top: 10px; padding-left: 10px; pad
 h2{font-family: 'Conv_Lato-Light'; color:#555; font-size:33px;}
 h1{ font-size:28px; font-family: 'Conv_Lato-Light'; }
 li img{ width:100%; } 
-p img{padding-right: 15px}
+p img{padding-right: 15px; max-width:100%; }
 nav.navbar.navbar-default{padding-top: 7px;
 padding-bottom: 3px}
 div.navbar-header{ padding-left:10px;}
