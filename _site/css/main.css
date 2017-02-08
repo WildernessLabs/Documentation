@@ -199,18 +199,17 @@ padding-bottom: 3px}
 div.navbar-header{ padding-left:10px;}
 ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 @media only screen and (min-width:1000px) and (max-width: 1205px)  {
-	.navbar-nav{
-	margin-top: 8px;
-	margin-left: 0px;
-}
-	.nav > li > a {
+.navbar-nav{
+		margin-top: 8px;
+	}
+.nav > li > a {
     position: relative;
     display: block;
     padding: 10px 5px;
 }
 	
 }
-@media (max-width: 999px) {
+@media (max-width: 1024px){
     .navbar-header {
         float: none;
     }
@@ -248,12 +247,12 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 }
 @media (max-width: 1199px) {
 	.container{ width:100%;}
-	.navbar-brand {
+	/*.navbar-brand {
     	padding: 5px 15px 5px 10px;
 	}
 	.main-content {
 		margin-right:0px;
-	}
+	}*/
 }
 @media (max-width: 767px) {
 	.main-content {
