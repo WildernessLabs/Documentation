@@ -15,7 +15,7 @@ package standards specified by the Joint Electron Device Engineering Council (JE
 
 [Make sure when buying them that you know whether Imperial or Metric is being specified, since 0402, and 0603 are found in both Imperial and Metric codes, but specify different sizes of components]
 
-![sizes](Component_Sizes.png)
+![sizes](Component_Sizes.svg)
 
 [1812 and 1206 (Imperial) are specialized sizes, most commonly used for components that require heat dissipation]
 
