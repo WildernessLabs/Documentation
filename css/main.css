@@ -154,7 +154,7 @@ td, th {
 }
 .navbar-nav{
 	margin-top: 8px;
-	margin-left: 4%
+	margin-left: 40px
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
 	color: #fff;
@@ -193,23 +193,51 @@ div#navigation{background-color:#fff; padding-top: 10px; padding-left: 10px; pad
 h2{font-family: 'Conv_Lato-Light'; color:#555; font-size:33px;}
 h1{ font-size:28px; font-family: 'Conv_Lato-Light'; }
 li img{ width:100%; } 
-p img{padding-right: 15px; max-width:100%; }
+p img{padding-right: 15px; max-width:100%;}
 nav.navbar.navbar-default{padding-top: 7px;
 padding-bottom: 3px}
 div.navbar-header{ padding-left:10px;}
 ul.nav.navbar-nav.navbar-right{padding-right: 20px}
-@media only screen and (min-width:1000px) and (max-width: 1205px)  {
+@media only screen and (min-width:1136px) and (max-width: 1205px)  {
 .navbar-nav{
 		margin-top: 8px;
+		margin-left: 20px;
 	}
 .nav > li > a {
-    position: relative;
-    display: block;
-    
+    padding: 10px 15px;
+}
+.container{width:100%!important;}
+}
+@media only screen and (min-width:1037px) and (max-width: 1135px)  {
+.navbar-nav{
+		margin-top: 8px;
+		margin-left: 10px;
+	}
+.nav > li > a {
+    padding: 10px 10px!important;
+}
+}
+@media only screen and (min-width:1024px) and (max-width: 1136px)  {
+.navbar-nav{
+		margin-top: 8px;
+		margin-left: 5px;
+	}
+.nav > li > a {
+    padding: 10px 7px!important;
 }
 	
 }
-@media (max-width: 1142px){
+@media only screen and (min-width:981px) and (max-width: 1023px)  {
+.navbar-nav{
+		margin-top: 8px;
+		margin-left: 7px;
+	}
+.nav > li > a {
+    padding: 10px 6.5px!important;
+}
+.navbar-right{ margin-left:0px;}
+}
+@media (max-width: 980px){
     .navbar-header {
         float: none;
     }
@@ -246,7 +274,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	}
 }
 @media (max-width: 1199px) {
-	.container{ width:100%;}
+	.container{width:100%!important;}
 	/*.navbar-brand {
     	padding: 5px 15px 5px 10px;
 	}
