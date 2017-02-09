@@ -208,29 +208,49 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 }
 .container{width:100%!important;}
 }
-@media only screen and (min-width:1037px) and (max-width: 1135px)  {
+@media only screen and (min-width:1115px) and (max-width: 1135px)  {
 .navbar-nav{
 		margin-top: 8px;
 		margin-left: 10px;
 	}
 .nav > li > a {
-    padding: 10px 10px!important;
+    padding: 10px 17px!important;
 }
 }
-@media only screen and (min-width:1024px) and (max-width: 1136px)  {
+@media only screen and (min-width:1091px) and (max-width: 1114px)  {
 .navbar-nav{
 		margin-top: 8px;
-		margin-left: 5px;
+		margin-left: 10px;
 	}
 .nav > li > a {
-    padding: 10px 7px!important;
+    padding: 10px 15px!important;
+}
+	
+}
+@media only screen and (min-width:1057px) and (max-width: 1090px)  {
+.navbar-nav{
+		margin-top: 8px;
+		margin-left: 7px;
+	}
+.nav > li > a {
+    padding: 10px 12px!important;
+}
+	
+}
+@media only screen and (min-width:1024px) and (max-width: 1056px)  {
+.navbar-nav{
+		margin-top: 8px;
+		margin-left: 3px;
+	}
+.nav > li > a {
+    padding: 10px 10px!important;
 }
 	
 }
 @media only screen and (min-width:981px) and (max-width: 1023px)  {
 .navbar-nav{
 		margin-top: 8px;
-		margin-left: 7px;
+		margin-left: 3px;
 	}
 .nav > li > a {
     padding: 10px 6.5px!important;
