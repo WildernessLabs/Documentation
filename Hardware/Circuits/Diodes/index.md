@@ -5,7 +5,7 @@ title: Diodes
 [one way current limiter]
 [ideally, zero resistance in one direction, infinite resistence in the other direction]
 
-![Diode Circuit Symbol](diode.svg)
+![Diode Circuit Symbol](Diode.svg)
 
 
 ## Uses
