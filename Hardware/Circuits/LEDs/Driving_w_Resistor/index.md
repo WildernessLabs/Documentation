@@ -36,5 +36,44 @@ Let's say that you have a red LED (1.8v VF), and you're driving it off a 5v circ
 
 [to be safe, need a 64Ω or better resistor (probably 100Ω is the next higher up)]
 
-![](circuit.png)
 
+# Sample Circuit
+
+General Circuit:
+
+![](circuit.svg)
+
+
+
+# Sample Project
+
+![](LED_Circuit_bb.svg)
+
+```CSharp
+using System;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+using System.Threading;
+
+namespace Blinky
+{
+	public class Program
+	{
+		public static void Main()
+		{
+			// write your code here
+			OutputPort led = new OutputPort(Pins.GPIO_PIN_D7, false);
+			while (true)
+			{
+				led.Write(true); // turn on the LED
+				Thread.Sleep(250); // sleep for 250ms
+				led.Write(false); // turn off the LED
+				Thread.Sleep(250); // sleep for 250ms
+			}
+		} 
+	}
+}
+
+
+```

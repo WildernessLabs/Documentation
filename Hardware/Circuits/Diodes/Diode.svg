@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="236px" height="109px" viewBox="0 0 236 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Diode</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-177.000000, -111.000000)">
+            <g id="Diode" transform="translate(180.000000, 115.000000)">
+                <g>
+                    <polygon id="Triangle" stroke="#524740" stroke-width="5" fill="#FFFFFF" transform="translate(110.750000, 50.500000) rotate(90.000000) translate(-110.750000, -50.500000) " points="110.75 8.25 160.75 92.75 60.75 92.75"></polygon>
+                    <rect id="Rectangle-3" fill="#524740" x="150" y="1" width="15" height="100"></rect>
+                    <path d="M230,50 L-1.42108547e-13,50" id="Line" stroke="#524740" stroke-width="5" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

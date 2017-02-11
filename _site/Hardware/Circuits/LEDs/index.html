@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : LEDs</title>
+        <title>Wilderness Labs : Light Emitting Diodes (LEDs)</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -163,26 +163,41 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>LEDs
+    <h2>Light Emitting Diodes (LEDs)
         
     </h2>
 </div>
 
-<p>[Light Emitting Diode - a diode that lights up!]</p>
+<p>An <a href="https://www.wikiwand.com/en/Light-emitting_diode">LED</a> is a diode (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:</p>
 
-<p>[diagram symbol, a diode with arrows]</p>
+<p><img src="LED.svg" alt="LED Circuit Symbol" /></p>
 
-<p>[only work with current one way - one leg is longer than the other]</p>
+<p>Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the <a href="https://www.wikiwand.com/en/Cathode">Cathode</a>) than the other (the <a href="https://www.wikiwand.com/en/Cathode">Anode</a>), to indicate which leg should be hooked to the positive (<code class="highlighter-rouge">+</code>) side of a circuit:</p>
 
-<p>[diagram]</p>
+<p>[need image and diagram]</p>
 
-<p>[need to have current limited so they don’t burn out]</p>
+<h2 id="limiting-current">Limiting Current</h2>
 
-<p>[two ways to do that, either <a href="Driving_an_LED_w_Resistor">use a resistor</a>, or drive it with a <a href="Driving_an_LED_w_PWM">PWM signal</a>]</p>
+<p>LEDs are extremely efficient light generators because they convert currently directly into photons. As such, it typically doesn’t take very much current to power them. Too much current, and they burn out.</p>
 
-<p>[Can also be used as a light sensor!]</p>
+<p>Because of this, the current that drives an LED is typically limited by one of two methods:</p>
+
+<ul>
+  <li><a href="Driving_w_Resistor">A current limiting resistor</a> - A resistor can be used to reduce the current. This is probably the most common way to drive an LED.</li>
+  <li><a href="Driving_w_PWM">Driving it with a Pulse Width Modulation (PWM) signal</a> - By using a PWM, the LED receives pulses of current that limit the overall current through the LED over time.</li>
+</ul>
+
+<h2 id="uses-and-more-information">Uses and More Information</h2>
+
+<p>[<a href="http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/">Can also be used as a light sensor!</a>]</p>
 
 <p>[come in many colors, packages, and powers]</p>
+
+<p>[RGB LEDs are super cool and can be used to produce any color of light in the visible spectrum]</p>
+
+<h1 id="more-reading">More Reading</h1>
+
+<p><a href="https://www.wikiwand.com/en/Light-emitting_diode">LED on Wikipedia</a></p>
 
 
                         </div>
