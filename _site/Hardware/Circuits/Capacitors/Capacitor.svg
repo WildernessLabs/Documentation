@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="236px" height="100px" viewBox="0 0 236 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Capacitor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-37.000000, -346.000000)">
+            <g id="Capacitor" transform="translate(40.000000, 346.000000)">
+                <g>
+                    <rect id="Rectangle-3" fill="#524740" x="120" y="0" width="15" height="100"></rect>
+                    <rect id="Rectangle-3-Copy" fill="#524740" x="90" y="0" width="15" height="100"></rect>
+                    <path d="M97.5115378,49 L-1.42108547e-13,49" id="Line" stroke="#524740" stroke-width="5" stroke-linecap="square"></path>
+                    <path d="M230,49 L127.489025,49" id="Line-Copy" stroke="#524740" stroke-width="5" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
