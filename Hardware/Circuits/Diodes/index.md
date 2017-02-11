@@ -28,5 +28,5 @@ title: Diodes
 
 ## Further Reading
 
-[Diode usage in modern circuits - Lifewire.com](https://www.lifewire.com/applications-of-diodes-818815)
-[Diode Applications - Sparkfun.com](https://learn.sparkfun.com/tutorials/diodes/diode-applications)
+* [Diode usage in modern circuits - Lifewire.com](https://www.lifewire.com/applications-of-diodes-818815)
+* [Diode Applications - Sparkfun.com](https://learn.sparkfun.com/tutorials/diodes/diode-applications)
