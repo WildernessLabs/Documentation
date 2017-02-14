@@ -71,12 +71,14 @@
             <li><a href="/Legacy_Netduino/About/Input_Output">IO</a>
                 <ul>
                     <li><a href="/Legacy_Netduino/About/Input_Output/Analog/">Analog</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Digital/">Digital</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/PWM/">PWM</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/UART/">UART (Serial)</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/I2C/">I2C</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/CAN/">CAN</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/SPI/">SPI</a></li>
+                    <li><a href="/Legacy_Netduino/About/Input_Output/Digital/">Digital</a>
+                        <ul>
+                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
+                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
+                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
+                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -168,16 +170,25 @@
     </h2>
 </div>
 
-<p>[comes with a varied set of input and output ports that support a host of different protocols]</p>
+<p>Netduino is equipped with a varied set of Input and Output (I/O) ports that can be accessed from your application to read sensors, listen to button presses, light LEDs, drive motors, communicate with other systems, and lots more.</p>
+
+<p>Netduino IO ports are divided into two categories; <em>Digital</em> and <em>Analog</em>.</p>
+
+<h2 id="digitaldigital"><a href="Digital/">Digital</a></h2>
+
+<p>The Digital ports can be set to be high (powered at 3.3v), or low (grounded at 0v) which correspond to digital 1 and 0, respectively. Additionally, they have built-in support for a host of different types of common digital communication protocols:</p>
 
 <ul>
-  <li><a href="Analog/">Analog</a></li>
-  <li><a href="Digital/">Digital</a></li>
-  <li><a href="PWM/">PWM</a></li>
-  <li><a href="UART/">UART (Serial)</a></li>
-  <li><a href="CAN/">I2C (CAN)</a></li>
-  <li><a href="SPI/">SPI</a></li>
+  <li><a href="Digital/CAN/">I2C (CAN)</a></li>
+  <li><a href="Digital/PWM/">PWM</a></li>
+  <li><a href="Digital/SPI/">SPI</a></li>
+  <li><a href="Digital/UART/">UART (Serial)</a></li>
 </ul>
+
+<h2 id="analog-portsanalog"><a href="Analog/">Analog Ports</a></h2>
+
+<p>Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal.</p>
+
 
 
                         </div>
