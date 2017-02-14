@@ -17,6 +17,10 @@ title: Pulse-Width Modulation (PWM)
 
 [can also generate in software]
 
+# Practical Examples
+
+* [Driving an LED with a PWM Signal](../../../../../Hardware/Circuits/LEDs/Driving_w_PWM)
+
 # Further Reading
 
 [PWM on Wikipedia](https://www.wikiwand.com/en/Pulse-width_modulation)
