@@ -20,6 +20,11 @@ title: Pulse-Width Modulation (PWM)
 # Practical Examples
 
 * [Driving an LED with a PWM Signal](../../../../../Hardware/Circuits/LEDs/Driving_w_PWM)
+* [Servo Control with PWM]
+
+# Advanced PWM
+
+[maybe talk about how you can do crazy shit like sine-wave generation. At high enough resolutions, it's quite good.]
 
 # Further Reading
 

@@ -1,13 +1,4 @@
----
-title: Driving an LED with a PWM Signal
----
-
-[can set either the duty cycle or the period/duration]
-
-[The following code sets pin 3 to duty cycle of 50%, and the onboard LED to a duty cycle of 33% (by manually setting the period and duration and cycles between the two]
-
-```CSharp
-using System;
+﻿using System;
 using Microsoft.SPOT;
 using SecretLabs.NETMF.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
@@ -47,4 +38,3 @@ namespace DrivingLED_w_PWM
 		}
 	}
 }
-```
