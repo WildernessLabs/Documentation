@@ -12,8 +12,6 @@ namespace OnboardButtonAndLed
 		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
 		static InputPort _button = new InputPort((Cpu.Pin)0x15, false, Port.ResistorMode.Disabled);
 
-		static bool _buttonPressed = false;
-
 		public static void Main()
 		{
 			// turn the LED off initially

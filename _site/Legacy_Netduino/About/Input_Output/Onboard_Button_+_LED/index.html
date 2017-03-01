@@ -175,6 +175,8 @@
 
 <p>[Button available via <code class="highlighter-rouge">Pins.ONBOARD_BTN</code>]</p>
 
+<h2 id="inputport-and-outputport">InputPort and OutputPort</h2>
+
 <p>Can access them via <code class="highlighter-rouge">OutputPort</code> or <code class="highlighter-rouge">InputPort</code>. Following example illustrates turning the LED on when the Button is pressed.</p>
 
 <pre><code class="language-CSharp">
@@ -212,9 +214,54 @@ namespace OnboardButtonAndLed
 
 </code></pre>
 
+<h2 id="interruptports">InterruptPorts</h2>
+
 <p>Button can also be set as an InterruptPort which raises events:</p>
 
-<p>[code]</p>
+<pre><code class="language-CSharp">using System;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace OnboardButtonAndLed
+{
+	public class Program
+	{
+		// An output port allows you to write (send a signal) to a pin
+		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+
+		// An interrupt port raises events when its value changes. in this case, 
+		// we use it to create an event when the button is clicked.
+		// We set the Interrupt mode to raise an event on both edges of the signal;
+		// both down, and up.
+		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
+			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
+		
+		public static void Main()
+		{
+			// turn the LED off initially
+			_led.Write(false);
+
+			// wire up the interrupt to our event handler
+			_button.OnInterrupt += handleButtonClick;
+
+			// run forever
+			while (true)
+			{
+				
+			}
+
+		}
+
+		static void handleButtonClick (uint port, uint data, DateTime time)
+		{
+			// will be 1 when pressed (raised high), and 0, when unpressed
+			Debug.Print ("Data: " + data.ToString ());
+			_led.Write (data == 1);
+		}
+	}
+}
+</code></pre>
 
 <h2 id="further-reading">Further Reading</h2>
 
