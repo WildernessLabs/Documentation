@@ -13,7 +13,6 @@ Can access them via `OutputPort` or `InputPort`. Following example illustrates t
 
 
 ```CSharp
-
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -58,7 +57,7 @@ using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 
-namespace OnboardButtonAndLed
+namespace ButtonInterruptEvents
 {
 	public class Program
 	{

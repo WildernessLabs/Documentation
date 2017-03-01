@@ -3,7 +3,7 @@ using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 
-namespace OnboardButtonAndLed
+namespace ButtonInterruptEvents
 {
 	public class Program
 	{
