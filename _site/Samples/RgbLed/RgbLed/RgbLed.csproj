@@ -34,7 +34,7 @@
     <Reference Include="SecretLabs.NETMF.Hardware" />
     <Reference Include="SecretLabs.NETMF.Hardware.Netduino" />
     <Reference Include="Microsoft.SPOT.Hardware.PWM" />
-    <Reference Include="SecretLabs.NETMF.Hardware.PWM" />
+    <Reference Include="Microsoft.SPOT.Hardware" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />

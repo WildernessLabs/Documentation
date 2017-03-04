@@ -17,6 +17,8 @@ title: About Netduino
 [3 models, N3 (no internet), N3Ethernet, N3WiFi)]
 [link to netduino page on wildernesslabs.co]
 
+![N3 Pinout Diagram](Netduino3_Pinout.svg)
+
 # Netduino 2
 
 [2 models, N2, N2+ which has ethernet]
