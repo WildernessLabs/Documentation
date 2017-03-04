@@ -26,3 +26,9 @@ Analog ports can operate at a range of voltages between 0 and 3.3v, which is esp
 
 In addition to the Analog and Digital Headers, the Netduino has an LED and a Button built into it that you can access from code.
 
+## Current Tolerance and Output
+
+ * **Maximum GPIO Current** - 25mA/pin.
+ * **Maximum MCU Output Current** - 125mA.
+ * **Digital I/O** - 3.3V nominal, but tolerant up to 5V.
+ * **IOREF** - 3.3V (for shield compatibility).

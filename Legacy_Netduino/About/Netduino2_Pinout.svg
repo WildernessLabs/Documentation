@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="638px" height="457px" viewBox="0 0 638 457" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="638px" height="399px" viewBox="0 0 638 399" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>Netduino3_Pinout</title>
+    <title>Netduino2_Pinout</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="93" y="43" width="300" height="440"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="300" height="440" fill="white">
+        <rect id="path-1" x="93" y="45" width="300" height="382"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="300" height="382" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
         <rect id="path-3" x="3" y="3" width="9" height="9"></rect>
@@ -364,11 +364,11 @@
         <mask id="mask-180" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="60" height="15" fill="white">
             <use xlink:href="#path-179"></use>
         </mask>
-        <rect id="path-181" x="119" y="26" width="43" height="69"></rect>
+        <rect id="path-181" x="119" y="28" width="43" height="69"></rect>
         <mask id="mask-182" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="69" fill="white">
             <use xlink:href="#path-181"></use>
         </mask>
-        <rect id="path-183" x="0" y="0" width="26" height="26"></rect>
+        <rect id="path-183" x="1" y="20" width="26" height="26"></rect>
         <mask id="mask-184" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="26" height="26" fill="white">
             <use xlink:href="#path-183"></use>
         </mask>
@@ -376,48 +376,33 @@
         <mask id="mask-186" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="95" height="79" fill="white">
             <use xlink:href="#path-185"></use>
         </mask>
-        <rect id="path-187" x="0" y="0" width="95" height="95"></rect>
-        <mask id="mask-188" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="95" height="95" fill="white">
+        <rect id="path-187" x="0" y="0" width="75" height="75"></rect>
+        <mask id="mask-188" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="75" height="75" fill="white">
             <use xlink:href="#path-187"></use>
         </mask>
-        <rect id="path-189" x="0" y="0" width="90" height="95"></rect>
-        <mask id="mask-190" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="90" height="95" fill="white">
+        <rect id="path-189" x="0" y="0" width="60" height="75"></rect>
+        <mask id="mask-190" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="60" height="75" fill="white">
             <use xlink:href="#path-189"></use>
         </mask>
-        <rect id="path-191" x="0" y="0" width="75" height="30"></rect>
-        <mask id="mask-192" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="75" height="30" fill="white">
+        <rect id="path-191" x="12" y="19" width="38" height="21"></rect>
+        <mask id="mask-192" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="38" height="21" fill="white">
             <use xlink:href="#path-191"></use>
         </mask>
-        <rect id="path-193" x="94" y="0" width="75" height="30"></rect>
-        <mask id="mask-194" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="75" height="30" fill="white">
+        <rect id="path-193" x="37" y="-1" width="9" height="21"></rect>
+        <mask id="mask-194" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9" height="21" fill="white">
             <use xlink:href="#path-193"></use>
         </mask>
-        <rect id="path-195" x="187" y="0" width="75" height="30"></rect>
-        <mask id="mask-196" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="75" height="30" fill="white">
+        <rect id="path-195" x="0" y="0" width="43" height="36"></rect>
+        <mask id="mask-196" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="36" fill="white">
             <use xlink:href="#path-195"></use>
-        </mask>
-        <rect id="path-197" x="35" y="0" width="45" height="30"></rect>
-        <mask id="mask-198" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="45" height="30" fill="white">
-            <use xlink:href="#path-197"></use>
-        </mask>
-        <rect id="path-199" x="30" y="0" width="9" height="21"></rect>
-        <mask id="mask-200" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9" height="21" fill="white">
-            <use xlink:href="#path-199"></use>
-        </mask>
-        <rect id="path-201" x="0" y="0" width="43" height="36"></rect>
-        <mask id="mask-202" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="36" fill="white">
-            <use xlink:href="#path-201"></use>
         </mask>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(-811.000000, -144.000000)">
-            <g id="Netduino3_Pinout" transform="translate(787.000000, 118.000000)">
-                <rect id="Rectangle-8" x="0" y="0" width="685" height="524"></rect>
+        <g id="Desktop" transform="translate(-71.000000, -144.000000)">
+            <g id="Netduino2_Pinout" transform="translate(47.000000, 116.000000)">
+                <rect id="Rectangle-8" x="0" y="2" width="685" height="524"></rect>
                 <use id="Rectangle-3" stroke="#23ABE3" mask="url(#mask-2)" stroke-width="6" fill="#555555" xlink:href="#path-1"></use>
-                <text id="BTN" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                    <tspan x="361.1015" y="77">BTN</tspan>
-                </text>
-                <g id="Digital-Headers" transform="translate(302.000000, 138.000000)">
+                <g id="Digital-Headers" transform="translate(302.000000, 140.000000)">
                     <g id="8-pin-digital-header" transform="translate(70.000000, 156.000000)">
                         <rect id="Rectangle-4" fill="#23ABE3" x="0" y="0" width="15" height="120"></rect>
                         <use id="Rectangle-5" stroke="#999999" mask="url(#mask-4)" stroke-width="2" fill="#555555" xlink:href="#path-3"></use>
@@ -445,8 +430,8 @@
                     <text id="Digital-Input/Output" transform="translate(57.500000, 143.500000) rotate(-270.000000) translate(-57.500000, -143.500000) " font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
                         <tspan x="-5.7345" y="149">Digital Input/Output</tspan>
                     </text>
-                    <text id="Netduino-3" transform="translate(15.000000, 158.000000) rotate(-270.000000) translate(-15.000000, -158.000000) " font-family="BauhausITCbyBT-Medium, Bauhaus Md BT" font-size="25" font-weight="400" fill="#EEEEEE">
-                        <tspan x="-42.9650879" y="167">Netduino 3</tspan>
+                    <text id="Netduino-2" transform="translate(15.000000, 158.000000) rotate(-270.000000) translate(-15.000000, -158.000000) " font-family="BauhausITCbyBT-Medium, Bauhaus Md BT" font-size="25" font-weight="400" fill="#EEEEEE">
+                        <tspan x="-42.9650879" y="167">Netduino 2</tspan>
                     </text>
                     <g id="UART-COM1" transform="translate(150.000000, 244.000000)">
                         <g transform="translate(0.000000, 2.000000)">
@@ -776,7 +761,7 @@
                     <path d="M260,163 L275,163" id="Line-Copy-50" stroke="#999999" stroke-width="2"></path>
                     <path d="M260,144 L275,144" id="Line-Copy-49" stroke="#999999" stroke-width="2"></path>
                 </g>
-                <g id="6-pin-analog-header" transform="translate(49.000000, 320.000000)">
+                <g id="6-pin-analog-header" transform="translate(49.000000, 322.000000)">
                     <rect id="Rectangle-4" fill="#23ABE3" x="50" y="2" width="15" height="90"></rect>
                     <use id="Rectangle-5" stroke="#999999" mask="url(#mask-128)" stroke-width="2" fill="#555555" xlink:href="#path-127"></use>
                     <use id="Rectangle-5-Copy" stroke="#999999" mask="url(#mask-130)" stroke-width="2" fill="#555555" xlink:href="#path-129"></use>
@@ -827,7 +812,7 @@
                     <path d="M35,69 L50,69" id="Line-Copy-4" stroke="#999999" stroke-width="2"></path>
                     <path d="M35,84 L50,84" id="Line-Copy-5" stroke="#999999" stroke-width="2"></path>
                 </g>
-                <g id="8-pin-power-header" transform="translate(24.000000, 192.000000)">
+                <g id="8-pin-power-header" transform="translate(24.000000, 194.000000)">
                     <rect id="Rectangle-4" fill="#23ABE3" x="75" y="0" width="15" height="120"></rect>
                     <use id="Rectangle-5" stroke="#999999" mask="url(#mask-152)" stroke-width="2" fill="#555555" xlink:href="#path-151"></use>
                     <use id="Rectangle-5-Copy" stroke="#999999" mask="url(#mask-154)" stroke-width="2" fill="#555555" xlink:href="#path-153"></use>
@@ -891,102 +876,107 @@
                     </g>
                 </g>
                 <use id="Power-Barrel" stroke="#23ABE3" mask="url(#mask-182)" stroke-width="2" fill="#555555" xlink:href="#path-181"></use>
-                <text id="VIN-(5V-12V)" transform="translate(141.500000, 60.000000) rotate(-270.000000) translate(-141.500000, -60.000000) " font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                    <tspan x="129.4565" y="57">VIN</tspan>
-                    <tspan x="113.675" y="74">(5V-12V)</tspan>
+                <text id="VIN-(5V-9V)" transform="translate(141.500000, 62.000000) rotate(-270.000000) translate(-141.500000, -62.000000) " font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                    <tspan x="129.4565" y="59">VIN</tspan>
+                    <tspan x="117.735" y="76">(5V-9V)</tspan>
                 </text>
-                <g id="Onboard-Button" transform="translate(362.000000, 83.000000)" stroke="#999999">
-                    <use id="Rectangle-6-Copy-2" mask="url(#mask-184)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-183"></use>
-                    <circle id="Oval-2" fill="#555555" cx="13" cy="13" r="8"></circle>
+                <g id="Onboard-Button" transform="translate(232.000000, 323.000000)">
+                    <use id="Rectangle-6-Copy-2" stroke="#999999" mask="url(#mask-184)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-183"></use>
+                    <circle id="Oval-2" stroke="#999999" fill="#555555" cx="14" cy="33" r="8"></circle>
+                    <text id="BTN" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="0.1015" y="14">BTN</tspan>
+                    </text>
                 </g>
-                <g id="Micro-SD" transform="translate(99.000000, 109.000000)">
+                <g id="Micro-SD" transform="translate(99.000000, 111.000000)">
                     <use id="SD-Card" stroke="#999999" mask="url(#mask-186)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-185"></use>
-                    <text id="Micro-SD-(N3E,-N3W)" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
+                    <text id="Micro-SD-(N2+)" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
                         <tspan x="18.744" y="34">Micro SD</tspan>
-                        <tspan x="10.281" y="51">(N3E, N3W)</tspan>
+                        <tspan x="30.2975" y="51">(N2+)</tspan>
                     </text>
                 </g>
-                <g id="MCU" transform="translate(177.000000, 263.000000)">
+                <g id="MCU" transform="translate(207.000000, 215.000000)">
                     <use stroke="#999999" mask="url(#mask-188)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-187"></use>
-                    <text id="MCU-Cortex-M-4-@168M" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
-                        <tspan x="31.176" y="35">MCU</tspan>
-                        <tspan x="11.7965" y="52">Cortex M-4</tspan>
-                        <tspan x="14.5335" y="69">@168MHz</tspan>
+                    <text id="MCU-Cortex-M" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
+                        <tspan x="21.176" y="34">MCU</tspan>
+                        <tspan x="8.457" y="51">Cortex M</tspan>
                     </text>
                 </g>
-                <g id="Network" transform="translate(256.000000, 61.000000)">
+                <g id="Network" transform="translate(302.000000, 33.000000)">
                     <use stroke="#999999" mask="url(#mask-190)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-189"></use>
-                    <text id="Network-(N3E,-N3W)" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
-                        <tspan x="18.5605" y="43">Network</tspan>
-                        <tspan x="8.281" y="60">(N3E, N3W)</tspan>
+                    <text id="10Mb-Ethernet-(N2+)" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
+                        <tspan x="11.013" y="23">10Mb </tspan>
+                        <tspan x="2.865" y="40">Ethernet</tspan>
+                        <tspan x="12.2975" y="57">(N2+)</tspan>
                     </text>
                 </g>
-                <text id="Analog-In" transform="translate(128.500000, 365.500000) rotate(-270.000000) translate(-128.500000, -365.500000) " font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                    <tspan x="99.541" y="371">Analog In</tspan>
+                <text id="Analog-In" transform="translate(128.500000, 367.500000) rotate(-270.000000) translate(-128.500000, -367.500000) " font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                    <tspan x="99.541" y="373">Analog In</tspan>
                 </text>
-                <g id="Go-Ports" transform="translate(111.000000, 445.000000)">
-                    <use id="Rectangle" stroke="#23ABE3" mask="url(#mask-192)" stroke-width="8" fill="#555555" xlink:href="#path-191"></use>
-                    <use id="Rectangle-Copy" stroke="#23ABE3" mask="url(#mask-194)" stroke-width="8" fill="#555555" xlink:href="#path-193"></use>
-                    <use id="Rectangle-Copy-2" stroke="#23ABE3" mask="url(#mask-196)" stroke-width="8" fill="#555555" xlink:href="#path-195"></use>
-                    <text id="Go-Port-2" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                        <tspan x="101.771" y="20">Go Port 2</tspan>
-                    </text>
-                    <text id="Go-Port-1" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                        <tspan x="7.771" y="20">Go Port 1</tspan>
-                    </text>
-                    <text id="Go-Port-3" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                        <tspan x="194.771" y="20">Go Port 3</tspan>
+                <g id="JTAG" transform="translate(215.000000, 381.000000)">
+                    <use id="Rectangle-6" stroke="#979797" mask="url(#mask-192)" stroke-width="2" fill="#D8D8D8" opacity="0.543421649" xlink:href="#path-191"></use>
+                    <g id="Group-Copy" transform="translate(14.000000, 23.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-5" transform="translate(21.000000, 23.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-6" transform="translate(28.000000, 23.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-7" transform="translate(35.000000, 23.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-8" transform="translate(42.000000, 23.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-13" transform="translate(14.000000, 30.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-12" transform="translate(21.000000, 30.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-11" transform="translate(28.000000, 30.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-10" transform="translate(35.000000, 30.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <g id="Group-Copy-9" transform="translate(42.000000, 30.000000)">
+                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="3" cy="3" r="3"></circle>
+                        <circle id="Oval-3-Copy" fill="#555555" cx="3" cy="3" r="2"></circle>
+                    </g>
+                    <text id="Mini-JTAG" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="0.874" y="14">Mini JTAG</tspan>
                     </text>
                 </g>
-                <g id="ICSP" transform="translate(192.000000, 393.000000)">
-                    <use id="Rectangle-6" stroke="#979797" mask="url(#mask-198)" stroke-width="2" fill="#D8D8D8" opacity="0.543421649" xlink:href="#path-197"></use>
-                    <g id="Group-2" transform="translate(67.000000, 3.000000)">
-                        <rect id="Rectangle-2" fill="#F8E81C" x="0" y="0" width="10" height="10"></rect>
-                        <circle id="Oval-3" fill="#555555" cx="5" cy="5" r="3"></circle>
-                    </g>
-                    <g id="Group" transform="translate(53.000000, 3.000000)">
-                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="5" cy="5" r="5"></circle>
-                        <circle id="Oval-3-Copy" fill="#555555" cx="5" cy="5" r="3"></circle>
-                    </g>
-                    <g id="Group-Copy" transform="translate(39.000000, 3.000000)">
-                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="5" cy="5" r="5"></circle>
-                        <circle id="Oval-3-Copy" fill="#555555" cx="5" cy="5" r="3"></circle>
-                    </g>
-                    <g id="Group-Copy-2" transform="translate(39.000000, 17.000000)">
-                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="5" cy="5" r="5"></circle>
-                        <circle id="Oval-3-Copy" fill="#555555" cx="5" cy="5" r="3"></circle>
-                    </g>
-                    <g id="Group-Copy-3" transform="translate(53.000000, 17.000000)">
-                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="5" cy="5" r="5"></circle>
-                        <circle id="Oval-3-Copy" fill="#555555" cx="5" cy="5" r="3"></circle>
-                    </g>
-                    <g id="Group-Copy-4" transform="translate(67.000000, 17.000000)">
-                        <circle id="Oval-3-Copy-2" fill="#F8E81C" cx="5" cy="5" r="5"></circle>
-                        <circle id="Oval-3-Copy" fill="#555555" cx="5" cy="5" r="3"></circle>
-                    </g>
+                <g id="LED" transform="translate(297.000000, 378.000000)">
                     <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                        <tspan x="0.863" y="21">ICSP</tspan>
+                        <tspan x="0.5395" y="14">LED</tspan>
                     </text>
+                    <use id="Rectangle-7" stroke="#EEEEEE" mask="url(#mask-194)" stroke-width="4" fill="#23ABE3" transform="translate(41.500000, 9.500000) rotate(-270.000000) translate(-41.500000, -9.500000) " xlink:href="#path-193"></use>
                 </g>
-                <g id="LED" transform="translate(304.000000, 375.000000)">
-                    <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
-                        <tspan x="0.5395" y="16">LED</tspan>
-                    </text>
-                    <use id="Rectangle-7" stroke="#EEEEEE" mask="url(#mask-200)" stroke-width="4" fill="#23ABE3" xlink:href="#path-199"></use>
-                </g>
-                <g id="Micro-USB" transform="translate(200.000000, 33.000000)">
-                    <use stroke="#999999" mask="url(#mask-202)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-201"></use>
+                <g id="Micro-USB" transform="translate(220.000000, 35.000000)">
+                    <use stroke="#999999" mask="url(#mask-196)" stroke-width="2" fill="#EEEEEE" xlink:href="#path-195"></use>
                     <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
                         <tspan x="3.657" y="14">Micro</tspan>
                         <tspan x="8.0285" y="31">USB</tspan>
                     </text>
                 </g>
-                <g id="Power-Notes" transform="translate(402.000000, 43.000000)" font-family="Lato-Regular, Lato" fill="#555555" font-weight="normal">
+                <g id="Power-Notes" transform="translate(402.000000, 45.000000)" font-family="Lato-Regular, Lato" fill="#555555" font-weight="normal">
                     <text id="Max.-GPIO-Current:-2" font-size="14">
                         <tspan x="6" y="34">Max. GPIO Current: 25mA/pin</tspan>
                     </text>
-                    <text id="Power:" font-size="16">
-                        <tspan x="0" y="16">Power:</tspan>
+                    <text id="Power-Tolerance-and" font-size="16">
+                        <tspan x="0" y="16">Power Tolerance and Output:</tspan>
                     </text>
                     <text id="Max.-MCU-Output-Curr" font-size="14">
                         <tspan x="6" y="49">Max. MCU Output Current: 125mA</tspan>

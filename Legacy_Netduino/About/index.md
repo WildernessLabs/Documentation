@@ -19,10 +19,30 @@ title: About Netduino
 
 ![N3 Pinout Diagram](Netduino3_Pinout.svg)
 
+* Micro SD Support up to 2GB
+
+| Model       | MCU                | Flash   | RAM     | Network |
+|-------------|--------------------|---------|---------|---------|
+| N3          | Cortex-M4 @ 168MHz | 384KB   | 164+ KB | n/a     |
+| N3 Ethernet | Cortex-M4 @ 168MHz | 1408KB  | 164+ KB | 10/100Mbs Ethernet |
+| N3 WiFi     | Cortex-M4 @ 168MHz | 1408KB  | 164+ KB | 802.11b/g/n with SSL/TLS 1.2 Support |
+
+
 # Netduino 2
 
 [2 models, N2, N2+ which has ethernet]
 [link to n2 page on wildernesslabs.co]
+
+![N2 Pinout Diagram](Netduino2_Pinout.svg)
+
+* Micro SD Support up to 2GB
+
+| Model  | MCU                | Flash   | RAM     | Network |
+|--------|--------------------|---------|---------|---------|
+| N2     | Cortex-M3 @ 120MHz | 192KB   | 60 KB   | n/a     |
+| N2+    | Cortex-M4 @ 168MHz | 384KB   | 100+ KB | 10Mbs Ethernet |
+
+
 
 # Older Netduinos
 

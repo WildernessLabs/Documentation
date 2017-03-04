@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="638px" height="466px" viewBox="0 0 638 466" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="638px" height="457px" viewBox="0 0 638 457" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
     <title>Netduino3_Pinout</title>
     <desc>Created with Sketch.</desc>
@@ -410,8 +410,9 @@
         </mask>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(-281.000000, -144.000000)">
-            <g id="Netduino3_Pinout" transform="translate(257.000000, 118.000000)">
+        <g id="Desktop" transform="translate(-811.000000, -144.000000)">
+            <g id="Netduino3_Pinout" transform="translate(787.000000, 118.000000)">
+                <rect id="Rectangle-8" x="0" y="0" width="685" height="524"></rect>
                 <use id="Rectangle-3" stroke="#23ABE3" mask="url(#mask-2)" stroke-width="6" fill="#555555" xlink:href="#path-1"></use>
                 <text id="BTN" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
                     <tspan x="361.1015" y="77">BTN</tspan>
@@ -706,20 +707,20 @@
                         </text>
                     </g>
                     <g id="SDA" transform="translate(100.000000, 15.000000)">
-                        <use id="Rectangle-Copy-5" stroke="#555555" mask="url(#mask-122)" stroke-width="2" fill="#23ABE3" xlink:href="#path-121"></use>
-                        <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                        <use id="Rectangle-Copy-5" stroke="#555555" mask="url(#mask-122)" stroke-width="2" fill="#7ED321" xlink:href="#path-121"></use>
+                        <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
                             <tspan x="3.7765" y="14">SDA</tspan>
                         </text>
                     </g>
                     <g id="SCL" transform="translate(100.000000, 0.000000)">
-                        <use id="Rectangle-Copy-5" stroke="#555555" mask="url(#mask-124)" stroke-width="2" fill="#23ABE3" xlink:href="#path-123"></use>
-                        <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                        <use id="Rectangle-Copy-5" stroke="#555555" mask="url(#mask-124)" stroke-width="2" fill="#7ED321" xlink:href="#path-123"></use>
+                        <text font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
                             <tspan x="5.432" y="14">SCL</tspan>
                         </text>
                     </g>
                     <g id="SCL-Copy" transform="translate(150.000000, 2.000000)">
-                        <use id="Rectangle-Copy-5" stroke="#555555" mask="url(#mask-126)" stroke-width="2" fill="#23ABE3" xlink:href="#path-125"></use>
-                        <text id="I2C" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#EEEEEE">
+                        <use id="Rectangle-Copy-5" stroke="#555555" mask="url(#mask-126)" stroke-width="2" fill="#7ED321" xlink:href="#path-125"></use>
+                        <text id="I2C" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" fill="#555555">
                             <tspan x="13.804" y="20">I2C</tspan>
                         </text>
                     </g>
@@ -997,21 +998,6 @@
                         <tspan x="6" y="80">IOREF: 3.3V (For shield compatibility)</tspan>
                     </text>
                 </g>
-                <g id="Notes" transform="translate(404.000000, 423.000000)" font-family="Lato-Regular, Lato" fill="#555555" font-weight="normal">
-                    <text id="Micro-SD-support-up" font-size="14">
-                        <tspan x="6" y="34">Micro SD support up to 2GB</tspan>
-                    </text>
-                    <text id="Notes:" font-size="16">
-                        <tspan x="0" y="16">Notes:</tspan>
-                    </text>
-                    <text id="N3WiFi:-802.11-b/g/n" font-size="14">
-                        <tspan x="6" y="50">N3WiFi: 802.11 b/g/n + SSL/TLS 1.2</tspan>
-                    </text>
-                    <text id="N3Ethernet:-10/100Mb" font-size="14">
-                        <tspan x="6" y="66">N3Ethernet: 10/100Mbps</tspan>
-                    </text>
-                </g>
-                <rect id="Rectangle-8" x="0" y="0" width="685" height="524"></rect>
             </g>
         </g>
     </g>
