@@ -1,25 +1,4 @@
----
-title: File Storage
----
-
-Netduino 2 and 3 can access up to 2GB of storage on a Micro SD Card. Some models have an SD card slot on the board, but models that don't have one built in can use an SD Card Shield. 
-
-Accessing and writing to an SD card is generally the same as in regular .NET. However, you'll need to make sure that the following DLLs are referenced:
-
- * `Microsoft.SPOT.IO`
- * `SecretLabs.NETMF.IO`
- * `System.IO`
-
-When a SD card is inserted into the Netduino, it is mounted as the "SD" volume, so for example, a file called `test.txt` in the root directory of the card would be accessed via the following path:
-
-`var path = Path.Combine("SD","test.txt");`
-
-The other thing to keep in mind, is that after writing to a file, `FlushAll()` should be called on the Volume in order to force a write. Otherwise, when the file is written will be indeterminate.
-
-The following sample illustrates writing some text to a file called `test.txt` to the SD card. It also outputs some general information about the card such as how much free space it has:
-
-```
-using System;
+﻿using System;
 using System.IO;
 using Microsoft.SPOT;
 using Microsoft.SPOT.IO;
@@ -68,6 +47,11 @@ namespace SDCardIO
 			}
 
 		}
+
+		public static bool SDExists()
+		{
+			return (new VolumeInfo ("SD") != null);
+		}
+
 	}
 }
-```
