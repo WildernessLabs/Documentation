@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : UART</title>
+        <title>Wilderness Labs : Analog I/O</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -65,26 +65,26 @@
                         <div id="navigation" class="col-sm-3">
                             <div class="NavHeader">Netduino</div>
 <ul class="navigation">
-    <li class="active"><a href="/Legacy_Netduino/Getting_Started">Getting Started</a></li>
-    <li><a href="/Legacy_Netduino/About">About Netduino</a>
+    <li class="active"><a href="/Netduino/Getting_Started">Getting Started</a></li>
+    <li><a href="/Netduino/About">About Netduino</a>
         <ul>
-            <li><a href="/Legacy_Netduino/About/Input_Output">IO</a>
+            <li><a href="/Netduino/About/Input_Output">IO</a>
                 <ul>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Analog/">Analog</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Digital/">Digital</a>
+                    <li><a href="/Netduino/About/Input_Output/Analog/">Analog</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Digital/">Digital</a>
                         <ul>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li><a href="/Legacy_Netduino/About/Updating_Firmware">Updating Firmware</a></li>
+    <li><a href="/Netduino/About/Updating_Firmware">Updating Firmware</a></li>
 </ul>
 
 <div class="NavHeader">App Fundamentals</div>
@@ -175,12 +175,21 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>UART
+    <h2>Analog I/O
         
     </h2>
 </div>
 
+<p>[Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal.]</p>
 
+<p>[1024 bit resolution (0-1023 value)]
+[3.3v max; be careful with inputs]</p>
+
+<h2 id="input">Input</h2>
+<p>[sample code reading a thermistor or other sensor]</p>
+
+<h2 id="output">Output</h2>
+<p>[sample code/project driving an LED with a potentiometer]</p>
 
 
                         </div>

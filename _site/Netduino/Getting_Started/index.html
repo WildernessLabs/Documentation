@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : Analog I/O</title>
+        <title>Wilderness Labs : Getting Started with Netduino</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -65,26 +65,26 @@
                         <div id="navigation" class="col-sm-3">
                             <div class="NavHeader">Netduino</div>
 <ul class="navigation">
-    <li class="active"><a href="/Legacy_Netduino/Getting_Started">Getting Started</a></li>
-    <li><a href="/Legacy_Netduino/About">About Netduino</a>
+    <li class="active"><a href="/Netduino/Getting_Started">Getting Started</a></li>
+    <li><a href="/Netduino/About">About Netduino</a>
         <ul>
-            <li><a href="/Legacy_Netduino/About/Input_Output">IO</a>
+            <li><a href="/Netduino/About/Input_Output">IO</a>
                 <ul>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Analog/">Analog</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Digital/">Digital</a>
+                    <li><a href="/Netduino/About/Input_Output/Analog/">Analog</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Digital/">Digital</a>
                         <ul>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li><a href="/Legacy_Netduino/About/Updating_Firmware">Updating Firmware</a></li>
+    <li><a href="/Netduino/About/Updating_Firmware">Updating Firmware</a></li>
 </ul>
 
 <div class="NavHeader">App Fundamentals</div>
@@ -175,21 +175,169 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>Analog I/O
+    <h2>Getting Started with Netduino
         
     </h2>
 </div>
 
-<p>[Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal.]</p>
+<p>Instructions for Netduino 2, 3, and Go! boards.</p>
 
-<p>[1024 bit resolution (0-1023 value)]
-[3.3v max; be careful with inputs]</p>
+<h1 id="installation">Installation</h1>
+<p>First, configure your development environment by installing the necessary software.</p>
 
-<h2 id="input">Input</h2>
-<p>[sample code reading a thermistor or other sensor]</p>
+<h2 id="windows">Windows</h2>
+<p>Download and run the following:</p>
 
-<h2 id="output">Output</h2>
-<p>[sample code/project driving an LED with a potentiometer]</p>
+<ol>
+  <li><a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/MicroFrameworkSDK.MSI">.NET Micro Framework (NETMF) SDK (v4.3.2. QFE2)</a></li>
+  <li>NETMF Plugin for Visual Studio (VS) 2015 or <a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/netmfvs2013.vsix">VS 2013</a></li>
+  <li>Netduino SDK v5</li>
+</ol>
+
+<h2 id="mac">Mac</h2>
+<p>Download and install the latest Xamarin Studio.</p>
+
+<p>Launch Xamarin Studio and install the NETMF plug-in:</p>
+
+<ol>
+  <li>Open the <em>Xamarin Studio</em> menu and select <em>Add-ins…</em>.</li>
+  <li>Select the <em>Gallery</em> Tab.</li>
+  <li>In the <em>search</em> box, type <code class="highlighter-rouge">MicroFramework</code>:
+<img src="MicroFramework_Addin.png" alt="MicroFramework Search Dialog" /></li>
+  <li>Click <em>install</em> and follow the directions.</li>
+  <li>Restart Xamarin Studio.</li>
+</ol>
+
+<h1 id="make-sure-the-board-firmware-is-up-to-date">Make Sure the Board Firmware is Up to Date</h1>
+<p>Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware. Firmware update instructions are <a href="../About/Updating_Firmware">here</a>.</p>
+
+<h1 id="create-your-first-app">Create your First App</h1>
+
+<h2 id="xamarin-studio">Xamarin Studio</h2>
+
+<ol>
+  <li>
+    <p>Launch Xamarin Studio and create a new solution of type <strong>C# &gt; MicroFramework &gt; MicroFramework Console Applicaiton</strong> and name it whatever you want:
+<img src="01-NewSolution_XS.png" alt="New Solution Dialog" /></p>
+  </li>
+  <li>
+    <p>Double-click on the <strong>References</strong> folder in the Solution Pad and add:
+ 	* Microsoft.Spot.Hardware
+ 	* SecretLabs.NETMF.Hardware
+ 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that’s what you’re using)</p>
+  </li>
+</ol>
+
+<h2 id="visual-studio">Visual Studio</h2>
+
+<ol>
+  <li>
+    <p>Launch Visual Studio and create a new solution of type <strong>Visual C# &gt; Micro Framework &gt; Console Application</strong> and name it whatever you want:
+ <img src="02-New_Solution_VS.png" alt="New Solution Dialog" /></p>
+  </li>
+  <li>
+    <p>Right-click on the <strong>References</strong> folder in the Solution Explorer and add:
+ 	* Microsoft.Spot.Hardware
+ 	* SecretLabs.NETMF.Hardware
+ 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that’s what you’re using)</p>
+  </li>
+</ol>
+
+<h2 id="add-the-code">Add the Code</h2>
+
+<p>After you’ve created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet’s name:</p>
+
+<pre><code class="language-CSharp">using System;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using System.Threading;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace NetduinoBlink
+{
+	public class Program
+	{
+		public static void Main()
+		{
+			// configure an output port for us to "write" to the LED
+			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false); 
+			// note that if we didn't have the SecretLabs.NETMF.Hardware.Netduino DLL, we could also manually access it this way:
+			//OutputPort led = new OutputPort(Cpu.Pin.GPIO_Pin10, false); 
+			int i = 0;
+			while (true) 
+			{ 
+				led.Write(true); // turn on the LED 
+				Thread.Sleep(250); // sleep for 250ms 
+				led.Write(false); // turn off the LED 
+				Thread.Sleep(250); // sleep for 250ms 
+
+				Debug.Print ("Looping" + i);
+				i++;
+			} 
+
+		}
+	}
+}
+</code></pre>
+
+<p>This code does the following things:</p>
+
+<ol>
+  <li>It creates an OutputPort. An OutputPort allows you to “Write” to a pin, e.g. power it on or off.</li>
+  <li>Loops forever, writing to the port on, then waiting 250ms, then turning it on.</li>
+  <li>Prints to the Debug window the loop iteration it’s on.</li>
+</ol>
+
+<h2 id="deploy">Deploy</h2>
+
+<h3 id="xamarin-studio-1">Xamarin Studio</h3>
+
+<ol>
+  <li>
+    <p>Make sure your Netduino is plugged in. It should show up in the build bar at the top:
+<img src="03-Build_Bar.png" alt="Xamarin Studio Build Bar" /></p>
+  </li>
+  <li>
+    <p>Hit the “&gt;” button to deploy.</p>
+  </li>
+</ol>
+
+<p>The app should deploy and after a moment, the LED should start blinking on the Netduino:</p>
+
+<p><img src="05-blinking_Netduino.gif" alt="" /></p>
+
+<p>You should also see the debug output in the <strong>Application Output</strong> window:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Deploy: Deploying assemblies to device
+Deploy: Deploying assemblies for a total size of 560 bytes
+Deploy: Assemblies successfully deployed to device.
+
+...
+Looping0
+Looping1
+Looping2
+Looping3
+</code></pre>
+</div>
+
+<h3 id="visual-studio-1">Visual Studio</h3>
+
+<ol>
+  <li>
+    <p>Make sure your Netduino is plugged in.</p>
+  </li>
+  <li>
+    <p>Double-click on the <strong>Properties</strong> item in the Solution Explorer, select <strong>.NET Micro Framework</strong> on the left, and the under <strong>Deployment</strong> choose <strong>USB</strong> and in the <strong>Device</strong> drop down, choose your Netduino device:
+ <img src="04-VS_Device_Choose.png" alt="Device Chooser" /></p>
+  </li>
+  <li>
+    <p>Click the <strong>Start &gt;</strong> button in the toolbar to deploy to yoru device.</p>
+  </li>
+</ol>
+
+<p>The app should deploy and after a moment, the LED should start blinking on the Netduino:</p>
+
+<p><img src="05-blinking_Netduino.gif" alt="" /></p>
 
 
                         </div>

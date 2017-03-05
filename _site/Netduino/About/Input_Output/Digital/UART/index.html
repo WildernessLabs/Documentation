@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : About Netduino</title>
+        <title>Wilderness Labs : UART</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -65,26 +65,26 @@
                         <div id="navigation" class="col-sm-3">
                             <div class="NavHeader">Netduino</div>
 <ul class="navigation">
-    <li class="active"><a href="/Legacy_Netduino/Getting_Started">Getting Started</a></li>
-    <li><a href="/Legacy_Netduino/About">About Netduino</a>
+    <li class="active"><a href="/Netduino/Getting_Started">Getting Started</a></li>
+    <li><a href="/Netduino/About">About Netduino</a>
         <ul>
-            <li><a href="/Legacy_Netduino/About/Input_Output">IO</a>
+            <li><a href="/Netduino/About/Input_Output">IO</a>
                 <ul>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Analog/">Analog</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Digital/">Digital</a>
+                    <li><a href="/Netduino/About/Input_Output/Analog/">Analog</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Digital/">Digital</a>
                         <ul>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li><a href="/Legacy_Netduino/About/Updating_Firmware">Updating Firmware</a></li>
+    <li><a href="/Netduino/About/Updating_Firmware">Updating Firmware</a></li>
 </ul>
 
 <div class="NavHeader">App Fundamentals</div>
@@ -175,109 +175,12 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>About Netduino
+    <h2>UART
         
     </h2>
 </div>
 
-<p>(general info)</p>
 
-<p>[open source hardware platform that runs the .net micro framework.]</p>
-
-<p>[similar in concept to arduino, but much more powerful, with high level language constructs, threading, event handling, etc.]</p>
-
-<p>[used by folks to build; home automation, industrial machinery like CNCs, etc. (need to come up with a list of cool things folks have done)]</p>
-
-<p>[code in Visual Studio on Windows or Xamarin Studio on Mac]</p>
-
-<h1 id="netduino-3">Netduino 3</h1>
-
-<p>[3 models, N3 (no internet), N3Ethernet, N3WiFi)]
-[link to netduino page on wildernesslabs.co]</p>
-
-<p><img src="Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
-
-<ul>
-  <li>Micro SD Support up to 2GB</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>MCU</th>
-      <th>Flash</th>
-      <th>RAM</th>
-      <th>Network</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>N3</td>
-      <td>Cortex-M4 @ 168MHz</td>
-      <td>384KB</td>
-      <td>164+ KB</td>
-      <td>n/a</td>
-    </tr>
-    <tr>
-      <td>N3 Ethernet</td>
-      <td>Cortex-M4 @ 168MHz</td>
-      <td>1408KB</td>
-      <td>164+ KB</td>
-      <td>10/100Mbs Ethernet</td>
-    </tr>
-    <tr>
-      <td>N3 WiFi</td>
-      <td>Cortex-M4 @ 168MHz</td>
-      <td>1408KB</td>
-      <td>164+ KB</td>
-      <td>802.11b/g/n with SSL/TLS 1.2 Support</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 id="netduino-2">Netduino 2</h1>
-
-<p>[2 models, N2, N2+ which has ethernet]
-[link to n2 page on wildernesslabs.co]</p>
-
-<p><img src="Netduino2_Pinout.svg" alt="N2 Pinout Diagram" /></p>
-
-<ul>
-  <li>Micro SD Support up to 2GB</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>MCU</th>
-      <th>Flash</th>
-      <th>RAM</th>
-      <th>Network</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>N2</td>
-      <td>Cortex-M3 @ 120MHz</td>
-      <td>192KB</td>
-      <td>60 KB</td>
-      <td>n/a</td>
-    </tr>
-    <tr>
-      <td>N2+</td>
-      <td>Cortex-M4 @ 168MHz</td>
-      <td>384KB</td>
-      <td>100+ KB</td>
-      <td>10Mbs Ethernet</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 id="older-netduinos">Older Netduinos</h1>
-
-<p>[some older models, too, but they’ve been end of lifed]</p>
 
 
                         </div>

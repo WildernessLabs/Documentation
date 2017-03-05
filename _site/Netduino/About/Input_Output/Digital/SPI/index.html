@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : Onboard Button + LED</title>
+        <title>Wilderness Labs : SPI</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -65,26 +65,26 @@
                         <div id="navigation" class="col-sm-3">
                             <div class="NavHeader">Netduino</div>
 <ul class="navigation">
-    <li class="active"><a href="/Legacy_Netduino/Getting_Started">Getting Started</a></li>
-    <li><a href="/Legacy_Netduino/About">About Netduino</a>
+    <li class="active"><a href="/Netduino/Getting_Started">Getting Started</a></li>
+    <li><a href="/Netduino/About">About Netduino</a>
         <ul>
-            <li><a href="/Legacy_Netduino/About/Input_Output">IO</a>
+            <li><a href="/Netduino/About/Input_Output">IO</a>
                 <ul>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Analog/">Analog</a></li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Digital/">Digital</a>
+                    <li><a href="/Netduino/About/Input_Output/Analog/">Analog</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Digital/">Digital</a>
                         <ul>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
-                            <li><a href="/Legacy_Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/I2C/">I2C</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/SPI/">SPI</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/PWM/">PWM</a></li>
+                            <li><a href="/Netduino/About/Input_Output/Digital/UART/">UART (Serial)</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Legacy_Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
+                    <li><a href="/Netduino/About/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li><a href="/Legacy_Netduino/About/Updating_Firmware">Updating Firmware</a></li>
+    <li><a href="/Netduino/About/Updating_Firmware">Updating Firmware</a></li>
 </ul>
 
 <div class="NavHeader">App Fundamentals</div>
@@ -175,105 +175,12 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>Onboard Button + LED
+    <h2>SPI
         
     </h2>
 </div>
 
-<p>[LED available via <code class="highlighter-rouge">Pins.ONBOARD_LED</code>]</p>
 
-<p>[Button available via <code class="highlighter-rouge">Pins.ONBOARD_BTN</code>]</p>
-
-<h2 id="inputport-and-outputport">InputPort and OutputPort</h2>
-
-<p>Can access them via <code class="highlighter-rouge">OutputPort</code> or <code class="highlighter-rouge">InputPort</code>. Following example illustrates turning the LED on when the Button is pressed.</p>
-
-<pre><code class="language-CSharp">using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
-
-namespace OnboardButtonAndLed
-{
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
-		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
-		static InputPort _button = new InputPort((Cpu.Pin)0x15, false, Port.ResistorMode.Disabled);
-
-		static bool _buttonPressed = false;
-
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
-
-			// run forever
-			while (true)
-			{
-				// set the onboard LED output to be the input of the button
-				_led.Write(_button.Read());
-			}
-
-		}
-	}
-}
-
-</code></pre>
-
-<h2 id="interruptports">InterruptPorts</h2>
-
-<p>Button can also be set as an InterruptPort which raises events:</p>
-
-<pre><code class="language-CSharp">using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
-
-namespace ButtonInterruptEvents
-{
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
-
-		// An interrupt port raises events when its value changes. in this case, 
-		// we use it to create an event when the button is clicked.
-		// We set the Interrupt mode to raise an event on both edges of the signal;
-		// both down, and up.
-		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
-			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
-		
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
-
-			// wire up the interrupt to our event handler
-			_button.OnInterrupt += handleButtonClick;
-
-			// run forever
-			while (true)
-			{
-				
-			}
-
-		}
-
-		static void handleButtonClick (uint port, uint data, DateTime time)
-		{
-			// will be 1 when pressed (raised high), and 0, when unpressed
-			Debug.Print ("Data: " + data.ToString ());
-			_led.Write (data == 1);
-		}
-	}
-}
-</code></pre>
-
-<h2 id="further-reading">Further Reading</h2>
-
-<p>[Working with Switches and Buttons]</p>
 
 
                         </div>
