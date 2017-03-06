@@ -8,7 +8,7 @@ Configure your development environment, update your Netduino, and build your fir
 
 # [Samples](Samples/Netduino)
 
-# [Hardware Fundamentals](Hardware)
+# [Hardware Fundamentals](Hardware/Overview)
 
 Creating circuits, types of components, etc.
 
