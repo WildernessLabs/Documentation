@@ -7,6 +7,8 @@ title: Onboard Button + LED
 
 [Button available via `Pins.ONBOARD_BTN`]
 
+[reset's the Netduino by default. Need to initialize it as an `InputPort` or `OutputPort` to disable reset.]
+
 ## InputPort and OutputPort
 
 Can access them via `OutputPort` or `InputPort`. Following example illustrates turning the LED on when the Button is pressed.
