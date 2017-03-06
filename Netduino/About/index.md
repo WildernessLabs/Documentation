@@ -42,7 +42,8 @@ title: About Netduino
 | N2     | Cortex-M3 @ 120MHz | 192KB   | 60 KB   | n/a     |
 | N2+    | Cortex-M4 @ 168MHz | 384KB   | 100+ KB | 10Mbs Ethernet |
 
-
+# Powering Netduino
+[VIN from Power Barrel or USB. If VIN present, then that powers. Otherwise, USB]
 
 # Older Netduinos
 

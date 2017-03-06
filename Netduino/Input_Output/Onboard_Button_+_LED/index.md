@@ -5,9 +5,13 @@ title: Onboard Button + LED
 
 [LED available via `Pins.ONBOARD_LED`]
 
+[Turns on briefly when power is turned on, and after boot.]
+
 [Button available via `Pins.ONBOARD_BTN`]
 
 [reset's the Netduino by default. Need to initialize it as an `InputPort` or `OutputPort` to disable reset.]
+
+[Also a power LED, and a Network LED for boards equipped with Ethernet or WiFi support. ]
 
 ## InputPort and OutputPort
 
