@@ -192,26 +192,25 @@
     </h2>
 </div>
 
-<p>(general info)</p>
+<p>Netduino is an <a href="/Source/">open source</a> hardware platform that runs applications built with the .NET MicroFramework. Applications can be built on Windows (with Visual Studio), or on Mac OS (with Xamarin Studio).  Netduino can be used to build nearly any <em>Connected Thing</em> you can dream up.</p>
 
-<p>[open source hardware platform that runs the .net micro framework.]</p>
+<p>It’s similar in concept to the <a href="http://arduino.cc">Arduino</a> platform, but is generally more powerful and instead of writing applications in C/C++ or <em>Wiring</em> (essentially, C++ without header files), applications are written in C#, which brings powerful, high-level language constructs to the toolbox such as threading, event handling, automatic garbage collection, and more.</p>
 
-<p>[similar in concept to arduino, but much more powerful, with high level language constructs, threading, event handling, etc.]</p>
+<p>Netduino provides a robust hardware reference platform that allows easy experimentation and rapid prototyping for hobbyists and professionals alike. Netduino has been used by folks to build home automation gadgets, industrial machinery like CNCs, and more.</p>
 
-<p>[used by folks to build; home automation, industrial machinery like CNCs, etc. (need to come up with a list of cool things folks have done)]</p>
-
-<p>[code in Visual Studio on Windows or Xamarin Studio on Mac]</p>
+<p>The Netduino family consists of the Netduino 3, Netduino 2, and the original Netduino 1 lines. The original Netduino (1st generation) and Netduino Mini (also 1st generation), nave been replaced by the much nore powerful Netduino 2 and 3 lines.</p>
 
 <h1 id="netduino-3">Netduino 3</h1>
 
-<p>[3 models, N3 (no internet), N3Ethernet, N3WiFi)]
-[link to netduino page on wildernesslabs.co]</p>
+<p>Netduino 3 is offered in 3 different models, the N3 base model, N3 Ethernet model, and the N3 WiFi model; which vary by their internet connectivity mode and their code/flash storage size. The various models and links to buy them can be found at <a href="http://staging.wildernesslabs.co/Netduino">wildernesslabs.co/netduino</a></p>
 
-<p><img src="Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
+<h2 id="features--pinout">Features + Pinout</h2>
 
-<ul>
-  <li>Micro SD Support up to 2GB</li>
-</ul>
+<h3 id="features">Features</h3>
+
+<p>All N3 models support <a href="../Input_Output/File_Storage">persistent storage</a> with SD cards up to 2GB. Both the Ethernet and WiFi models have a Micro SD slot built in to the board. The base model can use SD cards via most <a href="https://www.google.com/search?q=arduino+SD+shield&amp;rlz=1C5CHFA_enUS724US724&amp;oq=arduino+SD+shield&amp;aqs=chrome..69i57j0l5.5394j0j7&amp;sourceid=chrome&amp;ie=UTF-8">Arduino SD Card add-on shields</a>.</p>
+
+<p>The N3 technical specifications are as follows:</p>
 
 <table>
   <thead>
@@ -248,16 +247,23 @@
   </tbody>
 </table>
 
+<h3 id="pinout-diagram">Pinout Diagram</h3>
+
+<p>For compatibility with Arduino hardware, Netduino has the same header and pin configuration as Arduino. The following diagram illustrates which features are available on which header/pin, as well as the location of major components:</p>
+
+<p><img src="Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
+
 <h1 id="netduino-2">Netduino 2</h1>
 
-<p>[2 models, N2, N2+ which has ethernet]
-[link to n2 page on wildernesslabs.co]</p>
+<p>Netduino 2 is offered in 2 different models, the N32 base model as well as the N2+, which adds 10Mb Ethernet, The various models and links to buy them can be found at <a href="http://staging.wildernesslabs.co/Netduino">wildernesslabs.co/netduino</a></p>
 
-<p><img src="Netduino2_Pinout.svg" alt="N2 Pinout Diagram" /></p>
+<h2 id="features--pinout-1">Features + Pinout</h2>
 
-<ul>
-  <li>Micro SD Support up to 2GB</li>
-</ul>
+<h3 id="features-1">Features</h3>
+
+<p>Both N2 models support <a href="../Input_Output/File_Storage">persistent storage</a> with SD cards up to 2GB, and the N2+ has a micro SD slot built-in. The base model can use SD cards via most <a href="https://www.google.com/search?q=arduino+SD+shield&amp;rlz=1C5CHFA_enUS724US724&amp;oq=arduino+SD+shield&amp;aqs=chrome..69i57j0l5.5394j0j7&amp;sourceid=chrome&amp;ie=UTF-8">Arduino SD Card add-on shields</a>.</p>
+
+<p>The N3 technical specifications are as follows:</p>
 
 <table>
   <thead>
@@ -287,12 +293,18 @@
   </tbody>
 </table>
 
+<h3 id="pinout-diagram-1">Pinout Diagram</h3>
+
+<p>For compatibility with Arduino hardware, Netduino has the same header and pin configuration as Arduino. The following diagram illustrates which features are available on which header/pin, as well as the location of major components:</p>
+
+<p><img src="Netduino2_Pinout.svg" alt="N2 Pinout Diagram" /></p>
+
 <h1 id="powering-netduino">Powering Netduino</h1>
-<p>[VIN from Power Barrel or USB. If VIN present, then that powers. Otherwise, USB]</p>
 
-<h1 id="older-netduinos">Older Netduinos</h1>
+<p>Netduino can be powered either via the built-in USB adapter or the power barrel (VIN). If VIN is present, then that power is used, otherwise, it must be powered via USB.</p>
 
-<p>[some older models, too, but they’ve been end of lifed]</p>
+<p>N3 will accept VIN of 5v to 12v. N2 will accept VIN of 5v to 9v.</p>
+
 
 
                         </div>
