@@ -111,6 +111,10 @@ ul.navigation li a:hover{
 	color:#23ABE3;
 }
 
+.NavHeader A {
+	color: #eee
+}
+
 body.rtl {
 	direction: rtl;
 }

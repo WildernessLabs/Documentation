@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : I/O (Input & Output)</title>
+        <title>Wilderness Labs : Downloads</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -187,50 +187,50 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>I/O (Input & Output)
+    <h2>Downloads
         
     </h2>
 </div>
 
-<p>Netduino is equipped with a varied set of Input and Output (I/O) ports that can be accessed from your application to read sensors, listen to button presses, light LEDs, drive motors, communicate with other systems, and lots more.</p>
+<h1 id="development-environment">Development Environment</h1>
 
-<p>Netduino IO ports are divided into two categories; <em>Digital</em> and <em>Analog</em>.</p>
-
-<p><img src="../About/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
-
-<h2 id="general-purpose-inputoutput-gpio-ports">General Purpose Input/Output (GPIO) Ports</h2>
-
-<h3 id="digitaldigital"><a href="Digital/">Digital</a></h3>
-
-<p>The Digital ports can be set to be high (powered at 3.3v), or low (grounded at 0v) which correspond to digital 1 and 0, respectively. Additionally, they have built-in support for a host of different types of common digital communication protocols:</p>
+<h2 id="windows">Windows</h2>
 
 <ul>
-  <li><a href="Digital/CAN/">I2C (CAN)</a></li>
-  <li><a href="Digital/PWM/">PWM</a></li>
-  <li><a href="Digital/SPI/">SPI</a></li>
-  <li><a href="Digital/UART/">UART (Serial)</a></li>
+  <li><a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/MicroFrameworkSDK.MSI">.NET Micro Framework (NETMF) SDK v4.3.2 - QFE2</a></li>
+  <li>NETMF Plugin:
+    <ul>
+      <li>VS2015</li>
+      <li><a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/netmfvs2013.vsix">VS2013</a></li>
+    </ul>
+  </li>
+  <li><a href="http://static.netduino.com/downloads/netduinosdk/netduinosdk.exe">Netduino SDK V5</a></li>
 </ul>
 
-<h3 id="analog-portsanalog"><a href="Analog/">Analog Ports</a></h3>
-
-<p>Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal.</p>
-
-<h3 id="current-tolerance-and-output">Current Tolerance and Output</h3>
+<h2 id="mac">Mac</h2>
 
 <ul>
-  <li><strong>Maximum GPIO Current</strong> - 25mA/pin.</li>
-  <li><strong>Maximum MCU Output Current</strong> - 125mA.</li>
-  <li><strong>Digital I/O</strong> - 3.3V nominal, but tolerant up to 5V.</li>
-  <li><strong>IOREF</strong> - 3.3V (for shield compatibility).</li>
+  <li>Xamarin Studio</li>
+  <li>Firmware Updater and Deployment tool</li>
+  <li>NETMF Plugin for Xamarin Studio (instructions)</li>
 </ul>
 
-<h2 id="onboard-button--ledonboardbuttonled"><a href="Onboard_Button_+_LED">Onboard Button &amp; LED</a></h2>
+<h1 id="firmware">Firmware</h1>
 
-<p>In addition to the Analog and Digital Headers, the Netduino has an LED and a Button built into it that you can access from code.</p>
+<ul>
+  <li><a href="http://static.netduino.com/downloads/netduinoupdate/NetduinoUpdate_4.3.2.3.zip">v4.3.2.3</a></li>
+</ul>
 
-<h2 id="sd-cardfilestorage"><a href="File_Storage">SD Card</a></h2>
+<h1 id="discontinued-products-netduino-1-plus--mini">Discontinued Products (Netduino 1, Plus, &amp; Mini)</h1>
 
-<p>Netduino 2 and 3 can access up to 2GB of storage on a Micro SD Card. Some models have an SD card slot on the board, but models that don’t have one built in can use an SD Card Shield.</p>
+<h2 id="development-environment-windows-only">Development Environment (Windows Only)</h2>
+
+<ul>
+  <li><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-csharp-2010-express">Visual Studio Express 2010</a></li>
+  <li><a href="http://static.netduino.com/downloads/MicroFrameworkSDK_NETMF42_QFE2.MSI">NETMF SDK 4.2</a></li>
+  <li>Netduino SDK 4.2.2.0 <a href="http://static.netduino.com/downloads/netduinosdk_32bit_NETMF42.exe">32 bit</a> or <a href="http://static.netduino.com/downloads/netduinosdk_64bit_NETMF42.exe">64 bit</a></li>
+</ul>
+
 
 
                         </div>
