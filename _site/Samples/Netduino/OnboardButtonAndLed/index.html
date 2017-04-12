@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : Digital I/O</title>
+        <title>Wilderness Labs</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -187,109 +187,12 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>Digital I/O
+    <h2>
         
     </h2>
 </div>
 
-<p>Digital ports are useful for binary communication in which the port is either high/on (powered at 3.3v) or low/off (grounded at 0v). High represents a digital 1, and low represents 0.</p>
 
-<p>Additionally, Netduion provides built-in support for a host of different types of common digital communication protocols via the digital ports.</p>
-
-<ul>
-  <li><a href="Digital/CAN/">I2C (CAN)</a> - [explain]</li>
-  <li><a href="Digital/PWM/">PWM</a> - [signal pulses for analog-like functionality]</li>
-  <li><a href="Digital/SPI/">SPI</a> -</li>
-  <li><a href="Digital/UART/">UART (Serial)</a></li>
-</ul>
-
-<p>[available via different pins on the board:]</p>
-
-<p><img src="../../About/Netduino3_Pinout.svg" alt="" /></p>
-
-<h2 id="pulling-high-or-low">Pulling High or Low</h2>
-
-<p>Digital ports can be set to stand at a high or low current, in what’s knows as <em>pulling</em> them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v.</p>
-
-<h2 id="input-ports">Input Ports</h2>
-
-<p>For example, the following code initializes an <code class="highlighter-rouge">InputPort</code> (used for reading the port’s value) on GPIO Digital Pin #2 that’s pulled down to 0v, so that by default, it doesn’t have a current running through it:</p>
-
-<pre><code class="language-CSharp">var inputPort = new InputPort(Cpu.Pin.GPIO_Pin2, false,
-Port.ResistorMode.PullDown);
-</code></pre>
-
-<p>The port’s value can then be accessed via the <code class="highlighter-rouge">Read</code> method:</p>
-
-<pre><code class="language-CSharp">bool state = inputPort.Read();
-</code></pre>
-
-<h3 id="events">Events</h3>
-
-<p>In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port’s value changes, for example, in response to a button being pressed that connnects a circuit and raises the input port’s current from low (0v) to high (3.3v).</p>
-
-<p>For example, the <a href="/Samples/Netduino/ButtonInteruptEvents">Button Interrupt Events Sample</a> illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
-
-namespace ButtonInterruptEvents
-{
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
-
-		// An interrupt port raises events when its value changes. in this case, 
-		// we use it to create an event when the button is clicked.
-		// We set the Interrupt mode to raise an event on both edges of the signal;
-		// both down, and up.
-		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
-			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
-		
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
-
-			// wire up the interrupt to our event handler
-			_button.OnInterrupt += handleButtonClick;
-
-			// run forever
-			while (true)
-			{
-				
-			}
-
-		}
-
-		static void handleButtonClick (uint port, uint data, DateTime time)
-		{
-			// will be 1 when pressed (raised high), and 0, when unpressed
-			Debug.Print ("Data: " + data.ToString ());
-			_led.Write (data == 1);
-		}
-	}
-}
-</code></pre>
-</div>
-
-<h3 id="glitch-filtering">Glitch Filtering</h3>
-<p>[todo]</p>
-
-<h2 id="output">Output</h2>
-
-<p>To write to a port, an <code class="highlighter-rouge">OutputPort</code> is instantiated. The code below is from the same <a href="/Samples/Netduino/ButtonInteruptEvents">Button Interrupt Events Sample</a>:</p>
-
-<pre><code class="language-CSharp">static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
-</code></pre>
-
-<p>To send a signal to the port, the <code class="highlighter-rouge">Write</code> method is called, passing in <code class="highlighter-rouge">false</code> for a low signal (0v), or <code class="highlighter-rouge">true</code> for a high (3.3v) signal:</p>
-
-<pre><code class="language-CSharp">_led.Write(false); 
-</code></pre>
 
 
                         </div>
