@@ -19,11 +19,18 @@ Additionally, Netduion provides built-in support for a host of different types o
 
 Digital ports can be set to stand at a high or low current, in what's knows as _pulling_ them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v. 
 
+The following is the signature for one of the `InputPort` constructors:
+
+```CSharp
+public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
+```
+
 
 ## Input Ports
 
 
 For example, the following code initializes an `InputPort` (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to 0v, so that by default, it doesn't have a current running through it:
+
 
 ```CSharp
 var inputPort = new InputPort(Cpu.Pin.GPIO_Pin2, false,Port.ResistorMode.PullDown);
@@ -88,7 +95,12 @@ namespace ButtonInterruptEvents
 ```
 
 ### Glitch Filtering
-[todo]
+
+
+```
+Cpu.GlitchFilterTime = new TimeSpan(0, 0, 0, 0, 5);
+```
+
 
 ## Output
 

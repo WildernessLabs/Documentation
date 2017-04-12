@@ -211,6 +211,11 @@
 
 <p>Digital ports can be set to stand at a high or low current, in what’s knows as <em>pulling</em> them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v.</p>
 
+<p>The following is the signature for one of the <code class="highlighter-rouge">InputPort</code> constructors:</p>
+
+<pre><code class="language-CSharp">public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
+</code></pre>
+
 <h2 id="input-ports">Input Ports</h2>
 
 <p>For example, the following code initializes an <code class="highlighter-rouge">InputPort</code> (used for reading the port’s value) on GPIO Digital Pin #2 that’s pulled down to 0v, so that by default, it doesn’t have a current running through it:</p>
@@ -277,7 +282,10 @@ namespace ButtonInterruptEvents
 </div>
 
 <h3 id="glitch-filtering">Glitch Filtering</h3>
-<p>[todo]</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Cpu.GlitchFilterTime = new TimeSpan(0, 0, 0, 0, 5);
+</code></pre>
+</div>
 
 <h2 id="output">Output</h2>
 
