@@ -2,6 +2,8 @@
 title: Downloads
 ---
 
+Download links for Netduino are enumerated here for convenience. If you're new to Netduino, check out the [Getting Started](../../Getting_Started/) tutorial to get up and running.
+
 # Development Environment
 
 ## Windows

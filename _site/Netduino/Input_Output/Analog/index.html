@@ -192,13 +192,33 @@
     </h2>
 </div>
 
-<p>[Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal.]</p>
+<p>Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal which is represented as binary on or off.</p>
 
-<p>[1024 bit resolution (0-1023 value)]
-[3.3v max; be careful with inputs]</p>
+<p>Analog signals are written or read with a 1024 bit resolution, which means that they can have value of 0 to 1023.</p>
+
+<p>While the Analog IO is meant for up to 3.3v, the ports are actually 5v tolerant, meaning that they can take up to 5v of input without burning out the port. However, any voltage above 3.3v will simply read as the max value (1023). In order to use 5v peripherals, a special resistor circuit known as a <a href="https://learn.sparkfun.com/tutorials/voltage-dividers">Voltage Divider</a> should be used. Voltage divider circuits are very simple to make with two resistors. Additionally, specialized <a href="https://www.sparkfun.com/products/12009">Logic Level Converter boards</a> can also be used.</p>
 
 <h2 id="input">Input</h2>
-<p>[sample code reading a thermistor or other sensor]</p>
+
+<p>The <a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">Potentiometer Controlled RGB LED sample</a> illustrates how to use an analog input to read the value of a potentiometer.</p>
+
+<p>The salient code is as follows; first, an <code class="highlighter-rouge">AnalogInput</code> port is created with the appropriate pin:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var pot = new SecretLabs.NETMF.Hardware.AnalogInput(Pins.GPIO_PIN_A1);
+</code></pre>
+</div>
+
+<p>The input port value can be automatically transformed to return a value within a particular range. In the case of the sample, the analog input will represent a degree of Hue, so the range is set to 0 to 360:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pot.SetRange(0, 360);
+</code></pre>
+</div>
+
+<p>The port value is then accessed via the <code class="highlighter-rouge">Read</code> method:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>hue = pot.Read();
+</code></pre>
+</div>
 
 <h2 id="output">Output</h2>
 <p>[sample code/project driving an LED with a potentiometer]</p>
