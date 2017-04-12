@@ -9,11 +9,11 @@ Analog signals are written or read with a 1024 bit resolution, which means that 
 While the Analog IO is meant for up to 3.3v, the ports are actually 5v tolerant, meaning that they can take up to 5v of input without burning out the port. However, any voltage above 3.3v will simply read as the max value (1023). In order to use 5v peripherals, a special resistor circuit known as a [Voltage Divider](https://learn.sparkfun.com/tutorials/voltage-dividers) should be used. Voltage divider circuits are very simple to make with two resistors. Additionally, specialized [Logic Level Converter boards](https://www.sparkfun.com/products/12009) can also be used.
 
 
-## Input
+## Reading Analog Input
 
 The [Potentiometer Controlled RGB LED sample](/Samples/Netduino/PotentiometerControlled_RgbLed/) illustrates how to use an analog input to read the value of a potentiometer.
 
-The salient code is as follows; first, an `AnalogInput` port is created with the appropriate pin:
+The salient code is as follows; first, an [`AnalogInput`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.analoginput(v=vs.102).aspx) port is created with the appropriate pin:
 
 ```
 var pot = new SecretLabs.NETMF.Hardware.AnalogInput(Pins.GPIO_PIN_A1);
@@ -31,5 +31,7 @@ The port value is then accessed via the `Read` method:
 hue = pot.Read();
 ```
 
-## Output
-[sample code/project driving an LED with a potentiometer]
+
+# See Also
+
+ * [`AnalogInputPort` API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.analoginput(v=vs.102).aspx)

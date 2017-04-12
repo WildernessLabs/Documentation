@@ -199,11 +199,11 @@
 
 <p>While the Analog IO is meant for up to 3.3v, the ports are actually 5v tolerant, meaning that they can take up to 5v of input without burning out the port. However, any voltage above 3.3v will simply read as the max value (1023). In order to use 5v peripherals, a special resistor circuit known as a <a href="https://learn.sparkfun.com/tutorials/voltage-dividers">Voltage Divider</a> should be used. Voltage divider circuits are very simple to make with two resistors. Additionally, specialized <a href="https://www.sparkfun.com/products/12009">Logic Level Converter boards</a> can also be used.</p>
 
-<h2 id="input">Input</h2>
+<h2 id="reading-analog-input">Reading Analog Input</h2>
 
 <p>The <a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">Potentiometer Controlled RGB LED sample</a> illustrates how to use an analog input to read the value of a potentiometer.</p>
 
-<p>The salient code is as follows; first, an <code class="highlighter-rouge">AnalogInput</code> port is created with the appropriate pin:</p>
+<p>The salient code is as follows; first, an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.analoginput(v=vs.102).aspx"><code class="highlighter-rouge">AnalogInput</code></a> port is created with the appropriate pin:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>var pot = new SecretLabs.NETMF.Hardware.AnalogInput(Pins.GPIO_PIN_A1);
 </code></pre>
@@ -221,8 +221,11 @@
 </code></pre>
 </div>
 
-<h2 id="output">Output</h2>
-<p>[sample code/project driving an LED with a potentiometer]</p>
+<h1 id="see-also">See Also</h1>
+
+<ul>
+  <li><a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.analoginput(v=vs.102).aspx"><code class="highlighter-rouge">AnalogInputPort</code> API Reference</a></li>
+</ul>
 
 
                         </div>
