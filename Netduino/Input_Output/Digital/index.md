@@ -29,7 +29,7 @@ public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
 ## Input Ports
 
 
-For example, the following code initializes an `InputPort` (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to 0v, so that by default, it doesn't have a current running through it:
+For example, the following code initializes an [`InputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx) (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to 0v, so that by default, it doesn't have a current running through it:
 
 
 ```CSharp
@@ -96,15 +96,63 @@ namespace ButtonInterruptEvents
 
 ### Glitch Filtering
 
+Sometimes, switches and other circuits don't produce a perfectly clean signal, especially during activation. In this case, multiple events can be raised in quick succession when a single event was expected.
 
+In order to counteract this noise, a technique called _Glitch Filtering_ can be used to only raise one event during any given time span.
+
+To enable glitch filtering, pass `true` for the `glitchFilter` parameter when instantiating an `InputPort`:
+
+```CSharp
+static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
 ```
-Cpu.GlitchFilterTime = new TimeSpan(0, 0, 0, 0, 5);
+
+And then, set the time span to filter events to, usually 5 milliseconds will do the trick, but depending on the hardware more may be needed:
+
+```CSharp
+Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
+```
+
+The following program comes from the [Glitch Filtering Sample](/Samples/Netduino/GlitchFilter) and illustrates configuring the glitch filter to 5 milliseconds:
+
+```CSharp
+using System;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace GlitchFilter
+{
+	public class Program
+	{
+		// An output port allows you to write (send a signal) to a pin
+		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
+		static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
+
+		public static void Main()
+		{
+			// turn the LED off initially
+			_led.Write(false);
+
+			// smooth noise out over 5 milliseconds
+			Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
+
+
+			// run forever
+			while (true)
+			{
+				// set the onboard LED output to be the input of the button
+				_led.Write(_button.Read());
+			}
+
+		}
+	}
+}
 ```
 
 
 ## Output
 
-To write to a port, an `OutputPort` is instantiated. The code below is from the same [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents):
+To write to a port, an [`OutputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx) is instantiated. The code below is from the same [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents):
 
 ```CSharp
 static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
@@ -115,3 +163,10 @@ To send a signal to the port, the `Write` method is called, passing in `false` f
 ```CSharp
 _led.Write(false); 
 ```
+
+# See Also
+
+* [InputPort API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx)
+* [OutputPort API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx)
+* [Port.ResistorMode Enumeration](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.port.resistormode(v=vs.102).aspx)
+* [Port.InterruptMode Enumeration](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.port.interruptmode(v=vs.102).aspx)

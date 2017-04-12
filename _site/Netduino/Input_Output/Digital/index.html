@@ -177,6 +177,7 @@
 <ul class="navigation">
     <li><a href="/Samples/Netduino/OnboardButtonAndLed">Onboard Button + LED</a></li>
     <li><a href="/Samples/Netduino/Button Interrupt Events">Button Interrupt Events</a></li>
+    <li><a href="/Samples/Netduino/GlitchFilter">Glitch Filtering</a></li>
     <li><a href="/Samples/Netduino/DrivingLED_w_PWM/">LED w/PWM</a></li>
     <li><a href="/Samples/Netduino/RgbLed/">RGB LED</a></li>
     <li><a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">RGB LED with Potentiometer</a></li>
@@ -218,7 +219,7 @@
 
 <h2 id="input-ports">Input Ports</h2>
 
-<p>For example, the following code initializes an <code class="highlighter-rouge">InputPort</code> (used for reading the port’s value) on GPIO Digital Pin #2 that’s pulled down to 0v, so that by default, it doesn’t have a current running through it:</p>
+<p>For example, the following code initializes an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx"><code class="highlighter-rouge">InputPort</code></a> (used for reading the port’s value) on GPIO Digital Pin #2 that’s pulled down to 0v, so that by default, it doesn’t have a current running through it:</p>
 
 <pre><code class="language-CSharp">var inputPort = new InputPort(Cpu.Pin.GPIO_Pin2, false,
 Port.ResistorMode.PullDown);
@@ -283,13 +284,59 @@ namespace ButtonInterruptEvents
 
 <h3 id="glitch-filtering">Glitch Filtering</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Cpu.GlitchFilterTime = new TimeSpan(0, 0, 0, 0, 5);
+<p>Sometimes, switches and other circuits don’t produce a perfectly clean signal, especially during activation. In this case, multiple events can be raised in quick succession when a single event was expected.</p>
+
+<p>In order to counteract this noise, a technique called <em>Glitch Filtering</em> can be used to only raise one event during any given time span.</p>
+
+<p>To enable glitch filtering, pass <code class="highlighter-rouge">true</code> for the <code class="highlighter-rouge">glitchFilter</code> parameter when instantiating an <code class="highlighter-rouge">InputPort</code>:</p>
+
+<pre><code class="language-CSharp">static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
 </code></pre>
-</div>
+
+<p>And then, set the time span to filter events to, usually 5 milliseconds will do the trick, but depending on the hardware more may be needed:</p>
+
+<pre><code class="language-CSharp">Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
+</code></pre>
+
+<p>The following program comes from the <a href="/Samples/Netduino/GlitchFilter">Glitch Filtering Sample</a> and illustrates configuring the glitch filter to 5 milliseconds:</p>
+
+<pre><code class="language-CSharp">using System;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace GlitchFilter
+{
+	public class Program
+	{
+		// An output port allows you to write (send a signal) to a pin
+		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
+		static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
+
+		public static void Main()
+		{
+			// turn the LED off initially
+			_led.Write(false);
+
+			// smooth noise out over 5 milliseconds
+			Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
+
+
+			// run forever
+			while (true)
+			{
+				// set the onboard LED output to be the input of the button
+				_led.Write(_button.Read());
+			}
+
+		}
+	}
+}
+</code></pre>
 
 <h2 id="output">Output</h2>
 
-<p>To write to a port, an <code class="highlighter-rouge">OutputPort</code> is instantiated. The code below is from the same <a href="/Samples/Netduino/ButtonInteruptEvents">Button Interrupt Events Sample</a>:</p>
+<p>To write to a port, an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx"><code class="highlighter-rouge">OutputPort</code></a> is instantiated. The code below is from the same <a href="/Samples/Netduino/ButtonInteruptEvents">Button Interrupt Events Sample</a>:</p>
 
 <pre><code class="language-CSharp">static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 </code></pre>
@@ -298,6 +345,15 @@ namespace ButtonInterruptEvents
 
 <pre><code class="language-CSharp">_led.Write(false); 
 </code></pre>
+
+<h1 id="see-also">See Also</h1>
+
+<ul>
+  <li><a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx">InputPort API Reference</a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx">OutputPort API Reference</a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.port.resistormode(v=vs.102).aspx">Port.ResistorMode Enumeration</a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.port.interruptmode(v=vs.102).aspx">Port.InterruptMode Enumeration</a></li>
+</ul>
 
 
                         </div>

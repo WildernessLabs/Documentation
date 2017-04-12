@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs : Surface Finishes</title>
+        <title>Wilderness Labs : Glitch Filtering</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -188,24 +188,46 @@
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>Surface Finishes
+    <h2>Glitch Filtering
         
     </h2>
 </div>
 
-<p>Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won’t be soldered to. However, the copper areas that are exposed need also be protected and [solderability]</p>
+<p>The following sample illustrates configuring the glitch filter to 5 milliseconds:</p>
 
-<ul>
-  <li>Electroless Nickel Immersion (ENIG)</li>
-  <li>HASL (and Lead-Free HASL)</li>
-  <li>Immersion Tin</li>
-  <li>Immersion Silver</li>
-  <li>Organic Solderability Preservative (OSG)</li>
-</ul>
+<pre><code class="language-CSharp">using System;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
 
-<p>ENIG is by far the most popular, and it used to the most expensive, but since so many people have switched to it, it’s often no more expensive than the other options.</p>
+namespace GlitchFilter
+{
+	public class Program
+	{
+		// An output port allows you to write (send a signal) to a pin
+		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
+		static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
 
-<p><a href="http://blog.optimumdesign.com/pcb-surface-finishes-comparison-hasl-osp-enig">more information</a></p>
+		public static void Main()
+		{
+			// turn the LED off initially
+			_led.Write(false);
+
+			// smooth noise out over 5 milliseconds
+			Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
+
+
+			// run forever
+			while (true)
+			{
+				// set the onboard LED output to be the input of the button
+				_led.Write(_button.Read());
+			}
+
+		}
+	}
+}
+</code></pre>
 
 
                         </div>
