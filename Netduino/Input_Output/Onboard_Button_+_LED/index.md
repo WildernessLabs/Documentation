@@ -2,20 +2,17 @@
 title: Onboard Button + LED
 ---
 
+Netduino has an accessible button and a blue LED onboard. This means that you can test code that uses a button or LED circuit without having to build an external one.
 
-[LED available via `Pins.ONBOARD_LED`]
+The onboard LED  is availble via the `Pins.ONBOARD_LED` enumeration, and turns on briefly when power is turned on, as well as after booting to indicate the OS is operational and the program is ready to run.
 
-[Turns on briefly when power is turned on, and after boot.]
+The onboard Button is available via `Pins.ONBOARD_BTN` enumeration, and if not bound to either an `InputPort` or `OutputPort`, will reset the Netduino by default when pressed. To disable it, simple assign a port to it.
 
-[Button available via `Pins.ONBOARD_BTN`]
-
-[reset's the Netduino by default. Need to initialize it as an `InputPort` or `OutputPort` to disable reset.]
-
-[Also a power LED, and a Network LED for boards equipped with Ethernet or WiFi support. ]
+Note that the Netduino also has a white power LED indicating the board is powered. Boards that are network enabled, such as the N2+, N3 Ethernet, or N3 WiFi also have a network LED that lights up to indicate network traffic. 
 
 ## InputPort and OutputPort
 
-Can access them via `OutputPort` or `InputPort`. Following example illustrates turning the LED on when the Button is pressed.
+Both the onboard LED and Button are accessible via an `OutputPort` or `InputPort` object. For instance, the following example illustrates turning the LED on when the Button is pressed.
 
 
 ```CSharp
@@ -55,54 +52,9 @@ namespace OnboardButtonAndLed
 
 ## InterruptPorts
 
-Button can also be set as an InterruptPort which raises events:
+Just as with other digital inputs, the onboard Button can be wired up as an [`InterruptPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx) to raise an event when it is pressed. For more information, see the [Digital IO guide](/Netduino/Input_Output/Digital/).
 
-```CSharp
-using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
+## See Also
 
-namespace ButtonInterruptEvents
-{
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+[`InterruptPort` API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx)
 
-		// An interrupt port raises events when its value changes. in this case, 
-		// we use it to create an event when the button is clicked.
-		// We set the Interrupt mode to raise an event on both edges of the signal;
-		// both down, and up.
-		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
-			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
-		
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
-
-			// wire up the interrupt to our event handler
-			_button.OnInterrupt += handleButtonClick;
-
-			// run forever
-			while (true)
-			{
-				
-			}
-
-		}
-
-		static void handleButtonClick (uint port, uint data, DateTime time)
-		{
-			// will be 1 when pressed (raised high), and 0, when unpressed
-			Debug.Print ("Data: " + data.ToString ());
-			_led.Write (data == 1);
-		}
-	}
-}
-```
-
-## Further Reading
-
-[Working with Switches and Buttons]

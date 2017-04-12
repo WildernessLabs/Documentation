@@ -230,9 +230,9 @@ Port.ResistorMode.PullDown);
 <pre><code class="language-CSharp">bool state = inputPort.Read();
 </code></pre>
 
-<h3 id="events">Events</h3>
+<h3 id="events-via-interruptports">Events via InterruptPorts</h3>
 
-<p>In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port’s value changes, for example, in response to a button being pressed that connnects a circuit and raises the input port’s current from low (0v) to high (3.3v).</p>
+<p>In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port’s value changes by using an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx"><code class="highlighter-rouge">InterruptPort</code></a>. For example, in response to a button being pressed that connnects a circuit and raises the input port’s current from low (0v) to high (3.3v).</p>
 
 <p>For example, the <a href="/Samples/Netduino/ButtonInteruptEvents">Button Interrupt Events Sample</a> illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:</p>
 

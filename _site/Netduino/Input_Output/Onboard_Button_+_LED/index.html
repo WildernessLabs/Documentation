@@ -193,19 +193,17 @@
     </h2>
 </div>
 
-<p>[LED available via <code class="highlighter-rouge">Pins.ONBOARD_LED</code>]</p>
+<p>Netduino has an accessible button and a blue LED onboard. This means that you can test code that uses a button or LED circuit without having to build an external one.</p>
 
-<p>[Turns on briefly when power is turned on, and after boot.]</p>
+<p>The onboard LED  is availble via the <code class="highlighter-rouge">Pins.ONBOARD_LED</code> enumeration, and turns on briefly when power is turned on, as well as after booting to indicate the OS is operational and the program is ready to run.</p>
 
-<p>[Button available via <code class="highlighter-rouge">Pins.ONBOARD_BTN</code>]</p>
+<p>The onboard Button is available via <code class="highlighter-rouge">Pins.ONBOARD_BTN</code> enumeration, and if not bound to either an <code class="highlighter-rouge">InputPort</code> or <code class="highlighter-rouge">OutputPort</code>, will reset the Netduino by default when pressed. To disable it, simple assign a port to it.</p>
 
-<p>[reset’s the Netduino by default. Need to initialize it as an <code class="highlighter-rouge">InputPort</code> or <code class="highlighter-rouge">OutputPort</code> to disable reset.]</p>
-
-<p>[Also a power LED, and a Network LED for boards equipped with Ethernet or WiFi support. ]</p>
+<p>Note that the Netduino also has a white power LED indicating the board is powered. Boards that are network enabled, such as the N2+, N3 Ethernet, or N3 WiFi also have a network LED that lights up to indicate network traffic.</p>
 
 <h2 id="inputport-and-outputport">InputPort and OutputPort</h2>
 
-<p>Can access them via <code class="highlighter-rouge">OutputPort</code> or <code class="highlighter-rouge">InputPort</code>. Following example illustrates turning the LED on when the Button is pressed.</p>
+<p>Both the onboard LED and Button are accessible via an <code class="highlighter-rouge">OutputPort</code> or <code class="highlighter-rouge">InputPort</code> object. For instance, the following example illustrates turning the LED on when the Button is pressed.</p>
 
 <pre><code class="language-CSharp">using System;
 using Microsoft.SPOT;
@@ -243,56 +241,12 @@ namespace OnboardButtonAndLed
 
 <h2 id="interruptports">InterruptPorts</h2>
 
-<p>Button can also be set as an InterruptPort which raises events:</p>
+<p>Just as with other digital inputs, the onboard Button can be wired up as an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx"><code class="highlighter-rouge">InterruptPort</code></a> to raise an event when it is pressed. For more information, see the <a href="/Netduino/Input_Output/Digital/">Digital IO guide</a>.</p>
 
-<pre><code class="language-CSharp">using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
+<h2 id="see-also">See Also</h2>
 
-namespace ButtonInterruptEvents
-{
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+<p><a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx"><code class="highlighter-rouge">InterruptPort</code> API Reference</a></p>
 
-		// An interrupt port raises events when its value changes. in this case, 
-		// we use it to create an event when the button is clicked.
-		// We set the Interrupt mode to raise an event on both edges of the signal;
-		// both down, and up.
-		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
-			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
-		
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
-
-			// wire up the interrupt to our event handler
-			_button.OnInterrupt += handleButtonClick;
-
-			// run forever
-			while (true)
-			{
-				
-			}
-
-		}
-
-		static void handleButtonClick (uint port, uint data, DateTime time)
-		{
-			// will be 1 when pressed (raised high), and 0, when unpressed
-			Debug.Print ("Data: " + data.ToString ());
-			_led.Write (data == 1);
-		}
-	}
-}
-</code></pre>
-
-<h2 id="further-reading">Further Reading</h2>
-
-<p>[Working with Switches and Buttons]</p>
 
 
                         </div>
