@@ -161,7 +161,7 @@ static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 To send a signal to the port, the `Write` method is called, passing in `false` for a low signal (0v), or `true` for a high (3.3v) signal:
 
 ```CSharp
-_led.Write(false); 
+_led.Write(true); 
 ```
 
 # See Also
