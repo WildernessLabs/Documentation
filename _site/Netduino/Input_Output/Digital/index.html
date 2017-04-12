@@ -192,7 +192,13 @@
     </h2>
 </div>
 
-<p>[The Digital ports can be set to be high (powered at 3.3v), or low (grounded at 0v) which correspond to digital 1 and 0, respectively. Additionally, they have built-in support for a host of different types of common digital communication protocols:]</p>
+<p>Digital ports are useful for binary communication in which the port is either high/on (powered at 3.3v) or low/off (grounded at 0v). High represents a digital 1, and low represents 0.</p>
+
+<p>Digital ports can also be set to stand at a high or low, in what’s knows as pulling them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v.</p>
+
+<p>[example code for pulling high/low]</p>
+
+<p>Additionally, Netduion provides built-in support for a host of different types of common digital communication protocols via the digital ports.</p>
 
 <ul>
   <li><a href="Digital/CAN/">I2C (CAN)</a> - [explain]</li>
@@ -201,7 +207,14 @@
   <li><a href="Digital/UART/">UART (Serial)</a></li>
 </ul>
 
+<p>[available via different pins on the board:]</p>
+
+<p><img src="../../About/Netduino3_Pinout.svg" alt="" /></p>
+
 <h2 id="input">Input</h2>
+
+<p>There are two ways to 
+[events vs. reading]</p>
 
 <p>sample projects:</p>
 
