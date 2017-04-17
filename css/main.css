@@ -330,7 +330,7 @@ pre{margin-right: 15px}
 
 @media (min-width: 992px){
 .col-md-2 {
-    width: 14.2%;
+    width: 16.666%;
 }
 }
 @media (max-width: 767px) and (min-width: 320px){
