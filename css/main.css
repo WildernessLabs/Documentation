@@ -44,10 +44,7 @@ code {
 }
 
 #footer {
-    margin: 20px 0;
-    font-size: 0.85em;
-    color: #999;
-    text-align: center;
+    padding:0;
 }
 
 #content > .page-header:first-child {
@@ -315,4 +312,52 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 .page-header{padding-bottom: 2px;
 margin: 40px 0 0px;
 border-bottom: 0px solid #eee;}
-pre{margin-right: 15px;}
+pre{margin-right: 15px}
+
+
+/* Footer CSS Starts Here */
+
+#footer { background: #514740; box-sizing: border-box; padding: 20px 40px; width: calc(100% - 14px); }
+.footer-main-wrap {width: 100%; margin: 0; padding: 0}
+.footer-main-wrap .row{margin: 0;}
+.list-heading { color: #af9578; font-family: Lato; font-size: 16px; }
+.footer-ul { padding: 0; }
+.footer-ul li { list-style-type: none; }
+.footer-ul li a { display: block; font-family: lato-light; color: #EDEDED; text-decoration: none; font-size: 14px; }
+.footer-main-wrap > .row > .col-md-2 { padding-right: 5px; padding-left: 5px; }
+.footer-logo { margin: 10px 0; }
+.footer-copyright-txt { font-size: 16px; font-family: lato-light; color: #ededed; display: block; margin-top: 10px; }
+
+
+@media (max-width: 767px) and (min-width: 320px){
+.footer_logo {
+    text-align: center;
+}
+.col-xs-12 {
+    width: 100%;
+}
+}
+@media (max-width: 767px){
+#content.col-sm-9{
+	border-left: 0;
+}
+div#navigation{
+	width: calc(100% - 15px);
+}
+}
+
+@media (min-width: 768px) {
+.footer_column.col-md-2{width:14.666%}
+.footer_column.col-md-2.connect-items{ width: 40.666%;}
+.connect-items span{display:block; padding: 0 15px;}
+.connect-items div.col-md-2 { width: 49%; float: left; }
+}
+
+@media (max-width: 768px) {
+.connect-items div.col-xs-12 { padding:0 }
+.connect-items div.col-xs-12 .footer-ul{
+    margin:0;
+}
+}
+}
+/* Footer CSS Ends Here */
