@@ -328,9 +328,9 @@ pre{margin-right: 15px}
 .footer-logo { margin: 10px 0; }
 .footer-copyright-txt { font-size: 16px; font-family: lato-light; color: #ededed; display: block; margin-top: 10px; }
 
-@media (min-width: 992px){
+@media (min-width: 768px){
 .col-md-2 {
-    width: 16.666%;
+    width: 19.666%;
 }
 }
 @media (max-width: 767px) and (min-width: 320px){
