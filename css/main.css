@@ -328,11 +328,7 @@ pre{margin-right: 15px}
 .footer-logo { margin: 10px 0; }
 .footer-copyright-txt { font-size: 16px; font-family: lato-light; color: #ededed; display: block; margin-top: 10px; }
 
-@media (min-width: 768px){
-.col-md-2 {
-    width: 19.666%;
-}
-}
+
 @media (max-width: 767px) and (min-width: 320px){
 .footer_logo {
     text-align: center;
@@ -347,6 +343,19 @@ pre{margin-right: 15px}
 }
 div#navigation{
 	width: calc(100% - 15px);
+}
+}
+
+@media (min-width: 768px) {
+.connect-items{ width: 32.666%;}
+.connect-items span{display:block; padding: 0 15px;}
+.connect-items div.col-md-2 { width: 49%; float: left; }
+}
+
+@media (max-width: 768px) {
+.connect-items div.col-xs-12 { padding:0 }
+.connect-items div.col-xs-12 .footer-ul{
+    margin:0;
 }
 }
 /* Footer CSS Ends Here */
