@@ -8,6 +8,7 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ## Windows
 
+* [Visual Studio 2013 Express](https://www.microsoft.com/en-us/download/details.aspx?id=44914)
 * [.NET Micro Framework (NETMF) SDK v4.3.2 - QFE2](http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/MicroFrameworkSDK.MSI)
 * NETMF Plugin:
   * VS2015
