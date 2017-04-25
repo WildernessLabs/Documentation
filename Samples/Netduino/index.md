@@ -1,3 +1,3 @@
 ---
-title: Samples
+title: Netduino Samples
 ---
