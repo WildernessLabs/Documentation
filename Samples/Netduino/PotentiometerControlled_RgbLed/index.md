@@ -4,7 +4,9 @@ title: RGB LED Controlled with Potentiometer
 
 This sample sets the color of an RGB LED from the value read from a potentiometer. It illustrates reading an analog input and controlling PWMs with it.
 
-```
+# Code
+
+```CSharp
 using System;
 using System.Threading;
 using Microsoft.SPOT;

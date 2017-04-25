@@ -175,13 +175,15 @@
 
 <div class="NavHeader"><a href="/Samples">Sample Projects</a></div>
 <ul class="navigation">
+    <li><a href="/Samples/Netduino/Blinky">Blinky</a></li>
     <li><a href="/Samples/Netduino/OnboardButtonAndLed">Onboard Button + LED</a></li>
-    <li><a href="/Samples/Netduino/Button Interrupt Events">Button Interrupt Events</a></li>
+    <li><a href="/Samples/Netduino/ButtonInterruptEvents">Button Interrupt Events</a></li>
     <li><a href="/Samples/Netduino/GlitchFilter">Glitch Filtering</a></li>
     <li><a href="/Samples/Netduino/DrivingLED_w_PWM/">LED w/PWM</a></li>
     <li><a href="/Samples/Netduino/RgbLed/">RGB LED</a></li>
     <li><a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">RGB LED with Potentiometer</a></li>
     <li><a href="/Samples/Netduino/SDCardIO/">SD Card IO</a></li>
+    <li><a href="/Samples/Netduino/WebRequest/">Web Request</a></li>
 </ul>
 
                         </div>
@@ -195,7 +197,9 @@
 
 <p>This sample sets the color of an RGB LED from the value read from a potentiometer. It illustrates reading an analog input and controlling PWMs with it.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>using System;
+<h1 id="code">Code</h1>
+
+<pre><code class="language-CSharp">using System;
 using System.Threading;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -364,7 +368,6 @@ namespace PotentiometerControlled_RgbLed
 	}
 }
 </code></pre>
-</div>
 
 
                         </div>

@@ -175,13 +175,15 @@
 
 <div class="NavHeader"><a href="/Samples">Sample Projects</a></div>
 <ul class="navigation">
+    <li><a href="/Samples/Netduino/Blinky">Blinky</a></li>
     <li><a href="/Samples/Netduino/OnboardButtonAndLed">Onboard Button + LED</a></li>
-    <li><a href="/Samples/Netduino/Button Interrupt Events">Button Interrupt Events</a></li>
+    <li><a href="/Samples/Netduino/ButtonInterruptEvents">Button Interrupt Events</a></li>
     <li><a href="/Samples/Netduino/GlitchFilter">Glitch Filtering</a></li>
     <li><a href="/Samples/Netduino/DrivingLED_w_PWM/">LED w/PWM</a></li>
     <li><a href="/Samples/Netduino/RgbLed/">RGB LED</a></li>
     <li><a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">RGB LED with Potentiometer</a></li>
     <li><a href="/Samples/Netduino/SDCardIO/">SD Card IO</a></li>
+    <li><a href="/Samples/Netduino/WebRequest/">Web Request</a></li>
 </ul>
 
                         </div>
@@ -195,6 +197,49 @@
 
 <p>This sample lights up an LED with a PWM signal so that a current limiting resistor isn’t needed to prevent the LED from burning out.</p>
 
+<h1 id="code">Code</h1>
+
+<pre><code class="language-CSharp">using System;
+using Microsoft.SPOT;
+using SecretLabs.NETMF.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+using Microsoft.SPOT.Hardware;
+using System.Threading;
+
+namespace DrivingLED_w_PWM
+{
+	/// &lt;summary&gt;
+	/// This program illustrates how to drive an LED with a Pulse-Width Modulation
+	/// Signal.
+	/// &lt;/summary&gt;
+	public class Program
+	{
+		public static void Main()
+		{
+			// Create a PWM signal on Pin 3 @ 1000Hz and a 50% duty cycle
+			PWM dutyCyclePwm = new PWM(PWMChannels.PWM_PIN_D3, 1000, .5, false);
+			// note that only certain pins support PWM. the PWMChannels enumeration
+			// lists the ones that do.
+
+			// Create a PWM signal on the onboard LED by specifying the period and duration 
+			// in milliseconds. this will be a 33% duty cycle (on 1/3rd of the time)
+			PWM periodDurationPwm = new PWM (PWMChannels.PWM_ONBOARD_LED, 
+				3, 1, PWM.ScaleFactor.Milliseconds, false);
+
+			// alternate between the 50% duty cycle and the 33% duty cycle every second
+			while (true) {
+				dutyCyclePwm.Start ();
+				Thread.Sleep (1000);
+				dutyCyclePwm.Stop ();
+
+				periodDurationPwm.Start ();
+				Thread.Sleep (1000);
+				periodDurationPwm.Stop ();
+			}
+		}
+	}
+}
+</code></pre>
 
 
                         </div>

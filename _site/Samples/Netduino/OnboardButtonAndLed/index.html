@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Wilderness Labs</title>
+        <title>Wilderness Labs : Onboard Button & LED</title>
         <meta name="description" content="Documentation">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -175,25 +175,60 @@
 
 <div class="NavHeader"><a href="/Samples">Sample Projects</a></div>
 <ul class="navigation">
+    <li><a href="/Samples/Netduino/Blinky">Blinky</a></li>
     <li><a href="/Samples/Netduino/OnboardButtonAndLed">Onboard Button + LED</a></li>
-    <li><a href="/Samples/Netduino/Button Interrupt Events">Button Interrupt Events</a></li>
+    <li><a href="/Samples/Netduino/ButtonInterruptEvents">Button Interrupt Events</a></li>
     <li><a href="/Samples/Netduino/GlitchFilter">Glitch Filtering</a></li>
     <li><a href="/Samples/Netduino/DrivingLED_w_PWM/">LED w/PWM</a></li>
     <li><a href="/Samples/Netduino/RgbLed/">RGB LED</a></li>
     <li><a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">RGB LED with Potentiometer</a></li>
     <li><a href="/Samples/Netduino/SDCardIO/">SD Card IO</a></li>
+    <li><a href="/Samples/Netduino/WebRequest/">Web Request</a></li>
 </ul>
 
                         </div>
 
                         <div id="content" class="col-sm-9">
                             <div class="page-header">
-    <h2>
+    <h2>Onboard Button & LED
         
     </h2>
 </div>
 
+<p>Illustrates basic Port IO by reading the value of the Onboard Button circuit and lighting the onboard LED when the button is pressed.</p>
 
+<h1 id="code">Code</h1>
+
+<pre><code class="language-CSharp">using System;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace OnboardButtonAndLed
+{
+	public class Program
+	{
+		// An output port allows you to write (send a signal) to a pin
+		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
+		static InputPort _button = new InputPort((Cpu.Pin)0x15, false, Port.ResistorMode.Disabled);
+
+		public static void Main()
+		{
+			// turn the LED off initially
+			_led.Write(false);
+
+			// run forever
+			while (true)
+			{
+				// set the onboard LED output to be the input of the button
+				_led.Write(_button.Read());
+			}
+
+		}
+	}
+}
+</code></pre>
 
 
                         </div>

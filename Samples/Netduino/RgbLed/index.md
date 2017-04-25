@@ -6,6 +6,8 @@ This sample cycles an [RGB LED](https://www.sparkfun.com/products/105) through t
 
 It works by using the [Additive Color](https://www.wikiwand.com/en/Additive_color) mixing model in which the three primary colors, _red_, _green_, and _blue_, are added in varying amounts to create various colors.
 
+# Code
+
 ```CSharp
 using System;
 using System.Threading;
