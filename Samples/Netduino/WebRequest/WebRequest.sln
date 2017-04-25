@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRequest", "WebRequest\WebRequest.csproj", "{3A96F12C-8377-4A04-91B6-C8C39705A660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A96F12C-8377-4A04-91B6-C8C39705A660}.Debug|x86.ActiveCfg = Debug|x86
+		{3A96F12C-8377-4A04-91B6-C8C39705A660}.Debug|x86.Build.0 = Debug|x86
+		{3A96F12C-8377-4A04-91B6-C8C39705A660}.Release|x86.ActiveCfg = Release|x86
+		{3A96F12C-8377-4A04-91B6-C8C39705A660}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
