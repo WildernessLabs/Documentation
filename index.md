@@ -6,7 +6,7 @@ title: Documentation
 
 Configure your development environment, update your Netduino, and build your first application!
 
-# [Samples](Samples/Netduino)
+# [Samples](Samples/)
 
 # [Hardware Fundamentals](Hardware/Overview)
 
