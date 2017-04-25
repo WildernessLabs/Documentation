@@ -10,8 +10,10 @@ namespace Blinky
 	{
 		public static void Main()
 		{
-			// write your code here
-			OutputPort led = new OutputPort(Pins.GPIO_PIN_D7, false);
+			// create an output port (a port that can be written to) and wire it to the onboard LED
+			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
+
+			// run forever
 			while (true)
 			{
 				led.Write(true); // turn on the LED
