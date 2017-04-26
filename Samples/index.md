@@ -11,3 +11,25 @@ title: Samples
 * **[Changing colors of RGB LED with a Potentiometer](Netduino/PotentiometerControlled_RgbLed)** - Changing the color of an RGB LED with an `AnalogPort` potentiometer.
 * **[SD Card IO](Netduino/SDCardIO)** - Reading and writing to an SD card using `File.IO`.
 * **[Web Request](Netduino/WebRequest)** - Connecting to the internet and making an `HttpWebRequest`.
+
+
+## Additional NETMF Samples
+
+Additionally, the [Netduino version of the NETMF SDK](https://github.com/WildernessLabs/Netduino_SDK) includes a number of [Samples](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples), including:
+
+ * **[DP Web Service](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/DPWS)**
+ * **[Extended Weak References](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/ExtendedWeakReferences)**
+ * **[File System](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/FileSystem)**
+ * **[FTP Server](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/FtpServer)** 
+ * **[Http Client](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/HttpClient)**
+ * **[Http Server](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/HttpServer)** 
+ * **[Simple WPF Application](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/SimpleWPFApplication)**
+ * **[Socket Client](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/SocketClient)**
+ * **[Socket Server](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/SocketServer)**
+ * **[Temperature Samnple](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/TemperatureSample)**
+ * **[Threading](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/Threading)**
+ * **[Time](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/Time)**
+ * **[Touch Panel](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/TouchPanel)**
+ * **[USB Device](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/USBDevice)**
+ * **[WPF Emulator](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/WPFEmulator)**
+ * **[Weak Delegates](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/WeakDelegates)**
