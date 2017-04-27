@@ -2,25 +2,68 @@
 title: Network
 ---
 
-[configure network in MFDeploy]
+The network-enabled Netduinos, N2+, N3E, and N3WiFi have a robustly featured network stack that includes support for high level network APIs such as `HttpWebRequest` as well as low-level socket programming, UDP multicast support, and more.
 
-[if DHCP, request IP address]
+However, network programming on an MCU based device is a little different than traditional server or desktop app network programming. On a stand-alone MCU powered device such as a Netduino, ther are setup and initialization tasks that are usually already done by the time a server or a desktop app is executed such as configuring the WiFi network, or requesting an IP from a DHCP server. 
+
+# Configuring Network Access
+
+The first step in accessing the network from a Netduino is to configure the network settings. Many network settings, such as which WiFi network to connect to, or whether or not to use DHCP (or a static IP), are configured at deploy time via **MFDeploy** on Windows, or **Netduino Utils** on Mac. 
+
+## Windows/MFDeploy Configuration
+
+MFDeploy is included in the .NET MicroFramework installation. To configure network settings on Netduino, launch MFDeploy from the start menu and then access the settings via the `Target` > `Configuration` > `Network` menu:
+
+![](MFDeploy_Network_Menu.png)
+
+From there, Network settings are configured in the popup. For example, the following settings will configure a WiFi enabled Netduino 3 to connect to the open wireless network `Cabin in the Woods` using 802.11 b, g, or n radio and use DHCP to obtain an IP Address:
+
+![](MFDeploy_Network_Dialog.png)
+
+Note that if you get the error `unable to erase configuration sector memory`, when trying to save, you may have to choose `Plug-in` > `Reboot Stop` from the menu.
 
 
-# 
+## Mac OS/Netduino Utils
 
 
-# N3 WiFi
+[Need screenshot after BK has finished the app]
 
-[need to set wifi network in MFDeploy (windows) or Netduino Utils (mac)]
 
-[plug-in > reboot stop][otherwise you may get the error:
+## Waiting for the Network to Initialize
 
- `unable to erase configuration sector memory`
- 
- in MFDeploy
- 
- # Sample
+On the Netduino, chances are, the deployed application will actually startup before the network has fully initialized. There are two fundamental ways to do this. The simplest is to wait in a loop while the IP address is obtained (if using DHCP), or accepted (if using a static IP). The more sophisticated way is to use multi-threading and wait on network available events.
+
+## Wait Loop
+
+### Using DHCP
+
+If DHCP is configured, a call to the static `IPAddress.GetDefaultLocalAddress()`  will suffice:
+
+```CSharp
+while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any) {
+	Debug.Print ("Sleep while obtaining an IP");
+	Thread.Sleep (10);
+};
+```
+`IPAddress.Any` returns an empty IP address (`0.0.0.0`), so this loop will run until a real IP Address is obtained.
+
+### Using a Static IP
+
+When using a static IP, add the `NetduinoExtensions.dll` reference and make a call to 
+
+```
+while (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) {
+	Debug.Print ("Sleep while obtaining waiting for the network to initialize.");
+	Thread.Sleep (10);
+};
+```
+
+## Multithreading + Events
+
+
+
+# Code Example
+
  
 ```CSharp 
 using Microsoft.SPOT.Hardware;

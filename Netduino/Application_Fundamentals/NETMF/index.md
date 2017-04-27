@@ -2,7 +2,11 @@
 title: .NET Micro Framework (NETMF)
 ---
 
-Netduino applications are built using the .NET Microframework (v4.3), also known as NETMF. NETMF is an open source project that is further customized to run on the Netduino. NETMF is 
+Netduino applications are built using the .NET Microframework (v4.3), also known as NETMF. NETMF is an open source project that is further customized to run on the Netduino. 
+
+[basically .NET 2.0 a helpful guide to what features are available are here: http://informatix.miloush.net/microframework/Articles/CisFeatures.aspx]
+
+[no Generics, for instance]
 
 # NETMF API Documentation
 
