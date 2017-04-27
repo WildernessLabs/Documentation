@@ -1,6 +1,9 @@
 ---
-title: Samples
+title: Netduino Samples
 ---
+
+The following samples can be found in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/). 
+
 
 * **[Blinky](Netduino/Blinky)** - The quintessential Netduino `Hello, world.` app.
 * **[Onboard Button + LED](Netduino/OnboardButtonAndLED)** - Using the onboard button to light the onboard LED.
@@ -11,6 +14,11 @@ title: Samples
 * **[Changing colors of RGB LED with a Potentiometer](Netduino/PotentiometerControlled_RgbLed)** - Changing the color of an RGB LED with an `AnalogPort` potentiometer.
 * **[SD Card IO](Netduino/SDCardIO)** - Reading and writing to an SD card using `File.IO`.
 * **[Web Request](Netduino/WebRequest)** - Connecting to the internet and making an `HttpWebRequest`.
+
+
+### Contributing
+
+All samples in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/) are distributed under the Apache 2 license. If you have a cool sample that you'd like to document and share, please submit a pull request! We love quality contributions.
 
 
 ## Additional NETMF Samples
