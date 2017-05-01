@@ -197,9 +197,9 @@
     </h2>
 </div>
 
-<p>The network-enabled Netduinos, N2+, N3E, and N3WiFi have a robustly featured network stack that includes support for high level network APIs such as <code class="highlighter-rouge">HttpWebRequest</code> as well as low-level socket programming, UDP multicast support, and more.</p>
+<p>The network-enabled Netduinos; N2+, N3E, and N3WiFi have a robustly featured network stack that includes support for high level network APIs such as <code class="highlighter-rouge">HttpWebRequest</code> as well as low-level socket programming, UDP multicast support, and more.</p>
 
-<p>However, network programming on an MCU based device is a little different than traditional server or desktop app network programming. On a stand-alone MCU powered device such as a Netduino, ther are setup and initialization tasks that are usually already done by the time a server or a desktop app is executed such as configuring the WiFi network, or requesting an IP from a DHCP server.</p>
+<p>However, network programming on an MCU based device is a little different than traditional server or desktop app network programming. On a stand-alone MCU powered device such as a Netduino, ther are setup and initialization tasks that are usually already done by the time a server or a desktop app is executed, such as configuring the WiFi network, or requesting an IP from a DHCP server.</p>
 
 <h1 id="configuring-network-access">Configuring Network Access</h1>
 
@@ -215,7 +215,7 @@
 
 <p><img src="MFDeploy_Network_Dialog.png" alt="" /></p>
 
-<p>Note that if you get the error <code class="highlighter-rouge">unable to erase configuration sector memory</code>, when trying to save, you may have to choose <code class="highlighter-rouge">Plug-in</code> &gt; <code class="highlighter-rouge">Reboot Stop</code> from the menu.</p>
+<p>Note that if you get the error <code class="highlighter-rouge">unable to erase configuration sector memory</code>, when trying to save, you may have to close the network settings dialog and run <code class="highlighter-rouge">Plug-in</code> &gt; <code class="highlighter-rouge">Reboot Stop</code> from the menu first.</p>
 
 <h2 id="mac-osnetduino-utils">Mac OS/Netduino Utils</h2>
 
@@ -250,6 +250,8 @@
 </div>
 
 <h2 id="multithreading--events">Multithreading + Events</h2>
+
+<p>Netduino has sophisticated multithreading support (especially for an MCU platform), so for a more elegant solution that also saves on power consumption,</p>
 
 <h1 id="code-example">Code Example</h1>
 

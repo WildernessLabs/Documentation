@@ -8,6 +8,8 @@ Netduino applications are built using the .NET Microframework (v4.3), also known
 
 [no Generics, for instance]
 
+## SPOT Namespace
+
 # NETMF API Documentation
 
 The .NET Microframework API and SDK documentation can be found on the [MSDN site](https://msdn.microsoft.com/en-us/library/jj610646(v=vs.102).aspx).
