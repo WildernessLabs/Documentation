@@ -2,15 +2,13 @@
 title: Documentation
 ---
 
+![](images/Getting_Started_Banner_Temp.png)
+
 # [Getting Started](Netduino/Getting_Started)
 
 Configure your development environment, update your Netduino, and build your first application!
 
-# [Samples](Samples/)
+# Featured Guides
 
-# [Hardware Fundamentals](Hardware/Overview)
-
-Creating circuits, types of components, etc.
-
-# [Product Design Lifecycle](Product_Design_Lifecycle)
+# Featured Samples
 
