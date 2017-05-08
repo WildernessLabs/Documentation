@@ -234,7 +234,8 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	max-width: 500px;
 	margin: 0 auto;
 	font-size: 18px;
-	margin: 20px auto;
+	margin: 10px auto 20px;
+	font-weight: 600;
 }
 .banner_main a {
 	border: 1px solid #52473f;
