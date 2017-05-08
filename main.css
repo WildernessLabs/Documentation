@@ -200,14 +200,16 @@ padding-bottom: 3px}
 div.navbar-header{ padding-left:10px;}
 ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 .banner_main {
-    background-image: url("../banner.png");
-    background-size: cover;
-    background-position: center center;
-    height: 260px;
-    border: 10px solid rgba(82,71,63,.3);
-    text-align: center;
-    color: #000;
-    position: relative;
+	background-image: url("../banner.png");
+	background-size: cover;
+	background-position: center center;
+	height: 260px;
+	border: 10px solid rgba(82,71,63,.3);
+	text-align: center;
+	color: #000;
+	position: relative;
+	width: 100%;
+	max-width: 810px;
 }
 .banner_main::after {
     background-color: rgba(255,255,255,.5);
@@ -234,7 +236,8 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	max-width: 500px;
 	margin: 0 auto;
 	font-size: 18px;
-	margin: 20px auto;
+	margin: 10px auto 20px;
+	font-weight: 600;
 }
 .banner_main a {
 	border: 1px solid #52473f;
