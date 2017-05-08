@@ -235,26 +235,27 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	color: #545454;
 	position: relative;
 	z-index: 3;
-	max-width: 600px;
+	max-width: 440px;
 	margin: 0 auto;
 	font-size: 18px;
 	margin: 10px auto 20px;
-	font-weight: 500;
+	font-weight: 600;
 	font-family: 'Lato', sans-serif;
 }
 .banner_main a {
-	border: 1px solid #52473f;
+	border: 2px solid #438ead;
 	position: relative;
 	z-index: 2;
 	width: 220px;
-	height: 44px;
 	display: inline-block;
-	background: #22abe3;
+	background: #00a9e6;
 	color: #fff;
 	font-size: 20px;
-	font-weight: 500;
-	padding: 5px 0;
+	font-weight: bold;
+	padding: 7px 20px 8px;
 	font-family: 'Lato', sans-serif;
+	border-radius: 4px;
+	line-height: 1.42857143;
 }
 @media only screen and (min-width:1136px) and (max-width: 1205px)  {
 .navbar-nav{
