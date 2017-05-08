@@ -201,8 +201,8 @@ div.navbar-header{ padding-left:10px;}
 ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 .banner_main {
 	background-image: url("../banner2.jpg");
-	background-size: 104%;
-	background-position: -12px -74px;
+	background-size: 125%;
+	background-position: -122px -74px;
 	height: 260px;
 	border: 10px solid rgba(82,71,63,.3);
 	text-align: center;
