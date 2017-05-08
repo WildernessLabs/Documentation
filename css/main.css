@@ -202,7 +202,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 .banner_main {
 	background-image: url("../banner.png");
 	background-size: 104%;
-	background-position: 0 -74px;
+	background-position: -12px -74px;
 	height: 260px;
 	border: 10px solid rgba(82,71,63,.3);
 	text-align: center;
