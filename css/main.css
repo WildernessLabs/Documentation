@@ -202,7 +202,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 .banner_main {
 	background-image: url("../banner.png");
 	background-size: cover;
-	background-position: center center;
+	background-position: 64px -74px;
 	height: 260px;
 	border: 10px solid rgba(82,71,63,.3);
 	text-align: center;
@@ -241,6 +241,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	margin: 10px auto 20px;
 	font-weight: 600;
 	font-family: 'Lato', sans-serif;
+	line-height: 1.22857143;
 }
 .banner_main a {
 	border: 2px solid #438ead;
@@ -419,3 +420,8 @@ div#navigation{
 }
 }
 /* Footer CSS Ends Here */
+@media (max-width: 479px) {
+.banner_main {
+	height: 310px;
+}
+}
