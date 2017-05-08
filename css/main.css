@@ -202,7 +202,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 .banner_main {
 	background-image: url("../banner.png");
 	background-size: cover;
-	background-position: 64px -74px;
+	background-position: 0 -74px;
 	height: 260px;
 	border: 10px solid rgba(82,71,63,.3);
 	text-align: center;
@@ -210,6 +210,7 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	position: relative;
 	width: 100%;
 	max-width: 810px;
+	background-repeat: no-repeat;
 }
 .banner_main::after {
     background-color: rgba(255,255,255,.5);
