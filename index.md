@@ -1,4 +1,3 @@
-<!--![](images/Getting_Started_Banner_Temp.png)-->
 <div class="banner_main">
 <h1>Getting Started</h1>
 <p>Get up and running with Netduino! Configure your development environment, update your firmware, and write your first app.</p>
