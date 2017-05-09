@@ -1,7 +1,7 @@
 <div class="banner_main">
 <h1>Getting Started</h1>
 <p>Get up and running with Netduino! Configure your development environment, update your firmware, and write your first app.</p>
-<a href="">Get Started</a>
+<a href="/Netduino/Getting_Started">Get Started</a>
 </div>
 
 # Featured Netduino Guides
