@@ -1,10 +1,29 @@
-![](images/Getting_Started_Banner_Temp.png)
+<div class="banner_main">
+<h1>Getting Started</h1>
+<p>Get up and running with Netduino! Configure your development environment, update your firmware, and write your first app.</p>
+<a href="">Get Started</a>
+</div>
 
-# [Getting Started](Netduino/Getting_Started)
+# Featured Netduino Guides
 
-Configure your development environment, update your Netduino, and build your first application!
+#### [Input/Output (IO)](/Netduino/Input_Output)
 
-# Featured Guides
+##### [Analog IO](/Netduino/Input_Output/Analog/)
+
+##### [Digital IO](/Netduino/Input_Output/Digital/)
+
+##### [SD Card/File IO](/Netduino/Input_Output/File_Storage/)
+
+##### [Network Connectivity](/Netduino/Input_Output/Network/)
+
+#### [Updating Firmware](http://localhost:4000/Netduino/About/Updating_Firmware)
+
+#### [Application Fundamentals](/Netduino/Application_Fundamentals/)
+
+# [Community Forums](http://community.wildernesslabs.co)
+
+Come say hi!
 
 # Featured Samples
+
 
