@@ -245,19 +245,20 @@ ul.nav.navbar-nav.navbar-right{padding-right: 20px}
 	line-height: 1.22857143;
 }
 .banner_main a {
-	border: 2px solid #438ead;
-	position: relative;
-	z-index: 2;
-	width: 220px;
-	display: inline-block;
-	background: #00a9e6;
-	color: #fff;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 7px 20px 8px;
-	font-family: 'Lato', sans-serif;
-	border-radius: 4px;
-	line-height: 1.42857143;
+  background: #00a9e6 none repeat scroll 0 0;
+  border: 2px solid #438ead;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-family: "Lato",sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.42857;
+  max-width: 220px;
+  padding: 7px 20px 8px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
 }
 @media only screen and (min-width:1136px) and (max-width: 1205px)  {
 .navbar-nav{
