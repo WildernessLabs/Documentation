@@ -37,6 +37,8 @@ Wilderness Labs welcomes and encourages constrictive contributions. We believe t
 
 When contributing, please note that we have a strict policy on plagiarism; your contributions must be your own. Please do not copy and paste from external sources, unless they're your own writing that you are willing to contribute.
 
+The documentation is all written in Markdown, and I (bryancostanich) highly recommend [MacDown](https://macdown.uranusjr.com/) as a markdown editor if you're on a Mac. 
+
 ### Typos and other Small Fixes
 
 Typos and other small fixes, additions can just be made and submitted as a pull-request. No need to reserve the topic.
@@ -63,6 +65,8 @@ All the documentation prose is released under a [Creative Commons
 Attribution + Noncommercial + NoDerivatives (CC BY-NC-ND) license](Licenses/CreativecCommons_BY_NC_ND.md). Feel free to share verbatim in non-commercial usage and provide attribution. Commercial usage may be granted in certain use cases. If you need a more permissive license, please contact us at [hello@wildernesslabs.co](mailto:hell@wildernesslabs.co).
 
 ![Creative Commons BY-NC-ND Logo](Licenses/Cc-by-nc-nd_icon.png)
+
+[Human Readable Version of the License](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ### Code Samples and Code Snippets
 
