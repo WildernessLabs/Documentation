@@ -17,6 +17,9 @@ Open a terminal and run:
 
 ```
 $ brew install ruby
+$ gem install bundler
+$ gem install jekyll
+$ bundle update
 ```
 
 ### 3. Launch local server
