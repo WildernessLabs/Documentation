@@ -34,6 +34,12 @@ The site should be available locally at: `http://127.0.0.1:4000/`
 
 Changes should automatically be picked up and displayed on the site.
 
+You may receive an error stating that some componets are out of date.  In which case execute the following command before retrying:
+
+```
+bundle update
+```
+
 ## Contributing
 
 Wilderness Labs welcomes and encourages constrictive contributions. We believe that documentation is best when a diverse community of folks with a variety of perspectives and experience share their wisdom and findings with others. Additionally, documentation contributions are a great way to capture learnings that you may even reference yourself.
