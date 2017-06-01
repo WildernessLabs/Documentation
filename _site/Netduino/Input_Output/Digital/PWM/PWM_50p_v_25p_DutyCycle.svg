@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="919px" height="368px" viewBox="0 0 919 368" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
     <title>PWM_50p_v_25p_DutyCycle</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
@@ -22,8 +22,8 @@
                         <text id="Time" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
                             <tspan x="491.398" y="130">Time</tspan>
                         </text>
-                        <text id="Current" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
-                            <tspan x="0.7375" y="60">Current</tspan>
+                        <text id="Voltage" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="1.2955" y="60">Voltage</tspan>
                         </text>
                     </g>
                     <g id="Signal" transform="translate(165.000000, 50.000000)" stroke="#23ABE3" stroke-width="5" stroke-linecap="square">
@@ -60,8 +60,8 @@
                         <text id="Time" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
                             <tspan x="491.398" y="130">Time</tspan>
                         </text>
-                        <text id="Current" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
-                            <tspan x="0.7375" y="60">Current</tspan>
+                        <text id="Voltage" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="1.2955" y="60">Voltage</tspan>
                         </text>
                     </g>
                     <g id="Signal" transform="translate(165.000000, 50.000000)" stroke="#23ABE3" stroke-width="5" stroke-linecap="square">

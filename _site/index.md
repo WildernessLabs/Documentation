@@ -22,7 +22,11 @@
 
 # [Community Forums](http://community.wildernesslabs.co)
 
-Come say hi!
+For announcements and other info, check out our [community forums](https://community.wildernesslabs.co)!
+
+# [Live Community Chat](https://discord.gg/3hcz97R)
+
+We also have a [Discord chat server](https://discord.gg/3hcz97R) setup, so come say hi!
 
 # Featured Samples
 
