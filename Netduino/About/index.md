@@ -38,7 +38,7 @@ For compatibility with Arduino hardware, Netduino has the same header and pin co
 
 # Netduino 2
 
-Netduino 2 is offered in 2 different models, the N32 base model as well as the N2+, which adds 10Mb Ethernet, The various models and links to buy them can be found at [wildernesslabs.co/netduino](http://staging.wildernesslabs.co/Netduino)
+Netduino 2 is offered in 2 different models, the N2 base model as well as the N2+, which adds 10Mb Ethernet, The various models and links to buy them can be found at [wildernesslabs.co/netduino](http://staging.wildernesslabs.co/Netduino)
 
 ## Features + Pinout
 
