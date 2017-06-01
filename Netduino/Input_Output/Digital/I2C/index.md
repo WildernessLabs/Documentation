@@ -34,7 +34,7 @@ This in-depth article on the [Effects of Varying I2C Pull-Up Resistor](http://ds
 
 ## Netduino I2C Pins
 
-The Netduino has two pins allocated for the I2C protocol.  These pins are labelled SD (for SDA) and SC (for SCK) and can be found above the 13 digital pins on the board.
+The Netduino has two pins allocated for the I2C protocol.  These pins are labelled SD (for SDA) and SC (for SCK) and can be found above the 14 digital pins on the right of the board as viewed below:
 
 ![N3 Pinout Diagram](../../../About/Netduino3_Pinout.svg)
 
