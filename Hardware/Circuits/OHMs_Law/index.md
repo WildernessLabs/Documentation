@@ -26,8 +26,9 @@ or the resistance:
 
 R = V / I
 
+See [Driving LEDs with Current Limiting Resistors](../LEDs/Driving_w_Resistor/) for an example of using Ohms Law.
+
 # Further Reading
 
 - [Ohms Law article on Wikipedia](https://en.wikipedia.org/wiki/Ohm%27s_law)
 - [Resistors](../Resistors/)
-- [Driving LEDs with Current Limiting Resistors](../LEDs/Driving_w_Resistor/)
