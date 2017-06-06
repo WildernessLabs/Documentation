@@ -17,6 +17,9 @@ Open a terminal and run:
 
 ```
 $ brew install ruby
+$ gem install bundler
+$ gem install jekyll
+$ bundle update
 ```
 
 ### 3. Launch local server
@@ -30,6 +33,12 @@ bundle exec jekyll serve
 The site should be available locally at: `http://127.0.0.1:4000/`
 
 Changes should automatically be picked up and displayed on the site.
+
+You may receive an error stating that some componets are out of date.  In which case execute the following command before retrying:
+
+```
+bundle update
+```
 
 ## Contributing
 
