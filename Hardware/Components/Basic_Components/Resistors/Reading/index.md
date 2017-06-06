@@ -10,12 +10,12 @@ There are 2 primary methods of labeling SMD resistors.
 
 The first uses 3 numbers such as 424, this can be understood as 42 * 10^4 = 42x10,000 = 420k Ohms.  If the resistor were labeled as 420 it would be 42 * 10^0 = 42 * 1 = 42 Ohms.
 
-The second method, EIA Standard, uses 2 numbers and a letter such as 66B and this will require the tables below to decode. 
+The second method, EIA Standard, uses 2 numbers and a letter such as 66B using the tables below we can decode that to mean  475*10 = 4,750 Ohms.
 
 The numbers are a lookup code
 CODE	|	Value	|	 		|	CODE	|	Value	|	 		|	CODE	|	Value	|	 		|	CODE	|	Value
 -----	|	-----	|	-----	|	-----	|	-----	|	-----	|	-----	|	-----	|	-----	|	-----	|	-----
-01		|	100		|	 		|	25		|	178		|	 		|	49		|	316		|	 		|	73		|	562
+01		|	100		|	  		|	25		|	178		|	 		|	49		|	316		|	 		|	73		|	562
 02		|	102		|	 		|	26		|	182		|	 		|	50		|	324		|	 		|	74		|	576
 03		|	105		|	 		|	27		|	187		|	 		|	51		|	332		|	 		|	75		|	590
 04		|	107		|	 		|	28		|	191		|	 		|	52		|	340		|	 		|	76		|	604
