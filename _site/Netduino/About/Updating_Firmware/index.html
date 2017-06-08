@@ -199,7 +199,33 @@
 
 <p>Ensuring that your Netduino has the latest firmware means that it will be up to date with the current Netduino-specific .NET Micro Framework runtime. Additionally, unless your Netduino has the latest firmware, you may have issues deploying your application to it.</p>
 
-<h2 id="netduino-device-manager">Netduino Device Manager</h2>
+<h2 id="windows-using-mfdeploy">Windows (Using MFDeploy)</h2>
+
+<ol>
+  <li>
+    <p>Download the latest Netduino firmware files from the <a href="https://github.com/WildernessLabs/Netduino_Firmware_Releases">Netduino Firmware Repo</a>. You’ll need both the <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files for your specific Netduino model.</p>
+  </li>
+  <li>
+    <p>Launch <strong>MFDeploy</strong>. MFDeploy is installed as part of the Netduino NetMF SDK.</p>
+  </li>
+  <li>
+    <p>Select <code class="highlighter-rouge">USB</code> from the device selection area, and then your device from the drop down to the right of that:
+<img src="MFDeploy_01.png" alt="" /></p>
+  </li>
+  <li>
+    <p>In the <strong>Image File</strong> area, click the <strong>Browse</strong> button and navigate to the folder that has the <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files, select them, and click <strong>Open</strong>:
+<img src="MFDeploy_02.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Click the <strong>Deploy</strong> button to deploy the files.</p>
+  </li>
+  <li>
+    <p>After it’s done deploying, the console output should have something similar to the following:
+<img src="MFDeploy_06.png" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="mac-using-netduino-device-manager">Mac (Using Netduino Device Manager)</h2>
 
 <ol>
   <li>Launch the <em>Netduino Device Manager</em>:</li>
