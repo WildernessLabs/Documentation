@@ -6,11 +6,13 @@ An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](http:/
 
 ![LED Circuit Symbol](LED.svg)
 
-Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the [Cathode](https://en.wikipedia.org/wiki/Cathode)) than the other (the [Anode](https://en.wikipedia.org/wiki/Anode)), to indicate which leg should be hooked to the positive (`+`) side of a circuit:
+Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the [Cathode](https://en.wikipedia.org/wiki/Cathode)) than the other (the [Anode](https://en.wikipedia.org/wiki/Anode)), to indicate which leg should be hooked to the positive (`+`) side of a circuit.
 
-[need image and diagram]
+![Some LED Packages](SomeLEDs.jpg)
 
-LEDs have two fundamental properties that the electronics designer should take into consideration, namely the forward voltage (V<sub>f</sub>)and the maximum current (I<sub>fmax</sub>) it can conduct.  Typical values for V<sub>F</sub> and I<sub>fmax</sub> are:
+The above shows a number of different LEDs, starting from the left, Red, Green, Yellow, Blue, RGB, Infrared, Bar LED (actually 10 independent LEDs in a single package) and a Seven Segment display with decimal point.
+
+LEDs have two fundamental properties that the electronics designer should take into consideration, namely the forward voltage (V<sub>f</sub>) and the maximum current (I<sub>fmax</sub>) it can conduct.  Typical values for V<sub>F</sub> and I<sub>fmax</sub> are:
 
 | Color  | V<sub>f</sub> | I<sub>fmax</sub> |
 |--------|---------------|------------------|
@@ -22,11 +24,13 @@ LEDs have two fundamental properties that the electronics designer should take i
 
 These values may vary between suppliers and the data sheet for the component purchased will provide the appropriate values.
 
+The forward voltage (V<sub>f</sub>) is the voltage drop across the LED and the maximum current (I<sub>fmax</sub>) is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED.
+
 ## LED Colors
 
 LEDs are available in a variety of colors, the most common of which are red, green, yellow, white and blue.
 
-RGB (Red, Green and Blue) LEDs are capable of displaying a wide variety of colors.  These LEDs are actually three LEDs, one red, one green and one blue.  The wide variety of colours they are capable of displaying comes from the intensity of each of the three LEDs.
+RGB (Red, Green and Blue) LEDs are capable of displaying a wide variety of colors.  These LEDs are actually three LEDs, one red, one green and one blue in a single package (see the LED with four legs in the above image).  The wide variety of colours they are capable of displaying comes from the intensity of each of the three LEDs.
 
 LEDs can also emit light in the infrared spectrum.  These LEDs are used in remote controls for devices such as televisions and cameras.
 
@@ -47,8 +51,19 @@ Because of this, the current that drives an LED is typically limited by one of t
 
 ## Uses and More Information
 
-[[Can also be used as a light sensor!](http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/)]
+An LED is actually an exotic mix of materials that result in a [PN junction](https://en.wikipedia.org/wiki/P%E2%80%93n_junction).  Normally, electric current flowing through the LED causes it to emit light.  However, photons hitting the PN junction can also cause a tiny current flow and as [Forrest Mims shows here](http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/), you can detect this current and use the LED as a light sensor.
 
+
+# Digital LEDs
+
+In recent years a number of digital RGB LEDs have become available.  These products are RGB LEDs in combination with a small current controller IC.  The most prevalent of these are:
+
+* [NeoPixel](https://www.adafruit.com/product/1655) - WS8211 LEDs
+* [DotStar](https://www.adafruit.com/product/3341) - APA102 LEDs
+
+These devices are available as single units as well as flexible strips, straight PCB and full or quarter circular PCBs.
+
+The driver in the WS8211 LEDs requires precise timing control in order to be able to set the colour of the LED.  The APA102 is more forgiving as this uses a basic serial protocol (data and clock only).  The APA102 chips are better suited to the Netduino.
 
 # Further Information
 
