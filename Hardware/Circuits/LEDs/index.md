@@ -2,7 +2,7 @@
 title: Light Emitting Diodes (LEDs)
 ---
 
-An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](http://localhost:4000/Hardware/Circuits/Diodes/) (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:
+An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](/Hardware/Circuits/Diodes/) (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:
 
 ![LED Circuit Symbol](LED.svg)
 
