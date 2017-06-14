@@ -199,6 +199,108 @@
 
 <p><img src="Capacitor.svg" alt="Capacitor Circuit Symbol" /></p>
 
+<p>A capacitor is an electrical device capable of storing energy.</p>
+
+<p>Capacitors are made up of two electrical conductors separated by an insulator.  Early experimental capacitors were made from two metal plates separated by an air gap.  The metal plates are the conducting material and air acted as an insulator.  The insulating layer between the metal plates is called a <a href="https://en.wikipedia.org/wiki/Dielectric">dielectric</a>.</p>
+
+<p>Two leads connect the capacitor to an electronic circuit.  It should be noted that some capacitors have the leads marked with a + and / or - symbol.  These capacitors <strong>must</strong> be connected with the + lead connected to the positive voltage and the - lead connected to the negative voltage (or ground).  These capacitors are <em>polarized</em> capacitors.  Failure to observe this can cause the capacitor to explode or burst into flames.  Electrolytic and tantalum capacitors are examples of polarized capacitors.</p>
+
+<p>The separation of the two metal plates in a capacitor means that a charge can build up on each plate.  Doing this is <em>charging</em> the capacitor.  The capacitor can be <em>discharged</em> by removing the power source and connecting it to a circuit.  The charge will then be released until the capacitor has fully discharged.</p>
+
+<h2 id="capacitance">Capacitance</h2>
+
+<p>The measurement of capacitance is the Farad (symbol F).  The Farad is a large quantity and capacitance values are ofter prefixed by one of the following:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Letter</th>
+      <th>Prefix</th>
+      <th>Multiple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>p</td>
+      <td>Pico</td>
+      <td>10<sup>-12</sup></td>
+    </tr>
+    <tr>
+      <td>n</td>
+      <td>Nano</td>
+      <td>10<sup>-9</sup></td>
+    </tr>
+    <tr>
+      <td>μ</td>
+      <td>Micro</td>
+      <td>10<sup>-6</sup></td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>Milli</td>
+      <td>10<sup>-13</sup></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>So a 1μF capacitor has a capacitance of 0.000001 F (or 10<sup>-6</sup> F).</p>
+
+<h2 id="voltage-rating">Voltage Rating</h2>
+
+<p>Capacitors are often given a voltage rating.  This is the maximum voltage that they can tolerate before they breakdown and become unusable and possibly explode.</p>
+
+<p>Always choose a capacitor with a voltage rating higher than the circuit voltage it will be exposed to.</p>
+
+<h2 id="typical-uses">Typical Uses</h2>
+
+<p>The ability of a capacitor to store and release energy at short notice makes it extremely useful.  Typical application include:</p>
+
+<ul>
+  <li>Switch debouncing (RC Circuit)</li>
+  <li>Decoupling</li>
+  <li>Filters</li>
+</ul>
+
+<h3 id="switch-debouncing">Switch Debouncing</h3>
+
+<p>Mechanical switches are noisy devices.  Pressing a button does not always result in a single clean signal.  The mechanical properties of the switch mean that contact can sometimes generate spurious signals:</p>
+
+<p><img src="SwitchBounce.jpg" alt="Switch Bounce" /></p>
+
+<p>RC Circuits can be used to smooth out the signal.  Adding an RC circuit results in signals such as the following:</p>
+
+<p><img src="RCAddedToSwitch.jpg" alt="RC Debounced Switch Signal" /></p>
+
+<p>Notice the curved nature of both the falling and rising signals.</p>
+
+<h3 id="decoupling">Decoupling</h3>
+
+<p>A power supply is an efficient device capable of supplying current varying from a few milliamps to the maximum rating of the power supply.  It responds to the changing demand of the circuit it is connected to by increasing or decreasing the amount of current available as required.  These changes are not always instantaneous.</p>
+
+<p>Sometimes a circuit will place a sudden demand for an increase in current.  The power supply may take a (very) short time to respond to this demand.  A decoupling capacitor can be used to make up the shortfall.  It acts like a small local battery making up the shortfall when necessary and recharging when the power levels return to normal.</p>
+
+<h3 id="filters">Filters</h3>
+
+<p>Filters circuits can be used to remove (filter out) signals of a defined frequency.  There are several filter types:</p>
+
+<ul>
+  <li>Low pass filter</li>
+  <li>High pass filter</li>
+  <li>Band pass filter</li>
+</ul>
+
+<p>Various combination of capacitors, <a href="../Resistors/">resistors</a> and inductors are used to build these filters.</p>
+
+<h1 id="further-reading">Further Reading</h1>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Capacitor">Capacitor description on Wikipedia</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/RC_circuit">RC Circuits</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Decoupling_capacitor">Decoupling Capacitor</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/High-pass_filter">High Pass Filters</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Low-pass_filter">Low pass filters</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Band-pass_filter">Band pass filters</a></li>
+</ul>
+
 
                         </div>
                     

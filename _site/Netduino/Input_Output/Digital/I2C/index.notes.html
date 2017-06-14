@@ -205,9 +205,13 @@
 
 <h5 id="review-notes"><strong>Review Notes</strong></h5>
 
-<p>The overview section could use a little more “beginner’s mind” here. After reading the overview, the main question that I’m left with is, “what is it good for?” Also, if there are only two wires, what about power? How are peripherals powered? Are those in addition to the data lines? How does I2C compare to SPI or Serial? What are the advantages of I2C? Also, you mention devices on the bus. So I assume that it handles multiple devices? How does that work? Later you talk about addressing, which seems to make sense, given what you’re saying about the bus, but I think a little clarity in the overview would go a long way to providing a conceptual overview for what’s going to happen in the rest of the doc. Something like, “I2C supports multiple devices on the same bus (meaning they all share the same communication wires), through the use of addressing. This makes I2C useful for [explain the scenario(s) here a bit]” etc. In fact, I think we should have a “Bus” topic under /Hardware/Circuits that gives a quick definition and sample circuit.</p>
+<blockquote>
+  <p>The overview section could use a little more “beginner’s mind” here. After reading the overview, the main question that I’m left with is, “what is it good for?” Also, if there are only two wires, what about power? How are peripherals powered? Are those in addition to the data lines? How does I2C compare to SPI or Serial? What are the advantages of I2C? Also, you mention devices on the bus. So I assume that it handles multiple devices? How does that work? Later you talk about addressing, which seems to make sense, given what you’re saying about the bus, but I think a little clarity in the overview would go a long way to providing a conceptual overview for what’s going to happen in the rest of the doc. Something like, “I2C supports multiple devices on the same bus (meaning they all share the same communication wires), through the use of addressing. This makes I2C useful for [explain the scenario(s) here a bit]” etc. In fact, I think we should have a “Bus” topic under /Hardware/Circuits that gives a quick definition and sample circuit.</p>
+</blockquote>
 
-<p>Note that I added back ticks to <code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCK</code>, indicating they are hardware pins. We should add that bit of guidance to our writer notes.</p>
+<blockquote>
+  <p>Note that I added back ticks to <code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCK</code>, indicating they are hardware pins. We should add that bit of guidance to our writer notes.</p>
+</blockquote>
 
 <h3 id="device-addresses">Device Addresses</h3>
 
@@ -217,11 +221,17 @@
 
 <h5 id="review-notes-1"><strong>Review Notes</strong></h5>
 
-<p>I would define address collision inline. Maybe something like “to help with address collisio (in which multiple devices have the same primary address)”.</p>
+<blockquote>
+  <p>I would define address collision inline. Maybe something like “to help with address collisio (in which multiple devices have the same primary address)”.</p>
+</blockquote>
 
-<p>Also, I think a code snippet here would go a long way to provide a more concrete understanding of the concept. Specifically, maybe addressing a device or something.</p>
+<blockquote>
+  <p>Also, I think a code snippet here would go a long way to provide a more concrete understanding of the concept. Specifically, maybe addressing a device or something.</p>
+</blockquote>
 
-<p>I added a “, however,” to the last line. I think you’ll want to explain the capicitance issues. What specifically is the issue? Is there a practical limit usually? Like 5? 50? How does having multiple devices affect the speed in which you can communicate with them, since they’re on a bus?</p>
+<blockquote>
+  <p>I added a “, however,” to the last line. I think you’ll want to explain the capicitance issues. What specifically is the issue? Is there a practical limit usually? Like 5? 50? How does having multiple devices affect the speed in which you can communicate with them, since they’re on a bus?</p>
+</blockquote>
 
 <h3 id="read--write-bit">Read / Write Bit</h3>
 
@@ -229,7 +239,9 @@
 
 <h5 id="review-notes-2">Review Notes</h5>
 
-<p>the read/write bit content feels out of place. it needs context. maybe “Device Addressing, and Read/Write Bit” should be subsections under a “Communicating with I2C Devices” heading?</p>
+<blockquote>
+  <p>the read/write bit content feels out of place. it needs context. maybe “Device Addressing, and Read/Write Bit” should be subsections under a “Communicating with I2C Devices” heading?</p>
+</blockquote>
 
 <h3 id="pull-up-resistors">Pull-up Resistors</h3>
 
@@ -241,19 +253,31 @@
 
 <h5 id="review-notes-3">Review Notes</h5>
 
-<p>I think we need a topic on pulling up or down with resistors, which we’d then link to:</p>
+<blockquote>
+  <p>I think we need a topic on pulling up or down with resistors, which we’d then link to:</p>
+</blockquote>
 
 <p>“require <a href="/Hardware/Circuits/PullingUpAndDown_WithResistors/">pull-up resistors</a> to be connected…”</p>
 
-<p>That article needs to be super beginner minded.</p>
+<blockquote>
+  <p>That article needs to be super beginner minded.</p>
+</blockquote>
 
-<p>Should 4K7 be <code class="highlighter-rouge">47k</code>?</p>
+<blockquote>
+  <p>Should 4K7 be <code class="highlighter-rouge">47k</code>?</p>
+</blockquote>
 
-<p>Also, I think we need a topic in [Circuits](/Hardware/Circuits] about circuit capacitance. I also added a comma after “supplied”</p>
+<blockquote>
+  <p>Also, I think we need a topic in [Circuits](/Hardware/Circuits] about circuit capacitance. I also added a comma after “supplied”</p>
+</blockquote>
 
-<p>As an editorial note, I would change the last sentence to:</p>
+<blockquote>
+  <p>As an editorial note, I would change the last sentence to:</p>
+</blockquote>
 
-<p>For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the <a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor (external link)</a> article.</p>
+<blockquote>
+  <p>For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the <a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor (external link)</a> article.</p>
+</blockquote>
 
 <h3 id="further-information">Further Information</h3>
 
@@ -261,7 +285,9 @@
 
 <h5 id="review-notes-4">Review Notes</h5>
 
-<p>I think we should put <strong>Additional Resources</strong> at the end of the doc and standardize on a format. I put some guidance in the style guide.</p>
+<blockquote>
+  <p>I think we should put <strong>Additional Resources</strong> at the end of the doc and standardize on a format. I put some guidance in the style guide.</p>
+</blockquote>
 
 <h2 id="netduino-i2c-pins">Netduino I2C Pins</h2>
 
@@ -281,7 +307,9 @@
 
 <h4 id="reviewer-notes-1">Reviewer Notes</h4>
 
-<p>I think that if we put inline code in the conceptual sections after the overivew, we should probably move the concrete example here to a separate doc. Probably <a href="/Netduino/I2C/TMP102_Example">TMP102 I2C Example</a> or similar?</p>
+<blockquote>
+  <p>I think that if we put inline code in the conceptual sections after the overivew, we should probably move the concrete example here to a separate doc. Probably <a href="/Netduino/I2C/TMP102_Example">TMP102 I2C Example</a> or similar?</p>
+</blockquote>
 
 <p>Let’s chat about that. I think it’s generally a good idea to separate these things, but we’ll probably need to work through it a bit to get it right and set the pattern. I think we’re breaking new tech writing ground here.</p>
 
@@ -933,7 +961,9 @@ Temperature data: 0x0c, 0xb1
 
 <h5 id="review-notes-5">Review Notes</h5>
 
-<p>I wrapped the output here in a code block.</p>
+<blockquote>
+  <p>I wrapped the output here in a code block.</p>
+</blockquote>
 
 
                         </div>

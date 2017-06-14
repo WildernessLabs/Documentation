@@ -11,9 +11,9 @@ Devices on the bus will act as either a _master_ or a _slave_ devices.  Both _ma
 
 ##### **Review Notes**
 
-The overview section could use a little more "beginner's mind" here. After reading the overview, the main question that I'm left with is, "what is it good for?" Also, if there are only two wires, what about power? How are peripherals powered? Are those in addition to the data lines? How does I2C compare to SPI or Serial? What are the advantages of I2C? Also, you mention devices on the bus. So I assume that it handles multiple devices? How does that work? Later you talk about addressing, which seems to make sense, given what you're saying about the bus, but I think a little clarity in the overview would go a long way to providing a conceptual overview for what's going to happen in the rest of the doc. Something like, "I2C supports multiple devices on the same bus (meaning they all share the same communication wires), through the use of addressing. This makes I2C useful for [explain the scenario(s) here a bit]" etc. In fact, I think we should have a "Bus" topic under /Hardware/Circuits that gives a quick definition and sample circuit. 
+> The overview section could use a little more "beginner's mind" here. After reading the overview, the main question that I'm left with is, "what is it good for?" Also, if there are only two wires, what about power? How are peripherals powered? Are those in addition to the data lines? How does I2C compare to SPI or Serial? What are the advantages of I2C? Also, you mention devices on the bus. So I assume that it handles multiple devices? How does that work? Later you talk about addressing, which seems to make sense, given what you're saying about the bus, but I think a little clarity in the overview would go a long way to providing a conceptual overview for what's going to happen in the rest of the doc. Something like, "I2C supports multiple devices on the same bus (meaning they all share the same communication wires), through the use of addressing. This makes I2C useful for [explain the scenario(s) here a bit]" etc. In fact, I think we should have a "Bus" topic under /Hardware/Circuits that gives a quick definition and sample circuit. 
 
-Note that I added back ticks to `SDA` and `SCK`, indicating they are hardware pins. We should add that bit of guidance to our writer notes.
+> Note that I added back ticks to `SDA` and `SCK`, indicating they are hardware pins. We should add that bit of guidance to our writer notes.
 
 ### Device Addresses
 
@@ -23,11 +23,11 @@ Addresses are 7-bits in length giving a maximum number of 128 devices on the bus
 
 ##### **Review Notes**
 
-I would define address collision inline. Maybe something like "to help with address collisio (in which multiple devices have the same primary address)".
+> I would define address collision inline. Maybe something like "to help with address collisio (in which multiple devices have the same primary address)".
 
-Also, I think a code snippet here would go a long way to provide a more concrete understanding of the concept. Specifically, maybe addressing a device or something. 
+> Also, I think a code snippet here would go a long way to provide a more concrete understanding of the concept. Specifically, maybe addressing a device or something. 
 
-I added a ", however," to the last line. I think you'll want to explain the capicitance issues. What specifically is the issue? Is there a practical limit usually? Like 5? 50? How does having multiple devices affect the speed in which you can communicate with them, since they're on a bus?
+> I added a ", however," to the last line. I think you'll want to explain the capicitance issues. What specifically is the issue? Is there a practical limit usually? Like 5? 50? How does having multiple devices affect the speed in which you can communicate with them, since they're on a bus?
 
 ### Read / Write Bit
 
@@ -35,7 +35,7 @@ A Master device will start the communication session by sending the address of t
 
 ##### Review Notes
 
-the read/write bit content feels out of place. it needs context. maybe "Device Addressing, and Read/Write Bit" should be subsections under a "Communicating with I2C Devices" heading? 
+> the read/write bit content feels out of place. it needs context. maybe "Device Addressing, and Read/Write Bit" should be subsections under a "Communicating with I2C Devices" heading? 
 
 ### Pull-up Resistors
 
@@ -47,19 +47,19 @@ This in-depth article on the [Effects of Varying I2C Pull-Up Resistor](http://ds
 
 ##### Review Notes
 
-I think we need a topic on pulling up or down with resistors, which we'd then link to:
+> I think we need a topic on pulling up or down with resistors, which we'd then link to:
 
   "require [pull-up resistors](/Hardware/Circuits/PullingUpAndDown_WithResistors/) to be connected..." 
   
-That article needs to be super beginner minded.
+> That article needs to be super beginner minded.
 
-Should 4K7 be `47k`?
+> Should 4K7 be `47k`?
 
-Also, I think we need a topic in [Circuits](/Hardware/Circuits] about circuit capacitance. I also added a comma after "supplied"
+> Also, I think we need a topic in [Circuits](/Hardware/Circuits] about circuit capacitance. I also added a comma after "supplied"
 
-As an editorial note, I would change the last sentence to:
+> As an editorial note, I would change the last sentence to:
 
-For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors) article.
+> For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors) article.
 
 
 ### Further Information
@@ -68,7 +68,7 @@ For a more in depth discussion on why pull-up resistors are important and how to
 
 ##### Review Notes
 
-I think we should put **Additional Resources** at the end of the doc and standardize on a format. I put some guidance in the style guide. 
+> I think we should put **Additional Resources** at the end of the doc and standardize on a format. I put some guidance in the style guide. 
 
 
 ## Netduino I2C Pins
@@ -89,7 +89,7 @@ Use of the I2C bus on the Netduino will be illustrated using a temperature modul
 
 #### Reviewer Notes
 
-I think that if we put inline code in the conceptual sections after the overivew, we should probably move the concrete example here to a separate doc. Probably [TMP102 I2C Example](/Netduino/I2C/TMP102_Example) or similar?
+> I think that if we put inline code in the conceptual sections after the overivew, we should probably move the concrete example here to a separate doc. Probably [TMP102 I2C Example](/Netduino/I2C/TMP102_Example) or similar?
 
 Let's chat about that. I think it's generally a good idea to separate these things, but we'll probably need to work through it a bit to get it right and set the pattern. I think we're breaking new tech writing ground here.
 
@@ -549,4 +549,4 @@ Temperature data: 0x0c, 0xb1
 
 ##### Review Notes
 
-I wrapped the output here in a code block.
+> I wrapped the output here in a code block.

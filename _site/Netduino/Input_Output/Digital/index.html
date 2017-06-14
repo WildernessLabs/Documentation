@@ -199,22 +199,22 @@
 
 <p>Digital ports are useful for binary communication in which the port is either high/on (powered at 3.3v) or low/off (grounded at 0v). High represents a digital 1, and low represents 0.</p>
 
-<p>Additionally, Netduion provides built-in support for a host of different types of common digital communication protocols via the digital ports.</p>
+<p>Additionally, Netduino provides built-in support for a host of different types of common digital communication protocols via the digital ports.</p>
 
 <ul>
-  <li><a href="Digital/CAN/">I2C (CAN)</a> - [explain]</li>
-  <li><a href="Digital/PWM/">PWM</a> - [signal pulses for analog-like functionality]</li>
-  <li><a href="Digital/SPI/">SPI</a> -</li>
-  <li><a href="Digital/UART/">UART (Serial)</a></li>
+  <li><a href="I2C/">I2C (Inter Integrated Circuit)</a></li>
+  <li><a href="PWM/">PWM (Pulse Width Modulation)</a></li>
+  <li><a href="SPI/">SPI (Serial Peripheral Interface)</a></li>
+  <li><a href="UART/">UART (Serial)</a></li>
 </ul>
 
-<p>[available via different pins on the board:]</p>
+<p>The above protocols are sometimes called peripherals.  The location of the peripherals is shown on the pin out diagram for the boards.  The Netduino 3 and Netduino 3 WiFi pin out is as follows:</p>
 
 <p><img src="../../About/Netduino3_Pinout.svg" alt="" /></p>
 
 <h2 id="pulling-high-or-low">Pulling High or Low</h2>
 
-<p>Digital ports can be set to stand at a high or low current, in what’s knows as <em>pulling</em> them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v.</p>
+<p>Digital ports can be set to stand at a high or low voltage, in what’s knows as <em>pulling</em> them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v.</p>
 
 <p>The following is the signature for one of the <code class="highlighter-rouge">InputPort</code> constructors:</p>
 
@@ -236,7 +236,7 @@ Port.ResistorMode.PullDown);
 
 <h3 id="events-via-interruptports">Events via InterruptPorts</h3>
 
-<p>In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port’s value changes by using an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx"><code class="highlighter-rouge">InterruptPort</code></a>. For example, in response to a button being pressed that connnects a circuit and raises the input port’s current from low (0v) to high (3.3v).</p>
+<p>In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port’s value changes by using an <a href="https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx"><code class="highlighter-rouge">InterruptPort</code></a>. For example, in response to a button being pressed that connects a circuit and raises the input port’s voltage from low (0v) to high (3.3v).</p>
 
 <p>For example, the <a href="/Samples/Netduino/ButtonInteruptEvents">Button Interrupt Events Sample</a> illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:</p>
 

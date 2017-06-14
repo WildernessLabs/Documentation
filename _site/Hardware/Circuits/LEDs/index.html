@@ -197,17 +197,76 @@
     </h2>
 </div>
 
-<p>An <a href="https://www.wikiwand.com/en/Light-emitting_diode">LED</a> is a diode (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:</p>
+<p>An <a href="https://en.wikipedia.org/wiki/Light-emitting_diode">LED</a> is a <a href="/Hardware/Circuits/Diodes/">diode</a> (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:</p>
 
 <p><img src="LED.svg" alt="LED Circuit Symbol" /></p>
 
-<p>Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the <a href="https://www.wikiwand.com/en/Cathode">Cathode</a>) than the other (the <a href="https://www.wikiwand.com/en/Cathode">Anode</a>), to indicate which leg should be hooked to the positive (<code class="highlighter-rouge">+</code>) side of a circuit:</p>
+<p>Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the <a href="https://en.wikipedia.org/wiki/Cathode">Cathode</a>) than the other (the <a href="https://en.wikipedia.org/wiki/Anode">Anode</a>), to indicate which leg should be hooked to the positive (<code class="highlighter-rouge">+</code>) side of a circuit.</p>
 
-<p>[need image and diagram]</p>
+<p><img src="SomeLEDs.jpg" alt="Some LED Packages" /></p>
+
+<p>The above shows a number of different LEDs, starting from the left, Red, Green, Yellow, Blue, RGB, Infrared, Bar LED (actually 10 independent LEDs in a single package) and a Seven Segment display with decimal point.</p>
+
+<p>LEDs have two fundamental properties that the electronics designer should take into consideration, namely the forward voltage (V<sub>f</sub>) and the maximum current (I<sub>fmax</sub>) it can conduct.  Typical values for V<sub>F</sub> and I<sub>fmax</sub> are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>V<sub>f</sub></th>
+      <th>I<sub>fmax</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Red</td>
+      <td>1.8V</td>
+      <td>15mA - 20mA</td>
+    </tr>
+    <tr>
+      <td>Green</td>
+      <td>2.1V</td>
+      <td>20ma - 30mA</td>
+    </tr>
+    <tr>
+      <td>Blue</td>
+      <td>3.4V - 3.6 V</td>
+      <td>20mA</td>
+    </tr>
+    <tr>
+      <td>Yellow</td>
+      <td>2.0V</td>
+      <td>15mA</td>
+    </tr>
+    <tr>
+      <td>White</td>
+      <td>1.9V - 2.4V</td>
+      <td>30mA</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>These values may vary between suppliers and the data sheet for the component purchased will provide the appropriate values.</p>
+
+<p>The forward voltage (V<sub>f</sub>) is the voltage drop across the LED and the maximum current (I<sub>fmax</sub>) is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED.</p>
+
+<h2 id="led-colors">LED Colors</h2>
+
+<p>LEDs are available in a variety of colors, the most common of which are red, green, yellow, white and blue.</p>
+
+<p>RGB (Red, Green and Blue) LEDs are capable of displaying a wide variety of colors.  These LEDs are actually three LEDs, one red, one green and one blue in a single package (see the LED with four legs in the above image).  The wide variety of colours they are capable of displaying comes from the intensity of each of the three LEDs.</p>
+
+<p>LEDs can also emit light in the infrared spectrum.  These LEDs are used in remote controls for devices such as televisions and cameras.</p>
+
+<h2 id="led-power">LED Power</h2>
+
+<p>LEDs are extremely efficient and have a wide variety of uses.  Consumer electronics and hobbyist projects use LEDs to indicate the status of a system, is the power on, is the circuit connected to a network etc.</p>
+
+<p>Higher power LEDs are used in modern day lighting.  Such applications often require the use of a <a href="https://en.wikipedia.org/wiki/Heat_sink">heatsink</a> in order to prevent the LED from destroying itself through overheating.</p>
 
 <h2 id="limiting-current">Limiting Current</h2>
 
-<p>LEDs are extremely efficient light generators because they convert currently directly into photons. As such, it typically doesn’t take very much current to power them. Too much current, and they burn out.</p>
+<p>LEDs are extremely efficient light generators because they convert currently directly into photons. As such, it typically doesn’t take very much current to power them. Too much current (exceeding I<sub>fmax</sub>), and they burn out.</p>
 
 <p>Because of this, the current that drives an LED is typically limited by one of two methods:</p>
 
@@ -218,15 +277,24 @@
 
 <h2 id="uses-and-more-information">Uses and More Information</h2>
 
-<p>[<a href="http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/">Can also be used as a light sensor!</a>]</p>
+<p>An LED is actually an exotic mix of materials that result in a <a href="https://en.wikipedia.org/wiki/P%E2%80%93n_junction">PN junction</a>.  Normally, electric current flowing through the LED causes it to emit light.  However, photons hitting the PN junction can also cause a tiny current flow and as <a href="http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/">Forrest Mims shows here</a>, you can detect this current and use the LED as a light sensor.</p>
 
-<p>[come in many colors, packages, and powers]</p>
+<h1 id="digital-leds">Digital LEDs</h1>
 
-<p>[RGB LEDs are super cool and can be used to produce any color of light in the visible spectrum]</p>
+<p>In recent years a number of digital RGB LEDs have become available.  These products are RGB LEDs in combination with a small current controller IC.  The most prevalent of these are:</p>
 
-<h1 id="more-reading">More Reading</h1>
+<ul>
+  <li><a href="https://www.adafruit.com/product/1655">NeoPixel</a> - WS8211 LEDs</li>
+  <li><a href="https://www.adafruit.com/product/3341">DotStar</a> - APA102 LEDs</li>
+</ul>
 
-<p><a href="https://www.wikiwand.com/en/Light-emitting_diode">LED on Wikipedia</a></p>
+<p>These devices are available as single units as well as flexible strips, straight PCB and full or quarter circular PCBs.</p>
+
+<p>The driver in the WS8211 LEDs requires precise timing control in order to be able to set the colour of the LED.  The APA102 is more forgiving as this uses a basic serial protocol (data and clock only).  The APA102 chips are better suited to the Netduino.</p>
+
+<h1 id="further-information">Further Information</h1>
+
+<p><a href="https://en.wikipedia.org/wiki/Light-emitting_diode">LED on Wikipedia</a></p>
 
 
                         </div>
