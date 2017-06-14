@@ -15,9 +15,12 @@ namespace Blinky
 		{
 			
 			App app = new App ();
-			app.Run ();
+
+			// Start up the app
+			new Thread(app.Run).Start();
 
 			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
+
 			while (app.IsRunning)
 			{
 				led.Write(true); // turn on the LED
@@ -42,7 +45,11 @@ namespace Blinky
 
 		public void Run()
 		{
-			this.IsRunning = true;
+            this.IsRunning = true;
+
+			// wait for network hardware to spinup
+			//Thread.Sleep(10000);
+
 			bool goodToGo = InitializeNetwork ();
 
 			if (goodToGo) {
