@@ -4,6 +4,10 @@
 
 ## Priority Docs (Up for grabs)
 
+## Lower Priority Docs (Up for grabs)
+ * using an oscillscope
+ * using a multimeter
+
 
 ## Documentation Reservations
 
