@@ -14,9 +14,9 @@ Netduino IO ports are divided into two categories; _Digital_ and _Analog_.
 
 The Digital ports can be set to be high (powered at 3.3v), or low (grounded at 0v) which correspond to digital 1 and 0, respectively. Additionally, they have built-in support for a host of different types of common digital communication protocols:
 
-* [I2C (CAN)](Digital/CAN/)
-* [PWM](Digital/PWM/)
-* [SPI](Digital/SPI/)	
+* [I2C (Inter Integrated Circuit)](Digital/I2C/)
+* [PWM (Pulse Width Modulation)](Digital/PWM/)
+* [SPI (Serial Peripheral Interface)](Digital/SPI/)
 * [UART (Serial)](Digital/UART/)
 
 ### [Analog Ports](Analog/)
@@ -27,7 +27,7 @@ Analog ports can operate at a range of voltages between 0 and 3.3v, which is esp
 
  * **Maximum GPIO Current** - 25mA/pin.
  * **Maximum MCU Output Current** - 125mA.
- * **Digital I/O** - 3.3V nominal, but tolerant up to 5V.
+ * **Digital I/O** - 3.3V nominal, but tolerant up to 5V input.
  * **IOREF** - 3.3V (for shield compatibility).
 
 
