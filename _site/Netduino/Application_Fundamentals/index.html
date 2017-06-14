@@ -197,19 +197,105 @@
     </h2>
 </div>
 
-<p>Netduino is basically a small, power-efficient computer that runs a tiny operating system that’s part of the .NET Micro Framework. The .NET Micro Framework operating system is specially designed to run a single application.</p>
 
-<p>[run loop + threads]</p>
+<p>Netduino a small, power-efficient computer that runs a tiny operating system. The .NET Micro Framework (abbreviated to NETMF) system is specially designed to run a single application.  It is designed to run .NET on devices with low memory profiles.</p>
 
-<p>[basic form - <code class="highlighter-rouge">while(true) { stuff }</code> great for simple apps. but will chew through power]</p>
+<p>NETMF’s power lies in the debugging and rapid prototyping capabilities provided by the combination of C# (or Visual Basic) and Visual Studio.</p>
 
-<p>[app pattern using threads]</p>
+<h1 id="basic-application">Basic Application</h1>
 
-<p>http://forums.netduino.com/index.php?/topic/6070-multiple-threads-v-while-loop/</p>
+<p>One of the fundamental aspects of an application running on a microcontroller board such as Netduino, is that the application does not exit.  Normally, the microcontroller at the heart of the Netduino continually processes the data presented to it and so the application continues to run forever.</p>
 
-<p><a href="NETMF">.NET Micro Framework</a></p>
+<p>Microcontrollers are resource constrained devices, memory and processing power is usually restricted.  Often designs must also take power into consideration, especially when working with battery powered systems.</p>
 
-<p>[SPOT namespace]</p>
+<p>The two main patterns used by microcontroller developers are:</p>
+
+<ul>
+  <li>While loops running forever</li>
+  <li>Threads and interrupts</li>
+</ul>
+
+<p>There are pros and cons to both approaches.</p>
+
+<h2 id="while-loops">While Loops</h2>
+
+<p>The while loop pattern is demonstrated by the following code:</p>
+
+<pre><code class="language-CSharp">while (true)
+{
+    //  Check inputs.
+    //  Process inputs
+}
+</code></pre>
+
+<p>An application such as the above will run forever and every clock cycle will execute an instruction constantly consuming power.</p>
+
+<p>The advantage of this model is that data is processed sequentially.  This is important when the application uses shared data items.  Consider an application consuming data from a serial port.  The following model could be implemented:</p>
+
+<pre><code class="language-CSharp">while (true)
+{
+    CheckForNewData();
+    if (DataPacketComplete)
+    {
+        ProcessData();
+    }
+}
+</code></pre>
+
+<p><em>CheckForNewData</em> would prepare data for processing and set the flag to indicate we have data when we have a complete packet.  In this way there is no conflict between the producer (<em>CheckForNewData</em>) adding data to a buffer and the consumer (<em>ProcessData</em>) processing the data.</p>
+
+<p>The simplified programming model means that the application is executing instructions continuously.  This may not matter for projects powered by mains electricity but does matter for battery powered applications.</p>
+
+<ul>
+  <li>Pro: Simple to understand programming model.</li>
+  <li>Con: Increased power consumption.</li>
+</ul>
+
+<h2 id="threads-and-interrupts">Threads and Interrupts</h2>
+
+<p>Threads and interrupts present a more complex model as the application will need to take into consideration the non-linear execution of the application.  A typical pattern is:</p>
+
+<pre><code class="language-CSharp">public static void Main()
+{
+    CreateInterruptProcessors();
+    SetupAnyTimers();
+    Thread.Sleep(Timeout.Infinite);
+}
+</code></pre>
+
+<p><em>CreateInterruptProcessors</em> will create the objects needed to process events such as button preses, serial data input, sensor interrupts and similar events.</p>
+
+<p><em>SetupAnyTimers</em> would setup any periodic tasks, say sending data to an Azure web service once every five minutes.</p>
+
+<p>The final action is to put the application to sleep.  The following puts the microcontroller into a low power state:</p>
+
+<pre><code class="language-CSharp">Thread.Sleep(Timeout.Infinite);
+</code></pre>
+
+<p>The microcontroller will now wait for data to be generated and interrupts generated.  An interrupt or timer signal will put the microcontroller into a higher power state, processing the data generated and then returning to a low power state.  This presents an obvious advantage for battery powered applications.</p>
+
+<p>The trade off is the complexity introduced by the asynchronous nature in which data can be generated and processed.  This can lead to seemingly random bugs if data production and consumption is not synchronised.  More information can be found on the NETMF blog article on <a href="https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/">Thread Communication and Synchronization</a>.</p>
+
+<ul>
+  <li>Pros: Power efficient, ideal for battery powered devices.</li>
+  <li>Cons: Application development is more complex.</li>
+</ul>
+
+<h1 id="hardware">Hardware</h1>
+
+<p>As noted above, NETMF is designed to run on resource constrained systems.  These are often microcontrollers (at the time of writing, the Netduino family of boards are using the <a href="http://www.st.com/en/microcontrollers/stm32-32-bit-arm-cortex-mcus.html?querycriteria=productId=SC1169">STM32</a> series of microcontrollers) which are low speed devices with limited memory and little or no external storage available.</p>
+
+<p>NETMF also provides a method for accessing the hardware on the microcontroller.  This ranges from simple General Purpose Input Output (GPIO) pins to supporting higher level protocols such as SPI, I2C and UART.</p>
+
+<h1 id="further-reading">Further Reading</h1>
+
+<ul>
+  <li><a href="https://blogs.msdn.microsoft.com/netmfteam/2011/01/17/threads-and-thread-priorities-in-netmf/">NETMF: Threads and Thread Priorities</a></li>
+  <li><a href="https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/">NETMF: Thread Communication and Synchronisation</a></li>
+  <li><a href="NETMF">.NET Micro Framework</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Smart_Personal_Objects_Technology">SPOT namespace origin</a></li>
+</ul>
+
 
 
                         </div>

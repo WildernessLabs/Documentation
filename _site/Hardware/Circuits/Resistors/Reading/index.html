@@ -197,7 +197,411 @@
     </h2>
 </div>
 
+<h2 id="through-hole-pth">Through Hole (PTH)</h2>
 <p><img src="Reading_4_Band_Resistors.svg" alt="4-band resistor color chart" /></p>
+
+<h2 id="surface-mount-smd">Surface Mount (SMD)</h2>
+<p>There are 2 primary methods of labeling SMD resistors.</p>
+
+<p>The first uses 3 numbers such as 424, this can be understood as 42 * 10^4 = 42x10,000 = 420k Ohms.  If the resistor were labeled as 420 it would be 42 * 10^0 = 42 * 1 = 42 Ohms.</p>
+
+<p>The second method, EIA Standard, uses 2 numbers and a letter such as 66B and this will require the tables below to decode.</p>
+
+<p>The numbers are a lookup code</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>CODE</td>
+      <td>Value</td>
+      <td> </td>
+      <td>CODE</td>
+      <td>Value</td>
+      <td> </td>
+      <td>CODE</td>
+      <td>Value</td>
+      <td> </td>
+      <td>CODE</td>
+      <td>Value</td>
+    </tr>
+    <tr>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td>100</td>
+      <td> </td>
+      <td>25</td>
+      <td>178</td>
+      <td> </td>
+      <td>49</td>
+      <td>316</td>
+      <td> </td>
+      <td>73</td>
+      <td>562</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>102</td>
+      <td> </td>
+      <td>26</td>
+      <td>182</td>
+      <td> </td>
+      <td>50</td>
+      <td>324</td>
+      <td> </td>
+      <td>74</td>
+      <td>576</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>105</td>
+      <td> </td>
+      <td>27</td>
+      <td>187</td>
+      <td> </td>
+      <td>51</td>
+      <td>332</td>
+      <td> </td>
+      <td>75</td>
+      <td>590</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>107</td>
+      <td> </td>
+      <td>28</td>
+      <td>191</td>
+      <td> </td>
+      <td>52</td>
+      <td>340</td>
+      <td> </td>
+      <td>76</td>
+      <td>604</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>110</td>
+      <td> </td>
+      <td>29</td>
+      <td>196</td>
+      <td> </td>
+      <td>53</td>
+      <td>348</td>
+      <td> </td>
+      <td>77</td>
+      <td>619</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td>113</td>
+      <td> </td>
+      <td>30</td>
+      <td>200</td>
+      <td> </td>
+      <td>54</td>
+      <td>357</td>
+      <td> </td>
+      <td>78</td>
+      <td>634</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td>115</td>
+      <td> </td>
+      <td>31</td>
+      <td>205</td>
+      <td> </td>
+      <td>55</td>
+      <td>365</td>
+      <td> </td>
+      <td>79</td>
+      <td>649</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td>118</td>
+      <td> </td>
+      <td>32</td>
+      <td>210</td>
+      <td> </td>
+      <td>56</td>
+      <td>374</td>
+      <td> </td>
+      <td>80</td>
+      <td>665</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td>121</td>
+      <td> </td>
+      <td>33</td>
+      <td>215</td>
+      <td> </td>
+      <td>57</td>
+      <td>383</td>
+      <td> </td>
+      <td>81</td>
+      <td>681</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>124</td>
+      <td> </td>
+      <td>34</td>
+      <td>221</td>
+      <td> </td>
+      <td>58</td>
+      <td>392</td>
+      <td> </td>
+      <td>82</td>
+      <td>698</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>127</td>
+      <td> </td>
+      <td>35</td>
+      <td>226</td>
+      <td> </td>
+      <td>59</td>
+      <td>402</td>
+      <td> </td>
+      <td>83</td>
+      <td>715</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>130</td>
+      <td> </td>
+      <td>36</td>
+      <td>232</td>
+      <td> </td>
+      <td>60</td>
+      <td>412</td>
+      <td> </td>
+      <td>84</td>
+      <td>732</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>133</td>
+      <td> </td>
+      <td>37</td>
+      <td>237</td>
+      <td> </td>
+      <td>61</td>
+      <td>422</td>
+      <td> </td>
+      <td>85</td>
+      <td>750</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>137</td>
+      <td> </td>
+      <td>38</td>
+      <td>243</td>
+      <td> </td>
+      <td>62</td>
+      <td>432</td>
+      <td> </td>
+      <td>86</td>
+      <td>768</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>140</td>
+      <td> </td>
+      <td>39</td>
+      <td>249</td>
+      <td> </td>
+      <td>63</td>
+      <td>442</td>
+      <td> </td>
+      <td>87</td>
+      <td>787</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>143</td>
+      <td> </td>
+      <td>40</td>
+      <td>255</td>
+      <td> </td>
+      <td>64</td>
+      <td>453</td>
+      <td> </td>
+      <td>88</td>
+      <td>806</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>147</td>
+      <td> </td>
+      <td>41</td>
+      <td>261</td>
+      <td> </td>
+      <td>65</td>
+      <td>464</td>
+      <td> </td>
+      <td>89</td>
+      <td>825</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>150</td>
+      <td> </td>
+      <td>42</td>
+      <td>267</td>
+      <td> </td>
+      <td>66</td>
+      <td>475</td>
+      <td> </td>
+      <td>90</td>
+      <td>845</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>154</td>
+      <td> </td>
+      <td>43</td>
+      <td>274</td>
+      <td> </td>
+      <td>67</td>
+      <td>487</td>
+      <td> </td>
+      <td>91</td>
+      <td>866</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>158</td>
+      <td> </td>
+      <td>44</td>
+      <td>280</td>
+      <td> </td>
+      <td>68</td>
+      <td>499</td>
+      <td> </td>
+      <td>92</td>
+      <td>887</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>162</td>
+      <td> </td>
+      <td>45</td>
+      <td>287</td>
+      <td> </td>
+      <td>69</td>
+      <td>511</td>
+      <td> </td>
+      <td>93</td>
+      <td>909</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>165</td>
+      <td> </td>
+      <td>46</td>
+      <td>294</td>
+      <td> </td>
+      <td>70</td>
+      <td>523</td>
+      <td> </td>
+      <td>94</td>
+      <td>931</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>169</td>
+      <td> </td>
+      <td>47</td>
+      <td>301</td>
+      <td> </td>
+      <td>71</td>
+      <td>536</td>
+      <td> </td>
+      <td>95</td>
+      <td>953</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>174</td>
+      <td> </td>
+      <td>48</td>
+      <td>309</td>
+      <td> </td>
+      <td>72</td>
+      <td>549</td>
+      <td> </td>
+      <td>96</td>
+      <td>976</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The letter serves as a multiplier against the values above.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Letter</td>
+      <td>Multiplier</td>
+    </tr>
+    <tr>
+      <td>—–</td>
+      <td>—–</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <td>Y/R</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <td>X/S</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>B/H</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>1 000</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>10 000</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>100 000</td>
+    </tr>
+  </tbody>
+</table>
 
 
                         </div>

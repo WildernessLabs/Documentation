@@ -1,3 +1,0 @@
----
-title: OHM's Law
----

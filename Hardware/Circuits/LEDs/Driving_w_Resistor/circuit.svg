@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="135 150 265 276" preserveAspectRatio="xMinYMin meet" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g class="DC Current Source">
+<line x1="192" y1="352" x2="192" y2="321" stroke="#877777" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="192" y1="287" x2="192" y2="256" stroke="#0FEF0F" stroke-width="3" stroke-linecap="round" fill="none" />
+<ellipse cx="192" cy="304" rx="17" ry="17" fill="#FFFFFF" stroke="none" />
+<ellipse cx="192" cy="304" rx="17" ry="17" stroke="#47B747" stroke-width="3" fill="none" />
+<line x1="192" y1="312" x2="192" y2="301" stroke="#47B747" stroke-width="3" stroke-linecap="round" fill="none" />
+<polygon fill="#47B747" stroke="none" points="192,295 186,301 198,301 " />
+<text x="217" y="309" font-family="sans-serif">10mA</text>
+</g>
+<g class="LED">
+<line x1="352" y1="288" x2="352" y2="310" stroke="#37C737" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="352" y1="329" x2="352" y2="352" stroke="#877777" stroke-width="3" stroke-linecap="round" fill="none" />
+<polygon fill="#FF1919" stroke="none" points="365,310 339,310 352,329 " />
+<polygon stroke="#37C737" stroke-width="2" fill="none" points="365,310 339,310 352,329 " />
+<line x1="365" y1="329" x2="339" y2="329" stroke="#877777" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="363" y1="320" x2="367" y2="323" stroke="#37C737" stroke-width="2" stroke-linecap="round" fill="none" />
+<line x1="366" y1="316" x2="370" y2="319" stroke="#37C737" stroke-width="2" stroke-linecap="round" fill="none" />
+</g>
+<g class="Resistor">
+<line x1="352" y1="224" x2="352" y2="240" stroke="#0FEF0F" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="352" y1="272" x2="352" y2="288" stroke="#37C737" stroke-width="3" stroke-linecap="round" fill="none" />
+<polyline stroke="#0FEF0F" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none" points="352,240 360,242.6667 352,245.3333 344,248 352,250.6667 " />
+<polyline stroke="#17E717" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none" points="352,250.6667 360,253.3333 352,256 344,258.6667 352,261.3333 " />
+<polyline stroke="#27D727" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none" points="352,261.3333 360,264 352,266.6667 344,269.3333 352,272 " />
+<text x="367" y="261" font-family="sans-serif">100</text>
+</g>
+<g class="Wire">
+<line x1="352" y1="192" x2="192" y2="192" stroke="#0FEF0F" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="192" y1="352" x2="192" y2="384" stroke="#877777" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="192" y1="384" x2="352" y2="384" stroke="#877777" stroke-width="1.5" stroke-linecap="round" fill="none" />
+<text x="202" y="369" font-family="sans-serif">10mA / -4.16nV</text>
+<polygon fill="#000000" stroke="none" points="230,408 216,402 230,396 " />
+<line x1="328" y1="402" x2="230" y2="402" stroke="#000000" stroke-width="2" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="352" y1="384" x2="352" y2="352" stroke="#877777" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="352" y1="224" x2="352" y2="192" stroke="#0FEF0F" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="192" y1="256" x2="192" y2="192" stroke="#0FEF0F" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+</svg>
