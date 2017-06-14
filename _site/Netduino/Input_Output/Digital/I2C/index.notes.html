@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Wilderness Labs : I2C</title>
+        <meta name="description" content="Documentation">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">    
+    </head>
+    <body>
+
+        <div class="top-container">
+            <!--<h4><a class="brand" href="/">Wilderness Labs</a>
+    <small>Documentation</small>
+</h4>-->
+ <!-- Static navbar -->
+ <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="http://wildernesslabs.co"><img src="/images/WLabsHeaderLogo.png" data-rjs="/images/WLabsHeaderLogo@2x.png" ></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href="http://wildernesslabs.co/Netduino">Netduino</a></li>
+              <li><a href="http://community.wildernesslabs.co">Community</a></li>
+              <li class="active"><a href="/">Documentation</a></li>
+              <li class="dropdown">
+                <a href="http://blog.wildernesslabs.co" >Blog <!--<span class="caret"></span>--></a>
+                <!--<ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>-->
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <!--<li><a href="../navbar-fixed-top/">Sign in</a></li>-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+            
+        </div>
+			<div class="container">
+            	<div class="main-content">
+                <div class="row">
+                    
+                    
+                        <div id="navigation" class="col-sm-3">
+                            <!--
+<div class="NavHeader">Meadow</div>
+<ul class="navigation">
+    <li class="active"><a href="#">Getting Started</a></li>
+</ul>
+-->
+
+<div class="NavHeader">Netduino</div>
+<ul class="navigation">
+    <li class="active"><a href="/Netduino/Getting_Started">Getting Started</a></li>
+    
+    <li><a href="/Netduino/About">About Netduino</a>
+        <ul>
+            <li><a href="/Netduino/About/Updating_Firmware">Updating Firmware</a></li>
+           <li><a href="/Netduino/About/Downloads">Downloads</a></li>
+           <li><a href="/Netduino/About/Source">Source Files</a></li>
+        </ul>
+    </li>
+    <li><a href="/Netduino/Input_Output">IO</a>
+        <ul>
+            <li><a href="/Netduino/Input_Output/Analog/">Analog</a></li>
+            <li><a href="/Netduino/Input_Output/Digital/">Digital</a>
+                <ul>
+                    <li><a href="/Netduino/Input_Output/Digital/I2C/">I2C</a></li>
+                    <li><a href="/Netduino/Input_Output/Digital/SPI/">SPI</a></li>
+                    <li><a href="/Netduino/Input_Output/Digital/PWM/">PWM</a></li>
+                    <li><a href="/Netduino/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                </ul>
+            </li>
+            <li><a href="/Netduino/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
+            <li><a href="/Netduino/Input_Output/File_Storage/">SD Card/File IO</a></li>
+            <li><a href="/Netduino/Input_Output/Network/">Network</a></li>
+        </ul>
+    </li>
+    <li><a href="/Netduino/Application_Fundamentals/">Application Fundamentals</a>
+        <ul>
+            <li><a href="/Netduino/Application_Fundamentals/NETMF/">.NET MicroFramework</a></li>
+            <!--<li><a href="/Netduino/Application_Fundamentals/Memory_Management/">Memory Management</a></li>-->
+        </ul>
+    </li>
+    <!--
+    <li><a href="/Netduino/Peripherals/">Peripherals</a>
+        <ul>
+            <li><a href="/Netduino/Peripherals/LEDs/">LEDs</a></li>
+            <li><a href="/Netduino/Peripherals/Switches/">Switches</a></li>
+            <li><a href="/Netduino/Peripherals/Sensors/">Sensors</a></li>
+            <li><a href="/Netduino/Peripherals/Motors/">Motors</a></li>
+            <li><a href="/Netduino/Peripherals/Shields/">Shields</a></li>
+            <li><a href="/Netduino/Peripherals/Relays/">Relays</a></li>
+            <li><a href="/Netduino/Peripherals/Bluetooth/">Bluetooth</a></li>
+        </ul>
+    </li>
+    -->
+</ul>
+
+
+<div class="NavHeader">Hardware</div>
+<ul class="navigation">
+    <li><a href="/Hardware/Overview/">Overview</a></li>
+    <li><a href="/Hardware/Circuits/">Circuit Fundamentals</a>
+        <ul>
+            <li><a href="/Hardware/Circuits/OHMs_Law">OHMs Law</a></li>
+            <li><a href="/Hardware/Circuits/Resistors">Resistors</a>
+                <ul>
+                    <li><a href="/Hardware/Circuits/Resistors/Reading">Reading a Resistor's Value</a></li>
+                </ul>
+            </li>
+            <li><a href="/Hardware/Circuits/Capacitors">Capacitors</a></li>
+            <li><a href="/Hardware/Circuits/Diodes">Diodes</a></li>
+            <li><a href="/Hardware/Circuits/LEDs">LEDs</a>
+                <ul>
+                    <li><a href="/Hardware/Circuits/LEDs/Driving_w_Resistor">Driving w/a Resistor</a></li>    
+                    <li><a href="/Hardware/Circuits/LEDs/Driving_w_PWM">Driving w/a PWM Signal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="/Hardware/Components/">Component Fundamentals<a/>
+        <ul>
+            <li><a href="/Hardware/Components/Component_Types">Component Types</a></li>
+            <li><a href="/Hardware/Components/Packages_and_Sizes">Packages and Sizes</a></li>
+            <li><a href="/Hardware/Components/Choosing_Components">Choosing Components</a></li>
+        </ul>
+    </li> 
+</ul>
+
+<div class="NavHeader">Product Lifecycle</div>
+<ul class="navigation">
+    <li><a href="/Product_Design_Lifecycle/Conceptual_Design/">Conceptual Design</a></li>
+    <li><a href="/Product_Design_Lifecycle/Schematic_Design">Schematic Design</a></li>
+    <li><a href="/Product_Design_Lifecycle/Breadboard_Prototyping">Breadboard Prototyping</a></li>
+    <li><a href="/Product_Design_Lifecycle/Programming">Programming</a></li>
+    <li><a href="/Product_Design_Lifecycle/PCBs">PCBs</a>
+        <ul>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Prototyping">PCB Prototyping</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Fabrication">PCB Fabrication</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Assembly">PCB Assembly</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Solder_Masks">Solder Masks</a></li>
+            <li><a href="/Product_Design_Lifecycle/PCBs/Surface_Finishes">PCB Finishes</a></li>
+        </ul>
+    </li>
+    <li><a href="/Product_Design_Lifecycle/Industrial_Design">Industrial Design</a></li>
+    <li><a href="/Product_Design_Lifecycle/Mass_Production">Mass Production</a>
+        <ul>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs">USB Vendor IDs</a></li>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/MAC_Addresses">MAC Addresses</a></li>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/UPCs_EANs">UPCs and EANs</a></li>
+            <li><a href="/Product_Design_Lifecycle/Mass_Production/Certifications">Important Certifications</a></li>
+        </ul>
+    </li>
+</ul>
+
+<div class="NavHeader"><a href="/Samples">Sample Projects</a></div>
+<ul class="navigation">
+    <li><a href="/Samples/Netduino/Blinky">Blinky</a></li>
+    <li><a href="/Samples/Netduino/OnboardButtonAndLed">Onboard Button + LED</a></li>
+    <li><a href="/Samples/Netduino/ButtonInterruptEvents">Button Interrupt Events</a></li>
+    <li><a href="/Samples/Netduino/GlitchFilter">Glitch Filtering</a></li>
+    <li><a href="/Samples/Netduino/DrivingLED_w_PWM/">LED w/PWM</a></li>
+    <li><a href="/Samples/Netduino/RgbLed/">RGB LED</a></li>
+    <li><a href="/Samples/Netduino/PotentiometerControlled_RgbLed/">RGB LED with Potentiometer</a></li>
+    <li><a href="/Samples/Netduino/SDCardIO/">SD Card IO</a></li>
+    <li><a href="/Samples/Netduino/WebRequest/">Web Request</a></li>
+</ul>
+
+                        </div>
+
+                        <div id="content" class="col-sm-9">
+                            <div class="page-header">
+    <h2>I2C
+        
+    </h2>
+</div>
+
+<p>I2C (Inter-Integrated Circuit) is a communication protocol allowing bi-directional communication between two or more devices using only two wires.</p>
+
+<p>The two bus wires used are usually labelled <code class="highlighter-rouge">SDA</code> (Data) and <code class="highlighter-rouge">SCK</code> (Clock).  Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encounterd by hobbyists are 100KHz and 400KHz.</p>
+
+<p>Devices on the bus will act as either a <em>master</em> or a <em>slave</em> devices.  Both <em>master</em> and <em>slave</em> can transmit and receive on the bus.</p>
+
+<h5 id="review-notes"><strong>Review Notes</strong></h5>
+
+<p>The overview section could use a little more “beginner’s mind” here. After reading the overview, the main question that I’m left with is, “what is it good for?” Also, if there are only two wires, what about power? How are peripherals powered? Are those in addition to the data lines? How does I2C compare to SPI or Serial? What are the advantages of I2C? Also, you mention devices on the bus. So I assume that it handles multiple devices? How does that work? Later you talk about addressing, which seems to make sense, given what you’re saying about the bus, but I think a little clarity in the overview would go a long way to providing a conceptual overview for what’s going to happen in the rest of the doc. Something like, “I2C supports multiple devices on the same bus (meaning they all share the same communication wires), through the use of addressing. This makes I2C useful for [explain the scenario(s) here a bit]” etc. In fact, I think we should have a “Bus” topic under /Hardware/Circuits that gives a quick definition and sample circuit.</p>
+
+<p>Note that I added back ticks to <code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCK</code>, indicating they are hardware pins. We should add that bit of guidance to our writer notes.</p>
+
+<h3 id="device-addresses">Device Addresses</h3>
+
+<p>The use of multiple devices on the single bus is made possible through device addresses.  Each device on the bus is allocated a specific address.  Some devices allow the address to be configured to one or more alternatives to help with address collision.  This is achieved using <em>address pins</em> which would be tied low or high depending upon the device and the address required.</p>
+
+<p>Addresses are 7-bits in length giving a maximum number of 128 devices on the bus.  In practice, however, there are often far fewer due to bus capacitance issues.</p>
+
+<h5 id="review-notes-1"><strong>Review Notes</strong></h5>
+
+<p>I would define address collision inline. Maybe something like “to help with address collisio (in which multiple devices have the same primary address)”.</p>
+
+<p>Also, I think a code snippet here would go a long way to provide a more concrete understanding of the concept. Specifically, maybe addressing a device or something.</p>
+
+<p>I added a “, however,” to the last line. I think you’ll want to explain the capicitance issues. What specifically is the issue? Is there a practical limit usually? Like 5? 50? How does having multiple devices affect the speed in which you can communicate with them, since they’re on a bus?</p>
+
+<h3 id="read--write-bit">Read / Write Bit</h3>
+
+<p>A Master device will start the communication session by sending the address of the device it wishes to communicate with along with a single bit that indicates the mode of the communication: <em>read</em> or <em>write</em>.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.</p>
+
+<h5 id="review-notes-2">Review Notes</h5>
+
+<p>the read/write bit content feels out of place. it needs context. maybe “Device Addressing, and Read/Write Bit” should be subsections under a “Communicating with I2C Devices” heading?</p>
+
+<h3 id="pull-up-resistors">Pull-up Resistors</h3>
+
+<p>Both of the bus lines (<code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCK</code>) require pull-up resistors to be connected to them.  The value of the pull-up resistor will depend upon the capacitance of the bus.  The number of components on the board, type of substrate used will all influence the bus capacitance.</p>
+
+<p>Most I2C breakout boards are supplied with pull-up resistors already on the breakout board.  In the case where one is not supplied, then a 4K7 resistor is usually good enough for prototyping.</p>
+
+<p>This in-depth article on the <a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor</a> explains why pull-up resistors are important and how to determine the ideal value for the resistor.</p>
+
+<h5 id="review-notes-3">Review Notes</h5>
+
+<p>I think we need a topic on pulling up or down with resistors, which we’d then link to:</p>
+
+<p>“require <a href="/Hardware/Circuits/PullingUpAndDown_WithResistors/">pull-up resistors</a> to be connected…”</p>
+
+<p>That article needs to be super beginner minded.</p>
+
+<p>Should 4K7 be <code class="highlighter-rouge">47k</code>?</p>
+
+<p>Also, I think we need a topic in [Circuits](/Hardware/Circuits] about circuit capacitance. I also added a comma after “supplied”</p>
+
+<p>As an editorial note, I would change the last sentence to:</p>
+
+<p>For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the <a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor (external link)</a> article.</p>
+
+<h3 id="further-information">Further Information</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">This Wikipedia article</a> contains a description of the protocol, the various modes and the bus characteristics.</p>
+
+<h5 id="review-notes-4">Review Notes</h5>
+
+<p>I think we should put <strong>Additional Resources</strong> at the end of the doc and standardize on a format. I put some guidance in the style guide.</p>
+
+<h2 id="netduino-i2c-pins">Netduino I2C Pins</h2>
+
+<p>The Netduino has two pins allocated for the I2C protocol.  These pins are labelled <strong>SD</strong> (for <code class="highlighter-rouge">SDA</code>) and <strong>SC</strong> (for <code class="highlighter-rouge">SCK</code>) and can be found above the 14 digital pins on the right of the board as viewed below:</p>
+
+<p><img src="../../../About/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
+
+<h4 id="reviewer-notes">Reviewer Notes</h4>
+
+<p>I think we want to use <strong>bold</strong> for labeling here. I’m open to ideas though.</p>
+
+<p>Also, what do you think about moving the pinout diagrams to the <a href="/Common_Files">Common_Files</a> folder? Seems like we’re using it all over the place, and it would make addressing a lot easier (single backslash vs. ../../../ nonsense). :D</p>
+
+<h2 id="tmp102-i2c-temperature-breakout-board">TMP102 I2C Temperature Breakout Board</h2>
+
+<p>Use of the I2C bus on the Netduino will be illustrated using a temperature module.  The TMP102 is a commonly available temperature module capable of measuring temperatures in the range -40°C to +125°C with a maximum resolution of 0.0625°C.  This device uses I2C and can be powered by a 3.3V signal, ideal for use with Netduino.</p>
+
+<h4 id="reviewer-notes-1">Reviewer Notes</h4>
+
+<p>I think that if we put inline code in the conceptual sections after the overivew, we should probably move the concrete example here to a separate doc. Probably <a href="/Netduino/I2C/TMP102_Example">TMP102 I2C Example</a> or similar?</p>
+
+<p>Let’s chat about that. I think it’s generally a good idea to separate these things, but we’ll probably need to work through it a bit to get it right and set the pattern. I think we’re breaking new tech writing ground here.</p>
+
+<h3 id="purchasing">Purchasing</h3>
+
+<p>TMP102 breakout modules can be purchased from <a href="https://www.sparkfun.com/products/13314">Sparkfun</a>.</p>
+
+<h2 id="using-i2c-on-the-netduino">Using I2C on the Netduino</h2>
+
+<p>Reading the current temperature from the TMP102 will illustrate the basic software requirements for successful communication with an I2C device, namely a simple read operation.</p>
+
+<h3 id="wiring-up-the-tmp102-and-netduino">Wiring up the TMP102 and Netduino</h3>
+
+<p>Firsly, ensure that the Netduino is disconnected from power and the USB connector.  Once complete, place the TMP102 into a piece of breadboard (you will need to solder male pins to the breakout board first).</p>
+
+<p>Next make the following connections between the temperature breakout board and the Netduino:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>TMP102 Pin Name</th>
+      <th>Netduino Pin Name</th>
+      <th>Wire Color in Photo Below</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SDA</td>
+      <td>SD</td>
+      <td>Blue</td>
+    </tr>
+    <tr>
+      <td>SCK</td>
+      <td>SC</td>
+      <td>Yellow</td>
+    </tr>
+    <tr>
+      <td>V<sub>cc</sub></td>
+      <td>3.3V</td>
+      <td>Red</td>
+    </tr>
+    <tr>
+      <td>GND</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>ADD0</td>
+      <td>GND</td>
+      <td>Black</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="Netduino3AndTMP102.jpg" alt="Netduino Connected to TMP102" /></p>
+
+<p>There are two yellow and two blue leads in the photo.  The second blue and yellows lead are connected to a <a href="https://en.wikipedia.org/wiki/Logic_analyzer">logic analyzer</a>, more on this later.</p>
+
+<h3 id="software">Software</h3>
+
+<p>Open Visual Studio (or Xamarin Studio) and follow the instructions on the <a href="../../GettingStarted">Getting Started</a> page and start a new project.  Copy the following code and paste it into the <em>program.cs</em> file replacing the default code.</p>
+
+<pre><code class="language-CSharp">using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using System.Threading;
+
+namespace TMP102
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            //
+            //  Create a new I2C device for the TMP102 on address 0x48 with the clock
+            //  running at 50 KHz.
+            //
+            I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+            //
+            //  Create a transaction to read two bytes of data from the TMP102 sensor.
+            //
+            byte[] buffer = new byte[2];
+            I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
+            reading[0] = I2CDevice.CreateReadTransaction(buffer);
+            while (true)
+            {
+                //
+                //  Read the temperature.
+                //
+                int bytesRead = tmp102.Execute(reading, 100);
+                //
+                //  Convert the reading into Centigrade and Fahrenheit.
+                //
+                int sensorReading = ((buffer[0] &lt;&lt; 4) | (buffer[1]) &gt;&gt; 4);
+                double centigrade = sensorReading * 0.0625;
+                double fahrenheit = centigrade * 1.8 + 32;
+                //
+                //  Display the readings in the debug window and pause before repeating.
+                //
+                Debug.Print(centigrade.ToString() + " C / " + fahrenheit.ToString() + " F");
+                Thread.Sleep(1000);
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>Reconnect the Netduino to the USB cable then save and run the application.  If everything has been connected correctly you will start to see temperature measurements in the <em>Application Output / Debug</em> window.</p>
+
+<h4 id="key-elements">Key Elements</h4>
+
+<p>The data sheet for the TMP102 states that the default address for the TMP102 is 0x48, so the first task is to create a new <em>I2CDevice</em> object that defines how we connect to the TMP102:</p>
+
+<pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+</code></pre>
+
+<p>The above code creates the <em>tmp102</em> object where the device has an address of 0x48 and the communication speed will be 50KHz.</p>
+
+<p>Temperature readings are returned from the TMP102 as a two byte value and so a buffer is needed to store the results of the read opertiation:</p>
+
+<pre><code class="language-CSharp">byte[] buffer = new byte[2];
+</code></pre>
+
+<p>NETMF uses transaction to communicate with I2C devices.  Using an array of transactions allows multiple operation to be completed at the same time.  In this case, there is only one read operation and the array of transations consists of a single element:</p>
+
+<pre><code class="language-CSharp">I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
+reading[0] = I2CDevice.CreateReadTransaction(buffer);
+</code></pre>
+
+<p>More complex cases allow multiple operations to be executed as a simple ooperation simply by adding more transations to the array.</p>
+
+<p>In the above code, an array <em>reading</em> is created to hold the single transaction that should be executed.  Two transaction types are supported and these are created with the <em>I2CDevice.CreateReadTransaction</em> and the <em>I2CDevice.CreateWriteTransaction</em> methods.</p>
+
+<p>At this point the initialisation and set up is complete.  The main program loop is entered and the temperature reading is read repeatedly using the following statement:</p>
+
+<pre><code class="language-CSharp">int bytesRead = tmp102.Execute(reading, 100);
+</code></pre>
+
+<p>The <em>Execute</em> method above takes an array of transactions, in our case the single read transaction and a timeout value in milliseconds.</p>
+
+<p>The remainder of the code simply calculates the temperature using the formula derived from the data sheet.</p>
+
+<h4 id="program-output">Program Output</h4>
+
+<p>Successful deployment of the application should reduce in a stream of temperature readings, one per second:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>22.5625 C / 72.612500000000011 F
+22.5625 C / 72.612500000000011 F
+22.5625 C / 72.612500000000011 F
+22.5625 C / 72.612500000000011 F
+22.5625 C / 72.612500000000011 F
+22.5625 C / 72.612500000000011 F
+</code></pre>
+</div>
+
+<h4 id="logic-analyser-output">Logic Analyser Output</h4>
+
+<p>As noted earlier, a second yellow and blue wire can be seen connected to the circuit.  These allow the logic analyzer to be connected to the circuit.</p>
+
+<p>The logic analyzer was configured to read data for two seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:</p>
+
+<p><img src="I2CLogicAnalyserOutput.png" alt="Logic Analyzer Trace" /></p>
+
+<p>The trace has been annotated to indicate the signal line and the protocol being analyzed.</p>
+
+<p>Starting from the left of the data signal:</p>
+
+<ul>
+  <li>Start bit indicated by the green dot</li>
+  <li>Device address and access mode (0x91)</li>
+  <li>Two data bytes (0x15 and 0xC0)</li>
+  <li>Stop bit indicated by the red dot</li>
+</ul>
+
+<p>It is interesting to note that the device address and mode byte are encoded with the device address transmitted first followed by the mode bit.  I2C uses 1 to represent a read transaction and 0 to represent a write transaction.</p>
+
+<p>In the case of the above application, the address is 0x48 and Netduino is reading from the device.  Read mode is indicated by a 1 and write by a 0.  This results in a packet header of 0x91:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>b7</th>
+      <th>b6</th>
+      <th>b5</th>
+      <th>b4</th>
+      <th>b3</th>
+      <th>b2</th>
+      <th>b1</th>
+      <th>b0</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Device address</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Device address shifted left by one place</td>
+    </tr>
+    <tr>
+      <td>Read / Write indicator</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Read = 1</td>
+    </tr>
+    <tr>
+      <td>Packet header</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Address or-ed with mode bit = 0x91</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When reading the logic analyzer traces, read operations to this device have the first byte set to 0x91 whilst write operations to the same device have the first byte set to 0x90.</p>
+
+<h1 id="writing-to-registers-and-multiple-transactions">Writing to Registers and Multiple Transactions</h1>
+
+<p>As noted above, the <em>Execute</em> method can execute multiple transactions in a single call.  This will be illustrated in the following application that will:</p>
+
+<ul>
+  <li>Reconfigure the TMP102 to return a 13-bit temperature reading</li>
+  <li>Read the temperature as a 13-bit value</li>
+</ul>
+
+<p>Configuration of the TMP102 is managed by a number of registers.  It should be noted that the use of registers to store data and configuration is common to both I2C and <a href="/Netduino/Input_Output/Digital/SPI/">SPI</a> devices.</p>
+
+<h2 id="registers">Registers</h2>
+
+<p>In the above example the application used the default power on state for the TMP102.  The default state allows the application to read the temperature.  The temperature itself is maintained in one of the internal registers and the read operation is simply returning the value in the register.</p>
+
+<p>The number of registers and their meaning are ususlly documented in the data sheet for the component in question.</p>
+
+<h3 id="tmp102-registers">TMP102 Registers</h3>
+
+<p>The TMP102 has five registers:</p>
+
+<ul>
+  <li>Current temperature</li>
+  <li>Configuration</li>
+  <li>T<sub>LOW</sub></li>
+  <li>T<sub>HIGH</sub></li>
+  <li>Pointer</li>
+</ul>
+
+<p>The current temperature register is read only and is the one that the above application reads.  The remaining four registers are read-write registers and can be used to change the operation of the TMP102.</p>
+
+<h4 id="pointer-register">Pointer Register</h4>
+
+<p>The pointer register is an 8 bit wide register that indicates which of the remaining four registers should be accessed.  Applications can write to bits 0 and 1 of this register, bits 2-7 should be set to zero.  The pointer register is interpreted as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>b1</th>
+      <th>b0</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>Temperature register</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>Configuration register</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>T<sub>LOW</sub> register</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>T<sub>HIGH</sub></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The default power on value of the TMP102 pointer register is 0 (temperature register).</p>
+
+<h4 id="temperature-register">Temperature Register</h4>
+
+<p>The temperature register holds 0°C at power up.  Folllowing a conversion the temperatutre reading is transferred to the temperature register.  The two byte register holds a 12 (or 13) bit value indicating the last reading along with a single bit indicating if this is a 12 or 13 bit reading.</p>
+
+<h5 id="bit-reading">12-bit Reading:</h5>
+
+<p>Byte 1:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>b7</th>
+      <th>b6</th>
+      <th>b5</th>
+      <th>b4</th>
+      <th>b3</th>
+      <th>b2</th>
+      <th>b1</th>
+      <th>b0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T11</td>
+      <td>T10</td>
+      <td>T09</td>
+      <td>T08</td>
+      <td>T07</td>
+      <td>T06</td>
+      <td>T05</td>
+      <td>T04</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Byte 2:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>b7</th>
+      <th>b6</th>
+      <th>b5</th>
+      <th>b4</th>
+      <th>b3</th>
+      <th>b2</th>
+      <th>b1</th>
+      <th>b0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T03</td>
+      <td>T02</td>
+      <td>T01</td>
+      <td>T00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="bit-reading-1">13-bit Reading:</h5>
+
+<p>Byte 1:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>b7</th>
+      <th>b6</th>
+      <th>b5</th>
+      <th>b4</th>
+      <th>b3</th>
+      <th>b2</th>
+      <th>b1</th>
+      <th>b0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T12</td>
+      <td>T11</td>
+      <td>T10</td>
+      <td>T09</td>
+      <td>T09</td>
+      <td>T08</td>
+      <td>T07</td>
+      <td>T05</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Byte 2:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>b7</th>
+      <th>b6</th>
+      <th>b5</th>
+      <th>b4</th>
+      <th>b3</th>
+      <th>b2</th>
+      <th>b1</th>
+      <th>b0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T04</td>
+      <td>T03</td>
+      <td>T02</td>
+      <td>T01</td>
+      <td>T00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="configuration-register">Configuration Register</h4>
+
+<p>The configuration register controls how the TMP102 functions.  This register is a 16-bit register and as noted, this is a read-write register.  The control register allows the configuration of the following:</p>
+
+<ul>
+  <li>Extended Mode</li>
+  <li>Alert</li>
+  <li>Conversion Rate</li>
+  <li>Shutdown Mode</li>
+  <li>Thermostat Mode</li>
+  <li>Fault Queue</li>
+  <li>Copnversion Resolution</li>
+  <li>One-Shot/Conversion Ready</li>
+</ul>
+
+<p>For the purpose of this exercise the application will be changing only the <em>Extended Mode</em> (EM) bit in the control register.  Setting this bit to 0 sets the TMP102 to use 12-bit mode.  A value of 1 will set the TMP102 to use 13-bit mode.</p>
+
+<p>From the data sheet, the EM bit is bit 4 in the second byte of the configuration register.</p>
+
+<h3 id="writing-to-registers">Writing To Registers</h3>
+
+<p>The Pointer Register changes the register being adccessed.  Multiple reads will use the previous value in the Pointer Register if a new value is not supplied.  Write opertaions require the pointer register to be supplied for each write operation.</p>
+
+<h2 id="software-1">Software</h2>
+
+<p>The specification for the application was defined as follows:</p>
+
+<ul>
+  <li>Reconfigure the TMP102 to return a 13-bit temperature reading</li>
+  <li>Read the temperature as a 13-bit value</li>
+</ul>
+
+<p>The code for this becomes:</p>
+
+<pre><code class="language-CSharp">using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using System.Threading;
+
+namespace TMP102ReadWrite
+{
+    public class Program
+    {
+        /// &lt;summary&gt;
+        /// Convert a byte to a two character hex string.
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Hexadecimal representation of the byte as a string.&lt;/returns&gt;
+        /// &lt;param name="val"&gt;Byte to convert into a string.&lt;/param&gt;
+        public static string ByteToHex(byte val)
+        {
+            const string hex = "0123456789abcdef";
+            return(new string(new char[] { '0', 'x', hex[(val &amp; 0xf0) &gt;&gt; 4], hex[val &amp; 0x0f] }));
+        }
+
+        /// &lt;summary&gt;
+        /// Reads the TMP 102 configuration.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// Create transactions to read the current configuration.  A write transaction
+        /// is necessary to change the pointer register to point to the configuration
+        /// registers.  A read transaction will then read the current configuration.
+        /// &lt;/remarks&gt;
+        /// &lt;param name="device"&gt;TMP102 I2CDevice object to read the configuration from.&lt;/param&gt;
+        private static byte[] ReadTMP102Configuration(I2CDevice device)
+        {
+            I2CDevice.I2CTransaction[] readConfiguration = new I2CDevice.I2CTransaction[2];
+            byte[] pointerBuffer = new byte[1];
+            pointerBuffer[0] = 1;
+            readConfiguration[0] = I2CDevice.CreateWriteTransaction(pointerBuffer);
+            //
+            byte[] currentConfig = new byte[2];
+            readConfiguration[1] = I2CDevice.CreateReadTransaction(currentConfig);
+            device.Execute(readConfiguration, 100);
+            Debug.Print("Configuration register: " + ByteToHex(currentConfig[0]) + ", " + ByteToHex(currentConfig[1]));
+            return (currentConfig);
+        }
+
+        /// &lt;summary&gt;
+        /// Main program loop.
+        /// &lt;/summary&gt;
+        public static void Main()
+        {
+            //
+            //  Create a new I2C device for the TMP102 on address 0x48 with the clock
+            //  running at 50 KHz.
+            //
+            I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+            //
+            //  Read the configuration prior to updating the conversion mode to 13-bit mode.
+            //
+            byte[] currentConfig = ReadTMP102Configuration(tmp102);
+            //
+            //  Now we have the configuration, set up to change the configuration between
+            //  12 and 13 bit mode and read data from the sensor.
+            //
+            I2CDevice.I2CTransaction[] changeConfig = new I2CDevice.I2CTransaction[1];
+            byte[] newConfiguration = { 0x01, currentConfig[0], (byte) (currentConfig[1] | 0x10) };
+            changeConfig[0] = I2CDevice.CreateWriteTransaction(newConfiguration);
+            tmp102.Execute(changeConfig, 100);
+            Thread.Sleep(1000);
+            //
+            //  Now setup for reading the temperature.
+            //
+            I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
+            byte[] repointToTemperatureRegister = { 0x00 };
+            reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);
+            byte[] temperatureData = new byte[2];
+            reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
+            while (true)
+            {
+                //
+                //  Read the temperature.
+                //
+                int bytesRead = tmp102.Execute(reading, 100);
+                Debug.Print("Temperature data: "+ ByteToHex(temperatureData[0]) + ", " + ByteToHex(temperatureData[1]));
+                //
+                //  Convert the reading into Centigrade and Fahrenheit.
+                //
+                int sensorReading = 0;
+                double centigrade = -273.15;
+                double fahrenheit = centigrade * 1.8 + 32;
+                if ((temperatureData[1] &amp; 0x01) == 1)
+                {
+                    sensorReading = ((temperatureData[0] &lt;&lt; 5) | (temperatureData[1]) &gt;&gt; 3);
+                    Debug.Print("13-bit value retrieved.");
+                }
+                else
+                {
+                    sensorReading = ((temperatureData[0] &lt;&lt; 4) | (temperatureData[1]) &gt;&gt; 4);
+                    Debug.Print("12-bit value retrieved.");
+                }
+                centigrade = sensorReading * 0.0625;
+                fahrenheit = centigrade * 1.8 + 32;
+                //
+                //  Display the readings in the debug window and pause before repeating.
+                //
+                Debug.Print(centigrade.ToString() + " C / " + fahrenheit.ToString() + " F");
+                Thread.Sleep(1000);
+            }
+        }
+    }
+}
+</code></pre>
+
+<h3 id="key-elements-1">Key Elements</h3>
+
+<p>The application will read the configuration twice, once to verify the power on state, the second time to verify that the change from 12-bit mode to 13-bit mode has been applied.</p>
+
+<pre><code class="language-CSharp">private static byte[] ReadTMP102Configuration(I2CDevice device)
+</code></pre>
+
+<p>This method will take an <em>I2CDevice</em> object and read the configuration.  The method uses two transactions, a write transaction will adjust the pointer register to point to the configuration register:</p>
+
+<pre><code class="language-CSharp">I2CDevice.I2CTransaction[] readConfiguration = new I2CDevice.I2CTransaction[2];
+byte[] pointerBuffer = new byte[1];
+pointerBuffer[0] = 1;
+readConfiguration[0] = I2CDevice.CreateWriteTransaction(pointerBuffer);
+</code></pre>
+
+<p>The second transaction reads the configuration from the TMP102:</p>
+
+<pre><code class="language-CSharp">byte[] currentConfig = new byte[2];
+readConfiguration[1] = I2CDevice.CreateReadTransaction(currentConfig);
+</code></pre>
+
+<p>Finally, the method executes the two transactions and displays the configuration inhexadecimal:</p>
+
+<pre><code class="language-CSharp">device.Execute(readConfiguration, 100);
+Debug.Print("Configuration register: " + ByteToHex(currentConfig[0]) + ", " + ByteToHex(currentConfig[1]));
+</code></pre>
+
+<p>A key point to note here is that a write and a read transaction are both executed together in a single method call.</p>
+
+<p>Executing the above will result in a write following by a read:</p>
+
+<p><img src="ReadConfiguration.png" alt="Read Configuration from TMP102" /></p>
+
+<p>The second green dot indicates the change from the write operation (setting the pointer register) to the read operation (reading the configuration register).</p>
+
+<p>Next operation is to change the mode to 13-bit mode by changing the configuration register:</p>
+
+<pre><code class="language-CSharp">byte[] currentConfig = ReadTMP102Configuration(tmp102);
+I2CDevice.I2CTransaction[] changeConfig = new I2CDevice.I2CTransaction[1];
+byte[] newConfiguration = { 0x01, currentConfig[0], (byte) (currentConfig[1] | 0x10) };
+changeConfig[0] = I2CDevice.CreateWriteTransaction(newConfiguration);
+tmp102.Execute(changeConfig, 100);
+Thread.Sleep(1000);
+</code></pre>
+
+<p>This results in the following data transmission:</p>
+
+<p><img src="WriteConfiguration.png" alt="N3 Writing Configuration Data to TMP102" /></p>
+
+<p>The <em>Sleep</em> method call ensures that the TMP102 has time to make at least one measurement before the application starts to read the temperature from the sensor.</p>
+
+<pre><code class="language-CSharp">I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
+byte[] repointToTemperatureRegister = { 0x00 };
+reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);
+byte[] temperatureData = new byte[2];
+reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
+</code></pre>
+
+<p>The read operation differs from the first application as it ensures that it is reading from the temperatre register but explicitly setting the register (write transaction) before it reads the data from the register:</p>
+
+<p><img src="ReadTemperature.png" alt="Read Temperature From TMP102" /></p>
+
+<h4 id="program-output-1">Program Output</h4>
+
+<p>Successful deployment will give output similar to the following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Configuration register: 0x60, 0xa0
+Temperature data: 0x0c, 0xb1
+13-bit value retrieved.
+25.375 C / 77.675000000000011 F
+Temperature data: 0x0c, 0xb1
+13-bit value retrieved.
+25.375 C / 77.675000000000011 F
+Temperature data: 0x0c, 0xb1
+13-bit value retrieved.
+25.375 C / 77.675000000000011 F
+</code></pre>
+</div>
+
+<h5 id="review-notes-5">Review Notes</h5>
+
+<p>I wrapped the output here in a code block.</p>
+
+
+                        </div>
+                    
+                </div>
+
+                
+
+                <div class="row">
+                    <div id="footer" class="col-sm-12">
+                        <!-- Wilderness Labs - We Power Connected Things -->
+<!-- Footer HTML Starts -->
+<div class="container footer-main-wrap">
+    <div class="row white-background">
+        <div class="col-md-2 col-sm-2 col-xs-12 footer_logo footer_column">
+            <a href="#"><img src="/images/White_Mountain_Footer_Logo.svg" class="footer-logo"/></a>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-6  footer_column">
+            <span class="list-heading">Products</span>
+            <ul class="footer-ul">
+                <li><a href="/Netduino">Netduino 2 & 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="col-md-2 col-sm-2 col-xs-6  footer_column">
+            <span class="list-heading">Developer Center</span>
+            <ul class="footer-ul">
+                <li><a href="http://developer.wildernesslabs.co/Netduino/Getting_Started/">Getting Started</a></li>
+                <li><a href="http://developer.wildernesslabs.co/Samples/">Samples</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-6  footer_column">
+            <span class="list-heading">Company</span>
+            <ul class="footer-ul">
+                <li><a href="http://blog.wildernesslabs.co">Blog</a></li>
+                <!--<li><a href="/About">About Us</a></li>-->
+            </ul>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-6  footer_column connect-items">
+            <span class="list-heading">Connect</span>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <ul class="footer-ul">
+                <li ><a href="http://github.com/wildernesslabs">GitHub</a></li>
+                <li><a href="http://community.wildernesslabs.co/">Community Forums</a></li>
+                
+              </ul>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <ul class="footer-ul">
+                <li><a href="https://twitter.com/WLabsHQ">Twitter</a></li>
+                <li><a href="https://www.facebook.com/netduino/">Facebook</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <ul class="footer-ul">
+                <li><a href="http://stackoverflow.com/search?q=netduino">Stackoverflow</a></li>
+              </ul>
+            </div>
+        </div>
+<!-- 
+        <div class="col-md-2 col-sm-2 col-xs-6  footer_column">
+            <span class="list-heading">&nbsp;&nbsp;</span>
+            <ul class="footer-ul">
+                
+            </ul>
+        </div> -->
+    </div>
+
+    <div class="row brown-background">
+        <div class="col-md-12 ">
+            <span class="footer-copyright-txt">&copy; 2017, Wilderness Labs - We Power Connected Things</span>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+             </div>
+        </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/retina.min.js"></script>
+        <script src="/js/retina.js"></script>
+        <script>
+
+			 $('ul.nav li.dropdown').hover(function() {
+				  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+				  }, function() {
+				  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+			 });
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+			retinajs();
+			// Attempts to process all participating elements that
+			// haven't been processed before.
+
+			retinajs( [img, img, img] );
+			retinajs( $('img') );
+			retinajs( document.querySelectorAll('img') );
+			// Attempts to process only the elements in the collection.
+			// Each one still needs to be marked with `data-rjs` and
+			// will still be ignored if it has already been processed.
+        </script>
+        
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89139221-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+        
+    </body>
+</html>
