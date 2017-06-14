@@ -250,3 +250,11 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+#Ignore vagrant files
+.vagrant/
+
+#Ignore Jekyll files
+_site/
+.jekyll*
+Gemfile.lock
