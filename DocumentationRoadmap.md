@@ -3,6 +3,8 @@
 
 
 ## Priority Docs (Up for grabs)
+ * App fundamentals - specifically, app patterns per discussion between Nevyn and BryanCostanich
+
 
 ## Lower Priority Docs (Up for grabs)
  * using an oscillscope
@@ -15,6 +17,5 @@ The following docs have been claimed/reserved by the writer listed. If there is 
 
 | Topic Name + Link | Github Username of Writer |
 |-------------------|---------------------------|
-| [Application Fundamentals](Netduino/Application_Fundamentals/) | [bryancostanich](https://github.com/bryancostanich) |
 | [SPI](Netduino/Input_Output/Digital/SPI/) - LCD Example | Nevyn |
 
