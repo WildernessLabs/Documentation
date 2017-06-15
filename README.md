@@ -9,12 +9,13 @@ This repo is also a Ruby site powered by jekyll (which is how it's hosted by git
 ### Setup Options
 
 1. Native Install
-   A. [Mac OS X](#mac-os-x)
-   B. [Debian/Ubunutu](#debian-ubuntu)
+   1. [Mac OS X](#mac-os-x)
+   2. [Debian/Ubunutu](#debian-ubuntu)
 
 2. [Vagrant](#vagrant) (Cross-Platform)
 
 #### Mac OS X
+
 >**NOTE:** This will require that you are an administrator on your system.
 
 1. [Install Homebrew](https://brew.sh/) (if not already installed).
@@ -31,6 +32,7 @@ bundle exec jekyll serve
 The site should be available locally at: `http://127.0.0.1:4000/` with changes being reflected on the site automaticaly.
 
 #### Debian/Ubunutu
+
 >**NOTE:** This will require that you are root or have sudo permissions on the system.
 
 1. Install python-software-properties `sudo apt-get install python-software-properties`
