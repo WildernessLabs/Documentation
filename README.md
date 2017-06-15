@@ -10,7 +10,7 @@ This repo is also a Ruby site powered by jekyll (which is how it's hosted by git
 
 1. Native Install
    1. [Mac OS X](#mac-os-x)
-   2. [Debian/Ubunutu](#debian-ubuntu)
+   2. [Debian/Ubunutu](#debianubuntu)
 
 2. [Vagrant](#vagrant) (Cross-Platform)
 
