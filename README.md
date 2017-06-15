@@ -7,29 +7,52 @@ Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are
 
 This repo is also a Ruby site powered by jekyll (which is how it's hosted by github pages). You can run and browse this site locally, which is especially if you're contributing documentation, or you just want an offline experience.
 
-To browse locally:
-
-### 1. [Install Homebrew](https://brew.sh/) (if not already installed).
+### Setup Options
 
 
-### 2. Install Ruby:
+1. [Native Install](#native-install)
+	A. [Mac OS X](#mac-os-x)
+	B. [Debian/Ubunutu](#debian-ubuntu)
+2. [Vagrant](#vagrant) (Cross-Platform)
+
+#### Mac OS X
+>**NOTE:** This will require that you are an administrator on your system.
+
+1. [Install Homebrew](https://brew.sh/) (if not already installed).
+2. Install Ruby:
 Open a terminal and run:
-
 ```
 $ brew install ruby
 ```
-
-### 3. Launch local server
-
-Change your terminal working directory to be the location of the git repo and run:
-
+4. Change your terminal working directory to be the location of the git repo and run:
 ```
 bundle exec jekyll serve
 ```
 
-The site should be available locally at: `http://127.0.0.1:4000/`
+The site should be available locally at: `http://127.0.0.1:4000/` with changes being reflected on the site automaticaly.
 
-Changes should automatically be picked up and displayed on the site.
+#### Debian/Ubunutu
+>**NOTE:** This will require that you are root or have sudo permissions on the system.
+
+1. Install python-software-properties `sudo apt-get install python-software-properties`
+2. Add the brightbox repository for Ruby2+ and update the package list `sudo apt-add-repository ppa:brightbox/ruby-ng; sudo apt-get update`
+3. Install the required packages `sudo apt-get install build-essential ruby2.4 ruby2.4-dev`
+4. Install a javascript interpreter of your choice such as node.js `sudo apt-get install node`
+5. Install the bundler gem for ruby `get install bundler`
+6. Change to the directory you have cloned this repository into and run `bundle install`
+7. Start the jekyll server `jekyll s -B -I`
+
+The site should be available locally at: `http://127.0.0.1:4000/` with changes being reflected on the site automaticaly. If you wish to connect to the server remotely, add `--host=0.0.0.0`
+
+#### Vagrant
+>**NOTE:** This will require that you are an administrator on your system.
+
+1. [Download](https://www.vagrantup.com/downloads.html) and Install Vagrant
+2. Open a terminal, command prompt or shell depending on your operating system.
+3. Switch to the directory that you have cloned this repository to.
+4. Run `vagrant up`
+
+The site should be available locally at: `http://127.0.0.1:4000/` with changes being reflected on the site automaticaly.
 
 ## Contributing
 
