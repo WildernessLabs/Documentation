@@ -2,17 +2,15 @@
 
 Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are probably best viewed at the [developer.wildernesslabs.co](http://developer.wildernesslabs.co), but they should be readable here, as well. You'll also find all the source code to the [samples](samples/) here.
 
-
 ## Running Locally
 
 This repo is also a Ruby site powered by jekyll (which is how it's hosted by github pages). You can run and browse this site locally, which is especially if you're contributing documentation, or you just want an offline experience.
 
 ### Setup Options
 
-
-1. [Native Install](#native-install)
-	A. [Mac OS X](#mac-os-x)
-	B. [Debian/Ubunutu](#debian-ubuntu)
+1. Native Install
+   A. [Mac OS X](#mac-os-x)
+   B. [Debian/Ubunutu](#debian-ubuntu)
 2. [Vagrant](#vagrant) (Cross-Platform)
 
 #### Mac OS X
@@ -74,11 +72,9 @@ For general documentation, please refer to the [Documentation Roadmap](Documenta
 
 When contributing samples, please document them in a way that someone who is new to the concepts illustrated within can pick up the code and understand it. This includes both code-commenting, as well as a simple sample documentation page. 
 
-
 ### Pull Requests
 
 All contributions should be submitted as [pull requests](https://help.github.com/articles/about-pull-requests/). 
-
 
 ## License
 
