@@ -1,0 +1,3 @@
+---
+title: Alternating Current
+---
