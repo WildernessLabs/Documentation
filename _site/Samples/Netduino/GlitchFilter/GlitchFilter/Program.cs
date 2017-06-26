@@ -9,7 +9,7 @@ namespace GlitchFilter
 		// An output port allows you to write (send a signal) to a pin
 		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
-		static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
+		static InputPort _button = new InputPort(Pins.ONBOARD_SW1, true, Port.ResistorMode.Disabled);
 
 		public static void Main()
 		{
@@ -18,7 +18,6 @@ namespace GlitchFilter
 
 			// smooth noise out over 5 milliseconds
 			Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
-
 
 			// run forever
 			while (true)
