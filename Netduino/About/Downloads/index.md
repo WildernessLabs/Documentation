@@ -18,9 +18,9 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ### Mac
  
-* Xamarin Studio
+* [Xamarin Studio](http://www.monodevelop.com/download/)
 * Firmware Updater and Deployment tool
-* NETMF Plugin for Xamarin Studio (instructions)
+* [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 
 ## Firmware
 
