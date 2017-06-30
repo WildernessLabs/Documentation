@@ -1,5 +1,5 @@
 ---
-title: Part 2 - Practicals of Electrial Theory
+title: Part 2 - Practicals of Electrical Theory
 ---
 
 In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricy.
@@ -11,14 +11,17 @@ When talking about electricity and working with electronic circuits, there are t
  * **Amperage** - Measured in amps, this is the quantity of electrons that are being moved.
  * **Voltage** - Measured in volts, this is the amount of force in which those electrons are bing moved.
 
-Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quanity of water that is moving, and the height of the waterfall determines the pressure or force of the water at the bottom.
+Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quanity of water that is moving, and the height of the waterfall determines the pressure, or force, of the water at the bottom.
 
 ### Amperage (Amps)
 
-
+60 Watt Incandescent Bulb @ 110volts = ~ 0.5 amp
+10 Watt LED (60 Watt Equivalent) @ 110volts = ~ 0.1 amps
+Vacuum @ 110volts = up to 10 amps
+Netduino @ 5volts = x milliamps
 
 [coulombs per second]
-[6,242,000,000,000,000,000,000 (6.242 x 10^18)]
+[6,242,000,000,000,000,000,000 (6.242 x 10^18) electrons per second] = 1 amp
 
 
 ### Electromagnetic Force/Potential (Voltage)
@@ -29,6 +32,14 @@ A 100' Waterfall at different altitudes is still a 100' waterfall.
 
 Perhaps a pipe is a better analogy, because a vacuum means you can pull it
 
+
+### Watts
+
+Watts = Volts * Current
+
+100 watts = 120 volts * x Amps
+
+5/6 amp = 100 watts @ 120 volts
 
 ## Converting between Amps and Volts
 
