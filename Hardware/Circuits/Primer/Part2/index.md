@@ -2,36 +2,46 @@
 title: Part 2 - Practicals of Electrial Theory
 ---
 
+In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricy.
+
+## Measuring Electricty; Amount and Force
+
+When talking about electricity and working with electronic circuits, there are two aspects that describe current that are important:
+
+ * **Amperage** - Measured in amps, this is the quantity of electrons that are being moved.
+ * **Voltage** - Measured in volts, this is the amount of force in which those electrons are bing moved.
+
+Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quanity of water that is moving, and the height of the waterfall determines the pressure or force of the water at the bottom.
+
+### Amperage (Amps)
 
 
-## Force and Amount; Measuring Electricity
 
-Force - Volts. Voltage. 
-Amperage - Quantity of electrons
-
+[coulombs per second]
+[6,242,000,000,000,000,000,000 (6.242 x 10^18)]
 
 
+### Electromagnetic Force/Potential (Voltage)
+
+Potential difference
+
+A 100' Waterfall at different altitudes is still a 100' waterfall.
+
+Perhaps a pipe is a better analogy, because a vacuum means you can pull it
 
 
-## Electrical Potential
+## Converting between Amps and Volts
 
-[volts]
 
 
 ## Amps (amount of electrons flowing) - move this later?
 
-[coulombs per second]
-[6,242,000,000,000,000,000,000 (6.242 x 10^18)]
 
 ## Electromotive Force (EMF), Volts, and the ability to do work.
 
 [Charges can build build up.]
 [negative charge (too few electrons) and a postive charge (too many electrons)]
 []
-
-Water analogies
-
-Waterfall; width = amps, height = volts
 
 ## Insulators
 
@@ -47,6 +57,17 @@ We measure resistance in **Ohms**, which are often expressed in _ohms per unit l
 
 [loss as heat]
 
+
+## Ohms Law
+
+
+
+
+
+
+
+
+
 ## Semiconductors
 
 Some materials, such as silicon, can be made to conduct or insulate rather well. This is usually done during manufacturing, through the use of adding, or _doping_, various materials, or even physically altering the structure of the material itself, to behave a particular way. 
@@ -55,9 +76,3 @@ Some materials, such as silicon, can be made to conduct or insulate rather well.
 
 [P-Type vs. N-Type]
 [_majority_ carrier]
-
-
-
-## Ohm's Law
-
-
