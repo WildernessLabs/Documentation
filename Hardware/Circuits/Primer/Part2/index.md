@@ -13,18 +13,24 @@ When talking about electricity and working with electronic circuits, there are t
 
 Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quanity of water that is moving, and the height of the waterfall determines the pressure, or force, of the water at the bottom.
 
-### Amperage (Amps)
+### Amperage (Amperes/Amps/A)
 
-60 Watt Incandescent Bulb @ 110volts = ~ 0.5 amp
-10 Watt LED (60 Watt Equivalent) @ 110volts = ~ 0.1 amps
-Vacuum @ 110volts = up to 10 amps
-Netduino @ 5volts = x milliamps
+One of the simplest (though not actually the official) definitions of an [Ampere (amp)](https://en.wikipedia.org/wiki/Ampere) is 1 [_coulomb_](https://en.wikipedia.org/wiki/Coulomb) of charge carriers passing through a given location per second. 
 
-[coulombs per second]
-[6,242,000,000,000,000,000,000 (6.242 x 10^18) electrons per second] = 1 amp
+One coulomb is equal to 6.242 x10^18 (6,242,000,000,000,000,000,000) charge carriers. A fantastically large number, but given the relative size of electrons, one can imagine that number of charges moving on a relatively modest wire. Consider household wiring, which is typically 14 or 12 gauge, and rated at carrying 10 or 15 amps (at 120 volts), respectively.
+
+To get an idea of the amount of work that can be done with that number of electrons, consider the following household appliances and their amperage:
+
+| Appliance                       | Amperage |
+|---------------------------------|--------------|
+| 60 Watt incandescent light bulb | 500mA (0.5A) |
+| 10 Watt LED (60 Watt incandescent equivalent) | ~100mA (0.1A) |
+| Hair Dryer | 15 amps |
 
 
 ### Electromagnetic Force/Potential (Voltage)
+
+Force in relative. 
 
 Potential difference
 
@@ -32,27 +38,35 @@ A 100' Waterfall at different altitudes is still a 100' waterfall.
 
 Perhaps a pipe is a better analogy, because a vacuum means you can pull it
 
+## Converting between Amps and Volts
 
-### Watts
+[pipe analogy]
 
+
+## Wattage
+
+Because in order to properly describe the amount of work that eletrical current can do you need to use both Amperage and Voltage, we have a convenience unit called a [Watt](https://en.wikipedia.org/wiki/Watt) that can be described as follows:
+
+```
 Watts = Volts * Current
+```
+
+
+
 
 100 watts = 120 volts * x Amps
 
 5/6 amp = 100 watts @ 120 volts
 
-## Converting between Amps and Volts
+iPad Charger = 2 amps @ 5v (10 Watts)
+Netduino @ 5volts = 125 milliamps (maximum), 30-40ma (normal)
 
 
 
-## Amps (amount of electrons flowing) - move this later?
 
 
-## Electromotive Force (EMF), Volts, and the ability to do work.
 
-[Charges can build build up.]
-[negative charge (too few electrons) and a postive charge (too many electrons)]
-[]
+
 
 ## Insulators
 
