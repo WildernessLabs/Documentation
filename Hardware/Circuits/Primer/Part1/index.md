@@ -79,7 +79,11 @@ Well, it turns out, what actually moves is the _electromagnetic wave_, which is 
 
 [illustration of a tube of marbles]
 
-If you add a marble in one end, a marble will fall out of the other end almost immediately, even though each marble only moved a small amount. Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
+If you add a marble in one end, a marble will fall out of the other end almost immediately, even though each marble only moved a small amount:
+
+[illustration of the tube with a marble being added, and one falling out at the other end.]
+
+Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
 
 
 [Next (Part 2)  >>](../Part2/) 
