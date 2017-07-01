@@ -2,16 +2,18 @@
 title: Part 2 - Practicals of Electrical Theory
 ---
 
-In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricy.
+In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricity.
 
-## Measuring Electricty; Amount and Force
+## Measuring Electricity; Amount and Force
 
 When talking about electricity and working with electronic circuits, there are two aspects that describe current that are important:
 
  * **Amperage** - Measured in amps, this is the quantity of electrons that are being moved.
- * **Voltage** - Measured in volts, this is the amount of force in which those electrons are bing moved.
+ * **Voltage** - Measured in volts, this is the amount of force in which those electrons are being moved.
 
 Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quanity of water that is moving, and the height of the waterfall determines the pressure, or force, of the water at the bottom.
+
+[illustration of waterfall, height/width]
 
 ### Amperage (Amperes/Amps/A)
 
