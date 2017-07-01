@@ -9,9 +9,9 @@ In part 1 of our electronics primer we got an understanding of the physical natu
 When talking about electricity and working with electronic circuits, there are two aspects that describe current that are important:
 
  * **Amperage** - Measured in amps, this is the quantity of electrons that are being moved.
- * **Voltage** - Measured in volts, this is the amount of force in which those electrons are being moved.
+ * **Voltage** - Measured in volts, this is the amount of force in which those electrons are be	ing moved.
 
-Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quanity of water that is moving, and the height of the waterfall determines the pressure, or force, of the water at the bottom.
+Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quantity of water that is moving, and the height of the waterfall determines the pressure, or force, of the water at the bottom.
 
 [illustration of waterfall, height/width]
 
@@ -47,7 +47,7 @@ Perhaps a pipe is a better analogy, because a vacuum means you can pull it
 
 ## Wattage
 
-Because in order to properly describe the amount of work that eletrical current can do you need to use both Amperage and Voltage, we have a convenience unit called a [Watt](https://en.wikipedia.org/wiki/Watt) that can be described as follows:
+Because in order to properly describe the amount of work that electrical current can do you need to use both Amperage and Voltage, we have a convenience unit called a [Watt](https://en.wikipedia.org/wiki/Watt) that can be described as follows:
 
 ```
 Watts = Volts * Current
