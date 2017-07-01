@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="172px" height="197px" viewBox="0 0 172 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Atom</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Letter" transform="translate(-455.000000, -344.000000)">
+            <g id="Atom" transform="translate(444.000000, 345.000000)">
+                <circle id="Oval-7-Copy-20" stroke="#524740" fill="#B09679" cx="95" cy="85" r="13"></circle>
+                <circle id="Oval-7-Copy-15" stroke="#524740" fill="#23ABE3" cx="88" cy="94" r="13"></circle>
+                <circle id="Oval-7-Copy-16" stroke="#524740" fill="#23ABE3" cx="108" cy="106" r="13"></circle>
+                <circle id="Oval-7-Copy-19" stroke="#524740" fill="#23ABE3" cx="107" cy="88" r="13"></circle>
+                <circle id="Oval-7-Copy-17" stroke="#524740" fill="#B09679" cx="89" cy="109" r="13"></circle>
+                <circle id="Oval-7-Copy-18" stroke="#524740" fill="#B09679" cx="99" cy="92" r="13"></circle>
+                <ellipse id="Oval-8" stroke="#979797" cx="97" cy="97.5" rx="24" ry="97.5"></ellipse>
+                <ellipse id="Oval-8-Copy" stroke="#979797" transform="translate(97.000000, 97.500000) rotate(-315.000000) translate(-97.000000, -97.500000) " cx="97" cy="97.5" rx="24" ry="97.5"></ellipse>
+                <ellipse id="Oval-8-Copy-2" stroke="#979797" transform="translate(97.000000, 97.500000) rotate(-240.000000) translate(-97.000000, -97.500000) " cx="97" cy="97.5" rx="24" ry="97.5"></ellipse>
+                <circle id="Oval-7-Copy-21" stroke="#979797" fill="#F5A623" cx="110" cy="14" r="5"></circle>
+                <circle id="Oval-7-Copy-22" stroke="#979797" fill="#F5A623" cx="50" cy="114" r="5"></circle>
+                <circle id="Oval-7-Copy-23" stroke="#979797" fill="#F5A623" cx="140" cy="144" r="5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -18,7 +18,7 @@ Atoms are composed of three more elementary particles; protons, neutrons, and el
 
 Protons and neutrons are incredibly dense and make up the core, or _nucleus_ of an atom. In fact, they're so dense, that a teaspon of them packed together would weigh many tons on earth. However, an atom is mostly empty space, because while the protons and neutrons are tightly clustered in the center of the atom, electrons orbit a distance around the nucleus:
  
-[illustration showing an atom with it's nucleus of protrons and neutrons, and electrons orbiting around it]
+![](../Atom.svg)
 
 Atoms are classified on the [periodic table](http://www.ptable.com/) by the number of protons they posess, which is also their _atomic number_. So for example, Helium has (1) proton, so therefore its atomic number is 1. Helium has 2 protons, so its atomic number is 2, lead has 82, and so forth.
 
@@ -71,7 +71,7 @@ However, in practical usage, it doesn't matter, because most everything has stan
 
 ### Speed of Electrical Current
 
-One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects of electricity; the notion of speed of electricity.
+One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects of electricity. But first, we need to understand the speed of electricity.
 
 We think of electricity as moving at near the speed of light, which is how we can communicate around the world on the phone or via the internet, almost instantly. But it turns out; electrons actually flow, or _drift_ as physicists say, pretty slowly. So how is this possible?
 
