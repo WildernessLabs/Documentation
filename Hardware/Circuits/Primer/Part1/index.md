@@ -51,9 +51,9 @@ Atoms often combine together to form molecules or in a repeating lattice to form
 
 ## Electrical Current
 
-Atoms want to be balanced; that is, if they are postively charged (have too few electrons), they exert an attractive forced to try and take free electrons to achieve balance; a neutral charge. Atomns that have a negative charge (too many electrons), tend to want to get rid of excess electrons.
+Atoms want to be balanced; that is, if they are positively charged (have too few electrons), they exert an attractive forced to try and take free electrons to achieve balance; a neutral charge. Atoms that have a negative charge (too many electrons), tend to want to get rid of excess electrons.
 
-Usually, electrons jump from negatively charged atoms to positively charged locations. We can think of this as an electron filling a "hole." When an electron moves in this direction, it leaves a hole behind it, which has a positive charge. so we can think of electrons flowing one way, and holes (or postive charges) flowing the other way:
+Usually, electrons jump from negatively charged atoms to positively charged locations. We can think of this as an electron filling a "hole." When an electron moves in this direction, it leaves a hole behind it, which has a positive charge. so we can think of electrons flowing one way, and holes (or positive charges) flowing the other way:
 
 [illustration showing electrons moving one way, and holes/positive charge flowing the other way]
 
@@ -65,7 +65,7 @@ Benjamin Franklin's work kickstarted the practical use of electricity, and a big
 
 ![](../Hole_Flow.svg)
 
-This illustration isn't really accurate, because it implies electrons flowing from a positive charge, to a negative charge. It wasn't until 150 years later, in 1897, that [Sir J. J. Thomson](https://en.wikipedia.org/wiki/J._J._Thomson) posited that atoms were made of electrons and discovered that electrons, rather than holes, were thing thing that was actually moving.
+This illustration isn't really accurate, because it implies electrons flowing from a positive charge, to a negative charge. It wasn't until 150 years later, in 1897, that [Sir J. J. Thomson](https://en.wikipedia.org/wiki/J._J._Thomson) posited that atoms were made of electrons and discovered that electrons, rather than holes, were thing that was actually moving.
 
 However, in practical usage, it doesn't matter, because most everything has standardized on Benjamin Franklin's convention. For this reason, many people use the term _charge carrier_, which can mean either a positive charge (electron) or a negative charge (hole).
 
