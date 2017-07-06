@@ -4,9 +4,15 @@ title: Updating Netduino Firmware
 
 Ensuring that your Netduino has the latest firmware means that it will be up to date with the current Netduino-specific .NET Micro Framework runtime. Additionally, unless your Netduino has the latest firmware, you may have issues deploying your application to it.
 
-## Windows (Using MFDeploy)
+Instructions are OS specific:
 
-1. Download the latest Netduino firmware files from the [Netduino Firmware Repo](https://github.com/WildernessLabs/Netduino_Firmware_Releases). You'll need both the `ER_CONFIG` and `ER_FLASH` files for your specific Netduino model.
+ * **[Windows Instructions](#Windows)**
+ * **[Mac Instructrions](#Mac)**
+
+
+## <a name="Windows"></a>Windows (Using MFDeploy)
+
+1. Download the latest Netduino firmware files from the [downloads page](../Downloads). You'll need both the `ER_CONFIG` and `ER_FLASH` files for your specific Netduino model.
 
 2. Launch **MFDeploy**. MFDeploy is installed as part of the Netduino NetMF SDK.
 
@@ -23,16 +29,21 @@ Ensuring that your Netduino has the latest firmware means that it will be up to 
 
 
 
+## <a name="Mac"></a>Mac (Using Netduino Mac Firmware Deploy Tool)
 
-
-## Mac (Using Netduino Device Manager)
-
-1. Launch the _Netduino Device Manager_:
-
-![](Netduino_Device_Manager-File_Upload_View.png)
-
-2. While your Netduino is unplugged, hold down the button and then plug it in, to put it into _DFU Bootloader Mode_:
+ 1. While your Netduino is unplugged, hold down the button and then plug it in, to put it into _DFU Bootloader Mode_:
 
 ![](EnteringBootMode.gif)
+ 2. Launch the _Netduino Mac Deploy_ (available from the [downloads](../Downloads/) page):
+ 3. Click the `Install Firmware` button, firmware should install:
+ ![](MacDeploy_AutomaticFirmwareUpdate.png)
+ 
+### Manual Installation of Firmware from .hex or .s19 files
 
-2. Select your device from the left, click **Check for Update**, and follow the instructions.
+The Mac Firmware tool also enables manual firmware deployment:
+
+ 1. Follow steps 1 & 2 above.
+ 2. Click the `Choose` button, and select either the `.hex` or `.s19` `ER_CONFIG` and `ER_FLASH` files:
+ ![](MacDeploy_SelectedFirmwareFiles.png)
+ 3. Click `Deploy` and it should deploy the firmware:
+ ![](MacDeploy_ManuallyUpdatingFirmware.png)

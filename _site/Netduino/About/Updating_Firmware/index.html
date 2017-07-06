@@ -123,6 +123,12 @@
 <ul class="navigation">
     <li><a href="/Hardware/Circuits/">Circuit Fundamentals</a>
         <ul>
+            <li><a href="/Hardware/Circuits/Primer/Part1/">Electronics Primer</a>
+                <ul>
+                    <li><a href="/Hardware/Circuits/Primer/Part1/">Part 1 - Electrical Theory</a></li>
+                    <li><a href="/Hardware/Circuits/Primer/Part2/">Part 2 - Practicals</a></li>
+                </ul>
+            </li>
             <li><a href="/Hardware/Circuits/OHMs_Law">OHMs Law</a></li>
             <li><a href="/Hardware/Circuits/Resistors">Resistors</a>
                 <ul>
@@ -201,11 +207,18 @@
 
 <p>Ensuring that your Netduino has the latest firmware means that it will be up to date with the current Netduino-specific .NET Micro Framework runtime. Additionally, unless your Netduino has the latest firmware, you may have issues deploying your application to it.</p>
 
-<h2 id="windows-using-mfdeploy">Windows (Using MFDeploy)</h2>
+<p>Instructions are OS specific:</p>
+
+<ul>
+  <li><strong><a href="#Windows">Windows Instructions</a></strong></li>
+  <li><strong><a href="#Mac">Mac Instructrions</a></strong></li>
+</ul>
+
+<h2 id="a-namewindowsawindows-using-mfdeploy"><a name="Windows"></a>Windows (Using MFDeploy)</h2>
 
 <ol>
   <li>
-    <p>Download the latest Netduino firmware files from the <a href="https://github.com/WildernessLabs/Netduino_Firmware_Releases">Netduino Firmware Repo</a>. You’ll need both the <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files for your specific Netduino model.</p>
+    <p>Download the latest Netduino firmware files from the <a href="../Downloads">downloads page</a>. You’ll need both the <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files for your specific Netduino model.</p>
   </li>
   <li>
     <p>Launch <strong>MFDeploy</strong>. MFDeploy is installed as part of the Netduino NetMF SDK.</p>
@@ -227,22 +240,27 @@
   </li>
 </ol>
 
-<h2 id="mac-using-netduino-device-manager">Mac (Using Netduino Device Manager)</h2>
-
-<ol>
-  <li>Launch the <em>Netduino Device Manager</em>:</li>
-</ol>
-
-<p><img src="Netduino_Device_Manager-File_Upload_View.png" alt="" /></p>
+<h2 id="a-namemacamac-using-netduino-mac-firmware-deploy-tool"><a name="Mac"></a>Mac (Using Netduino Mac Firmware Deploy Tool)</h2>
 
 <ol>
   <li>While your Netduino is unplugged, hold down the button and then plug it in, to put it into <em>DFU Bootloader Mode</em>:</li>
 </ol>
 
-<p><img src="EnteringBootMode.gif" alt="" /></p>
+<p><img src="EnteringBootMode.gif" alt="" />
+ 2. Launch the <em>Netduino Mac Deploy</em> (available from the <a href="../Downloads/">downloads</a> page):
+ 3. Click the <code class="highlighter-rouge">Install Firmware</code> button, firmware should install:
+ <img src="MacDeploy_AutomaticFirmwareUpdate.png" alt="" /></p>
+
+<h3 id="manual-installation-of-firmware-from-hex-or-s19-files">Manual Installation of Firmware from .hex or .s19 files</h3>
+
+<p>The Mac Firmware tool also enables manual firmware deployment:</p>
 
 <ol>
-  <li>Select your device from the left, click <strong>Check for Update</strong>, and follow the instructions.</li>
+  <li>Follow steps 1 &amp; 2 above.</li>
+  <li>Click the <code class="highlighter-rouge">Choose</code> button, and select either the <code class="highlighter-rouge">.hex</code> or <code class="highlighter-rouge">.s19</code> <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files:
+ <img src="MacDeploy_SelectedFirmwareFiles.png" alt="" /></li>
+  <li>Click <code class="highlighter-rouge">Deploy</code> and it should deploy the firmware:
+ <img src="MacDeploy_ManuallyUpdatingFirmware.png" alt="" /></li>
 </ol>
 
 

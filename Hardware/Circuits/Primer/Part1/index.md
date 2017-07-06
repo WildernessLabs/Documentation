@@ -88,6 +88,8 @@ Now imagine that those marbles are electrons; the **effect** of adding an electr
 
 ## Electrical Magnetism
 
+
+
 [as discussed earlier, electrons are bound to the nucleus of atoms via the electromagnetic force]
 
 
