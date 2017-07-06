@@ -69,6 +69,7 @@ This illustration isn't really accurate, because it implies electrons flowing fr
 
 However, in practical usage, it doesn't matter, because most everything has standardized on Benjamin Franklin's convention. For this reason, many people use the term _charge carrier_, which can mean either a positive charge (electron) or a negative charge (hole).
 
+
 ### Speed of Electrical Current
 
 One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects of electricity. But first, we need to understand the speed of electricity.
@@ -85,6 +86,18 @@ If you add a marble in one end, a marble will fall out of the other end almost i
 
 Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
 
+## Electrical Magnetism
+
+[as discussed earlier, electrons are bound to the nucleus of atoms via the electromagnetic force]
+
+
+[current flowing through a wire creates a magnetic field]
+
+[charges can act on each other at a distance. 
+
+[magnetic field can _induce_ a current in a wire without touching it]
+
+[we'll see later that this is important for a lot of stuff]
 
 [Next (Part 2)  >>](../Part2/) 
  
