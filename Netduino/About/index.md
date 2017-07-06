@@ -12,7 +12,7 @@ The Netduino family consists of the Netduino 3, Netduino 2, and the original Net
 
 # Netduino 3
 
-Netduino 3 is offered in 3 different models, the N3 base model, N3 Ethernet model, and the N3 WiFi model; which vary by their internet connectivity mode and their code/flash storage size. The various models and links to buy them can be found at [wildernesslabs.co/netduino](http://staging.wildernesslabs.co/Netduino)
+Netduino 3 is offered in 3 different models, the N3 base model, N3 Ethernet model, and the N3 WiFi model; which vary by their internet connectivity mode and their code/flash storage size. The various models and links to buy them can be found at [wildernesslabs.co/netduino](http://www.wildernesslabs.co/Netduino)
 
 ## Features + Pinout
 
@@ -38,7 +38,7 @@ For compatibility with Arduino hardware, Netduino has the same header and pin co
 
 # Netduino 2
 
-Netduino 2 is offered in 2 different models, the N2 base model as well as the N2+, which adds 10Mb Ethernet, The various models and links to buy them can be found at [wildernesslabs.co/netduino](http://staging.wildernesslabs.co/Netduino)
+Netduino 2 is offered in 2 different models, the N2 base model as well as the N2+, which adds 10Mb Ethernet, The various models and links to buy them can be found at [wildernesslabs.co/netduino](http://www.wildernesslabs.co/Netduino)
 
 ## Features + Pinout
 
@@ -66,5 +66,4 @@ For compatibility with Arduino hardware, Netduino has the same header and pin co
 Netduino can be powered either via the built-in USB adapter or the power barrel (VIN). If VIN is present, then that power is used, otherwise, it must be powered via USB.
 
 N3 will accept VIN of 5v to 12v. N2 will accept VIN of 5v to 9v.
-
 

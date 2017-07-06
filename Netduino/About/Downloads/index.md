@@ -22,9 +22,9 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 * Firmware Updater and Deployment tool
 * [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 
-## Firmware
+## Windows Firmware Updater
 
-* [v4.3.2.3](http://static.netduino.com/downloads/netduinoupdate/NetduinoUpdate_4.3.2.3.zip)
+* [v4.3.2.3](http://downloads.wildernesslabs.co/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip)
 
 
 ## Discontinued Products (Netduino 1, Plus, & Mini)
