@@ -45,9 +45,11 @@ However, atoms can gain or lose electrons, causing them to have a net positive (
 
 ## Conductors
 
-Atoms often combine together to form molecules or in a repeating lattice to form crystals and metal, by sharing electrons. In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_, or _conductive_.
+Atoms often combine together to form molecules or in a repeating lattice to form crystals and metal, by sharing electrons:
 
-[illustration]
+![](../Atoms_Sharing_an_Electron.svg)
+
+In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_, or _conductive_.
 
 ## Electrical Current
 
@@ -86,22 +88,19 @@ If you add a marble in one end, a marble will fall out of the other end almost i
 
 Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
 
-## Electrical Magnetism
 
+# Review
 
+That was a lot of concepts to take in at once. As a quick review:
 
-[as discussed earlier, electrons are bound to the nucleus of atoms via the electromagnetic force]
-
-
-[current flowing through a wire creates a magnetic field]
-
-[charges can act on each other at a distance. 
-
-[magnetic field can _induce_ a current in a wire without touching it]
-
-[we'll see later that this is important for a lot of stuff]
+ * _Positive_ and _negative_ charges are arbitrarily named characteristics to describe the attractive and repulsive behavior of subatomic particles such as protons and electrons.
+ * Atoms get their net "charge" as _ions_; when there is an imbalance between the number of positively charged protons and negatively charged electrons.
+ * Materials that electrons move freely between atoms are electrically _conductive_.
+ * Because of historic reasons, circuits are described with the concept of hole-flow, rather than electron flow, which states that charge carriers flow from positive to negative.
+ * Electrons flow rather slowly, but their effect travels at the speed of light as an _electromagentic wave_.
 
 [Next (Part 2)  >>](../Part2/) 
+
  
 <!-- 
 
