@@ -101,8 +101,9 @@ That was a lot of concepts to take in at once. As a quick review:
  * Because of historic reasons, circuits are described with the concept of hole-flow, rather than electron flow, which states that charge carriers flow from positive to negative.
  * Electrons flow rather slowly, but their effect travels at the speed of light as an _electromagentic wave_.
 
-[Next (Part 2 - Practicals of Electricity)  >>](../Part2/) 
+# [Next (Part 2 - Practicals of Electricity)  >>](../Part2/) 
 
+<br/>
  
 <!-- 
 
