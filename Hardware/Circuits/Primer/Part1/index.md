@@ -24,6 +24,8 @@ Atoms are classified on the [periodic table](http://www.ptable.com/) by the numb
 
 ## Isotopes
 
+<!-- Maybe remove this section? does it have any bearing on electrical theory? -->
+
 As atoms go up in their number of protons, the number of neutrons they have also generally increases. Adding together an atom's protons and neutrons gives the _atomic weight_ of an atom. So for instance, carbon, which has an atomic number of 6, generally has 6 protons, and 6 neutrons. This means that elements actually get heavier by 2 as they go up the periodic chart; helium has an atomic weight of 4, and lithium, with an atomic number of 3, has an atomic weight > 6.
 
 However, while an element is defined by the number of protons it has, any given element can vary in the number of neutrons it contains. These variations are called _[isotopes](https://en.wikipedia.org/wiki/Isotope)_, which is Greek for "equal places," because even though they have different densities, they still occupy the same place in the periodic chart. They also retain the same general chemical characteristics, though they may have different nuclear behaviors.
@@ -99,7 +101,7 @@ That was a lot of concepts to take in at once. As a quick review:
  * Because of historic reasons, circuits are described with the concept of hole-flow, rather than electron flow, which states that charge carriers flow from positive to negative.
  * Electrons flow rather slowly, but their effect travels at the speed of light as an _electromagentic wave_.
 
-[Next (Part 2)  >>](../Part2/) 
+[Next (Part 2 - Practicals of Electricity)  >>](../Part2/) 
 
  
 <!-- 
