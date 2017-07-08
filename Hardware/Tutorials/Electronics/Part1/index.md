@@ -22,15 +22,17 @@ Protons and neutrons are incredibly dense and make up the core, or _nucleus_ of 
 
 Atoms are classified on the [periodic table](http://www.ptable.com/) by the number of protons they posess, which is also their _atomic number_. So for example, hydrogen has (1) proton, so therefore its atomic number is 1. Helium has 2 protons, so its atomic number is 2, lead has 82, and so forth.
 
-## Isotopes
+<!--
 
-<!-- Maybe remove this section? does it have any bearing on electrical theory? -->
+## Isotopes
 
 As atoms go up in their number of protons, the number of neutrons they have also generally increases. Adding together an atom's protons and neutrons gives the _atomic weight_ of an atom. So for instance, carbon, which has an atomic number of 6, generally has 6 protons, and 6 neutrons. This means that elements actually get heavier by 2 as they go up the periodic chart; helium has an atomic weight of 4, and lithium, with an atomic number of 3, has an atomic weight > 6.
 
 However, while an element is defined by the number of protons it has, any given element can vary in the number of neutrons it contains. These variations are called _[isotopes](https://en.wikipedia.org/wiki/Isotope)_, which is Greek for "equal places," because even though they have different densities, they still occupy the same place in the periodic chart. They also retain the same general chemical characteristics, though they may have different nuclear behaviors.
 
 All elements may have different isotopes. For example, the element carbon can  have an atomic weight of 12, 13, or 14. Since atomic weight is `atomic number + neutrons`, we can deduce that the carbon-12 (which is how an isotope is named), has 6 neutrons, while carbon-13 has 7 neutrons, and carbon-13 has 8 neutrons.
+
+-->
 
 
 ## Electrical Charge
@@ -52,6 +54,14 @@ Atoms often combine together to form molecules or in a repeating lattice to form
 ![](../Atoms_Sharing_an_Electron.svg)
 
 In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_, or _conductive_.
+
+## Insulators
+
+<!-- make a note about electron shells here? insulators exist when the valence shell is full? -->
+
+Materials that don't readily let electrons flow are said to be _insulators_. Materials such as glass and wood, are good insulators.
+
+Metal oxides (metal that have oxygen atoms bound to them) often insulate, even though the same metal without oxygen will conduct. Gasses usually make good insulators, too, because the atoms are too far apart to exchange electrons.
 
 ## Electrical Current
 
