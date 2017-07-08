@@ -21,6 +21,8 @@ In part 1 of our electronics primer we got an understanding of the physical natu
 
 [illustration of an electromagnet with a battery and a nail]
 
+### Induction
+
 [magnetic field can _induce_ a current in a wire without touching it]
 [can change the nature of a current with two coils]
 
@@ -61,7 +63,7 @@ To get an idea of the amount of work that can be done with that number of electr
 
 ### Electromagnetic Force/Potential (Voltage)
 
-Force in relative. 
+Force is relative. 
 
 Potential difference
 
@@ -94,6 +96,9 @@ Netduino @ 5volts = 125 milliamps (maximum), 30-40ma (normal)
 
 
 
+Most of the voltages we'll work with will be 5v or 3.3v for DC, or 120v/240v for AC
+
+
 
 
 
@@ -119,6 +124,10 @@ We measure resistance in **Ohms**, which are often expressed in _ohms per unit l
 
 
 
+## AC and DC
+
+AC powers stuff
+DC for digital/ogic circuits
 
 
 
