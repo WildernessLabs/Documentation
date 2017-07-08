@@ -103,6 +103,7 @@ That was a lot of concepts to take in at once. As a quick review:
 
 # [Part 2 - Practicals of Electricity](../Part2/) 
 
+<br/>
 
 <!-- 
 
