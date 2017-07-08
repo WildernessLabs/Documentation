@@ -1,5 +1,5 @@
 ---
-title: Part 2 - Practicals of Electrical Theory
+title: Part 2 - Amps, Volts, and Watts
 ---
 
 In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricity.
