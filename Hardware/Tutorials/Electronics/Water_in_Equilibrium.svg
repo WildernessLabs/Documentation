@@ -44,6 +44,7 @@
                         <tspan x="264.271228" y="18">Equilibrium</tspan>
                     </text>
                 </g>
+                <path d="M190.5,65.5 L343.5,65.5" id="Line-6" stroke="#B09679" stroke-linecap="square" stroke-dasharray="3,4"></path>
             </g>
         </g>
     </g>

@@ -76,6 +76,8 @@ One of the simplest (though not actually the official) definitions of an [ampere
 
 One coulomb is equal to 6.242 x10^18 (6,242,000,000,000,000,000,000) charge carriers. A fantastically large number, but given the relative size of electrons, one can imagine that number of charges moving on a relatively modest wire. Consider household wiring, which is typically 14 or 12 gauge, and rated at carrying 10 or 15 amps (at 120 volts), respectively.
 
+#### Common Amperages
+
 To get an idea of the amount of work that can be done with that number of electrons, consider the following household appliances and their amperage:
 
 | Appliance                       | Amperage |
@@ -83,6 +85,8 @@ To get an idea of the amount of work that can be done with that number of electr
 | 60 Watt incandescent light bulb | 500mA (0.5A) |
 | 10 Watt LED (60 Watt incandescent equivalent) | ~100mA (0.1A) |
 | Hair Dryer | 15 amps |
+
+#### Amp Hours (Ah)
 
 When describing the quantity of charge either available, or used, amp hours (Ah), are used. An amp hour is an hour's worth of amps, or 3600 coulombs (since there are 3600 seconds in an hour).
 
@@ -98,29 +102,46 @@ In order for a current to exist, charge carriers must be motivated to move.
 
 Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel.
 
-[The amount of potential force or pressure]
+This pressure at the valve is known as _electromotive force (EMF)_ and is expressed as a difference between the top and bottom of the water path and represents a potential for work.
+
+#### Relative Voltage
+
+When water (or charge carriers) is flowing through the valve, the amount of force is expressed in _volts (V)_.
+
+It's important to note that this force is relative; even if the water towers were at different altitudes, the pressure at the valve is still dependent on the _voltage drop_ from the top of the water to the ground.
+
+![](../Water_Tower_Relative_Voltages.svg)
+
+Consider the following two simple circuits:
+
+[circuit diagrams of 10v and 20v with a drop of 5v across both to 5v/15v respectively]
+
+While both circuits have different source and load voltages, in both cases, the voltage drop is 5v, since the source minus the load is 5v, meaning that the force of electricity in both cases is actually the same.
+
+A minor, technical point, is that while EMF exists whether curent is flowing or not, voltage only applies when a current exists. 
+
+#### Common Source Voltages
+
+| Source                       | Voltage |
+|---------------------------------|--------------|
+| North American Household Electricity | ~117v (110 nominal) |
+| European Household Electricity | ~220v (230 nominal) |
+| AA Battery | 1.5v |
+| USB Power | 5v |
+| Netduino Digital IO | 3v |
+
+## Common and Ground
 
 
 
 
-[dependent on how the electricity is stored or generated]
 
 
-[illustration of a water tank full of water, suspended above the ground]
+## Relationship of Amps & Volts
 
+[North American and European household electricity have different voltages, but have essentially the same amount of work that they can do because european household electricity has a fewer amps.]
 
-[EMF exists whether or not there is water in the tank, because the height differential exists. The moment you add a water molecule, it will have ]
-
-[which is why it's sometimes called potential]
-
-[voltage is measured when the water is flowing]
-
-
-
-Force is relative. [water towers at different altitudes]
-
-
-## Converting between Amps and Volts
+[US 15A circuit (rated at 12A), UK 6A circuit]
 
 [through induction]
 
