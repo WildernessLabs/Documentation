@@ -4,36 +4,6 @@ title: Part 2 - Quantifying Electriciy; Amps, Volts, and Watts
 
 In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricity.
 
-## Electromagnetism [move to phsyics, part 1]
-
-<!--[field alignment comes from orbital motion AND spin of electrons]-->
-
-
-[spin - another arbitrary naming for an intrinsic characteristic of subatomic particles. this is where the electromagnetic force comes from, along with the orbital motion of electrons]
-
-
-
-[electrons are bound to the nucleus of the atom in orbits because of their attraction to positively charged protons. electromagnetic force]
-
-[moving electrons; e.g. and electric current can extend this force at a distance]
-
-[a wire in a coil, has a particuarly strong magnetic force. in fact, we can build an electromagnet very easily. Simply coil an insulated wire around a nail and run a charge through it:]
-
-[illustration of an electromagnet with a battery and a nail]
-
-### Induction
-
-[magnetic field can _induce_ a current in a wire without touching it]
-[can change the nature of a current with two coils]
-
-[illustration of one coil inducting another to power an LED]
-
-[we'll see later that this is important for a lot of stuff]
-
-[a lot of electronic circuits use induction, and accidental induction is something that we need to concern ourselves in circuit design]
-
-[Further reading on Magnetism](http://www.rpi.edu/dept/phys/ScIT/InformationStorage/faraday/magnetism_a.html)
-
 
 ## Measuring Electricity's Ability to do Work; Amount and Force
 
