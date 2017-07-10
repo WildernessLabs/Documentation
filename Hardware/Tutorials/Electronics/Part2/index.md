@@ -35,9 +35,9 @@ In part 1 of our electronics primer we got an understanding of the physical natu
 [Further reading on Magnetism](http://www.rpi.edu/dept/phys/ScIT/InformationStorage/faraday/magnetism_a.html)
 
 
-## Measuring Electricity; Amount and Force
+## Measuring Electricity's Ability to do Work; Amount and Force
 
-Electricity is important because of its ability to do work. We can heat with electricity, generate light, and use the magnetic force of electricity to turn electric motors that propel our cars, vacuum our houses, and mix our smoothies.
+Electricity is useful because of its ability to do work. We can heat with electricity, generate light, and use the magnetic force of electricity to turn electric motors that propel our cars, vacuum our houses, and mix our smoothies.
 
 In order to describe the amount of work that electricity can do, we use two characteristics:
 
@@ -54,20 +54,19 @@ Now imagine, at the bottom of the pipe is a valve that can release water and a w
 
 [illustration of pipe, valve, and water wheel]
 
+The water tower has a quantity of water in it, and the gravity pulling from the water down to the ground, generates a force to move that water. When water is flowing over our water wheel, the molecules of water (analogous to our charge carriers) are causing the water wheel to move, and gravity acting on the difference in height from the top of the water to the bottom of the water to generate a force to push those water molecues and do work.
+
+In order for electricity to be useful, we must have both a quantity of charge carriers (amps), and force to move them (volts). Imagine a water tower full of water, but the pipe outflow is the same height as the top of the water stored in the tank:
+
+[illustration of water in equilibrium]
+
+Even though charge carriers exist, there is no different in height to create a potential, or force to move them.
+
+Similarly, even with a very tall, but empty tower, if there are no charge carriers to move, there can be no work done, even though gravity could be acting over a large height difference.
+
 This system, taken as a whole, is analgous to something like a cordless electric drill, in which the battery is our water tower, and the electric motor is the water wheel, and the trigger is the valve that let's water flow:
 
 [illustration of electric drill]
-
-The water tower has a quantity of water in it, and the gravity pulling from the water down to the ground, generates a potential force to move that water. When water is flowing over our water wheel, the molecules of water (analogous to our charge carriers) are causing the water wheel to move, and it's gravity acting on the the difference in height from the top of the water to the bottom of the water to generate a force to push those water molecues and do work.
-
-If we open the valve larger, more water flows out
-
-[if we keep the same pipe size
-
-[force vs.]
-
-[We can make a bigger water tower ]
-
 
 
 ### Amperage (Amperes/Amps/A)
@@ -96,32 +95,33 @@ Amp hours are often expressed in milliampere hours (mAh), which is one-thousandt
 
 In order for a current to exist, charge carriers must be motivated to move.
 
+Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel.
+
+[The amount of potential force or pressure]
+
+
+
+
 [dependent on how the electricity is stored or generated]
 
-Imagine a water tank full of water, and a pressure sensor at a valve at the bottom of the tank. The water wants to flow down (due to gravity), and so it exerts a pressure in that direction:
 
 [illustration of a water tank full of water, suspended above the ground]
 
 
-[EMF exists whether or not 
+[EMF exists whether or not there is water in the tank, because the height differential exists. The moment you add a water molecule, it will have ]
+
+[which is why it's sometimes called potential]
 
 [voltage is measured when the water is flowing]
 
 
-[pressure 
 
-[electrical generation - ]
+Force is relative. [water towers at different altitudes]
 
-
-Force is relative. 
-
-Potential difference
-
-A 100' Waterfall at different altitudes is still a 100' waterfall.
-
-Perhaps a pipe is a better analogy, because a vacuum means you can pull it
 
 ## Converting between Amps and Volts
+
+[through induction]
 
 [pipe analogy]
 
@@ -149,6 +149,9 @@ Netduino @ 5volts = 125 milliamps (maximum), 30-40ma (normal)
 Most of the voltages we'll work with will be 5v or 3.3v for DC, or 120v/240v for AC
 
 
+# [Part 3 - Resistance and Ohm's Law](../Part3/) 
+
+<br/>
 
 
 
