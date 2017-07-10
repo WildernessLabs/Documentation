@@ -37,18 +37,42 @@ In part 1 of our electronics primer we got an understanding of the physical natu
 
 ## Measuring Electricity; Amount and Force
 
-When talking about electricity and working with electronic circuits, there are two aspects that describe current that are important:
+Electricity is important because of its ability to do work. We can heat with electricity, generate light, and use the magnetic force of electricity to turn electric motors that propel our cars, vacuum our houses, and mix our smoothies.
+
+In order to describe the amount of work that electricity can do, we use two characteristics:
 
  * **Amperage** - Measured in amps, this is the quantity of electrons that are being moved.
- * **Voltage** - Measured in volts, this is the amount of force in which those electrons are be	ing moved.
+ * **Voltage** - Measured in volts, this is the amount of force in which those electrons are being moved.
 
-Water is used as a common analogy here. Imagine a waterfall; the width of the waterfall determines the quantity of water that is moving, and the height of the waterfall determines the pressure, or force, of the water at the bottom.
+Water is used as a common analogy to relate these characteristics. Imagine a water tower full of water, and a pipe extending down to the ground below it:
 
-[illustration of waterfall, height/width]
+[illustration of a water tower showing quantity of water and drop to ground]
+
+In this analogy, we can think of the water tower as a battery. 
+
+Now imagine, at the bottom of the pipe is a valve that can release water and a water wheel that spins when water flows over it.
+
+[illustration of pipe, valve, and water wheel]
+
+This system, taken as a whole, is analgous to something like a cordless electric drill, in which the battery is our water tower, and the electric motor is the water wheel, and the trigger is the valve that let's water flow:
+
+[illustration of electric drill]
+
+The water tower has a quantity of water in it, and the gravity pulling from the water down to the ground, generates a potential force to move that water. When water is flowing over our water wheel, the molecules of water (analogous to our charge carriers) are causing the water wheel to move, and it's gravity acting on the the difference in height from the top of the water to the bottom of the water to generate a force to push those water molecues and do work.
+
+If we open the valve larger, more water flows out
+
+[if we keep the same pipe size
+
+[force vs.]
+
+[We can make a bigger water tower ]
+
+
 
 ### Amperage (Amperes/Amps/A)
 
-One of the simplest (though not actually the official) definitions of an [Ampere (amp)](https://en.wikipedia.org/wiki/Ampere) is 1 [_coulomb_](https://en.wikipedia.org/wiki/Coulomb) of charge carriers passing through a given location per second. 
+One of the simplest (though not actually the official) definitions of an [ampere (amp)](https://en.wikipedia.org/wiki/Ampere) is 1 [_coulomb_](https://en.wikipedia.org/wiki/Coulomb) of charge carriers passing through a given location per second. 
 
 One coulomb is equal to 6.242 x10^18 (6,242,000,000,000,000,000,000) charge carriers. A fantastically large number, but given the relative size of electrons, one can imagine that number of charges moving on a relatively modest wire. Consider household wiring, which is typically 14 or 12 gauge, and rated at carrying 10 or 15 amps (at 120 volts), respectively.
 
@@ -60,8 +84,34 @@ To get an idea of the amount of work that can be done with that number of electr
 | 10 Watt LED (60 Watt incandescent equivalent) | ~100mA (0.1A) |
 | Hair Dryer | 15 amps |
 
+When describing the quantity of charge either available, or used, amp hours (Ah), are used. An amp hour is an hour's worth of amps, or 3600 coulombs (since there are 3600 seconds in an hour).
 
-### Electromagnetic Force/Potential (Voltage)
+In our water tower analogy, the quantity of water flowing over our water wheel at any given second is measured in Amps, and the quantity of water stored in the water tower (battery), is described in amp hours.
+
+[illustration of water tower with labels of Remaining Charge, measured in Ah, amount of current flowing, measured in A, and force of water, measured in V]
+
+Amp hours are often expressed in milliampere hours (mAh), which is one-thousandth of an amp hour, or 3.6 coulombs. For reference, a typical AA NiMH rechargeable battery will have ~2500 mAh (2.5Ah), and a D NiMH rechargeable has ~10,000 mAh (10 Ah).
+
+### Electromotive Force (EMF) and Voltage
+
+In order for a current to exist, charge carriers must be motivated to move.
+
+[dependent on how the electricity is stored or generated]
+
+Imagine a water tank full of water, and a pressure sensor at a valve at the bottom of the tank. The water wants to flow down (due to gravity), and so it exerts a pressure in that direction:
+
+[illustration of a water tank full of water, suspended above the ground]
+
+
+[EMF exists whether or not 
+
+[voltage is measured when the water is flowing]
+
+
+[pressure 
+
+[electrical generation - ]
+
 
 Force is relative. 
 
