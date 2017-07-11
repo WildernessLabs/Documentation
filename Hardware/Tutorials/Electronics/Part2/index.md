@@ -145,7 +145,7 @@ North American Wall Outlet = 110V * 12A = 1,320W
 European Wall Outlet = 220V * 6A = 1,320W
 ```
 
-Now, comparing some of the common electrical currents, sorted by wattage, make a lot more sense when including both voltage and amperage:
+Now, comparing some of the common electrical currents, sorted by wattage, they make a lot more sense when taken as a whole:
 
 | Electrical Current              | Voltage | Amperage | Wattage |
 |---------------------------------|---------|----------|---------|
