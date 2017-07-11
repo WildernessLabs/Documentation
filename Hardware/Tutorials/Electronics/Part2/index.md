@@ -1,5 +1,5 @@
 ---
-title: Part 2 - Quantifying Electriciy; Amps, Volts, and Watts
+title: Part 2 - Quantifying Electricity; Amps, Volts, and Watts
 ---
 
 In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricity.
@@ -92,19 +92,25 @@ A minor, technical point, is that while EMF exists whether curent is flowing or 
 
 #### Common Source Voltages
 
+Voltage amounts vary greatly around the world, and for different uses, consider the following sources:
+
+
 | Source                       | Voltage |
 |---------------------------------|--------------|
-| North American Household Electricity | ~117v (110 nominal) |
-| European Household Electricity | ~220v (230 nominal) |
+| High power transmission lines | 230kV - 500kV |
+| North American Household Mains | ~117v (110 nominal) |
+| European Household Mains | ~220v (230 nominal) |
 | AA Battery | 1.5v |
 | USB Power | 5v |
-| Netduino Digital IO | 3v |
+| Netduino Digital IO | 3.3v |
+| Low-power Peripherals | 1.8v |
+
+For most of the circuits that we'll explore here, voltages of 5V and 3.3V are the most common. However, many logic circuits control higher voltage circuits that power motors, heaters, and other loads that do heavy lifting and are typically powered by household mains of 110V and 220V.
 
 ## Common and Ground
 
-
-
-
+[where electrons go.]
+[might be 0V. might be higher. goes back to relativity of voltage drop.]
 
 
 ## Relationship of Amps & Volts
@@ -115,7 +121,7 @@ A minor, technical point, is that while EMF exists whether curent is flowing or 
 
 [through induction]
 
-[pipe analogy]
+[pipe analogy, can make a bigger pipe, more water will travel through it (amps), but it will have less speed/force (voltage).]
 
 
 ## Wattage
@@ -136,9 +142,6 @@ Watts = Volts * Current
 iPad Charger = 2 amps @ 5v (10 Watts)
 Netduino @ 5volts = 125 milliamps (maximum), 30-40ma (normal)
 
-
-
-Most of the voltages we'll work with will be 5v or 3.3v for DC, or 120v/240v for AC
 
 
 # [Part 3 - Resistance and Ohm's Law](../Part3/) 
