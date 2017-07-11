@@ -2,10 +2,10 @@
 title: Part 2 - Quantifying Electricity; Amps, Volts, and Watts
 ---
 
-In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from the atomic behavior of electricity.
+In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from that nature.
 
 
-## Measuring Electricity's Ability to do Work; Amount and Force
+## Electricity's Ability to do Work; Amount and Force
 
 Electricity is useful because of its ability to do work. We can heat with electricity, generate light, and use the magnetic force of electricity to turn electric motors that propel our cars, vacuum our houses, and mix our smoothies.
 
@@ -30,7 +30,6 @@ In order for electricity to be useful, we must have both a quantity of charge ca
 
 ![](../Water_in_Equilibrium.svg)
 
-
 Even though charge carriers exist, there is no different in height to create a potential, or force to move them.
 
 Similarly, even with a very tall, but empty tower, if there are no charge carriers to move, there can be no work done, even though gravity could be acting over a large height difference.
@@ -38,7 +37,6 @@ Similarly, even with a very tall, but empty tower, if there are no charge carrie
 This system, taken as a whole, is analgous to something like a cordless electric drill, in which the battery is our water tower, and the electric motor is the water wheel, and the trigger is the valve that let's water flow:
 
 [illustration of electric drill]
-
 
 ### Amperage (Amperes/Amps/A)
 
@@ -95,15 +93,15 @@ A minor, technical point, is that while EMF exists whether curent is flowing or 
 Voltage amounts vary greatly around the world, and for different uses, consider the following sources:
 
 
-| Source                       | Voltage |
+| Source                          | Voltage      |
 |---------------------------------|--------------|
-| High power transmission lines | 230kV - 500kV |
-| North American Household Mains | ~117v (110 nominal) |
-| European Household Mains | ~220v (230 nominal) |
-| AA Battery | 1.5v |
-| USB Power | 5v |
-| Netduino Digital IO | 3.3v |
-| Low-power Peripherals | 1.8v |
+| High power transmission lines   | 230kV - 500kV |
+| North American Household Mains  | ~117V (110 nominal) |
+| European Household Mains        | ~220V (230 nominal) |
+| AA Battery                      | 1.5V |
+| USB Power                       | 5V   |
+| Netduino Digital IO             | 3.3V |
+| Low-power Peripherals           | 1.8V |
 
 For most of the circuits that we'll explore here, voltages of 5V and 3.3V are the most common. However, many logic circuits control higher voltage circuits that power motors, heaters, and other loads that do heavy lifting and are typically powered by household mains of 110V and 220V.
 
@@ -142,6 +140,14 @@ Watts = Volts * Current
 iPad Charger = 2 amps @ 5v (10 Watts)
 Netduino @ 5volts = 125 milliamps (maximum), 30-40ma (normal)
 
+## Review
+ 
+ * The amount of work electricity can do is described in terms of _amperage_ and _voltage_.
+ * _Amperage (A)_ describes the quantity of charge carriers flowing in an electric current.
+ * _Amp hours (Ah)_ describe the quantity of available charge or charge used.
+ * _Voltage (V)_ describes the force in which charge carriers are being pushed in an electric current.
+ * Voltage is relative [current drop]
+ * _Wattage (W)_ is a convenience unit to describe electricity that includes amps and voltage, multiplied together (watts = amps * volts).
 
 
 # [Part 3 - Resistance and Ohm's Law](../Part3/) 
