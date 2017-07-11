@@ -11,8 +11,8 @@ Electricity is useful because of its ability to do work. We can heat with electr
 
 In order to describe the amount of work that electricity can do, we use two characteristics:
 
- * **Amperage** - Measured in amps, this is the quantity of electrons that are being moved.
- * **Voltage** - Measured in volts, this is the amount of force in which those electrons are being moved.
+ * **Amperage** - Measured in amps (A), this is the quantity of electrons that are being moved.
+ * **Voltage** - Measured in volts (V), this is the amount of force in which those electrons are being moved.
 
 Water is used as a common analogy to relate these characteristics. Imagine a water tower full of water, and a pipe extending down to the ground below it:
 
@@ -52,17 +52,17 @@ To get an idea of the amount of work that can be done with that number of electr
 |---------------------------------|--------------|
 | 60 Watt incandescent light bulb | 500mA (0.5A) |
 | 10 Watt LED (60 Watt incandescent equivalent) | ~100mA (0.1A) |
-| Hair Dryer | 15 amps |
+| Hair Dryer | 12 amps |
 
 #### Amp Hours (Ah)
 
-When describing the quantity of charge either available, or used, amp hours (Ah), are used. An amp hour is an hour's worth of amps, or 3600 coulombs (since there are 3600 seconds in an hour).
+When describing the quantity of charge either available, or used, _amp hours_ (Ah), are used. An amp hour is an hour's worth of amps, or 3,600 coulombs (since there are 3,600 seconds in an hour).
 
 In our water tower analogy, the quantity of water flowing over our water wheel at any given second is measured in Amps, and the quantity of water stored in the water tower (battery), is described in amp hours.
 
 [illustration of water tower with labels of Remaining Charge, measured in Ah, amount of current flowing, measured in A, and force of water, measured in V]
 
-Amp hours are often expressed in milliampere hours (mAh), which is one-thousandth of an amp hour, or 3.6 coulombs. For reference, a typical AA NiMH rechargeable battery will have ~2500 mAh (2.5Ah), and a D NiMH rechargeable has ~10,000 mAh (10 Ah).
+Amp hours are often expressed in _milliampere hours_ (mAh), which is one-thousandth of an amp hour, or 3.6 coulombs. For reference, a typical AA NiMH rechargeable battery will have ~2500 mAh (2.5Ah), and a D NiMH rechargeable has ~10,000 mAh (10 Ah).
 
 ### Electromotive Force (EMF) and Voltage
 
@@ -74,7 +74,7 @@ This pressure at the valve is known as _electromotive force (EMF)_ and is expres
 
 #### Relative Voltage
 
-When water (or charge carriers) is flowing through the valve, the amount of force is expressed in _volts (V)_.
+When water (or charge carriers) is flowing through the valve, the amount of force is expressed in _volts_ (V).
 
 It's important to note that this force is relative; even if the water towers were at different altitudes, the pressure at the valve is still dependent on the _voltage drop_ from the top of the water to the ground.
 
@@ -107,38 +107,53 @@ For most of the circuits that we'll explore here, voltages of 5V and 3.3V are th
 
 ## Common and Ground
 
-[where electrons go.]
+Both common and ground:
+[reference point from which voltages are measured]
 [might be 0V. might be higher. goes back to relativity of voltage drop.]
+
+
+Ground is
+[where electrons go.][an infinite sink, that is something that can absorb an infinite amount of charge carriers. the earth is ground]
+
+symbol:
+[ground symbol]
+
+[in circuits you also have common and floating return]
 
 
 ## Relationship of Amps & Volts
 
-[North American and European household electricity have different voltages, but have essentially the same amount of work that they can do because european household electricity has a fewer amps.]
+North American and European household electricity mains have different voltages (110V and 220V, respectively), but with a plug adapter, appliances generally work on both. In fact, the total amount work that they can do is essentially the same. This is because while European mains are twice the voltage, they're actually half the amperage; most wall outlets in North America are rated for 12A (technically, 80% of 15A), whereas European wall outlets are typically rated for 6A.
 
-[US 15A circuit (rated at 12A), UK 6A circuit]
+Through an induction circuit, we can actually trade amperage for voltage, or vice-versa. Going back to our water analogy, we can think of water in a pipe. If we use a bigger pipe, more water will travel through (amps), but it will have less speed/force (voltage):
 
-[through induction]
-
-[pipe analogy, can make a bigger pipe, more water will travel through it (amps), but it will have less speed/force (voltage).]
+[illustration of pipes showing north american and european voltages]
 
 
 ## Wattage
 
-Because in order to properly describe the amount of work that electrical current can do you need to use both Amperage and Voltage, we have a convenience unit called a [Watt](https://en.wikipedia.org/wiki/Watt) that can be described as follows:
+Because in order to properly describe the amount of work that electrical current can do you need to use both amperage and voltage, there is a convenience unit called a _[watt](https://en.wikipedia.org/wiki/Watt)_ (W) that can be described as follows:
 
 ```
-Watts = Volts * Current
+Watts = Volts * Amps
 ```
 
+With the watt, we can see that both North American and European wall outlets actually have the same power:
 
+```
+North American Wall Outlet = 110V * 12A = 1,320W
+European Wall Outlet = 220V * 6A = 1,320W
+```
 
+Now, comparing some of the common electrical currents, sorted by wattage, make a lot more sense when including both voltage and amperage:
 
-100 watts = 120 volts * x Amps
+| Electrical Current              | Voltage | Amperage | Wattage |
+|---------------------------------|---------|----------|---------|
+| Hair Dryer                      | 117V    | 12A      | 1,404W  |
+| 60 Watt Incandescent Light Bulb | 117V    | ~0.5A    | ~60W    |
+| iPad/Tablet Charger             | 5V      | ~2A      | 10W     |
+| Netduino                        | 5V      | 40mA     | 0.2W    |
 
-5/6 amp = 100 watts @ 120 volts
-
-iPad Charger = 2 amps @ 5v (10 Watts)
-Netduino @ 5volts = 125 milliamps (maximum), 30-40ma (normal)
 
 ## Review
  
