@@ -86,8 +86,6 @@ However, in practical usage, it doesn't matter, because most everything has stan
 
 ### Speed of Electrical Current
 
-One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects of electricity. But first, we need to understand the speed of electricity.
-
 We think of electricity as moving at near the speed of light, which is how we can communicate around the world on the phone or via the internet, almost instantly. But it turns out; electrons actually flow, or _drift_ as physicists say, pretty slowly. So how is this possible?
 
 Well, it turns out, what actually moves is the _electromagnetic wave_, which is the propagation of the charge moving. Consider a hypothetical tube full of marbles:
@@ -100,46 +98,53 @@ If you add a marble in one end, a marble will fall out of the other end almost i
 
 Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
 
+## Electromagnetism
+
+One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects that arise from the underlying physics. But first, we need to understand electromagnetism.
+
+Magnetism, that is, the effect of a magnetic field, is caused by rotating electrical charges; that is, electrons orbiting and "spinning" around a nucleus. <!-- Spin is another arbitrariliy named characteristic of subatamic particles, similar to charge. --> In simple terms, we can think of magnetism as a kind of magnification of electrical charges, caused by the angular momentum of electrons. Unlike simple attraction or repulsion in all directions like simple electric charge, however, a magnetic field has a three dimensional polarity with a north/south:
+
+[illustration of magnetic field with poles]
+
+Magentic North and South are arbitrary names just like positive and negative charge used to describe repulsion of like polarity and attraction of opposite polarity along an axis.
+
+Magentism in metals arises when enough electrons have a similar angular momentum to create a net _magnetic domain_. This can happen as part of the natural geological process of creation, or during manufacturing for manmade magnets. A strong enough magnetic field can also induce a magnetic field in other metals, by pulling their electrons into a unified orbit.
+
+A magnetic field can also be created electrically. A weak magnetic field is created when a current flows through a piece of straight wire, but if that wire is coiled, a much stronger magnetic field is created. In fact, a simple, yet effective magnet can be created with just a standard AA battery, a piece of coated wire, and a nail:
+
+[illustration of a nail magnet]
+
+### Induction
+
+Just as a magnetic field arises from the electic charges, a magnetic field can _induce_ current into a wire that enters the magnetic field:
+
+[illustration of a wire in a magnetic field with moving charge carriers]
+
+<!-- is there a simple induction experiment we can make that would power an LED with a battery and a couple of simple coils that we can put here? -->
+
+As we'll explore later, induction is a powerful tool, and in fact, it's how most commercial electricity has traditionally been generated. Whether hydroelectric, coal, or nuclear, or wind, a turbine attached to what is essentially a large electric motor (coils of wire surrounded by fixed magnets) is spun, causing those wires to rotate within the magnetic field, which causes a current through them.
+
+Induction is also important for a host of other uses, including transforming high voltages into lower voltages by inducing a current into a wire that's coiled next to a higher voltage wire. We'll explore this more in the next part of the tutorial.
+
+For further reading on magnetism, see:
+
+ * [Introduction to Magnetism and Induced Current, Rensselaer Polytechnic Institute](http://www.rpi.edu/dept/phys/ScIT/InformationStorage/faraday/magnetism_a.html)
+ * [Electromagnetism, Electronics-Tutorials.ws](http://www.electronics-tutorials.ws/electromagnetism/electromagnetism.html)
+
 
 # Review
 
-That was a lot of concepts to take in at once. As a quick review:
+That was a lot of concepts to take in at once, but it should provide a solid set of fundamental understandings that will aid in understanding how electronic circuits work. As a quick review:
 
  * _Positive_ and _negative_ charges are arbitrarily named characteristics to describe the attractive and repulsive behavior of subatomic particles such as protons and electrons.
  * Atoms get their net "charge" as _ions_; when there is an imbalance between the number of positively charged protons and negatively charged electrons.
  * Materials that electrons move freely between atoms are electrically _conductive_.
  * Because of historic reasons, circuits are described with the concept of hole-flow, rather than electron flow, which states that charge carriers flow from positive to negative.
  * Electrons flow rather slowly, but their effect travels at the speed of light as an _electromagentic wave_.
-
-## Electromagnetism
-
-<!--[field alignment comes from orbital motion AND spin of electrons]-->
+ * _Electromagnetism_ is a three dimensional attraction and repulsion force that arises from the angular momentum of electrons, and a strong magnetic field can be generated from current going through a coiled wire.
+ * A current can be _induced_ in a wire when it passes through a magnetic field.
 
 
-[spin - another arbitrary naming for an intrinsic characteristic of subatomic particles. this is where the electromagnetic force comes from, along with the orbital motion of electrons]
-
-
-
-[electrons are bound to the nucleus of the atom in orbits because of their attraction to positively charged protons. electromagnetic force]
-
-[moving electrons; e.g. and electric current can extend this force at a distance]
-
-[a wire in a coil, has a particuarly strong magnetic force. in fact, we can build an electromagnet very easily. Simply coil an insulated wire around a nail and run a charge through it:]
-
-[illustration of an electromagnet with a battery and a nail]
-
-### Induction
-
-[magnetic field can _induce_ a current in a wire without touching it]
-[can change the nature of a current with two coils]
-
-[illustration of one coil inducting another to power an LED]
-
-[we'll see later that this is important for a lot of stuff]
-
-[a lot of electronic circuits use induction, and accidental induction is something that we need to concern ourselves in circuit design]
-
-[Further reading on Magnetism](http://www.rpi.edu/dept/phys/ScIT/InformationStorage/faraday/magnetism_a.html)
 
 
 
