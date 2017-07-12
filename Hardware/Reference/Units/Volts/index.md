@@ -15,3 +15,12 @@ Voltage, measured in volts (V), is the amount of force in which charge carriers 
 | USB Power                       | 5V   |
 | Netduino Digital IO             | 3.3V |
 | Low-power Peripherals           | 1.8V |
+
+## Common Unit Magnitudes
+
+| Magnitude      | Value in volts |
+|----------------|----------------|
+| microvolt (µV) | 0.000001V      |
+| millivolt (mV) | 0.001V         |
+| kilovolt (kV)  | 1,000V         |
+| megavolt (MV)  | 1,000,000V     |
