@@ -22,5 +22,6 @@ Voltage, measured in volts (V), is the amount of force in which charge carriers 
 |----------------|----------------|
 | microvolt (µV) | 0.000001V      |
 | millivolt (mV) | 0.001V         |
+| volt (V)       | 1.0V           |
 | kilovolt (kV)  | 1,000V         |
 | megavolt (MV)  | 1,000,000V     |
