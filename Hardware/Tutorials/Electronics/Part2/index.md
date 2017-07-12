@@ -58,9 +58,9 @@ To get an idea of the amount of work that can be done with that number of electr
 
 When describing the quantity of charge either available, or used, _amp hours_ (Ah), are used. An amp hour is an hour's worth of amps, or 3,600 coulombs (since there are 3,600 seconds in an hour).
 
-In our water tower analogy, the quantity of water flowing over our water wheel at any given second is measured in Amps, and the quantity of water stored in the water tower (battery), is described in amp hours.
+In our water tower analogy, the quantity of water flowing over our water wheel at any given second is measured in amps, and the quantity of water stored in the water tower (battery), is described in amp hours.
 
-[illustration of water tower with labels of Remaining Charge, measured in Ah, amount of current flowing, measured in A, and force of water, measured in V]
+![](../Water_Tower_w_Units.svg)
 
 Amp hours are often expressed in _milliampere hours_ (mAh), which is one-thousandth of an amp hour, or 3.6 coulombs. For reference, a typical AA NiMH rechargeable battery will have ~2500 mAh (2.5Ah), and a D NiMH rechargeable has ~10,000 mAh (10 Ah).
 
