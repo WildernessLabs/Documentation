@@ -125,10 +125,11 @@ symbol:
 
 North American and European household electricity mains have different voltages (110V and 220V, respectively), but with a plug adapter, appliances generally work on both. In fact, the total amount work that they can do is essentially the same. This is because while European mains are twice the voltage, they're actually half the amperage; most wall outlets in North America are rated for 12A (technically, 80% of 15A), whereas European wall outlets are typically rated for 6A.
 
-Through an induction circuit, we can actually trade amperage for voltage, or vice-versa. Going back to our water analogy, we can think of water in a pipe. If we use a bigger pipe, more water will travel through (amps), but it will have less speed/force (voltage):
+Through an induction circuit, we can actually trade voltage for amperage, or vice-versa, as long as the overall amount of work (amps & volts) stays the same. Going back to our water analogy, we can think of water in a pipe. If we use a bigger pipe, but lower our drop (voltage), more water will travel through (amps), but it will have less speed/force:
 
-[illustration of pipes showing north american and european voltages]
+![](../Water_Tower_Trading_volts_for_amps.svg)
 
+Notice that in the diagram above, the water wheel had to get larger to accomodate the larger quantity of water flowing over it. While this is just an analogy; this concept carries through to the physical realities of electricity. An electric motor that is designed to run on 220V @ 5A will be physically different than one that runs on 110V @ 10A. 
 
 ## Wattage
 
@@ -162,6 +163,7 @@ Now, comparing some of the common electrical currents, sorted by wattage, they m
  * _Amp hours (Ah)_ describe the quantity of available charge or charge used.
  * _Voltage (V)_ describes the force in which charge carriers are being pushed in an electric current.
  * Voltage is relative [current drop]
+ * Volts and amps can be traded for each other in a current, as long as the overall amount of work (Wattage), stays the same. This is often done through induction.
  * _Wattage (W)_ is a convenience unit to describe electricity that includes amps and voltage, multiplied together (watts = amps * volts).
 
 
