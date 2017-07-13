@@ -240,7 +240,19 @@
 
 <p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires plus the ubiquitous power and ground connections.</p>
 
+<blockquote>
+  <p>Note: Word choice on ‘ubiquitous;’ I don’t think that’s what you’re trying to communicate here. Maybe something like “using only two signal wires (in addition to power and ground).</p>
+</blockquote>
+
+<blockquote>
+  <p>Missing: the <em>why</em>. Something like, “I2C has a benefit over similar protocols in that it can support multiple devices on the same communication wires, known as a <em>bus</em>.”</p>
+</blockquote>
+
 <p>This series of articles will:</p>
+
+<blockquote>
+  <p>Let’s call these guides. “This guide will cover:”</p>
+</blockquote>
 
 <ul>
   <li>Provide an overview of the I2C communication protocol</li>
@@ -248,13 +260,25 @@
   <li>Reconfigure the I2C temperature sensor by <a href="Part2">writing data to the I2C temperature sensor</a></li>
 </ul>
 
+<blockquote>
+  <p>Let’s rename the /part1/ folder to /Reading/ and /Part2/ to /Writing/. It’ll be much clearer and help with SEO. I think i’m going to have to do a similar thing with the electronics tutorial i’m working on. More work for us, but better for customers and google.</p>
+</blockquote>
+
 <h2 id="overview">Overview</h2>
 
 <p>Pictorially, a Netduino connected to two I2C devices looks like this:</p>
 
+<blockquote>
+  <p>Maybe: “I2C devices are connected in serial to Netduino via the <code class="highlighter-rouge">SCK</code> and <code class="highlighter-rouge">SDA</code> pins, and are addressed via unique addresses on the communication bus. The following diagram illusrates a typical setup for I2C devices connected to a Netduino:”</p>
+</blockquote>
+
 <p><img src="I2CBusIllustration.svg" alt="I2C Bus Master / Slave Illustration" /></p>
 
 <p>Some important points to note:</p>
+
+<blockquote>
+  <p>Maybe: “In this circuit:”</p>
+</blockquote>
 
 <ul>
   <li>The Netduino is a <em>master</em> device talking to two other devices (known as <em>slaves</em>)</li>
@@ -263,6 +287,10 @@
   <li><code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCK</code> are common to all devices on the bus</li>
   <li><a href="/Hardware/Reference/Resistors/PullUpAndPullDownResistors/">Pull up resistors</a> connect the signal lines to V<sub>cc</sub></li>
 </ul>
+
+<blockquote>
+  <p>Explain the pull up resistors in more detail in that doc you’re working on, but here, i think it needs the briefest of comment on why they’re needed.</p>
+</blockquote>
 
 <p>I2C is normally used to connect low speed devices over short distances.  Compare this to the main characteristics of <a href="../SPI/">SPI</a> and <a href="../UART">Serial</a> communications:</p>
 
@@ -289,11 +317,23 @@
   </tbody>
 </table>
 
+<blockquote>
+  <p>man, this is great. I wonder if we should bubble this up, and copy it to the <a href="http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/">Digital IO page</a>, so folks have an overview up there, too.</p>
+</blockquote>
+
 <h3 id="clock-signal-sck">Clock Signal <code class="highlighter-rouge">SCK</code></h3>
 
 <p>Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered by hobbyists are 100KHz and 400KHz.</p>
 
+<blockquote>
+  <p>just hobbyists? or is that just typical for most I2C stuff?</p>
+</blockquote>
+
 <p>The clock signal determines the rate at which the bits can be transferred between the <em>master</em> and <em>slave</em> devices.</p>
+
+<blockquote>
+  <p>bits is technically correct, but perhaps “data” would be more meaningful?</p>
+</blockquote>
 
 <h3 id="data-signal-sda">Data Signal <code class="highlighter-rouge">SDA</code></h3>
 
@@ -302,6 +342,10 @@
 <h2 id="communicating-with-i2c-devices">Communicating with I2C Devices</h2>
 
 <p>If it worth taking a short look the sequence of events in a message exchange between the <em>master</em> and <em>slave</em> device.  From a high level, the following events take place:</p>
+
+<blockquote>
+  <p>tonally, i would drop the “it’s worth taking a short look,” and instead just right into something like: “I2C communication occurs via the following prototcol:” or something similar.</p>
+</blockquote>
 
 <ul>
   <li><em>Master</em> device sends a start signal</li>
@@ -313,6 +357,10 @@
 
 <p>The start and stop signals are taken care of by the .NET Microframework and are not considered in detail in this article.  A comprehensive description can be found in the Wikipedia article, <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>.</p>
 
+<blockquote>
+  <p>I wonder if this is a good place for a code snippet? I haven’t done any I2C stuff, but we found that including code snippets early, when doing conceptual explanations can really help folks to grok it. Use your judgement, but consider a snippet to clarify and make concrete.</p>
+</blockquote>
+
 <h3 id="device-addresses">Device Addresses</h3>
 
 <p>The use of multiple devices on the single bus is made possible through device addresses.  Each <em>slave</em> device on the bus is allocated a specific address by the manufacturer of the device.</p>
@@ -321,19 +369,39 @@
 
 <p>So what happens if two devices have the same address?  Both devices will interpret the sending of the start signal and the address as a signal to listen to the <em>master</em> device.  Both devices are now reading the data when the <em>master</em> only want to talk to one of them.  This is known as an address collision.</p>
 
+<blockquote>
+  <p>Instead of “so what happens?” rhetoric, perhaps: “When two devices configured with the same address are connected on the same bus, an <em>address collision</em> occurs. Both devices will interpret the sending of the start…”</p>
+</blockquote>
+
 <p>In order to overcome this, some devices allow the address to be configured.  This is achieved using one or more <em>address pins</em> which would be tied low or high depending upon the device and the address required.  Addresses are 7-bits in length.</p>
+
+<blockquote>
+  <p>consider: “To prevent address collisions, some devices allow…”</p>
+</blockquote>
 
 <pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
 </code></pre>
 
+<blockquote>
+  <p>I would append “Addresses are 7-bits in length” and this code to the first paragraph in this section.</p>
+</blockquote>
+
 <p>The code above will be discussed in more detail in the following articles, <a href="Part1/">Reading Data from an I2C Temperature Sensor</a> and <a href="Part2">Writing Data to an I2C Temperature Sensor</a>.</p>
 
 <p>The use of seven bit addresses restricts the number of devices to 128 per bus.</p>
 
+<blockquote>
+  <p>I would move that above, too. Also, in practice 128 is nary impossible, right? So maybe say something like, “The use of 7-bit addresses allows a theoretical limit of 128 unique addresses, and there for 128 devices on a single I2C bus. However, in practice, the upper limit is much lower, because of [impedance/capacitance/gnomes]..”</p>
+</blockquote>
+
 <h3 id="read--write-bit">Read / Write Bit</h3>
 
 <p>A Master device will start the communication session by sending the address of the device it wishes to communicate with along with a single bit that indicates the mode of the communication: <em>read</em> or <em>write</em>.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.</p>
+
+<blockquote>
+  <p>A little unclear on first glance, I would consider tying it to the previous section a little better by reversing the first part: “In addition to an address, the master device will start a communication session by sending either a <em>read</em> or <em>write</em> bit, to indicate its intended communication mode. The combination of 7-bit…..”</p>
+</blockquote>
 
 <h2 id="pull-up-resistors">Pull-up Resistors</h2>
 
