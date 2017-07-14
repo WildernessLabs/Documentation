@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280px" height="242px" viewBox="0 0 280 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Resistor_Valve</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="129.676105" y="143.352118" width="24" height="38"></rect>
+        <rect id="path-2" x="119.676105" y="155.352118" width="45" height="15"></rect>
+        <path d="M30,147.352118 L30,53.4735225 L0,53.4735225 L0,177.564797 L30,177.564797 L30,177.352118 L130.676105,177.352118 L130.676105,147.352118 L30,147.352118 Z" id="path-3"></path>
+        <rect id="path-4" x="152.676105" y="147.352118" width="127" height="30"></rect>
+        <rect id="path-5" x="127.676105" y="130.352118" width="8" height="29"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Letter" transform="translate(-226.000000, -532.000000)">
+            <g id="Resistor_Valve" transform="translate(226.000000, 526.000000)">
+                <text id="Source-Voltage-(V)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
+                    <tspan x="0.405856661" y="26.8256402">Source Voltage (V)</tspan>
+                </text>
+                <text id="Valve-(Resistor)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
+                    <tspan x="61.005317" y="244">Valve (Resistor)</tspan>
+                </text>
+                <path d="M143,210 L143,191" id="Line-4-Copy" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M43,70 L65,37" id="Line-4-Copy" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
+                <g id="Rectangle-2">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#555555" stroke-width="1" x="130.176105" y="143.852118" width="23" height="37"></rect>
+                </g>
+                <g id="Rectangle-Copy-2">
+                    <use fill="#23ABE3" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#555555" stroke-width="2" x="120.676105" y="156.352118" width="43" height="13"></rect>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="#23ABE3" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <path stroke="#555555" stroke-width="2" d="M29,54.4735225 L1,54.4735225 L1,176.564797 L29,176.564797 L29,176.352118 L129.676105,176.352118 L129.676105,148.352118 L29,148.352118 L29,54.4735225 Z"></path>
+                </g>
+                <g id="Rectangle-Copy-3">
+                    <use fill="#23ABE3" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <rect stroke="#555555" stroke-width="2" x="153.676105" y="148.352118" width="125" height="28"></rect>
+                </g>
+                <g id="Rectangle-3" transform="translate(131.676105, 144.852118) rotate(-45.000000) translate(-131.676105, -144.852118) ">
+                    <use fill="#B09679" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <rect stroke="#555555" stroke-width="1" x="128.176105" y="130.852118" width="7" height="28"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

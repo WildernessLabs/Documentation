@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="504px" height="336px" viewBox="0 0 504 336" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Ohms_Circuit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Letter" transform="translate(-749.000000, -77.000000)">
+            <g id="Ohms_Circuit" transform="translate(754.000000, 72.000000)">
+                <polyline id="Resistor" stroke="#524740" stroke-width="3" points="106 87 116 87 126 61 146.128348 112.451451 166 61 186 112.451451 206 61 226 112.451447 236 87 246 87"></polyline>
+                <g id="Multicell_Battery" transform="translate(106.000000, 234.000000)" stroke="#524740" stroke-width="3">
+                    <path d="M0,26 L52,26" id="Path-2"></path>
+                    <path d="M88,26 L140,26" id="Path-2-Copy"></path>
+                    <path d="M52,14 L52,38" id="Path-3"></path>
+                    <path d="M64,1.42108547e-14 L64,52" id="Path-4"></path>
+                    <path d="M76,14 L76,38" id="Path-3-Copy"></path>
+                    <path d="M88,1.42108547e-14 L88,52" id="Path-4-Copy"></path>
+                </g>
+                <polyline id="Path-2" stroke="#524740" stroke-width="3" points="246 87 327 87 327 260 246 260"></polyline>
+                <polyline id="Path-3" stroke="#524740" stroke-width="3" points="106 87 25 87 25 260 106 260"></polyline>
+                <text id="Source-Voltage-(V)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
+                    <tspan x="64.4058567" y="336">Source Voltage (V)</tspan>
+                </text>
+                <text id="Resistance-(R)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
+                    <tspan x="91.7637774" y="26">Resistance (R)</tspan>
+                </text>
+                <text id="Current-in-amps-(I)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
+                    <tspan x="390.273639" y="170">Current</tspan>
+                    <tspan x="374.297218" y="202">in amps (I)</tspan>
+                </text>
+                <path d="M352.15895,207.203227 L352.15895,152.300638" id="Line-11-Copy-3" stroke="#B09679" stroke-width="3"></path>
+                <path id="Line-11-Copy-3-decoration-1" d="M352.15895,152.300638 L349.15895,163.100638 L355.15895,163.100638 L352.15895,152.300638 Z" stroke="#B09679" stroke-width="3"></path>
+                <path d="M0.495234784,152.300638 L0.495234784,207.203227" id="Line-11-Copy-4" stroke="#B09679" stroke-width="3"></path>
+                <path id="Line-11-Copy-4-decoration-1" d="M0.495234784,207.203227 L3.49523478,196.403227 L-2.50476522,196.403227 L0.495234784,207.203227 Z" stroke="#B09679" stroke-width="3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

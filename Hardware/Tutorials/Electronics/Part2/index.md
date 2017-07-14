@@ -131,6 +131,10 @@ Through an induction circuit, we can actually trade voltage for amperage, or vic
 
 Notice that in the diagram above, the water wheel had to get larger to accomodate the larger quantity of water flowing over it. While this is just an analogy; this concept carries through to the physical realities of electricity. An electric motor that is designed to run on 220V @ 5A will be physically different than one that runs on 110V @ 10A. 
 
+## Transformers
+
+
+
 ## Wattage
 
 Because in order to properly describe the amount of work that electrical current can do you need to use both amperage and voltage, there is a convenience unit called a _[watt](https://en.wikipedia.org/wiki/Watt)_ (W) that can be described as follows:

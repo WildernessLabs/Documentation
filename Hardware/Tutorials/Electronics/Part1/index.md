@@ -148,7 +148,7 @@ That was a lot of concepts to take in at once, but it should provide a solid set
 
 
 
-# [Part 2 - Practicals of Electricity](../Part2/) 
+# [Part 2 - Quanitfying Electricity; amps, volts, and watts](../Part2/) 
 
 <br/>
 
