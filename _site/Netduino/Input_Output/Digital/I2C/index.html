@@ -238,686 +238,145 @@
     </h2>
 </div>
 
-<p>I2C (Inter-Integrated Circuit) is a communication protocol allowing bi-directional communication between two or more devices using only two wires.</p>
+<p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).</p>
 
-<p>The two bus wires used are usually labelled SDA (Data) and SCK (Clock).  Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encounterd by hobbyists are 100KHz and 400KHz.</p>
+<blockquote>
+  <p>Missing: the <em>why</em>. Something like, “I2C has a benefit over similar protocols in that it can support multiple devices on the same communication wires, known as a <em>bus</em>.”</p>
+</blockquote>
 
-<p>Devices on the bus will act as either a <em>master</em> or a <em>slave</em> devices.  Both <em>master</em> and <em>slave</em> can transmit and receive on the bus.</p>
+<p>This guide will cover:</p>
+
+<ul>
+  <li>Provide an overview of the I2C communication protocol</li>
+  <li>Demonstrate <a href="Reading/">reading data from an I2C temperature sensor</a></li>
+  <li>Reconfigure the I2C temperature sensor by <a href="Writing/">writing data to the I2C temperature sensor</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p>I2C devices are connected in serial to Netduino via the <code class="highlighter-rouge">SCL</code> and <code class="highlighter-rouge">SDA</code> pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:</p>
+
+<p><img src="I2CBusIllustration.jpg" alt="I2C Bus Master / Slave Illustration" /></p>
+
+<p>In this circuit:</p>
+
+<ul>
+  <li>The Netduino is a <em>master</em> device talking to two other devices (known as <em>slaves</em>)</li>
+  <li>Each <em>slave</em> device has an address.  This allows the <em>master</em> device to choose which of the <em>slaves</em> it is communicating with</li>
+  <li>The two signal (bus) wires used are usually labelled <code class="highlighter-rouge">SDA</code> (Data) and <code class="highlighter-rouge">SCL</code> (Clock)</li>
+  <li><code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCL</code> are common to all devices on the bus</li>
+  <li><code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCL</code> are <a href="https://en.wikipedia.org/wiki/Open_collector">open drain outputs</a> and so require <a href="/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/">pull up resistors</a> to connect the two lines to V<sub>cc</sub></li>
+</ul>
+
+<p>I2C is normally used to connect low speed devices over short distances.  Compare this to the main characteristics of <a href="../SPI/">SPI</a> and <a href="../UART">Serial</a> communications:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Protocol</th>
+      <th>Characteristics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I2C</td>
+      <td>Two wires<br />Short distance<br />Low speed</td>
+    </tr>
+    <tr>
+      <td>SPI</td>
+      <td>Minimum of two wires, often more<br />High speed</td>
+    </tr>
+    <tr>
+      <td>Serial</td>
+      <td>Low speed<br />Used for communication between boards<br />Can be used to communicate on to on board devices</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="clock-signal-scl">Clock Signal <code class="highlighter-rouge">SCL</code></h3>
+
+<p>Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered are 100KHz and 400KHz.</p>
+
+<p>The clock signal determines the rate at which data can be transferred between the <em>master</em> and <em>slave</em> devices.</p>
+
+<h3 id="data-signal-sda">Data Signal <code class="highlighter-rouge">SDA</code></h3>
+
+<p>Both <em>master</em> and <em>slave</em> can transmit and receive on the bus.</p>
+
+<h2 id="communicating-with-i2c-devices">Communicating with I2C Devices</h2>
+
+<p>If it worth taking a short look the sequence of events in a message exchange between the <em>master</em> and <em>slave</em> device.  From a high level, the following events take place:</p>
+
+<blockquote>
+  <p>tonally, i would drop the “it’s worth taking a short look,” and instead just right into something like: “I2C communication occurs via the following prototcol:” or something similar.</p>
+</blockquote>
+
+<ol>
+  <li><em>master</em> device sends a start signal</li>
+  <li><em>master</em> transmits one byte on the bus.  This byte indicates the address of the <em>slave</em> device it wishes to talk to and the mode of operation (read or write)</li>
+  <li><em>master</em> sends data to the <em>slave</em> device</li>
+  <li><em>slave</em> acts or responds to the <em>master</em>
+    <ul>
+      <li>If reading, the <em>slave</em> will send data back to the <em>master</em> device</li>
+      <li>If writing then the <em>slave</em> device will act upon the data received accordingly</li>
+    </ul>
+  </li>
+  <li><em>master</em> sends a stop signal on the bus</li>
+</ol>
+
+<p>The start and stop signals are taken care of by the .NET Microframework and are not considered in detail in this article.  A comprehensive description can be found in the Wikipedia article, <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>.</p>
+
+<blockquote>
+  <p>I wonder if this is a good place for a code snippet? I haven’t done any I2C stuff, but we found that including code snippets early, when doing conceptual explanations can really help folks to grok it. Use your judgement, but consider a snippet to clarify and make concrete.</p>
+</blockquote>
 
 <h3 id="device-addresses">Device Addresses</h3>
 
-<p>The use of multiple devices on the single bus is made possible through device addresses.  Each device on the bus is allocated a specific address.  Some devices allow the address to be configured to one or more alternatives to help with address collision.  This is achieved using <em>address pins</em> which would be tied low or high depending upon the device and the address required.</p>
+<p>The use of multiple devices on the single bus is made possible through 7-bit device addresses.  Each <em>slave</em> device on the bus is allocated a specific address by the manufacturer of the device.</p>
 
-<p>Addresses are 7-bits in length giving a maximum number of 128 devices on the bus.  In practice there are often far fewer due to bus capacitance issues.</p>
+<p>The <em>master</em> initiates communication with a <em>slave</em> device by first transmitting the <em>slave</em> device address on the data line (<code class="highlighter-rouge">SDA</code>).  The <em>slave</em> device that has its address set to the address transmitted now knows that all data transmitted between now and the stop bit is intended for itself.</p>
+
+<p>If two devices have the same address both devices will interpret the sending of the start signal and the address as an indication to listen to the <em>master</em> device.  Both devices are now reading the data when the <em>master</em> only want to talk to one of them.  This is known as an address collision.</p>
+
+<p>To prevent address collision, some devices allow the address to be configured.  This is achieved using one or more <em>address pins</em> which would be tied low or high depending upon the device and the address required.</p>
+
+<pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
+</code></pre>
+
+<p>The code above will be discussed in more detail in the following articles, <a href="Reading/">Reading Data from an I2C Temperature Sensor</a> and <a href="Writing/">Writing Data to an I2C Temperature Sensor</a>.</p>
+
+<p>The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is much lower.</p>
 
 <h3 id="read--write-bit">Read / Write Bit</h3>
 
-<p>A Master device will start the communication session by sending the address of the device it wishes to communicate with along with a single bit that indicates the mode of the communication: <em>read</em> or <em>write</em>.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.</p>
+<p>In addition to the 7 address bits, the <em>master</em> device will also send a single bit that indicates the mode of the communication: <em>read</em> or <em>write</em>.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.</p>
 
-<h3 id="pull-up-resistors">Pull-up Resistors</h3>
+<h2 id="pull-up-resistors">Pull-up Resistors</h2>
 
-<p>Both of the bus lines (SDA and SCK) require pull-up resistors to be connected to them.  The value of the pull-up resistor will depend upon the capacitance of the bus.  The number of components on the board, type of substrate used will all influence the bus capacitance.</p>
+<p>Both of the bus lines (<code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCL</code>) require <a href="/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/">pull up resistors</a> to be connected to them.  The value of the pull-up resistor will depend upon the capacitance of the bus.  The number of components on the board, type of substrate used will all influence the bus capacitance.</p>
 
-<p>Most I2C breakout boards are supplied with pull-up resistors already on the breakout board.  In the case where one is not supplied then a 4K7 resistor is usually good enough for prototyping.</p>
+<p>Most I2C breakout boards are supplied with pull-up resistors already on the breakout board.  In the case where one is not supplied, then a 4.7 KΩ resistor is usually good enough for prototyping.</p>
 
-<p>This in-depth article on the <a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor</a> explains why pull-up resistors are important and how to determine the ideal value for the resistor.</p>
-
-<h3 id="further-information">Further Information</h3>
-
-<p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">This Wikipedia article</a> contains a description of the protocol, the various modes and the bus characteristics.</p>
+<p>For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the <a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor (external link)</a> article.</p>
 
 <h2 id="netduino-i2c-pins">Netduino I2C Pins</h2>
 
-<p>The Netduino has two pins allocated for the I2C protocol.  These pins are labelled SD (for SDA) and SC (for SCK) and can be found above the 14 digital pins on the right of the board as viewed below:</p>
+<p>The Netduino has two pins allocated for the I2C protocol.  These pins are labelled <strong>SD</strong> (for <code class="highlighter-rouge">SDA</code>) and <strong>SC</strong> (for <code class="highlighter-rouge">SCL</code>) and can be found above the 14 digital pins on the right of the board as viewed below:</p>
 
-<p><img src="../../../About/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
+<p><img src="/Common_Files/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
 
-<h2 id="tmp102-i2c-temperature-breakout-board">TMP102 I2C Temperature Breakout Board</h2>
+<h1 id="reading-data">Reading Data</h1>
 
-<p>Use of the I2C bus on the Netduino will be illustrated using a temperature module.  The TMP102 is a commonly available temperature module capable of measuring temperatures in the range -40°C to +125°C with a maximum resolution of 0.0625°C.  This device uses I2C and can be powered by a 3.3V signal, ideal for use with Netduino.</p>
+<p>The next section in this guide will put the above into practice by <a href="Reading/">Reading the Temperature from an I2C Temperature Sensor</a>.</p>
 
-<h3 id="purchasing">Purchasing</h3>
-
-<p>TMP102 breakout modules can be purchased from <a href="https://www.sparkfun.com/products/13314">Sparkfun</a>.</p>
-
-<h2 id="using-i2c-on-the-netduino">Using I2C on the Netduino</h2>
-
-<p>Reading the current temperature from the TMP102 will illustrate the basic software requirements for successful communication with an I2C device, namely a simple read operation.</p>
-
-<h3 id="wiring-up-the-tmp102-and-netduino">Wiring up the TMP102 and Netduino</h3>
-
-<p>Firsly, ensure that the Netduino is disconnected from power and the USB connector.  Once complete, place the TMP102 into a piece of breadboard (you will need to solder male pins to the breakout board first).</p>
-
-<p>Next make the following connections between the temperature breakout board and the Netduino:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>TMP102 Pin Name</th>
-      <th>Netduino Pin Name</th>
-      <th>Wire Color in Photo Below</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>SDA</td>
-      <td>SD</td>
-      <td>Blue</td>
-    </tr>
-    <tr>
-      <td>SCK</td>
-      <td>SC</td>
-      <td>Yellow</td>
-    </tr>
-    <tr>
-      <td>V<sub>cc</sub></td>
-      <td>3.3V</td>
-      <td>Red</td>
-    </tr>
-    <tr>
-      <td>GND</td>
-      <td>GND</td>
-      <td>Black</td>
-    </tr>
-    <tr>
-      <td>ADD0</td>
-      <td>GND</td>
-      <td>Black</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><img src="Netduino3AndTMP102.jpg" alt="Netduino Connected to TMP102" /></p>
-
-<p>There are two yellow and two blue leads in the photo.  The second blue and yellows lead are connected to a <a href="https://en.wikipedia.org/wiki/Logic_analyzer">logic analyzer</a>, more on this later.</p>
-
-<h3 id="software">Software</h3>
-
-<p>Open Visual Studio (or Xamarin Studio) and follow the instructions on the <a href="../../GettingStarted">Getting Started</a> page and start a new project.  Copy the following code and paste it into the <em>program.cs</em> file replacing the default code.</p>
-
-<pre><code class="language-CSharp">using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using System.Threading;
-
-namespace TMP102
-{
-    public class Program
-    {
-        public static void Main()
-        {
-            //
-            //  Create a new I2C device for the TMP102 on address 0x48 with the clock
-            //  running at 50 KHz.
-            //
-            I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
-            //
-            //  Create a transaction to read two bytes of data from the TMP102 sensor.
-            //
-            byte[] buffer = new byte[2];
-            I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
-            reading[0] = I2CDevice.CreateReadTransaction(buffer);
-            while (true)
-            {
-                //
-                //  Read the temperature.
-                //
-                int bytesRead = tmp102.Execute(reading, 100);
-                //
-                //  Convert the reading into Centigrade and Fahrenheit.
-                //
-                int sensorReading = ((buffer[0] &lt;&lt; 4) | (buffer[1]) &gt;&gt; 4);
-                double centigrade = sensorReading * 0.0625;
-                double fahrenheit = centigrade * 1.8 + 32;
-                //
-                //  Display the readings in the debug window and pause before repeating.
-                //
-                Debug.Print(centigrade.ToString() + " C / " + fahrenheit.ToString() + " F");
-                Thread.Sleep(1000);
-            }
-        }
-    }
-}
-</code></pre>
-
-<p>Reconnect the Netduino to the USB cable then save and run the application.  If everything has been connected correctly you will start to see temperature measurements in the <em>Application Output / Debug</em> window.</p>
-
-<h4 id="key-elements">Key Elements</h4>
-
-<p>The data sheet for the TMP102 states that the default address for the TMP102 is 0x48, so the first task is to create a new <em>I2CDevice</em> object that defines how we connect to the TMP102:</p>
-
-<pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
-</code></pre>
-
-<p>The above code creates the <em>tmp102</em> object where the device has an address of 0x48 and the communication speed will be 50KHz.</p>
-
-<p>Temperature readings are returned from the TMP102 as a two byte value and so a buffer is needed to store the results of the read opertiation:</p>
-
-<pre><code class="language-CSharp">byte[] buffer = new byte[2];
-</code></pre>
-
-<p>NETMF uses transaction to communicate with I2C devices.  Using an array of transactions allows multiple operation to be completed at the same time.  In this case, there is only one read operation and the array of transations consists of a single element:</p>
-
-<pre><code class="language-CSharp">I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
-reading[0] = I2CDevice.CreateReadTransaction(buffer);
-</code></pre>
-
-<p>More complex cases allow multiple operations to be executed as a simple ooperation simply by adding more transations to the array.</p>
-
-<p>In the above code, an array <em>reading</em> is created to hold the single transaction that should be executed.  Two transaction types are supported and these are created with the <em>I2CDevice.CreateReadTransaction</em> and the <em>I2CDevice.CreateWriteTransaction</em> methods.</p>
-
-<p>At this point the initialisation and set up is complete.  The main program loop is entered and the temperature reading is read repeatedly using the following statement:</p>
-
-<pre><code class="language-CSharp">int bytesRead = tmp102.Execute(reading, 100);
-</code></pre>
-
-<p>The <em>Execute</em> method above takes an array of transactions, in our case the single read transaction and a timeout value in milliseconds.</p>
-
-<p>The remainder of the code simply calculates the temperature using the formula derived from the data sheet.</p>
-
-<h4 id="program-output">Program Output</h4>
-
-<p>Successful deployment of the application should reduce in a stream of temperature readings, one per second:</p>
-
-<p>22.5625 C / 72.612500000000011 F<br />
-22.5625 C / 72.612500000000011 F<br />
-22.5625 C / 72.612500000000011 F<br />
-22.5625 C / 72.612500000000011 F<br />
-22.5625 C / 72.612500000000011 F<br />
-22.5625 C / 72.612500000000011 F</p>
-
-<h4 id="logic-analyser-output">Logic Analyser Output</h4>
-
-<p>As noted earlier, a second yellow and blue wire can be seen connected to the circuit.  These allow the logic analyzer to be connected to the circuit.</p>
-
-<p>The logic analyzer was configured to read data for two seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:</p>
-
-<p><img src="I2CLogicAnalyserOutput.png" alt="Logic Analyzer Trace" /></p>
-
-<p>The trace has been annotated to indicate the signal line and the protocol being analyzed.</p>
-
-<p>Starting from the left of the data signal:</p>
+<h1 id="further-information">Further Information</h1>
 
 <ul>
-  <li>Start bit indicated by the green dot</li>
-  <li>Device address and access mode (0x91)</li>
-  <li>Two data bytes (0x15 and 0xC0)</li>
-  <li>Stop bit indicated by the red dot</li>
+  <li><a href="https://en.wikipedia.org/wiki/I%C2%B2C">This Wikipedia article</a> contains a description of the protocol, the various modes and the bus characteristics.</li>
+  <li><a href="/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/">Pull up resistors</a></li>
+  <li><a href="http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors">Effects of Varying I2C Pull-Up Resistor (external link)</a></li>
 </ul>
-
-<p>It is interesting to note that the device address and mode byte are encoded with the device address transmitted first followed by the mode bit.  I2C uses 1 to represent a read transaction and 0 to represent a write transaction.</p>
-
-<p>In the case of the above application, the address is 0x48 and Netduino is reading from the device.  Read mode is indicated by a 1 and write by a 0.  This results in a packet header of 0x91:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>b7</th>
-      <th>b6</th>
-      <th>b5</th>
-      <th>b4</th>
-      <th>b3</th>
-      <th>b2</th>
-      <th>b1</th>
-      <th>b0</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Device address</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>Device address shifted left by one place</td>
-    </tr>
-    <tr>
-      <td>Read / Write indicator</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>Read = 1</td>
-    </tr>
-    <tr>
-      <td>Packet header</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>Address or-ed with mode bit = 0x91</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>When reading the logic analyzer traces, read operations to this device have the first byte set to 0x91 whilst write operations to the same device have the first byte set to 0x90.</p>
-
-<h1 id="writing-to-registers-and-multiple-transactions">Writing to Registers and Multiple Transactions</h1>
-
-<p>As noted above, the <em>Execute</em> method can execute multiple transactions in a single call.  This will be illustrated in the following application that will:</p>
-
-<ul>
-  <li>Reconfigure the TMP102 to return a 13-bit temperature reading</li>
-  <li>Read the temperature as a 13-bit value</li>
-</ul>
-
-<p>Configuration of the TMP102 is managed by a number of registers.  It should be noted that the use of registers to store data and configuration is common to both I2C and <a href="/Netduino/Input_Output/Digital/SPI/">SPI</a> devices.</p>
-
-<h2 id="registers">Registers</h2>
-
-<p>In the above example the application used the default power on state for the TMP102.  The default state allows the application to read the temperature.  The temperature itself is maintained in one of the internal registers and the read operation is simply returning the value in the register.</p>
-
-<p>The number of registers and their meaning are ususlly documented in the data sheet for the component in question.</p>
-
-<h3 id="tmp102-registers">TMP102 Registers</h3>
-
-<p>The TMP102 has five registers:</p>
-
-<ul>
-  <li>Current temperature</li>
-  <li>Configuration</li>
-  <li>T<sub>LOW</sub></li>
-  <li>T<sub>HIGH</sub></li>
-  <li>Pointer</li>
-</ul>
-
-<p>The current temperature register is read only and is the one that the above application reads.  The remaining four registers are read-write registers and can be used to change the operation of the TMP102.</p>
-
-<h4 id="pointer-register">Pointer Register</h4>
-
-<p>The pointer register is an 8 bit wide register that indicates which of the remaining four registers should be accessed.  Applications can write to bits 0 and 1 of this register, bits 2-7 should be set to zero.  The pointer register is interpreted as follows:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>b1</th>
-      <th>b0</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>Temperature register</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>Configuration register</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-      <td>T<sub>LOW</sub> register</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>T<sub>HIGH</sub></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>The default power on value of the TMP102 pointer register is 0 (temperature register).</p>
-
-<h4 id="temperature-register">Temperature Register</h4>
-
-<p>The temperature register holds 0°C at power up.  Folllowing a conversion the temperatutre reading is transferred to the temperature register.  The two byte register holds a 12 (or 13) bit value indicating the last reading along with a single bit indicating if this is a 12 or 13 bit reading.</p>
-
-<h5 id="bit-reading">12-bit Reading:</h5>
-
-<p>Byte 1:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>b7</th>
-      <th>b6</th>
-      <th>b5</th>
-      <th>b4</th>
-      <th>b3</th>
-      <th>b2</th>
-      <th>b1</th>
-      <th>b0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>T11</td>
-      <td>T10</td>
-      <td>T09</td>
-      <td>T08</td>
-      <td>T07</td>
-      <td>T06</td>
-      <td>T05</td>
-      <td>T04</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Byte 2:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>b7</th>
-      <th>b6</th>
-      <th>b5</th>
-      <th>b4</th>
-      <th>b3</th>
-      <th>b2</th>
-      <th>b1</th>
-      <th>b0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>T03</td>
-      <td>T02</td>
-      <td>T01</td>
-      <td>T00</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-
-<h5 id="bit-reading-1">13-bit Reading:</h5>
-
-<p>Byte 1:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>b7</th>
-      <th>b6</th>
-      <th>b5</th>
-      <th>b4</th>
-      <th>b3</th>
-      <th>b2</th>
-      <th>b1</th>
-      <th>b0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>T12</td>
-      <td>T11</td>
-      <td>T10</td>
-      <td>T09</td>
-      <td>T09</td>
-      <td>T08</td>
-      <td>T07</td>
-      <td>T05</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Byte 2:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>b7</th>
-      <th>b6</th>
-      <th>b5</th>
-      <th>b4</th>
-      <th>b3</th>
-      <th>b2</th>
-      <th>b1</th>
-      <th>b0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>T04</td>
-      <td>T03</td>
-      <td>T02</td>
-      <td>T01</td>
-      <td>T00</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="configuration-register">Configuration Register</h4>
-
-<p>The configuration register controls how the TMP102 functions.  This register is a 16-bit register and as noted, this is a read-write register.  The control register allows the configuration of the following:</p>
-
-<ul>
-  <li>Extended Mode</li>
-  <li>Alert</li>
-  <li>Conversion Rate</li>
-  <li>Shutdown Mode</li>
-  <li>Thermostat Mode</li>
-  <li>Fault Queue</li>
-  <li>Copnversion Resolution</li>
-  <li>One-Shot/Conversion Ready</li>
-</ul>
-
-<p>For the purpose of this exercise the application will be changing only the <em>Extended Mode</em> (EM) bit in the control register.  Setting this bit to 0 sets the TMP102 to use 12-bit mode.  A value of 1 will set the TMP102 to use 13-bit mode.</p>
-
-<p>From the data sheet, the EM bit is bit 4 in the second byte of the configuration register.</p>
-
-<h3 id="writing-to-registers">Writing To Registers</h3>
-
-<p>The Pointer Register changes the register being adccessed.  Multiple reads will use the previous value in the Pointer Register if a new value is not supplied.  Write opertaions require the pointer register to be supplied for each write operation.</p>
-
-<h2 id="software-1">Software</h2>
-
-<p>The specification for the application was defined as follows:</p>
-
-<ul>
-  <li>Reconfigure the TMP102 to return a 13-bit temperature reading</li>
-  <li>Read the temperature as a 13-bit value</li>
-</ul>
-
-<p>The code for this becomes:</p>
-
-<pre><code class="language-CSharp">using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using System.Threading;
-
-namespace TMP102ReadWrite
-{
-    public class Program
-    {
-        /// &lt;summary&gt;
-        /// Convert a byte to a two character hex string.
-        /// &lt;/summary&gt;
-        /// &lt;returns&gt;Hexadecimal representation of the byte as a string.&lt;/returns&gt;
-        /// &lt;param name="val"&gt;Byte to convert into a string.&lt;/param&gt;
-        public static string ByteToHex(byte val)
-        {
-            const string hex = "0123456789abcdef";
-            return(new string(new char[] { '0', 'x', hex[(val &amp; 0xf0) &gt;&gt; 4], hex[val &amp; 0x0f] }));
-        }
-
-        /// &lt;summary&gt;
-        /// Reads the TMP 102 configuration.
-        /// &lt;/summary&gt;
-        /// &lt;remarks&gt;
-        /// Create transactions to read the current configuration.  A write transaction
-        /// is necessary to change the pointer register to point to the configuration
-        /// registers.  A read transaction will then read the current configuration.
-        /// &lt;/remarks&gt;
-        /// &lt;param name="device"&gt;TMP102 I2CDevice object to read the configuration from.&lt;/param&gt;
-        private static byte[] ReadTMP102Configuration(I2CDevice device)
-        {
-            I2CDevice.I2CTransaction[] readConfiguration = new I2CDevice.I2CTransaction[2];
-            byte[] pointerBuffer = new byte[1];
-            pointerBuffer[0] = 1;
-            readConfiguration[0] = I2CDevice.CreateWriteTransaction(pointerBuffer);
-            //
-            byte[] currentConfig = new byte[2];
-            readConfiguration[1] = I2CDevice.CreateReadTransaction(currentConfig);
-            device.Execute(readConfiguration, 100);
-            Debug.Print("Configuration register: " + ByteToHex(currentConfig[0]) + ", " + ByteToHex(currentConfig[1]));
-            return (currentConfig);
-        }
-
-        /// &lt;summary&gt;
-        /// Main program loop.
-        /// &lt;/summary&gt;
-        public static void Main()
-        {
-            //
-            //  Create a new I2C device for the TMP102 on address 0x48 with the clock
-            //  running at 50 KHz.
-            //
-            I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
-            //
-            //  Read the configuration prior to updating the conversion mode to 13-bit mode.
-            //
-            byte[] currentConfig = ReadTMP102Configuration(tmp102);
-            //
-            //  Now we have the configuration, set up to change the configuration between
-            //  12 and 13 bit mode and read data from the sensor.
-            //
-            I2CDevice.I2CTransaction[] changeConfig = new I2CDevice.I2CTransaction[1];
-            byte[] newConfiguration = { 0x01, currentConfig[0], (byte) (currentConfig[1] | 0x10) };
-            changeConfig[0] = I2CDevice.CreateWriteTransaction(newConfiguration);
-            tmp102.Execute(changeConfig, 100);
-            Thread.Sleep(1000);
-            //
-            //  Now setup for reading the temperature.
-            //
-            I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
-            byte[] repointToTemperatureRegister = { 0x00 };
-            reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);
-            byte[] temperatureData = new byte[2];
-            reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
-            while (true)
-            {
-                //
-                //  Read the temperature.
-                //
-                int bytesRead = tmp102.Execute(reading, 100);
-                Debug.Print("Temperature data: "+ ByteToHex(temperatureData[0]) + ", " + ByteToHex(temperatureData[1]));
-                //
-                //  Convert the reading into Centigrade and Fahrenheit.
-                //
-                int sensorReading = 0;
-                double centigrade = -273.15;
-                double fahrenheit = centigrade * 1.8 + 32;
-                if ((temperatureData[1] &amp; 0x01) == 1)
-                {
-                    sensorReading = ((temperatureData[0] &lt;&lt; 5) | (temperatureData[1]) &gt;&gt; 3);
-                    Debug.Print("13-bit value retrieved.");
-                }
-                else
-                {
-                    sensorReading = ((temperatureData[0] &lt;&lt; 4) | (temperatureData[1]) &gt;&gt; 4);
-                    Debug.Print("12-bit value retrieved.");
-                }
-                centigrade = sensorReading * 0.0625;
-                fahrenheit = centigrade * 1.8 + 32;
-                //
-                //  Display the readings in the debug window and pause before repeating.
-                //
-                Debug.Print(centigrade.ToString() + " C / " + fahrenheit.ToString() + " F");
-                Thread.Sleep(1000);
-            }
-        }
-    }
-}
-</code></pre>
-
-<h3 id="key-elements-1">Key Elements</h3>
-
-<p>The application will read the configuration twice, once to verify the power on state, the second time to verify that the change from 12-bit mode to 13-bit mode has been applied.</p>
-
-<pre><code class="language-CSharp">private static byte[] ReadTMP102Configuration(I2CDevice device)
-</code></pre>
-
-<p>This method will take an <em>I2CDevice</em> object and read the configuration.  The method uses two transactions, a write transaction will adjust the pointer register to point to the configuration register:</p>
-
-<pre><code class="language-CSharp">I2CDevice.I2CTransaction[] readConfiguration = new I2CDevice.I2CTransaction[2];
-byte[] pointerBuffer = new byte[1];
-pointerBuffer[0] = 1;
-readConfiguration[0] = I2CDevice.CreateWriteTransaction(pointerBuffer);
-</code></pre>
-
-<p>The second transaction reads the configuration from the TMP102:</p>
-
-<pre><code class="language-CSharp">
-byte[] currentConfig = new byte[2];
-readConfiguration[1] = I2CDevice.CreateReadTransaction(currentConfig);
-</code></pre>
-
-<p>Finally, the method executes the two transactions and displays the configuration inhexadecimal:</p>
-
-<pre><code class="language-CSharp">device.Execute(readConfiguration, 100);
-Debug.Print("Configuration register: " + ByteToHex(currentConfig[0]) + ", " + ByteToHex(currentConfig[1]));
-</code></pre>
-
-<p>A key point to note here is that a write and a read transaction are both executed together in a single method call.</p>
-
-<p>Executing the above will result in a write following by a read:</p>
-
-<p><img src="ReadConfiguration.png" alt="Read Configuration from TMP102" /></p>
-
-<p>The second green dot indicates the change from the write operation (setting the pointer register) to the read operation (reading the configuration register).</p>
-
-<p>Next operation is to change the mode to 13-bit mode by changing the configuration register:</p>
-
-<pre><code class="language-CSharp">byte[] currentConfig = ReadTMP102Configuration(tmp102);
-I2CDevice.I2CTransaction[] changeConfig = new I2CDevice.I2CTransaction[1];
-byte[] newConfiguration = { 0x01, currentConfig[0], (byte) (currentConfig[1] | 0x10) };
-changeConfig[0] = I2CDevice.CreateWriteTransaction(newConfiguration);
-tmp102.Execute(changeConfig, 100);
-Thread.Sleep(1000);
-</code></pre>
-
-<p>This results in the following data transmission:</p>
-
-<p><img src="WriteConfiguration.png" alt="N3 Writing Configuration Data to TMP102" /></p>
-
-<p>The <em>Sleep</em> method call ensures that the TMP102 has time to make at least one measurement before the application starts to read the temperature from the sensor.</p>
-
-<pre><code class="language-CSharp">I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
-byte[] repointToTemperatureRegister = { 0x00 };
-reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);
-byte[] temperatureData = new byte[2];
-reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
-</code></pre>
-
-<p>The read operation differs from the first application as it ensures that it is reading from the temperatre register but explicitly setting the register (write transaction) before it reads the data from the register:</p>
-
-<p><img src="ReadTemperature.png" alt="Read Temperature From TMP102" /></p>
-
-<h4 id="program-output-1">Program Output</h4>
-
-<p>Successful deployment will give output similar to the following:</p>
-
-<p>Configuration register: 0x60, 0xa0<br />
-Temperature data: 0x0c, 0xb1<br />
-13-bit value retrieved.<br />
-25.375 C / 77.675000000000011 F<br />
-Temperature data: 0x0c, 0xb1<br />
-13-bit value retrieved.<br />
-25.375 C / 77.675000000000011 F&lt;/br&gt;
-Temperature data: 0x0c, 0xb1<br />
-13-bit value retrieved.<br />
-25.375 C / 77.675000000000011 F<br /></p>
 
 
                         </div>
