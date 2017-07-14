@@ -112,7 +112,7 @@ Magentism in metals arises when enough electrons have a similar angular momentum
 
 A magnetic field can also be created electrically. A weak magnetic field is created when a current flows through a piece of straight wire, but if that wire is coiled, a much stronger magnetic field is created. In fact, a simple, yet effective magnet can be created with just a standard AA battery, a piece of coated wire, and a nail:
 
-[illustration of a nail magnet]
+![](../Nail_Magnet.svg)
 
 ### Induction
 
