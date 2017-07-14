@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="280px" height="242px" viewBox="0 0 280 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="462px" height="242px" viewBox="0 0 462 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
     <title>Resistor_Valve</title>
     <desc>Created with Sketch.</desc>
@@ -19,7 +19,12 @@
                 <text id="Valve-(Resistor)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
                     <tspan x="61.005317" y="244">Valve (Resistor)</tspan>
                 </text>
+                <text id="Water-Out-(wattage)" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" letter-spacing="1.00396037" fill="#555555">
+                    <tspan x="333" y="158">Water Out </tspan>
+                    <tspan x="333" y="190">(wattage)</tspan>
+                </text>
                 <path d="M143,210 L143,191" id="Line-4-Copy" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M309,162 L290,162" id="Line-4-Copy-2" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
                 <path d="M43,70 L65,37" id="Line-4-Copy" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
                 <g id="Rectangle-2">
                     <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
@@ -41,6 +46,7 @@
                     <use fill="#B09679" fill-rule="evenodd" xlink:href="#path-5"></use>
                     <rect stroke="#555555" stroke-width="1" x="128.176105" y="130.852118" width="7" height="28"></rect>
                 </g>
+                <polygon id="Triangle-2" fill="#B09679" points="323.5 161.962402 305.5 166.5 305.5 157.424805"></polygon>
             </g>
         </g>
     </g>
