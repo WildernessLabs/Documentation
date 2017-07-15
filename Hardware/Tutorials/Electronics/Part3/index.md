@@ -9,27 +9,18 @@ In part two, we learned about the relationship between amperage (quantity) and v
 
 Some materials let electrons flow in a moderate manner. They are neither excellent conductors, nor absolute insulators. These materials _resist_ the flow of electrical current, but don't impede it completely. Carbon, for instance, is one of these materials. And by mixing in other materials with it, such as clay, the resistance can be changed. By precisely controlling material mixes, resistors can be made that reduce electrical current by specific amounts.
 
-<!-- important?
+We measure resistance in **Ohms**, which are often expressed in _ohms per unit length_, such as `80 ohms per meter`, or similar, and often, the Greek letter for Omega (`Ω`) is used as the abbreviation. 
 
-[from a physical standpoint, resistance occurs because electrons get deflected when passing through a substrate]
+From a physical standpoint, resistance occurs because some electrons get [deflected when passing through the atomic lattice of the resistor](https://en.wikipedia.org/wiki/Free_electron_model). Some of these electrons bounce off and are converted to heat energy, radiating away from the resistor.
 
-[illustration]
-
--->
-
-We measure resistance in **Ohms**, which are often expressed in _ohms per unit length_, such as `80 ohms per meter`, or similar.
-
-[symbol for ohm is Ω]
-
-[loss/dissipation as heat]
+The heat that a resistor can safely dissipate is dependent on the amount of current that passes through it. So resistors are _rated_ for different amounts of power, measured in watts. 
 
 
 ### Symbol
 
-[Resistor symbol:]
+In an electronic circuit schematic, a resistor is typically symbolized as the following:
 
 ![](/Common_Files/Resistor.svg)
-
 
 
 ## Ohms Law
@@ -68,7 +59,6 @@ From that, we can also calculate the wattage as `(watts = amps * volts)`:
 Wattage = 1.5V * 0.3A = 0.045W
 ```
 
-
 ### Other Forms of Ohm's Law
 
 Using algebra, we can solve the equation of Ohm's law for resistance, or voltage:
@@ -88,31 +78,34 @@ V = I * R
 
 ### Ohm's Law Pyramid
 
-[Ohm's law pyramid to help remember:]
+The _Ohm's Law Pyramid_ is helpful in remembering the various solutions of Ohm's law:
 
 ![](../Ohms_Law_Pyramid.svg)
 
-[middle horizontal line divides]
+It roughly represents the mathematical relationship of Ohm's law; it's divided vertically by a line that indicates division (below `V`), and horizontally, with a line that stands for multiplication (between `I` and `R`).
 
-[verticle line multiplies]
+So to read it, choose any given unit as the solution, and then use the division/multiplication rules of the lines.
 
-[therfore:]
+Therefore, starting with a solution for `V`, we have:
 
 ```
 V = I * R
 volts = amps * ohms
 ```
 
+Solving for `I`:
+
 ```
 I = V / R
 amps = volts / ohms
 ```
 
+And finally, solving for `R`:
+
 ```
 R = V / I
 ohms = volts / amps
 ```
-
 
 ## Calculating Resistance
 
@@ -120,6 +113,16 @@ ohms = volts / amps
 ## Reading Resistors
 
 
+[rating - 1/4watt, so forth, is for the amount of heat it can dissipate]
+
 ## See Also
  
  * [Ohm's Law Calculator](http://www.ohmslawcalculator.com/ohms-law-calculator)
+
+<!--
+ 
+# Things to add
+
+ * [Derating and Temperature Coefficient](https://www.digikey.com/en/maker/blogs/a8c993213afd48c3b08b65d2e372197c)
+
+-->
