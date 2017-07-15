@@ -238,11 +238,7 @@
     </h2>
 </div>
 
-<p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).</p>
-
-<blockquote>
-  <p>Missing: the <em>why</em>. Something like, “I2C has a benefit over similar protocols in that it can support multiple devices on the same communication wires, known as a <em>bus</em>.”</p>
-</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.</p>
 
 <p>This guide will cover:</p>
 
@@ -254,7 +250,7 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>I2C devices are connected in serial to Netduino via the <code class="highlighter-rouge">SCL</code> and <code class="highlighter-rouge">SDA</code> pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:</p>
+<p>I2C devices are connected to the Netduino via the <code class="highlighter-rouge">SCL</code> and <code class="highlighter-rouge">SDA</code> pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:</p>
 
 <p><img src="I2CBusIllustration.jpg" alt="I2C Bus Master / Slave Illustration" /></p>
 
@@ -293,23 +289,19 @@
   </tbody>
 </table>
 
-<h3 id="clock-signal-scl">Clock Signal <code class="highlighter-rouge">SCL</code></h3>
+<h3 id="clock-signal-scl">Clock Signal (<code class="highlighter-rouge">SCL</code>)</h3>
 
 <p>Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered are 100KHz and 400KHz.</p>
 
 <p>The clock signal determines the rate at which data can be transferred between the <em>master</em> and <em>slave</em> devices.</p>
 
-<h3 id="data-signal-sda">Data Signal <code class="highlighter-rouge">SDA</code></h3>
+<h3 id="data-signal-sda">Data Signal (<code class="highlighter-rouge">SDA</code>)</h3>
 
 <p>Both <em>master</em> and <em>slave</em> can transmit and receive on the bus.</p>
 
 <h2 id="communicating-with-i2c-devices">Communicating with I2C Devices</h2>
 
-<p>If it worth taking a short look the sequence of events in a message exchange between the <em>master</em> and <em>slave</em> device.  From a high level, the following events take place:</p>
-
-<blockquote>
-  <p>tonally, i would drop the “it’s worth taking a short look,” and instead just right into something like: “I2C communication occurs via the following prototcol:” or something similar.</p>
-</blockquote>
+<p>From a high level, the following events take place when the <em>master</em> device is communicating with <em>slave</em> device:</p>
 
 <ol>
   <li><em>master</em> device sends a start signal</li>
@@ -318,7 +310,7 @@
   <li><em>slave</em> acts or responds to the <em>master</em>
     <ul>
       <li>If reading, the <em>slave</em> will send data back to the <em>master</em> device</li>
-      <li>If writing then the <em>slave</em> device will act upon the data received accordingly</li>
+      <li>If writing then the <em>slave</em> device will act upon the data received</li>
     </ul>
   </li>
   <li><em>master</em> sends a stop signal on the bus</li>
@@ -326,9 +318,25 @@
 
 <p>The start and stop signals are taken care of by the .NET Microframework and are not considered in detail in this article.  A comprehensive description can be found in the Wikipedia article, <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>.</p>
 
-<blockquote>
-  <p>I wonder if this is a good place for a code snippet? I haven’t done any I2C stuff, but we found that including code snippets early, when doing conceptual explanations can really help folks to grok it. Use your judgement, but consider a snippet to clarify and make concrete.</p>
-</blockquote>
+<p>In code, the sequence of events looks as follows:</p>
+
+<pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+</code></pre>
+
+<p>The above code sets up the device address for a TMP102 temperature sensor.</p>
+
+<pre><code class="language-CSharp">byte[] buffer = new byte[2];
+I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
+</code></pre>
+
+<p>The application next prepares a read transaction.</p>
+
+<pre><code class="language-CSharp">reading[0] = I2CDevice.CreateReadTransaction(buffer);
+</code></pre>
+
+<p>Finally the data is read from the TMP102 temperature sensor.</p>
+
+<p>All of the above will be explained more fully in the next section, <a href="Reading/">reading data from an I2C temperature sensor</a>.</p>
 
 <h3 id="device-addresses">Device Addresses</h3>
 

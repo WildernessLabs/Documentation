@@ -2,9 +2,7 @@
 title: I2C
 ---
 
-[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).
-
-> Missing: the _why_. Something like, "I2C has a benefit over similar protocols in that it can support multiple devices on the same communication wires, known as a _bus_."
+[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.
 
 This guide will cover:
 
@@ -14,7 +12,7 @@ This guide will cover:
 
 ## Overview
 
-I2C devices are connected in serial to Netduino via the `SCL` and `SDA` pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:
+I2C devices are connected to the Netduino via the `SCL` and `SDA` pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:
 
 ![I2C Bus Master / Slave Illustration](I2CBusIllustration.jpg)
 
@@ -34,33 +32,52 @@ I2C is normally used to connect low speed devices over short distances.  Compare
 |   SPI    | Minimum of two wires, often more<br/>High speed                                                            |
 |  Serial  | Low speed<br/>Used for communication between boards<br/>Can be used to communicate on to on board devices  |
 
-### Clock Signal `SCL`
+### Clock Signal (`SCL`)
 
 Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered are 100KHz and 400KHz.
 
 The clock signal determines the rate at which data can be transferred between the _master_ and _slave_ devices.
 
-### Data Signal `SDA`
+### Data Signal (`SDA`)
 
 Both _master_ and _slave_ can transmit and receive on the bus.
 
 ## Communicating with I2C Devices
 
-If it worth taking a short look the sequence of events in a message exchange between the _master_ and _slave_ device.  From a high level, the following events take place:
-
-> tonally, i would drop the "it's worth taking a short look," and instead just right into something like: "I2C communication occurs via the following prototcol:" or something similar. 
+From a high level, the following events take place when the _master_ device is communicating with _slave_ device:
 
 1. _master_ device sends a start signal
 2. _master_ transmits one byte on the bus.  This byte indicates the address of the _slave_ device it wishes to talk to and the mode of operation (read or write)
 3. _master_ sends data to the _slave_ device
 4. _slave_ acts or responds to the _master_
 	* If reading, the _slave_ will send data back to the _master_ device
-	* If writing then the _slave_ device will act upon the data received accordingly
+	* If writing then the _slave_ device will act upon the data received
 5. _master_ sends a stop signal on the bus
 
 The start and stop signals are taken care of by the .NET Microframework and are not considered in detail in this article.  A comprehensive description can be found in the Wikipedia article, [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C).
 
-> I wonder if this is a good place for a code snippet? I haven't done any I2C stuff, but we found that including code snippets early, when doing conceptual explanations can really help folks to grok it. Use your judgement, but consider a snippet to clarify and make concrete.
+In code, the sequence of events looks as follows:
+
+```CSharp
+I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+```
+
+The above code sets up the device address for a TMP102 temperature sensor.
+
+```CSharp
+byte[] buffer = new byte[2];
+I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
+```
+
+The application next prepares a read transaction.
+
+```CSharp
+reading[0] = I2CDevice.CreateReadTransaction(buffer);
+```
+
+Finally the data is read from the TMP102 temperature sensor.
+
+All of the above will be explained more fully in the next section, [reading data from an I2C temperature sensor](Reading/).
 
 ### Device Addresses
 
