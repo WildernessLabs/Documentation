@@ -6,7 +6,7 @@ Serial Peripheral Interface (SPI) is a protocol for high speed communication ove
 
 - Master Out, Salve In (MOSI)
 - Master In, Slave Out (MISO)
-- Serial clock (SCLK)
+- Serial clock (SPCK)
 - Chip Select (CS) sometimes called Slave Select (SS)
 
 SPI implements a master / slave architecture and in an embedded system the master device is normally a microcontroller with sensors or output devices acting as slaves.
@@ -21,7 +21,7 @@ Data from the master is transmitted to the slave devices on the MOSI signal line
 
 Slave devices send data to the master device using the MISO channel.
 
-### SCLK
+### SPCK
 
 The clock signal is controlled by the master device.  The short distances involved mean that high clock speeds are possible.
 
@@ -31,15 +31,15 @@ SPI allows for multiple devices to be connected to the SPI bus.  The CS line all
 
 ### Modes
 
-SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the _SPI.Configuration_ object to control how the data is sampled.
+SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the `SPI.Configuration` object to control how the data is sampled.
 
 The four possible modes are determined by the active state of the clock signal (high or low) and when the data is sampled (rising or falling edge of the clock).
 
 ## Netduino SPI Pins
 
-The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
+The Netduino has a SPI interface defined on digital IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](../../../About/Netduino3_Pinout.svg)
+![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 

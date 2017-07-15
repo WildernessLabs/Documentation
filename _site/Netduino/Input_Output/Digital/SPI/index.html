@@ -243,7 +243,7 @@
 <ul>
   <li>Master Out, Salve In (MOSI)</li>
   <li>Master In, Slave Out (MISO)</li>
-  <li>Serial clock (SCLK)</li>
+  <li>Serial clock (SPCK)</li>
   <li>Chip Select (CS) sometimes called Slave Select (SS)</li>
 </ul>
 
@@ -259,7 +259,7 @@
 
 <p>Slave devices send data to the master device using the MISO channel.</p>
 
-<h3 id="sclk">SCLK</h3>
+<h3 id="spck">SPCK</h3>
 
 <p>The clock signal is controlled by the master device.  The short distances involved mean that high clock speeds are possible.</p>
 
@@ -269,15 +269,15 @@
 
 <h3 id="modes">Modes</h3>
 
-<p>SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the <em>SPI.Configuration</em> object to control how the data is sampled.</p>
+<p>SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the <code class="highlighter-rouge">SPI.Configuration</code> object to control how the data is sampled.</p>
 
 <p>The four possible modes are determined by the active state of the clock signal (high or low) and when the data is sampled (rising or falling edge of the clock).</p>
 
 <h2 id="netduino-spi-pins">Netduino SPI Pins</h2>
 
-<p>The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:</p>
+<p>The Netduino has a SPI interface defined on digital IO pins 11, 12, 13 and 4:</p>
 
-<p><img src="../../../About/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
+<p><img src="/Common_Files/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
 
 <p>It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.</p>
 
