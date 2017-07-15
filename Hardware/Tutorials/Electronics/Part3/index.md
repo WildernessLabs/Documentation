@@ -110,10 +110,18 @@ ohms = volts / amps
 ## Calculating Resistance
 
 
+## Resistance in Series
+
+
+## Resistance in Parallel
+
+
 ## Reading Resistors
 
 
 [rating - 1/4watt, so forth, is for the amount of heat it can dissipate]
+
+
 
 ## See Also
  
