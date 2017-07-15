@@ -1,17 +1,34 @@
 ---
-title: I2C (Part 3)
+title: I2C - Writing Data Over I2C
 ---
 
-Brief introduction and link to previous articles....
+The previous sections of this guide presented an [overview of the I2C protocol](../) and demonstrated how to [read from the TMP102 temperature sensor](../Reading/).  This section will demonstrate how to write some data to the TMP102 temperature sensor.
+
+As a reminder, this guide will cover:
+
+* Provide an [overview of the I2C communication protocol](../)
+* Demonstrate [reading data from an I2C temperature sensor](../Reading/)
+* Reconfigure the I2C temperature sensor by writing data to the I2C temperature sensor
 
 # Writing to Registers and Multiple Transactions
 
-As noted above, the `Execute` method can execute multiple transactions in a single call.  This will be illustrated in the following application that will:
+As noted in the [previous section](../Reading/), the `Execute` method can execute multiple transactions in a single call.  This will be illustrated in the following application that will:
 
 * Reconfigure the TMP102 to return a 13-bit temperature reading
 * Read the temperature as a 13-bit value
 
-Configuration of the TMP102 is managed by a number of registers.  It should be noted that the use of registers to store data and configuration is common to both I2C and [SPI](../SPI/index.md) devices.
+```CSharp
+I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
+byte[] repointToTemperatureRegister = { 0x00 };
+reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);
+byte[] temperatureData = new byte[2];
+reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
+int bytesRead = tmp102.Execute(reading, 100);
+```
+
+The call to `tmp102.Execute` in the above code will use the transactions in the `reading` array to firstly read the configuration from the sensor and finally read the current temperature. 
+
+Configuration of the TMP102 is managed by a number of registers.  It should be noted that the use of registers to store data and configuration is common to both I2C and [SPI](../../SPI/index.md) devices.
 
 ## Registers
 
@@ -305,3 +322,5 @@ Temperature data: 0x0c, 0xb1
 # Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
+* [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)
+* [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors)

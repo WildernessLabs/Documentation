@@ -116,7 +116,7 @@ The Netduino has two pins allocated for the I2C protocol.  These pins are labell
 
 ![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
 
-# Reading Data
+# Reading Data Using I2C
 
 The next section in this guide will put the above into practice by [Reading the Temperature from an I2C Temperature Sensor](Reading/).
 
