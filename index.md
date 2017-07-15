@@ -4,6 +4,8 @@
 <a href="/Netduino/Getting_Started">Get Started</a>
 </div>
 
+
+
 # Featured Netduino Guides
 
 #### [Input/Output (IO)](/Netduino/Input_Output)
@@ -19,6 +21,11 @@
 #### [Updating Firmware](http://localhost:4000/Netduino/About/Updating_Firmware)
 
 #### [Application Fundamentals](/Netduino/Application_Fundamentals/)
+
+# [Electronics Tutorial](/Hardware/Tutorials/Electronics)
+
+New to electronics? This tutorial starts with the fundamentals and builds from there.
+
 
 # [Community Forums](http://community.wildernesslabs.co)
 
