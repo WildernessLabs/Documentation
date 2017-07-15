@@ -78,7 +78,7 @@ V = I * R
 
 ### Ohm's Law Pyramid
 
-The _Ohm's Law Pyramid_ is helpful in remembering the various solutions of Ohm's law:
+The _Ohm's Law triangle_, also known as the _power triangle_ is helpful in remembering the various solutions of Ohm's law:
 
 ![](../Ohms_Law_Pyramid.svg)
 
