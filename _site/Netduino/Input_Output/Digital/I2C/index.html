@@ -86,7 +86,12 @@
             <li><a href="/Netduino/Input_Output/Analog/">Analog</a></li>
             <li><a href="/Netduino/Input_Output/Digital/">Digital</a>
                 <ul>
-                    <li><a href="/Netduino/Input_Output/Digital/I2C/">I2C</a></li>
+                    <li><a href="/Netduino/Input_Output/Digital/I2C/">I2C Overview</a>
+                        <ul>
+                            <li><a href="/Netduino/Input_Output/Digital/I2C/Reading">Reading from an I2C Device</a></li>
+                            <li><a href="/Netduino/Input_Output/Digital/I2C/Writing">Writing to an I2C Device</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/Netduino/Input_Output/Digital/SPI/">SPI</a></li>
                     <li><a href="/Netduino/Input_Output/Digital/PWM/">PWM</a></li>
                     <li><a href="/Netduino/Input_Output/Digital/UART/">UART (Serial)</a></li>
@@ -240,7 +245,7 @@
 
 <p><a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.</p>
 
-<p>This guide will cover:</p>
+<p>This guide will:</p>
 
 <ul>
   <li>Provide an overview of the I2C communication protocol</li>
@@ -258,7 +263,7 @@
 
 <ul>
   <li>The Netduino is a <em>master</em> device talking to two other devices (known as <em>slaves</em>)</li>
-  <li>Each <em>slave</em> device has an address.  This allows the <em>master</em> device to choose which of the <em>slaves</em> it is communicating with</li>
+  <li>Each slave device has an address.  This allows the master device to choose which of the slaves it is communicating with</li>
   <li>The two signal (bus) wires used are usually labelled <code class="highlighter-rouge">SDA</code> (Data) and <code class="highlighter-rouge">SCL</code> (Clock)</li>
   <li><code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCL</code> are common to all devices on the bus</li>
   <li><code class="highlighter-rouge">SDA</code> and <code class="highlighter-rouge">SCL</code> are <a href="https://en.wikipedia.org/wiki/Open_collector">open drain outputs</a> and so require <a href="/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/">pull up resistors</a> to connect the two lines to V<sub>cc</sub></li>
@@ -293,72 +298,67 @@
 
 <p>Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered are 100KHz and 400KHz.</p>
 
-<p>The clock signal determines the rate at which data can be transferred between the <em>master</em> and <em>slave</em> devices.</p>
+<p>The clock signal determines the rate at which data can be transferred between the master and slave devices.</p>
 
 <h3 id="data-signal-sda">Data Signal (<code class="highlighter-rouge">SDA</code>)</h3>
 
-<p>Both <em>master</em> and <em>slave</em> can transmit and receive on the bus.</p>
+<p>Both master and slave can transmit and receive on the bus.</p>
 
 <h2 id="communicating-with-i2c-devices">Communicating with I2C Devices</h2>
 
-<p>From a high level, the following events take place when the <em>master</em> device is communicating with <em>slave</em> device:</p>
+<p>From a high level, the following events take place when the master device is communicating with slave device:</p>
 
 <ol>
-  <li><em>master</em> device sends a start signal</li>
-  <li><em>master</em> transmits one byte on the bus.  This byte indicates the address of the <em>slave</em> device it wishes to talk to and the mode of operation (read or write)</li>
-  <li><em>master</em> sends data to the <em>slave</em> device</li>
-  <li><em>slave</em> acts or responds to the <em>master</em>
+  <li>master device sends a start signal</li>
+  <li>master transmits one byte on the bus.  This byte indicates the address of the slave device it wishes to talk to and the mode of operation (read or write)</li>
+  <li>master sends data to the slave device</li>
+  <li>slave acts or responds to the master
     <ul>
-      <li>If reading, the <em>slave</em> will send data back to the <em>master</em> device</li>
-      <li>If writing then the <em>slave</em> device will act upon the data received</li>
+      <li>If reading, the slave will send data back to the master device</li>
+      <li>If writing then the slave device will act upon the data received</li>
     </ul>
   </li>
-  <li><em>master</em> sends a stop signal on the bus</li>
+  <li>master sends a stop signal on the bus</li>
 </ol>
 
 <p>The start and stop signals are taken care of by the .NET Microframework and are not considered in detail in this article.  A comprehensive description can be found in the Wikipedia article, <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C (Inter-Integrated Circuit)</a>.</p>
 
 <p>In code, the sequence of events looks as follows:</p>
 
-<pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
-</code></pre>
+<pre><code class="language-CSharp">// create a new TMP102 device at address 0x48
+I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 
-<p>The above code sets up the device address for a TMP102 temperature sensor.</p>
-
-<pre><code class="language-CSharp">byte[] buffer = new byte[2];
+// create a buffer to read data from the deivce
+byte[] buffer = new byte[2];
 I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
+
+// read the data in
+reading[0] = I2CDevice.CreateReadTransaction(buffer);
 </code></pre>
 
-<p>The application next prepares a read transaction.</p>
-
-<pre><code class="language-CSharp">reading[0] = I2CDevice.CreateReadTransaction(buffer);
-</code></pre>
-
-<p>Finally the data is read from the TMP102 temperature sensor.</p>
-
-<p>All of the above will be explained more fully in the next section, <a href="Reading/">reading data from an I2C temperature sensor</a>.</p>
+<p>Reading from an I2C device is covered in more detail in the <a href="Reading/">reading</a> section.</p>
 
 <h3 id="device-addresses">Device Addresses</h3>
 
-<p>The use of multiple devices on the single bus is made possible through 7-bit device addresses.  Each <em>slave</em> device on the bus is allocated a specific address by the manufacturer of the device.</p>
+<p>The use of multiple devices on the single bus is made possible through 7-bit device addresses.  Each slave device on the bus is allocated a specific address by the manufacturer of the device.</p>
 
-<p>The <em>master</em> initiates communication with a <em>slave</em> device by first transmitting the <em>slave</em> device address on the data line (<code class="highlighter-rouge">SDA</code>).  The <em>slave</em> device that has its address set to the address transmitted now knows that all data transmitted between now and the stop bit is intended for itself.</p>
+<p>The master initiates communication with a slave device by first transmitting the slave device’s address on the data line (<code class="highlighter-rouge">SDA</code>).  The slave device that has its address set to the address transmitted now knows that all data transmitted between now and the stop bit is intended for itself.</p>
 
-<p>If two devices have the same address both devices will interpret the sending of the start signal and the address as an indication to listen to the <em>master</em> device.  Both devices are now reading the data when the <em>master</em> only want to talk to one of them.  This is known as an address collision.</p>
+<p>If two devices have the same address both devices will interpret the sending of the start signal and the address as an indication to listen to the master device.  Both devices are now reading the data when the master only wants to talk to one of them. This is known as an address collision.</p>
 
-<p>To prevent address collision, some devices allow the address to be configured.  This is achieved using one or more <em>address pins</em> which would be tied low or high depending upon the device and the address required.</p>
+<p>To prevent address collision, some devices allow the address to be configured.  This is achieved using one or more <em>address pins</em> which would be pulled low or high, depending upon the device and the address required.</p>
+
+<p>The following code illustrates creating two I2C devices on different addresses:</p>
 
 <pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
 </code></pre>
 
-<p>The code above will be discussed in more detail in the following articles, <a href="Reading/">Reading Data from an I2C Temperature Sensor</a> and <a href="Writing/">Writing Data to an I2C Temperature Sensor</a>.</p>
-
 <p>The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is much lower.</p>
 
 <h3 id="read--write-bit">Read / Write Bit</h3>
 
-<p>In addition to the 7 address bits, the <em>master</em> device will also send a single bit that indicates the mode of the communication: <em>read</em> or <em>write</em>.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.</p>
+<p>In addition to the 7 address bits, the master device will also send a single bit that indicates the mode of the communication: <em>read</em> or <em>write</em>.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.</p>
 
 <h2 id="pull-up-resistors">Pull-up Resistors</h2>
 
@@ -374,9 +374,13 @@ I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
 
 <p><img src="/Common_Files/Netduino3_Pinout.svg" alt="N3 Pinout Diagram" /></p>
 
-<h1 id="reading-data-using-i2c">Reading Data Using I2C</h1>
+<h1 id="reading-data-from-an-i2c-device">Reading Data from an I2C Device</h1>
 
-<p>The next section in this guide will put the above into practice by <a href="Reading/">Reading the Temperature from an I2C Temperature Sensor</a>.</p>
+<p>For an in-depth discussion on reading data, see the <a href="Reading/">Reading the Temperature from an I2C Temperature Sensor guide</a>.</p>
+
+<h1 id="writing-data-to-an-i2c-device">Writing Data to an I2C Device</h1>
+
+<p>For an in-depth discussion on writing data, see the <a href="Writing/">writing to I2C guide</a>.</p>
 
 <h1 id="further-information">Further Information</h1>
 

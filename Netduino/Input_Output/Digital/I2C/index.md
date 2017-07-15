@@ -4,7 +4,7 @@ title: I2C
 
 [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.
 
-This guide will cover:
+This guide will:
 
 * Provide an overview of the I2C communication protocol
 * Demonstrate [reading data from an I2C temperature sensor](Reading/)
@@ -19,7 +19,7 @@ I2C devices are connected to the Netduino via the `SCL` and `SDA` pins, and are 
 In this circuit:
 
 * The Netduino is a _master_ device talking to two other devices (known as _slaves_)
-* Each _slave_ device has an address.  This allows the _master_ device to choose which of the _slaves_ it is communicating with
+* Each slave device has an address.  This allows the master device to choose which of the slaves it is communicating with
 * The two signal (bus) wires used are usually labelled `SDA` (Data) and `SCL` (Clock)
 * `SDA` and `SCL` are common to all devices on the bus
 * `SDA` and `SCL` are [open drain outputs](https://en.wikipedia.org/wiki/Open_collector) and so require [pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/) to connect the two lines to V<sub>cc</sub>
@@ -36,71 +36,66 @@ I2C is normally used to connect low speed devices over short distances.  Compare
 
 Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered are 100KHz and 400KHz.
 
-The clock signal determines the rate at which data can be transferred between the _master_ and _slave_ devices.
+The clock signal determines the rate at which data can be transferred between the master and slave devices.
 
 ### Data Signal (`SDA`)
 
-Both _master_ and _slave_ can transmit and receive on the bus.
+Both master and slave can transmit and receive on the bus.
 
 ## Communicating with I2C Devices
 
-From a high level, the following events take place when the _master_ device is communicating with _slave_ device:
+From a high level, the following events take place when the master device is communicating with slave device:
 
-1. _master_ device sends a start signal
-2. _master_ transmits one byte on the bus.  This byte indicates the address of the _slave_ device it wishes to talk to and the mode of operation (read or write)
-3. _master_ sends data to the _slave_ device
-4. _slave_ acts or responds to the _master_
-	* If reading, the _slave_ will send data back to the _master_ device
-	* If writing then the _slave_ device will act upon the data received
-5. _master_ sends a stop signal on the bus
+1. master device sends a start signal
+2. master transmits one byte on the bus.  This byte indicates the address of the slave device it wishes to talk to and the mode of operation (read or write)
+3. master sends data to the slave device
+4. slave acts or responds to the master
+	* If reading, the slave will send data back to the master device
+	* If writing then the slave device will act upon the data received
+5. master sends a stop signal on the bus
 
 The start and stop signals are taken care of by the .NET Microframework and are not considered in detail in this article.  A comprehensive description can be found in the Wikipedia article, [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C).
 
 In code, the sequence of events looks as follows:
 
+
 ```CSharp
+// create a new TMP102 device at address 0x48
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
-```
 
-The above code sets up the device address for a TMP102 temperature sensor.
-
-```CSharp
+// create a buffer to read data from the deivce
 byte[] buffer = new byte[2];
 I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
-```
 
-The application next prepares a read transaction.
-
-```CSharp
+// read the data in
 reading[0] = I2CDevice.CreateReadTransaction(buffer);
 ```
 
-Finally the data is read from the TMP102 temperature sensor.
+Reading from an I2C device is covered in more detail in the [reading](Reading/) section.
 
-All of the above will be explained more fully in the next section, [reading data from an I2C temperature sensor](Reading/).
 
 ### Device Addresses
 
-The use of multiple devices on the single bus is made possible through 7-bit device addresses.  Each _slave_ device on the bus is allocated a specific address by the manufacturer of the device.
+The use of multiple devices on the single bus is made possible through 7-bit device addresses.  Each slave device on the bus is allocated a specific address by the manufacturer of the device.
 
-The _master_ initiates communication with a _slave_ device by first transmitting the _slave_ device address on the data line (`SDA`).  The _slave_ device that has its address set to the address transmitted now knows that all data transmitted between now and the stop bit is intended for itself.
+The master initiates communication with a slave device by first transmitting the slave device's address on the data line (`SDA`).  The slave device that has its address set to the address transmitted now knows that all data transmitted between now and the stop bit is intended for itself.
 
-If two devices have the same address both devices will interpret the sending of the start signal and the address as an indication to listen to the _master_ device.  Both devices are now reading the data when the _master_ only want to talk to one of them.  This is known as an address collision.
+If two devices have the same address both devices will interpret the sending of the start signal and the address as an indication to listen to the master device.  Both devices are now reading the data when the master only wants to talk to one of them. This is known as an address collision.
 
-To prevent address collision, some devices allow the address to be configured.  This is achieved using one or more _address pins_ which would be tied low or high depending upon the device and the address required.
+To prevent address collision, some devices allow the address to be configured.  This is achieved using one or more _address pins_ which would be pulled low or high, depending upon the device and the address required.
+
+The following code illustrates creating two I2C devices on different addresses:
 
 ```CSharp
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
 ```
 
-The code above will be discussed in more detail in the following articles, [Reading Data from an I2C Temperature Sensor](Reading/) and [Writing Data to an I2C Temperature Sensor](Writing/).
-
 The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is much lower.
 
 ### Read / Write Bit
 
-In addition to the 7 address bits, the _master_ device will also send a single bit that indicates the mode of the communication: _read_ or _write_.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.
+In addition to the 7 address bits, the master device will also send a single bit that indicates the mode of the communication: _read_ or _write_.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.
 
 ## Pull-up Resistors
 
@@ -116,9 +111,13 @@ The Netduino has two pins allocated for the I2C protocol.  These pins are labell
 
 ![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
 
-# Reading Data Using I2C
+# Reading Data from an I2C Device
 
-The next section in this guide will put the above into practice by [Reading the Temperature from an I2C Temperature Sensor](Reading/).
+For an in-depth discussion on reading data, see the [Reading the Temperature from an I2C Temperature Sensor guide](Reading/).
+
+# Writing Data to an I2C Device
+
+For an in-depth discussion on writing data, see the [writing to I2C guide](Writing/).
 
 # Further Information
 
