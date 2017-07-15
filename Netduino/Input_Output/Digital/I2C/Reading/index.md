@@ -1,30 +1,24 @@
 ---
-title: I2C (Part 2)
+title: I2C - Reading Data Over I2C
 ---
 
-Brief introduction here and reference the previous article.
+The [previous section of this guide](../) presented an overview of the I2C protocol.  This section will demonstrate how to read some data from a sensor, specifically the TMP102 temperature sensor.
+
+As a reminder, this guide will cover:
+
+* Provide an [overview of the I2C communication protocol](../)
+* Demonstrate reading data from an I2C temperature sensor
+* Reconfigure the I2C temperature sensor by [writing data to the I2C temperature sensor](../Writing/)
 
 ## Netduino I2C Pins
 
-The Netduino has two pins allocated for the I2C protocol.  These pins are labelled **SD** (for `SDA`) and **SC** (for `SCK`) and can be found above the 14 digital pins on the right of the board as viewed below:
+The Netduino has two pins allocated for the I2C protocol.  These pins are labelled **SD** (for `SDA`) and **SC** (for `SCL`) and can be found above the 14 digital pins on the right of the board as viewed below:
 
 ![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
-
-#### Reviewer Notes
-
-I think we want to use **bold** for labeling here. I'm open to ideas though.
-
-Also, what do you think about moving the pinout diagrams to the [Common_Files](/Common_Files) folder? Seems like we're using it all over the place, and it would make addressing a lot easier (single backslash vs. ../../../ nonsense). :D
 
 ## TMP102 I2C Temperature Breakout Board
 
 Use of the I2C bus on the Netduino will be illustrated using a temperature module.  The TMP102 is a commonly available temperature module capable of measuring temperatures in the range -40&deg;C to +125&deg;C with a maximum resolution of 0.0625&deg;C.  This device uses I2C and can be powered by a 3.3V signal, ideal for use with Netduino.
-
-#### Reviewer Notes
-
-> I think that if we put inline code in the conceptual sections after the overview, we should probably move the concrete example here to a separate doc. Probably [TMP102 I2C Example](/Netduino/I2C/TMP102_Example) or similar?
-
-> Let's chat about that. I think it's generally a good idea to separate these things, but we'll probably need to work through it a bit to get it right and set the pattern. I think we're breaking new tech writing ground here.
 
 ### Purchasing
 
@@ -43,7 +37,7 @@ Next make the following connections between the temperature breakout board and t
 | TMP102 Pin Name | Netduino Pin Name | Wire Color in Photo Below |
 |-----------------|-------------------|---------------------------|
 | SDA             | SD                | Blue                      |
-| SCK             | SC                | Yellow                    |
+| SCL             | SC                | Yellow                    |
 | V<sub>cc</sub>  | 3.3V              | Red                       |
 | GND             | GND               | Black                     |
 | ADD0            | GND               | Black                     |
@@ -54,7 +48,7 @@ There are two yellow and two blue leads in the photo.  The second blue and yello
 
 ### Software
 
-Open Visual Studio (or Xamarin Studio) and follow the instructions on the [Getting Started](../../GettingStarted) page and start a new project.  Copy the following code and paste it into the _program.cs_ file replacing the default code.
+Open Visual Studio (or Xamarin Studio) and follow the instructions on the [Getting Started](/Netduino/Getting_Started/) page and start a new project.  Copy the following code and paste it into the _program.cs_ file replacing the default code.
 
 ```CSharp
 using Microsoft.SPOT;
@@ -105,7 +99,7 @@ Reconnect the Netduino to the USB cable then save and run the application.  If e
 
 #### Key Elements
 
-The data sheet for the TMP102 states that the default address for the TMP102 is 0x48, so the first task is to create a new _I2CDevice_ object that defines how we connect to the TMP102:
+The data sheet for the TMP102 states that the default address for the TMP102 is 0x48, so the first task is to create a new `I2CDevice` object that defines how we connect to the TMP102:
 
 ```CSharp
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
@@ -157,7 +151,7 @@ Successful deployment of the application should reduce in a stream of temperatur
 
 As noted earlier, a second yellow and blue wire can be seen connected to the circuit.  These allow the logic analyzer to be connected to the circuit.
 
-The logic analyzer was configured to read data for two seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:
+The logic analyzer was configured to read data for two-seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:
 
 ![Logic Analyzer Trace](I2CLogicAnalyserOutput.png)
 
@@ -182,10 +176,12 @@ In the case of the above application, the address is 0x48 and Netduino is readin
 
 When reading the logic analyzer traces, read operations to this device have the first byte set to 0x91 whilst write operations to the same device have the first byte set to 0x90.
 
-# Next article....
+# Writing Data Using I2C
 
-Link to next article goes here.
+The next section of this guide will reconfigure the TMP102 temperature sensor by [writing some data to the sensor](../Writing/).
 
 # Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
+* [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)
+* [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors)
