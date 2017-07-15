@@ -17,6 +17,8 @@ Part 2 builds on the physical fundamentals and explores the ability of electrici
 
 ### [Part 3 - Resistance & Ohm's Law](Part3)
 
+Part 3 expands the relationship between amperage and voltage, and adds another piece to the fundamental laws of electricity; resistance. In doing so, it explores one of the most important laws in electricity, Ohm's law, and explains how to use it.
+
 ![](Ohms_Law_Pyramid.svg)
 
 ### [Part 4 - Current Types; AC & DC](Part4)
