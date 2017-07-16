@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="141px" height="141px" viewBox="0 0 141 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Ammeter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Diodes-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-491.000000, -28.000000)">
+            <g id="Ammeter" transform="translate(483.000000, 28.000000)">
+                <g transform="translate(8.000000, 0.000000)">
+                    <circle id="Oval" stroke="#524740" stroke-width="3" cx="70.716774" cy="70.9677754" r="68.5225525"></circle>
+                    <text id="A" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" letter-spacing="1.8" fill="#524740">
+                        <tspan x="58.914" y="85">A</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

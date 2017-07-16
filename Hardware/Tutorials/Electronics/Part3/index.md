@@ -109,11 +109,15 @@ ohms = volts / amps
 
 ## Calculating Resistance
 
+![](../Resistance_Calc_Circuit.svg)
 
-## Resistance in Series
+
+### Resistance in Series
+
+[they add up]
 
 
-## Resistance in Parallel
+### Resistance in Parallel
 
 
 ## Reading Resistors
