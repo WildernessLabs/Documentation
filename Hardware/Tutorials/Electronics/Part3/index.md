@@ -53,7 +53,7 @@ If the battery is `1.5V`, and the resistance is `50ohms`, we can calculate the a
 Amps = 1.5V / 50Ω = 0.3A
 ```
 
-From that, we can also calculate the wattage as `(watts = amps * volts)`:
+From that, we can also calculate the wattage/power as `(watts = amps * volts)`:
 
 ```
 Wattage = 1.5V * 0.3A = 0.045W
@@ -122,34 +122,43 @@ Which includes:
 
 Let's calculate the circuit, in a variety of configurations.
 
-### 1) Let's say we have a 1.5V battery, and the potentiometer set to 10ohms, how many amps will we have?
+### Simple Resistance Sample Problems
+
+#### 1) Let's say we have a 1.5V battery, and the potentiometer set to 10ohms, how many amps will we have?
 
 ```
 I = V/R
 I = 1.5V/10Ω = 0.15A = 150mA
 ```
 
-#### 1a) How much total power (wattage) would there be?
+##### 1a) How much total power (wattage) would there be?
 
 ```
 W = V*A = 1.5V * 0.15A = 0.225W = 225mW
 ```
 
-### 2) 12V battery, and 1KΩ resistance?
+#### 2) 12V battery, and 1KΩ resistance?
 
 ```
 I = V/R
 I = 12V / 1,000Ω = 0.012A = 12mA
 ```
 
-### 3) Now let's say that we have a 1.5v battery, and ammeter reads 15mA, how many ohms is the potentiometer set to?
+##### 1a) Total power?
+
+```
+12V * 0.012A = .144W = 144mW
+```
+
+
+#### 3) Now let's say that we have a 1.5v battery, and ammeter reads 15mA, how many ohms is the potentiometer set to?
 
 ```
 R = V/I
 R = 1.5/.015A = 100Ω
 ```
 
-### 4) What if we need to push 100mA through a 10Ω resistor, how much voltage would the battery need to have?
+#### 4) What if we need to push 100mA through a 10Ω resistor, how much voltage would the battery need to have?
 
 ```
 V = I*R
@@ -177,9 +186,69 @@ Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 
 ### Resistance in Parallel
 
+[parallel configuration:]
 
-## Reading Resistors
+![](../Resistors_in_Parallel.svg)
 
+
+#### Conductance; the Siemens
+
+[conductance = siemens (S) = reciprocal of resistance = 1/Ω)
+
+[G is often used for conductance]
+
+```
+G = 1/R
+R = 1/G
+```
+
+
+Let's consider the same resistor values we had in series, and calculate them in parallel:
+
+ * R1 - 100Ω
+ * R2 - 5Ω
+ * R3 - 1KΩ
+
+First, we need to convert each value to siemens:
+
+```
+G1 = 1/100Ω = .01 S
+G2 = 1/5Ω = .2 S
+G3 = 1/1KΩ = 1/1000Ω = 0.001 S
+```
+
+Once we have their conductance, we add them to get the total conductance:
+
+```
+.01 + .2 + .001 = .211 S
+```
+
+Converting from `.211` siemens to ohms:
+
+``` 
+Resistance = .211 S = 1/.211 = 4.74Ω
+``` 
+
+Total resistance with the same resistors as we had in series is now `4.7Ω` in parallel.
+
+#### Parallel Resistor Banks
+
+[sometimes a bank of the same resistors. shortcut to math them]
+
+```
+Total Resistance = R / Number of Resistors
+```
+
+Therefore, (10), 5KΩ resistors in parallel would be:
+
+```
+5,000Ω * 10 = 50,000Ω = 50K
+```
+
+
+## Resistor Power Rating
+
+In addition to resistance, resistors are rated to be able to safely dissipate up to a certain amount of power. This is a resistors _power rating_.
 
 [rating - 1/4watt, so forth, is for the amount of heat it can dissipate]
 
