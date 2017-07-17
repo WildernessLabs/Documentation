@@ -159,7 +159,6 @@ Now, comparing some of the common electrical currents, sorted by wattage, they m
 | iPad/Tablet Charger             | 5V      | ~2A      | 10W     |
 | Netduino                        | 5V      | 40mA     | 0.2W    |
 
-
 ## Review
  
  * The amount of work electricity can do is described in terms of _amperage_ and _voltage_.

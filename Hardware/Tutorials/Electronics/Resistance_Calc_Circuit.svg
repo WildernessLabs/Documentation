@@ -68,6 +68,9 @@
                 <path d="M332.330529,110.214147 L332.330529,196.214147" id="Path-5" stroke="#524740" stroke-width="3"></path>
                 <path d="M332.330529,335.214147 L332.330529,421.214147" id="Path-5-Copy" stroke="#524740" stroke-width="3"></path>
                 <polyline id="Path-6" stroke="#524740" stroke-width="3" points="184 196.708562 184 109.757812 510 109.757812"></polyline>
+                <circle id="Oval-2" fill="#524740" cx="332.5" cy="111.5" r="7.5"></circle>
+                <circle id="Oval-2-Copy" fill="#524740" cx="332.5" cy="421.5" r="7.5"></circle>
+                <circle id="Oval-2-Copy-2" fill="#524740" cx="742.5" cy="306.5" r="7.5"></circle>
             </g>
         </g>
     </g>
