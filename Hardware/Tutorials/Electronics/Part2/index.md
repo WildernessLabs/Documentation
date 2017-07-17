@@ -159,6 +159,10 @@ Now, comparing some of the common electrical currents, sorted by wattage, they m
 | iPad/Tablet Charger             | 5V      | ~2A      | 10W     |
 | Netduino                        | 5V      | 40mA     | 0.2W    |
 
+### Wattage == Power
+
+Because wattage describes the total amount work a current can do, it's often referred to as _power_.
+
 ## Review
  
  * The amount of work electricity can do is described in terms of _amperage_ and _voltage_.
@@ -168,6 +172,7 @@ Now, comparing some of the common electrical currents, sorted by wattage, they m
  * Voltage is relative [current drop]
  * Volts and amps can be traded for each other in a current, as long as the overall amount of work (Wattage), stays the same. This is often done through induction.
  * _Wattage (W)_ is a convenience unit to describe electricity that includes amps and voltage, multiplied together (watts = amps * volts).
+ * _Power_ is a colloquial term that usually means wattage.
 
 
 # [Part 3 - Resistance and Ohm's Law](../Part3/) 
