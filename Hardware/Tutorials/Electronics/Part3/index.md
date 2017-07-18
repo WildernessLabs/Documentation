@@ -107,6 +107,13 @@ R = V / I
 ohms = volts / amps
 ```
 
+## Resistor Power Rating
+
+In addition to resistance, resistors are rated to be able to safely dissipate up to a certain amount of power. This is a resistors _power rating_.
+
+[rating - 1/4watt, so forth, is for the amount of heat it can dissipate]
+
+
 ## Calculating Resistance
 
 Given the following circuit:
@@ -183,25 +190,30 @@ Then the total resistance would be:
 Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 ```
 
-
 ### Resistance in Parallel
 
-[parallel configuration:]
+Resistors are often arranged in parallel:
 
 ![](../Resistors_in_Parallel.svg)
 
+By dividing the current among more than resistor, the overall power that the resistors can handle is higher. Going back to our water analogy, imagine that a parallel resistor network is the equivalent of splitting the output pipe into several pipes, each of which has a pressure limiting valve:
 
-#### Conductance; the Siemens
+[illustration of multiple pipes]
 
-[conductance = siemens (S) = reciprocal of resistance = 1/Ω)
+#### Conductance; the Siemens (S)
 
-[G is often used for conductance]
+In order to calculate the resistance of a parallel resistor network, we actually need to add up the conductivity of each path, add them together, and then convert that conductance back to resistance.
+
+Conductance, measured in _siemens_ (S), is just the reciprocal of resistance: 
+
+`Siemens = 1 / Resistance in Ω`
+
+The letter `G` is often used to denote conductance/siemens, so the units calculate as follows:
 
 ```
 G = 1/R
 R = 1/G
 ```
-
 
 Let's consider the same resistor values we had in series, and calculate them in parallel:
 
@@ -233,24 +245,26 @@ Total resistance with the same resistors as we had in series is now `4.7Ω` in p
 
 #### Parallel Resistor Banks
 
-[sometimes a bank of the same resistors. shortcut to math them]
+Sometimes, resistors in parallel come in banks of the same resistor values. In this case, there's a shortcut to calculate the total resistance:
 
 ```
-Total Resistance = R / Number of Resistors
+Total Resistance = Resistance of Each Resistor / Number of Resistors
 ```
 
 Therefore, (10), 5KΩ resistors in parallel would be:
 
 ```
-5,000Ω * 10 = 50,000Ω = 50K
+5,000Ω / 10 = 500Ω
 ```
 
+## Circuit Comparison
 
-## Resistor Power Rating
 
-In addition to resistance, resistors are rated to be able to safely dissipate up to a certain amount of power. This is a resistors _power rating_.
+| Single Resistor   | Resistors in Series  | Resistors in Parallel     |
+|-------------------|--------------|----------|
+| ![](../Resistor_Single.svg) | ![](../Resistor_Series.svg) | ![](../Resistor_Parallel.svg) |
 
-[rating - 1/4watt, so forth, is for the amount of heat it can dissipate]
+
 
 
 

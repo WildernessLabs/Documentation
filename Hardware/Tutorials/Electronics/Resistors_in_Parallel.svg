@@ -21,18 +21,16 @@
                     </text>
                     <path d="M88,0 L88,52" id="Path-4-Copy" stroke="#524740" stroke-width="3"></path>
                 </g>
-                <polyline id="Path-2" stroke="#524740" stroke-width="3" points="229 69.7578125 229 544 188 544"></polyline>
-                <polyline id="Path-3" stroke="#524740" stroke-width="3" points="7 68.580902 7 544 50 544"></polyline>
+                <polyline id="Path-2" stroke="#524740" stroke-width="3" points="188 69 229 69 229 544 188 544"></polyline>
+                <polyline id="Path-3" stroke="#524740" stroke-width="3" points="50 69 7 69 7 544 50 544"></polyline>
                 <text id="Source-Voltage-(V)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
                     <tspan x="52.2040548" y="600">Source Voltage (V)</tspan>
                 </text>
-                <g id="R1" transform="translate(8.000000, 0.000000)">
-                    <polyline id="Resistor" stroke="#524740" stroke-width="3" points="41 69 51 69 61 43 81.1283482 94.451451 101 43 121 94.451451 141 43 161 94.451447 171 69 181 69"></polyline>
+                <g id="R1" transform="translate(49.000000, 0.000000)">
+                    <polyline id="Resistor" stroke="#524740" stroke-width="3" points="0 69 10 69 20 43 40.1283482 94.451451 60 43 80 94.451451 100 43 120 94.451447 130 69 140 69"></polyline>
                     <text font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                        <tspan x="99.4464505" y="18">R1</tspan>
+                        <tspan x="58.4464505" y="18">R1</tspan>
                     </text>
-                    <path d="M0.150331916,69 L42,69" id="Path-7-Copy-5" stroke="#524740" stroke-width="3"></path>
-                    <path d="M180.150332,69 L222,69" id="Path-7-Copy-4" stroke="#524740" stroke-width="3"></path>
                 </g>
                 <g id="R2" transform="translate(0.000000, 152.000000)">
                     <polyline id="Resistor-Copy" stroke="#524740" stroke-width="3" points="49 69 59 69 69 43 89.1283482 94.451451 109 43 129 94.451451 149 43 169 94.451447 179 69 189 69"></polyline>
