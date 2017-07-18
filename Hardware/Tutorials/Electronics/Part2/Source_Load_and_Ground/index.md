@@ -1,6 +1,30 @@
 ---
-title: Common and Ground
+title: Source, Load, and Ground
 ---
+
+[parts of a circuit fall into these general categories]
+
+## Source
+
+[voltage source or generator]
+
+[Netduino has both 5V and 3.3V sources]
+
+
+## Load
+
+[where the amps go]
+
+
+### Voltage Drop
+
+[voltage drop]
+
+#### Kirchoff's 2nd Law
+
+
+## Common and Ground
+
 
 Both common and ground:
 [reference point from which voltages are measured]

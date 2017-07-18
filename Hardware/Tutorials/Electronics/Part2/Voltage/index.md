@@ -2,6 +2,14 @@
 title: Electromotive Force (EMF) and Voltage (V)
 ---
 
+<!--
+
+TODO:
+
+for the voltage differential, show two batteries/water towers side by side with varying voltages
+
+-->
+
 In order for a current to exist, charge carriers must be motivated to move.
 
 Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel.

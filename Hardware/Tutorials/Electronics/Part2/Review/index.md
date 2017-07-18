@@ -4,6 +4,7 @@ title: Part 2 Review
 
  * The amount of work electricity can do is described in terms of _amperage_ and _voltage_.
  * _Amperage (A)_ describes the quantity of charge carriers flowing in an electric current.
+ * _Current_ is a colloquial term that means amperage.
  * _Amp hours (Ah)_ describe the quantity of available charge or charge used.
  * _Voltage (V)_ describes the force in which charge carriers are being pushed in an electric current.
  * Voltage is relative [current drop]

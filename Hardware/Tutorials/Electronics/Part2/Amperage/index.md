@@ -6,6 +6,10 @@ One of the simplest (though not actually the official) definitions of an [ampere
 
 One coulomb is equal to 6.242 x10^18 (6,242,000,000,000,000,000,000) charge carriers. A fantastically large number, but given the relative size of electrons, one can imagine that number of charges moving on a relatively modest wire. Consider household wiring, which is typically 14 or 12 gauge, and rated at carrying 10 or 15 amps (at 120 volts), respectively.
 
+## Amperage == Current
+
+Amperage is often referred to as _current_. 
+
 #### Common Amperages
 
 To get an idea of the amount of work that can be done with that number of electrons, consider the following household appliances and their amperage:
