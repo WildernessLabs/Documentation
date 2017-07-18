@@ -6,23 +6,13 @@ In part two, we learned about the relationship between amperage (quantity) and v
 
 ### [Resistors](Resistors/)
 
-
 ### [Ohms Law](Ohms_Law/)
-
 
 ### [Resistor Power Rating](Resistor_Power_Rating)
 
 ### [Calculating Resistance](Calculating_Resistance)
 
 ### [Review](Review)
-
-
-
-
-
-
-
-
 
 
 # Part 4 - Coming Soon!
