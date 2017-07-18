@@ -290,6 +290,7 @@ We're going to dive deeper into resistors and resistor networks later, but
  
  * [Ohm's Law Calculator](http://www.ohmslawcalculator.com/ohms-law-calculator)
 
+# Part 4 - Coming Soon!
 <!--
  
 # Things to add
