@@ -1,8 +1,6 @@
 ---
-title: Wattage
+title: Wattage, the Relationship of Amps & Volts
 ---
-
-## Relationship of Amps & Volts
 
 North American and European household electricity mains have different voltages (110V and 220V, respectively), but with a plug adapter, appliances generally work on both. In fact, the total amount work that they can do is essentially the same. This is because while European mains are twice the voltage, they're actually half the amperage; most wall outlets in North America are rated for 12A (technically, 80% of 15A), whereas European wall outlets are typically rated for 6A.
 

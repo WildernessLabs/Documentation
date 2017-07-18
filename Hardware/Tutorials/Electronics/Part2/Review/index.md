@@ -11,6 +11,6 @@ title: Part 2 Review
  * _Wattage (W)_ is a convenience unit to describe electricity that includes amps and voltage, multiplied together (watts = amps * volts).
  * _Power_ is a colloquial term that usually means wattage.
 
-# [Part 3 - Ohm's Law](../../Part3)
+# [Part 3 - Resistance and Ohm's Law](../../Part3/Resistors)
 
 <br/>
