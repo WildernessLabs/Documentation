@@ -6,13 +6,15 @@ To drive an LED with a resistor as the current limiting device in the circuit, w
 
 ## Calculating Necessary Resistance
 
-To do this, we use ohm's law, solved for resistance, and remove the voltage drop specified as the forward voltage (F<sub>v</sub>) from the source voltage (V<sub>s</sub>) for the LED we're using:
+[Kirchoff's Voltage Law](https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff.27s_voltage_law_.28KVL.29) states that the sum of the voltages in any circuit loop (source -> load -> return/common) must be zero. Which means that if the source is 5V, then the total load must drop 5V to zero. Let's examine a typical single resistor circuit:
+
+![](LED_Resistor_Circuit.svg)
+
+So to calculate the resistance needed in this circuit to power the LED, we use ohm's law, solved for resistance, but remove the voltage drop specified as the forward voltage (F<sub>v</sub>) from the source voltage (V<sub>s</sub>) for the LED we're using:
 
 ```
 R = (Vs - Fv) / I
 ```
-
-![](LED_Resistor_Circuit.svg)
 
 ## Example
 
@@ -24,6 +26,10 @@ R = (5V - 1.8V) / 0.020A = 160Ω
 ```
 
 The circuit would need at least a `160Ω` resistor to safely drive the LED. Note that when calculating the resistance, `20mA` was converted to `0.020A`.
+
+## Online Calculator
+
+To aid in LED resistance calculation, [here is a fantastic online LED resistance calculator](http://www.ohmslawcalculator.com/led-resistor-calculator).
 
 
 ## Sample Project

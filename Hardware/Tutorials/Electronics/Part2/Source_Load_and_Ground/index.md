@@ -15,6 +15,8 @@ But circuits are actually closed loops, hence the name "circuit."
 
 [parts of a circuit fall into these general categories]
 
+[Kirchoff's second law, voltage law[
+
 
 ## Source
 
