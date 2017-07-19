@@ -25,8 +25,7 @@ Note that if you get the error `unable to erase configuration sector memory`, wh
 
 ## Mac OS/Netduino Utils
 
-
-[Need screenshot after BK has finished the app]
+Note: The Mac Deploy tool does not yet support network configuration. Support is coming soon, but until then, the Windows MFDeploy tool must be used.
 
 
 ## Waiting for the Network to Initialize
