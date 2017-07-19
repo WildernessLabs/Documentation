@@ -242,8 +242,9 @@ A number of cables and boards are available to connect TTL serial ports on the N
 -	[USV to TTL Serial Cable](https://www.adafruit.com/product/954)
 -	[FTDI Friend](https://www.adafruit.com/product/284)
 
+<!--
 # Project Ideas
 
 - Build a Xamarin Forms application to communicate with the Netduino over USB
 - Add a Bluetooth board and connect your mobile phone to your Netduino
-
+-->
