@@ -2,7 +2,7 @@
 title: Capacitors
 ---
 
-![Capacitor Circuit Symbol](Capacitor.svg)
+![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg)
 
 A capacitor is an electrical device capable of storing energy.
 
