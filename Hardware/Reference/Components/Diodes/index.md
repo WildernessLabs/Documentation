@@ -4,7 +4,7 @@ title: Diodes
 
 Diodes are one way conductors and under normal circumstances will allow current to pass from the anode to the cathode.  The symbol for a diode is:
 
-![Diode Circuit Symbol](Diode.svg)
+![Diode Circuit Symbol](/Common_Files/Diode.svg)
 
 The arrow head (triangle) points towards the direction of current flow.
 
