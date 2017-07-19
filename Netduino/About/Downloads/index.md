@@ -8,9 +8,9 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ### Windows
 
-* Visual Studio 2013 Express - [need new link]
+* [Visual Studio 2015](https://www.visualstudio.com/vs/older-downloads/) - Note, community edition is free, but you'll need to create an account if you don't already have one.
 * [.NET Micro Framework (.NETMF) v4.3.2 - QFE2 SDK](http://downloads.wildernesslabs.co/NETMF_SDK/netmf-v4.3.2-SDK-QFE2-RTM.zip)
-* .NETMF Plugin:
+* .NETMF Plugin for:
   * [Visual Studio 2015](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs14.vsix)
   * [Visual Studio 2013](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs2013.vsix)
   
@@ -19,7 +19,7 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 ### Mac
  
 * [Xamarin Studio](http://www.monodevelop.com/download/)
-* Firmware Updater and Deployment tool
+* [Firmware Updater and Deployment tool](https://github.com/WildernessLabs/Netduino-Updater/releases)
 * [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 
 ## Windows Firmware Updater
@@ -31,8 +31,8 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ### Development Environment (Windows Only)
 
-* [Visual Studio Express 2010](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-csharp-2010-express)
-* [NETMF SDK 4.2](http://static.netduino.com/downloads/MicroFrameworkSDK_NETMF42_QFE2.MSI)
-* Netduino SDK 4.2.2.0 [32 bit](http://static.netduino.com/downloads/netduinosdk_32bit_NETMF42.exe) or [64 bit](http://static.netduino.com/downloads/netduinosdk_64bit_NETMF42.exe)
+* [Visual Studio Express 2010](https://www.visualstudio.com/vs/older-downloads/)
+* [NETMF SDK 4.2](http://downloads.wildernesslabs.co/NETMF_SDK/MicroFrameworkSDK_NETMF42_QFE2.MSI)
+* Netduino SDK 4.2.2.0 [32 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_32bit_NETMF42.exe) or [64 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_64bit_NETMF42.exe)
 
 
