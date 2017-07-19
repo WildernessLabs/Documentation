@@ -12,14 +12,14 @@ Instructions are OS specific:
 
 ## <a name="Windows"></a>Windows (Using MFDeploy)
 
-1. Download the latest Netduino firmware files from the [downloads page](../Downloads). You'll need both the `ER_CONFIG` and `ER_FLASH` files for your specific Netduino model.
+1. Download the latest Netduino firmware files from the [downloads page](../Downloads). You'll need the `Tinybooter`, `ER_CONFIG`, `ER_FLASH` files for your specific Netduino model.
 
 2. Launch **MFDeploy**. MFDeploy is installed as part of the Netduino NetMF SDK.
 
 3. Select `USB` from the device selection area, and then your device from the drop down to the right of that:
 ![](MFDeploy_01.png)
 
-4. In the **Image File** area, click the **Browse** button and navigate to the folder that has the `ER_CONFIG` and `ER_FLASH` files, select them, and click **Open**:
+4. In the **Image File** area, click the **Browse** button and navigate to the folder that has the `ER_CONFIG`, `ER_FLASH`, and `Tinybooter` files, select them, and click **Open**:
 ![](MFDeploy_02.png)
 
 5. Click the **Deploy** button to deploy the files.
@@ -32,8 +32,8 @@ Instructions are OS specific:
 ## <a name="Mac"></a>Mac (Using Netduino Mac Firmware Deploy Tool)
 
  1. While your Netduino is unplugged, hold down the button and then plug it in, to put it into _DFU Bootloader Mode_:
-
 ![](EnteringBootMode.gif)
+
  2. Launch the _Netduino Mac Deploy_ (available from the [downloads](../Downloads/) page):
  3. Click the `Install Firmware` button, firmware should install:
  ![](MacDeploy_AutomaticFirmwareUpdate.png)

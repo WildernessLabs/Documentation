@@ -282,7 +282,7 @@
 
 <ol>
   <li>
-    <p>Download the latest Netduino firmware files from the <a href="../Downloads">downloads page</a>. You’ll need both the <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files for your specific Netduino model.</p>
+    <p>Download the latest Netduino firmware files from the <a href="../Downloads">downloads page</a>. You’ll need the <code class="highlighter-rouge">Tinybooter</code>, <code class="highlighter-rouge">ER_CONFIG</code>, <code class="highlighter-rouge">ER_FLASH</code> files for your specific Netduino model.</p>
   </li>
   <li>
     <p>Launch <strong>MFDeploy</strong>. MFDeploy is installed as part of the Netduino NetMF SDK.</p>
@@ -292,7 +292,7 @@
 <img src="MFDeploy_01.png" alt="" /></p>
   </li>
   <li>
-    <p>In the <strong>Image File</strong> area, click the <strong>Browse</strong> button and navigate to the folder that has the <code class="highlighter-rouge">ER_CONFIG</code> and <code class="highlighter-rouge">ER_FLASH</code> files, select them, and click <strong>Open</strong>:
+    <p>In the <strong>Image File</strong> area, click the <strong>Browse</strong> button and navigate to the folder that has the <code class="highlighter-rouge">ER_CONFIG</code>, <code class="highlighter-rouge">ER_FLASH</code>, and <code class="highlighter-rouge">Tinybooter</code> files, select them, and click <strong>Open</strong>:
 <img src="MFDeploy_02.png" alt="" /></p>
   </li>
   <li>
@@ -307,13 +307,14 @@
 <h2 id="a-namemacamac-using-netduino-mac-firmware-deploy-tool"><a name="Mac"></a>Mac (Using Netduino Mac Firmware Deploy Tool)</h2>
 
 <ol>
-  <li>While your Netduino is unplugged, hold down the button and then plug it in, to put it into <em>DFU Bootloader Mode</em>:</li>
+  <li>
+    <p>While your Netduino is unplugged, hold down the button and then plug it in, to put it into <em>DFU Bootloader Mode</em>:
+<img src="EnteringBootMode.gif" alt="" /></p>
+  </li>
+  <li>Launch the <em>Netduino Mac Deploy</em> (available from the <a href="../Downloads/">downloads</a> page):</li>
+  <li>Click the <code class="highlighter-rouge">Install Firmware</code> button, firmware should install:
+ <img src="MacDeploy_AutomaticFirmwareUpdate.png" alt="" /></li>
 </ol>
-
-<p><img src="EnteringBootMode.gif" alt="" />
- 2. Launch the <em>Netduino Mac Deploy</em> (available from the <a href="../Downloads/">downloads</a> page):
- 3. Click the <code class="highlighter-rouge">Install Firmware</code> button, firmware should install:
- <img src="MacDeploy_AutomaticFirmwareUpdate.png" alt="" /></p>
 
 <h3 id="manual-installation-of-firmware-from-hex-or-s19-files">Manual Installation of Firmware from .hex or .s19 files</h3>
 
