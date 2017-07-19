@@ -2,9 +2,9 @@
 title: Equations and Laws
 ---
 
-#### [Capacitance](Capacitance)
+<!-- #### [Capacitance](Capacitance) -->
 
-#### [Voltage](Voltage)
+### [Voltage](Voltage)
  
  * **[Voltage Division](Voltage/Division)**
  * **[Ohm's Law](Voltage/Ohms_Law)**
