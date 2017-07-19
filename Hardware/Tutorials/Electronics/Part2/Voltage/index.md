@@ -8,6 +8,7 @@ TODO:
 
 for the voltage differential, show two batteries/water towers side by side with varying voltages
 
+
 -->
 
 In order for a current to exist, charge carriers must be motivated to move.

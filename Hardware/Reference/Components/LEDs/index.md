@@ -24,7 +24,15 @@ LEDs have two fundamental properties that the electronics designer should take i
 
 These values may vary between suppliers and the data sheet for the component purchased will provide the appropriate values.
 
-The forward voltage (V<sub>f</sub>) is the voltage drop across the LED and the maximum current (I<sub>fmax</sub>) is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED.
+## Forward Voltage
+
+LEDs require a minimum voltage drop across the LED in order for it to open it's pn-gate and light up. This threshold is called the _forward voltage_ (V<sub>f</sub>). However once that voltage is met, there is a limited operating range of voltage that is safe for the LED.
+
+
+## Maximum Current
+
+Maximum current (I<sub>fmax</sub>) rating is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED. Exceeding the maximum current rating for an LED by very much will usually burn out an LED quite quickly. 
+
 
 ## LED Colors
 

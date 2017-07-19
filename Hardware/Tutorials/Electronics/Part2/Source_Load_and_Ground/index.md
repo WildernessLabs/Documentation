@@ -2,7 +2,19 @@
 title: Source, Load, and Ground
 ---
 
+[Thus far, we've talked about electrical current in an open-ended way; 
+
+But circuits are actually closed loops, hence the name "circuit."
+
+
+[using another analogy, a river that connects back on itself]
+
+[water goes around, and then there is a force that impels it at one point - this is the voltage drop]
+
+[imagine a dam - but instead of backing up when it's dammed, the whole river stops - this is because of there's no where for it to "pool" generally speaking]
+
 [parts of a circuit fall into these general categories]
+
 
 ## Source
 
@@ -13,8 +25,11 @@ title: Source, Load, and Ground
 
 ## Load
 
-[where the amps go]
+[where the amps/current goes]
 
+[different components have different current loads. hair dryer might use 12A, but a phone charger might use 1A]
+
+[the amperage that a device uses is dependent on its overall resistance]
 
 ### Voltage Drop
 

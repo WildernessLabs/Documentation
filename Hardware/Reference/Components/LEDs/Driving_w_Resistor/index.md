@@ -2,52 +2,37 @@
 title: Driving an LED with a Resistor
 ---
 
-Generally, when driving (powering) an LED, you must use a current limiting resistor, which prevents the LED from receiving too much power and burning out.
+To drive an LED with a resistor as the current limiting device in the circuit, we need to first compute the resistance needed.
 
-# Forward Voltage
+## Calculating Necessary Resistance
 
-An LED is a [diode](../../Diodes) that requires a certain amount of voltage in order for it to open it's pn-gate and light up. This threshold is called the _Forward Voltage_ (VF). However once that voltage is met, there is a limited operating range of voltage that is safe for the LED:
+To do this, we use ohm's law, solved for resistance, and remove the voltage drop specified as the forward voltage (F<sub>v</sub>) from the source voltage (V<sub>s</sub>) for the LED we're using:
 
-[need a graph here of FV of an LED]
+```
+R = (Vs - Fv) / I
+```
 
-## Typical Forward Voltages and Current
+![](LED_Resistor_Circuit.svg)
 
-[run of the mill 5MM LEDs usually have:]
+## Example
 
-| LED Color | Typical VF | Max VF | Max Current |
-| --------- | ---------- | ------ | ----------- |
-| Red, Yellow, Orange | 1.8v | 2.3v | 20mA |
-| Green, Blue, White | 3.2v | 3.4v | 20mA |
+For example, let's say that we have a red LED has a maximum current rating of `20mA`, and a V<sub>f</sub> of `1.8V`, that we're driving from a `5V` voltage source. Solving for R:
 
-[LEDs may vary, so it's good to check the datasheet of yours]
+```
+R = (5V - 1.8V) / 0.020A = 160Ω 
 
-# Maximum Ratings
+```
 
-Exceeding the maximum rating for an LED by very much will usually burn out an LED quite quickly. 
-
-[datasheet for your LED will have the maximum VF rating]
-
-# Computing The Resistance Needed to Safely Operate
-
-Let's say that you have a red LED (1.8v VF), and you're driving it off a 5v circuit. That means you need to reduce it by 3.2v. 
-
-[use OHM's law: ]
-`R = V / I = (5v - 1.8v) / 20 = 64Ω
-
-[to be safe, need a 64Ω or better resistor (probably 100Ω is the next higher up)]
+The circuit would need at least a `160Ω` resistor to safely drive the LED. Note that when calculating the resistance, `20mA` was converted to `0.020A`.
 
 
-# Sample Circuit
+## Sample Project
 
-General Circuit:
-
-![](circuit.svg)
-
-
-
-# Sample Project
+Prototyping this with a Netduino would look something like this:
 
 ![](LED_Circuit_bb.svg)
+
+The following code can then be used to make that LED blink by repeatedly turning it on and off:
 
 ```CSharp
 using System;
@@ -62,7 +47,7 @@ namespace Blinky
 	{
 		public static void Main()
 		{
-			// write your code here
+			// Create a new output port on Digital Pin 7
 			OutputPort led = new OutputPort(Pins.GPIO_PIN_D7, false);
 			while (true)
 			{
