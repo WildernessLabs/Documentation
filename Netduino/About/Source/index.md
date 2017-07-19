@@ -19,3 +19,16 @@ These are the source files (including Bill of Materials [BOM]) for the current p
 #### [.NET MF v4.3.2 – QFE2 Source](http://netmf.codeplex.com/releases/view/118283)
 
 This is a legacy link to the original .NET MF sources. Note that the Netduino version of .NET MF can be found in the [Netduino SDK](https://github.com/WildernessLabs/Netduino_SDK) repo.
+
+
+#### [Wilderness Labs Documentation](https://github.com/WildernessLabs/Documentation)
+
+This site, and everything in it is open source.
+
+#### [DFU-Sharp](https://github.com/WildernessLabs/DFU-Sharp)
+
+A cross platform C# library for performing DFU tasks such as flashing devices, etc. The mac firmware deployment tool uses this under the hood.
+
+#### [Netduino Firmware Update Utilities](https://github.com/WildernessLabs/Netduino-Updater)
+
+For both Windows and Mac, these applications are used to update Netduino firmware.
