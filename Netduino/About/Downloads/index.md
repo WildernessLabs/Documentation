@@ -13,12 +13,11 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 * .NETMF Plugin for:
   * [Visual Studio 2015](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs14.vsix)
   * [Visual Studio 2013](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs2013.vsix)
-  
 * [Netduino SDK V5](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_v5.exe)
 
 ### Mac
  
-* [Xamarin Studio](http://www.monodevelop.com/download/)
+* [Xamarin Studio](http://www.monodevelop.com/download/) or [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 * [Firmware Updater and Deployment tool](https://github.com/WildernessLabs/Netduino-Updater/releases)
 * [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 

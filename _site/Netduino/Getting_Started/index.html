@@ -271,53 +271,41 @@
 
 <p>Instructions for Netduino 2, 3, and Go! boards.</p>
 
-<h1 id="installation">Installation</h1>
+<h2 id="installation">Installation</h2>
+
 <p>First, configure your development environment by installing the necessary software.</p>
 
-<h2 id="windows">Windows</h2>
-<p>Download and run the following:</p>
+<h3 id="windows">Windows</h3>
+
+<p>Download and install the following:</p>
 
 <ol>
-  <li><a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/MicroFrameworkSDK.MSI">.NET Micro Framework (NETMF) SDK (v4.3.2. QFE2)</a></li>
-  <li>NETMF Plugin for Visual Studio (VS) 2015 or <a href="http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/netmfvs2013.vsix">VS 2013</a></li>
-  <li>Netduino SDK v5</li>
+  <li><a href="http://downloads.wildernesslabs.co/NETMF_SDK/netmf-v4.3.2-SDK-QFE2-RTM.zip">.NET Micro Framework (.NETMF) v4.3.2 - QFE2 SDK</a></li>
+  <li>NETMF Plugin for Visual Studio <a href="http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs14.vsix">Visual Studio 2015</a> or <a href="http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs2013.vsix">Visual Studio 2013</a></li>
+  <li><a href="http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_v5.exe">Netduino SDK V5</a></li>
 </ol>
 
-<h2 id="mac">Mac</h2>
-<p>Download and install the latest Xamarin Studio.</p>
+<h3 id="mac">Mac</h3>
+
+<p>Download and install the latest <a href="https://www.visualstudio.com/vs/visual-studio-mac/">Visual Studio for Mac</a> or <a href="http://www.monodevelop.com/download/">Xamarin Studio</a></p>
 
 <p>Launch Xamarin Studio and install the NETMF plug-in:</p>
 
 <ol>
-  <li>Open the <em>Xamarin Studio</em> menu and select <em>Add-ins…</em>.</li>
+  <li>Open the <em>Visual Studio</em> menu and select <em>Extensions</em>. Note, for Xamarin Studio users, the menu item is called <em>Add-ins…</em>.</li>
   <li>Select the <em>Gallery</em> Tab.</li>
   <li>In the <em>search</em> box, type <code class="highlighter-rouge">MicroFramework</code>:
-<img src="MicroFramework_Addin.png" alt="MicroFramework Search Dialog" /></li>
+<img src="VS_MicroFramework_Addin.png" alt="MicroFramework Search Dialog" /></li>
   <li>Click <em>install</em> and follow the directions.</li>
-  <li>Restart Xamarin Studio.</li>
+  <li>Restart Visual Studio/Xamarin Studio.</li>
 </ol>
 
-<h1 id="make-sure-the-board-firmware-is-up-to-date">Make Sure the Board Firmware is Up to Date</h1>
+<h2 id="make-sure-the-board-firmware-is-up-to-date">Make Sure the Board Firmware is Up to Date</h2>
 <p>Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware. Firmware update instructions are <a href="../About/Updating_Firmware">here</a>.</p>
 
-<h1 id="create-your-first-app">Create your First App</h1>
+<h2 id="create-your-first-app">Create your First App</h2>
 
-<h2 id="xamarin-studio">Xamarin Studio</h2>
-
-<ol>
-  <li>
-    <p>Launch Xamarin Studio and create a new solution of type <strong>C# &gt; MicroFramework &gt; MicroFramework Console Applicaiton</strong> and name it whatever you want:
-<img src="01-NewSolution_XS.png" alt="New Solution Dialog" /></p>
-  </li>
-  <li>
-    <p>Double-click on the <strong>References</strong> folder in the Solution Pad and add:
- 	* Microsoft.Spot.Hardware
- 	* SecretLabs.NETMF.Hardware
- 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that’s what you’re using)</p>
-  </li>
-</ol>
-
-<h2 id="visual-studio">Visual Studio</h2>
+<h3 id="visual-studio">Visual Studio</h3>
 
 <ol>
   <li>
@@ -332,7 +320,22 @@
   </li>
 </ol>
 
-<h2 id="add-the-code">Add the Code</h2>
+<h3 id="xamarin-studio">Xamarin Studio</h3>
+
+<ol>
+  <li>
+    <p>Launch Xamarin Studio and create a new solution of type <strong>C# &gt; MicroFramework &gt; MicroFramework Console Applicaiton</strong> and name it whatever you want:
+<img src="01-NewSolution_XS.png" alt="New Solution Dialog" /></p>
+  </li>
+  <li>
+    <p>Double-click on the <strong>References</strong> folder in the Solution Pad and add:
+ 	* Microsoft.Spot.Hardware
+ 	* SecretLabs.NETMF.Hardware
+ 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that’s what you’re using)</p>
+  </li>
+</ol>
+
+<h3 id="add-the-code">Add the Code</h3>
 
 <p>After you’ve created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet’s name:</p>
 
@@ -377,9 +380,9 @@ namespace NetduinoBlink
   <li>Prints to the Debug window the loop iteration it’s on.</li>
 </ol>
 
-<h2 id="deploy">Deploy</h2>
+<h3 id="deploy">Deploy</h3>
 
-<h3 id="xamarin-studio-1">Xamarin Studio</h3>
+<h4 id="xamarin-studio-1">Xamarin Studio</h4>
 
 <ol>
   <li>
@@ -409,7 +412,7 @@ Looping3
 </code></pre>
 </div>
 
-<h3 id="visual-studio-1">Visual Studio</h3>
+<h4 id="visual-studio-1">Visual Studio</h4>
 
 <ol>
   <li>

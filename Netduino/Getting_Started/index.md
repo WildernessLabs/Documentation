@@ -4,44 +4,37 @@ title: Getting Started with Netduino
 
 Instructions for Netduino 2, 3, and Go! boards.
 
-# Installation
+## Installation
+
 First, configure your development environment by installing the necessary software.
 
-## Windows
-Download and run the following:
+### Windows
 
-1. [.NET Micro Framework (NETMF) SDK (v4.3.2. QFE2)](http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/MicroFrameworkSDK.MSI)
-2. NETMF Plugin for Visual Studio (VS) 2015 or [VS 2013](http://static.netduino.com/downloads/netmfsdk/v4.3.2-QFE2/netmfvs2013.vsix)
-3. Netduino SDK v5
+Download and install the following:
 
-## Mac
-Download and install the latest Xamarin Studio.
+1. [.NET Micro Framework (.NETMF) v4.3.2 - QFE2 SDK](http://downloads.wildernesslabs.co/NETMF_SDK/netmf-v4.3.2-SDK-QFE2-RTM.zip)
+2. NETMF Plugin for Visual Studio [Visual Studio 2015](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs14.vsix) or [Visual Studio 2013](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs2013.vsix)
+3. [Netduino SDK V5](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_v5.exe)
+
+### Mac
+
+Download and install the latest [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) or [Xamarin Studio](http://www.monodevelop.com/download/)
 
 Launch Xamarin Studio and install the NETMF plug-in:
 
-1. Open the *Xamarin Studio* menu and select *Add-ins...*.
+1. Open the *Visual Studio* menu and select *Extensions*. Note, for Xamarin Studio users, the menu item is called *Add-ins...*.
 2. Select the *Gallery* Tab.
 3. In the *search* box, type `MicroFramework`:
-![MicroFramework Search Dialog](MicroFramework_Addin.png)
+![MicroFramework Search Dialog](VS_MicroFramework_Addin.png)
 4. Click *install* and follow the directions.
-5. Restart Xamarin Studio.
+5. Restart Visual Studio/Xamarin Studio.
 
-# Make Sure the Board Firmware is Up to Date
+## Make Sure the Board Firmware is Up to Date
 Once your development environment is configured, make sure your board has the latest firmware on it. The firmware includes a customized .NETMF runtime specific to the board hardware. Firmware update instructions are [here](../About/Updating_Firmware).
 
-# Create your First App
-
-## Xamarin Studio
-
- 1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Applicaiton** and name it whatever you want:
-![New Solution Dialog](01-NewSolution_XS.png)
-
- 2. Double-click on the **References** folder in the Solution Pad and add:
- 	* Microsoft.Spot.Hardware
- 	* SecretLabs.NETMF.Hardware
- 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
+## Create your First App
  	
-## Visual Studio
+### Visual Studio
 
  1. Launch Visual Studio and create a new solution of type **Visual C# > Micro Framework > Console Application** and name it whatever you want:
  ![New Solution Dialog](02-New_Solution_VS.png)
@@ -51,8 +44,18 @@ Once your development environment is configured, make sure your board has the la
  	* SecretLabs.NETMF.Hardware
  	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
 
+### Xamarin Studio
 
-## Add the Code
+ 1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Applicaiton** and name it whatever you want:
+![New Solution Dialog](01-NewSolution_XS.png)
+
+ 2. Double-click on the **References** folder in the Solution Pad and add:
+ 	* Microsoft.Spot.Hardware
+ 	* SecretLabs.NETMF.Hardware
+ 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
+
+
+### Add the Code
 
 After you've created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet's name:
 
@@ -96,9 +99,9 @@ This code does the following things:
  2. Loops forever, writing to the port on, then waiting 250ms, then turning it on.
  3. Prints to the Debug window the loop iteration it's on.
 
-## Deploy
+### Deploy
 
-### Xamarin Studio
+#### Xamarin Studio
 
  1. Make sure your Netduino is plugged in. It should show up in the build bar at the top:
 ![Xamarin Studio Build Bar](03-Build_Bar.png)
@@ -123,7 +126,7 @@ Looping2
 Looping3
 ```
  
-### Visual Studio
+#### Visual Studio
 
  1. Make sure your Netduino is plugged in.
   	
