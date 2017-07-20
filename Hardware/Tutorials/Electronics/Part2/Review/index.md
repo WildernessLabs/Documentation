@@ -13,6 +13,10 @@ title: Part 2 Review
  * _Power_ is a colloquial term that usually means wattage.
  * Circuits are closed loops that consists of a voltage _source_, a _load_, and a return path called _ground_ or _common_.
 
+# Part 3 - Resistance & Ohm's Law - Coming Soon!
+
+<!--
 # [Part 3 - Resistance and Ohm's Law](../../Part3/Resistors)
+-->
 
 <br/>

@@ -15,11 +15,8 @@ Part 2 builds on the physical fundamentals and explores the ability of electrici
 ![](Part2/Water_Tower_w_Units.svg)
 
 
-### [Part 3 - Resistance & Ohm's Law](Part3/Resistors)
+### Part 3 - Resistance & Ohm's Law - Coming Soon!
 
 Part 3 expands the relationship between amperage and voltage, and adds another piece to the fundamental laws of electricity; resistance. In doing so, it explores one of the most important laws in electricity, Ohm's law, and explains how to use it.
 
 ![](Part3/Ohms_Law_Pyramid.svg)
-
-
-### Part 4 - Coming Soon!
