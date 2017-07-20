@@ -8,7 +8,7 @@ Through an induction circuit, we can actually trade voltage for amperage, or vic
 
 ![](../Water_Tower_Trading_volts_for_amps.svg)
 
-This proportional relationship between amperage and voltage is codified in a rule called ohm's law, which we'll explore in part 3.
+This proportional relationship between amperage and voltage is codified in a rule called [_ohm's law_](https://en.wikipedia.org/wiki/Ohm%27s_law), which we'll explore in part 3.
 
 Notice that in the diagram above, the water wheel had to get larger to accomodate the larger quantity of water flowing over it. While this is just an analogy; this concept carries through to the physical realities of electricity. An electric motor that is designed to run on 220V @ 5A will be physically different than one that runs on 110V @ 10A. 
 
