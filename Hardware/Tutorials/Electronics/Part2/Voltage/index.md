@@ -2,34 +2,25 @@
 title: Electromotive Force (EMF) and Voltage (V)
 ---
 
-<!--
+In order for a current to exist, charge carriers must be motivated to move. Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel:
 
-TODO:
-
-for the voltage differential, show two batteries/water towers side by side with varying voltages
-
-
--->
-
-In order for a current to exist, charge carriers must be motivated to move.
-
-Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel.
+![](../Water_Tower_w_Wheel.svg)
 
 This pressure at the valve is known as _electromotive force (EMF)_ and is expressed as a difference between the top and bottom of the water path and represents a potential for work.
 
-### Relative Voltage
+When water (or charge carriers) is flowing through the valve, the amount of force is expressed as voltage, in _volts_ (V).
 
-When water (or charge carriers) is flowing through the valve, the amount of force is expressed in _volts_ (V).
+Another way to think about voltage is to imagine that a battery provides an engine to lift charge carriers up to a particular energy level. For example, a standard AA cell has the power to lift charge carriers up to 1.5V:
+
+![](../Battery_EMF.svg)
+
+### Relative Voltage
 
 It's important to note that this force is relative; even if the water towers were at different altitudes, the pressure at the valve is still dependent on the _voltage drop_ from the top of the water to the ground.
 
 ![](../Water_Tower_Relative_Voltages.svg)
 
-Consider the following two simple circuits:
-
-[circuit diagrams of 10v and 20v with a drop of 5v across both to 5v/15v respectively]
-
-While both circuits have different source and load voltages, in both cases, the voltage drop is 5v, since the source minus the load is 5v, meaning that the force of electricity in both cases is actually the same.
+This means that current flowing from a 10V source to 5V, the potential difference is still only 5V. The amount of force differential between those two points would be the same as 5V flowing to 0V.
 
 A minor, technical point, is that while EMF exists whether curent is flowing or not, voltage only applies when a current exists. 
 
@@ -50,6 +41,6 @@ Voltage amounts vary greatly around the world, and for different uses, consider 
 
 For most of the circuits that we'll explore here, voltages of 5V and 3.3V are the most common. However, many logic circuits control higher voltage circuits that power motors, heaters, and other loads that do heavy lifting and are typically powered by household mains of 110V and 220V.
 
-## [Next - Source, Load, and Ground](../Source_Load_and_Ground)
+## [Next - Wattage](../Wattage)
 
 <br/>

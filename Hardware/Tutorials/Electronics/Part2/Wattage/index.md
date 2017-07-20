@@ -45,6 +45,6 @@ Now, comparing some of the common electrical currents, sorted by wattage, they m
 
 Because wattage describes the total amount work a current can do, it's often referred to as _power_.
 
-## [Next - Review](../Review)
+## [Next - Source, Load, and Ground](../Source_Load_and_Ground)
 
 <br/>
