@@ -4,9 +4,13 @@ title: Electrical Current
 
 Atoms want to be balanced; that is, if they are positively charged (have too few electrons), they exert an attractive forced to try and take free electrons to achieve balance; a neutral charge. Atoms that have a negative charge (too many electrons), tend to want to get rid of excess electrons.
 
-Usually, electrons jump from negatively charged atoms to positively charged locations. We can think of this as an electron filling a "hole." When an electron moves in this direction, it leaves a hole behind it, which has a positive charge. so we can think of electrons flowing one way, and holes (or positive charges) flowing the other way:
+Usually, electrons jump from negatively charged atoms to positively charged locations. We can think of this as an electron filling a "hole." When an electron moves in this direction, it leaves a hole behind it, which has a positive charge. so we can think of electrons flowing one way, and holes (or positive charges) flowing the other way.
+
+<!-- not sure what this illustration would look like yet
 
 [illustration showing electrons moving one way, and holes/positive charge flowing the other way]
+
+-->
 
 This movement of electrons and holes is what we call _electrical current_. 
 
