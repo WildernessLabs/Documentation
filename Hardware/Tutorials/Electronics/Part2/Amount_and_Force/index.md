@@ -36,7 +36,7 @@ Similarly, even with a very tall, but empty tower, if there are no charge carrie
 
 This system, taken as a whole, is analgous to something like a cordless electric drill, in which the battery is our water tower, and the electric motor is the water wheel, and the trigger is the valve that let's water flow:
 
-[illustration of electric drill]
+![](../Drill.svg)
 
 ## [Next - Amperage](../Amperage)
 
