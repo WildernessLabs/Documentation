@@ -18,9 +18,11 @@ A magnetic field can also be created electrically. A weak magnetic field is crea
 
 ### Induction
 
-Just as a magnetic field arises from the electic charges, a magnetic field can _induce_ current into a wire that enters the magnetic field:
+Just as a magnetic field arises from the electic charges, a magnetic field can _induce_ current into a wire that enters the magnetic field.
 
+<!--
 [illustration of a wire in a magnetic field with moving charge carriers]
+-->
 
 <!-- is there a simple induction experiment we can make that would power an LED with a battery and a couple of simple coils that we can put here? -->
 
