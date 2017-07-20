@@ -1,6 +1,9 @@
 # Documentation Roadmap + Tasking
 
 
+## Existing Documentation Topic Work (up for grabs)
+
+ * Surface Mounted Devices (SMD) Packages and Sizes - Needs images or illustrations for the various IC packages. May be able to get them from JEDEC.
 
 ## Priority Docs (Up for grabs)
  * App fundamentals - specifically, app patterns per discussion between Nevyn and BryanCostanich
