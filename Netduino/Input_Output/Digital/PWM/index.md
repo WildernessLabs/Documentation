@@ -73,7 +73,7 @@ The multimeter shows the average reading is 0.332V (10% of the output voltage of
 
 ## Changing the Brightness of an LED
 
-One of the most visible uses of PWM is to [control the brightness of an LED](../../../../../Hardware/Circuits/LEDs/Driving_w_PWM).  A low duty cycle results in a dim LED, a higher duty cycle produces a brighter LED.
+One of the most visible uses of PWM is to [control the brightness of an LED](/Hardware/Reference/Components/LEDs/Driving_w_PWM/).  A low duty cycle results in a dim LED, a higher duty cycle produces a brighter LED.
 
 ## Servo Control
 
