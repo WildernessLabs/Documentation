@@ -45,6 +45,7 @@ The following samples can be found in the [WildernessLabs Documentation repo](ht
 * **[ButtonInterruptEvents](/Samples/Netduino/ButtonInterruptEvents)** - Listening to an `InterruptPort` for button press events.
 * **[Glitch Filtering](/Samples/Netduino/GlitchFilter)** - Filtering circuit noise using a Glitch Filter and the eventing model.
 * **[Driving an LED w/a PWM Signal](/Samples/Netduino/DrivingLED_w_PWM)** - Driving a single LED with a `PWM` signal.
+* **[Blinking an RGB LED with Red, Green, and Blue](/Samples/Netduino/RGB_Blinky)** - A simple sample illustrating how to drive an RGB LED.
 * **[Driving an RGB LED](/Samples/Netduino/RgbLed)** - Driving an RGB LED with three `PWM` Signals.
 * **[Changing colors of RGB LED with a Potentiometer](/Samples/Netduino/PotentiometerControlled_RgbLed)** - Changing the color of an RGB LED with an `AnalogPort` potentiometer.
 * **[SD Card IO](/Samples/Netduino/SDCardIO)** - Reading and writing to an SD card using `File.IO`.

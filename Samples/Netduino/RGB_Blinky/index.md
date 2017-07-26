@@ -1,5 +1,5 @@
 ---
-Title: RGB LED Blinky
+title: RGB LED Blinky
 ---
 
 This sample illustrates a simple program to cycle an RGB LED through each of its primary colors; red, green, and blue.
