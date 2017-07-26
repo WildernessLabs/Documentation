@@ -40,7 +40,7 @@ As noted, there are three main uses for PWM that are most frequently encountered
 
 ## Power Control
 
-The output voltage on a Netduino digital output pin is 3.3V.  Creating a digital output pin (_OuputPort_) and turning the pin on will show 3.3V on a multimeter.
+The output voltage on a Netduino digital output pin is 3.3V.  Creating a digital output pin (_OutputPort_) and turning the pin on will show 3.3V on a multimeter.
 
 Changing the output port to a _PWM_ port and setting the duty cycle to 10% will change the reading on the multimeter.  Consider the following application:
 
