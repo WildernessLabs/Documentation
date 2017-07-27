@@ -17,12 +17,4 @@ We're going to dive deeper into resistors and resistor networks later, but
  * _Conductance_ is the reciprocal of resistance, `(1/R)`, and is measured in siemens (S), but most often abbreviated as `G`.
  * Resistors wired in _parallel_ have a total resistance which is the sum of the conductance (in siemens) of each resistor, and then converted back to resistance.
 
-<!--
-## Circuit Comparison [stashed here]
-
-| Single Resistor   | Resistors in Series  | Resistors in Parallel     |
-|-------------------|--------------|----------|
-| ![](../Resistor_Single.svg) | ![](../Resistor_Series.svg) | ![](../Resistor_Parallel.svg) |
--->
-
 ## Part 4 - Coming Soon!

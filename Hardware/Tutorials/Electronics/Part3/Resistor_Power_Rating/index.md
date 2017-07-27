@@ -15,6 +15,6 @@ When power flows through a resistor, some of the energy is converted into heat. 
 ## Tolerance
 
 
-## [Next - Calculating Resistance](../Calculating_Resistance)
+## [Next - Calculating Simple Resistance](../Calculating_Resistance)
 
 <br/>
