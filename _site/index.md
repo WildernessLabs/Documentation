@@ -18,7 +18,7 @@
 
 ##### [Network Connectivity](/Netduino/Input_Output/Network/)
 
-#### [Updating Firmware](http://localhost:4000/Netduino/About/Updating_Firmware)
+#### [Updating Firmware](/Netduino/About/Updating_Firmware)
 
 #### [Application Fundamentals](/Netduino/Application_Fundamentals/)
 
