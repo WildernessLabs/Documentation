@@ -30,11 +30,19 @@ AC electricity is described in terms of _period_, _frequency_, and _amplitude_.
 
 ## Other Waveforms
 
-Alternating current is not always a perfect sine wave. In fact, 
+Alternating current is not always a perfect sine wave. In fact, alternating currents are often generated digitally by using triangle and square waves:
 
 [make a new version of this:]
 
 ![](http://www.electronics-tutorials.ws/accircuits/acp2.gif)
+
+Even more complex wave forms are sometimes used:
+
+[complex wave form illustration]
+
+## AC Circuits
+
+Designing AC circuits is a little more complicated than DC, but for most work involving connected things, we can keep it pretty simple, and we'll explore it in more depth later.
 
 ## [Next - Batteries](../Batteries)
 
