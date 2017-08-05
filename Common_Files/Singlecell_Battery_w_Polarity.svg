@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="53px" viewBox="0 0 140 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Singlecell_Battery_w_Polarity</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Batteries" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-472.000000, -332.000000)">
+            <g id="Single-Cell-w-Polarity" transform="translate(472.000000, 318.000000)">
+                <g id="Singlecell_Battery_w_Polarity">
+                    <path d="M0,41 L64,41" id="Path-2" stroke="#524740" stroke-width="3"></path>
+                    <path d="M76,41 L140,41" id="Path-2-Copy" stroke="#524740" stroke-width="3"></path>
+                    <path d="M64,29 L64,53" id="Path-4" stroke="#524740" stroke-width="3"></path>
+                    <path d="M76,15 L76,67" id="Path-3-Copy" stroke="#524740" stroke-width="3"></path>
+                    <text id="+" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
+                        <tspan x="84.79" y="34">+</tspan>
+                    </text>
+                    <text id="-" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
+                        <tspan x="38.3345" y="34">-</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
