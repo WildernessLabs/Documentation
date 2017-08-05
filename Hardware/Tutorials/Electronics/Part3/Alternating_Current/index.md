@@ -44,6 +44,12 @@ Even more complex wave forms are sometimes used:
 
 Designing AC circuits is a little more complicated than DC, but for most work involving connected things, we can keep it pretty simple, and we'll explore it in more depth later.
 
+## AC Power Source Symbol
+
+The symbol for an AC power source looks similar to the DC power source, but instead of `+` and `-` polarity indicators, it has a wave in it, symbolizing the cycle of voltage polarity:
+
+![AC Power Source Symbol; A circle with a wave inside it.](/Common_Files/AC_Power.svg)
+
 ## [Next - Batteries](../Batteries)
 
 <br/>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>AC_Power</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Meters-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-339.000000, -19.000000)" stroke="#524740" stroke-width="3">
+            <g id="AC-Power" transform="translate(324.000000, 19.000000)">
+                <g id="AC_Power" transform="translate(15.000000, 0.000000)">
+                    <circle id="Oval" cx="80" cy="80" r="78.5"></circle>
+                    <path d="M34.7460938,80.5651718 C42.3146235,59.5217239 49.8558981,49 57.3699177,49 C62.79783,49 68.1279369,54.4904495 73.3602384,65.4713486 C74.7008572,68.2848715 76.6973387,73.3161459 79.3496829,80.5651718 C87.2385648,102.458979 94.9400155,113.405882 102.454035,113.405882 C109.968055,113.405882 117.482074,102.458979 124.996094,80.5651718" id="Path-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

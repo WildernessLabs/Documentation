@@ -16,11 +16,11 @@ Netduino provides two _power rails_ that supply 5V and 3.3V direct current. They
 
 ## DC Power Symbols
 
-[Battery:]
+A general DC power source symbol looks like the following:
 
-![](/Common_Files/Singlecell_Battery.svg)
+![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/DC_Power.svg)
 
-[Other DC Power source symbols]
+But many specific power sources have their own symbols, such as batteries, as we'll see later.
 
 Let's examine AC next.
 

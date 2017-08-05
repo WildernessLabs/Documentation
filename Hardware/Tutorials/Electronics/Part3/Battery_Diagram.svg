@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="329px" height="193px" viewBox="0 0 329 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Battery_Diagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-755.000000, -622.000000)">
+            <g id="Battery_Diagram" transform="translate(754.000000, 621.000000)">
+                <text id="Cathode-(+)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049703" fill="#555555">
+                    <tspan x="0.554453266" y="49">Cathode (+)</tspan>
+                </text>
+                <text id="Anode-(-)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049703" fill="#555555">
+                    <tspan x="1.85355267" y="159">Anode (-)</tspan>
+                </text>
+                <g id="Flows" transform="translate(129.000000, 155.000000)">
+                    <text id="Hole-Flow" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049703" fill="#555555">
+                        <tspan x="68" y="18">Hole Flow</tspan>
+                    </text>
+                    <path d="M0.831857412,12.4955722 L55.7344466,12.4955722" id="Line-11-Copy-2" stroke="#B09679" stroke-width="3"></path>
+                    <path id="Line-11-Copy-2-decoration-1" d="M0.831857412,12.4955722 L11.6318574,9.49557223 L11.6318574,15.4955722 L0.831857412,12.4955722 Z" stroke="#B09679" stroke-width="3"></path>
+                    <text id="Electron-Flow" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049703" fill="#555555">
+                        <tspan x="68" y="38">Electron Flow</tspan>
+                    </text>
+                    <path d="M0.831857412,32.4955722 L55.7344466,32.4955722" id="Line-11-Copy-4" stroke="#B09679" stroke-width="3"></path>
+                    <path id="Line-11-Copy-4-decoration-1" d="M55.7344466,32.4955722 L44.9344466,29.4955722 L44.9344466,35.4955722 L55.7344466,32.4955722 Z" stroke="#B09679" stroke-width="3"></path>
+                </g>
+                <g id="Circuit-Lines" transform="translate(122.000000, 36.000000)" stroke="#23ABE3" stroke-width="2" stroke-linecap="square">
+                    <path d="M2.5,1 L92.5,1" id="Line-7"></path>
+                    <path d="M1,1.11763391 L1,34" id="Line-7-Copy-2"></path>
+                    <path d="M93,1.11763391 L93,64.0317974" id="Line-7-Copy-13"></path>
+                    <path d="M144,54.1176339 L144,117.031797" id="Line-7-Copy-15"></path>
+                    <path d="M1,84.1176339 L1,117" id="Line-7-Copy-3"></path>
+                    <path d="M2.5,117 L143.003559,117" id="Line-7-Copy"></path>
+                    <path d="M93.5,64 L131.119809,64" id="Line-7-Copy-14"></path>
+                </g>
+                <g id="Lightbulb" transform="translate(197.000000, 0.000000)">
+                    <path d="M65.0971859,115.707768 C65.0971859,117.545456 66.9593621,119.035197 69.2564729,119.035197 C71.5535837,119.035197 73.41576,117.545456 73.41576,115.707768 L76.7343341,115.707768 C79.4957578,115.707768 81.7343341,113.469191 81.7343341,110.707768 L81.7343341,84.5380111 C81.7343341,81.7765874 79.4957578,79.5380111 76.7343341,79.5380111 L76.7343341,79.5380111 L61.7786117,79.5380111 L61.7786117,79.5380111 C59.017188,79.5380111 56.7786117,81.7765874 56.7786117,84.5380111 L56.7786117,84.5380111 L56.7786117,110.707768 C56.7786117,113.469191 59.017188,115.707768 61.7786117,115.707768 L61.7786117,115.707768 L65.0971859,115.707768 Z" id="Combined-Shape" stroke="#979797" fill="#D8D8D8"></path>
+                    <circle id="Oval-3" stroke="#979797" fill="#F8E71C" cx="68.4246155" cy="62.4688932" r="29.9468668"></circle>
+                    <polyline id="Path-3" stroke="#8B572A" stroke-linejoin="round" points="61.697667 91.707577 61.697667 62.0897297 65.0728803 72.5542946 68.175349 62.0897297 71.0501964 72.5542946 73.3725357 62.0897297 75.6216751 72.5542946 75.6216751 91.707577"></polyline>
+                    <path d="M17.6813134,15.0530207 L34.3184616,30.0264541" id="Line" stroke="#999999" stroke-linecap="square"></path>
+                    <path d="M44.3007506,3.40701693 L50.9556099,21.70788" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M90.8847656,1.74330211 L82.5661915,21.70788" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M119.167918,16.7167355 L100.867055,30.0264541" id="Line-4" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M105.858199,49.991032 L129.150207,44.9998875" id="Line-5" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M107.521914,71.6193247 L132.477636,74.9467543" id="Line-6" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M94.2121953,86.5927581 L110.849344,108.221051" id="Line-7" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M25.9998875,46.6636023 L1.04416517,40.008743" id="Line-8" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M29.3273172,64.9644654 L2.70787999,73.2830395" id="Line-9" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M39.3096061,86.5927581 L17.6813134,108.221051" id="Line-10" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M81.6412801,91.7322976 C75.2628691,97.224289 59.9961959,96.4050527 57.0451405,95.3602006" id="Path-4" stroke="#979797"></path>
+                    <path d="M81.6412801,96.7234421 C75.2628691,102.215433 59.9961959,101.396197 57.0451405,100.351345" id="Path-4-Copy" stroke="#979797"></path>
+                    <path d="M81.6412801,101.714587 C75.2628691,107.206578 59.9961959,106.387342 57.0451405,105.34249" id="Path-4-Copy-2" stroke="#979797"></path>
+                    <path d="M81.6412801,106.705731 C75.2628691,112.197722 59.9961959,111.378486 57.0451405,110.333634" id="Path-4-Copy-3" stroke="#979797"></path>
+                </g>
+                <g id="Battery" transform="translate(40.000000, 59.000000)">
+                    <rect id="Rectangle-4" fill="#524740" x="0" y="25" width="107" height="25"></rect>
+                    <rect id="Rectangle-4-Copy" fill="#999999" x="0" y="0" width="107" height="25"></rect>
+                    <rect id="Rectangle-4-Copy-2" fill="#EEEEEE" x="0" y="50" width="107" height="25"></rect>
+                    <rect id="Rectangle-4-Copy-3" stroke="#524740" stroke-width="2" x="1" y="1" width="105" height="73"></rect>
+                    <g id="Group" transform="translate(3.000000, 50.000000)" fill="#23ABE3">
+                        <circle id="Oval-3-Copy-31" cx="5.5" cy="6.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-51" cx="11.5" cy="13.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-52" cx="6.5" cy="17.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-53" cx="21.5" cy="8.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-54" cx="21.5" cy="18.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-55" cx="30.5" cy="16.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-61" transform="translate(38.500000, 6.500000) scale(-1, 1) translate(-38.500000, -6.500000) " cx="38.5" cy="6.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-60" transform="translate(44.500000, 13.500000) scale(-1, 1) translate(-44.500000, -13.500000) " cx="44.5" cy="13.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-59" transform="translate(39.500000, 17.500000) scale(-1, 1) translate(-39.500000, -17.500000) " cx="39.5" cy="17.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-58" transform="translate(56.500000, 6.500000) scale(-1, 1) translate(-56.500000, -6.500000) " cx="56.5" cy="6.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-57" transform="translate(53.500000, 16.500000) scale(-1, 1) translate(-53.500000, -16.500000) " cx="53.5" cy="16.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-56" transform="translate(63.500000, 16.500000) scale(-1, 1) translate(-63.500000, -16.500000) " cx="63.5" cy="16.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-67" transform="translate(70.500000, 5.500000) scale(-1, 1) translate(-70.500000, -5.500000) " cx="70.5" cy="5.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-66" transform="translate(76.500000, 12.500000) scale(-1, 1) translate(-76.500000, -12.500000) " cx="76.5" cy="12.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-65" transform="translate(71.500000, 16.500000) scale(-1, 1) translate(-71.500000, -16.500000) " cx="71.5" cy="16.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-64" transform="translate(86.500000, 7.500000) scale(-1, 1) translate(-86.500000, -7.500000) " cx="86.5" cy="7.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-63" transform="translate(86.500000, 17.500000) scale(-1, 1) translate(-86.500000, -17.500000) " cx="86.5" cy="17.5" r="5.5"></circle>
+                        <circle id="Oval-3-Copy-62" transform="translate(95.500000, 15.500000) scale(-1, 1) translate(-95.500000, -15.500000) " cx="95.5" cy="15.5" r="5.5"></circle>
+                    </g>
+                    <text id="Electrolyte" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049703" fill="#EEEEEE">
+                        <tspan x="7.20622663" y="42">Electrolyte</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -9,11 +9,11 @@
             <g id="DC-Power" transform="translate(44.000000, 19.000000)">
                 <g id="DC_Power" transform="translate(15.000000, 0.000000)">
                     <circle id="Oval" stroke="#524740" stroke-width="3" cx="80" cy="80" r="78.5"></circle>
-                    <text id="+" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" letter-spacing="1.8" fill="#524740">
-                        <tspan x="69.66" y="40">+</tspan>
+                    <text id="+" font-family="Lato-Regular, Lato" font-size="40" font-weight="normal" letter-spacing="1.99999976" fill="#524740">
+                        <tspan x="69.4000001" y="57">+</tspan>
                     </text>
-                    <text id="-" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" letter-spacing="1.8" fill="#524740">
-                        <tspan x="73.413" y="145">-</tspan>
+                    <text id="-" font-family="Lato-Regular, Lato" font-size="40" font-weight="normal" letter-spacing="1.99999976" fill="#524740">
+                        <tspan x="73.5700001" y="134">-</tspan>
                     </text>
                 </g>
             </g>
