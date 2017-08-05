@@ -2,20 +2,23 @@
 title: Battery Types
 ---
 
-[Come in two types; rechargeable and non-rechargeable]
+Batteries come in two types; single use batteries that cannot be recharged, and multi-use batteries that are rechargeable.
 
 ## Non-Rechargeable Batteries
 
 Also known as _primary batteries_, once the charge is depleted, they cannot be easily recharged. While hundreds of different primary battery designs have been created over the years, there are really only three in use today; alkaline, lithium, and carbon-zinc, and even carbon-zinc is rarely used.
 
-
 #### Alkaline
 
 [Alkaline batteries](https://en.wikipedia.org/wiki/Alkaline_battery) are the most common consumer non-rechargeable battery and most cylindrical batteries in the AA, AAA, C, etc., size are alkaline. Alkaline batteries have both a good charge density and shelf life. 
 
+![](../Alkaline_Batteries_Cropped.jpg)
+
 #### Lithium
 
 [Lithium batteries](https://en.wikipedia.org/wiki/Lithium_battery) are most often the coin cell batteries used in watches, key fobs, etc. However, 9V lithium batteries are often found for use in smoke detectors. Recently, non-rechargeable lithium batteries have also been made in AA and AAA sizes and are meant to power high drain devices such as digital cameras. Lithium batteries have a high charge density and long shelf life, but are also more expensive than alkalines.
+
+![](../Lithium_Batteries_Cropped.jpg)
 
 #### Carbon-Zinc
 
@@ -45,12 +48,18 @@ reverse the chemical process by applying voltage in the reverse direction]
 
 #### Nickel-Metal Hydride (NiMH)
 
+![](../NiMH_Batteries_Cropped.jpg)
+
 #### Lead-Acid
 
 #### Lithium Ion
 
+![](../Lithium_Ion_Battery_Cropped.jpg)
+
 #### Lithium Polymer
 
-## [Next - Review](../Review)
+![](../LiPo_Battery_Cropped.jpg)
+
+## [Next - Battery Circuits](../Battery_Circuits)
 
 <br/>

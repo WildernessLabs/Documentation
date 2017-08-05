@@ -4,7 +4,7 @@ title: Direct Current
 
 [Direct current (DC)](https://en.wikipedia.org/wiki/Direct_current) specifies a unidirectional flow of electrons; that is they flow in one direction only.
 
-The simple nature of direct current lends itself well to creating digital logic circuits, because it can represent binary 1 when on (within a given voltage range), and binary 0 when off (at ground, or 0V). It's also the type of current that bateries generate.
+The simple nature of direct current lends itself well to creating digital logic circuits, because it can represent binary 1 when on (within a given voltage range), and binary 0 when off (at ground, or 0V). It's also the type of current that batteries generate.
  
 Because DC is used as the primary type of current in digital logic circuits, most of this tutorial will focus on DC circuits.
 

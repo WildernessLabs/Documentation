@@ -8,38 +8,6 @@ Household wall outlets deliver AC and so most appliances are designed to use alt
 
 When building connected things, AC is usually used to power motors, heaters, and other things, while a DC circuit acts as the brain, or logic controller, which determines when the AC power is switched on for various loads. For example, a connected coffee maker might have a microcontroller (such as a Netduino) that controls when the power to the boiler is turned on to heat water and make coffee. The AC portion of an appliance like that is usually on a separate circuit and controlled through _relays_, which are electro-mechanical switches that typically use a small current to control a larger one. 
 
-## AC Power Generation
-
-AC current has historically been created by turning a [rotor](https://en.wikipedia.org/wiki/Rotor_(electric)) (the central shaft with wire coils around it) within an electrical generator. These generators have powerful magnets that enclose the rotor, known as [_stators_](https://en.wikipedia.org/wiki/Stator). Stators induct a current into the rotor wire coiles as they pass through the magnetic field  created by the surrounding stator magnets. 
-
-[illustration of rotor and stator]
-
-As the rotor turns, the wire coils get closer to the magnetic, and then farther away; causing an alternating voltage to be induced as the electrons are moved back and forth in the wires. As such, alternating current looks like a sine wave when the voltage is mapped over time, because the induction is actually a function of a circle:
-
-![](../Circle_cos_sin.gif)
-
-## Characteristics
-
-AC electricity is described in terms of _period_, _frequency_, and _amplitude_.
-
-![](../Alternating_Current.svg)
-
-* **Period** - Period is the amount of time that it takes the waveform to make one complete cycle.
-* **Frequency** - Measured in _hertz_ (hz), frequency is the number of time the waveform repeats itself in one second. In the United States, this is usually 60hz, and 50hz in most of the rest of the world.
-* **Amplitude** - This is the magnitude of the waveform and is usually measured in volts or amps.
-
-## Other Waveforms
-
-Alternating current is not always a perfect sine wave. In fact, alternating currents are often generated digitally by using triangle and square waves:
-
-[make a new version of this:]
-
-![](http://www.electronics-tutorials.ws/accircuits/acp2.gif)
-
-Even more complex wave forms are sometimes used:
-
-[complex wave form illustration]
-
 ## AC Circuits
 
 Designing AC circuits is a little more complicated than DC, but for most work involving connected things, we can keep it pretty simple, and we'll explore it in more depth later.
@@ -50,6 +18,6 @@ The symbol for an AC power source looks similar to the DC power source, but inst
 
 ![AC Power Source Symbol; A circle with a wave inside it.](/Common_Files/AC_Power.svg)
 
-## [Next - Batteries](../Batteries)
+## [Next - AC Power Generation](../AC_Generation)
 
 <br/>

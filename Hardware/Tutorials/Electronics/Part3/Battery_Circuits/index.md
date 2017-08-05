@@ -35,3 +35,8 @@ Batteries are often arranged in serial to get the desired voltage necxessary to 
 [voltage must be the same]
 
 Total voltage is the same as a single battery, but they last x number of batteries.
+
+
+## [Next - Review](../Review)
+
+<br/>
