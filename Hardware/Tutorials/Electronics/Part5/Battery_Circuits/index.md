@@ -45,6 +45,10 @@ Batteries are often arranged in serial to get the desired voltage necxessary to 
 
 Total voltage is the same as a single battery, but they last x number of batteries.
 
+## Battery Capacity
+
+[mAh is additive, but assuming a fixed load that, it will deplete x # of batteries in serial, vs. parallel]
+
 
 
 ## [Next - Review](../Review)
