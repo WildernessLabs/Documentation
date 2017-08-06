@@ -51,6 +51,6 @@ Total voltage is the same as a single battery, but they last x number of batteri
 
 
 
-## [Next - Review](../Review)
+## [Next - Battery Resistance](../Battery_Resistance)
 
 <br/>
