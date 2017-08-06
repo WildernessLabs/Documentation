@@ -7,7 +7,9 @@ title: Battery Circuits
 
 
 
-## Batteries in Serial
+## Batteries in Series
+
+![](../Batteries_in_Series_Voltage_Diagram.svg)
 
 [voltages are additive, because the electromagnetic force (voltage) from one flows into the next, and that battery adds its own voltage]
 
@@ -30,11 +32,19 @@ Batteries are often arranged in serial to get the desired voltage necxessary to 
 
 [image of battery pack]
 
+## Batteries in Series with Opposing Polarity
+
+![](../Batteries_in_Series_Opposing_Voltage_Diagram.svg)
+
+
 ## Batteries in Parallel
+
+![](../Batteries_in_Parallel_Voltage_Diagram.svg)
 
 [voltage must be the same]
 
 Total voltage is the same as a single battery, but they last x number of batteries.
+
 
 
 ## [Next - Review](../Review)

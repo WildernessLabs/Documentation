@@ -28,8 +28,8 @@ Once the mainstay of consumer batteries, [carbon-zinc (or zinc-carbon)](https://
 ### Non-Rechargeable Battery Comparison
 
 | Type   | Shelf Life    | Cost   | Charge Density |
-|-------|------|----|-----|
-| Alkaline | 5-10 Years | Medium | Medium (4-5x of Carbon Zinc) | 
+|-------|------|----|-----|-----|
+| Alkaline | 5-10 Years | Medium | Medium (4-5x of Carbon Zinc) |
 | Lithium | 10-15 years | Expensive | Highest (3x of alkaline) |
 | Zinc Carbon | 3-5 years | Cheap | Lowest |
 

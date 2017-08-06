@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
     <title>Ammeter</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Meters" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-539.000000, -19.000000)">
-            <g id="Ammeter" transform="translate(524.000000, 19.000000)">
+        <g id="Artboard" transform="translate(-339.000000, -19.000000)">
+            <g id="Ammeter" transform="translate(324.000000, 19.000000)">
                 <g transform="translate(15.000000, 0.000000)">
-                    <circle id="Oval" stroke="#524740" stroke-width="3" cx="80" cy="80" r="78.5"></circle>
-                    <text id="A" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" letter-spacing="1.8" fill="#524740">
-                        <tspan x="67.914" y="94">A</tspan>
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="40" r="39"></circle>
+                    <text id="A" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                        <tspan x="34.957" y="47">A</tspan>
                     </text>
                 </g>
             </g>

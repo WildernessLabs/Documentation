@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="140px" height="53px" viewBox="0 0 140 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="70px" height="33px" viewBox="0 0 70 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
     <title>Multicell_Battery_w_Polarity</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Batteries" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-102.000000, -332.000000)">
-            <g id="Multicell-w-Polarity" transform="translate(102.000000, 318.000000)">
+        <g id="Artboard" transform="translate(-102.000000, -326.000000)">
+            <g id="Multicell-w-Polarity" transform="translate(102.000000, 310.000000)">
                 <g id="Multicell_Battery_w_Polarity">
-                    <path d="M0,41 L52,41" id="Path-2" stroke="#524740" stroke-width="3"></path>
-                    <path d="M88,41 L140,41" id="Path-2-Copy" stroke="#524740" stroke-width="3"></path>
-                    <path d="M52,29 L52,53" id="Path-3" stroke="#524740" stroke-width="3"></path>
-                    <text id="+" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
-                        <tspan x="97.29" y="34">+</tspan>
+                    <path d="M0,33 L26,33" id="Path-2" stroke="#524740" stroke-width="2"></path>
+                    <path d="M44,33 L70,33" id="Path-2-Copy" stroke="#524740" stroke-width="2"></path>
+                    <path d="M26,25.7462687 L26,40.4328358" id="Path-3" stroke="#524740" stroke-width="2"></path>
+                    <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                        <tspan x="48.5" y="26.0447761">+</tspan>
                     </text>
-                    <text id="-" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
-                        <tspan x="29.8345" y="34">-</tspan>
+                    <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                        <tspan x="14.75" y="26.0447761">-</tspan>
                     </text>
-                    <path d="M64,15 L64,67" id="Path-4" stroke="#524740" stroke-width="3"></path>
-                    <path d="M76,29 L76,53" id="Path-3-Copy" stroke="#524740" stroke-width="3"></path>
-                    <path d="M88,15 L88,67" id="Path-4-Copy" stroke="#524740" stroke-width="3"></path>
+                    <path d="M32,17.1791045 L32,49" id="Path-4" stroke="#524740" stroke-width="2"></path>
+                    <path d="M38,25.7462687 L38,40.4328358" id="Path-3-Copy" stroke="#524740" stroke-width="2"></path>
+                    <path d="M44,17.1791045 L44,49" id="Path-4-Copy" stroke="#524740" stroke-width="2"></path>
                 </g>
             </g>
         </g>
