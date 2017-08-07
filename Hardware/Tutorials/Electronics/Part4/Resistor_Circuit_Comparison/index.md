@@ -8,4 +8,4 @@ title: Resistor Circuit Comparison
 | ![](../Resistor_Single.svg) | ![](../Resistor_Series.svg) | ![](../Resistor_Parallel.svg) |
 
 
-## [Next - Review](../Review)
+## [Next - Non-Ohmic Devices](../Non-Ohmic_Devices)

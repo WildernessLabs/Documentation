@@ -10,7 +10,7 @@ In this case, the total resistance is the _sum_ of each resistor. So for instanc
 
  * **R1** - `100Ω`
  * **R2** - `5Ω`
- * **R3** - `1KΩ`
+ * **R3** - `1kΩ`
 
 Then the total resistance would be:
 
@@ -22,11 +22,17 @@ Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 
 Resistors in a series share a common current, that is the amount of amps flowing through each one is the same, since there's only one path. 
 
+
 So for instance, given the previously calculated resistance of `1,150Ω`, if we were to supply `5V` of electrical force, we can use ohm's law to calcuate the current at any given point as:
 
 ```
 I = 5V * 1,150Ω = 0.004A = 4mA
 ```
+
+So no matter where in the circuit that we measure the current, we would get the same value of `4mA`:
+
+![](../Common_Current_w_Values.svg)
+
 
 ## Advantages and Disadvantages of Series Resistors
 

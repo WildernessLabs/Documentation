@@ -3,9 +3,6 @@
  * Add Negative Voltage to voltage page (current flowing in opposite direction)
  * Add Active/Passive to Source/Load/Return
 
- * Power Law P = I<sup>2</sup>R
-
-
 
 ## Kirchoff's Laws
 

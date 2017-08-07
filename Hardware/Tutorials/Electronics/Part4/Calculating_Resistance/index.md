@@ -58,10 +58,10 @@ V = I*R
 V = .100A * 10Ω = 1V
 ```
 
-## Calculating Power
+## Rule of Significant Digits
 
+[todo]
 
-
-## [Next - Resistors in Series](../Resistors_in_Series)
+## [Next - Resistor Power Rating](../Resistor_Power_Rating)
 
 <br/>

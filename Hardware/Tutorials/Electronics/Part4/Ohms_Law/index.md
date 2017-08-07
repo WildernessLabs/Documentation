@@ -14,11 +14,19 @@ This relationship holds true for electricity as well, and is codified in [_Ohm's
 Amperage = Voltage / Resistance
 ```
 
-For historical reasons, Amperage is often labeled `I`, and sometimes Voltage is labeled `E`.  The most common labeling for Ohm's law is usually:
+For historical reasons, amperage is often labeled `I` (for intensity), and sometimes voltage is labeled `E` (for electromotive force).  The most common labeling for Ohm's law is usually:
 
 ```
 I = V/R
 ```
+
+But you may also see:
+
+```
+I = E/R
+```
+
+## Ohm's Test Circuit
 
 Consider the following circuit diagram that includes a voltage source and a resistor:
 
@@ -89,7 +97,6 @@ ohms = volts / amps
 
 There is a fantastic ohm's law calculator online [here](http://www.ohmslawcalculator.com/ohms-law-calculator).
 
-
-## [Next - Resistor Power Rating](../Resistor_Power_Rating)
+## [Next - Calculating Simple Resistance](../Calculating_Resistance)
 
 <br/>
