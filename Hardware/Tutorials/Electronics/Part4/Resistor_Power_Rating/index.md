@@ -1,12 +1,10 @@
 ---
-title: Resistor Power Rating and Tolerance
+title: Resistor Power Rating
 ---
 
-In addition to amount of resistance, resistors have two other important characteristics that describe them: _power rating_ and _tolerance_.
+In addition to amount of resistance, resistors have another other important characteristic that describe them: _power rating_.
 
-## Power Rating
-
-When power flows through a resistor, some of the energy is converted into heat. The amount of heat a resistor can safely dissipate is characterized by its _power rating_, and is specified in wattage.
+When power flows through a resistor, some of the energy is converted into heat. The amount of heat a resistor can safely dissipate is characterized by its power rating, and is specified in wattage.
 
 Most common resistors have a power rating between 1/8 watt (0.125W), and 1 watt. Resistors with higher power ratings are usually referred to as _power resistors_, and used specifically to dissipate power.
 
