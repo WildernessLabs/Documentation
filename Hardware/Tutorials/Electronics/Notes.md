@@ -3,6 +3,7 @@
  * Add Negative Voltage to voltage page (current flowing in opposite direction)
  * Add Active/Passive to Source/Load/Return
 
+ * Add Power Calculation to reference
 
 ## Kirchoff's Laws
 
