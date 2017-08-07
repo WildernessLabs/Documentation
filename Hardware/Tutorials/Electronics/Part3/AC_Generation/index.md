@@ -16,7 +16,7 @@ As the rotor turns, the wire coils get closer to the magnetic, and then farther 
 
 ### Multiphase AC Generation
 
-By adding mulitple wire coils to a stator, a generator can create multiple AC waves that are _out of phase_ to each other. For instance, most modern electrical generators, like the kind found at power generating plants, have three, 120º opposed, [what are they called,] that create [_three phase electric power_](https://en.wikipedia.org/wiki/Three-phase_electric_power), which is the most common 
+By adding mulitple wire coils to a stator, a generator can create multiple AC waves that are _out of phase_ to each other. For instance, most modern electrical generators, like the kind found at power generating plants, have three, 120º opposed inductors that create [_three phase electric power_](https://en.wikipedia.org/wiki/Three-phase_electric_power), which is effectively the worldwide standard for AC power generation and transmission.
 
 ![](../Three_Phase_Generator.svg)
 
