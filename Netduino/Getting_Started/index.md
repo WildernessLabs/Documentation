@@ -39,21 +39,22 @@ Once your development environment is configured, make sure your board has the la
  1. Launch Visual Studio and create a new solution of type **Visual C# > Micro Framework > Console Application** and name it whatever you want:
  ![New Solution Dialog](02-New_Solution_VS.png)
  
-2. Right-click on the **References** folder in the Solution Explorer and add:
- 	* Microsoft.Spot.Hardware
- 	* SecretLabs.NETMF.Hardware
- 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
+ 2. Right-click on the **References** folder in the Solution Explorer and add:
+ 
+     * Microsoft.Spot.Hardware
+     * SecretLabs.NETMF.Hardware
+     * SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
 
 ### Xamarin Studio
 
- 1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Applicaiton** and name it whatever you want:
+ 1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Application** and name it whatever you want:
 ![New Solution Dialog](01-NewSolution_XS.png)
 
  2. Double-click on the **References** folder in the Solution Pad and add:
- 	* Microsoft.Spot.Hardware
- 	* SecretLabs.NETMF.Hardware
- 	* SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
-
+ 
+    * Microsoft.Spot.Hardware
+    * SecretLabs.NETMF.Hardware
+    * SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
 
 ### Add the Code
 

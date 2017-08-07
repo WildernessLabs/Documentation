@@ -12,11 +12,24 @@ To browse locally:
 ### 1. [Install Homebrew](https://brew.sh/) (if not already installed).
 
 
-### 2. Install Ruby:
+### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
+
 Open a terminal and run:
 
 ```
 $ brew install ruby
+```
+
+Once you have Ruby, you'll need Jekyll and Bundler to build and host the site locally:
+
+```
+$ gem install jekyll bundler
+```
+
+With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
+
+```
+$ bundle install
 ```
 
 ### 3. Launch local server
