@@ -4,7 +4,7 @@ title: Ohm's Law
 
 Going back to the water analogy, we can think of resistance as the valve at the bottom of the water tank:
 
-![](../Resistor_Valve.svg)
+![Illustratino of a water pipe with a valve in the center of it, representing a resistor](../Resistor_Valve.svg)
 
 Given a constant water pressure (voltage), if we put in a valve that was half the size of the pipe, we would expect that the amount of water that flows through would also be divided, proportionally, in half.
 
@@ -30,7 +30,7 @@ I = E/R
 
 Consider the following circuit diagram that includes a voltage source and a resistor:
 
-![](../Ohms_Circuit.svg)
+![Circuit diagram that shows a circuit loop with a resistor at the top of the loop, and a source voltage at the bottom of the loop.](../Ohms_Circuit.svg)
 
 If the voltage source is `1.5V`, and the resistance is `50ohms`, we can calculate the amount of amps that can make it through the circuit as:
 
@@ -75,7 +75,7 @@ volts = amps / ohms
 
 The _Ohm's Law triangle_, also known as the _power triangle_ is helpful in remembering the various solutions of Ohm's law:
 
-![](../Ohms_Law_Pyramid.svg)
+![Illustration of a triangle divided into three sections with volts in the top and the bottom divided again with amps on the left and ohms on the right](../Ohms_Law_Pyramid.svg)
 
 It roughly represents the mathematical relationship of Ohm's law; it's divided vertically by a line that indicates division (below `V`), and horizontally, with a line that stands for multiplication (between `I` and `R`).
 
