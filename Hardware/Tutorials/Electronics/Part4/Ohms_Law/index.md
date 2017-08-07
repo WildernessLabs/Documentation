@@ -44,6 +44,15 @@ From that, we can also calculate the wattage/power as `(watts = amps * volts)`:
 Wattage = 1.5V * 0.3A = 0.045W
 ```
 
+### Rule of Significant Digits
+
+Doing this math brings up an important point, which is the _rule of significant digits_, which prevents us from stating a computational answer that has more precision than actually intended.
+
+After completing any calculation, it's necessary to round to the least number of digits in the input numbers.
+
+So for the above calculation, we had inputs of `1.5V` and `0.3V` and an output of `0.045W`. The input numbers both had two significant digits, so we can only have a result of two significant digits, which means we need to round `0.045W` to `0.05W`. We can ignore the zero left of the decimal when counting significant digits because it's just a convenience marker to make it clear there is a decimal.
+
+
 ### Other Forms of Ohm's Law
 
 Using algebra, we can solve the equation of ohm's law for resistance, or voltage:

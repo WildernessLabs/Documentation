@@ -109,10 +109,6 @@ And then solving for power:
 P = 5V * 0.05A = 0.25W = 1/4 watt
 ```
 
-## Tolerance
-
-
-## [Next - Resistors in Series](../Resistors_in_Series)
-
+## [Next - Resistor Tolerance](../Tolerance)
 
 <br/>
