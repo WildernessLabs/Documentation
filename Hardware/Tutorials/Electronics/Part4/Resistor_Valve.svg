@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="423px" height="226px" viewBox="0 0 423 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
     <title>Resistor_Valve</title>
     <desc>Created with Sketch.</desc>
     <defs>
@@ -13,13 +13,13 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Letter" transform="translate(-226.000000, -539.000000)">
             <g id="Resistor_Valve" transform="translate(226.000000, 534.000000)">
-                <text id="Source-Voltage-(V)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                <text id="Source-Voltage-(V)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
                     <tspan x="45.2040548" y="18.8256402">Source Voltage (V)</tspan>
                 </text>
-                <text id="Valve-(Resistor)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                <text id="Valve-(Resistor)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
                     <tspan x="90.0806043" y="228">Valve (Resistor)</tspan>
                 </text>
-                <text id="Water-Out-(wattage)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                <text id="Water-Out-(wattage)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
                     <tspan x="333" y="150">Water Out </tspan>
                     <tspan x="333" y="172">(wattage)</tspan>
                 </text>

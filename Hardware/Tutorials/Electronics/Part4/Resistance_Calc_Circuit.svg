@@ -1,76 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="765px" height="511px" viewBox="0 0 765 511" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+<svg width="546px" height="307px" viewBox="0 0 546 307" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
     <title>Resistance_Calc_Circuit</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Letter" transform="translate(-677.000000, -583.000000)">
-            <g id="Resistance_Calc_Circuit" transform="translate(676.000000, 578.000000)">
-                <g id="Multicell_Battery" transform="translate(184.000000, 264.000000) rotate(90.000000) translate(-184.000000, -264.000000) translate(114.000000, 238.000000)" stroke="#524740" stroke-width="3">
-                    <path d="M0,26 L52,26" id="Path-2"></path>
-                    <path d="M88,26 L140,26" id="Path-2-Copy"></path>
-                    <path d="M52,14 L52,38" id="Path-3"></path>
-                    <path d="M64,1.42108547e-14 L64,52" id="Path-4"></path>
-                    <path d="M76,14 L76,38" id="Path-3-Copy"></path>
-                    <path d="M88,1.42108547e-14 L88,52" id="Path-4-Copy"></path>
+        <g id="Letter" transform="translate(-721.000000, -572.000000)">
+            <g id="Resistance_Calc_Circuit" transform="translate(721.000000, 572.000000)">
+                <polyline id="Path-3" stroke="#524740" stroke-width="2" points="116 164 116 244 308 244"></polyline>
+                <polyline id="Path-3-Copy" stroke="#524740" stroke-width="2" points="388 244 458 244 458 159"></polyline>
+                <text id="Voltmeter" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="287.145777" y="130">Voltmeter</tspan>
+                </text>
+                <text id="Resistor" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                    <tspan x="478.084802" y="129">Resistor</tspan>
+                </text>
+                <text id="Ammeter" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="308.234827" y="306">Ammeter</tspan>
+                </text>
+                <path d="M477,61 L477,29" id="Line-11-Copy-3" stroke="#B09679" stroke-width="3"></path>
+                <path id="Line-11-Copy-3-decoration-1" d="M477,61 L474,50.2 L480,50.2 L477,61 Z" stroke="#B09679" stroke-width="3"></path>
+                <path d="M97,33 L97,65" id="Line-11-Copy-4" stroke="#B09679" stroke-width="3"></path>
+                <path id="Line-11-Copy-4-decoration-1" d="M97,33 L100,43.8 L94,43.8 L97,33 Z" stroke="#B09679" stroke-width="3"></path>
+                <g id="Voltmeter" transform="translate(192.000000, 84.000000)">
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="40" r="39"></circle>
+                    <text id="V" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                        <tspan x="34.957" y="47">V</tspan>
+                    </text>
                 </g>
-                <path d="M649.005858,109.757813 L742,109.757813 C742,205.779948 742,272.369792 742,309.527344 C742,346.684896 742,383.842448 742,421 L661,421" id="Path-2" stroke="#524740" stroke-width="3"></path>
-                <polyline id="Path-3" stroke="#524740" stroke-width="3" points="184 334.5 184 421 530.359375 421"></polyline>
-                <text id="Voltmeter" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                    <tspan x="415.145777" y="271">Voltmeter</tspan>
-                </text>
-                <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                    <tspan x="195.932475" y="301">+</tspan>
-                </text>
-                <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                    <tspan x="197.808975" y="241">-</tspan>
-                </text>
-                <text id="Variable-Resistance" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                    <tspan x="515.12153" y="491">Variable Resistance</tspan>
-                    <tspan x="530.908154" y="513">(Potentiometer)</tspan>
-                </text>
-                <text id="Ammeter" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                    <tspan x="541.234827" y="18">Ammeter</tspan>
-                </text>
-                <text id="Battery-(Source-Volt" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
-                    <tspan x="38.4618516" y="260">Battery</tspan>
-                    <tspan x="0.620104282" y="282">(Source Voltage)</tspan>
-                </text>
-                <path d="M760.15895,301.203227 L760.15895,246.300638" id="Line-11-Copy-3" stroke="#B09679" stroke-width="3"></path>
-                <path id="Line-11-Copy-3-decoration-1" d="M760.15895,246.300638 L757.15895,257.100638 L763.15895,257.100638 L760.15895,246.300638 Z" stroke="#B09679" stroke-width="3"></path>
-                <path d="M168.495235,336.300638 L168.495235,391.203227" id="Line-11-Copy-4" stroke="#B09679" stroke-width="3"></path>
-                <path id="Line-11-Copy-4-decoration-1" d="M168.495235,391.203227 L171.495235,380.403227 L165.495235,380.403227 L168.495235,391.203227 Z" stroke="#B09679" stroke-width="3"></path>
-                <g id="Voltmeter" transform="translate(263.000000, 197.000000)">
-                    <circle id="Oval" stroke="#524740" stroke-width="3" cx="68.716774" cy="68.9677754" r="68.5225525"></circle>
-                    <g id="V" transform="translate(56.000000, 47.000000)" font-size="36" font-family="Lato-Regular, Lato" fill="#524740" font-weight="normal">
-                        <text>
-                            <tspan x="0.914" y="36">V</tspan>
-                        </text>
-                    </g>
+                <g id="Ammeter" transform="translate(308.000000, 204.000000)">
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="40" r="39"></circle>
+                    <text id="A" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                        <tspan x="34.957" y="47">A</tspan>
+                    </text>
                 </g>
-                <g id="Ammeter" transform="translate(511.000000, 42.000000)">
-                    <circle id="Oval" stroke="#524740" stroke-width="3" cx="68.716774" cy="68.9677754" r="68.5225525"></circle>
-                    <g id="A" transform="translate(56.000000, 47.000000)" font-size="36" font-family="Lato-Regular, Lato" fill="#524740" font-weight="normal">
-                        <text>
-                            <tspan x="0.914" y="36">A</tspan>
-                        </text>
-                    </g>
+                <g id="DC_Power" transform="translate(76.000000, 84.000000)">
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="40" r="39"></circle>
+                    <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999917" fill="#524740">
+                        <tspan x="35.33" y="21">+</tspan>
+                    </text>
+                    <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999917" fill="#524740">
+                        <tspan x="37.2065" y="72.5">-</tspan>
+                    </text>
                 </g>
-                <g id="Potentiometer" transform="translate(530.000000, 341.000000)">
-                    <polyline id="Resistor-Copy" stroke="#524740" stroke-width="3" stroke-linejoin="bevel" points="0 80 10 80 20 54 41 106 60 54 80 106 100 54 120 106 130 80 140 80"></polyline>
-                    <g id="Line" transform="translate(95.000000, 0.000000)">
-                        <polygon id="Triangle" fill="#524740" fill-rule="nonzero" transform="translate(5.000000, 40.000000) scale(-1, 1) rotate(-180.000000) translate(-5.000000, -40.000000) " points="5 27 10 53 0 53"></polygon>
-                        <path d="M5,0 L5,40" id="Path-3" stroke="#524740" stroke-width="3"></path>
-                    </g>
-                </g>
-                <polyline id="Path-4" stroke="#524740" stroke-width="3" points="742.976562 306.445313 630 306.445313 630 341.144531"></polyline>
-                <path d="M332.330529,110.214147 L332.330529,196.214147" id="Path-5" stroke="#524740" stroke-width="3"></path>
-                <path d="M332.330529,335.214147 L332.330529,421.214147" id="Path-5-Copy" stroke="#524740" stroke-width="3"></path>
-                <polyline id="Path-6" stroke="#524740" stroke-width="3" points="184 196.708562 184 109.757812 510 109.757812"></polyline>
-                <circle id="Oval-2" fill="#524740" cx="332.5" cy="111.5" r="7.5"></circle>
-                <circle id="Oval-2-Copy" fill="#524740" cx="332.5" cy="421.5" r="7.5"></circle>
-                <circle id="Oval-2-Copy-2" fill="#524740" cx="742.5" cy="306.5" r="7.5"></circle>
+                <polyline id="Resistor" stroke="#524740" stroke-width="2" stroke-linejoin="bevel" transform="translate(458.000000, 124.000000) rotate(-270.000000) translate(-458.000000, -124.000000) " points="423 124 428 124 433 111 443 137 453 111 463 137 473 111 483 137 488 124 493 124"></polyline>
+                <text id="Source-Voltage" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="3.37885161" y="117">Source</tspan>
+                    <tspan x="0.362826874" y="139">Voltage</tspan>
+                </text>
+                <path d="M232,5.2141472 L232,85" id="Path-5" stroke="#524740" stroke-width="2"></path>
+                <path d="M232,163.214147 L232,243" id="Path-5-Copy" stroke="#524740" stroke-width="2"></path>
+                <polyline id="Path-6" stroke="#524740" stroke-width="2" points="116 84 116 5 458 5 458 89.7554793"></polyline>
+                <circle id="Oval-2" fill="#524740" cx="232" cy="5" r="5"></circle>
+                <circle id="Oval-2-Copy" fill="#524740" cx="232" cy="244" r="5"></circle>
             </g>
         </g>
     </g>

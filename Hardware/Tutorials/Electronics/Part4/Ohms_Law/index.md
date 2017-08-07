@@ -20,11 +20,11 @@ For historical reasons, Amperage is often labeled `I`, and sometimes Voltage is 
 I = V/R
 ```
 
-Consider the following circuit diagram that includes a battery and a resistor:
+Consider the following circuit diagram that includes a voltage source and a resistor:
 
 ![](../Ohms_Circuit.svg)
 
-If the battery is `1.5V`, and the resistance is `50ohms`, we can calculate the amount of amps that can make it through the circuit as:
+If the voltage source is `1.5V`, and the resistance is `50ohms`, we can calculate the amount of amps that can make it through the circuit as:
 
 ```
 Amps = 1.5V / 50Ω = 0.3A
@@ -38,19 +38,20 @@ Wattage = 1.5V * 0.3A = 0.045W
 
 ### Other Forms of Ohm's Law
 
-Using algebra, we can solve the equation of Ohm's law for resistance, or voltage:
+Using algebra, we can solve the equation of ohm's law for resistance, or voltage:
 
 #### Solved for Resistance (R)
 
 ```
 R = V / I
-ohms = volts / 
+ohms = volts / amps
 ```
 
 #### Solved for Voltage (V)
 
 ```
 V = I * R
+volts = amps / ohms
 ```
 
 ### Ohm's Law Pyramid
@@ -84,9 +85,9 @@ R = V / I
 ohms = volts / amps
 ```
 
-## See Also
- 
- * [Ohm's Law Calculator](http://www.ohmslawcalculator.com/ohms-law-calculator)
+### Online Ohm's Law Calculator
+
+There is a fantastic ohm's law calculator online [here](http://www.ohmslawcalculator.com/ohms-law-calculator).
 
 
 ## [Next - Resistor Power Rating](../Resistor_Power_Rating)

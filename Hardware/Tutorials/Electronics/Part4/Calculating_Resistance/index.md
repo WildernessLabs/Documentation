@@ -8,8 +8,8 @@ Given the following circuit:
 
 Which includes:
 
- * **Source Voltage** -  A charged battery.
- * **Variable Resistor (Potentiometer)** - Potentiometer is a resistor that provides varying resistance as the knob is turned.
+ * **Source Voltage** - A charged battery.
+ * **Resistor** - A simple resistor.
  * **Voltmeter** - An instrument for measuring voltage.
  * **Ammeter** - An instrument for measuring amperage.
 
