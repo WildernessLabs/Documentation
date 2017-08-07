@@ -14,12 +14,15 @@ Part 2 builds on the physical fundamentals and explores the ability of electrici
 
 ![](Part2/Water_Tower_w_Units.svg)
 
-### Part 3 - Current Types and Power Sources
+### [Part 3 - Current Types; AC & DC](Part3/Current_Types)
 
+Part 3 introduces the two fundamental current types, direct current (DC), and alternating current. It explores the difference between the two, and what they're used for.
+
+![](Part3/AC_DC.svg)
 
 
 ### Part 4 - Resistance & Ohm's Law - Coming Soon!
 
-Part 3 expands the relationship between amperage and voltage, and adds another piece to the fundamental laws of electricity; resistance. In doing so, it explores one of the most important laws in electricity, Ohm's law, and explains how to use it.
+Part 4 expands the relationship between amperage and voltage, and adds another piece to the fundamental laws of electricity; resistance. In doing so, it explores one of the most important laws in electricity, Ohm's law, and explains how to use it.
 
 ![](Part4/Ohms_Law_Pyramid.svg)

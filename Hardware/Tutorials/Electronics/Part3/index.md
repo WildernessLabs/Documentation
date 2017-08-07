@@ -8,8 +8,6 @@ title: Part 3 - Power Sources & Current Types
 
 ### [Alternating Current](Alternating_Current)
 
-### [Batteries](Batteries)
-
-### [Other Power Sources](?)
+### [AC Characteristics](AC_Characteristics)
 
 ### [Review]()
