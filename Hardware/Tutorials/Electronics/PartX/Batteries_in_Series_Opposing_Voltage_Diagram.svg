@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="340px" height="150px" viewBox="0 0 340 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Batteries_in_Series_Opposing_Voltage_Diagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1055.000000, -665.000000)">
+            <g id="Batteries-in-Series-Opposing" transform="translate(1056.000000, 665.000000)">
+                <g id="Batteries_in_Series_Opposing_Voltage_Diagram">
+                    <g id="Singlecell_Battery_w_Polarity-Copy" transform="translate(64.000000, 101.000000)">
+                        <path d="M0,25 L32,25" id="Path-2" stroke="#524740" stroke-width="2"></path>
+                        <path d="M38,25 L70,25" id="Path-2-Copy" stroke="#524740" stroke-width="2"></path>
+                        <path d="M32,17.7462687 L32,32.4328358" id="Path-4" stroke="#524740" stroke-width="2"></path>
+                        <path d="M38,9.17910448 L38,41" id="Path-3-Copy" stroke="#524740" stroke-width="2"></path>
+                        <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                            <tspan x="42.25" y="18.0447761">+</tspan>
+                        </text>
+                        <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                            <tspan x="19" y="18.0447761">-</tspan>
+                        </text>
+                        <text id="5V-Copy" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                            <tspan x="44" y="48">5V</tspan>
+                        </text>
+                    </g>
+                    <g id="Singlecell_Battery_w_Polarity-Copy-3" transform="translate(169.000000, 121.500000) scale(-1, 1) translate(-169.000000, -121.500000) translate(134.000000, 101.000000)">
+                        <path d="M0,25 L32,25" id="Path-2" stroke="#524740" stroke-width="2"></path>
+                        <path d="M38,25 L70,25" id="Path-2-Copy" stroke="#524740" stroke-width="2"></path>
+                        <path d="M32,17.7462687 L32,32.4328358" id="Path-4" stroke="#524740" stroke-width="2"></path>
+                        <path d="M38,9.17910448 L38,41" id="Path-3-Copy" stroke="#524740" stroke-width="2"></path>
+                        <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                            <tspan x="42.25" y="18.0447761">+</tspan>
+                        </text>
+                        <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                            <tspan x="19" y="18.0447761">-</tspan>
+                        </text>
+                    </g>
+                    <text id="5V-Copy" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                        <tspan x="178" y="149">5V</tspan>
+                    </text>
+                    <g id="Singlecell_Battery_w_Polarity-Copy-4" transform="translate(204.000000, 101.000000)">
+                        <path d="M0,25 L32,25" id="Path-2" stroke="#524740" stroke-width="2"></path>
+                        <path d="M38,25 L70,25" id="Path-2-Copy" stroke="#524740" stroke-width="2"></path>
+                        <path d="M32,17.7462687 L32,32.4328358" id="Path-4" stroke="#524740" stroke-width="2"></path>
+                        <path d="M38,9.17910448 L38,41" id="Path-3-Copy" stroke="#524740" stroke-width="2"></path>
+                        <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                            <tspan x="42.25" y="18.0447761">+</tspan>
+                        </text>
+                        <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.900000036" fill="#524740">
+                            <tspan x="19" y="18.0447761">-</tspan>
+                        </text>
+                        <text id="10V" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                            <tspan x="44" y="48">10V</tspan>
+                        </text>
+                    </g>
+                    <g id="Voltmeter-Copy" transform="translate(129.000000, 0.000000)">
+                        <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="40" r="39"></circle>
+                        <text id="10V" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                            <tspan x="23.617" y="47">10V</tspan>
+                        </text>
+                    </g>
+                    <polyline id="Path-5" stroke="#524740" stroke-width="2" points="274 126 338 126 338 39 209 39"></polyline>
+                    <polyline id="Path-5-Copy" stroke="#524740" stroke-width="2" transform="translate(64.500000, 82.500000) scale(-1, 1) translate(-64.500000, -82.500000) " points="65 126 129 126 129 39 -5.68434189e-14 39"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

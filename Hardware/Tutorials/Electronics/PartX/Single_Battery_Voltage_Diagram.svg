@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="414px" height="373px" viewBox="0 0 414 373" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Single_Battery_Voltage_Diagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-190.000000, -344.000000)">
+            <g id="Single-Battery-Diagram" transform="translate(192.000000, 344.000000)">
+                <g id="Single_Battery_Voltage_Diagram">
+                    <g id="Singlecell_Battery_w_Polarity" transform="translate(134.000000, 264.000000)">
+                        <path d="M0,41 L64,41" id="Path-2" stroke="#524740" stroke-width="3"></path>
+                        <path d="M76,41 L140,41" id="Path-2-Copy" stroke="#524740" stroke-width="3"></path>
+                        <path d="M64,29 L64,53" id="Path-4" stroke="#524740" stroke-width="3"></path>
+                        <path d="M76,15 L76,67" id="Path-3-Copy" stroke="#524740" stroke-width="3"></path>
+                        <text id="+" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
+                            <tspan x="84.79" y="34">+</tspan>
+                        </text>
+                        <text id="5V" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
+                            <tspan x="49.431" y="108">5V</tspan>
+                        </text>
+                        <text id="-" font-family="Lato-Regular, Lato" font-size="34" font-weight="normal" letter-spacing="1.70000005" fill="#524740">
+                            <tspan x="38.3345" y="34">-</tspan>
+                        </text>
+                    </g>
+                    <g id="Voltmeter" transform="translate(125.000000, 0.000000)">
+                        <circle id="Oval" stroke="#524740" stroke-width="3" cx="80" cy="80" r="78.5"></circle>
+                        <text id="V" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" letter-spacing="1.8" fill="#524740">
+                            <tspan x="67.914" y="94">V</tspan>
+                        </text>
+                        <text id="5V" font-family="Lato-Regular, Lato" font-size="28" font-weight="normal" letter-spacing="1.08118844" fill="#555555">
+                            <tspan x="160.641623" y="28">5V</tspan>
+                        </text>
+                    </g>
+                    <polyline id="Path-5" stroke="#524740" stroke-width="3" points="274 305 410 305 410 80 285 80"></polyline>
+                    <polyline id="Path-5-Copy" stroke="#524740" stroke-width="3" transform="translate(68.000000, 192.500000) scale(-1, 1) translate(-68.000000, -192.500000) " points="0 305 136 305 136 80 11 80"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

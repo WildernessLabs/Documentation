@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="141px" height="141px" viewBox="0 0 141 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
     <title>Voltmeter</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Diodes-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-271.000000, -28.000000)">
-            <g id="Voltmeter" transform="translate(256.000000, 28.000000)">
+    <g id="Meters" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-199.000000, -19.000000)">
+            <g id="Voltmeter" transform="translate(184.000000, 19.000000)">
                 <g transform="translate(15.000000, 0.000000)">
-                    <circle id="Oval" stroke="#524740" stroke-width="3" cx="70.716774" cy="70.9677754" r="68.5225525"></circle>
-                    <text id="V" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" letter-spacing="1.8" fill="#524740">
-                        <tspan x="58.914" y="85">V</tspan>
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="40" r="39"></circle>
+                    <text id="V" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999976" fill="#524740">
+                        <tspan x="34.957" y="47">V</tspan>
                     </text>
                 </g>
             </g>

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="140px" height="53px" viewBox="0 0 140 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+<svg width="70px" height="28px" viewBox="0 0 70 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
     <title>Resistor</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Resistors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="bevel">
-        <g id="Artboard" transform="translate(-52.000000, -58.000000)" stroke-width="3" stroke="#524740">
-            <polyline id="Resistor" points="52 85 62 85 72 59 92.1283482 110.451451 112 59 132 110.451451 152 59 172 110.451447 182 85 192 85"></polyline>
+        <g id="Artboard" transform="translate(-52.000000, -122.000000)" stroke-width="2" stroke="#524740">
+            <g id="Resistor" transform="translate(52.000000, 123.000000)">
+                <g id="Group">
+                    <polyline id="Resistor" points="0 13 5 13 10 0 20 26 30 0 40 26 50 0 60 26 65 13 70 13"></polyline>
+                </g>
+            </g>
         </g>
     </g>
 </svg>

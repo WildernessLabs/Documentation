@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="423px" height="226px" viewBox="0 0 423 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Resistor_Valve</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="129.676105" y="135.352118" width="24" height="38"></rect>
+        <rect id="path-2" x="119.676105" y="147.352118" width="45" height="15"></rect>
+        <path d="M30,139.352118 L30,45.4735225 L0,45.4735225 L0,169.564797 L30,169.564797 L30,169.352118 L130.676105,169.352118 L130.676105,139.352118 L30,139.352118 Z" id="path-3"></path>
+        <rect id="path-4" x="152.676105" y="139.352118" width="127" height="30"></rect>
+        <rect id="path-5" x="127.676105" y="122.352118" width="8" height="29"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Letter" transform="translate(-226.000000, -539.000000)">
+            <g id="Resistor_Valve" transform="translate(226.000000, 534.000000)">
+                <text id="Source-Voltage-(V)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="45.2040548" y="18.8256402">Source Voltage (V)</tspan>
+                </text>
+                <text id="Valve-(Resistor)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="90.0806043" y="228">Valve (Resistor)</tspan>
+                </text>
+                <text id="Water-Out-(wattage)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="333" y="150">Water Out </tspan>
+                    <tspan x="333" y="172">(wattage)</tspan>
+                </text>
+                <path d="M143,202 L143,183" id="Line-4-Copy" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M309,154 L290,154" id="Line-4-Copy-2" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M43,62 L65,29" id="Line-4-Copy" stroke="#B09679" stroke-width="2" stroke-linecap="square"></path>
+                <g id="Rectangle-2">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#555555" stroke-width="1" x="130.176105" y="135.852118" width="23" height="37"></rect>
+                </g>
+                <g id="Rectangle-Copy-2">
+                    <use fill="#23ABE3" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#555555" stroke-width="2" x="120.676105" y="148.352118" width="43" height="13"></rect>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="#23ABE3" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <path stroke="#555555" stroke-width="2" d="M29,46.4735225 L1,46.4735225 L1,168.564797 L29,168.564797 L29,168.352118 L129.676105,168.352118 L129.676105,140.352118 L29,140.352118 L29,46.4735225 Z"></path>
+                </g>
+                <g id="Rectangle-Copy-3">
+                    <use fill="#23ABE3" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <rect stroke="#555555" stroke-width="2" x="153.676105" y="140.352118" width="125" height="28"></rect>
+                </g>
+                <g id="Rectangle-3" transform="translate(131.676105, 136.852118) rotate(-45.000000) translate(-131.676105, -136.852118) ">
+                    <use fill="#B09679" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <rect stroke="#555555" stroke-width="1" x="128.176105" y="122.852118" width="7" height="28"></rect>
+                </g>
+                <polygon id="Triangle-2" fill="#B09679" points="323.5 153.962402 305.5 158.5 305.5 149.424805"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
