@@ -10,11 +10,7 @@ title: Review
  * AC is described by its _period_ (cycle time), _frequency_ (cycles per second, measured in _hertz_ (hz), and _amplitude_ (magnitude of waveform measured in volts).
 
  
-## Next - Part 4; Resistance and Ohm's Law - Coming Soon!
-
-<!-- 
 ## [Next - Part 4; Resistance and Ohm's Law](../../Part4/Resistors)
--->
 
 
 <br/>
