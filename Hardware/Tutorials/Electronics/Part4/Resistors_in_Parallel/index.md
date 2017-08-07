@@ -67,6 +67,6 @@ Therefore, (10), 5KΩ resistors in parallel would be:
 5,000Ω / 10 = 500Ω
 ```
 
-## [Next - Resistor Circuit Comparison](../Resistor_Circuit_Comparison)
+## [Next - Non-Ohmic Devices](../Non-Ohmic_Devices)
 
 <br/>
