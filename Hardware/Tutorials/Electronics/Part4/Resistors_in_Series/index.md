@@ -33,6 +33,10 @@ So no matter where in the circuit that we measure the current, we would get the 
 
 ![](../Common_Current_w_Values.svg)
 
+### Power Calculation
+
+[wtf]
+
 
 ## Advantages and Disadvantages of Series Resistors
 

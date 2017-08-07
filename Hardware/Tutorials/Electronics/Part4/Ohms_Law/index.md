@@ -35,7 +35,7 @@ Consider the following circuit diagram that includes a voltage source and a resi
 If the voltage source is `1.5V`, and the resistance is `50ohms`, we can calculate the amount of amps that can make it through the circuit as:
 
 ```
-Amps = 1.5V / 50Ω = 0.3A
+Amps = I = V / R = 1.5V / 50Ω = 0.3A
 ```
 
 From that, we can also calculate the wattage/power as `(watts = amps * volts)`:

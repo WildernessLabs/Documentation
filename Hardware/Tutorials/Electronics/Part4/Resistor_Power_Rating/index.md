@@ -6,14 +6,11 @@ In addition to amount of resistance, resistors have two other important characte
 
 ## Power Rating
 
-When power flows through a resistor, some of the energy is converted into heat. The amount of heat a resistor can safely dissipate is 
+When power flows through a resistor, some of the energy is converted into heat. The amount of heat a resistor can safely dissipate is characterized by its _power rating_, and is specified in wattage.
 
-[]
+Most common resistors have a power rating between 1/8 watt (0.125W), and 1 watt. Resistors with higher power ratings are usually referred to as _power resistors_, and used specifically to dissipate power.
 
- are rated to be able to safely dissipate up to a certain amount of power. This is a resistors _power rating_.
-
-[rating - 1/4watt, so forth, is for the amount of heat it can dissipate]
-
+<!-- TODO: get some power resistor images in here -->
 
 ## Power Calculation Shortcuts
 
