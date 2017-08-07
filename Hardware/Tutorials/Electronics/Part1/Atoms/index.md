@@ -8,7 +8,7 @@ Physical things we interact with in the world are made of molecules, which are t
 
 ![](../Water_Molecules.svg)
 
-Most molecules are very small, atoms are very, very small. To give an idea of the size of an atom; a cup of water has about 6.022 x 10<sup>24</sup> water molecules. Water's chemical symbol is H<sub>2</sub>0, meaning that it is a molecule made of Hydrogen (x2) atoms, and one Oxygen atom. Therefore there are three times as many atoms as molecules in a glass of water, or 18.066 x 10<sup>24</sup> or 180,660,000,000,000,000,000,000,000,000 atoms.
+Most molecules are very small, atoms are very, very small. To give an idea of the size of an atom; a cup of water has about 6.022 x 10<sup>24</sup> water molecules. Water's chemical symbol is H<sub>2</sub>0, meaning that it is a molecule made of Hydrogen (x2) atoms, and one Oxygen atom. Therefore there are three times as many atoms as molecules in a glass of water, or 18.066 x 10<sup>24</sup> or 18,066,000,000,000,000,000,000,000 atoms.
 
 ## Protons, Neutrons, and Electrons
 
