@@ -57,7 +57,7 @@ namespace UARTTest
 		/// </summary>
 		/// <remarks>
 		/// Note that the transmitter and the receiver must be configured to use the
-		/// same baud rate, numebr of bits etc.
+		/// same baud rate, number of bits etc.
 		/// </remarks>
 		static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
 		static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
@@ -126,7 +126,7 @@ namespace UARTTest
             {
                 count++;
                 String messageToSend = count.ToString();
-                Debug.Print("Sending messge: " + messageToSend);
+                Debug.Print("Sending message: " + messageToSend);
                 messageToSend += "\n";
                 transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
             }
@@ -145,7 +145,7 @@ The first task is to create variables for the serial ports:
 /// </summary>
 /// <remarks>
 /// Note that the transmitter and the receiver must be configured to use the
-/// same baud rate, numebr of bits etc.
+/// same baud rate, number of bits etc.
 /// </remarks>
 static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
 static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
@@ -216,13 +216,13 @@ The white dots show the points where the protocol analyser is expecting to read 
 Running the above application generates the following output:
 
 ```
-Sending messge: 1<br/>
-Message received: 1<br/>
-Sending messge: 2<br/>
-Message received: 2<br/>
-Sending messge: 3<br/>
-Message received: 3<br/>
-Sending messge: 4<br/>
+Sending message: 1
+Message received: 1
+Sending message: 2
+Message received: 2
+Sending message: 3
+Message received: 3
+Sending message: 4
 Message received: 4
 ```
 
