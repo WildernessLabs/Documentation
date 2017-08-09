@@ -13,7 +13,7 @@ namespace UARTTest
 		/// </summary>
 		/// <remarks>
 		/// Note that the transmitter and the receiver must be configured to use the
-		/// same boud rate, numebr of bits etc.
+		/// same boud rate, number of bits etc.
 		/// </remarks>
 		static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
 		static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
@@ -82,7 +82,7 @@ namespace UARTTest
             {
                 count++;
                 String messageToSend = count.ToString();
-                Debug.Print("Sending messge: " + messageToSend);
+                Debug.Print("Sending message: " + messageToSend);
                 messageToSend += "\n";
                 transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
             }
