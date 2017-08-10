@@ -12,7 +12,7 @@ Most common resistors have a power rating between 1/8 watt (0.125W), and 1 watt.
 
 ## Power Calculation Shortcuts
 
-On the last page, we learned how to calculate the amount of power (in wattage) passes through a resistor circuit by first using ohm's law to calculate both voltage and amperage, and then calculate the power from that. However, we can use a couple power calculation shortcuts to calculate power if we only know amperage and resistance, or voltage and resistance.
+On the last page, we learned how to calculate the amount of power (in wattage) passes through a resistor circuit by first using ohm's law to calculate both voltage and amperage, and then calculate the power from that. However, we can use a couple of power calculation shortcuts to calculate power if we only know amperage and resistance, or voltage and resistance.
 
 ### Power Calculation when Amperage and Resistance is Known
 
