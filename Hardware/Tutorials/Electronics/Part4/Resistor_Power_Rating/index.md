@@ -58,7 +58,7 @@ We can substitute that into the watt definition
 P = Watts = V * I = V * (V / R) = V^2 / R
 ```
 
-Thefore, if we know voltage and resistance, we can calculate power in a ciruit as:
+Therefore, if we know voltage and resistance, we can calculate power in a circuit as:
 
 ```
 P = V^2 / R
@@ -89,7 +89,7 @@ P = 0.100A ^2 * 20Ω = 0.2W
 
 The nearest power rating to `0.2` would usually be a 1/4 watt.
 
-#### 2) If the source voltage is 5V, and the resistance is 100Ω, what minimum power rating must the resistor haved?
+#### 2) If the source voltage is 5V, and the resistance is 100Ω, what minimum power rating must the resistor have?
 
 ```
 P = 5^2 / 100Ω = 0.25W = 1/4 watt.
