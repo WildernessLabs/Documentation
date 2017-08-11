@@ -8,13 +8,6 @@ For example, a `570Ω` resistor with a 10% tolerance can have an actual resistan
 
 The tolerance needed depends on the circuit being designed. We'll explore which kinds of circuits need which tolerances later, when we start looking at various circuit designs.
 
-### Tolerance Band
-
-For axial lead resistors (the kind typically used for building prototype circuits), the tolerance of a resistor is specified by the last color on the resistor:
-
-![4-band resistor color chart](/Common_Files/Reading_4_Band_Resistors.svg)
-
-
 ### Preferred Values
 
 Resistors common in values from 1Ω to many mega (million) Ω values. Because of the wide range of values that resistors could possibly come in, and the fact that due to tolerances, most stated resistor values would actually have overlapping actual values, they come in what is known as [_preferred values_](https://en.wikipedia.org/wiki/Preferred_number#E-series). 

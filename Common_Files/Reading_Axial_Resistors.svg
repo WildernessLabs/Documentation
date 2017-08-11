@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="937px" height="718px" viewBox="0 0 937 718" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Reading_Axial_Resistors</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-2" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-3" x="377" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-4" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-5" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-6" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-7" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-8" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-9" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-10" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-11" x="377" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-12" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-13" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-14" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-15" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-16" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-17" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-18" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-19" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-20" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-21" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-22" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-23" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-24" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-25" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-26" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-27" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-28" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-29" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-30" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-31" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-32" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-33" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-34" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-35" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-36" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-37" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-38" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-39" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-40" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-41" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-42" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-43" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-44" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-45" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-46" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-47" x="0" y="0" width="145" height="35" rx="5"></rect>
+        <rect id="path-48" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-49" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-50" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-51" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-52" x="107" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-53" x="197" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-54" x="287" y="0" width="75" height="35" rx="5"></rect>
+        <rect id="path-55" x="0" y="0" width="133" height="35" rx="5"></rect>
+        <rect id="path-56" x="0" y="0" width="145" height="35" rx="5"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Reading-Resistors" transform="translate(-41.000000, -16.000000)">
+            <g id="Reading_Axial_Resistors" transform="translate(41.000000, 17.000000)">
+                <path d="M332,68.3300781 L332,144.433524" id="Path-3" stroke="#23ABE3" stroke-width="5"></path>
+                <polyline id="Path-4" stroke="#23ABE3" stroke-width="5" stroke-linecap="round" points="407.962891 76.5214844 407.962891 92.4492188 616.347656 92.4492188 616.347656 144.596278"></polyline>
+                <polyline id="Path-4-Copy" stroke="#23ABE3" stroke-width="5" stroke-linecap="square" points="361.962891 66.953125 361.962891 109.99219 471.360239 109.99219 471.360239 144.596278"></polyline>
+                <polyline id="Path-2" stroke="#23ABE3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="271.810547 77.7226562 271.810547 93.3430092 146.118637 93.3430092 146.118637 144.482613"></polyline>
+                <polyline id="Path-2-Copy" stroke="#23ABE3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="302.673828 68.6425781 302.673828 112.303475 236.118637 111.951172 236.118637 144.482613"></polyline>
+                <g id="Table" transform="translate(0.000000, 139.000000)">
+                    <g id="White" transform="translate(0.000000, 450.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <rect stroke="#555555" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <rect stroke="#555555" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-5">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <rect stroke="#555555" stroke-width="3" x="378.5" y="1.5" width="130" height="32" rx="5"></rect>
+                        </g>
+                        <text id="9" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="139.62" y="26">9</tspan>
+                        </text>
+                        <text id="9" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="229.62" y="26">9</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-9">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <rect stroke="#555555" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="9-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="319.62" y="26">9</tspan>
+                        </text>
+                        <text id="x1,000M" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="412.583" y="26">x1,000M</tspan>
+                        </text>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">White</tspan>
+                        </text>
+                    </g>
+                    <g id="Gold" transform="translate(0.000000, 495.000000)">
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#FED02D" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                <rect stroke="#555555" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x0.1" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="81.332" y="26">x0.1</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-9" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#FED02D" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                <rect stroke="#555555" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±5%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="51.4235" y="26">±5%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Gold</tspan>
+                        </text>
+                    </g>
+                    <g id="Gold-Copy" transform="translate(0.000000, 540.000000)">
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                <rect stroke="#555555" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x0.01" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="68.572" y="26">x0.01</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-9" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-8"></use>
+                                <rect stroke="#555555" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±10%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="45.0435" y="26">±10%</tspan>
+                            </text>
+                        </g>
+                        <text id="Silver" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Silver</tspan>
+                        </text>
+                    </g>
+                    <g id="Gray" transform="translate(0.000000, 405.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#999999" fill-rule="evenodd" xlink:href="#path-9"></use>
+                            <rect stroke="#555555" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#999999" fill-rule="evenodd" xlink:href="#path-10"></use>
+                            <rect stroke="#555555" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-5">
+                            <use fill="#999999" fill-rule="evenodd" xlink:href="#path-11"></use>
+                            <rect stroke="#555555" stroke-width="3" x="378.5" y="1.5" width="130" height="32" rx="5"></rect>
+                        </g>
+                        <text id="8" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="139.62" y="26">8</tspan>
+                        </text>
+                        <text id="8" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="229.62" y="26">8</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-8">
+                            <use fill="#999999" fill-rule="evenodd" xlink:href="#path-12"></use>
+                            <rect stroke="#555555" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="8-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="319.62" y="26">8</tspan>
+                        </text>
+                        <text id="x100M" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="430.337" y="26">x100M</tspan>
+                        </text>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Gray</tspan>
+                        </text>
+                    </g>
+                    <g id="Purple" transform="translate(0.000000, 360.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#9013FE" fill-rule="evenodd" xlink:href="#path-13"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#9013FE" fill-rule="evenodd" xlink:href="#path-14"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="7" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="139.62" y="26">7</tspan>
+                        </text>
+                        <text id="7" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="229.62" y="26">7</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-15">
+                            <use fill="#9013FE" fill-rule="evenodd" xlink:href="#path-15"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="7-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="319.62" y="26">7</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#9013FE" fill-rule="evenodd" xlink:href="#path-16"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x10M" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="66.097" y="26">x10M</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-8" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#9013FE" fill-rule="evenodd" xlink:href="#path-17"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±0.1%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="41.9475" y="26">±0.1%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Purple</tspan>
+                        </text>
+                    </g>
+                    <g id="Blue" transform="translate(0.000000, 315.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#4A90E2" fill-rule="evenodd" xlink:href="#path-18"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#4A90E2" fill-rule="evenodd" xlink:href="#path-19"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="6" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="139.62" y="26">6</tspan>
+                        </text>
+                        <text id="6" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="229.62" y="26">6</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-11">
+                            <use fill="#4A90E2" fill-rule="evenodd" xlink:href="#path-20"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="6-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="319.62" y="26">6</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#4A90E2" fill-rule="evenodd" xlink:href="#path-21"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x1M" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="78.857" y="26">x1M</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-7" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#4A90E2" fill-rule="evenodd" xlink:href="#path-22"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±0.25%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="36.0675" y="26">±0.25%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Blue</tspan>
+                        </text>
+                    </g>
+                    <g id="Green" transform="translate(0.000000, 270.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-23"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-24"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="5" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="139.62" y="26">5</tspan>
+                        </text>
+                        <text id="5" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="229.62" y="26">5</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-10">
+                            <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-25"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="5-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="319.62" y="26">5</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-26"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x100k" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="62.588" y="26">x100k</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-6" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-27"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±0.5%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="42.4475" y="26">±0.5%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Green</tspan>
+                        </text>
+                    </g>
+                    <g id="Yellow" transform="translate(0.000000, 225.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#F8E71C" fill-rule="evenodd" xlink:href="#path-28"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#F8E71C" fill-rule="evenodd" xlink:href="#path-29"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="4" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="139.62" y="26">4</tspan>
+                        </text>
+                        <text id="4" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="229.62" y="26">4</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-17">
+                            <use fill="#F8E71C" fill-rule="evenodd" xlink:href="#path-30"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="4-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="319.62" y="26">4</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#F8E71C" fill-rule="evenodd" xlink:href="#path-31"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x10k" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="75.348" y="26">x10k</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-5" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#F8E71C" fill-rule="evenodd" xlink:href="#path-32"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±4%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="53.847" y="26">±4%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Yellow</tspan>
+                        </text>
+                    </g>
+                    <g id="Orange" transform="translate(0.000000, 180.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-33"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-34"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="3" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="139.62" y="26">3</tspan>
+                        </text>
+                        <text id="3" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="229.62" y="26">3</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-18">
+                            <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-35"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="3-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="319.62" y="26">3</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-36"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x1k" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="88.108" y="26">x1k</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-4" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-37"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±3%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="51.847" y="26">±3%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Orange</tspan>
+                        </text>
+                    </g>
+                    <g id="Red" transform="translate(0.000000, 135.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#D0021B" fill-rule="evenodd" xlink:href="#path-38"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#D0021B" fill-rule="evenodd" xlink:href="#path-39"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="2" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="139.62" y="26">2</tspan>
+                        </text>
+                        <text id="2" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="229.62" y="26">2</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-14">
+                            <use fill="#D0021B" fill-rule="evenodd" xlink:href="#path-40"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="2-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="319.62" y="26">2</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#D0021B" fill-rule="evenodd" xlink:href="#path-41"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x100" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="73.764" y="26">x100</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-3" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#D0021B" fill-rule="evenodd" xlink:href="#path-42"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±2%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="51.4235" y="26">±2%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Red</tspan>
+                        </text>
+                    </g>
+                    <g id="Brown" transform="translate(0.000000, 90.000000)">
+                        <g id="Rectangle-Copy-7">
+                            <use fill="#8B572A" fill-rule="evenodd" xlink:href="#path-43"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy-6">
+                            <use fill="#8B572A" fill-rule="evenodd" xlink:href="#path-44"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="1" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="139.62" y="26">1</tspan>
+                        </text>
+                        <text id="1" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="229.62" y="26">1</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-16">
+                            <use fill="#8B572A" fill-rule="evenodd" xlink:href="#path-45"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="1-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="319.62" y="26">1</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#8B572A" fill-rule="evenodd" xlink:href="#path-46"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x10" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="86.524" y="26">x10</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy-2" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-5">
+                                <use fill="#8B572A" fill-rule="evenodd" xlink:href="#path-47"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="±1%" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="51.4235" y="26">±1%</tspan>
+                            </text>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="26">Brown</tspan>
+                        </text>
+                    </g>
+                    <g id="Black" transform="translate(0.000000, 45.000000)">
+                        <g id="Rectangle">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-48"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-49"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="27">Black</tspan>
+                        </text>
+                        <text id="0" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="139.62" y="26">0</tspan>
+                        </text>
+                        <text id="0-copy" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="229.62" y="26">0</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-13">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-50"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="0-copy-2" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                            <tspan x="319.62" y="26">0</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-2">
+                                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-51"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="x1" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#EEEEEE">
+                                <tspan x="99.284" y="26">x1</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Labels">
+                        <g id="Rectangle">
+                            <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-52"></use>
+                            <rect stroke="#999999" stroke-width="3" x="108.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <g id="Rectangle-Copy">
+                            <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-53"></use>
+                            <rect stroke="#999999" stroke-width="3" x="198.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="Color" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal" fill="#555555">
+                            <tspan x="0" y="27">Color</tspan>
+                        </text>
+                        <text id="1" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="133.62" y="26">1</tspan>
+                        </text>
+                        <text id="st" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" fill="#555555">
+                            <tspan x="145.668" y="20">st</tspan>
+                        </text>
+                        <text id="2" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="223.62" y="26">2</tspan>
+                        </text>
+                        <text id="nd" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" fill="#555555">
+                            <tspan x="236.056" y="20">nd</tspan>
+                        </text>
+                        <g id="Rectangle-Copy-12">
+                            <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-54"></use>
+                            <rect stroke="#999999" stroke-width="3" x="288.5" y="1.5" width="72" height="32" rx="5"></rect>
+                        </g>
+                        <text id="x" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                            <tspan x="317.522" y="26">x</tspan>
+                        </text>
+                        <text id="th" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" fill="#555555">
+                            <tspan x="329.668" y="20">th</tspan>
+                        </text>
+                        <g id="Magnitude" transform="translate(377.000000, 0.000000)">
+                            <g id="Rectangle-Copy-2">
+                                <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-55"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="130" height="32" rx="5"></rect>
+                            </g>
+                            <text id="Multiplier" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="22.335" y="26">Multiplier</tspan>
+                            </text>
+                        </g>
+                        <g id="Magnitude-Copy" transform="translate(547.000000, 0.000000)">
+                            <g id="Rectangle-Copy-2">
+                                <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-56"></use>
+                                <rect stroke="#999999" stroke-width="3" x="1.5" y="1.5" width="142" height="32" rx="5"></rect>
+                            </g>
+                            <text id="Tolerance" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal" fill="#555555">
+                                <tspan x="26.223" y="26">Tolerance</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Tolerance" transform="translate(709.000000, 474.000000)" fill="#524740">
+                        <text id="Common-Tolerances" font-family="Lato-Regular, Lato" font-size="22" font-weight="normal">
+                            <tspan x="34" y="69">Common Tolerances</tspan>
+                        </text>
+                        <text id="}" font-family="Lato-Light, Lato" font-size="92" font-weight="300">
+                            <tspan x="0.43" y="91">}</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Example" transform="translate(573.000000, 9.000000)" font-size="22" font-family="Lato-Regular, Lato" font-weight="normal">
+                    <text id="Example-resistor:" fill="#524740">
+                        <tspan x="0.5" y="22">Example resistor:</tspan>
+                    </text>
+                    <text id="=-160kΩ" fill="#524740">
+                        <tspan x="114.5" y="52">= 160kΩ</tspan>
+                    </text>
+                    <text id="1" fill="#8B572A">
+                        <tspan x="0.5" y="52">1</tspan>
+                    </text>
+                    <text id="6" fill="#4A90E2">
+                        <tspan x="24.5" y="52">6</tspan>
+                    </text>
+                    <text id="0" fill="#000000">
+                        <tspan x="48.5" y="52">0</tspan>
+                    </text>
+                    <text id="x1k" fill="#F5A623">
+                        <tspan x="72.5" y="52">x1k</tspan>
+                    </text>
+                </g>
+                <g id="Resitor" transform="translate(154.000000, 0.000000)">
+                    <path d="M0.5,40.5 L364.5,40.5" id="Line" stroke="#979797" stroke-width="11" stroke-linecap="round"></path>
+                    <path d="M131.513041,13 C124.199743,5.01040334 113.684993,0 102,0 C79.90861,0 62,17.90861 62,40 C62,62.09139 79.90861,80 102,80 C113.189576,80 123.306038,75.4054489 130.565731,68 L233.434269,68 C240.693962,75.4054489 250.810424,80 262,80 C284.09139,80 302,62.09139 302,40 C302,17.90861 284.09139,0 262,0 C250.315007,0 239.800257,5.01040334 232.486959,13 L131.513041,13 Z" id="Combined-Shape" stroke="#979797" fill="#A6CFE0"></path>
+                    <path d="M148,13 L148,68" id="Line" stroke="#4A90E2" stroke-width="12"></path>
+                    <path d="M178,13 L178,68" id="Line-Copy" stroke="#000000" stroke-width="12"></path>
+                    <path d="M208,13 L208,68" id="Line-Copy-4" stroke="#F5A623" stroke-width="12"></path>
+                    <path d="M117,9 L117,71" id="Line-Copy-2" stroke="#8B572A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M254,7 L254,72" id="Line-Copy-3" stroke="#FED02D" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
