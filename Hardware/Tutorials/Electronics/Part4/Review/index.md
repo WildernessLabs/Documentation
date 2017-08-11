@@ -13,6 +13,9 @@ We're going to dive deeper into resistors and resistor networks later, but
    * `Resistance = Voltage / Amperage` or `R = V/I`
    * Where `I` is amps, `R` is ohms, and `V` is voltage.
  * Resistors have a _power rating_ which specifies the amount of power (wattage) they can safely handle.
+ * In addition to the standard definition of a watt (`volts * amps`), power can be calculated when only volts or amps and resistance is known:
+   * When amperage (current) and resistance is known: `P = I^2 * R`
+   * When voltage (force) and resistance is known: `P = V^2 / R`
  * Resistors wired in _series_ (end-to-end) have a total resistance which is the sum of the resistance of each resistor.
  * _Conductance_ is the reciprocal of resistance, `(1/R)`, and is measured in siemens (S), but most often abbreviated as `G`.
  * Resistors wired in _parallel_ have a total resistance which is the sum of the conductance (in siemens) of each resistor, and then converted back to resistance.

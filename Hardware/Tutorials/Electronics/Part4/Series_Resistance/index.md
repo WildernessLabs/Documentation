@@ -54,6 +54,6 @@ A disadvantage of series resistance is that if one resistor fails open (no longe
 Because there's little advantage to a series resistor network in terms of pure resistance, usually resistors in series are used in circuits to divide voltage.
 
 
-## [Next - Resistors in Parallel](../Resistors_in_Parallel)
+## [Next - Parallel Resistance](../Parallel_Resistance)
 
 <br/>

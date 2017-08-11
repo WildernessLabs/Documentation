@@ -87,6 +87,6 @@ Since we know the voltage and resistance, we can use the `P = V^2 / R` form of t
 Pn = V^2 / Rn
 ```
 
-## [Next - Non-Ohmic Devices](../Non-Ohmic_Devices)
+## [Next - Resistor Tolerance](../Resistor_Tolerance)
 
 <br/>
