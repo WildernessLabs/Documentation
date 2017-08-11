@@ -3,7 +3,7 @@ title: Reading a Resistor's Value
 ---
 
 ## Through Hole (PTH)
-![4-band resistor color chart](Reading_4_Band_Resistors.svg)
+![4-band resistor color chart](/Common_Files/Reading_4_Band_Resistors.svg)
 
 ## Surface Mount (SMD)
 There are 2 primary methods of labeling SMD resistors.

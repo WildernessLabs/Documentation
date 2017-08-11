@@ -21,8 +21,10 @@ Part 3 introduces the two fundamental current types, direct current (DC), and al
 ![](Part3/AC_DC.svg)
 
 
-### Part 4 - Resistance & Ohm's Law - Coming Soon!
+### [Part 4 - Resistance & Ohm's Law](Part4/Resistance)
 
 Part 4 expands the relationship between amperage and voltage, and adds another piece to the fundamental laws of electricity; resistance. In doing so, it explores one of the most important laws in electricity, Ohm's law, and explains how to use it.
 
 ![](Part4/Ohms_Law_Pyramid.svg)
+
+### [Part 5 - Kirchhoff's Law and Voltage](Part5/Kirchhoffs_First_Law)
