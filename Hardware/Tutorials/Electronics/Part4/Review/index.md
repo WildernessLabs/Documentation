@@ -7,7 +7,7 @@ We're going to dive deeper into resistors and resistor networks later, but
 
  * _Resistors_ are electronic components made of materials that restrict the flow of electricity.
  * Resistance is measured in _ohms_, often denoted as `Ω`.
- * _Ohm's law_ states that the resistance provides a proportional reduction of current flowm and is codified as:
+ * _Ohm's law_ states that the resistance provides a proportional reduction of current flow and is codified as:
    * `Voltage = Amperage * Resistance` or `V = I*R` 
    * `Amperage = Voltage / Resistance` or `I = V/R`
    * `Resistance = Voltage / Amperage` or `R = V/I`
