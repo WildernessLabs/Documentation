@@ -18,8 +18,6 @@ title: Part 4 - Resistance and Ohm's Law
 
 ### [Resistor Tolerance](Resistor_Tolerance)
 
-### [Non-Ohmic Devices](Non-Ohmic_Devices)
-
 ### [Review](Review)
 
 <!--

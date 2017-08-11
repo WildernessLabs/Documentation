@@ -45,7 +45,7 @@ Resistor series that have a higher tolerance need more preferred values to cover
 It continues on from there as well. The E96 series has a tolerance of 1%, so it has 96 preferred values, and there's even an E192 series that has a huge set of 192 possible values per magnitude. Given that there 7 possible magnitudes (ranging from 1 to 1,000,000), that means that the E192 series has  1,344 (`192 * 7`) different resistor values!
 
 
-## [Next - Non-Ohmic Devices](../Non-Ohmic_Devices)
+## [Next - Review](../Review)
 
 
 <br/>
