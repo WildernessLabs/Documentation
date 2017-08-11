@@ -25,6 +25,14 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 * [v4.3.2.3](http://downloads.wildernesslabs.co/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip)
 
+## 3D Printable Prototyping Baseboard
+
+![](Baseboards_Medium.jpg)
+
+* **[Base](Baseboard_3D_Chamfered_Base.stl)**
+* **[Logo (for multi-head 3D printers)](Baseboard_3D_Chamfered_Logo.stl)**
+
+
 
 ## Discontinued Products (Netduino 1, Plus, & Mini)
 
