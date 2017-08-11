@@ -1,21 +1,27 @@
 ---
-title: Part 3 - Resistance and Ohm's Law
+title: Part 4 - Resistance and Ohm's Law
 ---
 
-In part two, we learned about the relationship between amperage (quantity) and voltage (force) of electricity. In this part, we're going to explore another pieces of that fundamental relationship, resistence, and how that relationship is codified in _Ohm's Law_.
-
-### [Resistors](Resistors/)
+### [Resistance & Ohms](Resistance)
 
 ### [Ohms Law](Ohms_Law/)
 
+### [Calculating Simple Resistance](Calculating_Resistance)
+
 ### [Resistor Power Rating](Resistor_Power_Rating)
 
-### [Calculating Resistance](Calculating_Resistance)
+### [Series Resistance](Series_Resistance)
+
+### [Parallel Resistance](Parallel_Resistance)
+
+### [Reading Resistor Values](Reading_Resistors)
+
+### [Resistor Tolerance](Resistor_Tolerance)
+
+### [Non-Ohmic Devices](Non-Ohmic_Devices)
 
 ### [Review](Review)
 
-
-# Part 4 - Coming Soon!
 <!--
  
 # Things to add
