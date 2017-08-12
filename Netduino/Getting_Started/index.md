@@ -60,7 +60,7 @@ Once your development environment is configured, make sure your board has the la
 
 After you've created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet's name:
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;

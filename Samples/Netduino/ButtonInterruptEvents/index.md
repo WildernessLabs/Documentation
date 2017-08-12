@@ -7,7 +7,7 @@ This sample illustrates wiring up an event to fire when interrupts come in on an
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;

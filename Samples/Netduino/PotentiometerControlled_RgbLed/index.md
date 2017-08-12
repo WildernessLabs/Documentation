@@ -6,7 +6,7 @@ This sample sets the color of an RGB LED from the value read from a potentiomete
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using System.Threading;
 using Microsoft.SPOT;

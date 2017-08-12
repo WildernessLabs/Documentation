@@ -40,7 +40,7 @@ Prototyping this with a Netduino would look something like this:
 
 The following code can then be used to make that LED blink by repeatedly turning it on and off:
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;

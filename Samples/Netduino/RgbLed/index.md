@@ -8,7 +8,7 @@ It works by using the [Additive Color](https://www.wikiwand.com/en/Additive_colo
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using System.Threading;
 using Microsoft.SPOT;

@@ -44,7 +44,7 @@ The output voltage on a Netduino digital output pin is 3.3V.  Creating a digital
 
 Changing the output port to a _PWM_ port and setting the duty cycle to 10% will change the reading on the multimeter.  Consider the following application:
 
-```CSharp
+```csharp
 using System.Threading;
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.NetduinoPlus;

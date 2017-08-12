@@ -8,7 +8,7 @@ It illustrates a basic program flow in Netduino and how to make the onboard LED 
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;

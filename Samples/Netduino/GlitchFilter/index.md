@@ -6,7 +6,7 @@ The following sample illustrates configuring the glitch filter to 5 milliseconds
 
 #Code
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;

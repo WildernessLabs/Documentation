@@ -15,7 +15,7 @@ Note that the Netduino also has a white power LED indicating the board is powere
 Both the onboard LED and Button are accessible via an `OutputPort` or `InputPort` object. For instance, the following example illustrates turning the LED on when the Button is pressed.
 
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;

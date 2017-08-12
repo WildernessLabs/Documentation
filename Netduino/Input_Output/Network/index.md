@@ -38,19 +38,20 @@ On the Netduino, chances are, the deployed application will actually start up be
 
 If DHCP is configured, a call to the static `IPAddress.GetDefaultLocalAddress()`  will suffice:
 
-```CSharp
+```csharp
 while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any) {
 	Debug.Print ("Sleep while obtaining an IP");
 	Thread.Sleep (10);
 };
 ```
+
 `IPAddress.Any` returns an empty IP address (`0.0.0.0`), so this loop will run until a real IP Address is obtained.
 
 ### Using a Static IP
 
 When using a static IP, add the `NetduinoExtensions.dll` reference and make a call to 
 
-```
+```csharp
 while (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) {
 	Debug.Print ("Sleep while obtaining waiting for the network to initialize.");
 	Thread.Sleep (10);
@@ -64,7 +65,7 @@ Netduino has sophisticated multithreading support (especially for an MCU platfor
 # Code Example
 
  
-```CSharp 
+```csharp 
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 using System;

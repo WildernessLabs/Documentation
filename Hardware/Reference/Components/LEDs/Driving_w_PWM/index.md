@@ -10,7 +10,7 @@ PWM can be configured by either setting the duty cycle, as a percentage of on ti
 
 The following code sets pin 3 to duty cycle of 50%, and the onboard LED to a duty cycle of 33% (by manually setting the period and duration and cycles between the two:
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using SecretLabs.NETMF.Hardware;

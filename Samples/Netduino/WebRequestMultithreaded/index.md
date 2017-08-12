@@ -12,7 +12,7 @@ This sample makes a web request to http://google.com. It illustrates how to:
 
 # Code
 
-```CSharp 
+```csharp 
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 using System;

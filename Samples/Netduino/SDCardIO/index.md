@@ -6,7 +6,7 @@ This sample illustrates access the SD card and writing to a file using standard 
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using System.IO;
 using Microsoft.SPOT;

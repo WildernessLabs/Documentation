@@ -50,7 +50,7 @@ There are two yellow and two blue leads in the photo.  The second blue and yello
 
 Open Visual Studio (or Xamarin Studio) and follow the instructions on the [Getting Started](/Netduino/Getting_Started/) page and start a new project.  Copy the following code and paste it into the _program.cs_ file replacing the default code.
 
-```CSharp
+```csharp
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using System.Threading;
@@ -101,7 +101,7 @@ Reconnect the Netduino to the USB cable then save and run the application.  If e
 
 The data sheet for the TMP102 states that the default address for the TMP102 is 0x48, so the first task is to create a new `I2CDevice` object that defines how we connect to the TMP102:
 
-```CSharp
+```csharp
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 ```
 
@@ -109,13 +109,13 @@ The above code creates the `tmp102` object where the device has an address of 0x
 
 Temperature readings are returned from the TMP102 as a two byte value and so a buffer is needed to store the results of the read operation:
 
-```CSharp
+```csharp
 byte[] buffer = new byte[2];
 ```
 
 NETMF uses transaction to communicate with I2C devices.  Using an array of transactions allows multiple operation to be completed at the same time.  In this case, there is only one read operation and the array of transactions consists of a single element:
 
-```CSharp
+```csharp
 I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
 reading[0] = I2CDevice.CreateReadTransaction(buffer);
 ```
@@ -126,7 +126,7 @@ In the above code, an array `reading` is created to hold the single transaction 
 
 At this point the initialization and set up is complete.  The main program loop is entered and the temperature reading is read repeatedly using the following statement:
 
-```CSharp
+```csharp
 int bytesRead = tmp102.Execute(reading, 100);
 ```
 
