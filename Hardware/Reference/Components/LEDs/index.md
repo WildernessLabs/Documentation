@@ -44,9 +44,9 @@ LEDs can also emit light in the infrared spectrum.  These LEDs are used in remot
 
 ## LED Power
 
-LEDs are extremely efficient and have a wide variety of uses.  Consumer electronics and hobbyist projects use LEDs to indicate the status of a system, is the power on, is the circuit connected to a network etc.
+LEDs are extremely efficient and have a wide variety of uses.  Consumer electronics and hobbyist projects use LEDs to indicate the status of a system, if the power on, if the circuit connected to a network, etc.
 
-Higher power LEDs are used in modern day lighting.  Such applications often require the use of a [heatsink](https://en.wikipedia.org/wiki/Heat_sink) in order to prevent the LED from destroying itself through overheating.
+Higher power LEDs are used in modern-day lighting.  Such applications often require the use of a [heatsink](https://en.wikipedia.org/wiki/Heat_sink) in order to prevent the LED from destroying itself through overheating.
 
 ## Limiting Current
 
@@ -59,7 +59,7 @@ Because of this, the current that drives an LED is typically limited by one of t
 
 ## Uses and More Information
 
-An LED is actually an exotic mix of materials that result in a [PN junction](https://en.wikipedia.org/wiki/P%E2%80%93n_junction).  Normally, electric current flowing through the LED causes it to emit light.  However, photons hitting the PN junction can also cause a tiny current flow and as [Forrest Mims shows here](http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/), you can detect this current and use the LED as a light sensor.
+An LED is actually an exotic mix of materials that result in a [PN junction](https://en.wikipedia.org/wiki/P%E2%80%93n_junction).  Normally, electric current flowing through the LED causes it to emit light.  However, photons hitting the PN junction can also cause a tiny current flow and, as [Forrest Mims shows here](http://makezine.com/projects/make-36-boards/how-to-use-leds-to-detect-light/), you can detect this current and use the LED as a light sensor.
 
 
 # Digital LEDs

@@ -16,7 +16,7 @@ In this case, the constant of proportionality is replaced by the resistance (in 
 
 V = I &sdot; R
 
-Given two of the three values it is possible to calculate the unknown value.
+Given two of the three values, it is possible to calculate the unknown value.
 
 This equation can be rearranged to allow the calculation of the current:
 

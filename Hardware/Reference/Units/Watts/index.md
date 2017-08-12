@@ -2,7 +2,7 @@
 title: Watts
 ---
 
-The _[watt](https://en.wikipedia.org/wiki/Watt)_ (W) is a convenience unit to describe the amount of work that current can do, as a factor of voltage and amperage and is defined as:
+The _[watt](https://en.wikipedia.org/wiki/Watt)_ (W) is a convenience unit to describe the amount of work that current can do, as a factor of voltage and amperage, and is defined as:
 
 ```
 Watts = Volts * Amps
