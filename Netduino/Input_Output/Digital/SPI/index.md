@@ -68,7 +68,7 @@ namespace BasicSPI
                 ChipSelect_ActiveState: false,          // Chip select is active low.
                 ChipSelect_SetupTime: 0,                // Amount of time between selection and the clock starting
                 ChipSelect_HoldTime: 0,                 // Amount of time the device must be active after the data has been read.
-                Clock_Edge: false,                      // Sample on the faling edge.
+                Clock_Edge: false,                      // Sample on the falling edge.
                 Clock_IdleState: true,                  // Clock is idle when high.
                 Clock_RateKHz: 2000,                    // 2MHz clock speed.
                 SPI_mod: SPI_Devices.SPI1               // Use SPI1
@@ -96,16 +96,10 @@ Zooming in on the output for one character shows the relationship between the cl
 
 ![Single Character in the Message](SingleCharacterOutput.png)
 
-## Controlling the LCD
-
-_Add information about controlling the LCD including same code_
+# [Controlling the LCD](ControllingLCD)
 
 # Further Reading
 
 - [Serial Peripheral Interface Bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) description
 - [HD44780 LCD Interface](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) This is a common interface used to drive LCD displays.
 - [Adafruit I2C/ SPI Character LCD Backpack](https://www.adafruit.com/product/292)
-
-# Project Ideas
-
-- Consider displaying the current temperture using the TMP102
