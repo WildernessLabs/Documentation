@@ -4,7 +4,7 @@ title: Controlling an SPI LCD
 
 The [previous section of this guide](..) demonstrated simple data transmission using SPI. This section will build on the previous guide and demonstrate how to display data on an [LCD display fitted with an SPI backpack](https://www.adafruit.com/product/292).
 
-![Netduino Controlling 16x2 LCD](SPILCDHelloWorld.png)
+![Netduino Controlling 16x2 LCD](LCDDisplay.gif)
 
 ## LCD Displays
 
