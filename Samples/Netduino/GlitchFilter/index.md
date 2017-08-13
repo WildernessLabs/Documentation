@@ -4,7 +4,7 @@ title: Glitch Filtering
 
 The following sample illustrates configuring the glitch filter to 5 milliseconds.
 
-#Code
+# Code
 
 ```csharp
 using System;
