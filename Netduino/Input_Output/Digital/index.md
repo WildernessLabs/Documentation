@@ -21,7 +21,7 @@ Digital ports can be set to stand at a high or low voltage, in what's knows as _
 
 The following is the signature for one of the `InputPort` constructors:
 
-```CSharp
+```csharp
 public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
 ```
 
@@ -30,13 +30,14 @@ public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
 For example, the following code initializes an [`InputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx) (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to 0v, so that by default, it doesn't have a current running through it:
 
 
-```CSharp
-var inputPort = new InputPort(Cpu.Pin.GPIO_Pin2, false,Port.ResistorMode.PullDown);
+```csharp
+var inputPort = new InputPort(Cpu.Pin.GPIO_Pin2, false,
+Port.ResistorMode.PullDown);
 ```
 
 The port's value can then be accessed via the `Read` method:
 
-```CSharp
+```csharp
 bool state = inputPort.Read();
 ```
 
@@ -46,7 +47,7 @@ In addition to polling/requesting a port for its value, the .NET MicroFramework 
 
 For example, the [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents) illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:
 
-```
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -100,19 +101,19 @@ In order to counteract this noise, a technique called _Glitch Filtering_ can be 
 
 To enable glitch filtering, pass `true` for the `glitchFilter` parameter when instantiating an `InputPort`:
 
-```CSharp
+```csharp
 static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
 ```
 
 And then, set the time span to filter events to, usually 5 milliseconds will do the trick, but depending on the hardware more may be needed:
 
-```CSharp
+```csharp
 Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
 ```
 
 The following program comes from the [Glitch Filtering Sample](/Samples/Netduino/GlitchFilter) and illustrates configuring the glitch filter to 5 milliseconds:
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
@@ -151,13 +152,13 @@ namespace GlitchFilter
 
 To write to a port, an [`OutputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx) is instantiated. The code below is from the same [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents):
 
-```CSharp
+```csharp
 static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 ```
 
 To send a signal to the port, the `Write` method is called, passing in `false` for a low signal (0v), or `true` for a high (3.3v) signal:
 
-```CSharp
+```csharp
 _led.Write(true); 
 ```
 

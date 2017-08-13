@@ -6,7 +6,7 @@ This sample lights up an LED with a PWM signal so that a current limiting resist
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using SecretLabs.NETMF.Hardware;

@@ -59,7 +59,7 @@ The start and stop signals are taken care of by the .NET Microframework and are 
 In code, the sequence of events looks as follows:
 
 
-```CSharp
+```csharp
 // create a new TMP102 device at address 0x48
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 
@@ -86,7 +86,7 @@ To prevent address collision, some devices allow the address to be configured.  
 
 The following code illustrates creating two I2C devices on different addresses:
 
-```CSharp
+```csharp
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
 ```

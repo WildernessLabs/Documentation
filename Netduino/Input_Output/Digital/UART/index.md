@@ -41,7 +41,7 @@ Connect R<sub>x</sub> of COM1 to SCL (T<sub>x</sub> of COM4) and T<sub>x</sub> o
 
 The following example has COM1as the transmitter and COM4 as the receiver:
 
-```CSharp
+```csharp
 using System;
 using System.Threading;
 using System.IO.Ports;
@@ -139,7 +139,7 @@ namespace UARTTest
 
 The first task is to create variables for the serial ports:
 
-```CSharp
+```csharp
 /// <summary>
 /// Two com ports, one sender and one receiver.
 /// </summary>
@@ -153,20 +153,20 @@ static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBi
 
 Once created it is necessary to open the com ports:
 
-```CSharp
+```csharp
 transmitter.Open();
 receiver.Open();
 ```
 
 An event handler is used to process any data received on the _receiver_ serial port:
 
-```CSharp
+```csharp
 receiver.DataReceived += SerialDataReceived;
 ```
 
 The messages are held in .NET _string_ objects.  The _Encoding.UTF8.GetBytes_ method converts the _string_ objects into an array of bytes that can be transmitted over the serial port:
 
-```CSharp
+```csharp
 transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
 ```
 
@@ -174,7 +174,7 @@ The _Write_ method transmits a sequence of bytes to the receiver.
 
 The most complex part of this application is the _SerialDataReceived_ event.  The method is complex due to the way in which the method is called.  The _SerialDataReceived_ method seems to be called randomly.  For instance, sending _123456789_ may generate two calls to the event handler, one of _1234_ and a second for _56789_.  The event handler needs to take this into consideration when reassembling the messages.  In this case, the newline character "\n" is used as an end of message marker.  Characters are added to the message buffer until a newline is encountered.  At this point the message is considered complete and a new message is started.
 
-```CSharp
+```csharp
 static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
 {
 	if ((e.EventType == SerialData.Chars) && (sender == receiver))

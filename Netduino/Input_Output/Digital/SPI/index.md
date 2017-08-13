@@ -51,7 +51,7 @@ LCDs are readily available and provide a really useful way of displaying data in
 
 First thing that any SPI application needs to do is to configure the SPI interface to match the characteristics of the device being used.  The following application demonstrates basic SPI setup and how to output data:
 
-```CSharp
+```csharp
 using System.Text;
 using System.Threading;
 using Microsoft.SPOT.Hardware;

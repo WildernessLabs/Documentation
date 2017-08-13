@@ -7,7 +7,7 @@ Illustrates basic Port IO by reading the value of the Onboard Button circuit and
 
 # Code
 
-```CSharp
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;

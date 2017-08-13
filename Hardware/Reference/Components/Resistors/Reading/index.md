@@ -12,7 +12,7 @@ The first uses 3 numbers such as 424, this can be understood as 42 * 10<sup>4</s
 
 The second method, EIA Standard, uses 2 numbers and a letter such as 66B and this will require the tables below to decode.
 
-The numbers are a lookup code
+The numbers are a lookup code.
 
 | CODE | Value | | CODE | Value | | CODE | Value | | CODE | Value |
 |------|-------|-|------|-------|-|------|-------|-|------|-------|
@@ -54,3 +54,5 @@ The letter serves as a multiplier against the values above.
 | D      | 1 000      |
 | E      | 10 000     |
 | F      | 100 000    |
+
+So, that 66B has a value of 475 in the first table and a multiplier of 10 from the second table, which would be 475 * 10 = 4,750 Ohms.

@@ -4,7 +4,7 @@ title: Part 4 - Resistance and Ohm's Law
 
 ### [Resistance & Ohms](Resistance)
 
-### [Ohms Law](Ohms_Law/)
+### [Ohm's Law](Ohms_Law/)
 
 ### [Calculating Simple Resistance](Calculating_Resistance)
 

@@ -36,7 +36,7 @@ A common cathode LED would probably not need that logic inversion.
 
 ## Code
 
-```
+```csharp
 using System;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -45,24 +45,24 @@ using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace RGB_Blinky
 {
-	public class Program
-	{
-		public static void Main()
+    public class Program
+    {
+        public static void Main()
         {
             OutputPort redLed = new OutputPort(Pins.GPIO_PIN_D3, false);
-			OutputPort greenLed = new OutputPort(Pins.GPIO_PIN_D4, false);
-			OutputPort blueLed = new OutputPort(Pins.GPIO_PIN_D5, false);
+            OutputPort greenLed = new OutputPort(Pins.GPIO_PIN_D4, false);
+            OutputPort blueLed = new OutputPort(Pins.GPIO_PIN_D5, false);
 
             // just for seeing that the program is running
-			OutputPort onboardLed = new OutputPort(Pins.ONBOARD_LED, false);
+            OutputPort onboardLed = new OutputPort(Pins.ONBOARD_LED, false);
 
-            // because it's common annode, on is actually false. if you're using
+            // because it's common anode, on is actually false. if you're using
             // a common cathode LED, you'll want to reverse this.
             bool ledOn = false;
             bool ledOff = true;
 
-			while (true)
-			{
+            while (true)
+            {
                 onboardLed.Write(true);
                   
                 // make it RED
@@ -75,24 +75,23 @@ namespace RGB_Blinky
                 onboardLed.Write(false);
 
                 // make it GREEN
-				redLed.Write(ledOff);
-				greenLed.Write(ledOn);
-				blueLed.Write(ledOff);
+                redLed.Write(ledOff);
+                greenLed.Write(ledOn);
+                blueLed.Write(ledOff);
 
-				Thread.Sleep(250);
+                Thread.Sleep(250);
 
                 // Make it BLUE
-				redLed.Write(ledOff);
-				greenLed.Write(ledOff);
+                redLed.Write(ledOff);
+                greenLed.Write(ledOff);
                 blueLed.Write(ledOn);
 
-				Thread.Sleep(250);
-			}
-		}
-	}
+                Thread.Sleep(250);
+            }
+        }
+    }
 }
 ```
-
 
 ## Schematic
 

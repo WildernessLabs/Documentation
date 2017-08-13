@@ -55,7 +55,7 @@ So for the above calculation, we had inputs of `1.5V` and `0.3V` and an output o
 
 ### Other Forms of Ohm's Law
 
-Using algebra, we can solve the equation of ohm's law for resistance, or voltage:
+Using algebra, we can solve the equation of Ohm's law for resistance, or voltage:
 
 #### Solved for Resistance (R)
 
@@ -104,7 +104,7 @@ ohms = volts / amps
 
 ### Online Ohm's Law Calculator
 
-There is a fantastic ohm's law calculator online [here](http://www.ohmslawcalculator.com/ohms-law-calculator).
+There is a fantastic Ohm's law calculator online [here](http://www.ohmslawcalculator.com/ohms-law-calculator).
 
 ## [Next - Calculating Simple Resistance](../Calculating_Resistance)
 

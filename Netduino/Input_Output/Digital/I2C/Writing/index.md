@@ -17,7 +17,7 @@ As noted in the [previous section](../Reading/), the `Execute` method can execut
 * Reconfigure the TMP102 to return a 13-bit temperature reading
 * Read the temperature as a 13-bit value
 
-```CSharp
+```csharp
 I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
 byte[] repointToTemperatureRegister = { 0x00 };
 reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);
@@ -124,7 +124,7 @@ The specification for the application was defined as follows:
 
 The code for this becomes:
 
-```CSharp
+```csharp
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using System.Threading;
@@ -238,13 +238,13 @@ namespace TMP102ReadWrite
 
 The application will read the configuration twice, once to verify the power on state, the second time to verify that the change from 12-bit mode to 13-bit mode has been applied.
 
-```CSharp
+```csharp
 private static byte[] ReadTMP102Configuration(I2CDevice device)
 ```
 
 This method will take an `I2CDevice` object and read the configuration.  The method uses two transactions, a write transaction will adjust the pointer register to point to the configuration register:
 
-```CSharp
+```csharp
 I2CDevice.I2CTransaction[] readConfiguration = new I2CDevice.I2CTransaction[2];
 byte[] pointerBuffer = new byte[1];
 pointerBuffer[0] = 1;
@@ -253,14 +253,14 @@ readConfiguration[0] = I2CDevice.CreateWriteTransaction(pointerBuffer);
 
 The second transaction reads the configuration from the TMP102:
 
-```CSharp
+```csharp
 byte[] currentConfig = new byte[2];
 readConfiguration[1] = I2CDevice.CreateReadTransaction(currentConfig);
 ```
 
 Finally, the method executes the two transactions and displays the configuration in hexadecimal:
 
-```CSharp
+```csharp
 device.Execute(readConfiguration, 100);
 Debug.Print("Configuration register: " + ByteToHex(currentConfig[0]) + ", " + ByteToHex(currentConfig[1]));
 ```
@@ -275,7 +275,7 @@ The second green dot indicates the change from the write operation (setting the 
 
 Next operation is to change the mode to 13-bit mode by changing the configuration register:
 
-```CSharp
+```csharp
 byte[] currentConfig = ReadTMP102Configuration(tmp102);
 I2CDevice.I2CTransaction[] changeConfig = new I2CDevice.I2CTransaction[1];
 byte[] newConfiguration = { 0x01, currentConfig[0], (byte) (currentConfig[1] | 0x10) };
@@ -290,7 +290,7 @@ This results in the following data transmission:
 
 The `Sleep` method call ensures that the TMP102 has time to make at least one measurement before the application starts to read the temperature from the sensor.
 
-```CSharp
+```csharp
 I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[2];
 byte[] repointToTemperatureRegister = { 0x00 };
 reading[0] = I2CDevice.CreateWriteTransaction(repointToTemperatureRegister);

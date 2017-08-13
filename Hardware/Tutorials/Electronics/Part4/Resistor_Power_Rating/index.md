@@ -12,7 +12,7 @@ Most common resistors have a power rating between 1/8 watt (0.125W), and 1 watt.
 
 ## Power Calculation when only Voltage or Amperage and Resistance is Known
 
-On the last page, we learned how to calculate the amount of power (in wattage) passes through a resistor circuit by first using ohm's law to calculate both voltage and amperage, and then calculate the power from that. However, we can use a couple of power calculation laws to calculate power if we only know amperage and resistance, or voltage and resistance.
+On the last page, we learned how to calculate the amount of power (in wattage) passes through a resistor circuit by first using Ohm's law to calculate both voltage and amperage, and then calculate the power from that. However, we can use a couple of power calculation laws to calculate power if we only know amperage and resistance, or voltage and resistance.
 
 ### Power Calculation when Amperage and Resistance is Known
 
@@ -24,13 +24,13 @@ Power = I(in amps) * Voltage
 P = I * V
 ```
 
-And ohm's law, solved for voltage, is:
+And Ohm's law, solved for voltage, is:
 
 ```
 V = I * R 
 ```
 
-We can substitute ohm's law (`I * R` for `V`), into the watt/power definition:
+We can substitute Ohm's law (`I * R` for `V`), into the watt/power definition:
 
 ```
 P = I * (I * R) = I^2 * R
@@ -46,7 +46,7 @@ P = I^2 * R
 
 We can also solve for power if we only know voltage and resistance. 
 
-Starting with ohm's law, solved for amperage:
+Starting with Ohm's law, solved for amperage:
 
 ```
 I = V / R
@@ -95,7 +95,7 @@ The nearest power rating to `0.2` would usually be a 1/4 watt.
 P = 5^2 / 100Ω = 0.25W = 1/4 watt.
 ```
 
-We can test this by doing the long hand, as well. First, let's use ohm's law to solve for current/amperage:
+We can test this by doing the long hand, as well. First, let's use Ohm's law to solve for current/amperage:
 
 ```
 I = V / R = 5V / 100Ω = 0.05A

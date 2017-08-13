@@ -14,11 +14,11 @@ The first step in accessing the network from a Netduino is to configure the netw
 
 MFDeploy is included in the .NET MicroFramework installation. To configure network settings on Netduino, launch MFDeploy from the start menu and then access the settings via the `Target` > `Configuration` > `Network` menu:
 
-![](MFDeploy_Network_Menu.png)
+![Menu navigation in MFDeploy to launch the Network Configuration popup](MFDeploy_Network_Menu.png)
 
 From there, Network settings are configured in the popup. For example, the following settings will configure a WiFi enabled Netduino 3 to connect to the open wireless network `Cabin in the Woods` using 802.11 b, g, or n radio and use DHCP to obtain an IP Address:
 
-![](MFDeploy_Network_Dialog.png)
+![The Network Configuration popup in MFDeploy](MFDeploy_Network_Dialog.png)
 
 Note that if you get the error `unable to erase configuration sector memory`, when trying to save, you may have to close the network settings dialog and run `Plug-in` > `Reboot Stop` from the menu first.
 
@@ -30,7 +30,7 @@ Note: The Mac Deploy tool does not yet support network configuration. Support is
 
 ## Waiting for the Network to Initialize
 
-On the Netduino, chances are, the deployed application will actually startup before the network has fully initialized. There are two fundamental ways to do this. The simplest is to wait in a loop while the IP address is obtained (if using DHCP), or accepted (if using a static IP). The more sophisticated way is to use multi-threading and wait on network available events.
+On the Netduino, chances are, the deployed application will actually start up before the network has fully initialized. There are two fundamental ways to do this. The simplest is to wait in a loop while the IP address is obtained (if using DHCP), or accepted (if using a static IP). The more sophisticated way is to use multi-threading and wait on network available events.
 
 ## Wait Loop
 
@@ -38,19 +38,20 @@ On the Netduino, chances are, the deployed application will actually startup bef
 
 If DHCP is configured, a call to the static `IPAddress.GetDefaultLocalAddress()`  will suffice:
 
-```CSharp
+```csharp
 while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any) {
 	Debug.Print ("Sleep while obtaining an IP");
 	Thread.Sleep (10);
 };
 ```
+
 `IPAddress.Any` returns an empty IP address (`0.0.0.0`), so this loop will run until a real IP Address is obtained.
 
 ### Using a Static IP
 
 When using a static IP, add the `NetduinoExtensions.dll` reference and make a call to 
 
-```
+```csharp
 while (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) {
 	Debug.Print ("Sleep while obtaining waiting for the network to initialize.");
 	Thread.Sleep (10);
@@ -64,7 +65,7 @@ Netduino has sophisticated multithreading support (especially for an MCU platfor
 # Code Example
 
  
-```CSharp 
+```csharp 
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 using System;
