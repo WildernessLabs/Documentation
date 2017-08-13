@@ -157,7 +157,7 @@ while (true)
 }
 ```
 
-The source code including the MicroLiquidCrystal source files can be found [here](/Samples/Netduino/LCDMicroLiquidCrystal).
+The source code including the MicroLiquidCrystal source files can be found [here](https://github.com/WildernessLabs/Netduino_Samples/tree/master/LCDDisplay).
 
 # Further Reading
 
