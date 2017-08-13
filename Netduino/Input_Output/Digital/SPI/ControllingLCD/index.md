@@ -157,6 +157,8 @@ while (true)
 }
 ```
 
+The source code including the MicroLiquidCrystal source files can be found [here](/Samples/Netduino/LCDMicroLiquidCrystal).
+
 # Further Reading
 
 * [Serial Peripheral Interface Bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) description
