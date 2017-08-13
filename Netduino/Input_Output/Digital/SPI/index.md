@@ -6,7 +6,7 @@ Serial Peripheral Interface (SPI) is a protocol for high speed communication ove
 
 - Master Out, Salve In (MOSI)
 - Master In, Slave Out (MISO)
-- Serial clock (SPCK)
+- Serial clock (SCLK)
 - Chip Select (CS) sometimes called Slave Select (SS)
 
 SPI implements a master / slave architecture and in an embedded system the master device is normally a microcontroller with sensors or output devices acting as slaves.
@@ -21,7 +21,7 @@ Data from the master is transmitted to the slave devices on the MOSI signal line
 
 Slave devices send data to the master device using the MISO channel.
 
-### SPCK
+### SCLK
 
 The clock signal is controlled by the master device.  The short distances involved mean that high clock speeds are possible.
 
@@ -31,15 +31,15 @@ SPI allows for multiple devices to be connected to the SPI bus.  The CS line all
 
 ### Modes
 
-SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the `SPI.Configuration` object to control how the data is sampled.
+SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the _SPI.Configuration_ object to control how the data is sampled.
 
 The four possible modes are determined by the active state of the clock signal (high or low) and when the data is sampled (rising or falling edge of the clock).
 
 ## Netduino SPI Pins
 
-The Netduino has a SPI interface defined on digital IO pins 11, 12, 13 and 4:
+The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
+![N3 Pinout Diagram](../../../About/Netduino3_Pinout.svg)
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 
@@ -51,7 +51,7 @@ LCDs are readily available and provide a really useful way of displaying data in
 
 First thing that any SPI application needs to do is to configure the SPI interface to match the characteristics of the device being used.  The following application demonstrates basic SPI setup and how to output data:
 
-```CSharp
+```csharp
 using System.Text;
 using System.Threading;
 using Microsoft.SPOT.Hardware;
@@ -68,7 +68,7 @@ namespace BasicSPI
                 ChipSelect_ActiveState: false,          // Chip select is active low.
                 ChipSelect_SetupTime: 0,                // Amount of time between selection and the clock starting
                 ChipSelect_HoldTime: 0,                 // Amount of time the device must be active after the data has been read.
-                Clock_Edge: false,                      // Sample on the faling edge.
+                Clock_Edge: false,                      // Sample on the falling edge.
                 Clock_IdleState: true,                  // Clock is idle when high.
                 Clock_RateKHz: 2000,                    // 2MHz clock speed.
                 SPI_mod: SPI_Devices.SPI1               // Use SPI1
@@ -96,16 +96,10 @@ Zooming in on the output for one character shows the relationship between the cl
 
 ![Single Character in the Message](SingleCharacterOutput.png)
 
-## Controlling the LCD
-
-_Add information about controlling the LCD including same code_
+# [Controlling the LCD](ControllingLCD)
 
 # Further Reading
 
 - [Serial Peripheral Interface Bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) description
 - [HD44780 LCD Interface](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) This is a common interface used to drive LCD displays.
 - [Adafruit I2C/ SPI Character LCD Backpack](https://www.adafruit.com/product/292)
-
-# Project Ideas
-
-- Consider displaying the current temperture using the TMP102
