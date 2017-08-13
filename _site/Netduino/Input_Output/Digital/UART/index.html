@@ -344,161 +344,167 @@
 
 <p>The following example has COM1as the transmitter and COM4 as the receiver:</p>
 
-<pre><code class="language-CSharp">using System;
-using System.Threading;
-using System.IO.Ports;
-using Microsoft.SPOT;
-using System.Text;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO.Ports</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
 
-namespace UARTTest
-{
-    public class Program
-    {
-		/// &lt;summary&gt;
-		/// Two com ports, one sender and one receiver.
-		/// &lt;/summary&gt;
-		/// &lt;remarks&gt;
-		/// Note that the transmitter and the receiver must be configured to use the
-		/// same baud rate, number of bits etc.
-		/// &lt;/remarks&gt;
-		static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
-		static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+<span class="k">namespace</span> <span class="nn">UARTTest</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+		<span class="c1">/// &lt;summary&gt;
+</span>		<span class="c1">/// Two com ports, one sender and one receiver.
+</span>		<span class="c1">/// &lt;/summary&gt;
+</span>		<span class="c1">/// &lt;remarks&gt;
+</span>		<span class="c1">/// Note that the transmitter and the receiver must be configured to use the
+</span>		<span class="c1">/// same baud rate, number of bits etc.
+</span>		<span class="c1">/// &lt;/remarks&gt;
+</span>		<span class="k">static</span> <span class="n">SerialPort</span> <span class="n">transmitter</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SerialPort</span><span class="p">(</span><span class="s">"COM1"</span><span class="p">,</span> <span class="m">9600</span><span class="p">,</span> <span class="n">Parity</span><span class="p">.</span><span class="n">None</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">One</span><span class="p">);</span>
+		<span class="k">static</span> <span class="n">SerialPort</span> <span class="n">receiver</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SerialPort</span><span class="p">(</span><span class="s">"COM4"</span><span class="p">,</span> <span class="m">9600</span><span class="p">,</span> <span class="n">Parity</span><span class="p">.</span><span class="n">None</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">One</span><span class="p">);</span>
 
-		/// &lt;summary&gt;
-		/// Timer object generates and event periodically to transmit data to the receiver.
-		/// &lt;/summary&gt;
-        static Timer timer = new Timer(Timer_Interrupt, null, 0, 2000);
+		<span class="c1">/// &lt;summary&gt;
+</span>		<span class="c1">/// Timer object generates and event periodically to transmit data to the receiver.
+</span>		<span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">static</span> <span class="n">Timer</span> <span class="n">timer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Timer</span><span class="p">(</span><span class="n">Timer_Interrupt</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">2000</span><span class="p">);</span>
 
-		/// &lt;summary&gt;
-		/// Variables to hold information about the messages being transmitted and received.
-		/// &lt;/summary&gt;
-        static int count = 0;
-		static string messageBeingReceived = "";
+		<span class="c1">/// &lt;summary&gt;
+</span>		<span class="c1">/// Variables to hold information about the messages being transmitted and received.
+</span>		<span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">static</span> <span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+		<span class="k">static</span> <span class="kt">string</span> <span class="n">messageBeingReceived</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>
 
-		/// &lt;summary&gt;
-		/// The entry point of the program, where the program control starts and ends.
-		/// &lt;/summary&gt;
-		public static void Main()
-        {
-            transmitter.Open();
-            receiver.Open();
-			receiver.DataReceived += SerialDataReceived;
-			Thread.Sleep(Timeout.Infinite);
-        }
+		<span class="c1">/// &lt;summary&gt;
+</span>		<span class="c1">/// The entry point of the program, where the program control starts and ends.
+</span>		<span class="c1">/// &lt;/summary&gt;
+</span>		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">transmitter</span><span class="p">.</span><span class="nf">Open</span><span class="p">();</span>
+            <span class="n">receiver</span><span class="p">.</span><span class="nf">Open</span><span class="p">();</span>
+			<span class="n">receiver</span><span class="p">.</span><span class="n">DataReceived</span> <span class="p">+=</span> <span class="n">SerialDataReceived</span><span class="p">;</span>
+			<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="n">Timeout</span><span class="p">.</span><span class="n">Infinite</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-		/// Process data from the serial port(s)
-        /// &lt;/summary&gt;
-        /// &lt;param name="sender"&gt;Serial port that is receiving the data.&lt;/param&gt;
-        /// &lt;param name="e"&gt;Event information.&lt;/param&gt;
-        static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-			if ((e.EventType == SerialData.Chars) &amp;&amp; (sender == receiver))
-			{
-				const int BUFFER_SIZE = 1024;
-				byte[] buffer = new byte[BUFFER_SIZE];
+        <span class="c1">/// &lt;summary&gt;
+</span>		<span class="c1">/// Process data from the serial port(s)
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="sender"&gt;Serial port that is receiving the data.&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="e"&gt;Event information.&lt;/param&gt;
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">SerialDataReceived</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">SerialDataReceivedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+			<span class="k">if</span> <span class="p">((</span><span class="n">e</span><span class="p">.</span><span class="n">EventType</span> <span class="p">==</span> <span class="n">SerialData</span><span class="p">.</span><span class="n">Chars</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">sender</span> <span class="p">==</span> <span class="n">receiver</span><span class="p">))</span>
+			<span class="p">{</span>
+				<span class="k">const</span> <span class="kt">int</span> <span class="n">BUFFER_SIZE</span> <span class="p">=</span> <span class="m">1024</span><span class="p">;</span>
+				<span class="kt">byte</span><span class="p">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="p">[</span><span class="n">BUFFER_SIZE</span><span class="p">];</span>
 
-				int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
-				if (amount &gt; 0)
-				{
-					char[] characters = Encoding.UTF8.GetChars(buffer);
-					for (int index = 0; index &lt; amount; index++)
-					{
-						if (buffer[index] == '\n')
-						{
-							Debug.Print("Message received: " + messageBeingReceived);
-							messageBeingReceived = "";
-						}
-						else
-						{
-							messageBeingReceived += characters[index];
-						}
-					}
-				}
-			}
-		}
+				<span class="kt">int</span> <span class="n">amount</span> <span class="p">=</span> <span class="p">((</span><span class="n">SerialPort</span><span class="p">)</span><span class="n">sender</span><span class="p">).</span><span class="nf">Read</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">BUFFER_SIZE</span><span class="p">);</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">amount</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+				<span class="p">{</span>
+					<span class="kt">char</span><span class="p">[]</span> <span class="n">characters</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetChars</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+					<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">index</span> <span class="p">&lt;</span> <span class="n">amount</span><span class="p">;</span> <span class="n">index</span><span class="p">++)</span>
+					<span class="p">{</span>
+						<span class="k">if</span> <span class="p">(</span><span class="n">buffer</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">==</span> <span class="sc">'\n'</span><span class="p">)</span>
+						<span class="p">{</span>
+							<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Message received: "</span> <span class="p">+</span> <span class="n">messageBeingReceived</span><span class="p">);</span>
+							<span class="n">messageBeingReceived</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>
+						<span class="p">}</span>
+						<span class="k">else</span>
+						<span class="p">{</span>
+							<span class="n">messageBeingReceived</span> <span class="p">+=</span> <span class="n">characters</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+						<span class="p">}</span>
+					<span class="p">}</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Periodic interrupt generated by the timer.
-        /// &lt;/summary&gt;
-        /// &lt;param name="state"&gt;State.&lt;/param&gt;
-        static void Timer_Interrupt(object state)
-        {
-            if (transmitter.IsOpen)
-            {
-                count++;
-                String messageToSend = count.ToString();
-                Debug.Print("Sending message: " + messageToSend);
-                messageToSend += "\n";
-                transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
-            }
-        }
-    }
-}
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// Periodic interrupt generated by the timer.
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="state"&gt;State.&lt;/param&gt;
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">Timer_Interrupt</span><span class="p">(</span><span class="kt">object</span> <span class="n">state</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">transmitter</span><span class="p">.</span><span class="n">IsOpen</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">count</span><span class="p">++;</span>
+                <span class="n">String</span> <span class="n">messageToSend</span> <span class="p">=</span> <span class="n">count</span><span class="p">.</span><span class="nf">ToString</span><span class="p">();</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Sending message: "</span> <span class="p">+</span> <span class="n">messageToSend</span><span class="p">);</span>
+                <span class="n">messageToSend</span> <span class="p">+=</span> <span class="s">"\n"</span><span class="p">;</span>
+                <span class="n">transmitter</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">messageToSend</span><span class="p">),</span> <span class="m">0</span><span class="p">,</span> <span class="n">messageToSend</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <h2 id="key-program-elements">Key Program Elements</h2>
 
 <p>The first task is to create variables for the serial ports:</p>
 
-<pre><code class="language-CSharp">/// &lt;summary&gt;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="c1">/// &lt;summary&gt;
 /// Two com ports, one sender and one receiver.
 /// &lt;/summary&gt;
 /// &lt;remarks&gt;
 /// Note that the transmitter and the receiver must be configured to use the
 /// same baud rate, number of bits etc.
 /// &lt;/remarks&gt;
-static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
-static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+</span><span class="k">static</span> <span class="n">SerialPort</span> <span class="n">transmitter</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SerialPort</span><span class="p">(</span><span class="s">"COM1"</span><span class="p">,</span> <span class="m">9600</span><span class="p">,</span> <span class="n">Parity</span><span class="p">.</span><span class="n">None</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">One</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">SerialPort</span> <span class="n">receiver</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SerialPort</span><span class="p">(</span><span class="s">"COM4"</span><span class="p">,</span> <span class="m">9600</span><span class="p">,</span> <span class="n">Parity</span><span class="p">.</span><span class="n">None</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="n">StopBits</span><span class="p">.</span><span class="n">One</span><span class="p">);</span>
 </code></pre>
+</div>
 
 <p>Once created it is necessary to open the com ports:</p>
 
-<pre><code class="language-CSharp">transmitter.Open();
-receiver.Open();
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">transmitter</span><span class="p">.</span><span class="nf">Open</span><span class="p">();</span>
+<span class="n">receiver</span><span class="p">.</span><span class="nf">Open</span><span class="p">();</span>
 </code></pre>
+</div>
 
 <p>An event handler is used to process any data received on the <em>receiver</em> serial port:</p>
 
-<pre><code class="language-CSharp">receiver.DataReceived += SerialDataReceived;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">receiver</span><span class="p">.</span><span class="n">DataReceived</span> <span class="p">+=</span> <span class="n">SerialDataReceived</span><span class="p">;</span>
 </code></pre>
+</div>
 
 <p>The messages are held in .NET <em>string</em> objects.  The <em>Encoding.UTF8.GetBytes</em> method converts the <em>string</em> objects into an array of bytes that can be transmitted over the serial port:</p>
 
-<pre><code class="language-CSharp">transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">transmitter</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">messageToSend</span><span class="p">),</span> <span class="m">0</span><span class="p">,</span> <span class="n">messageToSend</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
 </code></pre>
+</div>
 
 <p>The <em>Write</em> method transmits a sequence of bytes to the receiver.</p>
 
 <p>The most complex part of this application is the <em>SerialDataReceived</em> event.  The method is complex due to the way in which the method is called.  The <em>SerialDataReceived</em> method seems to be called randomly.  For instance, sending <em>123456789</em> may generate two calls to the event handler, one of <em>1234</em> and a second for <em>56789</em>.  The event handler needs to take this into consideration when reassembling the messages.  In this case, the newline character “\n” is used as an end of message marker.  Characters are added to the message buffer until a newline is encountered.  At this point the message is considered complete and a new message is started.</p>
 
-<pre><code class="language-CSharp">static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
-{
-	if ((e.EventType == SerialData.Chars) &amp;&amp; (sender == receiver))
-	{
-		const int BUFFER_SIZE = 1024;
-		byte[] buffer = new byte[BUFFER_SIZE];
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">static</span> <span class="k">void</span> <span class="nf">SerialDataReceived</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">SerialDataReceivedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">((</span><span class="n">e</span><span class="p">.</span><span class="n">EventType</span> <span class="p">==</span> <span class="n">SerialData</span><span class="p">.</span><span class="n">Chars</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">sender</span> <span class="p">==</span> <span class="n">receiver</span><span class="p">))</span>
+	<span class="p">{</span>
+		<span class="k">const</span> <span class="kt">int</span> <span class="n">BUFFER_SIZE</span> <span class="p">=</span> <span class="m">1024</span><span class="p">;</span>
+		<span class="kt">byte</span><span class="p">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="p">[</span><span class="n">BUFFER_SIZE</span><span class="p">];</span>
 
-		int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
-		if (amount &gt; 0)
-		{
-			char[] characters = Encoding.UTF8.GetChars(buffer);
-			for (int index = 0; index &lt; amount; index++)
-			{
-				if (buffer[index] == '\n')
-				{
-					Debug.Print("Message received: " + messageBeingReceived);
-					messageBeingReceived = "";
-				}
-				else
-				{
-					messageBeingReceived += characters[index];
-				}
-			}
-		}
-	}
-}
+		<span class="kt">int</span> <span class="n">amount</span> <span class="p">=</span> <span class="p">((</span><span class="n">SerialPort</span><span class="p">)</span><span class="n">sender</span><span class="p">).</span><span class="nf">Read</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">BUFFER_SIZE</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">amount</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="kt">char</span><span class="p">[]</span> <span class="n">characters</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetChars</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">index</span> <span class="p">&lt;</span> <span class="n">amount</span><span class="p">;</span> <span class="n">index</span><span class="p">++)</span>
+			<span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">buffer</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">==</span> <span class="sc">'\n'</span><span class="p">)</span>
+				<span class="p">{</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Message received: "</span> <span class="p">+</span> <span class="n">messageBeingReceived</span><span class="p">);</span>
+					<span class="n">messageBeingReceived</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="k">else</span>
+				<span class="p">{</span>
+					<span class="n">messageBeingReceived</span> <span class="p">+=</span> <span class="n">characters</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <h2 id="logic-analyser-output">Logic Analyser Output</h2>
 

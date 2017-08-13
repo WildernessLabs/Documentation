@@ -349,25 +349,26 @@
 
 <p>Changing the output port to a <em>PWM</em> port and setting the duty cycle to 10% will change the reading on the multimeter.  Consider the following application:</p>
 
-<pre><code class="language-CSharp">using System.Threading;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.NetduinoPlus;
-using Microsoft.SPOT;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT.Hardware</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.NetduinoPlus</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT</span><span class="p">;</span>
 
-namespace PWMExample
-{
-	public class Program
-	{
-		public static void Main()
-		{
-            Debug.Print("Application starting...");
-            PWM led1 = new PWM(PWMChannels.PWM_PIN_D9, 100d, 0.1d, false);
-			led1.Start();
-            Thread.Sleep(Timeout.Infinite);
-		}
-	}
-}
+<span class="k">namespace</span> <span class="nn">PWMExample</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+		<span class="p">{</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Application starting..."</span><span class="p">);</span>
+            <span class="n">PWM</span> <span class="n">led1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PWM</span><span class="p">(</span><span class="n">PWMChannels</span><span class="p">.</span><span class="n">PWM_PIN_D9</span><span class="p">,</span> <span class="m">100d</span><span class="p">,</span> <span class="m">0.1d</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+			<span class="n">led1</span><span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
+            <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="n">Timeout</span><span class="p">.</span><span class="n">Infinite</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <p>Running this results in the following output on a multimeter and oscilloscope:</p>
 

@@ -379,38 +379,39 @@
 
 <p>After you’ve created the project and configured the references, add the following code to your program.cs file. Not that you might want to modify the namespace declaration to match your projet’s name:</p>
 
-<pre><code class="language-CSharp">using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using System.Threading;
-using SecretLabs.NETMF.Hardware.Netduino;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT.Hardware</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.Netduino</span><span class="p">;</span>
 
-namespace NetduinoBlink
-{
-	public class Program
-	{
-		public static void Main()
-		{
-			// configure an output port for us to "write" to the LED
-			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false); 
-			// note that if we didn't have the SecretLabs.NETMF.Hardware.Netduino DLL, we could also manually access it this way:
-			//OutputPort led = new OutputPort(Cpu.Pin.GPIO_Pin10, false); 
-			int i = 0;
-			while (true) 
-			{ 
-				led.Write(true); // turn on the LED 
-				Thread.Sleep(250); // sleep for 250ms 
-				led.Write(false); // turn off the LED 
-				Thread.Sleep(250); // sleep for 250ms 
+<span class="k">namespace</span> <span class="nn">NetduinoBlink</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="c1">// configure an output port for us to "write" to the LED
+</span>			<span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span> 
+			<span class="c1">// note that if we didn't have the SecretLabs.NETMF.Hardware.Netduino DLL, we could also manually access it this way:
+</span>			<span class="c1">//OutputPort led = new OutputPort(Cpu.Pin.GPIO_Pin10, false); 
+</span>			<span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+			<span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> 
+			<span class="p">{</span> 
+				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED 
+</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms 
+</span>				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED 
+</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms 
+</span>
+				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Looping"</span> <span class="p">+</span> <span class="n">i</span><span class="p">);</span>
+				<span class="n">i</span><span class="p">++;</span>
+			<span class="p">}</span> 
 
-				Debug.Print ("Looping" + i);
-				i++;
-			} 
-
-		}
-	}
-}
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <p>This code does the following things:</p>
 

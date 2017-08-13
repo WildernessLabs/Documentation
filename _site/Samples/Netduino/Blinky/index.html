@@ -309,33 +309,34 @@
 
 <h1 id="code">Code</h1>
 
-<pre><code class="language-CSharp">using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
-using System.Threading;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT.Hardware</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.Netduino</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
-namespace Blinky
-{
-	public class Program
-	{
-		public static void Main()
-		{
-			// create an output port (a port that can be written to) and wire it to the onboard LED
-			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
+<span class="k">namespace</span> <span class="nn">Blinky</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="c1">// create an output port (a port that can be written to) and wire it to the onboard LED
+</span>			<span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
 
-			// run forever
-			while (true)
-			{
-				led.Write(true); // turn on the LED
-				Thread.Sleep(250); // sleep for 250ms
-				led.Write(false); // turn off the LED
-				Thread.Sleep(250); // sleep for 250ms
-			}
-		} 
-	}
-}
+			<span class="c1">// run forever
+</span>			<span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED
+</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED
+</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>			<span class="p">}</span>
+		<span class="p">}</span> 
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 
                         </div>
