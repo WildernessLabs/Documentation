@@ -10,7 +10,7 @@ To drive an LED with a resistor as the current limiting device in the circuit, w
 
 ![](LED_Resistor_Circuit.svg)
 
-So to calculate the resistance needed in this circuit to power the LED, we use ohm's law, solved for resistance, but remove the voltage drop specified as the forward voltage (F<sub>v</sub>) from the source voltage (V<sub>s</sub>) for the LED we're using:
+So to calculate the resistance needed in this circuit to power the LED, we use Ohm's law, solved for resistance, but remove the voltage drop specified as the forward voltage (F<sub>v</sub>) from the source voltage (V<sub>s</sub>) for the LED we're using:
 
 ```
 R = (Vs - Fv) / I
