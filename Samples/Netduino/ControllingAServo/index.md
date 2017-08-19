@@ -36,4 +36,4 @@ namespace ServoTest
 }
 ```
 
-Full source code for the project can be found on the [Netduino Samples]() repository.
+Full source code for the project can be found on the [Netduino Samples](https://github.com/WildernessLabs/Netduino_Samples/tree/master/ControllingAServo) repository.

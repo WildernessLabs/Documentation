@@ -1,5 +1,5 @@
 ---
-title: Controlling a Servo using PWM
+title: Controlling a Servo Using PWM
 ---
 
 Servo motors (servos) are available in a wide range of sizes amd capabilities.  A servo makes it easy to add controlled motion to a project.
@@ -19,6 +19,8 @@ The horns provide a way to connect the spindle from the servo to the rest of the
 
 ![Servo horns](ServoHorns.png)
 
+The holes in the armatures of the horns allow cables and wires to be connected to the horns.  This makes it possible to translate the circular motion of the servo into linear motion to control a rudder on a boat or plane.
+
 Three wires are used to connect the servo to the Netduino:
 
 * Power
@@ -29,7 +31,10 @@ The servo above uses a 5V power supply.  According to the data sheet the control
 
 ## Types of Servo Motors
 
-The two common types of servos are fixed range and continuous rotation.
+The two common types of servos are:
+
+* Fixed range
+* Continuous rotation
 
 Fixed range servos have a defined sweep, typically 0 to 180 degrees.  Fixed range servos typically have hard stops built into the case.  Care should be taken not to attempt to rotate the motor past these stops.
 
@@ -53,6 +58,18 @@ Changing the position is as simple as changing the duty cycle of the pulse:
 ```csharp
 pwm.DutyCycle = 0.07;
 ```
+
+## Connecting the Servo Using Breadboard
+
+Only three connections are required:
+
+* Power
+* Ground
+* Control signal
+
+For a low power servo, the power and ground signal can be connected directly to the Netduino 5V lines.  It is advisable to connect the control signal through a current limiting resistor, in the case of the <i>Microservo SG90</i> a 470&Omega; resistor was used to connect digitial pin 9 to the control signal of the servo.
+
+![Servo Connected to Netduino](ServoBreadboard.png)
 
 ## Sweeping Through 180 Degrees
 
@@ -158,11 +175,11 @@ Before looking at the code it is necessary to examine how the position of the se
 
 ![Servo Control Signal with Measurements](ServoControlSignalWithMeasurements.png)
 
-The frequency of the signal is 50Hz giving a <i>period</i> of 20,000 ms.
+The frequency of the signal is 50Hz giving a <i>period</i> of 20,000 microseconds (20 ms).
 
 The <i>pulse</i> width determines the position of the servo.  This should be between the <i>minimum</i> and <i>maximum</i> pulse width.
 
-From the data sheet of the <i>Microservo SG90</i>, the <i>minimum</i> pulse width is 1ms (0 degrees) and the <i>maximum</i> pulse width is 2ms (180 degrees).
+From the data sheet of the <i>Microservo SG90</i>, the <i>minimum</i> pulse width is 1ms (0 degrees) and the <i>maximum</i> pulse width is 2ms (180 degrees).  So to calculate the pulse width for a specified angle the following steps should be followed:
 
 * Pulse range = maximum pulse width - minimum pulse width
 * Pulse width per degree = pulse width / 181
@@ -188,7 +205,17 @@ Why 181 in the `pulseWidth` calculation, there are 181 divisions as the angle is
 
 # Sample Code
 
-The sample application and the `Servo` class can be accessed through the [samples area](/Samples/ControllingAServo/).
+The sample application and the `Servo` class can be accessed through the [samples area](/Samples/Netduino/ControllingAServo/).
+
+# Practical Implementation
+
+Whilst developing the `Servo` class it was noted that using the default values did not result in a 180 degree sweep.  Experimentation with the servo showed that the servo had a wider pulse range.  The constructor for the `Servo` class became:
+
+```csharp
+Servo servo = new Servo(PWMChannels.PWM_PIN_D9, 500, 2400);
+```
+
+<b>Note:</b> This experiment was conducted using an external power supply for the servo.  This was necessary to ensure that too much current was not sourced from the Netduino.  As noted earlier, it is important not to drive a fixed range servo past the end stops.  Doing this can result in excessive current draw from the power supply.
 
 # Further Reading
 
