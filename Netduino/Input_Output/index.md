@@ -19,6 +19,14 @@ The Digital ports can be set to be high (powered at 3.3v), or low (grounded at 0
 * [SPI (Serial Peripheral Interface)](Digital/SPI/)
 * [UART (Serial)](Digital/UART/)
 
+[I2C](Digital/I2C/) is normally used to connect low speed devices over short distances.  Compare this to the main characteristics of [SPI](Digital/SPI/) and [Serial](Digital/UART) communications:
+
+| Protocol | Characteristics                                                                                            |
+|----------|------------------------------------------------------------------------------------------------------------|
+|   I2C    | Two wires<br/>Short distance<br/>Low speed                                                                 |
+|   SPI    | Minimum of two wires, often more<br/>High speed                                                            |
+|  Serial  | Low speed<br/>Used for communication between boards<br/>Can be used to communicate with on board devices  |
+
 ### [Analog Ports](Analog/)
 
 Analog ports can operate at a range of voltages between 0 and 3.3v, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal.
