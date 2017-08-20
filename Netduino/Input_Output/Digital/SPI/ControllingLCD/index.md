@@ -102,6 +102,13 @@ namespace HelloWorld
 }
 ```
 
+## Wiring up the LCD Display
+
+As noted, the backpack allows the Netduino to talk to the LCD using SPI.  This requires three wires plus power connections.  The LCD Backpack should be wired as follows:
+
+![Netduino and LCD wiring](NetduinoAndLCDFritzing.png)
+
+
 ## Software
 
 The MicroLiquidCrystal library allows a number of different way to connect to an LCD display.  The mechanism used is defined by a _Transfer Provider_.  In the cas of the [Adafruit LCD Backpack](https://www.adafruit.com/product/292) this is a [74595 shift register](/Hardware/Reference/Components/ShiftRegister74595).  This register takes 8 data bits transmitted serially (using SPI) and presents them to the display as 8 parallel data bits.
