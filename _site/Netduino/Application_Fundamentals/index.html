@@ -304,7 +304,6 @@
     </h2>
 </div>
 
-
 <p>Netduino a small, power-efficient computer that runs a tiny operating system. The .NET Micro Framework (abbreviated to NETMF) system is specially designed to run a single application.  It is designed to run .NET on devices with low memory profiles.</p>
 
 <p>NETMF’s power lies in the debugging and rapid prototyping capabilities provided by the combination of C# (or Visual Basic) and Visual Studio.</p>
@@ -328,26 +327,28 @@
 
 <p>The while loop pattern is demonstrated by the following code:</p>
 
-<pre><code class="language-CSharp">while (true)
-{
-    //  Check inputs.
-    //  Process inputs
-}
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//  Check inputs.
+</span>    <span class="c1">//  Process inputs
+</span><span class="p">}</span>
 </code></pre>
+</div>
 
 <p>An application such as the above will run forever and every clock cycle will execute an instruction constantly consuming power.</p>
 
 <p>The advantage of this model is that data is processed sequentially.  This is important when the application uses shared data items.  Consider an application consuming data from a serial port.  The following model could be implemented:</p>
 
-<pre><code class="language-CSharp">while (true)
-{
-    CheckForNewData();
-    if (DataPacketComplete)
-    {
-        ProcessData();
-    }
-}
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">CheckForNewData</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">DataPacketComplete</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nf">ProcessData</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <p><em>CheckForNewData</em> would prepare data for processing and set the flag to indicate we have data when we have a complete packet.  In this way there is no conflict between the producer (<em>CheckForNewData</em>) adding data to a buffer and the consumer (<em>ProcessData</em>) processing the data.</p>
 
@@ -362,13 +363,14 @@
 
 <p>Threads and interrupts present a more complex model as the application will need to take into consideration the non-linear execution of the application.  A typical pattern is:</p>
 
-<pre><code class="language-CSharp">public static void Main()
-{
-    CreateInterruptProcessors();
-    SetupAnyTimers();
-    Thread.Sleep(Timeout.Infinite);
-}
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">CreateInterruptProcessors</span><span class="p">();</span>
+    <span class="nf">SetupAnyTimers</span><span class="p">();</span>
+    <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="n">Timeout</span><span class="p">.</span><span class="n">Infinite</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <p><em>CreateInterruptProcessors</em> will create the objects needed to process events such as button preses, serial data input, sensor interrupts and similar events.</p>
 
@@ -376,8 +378,9 @@
 
 <p>The final action is to put the application to sleep.  The following puts the microcontroller into a low power state:</p>
 
-<pre><code class="language-CSharp">Thread.Sleep(Timeout.Infinite);
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="n">Timeout</span><span class="p">.</span><span class="n">Infinite</span><span class="p">);</span>
 </code></pre>
+</div>
 
 <p>The microcontroller will now wait for data to be generated and interrupts generated.  An interrupt or timer signal will put the microcontroller into a higher power state, processing the data generated and then returning to a low power state.  This presents an obvious advantage for battery powered applications.</p>
 
@@ -402,7 +405,6 @@
   <li><a href="NETMF">.NET Micro Framework</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Smart_Personal_Objects_Technology">SPOT namespace origin</a></li>
 </ul>
-
 
 
                         </div>

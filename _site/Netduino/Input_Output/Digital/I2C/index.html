@@ -386,16 +386,17 @@
 
 <p>In code, the sequence of events looks as follows:</p>
 
-<pre><code class="language-CSharp">// create a new TMP102 device at address 0x48
-I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="c1">// create a new TMP102 device at address 0x48
+</span><span class="n">I2CDevice</span> <span class="n">tmp102</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">I2CDevice</span><span class="p">(</span><span class="k">new</span> <span class="n">I2CDevice</span><span class="p">.</span><span class="nf">Configuration</span><span class="p">(</span><span class="m">0x48</span><span class="p">,</span> <span class="m">50</span><span class="p">));</span>
 
-// create a buffer to read data from the deivce
-byte[] buffer = new byte[2];
-I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
+<span class="c1">// create a buffer to read data from the deivce
+</span><span class="kt">byte</span><span class="p">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="p">[</span><span class="m">2</span><span class="p">];</span>
+<span class="n">I2CDevice</span><span class="p">.</span><span class="n">I2CTransaction</span><span class="p">[]</span> <span class="n">reading</span> <span class="p">=</span> <span class="k">new</span> <span class="n">I2CDevice</span><span class="p">.</span><span class="n">I2CTransaction</span><span class="p">[</span><span class="m">1</span><span class="p">];</span>
 
-// read the data in
-reading[0] = I2CDevice.CreateReadTransaction(buffer);
+<span class="c1">// read the data in
+</span><span class="n">reading</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="n">I2CDevice</span><span class="p">.</span><span class="nf">CreateReadTransaction</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
 </code></pre>
+</div>
 
 <p>Reading from an I2C device is covered in more detail in the <a href="Reading/">reading</a> section.</p>
 
@@ -411,9 +412,10 @@ reading[0] = I2CDevice.CreateReadTransaction(buffer);
 
 <p>The following code illustrates creating two I2C devices on different addresses:</p>
 
-<pre><code class="language-CSharp">I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
-I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">I2CDevice</span> <span class="n">tmp102</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">I2CDevice</span><span class="p">(</span><span class="k">new</span> <span class="n">I2CDevice</span><span class="p">.</span><span class="nf">Configuration</span><span class="p">(</span><span class="m">0x48</span><span class="p">,</span> <span class="m">50</span><span class="p">));</span>
+<span class="n">I2CDevice</span> <span class="n">bme280</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">I2CDevice</span><span class="p">(</span><span class="k">new</span> <span class="n">I2CDevice</span><span class="p">.</span><span class="nf">Configuration</span><span class="p">(</span><span class="m">0x77</span><span class="p">,</span> <span class="m">50</span><span class="p">));</span>
 </code></pre>
+</div>
 
 <p>The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is much lower.</p>
 

@@ -316,11 +316,11 @@
 
 <p>MFDeploy is included in the .NET MicroFramework installation. To configure network settings on Netduino, launch MFDeploy from the start menu and then access the settings via the <code class="highlighter-rouge">Target</code> &gt; <code class="highlighter-rouge">Configuration</code> &gt; <code class="highlighter-rouge">Network</code> menu:</p>
 
-<p><img src="MFDeploy_Network_Menu.png" alt="" /></p>
+<p><img src="MFDeploy_Network_Menu.png" alt="Menu navigation in MFDeploy to launch the Network Configuration popup" /></p>
 
 <p>From there, Network settings are configured in the popup. For example, the following settings will configure a WiFi enabled Netduino 3 to connect to the open wireless network <code class="highlighter-rouge">Cabin in the Woods</code> using 802.11 b, g, or n radio and use DHCP to obtain an IP Address:</p>
 
-<p><img src="MFDeploy_Network_Dialog.png" alt="" /></p>
+<p><img src="MFDeploy_Network_Dialog.png" alt="The Network Configuration popup in MFDeploy" /></p>
 
 <p>Note that if you get the error <code class="highlighter-rouge">unable to erase configuration sector memory</code>, when trying to save, you may have to close the network settings dialog and run <code class="highlighter-rouge">Plug-in</code> &gt; <code class="highlighter-rouge">Reboot Stop</code> from the menu first.</p>
 
@@ -330,7 +330,7 @@
 
 <h2 id="waiting-for-the-network-to-initialize">Waiting for the Network to Initialize</h2>
 
-<p>On the Netduino, chances are, the deployed application will actually startup before the network has fully initialized. There are two fundamental ways to do this. The simplest is to wait in a loop while the IP address is obtained (if using DHCP), or accepted (if using a static IP). The more sophisticated way is to use multi-threading and wait on network available events.</p>
+<p>On the Netduino, chances are, the deployed application will actually start up before the network has fully initialized. There are two fundamental ways to do this. The simplest is to wait in a loop while the IP address is obtained (if using DHCP), or accepted (if using a static IP). The more sophisticated way is to use multi-threading and wait on network available events.</p>
 
 <h2 id="wait-loop">Wait Loop</h2>
 
@@ -338,21 +338,23 @@
 
 <p>If DHCP is configured, a call to the static <code class="highlighter-rouge">IPAddress.GetDefaultLocalAddress()</code>  will suffice:</p>
 
-<pre><code class="language-CSharp">while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any) {
-	Debug.Print ("Sleep while obtaining an IP");
-	Thread.Sleep (10);
-};
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">GetDefaultLocalAddress</span> <span class="p">()</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Sleep while obtaining an IP"</span><span class="p">);</span>
+	<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">10</span><span class="p">);</span>
+<span class="p">};</span>
 </code></pre>
+</div>
+
 <p><code class="highlighter-rouge">IPAddress.Any</code> returns an empty IP address (<code class="highlighter-rouge">0.0.0.0</code>), so this loop will run until a real IP Address is obtained.</p>
 
 <h3 id="using-a-static-ip">Using a Static IP</h3>
 
 <p>When using a static IP, add the <code class="highlighter-rouge">NetduinoExtensions.dll</code> reference and make a call to</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>while (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) {
-	Debug.Print ("Sleep while obtaining waiting for the network to initialize.");
-	Thread.Sleep (10);
-};
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="p">(!</span><span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">NetworkInformation</span><span class="p">.</span><span class="n">NetworkInterface</span><span class="p">.</span><span class="nf">GetIsNetworkAvailable</span><span class="p">())</span> <span class="p">{</span>
+	<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Sleep while obtaining waiting for the network to initialize."</span><span class="p">);</span>
+	<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">10</span><span class="p">);</span>
+<span class="p">};</span>
 </code></pre>
 </div>
 
@@ -362,222 +364,223 @@
 
 <h1 id="code-example">Code Example</h1>
 
-<pre><code class="language-CSharp">using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
-using System;
-using System.Threading;
-using System.Net;
-using System.IO;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Net.NetworkInformation;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">Microsoft.SPOT.Hardware</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.Netduino</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT.Net.NetworkInformation</span><span class="p">;</span>
 
-namespace Blinky
-{
-	public class Program
-	{
-		public static void Main()
-		{
+<span class="k">namespace</span> <span class="nn">Blinky</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+		<span class="p">{</span>
 			
-			App app = new App ();
-			app.Run ();
+			<span class="n">App</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">App</span> <span class="p">();</span>
+			<span class="n">app</span><span class="p">.</span><span class="nf">Run</span> <span class="p">();</span>
 
-			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
-			while (app.IsRunning)
-			{
-				led.Write(true); // turn on the LED
-				Thread.Sleep(250); // sleep for 250ms
-				led.Write(false); // turn off the LED
-				Thread.Sleep(250); // sleep for 250ms
+			<span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+			<span class="k">while</span> <span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">IsRunning</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED
+</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED
+</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>
+			<span class="p">}</span>
 
-			}
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"App finished."</span><span class="p">);</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain."</span><span class="p">);</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Time to die."</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
-			Debug.Print ("App finished.");
-			Debug.Print ("I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain.");
-			Debug.Print ("Time to die.");
-		}
-	}
-
-	public class App
-	{
-		NetworkInterface[] _interfaces;
-
-
-		public bool IsRunning { get; set; }
-
-		public void Run()
-		{
-			this.IsRunning = true;
-			bool goodToGo = InitializeNetwork ();
-
-			if (goodToGo) {
-				MakeWebRequest ("http://google.com");
-			}
-
-			this.IsRunning = false;
-		}
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">App</span>
+	<span class="p">{</span>
+		<span class="n">NetworkInterface</span><span class="p">[]</span> <span class="n">_interfaces</span><span class="p">;</span>
 
 
-		protected bool InitializeNetwork()
-		{
-			if (Microsoft.SPOT.Hardware.SystemInfo.SystemID.SKU == 3) {
-				Debug.Print("Wireless tests run only on Device");
-				return false;
-			}
+		<span class="k">public</span> <span class="kt">bool</span> <span class="n">IsRunning</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
 
-			Debug.Print("Getting all the network interfaces.");
-			_interfaces = NetworkInterface.GetAllNetworkInterfaces();
+		<span class="k">public</span> <span class="k">void</span> <span class="nf">Run</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="k">this</span><span class="p">.</span><span class="n">IsRunning</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+			<span class="kt">bool</span> <span class="n">goodToGo</span> <span class="p">=</span> <span class="nf">InitializeNetwork</span> <span class="p">();</span>
 
-			// debug output
-			ListNetworkInterfaces ();
+			<span class="k">if</span> <span class="p">(</span><span class="n">goodToGo</span><span class="p">)</span> <span class="p">{</span>
+				<span class="nf">MakeWebRequest</span> <span class="p">(</span><span class="s">"http://google.com"</span><span class="p">);</span>
+			<span class="p">}</span>
 
-			// loop through each network interface
-			foreach (var net in _interfaces) {
-
-				// debug out
-				ListNetworkInfo (net);
-
-				switch (net.NetworkInterfaceType) {
-				case (NetworkInterfaceType.Ethernet):
-					Debug.Print ("Found Ethernet Interface");
-					break;
-				case (NetworkInterfaceType.Wireless80211):
-					Debug.Print ("Found 802.11 WiFi Interface");
-					break;
-				case (NetworkInterfaceType.Unknown):
-					Debug.Print ("Found Unknown Interface");
-					break;
-				}
-
-				// check for an IP address, try to get one if it's empty
-				return CheckIPAddress (net);
-			}
-
-			// if we got here, should be false.
-			return false;
-		}
-
-		protected void MakeWebRequest(string url)
-		{
-			var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-			httpWebRequest.Method = "GET";
-
-			var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-			using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-			{
-				var result = streamReader.ReadToEnd();
-				Debug.Print("this is what we got from " + url + ": " + result);
-			}
-		}
+			<span class="k">this</span><span class="p">.</span><span class="n">IsRunning</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+		<span class="p">}</span>
 
 
-		protected bool CheckIPAddress (NetworkInterface net)
-		{
-			int timeout = 10000; // timeout, in milliseconds to wait for an IP. 10,000 = 10 seconds
+		<span class="k">protected</span> <span class="kt">bool</span> <span class="nf">InitializeNetwork</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">Microsoft</span><span class="p">.</span><span class="n">SPOT</span><span class="p">.</span><span class="n">Hardware</span><span class="p">.</span><span class="n">SystemInfo</span><span class="p">.</span><span class="n">SystemID</span><span class="p">.</span><span class="n">SKU</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
+				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Wireless tests run only on Device"</span><span class="p">);</span>
+				<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+			<span class="p">}</span>
 
-			// check to see if the IP address is empty (0.0.0.0). IPAddress.Any is 0.0.0.0.
-			if (net.IPAddress == IPAddress.Any.ToString()) {
-				Debug.Print ("No IP Address");
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Getting all the network interfaces."</span><span class="p">);</span>
+			<span class="n">_interfaces</span> <span class="p">=</span> <span class="n">NetworkInterface</span><span class="p">.</span><span class="nf">GetAllNetworkInterfaces</span><span class="p">();</span>
 
-				if (net.IsDhcpEnabled) {
-					Debug.Print ("DHCP is enabled, attempting to get an IP Address");
+			<span class="c1">// debug output
+</span>			<span class="nf">ListNetworkInterfaces</span> <span class="p">();</span>
 
-					// ask for an IP address from DHCP [note this is a static, not sure which network interface it would act on]
-					int sleepInterval = 10;
-					int maxIntervalCount = timeout / sleepInterval;
-					int count = 0;
-					while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any &amp;&amp; count &lt; maxIntervalCount) {
-						Debug.Print ("Sleep while obtaining an IP");
-						Thread.Sleep (10);
-						count++;
-					};
+			<span class="c1">// loop through each network interface
+</span>			<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">net</span> <span class="k">in</span> <span class="n">_interfaces</span><span class="p">)</span> <span class="p">{</span>
 
-					// if we got here, we either timed out or got an address, so let's find out.
-					if (net.IPAddress == IPAddress.Any.ToString()) {
-						Debug.Print ("Failed to get an IP Address in the alotted time.");
-						return false;
-					}
+				<span class="c1">// debug out
+</span>				<span class="nf">ListNetworkInfo</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
 
-					Debug.Print ("Got IP Address: " + net.IPAddress.ToString ());
-					return true;
+				<span class="k">switch</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">NetworkInterfaceType</span><span class="p">)</span> <span class="p">{</span>
+				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Ethernet</span><span class="p">):</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Ethernet Interface"</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Wireless80211</span><span class="p">):</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found 802.11 WiFi Interface"</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Unknown</span><span class="p">):</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Unknown Interface"</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="p">}</span>
 
-					//NOTE: this does not work, even though it's on the actual network device. [shrug]
-					// try to renew the DHCP lease and get a new IP Address
-					//net.RenewDhcpLease ();
-					//while (net.IPAddress == "0.0.0.0") {
-					//	Thread.Sleep (10);
-					//}
+				<span class="c1">// check for an IP address, try to get one if it's empty
+</span>				<span class="k">return</span> <span class="nf">CheckIPAddress</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
+			<span class="p">}</span>
 
-				} else {
-					Debug.Print ("DHCP is not enabled, and no IP address is configured, bailing out.");
-					return false;
-				}
-			} else {
-				Debug.Print ("Already had IP Address: " + net.IPAddress.ToString ());
-				return true;
-			}
+			<span class="c1">// if we got here, should be false.
+</span>			<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+		<span class="p">}</span>
 
-		}
+		<span class="k">protected</span> <span class="k">void</span> <span class="nf">MakeWebRequest</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="kt">var</span> <span class="n">httpWebRequest</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+			<span class="n">httpWebRequest</span><span class="p">.</span><span class="n">Method</span> <span class="p">=</span> <span class="s">"GET"</span><span class="p">;</span>
 
-		protected void ListNetworkInterfaces()
-		{
-			foreach (var net in _interfaces) {
-				switch (net.NetworkInterfaceType) {
-				case (NetworkInterfaceType.Ethernet):
-					Debug.Print ("Found Ethernet Interface");
-					break;
-				case (NetworkInterfaceType.Wireless80211):
-					Debug.Print ("Found 802.11 WiFi Interface");
-					break;
-				case (NetworkInterfaceType.Unknown):
-					Debug.Print ("Found Unknown Interface");
-					break;
+			<span class="kt">var</span> <span class="n">httpResponse</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebResponse</span><span class="p">)</span><span class="n">httpWebRequest</span><span class="p">.</span><span class="nf">GetResponse</span><span class="p">();</span>
+			<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">streamReader</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamReader</span><span class="p">(</span><span class="n">httpResponse</span><span class="p">.</span><span class="nf">GetResponseStream</span><span class="p">()))</span>
+			<span class="p">{</span>
+				<span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">streamReader</span><span class="p">.</span><span class="nf">ReadToEnd</span><span class="p">();</span>
+				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"this is what we got from "</span> <span class="p">+</span> <span class="n">url</span> <span class="p">+</span> <span class="s">": "</span> <span class="p">+</span> <span class="n">result</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
 
-				}
-			}
-		}
 
-		protected void ListNetworkInfo(NetworkInterface net)
-		{
-			Debug.Print("MAC Address: " + BytesToHexString(net.PhysicalAddress));
-			Debug.Print("DHCP enabled: " + net.IsDhcpEnabled.ToString());
-			Debug.Print("Dynamic DNS enabled: " + net.IsDynamicDnsEnabled.ToString());
-			Debug.Print("IP Address: " + net.IPAddress.ToString());
-			Debug.Print("Subnet Mask: " + net.SubnetMask.ToString());
-			Debug.Print("Gateway: " + net.GatewayAddress.ToString());
+		<span class="k">protected</span> <span class="kt">bool</span> <span class="nf">CheckIPAddress</span> <span class="p">(</span><span class="n">NetworkInterface</span> <span class="n">net</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="kt">int</span> <span class="n">timeout</span> <span class="p">=</span> <span class="m">10000</span><span class="p">;</span> <span class="c1">// timeout, in milliseconds to wait for an IP. 10,000 = 10 seconds
+</span>
+			<span class="c1">// check to see if the IP address is empty (0.0.0.0). IPAddress.Any is 0.0.0.0.
+</span>			<span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">.</span><span class="nf">ToString</span><span class="p">())</span> <span class="p">{</span>
+				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"No IP Address"</span><span class="p">);</span>
 
-			if (net is Wireless80211) {
-				var wifi = net as Wireless80211;
-				Debug.Print ("SSID:" + wifi.Ssid.ToString ());
-			}
+				<span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IsDhcpEnabled</span><span class="p">)</span> <span class="p">{</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"DHCP is enabled, attempting to get an IP Address"</span><span class="p">);</span>
 
-		}
+					<span class="c1">// ask for an IP address from DHCP [note this is a static, not sure which network interface it would act on]
+</span>					<span class="kt">int</span> <span class="n">sleepInterval</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+					<span class="kt">int</span> <span class="n">maxIntervalCount</span> <span class="p">=</span> <span class="n">timeout</span> <span class="p">/</span> <span class="n">sleepInterval</span><span class="p">;</span>
+					<span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+					<span class="k">while</span> <span class="p">(</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">GetDefaultLocalAddress</span> <span class="p">()</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span> <span class="p">&amp;&amp;</span> <span class="n">count</span> <span class="p">&lt;</span> <span class="n">maxIntervalCount</span><span class="p">)</span> <span class="p">{</span>
+						<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Sleep while obtaining an IP"</span><span class="p">);</span>
+						<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">10</span><span class="p">);</span>
+						<span class="n">count</span><span class="p">++;</span>
+					<span class="p">};</span>
 
-		private static string BytesToHexString(byte[] bytes)
-		{
-			string hexString = string.Empty;
+					<span class="c1">// if we got here, we either timed out or got an address, so let's find out.
+</span>					<span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">.</span><span class="nf">ToString</span><span class="p">())</span> <span class="p">{</span>
+						<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Failed to get an IP Address in the alotted time."</span><span class="p">);</span>
+						<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+					<span class="p">}</span>
 
-			// Create a character array for hexidecimal conversion.
-			const string hexChars = "0123456789ABCDEF";
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Got IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+					<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
 
-			// Loop through the bytes.
-			for (byte b = 0; b &lt; bytes.Length; b++)
-			{
-				if (b &gt; 0)
-					hexString += "-";
+					<span class="c1">//NOTE: this does not work, even though it's on the actual network device. [shrug]
+</span>					<span class="c1">// try to renew the DHCP lease and get a new IP Address
+</span>					<span class="c1">//net.RenewDhcpLease ();
+</span>					<span class="c1">//while (net.IPAddress == "0.0.0.0") {
+</span>					<span class="c1">//	Thread.Sleep (10);
+</span>					<span class="c1">//}
+</span>
+				<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"DHCP is not enabled, and no IP address is configured, bailing out."</span><span class="p">);</span>
+					<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Already had IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+				<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+			<span class="p">}</span>
 
-				// Grab the top 4 bits and append the hex equivalent to the return string.        
-				hexString += hexChars[bytes[b] &gt;&gt; 4];
+		<span class="p">}</span>
 
-				// Mask off the upper 4 bits to get the rest of it.
-				hexString += hexChars[bytes[b] &amp; 0x0F];
-			}
+		<span class="k">protected</span> <span class="k">void</span> <span class="nf">ListNetworkInterfaces</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">net</span> <span class="k">in</span> <span class="n">_interfaces</span><span class="p">)</span> <span class="p">{</span>
+				<span class="k">switch</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">NetworkInterfaceType</span><span class="p">)</span> <span class="p">{</span>
+				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Ethernet</span><span class="p">):</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Ethernet Interface"</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Wireless80211</span><span class="p">):</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found 802.11 WiFi Interface"</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Unknown</span><span class="p">):</span>
+					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Unknown Interface"</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
 
-			return hexString;
-		}
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
 
-	}
-}
+		<span class="k">protected</span> <span class="k">void</span> <span class="nf">ListNetworkInfo</span><span class="p">(</span><span class="n">NetworkInterface</span> <span class="n">net</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"MAC Address: "</span> <span class="p">+</span> <span class="nf">BytesToHexString</span><span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">PhysicalAddress</span><span class="p">));</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"DHCP enabled: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IsDhcpEnabled</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Dynamic DNS enabled: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IsDynamicDnsEnabled</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Subnet Mask: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">SubnetMask</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Gateway: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">GatewayAddress</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+
+			<span class="k">if</span> <span class="p">(</span><span class="n">net</span> <span class="k">is</span> <span class="n">Wireless80211</span><span class="p">)</span> <span class="p">{</span>
+				<span class="kt">var</span> <span class="n">wifi</span> <span class="p">=</span> <span class="n">net</span> <span class="k">as</span> <span class="n">Wireless80211</span><span class="p">;</span>
+				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"SSID:"</span> <span class="p">+</span> <span class="n">wifi</span><span class="p">.</span><span class="n">Ssid</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+			<span class="p">}</span>
+
+		<span class="p">}</span>
+
+		<span class="k">private</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">BytesToHexString</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span> <span class="n">bytes</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="kt">string</span> <span class="n">hexString</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+
+			<span class="c1">// Create a character array for hexidecimal conversion.
+</span>			<span class="k">const</span> <span class="kt">string</span> <span class="n">hexChars</span> <span class="p">=</span> <span class="s">"0123456789ABCDEF"</span><span class="p">;</span>
+
+			<span class="c1">// Loop through the bytes.
+</span>			<span class="k">for</span> <span class="p">(</span><span class="kt">byte</span> <span class="n">b</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">b</span> <span class="p">&lt;</span> <span class="n">bytes</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">b</span><span class="p">++)</span>
+			<span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+					<span class="n">hexString</span> <span class="p">+=</span> <span class="s">"-"</span><span class="p">;</span>
+
+				<span class="c1">// Grab the top 4 bits and append the hex equivalent to the return string.        
+</span>				<span class="n">hexString</span> <span class="p">+=</span> <span class="n">hexChars</span><span class="p">[</span><span class="n">bytes</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">&gt;&gt;</span> <span class="m">4</span><span class="p">];</span>
+
+				<span class="c1">// Mask off the upper 4 bits to get the rest of it.
+</span>				<span class="n">hexString</span> <span class="p">+=</span> <span class="n">hexChars</span><span class="p">[</span><span class="n">bytes</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">&amp;</span> <span class="m">0x0F</span><span class="p">];</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="n">hexString</span><span class="p">;</span>
+		<span class="p">}</span>
+
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 
                         </div>

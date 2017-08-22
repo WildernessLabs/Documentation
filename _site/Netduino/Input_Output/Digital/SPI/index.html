@@ -355,39 +355,40 @@
 
 <p>First thing that any SPI application needs to do is to configure the SPI interface to match the characteristics of the device being used.  The following application demonstrates basic SPI setup and how to output data:</p>
 
-<pre><code class="language-CSharp">using System.Text;
-using System.Threading;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.NetduinoPlus;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT.Hardware</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.NetduinoPlus</span><span class="p">;</span>
 
-namespace BasicSPI
-{
-    public class Program
-    {
-        public static void Main()
-        {
-            SPI.Configuration spiConfig = new SPI.Configuration(
-                ChipSelect_Port: Pins.GPIO_PIN_D4,      // Chip select is digital IO 4.
-                ChipSelect_ActiveState: false,          // Chip select is active low.
-                ChipSelect_SetupTime: 0,                // Amount of time between selection and the clock starting
-                ChipSelect_HoldTime: 0,                 // Amount of time the device must be active after the data has been read.
-                Clock_Edge: false,                      // Sample on the faling edge.
-                Clock_IdleState: true,                  // Clock is idle when high.
-                Clock_RateKHz: 2000,                    // 2MHz clock speed.
-                SPI_mod: SPI_Devices.SPI1               // Use SPI1
-            );
+<span class="k">namespace</span> <span class="nn">BasicSPI</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">SPI</span><span class="p">.</span><span class="n">Configuration</span> <span class="n">spiConfig</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SPI</span><span class="p">.</span><span class="nf">Configuration</span><span class="p">(</span>
+                <span class="n">ChipSelect_Port</span><span class="p">:</span> <span class="n">Pins</span><span class="p">.</span><span class="n">GPIO_PIN_D4</span><span class="p">,</span>      <span class="c1">// Chip select is digital IO 4.
+</span>                <span class="n">ChipSelect_ActiveState</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>          <span class="c1">// Chip select is active low.
+</span>                <span class="n">ChipSelect_SetupTime</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>                <span class="c1">// Amount of time between selection and the clock starting
+</span>                <span class="n">ChipSelect_HoldTime</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>                 <span class="c1">// Amount of time the device must be active after the data has been read.
+</span>                <span class="n">Clock_Edge</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>                      <span class="c1">// Sample on the faling edge.
+</span>                <span class="n">Clock_IdleState</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>                  <span class="c1">// Clock is idle when high.
+</span>                <span class="n">Clock_RateKHz</span><span class="p">:</span> <span class="m">2000</span><span class="p">,</span>                    <span class="c1">// 2MHz clock speed.
+</span>                <span class="n">SPI_mod</span><span class="p">:</span> <span class="n">SPI_Devices</span><span class="p">.</span><span class="n">SPI1</span>               <span class="c1">// Use SPI1
+</span>            <span class="p">);</span>
 
-            SPI spi = new SPI(spiConfig);
-            byte[] buffer = Encoding.UTF8.GetBytes("Message Text.");
-            while (true)
-            {
-                spi.Write(buffer);
-                Thread.Sleep(100);
-            }
-        }
-    }
-}
+            <span class="n">SPI</span> <span class="n">spi</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SPI</span><span class="p">(</span><span class="n">spiConfig</span><span class="p">);</span>
+            <span class="kt">byte</span><span class="p">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="s">"Message Text."</span><span class="p">);</span>
+            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">spi</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+                <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">100</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <p>Note that the application used <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments">named arguments</a> in the configuration constructor.  This help clarify the intention of the application.</p>
 

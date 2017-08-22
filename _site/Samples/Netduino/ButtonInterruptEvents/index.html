@@ -308,50 +308,51 @@
 
 <h1 id="code">Code</h1>
 
-<pre><code class="language-CSharp">using System;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.SPOT.Hardware</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.Netduino</span><span class="p">;</span>
 
-namespace ButtonInterruptEvents
-{
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+<span class="k">namespace</span> <span class="nn">ButtonInterruptEvents</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+	<span class="p">{</span>
+		<span class="c1">// An output port allows you to write (send a signal) to a pin
+</span>		<span class="k">static</span> <span class="n">OutputPort</span> <span class="n">_led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
 
-		// An interrupt port raises events when its value changes. in this case, 
-		// we use it to create an event when the button is clicked.
-		// We set the Interrupt mode to raise an event on both edges of the signal;
-		// both down, and up.
-		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
-			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
+		<span class="c1">// An interrupt port raises events when its value changes. in this case, 
+</span>		<span class="c1">// we use it to create an event when the button is clicked.
+</span>		<span class="c1">// We set the Interrupt mode to raise an event on both edges of the signal;
+</span>		<span class="c1">// both down, and up.
+</span>		<span class="k">static</span> <span class="n">InterruptPort</span> <span class="n">_button</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">InterruptPort</span><span class="p">((</span><span class="n">Cpu</span><span class="p">.</span><span class="n">Pin</span><span class="p">)</span><span class="m">0x15</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> 
+			<span class="n">Port</span><span class="p">.</span><span class="n">ResistorMode</span><span class="p">.</span><span class="n">Disabled</span><span class="p">,</span> <span class="n">Port</span><span class="p">.</span><span class="n">InterruptMode</span><span class="p">.</span><span class="n">InterruptEdgeBoth</span> <span class="p">);</span>
 		
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="c1">// turn the LED off initially
+</span>			<span class="n">_led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 
-			// wire up the interrupt to our event handler
-			_button.OnInterrupt += handleButtonClick;
+			<span class="c1">// wire up the interrupt to our event handler
+</span>			<span class="n">_button</span><span class="p">.</span><span class="n">OnInterrupt</span> <span class="p">+=</span> <span class="n">handleButtonClick</span><span class="p">;</span>
 
-			// run forever
-			while (true)
-			{
+			<span class="c1">// run forever
+</span>			<span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+			<span class="p">{</span>
 				
-			}
+			<span class="p">}</span>
 
-		}
+		<span class="p">}</span>
 
-		static void handleButtonClick (uint port, uint data, DateTime time)
-		{
-			// will be 1 when pressed (raised high), and 0, when unpressed
-			Debug.Print ("Data: " + data.ToString ());
-			_led.Write (data == 1);
-		}
-	}
-}
+		<span class="k">static</span> <span class="k">void</span> <span class="nf">handleButtonClick</span> <span class="p">(</span><span class="kt">uint</span> <span class="n">port</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">data</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">time</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="c1">// will be 1 when pressed (raised high), and 0, when unpressed
+</span>			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Data: "</span> <span class="p">+</span> <span class="n">data</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+			<span class="n">_led</span><span class="p">.</span><span class="nf">Write</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="m">1</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 
                         </div>
