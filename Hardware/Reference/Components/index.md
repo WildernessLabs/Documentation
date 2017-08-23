@@ -12,7 +12,5 @@ title: Component Reference
 
 #### [LEDs](LEDs)
 
-#### [Relays](Relays)
-
 #### [Resistors](Resistors)
 
