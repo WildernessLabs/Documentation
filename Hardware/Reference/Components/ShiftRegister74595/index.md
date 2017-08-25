@@ -34,7 +34,7 @@ The application will output the current byte as a series of bits and then displa
 A small number of components are required:
 
 * 1 x LED block (10 LEDs, we will only be using 8)
-* 8 x 220&Omega; current limiting resistors (one for each LED).  Alternatively, use a resistor pack containing 8 x 220&Omega; resistors.
+* 8 x `220R` current limiting resistors (one for each LED).  Alternatively, use a resistor pack containing 8 x `220R` resistors.
 * 1 x 74HC595
 
 These components, along with a Netduino, should be connected as follows:
