@@ -14,3 +14,4 @@ title: Component Reference
 
 #### [Resistors](Resistors)
 
+#### [74595 Shift Register](ShiftRegister74595)
