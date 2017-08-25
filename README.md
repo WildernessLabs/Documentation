@@ -55,7 +55,7 @@ For more information, please see the [Contributing](Contributing) page.
 ### Documentation Prose
 
 All the documentation prose is released under a [Creative Commons 
-Attribution + Noncommercial + NoDerivatives (CC BY-NC-ND) license](Licenses/CreativecCommons_BY_NC_ND.md). Feel free to share verbatim in non-commercial usage and provide attribution. Commercial usage may be granted in certain use cases. If you need a more permissive license, please contact us at [hello@wildernesslabs.co](mailto:hello@wildernesslabs.co).
+Attribution + Noncommercial + NoDerivatives (CC BY-NC-ND) license](Licenses/CreativeCommons_BY_NC_ND.md). Feel free to share verbatim in non-commercial usage and provide attribution. Commercial usage may be granted in certain use cases. If you need a more permissive license, please contact us at [hello@wildernesslabs.co](mailto:hello@wildernesslabs.co).
 
 ![Creative Commons BY-NC-ND Logo](Licenses/Cc-by-nc-nd_icon.png)
 
