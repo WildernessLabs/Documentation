@@ -27,7 +27,7 @@ The second clock (Storage register / Latch clock) is used to decide when the dat
 
 The operation of the shift register can be illustrated using binary counter.  Here a single shift register will be connected to 8 LEDs.  These LEDs will represent the 8 bits in a single byte.
 
-The application will output the current byte as a series of bits and then display the value on the LEDs.
+The application will use [BitBanging](../../BitBanging/) to output the current byte as a series of bits and then display the value on the LEDs.
 
 ### Hardware
 
