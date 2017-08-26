@@ -317,33 +317,36 @@
 
 <span class="k">namespace</span> <span class="nn">GlitchFilter</span>
 <span class="p">{</span>
-	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
-	<span class="p">{</span>
-		<span class="c1">// An output port allows you to write (send a signal) to a pin
-</span>		<span class="k">static</span> <span class="n">OutputPort</span> <span class="n">_led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
-		<span class="c1">// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
-</span>		<span class="k">static</span> <span class="n">InputPort</span> <span class="n">_button</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">InputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_SW1</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="n">Port</span><span class="p">.</span><span class="n">ResistorMode</span><span class="p">.</span><span class="n">Disabled</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="c1">// An output port allows you to write (send a signal) to a pin
+</span>        <span class="k">static</span> <span class="n">OutputPort</span> <span class="n">_led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+        <span class="c1">// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
+</span>        <span class="k">static</span> <span class="n">InputPort</span> <span class="n">_button</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">InputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_SW1</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="n">Port</span><span class="p">.</span><span class="n">ResistorMode</span><span class="p">.</span><span class="n">Disabled</span><span class="p">);</span>
 
-		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="c1">// turn the LED off initially
-</span>			<span class="n">_led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// turn the LED off initially
+</span>            <span class="n">_led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 
-			<span class="c1">// smooth noise out over 5 milliseconds
-</span>			<span class="n">Cpu</span><span class="p">.</span><span class="n">GlitchFilterTime</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TimeSpan</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+            <span class="c1">// smooth noise out over 5 milliseconds
+</span>            <span class="n">Cpu</span><span class="p">.</span><span class="n">GlitchFilterTime</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TimeSpan</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
 
-			<span class="c1">// run forever
-</span>			<span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="c1">// set the onboard LED output to be the input of the button
-</span>				<span class="n">_led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">_button</span><span class="p">.</span><span class="nf">Read</span><span class="p">());</span>
-			<span class="p">}</span>
-
-		<span class="p">}</span>
-	<span class="p">}</span>
+            <span class="c1">// run forever
+</span>            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="c1">// set the onboard LED output to be the input of the button
+</span>                <span class="n">_led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">_button</span><span class="p">.</span><span class="nf">Read</span><span class="p">());</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 </div>
+
+<h1 id="netduino-samples-github-repositoryhttpsgithubcomwildernesslabsnetduinosamples"><a href="https://github.com/WildernessLabs/Netduino_Samples">Netduino Samples Github Repository</a></h1>
+
+<p>Full source code for all of the samples can be found in the Netduino Samples repository on Github.</p>
 
 
                         </div>

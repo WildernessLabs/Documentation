@@ -321,26 +321,30 @@
 
 <span class="k">namespace</span> <span class="nn">Blinky</span>
 <span class="p">{</span>
-	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
-	<span class="p">{</span>
-		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="c1">// create an output port (a port that can be written to) and wire it to the onboard LED
-</span>			<span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// create an output port (a port that can be written to) and wire it to the onboard LED
+</span>            <span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
 
-			<span class="c1">// run forever
-</span>			<span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED
-</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
-</span>				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED
-</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
-</span>			<span class="p">}</span>
-		<span class="p">}</span> 
-	<span class="p">}</span>
+            <span class="c1">// run forever
+</span>            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED
+</span>                <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>                <span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED
+</span>                <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>            <span class="p">}</span>
+        <span class="p">}</span> 
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 </div>
+
+<h1 id="netduino-samples-github-repositoryhttpsgithubcomwildernesslabsnetduinosamples"><a href="https://github.com/WildernessLabs/Netduino_Samples">Netduino Samples Github Repository</a></h1>
+
+<p>Full source code for all of the samples can be found in the Netduino Samples repository on Github.</p>
 
 
                         </div>

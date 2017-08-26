@@ -329,212 +329,229 @@
 
 <span class="k">namespace</span> <span class="nn">Blinky</span>
 <span class="p">{</span>
-	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
-	<span class="p">{</span>
-		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-		<span class="p">{</span>
-			
-			<span class="n">App</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">App</span> <span class="p">();</span>
-			<span class="n">app</span><span class="p">.</span><span class="nf">Run</span> <span class="p">();</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            
+            <span class="n">App</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">App</span> <span class="p">();</span>
+            <span class="n">app</span><span class="p">.</span><span class="nf">Run</span> <span class="p">();</span>
 
-			<span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
-			<span class="k">while</span> <span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">IsRunning</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED
-</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
-</span>				<span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED
-</span>				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+            <span class="n">OutputPort</span> <span class="n">led</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OutputPort</span><span class="p">(</span><span class="n">Pins</span><span class="p">.</span><span class="n">ONBOARD_LED</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">IsRunning</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> <span class="c1">// turn on the LED
+</span>                <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
+</span>                <span class="n">led</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// turn off the LED
+</span>                <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">250</span><span class="p">);</span> <span class="c1">// sleep for 250ms
 </span>
-			<span class="p">}</span>
+            <span class="p">}</span>
 
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"App finished."</span><span class="p">);</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain."</span><span class="p">);</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Time to die."</span><span class="p">);</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"App finished."</span><span class="p">);</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain."</span><span class="p">);</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Time to die."</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-	<span class="k">public</span> <span class="k">class</span> <span class="nc">App</span>
-	<span class="p">{</span>
-		<span class="n">NetworkInterface</span><span class="p">[]</span> <span class="n">_interfaces</span><span class="p">;</span>
-
-
-		<span class="k">public</span> <span class="kt">bool</span> <span class="n">IsRunning</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-
-		<span class="k">public</span> <span class="k">void</span> <span class="nf">Run</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="k">this</span><span class="p">.</span><span class="n">IsRunning</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
-			<span class="kt">bool</span> <span class="n">goodToGo</span> <span class="p">=</span> <span class="nf">InitializeNetwork</span> <span class="p">();</span>
-
-			<span class="k">if</span> <span class="p">(</span><span class="n">goodToGo</span><span class="p">)</span> <span class="p">{</span>
-				<span class="nf">MakeWebRequest</span> <span class="p">(</span><span class="s">"http://google.com"</span><span class="p">);</span>
-			<span class="p">}</span>
-
-			<span class="k">this</span><span class="p">.</span><span class="n">IsRunning</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
-		<span class="p">}</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">App</span>
+    <span class="p">{</span>
+        <span class="n">NetworkInterface</span><span class="p">[]</span> <span class="n">_interfaces</span><span class="p">;</span>
 
 
-		<span class="k">protected</span> <span class="kt">bool</span> <span class="nf">InitializeNetwork</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="k">if</span> <span class="p">(</span><span class="n">Microsoft</span><span class="p">.</span><span class="n">SPOT</span><span class="p">.</span><span class="n">Hardware</span><span class="p">.</span><span class="n">SystemInfo</span><span class="p">.</span><span class="n">SystemID</span><span class="p">.</span><span class="n">SKU</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Wireless tests run only on Device"</span><span class="p">);</span>
-				<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-			<span class="p">}</span>
+        <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsRunning</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
 
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Getting all the network interfaces."</span><span class="p">);</span>
-			<span class="n">_interfaces</span> <span class="p">=</span> <span class="n">NetworkInterface</span><span class="p">.</span><span class="nf">GetAllNetworkInterfaces</span><span class="p">();</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Run</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">IsRunning</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="kt">bool</span> <span class="n">goodToGo</span> <span class="p">=</span> <span class="nf">InitializeNetwork</span> <span class="p">();</span>
 
-			<span class="c1">// debug output
-</span>			<span class="nf">ListNetworkInterfaces</span> <span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">goodToGo</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nf">MakeWebRequest</span> <span class="p">(</span><span class="s">"http://google.com"</span><span class="p">);</span>
+            <span class="p">}</span>
 
-			<span class="c1">// loop through each network interface
-</span>			<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">net</span> <span class="k">in</span> <span class="n">_interfaces</span><span class="p">)</span> <span class="p">{</span>
-
-				<span class="c1">// debug out
-</span>				<span class="nf">ListNetworkInfo</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
-
-				<span class="k">switch</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">NetworkInterfaceType</span><span class="p">)</span> <span class="p">{</span>
-				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Ethernet</span><span class="p">):</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Ethernet Interface"</span><span class="p">);</span>
-					<span class="k">break</span><span class="p">;</span>
-				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Wireless80211</span><span class="p">):</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found 802.11 WiFi Interface"</span><span class="p">);</span>
-					<span class="k">break</span><span class="p">;</span>
-				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Unknown</span><span class="p">):</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Unknown Interface"</span><span class="p">);</span>
-					<span class="k">break</span><span class="p">;</span>
-				<span class="p">}</span>
-
-				<span class="c1">// check for an IP address, try to get one if it's empty
-</span>				<span class="k">return</span> <span class="nf">CheckIPAddress</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
-			<span class="p">}</span>
-
-			<span class="c1">// if we got here, should be false.
-</span>			<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-		<span class="p">}</span>
-
-		<span class="k">protected</span> <span class="k">void</span> <span class="nf">MakeWebRequest</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="kt">var</span> <span class="n">httpWebRequest</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
-			<span class="n">httpWebRequest</span><span class="p">.</span><span class="n">Method</span> <span class="p">=</span> <span class="s">"GET"</span><span class="p">;</span>
-
-			<span class="kt">var</span> <span class="n">httpResponse</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebResponse</span><span class="p">)</span><span class="n">httpWebRequest</span><span class="p">.</span><span class="nf">GetResponse</span><span class="p">();</span>
-			<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">streamReader</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamReader</span><span class="p">(</span><span class="n">httpResponse</span><span class="p">.</span><span class="nf">GetResponseStream</span><span class="p">()))</span>
-			<span class="p">{</span>
-				<span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">streamReader</span><span class="p">.</span><span class="nf">ReadToEnd</span><span class="p">();</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"this is what we got from "</span> <span class="p">+</span> <span class="n">url</span> <span class="p">+</span> <span class="s">": "</span> <span class="p">+</span> <span class="n">result</span><span class="p">);</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">IsRunning</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
 
 
-		<span class="k">protected</span> <span class="kt">bool</span> <span class="nf">CheckIPAddress</span> <span class="p">(</span><span class="n">NetworkInterface</span> <span class="n">net</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="kt">int</span> <span class="n">timeout</span> <span class="p">=</span> <span class="m">10000</span><span class="p">;</span> <span class="c1">// timeout, in milliseconds to wait for an IP. 10,000 = 10 seconds
+        <span class="k">protected</span> <span class="kt">bool</span> <span class="nf">InitializeNetwork</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Microsoft</span><span class="p">.</span><span class="n">SPOT</span><span class="p">.</span><span class="n">Hardware</span><span class="p">.</span><span class="n">SystemInfo</span><span class="p">.</span><span class="n">SystemID</span><span class="p">.</span><span class="n">SKU</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Wireless tests run only on Device"</span><span class="p">);</span>
+                <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Getting all the network interfaces."</span><span class="p">);</span>
+            <span class="n">_interfaces</span> <span class="p">=</span> <span class="n">NetworkInterface</span><span class="p">.</span><span class="nf">GetAllNetworkInterfaces</span><span class="p">();</span>
+
+            <span class="c1">// debug output
+</span>            <span class="nf">ListNetworkInterfaces</span> <span class="p">();</span>
+
+            <span class="c1">// loop through each network interface
+</span>            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">net</span> <span class="k">in</span> <span class="n">_interfaces</span><span class="p">)</span>
+            <span class="p">{</span>
+
+                <span class="c1">// debug out
+</span>                <span class="nf">ListNetworkInfo</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
+
+                <span class="k">switch</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">NetworkInterfaceType</span><span class="p">)</span> 
+                <span class="p">{</span>
+                <span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Ethernet</span><span class="p">):</span>
+                    <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Ethernet Interface"</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Wireless80211</span><span class="p">):</span>
+                    <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found 802.11 WiFi Interface"</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Unknown</span><span class="p">):</span>
+                    <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Unknown Interface"</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="c1">// check for an IP address, try to get one if it's empty
+</span>                <span class="k">return</span> <span class="nf">CheckIPAddress</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="c1">// if we got here, should be false.
+</span>            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">void</span> <span class="nf">MakeWebRequest</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">httpWebRequest</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+            <span class="n">httpWebRequest</span><span class="p">.</span><span class="n">Method</span> <span class="p">=</span> <span class="s">"GET"</span><span class="p">;</span>
+
+            <span class="kt">var</span> <span class="n">httpResponse</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebResponse</span><span class="p">)</span><span class="n">httpWebRequest</span><span class="p">.</span><span class="nf">GetResponse</span><span class="p">();</span>
+            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">streamReader</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamReader</span><span class="p">(</span><span class="n">httpResponse</span><span class="p">.</span><span class="nf">GetResponseStream</span><span class="p">()))</span>
+            <span class="p">{</span>
+                <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">streamReader</span><span class="p">.</span><span class="nf">ReadToEnd</span><span class="p">();</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"this is what we got from "</span> <span class="p">+</span> <span class="n">url</span> <span class="p">+</span> <span class="s">": "</span> <span class="p">+</span> <span class="n">result</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+
+        <span class="k">protected</span> <span class="kt">bool</span> <span class="nf">CheckIPAddress</span> <span class="p">(</span><span class="n">NetworkInterface</span> <span class="n">net</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">timeout</span> <span class="p">=</span> <span class="m">10000</span><span class="p">;</span> <span class="c1">// timeout, in milliseconds to wait for an IP. 10,000 = 10 seconds
 </span>
-			<span class="c1">// check to see if the IP address is empty (0.0.0.0). IPAddress.Any is 0.0.0.0.
-</span>			<span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">.</span><span class="nf">ToString</span><span class="p">())</span> <span class="p">{</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"No IP Address"</span><span class="p">);</span>
+            <span class="c1">// check to see if the IP address is empty (0.0.0.0). IPAddress.Any is 0.0.0.0.
+</span>            <span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">.</span><span class="nf">ToString</span><span class="p">())</span> 
+            <span class="p">{</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"No IP Address"</span><span class="p">);</span>
 
-				<span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IsDhcpEnabled</span><span class="p">)</span> <span class="p">{</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"DHCP is enabled, attempting to get an IP Address"</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IsDhcpEnabled</span><span class="p">)</span> 
+                <span class="p">{</span>
+                    <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"DHCP is enabled, attempting to get an IP Address"</span><span class="p">);</span>
 
-					<span class="c1">// ask for an IP address from DHCP [note this is a static, not sure which network interface it would act on]
-</span>					<span class="kt">int</span> <span class="n">sleepInterval</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
-					<span class="kt">int</span> <span class="n">maxIntervalCount</span> <span class="p">=</span> <span class="n">timeout</span> <span class="p">/</span> <span class="n">sleepInterval</span><span class="p">;</span>
-					<span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-					<span class="k">while</span> <span class="p">(</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">GetDefaultLocalAddress</span> <span class="p">()</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span> <span class="p">&amp;&amp;</span> <span class="n">count</span> <span class="p">&lt;</span> <span class="n">maxIntervalCount</span><span class="p">)</span> <span class="p">{</span>
-						<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Sleep while obtaining an IP"</span><span class="p">);</span>
-						<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">10</span><span class="p">);</span>
-						<span class="n">count</span><span class="p">++;</span>
-					<span class="p">};</span>
+                    <span class="c1">// ask for an IP address from DHCP [note this is a static, not sure which network interface it would act on]
+</span>                    <span class="kt">int</span> <span class="n">sleepInterval</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+                    <span class="kt">int</span> <span class="n">maxIntervalCount</span> <span class="p">=</span> <span class="n">timeout</span> <span class="p">/</span> <span class="n">sleepInterval</span><span class="p">;</span>
+                    <span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                    <span class="k">while</span> <span class="p">(</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">GetDefaultLocalAddress</span> <span class="p">()</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span> <span class="p">&amp;&amp;</span> <span class="n">count</span> <span class="p">&lt;</span> <span class="n">maxIntervalCount</span><span class="p">)</span> 
+                    <span class="p">{</span>
+                        <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Sleep while obtaining an IP"</span><span class="p">);</span>
+                        <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">10</span><span class="p">);</span>
+                        <span class="n">count</span><span class="p">++;</span>
+                    <span class="p">};</span>
 
-					<span class="c1">// if we got here, we either timed out or got an address, so let's find out.
-</span>					<span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">.</span><span class="nf">ToString</span><span class="p">())</span> <span class="p">{</span>
-						<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Failed to get an IP Address in the alotted time."</span><span class="p">);</span>
-						<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-					<span class="p">}</span>
+                    <span class="c1">// if we got here, we either timed out or got an address, so let's find out.
+</span>                    <span class="k">if</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span> <span class="p">==</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Any</span><span class="p">.</span><span class="nf">ToString</span><span class="p">())</span> 
+                    <span class="p">{</span>
+                        <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Failed to get an IP Address in the alotted time."</span><span class="p">);</span>
+                        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+                    <span class="p">}</span>
 
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Got IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
-					<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Got IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+                    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
 
-					<span class="c1">//NOTE: this does not work, even though it's on the actual network device. [shrug]
-</span>					<span class="c1">// try to renew the DHCP lease and get a new IP Address
-</span>					<span class="c1">//net.RenewDhcpLease ();
-</span>					<span class="c1">//while (net.IPAddress == "0.0.0.0") {
-</span>					<span class="c1">//	Thread.Sleep (10);
-</span>					<span class="c1">//}
+                    <span class="c1">//NOTE: this does not work, even though it's on the actual network device. [shrug]
+</span>                    <span class="c1">// try to renew the DHCP lease and get a new IP Address
+</span>                    <span class="c1">//net.RenewDhcpLease ();
+</span>                    <span class="c1">//while (net.IPAddress == "0.0.0.0") {
+</span>                    <span class="c1">//    Thread.Sleep (10);
+</span>                    <span class="c1">//}
 </span>
-				<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"DHCP is not enabled, and no IP address is configured, bailing out."</span><span class="p">);</span>
-					<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-				<span class="p">}</span>
-			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Already had IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
-				<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
-			<span class="p">}</span>
+                <span class="p">}</span> 
+                <span class="k">else</span> 
+                <span class="p">{</span>
+                    <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"DHCP is not enabled, and no IP address is configured, bailing out."</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Already had IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+            <span class="p">}</span>
 
-		<span class="p">}</span>
+        <span class="p">}</span>
 
-		<span class="k">protected</span> <span class="k">void</span> <span class="nf">ListNetworkInterfaces</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">net</span> <span class="k">in</span> <span class="n">_interfaces</span><span class="p">)</span> <span class="p">{</span>
-				<span class="k">switch</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">NetworkInterfaceType</span><span class="p">)</span> <span class="p">{</span>
-				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Ethernet</span><span class="p">):</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Ethernet Interface"</span><span class="p">);</span>
-					<span class="k">break</span><span class="p">;</span>
-				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Wireless80211</span><span class="p">):</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found 802.11 WiFi Interface"</span><span class="p">);</span>
-					<span class="k">break</span><span class="p">;</span>
-				<span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Unknown</span><span class="p">):</span>
-					<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Unknown Interface"</span><span class="p">);</span>
-					<span class="k">break</span><span class="p">;</span>
+        <span class="k">protected</span> <span class="k">void</span> <span class="nf">ListNetworkInterfaces</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">net</span> <span class="k">in</span> <span class="n">_interfaces</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">switch</span> <span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">NetworkInterfaceType</span><span class="p">)</span> 
+                <span class="p">{</span>
+                    <span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Ethernet</span><span class="p">):</span>
+                        <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Ethernet Interface"</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Wireless80211</span><span class="p">):</span>
+                        <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found 802.11 WiFi Interface"</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="p">(</span><span class="n">NetworkInterfaceType</span><span class="p">.</span><span class="n">Unknown</span><span class="p">):</span>
+                        <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Found Unknown Interface"</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-				<span class="p">}</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
+        <span class="k">protected</span> <span class="k">void</span> <span class="nf">ListNetworkInfo</span><span class="p">(</span><span class="n">NetworkInterface</span> <span class="n">net</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"MAC Address: "</span> <span class="p">+</span> <span class="nf">BytesToHexString</span><span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">PhysicalAddress</span><span class="p">));</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"DHCP enabled: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IsDhcpEnabled</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Dynamic DNS enabled: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IsDynamicDnsEnabled</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Subnet Mask: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">SubnetMask</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Gateway: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">GatewayAddress</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
 
-		<span class="k">protected</span> <span class="k">void</span> <span class="nf">ListNetworkInfo</span><span class="p">(</span><span class="n">NetworkInterface</span> <span class="n">net</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"MAC Address: "</span> <span class="p">+</span> <span class="nf">BytesToHexString</span><span class="p">(</span><span class="n">net</span><span class="p">.</span><span class="n">PhysicalAddress</span><span class="p">));</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"DHCP enabled: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IsDhcpEnabled</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Dynamic DNS enabled: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IsDynamicDnsEnabled</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"IP Address: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">IPAddress</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Subnet Mask: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">SubnetMask</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
-			<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">"Gateway: "</span> <span class="p">+</span> <span class="n">net</span><span class="p">.</span><span class="n">GatewayAddress</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">net</span> <span class="k">is</span> <span class="n">Wireless80211</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">var</span> <span class="n">wifi</span> <span class="p">=</span> <span class="n">net</span> <span class="k">as</span> <span class="n">Wireless80211</span><span class="p">;</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"SSID:"</span> <span class="p">+</span> <span class="n">wifi</span><span class="p">.</span><span class="n">Ssid</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+            <span class="p">}</span>
 
-			<span class="k">if</span> <span class="p">(</span><span class="n">net</span> <span class="k">is</span> <span class="n">Wireless80211</span><span class="p">)</span> <span class="p">{</span>
-				<span class="kt">var</span> <span class="n">wifi</span> <span class="p">=</span> <span class="n">net</span> <span class="k">as</span> <span class="n">Wireless80211</span><span class="p">;</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"SSID:"</span> <span class="p">+</span> <span class="n">wifi</span><span class="p">.</span><span class="n">Ssid</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
-			<span class="p">}</span>
+        <span class="p">}</span>
 
-		<span class="p">}</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">BytesToHexString</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span> <span class="n">bytes</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">hexString</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
 
-		<span class="k">private</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">BytesToHexString</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span> <span class="n">bytes</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="kt">string</span> <span class="n">hexString</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+            <span class="c1">// Create a character array for hexidecimal conversion.
+</span>            <span class="k">const</span> <span class="kt">string</span> <span class="n">hexChars</span> <span class="p">=</span> <span class="s">"0123456789ABCDEF"</span><span class="p">;</span>
 
-			<span class="c1">// Create a character array for hexidecimal conversion.
-</span>			<span class="k">const</span> <span class="kt">string</span> <span class="n">hexChars</span> <span class="p">=</span> <span class="s">"0123456789ABCDEF"</span><span class="p">;</span>
+            <span class="c1">// Loop through the bytes.
+</span>            <span class="k">for</span> <span class="p">(</span><span class="kt">byte</span> <span class="n">b</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">b</span> <span class="p">&lt;</span> <span class="n">bytes</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">b</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">hexString</span> <span class="p">+=</span> <span class="s">"-"</span><span class="p">;</span>
 
-			<span class="c1">// Loop through the bytes.
-</span>			<span class="k">for</span> <span class="p">(</span><span class="kt">byte</span> <span class="n">b</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">b</span> <span class="p">&lt;</span> <span class="n">bytes</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">b</span><span class="p">++)</span>
-			<span class="p">{</span>
-				<span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
-					<span class="n">hexString</span> <span class="p">+=</span> <span class="s">"-"</span><span class="p">;</span>
+                <span class="c1">// Grab the top 4 bits and append the hex equivalent to the return string.        
+</span>                <span class="n">hexString</span> <span class="p">+=</span> <span class="n">hexChars</span><span class="p">[</span><span class="n">bytes</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">&gt;&gt;</span> <span class="m">4</span><span class="p">];</span>
 
-				<span class="c1">// Grab the top 4 bits and append the hex equivalent to the return string.        
-</span>				<span class="n">hexString</span> <span class="p">+=</span> <span class="n">hexChars</span><span class="p">[</span><span class="n">bytes</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">&gt;&gt;</span> <span class="m">4</span><span class="p">];</span>
+                <span class="c1">// Mask off the upper 4 bits to get the rest of it.
+</span>                <span class="n">hexString</span> <span class="p">+=</span> <span class="n">hexChars</span><span class="p">[</span><span class="n">bytes</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">&amp;</span> <span class="m">0x0F</span><span class="p">];</span>
+            <span class="p">}</span>
 
-				<span class="c1">// Mask off the upper 4 bits to get the rest of it.
-</span>				<span class="n">hexString</span> <span class="p">+=</span> <span class="n">hexChars</span><span class="p">[</span><span class="n">bytes</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">&amp;</span> <span class="m">0x0F</span><span class="p">];</span>
-			<span class="p">}</span>
-
-			<span class="k">return</span> <span class="n">hexString</span><span class="p">;</span>
-		<span class="p">}</span>
-
-	<span class="p">}</span>
+            <span class="k">return</span> <span class="n">hexString</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 </div>
+
+<h1 id="netduino-samples-github-repositoryhttpsgithubcomwildernesslabsnetduinosamples"><a href="https://github.com/WildernessLabs/Netduino_Samples">Netduino Samples Github Repository</a></h1>
+
+<p>Full source code for all of the samples can be found in the Netduino Samples repository on Github.</p>
 
 
                         </div>

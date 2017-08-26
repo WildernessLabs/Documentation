@@ -4,6 +4,8 @@ This sample demonstrates how to control an LCD using the Adafruit I2C/SPI LCD ba
 
 ![LCD Backpack](SPILCDHelloWorld.png)
 
+# Code
+
 The application producing the above output is as follows:
 
 ```csharp
@@ -46,7 +48,11 @@ namespace HelloWorld
 }
 ```
 
-The full source code for this project can be found on the [Netduino Samples Repository](https://github.com/WildernessLabs/Netduino_Samples).
+# Hardware
+
+Connect the LCD to the Netduino as follows:
+
+![](NetduinoAndLCDFritzing.png)
 
 ## Discussion
 
@@ -59,3 +65,7 @@ A full discussion on SPI and the software can be found on the [Wilderness Labs](
 
 * [Netduino](https://www.wildernesslabs.co/Netduino)
 * [Adafruit I2C / SPI LCD Backpack](https://www.adafruit.com/product/292)
+
+# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+
+Full source code for all of the samples can be found in the Netduino Samples repository on Github.

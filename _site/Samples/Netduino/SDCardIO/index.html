@@ -319,57 +319,63 @@
 
 <span class="k">namespace</span> <span class="nn">SDCardIO</span>
 <span class="p">{</span>
-	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
-	<span class="p">{</span>
-		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="c1">// some debug output for funsies 
-</span>			<span class="nf">OutputSDInfo</span> <span class="p">();</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// some debug output for funsies 
+</span>            <span class="nf">OutputSDInfo</span> <span class="p">();</span>
 
-			<span class="kt">var</span> <span class="n">volume</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">VolumeInfo</span><span class="p">(</span><span class="s">"SD"</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">volume</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">VolumeInfo</span><span class="p">(</span><span class="s">"SD"</span><span class="p">);</span>
 
-			<span class="c1">// check to see if there's an SD card inserted
-</span>			<span class="k">if</span> <span class="p">(</span><span class="n">volume</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// check to see if there's an SD card inserted
+</span>            <span class="k">if</span> <span class="p">(</span><span class="n">volume</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="c1">// "SD" is the volume name,
+</span>                <span class="kt">var</span> <span class="n">path</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="nf">Combine</span><span class="p">(</span><span class="s">"SD"</span><span class="p">,</span><span class="s">"test.txt"</span><span class="p">);</span>
 
-				<span class="c1">// "SD" is the volume name,
-</span>				<span class="kt">var</span> <span class="n">path</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="nf">Combine</span><span class="p">(</span><span class="s">"SD"</span><span class="p">,</span><span class="s">"test.txt"</span><span class="p">);</span>
+                <span class="c1">// write some text to a file
+</span>                <span class="n">File</span><span class="p">.</span><span class="nf">WriteAllBytes</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span> <span class="p">(</span><span class="s">"Foooooooo"</span><span class="p">));</span>
 
-				<span class="c1">// write some text to a file
-</span>				<span class="n">File</span><span class="p">.</span><span class="nf">WriteAllBytes</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span> <span class="p">(</span><span class="s">"Foooooooo"</span><span class="p">));</span>
+                <span class="c1">// Must call flush to write immediately. Otherwise, there's no guarantee 
+</span>                <span class="c1">// as to when the file is written. 
+</span>                <span class="n">volume</span><span class="p">.</span><span class="nf">FlushAll</span><span class="p">();</span>
+            <span class="p">}</span> 
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"There doesn't appear to be an SD card inserted"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-				<span class="c1">// Must call flush to write immediately. Otherwise, there's no guarantee 
-</span>				<span class="c1">// as to when the file is written. 
-</span>				<span class="n">volume</span><span class="p">.</span><span class="nf">FlushAll</span><span class="p">();</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">OutputSDInfo</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">vInfo</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">VolumeInfo</span> <span class="p">(</span><span class="s">"SD"</span><span class="p">);</span>
 
-			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"There doesn't appear to be an SD card inserted"</span><span class="p">);</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">vInfo</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Is Formatted: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">IsFormatted</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Total Free Space: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">TotalFreeSpace</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Total Size: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">TotalSize</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"File System: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"There doesn't appear to be an SD card in the device."</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">OutputSDInfo</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="kt">var</span> <span class="n">vInfo</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">VolumeInfo</span> <span class="p">(</span><span class="s">"SD"</span><span class="p">);</span>
-
-			<span class="k">if</span> <span class="p">(</span><span class="n">vInfo</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Is Formatted: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">IsFormatted</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Total Free Space: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">TotalFreeSpace</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"Total Size: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">TotalSize</span><span class="p">.</span><span class="nf">ToString</span> <span class="p">());</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"File System: "</span> <span class="p">+</span> <span class="n">vInfo</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">);</span>
-			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-				<span class="n">Debug</span><span class="p">.</span><span class="nf">Print</span> <span class="p">(</span><span class="s">"There doesn't appear to be an SD card in the device."</span><span class="p">);</span>
-			<span class="p">}</span>
-
-		<span class="p">}</span>
-
-		<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">SDExists</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nf">VolumeInfo</span> <span class="p">(</span><span class="s">"SD"</span><span class="p">)</span> <span class="p">!=</span> <span class="k">null</span><span class="p">);</span>
-		<span class="p">}</span>
-
-	<span class="p">}</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">SDExists</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nf">VolumeInfo</span> <span class="p">(</span><span class="s">"SD"</span><span class="p">)</span> <span class="p">!=</span> <span class="k">null</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 </div>
+
+<h1 id="netduino-samples-github-repositoryhttpsgithubcomwildernesslabsnetduinosamples"><a href="https://github.com/WildernessLabs/Netduino_Samples">Netduino Samples Github Repository</a></h1>
+
+<p>Full source code for all of the samples can be found in the Netduino Samples repository on Github.</p>
 
 
                         </div>
