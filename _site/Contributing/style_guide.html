@@ -307,27 +307,13 @@
     </h2>
 </div>
 
+<p>Start your article with a brief introduction explaining the purpose of the article.</p>
+
+<p>Use one or two paragraphs to capture the readers interest.</p>
+
 <h1 id="article-structure">Article Structure</h1>
 
 <h2 id="separation-of-conceptual-and-concrete-examples">Separation of Conceptual and Concrete Examples</h2>
-
-<h2 id="additional-resources">Additional Resources</h2>
-
-<p>The <em>Additional Resources</em> Section should go at the bottom of the article and use the following general pattern:</p>
-
-<h3 id="further-reading">Further Reading</h3>
-
-<ul>
-  <li><strong><a href="Link">Article Title</a></strong> - Brief description/relevance.</li>
-  <li><strong><a href="Link">Article Title</a></strong> - Brief description/relevance.</li>
-</ul>
-
-<h3 id="product-links">Product Links</h3>
-
-<ul>
-  <li><strong><a href="Link">Product Title</a></strong> - Brief description/relevance.</li>
-  <li><strong><a href="Link">Product Title</a></strong> - Brief description/relevance.</li>
-</ul>
 
 <h1 id="markdown-syntax-reference">Markdown Syntax Reference</h1>
 
@@ -357,6 +343,28 @@
 
 <h3 id="examples-1">Examples</h3>
 
+<h4 id="source-code">Source Code</h4>
+
+<p>The initial triple backticks should be followed by the <em>csharp</em> modifier to indicate that the following section should use C# syntax highlighting.  For example:</p>
+
+<pre>
+```csharp
+while (true)
+{
+    ToggleLED();
+}
+```
+</pre>
+
+<p>will appear as:</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">ToggleLED</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
 <h4 id="applicationconsole-output">Application/Console Output</h4>
 
 <p>Putting console text in a triple backtick block has the benefit of differentiating it from prose, as well as removing the need for <code class="highlighter-rouge">&lt;br/&gt;</code> tags:</p>
@@ -373,6 +381,59 @@ Temperature data: 0x0c, 0xb1
 25.375 C / 77.675000000000011 F
 </code></pre>
 </div>
+
+<h2 id="coding-style">Coding Style</h2>
+
+<p>Use standard C# coding and bracing conventions.  There are many examples of the C# style on <a href="https://docs.microsoft.com/en-us/dotnet/csharp/index">Microsoft’s C# Language Reference</a> site.</p>
+
+<h3 id="tabs-or-spaces">Tabs or Spaces?</h3>
+
+<p>Spaces should be used in preference to tabs for consistency in rendering the output in the browser.  This is especially critical in example code enclosed in backticks.</p>
+
+<p>Use four spaces when indenting code, again this is consistent with the style used on Microsoft’s sites.</p>
+
+<h1 id="hardware">Hardware</h1>
+
+<p>When selecting hardware, try to select commonly available components and breakout boards.  This will make it easier for someone to replicate project being discussed.</p>
+
+<h2 id="schematics-and-breadboard-layout">Schematics and Breadboard Layout</h2>
+
+<h3 id="schematics">Schematics</h3>
+
+<h3 id="breadboard">Breadboard</h3>
+
+<p>Make it easier for the reader to reproduce the work on breadboard by including a diagram such as the following:</p>
+
+<p><img src="ShiftRegisterAndLEDFritzing.png" alt="" /></p>
+
+<p>The above was produced using <a href="http://fritzing.org/home/">Fritzing</a>.</p>
+
+<p>A good convention to keep is to reserve red wires for power and black wires for ground signals.</p>
+
+<p>Try not to cross wires of the same color as this can be confusing.</p>
+
+<h2 id="photographs">Photographs</h2>
+
+<p>A photograph of a component or layout can also help the reader get a feel for the project.</p>
+
+<h1 id="additional-resources--see-also--further-information">Additional Resources / See Also / Further Information</h1>
+
+<p>The <em>Additional Resources</em> Section should go at the bottom of the article and use the following general pattern:</p>
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><strong><a href="Link">Article Title</a></strong> - Brief description/relevance.</li>
+  <li><strong><a href="Link">Article Title</a></strong> - Brief description/relevance.</li>
+</ul>
+
+<h3 id="product-links">Product Links</h3>
+
+<ul>
+  <li><strong><a href="Link">Product Title</a></strong> - Brief description/relevance.</li>
+  <li><strong><a href="Link">Product Title</a></strong> - Brief description/relevance.</li>
+</ul>
+
 
 
                         </div>
