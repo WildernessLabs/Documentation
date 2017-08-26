@@ -105,7 +105,7 @@ Make it easier for the reader to reproduce the work on breadboard by including a
 
 The above was produced using [Fritzing](http://fritzing.org/home/).
 
-A good convention to keep is to reserve red wires for power and black wires for ground signals.
+A good convention is to reserve red wires for power and black wires for ground signals.
 
 Try not to cross wires of the same color as this can be confusing.
 
