@@ -17,22 +17,26 @@ using System.Threading;
 
 namespace Blinky
 {
-	public class Program
-	{
-		public static void Main()
-		{
-			// create an output port (a port that can be written to) and wire it to the onboard LED
-			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
+    public class Program
+    {
+        public static void Main()
+        {
+            // create an output port (a port that can be written to) and wire it to the onboard LED
+            OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
 
-			// run forever
-			while (true)
-			{
-				led.Write(true); // turn on the LED
-				Thread.Sleep(250); // sleep for 250ms
-				led.Write(false); // turn off the LED
-				Thread.Sleep(250); // sleep for 250ms
-			}
-		} 
-	}
+            // run forever
+            while (true)
+            {
+                led.Write(true); // turn on the LED
+                Thread.Sleep(250); // sleep for 250ms
+                led.Write(false); // turn off the LED
+                Thread.Sleep(250); // sleep for 250ms
+            }
+        } 
+    }
 }
 ```
+
+# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+
+Full source code for all of the samples can be found in the Netduino Samples repository on Github.

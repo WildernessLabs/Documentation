@@ -6,6 +6,8 @@ Servo motors (servos) are available in a wide range of sizes amd capabilities.  
 
 The application below sweeps a servo through 0 to 180 degrees and back to 0 repeatedly.
 
+# Code
+
 ```csharp
 using System.Threading;
 using SecretLabs.NETMF.Hardware.NetduinoPlus;
@@ -36,4 +38,12 @@ namespace ServoTest
 }
 ```
 
-Full source code for the project can be found on the [Netduino Samples](https://github.com/WildernessLabs/Netduino_Samples/tree/master/ControllingAServo) repository.
+# Hardware
+
+Connect the Netduino to the servo as follows:
+
+![Servo Connected to Netduino](ServoBreadboard.png)
+
+# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+
+Full source code for all of the samples can be found in the Netduino Samples repository on Github.
