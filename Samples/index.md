@@ -14,6 +14,11 @@ The following samples can be found in the [WildernessLabs Documentation repo](ht
 * **[Changing colors of RGB LED with a Potentiometer](Netduino/PotentiometerControlled_RgbLed)** - Changing the color of an RGB LED with an `AnalogPort` potentiometer.
 * **[SD Card IO](Netduino/SDCardIO)** - Reading and writing to an SD card using `File.IO`.
 * **[Web Request](Netduino/WebRequest)** - Connecting to the internet and making an `HttpWebRequest`.
+* **[Controlling a servo](Netduino/ControllingAServo/)** - Make a servo sweep through 180 degrees continuously.
+* **[Read Temperature from TMP102](Netduino/TMP102BasicRead/)** - Read the temperature from a TMP102 temperature sensor using I2C.
+* **[Write to I2C Register](Netduino/TMP102ReadWrite/)** - Change the mode of the TMP102 by writing to a register using I2C.
+* **[UART Test](Netduino/UARTTest/)** - Basic reading and writing to a UART.
+* **[16x2 LCD](Netduino/LCDMicroLiquidCrystal/)** - Write information to a 16x2 LCD using SPI.
 
 
 ### Contributing
