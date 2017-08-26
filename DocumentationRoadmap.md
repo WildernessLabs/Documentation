@@ -12,6 +12,7 @@
 ## Lower Priority Docs (Up for grabs)
  * using an oscillscope
  * using a multimeter
+ * using a logic analyzer
 
 
 ## Documentation Reservations
@@ -20,5 +21,5 @@ The following docs have been claimed/reserved by the writer listed. If there is 
 
 | Topic Name + Link | Github Username of Writer |
 |-------------------|---------------------------|
-| [SPI](Netduino/Input_Output/Digital/SPI/) - LCD Example | Nevyn |
+| N/A | N/A |
 
