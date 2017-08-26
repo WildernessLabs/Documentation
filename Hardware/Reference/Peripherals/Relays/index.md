@@ -66,7 +66,7 @@ namespace Relay
             // run forever
             while (true)
             {
-                relay.Write(true); // turn on the LED
+                relay.Write(true); // turn on the relay
                 Thread.Sleep(500); // sleep for 1/2 second
                 relay.Write(false); // turn off the relay
                 Thread.Sleep(500); // sleep for 1/2 second
