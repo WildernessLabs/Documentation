@@ -2,23 +2,80 @@
 title: Relays
 ---
 
-Relays are electrical switching devices that use a small amount of current to control a much larger amount of current. Conceptually, they perform a similar function to a transistor, except that the controlling circuit is usually mechanically separate from the power circuit being controlled. This allows for very high currents to be switched, and also different types of currents. 
+Relays are electromechanical switches that allow a circuit to switch current on another circuit while being electrically isolated from each other. Inside a relay is an electromagnet powered by the controlling circuit which physically moves a switch. Conceptually, a relay functions much like a transistor, except that because the controlling circuit is electrically isolated from the switched current, meaning that relays can use small amounts of current to physically control large amounts of current, or completely different types of current.
+
+<!-- TODO: Need relay photo -->
 
 For example, a common type of relay is a DC controlled AC relay which uses a small amount of DC current (often supplied by a microcontroller) to switch an AC circuit on or off. This type of setup is common in appliances and other applications in which the logic circuit is DC, but various mechanical parts of the appliance are powered by AC current, such as motors, or heating elements.
 
-<!--
-# Pole and Throw
+### Supporting Circuits
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Relay_symbols.svg/400px-Relay_symbols.svg.png)
+Relays have some interesting electrical behaviors due to the fact that they're driven electromagnetically. For this reason, a relay requires a simple, but ancillary circuit to properly control them and handle current spikes created by them. For a more complete discussion of these circuits, see this [excellent tutorial](http://www.electronics-tutorials.ws/blog/relay-switch-circuit.html). However, there are many relay boards that come with a supporting circuit that can be wired up to a microcontroller very easily. 
 
-# Article TODO:
+### All in One Relay Boards
 
- * Relay Symbol
- * Relay Picture
- * Example Circuit of Relay controlling something like a motor or fan
+For example this, [Keye Studio 2 Channel relay board](https://www.amazon.com/Keyestudio-Module-Arduino-raspberry-2-channel/dp/B0177WOT1E/ref=sr_1_1?ie=UTF8&qid=1503712979&sr=8-1&keywords=2+channel+relay+keyestudio) can control up to 10A of 250V AC or 30V DC with 5V of input:
 
--->
+![Photo of a Keye Studio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg)
 
-# See Also
+## Pole and Throw
+
+Relays, like other switches, come in various _pole_ (P) and _throw_ (T) configurations. Pole refers to the source current nodes, and throw refers to the switched current nodes, and they are often come in single (S), and dual (D) configurations:
+
+![Illustration of the four common pole and throw configurations](/Common_Files/Switch_Pole_and_Throw.svg)
+
+The most common set of configurations are: 
+
+ * **SPST** - Single Pole, Single Throw 
+ * **SPDT** - Single Pole, Dual Throw
+ * **DPST** - Dual Pole, Single Throw
+ * **DPDT** - Dual Pole, Dual Throw
+
+The throw end of the switch most commonly comes in a _normally closed_ (NC), or _normally open_ configuration, which refers to whether or not that throw node is in the open or closed circuit configuration when at rest.
+
+## Sample Circuit
+
+The following schematic shows a simplified circuit diagram of how to use a relay to power LEDs. In this example, the current controlled by the relay is actually on the same circuit as the current that controls the relay for simplicity, but in a practical scenario, instead of LEDs, the relay might power an AC appliance circuit for a fan, heater, or similar:
+
+![](Relay_schematic.svg)
+
+Note that the relay in this schematic actually represents a relay circuit such as one contained in the Keyes all in one relay board mentioned above. So a practical example might look like the following:
+
+![](Relay_Practical_OFF_small.jpg)
+
+## Controlling the Relay
+
+Because the relay is controlled by simply supplying power to the pole side of the relay, all that is required is to wire the controlling lead to a digital IO pin. The following example illustrates switching between throws every 1/2 second on the SPDT relay shown above:
+
+```csharp
+using System;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+using System.Threading;
+
+namespace Relay
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            // create an output port (a port that can be written to) and connect it to Digital Pin 2
+            OutputPort relay = new OutputPort(Pins.GPIO_PIN_D2, false);
+
+            // run forever
+            while (true)
+            {
+                relay.Write(true); // turn on the LED
+                Thread.Sleep(500); // sleep for 1/2 second
+                relay.Write(false); // turn off the relay
+                Thread.Sleep(500); // sleep for 1/2 second
+            }
+        }
+    }
+}
+```
+
+## See Also
 
 [Wikipedia Relay Article](https://en.wikipedia.org/wiki/Relay)
