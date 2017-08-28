@@ -143,6 +143,7 @@ Current time: 8:28:14 Date: 28-8-2017
 Read 3: 0x16 0x28 0x08 0x02 0x28 0x00 0x88 0x17
 Current time: 8:28:16 Date: 28-8-2017
 ```
+
 The first line shows the bytes in the `dataIn` buffer, the second line shows the decoded date and time in _hour:minute:second day-month-year_ format.
 
 Comparing the contents of the `dataIn` buffer with the logic analyzer output above it can be seen that the first byte in the input stream (MISO) has been rejected by the `WriteRead` method.
