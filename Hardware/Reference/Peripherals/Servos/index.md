@@ -67,7 +67,7 @@ Only three connections are required:
 * Ground
 * Control signal
 
-For a low power servo, the power and ground signal can be connected directly to the Netduino 5V lines.  It is advisable to connect the control signal through a current limiting resistor, in the case of the <i>Microservo SG90</i> a 470&Omega; resistor was used to connect digitial pin 9 to the control signal of the servo.
+For a low power servo, the power and ground signal can be connected directly to the Netduino 5V lines.  It is advisable to connect the control signal through a current limiting resistor, in the case of the <i>Microservo SG90</i> a 470&Omega; resistor was used to connect digital pin 9 to the control signal of the servo.
 
 ![Servo Connected to Netduino](ServoBreadboard.png)
 
@@ -182,7 +182,7 @@ The <i>pulse</i> width determines the position of the servo.  This should be bet
 From the data sheet of the <i>Microservo SG90</i>, the <i>minimum</i> pulse width is 1ms (0 degrees) and the <i>maximum</i> pulse width is 2ms (180 degrees).  So to calculate the pulse width for a specified angle the following steps should be followed:
 
 * Pulse range = maximum pulse width - minimum pulse width
-* Pulse width per degree = pulse width / 181
+* Pulse width per degree = pulse range / 181
 * For a specified angle, the pulse width = minimum pulse width + (angle * pulse width per degree)
 
 For the Netduino this needs to be converted into a duty cycle.  For an average servo, the pulse frequency is 50 Hz.  The duty cycle for a specified angle becomes the pulse width / 20,000.  In code this becomes:
