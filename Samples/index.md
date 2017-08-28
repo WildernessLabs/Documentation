@@ -19,6 +19,7 @@ The following samples can be found in the [WildernessLabs Documentation repo](ht
 * **[Write to I2C Register](Netduino/TMP102ReadWrite/)** - Change the mode of the TMP102 by writing to a register using I2C.
 * **[UART Test](Netduino/UARTTest/)** - Basic reading and writing to a UART.
 * **[16x2 LCD](Netduino/LCDMicroLiquidCrystal/)** - Write information to a 16x2 LCD using SPI.
+* **[Read DS3234 Using SPI](Netduino/ReadDS3234)** - Read the current date / time from a DS3234 RTC using SPI.
 
 
 ### Contributing
