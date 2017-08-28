@@ -166,7 +166,7 @@ while (true)
 
 The source code including the MicroLiquidCrystal source files can be found [here](/Samples/Netduino/LCDMicroLiquidCrystal/).
 
-# [Reading Date From an SPI Device](../ReadingTime)
+# [Reading Data From an SPI Device](../ReadingTime)
 
 The next section  of the guide on SPI will demonstrate how to read data from an SPI device.
 
