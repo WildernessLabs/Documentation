@@ -1,5 +1,5 @@
 ---
-title: Reading Data and Time UsingSPI
+title: Reading Date and Time Using SPI
 ---
 
 The first two sections of this guide discussed the following topics:
@@ -30,7 +30,7 @@ The DS3234 chip will start to increment the time as soon as it is connected to p
 
 The DS3234 stores the current date and time in a series of registers on the chip.  The first 8 of these byte registers contain the date and time encoded in [Binary Coded Decimal](https://en.wikipedia.org/wiki/Binary-coded_decimal).
 
-In order to read the registers the Netduino must issues a read command to the DS3234.  This command will tell the DS3234 which of the registers should be read first.  Subsequent reads will return the next register in the chip incrementing the register pointer after each read.
+In order to read the registers the Netduino must issue a read command to the DS3234.  This command will tell the DS3234 which of the registers should be read first.  Subsequent reads will return the next register in the chip incrementing the register pointer after each read.
 
 The main program loop for the application is follows:
 
@@ -99,7 +99,7 @@ byte[] dataIn = new byte[REG_SIZE];
 
 `dataOut` holds the command to inform the DS3234 that the Netduino wishes to read data from the chip starting at register 0.
 
-`dataIn` is the data store for the data from the DS3234.  `REG_SIZE` defines the number of bytes that will be read.
+`dataIn` is the data store for the contents of the registers as they are read from the DS3234.  `REG_SIZE` defines the number of bytes that will be read.
 
 ### Reading the Data
 
@@ -119,9 +119,9 @@ The above application generated the following trace:
 
 ![Logic Analyzer Output](LogicAnalyzerOutput.png)
 
-Starting from the left, the byte 0 is output on the MOSI line.  This is done by the Netduino sending the byte 0 to the DS3234.  At the same time, the MISO line is also set to 0.  This is done by the DS3234.
+Starting from the left, the value 0 is output on the MOSI line by the Netduino.  At the same time, the MISO line is also set to 0.  This is done by the DS3234.
 
-At this point, the Netduino has sent all of the data in the `dataOut` buffer and has received a response, 0, from the DS3234.  In the context of the read operation this byte has no meaning.  Two options are possible:
+At this point, the Netduino has sent all of the data in the `dataOut` buffer and has received a response, 0, from the DS3234.  In the context of the read operation from the DS3234, this byte has no meaning.  Two options are possible:
 
 * Store the byte in `dataIn`
 * Ignore the first byte
