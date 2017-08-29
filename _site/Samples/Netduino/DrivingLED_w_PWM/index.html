@@ -321,41 +321,6 @@
 
 <span class="k">namespace</span> <span class="nn">DrivingLED_w_PWM</span>
 <span class="p">{</span>
-<<<<<<< HEAD
-	<span class="c1">/// &lt;summary&gt;
-</span>	<span class="c1">/// This program illustrates how to drive an LED with a Pulse-Width Modulation
-</span>	<span class="c1">/// Signal.
-</span>	<span class="c1">/// &lt;/summary&gt;
-</span>	<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
-	<span class="p">{</span>
-		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="c1">// Create a PWM signal on Pin 3 @ 1000Hz and a 50% duty cycle
-</span>			<span class="n">PWM</span> <span class="n">dutyCyclePwm</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PWM</span><span class="p">(</span><span class="n">PWMChannels</span><span class="p">.</span><span class="n">PWM_PIN_D3</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="p">.</span><span class="m">5</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
-			<span class="c1">// note that only certain pins support PWM. the PWMChannels enumeration
-</span>			<span class="c1">// lists the ones that do.
-</span>
-			<span class="c1">// Create a PWM signal on the onboard LED by specifying the period and duration 
-</span>			<span class="c1">// in milliseconds. this will be a 33% duty cycle (on 1/3rd of the time)
-</span>			<span class="n">PWM</span> <span class="n">periodDurationPwm</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PWM</span> <span class="p">(</span><span class="n">PWMChannels</span><span class="p">.</span><span class="n">PWM_ONBOARD_LED</span><span class="p">,</span> 
-				<span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="n">PWM</span><span class="p">.</span><span class="n">ScaleFactor</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
-
-			<span class="c1">// alternate between the 50% duty cycle and the 33% duty cycle every second
-</span>			<span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
-				<span class="n">dutyCyclePwm</span><span class="p">.</span><span class="nf">Start</span> <span class="p">();</span>
-				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">1000</span><span class="p">);</span>
-				<span class="n">dutyCyclePwm</span><span class="p">.</span><span class="nf">Stop</span> <span class="p">();</span>
-
-				<span class="n">periodDurationPwm</span><span class="p">.</span><span class="nf">Start</span> <span class="p">();</span>
-				<span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">1000</span><span class="p">);</span>
-				<span class="n">periodDurationPwm</span><span class="p">.</span><span class="nf">Stop</span> <span class="p">();</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-=======
     <span class="c1">/// &lt;summary&gt;
 </span>    <span class="c1">/// This program illustrates how to drive an LED with a Pulse-Width Modulation
 </span>    <span class="c1">/// Signal.
@@ -394,7 +359,6 @@
 <h1 id="netduino-samples-github-repositoryhttpsgithubcomwildernesslabsnetduinosamples"><a href="https://github.com/WildernessLabs/Netduino_Samples">Netduino Samples Github Repository</a></h1>
 
 <p>Full source code for all of the samples can be found in the Netduino Samples repository on Github.</p>
->>>>>>> master
 
 
                         </div>
