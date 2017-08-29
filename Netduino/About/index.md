@@ -8,7 +8,7 @@ It's similar in concept to the [Arduino](http://arduino.cc) platform, but is gen
 
 Netduino provides a robust hardware reference platform that allows easy experimentation and rapid prototyping for hobbyists and professionals alike. Netduino has been used by folks to build home automation gadgets, industrial machinery like CNCs, and more.  
 
-The Netduino family consists of the Netduino 3, Netduino 2, and the original Netduino 1 lines. The original Netduino (1st generation) and Netduino Mini (also 1st generation), nave been replaced by the much nore powerful Netduino 2 and 3 lines.
+The Netduino family consists of the Netduino 3, Netduino 2, and the original Netduino 1 lines. The original Netduino (1st generation) and Netduino Mini (also 1st generation), have been replaced by the much nore powerful Netduino 2 and 3 lines.
 
 # Netduino 3
 

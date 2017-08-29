@@ -12,7 +12,6 @@ title: Component Reference
 
 #### [LEDs](LEDs)
 
-#### [Relays](Relays)
-
 #### [Resistors](Resistors)
 
+#### [74595 Shift Register](ShiftRegister74595)

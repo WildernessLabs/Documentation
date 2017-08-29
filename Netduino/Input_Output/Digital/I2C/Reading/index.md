@@ -42,9 +42,7 @@ Next make the following connections between the temperature breakout board and t
 | GND             | GND               | Black                     |
 | ADD0            | GND               | Black                     |
 
-![Netduino Connected to TMP102](Netduino3AndTMP102.jpg)
-
-There are two yellow and two blue leads in the photo.  The second blue and yellows lead are connected to a [logic analyzer](https://en.wikipedia.org/wiki/Logic_analyzer), more on this later.
+![Netduino Connected to TMP102](NetduinoAndTMP102FritzingDiagram.png)
 
 ### Software
 
@@ -149,7 +147,7 @@ Successful deployment of the application should reduce in a stream of temperatur
 
 #### Logic Analyser Output
 
-As noted earlier, a second yellow and blue wire can be seen connected to the circuit.  These allow the logic analyzer to be connected to the circuit.
+The output from the Netduino can be interpreted by using a [logic analyzer](https://en.wikipedia.org/wiki/Logic_analyzer).
 
 The logic analyzer was configured to read data for two-seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:
 

@@ -221,7 +221,6 @@
                             <li><a href="/Hardware/Reference/Components/LEDs/Driving_w_Resistor/">Driving with a Resistor</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Hardware/Reference/Components/Relays">Relays</a></li>
                     <li><a href="/Hardware/Reference/Components/Resistors">Resistors</a>
                         <ul>
                             <li><a href="/Hardware/Reference/Components/Resistors/Reading">Reading a Resistor's Value</a></li>
@@ -229,7 +228,12 @@
                     </li>
                 </ul>
             </li>
-
+            <li><a href="/Hardware/Reference/Peripherals">Peripherals</a>
+                <ul>
+                    <li><a href="/Hardware/Reference/Peripherals/Servos">Servos</a></li>
+                    <li><a href="/Hardware/Reference/Peripherals/Relays">Relays</a></li>
+                </ul>
+            </li>
 
             <li><a href="/Hardware/Reference/Equations_and_Laws">Equations and Laws</a>
                 <ul>
@@ -317,6 +321,7 @@
 <span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">SecretLabs.NETMF.Hardware.Netduino</span><span class="p">;</span>
 
+<<<<<<< HEAD
 
 <span class="k">namespace</span> <span class="nn">RgbLed</span>
 <span class="p">{</span>
@@ -471,16 +476,175 @@
 			<span class="k">return</span> <span class="n">i</span><span class="p">;</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
+=======
+<span class="k">namespace</span> <span class="nn">RgbLed</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;
+</span>    <span class="c1">/// This program illustrates how to drive an RGB LED with a Pulse-Width Modulation
+</span>    <span class="c1">/// Signal.
+</span>    <span class="c1">/// &lt;/summary&gt;
+</span>    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>            
+            <span class="n">PWM</span> <span class="n">redLed</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PWM</span> <span class="p">(</span><span class="n">PWMChannels</span><span class="p">.</span><span class="n">PWM_PIN_D11</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+            <span class="n">PWM</span> <span class="n">greenLed</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PWM</span> <span class="p">(</span><span class="n">PWMChannels</span><span class="p">.</span><span class="n">PWM_PIN_D10</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+            <span class="n">PWM</span> <span class="n">blueLed</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PWM</span> <span class="p">(</span><span class="n">PWMChannels</span><span class="p">.</span><span class="n">PWM_PIN_D9</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+
+            <span class="kt">double</span> <span class="n">dutyCycleMax</span> <span class="p">=</span> <span class="p">.</span><span class="m">3</span><span class="p">;</span> <span class="c1">// RGB Led doesn't seem to get much brighter than at 30%
+</span> 
+            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> 
+            <span class="p">{</span>
+                <span class="n">redLed</span><span class="p">.</span><span class="nf">Start</span> <span class="p">();</span>
+                <span class="n">greenLed</span><span class="p">.</span><span class="nf">Start</span> <span class="p">();</span>
+                <span class="n">blueLed</span><span class="p">.</span><span class="nf">Start</span> <span class="p">();</span>
+
+                <span class="kt">double</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">360</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+                    <span class="nf">HsvToRgb</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="k">out</span> <span class="n">r</span><span class="p">,</span> <span class="k">out</span> <span class="n">g</span><span class="p">,</span> <span class="k">out</span> <span class="n">b</span><span class="p">);</span>
+
+                    <span class="n">redLed</span><span class="p">.</span><span class="n">DutyCycle</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span> <span class="p">*</span> <span class="n">dutyCycleMax</span><span class="p">);</span>
+                    <span class="n">greenLed</span><span class="p">.</span><span class="n">DutyCycle</span> <span class="p">=</span> <span class="p">(</span><span class="n">g</span> <span class="p">*</span> <span class="n">dutyCycleMax</span><span class="p">);</span>
+                    <span class="n">blueLed</span><span class="p">.</span><span class="n">DutyCycle</span> <span class="p">=</span> <span class="p">(</span><span class="n">b</span> <span class="p">*</span> <span class="n">dutyCycleMax</span><span class="p">);</span>
+
+                    <span class="c1">// for a fun, fast rotation through the hue spectrum:
+</span>                    <span class="c1">//Thread.Sleep (1);
+</span>                    <span class="c1">// for a gentle walk through the forest of colors;
+</span>                    <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span> <span class="p">(</span><span class="m">18</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// HSV to rgb. Note that for RGB LED use, you probably want a constant 100% brightness. This doesn't do that. 
+</span>        <span class="c1">/// For that Algorithm, check out: https://blog.adafruit.com/2012/03/14/constant-brightness-hsb-to-rgb-algorithm/
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="hue"&gt;Hue in degress (0-359º).&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="saturation"&gt;Saturation.&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="brightValue"&gt;Brightness value.&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="r"&gt;The red component. (0-1)&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="g"&gt;The green component. (0-1)&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="b"&gt;The blue component. (0-1)&lt;/param&gt;
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">HsvToRgb</span><span class="p">(</span><span class="kt">double</span> <span class="n">hue</span><span class="p">,</span> <span class="kt">double</span> <span class="n">saturation</span><span class="p">,</span> <span class="kt">double</span> <span class="n">brightValue</span><span class="p">,</span> <span class="k">out</span> <span class="kt">double</span> <span class="n">r</span><span class="p">,</span> <span class="k">out</span> <span class="kt">double</span> <span class="n">g</span><span class="p">,</span> <span class="k">out</span> <span class="kt">double</span> <span class="n">b</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">double</span> <span class="n">H</span> <span class="p">=</span> <span class="n">hue</span><span class="p">;</span>
+            <span class="kt">double</span> <span class="n">R</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
+
+            <span class="c1">// hue parameter checking/fixing
+</span>            <span class="k">if</span> <span class="p">(</span><span class="n">H</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">||</span> <span class="n">H</span> <span class="p">&gt;=</span> <span class="m">360</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">H</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="c1">// if Brightness is turned off, then everything is zero.
+</span>            <span class="k">if</span> <span class="p">(</span><span class="n">brightValue</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">R</span> <span class="p">=</span> <span class="n">G</span> <span class="p">=</span> <span class="n">B</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// if saturation is turned off, then there is no color/hue. it's grayscale.
+</span>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">saturation</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">R</span> <span class="p">=</span> <span class="n">G</span> <span class="p">=</span> <span class="n">B</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="c1">// if we got here, then there is a color to create.
+</span>            <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">hf</span> <span class="p">=</span> <span class="n">H</span> <span class="p">/</span> <span class="m">60.0</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">System</span><span class="p">.</span><span class="n">Math</span><span class="p">.</span><span class="nf">Floor</span><span class="p">(</span><span class="n">hf</span><span class="p">);</span>
+                <span class="kt">double</span> <span class="n">f</span> <span class="p">=</span> <span class="n">hf</span> <span class="p">-</span> <span class="n">i</span><span class="p">;</span>
+                <span class="kt">double</span> <span class="n">pv</span> <span class="p">=</span> <span class="n">brightValue</span> <span class="p">*</span> <span class="p">(</span><span class="m">1</span> <span class="p">-</span> <span class="n">saturation</span><span class="p">);</span>
+                <span class="kt">double</span> <span class="n">qv</span> <span class="p">=</span> <span class="n">brightValue</span> <span class="p">*</span> <span class="p">(</span><span class="m">1</span> <span class="p">-</span> <span class="n">saturation</span> <span class="p">*</span> <span class="n">f</span><span class="p">);</span>
+                <span class="kt">double</span> <span class="n">tv</span> <span class="p">=</span> <span class="n">brightValue</span> <span class="p">*</span> <span class="p">(</span><span class="m">1</span> <span class="p">-</span> <span class="n">saturation</span> <span class="p">*</span> <span class="p">(</span><span class="m">1</span> <span class="p">-</span> <span class="n">f</span><span class="p">));</span>
+
+                <span class="k">switch</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="p">{</span>
+
+                    <span class="c1">// Red Dominant
+</span>                    <span class="k">case</span> <span class="m">0</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">tv</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="c1">// Green Dominant
+</span>                    <span class="k">case</span> <span class="m">1</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">qv</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="m">2</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">tv</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="c1">// Blue Dominant
+</span>                    <span class="k">case</span> <span class="m">3</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">qv</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="m">4</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">tv</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="c1">// Red Red Dominant
+</span>                    <span class="k">case</span> <span class="m">5</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">qv</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="c1">// In case the math is out of bounds, this is a fix.
+</span>                    <span class="k">case</span> <span class="m">6</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">tv</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="p">-</span><span class="m">1</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="n">G</span> <span class="p">=</span> <span class="n">pv</span><span class="p">;</span>
+                        <span class="n">B</span> <span class="p">=</span> <span class="n">qv</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="c1">// If the color is not defined, go grayscale
+</span>                    <span class="k">default</span><span class="p">:</span>
+                        <span class="n">R</span> <span class="p">=</span> <span class="n">G</span> <span class="p">=</span> <span class="n">B</span> <span class="p">=</span> <span class="n">brightValue</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">r</span> <span class="p">=</span> <span class="nf">Clamp</span><span class="p">(</span><span class="n">R</span><span class="p">);</span>
+            <span class="n">g</span> <span class="p">=</span> <span class="nf">Clamp</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
+            <span class="n">b</span> <span class="p">=</span> <span class="nf">Clamp</span><span class="p">(</span><span class="n">B</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// Clamp a value to 0 to 1
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">static</span> <span class="kt">double</span> <span class="nf">Clamp</span><span class="p">(</span><span class="kt">double</span> <span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="k">return</span> <span class="m">0</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span> <span class="k">return</span> <span class="m">1</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+>>>>>>> master
 <span class="p">}</span>
 
 </code></pre>
 </div>
 
-<h1 id="todo">TODO</h1>
+<h1 id="hardware">Hardware</h1>
 
-<ul>
-  <li>Fritzing schematic with breadboard here.</li>
-</ul>
+<p>A common anode LED should be connected to the Netduino as follows:</p>
+
+<p><img src="RGBLedBreadboardFritzing.png" alt="RGB LED on Breadboard" /></p>
+
+<h1 id="netduino-samples-github-repositoryhttpsgithubcomwildernesslabsnetduinosamples"><a href="https://github.com/WildernessLabs/Netduino_Samples">Netduino Samples Github Repository</a></h1>
+
+<p>Full source code for all of the samples can be found in the Netduino Samples repository on Github.</p>
 
 
                         </div>

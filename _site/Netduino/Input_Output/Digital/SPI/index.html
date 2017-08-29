@@ -221,7 +221,6 @@
                             <li><a href="/Hardware/Reference/Components/LEDs/Driving_w_Resistor/">Driving with a Resistor</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Hardware/Reference/Components/Relays">Relays</a></li>
                     <li><a href="/Hardware/Reference/Components/Resistors">Resistors</a>
                         <ul>
                             <li><a href="/Hardware/Reference/Components/Resistors/Reading">Reading a Resistor's Value</a></li>
@@ -229,7 +228,12 @@
                     </li>
                 </ul>
             </li>
-
+            <li><a href="/Hardware/Reference/Peripherals">Peripherals</a>
+                <ul>
+                    <li><a href="/Hardware/Reference/Peripherals/Servos">Servos</a></li>
+                    <li><a href="/Hardware/Reference/Peripherals/Relays">Relays</a></li>
+                </ul>
+            </li>
 
             <li><a href="/Hardware/Reference/Equations_and_Laws">Equations and Laws</a>
                 <ul>
@@ -371,7 +375,11 @@
 </span>                <span class="n">ChipSelect_ActiveState</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>          <span class="c1">// Chip select is active low.
 </span>                <span class="n">ChipSelect_SetupTime</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>                <span class="c1">// Amount of time between selection and the clock starting
 </span>                <span class="n">ChipSelect_HoldTime</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>                 <span class="c1">// Amount of time the device must be active after the data has been read.
+<<<<<<< HEAD
 </span>                <span class="n">Clock_Edge</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>                      <span class="c1">// Sample on the faling edge.
+=======
+</span>                <span class="n">Clock_Edge</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>                      <span class="c1">// Sample on the falling edge.
+>>>>>>> master
 </span>                <span class="n">Clock_IdleState</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>                  <span class="c1">// Clock is idle when high.
 </span>                <span class="n">Clock_RateKHz</span><span class="p">:</span> <span class="m">2000</span><span class="p">,</span>                    <span class="c1">// 2MHz clock speed.
 </span>                <span class="n">SPI_mod</span><span class="p">:</span> <span class="n">SPI_Devices</span><span class="p">.</span><span class="n">SPI1</span>               <span class="c1">// Use SPI1
@@ -400,9 +408,7 @@
 
 <p><img src="SingleCharacterOutput.png" alt="Single Character in the Message" /></p>
 
-<h2 id="controlling-the-lcd">Controlling the LCD</h2>
-
-<p><em>Add information about controlling the LCD including same code</em></p>
+<h1 id="controlling-the-lcdcontrollinglcd"><a href="ControllingLCD">Controlling the LCD</a></h1>
 
 <h1 id="further-reading">Further Reading</h1>
 
@@ -410,12 +416,6 @@
   <li><a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">Serial Peripheral Interface Bus</a> description</li>
   <li><a href="https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller">HD44780 LCD Interface</a> This is a common interface used to drive LCD displays.</li>
   <li><a href="https://www.adafruit.com/product/292">Adafruit I2C/ SPI Character LCD Backpack</a></li>
-</ul>
-
-<h1 id="project-ideas">Project Ideas</h1>
-
-<ul>
-  <li>Consider displaying the current temperture using the TMP102</li>
 </ul>
 
 

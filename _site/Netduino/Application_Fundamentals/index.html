@@ -221,7 +221,6 @@
                             <li><a href="/Hardware/Reference/Components/LEDs/Driving_w_Resistor/">Driving with a Resistor</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Hardware/Reference/Components/Relays">Relays</a></li>
                     <li><a href="/Hardware/Reference/Components/Resistors">Resistors</a>
                         <ul>
                             <li><a href="/Hardware/Reference/Components/Resistors/Reading">Reading a Resistor's Value</a></li>
@@ -229,7 +228,12 @@
                     </li>
                 </ul>
             </li>
-
+            <li><a href="/Hardware/Reference/Peripherals">Peripherals</a>
+                <ul>
+                    <li><a href="/Hardware/Reference/Peripherals/Servos">Servos</a></li>
+                    <li><a href="/Hardware/Reference/Peripherals/Relays">Relays</a></li>
+                </ul>
+            </li>
 
             <li><a href="/Hardware/Reference/Equations_and_Laws">Equations and Laws</a>
                 <ul>
@@ -350,7 +354,7 @@
 </code></pre>
 </div>
 
-<p><em>CheckForNewData</em> would prepare data for processing and set the flag to indicate we have data when we have a complete packet.  In this way there is no conflict between the producer (<em>CheckForNewData</em>) adding data to a buffer and the consumer (<em>ProcessData</em>) processing the data.</p>
+<p><code class="highlighter-rouge">CheckForNewData</code> would prepare data for processing and set the flag to indicate we have data when we have a complete packet.  In this way there is no conflict between the producer (<code class="highlighter-rouge">CheckForNewData</code>) adding data to a buffer and the consumer (<code class="highlighter-rouge">ProcessData</code>) processing the data.</p>
 
 <p>The simplified programming model means that the application is executing instructions continuously.  This may not matter for projects powered by mains electricity but does matter for battery powered applications.</p>
 
@@ -372,9 +376,9 @@
 </code></pre>
 </div>
 
-<p><em>CreateInterruptProcessors</em> will create the objects needed to process events such as button preses, serial data input, sensor interrupts and similar events.</p>
+<p><code class="highlighter-rouge">CreateInterruptProcessors</code> will create the objects needed to process events such as button press, serial data input, sensor interrupts and similar events.</p>
 
-<p><em>SetupAnyTimers</em> would setup any periodic tasks, say sending data to an Azure web service once every five minutes.</p>
+<p><code class="highlighter-rouge">SetupAnyTimers</code> would setup any periodic tasks, say sending data to an Azure web service once every five minutes.</p>
 
 <p>The final action is to put the application to sleep.  The following puts the microcontroller into a low power state:</p>
 
@@ -384,7 +388,7 @@
 
 <p>The microcontroller will now wait for data to be generated and interrupts generated.  An interrupt or timer signal will put the microcontroller into a higher power state, processing the data generated and then returning to a low power state.  This presents an obvious advantage for battery powered applications.</p>
 
-<p>The trade off is the complexity introduced by the asynchronous nature in which data can be generated and processed.  This can lead to seemingly random bugs if data production and consumption is not synchronised.  More information can be found on the NETMF blog article on <a href="https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/">Thread Communication and Synchronization</a>.</p>
+<p>The trade off is the complexity introduced by the asynchronous nature in which data can be generated and processed.  This can lead to seemingly random bugs if data production and consumption is not synchronized.  More information can be found on the NETMF blog article on <a href="https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/">Thread Communication and Synchronization</a>.</p>
 
 <ul>
   <li>Pros: Power efficient, ideal for battery powered devices.</li>

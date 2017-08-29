@@ -14,8 +14,8 @@ Microcontrollers are resource constrained devices, memory and processing power i
 
 The two main patterns used by microcontroller developers are:
 
-- While loops running forever
-- Threads and interrupts
+* While loops running forever
+* Threads and interrupts
 
 There are pros and cons to both approaches.
 
@@ -46,12 +46,12 @@ while (true)
 }
 ```
 
-_CheckForNewData_ would prepare data for processing and set the flag to indicate we have data when we have a complete packet.  In this way there is no conflict between the producer (_CheckForNewData_) adding data to a buffer and the consumer (_ProcessData_) processing the data.
+`CheckForNewData` would prepare data for processing and set the flag to indicate we have data when we have a complete packet.  In this way there is no conflict between the producer (`CheckForNewData`) adding data to a buffer and the consumer (`ProcessData`) processing the data.
 
 The simplified programming model means that the application is executing instructions continuously.  This may not matter for projects powered by mains electricity but does matter for battery powered applications.
 
-- Pro: Simple to understand programming model.
-- Con: Increased power consumption.
+* Pro: Simple to understand programming model.
+* Con: Increased power consumption.
 
 ## Threads and Interrupts
 
@@ -66,9 +66,9 @@ public static void Main()
 }
 ```
 
-_CreateInterruptProcessors_ will create the objects needed to process events such as button preses, serial data input, sensor interrupts and similar events.
+`CreateInterruptProcessors` will create the objects needed to process events such as button press, serial data input, sensor interrupts and similar events.
 
-_SetupAnyTimers_ would setup any periodic tasks, say sending data to an Azure web service once every five minutes.
+`SetupAnyTimers` would setup any periodic tasks, say sending data to an Azure web service once every five minutes.
 
 The final action is to put the application to sleep.  The following puts the microcontroller into a low power state:
 
@@ -78,10 +78,10 @@ Thread.Sleep(Timeout.Infinite);
 
 The microcontroller will now wait for data to be generated and interrupts generated.  An interrupt or timer signal will put the microcontroller into a higher power state, processing the data generated and then returning to a low power state.  This presents an obvious advantage for battery powered applications.
 
-The trade off is the complexity introduced by the asynchronous nature in which data can be generated and processed.  This can lead to seemingly random bugs if data production and consumption is not synchronised.  More information can be found on the NETMF blog article on [Thread Communication and Synchronization](https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/).
+The trade off is the complexity introduced by the asynchronous nature in which data can be generated and processed.  This can lead to seemingly random bugs if data production and consumption is not synchronized.  More information can be found on the NETMF blog article on [Thread Communication and Synchronization](https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/).
 
-- Pros: Power efficient, ideal for battery powered devices.
-- Cons: Application development is more complex.
+* Pros: Power efficient, ideal for battery powered devices.
+* Cons: Application development is more complex.
 
 # Hardware
 
@@ -91,7 +91,7 @@ NETMF also provides a method for accessing the hardware on the microcontroller. 
 
 # Further Reading
 
-- [NETMF: Threads and Thread Priorities](https://blogs.msdn.microsoft.com/netmfteam/2011/01/17/threads-and-thread-priorities-in-netmf/)
-- [NETMF: Thread Communication and Synchronisation](https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/)
-- [.NET Micro Framework](NETMF)
-- [SPOT namespace origin](https://en.wikipedia.org/wiki/Smart_Personal_Objects_Technology)
+* [NETMF: Threads and Thread Priorities](https://blogs.msdn.microsoft.com/netmfteam/2011/01/17/threads-and-thread-priorities-in-netmf/)
+* [NETMF: Thread Communication and Synchronisation](https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/)
+* [.NET Micro Framework](NETMF)
+* [SPOT namespace origin](https://en.wikipedia.org/wiki/Smart_Personal_Objects_Technology)
