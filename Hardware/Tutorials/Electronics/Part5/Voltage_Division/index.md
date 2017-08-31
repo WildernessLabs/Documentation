@@ -7,7 +7,7 @@ Examining Ohm's law in the context of Kirchhoff's voltage law reveals an interes
 ![Voltage Divider Network Illustration](../Voltage_Divider_Network.svg)
 
 ```
-Vn = Vs - (I * Rn)
+Vn = Vs - (I * Rn) //this isn't right, because Vs is lower at each point
 V1 = 5V - (.25A * 2Ω) = 0.5V
 V1 = 5V - (.25A * 6Ω) = 1.5V
 V1 = 5V - (.25A * 12Ω) = 3V
