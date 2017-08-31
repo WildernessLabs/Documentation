@@ -19,7 +19,7 @@ Where `V1` represents the voltage drop at `R1`, and so forth.
 
 We can actually calculate Kirchhoff's voltage law from Ohm's law. 
 
-Recall that in a series resistance, each resistor experiences the same amount of current.
+Recall that in a series resistance, each resistor experiences the same amount of current:
 
 ![](../VoltageLaw_Calculation_Circuit.svg)
 
@@ -44,6 +44,20 @@ Total voltage drops = 0.5V + 1.5V + 3V = 5V = Voltage Source
 ```
 
 The total amount of voltage drop is the exact same amount as the voltage source!
+
+## Voltage Reduction
+
+Revisiting the previous circuit, if we put a voltmeter between points B, C, D, and ground, we'd get `2V`, `.5V`, and `0V`, respectively:
+
+![](../VoltageLaw_Calculated_Circuit.svg)
+
+This is because the voltage drop is removed from the source voltage to get the output voltage after each resistor:
+
+```
+B -> Ground = 5V - 3V = 2V
+C -> Ground = 2V - 1.5V = .5V
+D -> Ground = .5V - .5V = 0V
+```
 
 
 ## [Next - Voltage Division](../Voltage_Division)
