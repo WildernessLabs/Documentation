@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="357px" height="337px" viewBox="0 0 357 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>VoltageLaw_ZeroVoltage_Resistor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-598.000000, -451.000000)">
+            <g id="VoltageLaw_ZeroVoltage_Resistor" transform="translate(596.000000, 446.000000)">
+                <path d="M101.5,57.5 L101.5,87.5" id="Line-11-Copy-5" stroke="#B09679" stroke-width="3"></path>
+                <path id="Line-11-Copy-5-decoration-1" d="M101.5,57.5 L104.5,68.3 L98.5,68.3 L101.5,57.5 Z" stroke="#B09679" stroke-width="3"></path>
+                <path d="M334.5,184.5 L334.5,214.5" id="Line-11-Copy-8" stroke="#B09679" stroke-width="3" transform="translate(334.500000, 199.500000) scale(1, -1) translate(-334.500000, -199.500000) "></path>
+                <path id="Line-11-Copy-8-decoration-1" d="M334.5,184.5 L337.5,195.3 L331.5,195.3 L334.5,184.5 Z" stroke="#B09679" stroke-width="3"></path>
+                <g id="V1" transform="translate(214.000000, 60.000000)" font-weight="normal" fill="#23ABE3">
+                    <text id="V" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.486975268" y="18">V</tspan>
+                    </text>
+                    <text id="1" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="8.78831684" y="21">1</tspan>
+                    </text>
+                </g>
+                <g id="V3" transform="translate(242.000000, 248.000000)" font-weight="normal" fill="#23ABE3">
+                    <text id="V" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.486975268" y="18">V</tspan>
+                    </text>
+                    <text id="3" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="8.78831684" y="21">3</tspan>
+                    </text>
+                </g>
+                <g id="V2" transform="translate(281.000000, 124.000000)" font-weight="normal" fill="#23ABE3">
+                    <text id="V" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.486975268" y="18">V</tspan>
+                    </text>
+                    <text id="2" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="8.78831684" y="21">2</tspan>
+                    </text>
+                </g>
+                <polyline id="Resistor" stroke="#524740" stroke-width="2" stroke-linejoin="bevel" points="184 43 189 43 194 30 204 56 214 30 224 56 234 30 244 56 249 43 254 43"></polyline>
+                <g id="R1" transform="translate(212.000000, 0.000000)" font-weight="normal" fill="#524740">
+                    <text id="R" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.400975268" y="18">R</tspan>
+                    </text>
+                    <text id="1-copy" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="10.2883168" y="21">1</tspan>
+                    </text>
+                </g>
+                <g id="R3" transform="translate(241.000000, 185.000000)" font-weight="normal" fill="#524740">
+                    <text id="R" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.400975268" y="18">R</tspan>
+                    </text>
+                    <text id="3" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="10.2883168" y="21">3</tspan>
+                    </text>
+                </g>
+                <g id="R4" transform="translate(197.000000, 275.000000)" font-weight="normal" fill="#524740">
+                    <text id="R" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.400975268" y="18">R</tspan>
+                    </text>
+                    <text id="4" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="10.2883168" y="21">4</tspan>
+                    </text>
+                </g>
+                <g id="R2" transform="translate(342.000000, 124.000000)" font-weight="normal" fill="#524740">
+                    <text id="R" font-family="Lato-Italic, Lato" font-size="18" font-style="italic" letter-spacing="0.695049465">
+                        <tspan x="0.400975268" y="18">R</tspan>
+                    </text>
+                    <text id="2" font-family="Lato-Regular, Lato" font-size="12" letter-spacing="0.46336633">
+                        <tspan x="10.2883168" y="21">2</tspan>
+                    </text>
+                </g>
+                <polyline id="Resistor-Copy-5" stroke="#524740" stroke-width="2" stroke-linejoin="bevel" transform="translate(319.000000, 135.000000) rotate(90.000000) translate(-319.000000, -135.000000) " points="284 135 289 135 294 122 304 148 314 122 324 148 334 122 344 148 349 135 354 135"></polyline>
+                <polyline id="Resistor-Copy-6" stroke="#524740" stroke-width="2" stroke-linejoin="bevel" transform="translate(175.000000, 287.000000) rotate(90.000000) translate(-175.000000, -287.000000) " points="140 287 145 287 150 274 160 300 170 274 180 300 190 274 200 300 205 287 210 287"></polyline>
+                <polyline id="Resistor-Copy-2" stroke="#524740" stroke-width="2" stroke-linejoin="bevel" points="214 228 219 228 224 215 234 241 244 215 254 241 264 215 274 241 279 228 284 228"></polyline>
+                <text id="Voltage-Source" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#524740">
+                    <tspan x="2.86282687" y="127">Voltage </tspan>
+                    <tspan x="5.87885161" y="149">Source</tspan>
+                </text>
+                <text id="A" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#23ABE3">
+                    <tspan x="113.059475" y="27">A</tspan>
+                </text>
+                <text id="B" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#23ABE3">
+                    <tspan x="313.333975" y="27">B</tspan>
+                </text>
+                <text id="D" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#23ABE3">
+                    <tspan x="82.3079753" y="234">D</tspan>
+                </text>
+                <text id="C" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#23ABE3">
+                    <tspan x="313.140475" y="259">C</tspan>
+                </text>
+                <circle id="Oval-2" fill="#524740" cx="119" cy="43" r="5"></circle>
+                <circle id="Oval-2-Copy" fill="#524740" cx="319" cy="43" r="5"></circle>
+                <circle id="Oval-2-Copy-6" fill="#524740" cx="319" cy="228" r="5"></circle>
+                <circle id="Oval-2-Copy-7" fill="#524740" cx="119" cy="228" r="5"></circle>
+                <circle id="Oval-2-Copy-8" fill="#524740" cx="175" cy="228" r="5"></circle>
+                <g id="DC_Power" transform="translate(79.000000, 43.000000)">
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="40" cy="92" r="39"></circle>
+                    <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999917" fill="#524740">
+                        <tspan x="35.33" y="73">+</tspan>
+                    </text>
+                    <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.899999917" fill="#524740">
+                        <tspan x="37.2065" y="124.5">-</tspan>
+                    </text>
+                    <polyline id="Path-5" stroke="#524740" stroke-width="2" points="40 52 40 0 105 0"></polyline>
+                </g>
+                <polyline id="Path-6" stroke="#524740" stroke-width="2" points="254 43 319 43 319 100"></polyline>
+                <polyline id="Path-7" stroke="#524740" stroke-width="2" points="319 170 319 228 284 228"></polyline>
+                <polyline id="Path-8" stroke="#524740" stroke-width="2" points="214 228 119 228 119 175"></polyline>
+                <polyline id="Path-9" stroke="#524740" stroke-width="2" points="119 228 119 341 175 341 175 320.151973"></polyline>
+                <path d="M175,228 L175,253" id="Path-10" stroke="#524740" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>
