@@ -2,23 +2,48 @@
 title: Voltage Division
 ---
 
-Examining Ohm's law in the context of Kirchhoff's voltage law reveals an interesting fact about the voltage drop after each resistor in a series, in that the ratio of resistances determines how much the voltage is reduced at each interval. Consider the following 
+Examining Ohm's law in the context of Kirchhoff's voltage law reveals an interesting fact about the voltage drop after each resistor in a series, in that the ratio of resistances determines how much the voltage is reduced at each interval. Consider the following schematic which illustrates a _voltage divider_ circuit:
 
-![Voltage Divider Network Illustration](../Voltage_Divider_Network.svg)
+![Voltage Divider Circuit Illustration](../Voltage_Divider_Network.svg)
+
+Because there are only two resistors here, we can simply our voltage calculation from before:
 
 ```
-Vn = Vs - (I * Rn) //this isn't right, because Vs is lower at each point
-V1 = 5V - (.25A * 2Ω) = 0.5V
-V1 = 5V - (.25A * 6Ω) = 1.5V
-V1 = 5V - (.25A * 12Ω) = 3V
+V1 = Vs - (Vs * (∑(R...Rn) / Total R))
 ```
 
-[something interesting happens in series resistances]
+To:
 
-[voltage division]
+```
+V1 = Vs - (Vs * (R1 / Total R))
+```
+
+Let's say that the voltage source is `5V` and the two resistors are `8Ω` and `12Ω`, respectively.
+
+Therefore, the voltage at `V1` would be:
+
+```
+V1 = 5V - (5V * (8Ω / 20Ω)) = 5V - 2V = 3V
+```
+
+So the voltage at `V1` would be `3V`.
+
+### Current
+
+The voltage drop in a circuit is determined by the ratio of resistances, not the overall resistance. This means, that if we took the exact same circuit as before, but this time used resistors that were 10x more resistive, we'd still get the same exact voltage drop:
+
+```
+V1 = 5V - (5V * (80Ω / 200Ω)) = 5V - 2V = 3V
+```
+
+However, if we change the overall resistance, then the amount of current that passes through the circuit changes. When we calculate the current using Ohm's law `(I = V/R)` of the two different overall resistances, we see that just as there was a 10x difference in resistance, there is also a 10x difference in power:
+
+```
+I = 5V / 20Ω = .25A = 250mA
+I = 5V / 200Ω = 0.025A = 25mA
+```
 
 
-[ratio of resistances determines what division occurs]
 
 ### Current
 

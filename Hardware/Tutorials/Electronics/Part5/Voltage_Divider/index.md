@@ -7,6 +7,9 @@ title: Voltage Divider Circuit
 
 [many sensors are 5V, but the MCU that the Netduino uses is 3.3V (lower power is actually better, but many sensors are based on older standards). ]
 
+[Voltage Divider Calculator](http://www.ohmslawcalculator.com/voltage-divider-calculator)
+
+
 ## [Next - iCircuit](../iCircuit)
 
 <br/>
