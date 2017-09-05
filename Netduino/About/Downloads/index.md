@@ -42,4 +42,13 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 * [NETMF SDK 4.2](http://downloads.wildernesslabs.co/NETMF_SDK/MicroFrameworkSDK_NETMF42_QFE2.MSI)
 * Netduino SDK 4.2.2.0 [32 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_32bit_NETMF42.exe) or [64 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_64bit_NETMF42.exe)
 
+### Legacy Firmware Downloads
+
+ * [Netduino 2 Plus, v4.2.2.2](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoPlus2_Firmware_4.2.2.2.zip)
+ * [Netduino 2, v4.2.2.2](https://downloads.wildernesslabs.co/LegacyFirmware/Netduino2_Firmware_4.2.2.2.zip)
+ * [Netduino Plus, v4.2.0.1](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoPlus_Firmware_4.2.0.1.zip)
+ * [Netduino Mini, v4.2.0.1 (TTL)](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_TTL.zip)
+ * [Netduino Mini, v4.2.0.1 (RS232)](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_RS232.zip)
+
+
 
