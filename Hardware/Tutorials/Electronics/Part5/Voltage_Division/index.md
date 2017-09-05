@@ -43,14 +43,17 @@ I = 5V / 20Ω = .25A = 250mA
 I = 5V / 200Ω = 0.025A = 25mA
 ```
 
+## Power Efficiency and Practical Usage
 
+[need some help here. first question: let's
 
-### Current
+Voltage dividers are used extensively in modern circuits, but they are inefficient; each resistor is consuming power, and the "bottom half" (the half of the resistor pair that 
 
-[resistance of the resistors determines how much current]
+Voltage dividers are inherently inefficient; the 
 
 [use the largest resistance while still providing the necessary current, so as to be power efficient]
 
+[don't use as a voltage regulator. it's inefficient and Vout is dependent on Vin]
 
 ## [Next - Voltage Divider Circuit](../Voltage_Divider)
 
