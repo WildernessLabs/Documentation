@@ -63,6 +63,8 @@ There is a fantastic voltage divider calculator online [here](http://www.ohmslaw
 
 ## Practical Example
 
+[Analog to Digital Converter (ADC) can measure voltage]
+
 [5v sensor + schematic + code]
 
 

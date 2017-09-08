@@ -45,6 +45,9 @@ I = 5V / 200Ω = 0.025A = 25mA
 
 ## Power Efficiency and Practical Usage
 
+[note: ADC has a high impedance; it will draw very small current]
+
+
 [need some help here. first question: let's
 
 Voltage dividers are used extensively in modern circuits, but they are inefficient; each resistor is consuming power, and the "bottom half" (the half of the resistor pair that 
