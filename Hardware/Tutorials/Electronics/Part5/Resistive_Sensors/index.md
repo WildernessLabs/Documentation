@@ -92,4 +92,7 @@ Therefore, our circuit would look something like this:
 
 
 
+[in the next part of the tutorial, we'll look at the code to make this work!]
+
+
 ## [Next - Circuit Software](../Circuit_Software)
