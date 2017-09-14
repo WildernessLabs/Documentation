@@ -15,9 +15,11 @@ Vs = V1 + V2 + V3
 ```
 Where `V1` represents the voltage drop at `R1`, and so forth.
 
+This means that at point `A`, the voltage would be `5V`, and at point `D`, the voltage is `OV`. It turns out, that the voltage through each resistor is proportionate to that resistors part of the overall resistance. So if that resistance represents one half of the total resistance, then the voltage drop through that resistor will also be half of the total voltage drop, or `2.5V`, since `5V * .5 = 2.5V`.
+
 ## Deriving from Ohm's Law
 
-We can actually calculate Kirchhoff's voltage law from Ohm's law. 
+We can calculate Kirchhoff's voltage law from Ohm's law.
 
 Recall that in a series resistance, each resistor experiences the same amount of current:
 
@@ -26,15 +28,15 @@ Recall that in a series resistance, each resistor experiences the same amount of
 In this case, the total resistance (series resistances are additive), is `20Ω`, therefore the current is:
 
 ```
-I = 5V / 20Ω = .25A
+I = 5V / 20Ω = 0.25A = 250mA
 ```
 
 Now, recalling Ohm's law solved for voltage (`V = I * R`), we can calculate the voltage drop for that current at each resistor:
 
 ```
-R1 Voltage = .25A * 2Ω = 0.5V
-R2 Voltage = .25A * 6Ω = 1.5V
-R3 Voltage = .25A * 12Ω = 3V
+R1 Voltage = 0.25A * 2Ω = 0.5V
+R2 Voltage = 0.25A * 6Ω = 1.5V
+R3 Voltage = 0.25A * 12Ω = 3V
 ```
 
 If we add each of these voltage drops up:

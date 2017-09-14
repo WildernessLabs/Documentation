@@ -88,11 +88,45 @@ Therefore, our circuit would look something like this:
 
 # Practical Circuit
 
+To build this circuit on a breadboard, wire it similar to the following:
+
 ![](../Photoresistor_Circuit_bb.svg)
 
+The following code illustrates creating a new `AnalogInput` on pin 3, and reading the voltage to get the value of the light hitting the photoresistor:
 
 
-[in the next part of the tutorial, we'll look at the code to make this work!]
+```csharp
+using System;
+using System.Threading;
+using Microsoft.SPOT;
+using SecretLabs.NETMF.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace Photoresistor_Reading
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            var photoresistor = new AnalogInput(Pins.GPIO_PIN_A3);
+
+            while (true)
+            {
+                Debug.Print("Photoresistor reading: " + photoresistor.Read().ToString());
+                Thread.Sleep(250);
+            }
+        }
+    }
+}
+```
+In a later part this tutorial, we'll examine reading analog signals and digital communication in a more depth.
+
+
+## Breadboards
+
+Breadboards simplify prototyping by creating connections without soldering. In the illustration above, the breadboard is sideways, but each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, like the photoresistor in the illustration. Additionally, many breadboards, such as the one pictured above, have power busses along the edges that are connected the whole way down. So for instance, one side of the photoresistor is connected to the wire in row 14 that then connects to the ground rail. And the other side of the photoresistor is connected to analog 3 in, and our second resistor.
+
+
 
 
 ## [Next - Circuit Software](../Circuit_Software)

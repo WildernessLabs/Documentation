@@ -12,7 +12,7 @@ Consider the following circuit:
 
 Though this might look different, it's actually the equivalent of the voltage divider circuit we were examining before:
 
-![](../Voltage_Divider_Network.svg)
+![](../Voltage_Divider_Network_2.svg)
 
 In the case of the first schematic, `Vin` means "voltage in" and is the equivalent of the positive side of the voltage source. `Vout` means "voltage out", and represents the divided voltage. The ground symbol represents the negative pole of the voltage source. 
 
