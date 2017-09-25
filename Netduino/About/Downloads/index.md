@@ -27,11 +27,22 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ## 3D Printable Prototyping Baseboard
 
+These 3D printable baseboards have mounting holes for a Netduino plus space for a [half-size breadboard](http://amzn.to/2fMEgGH). You may find it helpful to ream the holes with a [3.2mm (1/8") drill bit](http://amzn.to/2xBmAXN) after printing.
+
+To mount the Netduino, use [12mm M3 socket screws](http://amzn.to/2xvG6Dw) and [3 hex nuts](http://amzn.to/2y4LosQ).
+
+### Standard Baseboard
+
 ![](Baseboards_Medium.jpg)
 
 * **[Base](Baseboard_3D_Chamfered_Base.stl)**
 * **[Logo (for multi-head 3D printers)](Baseboard_3D_Chamfered_Logo.stl)**
 
+### Appliance Control Board
+
+Handles either a [2 channel](http://amzn.to/2xBiHSM) or [4 channel](http://amzn.to/2y4CDir) relay. For buses, use [screw terminal blocks](http://amzn.to/2y3Vqdx).
+
+![](Appliance_Control_Board.jpg)
 
 
 ## Discontinued Products (Netduino 1, Plus, & Mini)
