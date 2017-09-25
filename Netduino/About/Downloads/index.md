@@ -40,10 +40,12 @@ To mount the Netduino, use [12mm M3 socket screws](http://amzn.to/2xvG6Dw) and [
 
 ### Appliance Control Board
 
-Handles either a [2 channel](http://amzn.to/2xBiHSM) or [4 channel](http://amzn.to/2y4CDir) relay. For buses, use [screw terminal blocks](http://amzn.to/2y3Vqdx).
-
 ![](Appliance_Control_Board.jpg)
 
+Handles either a [2 channel](http://amzn.to/2xBiHSM) or [4 channel](http://amzn.to/2y4CDir) relay. For buses, use [screw terminal blocks](http://amzn.to/2y3Vqdx).
+
+* **[Base](Baseboard_Appliance_3D_Chamfered_Base.stl)**
+* **[Logo (for multi-head 3D printers)](Baseboard_Appliance_3D_Chamfered_Logo.stl)**
 
 ## Discontinued Products (Netduino 1, Plus, & Mini)
 
