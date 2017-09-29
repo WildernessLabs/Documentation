@@ -51,6 +51,34 @@ I = 5V / 200Ω = 0.025A = 25mA
 
 ### Power Efficiency and Practical Usage
 
+Ok, so does it make sense to recommend that you use the largest total resistance that still allows for the necessary current the ADC needs?
+
+In my case, I'm using an STM32F4 chip, and the data sheet says that the ADC has the following characteristics:
+
+ADC Sampling Switch Resistance : 6KΩ
+External Input Impedance : 50kΩ
+Internal Sample and Hold Capacitor : 4pF
+
+So the peak current draw would be:
+
+```
+I = V / R
+I = 3.3 / 6000 = 0.0006 = .6mA
+```
+
+Therefore, 
+
+```
+R = V / I
+R = 3.3V / 0.0006A = 5,500Ω = 5.5kΩ
+```
+
+But then the problem I see there is that the total resistance is less than the sampling resistance. Wouldn't that blow my voltage divider math out of the water?
+
+
+
+## Power Efficiency and Practical Usage
+
 I think we need to step back a bit and resolve some more fundamental questions I have.
 
 If i have two divider circuits, let's say:
@@ -79,11 +107,6 @@ Is that right? Or am I misunderstanding how resistors work, because I've read th
 
 
 
-
-[note: ADC has a high impedance; it will draw very small current]
-
-
-[need some help here. first question: let's
 
 Voltage dividers are used extensively in modern circuits, but they are inefficient; each resistor is consuming power, and the "bottom half" (the half of the resistor pair that 
 
