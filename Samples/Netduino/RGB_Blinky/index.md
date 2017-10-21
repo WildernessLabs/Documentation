@@ -2,7 +2,7 @@
 title: RGB LED Blinky
 ---
 
-This sample illustrates a simple program to cycle an RGB LED through each of its primary colors; red, green, and blue.
+This sample illustrates a simple program to cycle an RGB LED through each of its primary colors: red, green, and blue.
 
 It was tested with a [Chanzon, Common Anode RGB LED](https://www.amazon.com/gp/product/B01C19ENFK/ref=oh_aui_detailpage_o04_s01?ie=UTF8&psc=1 )
 
@@ -14,7 +14,7 @@ The forward voltage on the LED is:
 
 And a current draw of 20mA for each color.
 
-Using the RGB calculation described [here](/Hardware/Reference/Components/LEDs/Driving_w_Resistor/), we get the following necessary resistance:
+Using the RGB calculation described [here](/Hardware/Reference/Components/LEDs/Driving_w_Resistor/), we get the following voltage drops:
 
 ```
 3.3V - 2.2V (red) = 1.1V
@@ -28,9 +28,9 @@ Red R = 1.1V / 0.020A = 55Ω
 Green R & Blue R = 0.1V / 0.020A = 5Ω
 ```
 
-A `47Ω` and two, `4.7Ω` resistors are close enough.
+A `47Ω` and two `4.7Ω` resistors are close enough.
 
-Note that particular LED is "Common Anode", meaning the long pin needs to be hooked to positive voltage. This inverts the logic, so it would be on, when the led pin is off (grounded at 0V).
+Note that particular LED is "Common Anode", meaning the long pin needs to be hooked to positive voltage. This inverts the logic, so it would be on when the LED pin is off (grounded at 0V).
 
 A common cathode LED would probably not need that logic inversion.
 

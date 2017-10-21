@@ -23,9 +23,11 @@ From there, Network settings are configured in the popup. For example, the follo
 Note that if you get the error `unable to erase configuration sector memory`, when trying to save, you may have to close the network settings dialog and run `Plug-in` > `Reboot Stop` from the menu first.
 
 
-## Mac OS/Netduino Utils
+## Mac Deploy
 
-Note: The Mac Deploy tool does not yet support network configuration. Support is coming soon, but until then, the Windows MFDeploy tool must be used.
+Developers using a Mac can use the [Firmware Updater and Configuration Tool](http://downloads.wildernesslabs.co/Netduino_SDK/MacDeploy.zip) tool to configure the network. To use, hold down the onboard button on the Netduino and then plug into a USB port. This will put the Netduino into DFU bootloader mode and enable it to work in the configuration tool. From there, network configuration can be set in the Network Settings area:
+
+![](MacDeploy.png)
 
 
 ## Waiting for the Network to Initialize

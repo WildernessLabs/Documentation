@@ -18,7 +18,7 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 ### Mac
  
 * [Xamarin Studio](http://www.monodevelop.com/download/) or [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
-* [Firmware Updater and Deployment tool](https://github.com/WildernessLabs/Netduino-Updater/releases)
+* [Firmware Updater and Configuration Tool](http://downloads.wildernesslabs.co/Netduino_SDK/MacDeploy.zip)
 * [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 
 ## Windows Firmware Updater
@@ -27,12 +27,25 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ## 3D Printable Prototyping Baseboard
 
+These 3D printable baseboards have mounting holes for a Netduino plus space for a [half-size breadboard](http://amzn.to/2fMEgGH). You may find it helpful to ream the holes with a [3.2mm (1/8") drill bit](http://amzn.to/2xBmAXN) after printing.
+
+To mount the Netduino, use [12mm M3 socket screws](http://amzn.to/2xvG6Dw) and [3 hex nuts](http://amzn.to/2y4LosQ).
+
+### Standard Baseboard
+
 ![](Baseboards_Medium.jpg)
 
 * **[Base](Baseboard_3D_Chamfered_Base.stl)**
 * **[Logo (for multi-head 3D printers)](Baseboard_3D_Chamfered_Logo.stl)**
 
+### Appliance Control Board
 
+![](Appliance_Control_Board.jpg)
+
+Handles either a [2 channel](http://amzn.to/2xBiHSM) or [4 channel](http://amzn.to/2y4CDir) relay. For buses, use [screw terminal blocks](http://amzn.to/2y3Vqdx).
+
+* **[Base](Baseboard_Appliance_3D_Chamfered_Base.stl)**
+* **[Logo (for multi-head 3D printers)](Baseboard_Appliance_3D_Chamfered_Logo.stl)**
 
 ## Discontinued Products (Netduino 1, Plus, & Mini)
 
@@ -41,5 +54,14 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 * [Visual Studio Express 2010](https://www.visualstudio.com/vs/older-downloads/)
 * [NETMF SDK 4.2](http://downloads.wildernesslabs.co/NETMF_SDK/MicroFrameworkSDK_NETMF42_QFE2.MSI)
 * Netduino SDK 4.2.2.0 [32 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_32bit_NETMF42.exe) or [64 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_64bit_NETMF42.exe)
+
+### Legacy Firmware Downloads
+
+ * [Netduino 2 Plus, v4.2.2.2](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoPlus2_Firmware_4.2.2.2.zip)
+ * [Netduino 2, v4.2.2.2](https://downloads.wildernesslabs.co/LegacyFirmware/Netduino2_Firmware_4.2.2.2.zip)
+ * [Netduino Plus, v4.2.0.1](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoPlus_Firmware_4.2.0.1.zip)
+ * [Netduino Mini, v4.2.0.1 (TTL)](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_TTL.zip)
+ * [Netduino Mini, v4.2.0.1 (RS232)](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_RS232.zip)
+
 
 
