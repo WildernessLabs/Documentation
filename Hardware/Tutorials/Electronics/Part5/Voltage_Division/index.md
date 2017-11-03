@@ -2,7 +2,7 @@
 title: Voltage Division
 ---
 
-Examining Ohm's law in the context of Kirchhoff's voltage law revealed an interesting fact about the voltage drop after each resistor in a series; the ratio of resistances determines how much the voltage is reduced at each interval. Consider the following schematic which illustrates a _voltage divider_ circuit:
+Examining Ohm's law in the context of Kirchhoff's voltage law revealed an interesting fact about the voltage drop after each resistor in a series; **the ratio of resistances determines how much the voltage is reduced at each interval**. Consider the following schematic which illustrates a _voltage divider_ circuit:
 
 ![Voltage Divider Circuit Illustration](../Voltage_Divider_Network_2.svg)
 
@@ -13,6 +13,8 @@ In a voltage divider circuit like this, because there are only two resistors, an
 ```
 Vout = Vs * (R2 / (R1 + R2))
 ```
+
+![](../Voltage_Divider_Equation.svg)
 
 ### Example
 
@@ -49,6 +51,46 @@ I = 5V / 20Ω = .25A = 250mA
 I = 5V / 200Ω = 0.025A = 25mA
 ```
 
+
+------
+
+# Notes
+
+------
+
+# 1 explain the power efficiency of a voltage divider (not good)
+
+[this is where things get interesting, thus far the concepts that we've explored sit fairly simple and well in a perfect world, but circuits are complicated things.]
+
+[inherently inefficient]
+
+Consider the following two voltage divider circuits:
+
+```
+Voltage Divider 1: 
+ R1 = 8Ω, R2 = 12Ω
+ ∑ = 20Ω
+ Total I = 5V / 20 = 0.25A = 250mA
+ I @ R1 = 5V / 8Ω = 0.625A
+
+Voltage Divider 2: 
+ R1 = 80Ω, R2 = 120Ω; 
+ ∑ = 200Ω; 
+ Total I = 5V / 200 = 0.025A
+ I @ R1 = 5V / 80Ω = 0.0625A
+``` 
+
+The max current that can be drawn on Vout is 625mA, and 63mA in circuit 2. Since that's the max amount of current that can get through R1 at that voltage.
+
+Second, what about power loss? For this question, let's forget it's a voltage divider network and just assume it's a serial resistance. Let's say I'm running this off an 5V battery (assuming it's an idea voltage source) that has 1000mAh. In circuit 1, I can expect to have 1000mAh/250mA = 4hrs. In circuit 2, I would have 40 hrs of charge (1000/25).
+
+### [ADCs are a third leg.]
+
+[remember; loads have resistance]
+
+[add resistance to the bottom half of the voltage divider, that becomes a parallel resistor circuit, which changes the math]
+
+
 ### Power Efficiency and Practical Usage
 
 Ok, so does it make sense to recommend that you use the largest total resistance that still allows for the necessary current the ADC needs?
@@ -75,38 +117,7 @@ R = 3.3V / 0.0006A = 5,500Ω = 5.5kΩ
 
 But then the problem I see there is that the total resistance is less than the sampling resistance. Wouldn't that blow my voltage divider math out of the water?
 
-
-
 ## Power Efficiency and Practical Usage
-
-I think we need to step back a bit and resolve some more fundamental questions I have.
-
-If i have two divider circuits, let's say:
-
-```
-Voltage Divider 1: 
- R1 = 8Ω, R2 = 12Ω
- ∑ = 20Ω
- Total I = 5V / 20 = 0.25A = 250mA
- I @ R1 = 5V / 8Ω = 0.625A
-
-Voltage Divider 2: 
- R1 = 80Ω, R2 = 120Ω; 
- ∑ = 200Ω; 
- Total I = 5V / 200 = 0.025A
- I @ R1 = 5V / 80Ω = 0.0625A
-``` 
-
-So first, if I understand correctly, then the max I can draw on Vout is 625mA in circuit 1, and 63mA in circuit 2. Since that's the max amount of current that can get through R1 at that voltage. Is that correct?
-
-Second, what about power loss? For this question, let's forget it's a voltage divider network and just assume it's a serial resistance. Let's say I'm running this off an 5V battery (assuming it's an idea voltage source) that has 1000mAh. In circuit 1, I can expect to have 1000mAh/250mA = 4hrs. In circuit 2, I would have 40 hrs of charge (1000/25). Yeah?
-
-Is that right? Or am I misunderstanding how resistors work, because I've read that the excess power is dissipated. but i'm not sure what that really means. 
-
-
-
-
-
 
 Voltage dividers are used extensively in modern circuits, but they are inefficient; each resistor is consuming power, and the "bottom half" (the half of the resistor pair that 
 

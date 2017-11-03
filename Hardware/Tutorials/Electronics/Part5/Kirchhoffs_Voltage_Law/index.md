@@ -49,7 +49,7 @@ The total amount of voltage drop is the exact same amount as the voltage source!
 
 ## Voltage Drop
 
-Revisiting the previous circuit, if we put a voltmeter between points B, C, D, and ground, we'd get `2V`, `.5V`, and `0V`, respectively:
+Revisiting the previous circuit, if we put a voltmeter between points `B`, `C`, `D`, and ground, we'd get `2V`, `.5V`, and `0V`, respectively:
 
 ![](../VoltageLaw_Calculated_Circuit.svg)
 
@@ -65,39 +65,60 @@ D -> Common = .5V - .5V = 0V
 
 Voltage drop is often referred to as _forward voltage_ (V<sub>f</sub>). In many components, their voltage drop is actually the same amount of voltage that they require to work. For example, lights such as LEDs require a particular forward voltage to be met in order for them to have enough energy to work.
 
-### Calculating Voltage Drop
+### Simplifying Series Resistance
 
-We can calculate the voltage drop at any given resistor by using Ohm's law to calculate the drop at each resistor and adding up the previous voltage drops from each resistor that came before it. However, we can shortcut these calculations by considering all previous resistances as a single value, and express that as a ratio in the overall resistance:
+Since know that resistors in series are additive, if we want to know the voltage drop at any point between resistors in series (as in the above diagram), we can simplify the previous circuit by considering any series resistances as a single resistor by adding them up, as illustrated in the following circuit diagram:
 
-```
-Voltage Drop @ Rn = Vs * (sum of resistance up to Rn / Total Resistance)
-```
+![](../VoltageDrop_Simplification.svg)
 
-In the case above, if we wanted to calculate the voltage drop (V<sub>f</sub>) at `C`, it would be:
+Note that the sigma (∑) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
 
-```
-Vf = 5V * ((12Ω + 6Ω) / (12Ω + 6Ω + 2Ω)) = 5V * (18Ω / 20Ω) = 4.5V
-```
-
-From there, we can remove the forward voltage from the voltage source (V<sub>s</sub>), to determine how much voltage exists at point `C`:
+Using the same numbers from before, to calculate the forward voltage (voltage drop) at `B`:
 
 ```
-Vn = Vs - Vf = 5V - 4.5V = .5V
+Vf = I * R1; therfore:
+Vf = 0.25A * 18Ω = 4.5V
 ```
 
-And of course, we can combine these two formulas to create a formula to directly calculate the voltage at any given point.  Note that the sigma (∑) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`:
+That means that there is only `0.5V` from the original `5V` of electromotive force at point `B`, since we have to remove the drop from the source voltage:
 
 ```
-Vn = Vs - (Vs * (∑(R...Rn) / Total R))
+V (at point B) = 5V - 4.5 = 0.5V
 ```
 
-In this case, it would be:
+By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a little clearer if we simplify the circuit diagram even further:
+
+![](../Voltage_Divider_Network_2.svg)
+
+
+### Voltage Drop is Proportionate
+
+This reveals something interesting; the voltage drop at any given point in a circuit is _proportionate_ to the resistance at that point to the overall resistance. If the resistances were changed such that `R1`'s voltage drop were `3V`, then the voltage drop at `R2` would have to be `2V`, since it would have to add up to a total of `5V`.
+
+This makes more sense if we remember that we calculated the total amount of current using `I = V / R`
 
 ```
-Vn = 5v - (5V * (18Ω / 20Ω)) = .5V
+I = Vs / (R1 + R2)
 ```
 
-As we can see from this, the voltage drop at any given point in a circuit is proportionate to the resistance at that point to the overall resistance.
+And then substitute that into `I` of the `Vf = I * R1` voltage drop calculation:
+
+```
+Vf = (Vs / (R1 + R2)) * R1;
+```
+
+We can test this using the values from before:
+
+```
+Vf = 0.25A * 18Ω = 4.5V
+```
+
+And of course, removing that from the source voltage:
+
+```
+Vout = Vs - Vf
+Vout = 5V - 4.5V = 0.5V
+```
 
 ## [Next - Voltage Division](../Voltage_Division)
 
