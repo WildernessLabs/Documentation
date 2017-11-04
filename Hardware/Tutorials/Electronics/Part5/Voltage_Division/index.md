@@ -8,7 +8,7 @@ Examining Ohm's law in the context of Kirchhoff's voltage law revealed an intere
 
 ## Voltage Divider Equation
 
-In a voltage divider circuit like this, because there are only two resistors, and we know that the current drop is proportionate to the resistance provided, we can greatly simplify our equation from before by calculating the proportion or resistance of R2, which is `(R2 / Total Resistance)`, and then multiplying by the voltage source to get the leftover voltage:
+In a voltage divider circuit like this, because there are only two resistors, and we know that the current drop is proportionate to the resistance provided, we can greatly simplify our equation from before by calculating the proportion or resistance of `R2` (instead of `R1`), which is `(R2 / Total Resistance)`, and then multiplying by the voltage source to get the leftover voltage:
 
 ```
 Vout = Vs * (R2 / (R1 + R2))
@@ -20,19 +20,22 @@ Vout = Vs * (R2 / (R1 + R2))
 
 Let's say that the voltage source is `5V` and the two resistors are `8Ω` and `12Ω`, respectively.
 
-Therefore, we can calculate the voltage at `Vout` as:
+Therefore, we can calculate the voltage of `Vout` as:
 
 ```
 Vout = 5V * (12Ω / 20Ω) = 5V * .6 = 3V
 ```
 
-So the voltage at `V1` would be `3V`.
+So the voltage out would be `3V`.
 
 <!-- is this necessary? -->
 We can also verify that using the more wieldy equation from before:
 
 ```
+Given:
 Vn = Vs - (Vs * (∑(R...Rn) / Total R))
+
+Therefore:
 V1 = 5V - (5V * (8Ω / 20Ω)) = 5V - 2V = 3V
 ```
 
@@ -44,89 +47,43 @@ The voltage drop in a circuit is determined by the ratio of resistances, not the
 Vout = 5V * (80Ω / 200Ω) = 5V * .6 = 3V
 ```
 
-However, if we change the overall resistance, then the amount of current that passes through the circuit changes. When we calculate the current using Ohm's law `(I = V/R)` of the two different overall resistances, we see that just as there was a 10x difference in resistance, there is also a 10x difference in power:
+However, if we change the overall resistance, then the amount of current that passes through the circuit changes. When we calculate the current using Ohm's law `(I = V/R)` of the two different overall resistances, we see that just as there was a 10x difference in resistance, there is also a 10x difference in power passing through the voltage divider:
 
 ```
 I = 5V / 20Ω = .25A = 250mA
 I = 5V / 200Ω = 0.025A = 25mA
 ```
 
+### Current at Vout
 
-------
-
-# Notes
-
-------
-
-# 1 explain the power efficiency of a voltage divider (not good)
-
-[this is where things get interesting, thus far the concepts that we've explored sit fairly simple and well in a perfect world, but circuits are complicated things.]
-
-[inherently inefficient]
-
-Consider the following two voltage divider circuits:
+We can also calculate the maximum amount of current available to a load hooked to `Vout` in those two divider circuits:
 
 ```
-Voltage Divider 1: 
- R1 = 8Ω, R2 = 12Ω
- ∑ = 20Ω
- Total I = 5V / 20 = 0.25A = 250mA
- I @ R1 = 5V / 8Ω = 0.625A
-
-Voltage Divider 2: 
- R1 = 80Ω, R2 = 120Ω; 
- ∑ = 200Ω; 
- Total I = 5V / 200 = 0.025A
- I @ R1 = 5V / 80Ω = 0.0625A
+I @ R1 = 5V / 8Ω = 0.625A
+I @ R1 = 5V / 80Ω = 0.0625A
 ``` 
 
-The max current that can be drawn on Vout is 625mA, and 63mA in circuit 2. Since that's the max amount of current that can get through R1 at that voltage.
+A load attached to `Vout` could potentially draw up to `625mA` of current from the divider circuit that had smaller resistors, and `62.5mA` from the divider circuit with larger resistors.
 
-Second, what about power loss? For this question, let's forget it's a voltage divider network and just assume it's a serial resistance. Let's say I'm running this off an 5V battery (assuming it's an idea voltage source) that has 1000mAh. In circuit 1, I can expect to have 1000mAh/250mA = 4hrs. In circuit 2, I would have 40 hrs of charge (1000/25).
+### Power Draw
 
-### [ADCs are a third leg.]
+Consider the two voltage divider circuits described above:
 
-[remember; loads have resistance]
+| Voltage Divider # | R1   | R2   | ∑(R1 + R2) | Total Current Draw | Current @ Vout |
+|-------------------|------|------|------------|--------------------|----------------|
+| 1                 | 8Ω   | 12Ω  | 20Ω        | 250mA              | 625mA          |
+| 2                 | 80Ω  | 120Ω | 200Ω       | 25mA               | 62.5mA         |
 
-[add resistance to the bottom half of the voltage divider, that becomes a parallel resistor circuit, which changes the math]
-
-
-### Power Efficiency and Practical Usage
-
-Ok, so does it make sense to recommend that you use the largest total resistance that still allows for the necessary current the ADC needs?
-
-In my case, I'm using an STM32F4 chip, and the data sheet says that the ADC has the following characteristics:
-
-ADC Sampling Switch Resistance : 6KΩ
-External Input Impedance : 50kΩ
-Internal Sample and Hold Capacitor : 4pF
-
-So the peak current draw would be:
+If these were hooked to a 5V battery that had `1000mAh` of charge, we can calculate the amount of time (in theory) that it would take to drain that battery for each circuit:
 
 ```
-I = V / R
-I = 3.3 / 6000 = 0.0006 = .6mA
+Circuit 1 Battery Time = 1000mAh / 250mA = 4 hours.
+Circuit 2 Battery Time = 1000mAh / 25mA = 40 hours.
 ```
 
-Therefore, 
+As we can see, the voltage divider with more resistance is much more power efficient than the voltage divider with less resistance. We might then be tempted to think that we should always use high resistance in a voltage divider, but in reality, things are a little more complicated. In order to understand why, we must consider the circuit as a whole.
 
-```
-R = V / I
-R = 3.3V / 0.0006A = 5,500Ω = 5.5kΩ
-```
+## [Next - Practical Considerations and Use of Voltage Dividers](../Voltage_Divider_Practicals)
 
-But then the problem I see there is that the total resistance is less than the sampling resistance. Wouldn't that blow my voltage divider math out of the water?
-
-## Power Efficiency and Practical Usage
-
-Voltage dividers are used extensively in modern circuits, but they are inefficient; each resistor is consuming power, and the "bottom half" (the half of the resistor pair that 
-
-Voltage dividers are inherently inefficient; the 
-
-[use the largest resistance while still providing the necessary current, so as to be power efficient]
-
-[don't use as a voltage regulator. it's inefficient and Vout is dependent on Vin]
-
-## [Next - Level Shifting with a Voltage Divider](../Level_Shifting)
 
 <br/>

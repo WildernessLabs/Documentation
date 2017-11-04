@@ -68,6 +68,6 @@ There is a fantastic voltage divider calculator online [here](http://www.ohmslaw
 [5v sensor + schematic + code]
 
 
-## [Next - Resistive Sensors](../Resistive_Sensors)
+## [Next - Circuit Software](../Circuit_Software)
 
 <br/>
