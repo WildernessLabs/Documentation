@@ -1,5 +1,5 @@
 ---
-title: Practical Considerations and Use of Voltage Dividers
+title: Voltage Dividers Uses and Practical Considerations
 ---
 
 Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; level shifting, and reading resistive sensors.
@@ -12,7 +12,9 @@ As the name implies, one of the primary uses they have is to adjust, through div
 
 ### Reading Resistive Sensors
 
-Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive sensors have a variable resistance, depending on whatever input their sensing. For instance, a photoresistor may have 30kΩ of resistance in the dark, but only 1kΩ of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be calculated based on the known resistance of the other resistor in series.
+Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
+
+![](../Resistive_Sensor_Circuit.svg)
 
 ### Potentiometers
 
@@ -20,17 +22,17 @@ Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive 
 
 ## Practical Considerations
 
-However, whether they're used to level shift, or read resistive sensors, there are some practical considerations that must be understood before they can be used effectively.
+Whether voltage dividers are used to level shift or read resistive sensors, there are some practical considerations that must be understood before they can be used effectively.
 
 ### Load and the Third Leg
 
-When you attach a load to Vout, the values of the voltage divider circuit changes. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
+When a load is attached to Vout, the values of the voltage divider circuit changes. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
 
 ![](../Voltage_Divider_Third_Leg.svg)
 
-This means that when calculating the divider resistance, you must consider the resistance of the load.
+This means that when calculating the divider resistance, the resistance of the load must also be considered.
 
-For instance, if we were to use the voltage divider discussed early (`R1 = 8Ω`, `R2 = 12Ω`), and the load had a fixed resistance of `3Ω`, we can calculate the total resistance of the bottom half of the divider by adding together the conductance of `R2` and `RLoad` (recall that parallel resistance is calculated by adding together the conductance, or _G_, in siemens (S), which is the reciprocal of resistance): 
+For instance, if we were to use the voltage divider discussed earlier (in which `R1 = 8Ω` and `R2 = 12Ω`), and the load had a fixed resistance of `3Ω`, we can calculate the total resistance of the bottom half of the divider by adding together the conductance of `R2` and `RLoad` (recall that parallel resistance is calculated by adding together the conductance, or _G_, in siemens (S), which is the reciprocal of resistance): 
 
 ```
 Given: 
@@ -56,43 +58,42 @@ Therefore:
 Vout = 5V * (2.4Ω / 10.4Ω)) = 0.23V
 ```
 
-In this case, the load would only see `0.23V`!
+In this case, the load would only see `0.23V`! And because the total resistance has changed, the amount of power would have also changed.
 
+<!-- unnecessarily complicates things? -->
+<!--
 ### Variable Load Resistance
 
 The consideration of load resistance gets much more complex when the resistance of that load can change over time. 
+-->
 
-[this problem is exacerbated in the case that the resistance of the load changes]
+### Power Efficiency
+
+[balance between minimum amount of power needed by the sub circuit and the 
+
+### Netduino Analog to Digital Converter (ADC) Load
+
+In both the level shifting and the resistive sensor, the values are read by Netduino via the Analog to Digital Converter (ADC) on the MCU. 
+
+[explain what an analog to digital converter is]
+
+[give the known impedance for calculations]
+
+Netduino reads 
+
+[sample and hold capacitor fills the capacitor with the same voltage as the input signal]
+[one ADC cycles through all the analog input sample and holds and converts them to a digital value representing the voltage]
+[sampling too fast means that the capacitor doesn't have enough time to reach the charge of the input, and so the reads will be inaccurate]
+
+## Calculating Voltage Division with a Third Leg
+
+Step 1: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
+Step 2: Calculate total resistance based on how much power is needed
+Step 3: Solve individual resistors by multiplying ratio by total R
+Step 4: Subtract the ADC impedance from R2 in the solution
 
 
 
-# BLAH
-
-### Power Efficiency and Practical Usage
-
-Ok, so does it make sense to recommend that you use the largest total resistance that still allows for the necessary current the ADC needs?
-
-In my case, I'm using an STM32F4 chip, and the data sheet says that the ADC has the following characteristics:
-
-ADC Sampling Switch Resistance : 6KΩ
-External Input Impedance : 50kΩ
-Internal Sample and Hold Capacitor : 4pF
-
-So the peak current draw would be:
-
-```
-I = V / R
-I = 3.3 / 6000 = 0.0006 = .6mA
-```
-
-Therefore, 
-
-```
-R = V / I
-R = 3.3V / 0.0006A = 5,500Ω = 5.5kΩ
-```
-
-But then the problem I see there is that the total resistance is less than the sampling resistance. Wouldn't that blow my voltage divider math out of the water?
 
 ## [Next - Resistive Sensors](../Resistive_Sensors)
 
