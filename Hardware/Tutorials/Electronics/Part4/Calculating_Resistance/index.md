@@ -48,14 +48,14 @@ I = 12V / 1,000Ω = 0.012A = 12mA
 
 ```
 R = V/I
-R = 1.5/.015A = 100Ω
+R = 1.5/0.015A = 100Ω
 ```
 
 #### 4) What if we need to push 100mA through a 10Ω resistor, how much voltage would the battery need to have?
 
 ```
 V = I*R
-V = .100A * 10Ω = 1V
+V = 0.100A * 10Ω = 1V
 ```
 
 ## [Next - Resistor Power Rating](../Resistor_Power_Rating)

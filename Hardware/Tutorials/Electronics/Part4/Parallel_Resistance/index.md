@@ -42,21 +42,21 @@ Let's consider the same resistor values we had in series, and calculate them in 
 First, we need to convert each value to siemens:
 
 ```
-G1 = 1/100Ω = .01 S
-G2 = 1/5Ω = .2 S
+G1 = 1/100Ω = 0.01 S
+G2 = 1/5Ω = 0.2 S
 G3 = 1/1KΩ = 1/1000Ω = 0.001 S
 ```
 
 Once we have their conductance, we add them to get the total conductance:
 
 ```
-.01 + .2 + .001 = .211 S
+0.01 + 0.2 + 0.001 = 0.211 S
 ```
 
-Converting from `.211` siemens to ohms:
+Converting from `0.211` siemens to ohms:
 
 ``` 
-Resistance = .211 S = 1/.211 = 4.74Ω
+Resistance = 0.211 S = 1/0.211 = 4.74Ω
 ``` 
 
 Total resistance with the same resistors as we had in series is now `4.7Ω` in parallel.

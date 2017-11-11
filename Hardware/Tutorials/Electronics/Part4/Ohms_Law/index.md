@@ -35,13 +35,13 @@ Consider the following circuit diagram that includes a voltage source and a resi
 If the voltage source is `1.5V`, and the resistance is `50ohms`, we can calculate the amount of amps that can make it through the circuit as:
 
 ```
-Amps = I = V / R = 1.5V / 50Ω = 0.3A
+Amps = I = V / R = 1.5V / 50Ω = 0.03A
 ```
 
 From that, we can also calculate the wattage/power as `(watts = amps * volts)`:
 
 ```
-Wattage = 1.5V * 0.3A = 0.045W
+Wattage = 1.5V * 0.03A = 0.045W
 ```
 
 ### Rule of Significant Digits
@@ -50,7 +50,7 @@ Doing this math brings up an important point, which is the _rule of significant 
 
 After completing any calculation, it's necessary to round to the least number of digits in the input numbers.
 
-So for the above calculation, we had inputs of `1.5V` and `0.3V` and an output of `0.045W`. The input numbers both had two significant digits, so we can only have a result of two significant digits, which means we need to round `0.045W` to `0.05W`. We can ignore the zero left of the decimal when counting significant digits because it's just a convenience marker to make it clear there is a decimal.
+So for the above calculation, we had inputs of `1.5V` and `0.03A` and an output of `0.045W`. The input numbers both had two significant digits, so we can only have a result of two significant digits, which means we need to round `0.045W` to `0.05W`. We can ignore the zero left of the decimal when counting significant digits because it's just a convenience marker to make it clear there is a decimal.
 
 
 ### Other Forms of Ohm's Law
