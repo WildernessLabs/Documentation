@@ -68,7 +68,7 @@ ohms = volts / amps
 
 ```
 V = I * R
-volts = amps / ohms
+volts = amps * ohms
 ```
 
 ### Ohm's Law Pyramid
