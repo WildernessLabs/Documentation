@@ -73,17 +73,31 @@ The consideration of load resistance gets much more complex when the resistance 
 
 ### Netduino Analog to Digital Converter (ADC) Load
 
-In both the level shifting and the resistive sensor, the values are read by Netduino via the Analog to Digital Converter (ADC) on the MCU. 
+In both the level shifting and the resistive sensor, the values are read by Netduino via the _Analog to Digital Converter_ (ADC) on the STM32 microcontroller, which is the main processing chip. An ADC reads voltage signals and converts them to a digital value that describes the input voltage level (`0V` to `3.3V`) in 1,024 steps of precision (values `0` through `1,023`).
 
-[explain what an analog to digital converter is]
+Netduino has 6 analog inputs and the following code illustrates reading a voltage input level on Analog Pin 3: 
 
-[give the known impedance for calculations]
+```
+AnalogInput analog3 = new AnalogInput(Pins.GPIO_PIN_A3)
+int value = analog3.Read();
+```
 
-Netduino reads 
+A value of `0` means that it read `0V`, and a value of `1,023` means that the voltage was at or above `3.3V`. The steps in between are linear, meaning that a value of `511` (`1,023 / 2`) indicates it was reading `1.65V` (`3.3V / 2`).
 
-[sample and hold capacitor fills the capacitor with the same voltage as the input signal]
-[one ADC cycles through all the analog input sample and holds and converts them to a digital value representing the voltage]
-[sampling too fast means that the capacitor doesn't have enough time to reach the charge of the input, and so the reads will be inaccurate]
+The maximum voltage level that can be read is `3.3V`, but the analog input ports are `5V` tolerant, meaning they can accept up to `5V` without overloading the chip and possibly destroying it.
+
+#### ADC Resistance and Load
+
+The ADC is a complex and clever circuit and getting very accurate reads from it requires special considerations which will be covered in a later part of this tutorial. However, for prototyping purposes, we can ignore those complexities and design with simple concepts in mind.
+
+When using a voltage divider with Netduino's analog input, we have to consider that the ADC has some resistance, and requires a certain amount of current to work.
+
+For prototyping purposes, we can assume that the ADC will provide about `6kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can calculate then that it will require up to `0.6mA` of current:
+
+```
+I = V / R
+I = 3.3V / 6K = 0.00055 = 0.6mA
+```
 
 ## Calculating Voltage Division with a Third Leg
 
