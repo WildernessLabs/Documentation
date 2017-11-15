@@ -28,8 +28,14 @@ Recall that in a series resistance, each resistor experiences the same amount of
 In this case, the total resistance (series resistances are additive), is `20Ω`, therefore the current is:
 
 ```
+Given:
+I = V / R
+
+Therefore:
 I = 5V / 20Ω = 0.25A = 250mA
 ```
+
+So each resistor sees `0.25A` of current. 
 
 Now, recalling Ohm's law solved for voltage (`V = I * R`), we can calculate the voltage drop for that current at each resistor:
 
@@ -71,7 +77,7 @@ Since know that resistors in series are additive, if we want to know the voltage
 
 ![](../VoltageDrop_Simplification.svg)
 
-Note that the sigma (∑) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
+Note that the sigma (`∑`) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
 
 Using the same numbers from before, to calculate the forward voltage (voltage drop) at `B`:
 
@@ -93,9 +99,9 @@ By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a 
 
 ### Voltage Drop is Proportionate
 
-This reveals something interesting; the voltage drop at any given point in a circuit is _proportionate_ to the resistance at that point to the overall resistance. If the resistances were changed such that `R1`'s voltage drop were `3V`, then the voltage drop at `R2` would have to be `2V`, since it would have to add up to a total of `5V`.
+This reveals something interesting; the voltage drop at any given point in a circuit is _proportionate_ to the resistance at that point to the overall resistance. <!-- If the resistances were changed such that `R1`'s voltage drop were `3V`, then the voltage drop at `R2` would have to be `2V`, since it would have to add up to a total of `5V`. -->
 
-This makes more sense if we remember that we calculated the total amount of current using `I = V / R`
+This makes more sense if we remember that we calculated the total amount of current using `I = V / R`:
 
 ```
 I = Vs / (R1 + R2)
@@ -113,12 +119,13 @@ We can test this using the values from before:
 Vf = 0.25A * 18Ω = 4.5V
 ```
 
-And of course, removing that from the source voltage:
+And of course, removing that from the source voltage, gives us `0.5V`, as with before:
 
 ```
 Vout = Vs - Vf
 Vout = 5V - 4.5V = 0.5V
 ```
+
 
 ## [Next - Voltage Division](../Voltage_Division)
 

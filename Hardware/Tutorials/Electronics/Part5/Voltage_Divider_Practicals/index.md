@@ -4,7 +4,7 @@ title: Voltage Dividers Uses and Practical Considerations
 
 Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; level shifting, and reading resistive sensors.
 
-Additionally, [potentiometers]
+Additionally, potentiometers use voltage division to provide 
 
 ### Level Shifting
 
@@ -60,20 +60,10 @@ Vout = 5V * (2.4Ω / 10.4Ω)) = 0.23V
 
 In this case, the load would only see `0.23V`! And because the total resistance has changed, the amount of power would have also changed.
 
-<!-- unnecessarily complicates things? -->
-<!--
-### Variable Load Resistance
-
-The consideration of load resistance gets much more complex when the resistance of that load can change over time. 
--->
-
-### Power Efficiency
-
-[balance between minimum amount of power needed by the sub circuit and the 
 
 ### Netduino Analog to Digital Converter (ADC) Load
 
-In both the level shifting and the resistive sensor, the values are read by Netduino via the _Analog to Digital Converter_ (ADC) on the STM32 microcontroller, which is the main processing chip. An ADC reads voltage signals and converts them to a digital value that describes the input voltage level (`0V` to `3.3V`) in 1,024 steps of precision (values `0` through `1,023`).
+In both the level shifting and the resistive sensor, the values are read by Netduino via the _Analog to Digital Converter_ (ADC) on the STM32F microcontroller, which is the main processing chip. An ADC reads voltage signals and converts them to a digital value that describes the input voltage level (`0V` to `3.3V`) in 1,024 steps of precision (values `0` through `1,023`).
 
 Netduino has 6 analog inputs and the following code illustrates reading a voltage input level on Analog Pin 3: 
 
@@ -96,10 +86,39 @@ For prototyping purposes, we can assume that the ADC will provide about `6kΩ` i
 
 ```
 I = V / R
-I = 3.3V / 6K = 0.00055 = 0.6mA
+I = 3.3V / 6,000Ω = 0.00055 = 0.6mA
 ```
 
+
+### Variable Load Resistance
+
+The consideration of load resistance gets much more complex when the resistance of that load can change over time. [As a sub circuit on the Vout's current load changes, it resistance must also change, since current is a function of resistance.]
+
+[to get around this, you can 10x the power by reducing the voltage dividing resistors, but 
+
+[If divider resistors are small, then the resistance of the load really affects the equation. also lots of power is wasted]
+
+[but if divider resistors are large, then they aren't affected by the load as much, but very little power can make it through.]
+
+[pick the smallest resistors that the sensor can drive]
+
+### Never use a Divider as a Voltage Regulator
+
+[would waste a pile of power and it wouldn't be very regular]
+
+
+### Power Efficiency
+
+[picking the smallest resistors means that lots of power is just wasted]
+
+[balance between minimum amount of power needed by the sub circuit and the 
+
+1,000,000
+
+
 ## Calculating Voltage Division with a Third Leg
+
+Given that 
 
 Step 1: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
 Step 2: Calculate total resistance based on how much power is needed

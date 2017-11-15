@@ -31,8 +31,8 @@
                 </g>
                 <g id="R1-Copy" transform="translate(193.000000, 0.000000)">
                     <g id="V1" font-size="18" font-family="Lato-Regular, Lato" letter-spacing="0.695049465" fill="#23ABE3" font-weight="normal">
-                        <text id="V-=-Fs---Vf">
-                            <tspan x="166.371228" y="223">V = Fs - Vf</tspan>
+                        <text id="V-=-Vs---Vf">
+                            <tspan x="165.903228" y="223">V = Vs - Vf</tspan>
                         </text>
                         <text id="Vf-=-I-*-SeriesR">
                             <tspan x="24.6201043" y="154">Vf = I * SeriesR</tspan>
