@@ -4,11 +4,11 @@ title: Voltage Dividers Uses and Practical Considerations
 
 Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; level shifting, and reading resistive sensors.
 
-Additionally, potentiometers use voltage division to provide 
-
 ### Level Shifting
 
-As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing. For example a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided.
+As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing; a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided. 
+
+In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run at 1.2V or less, internally), but occasionally you might find an older 5V sensor that you want to use
 
 ### Reading Resistive Sensors
 
@@ -18,6 +18,10 @@ Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive 
 
 ### Potentiometers
 
+In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable voltage. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer.
+
+[image]
+
 [explain]
 
 ## Practical Considerations
@@ -26,22 +30,22 @@ Whether voltage dividers are used to level shift or read resistive sensors, ther
 
 ### Load and the Third Leg
 
-When a load is attached to Vout, the values of the voltage divider circuit changes. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
+When a load is attached to `Vout`, the values of the voltage divider circuit change. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
 
 ![](../Voltage_Divider_Third_Leg.svg)
 
-This means that when calculating the divider resistance, the resistance of the load must also be considered.
+Therefore, when calculating the divider resistance, the resistance of the load must also be considered.
 
 For instance, if we were to use the voltage divider discussed earlier (in which `R1 = 8Ω` and `R2 = 12Ω`), and the load had a fixed resistance of `3Ω`, we can calculate the total resistance of the bottom half of the divider by adding together the conductance of `R2` and `RLoad` (recall that parallel resistance is calculated by adding together the conductance, or _G_, in siemens (S), which is the reciprocal of resistance): 
 
 ```
 Given: 
-G = 1 / R
-G of R2 = (1 / 12Ω) = 0.083 S
-G of RLoad = (1 / 3Ω) = 0.33 S
+Conductance (G) = 1 / R
+G of R2 = (1 / 12Ω) = 0.083S
+G of RLoad = (1 / 3Ω) = 0.33S
 
 Therefore:
-Total G = .42 S
+Total G = 0.083S + 0.33S = .42 S
 Total Resistance of Load and R2 =  1 / 0.42 = 2.4Ω
 ```
 
@@ -58,7 +62,7 @@ Therefore:
 Vout = 5V * (2.4Ω / 10.4Ω)) = 0.23V
 ```
 
-In this case, the load would only see `0.23V`! And because the total resistance has changed, the amount of power would have also changed.
+As illustrated above, a `3Ω` resistance in the load made a big difference; In this case, the load would only see `0.23V`! And because the total resistance has changed, the amount of power would have also changed.
 
 
 ### Netduino Analog to Digital Converter (ADC) Load
@@ -74,7 +78,7 @@ int value = analog3.Read();
 
 A value of `0` means that it read `0V`, and a value of `1,023` means that the voltage was at or above `3.3V`. The steps in between are linear, meaning that a value of `511` (`1,023 / 2`) indicates it was reading `1.65V` (`3.3V / 2`).
 
-The maximum voltage level that can be read is `3.3V`, but the analog input ports are `5V` tolerant, meaning they can accept up to `5V` without overloading the chip and possibly destroying it.
+The maximum voltage level that can be read is `3.3V`, but the analog input ports are `5V` tolerant, meaning they can accept up to `5V` without overloading the chip and possibly destroying it. However, to be able to read any voltage above `3.3V`, a voltage divider must be used.
 
 #### ADC Resistance and Load
 
@@ -85,10 +89,14 @@ When using a voltage divider with Netduino's analog input, we have to consider t
 For prototyping purposes, we can assume that the ADC will provide about `6kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can calculate then that it will require up to `0.6mA` of current:
 
 ```
+Given:
 I = V / R
+V = 3.3V
+R = 6kΩ
+
+Therefore:
 I = 3.3V / 6,000Ω = 0.00055 = 0.6mA
 ```
-
 
 ### Variable Load Resistance
 
@@ -120,10 +128,10 @@ The consideration of load resistance gets much more complex when the resistance 
 
 Given that 
 
-Step 1: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
-Step 2: Calculate total resistance based on how much power is needed
-Step 3: Solve individual resistors by multiplying ratio by total R
-Step 4: Subtract the ADC impedance from R2 in the solution
+* Step 1: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
+* Step 2: Calculate total resistance based on how much power is needed
+* Step 3: Solve individual resistors by multiplying ratio by total R
+* Step 4: Subtract the ADC impedance from R2 in the solution
 
 
 
