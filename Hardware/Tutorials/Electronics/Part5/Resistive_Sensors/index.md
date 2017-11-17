@@ -62,17 +62,21 @@ The datasheet for the Adafruit photoresistor gave a range of `200kΩ - 10kΩ`, s
 
 ### Calculating the Fixed Resistor Value
 
+<!-- re do
+
 Netduino has an onboard Analog to Digital Converter (ADC) that reads voltage values from `0V` - `3.3V` in 1,024 steps, which means it will give a value from `0` to `1023` that represents the voltage. For the best resolution therefore, we want the total resistance when it's very bright to be near the ADC max of `3.3V`. And when it's low, it should be near `0V`. This ensures that we are using the biggest range possible.
+
+-->
 
 The easiest way to do this is to choose a resistor that splits the difference between the high and low resistance values of the resistive sensor:
 
 ```
-(High Value - Low Value) / 2 = Fixed Resistor Value
+(High Value + ADC Resistance - Low Value) / 2 = Fixed Resistor Value
 ```
 
-In the case of my photoresistor, that would be `~15.5kΩ`, since `(30kΩ - 1kΩ) / 2 = 15.5kΩ`. In the case of the Adafruit photoresistor, a `195kΩ` resistor would be more appropriate, given `(400kΩ - 10kΩ) / 2 = 195kΩ`.
+In the case of my photoresistor, that would be `~20kΩ`, since `(30kΩ + 11kΩ - 1kΩ) / 2 = 20kΩ`. In the case of the Adafruit photoresistor, a `211kΩ` resistor would be more appropriate, given `(400kΩ + 11kΩ - 10kΩ) / 2 = 210.5kΩ`.
 
-`15.5kΩ` isn't a common resistor value, but `22kΩ` is, so using the voltage divider equation (`Vout = (Vin * R2) / (R1 + R2)`), we can calculate the expected spread of values:
+`22kΩ` isn't a common resistor value, but `22kΩ` is, so using the voltage divider equation (`Vout = (Vin * R2) / (R1 + R2)`), we can calculate the expected spread of values:
 
 | Light Level | R1 Value | Sensor Resistance (R2) | Total Resistance | Vin   | Vout  |
 |-------------|----------|------------------------|------------------|-------|-------|

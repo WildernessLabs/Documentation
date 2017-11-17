@@ -82,7 +82,10 @@ Note that the sigma (`∑`) symbol means mathematical sum, and `R...Rn` means `R
 Using the same numbers from before, to calculate the forward voltage (voltage drop) at `B`:
 
 ```
-Vf = I * R1; therfore:
+Given:
+Vf = I * R1
+
+Therefore:
 Vf = 0.25A * 18Ω = 4.5V
 ```
 
@@ -96,36 +99,41 @@ By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a 
 
 ![](../Voltage_Divider_Network_2.svg)
 
+In this case, it's easy to see that `Vout = VS - R1Vf` and `R2Vf = VS - R1Vf`, which means that `Vout = R2Vf`. Therefore, if we want to calculate `Vout`, we can simplify things by calculating the voltage drop of `R2`.
+
 
 ### Voltage Drop is Proportionate
 
-This reveals something interesting; the voltage drop at any given point in a circuit is _proportionate_ to the resistance at that point to the overall resistance. <!-- If the resistances were changed such that `R1`'s voltage drop were `3V`, then the voltage drop at `R2` would have to be `2V`, since it would have to add up to a total of `5V`. -->
-
-This makes more sense if we remember that we calculated the total amount of current using `I = V / R`:
+Because Ohm's law is proportionate, **the ratio of resistances determines how much the voltage is reduced at each interval**. We can prove this out by starting with Ohm's law, solved for `I`:
 
 ```
+Given:
+I = V / R
+
+Therefore
 I = Vs / (R1 + R2)
 ```
 
-And then substitute that into `I` of the `Vf = I * R1` voltage drop calculation:
+And remember from the previous page, to solve for `Vout`, we can simply solve for the voltage drop (`Vf`) of `R2`.
+
+So then, substituting that into `I` of the `R2` voltage drop calculation:
 
 ```
-Vf = (Vs / (R1 + R2)) * R1;
+Given:
+R2Vf = I * R2
+
+And:
+I = Vs / (R1 + R2)
+
+Therefore:
+Vout = R2VF = (Vs / (R1 + R2)) * R2
 ```
 
 We can test this using the values from before:
 
 ```
-Vf = 0.25A * 18Ω = 4.5V
+R2Vf = (5v / (18Ω + 2Ω)) * 2Ω = 0.5V
 ```
-
-And of course, removing that from the source voltage, gives us `0.5V`, as with before:
-
-```
-Vout = Vs - Vf
-Vout = 5V - 4.5V = 0.5V
-```
-
 
 ## [Next - Voltage Division](../Voltage_Division)
 

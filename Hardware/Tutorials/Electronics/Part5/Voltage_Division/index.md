@@ -2,19 +2,23 @@
 title: Voltage Division
 ---
 
-Examining Ohm's law in the context of Kirchhoff's voltage law revealed an interesting fact about the voltage drop after each resistor in a series; **the ratio of resistances determines how much the voltage is reduced at each interval**. Consider the following schematic which illustrates a _voltage divider_ circuit:
-
-![Voltage Divider Circuit Illustration](../Voltage_Divider_Network_2.svg)
-
-## Voltage Divider Equation
-
-In a voltage divider circuit like this, because there are only two resistors, and we know that the current drop is proportionate to the resistance provided, we can greatly simplify our equation from before by calculating the proportion or resistance of `R2` (instead of `R1`), which is `(R2 / Total Resistance)`, and then multiplying by the voltage source to get the leftover voltage:
+Using a little algebra, we can rewrite our equation from before:
 
 ```
-Vout = Vs * (R2 / (R1 + R2))
+Vout = (Vs / (R1 + R2)) * R2
+
+// multiply R2:
+Vout = (Vs * R2) / (R1 + R2) 
+
+// pull out Vs (transitive property of multiplication):
+Vout = Vs * (R2 / R1 + R2)
 ```
+
+The final formulation; `Vout = Vs * (R2 / (R1 + R2))`, is usually how the voltage divider equation is written in textbooks and other reference material:
+
 
 ![](../Voltage_Divider_Equation.svg)
+
 
 ### Example
 
@@ -32,7 +36,8 @@ Vout = 5V * (12Ω / (8Ω + 12Ω)) = 5V * .6 = 3V
 
 So the voltage out would be `3V`.
 
-<!-- is this necessary? -->
+<!-- is this necessary? probably not -->
+<!--
 We can also verify that using the more wieldy equation from before:
 
 ```
@@ -42,6 +47,7 @@ Vn = Vs - (Vs * (∑(R...Rn) / Total R))
 Therefore:
 V1 = 5V - (5V * (8Ω / 20Ω)) = 5V - 2V = 3V
 ```
+-->
 
 ## Current
 

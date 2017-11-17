@@ -4,17 +4,20 @@ title: Voltage Dividers Uses and Practical Considerations
 
 Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; level shifting, and reading resistive sensors.
 
-### Level Shifting
-
-As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing; a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided. 
-
-In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run at 1.2V or less, internally), but occasionally you might find an older 5V sensor that you want to use
 
 ### Reading Resistive Sensors
 
 Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
 
 ![](../Resistive_Sensor_Circuit.svg)
+
+### Level Shifting
+
+As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing; a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided. 
+
+[an illustration of 5V -> 3.3V would be cool]
+
+In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run at 1.2V or less, internally), but occasionally you might find an older 5V sensor that you want to use
 
 ### Potentiometers
 
@@ -86,17 +89,38 @@ The ADC is a complex and clever circuit and getting very accurate reads from it 
 
 When using a voltage divider with Netduino's analog input, we have to consider that the ADC has some resistance, and requires a certain amount of current to work.
 
-For prototyping purposes, we can assume that the ADC will provide about `6kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can calculate then that it will require up to `0.6mA` of current:
+For prototyping purposes, we can assume that the ADC will provide about `11kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can calculate then that it will require up to `0.3mA` of current:
 
 ```
 Given:
 I = V / R
 V = 3.3V
-R = 6kΩ
+R = 11kΩ
 
 Therefore:
-I = 3.3V / 6,000Ω = 0.00055 = 0.6mA
+I = 3.3V / 11,000Ω = 0.0003 = 0.3mA
 ```
+
+### Calculating Voltage Division with Load
+
+[total of the R2 and Load is the sum of the conductance, converted back into resistance:]
+
+```
+Conductance (G) = (1 / R2) + (1 / Rload)
+R = 1 / G
+R = 1 / (1 / R2) + (1 / Rload)
+```
+
+```
+Given voltage division:
+Vout = Vs * (R2 / (R1 + R2))
+
+and parallel resistance:
+Total R2 + Load = 1 / (1 / R2) + (1 / RLoad)
+
+Vout = Vs * ( (1 / (1 / R2) + (1 / RLoad)) / (R1 + (1 / (1 / R2) + (1 / RLoad))
+```
+
 
 ### Variable Load Resistance
 
@@ -126,7 +150,7 @@ The consideration of load resistance gets much more complex when the resistance 
 
 ## Calculating Voltage Division with a Third Leg
 
-Given that 
+[do we need to modify the voltage division equation here?]
 
 * Step 1: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
 * Step 2: Calculate total resistance based on how much power is needed
