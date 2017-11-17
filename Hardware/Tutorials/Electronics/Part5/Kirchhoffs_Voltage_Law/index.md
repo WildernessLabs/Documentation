@@ -95,6 +95,8 @@ That means that there is only `0.5V` from the original `5V` of electromotive for
 V (at point B) = 5V - 4.5 = 0.5V
 ```
 
+### Voltage Drop (Vf) of R2 is Vout
+
 By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a little clearer if we simplify the circuit diagram even further:
 
 ![](../Voltage_Divider_Network_2.svg)
@@ -114,9 +116,7 @@ Therefore
 I = Vs / (R1 + R2)
 ```
 
-And remember from the previous page, to solve for `Vout`, we can simply solve for the voltage drop (`Vf`) of `R2`.
-
-So then, substituting that into `I` of the `R2` voltage drop calculation:
+And because `Vout` = `R2Vf`, we solve for the voltage drop (`Vf`) of `R2` and substitute `Vs / (R1 + R2)` in for `I`:
 
 ```
 Given:
