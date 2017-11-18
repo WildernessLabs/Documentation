@@ -16,42 +16,23 @@ Vout = Vs * (R2 / R1 + R2)
 
 The final formulation; `Vout = Vs * (R2 / (R1 + R2))`, is usually how the voltage divider equation is written in textbooks and other reference material:
 
-
 ![](../Voltage_Divider_Equation.svg)
 
-
-### Example
-
-Let's say that the voltage source is `5V` and the two resistors are `8Ω` and `12Ω`, respectively.
-
-Therefore, we can calculate the voltage of `Vout` as:
+This is, presumably, because it more intuitively represents the solution to the problem. Namely; that the output voltage is a product of the division ratio. So for example, if we had `5V` input, and we needed to divide such that we got `3V` output, then we need to multiply `5` by `3 / 5`:
 
 ```
 Given:
-Vout = Vs * (R2 / (R1 + R2))
+Vout = Vs * (R2 / R1 + R2)
 
 Therefore:
-Vout = 5V * (12Ω / (8Ω + 12Ω)) = 5V * .6 = 3V
+5V * (3 / 5) = 3V
 ```
-
-So the voltage out would be `3V`.
-
-<!-- is this necessary? probably not -->
-<!--
-We can also verify that using the more wieldy equation from before:
-
-```
-Given:
-Vn = Vs - (Vs * (∑(R...Rn) / Total R))
-
-Therefore:
-V1 = 5V - (5V * (8Ω / 20Ω)) = 5V - 2V = 3V
-```
--->
 
 ## Current
 
-The voltage drop in a circuit is determined by the ratio of resistances, not the overall resistance. This means, that if we took the exact same circuit as before, but this time used resistors that were 10x more resistive, we'd still get the same exact voltage drop:
+This reveals another interesting fact about voltage division; the voltage drop in a circuit is determined by the ratio of resistances, not the overall resistance. Therefore, any resistor combination that fulfilled that ratio, would provide `3V` out. 
+
+Consider that if we took the exact same circuit as before (`R1 = 8Ω, R2 = 12Ω`), but this time used resistors that were 10x more resistive, we'd still get the same exact voltage drop:
 
 ```
 Given: 
@@ -105,6 +86,54 @@ Circuit 2 (total R: 200Ω) Battery Time = 1000mAh / 25mA = 40 hours.
 ```
 
 As we can see, the voltage divider with more resistance is much more power efficient than the voltage divider with less resistance because it lets less current through. We might then be tempted to think that we should always use high resistance in a voltage divider, but in reality, things are a little more complicated. In order to understand why, we must consider the circuit as a whole.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[this needs work:]
+
+
+The solution then is to first determine how much power/current the sub circuit on `Vout` needs, and choose an `R1` whose resistance provides that power and then multiply them by the appropriate ratio to determine the value of each leg of the divider..
+
+
+
+
+
+
+
+## Sample Problems
+
+### Example
+
+[redo this example or add another one where we 
+
+Let's say that the voltage source is `5V` and the two resistors are `8Ω` and `12Ω`, respectively.
+
+Therefore, we can calculate the voltage of `Vout` as:
+
+```
+Given:
+Vout = Vs * (R2 / (R1 + R2))
+
+Therefore:
+Vout = 5V * (12Ω / (8Ω + 12Ω)) = 5V * .6 = 3V
+```
+
+So the voltage out would be `3V`.
+
+
 
 ## [Next - Practical Considerations and Use of Voltage Dividers](../Voltage_Divider_Practicals)
 
