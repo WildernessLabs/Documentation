@@ -79,6 +79,8 @@ Since know that resistors in series are additive, if we want to know the voltage
 
 Note that the sigma (`∑`) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
 
+Simplifying circuits like this, by combining resistances is a common way to analyze circuits because it makes them practical to deal with. In fact, when dealing with circuits, we often simplify them into single values that describe their overall resistance, and _capacitance_, which we'll explore later. By simplifying circuits like this, we can more effectively design complex systems that incorporate multiple circuits into a larger design.
+
 Using the same numbers from before, to calculate the forward voltage (voltage drop) at `B`:
 
 ```
@@ -106,7 +108,7 @@ In this case, it's easy to see that `Vout = VS - R1Vf` and `R2Vf = VS - R1Vf`, w
 
 ### Voltage Drop is Proportionate
 
-Because Ohm's law is proportionate, **the ratio of resistances determines how much the voltage is reduced at each interval**. We can prove this out by starting with Ohm's law, solved for `I`:
+Because Ohm's law is proportionate, **the ratio of resistances determines how much the voltage is reduced at each interval**. We can prove this by starting with Ohm's law, solved for `I`:
 
 ```
 Given:

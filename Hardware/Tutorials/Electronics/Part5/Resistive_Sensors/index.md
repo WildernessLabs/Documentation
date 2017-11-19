@@ -4,7 +4,9 @@ title: Resistive Sensors
 
 There is a class of sensors, called resistive sensors, that have a variable resistance based on various input such as light or heat. [Photoresistors](https://www.wikipedia.com/en/Photoresistor), for instance, provide less resistance the more light that they receive. Similarly, [thermistors](https://en.wikipedia.org/wiki/Thermistor) change their resistance (either more resistance or less resistance, depending on the type), as their temperature changes.
 
-Resistance can't be measured directly with a Netduino, but voltage can be measured by the Analog to Digital Converter (ADC) via the analog input pins. By placing a resistive sensor in a voltage divider with another resistor of known value, we can measure the voltage output and use Ohm's law to calculate the resistance of the resistive sensor. The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
+Resistance can't be measured directly with a Netduino, but voltage can be measured by the Analog to Digital Converter (ADC) via the analog input pins. By placing a resistive sensor in a voltage divider with another resistor of known value, we can measure the voltage output and use Ohm's law to calculate the resistance of the resistive sensor. 
+
+The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
 
 ![](../Resistive_Sensor_Circuit.svg)
 
@@ -29,7 +31,7 @@ There are several major component supply websites that serve the majority of the
 
 ### Datasheets
 
-Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use.
+Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use. Datasheets are usually easy to find, simply searching on Google for the part number + "datasheet" will often turn up a PDF datasheet.
 
 In the case of my photoresistor, I found it in a pile of components, so I'm not sure if it conforms to the values in the above datasheet, since I'm not sure it's the same component. That's not a problem, however, with a simple resistive sensor like this, however, because I can just measure the resistance with a multimeter under varying conditions to determine its characteristics. To test it, we just need a [multimeter](https://en.wikipedia.org/wiki/Multimeter). 
 
@@ -43,7 +45,7 @@ A multimeter is a must-have tool for hardware developers. A decent multimeter do
 
 [Here is a great multimeter from Amazon](https://www.amazon.com/gp/product/B072XH5SJ7/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B072XH5SJ7&linkCode=as2&tag=ilderneabs-20&linkId=a5c314e3ce625c8bee20f98f7e4827f3) that costs about USD$15.
 
-### Measuring Resitance
+### Measuring Resistance
 
 To measure the resistance of a photoresistor, set the multimeter to its resistance setting, which is usually denoted by the ohm (`Ω`) symbol, and put the multimeter leads on each of the photoresistor leads. It might be helpful to put the photoresistor in a breadboard to keep it still:
 
@@ -62,33 +64,74 @@ The datasheet for the Adafruit photoresistor gave a range of `200kΩ - 10kΩ`, s
 
 ### Calculating the Fixed Resistor Value
 
-<!-- re do
-
 Netduino has an onboard Analog to Digital Converter (ADC) that reads voltage values from `0V` - `3.3V` in 1,024 steps, which means it will give a value from `0` to `1023` that represents the voltage. For the best resolution therefore, we want the total resistance when it's very bright to be near the ADC max of `3.3V`. And when it's low, it should be near `0V`. This ensures that we are using the biggest range possible.
 
--->
-
-The easiest way to do this is to choose a resistor that splits the difference between the high and low resistance values of the resistive sensor:
+The easiest way to do this is to choose a resistor that splits the difference between the high and low resistance values of the resistive sensor, combined with the ADC resistance:
 
 ```
-(High Value + ADC Resistance - Low Value) / 2 = Fixed Resistor Value
+Given:
+ADC Conductance = 1 / 11kΩ = (0.0001S)
+Photoresistor high (dark) resistance = 30kΩ
+Photoresistor moderate (room light) resistance = 5kΩ
+Photoresistor low (bright) resistance = 1kΩ
+
+Therefore:
+Photoresistor high conductance = 1 / 30,000Ω = 0.00003S
+Photoresistor moderate conductance = 1 / 5,000Ω = 0.0002S
+Photoresistor low conductance = 1 / 1,000Ω = 0.001S
+
+Total voltage divider bottom half (ADC + Photoresistor) resistance:
+High (dark) = 0.0001S + 0.00003S = 0.00013S = 7,692Ω
+Moderate = 0.0001S + 0.0002S = 0.0003S = 3,333Ω
+Low (bright) = 0.0001S + 0.001S = 0.0011S = 909Ω
 ```
 
-In the case of my photoresistor, that would be `~20kΩ`, since `(30kΩ + 11kΩ - 1kΩ) / 2 = 20kΩ`. In the case of the Adafruit photoresistor, a `211kΩ` resistor would be more appropriate, given `(400kΩ + 11kΩ - 10kΩ) / 2 = 210.5kΩ`.
+Therefore, we would need an R1 that has a value halfway between `909Ω` and `7,692Ω`:
 
-`22kΩ` isn't a common resistor value, but `22kΩ` is, so using the voltage divider equation (`Vout = (Vin * R2) / (R1 + R2)`), we can calculate the expected spread of values:
+```
+(909Ω + 7,692Ω) / 2 = 4,300Ω = 4.3k
+```
 
-| Light Level | R1 Value | Sensor Resistance (R2) | Total Resistance | Vin   | Vout  |
-|-------------|----------|------------------------|------------------|-------|-------|
-| Very Bright | 22kΩ     | 1kΩ                    | 23kΩ             | 5V    | 0.21V |
-| Moderate    | 22kΩ     | 5kΩ                    | 27kΩ             | 5V    | 0.93V |
-| Dark        | 22kΩ     | 30kΩ                   | 52kΩ             | 5V    | 2.89V |
+`4.3kΩ` isn't a very common resistor value, but `4.7kΩ` is, so using the voltage divider equation from before (`Vout = Vs * (R2 / (R1 + R2))`), and using the total parallel resistance of `R2` + `ADC` as the value for `R2`, we can calculate the expected spread of values:
 
-Therefore, our circuit would look something like this:
+```
+Example calculation:
+Vout = Vs * ((R2 + ADC) / (R1 + R2 + ADC)) )
+Very Bright Vout = 5V * (909Ω / 5,609Ω) = 5V * 0.162Ω = 0.81V
+```
+
+| Light Level | R1 Value  | Sensor Resistance (R2) | R2 + ADC Resistance | Total R (R1 + R2 + ADC) | Vin   | Vout  |
+|-------------|-----------|------------------------|---------------------|---------|-------|-------|
+| Very Bright | 4.7kΩ     | 1kΩ                    | 909Ω                | 5,609Ω  | 5V    | 0.81V |
+| Moderate    | 4.7kΩ     | 5kΩ                    | 3,333Ω              | 8,033Ω  | 5V    | 2.07V |
+| Dark        | 4.7kΩ     | 30kΩ                   | 7,692Ω              | 12,392Ω | 5V    | 3.1V  |
+
+
+The circuit would look something like this:
 
 ![](../Photoresistor_Circuit.svg)
 
-`0.21V - 2.89V` is a pretty wide spread, which will give good resolution for reading the values.
+Our measured voltage spread should then be somewhere between `0.8V` and `3.1V`, which would give good resolution for reading the value.
+
+### Converting Voltage to Digital Value and Back
+
+Given that voltage is reported by the ADC as a digital value from `0` to `1,023`, we can then calculate the expected value output from the ADC as a percentage of the maximum voltage, multiplied by `1,023`:
+
+```
+Given:
+Digital value = (Vout / 3.3V) * 1,023
+
+Therefore:
+Bright value = (0.8V / 3.3V) * 1,023 = 248
+Dark value = (3.1V / 3.3V) * 1,023 = 961
+```
+
+Therefore, if the photoresistor were in bright light, the voltage divider should output around `0.81V`, which would read somewhere around `248`. We can then convert that back to voltage by reversing the process and multiplying the ratio of value over max steps (`1,023`) and multiplying by `3.3V`:
+
+```
+Vout = (Digital Value / 1,023) * 3.3V
+Bright Vout = 248 / 1,023 * 3.3V = 0.8V
+```
 
 # Practical Circuit
 

@@ -16,7 +16,46 @@ Though this might look different, it's actually the equivalent of the voltage di
 
 In the case of the first schematic, `Vin` means "voltage in" and is the equivalent of the positive side of the voltage source. `Vout` means "voltage out", and represents the divided voltage. The ground symbol represents the negative pole of the voltage source. 
 
-## Calculating 
+## Calculating Voltage Division with a Third Leg
+
+
+* Step 1: Calculate total resistance based on how much power is needed
+* Step 2: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
+* Step 3: Solve individual resistors by multiplying ratio by total R
+* Step 4: Subtract the ADC impedance from R2 in the solution
+
+
+
+
+
+
+### OLD Calculating Voltage Division with Load
+
+
+
+[total of the R2 and Load is the sum of the conductance, converted back into resistance:]
+
+```
+Conductance (G) = (1 / R2) + (1 / Rload)
+R = 1 / G
+R = 1 / (1 / R2) + (1 / Rload)
+```
+
+```
+Given voltage division:
+Vout = Vs * (R2 / (R1 + R2))
+
+and parallel resistance:
+Total R2 + Load = 1 / (1 / R2) + (1 / RLoad)
+
+Vout = Vs * ( (1 / (1 / R2) + (1 / RLoad)) / (R1 + (1 / (1 / R2) + (1 / RLoad))
+```
+
+
+
+
+
+
 
 In order to calculate a voltage divider circuit for level shifting down, we have to first determine how much power that we need to output to the Netduino. According to the [random places on the internet, ugh], the microcontroller chips that power Netduino have an acceptable current input range of `4 - 20mA`. Let's pick a safe target value somewhere in the middle, like `10mA`. 
 

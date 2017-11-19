@@ -2,7 +2,7 @@
 title: Voltage Division
 ---
 
-Using a little algebra, we can rewrite our equation from before:
+Using a little algebra, we can rewrite our `Vout = (Vs / (R1 + R2)) * R2` equation from before:
 
 ```
 Vout = (Vs / (R1 + R2)) * R2
@@ -93,14 +93,7 @@ As we can see, the voltage divider with more resistance is much more power effic
 
 
 
-
-
-
-
-
-
-
-
+------
 
 [this needs work:]
 

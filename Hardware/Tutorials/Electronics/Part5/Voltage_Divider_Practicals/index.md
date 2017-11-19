@@ -13,11 +13,11 @@ Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive 
 
 ### Level Shifting
 
-As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing; a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided. 
+As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing; a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided:
 
-[an illustration of 5V -> 3.3V would be cool]
+![](../5V_to_3.3V_Signal_Division.svg)
 
-In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run at 1.2V or less, internally), but occasionally you might find an older 5V sensor that you want to use
+In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run at 1.2V or less, internally), but occasionally you might find an older 5V sensor that you want to use.
 
 ### Potentiometers
 
@@ -89,7 +89,7 @@ The ADC is a complex and clever circuit and getting very accurate reads from it 
 
 When using a voltage divider with Netduino's analog input, we have to consider that the ADC has some resistance, and requires a certain amount of current to work.
 
-For prototyping purposes, we can assume that the ADC will provide about `11kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can calculate then that it will require up to `0.3mA` of current:
+For prototyping purposes, we can assume that the ADC will provide about `11kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can then calculate that it will require up to `0.3mA` of current:
 
 ```
 Given:
@@ -101,63 +101,53 @@ Therefore:
 I = 3.3V / 11,000Ω = 0.0003 = 0.3mA
 ```
 
-### Calculating Voltage Division with Load
-
-[total of the R2 and Load is the sum of the conductance, converted back into resistance:]
+Additionally, `11kΩ` is about `0.0001S (Siemens)`:
 
 ```
-Conductance (G) = (1 / R2) + (1 / Rload)
-R = 1 / G
-R = 1 / (1 / R2) + (1 / Rload)
+G = 1 / 11,000Ω = 0.00009S ~= 0.0001S
 ```
-
-```
-Given voltage division:
-Vout = Vs * (R2 / (R1 + R2))
-
-and parallel resistance:
-Total R2 + Load = 1 / (1 / R2) + (1 / RLoad)
-
-Vout = Vs * ( (1 / (1 / R2) + (1 / RLoad)) / (R1 + (1 / (1 / R2) + (1 / RLoad))
-```
-
 
 ### Variable Load Resistance
 
-The consideration of load resistance gets much more complex when the resistance of that load can change over time. [As a sub circuit on the Vout's current load changes, it resistance must also change, since current is a function of resistance.]
+Further complicating things, the consideration of load resistance gets much more complex when the resistance of that load can change over time. For instance, some sub circuits might draw different amounts of power depending on what the circuit is doing. In fact, the ADC does just that, but for prototyping we can largely ignore the fluctuation. Later on, we'll dive deeper into into increasing the accuracy of analog readings.
+
+One way to get around this is to use much smaller resistors in the divider so that there is lots of power going through the circuit and the third leg has a negligible effect. This might not make sense at first blush, but if we remember that the third leg is a parallel circuit, and therefore we add the inversion of the resistance (conductance), smaller resistors suffer less overall voltage modification.
+
+For instance, given that the `11kΩ` resistance of the ADC provides a very small amount of conductance, `0.0001S`, an R2 resistor that's ~10x smaller, `1kΩ`, conducts nearly 10x more power (a conductance of `0.001S`). This means the overall resistance of the bottom half of the divider is only affected by ~10%, going from `1,000Ω` for the R2 alone, to `909Ω`, when factoring in the ADC:
+
+```
+Given:
+ADC = 11kΩ (0.0001S)
+R2 = 1kΩ
+
+Therefore:
+R2 = 1kΩ = 1 / 1000Ω = 0.001S
+ADC + R2 = 0.0001S + 0.001S = 0.0011S = 909Ω
+```
+
+This means that as the load resistance changes, it only has a minor effect on the level of output voltage (`Vout`). 
+
+<!--
+
+[need to say something about driving these sensors; max the power]
 
 [to get around this, you can 10x the power by reducing the voltage dividing resistors, but 
 
-[If divider resistors are small, then the resistance of the load really affects the equation. also lots of power is wasted]
-
-[but if divider resistors are large, then they aren't affected by the load as much, but very little power can make it through.]
-
 [pick the smallest resistors that the sensor can drive]
 
-### Never use a Divider as a Voltage Regulator
-
-[would waste a pile of power and it wouldn't be very regular]
-
+-->
 
 ### Power Efficiency
 
-[picking the smallest resistors means that lots of power is just wasted]
+This reveals another interesting fact about voltage dividers; in their simple form, they are very power inefficient. Using smaller resistors to account for load resistance changes means that more power is wasted.
 
-[balance between minimum amount of power needed by the sub circuit and the 
+In circuit designs that require a high level of ADC accuracy, or more power efficiency, we can use a more complex circuit that uses an _operational amplifier_ (OpAmp) to amplify the sensor signal so that we can use a very small amount of power. We'll explore that circuit in a later part of this tutorial. Again, however, for prototyping, we can usually get away with just using more power. We can also average our samples to get a cleaner reading, as we'll see in a bit.
 
-1,000,000
+### Never use a Voltage Divider as a Voltage Regulator
 
+Because of their inefficiency, voltage dividers should never be used as voltage regulator. In order to get a voltage signal that had only 10% deviation from the target value, you would have to use resistors that let 10x of the amount of power that the `Vout` required. So if the sub circuit required `100mA` of power, then you would need to push `1A` through the circuit to only get a deviation between `95mA` and `105mA`. 
 
-## Calculating Voltage Division with a Third Leg
-
-[do we need to modify the voltage division equation here?]
-
-* Step 1: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
-* Step 2: Calculate total resistance based on how much power is needed
-* Step 3: Solve individual resistors by multiplying ratio by total R
-* Step 4: Subtract the ADC impedance from R2 in the solution
-
-
+Instead, cheap voltage regulator chips are much more efficient than a voltage divider to provide sub circuit with clean, regular power.
 
 
 ## [Next - Resistive Sensors](../Resistive_Sensors)
