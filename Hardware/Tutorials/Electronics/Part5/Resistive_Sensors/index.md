@@ -14,7 +14,7 @@ The following circuit schematic is the exact same as our voltage divider from be
 
 In this section, we're going to build a sample circuit that uses a photoresistor to measure the amount of light available.
 
-### Component Sourcing
+### Component Sourcing [TODO: move this way earlier]
 
 To build a photoresistor sensor circuit, we need to start with a photoresistor. Photoresistors usually look something like the following, and can usually be [sourced for less than USD$1](http://www.mouser.com/ProductDetail/Adafruit/161/?qs=%2fha2pyFadugRELlGV3EJvhiJsyG6%2fjztqGMot59Rgn9%2fJAtRYbFvdw%3d%3d):
 
@@ -35,7 +35,7 @@ Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocell
 
 In the case of my photoresistor, I found it in a pile of components, so I'm not sure if it conforms to the values in the above datasheet, since I'm not sure it's the same component. That's not a problem, however, with a simple resistive sensor like this, however, because I can just measure the resistance with a multimeter under varying conditions to determine its characteristics. To test it, we just need a [multimeter](https://en.wikipedia.org/wiki/Multimeter). 
 
-### Multimeters
+### Multimeters [TODO: move this way earlier]
 
 A multimeter is a must-have tool for hardware developers. A decent multimeter doesn't cost very much, usually less than USD$20, but when purchasing one, I recommend finding one with the following features:
 
@@ -141,6 +141,7 @@ To build this circuit on a breadboard, wire it similar to the following:
 
 The following code illustrates creating a new `AnalogInput` on pin 3, and reading the voltage to get the value of the light hitting the photoresistor:
 
+[TODO: modify this to calculate the Vout, and use a switch statement to output "Bright/Dark/Moderate."]
 
 ```csharp
 using System;
@@ -169,9 +170,13 @@ namespace Photoresistor_Reading
 In a later part this tutorial, we'll examine reading analog signals and digital communication in a more depth.
 
 
-## Breadboards
+## Breadboards [TODO: Move this to an earlier part]
 
-Breadboards simplify prototyping by creating connections without soldering. In the illustration above, the breadboard is sideways, but each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, like the photoresistor in the illustration. Additionally, many breadboards, such as the one pictured above, have power busses along the edges that are connected the whole way down. So for instance, one side of the photoresistor is connected to the wire in row 14 that then connects to the ground rail. And the other side of the photoresistor is connected to analog 3 in, and our second resistor.
+Breadboards simplify prototyping by creating connections without soldering. The following illustration is of a half size bread board with power rails (my favorite kind for prototyping), with an "xray" view on the right showing the copper traces that connect the _wells_ (holes):
+
+![](/Common_Files/Half_Size_+_Breadboards.svg)
+
+Each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, like the photoresistor in the illustration earlier. Additionally, many breadboards, such as the one pictured above, have power busses along the edges that are connected the whole way down. So for instance, one side of the photoresistor is connected to the wire in row 14 that then connects to the ground rail. And the other side of the photoresistor is connected to analog 3 in, and our second resistor.
 
 ## [Next - Level Shifting with a Voltage Divider](../Level_Shifting)
 

@@ -2,29 +2,107 @@
 title: Level Shifting with a Voltage Divider Circuit
 ---
 
-One of the most common reasons to use a voltage divider circuit is to _level shift_. Sometimes, two circuits operate at different voltage levels (sometimes called _voltage domains_), yet they need to communicate. A voltage in one circuit might need to be shifted down to communicate with another that runs on a lower voltage, or vice-versa. When shifting downwards, from a higher voltage to a lower voltage, a voltage divider can be used to "divide" a higher voltage signal into a lower voltage signal to resolve this incompatibility. To level shift upwards, a different circuit is needed, which we'll examine later.
+In addition to resistive sensors, a common use of voltage divider circuits is to _level shift_. Sometimes, two circuits operate at different voltage levels (sometimes called _voltage domains_), yet they need to communicate. A voltage in one circuit might need to be shifted down to communicate with another that runs on a lower voltage, or vice-versa. When shifting downwards, from a higher voltage to a lower voltage, a voltage divider can be used to "divide" a higher voltage signal into a lower voltage signal to resolve this incompatibility. To level shift upwards, a different circuit is needed, which we'll examine later.
 
-One of the most common places to run into a voltage incompatibility like this is when dealing with sensors. The microcontroller at the heart of a Netduino uses 3.3V (lower voltage is actually better for a myriad of reasons, including speed and power efficiency), but many sensors operate at 5V (or even other voltages).
+[digital vs. analog level shifting]
+
+
+One of the most common places to run into a voltage incompatibility like this is when dealing with sensors. The microcontroller at the heart of a Netduino uses 3.3V (lower voltage is actually better for a myriad of reasons, including speed and power efficiency), but many older sensors operate at 5V (or even other voltages).
 
 Consider the following circuit:
 
 ![](../Voltage_Divider_Circuit.svg)
 
-Though this might look different, it's actually the equivalent of the voltage divider circuit we were examining before:
+Though this might look different, it's actually 
+
+[not equivalent, but similar to the divider from before, this time we've separated Vin because it might be in a different voltage domain]
+
+[need a diagram here showing a sensor being powered by the 5V rail]
+
+
+
+
+the equivalent of the voltage divider circuit we were examining before:
 
 ![](../Voltage_Divider_Network_2.svg)
 
 In the case of the first schematic, `Vin` means "voltage in" and is the equivalent of the positive side of the voltage source. `Vout` means "voltage out", and represents the divided voltage. The ground symbol represents the negative pole of the voltage source. 
 
+
+
 ## Calculating Voltage Division with a Third Leg
 
+Following steps:
 
-* Step 1: Calculate total resistance based on how much power is needed
-* Step 2: Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
-* Step 3: Solve individual resistors by multiplying ratio by total R
-* Step 4: Subtract the ADC impedance from R2 in the solution
+1. Calculate R1 resistance based on how much power Vout needs
+2. Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
+3. Solve individual resistors by multiplying ratio by total R
+4. Subtract the ADC resistance from R2 in the solution
+
+### Step 1: Calculate R1 resistance, based on power requirements.
+
+Netduino ADC needs `0.3mA`. 
+
+[remember, this is the third leg, so Vout, not total R]
+
+[so we need to calculate the R1 from that]
+
+```
+Given:
+R = V / I
+
+Therefore:
+R1 = 3.3V / 0.0003A = 11kΩ
+```
+
+### Step 2: Division Ratio
+
+```
+3.3V / 5V = 0.66
+```
+
+```
+5V / 1.7V = 2.
+```
+
+### Step 3: 
+
+[we know that R1 must be `11kΩ`]
+
+[we know that bottom half, R2 + ADC, must be a ratio of that]
+
+```
+Bottom half (R2 + ADC) = 11,000 / (3.3 / 5) = 16,666
+
+Bottom half (R2 + ADC) = 11,000 / (2.7 / 5) = 16,666
+```
+
+verify:
+
+```
+Given:
+Vout = Vs * (R2 / (R1 + R2))
 
 
+Therefore:
+Vout = 5V * (16,666 / (11,000 + 16,666)) = 3.0V = WRONG
+
+
+
+3.3  = 5 * (x / (11,000 + x))
+x = 21,352
+
+
+```
+
+### Step 4: 
+
+[remove the ADC resistance from the bottom half to get the leftover resistance needed for R2]
+
+
+
+
+## 5V Sensor Lab
 
 
 
