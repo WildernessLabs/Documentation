@@ -35,15 +35,6 @@ Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocell
 
 In the case of my photoresistor, I found it in a pile of components, so I'm not sure if it conforms to the values in the above datasheet, since I'm not sure it's the same component. That's not a problem, however, with a simple resistive sensor like this, however, because I can just measure the resistance with a multimeter under varying conditions to determine its characteristics. To test it, we just need a [multimeter](https://en.wikipedia.org/wiki/Multimeter). 
 
-### Multimeters [TODO: move this way earlier]
-
-A multimeter is a must-have tool for hardware developers. A decent multimeter doesn't cost very much, usually less than USD$20, but when purchasing one, I recommend finding one with the following features:
-
-* **Auto-Ranging** - An auto-ranging multimeter simplifies reading values by not requiring you to set the approximate range of reading. So if when reading resistance, it's just one setting, without having to know the amount of resistance that's being measured.
-* **Small** - There's little need for a multimeter to be large, and pocket sized multimeters are much easier to carry around.
-* **Digital** - Analog (those with a physical gauge) multimeters are nice because they can more effectively show change, but I find that digital multimeters (those with an LCD screen) are much easier to read and use.
-
-[Here is a great multimeter from Amazon](https://www.amazon.com/gp/product/B072XH5SJ7/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B072XH5SJ7&linkCode=as2&tag=ilderneabs-20&linkId=a5c314e3ce625c8bee20f98f7e4827f3) that costs about USD$15.
 
 ### Measuring Resistance
 

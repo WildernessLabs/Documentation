@@ -1152,9 +1152,102 @@
                                 </g>
                             </g>
                         </g>
+                        <g id="Numbers" transform="translate(34.000000, 8.000000)" font-size="6" font-family="HelveticaNeue-Light, Helvetica Neue" fill="#524740" font-weight="300">
+                            <text id="1">
+                                <tspan x="1.832" y="6">1</tspan>
+                            </text>
+                            <text id="2">
+                                <tspan x="1.832" y="13">2</tspan>
+                            </text>
+                            <text id="3">
+                                <tspan x="1.832" y="20">3</tspan>
+                            </text>
+                            <text id="4">
+                                <tspan x="1.832" y="27">4</tspan>
+                            </text>
+                            <text id="5">
+                                <tspan x="1.832" y="34">5</tspan>
+                            </text>
+                            <text id="6">
+                                <tspan x="1.832" y="41">6</tspan>
+                            </text>
+                            <text id="7">
+                                <tspan x="1.832" y="48">7</tspan>
+                            </text>
+                            <text id="8">
+                                <tspan x="1.832" y="55">8</tspan>
+                            </text>
+                            <text id="9">
+                                <tspan x="1.832" y="62">9</tspan>
+                            </text>
+                            <text id="10" letter-spacing="-0.507692337">
+                                <tspan x="0.652165706" y="69">1</tspan>
+                                <tspan x="3.48047337" y="69" letter-spacing="-0.468639076">0</tspan>
+                            </text>
+                            <text id="11" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="76">11</tspan>
+                            </text>
+                            <text id="12" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="83">12</tspan>
+                            </text>
+                            <text id="13" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="90">13</tspan>
+                            </text>
+                            <text id="14" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="97">14</tspan>
+                            </text>
+                            <text id="15" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="104">15</tspan>
+                            </text>
+                            <text id="16" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="111">16</tspan>
+                            </text>
+                            <text id="17" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="118">17</tspan>
+                            </text>
+                            <text id="18" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="125">18</tspan>
+                            </text>
+                            <text id="19" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="132">19</tspan>
+                            </text>
+                            <text id="20" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="139">20</tspan>
+                            </text>
+                            <text id="21" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="146">21</tspan>
+                            </text>
+                            <text id="22" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="153">22</tspan>
+                            </text>
+                            <text id="23" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="160">23</tspan>
+                            </text>
+                            <text id="24" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="167">24</tspan>
+                            </text>
+                            <text id="25" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="174">25</tspan>
+                            </text>
+                            <text id="26" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="181">26</tspan>
+                            </text>
+                            <text id="27" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="188">27</tspan>
+                            </text>
+                            <text id="28" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="195">28</tspan>
+                            </text>
+                            <text id="29" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="202">29</tspan>
+                            </text>
+                            <text id="30" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="209">30</tspan>
+                            </text>
+                        </g>
                     </g>
-                    <g id="Left-Bank" transform="translate(35.000000, 3.000000)">
-                        <g id="Row-Letters" transform="translate(1.000000, 0.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
+                    <g id="Left-Bank" transform="translate(28.000000, 3.000000)">
+                        <g id="Row-Letters" transform="translate(8.000000, 0.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
                             <text id="a">
                                 <tspan x="0.548351445" y="7">a</tspan>
                             </text>
@@ -1171,7 +1264,7 @@
                                 <tspan x="28.5483514" y="7">e</tspan>
                             </text>
                         </g>
-                        <g id="Row-Letters-Copy" transform="translate(1.000000, 219.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
+                        <g id="Row-Letters-Copy" transform="translate(8.000000, 219.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
                             <text id="a">
                                 <tspan x="0.548351445" y="7">a</tspan>
                             </text>
@@ -1188,7 +1281,7 @@
                                 <tspan x="28.5483514" y="7">e</tspan>
                             </text>
                         </g>
-                        <g id="Copper-Trace" transform="translate(0.000000, 9.000000)" fill="#E7B563">
+                        <g id="Copper-Trace" transform="translate(7.000000, 9.000000)" fill="#E7B563">
                             <rect id="Rectangle" x="0.5" y="0.5" width="33.5" height="5.5" rx="2.75"></rect>
                             <rect id="Rectangle-Copy" x="0.5" y="7.5" width="33.5" height="5.5" rx="2.75"></rect>
                             <rect id="Rectangle-Copy-2" x="0.5" y="14.5" width="33.5" height="5.5" rx="2.75"></rect>
@@ -1220,7 +1313,7 @@
                             <rect id="Rectangle-Copy-21" x="0.5" y="196.5" width="33.5" height="5.5" rx="2.75"></rect>
                             <rect id="Rectangle-Copy-20" x="0.5" y="203.5" width="33.5" height="5.5" rx="2.75"></rect>
                         </g>
-                        <g id="Holes" opacity="0.151211504" transform="translate(0.000000, 9.000000)">
+                        <g id="Holes" opacity="0.151211504" transform="translate(7.000000, 9.000000)">
                             <g id="Group-3">
                                 <g id="Hole">
                                     <polygon id="Path-2-Copy-3" fill="#999999" points="0 0 0 6.5 4.49540072 2 6.5 0"></polygon>
@@ -1983,6 +2076,99 @@
                                     <rect id="Rectangle-4" fill="#555555" x="2" y="2" width="2.5" height="2.5"></rect>
                                 </g>
                             </g>
+                        </g>
+                        <g id="Numbers" transform="translate(0.000000, 8.000000)" font-size="6" font-family="HelveticaNeue-Light, Helvetica Neue" fill="#524740" font-weight="300">
+                            <text id="1">
+                                <tspan x="1.832" y="6">1</tspan>
+                            </text>
+                            <text id="2">
+                                <tspan x="1.832" y="13">2</tspan>
+                            </text>
+                            <text id="3">
+                                <tspan x="1.832" y="20">3</tspan>
+                            </text>
+                            <text id="4">
+                                <tspan x="1.832" y="27">4</tspan>
+                            </text>
+                            <text id="5">
+                                <tspan x="1.832" y="34">5</tspan>
+                            </text>
+                            <text id="6">
+                                <tspan x="1.832" y="41">6</tspan>
+                            </text>
+                            <text id="7">
+                                <tspan x="1.832" y="48">7</tspan>
+                            </text>
+                            <text id="8">
+                                <tspan x="1.832" y="55">8</tspan>
+                            </text>
+                            <text id="9">
+                                <tspan x="1.832" y="62">9</tspan>
+                            </text>
+                            <text id="10" letter-spacing="-0.507692337">
+                                <tspan x="0.652165706" y="69">1</tspan>
+                                <tspan x="3.48047337" y="69" letter-spacing="-0.468639076">0</tspan>
+                            </text>
+                            <text id="11" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="76">11</tspan>
+                            </text>
+                            <text id="12" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="83">12</tspan>
+                            </text>
+                            <text id="13" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="90">13</tspan>
+                            </text>
+                            <text id="14" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="97">14</tspan>
+                            </text>
+                            <text id="15" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="104">15</tspan>
+                            </text>
+                            <text id="16" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="111">16</tspan>
+                            </text>
+                            <text id="17" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="118">17</tspan>
+                            </text>
+                            <text id="18" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="125">18</tspan>
+                            </text>
+                            <text id="19" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="132">19</tspan>
+                            </text>
+                            <text id="20" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="139">20</tspan>
+                            </text>
+                            <text id="21" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="146">21</tspan>
+                            </text>
+                            <text id="22" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="153">22</tspan>
+                            </text>
+                            <text id="23" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="160">23</tspan>
+                            </text>
+                            <text id="24" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="167">24</tspan>
+                            </text>
+                            <text id="25" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="174">25</tspan>
+                            </text>
+                            <text id="26" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="181">26</tspan>
+                            </text>
+                            <text id="27" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="188">27</tspan>
+                            </text>
+                            <text id="28" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="195">28</tspan>
+                            </text>
+                            <text id="29" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="202">29</tspan>
+                            </text>
+                            <text id="30" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="209">30</tspan>
+                            </text>
                         </g>
                     </g>
                     <g id="Left-Power-Rail" transform="translate(2.000000, 6.000000)">
@@ -2604,6 +2790,99 @@
                                 <tspan x="28.7173514" y="7">j</tspan>
                             </text>
                         </g>
+                        <g id="Numbers" transform="translate(34.000000, 8.000000)" font-size="6" font-family="HelveticaNeue-Light, Helvetica Neue" fill="#524740" font-weight="300">
+                            <text id="1">
+                                <tspan x="1.832" y="6">1</tspan>
+                            </text>
+                            <text id="2">
+                                <tspan x="1.832" y="13">2</tspan>
+                            </text>
+                            <text id="3">
+                                <tspan x="1.832" y="20">3</tspan>
+                            </text>
+                            <text id="4">
+                                <tspan x="1.832" y="27">4</tspan>
+                            </text>
+                            <text id="5">
+                                <tspan x="1.832" y="34">5</tspan>
+                            </text>
+                            <text id="6">
+                                <tspan x="1.832" y="41">6</tspan>
+                            </text>
+                            <text id="7">
+                                <tspan x="1.832" y="48">7</tspan>
+                            </text>
+                            <text id="8">
+                                <tspan x="1.832" y="55">8</tspan>
+                            </text>
+                            <text id="9">
+                                <tspan x="1.832" y="62">9</tspan>
+                            </text>
+                            <text id="10" letter-spacing="-0.507692337">
+                                <tspan x="0.652165706" y="69">1</tspan>
+                                <tspan x="3.48047337" y="69" letter-spacing="-0.468639076">0</tspan>
+                            </text>
+                            <text id="11" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="76">11</tspan>
+                            </text>
+                            <text id="12" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="83">12</tspan>
+                            </text>
+                            <text id="13" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="90">13</tspan>
+                            </text>
+                            <text id="14" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="97">14</tspan>
+                            </text>
+                            <text id="15" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="104">15</tspan>
+                            </text>
+                            <text id="16" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="111">16</tspan>
+                            </text>
+                            <text id="17" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="118">17</tspan>
+                            </text>
+                            <text id="18" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="125">18</tspan>
+                            </text>
+                            <text id="19" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="132">19</tspan>
+                            </text>
+                            <text id="20" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="139">20</tspan>
+                            </text>
+                            <text id="21" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="146">21</tspan>
+                            </text>
+                            <text id="22" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="153">22</tspan>
+                            </text>
+                            <text id="23" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="160">23</tspan>
+                            </text>
+                            <text id="24" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="167">24</tspan>
+                            </text>
+                            <text id="25" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="174">25</tspan>
+                            </text>
+                            <text id="26" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="181">26</tspan>
+                            </text>
+                            <text id="27" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="188">27</tspan>
+                            </text>
+                            <text id="28" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="195">28</tspan>
+                            </text>
+                            <text id="29" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="202">29</tspan>
+                            </text>
+                            <text id="30" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="209">30</tspan>
+                            </text>
+                        </g>
                         <g id="Group-4" transform="translate(0.000000, 9.000000)">
                             <g id="Group-3">
                                 <g id="Hole">
@@ -3369,8 +3648,8 @@
                             </g>
                         </g>
                     </g>
-                    <g id="Left-Bank" transform="translate(35.000000, 3.000000)">
-                        <g id="Row-Letters" transform="translate(1.000000, 0.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
+                    <g id="Left-Bank" transform="translate(27.000000, 3.000000)">
+                        <g id="Row-Letters" transform="translate(9.000000, 0.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
                             <text id="a">
                                 <tspan x="0.548351445" y="7">a</tspan>
                             </text>
@@ -3387,7 +3666,7 @@
                                 <tspan x="28.5483514" y="7">e</tspan>
                             </text>
                         </g>
-                        <g id="Row-Letters-Copy" transform="translate(1.000000, 219.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
+                        <g id="Row-Letters-Copy" transform="translate(9.000000, 219.000000)" font-size="7" font-family="HelveticaNeue-Light, Helvetica Neue" letter-spacing="0.27029711" fill="#524740" font-weight="300">
                             <text id="a">
                                 <tspan x="0.548351445" y="7">a</tspan>
                             </text>
@@ -3404,7 +3683,100 @@
                                 <tspan x="28.5483514" y="7">e</tspan>
                             </text>
                         </g>
-                        <g id="Group-4" transform="translate(0.000000, 9.000000)">
+                        <g id="Numbers" transform="translate(0.000000, 8.000000)" font-size="6" font-family="HelveticaNeue-Light, Helvetica Neue" fill="#524740" font-weight="300">
+                            <text id="1">
+                                <tspan x="1.832" y="6">1</tspan>
+                            </text>
+                            <text id="2">
+                                <tspan x="1.832" y="13">2</tspan>
+                            </text>
+                            <text id="3">
+                                <tspan x="1.832" y="20">3</tspan>
+                            </text>
+                            <text id="4">
+                                <tspan x="1.832" y="27">4</tspan>
+                            </text>
+                            <text id="5">
+                                <tspan x="1.832" y="34">5</tspan>
+                            </text>
+                            <text id="6">
+                                <tspan x="1.832" y="41">6</tspan>
+                            </text>
+                            <text id="7">
+                                <tspan x="1.832" y="48">7</tspan>
+                            </text>
+                            <text id="8">
+                                <tspan x="1.832" y="55">8</tspan>
+                            </text>
+                            <text id="9">
+                                <tspan x="1.832" y="62">9</tspan>
+                            </text>
+                            <text id="10" letter-spacing="-0.507692337">
+                                <tspan x="0.652165706" y="69">1</tspan>
+                                <tspan x="3.48047337" y="69" letter-spacing="-0.468639076">0</tspan>
+                            </text>
+                            <text id="11" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="76">11</tspan>
+                            </text>
+                            <text id="12" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="83">12</tspan>
+                            </text>
+                            <text id="13" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="90">13</tspan>
+                            </text>
+                            <text id="14" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="97">14</tspan>
+                            </text>
+                            <text id="15" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="104">15</tspan>
+                            </text>
+                            <text id="16" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="111">16</tspan>
+                            </text>
+                            <text id="17" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="118">17</tspan>
+                            </text>
+                            <text id="18" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="125">18</tspan>
+                            </text>
+                            <text id="19" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="132">19</tspan>
+                            </text>
+                            <text id="20" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="139">20</tspan>
+                            </text>
+                            <text id="21" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="146">21</tspan>
+                            </text>
+                            <text id="22" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="153">22</tspan>
+                            </text>
+                            <text id="23" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="160">23</tspan>
+                            </text>
+                            <text id="24" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="167">24</tspan>
+                            </text>
+                            <text id="25" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="174">25</tspan>
+                            </text>
+                            <text id="26" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="181">26</tspan>
+                            </text>
+                            <text id="27" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="188">27</tspan>
+                            </text>
+                            <text id="28" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="195">28</tspan>
+                            </text>
+                            <text id="29" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="202">29</tspan>
+                            </text>
+                            <text id="30" letter-spacing="-0.507692337">
+                                <tspan x="0.671692337" y="209">30</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-4" transform="translate(8.000000, 9.000000)">
                             <g id="Group-3">
                                 <g id="Hole">
                                     <polygon id="Path-2-Copy-3" fill="#999999" points="0 0 0 6.5 4.49540072 2 6.5 0"></polygon>
