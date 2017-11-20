@@ -22,5 +22,6 @@ We're going to dive deeper into resistors and resistor networks later, but
  * Axial resistors are color coded to aid in identifying them. See [this chart](/Hardware/Reference/Components/Resistors/Reading/) for reference.
  * Resistors have a tolerance which specifies a range that their actual resistance falls into.
  * Resistors come in a set of values that covers the range of possible values, adjusted for tolerance, with only small overlap.
+ * _Breadboards_ reduce prototyping complexity by allowing you to create circuits without soldering.
 
 ## Part 5 - Coming Soon!
