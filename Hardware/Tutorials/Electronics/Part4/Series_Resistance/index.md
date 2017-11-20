@@ -22,10 +22,10 @@ Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 
 Resistors in a series share a common current, that is the amount of amps flowing through each one is the same, since there's only one path. 
 
-So for instance, given the previously calculated resistance of `1,150Ω`, if we were to supply `5V` of electrical force, we can use Ohm's law to calculate the current at any given point as:
+So for instance, given the previously calculated resistance of `1,105Ω`, if we were to supply `5V` of electrical force, we can use Ohm's law to calculate the current at any given point as:
 
 ```
-I = 5V * 1,150Ω = 0.004A = 4mA
+I = 5V / 1,105Ω = 0.004A = 4mA
 ```
 
 So no matter where in the circuit that we measure the current, we would get the same value of `4mA`:
