@@ -1,5 +1,5 @@
 ---
-title: Level Shifting with a Voltage Divider Circuit
+title: Analog Level Shifting Lab
 ---
 
 In addition to resistive sensors, a common use of voltage divider circuits is to _level shift_. Sometimes, two circuits operate at different voltage levels (sometimes called _voltage domains_), yet they need to communicate. A voltage in one circuit might need to be shifted down to communicate with another that runs on a lower voltage, or vice-versa. When shifting downwards, from a higher voltage to a lower voltage, a voltage divider can be used to "divide" a higher voltage signal into a lower voltage signal to resolve this incompatibility. To level shift upwards, a different circuit is needed, which we'll examine later.

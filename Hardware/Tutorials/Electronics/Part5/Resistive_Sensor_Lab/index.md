@@ -66,8 +66,8 @@ If using a breadboard, make sure each leg of the photoresistor is on opposite si
 I measured the resistance of my photoresistor in varying light conditions and came up with the following values:
 
 ```
-~30kΩ in dark
-~5kΩ in moderate room light
+~250kΩ in dark
+~6kΩ moderate room light
 ~1kΩ in sunlight
 ```
 
@@ -92,62 +92,64 @@ The easiest way to do this is to choose a resistor that splits the difference be
 ```
 Given:
 ADC Conductance = 1 / 11kΩ = (0.0001S)
-Photoresistor high (dark) R = 30kΩ
+Photoresistor high (dark) R = 250kΩ
 Photoresistor low (bright) R = 1kΩ
 
 Therefore:
-Photoresistor high G = 1 / 30,000Ω = 0.00003S
+Photoresistor high G = 1 / 250,000Ω = 0.000004S
 Photoresistor low G = 1 / 1,000Ω = 0.001S
 
 Total voltage divider bottom half (ADC + Photoresistor) resistance:
-High (dark) = 0.0001S + 0.00003S = 0.00013S = 7,692Ω
-Low (bright) = 0.0001S + 0.001S = 0.0011S = 909Ω
+High (dark) = 0.0001S + 0.000004S = 0.000104S = 9,615Ω ~= 10kΩ
+Low (bright) = 0.0001S + 0.001S = 0.0011S = 909Ω ~= 1kΩ
 ```
+
+These are approximate measurements, so I've rounded to the nearest 1k.
 
 <!--
 moderate calculation
 ```
-Photoresistor moderate (room light) resistance = 5kΩ
-Photoresistor moderate conductance = 1 / 5,000Ω = 0.0002S
-Moderate = 0.0001S + 0.0002S = 0.0003S = 3,333Ω
+Photoresistor moderate (room light) resistance = 6kΩ
+Photoresistor moderate conductance = 1 / 6,000Ω = 0.000167S
+Moderate R2 + ADC = 0.0001S + 0.000167S = 0.000267S = 3,750Ω ~= 4kΩ
 ```
 -->
 
 #### Choosing an `R1` that Splits the Difference
 
-Therefore, I would need an R1 that has a value halfway between `909Ω` and `7,692Ω`:
+Therefore, I would need an R1 that has a value halfway between `1kΩ` and `10kΩ`:
 
 ```
-Halfway = (909Ω + 7,692Ω) / 2 = 4,300Ω = 4.3kΩ
+Halfway = (1,000Ω - 10,000Ω) / 2 = 4,500Ω = 4.3kΩ
 ```
 
-`4.3kΩ` isn't a very common resistor value, but `4.7kΩ` is, so I'll start with that and calculate my expected `Vout` based on that.
+`4.5kΩ` isn't a very common resistor value, but `4.7kΩ` is, so I'll start with that and calculate my expected `Vout` based on that.
 
 
 #### Calculating Expected `Vout`
 
-Using the voltage divider equation from before (`Vout = Vs * (R2 / (R1 + R2))`), and using the total parallel resistance of `R2` & `ADC` as the value for `R2`, we can calculate the expected spread of values. The following example calculation is for the **very bright** resistance:
+Using the voltage divider equation from before (`Vout = Vs * (R2 / (R1 + R2))`), and using the total parallel resistance of `R2` & `ADC` as the new value for `R2`, we can calculate the expected spread of values. For example, the following calculation is for **very bright** resistance:
 
 ```
 Example calculation:
 Vout = Vs * ((R2 & ADC) / (R1 + R2 & ADC)) )
-Very Bright Vout = 5V * (909Ω / 5,609Ω) = 3V * 0.162Ω = 0.49V
+Very Bright Vout = 5V * (1,000Ω / (4,700Ω + 1,000Ω)) = 3.3V * 0.175 = 0.58V
 ```
 
 Using that formula, I created the following table of values:
 
 | Light Level | R1 Value  | Sensor Resistance (R2) | R2 & ADC Resistance | Total R | Vin   | Vout  |
 |-------------|-----------|------------------------|---------------------|---------|-------|-------|
-| Very Bright | 4.7kΩ     | 1kΩ                    | 909Ω                | 5,609Ω  | 3V    | 0.49V |
-| Moderate    | 4.7kΩ     | 5kΩ                    | 3,333Ω              | 8,033Ω  | 3V    | 1.24V |
-| Dark        | 4.7kΩ     | 30kΩ                   | 7,692Ω              | 12,392Ω | 3V    | 1.86V |
+| Very Bright | 4.7kΩ     | 1kΩ                    | 1kΩ                 | 5.7kΩ   | 3.3V  | 0.58V |
+| Moderate    | 4.7kΩ     | 6kΩ                    | 4kΩ                 | 8.7kΩ   | 3.3V  | 1.52V |
+| Dark        | 4.7kΩ     | 250kΩ                  | 10kΩ                | 14.7kΩ  | 3.3V  | 2.24V |
 
 
 The circuit therefore would look something like this:
 
 ![](../Photoresistor_Circuit.svg)
 
-My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.5V` and `1.9V`, which will give ok resolution for reading the value.
+My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.5V` and `2.3V`, which provides a good resolution for reading the value.
 
 #### Lab Process & Questions:
 
@@ -174,7 +176,7 @@ Digital Value = (Vout / 3.3V) * 1,023
 
 Therefore:
 Bright value = (0.5V / 3.3V) * 1,023 = 155
-Dark value = (1.9V / 3.3V) * 1,023 = 589
+Dark value = (2.3V / 3.3V) * 1,023 = 713
 ```
 
 Therefore, if my photoresistor were in bright light, the voltage divider should output around `0.5V`, which would read somewhere around `155`. We can then convert that back to voltage by reversing the process and multiplying the ratio of value over max steps (`1,023`) and multiplying by `3.3V`:
