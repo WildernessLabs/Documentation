@@ -25,13 +25,21 @@ When circuits branch off at a node, they're known as _branching circuits_. Consi
 Using Kirchhoff's current law, in conjunction with Ohm's law, we can determine the total amount of current flowing through the circuit. First, let's calculate the amount of current flowing through each resistor (circuits `A -> D` and `B -> C`):
 
 ```
-given; I = V / R
+Given:
+I = V / R
+
+Therefore:
 I (at Resistor 1) = 12V / 10Ω = 1.2A
 I (at Resistor 2) = 12V / 1.5Ω = 8A
 ```
 
-Given Kirchhoff's current law which states the sum of currents entering a junction is equal to the sum of the currents leaving a junction, we can determine that the current entering junction `A` is equal to the amount of current flowing from `A -> D` plus `B -> C`, therefore, the total current flowing through the junction `A` is `1.2A + 8A`, or `9.2A`. Additionally, the current flowing in and out of `D` is also `9.2A`.
+Given Kirchhoff's current law which states the sum of currents entering a junction is equal to the sum of the currents leaving a junction, we can determine that the current entering junction `A` is equal to the amount of current flowing from `A -> D` plus `B -> C`:
 
+```
+Current at Junction A = 1.2A + 8A = 9.2A
+```
+
+Additionally, the current flowing in and out of `D` is also `9.2A`.
 
 
 ## [Next - Kirchhoff's Voltage Law](../Kirchhoffs_Voltage_Law)
