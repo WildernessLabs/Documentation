@@ -74,8 +74,6 @@ And our power calculation shortcuts:
 
 ```
 P = I^2 * R
-```
-```
 P = V^2 / R
 ```
 
@@ -98,7 +96,11 @@ P = 5^2 / 100Ω = 0.25W = 1/4 watt.
 We can test this by doing the long hand, as well. First, let's use Ohm's law to solve for current/amperage:
 
 ```
-I = V / R = 5V / 100Ω = 0.05A
+Given:
+I = V / R
+
+Therfore:
+I = 5V / 100Ω = 0.05A
 ```
 
 And then solving for power:
