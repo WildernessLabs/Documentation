@@ -165,12 +165,14 @@ Given:
 R1 = 330Ω
 R2 = 1kΩ
 
-Total R = 330Ω + 1,000Ω = 1,330Ω
+Therefore:
+Total Expected R = 330Ω + 1,000Ω = 1,330Ω
 ```
 
 After stabilizing, my multimeter reads that the total resistance is `1,337Ω`, which is very close. We can determine the percentage error by dividing the difference between the expected value and the actual value by the expected value, and then multiplying by 100:
 
 ```
+Given:
 Expected Value: 1,330Ω
 Actual Value: 1,337Ω
 Difference = 1,330Ω - 1,337Ω = -7Ω
@@ -182,7 +184,7 @@ Percentage Error = -7 / 1,330 = 0.005 * 100 = 0.5%
 
 Even though these resistors are stated to be accurate to within 5%, these particular resistors are actually accurate to within one half of one percent!
 
-Following my steps, measure your total resistance and calculate the percent error. Are your resistors within specification of their stated tolerance? 
+Following my steps, measure your total resistance and calculate the percent error. Are your resistors within specification of their stated tolerance? If your measured resistance is way off, double check the circuit to make sure it looks like one of the examples above.
 
 
 ## Exercise 2 - Measuring Parallel Resistance
