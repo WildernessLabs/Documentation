@@ -134,7 +134,7 @@ Resistor leads are pretty long, so I often trim them down a bit to put them in b
 
 For our first exercise, we're going to measure two resistors in series. This will allow us to learn how to use a multimeter, build a simple circuit, and verify the series resistance law.
 
-### Step 1 - Build the Resistance Circuit
+### Step 1: Build the resistance circuit.
 
 Select two resistors of any value from your resistor kit. For mine, I grabbed a `330Ω` resistor, and a `1kΩ` resistor. Then, arrange them in series (end-to-end) on a breadboard. How you configure them is your choice, as long as their common legs are connected. The following illustration shows a breadboard with 3 different, yet valid configurations in which to place the resistors (note that configuration 3 requires a wire to connect the two resistors, because they have no common row connection):
 
@@ -142,7 +142,7 @@ Select two resistors of any value from your resistor kit. For mine, I grabbed a 
 
 The green wires illustrate where we'll measure resistance with the probes.
 
-### Step 2 - Measure the Circuit and Calculate Percent Error
+### Step 2: Measure the circuit and calculate percent error.
 
 Once the circuit is built, we need to measure the resistance from one end of the resistor series to the other.
 
@@ -191,13 +191,13 @@ Following my steps, measure your total resistance and calculate the percent erro
 
 In this exercise we're going to build a parallel resistance circuit and measure it. 
 
-### Step 1 - Build the Circuit
+### Step 1: Build the circuit.
 
 Just as before, choose two resistors from you resistor kit and place them in parallel wiring configuration so that they each share their legs. The following illustration shows two different sample configurations, as well as the probe test points:
 
 ![](../Parallel_Resistance_Lab_bb.svg)
 
-### Step 2 - Measure Actual, Calculate Expected Values
+### Step 2: Measure actual values and calculate expected values.
 
 Next, measure the actual resistance and calculate the expected values. I used two, `4.7k` resistors and measured `2.32kΩ`.  Recall that parallel resistance is calculated using conductance:
 
