@@ -184,7 +184,11 @@ Percentage Error = -7 / 1,330 = 0.005 * 100 = 0.5%
 
 Even though these resistors are stated to be accurate to within 5%, these particular resistors are actually accurate to within one half of one percent!
 
-Following my steps, measure your total resistance and calculate the percent error. Are your resistors within specification of their stated tolerance? If your measured resistance is way off, double check the circuit to make sure it looks like one of the examples above.
+Following my steps, measure your total resistance and calculate the percent error:
+
+ * Are your resistors within specification of their stated tolerance? 
+
+If your measured resistance is way off, double check the circuit to make sure it looks like one of the examples above.
 
 
 ## Exercise 2 - Measuring Parallel Resistance
@@ -220,7 +224,7 @@ Percent Error = (30 / 2,350) * 100 = 1.2%
 
 This time my error was `1.2%`. Slightly more than last time, but still well with in the 5% stated tolerance.
 
-Using the process above:
+Using the process above with your circuit, answer the following questions:
 
  * What is your measured resistance?
  * What is the expected value?
