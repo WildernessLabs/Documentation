@@ -204,9 +204,8 @@ Given:
 Conductance (G), in Siemens (S) = 1 / R
 R1, R2 = 4.7kΩ
 
-
+Therefor:
 Total G = (1 / 4700Ω) + (1 / 4700Ω) = 0.0004S
-
 Expected Total R = 1 / 0.0004S = 2,350Ω = 2.35kΩ
 ```
 
@@ -219,6 +218,10 @@ Percent Error = (30 / 2,350) * 100 = 1.2%
 
 This time my error was `1.2%`. Slightly more than last time, but still well with in the 5% stated tolerance.
 
-Measure your resistance, calculate the expected value, and then calculate the percent error of actual vs. expected.
+ * What is your measured resistance?
+ * What is the expected value?
+ * What is the percent error of actual vs. expected?
 
 ## [Next - Review](../Review)
+
+<br/>

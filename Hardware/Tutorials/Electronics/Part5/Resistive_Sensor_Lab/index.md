@@ -161,14 +161,6 @@ namespace Photoresistor_Reading
 In a later part this tutorial, we'll examine reading analog signals and digital communication in a more depth.
 
 
-## Breadboards [TODO: Move this to an earlier part]
-
-Breadboards simplify prototyping by creating connections without soldering. The following illustration is of a half size bread board with power rails (my favorite kind for prototyping), with an "xray" view on the right showing the copper traces that connect the _wells_ (holes):
-
-![](/Common_Files/Half_Size_+_Breadboards.svg)
-
-Each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, like the photoresistor in the illustration earlier. Additionally, many breadboards, such as the one pictured above, have power busses along the edges that are connected the whole way down. So for instance, one side of the photoresistor is connected to the wire in row 14 that then connects to the ground rail. And the other side of the photoresistor is connected to analog 3 in, and our second resistor.
-
-## [Next - Level Shifting with a Voltage Divider](../Level_Shifting)
+## [Next - Lab: Level Shifting with a Voltage Divider](../Level_Shifting_Lab)
 
 <br/>

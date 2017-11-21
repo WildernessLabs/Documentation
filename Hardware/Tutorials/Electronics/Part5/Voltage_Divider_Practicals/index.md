@@ -150,6 +150,6 @@ Because of their inefficiency, voltage dividers should never be used as voltage 
 Instead, cheap voltage regulator chips are much more efficient than a voltage divider to provide sub circuit with clean, regular power.
 
 
-## [Next - Resistive Sensors](../Resistive_Sensors)
+## [Next - Lab: Resistive Sensors](../Resistive_Sensor_Lab)
 
 <br/>
