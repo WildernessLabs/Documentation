@@ -2,7 +2,7 @@
 title: Voltage Dividers Uses and Practical Considerations
 ---
 
-Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; level shifting, and reading resistive sensors.
+Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; reading resistive sensors, and analog level shifting.
 
 
 ### Reading Resistive Sensors
@@ -11,13 +11,17 @@ Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive 
 
 ![](../Resistive_Sensor_Circuit.svg)
 
-### Level Shifting
+### Analog Level Shifting
 
-As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. For instance, a 5V analog sensor may output 0V to 5V, depending on the input level of what it's sensing; a 5V temperature sensor may output a voltage of 5V at the highest temp it can sense, and 0V at the lowest temperature. However, Netduino has analog inputs that can read voltage from 0V to 3.3V. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided:
+As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. 
+
+For instance, a 5V analog temperature sensor may output `0V` to `5V`, depending on the temperature that it's sensing. At the highest temperature it can sense, it might output a `5V` signal, `0V` at the lowest temperature, and voltage in between representing temperatures between those two points. 
+
+However, Netduino has analog inputs that can read voltage from `0V` to `3.3V`. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided:
 
 ![](../5V_to_3.3V_Signal_Division.svg)
 
-In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run at 1.2V or less, internally), but occasionally you might find an older 5V sensor that you want to use.
+In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run internally at 1.2V or less), but occasionally you might find an older 5V sensor that you want to use.
 
 ### Potentiometers
 
@@ -72,14 +76,14 @@ As illustrated above, a `3Ω` resistance in the load made a big difference; In t
 
 In both the level shifting and the resistive sensor, the values are read by Netduino via the _Analog to Digital Converter_ (ADC) on the STM32F microcontroller, which is the main processing chip. An ADC reads voltage signals and converts them to a digital value that describes the input voltage level (`0V` to `3.3V`) in 1,024 steps of precision (values `0` through `1,023`).
 
-Netduino has 6 analog inputs and the following code illustrates reading a voltage input level on Analog Pin 3: 
+Netduino has 6 analog inputs and the following code illustrates reading a voltage input level on `Analog Pin 3`: 
 
 ```
 AnalogInput analog3 = new AnalogInput(Pins.GPIO_PIN_A3)
 int value = analog3.Read();
 ```
 
-A value of `0` means that it read `0V`, and a value of `1,023` means that the voltage was at or above `3.3V`. The steps in between are linear, meaning that a value of `511` (`1,023 / 2`) indicates it was reading `1.65V` (`3.3V / 2`).
+A value of `0` means that it read `0V`, and a value of `1,023` means that the voltage was at or above `3.3V`. The steps in between are linear; a value of `511`, which is `1,023 / 2`, indicates it was reading `1.65V`, or `3.3V / 2`.
 
 The maximum voltage level that can be read is `3.3V`, but the analog input ports are `5V` tolerant, meaning they can accept up to `5V` without overloading the chip and possibly destroying it. However, to be able to read any voltage above `3.3V`, a voltage divider must be used.
 
@@ -87,7 +91,7 @@ The maximum voltage level that can be read is `3.3V`, but the analog input ports
 
 The ADC is a complex and clever circuit and getting very accurate reads from it requires special considerations which will be covered in a later part of this tutorial. However, for prototyping purposes, we can ignore those complexities and design with simple concepts in mind.
 
-When using a voltage divider with Netduino's analog input, we have to consider that the ADC has some resistance, and requires a certain amount of current to work.
+When using a voltage divider with Netduino's analog input, we have to consider that the ADC has some resistance and requires a certain amount of current to work.
 
 For prototyping purposes, we can assume that the ADC will provide about `11kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can then calculate that it will require up to `0.3mA` of current:
 
@@ -107,21 +111,22 @@ Additionally, `11kΩ` is about `0.0001S (Siemens)`:
 G = 1 / 11,000Ω = 0.00009S ~= 0.0001S
 ```
 
+Luckily, even though the ADC adds resistance to the bottom half of the divider, the resistance is high enough that it has only a negligible effect, as we'll see.
+
 ### Variable Load Resistance
 
-Further complicating things, the consideration of load resistance gets much more complex when the resistance of that load can change over time. For instance, some sub circuits might draw different amounts of power depending on what the circuit is doing. In fact, the ADC does just that, but for prototyping we can largely ignore the fluctuation. Later on, we'll dive deeper into into increasing the accuracy of analog readings.
+Another complication of voltage dividers is that the consideration of load resistance gets much more complex when the resistance of that load can change over time. For instance, some sub circuits might draw different amounts of power depending on what the circuit is doing. In fact, the ADC does just that, but for prototyping we can largely ignore the fluctuation. Later on, we'll dive deeper into into increasing the accuracy of analog readings.
 
 One way to get around this is to use much smaller resistors in the divider so that there is lots of power going through the circuit and the third leg has a negligible effect. This might not make sense at first blush, but if we remember that the third leg is a parallel circuit, and therefore we add the inversion of the resistance (conductance), smaller resistors suffer less overall voltage modification.
 
-For instance, given that the `11kΩ` resistance of the ADC provides a very small amount of conductance, `0.0001S`, an R2 resistor that's ~10x smaller, `1kΩ`, conducts nearly 10x more power (a conductance of `0.001S`). This means the overall resistance of the bottom half of the divider is only affected by ~10%, going from `1,000Ω` for the R2 alone, to `909Ω`, when factoring in the ADC:
+For instance, given that the `11kΩ` resistance of the ADC provides a very small amount of conductance, `0.0001S`, an R2 resistor that's ~10x smaller, or `1kΩ`, conducts nearly 10x more power (a conductance of `0.001S`). This means the overall resistance of the bottom half of the divider is only affected by ~10%, going from `1,000Ω` for the R2 alone, to `909Ω`, when factoring in the ADC:
 
 ```
 Given:
-ADC = 11kΩ (0.0001S)
-R2 = 1kΩ
+ADC = 11kΩ = 0.0001S
+R2 = 1kΩ = 1 / 1000Ω = 0.001S
 
 Therefore:
-R2 = 1kΩ = 1 / 1000Ω = 0.001S
 ADC + R2 = 0.0001S + 0.001S = 0.0011S = 909Ω
 ```
 

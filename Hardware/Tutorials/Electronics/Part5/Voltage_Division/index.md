@@ -87,47 +87,6 @@ Circuit 2 (total R: 200Ω) Battery Time = 1000mAh / 25mA = 40 hours.
 
 As we can see, the voltage divider with more resistance is much more power efficient than the voltage divider with less resistance because it lets less current through. We might then be tempted to think that we should always use high resistance in a voltage divider, but in reality, things are a little more complicated. In order to understand why, we must consider the circuit as a whole.
 
-
-
-
-
-
-
-------
-
-[this needs work:]
-
-
-The solution then is to first determine how much power/current the sub circuit on `Vout` needs, and choose an `R1` whose resistance provides that power and then multiply them by the appropriate ratio to determine the value of each leg of the divider..
-
-
-
-
-
-
-
-## Sample Problems
-
-### Example
-
-[redo this example or add another one where we 
-
-Let's say that the voltage source is `5V` and the two resistors are `8Ω` and `12Ω`, respectively.
-
-Therefore, we can calculate the voltage of `Vout` as:
-
-```
-Given:
-Vout = Vs * (R2 / (R1 + R2))
-
-Therefore:
-Vout = 5V * (12Ω / (8Ω + 12Ω)) = 5V * .6 = 3V
-```
-
-So the voltage out would be `3V`.
-
-
-
 ## [Next - Practical Considerations and Use of Voltage Dividers](../Voltage_Divider_Practicals)
 
 
