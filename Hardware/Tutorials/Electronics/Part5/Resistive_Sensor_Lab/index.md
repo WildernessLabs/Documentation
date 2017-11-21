@@ -11,7 +11,7 @@ To do this lab, you'll need the following new items:
 | Item                                   | Approximate Cost (USD) |
 |----------------------------------------|------------------------|
 | Photoresistor                          | <$1                    |
-| Netduino 3, any model                  | $40 - $70              |
+| Netduino                               | $25 - $70              |
 
 Additionally, you'll reuse the following tools and components from earlier labs:
 
@@ -196,13 +196,13 @@ To build this circuit on a breadboard, wire it similar to the following:
 
 ![](../Photoresistor_Circuit_bb.svg)
 
-### Step 5: Write the code and deploy to the Netduino.
+### Step 5: Deploy Photoresistor_Lab app to the Netduino.
 
 If you haven't setup your development environment yet, follow the [Getting Started Guide](/Netduino/Getting_Started/).
 
-The following code illustrates creating a new `AnalogInput` on pin 3, and reading the voltage to get the value of the light hitting the photoresistor:
+Clone the [Netduino_Samples](https://github.com/WildernessLabs/Netduino_Samples) git repo to your local drive, and open the [Photoresistor_Lab](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/Photoresistor_Lab) app and deploy to your Netduino.
 
-[TODO: modify this to calculate the Vout, and use a switch statement to output "Bright/Dark/Moderate."]
+The _Photoresistor\_Lab_ code is copied below; it illustrates creating a new `AnalogInput` on pin 3, and reading the voltage to get the value of the light hitting the photoresistor:
 
 ```csharp
 using System;
@@ -211,24 +211,45 @@ using Microsoft.SPOT;
 using SecretLabs.NETMF.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 
-namespace Photoresistor_Reading
+namespace Photoresistor_Lab
 {
     public class Program
     {
         public static void Main()
         {
             var photoresistor = new AnalogInput(Pins.GPIO_PIN_A3);
+            int ambientLight = 0;
+            float sensorVoltage = 0;
 
             while (true)
             {
-                Debug.Print("Photoresistor reading: " + photoresistor.Read().ToString());
+                // read the analog input
+                ambientLight = photoresistor.Read();
+
+                // convert the digital value back to voltage
+                sensorVoltage = AnalogValueToVoltage(ambientLight);
+
+                // output
+                Debug.Print("Light Level = Raw: " + ambientLight.ToString() + 
+                            ", Voltage: " + AnalogValueToVoltage(ambientLight).ToString());
+
+                // wait 1/4 second
                 Thread.Sleep(250);
             }
+        }
+
+        /// <summary>
+        /// Converts an analog input value voltage.
+        /// </summary>
+        public static float AnalogValueToVoltage (int analogValue)
+        {
+            return ((float)analogValue / 1023f) * 3.3f;
         }
     }
 }
 ```
-In a later part this tutorial, we'll examine reading analog signals and digital communication in a more depth.
+
+In a later part of this tutorial, we'll examine reading analog signals and digital communication in a more depth.
 
 
 ## [Next - Lab: Level Shifting with a Voltage Divider](../Level_Shifting_Lab)
