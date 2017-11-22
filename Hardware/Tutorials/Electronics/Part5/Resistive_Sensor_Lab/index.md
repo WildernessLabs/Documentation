@@ -63,13 +63,17 @@ To measure the resistance of a photoresistor, set the multimeter to its resistan
 
 If using a breadboard, make sure each leg of the photoresistor is on opposite sides of the center well (or on different rows), so the legs aren't connected.
 
-I measured the resistance of my photoresistor in varying light conditions and came up with the following values:
+I measured the resistance of my photoresistor in varying light conditions and came up with the following ranges:
 
-```
-~250kΩ in dark
-~6kΩ moderate room light
-~1kΩ in sunlight
-```
+| Luminance      | Resistance Range       |
+|----------------|------------------------|
+| Bright Light   | <= ~1kΩ                |
+| Room Light     | ~1kΩ - ~75kΩ           |
+| Darkness       | >= 75kΩ (up to 350kΩ+) |
+
+This photoresistor is very good at detecting very little light, in fact, from the table above, most of its range is in the relative darkness. However, for my purposes, "mostly" dark is good enough, so I can ignore anything above `75kΩ`.
+
+I live in the Pacific Northwest and on a November day, sunlight is a commodity that is hard to find, so to simulate sunlight, I shone the LED from my phone on the sensor from a few inches away.
 
 The datasheet for the Adafruit photoresistor gave a range of `200kΩ - 10kΩ`, so I'm glad I measured mine.
 
@@ -79,7 +83,7 @@ Using a multimeter in resistance measuring mode, measure your photoresistor unde
 
  * Bright sunlight
  * A moderately lit room
- * When the sensor's light collector is covered by your finger (a dark condition)
+ * When the sensor's light collector is covered by something dark (a dark condition)
 
 ### Step 2: Calculate the fixed resistor (`R1`) value.
 
@@ -87,44 +91,40 @@ Netduino has an onboard Analog to Digital Converter (ADC) that reads voltage val
 
 #### Calculating the High and Low Resistance Values of the Bottom Half of the Voltage Divider
 
-The easiest way to do this is to choose a resistor that splits the difference between the high and low resistance values of the bottom half of the voltage divider which we can calculate by adding the conductance (G) of the sensor and the conductance of the ADC:
+The easiest way to select an `R1` resistor is to choose a value that splits the difference between the high and low resistance threshold values of the bottom half of the voltage divider (resistive sensor and ADC). Recall that the parallel resistance of the resistive sensor and the ADC is calculated using conductance (G):
 
 ```
 Given:
 ADC Conductance = 1 / 11kΩ = (0.0001S)
-Photoresistor high (dark) R = 250kΩ
-Photoresistor low (bright) R = 1kΩ
+Photoresistor low R/bright threshold < 1kΩ
+Photoresistor high R/dark threshold > 75kΩ
 
 Therefore:
-Photoresistor high G = 1 / 250,000Ω = 0.000004S
-Photoresistor low G = 1 / 1,000Ω = 0.001S
+Photoresistor low G = 1 / 1,000Ω = 0.0001S
+Photoresistor high G = 1 / 75,000Ω = 0.000013S
 
 Total voltage divider bottom half (ADC + Photoresistor) resistance:
-High (dark) = 0.0001S + 0.000004S = 0.000104S = 9,615Ω ~= 10kΩ
-Low (bright) = 0.0001S + 0.001S = 0.0011S = 909Ω ~= 1kΩ
+Low (bright) = 0.0001S + 0.0001S = 0.0002S = 5,000Ω = 5kΩ
+High (dark) = 0.0001S + 0.000013S = 0.000113S = 8,824Ω ~= 8.8kΩ
 ```
 
-These are approximate measurements, so I've rounded to the nearest 1k.
-
-<!--
-moderate calculation
-```
-Photoresistor moderate (room light) resistance = 6kΩ
-Photoresistor moderate conductance = 1 / 6,000Ω = 0.000167S
-Moderate R2 + ADC = 0.0001S + 0.000167S = 0.000267S = 3,750Ω ~= 4kΩ
-```
--->
+Since these are approximations, I've rounded them a little to make calculations simpler.
 
 #### Choosing an `R1` that Splits the Difference
 
-Therefore, I would need an R1 that has a value halfway between `1kΩ` and `10kΩ`:
+Therefore, I would need an R1 that has a value halfway between `8.8kΩ` and `5kΩ`.  You migh be able to guess at a midpoint in your head that's close enough, but we can also use a formula that calculates the difference between the two resistors, divides it in half, and then subtracts that from the bigger resistor:
 
 ```
-Halfway = (1,000Ω - 10,000Ω) / 2 = 4,500Ω = 4.3kΩ
+Given:
+Halfway = R2High - ((R2High - R2Low) / 2)
+
+Therefore
+Halfway = 8.8kΩ - ((8.8kΩ - 5kΩ) / 2) = 6.9kΩ 
 ```
 
-`4.5kΩ` isn't a very common resistor value, but `4.7kΩ` is, so I'll start with that and calculate my expected `Vout` based on that.
+`6kΩ` isn't a very common resistor value, but `4.7kΩ` is the closest common resistor, so I'll start with that and calculate my expected `Vout` based on that in order to validate that resistor choice.
 
+In practice, there's no real need to do this next step; you can simply grab a resistor that is somewhere near the halfway point, put the voltage divider together and then test the resulting output under various conditions to find the threshold values that you're happy with. However, for the purposes of understanding, I think it's important to go through these steps.
 
 #### Calculating Expected `Vout`
 
@@ -133,23 +133,60 @@ Using the voltage divider equation from before (`Vout = Vs * (R2 / (R1 + R2))`),
 ```
 Example calculation:
 Vout = Vs * ((R2 & ADC) / (R1 + R2 & ADC)) )
-Very Bright Vout = 5V * (1,000Ω / (4,700Ω + 1,000Ω)) = 3.3V * 0.175 = 0.58V
+Bright Threshold = 3.3V * (5kΩ / (4.7kΩ + 5kΩ)) = 1.7V
 ```
+<!--
+Dark Threshold = 3.3V * (8.8kΩ / (4.7kΩ + 8.8kΩ)) = 2.15V
+-->
 
 Using that formula, I created the following table of values:
 
-| Light Level | R1 Value  | Sensor Resistance (R2) | R2 & ADC Resistance | Total R | Vin   | Vout  |
-|-------------|-----------|------------------------|---------------------|---------|-------|-------|
-| Very Bright | 4.7kΩ     | 1kΩ                    | 1kΩ                 | 5.7kΩ   | 3.3V  | 0.58V |
-| Moderate    | 4.7kΩ     | 6kΩ                    | 4kΩ                 | 8.7kΩ   | 3.3V  | 1.52V |
-| Dark        | 4.7kΩ     | 250kΩ                  | 10kΩ                | 14.7kΩ  | 3.3V  | 2.24V |
+| Light Level Threshold | R1 Value  | Sensor Resistance (R2) | R2 & ADC Resistance | Total R | Vin   | Vout  |
+|-----------------------|-----------|------------------------|---------------------|---------|-------|-------|
+| Bright                | 4.7kΩ     | < 1kΩ                  | 5kΩ                 | 9.7kΩ   | 3.3V  | 1.7V  |
+| Dark                  | 4.7kΩ     | > 75kΩ                 | 8.8kΩ               | 13.5kΩ  | 3.3V  | 2.15V |
 
+
+<!--
+
+This is what's weird, when I actually run this, these are the values that I get. And I can't think of anything really to explain it.
+
+Actuals with 4.7k resistor:
+
+Bright < 0.85V
+Moderate Light 2.5V
+Dark > 3V
+-->
+
+<!--
+I even calculated using a 6K ADC resistance, in case the 11k that we calculated was wrong, and it's not materially different.
+
+## Alternate 6k ADC Calculation
+
+```
+Given:
+ADC Conductance = 1 / 6kΩ = (0.00016S)
+Photoresistor low R/bright threshold < 1kΩ
+Photoresistor high R/dark threshold > 75kΩ
+
+Therefore:
+Photoresistor low G = 1 / 1,000Ω = 0.0001S
+Photoresistor high G = 1 / 75,000Ω = 0.000013S
+
+Total voltage divider bottom half (ADC + Photoresistor) resistance:
+Low (bright) = 0.00016S + 0.0001S = 0.00026S = 3,846Ω = 3.8kΩ
+High (dark) = 0.00016S + 0.000013S = 0.00018S = 5,566Ω = 5.6kΩ
+
+Bright Threshold = 3.3V * (3.8kΩ / (4.7kΩ + 3.8kΩ)) = 1.5V
+Dark Threshold = 3.3V * (5.6kΩ / (4.7kΩ + 5.6kΩ)) = 1.8V
+```
+-->
 
 The circuit therefore would look something like this:
 
 ![](../Photoresistor_Circuit.svg)
 
-My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.5V` and `2.3V`, which provides a good resolution for reading the value.
+My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `1.7V` and `2.2V`, which provides a decent resolution for reading the value.
 
 #### Lab Process & Questions:
 
@@ -202,7 +239,9 @@ To build this circuit on a breadboard, wire it similar to the following:
 
 If you haven't setup your development environment yet, follow the [Getting Started Guide](/Netduino/Getting_Started/).
 
-Clone the [Netduino_Samples](https://github.com/WildernessLabs/Netduino_Samples) git repo to your local drive, and open the [Photoresistor_Lab](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/Photoresistor_Lab) app and deploy to your Netduino.
+Clone the [Netduino_Samples](https://github.com/WildernessLabs/Netduino_Samples) git repo to your local drive, and open the [Photoresistor_Lab](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/Photoresistor_Lab) app.
+
+Make sure to modify the `lightThresholdVoltage` and `darkThresholdVoltage` variables to match your photoresistor, and deploy the app to your Netduino.
 
 The _Photoresistor\_Lab_ code is copied below; it illustrates creating a new `AnalogInput` on pin 3, and reading the voltage to get the value of the light hitting the photoresistor:
 
@@ -223,6 +262,9 @@ namespace Photoresistor_Lab
             int ambientLight = 0;
             float sensorVoltage = 0;
 
+            float lightThresholdVoltage = 0.85f;
+            float darkThresholdVoltage = 2.1f;
+
             while (true)
             {
                 // read the analog input
@@ -234,6 +276,14 @@ namespace Photoresistor_Lab
                 // output
                 Debug.Print("Light Level = Raw: " + ambientLight.ToString() + 
                             ", Voltage: " + AnalogValueToVoltage(ambientLight).ToString());
+
+                if (sensorVoltage < lightThresholdVoltage) {
+                    Debug.Print("Very bright.");
+                } else if (sensorVoltage > darkThresholdVoltage ) {
+                    Debug.Print("Dark.");
+                } else {
+                    Debug.Print("Moderately Bright.");
+                }
 
                 // wait 1/4 second
                 Thread.Sleep(250);
