@@ -2,12 +2,42 @@
 title: Analog Level Shifting Lab
 ---
 
-In addition to resistive sensors, a common use of voltage divider circuits is to _level shift_. Sometimes, two circuits operate at different voltage levels (sometimes called _voltage domains_), yet they need to communicate. A voltage in one circuit might need to be shifted down to communicate with another that runs on a lower voltage, or vice-versa. When shifting downwards, from a higher voltage to a lower voltage, a voltage divider can be used to "divide" a higher voltage signal into a lower voltage signal to resolve this incompatibility. To level shift upwards, a different circuit is needed, which we'll examine later.
+In this lab, we'll build a circuit that powers a 5V luminosity (light level) sensor and uses a voltage divider to level shift the sensor's output from a 5V _voltage domain_ to a 3.3V voltage domain.
 
-[digital vs. analog level shifting]
+Voltage dividers are the only practical way of level shifting an analog signal (one in which the signal may have a varying degree of voltage). While this circuit will also work for a digital signal, in which the voltage is either high (in our case `3.3V`), or low (`0V`), there are circuits which can be built out of transistors that are much more efficient.
+
+Additionally, because a voltage divider _lowers_ the signal amplitude, a different circuit is necessary for level shifting from a lower voltage domain to a higher one. Again, we'll examine a circuit for that later.
+
+### Requirements
+
+To do this lab, you'll need the following new items:
+
+| Item                                   | Approximate Cost (USD) |
+|----------------------------------------|------------------------|
+| LilyPad 5V Luminosity Sensor           | $5                     |
+
+Additionally, you'll reuse the following tools and components from earlier labs:
+
+ * Netduino
+ * Half size breadboard
+ * Resistor Kit
+ * Breadboard jumper wires
+ * Wire cutter (optional, for trimming resistors)
 
 
-One of the most common places to run into a voltage incompatibility like this is when dealing with sensors. The microcontroller at the heart of a Netduino uses 3.3V (lower voltage is actually better for a myriad of reasons, including speed and power efficiency), but many older sensors operate at 5V (or even other voltages).
+## Luminosity Sensor and Analog Level Shifting Circuit
+
+[most complex circuits are actually circuits joined together]
+
+[in this lab, we'll build a circuit that is just that, one powering the sensor, and one to divide the output]
+
+[circuit diagram with the sensor circuit and the voltage divider circuits on a different background]
+
+[voltage divider looks just like the photoresistor lab circuit]
+
+
+----
+
 
 Consider the following circuit:
 
@@ -19,7 +49,7 @@ Though this might look different, it's actually
 
 [need a diagram here showing a sensor being powered by the 5V rail]
 
-
+[actually, need a complete circuit that shows the sensor and output]
 
 
 the equivalent of the voltage divider circuit we were examining before:
