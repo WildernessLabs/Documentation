@@ -7,13 +7,13 @@ Voltage dividers are useful circuits that have a variety of uses, but for the ty
 
 ### Reading Resistive Sensors
 
-Another, perhaps non-obvious, usage is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
+A non-obvious usage for voltage dividers is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
 
 ![](../Resistive_Sensor_Circuit.svg)
 
 ### Analog Level Shifting
 
-As the name implies, one of the primary uses they have is to adjust, through division, the level of a signal to a lower level. 
+Another common use of voltage dividers is to adjust, through division, the level of an analong input signal to a lower level.
 
 For instance, a 5V analog temperature sensor may output `0V` to `5V`, depending on the temperature that it's sensing. At the highest temperature it can sense, it might output a `5V` signal, `0V` at the lowest temperature, and voltage in between representing temperatures between those two points. 
 
