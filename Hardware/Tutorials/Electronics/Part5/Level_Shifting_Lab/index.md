@@ -4,6 +4,8 @@ title: Analog Level Shifting Lab
 
 In this lab, we'll build a circuit that powers a 5V luminosity (light level) sensor and uses a voltage divider to level shift the sensor's output from a 5V _voltage domain_ to a 3.3V voltage domain.
 
+[also, some light soldering]
+
 Voltage dividers are the only practical way of level shifting an analog signal (one in which the signal may have a varying degree of voltage). While this circuit will also work for a digital signal, in which the voltage is either high (in our case `3.3V`), or low (`0V`), there are circuits which can be built out of transistors that are much more efficient.
 
 Additionally, because a voltage divider _lowers_ the signal amplitude, a different circuit is necessary for level shifting from a lower voltage domain to a higher one. Again, we'll examine a circuit for that later.
@@ -14,7 +16,11 @@ To do this lab, you'll need the following new items:
 
 | Item                                   | Approximate Cost (USD) |
 |----------------------------------------|------------------------|
-| LilyPad 5V Luminosity Sensor           | $5                     |
+| [LilyPad 5V Luminosity Sensor](https://www.sparkfun.com/products/8464)           | $4                     |
+| 22ga Single Strand Wire                | [set]                  |
+| Soldering iron                         |
+
+Though this lab uses the LilyPad Luminosity sensor, nearly any 5V sensor will do.
 
 Additionally, you'll reuse the following tools and components from earlier labs:
 
@@ -27,55 +33,27 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 ## Luminosity Sensor and Analog Level Shifting Circuit
 
-[most complex circuits are actually circuits joined together]
+Most complex circuits in use are actually lots of simpler circuits joined together to provide more complex behaviors. In fact, in this lab, we're going to join two very simple circuits; a 5V light sensor circuit, and a voltage divider to reduce the voltage output of the light sensor down to a 3.3V voltage domain:
 
-[in this lab, we'll build a circuit that is just that, one powering the sensor, and one to divide the output]
-
-[circuit diagram with the sensor circuit and the voltage divider circuits on a different background]
-
-[voltage divider looks just like the photoresistor lab circuit]
-
-
-----
-
-
-Consider the following circuit:
-
-![](../Voltage_Divider_Circuit.svg)
-
-Though this might look different, it's actually 
-
-[not equivalent, but similar to the divider from before, this time we've separated Vin because it might be in a different voltage domain]
-
-[need a diagram here showing a sensor being powered by the 5V rail]
-
-[actually, need a complete circuit that shows the sensor and output]
-
-
-the equivalent of the voltage divider circuit we were examining before:
-
-![](../Voltage_Divider_Network_2.svg)
-
-In the case of the first schematic, `Vin` means "voltage in" and is the equivalent of the positive side of the voltage source. `Vout` means "voltage out", and represents the divided voltage. The ground symbol represents the negative pole of the voltage source. 
-
+![](../Level_Shifting_Lab_Circuit.svg)
 
 
 ## Calculating Voltage Division with a Third Leg
 
-Following steps:
+Before we build our circuit, however, we must first calculate the values of our resistors in the voltage divider, while making sure we account for the resistance of the ADC.
 
-1. Calculate R1 resistance based on how much power Vout needs
-2. Figure out the necessary division ratio, e.g. 5/3.3 for 5V to 3.3V
-3. Solve individual resistors by multiplying ratio by total R
-4. Subtract the ADC resistance from R2 in the solution
+[Following what we've learned from blah:]
+
+1. Calculate R1 resistance based on how much power Vout needs.
+2. Figure out the necessary division ratio, e.g. `5/3.3` for `5V` to `3.3V`.
+3. Solve individual resistors by multiplying ratio by total `R`.
+4. Subtract the ADC resistance from `R2` in the solution.
 
 ### Step 1: Calculate R1 resistance, based on power requirements.
 
-Netduino ADC needs `0.3mA`. 
+The Netduino ADC needs `0.3mA` current. Recall, however, that the amount of current available at `Vout` in a voltage divider is controlled by the `R1` resistor, rather than the total resistance.
 
-[remember, this is the third leg, so Vout, not total R]
-
-[so we need to calculate the R1 from that]
+So to start, we need to use Ohm's law to calculate the resistance needed at `R1`:
 
 ```
 Given:
@@ -87,13 +65,36 @@ R1 = 3.3V / 0.0003A = 11kΩ
 
 ### Step 2: Division Ratio
 
+Next, we need to figure out the division ratio needed to divide `5V` down to `3.3V`:
+
 ```
 3.3V / 5V = 0.66
 ```
 
+[but what we really need is 1.7 volts]
 ```
-5V / 1.7V = 2.
+1.7V / 5V = 0.34
 ```
+
+
+Recall again, our voltage divider formula:
+
+```
+Vout = Vs * (R2 / R1 + R2)
+```
+
+So if the division ratio is `.66`, that [actually solves for R2]
+
+```
+Vout = Vs * (3.3 / 5V)
+```
+
+[which makes sense if we think about it, because we want the R2 to block 66% of the current, so we need the other side].
+
+```
+1 - .66 = .34
+```
+
 
 ### Step 3: 
 
@@ -102,9 +103,17 @@ R1 = 3.3V / 0.0003A = 11kΩ
 [we know that bottom half, R2 + ADC, must be a ratio of that]
 
 ```
-Bottom half (R2 + ADC) = 11,000 / (3.3 / 5) = 16,666
+R2 = R1 * .66
 
-Bottom half (R2 + ADC) = 11,000 / (2.7 / 5) = 16,666
+
+Bottom half (R2 + ADC) = 11,000 
+```
+
+```
+R2 = (R1 * Vout) / (Vs - Vout)
+
+R2 = (11,000 * 3.3) / (5 - 3.3)
+R2 = (36,300) / (1.7) = 21,353Ω
 ```
 
 verify:
@@ -113,14 +122,8 @@ verify:
 Given:
 Vout = Vs * (R2 / (R1 + R2))
 
-
-Therefore:
-Vout = 5V * (16,666 / (11,000 + 16,666)) = 3.0V = WRONG
-
-
-
-3.3  = 5 * (x / (11,000 + x))
-x = 21,352
+Vout = 5V * (21,353 / (11,000 + 21,353))
+Vout = 5V * (0.66) = 3.3V
 
 
 ```
@@ -129,25 +132,16 @@ x = 21,352
 
 [remove the ADC resistance from the bottom half to get the leftover resistance needed for R2]
 
-
-
-
-## 5V Sensor Lab
-
-
-
-
-### OLD Calculating Voltage Division with Load
-
-
-
-[total of the R2 and Load is the sum of the conductance, converted back into resistance:]
+//feck. is this right? do i need to think about conductance here?
 
 ```
-Conductance (G) = (1 / R2) + (1 / Rload)
-R = 1 / G
-R = 1 / (1 / R2) + (1 / Rload)
+R2 = BottomR - ADC
+R2 = 21,353 - 11,000 = 10,353Ω
 ```
+
+R1 = 11kΩ
+R2 ~= 10kΩ
+
 
 ```
 Given voltage division:
@@ -162,57 +156,19 @@ Vout = Vs * ( (1 / (1 / R2) + (1 / RLoad)) / (R1 + (1 / (1 / R2) + (1 / RLoad))
 
 
 
+## 5V Sensor Lab
+
+![](../Level_Shifting_Lab_schem.svg)
+
+![](../Level_Shifting_Lab_bb.svg)
 
 
 
-In order to calculate a voltage divider circuit for level shifting down, we have to first determine how much power that we need to output to the Netduino. According to the [random places on the internet, ugh], the microcontroller chips that power Netduino have an acceptable current input range of `4 - 20mA`. Let's pick a safe target value somewhere in the middle, like `10mA`. 
 
-
-### Step 1: Calculate total resistance needed.
-
-Now we know current and voltage, we can use Ohm's law solved for resistance to figure out how much total resistance we need in our circuit divider:
-
-```
-R = V / I
-R = 5V / 10mA = 5V / 0.010A = 500Ω
-```
-
-We need a voltage divider with a total resistance of `500Ω`.
-
-### Step 2: Calculate division ratio.
-
-Recall from earlier, that voltage division is proportionate to the resistors, so we need to calculate the ratio of resistance needed to divide 3.3V from 5V:
-
-```
-3.3V / 5V = .66
-```
-
-That means that one of the resistors has to be `.66 * Total Resistance`, and the other needs to be `.34 * Total Resistance` (the leftovers of `1 - .66 = .34`).
-
-### Step 3: Calculate individual resistors.
-
-Using a bit of intuition, we can also figure that the first resistor needs to be the smaller one, since we need to remove 1.7V from 5V, so our solution looks like the following:
-
-```
-R1 = 500Ω * .34 = 170Ω
-R2 = 500Ω * .66 = 330Ω
-```
-
-Therefore, our `5V` to `3.3V` voltage divider circuit would look like the following:
-
-![](../Voltage_Divider_Circuit_Calculated.svg)
-```
 
 ### Online Voltage Divider Calcuator
 
 There is a fantastic voltage divider calculator online [here](http://www.ohmslawcalculator.com/voltage-divider-calculator)
-
-
-## Practical Example
-
-[Analog to Digital Converter (ADC) can measure voltage]
-
-[5v sensor + schematic + code]
 
 
 ## [Next - Circuit Software](../Circuit_Software)
