@@ -147,21 +147,22 @@ Using that formula, I created the following table of values:
 | Dark                  | 4.7kΩ     | > 75kΩ                 | 8.8kΩ               | 13.5kΩ  | 3.3V  | 2.15V |
 
 
-<!--
 
-This is what's weird, when I actually run this, these are the values that I get. And I can't think of anything really to explain it.
+## Note for EE Reviewers
+
+This is what's weird, when I actually run this, these are the values that I get. And I can't think of anything really to explain it. It gives me a really good spread, which is nice, but it doesn't conform to what I calculated, based on the resistance measurements I took on the photoresistor given those conditions.
 
 Actuals with 4.7k resistor:
 
+```
 Bright < 0.85V
 Moderate Light 2.5V
 Dark > 3V
--->
+```
 
-<!--
 I even calculated using a 6K ADC resistance, in case the 11k that we calculated was wrong, and it's not materially different.
 
-## Alternate 6k ADC Calculation
+#### Alternate 6k ADC Calculation
 
 ```
 Given:
@@ -180,7 +181,14 @@ High (dark) = 0.00016S + 0.000013S = 0.00018S = 5,566Ω = 5.6kΩ
 Bright Threshold = 3.3V * (3.8kΩ / (4.7kΩ + 3.8kΩ)) = 1.5V
 Dark Threshold = 3.3V * (5.6kΩ / (4.7kΩ + 5.6kΩ)) = 1.8V
 ```
--->
+
+What did I do wrong here?
+
+---
+
+## Continued
+
+**[NOTE: update this diagram when values are locked]**
 
 The circuit therefore would look something like this:
 
@@ -300,6 +308,8 @@ namespace Photoresistor_Lab
     }
 }
 ```
+
+**[Note to self: add a section here that shows the output, and then introduce the oversampling/averaging code]**
 
 In a later part of this tutorial, we'll examine reading analog signals and digital communication in a more depth.
 

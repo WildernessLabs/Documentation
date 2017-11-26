@@ -63,40 +63,8 @@ Therefore:
 R1 = 3.3V / 0.0003A = 11kΩ
 ```
 
-### Step 2: Division Ratio
 
-Next, we need to figure out the division ratio needed to divide `5V` down to `3.3V`:
-
-```
-3.3V / 5V = 0.66
-```
-
-[but what we really need is 1.7 volts]
-```
-1.7V / 5V = 0.34
-```
-
-
-Recall again, our voltage divider formula:
-
-```
-Vout = Vs * (R2 / R1 + R2)
-```
-
-So if the division ratio is `.66`, that [actually solves for R2]
-
-```
-Vout = Vs * (3.3 / 5V)
-```
-
-[which makes sense if we think about it, because we want the R2 to block 66% of the current, so we need the other side].
-
-```
-1 - .66 = .34
-```
-
-
-### Step 3: 
+### Step 2: 
 
 [we know that R1 must be `11kΩ`]
 
@@ -132,27 +100,47 @@ Vout = 5V * (0.66) = 3.3V
 
 [remove the ADC resistance from the bottom half to get the leftover resistance needed for R2]
 
-//feck. is this right? do i need to think about conductance here?
-
 ```
 R2 = BottomR - ADC
-R2 = 21,353 - 11,000 = 10,353Ω
+Total Bottom Resistance = 21,353Ω
+Total Bottom G = 1 / 21,353Ω = 0.000047
+
+ADC G = 1/11,000 = 0.000091
+
+Total G - ADC G = 0.000047 - 0.000091 = -0.000044
+
+
 ```
 
-R1 = 11kΩ
-R2 ~= 10kΩ
-
+**[need to explain that in order to make this work, we have to pump more power through it.  we'd need 21k of resistance on the bottom half to make it work to get only 0.3mA through. but the ADC is only 11k, so there's no way to add more. so we need to crank the power 10x]:**
 
 ```
-Given voltage division:
-Vout = Vs * (R2 / (R1 + R2))
+Given:
+R = V / I
 
-and parallel resistance:
-Total R2 + Load = 1 / (1 / R2) + (1 / RLoad)
+Therefore:
+R1 = 3.3V / 0.0003A = 11kΩ
 
-Vout = Vs * ( (1 / (1 / R2) + (1 / RLoad)) / (R1 + (1 / (1 / R2) + (1 / RLoad))
+Divide by 10 to 10x the power:
+R1 = 1kΩ
+
+Solve for bottom half of the voltage divider:
+R2 = (R1 * Vout) / (Vs - Vout)
+
+R2 = (1,000 * 3.3V) / (5V - 3.3V) = 3,300 / 1.7 = 1,941Ω
+
+R2 = BottomR - ADC
+Total Bottom Resistance = 1,941Ω
+Total Bottom G = 1 / 1,941Ω = 0.00052S
+
+ADC G = 1/11,000 = 0.000091
+
+R2 = Total G - ADC G = 0.00052S - 0.000091S = 0.000424S = 2,357Ω
+
+R2 ~= 2.2kΩ
 ```
 
+That seems to work.
 
 
 
