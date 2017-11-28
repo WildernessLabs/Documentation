@@ -15,7 +15,7 @@ Vs = V1 + V2 + V3
 ```
 Where `V1` represents the voltage drop at `R1`, and so forth.
 
-This means that at point `A`, the voltage would be `5V`, and at point `D`, the voltage is `OV`. It turns out, that the voltage through each resistor is proportionate to that resistors part of the overall resistance. So if that resistance represents one half of the total resistance, then the voltage drop through that resistor will also be half of the total voltage drop, or `2.5V`, since `5V * .5 = 2.5V`.
+This means that at point `A`, relative to ground, the voltage would be `5V`, and at point `D`, the voltage is `OV`. It turns out, that the voltage through each resistor is proportionate to that resistor's part of the overall resistance. So if that resistance represents one half of the total resistance, then the voltage drop through that resistor will also be half of the total voltage drop, or `2.5V`, since `5V * .5 = 2.5V`.
 
 ## Deriving from Ohm's Law
 
@@ -73,15 +73,15 @@ Voltage drop is often referred to as _forward voltage_ (V<sub>f</sub>). In many 
 
 ### Simplifying Series Resistance
 
-Since know that resistors in series are additive, if we want to know the voltage drop at any point between resistors in series (as in the above diagram), we can simplify the previous circuit by considering any series resistances as a single resistor by adding them up, as illustrated in the following circuit diagram:
+Since we know that resistors in series are additive, if we want to know the voltage drop at any point between resistors in series (as in the above diagram), we can simplify the previous circuit by considering any series resistances as a single resistor by adding them up, as illustrated in the following circuit diagram:
 
 ![](../VoltageDrop_Simplification.svg)
 
 Note that the sigma (`∑`) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
 
-Simplifying circuits like this, by combining resistances is a common way to analyze circuits because it makes them practical to deal with. In fact, when dealing with circuits, we often simplify them into single values that describe their overall resistance, and _capacitance_, which we'll explore later. By simplifying circuits like this, we can more effectively design complex systems that incorporate multiple circuits into a larger design.
+Simplifying circuits like this, by combining resistances, is a common way to analyze circuits because it makes them more practical to deal with. In fact, when dealing with circuits, we often simplify them into single values that describe their overall resistance, and _capacitance_, which we'll explore later. By simplifying circuits, we can more effectively design complex systems that incorporate multiple circuits into a larger design.
 
-Using the same numbers from before, to calculate the forward voltage (voltage drop) at `B`:
+Using the same numbers from before, calculate the forward voltage (voltage drop) at `B`:
 
 ```
 Given:
@@ -103,7 +103,7 @@ By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a 
 
 ![](../Voltage_Divider_Network_2.svg)
 
-In this case, it's easy to see that `Vout = VS - R1Vf` and `R2Vf = VS - R1Vf`, which means that `Vout = R2Vf`. Therefore, if we want to calculate `Vout`, we can simplify things by calculating the voltage drop of `R2`.
+In this case, we see that `Vout = VS - R1Vf` and `R2Vf = VS - R1Vf`, which means that `Vout = R2Vf`. Therefore, if we want to calculate `Vout`, we can simplify things by calculating the voltage drop of `R2`.
 
 
 ### Voltage Drop is Proportionate
