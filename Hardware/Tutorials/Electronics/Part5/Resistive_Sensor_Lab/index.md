@@ -302,7 +302,7 @@ public static int AverageAndStore(ref int[] sampleSet, int newValue)
 }
 ```
 
-Adding this to our code then, we now have a program that looks something like the following:
+Adding this to our code then, we now have a program that looks something like the following (the full sample can be found in [Photoresistor\_Lab\_Oversampled folder](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/Photoresistor_Lab_Oversampled)):
 
 ```csharp
 using System;
