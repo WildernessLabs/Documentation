@@ -19,6 +19,9 @@ To do this lab, you'll need the following new items:
 | [LilyPad 5V Luminosity Sensor](https://www.sparkfun.com/products/8464)           | $4                     |
 | 22ga Single Strand Wire                | [set]                  |
 | Soldering iron                         |
+| Solder                                 |
+| Tip Tinner and Cleaner                 |
+| Helping Hands (optional)               |
 
 Though this lab uses the LilyPad Luminosity sensor, nearly any 5V sensor will do.
 
