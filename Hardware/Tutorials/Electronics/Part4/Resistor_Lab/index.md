@@ -155,7 +155,7 @@ The overlays can be pinned down as shown in the photos above by using some break
 
 ![](../Breakaway_Headers.jpg)
 
-Or, for an even better deal, you can get a pack of [40 in fancy colors for ~USD$9 on Amazon](http://amzn.to/2jzbD0B)!
+Or, for an even better deal, you can get a [pack of 40 in fancy colors for ~USD$9 on Amazon](http://amzn.to/2jzbD0B)!
 
 ![](../Colored_Breakaway_Headers.jpg)
 
