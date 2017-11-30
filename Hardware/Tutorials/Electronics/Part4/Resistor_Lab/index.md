@@ -8,13 +8,16 @@ In this lab we're going to build some very simple resistance circuits using a br
 
 To do this lab, you'll need the following components and tools:
 
-| Item                                   | Approximate Cost (USD) |
-|----------------------------------------|------------------------|
-| 1/4 Watt resistor kit                  | $8 - $20               |
-| Half size breadboard with power rails  | $16 for 10 pieces      |
-| Breadboard jumper wires                | $7 - $15               |
-| Multimeter                             | $10 - $40              |
-| Wire cutter (optional)                 | $10 - $25              |
+| Item                                    | Approximate Cost (USD) |
+|-----------------------------------------|------------------------|
+| 1/4 Watt resistor kit                   | $8 - $20               |
+| Half size breadboard with power rails   | $16 for 10 pieces      |
+| Breadboard jumper wires                 | $7 - $15               |
+| Multimeter                              | $10 - $40              |
+| Wire cutter (optional)                  | $10 - $25              |
+| Single row breakaway headers (optional) | $6 - $9                |
+
+[Lab breadboard overlays (for printing)](../Resistor_Lab_BB_Overlay.pdf).
 
 ## Resistor Pack
 
@@ -141,6 +144,23 @@ Select two resistors of any value from your resistor kit. For mine, I grabbed a 
 ![](../Series_Resistance_Lab_bb.svg)
 
 The green wires illustrate where we'll measure resistance with the probes.
+
+#### Breadboard Layout Overlays
+
+To make lab component layouts easier, I've created printable breadboard overlays that you can attach to the top of your breadboard. These illustrate sample component layouts and also show the underlying copper traces, which add some clarity to the routing connections:
+
+![](../Resistor_Lab_BB_Printout_Combined.jpg)
+
+The overlays can be pinned down as shown in the photos above by using some breakaway headers, which can easily be snapped to size with pliers. You can find a [pack of 10 of them for ~USD$6 on Amazon](http://amzn.to/2BCdFWf):
+
+![](../Breakaway_Headers.jpg)
+
+Or, for an even better deal, you can get a pack of [40 in fancy colors for ~USD$9 on Amazon](http://amzn.to/2jzbD0B)!
+
+![](../Colored_Breakaway_Headers.jpg)
+
+The [layout overlays for this lab are here](../Resistor_Lab_BB_Overlay.pdf). Make sure that when you print them, they are printed at 100% scale, otherwise they may not fit.
+
 
 ### Step 2: Measure the circuit and calculate percent error.
 
