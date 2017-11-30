@@ -36,7 +36,7 @@ A [pack of 10 of them](http://amzn.to/2zUjcZt) runs ~USD$16 on Amazon.com.
 
 Breadboards simplify prototyping by creating connections without soldering. The following illustration is of a half size bread board with power rails (my favorite kind for prototyping), and an "xray" view on the right showing the copper traces that connect the _wells_ (holes):
 
-![](/Common_Files/Half_Size_+_Breadboards_1.5x.svg)
+![](/Common_Files/Half_Size_+_Breadboards.svg)
 
 Each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, with the leads being separated. Additionally, many breadboards, such as the one pictured above, have power rails along the edges that are connected the whole way down. 
 
