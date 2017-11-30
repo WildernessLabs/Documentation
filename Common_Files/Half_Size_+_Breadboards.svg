@@ -54,24 +54,8 @@
                         <path d="M27.4567901,11.2051282 L27.4567901,279.205128" id="Ground" stroke="#23ABE3"></path>
                         <g id="Copper-Traces-Copy-5" transform="translate(6.000000, 11.000000)" fill="#E7B563">
                             <g id="Copper-Traces" transform="translate(-0.000000, 0.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy" transform="translate(-0.000000, 56.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy-2" transform="translate(-0.000000, 112.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy-3" transform="translate(-0.000000, 168.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy-4" transform="translate(-0.000000, 224.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
+                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="268.5" rx="3"></rect>
+                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="268.5" rx="3"></rect>
                             </g>
                         </g>
                         <g id="Holes" opacity="0.15" transform="translate(5.456790, 10.205128)">
@@ -1952,24 +1936,8 @@
                         <path d="M27.4567901,11.2051282 L27.4567901,279.205128" id="Ground" stroke="#23ABE3"></path>
                         <g id="Copper-Traces" transform="translate(6.000000, 11.000000)" fill="#E7B563">
                             <g transform="translate(-0.000000, 0.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy" transform="translate(-0.000000, 56.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy-2" transform="translate(-0.000000, 112.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy-3" transform="translate(-0.000000, 168.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                            </g>
-                            <g id="Copper-Traces-Copy-4" transform="translate(-0.000000, 224.000000)">
-                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="44.5" rx="3"></rect>
-                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="44.5" rx="3"></rect>
+                                <rect id="Copper-Trace" x="0.956790123" y="0.205128205" width="7" height="268.5" rx="3"></rect>
+                                <rect id="Copper-Trace-Copy-21" x="10.4567901" y="0.205128205" width="7" height="268.5" rx="3"></rect>
                             </g>
                         </g>
                         <g id="Holes" opacity="0.15" transform="translate(5.456790, 10.205128)">
