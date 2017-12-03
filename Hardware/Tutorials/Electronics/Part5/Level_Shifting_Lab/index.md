@@ -98,9 +98,9 @@ Before we build our circuit, however, we must first calculate the values of our 
 
 In order to calculate a level-shifting voltage divider, we need to do three things:
 
-1. Calculate maximum R1 resistance based on how much power the sub-circuit on `Vout` requires
-2.
-3. Subtract the ADC resistance from `R2` in the solution.
+1. Calculate maximum R1 resistance based on how much power the sub-circuit on `Vout` requires.
+2. Calculate the total resistance of bottom half of the divider.
+3. Subtract the ADC resistance from the bottom half of the divider to get the R2 value.
 
 ### Step 1: Calculate maximum R1 resistance, based on ADC power requirements.
 
@@ -120,27 +120,34 @@ R1 = 3.3V / 0.0003A = 11kΩ
 
 The largest resistor that can be placed at R1 is therefore `11kΩ`.
 
-### Step 2: Calculate Bottom Half of Divider
+### Step 2: Calculate the Bottom Half of the Voltage Divider
 
-[we know that R1 must be `11kΩ`]
+Now that we know the maximum value for R1, the "top half" of the divider, we can calculate the "bottom half" of the divider. Which, in this case, is R2 and the ADC.
 
-[we know that bottom half, R2 + ADC, must be a ratio of that]
-
-```
-R2 = R1 * .66
-
-
-Bottom half (R2 + ADC) = 11,000 
-```
+Using a little bit of algebra, we can rearrange the voltage divider equation so it's solved for R2:
 
 ```
-R2 = (R1 * Vout) / (Vs - Vout) //wolfram alpha, solve [equation] for R2
+Given:
+Vout = Vs * (R2 / (R1 + R2))
 
+Therefore:
+R2 = (R1 * Vout) / (Vs - Vout)
+```
+
+I used Wolfram Alpha to solve for R2, rather than having to do the algebra by hand. Check out [this link](http://www.wolframalpha.com/input/?i=solve+V+%3D+S+*+(B+%2F+(T+%2B+B))+for+B) to see how I formatted my Wolfram Alpha query so that it rearranged the equation. Note that I had to rename some of the variables because it interprets multi-letter variables as equations.
+
+Using that equation, we can then calculate the bottom half of the divider (note, we're using R2 as the variable here, but R2 means both R2 and the ADC):
+
+```
+Given:
+R2 = (R1 * Vout) / (Vs - Vout)
+
+Therefore:
 R2 = (11,000 * 3.3) / (5 - 3.3)
 R2 = (36,300) / (1.7) = 21,353Ω
 ```
 
-verify:
+Double checking our work, to verify those resistor values work to satisfy the division:
 
 ```
 Given:
@@ -148,59 +155,109 @@ Vout = Vs * (R2 / (R1 + R2))
 
 Vout = 5V * (21,353 / (11,000 + 21,353))
 Vout = 5V * (0.66) = 3.3V
-
-
 ```
 
-### Step 4: 
+Looks good so far.
 
-[remove the ADC resistance from the bottom half to get the leftover resistance needed for R2]
+### Step 3: Remove the ADC Conductance from the Bottom Half to Determine R2 
 
-```
-R2 = BottomR - ADC
-Total Bottom Resistance = 21,353Ω
-Total Bottom G = 1 / 21,353Ω = 0.000047
-
-ADC G = 1/11,000 = 0.000091
-
-Total G - ADC G = 0.000047 - 0.000091 = -0.000044
-
-
-```
-
-**[need to explain that in order to make this work, we have to pump more power through it.  we'd need 21k of resistance on the bottom half to make it work to get only 0.3mA through. but the ADC is only 11k, so there's no way to add more. so we need to crank the power 10x]:**
+The last step is to remove the ADC resistance from the value of the bottom half of the divider resistance we calculated in step 2:
 
 ```
 Given:
-R = V / I
+R2 = BottomR - ADC
+Total Bottom Resistance = 21,353Ω
+Total Bottom G = 1 / 21,353Ω = 0.000047
+ADC G = 1 / 11,000 = 0.000091
 
 Therefore:
-R1 = 3.3V / 0.0003A = 11kΩ
+Total G - ADC G = 0.000047 - 0.000091 = -0.000044
+```
 
-Divide by 10 to 10x the power:
-R1 = 1kΩ
+But wait, that's weird, how can it be a negative amount of resistance? If we look back at our earlier calculations in step 2, we determined that we needed a little more than `21kΩ` of resistance to make division ratio work. However, the ADC only provides `11kΩ` of resistance, and since it's in _parallel_ with R2, there's no way to _add_ resistance; recall that in a parallel resistance circuit, each resistor allows more power through the circuit, which is why we add their conductances up to calculate total resistance. So the total resistance in a parallel resistor circuit will always be less than the smallest resistor.
 
-Solve for bottom half of the voltage divider:
+#### Increasing the Power
+
+To solve this, we need to lower the resistance of the top half of the voltage divider (R1), to let more power through, so that the bottom half of the voltage divider can still block enough percentage of the power to satisfy our `3.3/5` division ratio.
+
+[let's increase the power by 10x and redo our step 2 and 3 calculations:]
+
+[R1 was 11kΩ]
+
+
+```
+Given:
+NewR1 = OldR1 / 10
+
+NewR1 = 11kΩ / 10 = 1.1kΩ ~= 1kΩ   //the closest common resistor
+```
+
+Redo step 2 to calculate the bottom half of the divider:
+
+```
+Given:
 R2 = (R1 * Vout) / (Vs - Vout)
 
+Therefore:
 R2 = (1,000 * 3.3V) / (5V - 3.3V) = 3,300 / 1.7 = 1,941Ω
+```
 
+Redo Step 3:
+
+```
+Given:
 R2 = BottomR - ADC
 Total Bottom Resistance = 1,941Ω
 Total Bottom G = 1 / 1,941Ω = 0.00052S
-
 ADC G = 1/11,000 = 0.000091
 
+Therefore:
 R2 = Total G - ADC G = 0.00052S - 0.000091S = 0.000424S = 2,357Ω
-
-R2 ~= 2.2kΩ
 ```
 
-That seems to work.
+`2.4kΩ` isn't a common resistor value, but `2.2kΩ` is, so we need to know if rounding the resistor down to `2.2kΩ` will still keep our maximum `Vout` at or below `3.3V`. To do that, first we need to calculate the bottom half resistance using the `2.2k` resistor:
+
+```
+Given:
+G of R2 = 1 / 2,200 = 0.000455S
+G of ADC = 0.000091
+
+Therefore:
+Bottom Half R = 0.000091 + 0.000455 = 0.000546S = 1,833Ω
+```
+
+Then using `1,833Ω` as the bottom half of the divider, we can calculate `Vout`:
+
+```
+Given:
+Vout = Vs * (R2 / (R1 + R2))
+
+Therefore:
+Vout = 5V * (1,833 / (1,000 + 1,833))
+Vout = 5V * (0.647) = 3.23V
+```
+
+Success! This means that if the sensor outputs its maximum possible voltage of `5V`, then the voltage divider should reduce it to `3.23V`. Therefore, our range will be `0V` to `3.23V`, a _very_ good range to get accurate values.
+
+### The Magic Resistor Values
+
+Now that we've gone through that calculation, we never have to do it for prototype circuits again. Anytime we need to divide `5V` to `3.3V`, we can just use the following resistor values:
+
+* **R1**: 1kΩ
+* **R2**: 2.2kΩ
+
+Now that we've got all that out of the way, let's actually build and test the circuit.
+
+## Exercise 1 - Soldering the Sensor
 
 
+
+
+## Exercise 2 - Building the Circuit
 
 ## 5V Sensor Lab
+
+
 
 ![](../Level_Shifting_Lab_schem.svg)
 
@@ -210,7 +267,7 @@ That seems to work.
 
 
 
-### Online Voltage Divider Calcuator
+### Online Voltage Divider Calculator
 
 There is a fantastic voltage divider calculator online [here](http://www.ohmslawcalculator.com/voltage-divider-calculator)
 
