@@ -264,40 +264,49 @@ Soldering is similar to welding; it's the process of melting and depositing meta
 
 ### Step 1: Clean and Tin your Soldering Iron
 
-[add water to your sponge]
+If your soldering iron is brand new, you may be able to skip this step if it comes pre-tinned. If you don't know if it's pre-tinned, then I recommend tinning it anyway, it won't hurt it.
 
-[turn your soldering iron to around 750º]
+To clean and tin your iron do follow these steps:
 
-[dip in tip tinner and cleaner]
+ 1. Add water to your sponge.
+ 2. Turn your soldering iron to around 400ºC/750ºF (if it has a temperature adjustment), and wait for it to heat up.
+ 3. Lightly drag your tip across the tip tinner/cleaner:
+  
+    ![](Tip_Tinning.jpg)
+ 
+ 4. Brush off the excess tin onto the wet sponge.
+  
+    ![](Cleaning_on_Sponge.jpg)
+    
+When it's done, you should have a nice shiny coat of tin on the tip:
 
-[image]
+![](Clean_Tinned_Tip.jpg)
 
-[brush soldering iron in wet sponge]
+### Step 2: Prepare Solder Joint Connection
 
-### Step 2: Prepare Solder Joint Connections
+Next, prepare your solder joint connection by stripping off a bit of the plastic insulation from your jumper wire (if it's not already stripped), place it through the hole, and bend the wire over:
 
-[put wire through and bend over]
+![](Sensor_Ready_for_Soldering.jpg)
 
-[image]
+If you have a "Helping Hands," clip it in place to hold it while you solder.
 
-[put in helping hands or other]
-
-[image]
+You can use whatever color of wire you want for the sensor output pad (`S`), but it's generally a good idea to use black or blue for the negative (`-`), and red for the positive (`+`) pad.
 
 ### Step 3: Solder the Joints
 
-[put tip of hot soldering iron on metal, count to 5]
+To solder the joint, place the hot (~400ºC/750ºF) iron tip on the metal pad to heat it up and count to 5 or so. Then, touch some solder to the tip to get it flowing, and move the solder around a bit until it flows into and fills the hole:
 
-[touch solder to tip to start flowing, then move solder around and let it fill the hole]
+![](Sensor_Solder_Sequence.jpg)
+
+Repeat step 2 and 3 for the other two joints.
 
 ### Step 4: Inspect Joints
 
-
-
+Finally, do a quick inspection of the solder joints; make sure the wires don't move in the joints, and the hole is completely filled. 
 
 ## Exercise 2 - Building and Testing the Circuit
 
-[Now that the sensor has wires soldered to it, we can build the actual level shifting circuit]
+Now that the sensor has wires soldered to it, we can use it to build the actual level shifting circuit.
 
 ### Breadboard Overlay
 
