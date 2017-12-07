@@ -34,7 +34,17 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 #### LilyPad 5V Luminosity Sensor
 
-For this lab, we're going to use a sensor from the LilyPad project that operates on a 5V voltage domain. LilyPad is a wearables project that's designed to be able to sewn into garments and textiles. This design is represented in its form factor:
+For this lab, we're going to use a [light sensor from the LilyPad project](https://www.sparkfun.com/products/8464) that operates on a 5V voltage domain. According to the [SparkFun](https://www.sparkfun.com/products/8464) page, the sensor should have the following output (I've also added the calculated output after level shifting to a 3.3V voltage domain):
+
+| Luminance      | 5V Voltage Output      | Level Shifted to 3.3V (output multiplied by 3.3 / 5) |
+|----------------|------------------------|------------------------------------------------------|
+| Bright Light   | > `2V` (up to `5V`)    | > `1.32V` (`2V * .66`)                               |
+| Room Light     | `1V - 2V`              | `.66V - 1.32V`                                       |
+| Darkness       | < `1V`                 | < `.66V`                                             |
+
+
+
+LilyPad is a wearables project that's designed to be able to sewn into garments and textiles. This design is represented in its form factor:
 
 ![Image of LilyPad Light Sensor](../LilyPad_Light_Sensor.jpg)
 
@@ -241,7 +251,7 @@ Success! This means that if the sensor outputs its maximum possible voltage of `
 
 ### The Magic Resistor Values
 
-Now that we've gone through that calculation, we never have to do it for prototype circuits again. Anytime we need to divide `5V` to `3.3V`, we can just use the following resistor values:
+Now that we've gone through that calculation, we never have to do it for prototype circuits again. Nearly anytime we need to divide `5V` to `3.3V` to level shift an analog sensor, we can just use the following resistor values:
 
 * **R1**: 1kΩ
 * **R2**: 2.2kΩ
@@ -250,21 +260,173 @@ Now that we've got all that out of the way, let's actually build and test the ci
 
 ## Exercise 1 - Soldering the Sensor
 
+Soldering is similar to welding; it's the process of melting and depositing metal onto to make an electrical connection, known as a solder joint. Soldering is an invaluable skill when building circuits because it's a common task. 
+
+### Step 1: Clean and Tin your Soldering Iron
+
+[add water to your sponge]
+
+[turn your soldering iron to around 750º]
+
+[dip in tip tinner and cleaner]
+
+[image]
+
+[brush soldering iron in wet sponge]
+
+### Step 2: Prepare Solder Joint Connections
+
+[put wire through and bend over]
+
+[image]
+
+[put in helping hands or other]
+
+[image]
+
+### Step 3: Solder the Joints
+
+[put tip of hot soldering iron on metal, count to 5]
+
+[touch solder to tip to start flowing, then move solder around and let it fill the hole]
+
+### Step 4: Inspect Joints
 
 
 
-## Exercise 2 - Building the Circuit
 
-## 5V Sensor Lab
+## Exercise 2 - Building and Testing the Circuit
 
+[Now that the sensor has wires soldered to it, we can build the actual level shifting circuit]
 
+### Breadboard Overlay
+
+[Breadboard overlay can be downloaded here]
+
+### Schematic
+
+Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of all the components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In the case of the LilyPad sensor, it has three leads, 5V in is labeled `+`, ground/common is labeled `-`, and the analog sensor output signal comes from the `S` pin. 
+
+Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the following schematic of our LilyPad Level Shifting Lab, to the breadboard layout schematic below it:
 
 ![](../Level_Shifting_Lab_schem.svg)
 
+The breadboard view, which I've created in [Fritzing](http://fritzing.org), is built from the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a fair bit more complex than the schematic:
+
 ![](../Level_Shifting_Lab_bb.svg)
 
+### Step 1: Assemble the Circuit
+
+[if you have a wilderness hack kit, it'll be easier to hold the breadboard and netduino together]
 
 
+
+### Step 2: Deploy the App and Test the Circuit
+
+The level shifting lab app can be found [here, in the Netduino_Samples repo](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/LilyPad_5V_Sensor_Level_Shifting). Download it, and deploy it to your Netduino. The `main.cs` code is pasted below for reference. Note that it's almost identical to the Photoresistor_Lab app from the last lab. The only thing that's changed is the light/dark threshold values and the conditional has been reversed because the LilyPad sensor supplies more voltage the brighter it is, as opposed to the photoresistor circuit, which supplied less voltage the brighter it got:
+
+```csharp
+using System;
+using System.Threading;
+using Microsoft.SPOT;
+using SecretLabs.NETMF.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace LilyPad_Lab
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            var photoresistor = new AnalogInput(Pins.GPIO_PIN_A3);
+            int ambientLight = 0;
+            int averageAmbientLight = 0;
+            float sensorVoltage = 0;
+
+            float lightThresholdVoltage = 1.32f;
+            float darkThresholdVoltage = .3f;
+
+            // setup an array to hold our samples
+            int numberOfSamplesToAverage = 3;
+            int[] previousSamples = new int[numberOfSamplesToAverage];
+            for (int i = 0; i < numberOfSamplesToAverage; i++) {
+                previousSamples[i] = 0;
+            }
+
+            while (true)
+            {
+                // read the analog input
+                ambientLight = photoresistor.Read();
+
+                // average (oversample) the last two readings
+                averageAmbientLight = AverageAndStore(ref previousSamples, ambientLight);
+
+                // convert the digital value back to voltage
+                // sensorVoltage = AnalogValueToVoltage(ambientLight);
+                sensorVoltage = AnalogValueToVoltage(averageAmbientLight);
+
+                // output
+                Debug.Print("Light Level = Raw: " + ambientLight.ToString() + 
+                            ", Average: " + averageAmbientLight.ToString() + 
+                            ", Voltage: " + AnalogValueToVoltage(averageAmbientLight).ToString());
+
+                if (sensorVoltage > lightThresholdVoltage) {
+                    Debug.Print("Very bright.");
+                } else if (sensorVoltage < darkThresholdVoltage ) {
+                    Debug.Print("Dark.");
+                } else {
+                    Debug.Print("Moderately Bright.");
+                }
+
+                // wait 1/4 second
+                Thread.Sleep(250);
+            }
+        }
+
+        /// <summary>
+        /// Converts an analog input value voltage.
+        /// </summary>
+        public static float AnalogValueToVoltage (int analogValue)
+        {
+            return ((float)analogValue / 1023f) * 3.3f;
+        }
+
+        /// <summary>
+        /// Averages the new value in with an existing sample set of any size. Adds the new value
+        /// to the sample set and returns the average.
+        /// </summary>
+        /// <returns>The and store.</returns>
+        /// <param name="sampleSet">existing sample set.</param>
+        /// <param name="newValue">New value.</param>
+        public static int AverageAndStore(ref int[] sampleSet, int newValue)
+        {
+            int sum = 0;
+            int average = 0;
+
+            // sum up all the values
+            for (int i = 0; i < sampleSet.Length; i++) {
+                sum += sampleSet[i];
+            }
+            sum += newValue;
+
+            // calculate the average
+            average = sum / (sampleSet.Length + 1);
+
+            // swap the values a slot
+            for (int i = 0; i < sampleSet.Length - 1; i++) {
+                sampleSet[i] = sampleSet[(i + 1)];
+            }
+            sampleSet[sampleSet.Length - 1] = newValue;
+
+            return average;
+        }
+    }
+}
+```
+
+#### Validating Output
+
+The **Application Output** window should display
 
 
 ### Online Voltage Divider Calculator
