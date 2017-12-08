@@ -95,34 +95,34 @@ The easiest way to select an `R1` resistor is to choose a value that splits the 
 
 ```
 Given:
-ADC Conductance = 1 / 11kΩ = (0.0001S)
+ADC Conductance = 1 / 11kΩ = 0.000091S ~= 0.0001S
 Photoresistor low R/bright threshold < 1kΩ
 Photoresistor high R/dark threshold > 75kΩ
 
 Therefore:
-Photoresistor low G = 1 / 1,000Ω = 0.0001S
+Photoresistor low G = 1 / 1,000Ω = 0.001S
 Photoresistor high G = 1 / 75,000Ω = 0.000013S
 
 Total voltage divider bottom half (ADC + Photoresistor) resistance:
-Low (bright) = 0.0001S + 0.0001S = 0.0002S = 5,000Ω = 5kΩ
-High (dark) = 0.0001S + 0.000013S = 0.000113S = 8,824Ω ~= 8.8kΩ
+Low (bright) = 0.000091S + 0.001S = 0.001091S = 916Ω ~= 0.9kΩ
+High (dark) = 0.00091S + 0.000013S = 0.00010391S = 9,624Ω ~= 9.6kΩ
 ```
 
 Since these are approximations, I've rounded them a little to make the calculations simpler.
 
 #### Choosing an `R1` that Splits the Difference
 
-Therefore, I would need an R1 that has a value halfway between `8.8kΩ` and `5kΩ`.  You migh be able to guess at a midpoint in your head that's close enough, but we can also use a formula that calculates the difference between the two resistors, divides it in half, and then subtracts that from the bigger resistor:
+Therefore, I would need an R1 that has a value halfway between `9.6kΩ` and `0.9kΩ`.  You might be able to guess at a midpoint in your head that's close enough, but we can also use a formula that calculates the difference between the two resistors, divides it in half, and then subtracts that from the bigger resistor:
 
 ```
 Given:
 Halfway = R2High - ((R2High - R2Low) / 2)
 
 Therefore
-Halfway = 8.8kΩ - ((8.8kΩ - 5kΩ) / 2) = 6.9kΩ 
+Halfway = 9.6kΩ - ((9.6kΩ - 0.9kΩ) / 2) = 5.3kΩ
 ```
 
-`6.9kΩ` isn't a very common resistor value, but `4.7kΩ` is the closest common resistor, so I'll start with that and calculate my expected `Vout` based on that in order to validate that resistor choice.
+`5.3kΩ` isn't a very common resistor value, but `4.7kΩ` is the closest common resistor, so I'll start with that and calculate my expected `Vout` based on that in order to validate that resistor choice.
 
 In practice, there's no real need to do this next step; you can simply grab a resistor that is somewhere near the halfway point, put the voltage divider together and then test the resulting output under various conditions to find the threshold values that you're happy with. However, for the purposes of understanding, I think it's important to go through these steps.
 
@@ -133,68 +133,26 @@ Using the voltage divider equation from before (`Vout = Vs * (R2 / (R1 + R2))`),
 ```
 Example calculation:
 Vout = Vs * ((R2 & ADC) / (R1 + R2 & ADC)) )
-Bright Threshold = 3.3V * (5kΩ / (4.7kΩ + 5kΩ)) = 1.7V
+Bright Threshold = 3.3V * (0.9kΩ / (4.7kΩ + 0.9kΩ)) = 0.53V
 ```
+
 <!--
-Dark Threshold = 3.3V * (8.8kΩ / (4.7kΩ + 8.8kΩ)) = 2.15V
+Dark Threshold = 3.3V * (9.6kΩ / (4.7kΩ + 9.6kΩ)) = 2.2V
 -->
 
 Using that formula, I created the following table of values:
 
 | Light Level Threshold | R1 Value  | Sensor Resistance (R2) | R2 & ADC Resistance | Total R | Vin   | Vout  |
 |-----------------------|-----------|------------------------|---------------------|---------|-------|-------|
-| Bright                | 4.7kΩ     | < 1kΩ                  | 5kΩ                 | 9.7kΩ   | 3.3V  | 1.7V  |
-| Dark                  | 4.7kΩ     | > 75kΩ                 | 8.8kΩ               | 13.5kΩ  | 3.3V  | 2.15V |
+| Bright                | 4.7kΩ     | < 1kΩ                  | 0.9kΩ               | 5.6kΩ   | 3.3V  | 0.53V |
+| Dark                  | 4.7kΩ     | > 75kΩ                 | 9.6kΩ               | 14.3kΩ  | 3.3V  | 2.2V  |
 
-
-
-## Note for EE Reviewers
-
-This is what's weird, when I actually run this, these are the values that I get. And I can't think of anything really to explain it. It gives me a really good spread, which is nice, but it doesn't conform to what I calculated, based on the resistance measurements I took on the photoresistor given those conditions.
-
-Actuals with 4.7k resistor:
-
-```
-Bright < 0.85V
-Moderate Light 2.5V
-Dark > 3V
-```
-
-I even calculated using a 6K ADC resistance, in case the 11k that we calculated was wrong, and it's not materially different.
-
-#### Alternate 6k ADC Calculation
-
-```
-Given:
-ADC Conductance = 1 / 6kΩ = (0.00016S)
-Photoresistor low R/bright threshold < 1kΩ
-Photoresistor high R/dark threshold > 75kΩ
-
-Therefore:
-Photoresistor low G = 1 / 1,000Ω = 0.0001S
-Photoresistor high G = 1 / 75,000Ω = 0.000013S
-
-Total voltage divider bottom half (ADC + Photoresistor) resistance:
-Low (bright) = 0.00016S + 0.0001S = 0.00026S = 3,846Ω = 3.8kΩ
-High (dark) = 0.00016S + 0.000013S = 0.00018S = 5,566Ω = 5.6kΩ
-
-Bright Threshold = 3.3V * (3.8kΩ / (4.7kΩ + 3.8kΩ)) = 1.5V
-Dark Threshold = 3.3V * (5.6kΩ / (4.7kΩ + 5.6kΩ)) = 1.8V
-```
-
-What did I do wrong here?
-
----
-
-## Continued
-
-**[NOTE: update this diagram when values are locked]**
 
 The circuit therefore would look something like this:
 
 ![](../Photoresistor_Circuit.svg)
 
-My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `1.7V` and `2.2V`, which provides a decent resolution for reading the value.
+My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.53V` and `2.2V`, which provides a good resolution for reading the value.
 
 #### Lab Process & Questions:
 
@@ -221,10 +179,10 @@ Digital Value = (Vout / 3.3V) * 1,023
 
 Therefore:
 Bright value = (0.5V / 3.3V) * 1,023 = 155
-Dark value = (2.3V / 3.3V) * 1,023 = 713
+Dark value = (2.2V / 3.3V) * 1,023 = 682
 ```
 
-Therefore, if my photoresistor were in bright light, the voltage divider should output around `0.5V`, which would read somewhere around `155`. We can then convert that back to voltage by reversing the process and multiplying the ratio of value over max steps (`1,023`) and multiplying by `3.3V`:
+Therefore, if my photoresistor were in bright light, the voltage divider should output around `0.53V`, which would read somewhere around `155`. We can then convert that back to voltage by reversing the process and multiplying the ratio of value over max steps (`1,023`) and multiplying by `3.3V`:
 
 ```
 Vout = (Digital Value / 1,023) * 3.3V
@@ -309,9 +267,161 @@ namespace Photoresistor_Lab
 }
 ```
 
-**[Note to self: add a section here that shows the output, and then introduce the oversampling/averaging code]**
-
 In a later part of this tutorial, we'll examine reading analog signals and digital communication in a more depth.
+
+
+#### Oversampling/Averaging Results
+
+When I run this application, I mostly get the results that I expect, but the output has quite a bit of variance within any given light condition. This has to do with the way the ADC does the actual sampling. In a later part of the tutorial, we're going to examine some circuit modifications to deal with this to smooth out the readings, but we can actually clean some of this up using code, as well. 
+
+The technique that we'll use is called _oversampling_, which just means that for every reading we take, we'll average it with the last few readings to smooth out the value. The following method is a general function that examines an existing sample set and calculates a new average, given a new sample value. Note that the `sampleSet` parameter is passed by reference, so that it can update the sample set with the new value to keep the sample set current:
+
+```csharp
+public static int AverageAndStore(ref int[] sampleSet, int newValue)
+{
+    int sum = 0;
+    int average = 0;
+
+    // sum up all the values
+    for (int i = 0; i < sampleSet.Length; i++) {
+        sum += sampleSet[i];
+    }
+    sum += newValue;
+
+    // calculate the average
+    average = sum / (sampleSet.Length + 1);
+
+    // swap the values a slot
+    for (int i = 0; i < sampleSet.Length - 1; i++) {
+        sampleSet[i] = sampleSet[(i + 1)];
+    }
+    sampleSet[sampleSet.Length - 1] = newValue;
+
+    return average;
+}
+```
+
+Adding this to our code then, we now have a program that looks something like the following (the full sample can be found in [Photoresistor\_Lab\_Oversampled folder](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/Photoresistor_Lab_Oversampled)):
+
+```csharp
+using System;
+using System.Threading;
+using Microsoft.SPOT;
+using SecretLabs.NETMF.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
+
+namespace Photoresistor_Lab
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            var photoresistor = new AnalogInput(Pins.GPIO_PIN_A3);
+            int ambientLight = 0;
+            int averageAmbientLight = 0;
+            float sensorVoltage = 0;
+
+            float lightThresholdVoltage = 0.85f;
+            float darkThresholdVoltage = 2.1f;
+
+            // setup an array to hold our samples
+            int numberOfSamplesToAverage = 3;
+            int[] previousSamples = new int[numberOfSamplesToAverage];
+            for (int i = 0; i < numberOfSamplesToAverage; i++) {
+                previousSamples[i] = 0;
+            }
+
+            while (true)
+            {
+                // read the analog input
+                ambientLight = photoresistor.Read();
+
+                // average (oversample) the last two readings
+                averageAmbientLight = AverageAndStore(ref previousSamples, ambientLight);
+
+                // convert the digital value back to voltage
+                // sensorVoltage = AnalogValueToVoltage(ambientLight);
+                sensorVoltage = AnalogValueToVoltage(averageAmbientLight);
+
+                // output
+                Debug.Print("Light Level = Raw: " + ambientLight.ToString() + 
+                            ", Average: " + averageAmbientLight.ToString() + 
+                            ", Voltage: " + AnalogValueToVoltage(averageAmbientLight).ToString());
+
+                if (sensorVoltage < lightThresholdVoltage) {
+                    Debug.Print("Very bright.");
+                } else if (sensorVoltage > darkThresholdVoltage ) {
+                    Debug.Print("Dark.");
+                } else {
+                    Debug.Print("Moderately Bright.");
+                }
+
+                // wait 1/4 second
+                Thread.Sleep(250);
+            }
+        }
+
+        /// <summary>
+        /// Converts an analog input value voltage.
+        /// </summary>
+        public static float AnalogValueToVoltage (int analogValue)
+        {
+            return ((float)analogValue / 1023f) * 3.3f;
+        }
+
+        /// <summary>
+        /// Averages the new value in with an existing sample set of any size. Adds the new value
+        /// to the sample set and returns the average.
+        /// </summary>
+        /// <returns>The and store.</returns>
+        /// <param name="sampleSet">existing sample set.</param>
+        /// <param name="newValue">New value.</param>
+        public static int AverageAndStore(ref int[] sampleSet, int newValue)
+        {
+            int sum = 0;
+            int average = 0;
+
+            // sum up all the values
+            for (int i = 0; i < sampleSet.Length; i++) {
+                sum += sampleSet[i];
+            }
+            sum += newValue;
+
+            // calculate the average
+            average = sum / (sampleSet.Length + 1);
+
+            // swap the values a slot
+            for (int i = 0; i < sampleSet.Length - 1; i++) {
+                sampleSet[i] = sampleSet[(i + 1)];
+            }
+            sampleSet[sampleSet.Length - 1] = newValue;
+
+            return average;
+        }
+    }
+}
+```
+
+When I run this, the output becomes much cleaner. Testing under varying conditions I get approximately the following values:
+
+```
+Bright < 0.5V
+Moderate 1.0V
+Dark > 2.9V
+```
+
+<!-- N2 has an ADC with a slightly different resistance
+```
+N2:
+Bright < 0.85V
+Moderate Light 2.5V
+Dark > 3V
+```
+-->
+
+These values are fairly close to what I expect. The dark reading is a little off, but that could very well be explained by my initial resistance measurements. In any case, this is a great range of values, and provides an excellent way to measure light with only a few dollars worth of components!
+
+Run the new code with your sensor. What are your output values under varying conditions?
 
 
 ## [Next - Lab: Level Shifting with a Voltage Divider](../Level_Shifting_Lab)

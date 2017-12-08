@@ -40,8 +40,8 @@
                     </text>
                 </g>
                 <g id="Vout" transform="translate(120.000000, 143.000000)" font-size="18" font-family="Lato-Regular, Lato" letter-spacing="0.695049465" fill="#524740" font-weight="normal">
-                    <text id="0.5V---1.9V">
-                        <tspan x="16.4326785" y="18">0.5V  -  1.9V</tspan>
+                    <text id="0.53V---2.2V">
+                        <tspan x="10.8651537" y="18">0.53V  -  2.2V</tspan>
                     </text>
                 </g>
                 <g id="Ground" transform="translate(343.500000, 89.500000) rotate(-180.000000) translate(-343.500000, -89.500000) translate(324.500000, 73.000000)" stroke="#524740" stroke-width="2">
