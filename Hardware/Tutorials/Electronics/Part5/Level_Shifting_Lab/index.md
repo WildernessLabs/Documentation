@@ -12,15 +12,15 @@ Additionally, because a voltage divider _lowers_ the signal amplitude, a differe
 
 To do this lab, you'll need the following new items:
 
-| Item                                   | Approximate Cost (USD) |
-|----------------------------------------|------------------------|
-| [LilyPad 5V Luminosity Sensor](https://www.sparkfun.com/products/8464)  | $4    |
-| 22ga Single Strand Wire                | [set]                  |
-| Soldering iron                         |
-| Lead-Free Solder                       |
-| Tip Tinner and Cleaner                 |
-| Helping Hands (optional)               |
-| 20ga Single Strand Wire (optional)     | $20
+| Item                                             | Approximate Cost (USD) |
+|--------------------------------------------------|------------------------|
+| LilyPad 5V Luminosity Sensor                     | $4                     |
+| Soldering iron                                   | $20 - $100             |
+| Lead-Free Solder                                 | $10                    |
+| Tip Tinner and Cleaner                           | $8                     |
+| Helping Hands (optional, but highly recommended) | $6                     |
+| 22ga Single Strand Wire (optional)               | $20                    |
+| Baseboard (optional, but highly recommended)     | 3D Printable or $20    |
 
 Though this lab uses the LilyPad Luminosity sensor, nearly any 5V sensor will do.
 
@@ -188,12 +188,7 @@ But wait, that's weird, how can it be a negative amount of resistance? If we loo
 
 #### Increasing the Power
 
-To solve this, we need to lower the resistance of the top half of the voltage divider (R1), to let more power through, so that the bottom half of the voltage divider can still block enough percentage of the power to satisfy our `3.3/5` division ratio.
-
-[let's increase the power by 10x and redo our step 2 and 3 calculations:]
-
-[R1 was 11kΩ]
-
+To solve this, we need to lower the resistance of the top half of the voltage divider (R1), to let more power through, so that the bottom half of the voltage divider can still block enough percentage of the power to satisfy our `3.3/5` division ratio. Let's increase the power by 10x, which will provide better accuracy anyway, and redo the the calculations:
 
 ```
 Given:
@@ -310,24 +305,30 @@ Now that the sensor has wires soldered to it, we can use it to build the actual 
 
 ### Breadboard Overlay
 
-[Breadboard overlay can be downloaded here]
+The breadboard overlay for this lab can be found [here](../Level_Shifting_Lab_BB_Overlay.pdf).
 
 ### Schematic
 
-Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of all the components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In the case of the LilyPad sensor, it has three leads, 5V in is labeled `+`, ground/common is labeled `-`, and the analog sensor output signal comes from the `S` pin. 
-
-Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the following schematic of our LilyPad Level Shifting Lab, to the breadboard layout schematic below it:
+Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of all the components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In the case of the LilyPad sensor, it has three leads, 5V in is labeled `+`, ground/common is labeled `-`, and the analog sensor output signal comes from the `S` pin:
 
 ![](../Level_Shifting_Lab_schem.svg)
 
-The breadboard view, which I've created in [Fritzing](http://fritzing.org), is built from the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a fair bit more complex than the schematic:
+Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the schematic of our LilyPad Level Shifting Lab above, to the breadboard layout schematic below:
 
 ![](../Level_Shifting_Lab_bb.svg)
 
+The breadboard view above, which I've created in [Fritzing](http://fritzing.org), is electrically equivalent to the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a fair bit more complex than the schematic:
+
 ### Step 1: Assemble the Circuit
 
-[if you have a wilderness hack kit, it'll be easier to hold the breadboard and netduino together]
+A baseboard to mount the Netduino and the breadboard on is really helpful to hold the whole assembly together, though it's not required:
 
+![](../Level_Shifting_Lab_Exercise_2.svg)
+
+
+Our [Wilderness Labs Hack kit](http://amzn.to/2y8LzPg) includes a laser etched wooden baseboard, but if you have access to a 3D printer, you can also print one from our [3D designs repo](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Baseboards).
+
+Assemble the circuit similar to what's shown in the breadboard overlay illustration above; making sure that you supply the sensor with `5V` power, and both ground rails are connected to `GND` on the Netduino.
 
 
 ### Step 2: Deploy the App and Test the Circuit
@@ -432,6 +433,35 @@ namespace LilyPad_Lab
     }
 }
 ```
+
+## Note to EE Reviewer
+
+Ok, I tested and ran this with the `1kΩ` & `2.2kΩ` resistors, and got the following output:
+
+```
+Direct Sensor Multimeter Measured Output:
+Bright Light: 4V
+Room light: 330mV = 0.33V
+Dark: 1.8mv = 0.0018V
+
+Divided Direct Measure with Multimeter (impedance is different from ADC):
+Bright Light: 0.65V
+Room light: 62.7mV = 0.0627V
+Dark: 1.1mV = 0.0011V
+
+Expected ADC Output based on measured sensor output * .66:
+Bright: 2.64V
+Room: 0.218V
+Dark: 0.0012V
+
+Netduino ADC Reading:
+Bright Light: 1.1V
+Room Light: 0.061V
+Dark: 0 - 0.003V
+```
+
+What the heck is happening here? I recognize that the stated outputs for the sensor are way off, but why are my ADC readings so different than the `measured sensor output * .66`?
+
 
 #### Validating Output
 
