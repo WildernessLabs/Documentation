@@ -50,7 +50,7 @@ Given:
 I = V / R
 
 Therefore:
-I = 5V / 20Ω = .25A = 250mA      // smaller resistors, more current
+I = 5V / 20Ω = 0.25A = 250mA      // smaller resistors, more current
 I = 5V / 200Ω = 0.025A = 25mA    // larger resistors, less current
 ```
 

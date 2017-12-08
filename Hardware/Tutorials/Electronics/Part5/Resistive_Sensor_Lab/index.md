@@ -38,7 +38,7 @@ There are several major component supply websites that serve the majority of the
 
 #### Datasheets
 
-Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use. Datasheets are usually easy to find, simply searching on Google for the part number + "datasheet" will often turn up a PDF datasheet.
+Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use. Datasheets are usually easy to find; simply searching on Google for the part number + "datasheet" will often turn up a PDF datasheet.
 
 In the case of my photoresistor, I found it in a pile of components, so I'm not sure if it conforms to the values in the above datasheet, since I'm not sure it's the same component. That's not a problem, however, with a simple resistive sensor like this because I can just measure the resistance with a multimeter under varying conditions to determine its characteristics. 
 
@@ -108,7 +108,7 @@ Low (bright) = 0.000091S + 0.001S = 0.001091S = 916Ω ~= 0.9kΩ
 High (dark) = 0.00091S + 0.000013S = 0.00010391S = 9,624Ω ~= 9.6kΩ
 ```
 
-Since these are approximations, I've rounded them a little to make calculations simpler.
+Since these are approximations, I've rounded them a little to make the calculations simpler.
 
 #### Choosing an `R1` that Splits the Difference
 
@@ -122,8 +122,7 @@ Therefore
 Halfway = 9.6kΩ - ((9.6kΩ - 0.9kΩ) / 2) = 5.3kΩ
 ```
 
-`5.3kΩ` isn't a very common resistor value, but `4.7kΩ` is the closest common resistor, so I'll start with that and 
-calculate my expected `Vout` based on that in order to validate that resistor choice.
+`5.3kΩ` isn't a very common resistor value, but `4.7kΩ` is the closest common resistor, so I'll start with that and calculate my expected `Vout` based on that in order to validate that resistor choice.
 
 In practice, there's no real need to do this next step; you can simply grab a resistor that is somewhere near the halfway point, put the voltage divider together and then test the resulting output under various conditions to find the threshold values that you're happy with. However, for the purposes of understanding, I think it's important to go through these steps.
 

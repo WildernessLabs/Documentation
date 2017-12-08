@@ -2,7 +2,7 @@
 title: Voltage Dividers Uses and Practical Considerations
 ---
 
-Voltage dividers are useful circuits that have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; reading resistive sensors, and analog level shifting.
+Voltage divider circuits have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; reading resistive sensors, and analog level shifting.
 
 
 ### Reading Resistive Sensors
@@ -25,7 +25,7 @@ In practice, very few sensors are 5V anymore (lower voltage is faster and can be
 
 ### Potentiometers
 
-In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable voltage. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer.
+In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable resistance. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer.
 
 [image]
 
@@ -66,10 +66,10 @@ And:
 R2 now = R2 + RLoad
 
 Therefore:
-Vout = 5V * (2.4Ω / 10.4Ω)) = 0.23V
+Vout = 5V * (2.4Ω / 10.4Ω)) = 1.15V
 ```
 
-As illustrated above, a `3Ω` resistance in the load made a big difference; In this case, the load would only see `0.23V`! And because the total resistance has changed, the amount of power would have also changed.
+As illustrated above, a `3Ω` resistance in the load made a big difference; In this case, the load would only see `1.15V`! And because the total resistance has changed, the amount of power would have also changed.
 
 
 ### Netduino Analog to Digital Converter (ADC) Load
