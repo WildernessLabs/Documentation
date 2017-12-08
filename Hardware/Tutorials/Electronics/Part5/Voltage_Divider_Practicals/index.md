@@ -27,9 +27,9 @@ In practice, very few sensors are 5V anymore (lower voltage is faster and can be
 
 In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable resistance. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer.
 
-[image]
+![](../Potentiometers.jpg)
 
-[explain]
+**[explain]**
 
 ## Practical Considerations
 
