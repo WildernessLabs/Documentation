@@ -25,11 +25,11 @@ In practice, very few sensors are 5V anymore (lower voltage is faster and can be
 
 ### Potentiometers
 
-In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable resistance. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer.
+In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable voltage output based on the adjustable resistance of the internal variable resistor. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer. The following image shows a traditional potentiometer on the left and a trimmer potentiometer (trimpot) on the right:
 
 ![](../Potentiometers.jpg)
 
-**[explain]**
+Potentiometers often have a decorative knob (for instance, a volume knob) attached to them after they're installed in their finished products. Trimpots are usually used internally in products to provide very precise adjustments, often to balance circuits. They're not meant for daily use, and often their lifespan is no more than 200 cycles/turns.
 
 ## Practical Considerations
 
