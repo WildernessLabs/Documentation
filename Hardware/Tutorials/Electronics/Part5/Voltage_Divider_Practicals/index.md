@@ -93,7 +93,7 @@ The ADC is a complex and clever circuit and getting very accurate reads from it 
 
 When using a voltage divider with Netduino's analog input, we have to consider that the ADC has some resistance and requires a certain amount of current to work.
 
-For prototyping purposes, we can assume that the ADC will provide about `11kΩ` in resistance (actually _impedance_, which we'll learn about later). Using Ohm's law, we can then calculate that it will require up to `0.3mA` of current:
+For prototyping purposes, we can assume that the [ADC will provide about `11kΩ` in resistance](https://community.st.com/message/174252-stm32f4-adc-impedance-calculation) (actually _impedance_, which we'll learn about later). Using Ohm's law, we can then calculate that it will require up to `0.3mA` of current:
 
 ```
 Given:
