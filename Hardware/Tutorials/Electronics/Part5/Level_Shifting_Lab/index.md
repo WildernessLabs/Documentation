@@ -12,15 +12,15 @@ Additionally, because a voltage divider _lowers_ the signal amplitude, a differe
 
 To do this lab, you'll need the following new items:
 
-| Item                                             | Approximate Cost (USD) |
-|--------------------------------------------------|------------------------|
-| LilyPad 5V Luminosity Sensor                     | $4                     |
-| Soldering iron                                   | $20 - $100             |
-| Lead-Free Solder                                 | $10                    |
-| Tip Tinner and Cleaner                           | $8                     |
+| Item                                     | Approximate Cost (USD) |
+| ---------------------------------------- | ---------------------- |
+| LilyPad 5V Luminosity Sensor             | $4                     |
+| Soldering iron                           | $20 - $100             |
+| Lead-Free Solder                         | $10                    |
+| Tip Tinner and Cleaner                   | $8                     |
 | Helping Hands (optional, but highly recommended) | $6                     |
-| 22ga Single Strand Wire (optional)               | $20                    |
-| Baseboard (optional, but highly recommended)     | 3D Printable or $20    |
+| 22ga Single Strand Wire (optional)       | $20                    |
+| Baseboard (optional, but highly recommended) | 3D Printable or $20    |
 
 Though this lab uses the LilyPad Luminosity sensor, nearly any 5V sensor will do.
 
@@ -36,11 +36,11 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 For this lab, we're going to use a [light sensor from the LilyPad project](https://www.sparkfun.com/products/8464) that operates on a 5V voltage domain. According to the [SparkFun](https://www.sparkfun.com/products/8464) page, the sensor should have the following output (I've also added the calculated output after level shifting to a 3.3V voltage domain):
 
-| Luminance      | 5V Voltage Output      | Level Shifted to 3.3V (output multiplied by 3.3 / 5) |
-|----------------|------------------------|------------------------------------------------------|
-| Bright Light   | > `2V` (up to `5V`)    | > `1.32V` (`2V * .66`)                               |
-| Room Light     | `1V - 2V`              | `.66V - 1.32V`                                       |
-| Darkness       | < `1V`                 | < `.66V`                                             |
+| Luminance    | 5V Voltage Output   | Level Shifted to 3.3V (output multiplied by 3.3 / 5) |
+| ------------ | ------------------- | ---------------------------------------- |
+| Bright Light | > `2V` (up to `5V`) | > `1.32V` (`2V * .66`)                   |
+| Room Light   | `1V - 2V`           | `.66V - 1.32V`                           |
+| Darkness     | < `1V`              | < `.66V`                                 |
 
 
 
@@ -49,7 +49,7 @@ LilyPad is a wearables project that's designed to be able to sewn into garments 
 ![Image of LilyPad Light Sensor](../LilyPad_Light_Sensor.jpg)
 
 The connection points are rather large, however, and require some soldering to make them useful:
- 
+
 ![Photo of the finished LilyPad Sensor with wires soldered to it](../Soldered_LilyPad_Sensor.jpg)
 
 #### 22 Gauge Single Strand Wire
@@ -143,6 +143,28 @@ Vout = Vs * (R2 / (R1 + R2))
 Therefore:
 R2 = (R1 * Vout) / (Vs - Vout)
 ```
+
+<!--
+
+```
+Vo = Vs * R2 / (R1 + R2)
+
+multiply both sides by (R1 + R2)
+Vo (R1 + R2) = Vs * R2 
+
+expand the left side
+Vo * R1 + Vo * R2 = Vs * R2
+
+Subtract Vo*R2 from both sides
+Vo * R1 = Vs * R2 - Vo * R2
+
+factor out R2 from the right side
+Vo * R1 = R2 * (Vs - Vo)
+
+divide both sides by (Vs - Vo) 
+R1 * Vo / ( Vs - Vo) = R2
+```
+-->
 
 I used Wolfram Alpha to solve for R2, rather than having to do the algebra by hand. Check out [this link](http://www.wolframalpha.com/input/?i=solve+V+%3D+S+*+(B+%2F+(T+%2B+B))+for+B) to see how I formatted my Wolfram Alpha query so that it rearranged the equation. Note that I had to rename some of the variables because it interprets multi-letter variables as equations.
 
@@ -266,13 +288,13 @@ To clean and tin your iron do follow these steps:
  1. Add water to your sponge.
  2. Turn your soldering iron to around 400ºC/750ºF (if it has a temperature adjustment), and wait for it to heat up.
  3. Lightly drag your tip across the tip tinner/cleaner:
-  
+
     ![](Tip_Tinning.jpg)
- 
+
  4. Brush off the excess tin onto the wet sponge.
-  
+
     ![](Cleaning_on_Sponge.jpg)
-    
+
 When it's done, you should have a nice shiny coat of tin on the tip:
 
 ![](Clean_Tinned_Tip.jpg)
