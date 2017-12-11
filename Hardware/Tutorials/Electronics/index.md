@@ -1,6 +1,13 @@
 ---
 title: Fundamentals of Electronics Tutorial
 ---
+by Bryan Costanich.
+
+This is a practical, hands-on tutorial on electronic circuits that focuses on modern circuit development for connected things. It starts with fundamentals and builds a solid foundation for doing more complex circuits, with a focus on common circuit designs and microcontroller integrations. For most of the tutorial, only basic proficiency in algebra is necessary.
+
+### [Lab Requirements](Prologue/Requirements)
+
+The tutorial is full of practical, real world labs which build a number of different circuits and designs, which require a few tools and components to build. On the [Lab Requirements](Prologue/Requirements) page, you can find a list of items needed to complete the labs. Especially with the tools, there are a number of options to choose from, which will depend on how much you intend to use them, and your budget. Each lab builds on the tools and components in previous labs, so I've listed them in the order that you'll need them. Before purchasing of the tools and components on that page, make sure to read the labs in which the tools used, because I discuss various options as well as their costs.
 
 ### [Part 1 - Physics of Electricity](Part1/Atoms)
 
