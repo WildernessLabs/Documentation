@@ -18,7 +18,9 @@
 
 
 
+# [Events](/Events)
 
+Check out our [events page](/Events) for upcoming Wilderness Labs events!
 
 # Featured Netduino Guides
 
