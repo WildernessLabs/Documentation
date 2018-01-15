@@ -1,8 +1,22 @@
 <div class="banner_main">
-<h1>Getting Started</h1>
+<h1>Get Started</h1>
 <p>Get up and running with Netduino! Configure your development environment, update your firmware, and write your first app.</p>
 <a href="/Netduino/Getting_Started">Get Started</a>
 </div>
+
+<br/>
+
+<div class="banner_nfoundation">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Netduino.Foundation makes Netduino development easier by providing a massive peripheral driver library and a handcrafted API to use them.</p>
+<p>&nbsp;</p>
+<a href="http://Netduino.Foundation">Netduino.Foundation</a>
+</div>
+
+
 
 
 
