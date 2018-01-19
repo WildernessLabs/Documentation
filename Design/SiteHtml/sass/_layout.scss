@@ -1,0 +1,18 @@
+/* ========================================= 
+   Layout
+   ========================================= */
+
+.container {
+  margin: 0 auto;
+  width: 94%;
+  max-width: 1240px;
+  position: relative;
+
+  @include mq(desktop, 'max-width') {
+    width: 90%;
+  }
+  
+  @include mq(desktop-wide, 'max-width') {
+    width: 82%;
+  }
+}
