@@ -134,8 +134,14 @@ Looping3
  2. Double-click on the **Properties** item in the Solution Explorer, select **.NET Micro Framework** on the left, and the under **Deployment** choose **USB** and in the **Device** drop down, choose your Netduino device:
  ![Device Chooser](04-VS_Device_Choose.png)
 
- 3. Click the **Start >** button in the toolbar to deploy to yoru device.
+ 3. Click the **Start >** button in the toolbar to deploy to your device.
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
 ![](05-blinking_Netduino.gif)
+
+# [Next - Check out Netduino.Foundation](http://netduino.foundation)
+
+Netduino.Foundation makes creating Netduino applications easier by providing a huge library of hardware peripheral drivers and a handcrafted API to use them. You can find it at [Netduino.Foundation](http://netduino.foundation).
+
+<br/>

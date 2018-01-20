@@ -4,7 +4,7 @@
 <a href="/Netduino/Getting_Started">Get Started</a>
 </div>
 
-<br/>
+<br/><br/>
 
 <div class="banner_nfoundation">
 <p>&nbsp;</p>
@@ -18,7 +18,9 @@
 
 
 
+# [Events](/Events)
 
+Check out our [events page](/Events) for upcoming Wilderness Labs events!
 
 # Featured Netduino Guides
 
