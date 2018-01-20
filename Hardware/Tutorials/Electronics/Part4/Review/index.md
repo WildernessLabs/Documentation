@@ -3,7 +3,7 @@ title: Review
 ---
 
 
-We're going to dive deeper into resistors and resistor networks later, but 
+We're going to dive deeper into resistors and resistor networks later, but: 
 
  * _Resistors_ are electronic components made of materials that restrict the flow of electricity.
  * Resistance is measured in _ohms_, often denoted as `Ω`.
@@ -24,8 +24,4 @@ We're going to dive deeper into resistors and resistor networks later, but
  * Resistors come in a set of values that covers the range of possible values, adjusted for tolerance, with only small overlap.
  * _Breadboards_ reduce prototyping complexity by allowing you to create circuits without soldering.
 
-## Part 5 - Coming Soon!
-
-<!--
 ## [Part 5 - DC Circuit Analysis](../../Part5/DC_Circuits)
--->

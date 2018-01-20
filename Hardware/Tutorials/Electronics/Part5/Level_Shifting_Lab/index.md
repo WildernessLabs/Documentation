@@ -34,30 +34,36 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 #### LilyPad 5V Luminosity Sensor
 
-For this lab, we're going to use a [light sensor from the LilyPad project](https://www.sparkfun.com/products/8464) that operates on a 5V voltage domain. According to the [SparkFun](https://www.sparkfun.com/products/8464) page, the sensor should have the following output (I've also added the calculated output after level shifting to a 3.3V voltage domain):
+For this lab, we're going to use a [light sensor from the LilyPad project](https://www.sparkfun.com/products/8464) that operates on a 5V voltage domain. 
 
-| Luminance    | 5V Voltage Output   | Level Shifted to 3.3V (output multiplied by 3.3 / 5) |
-| ------------ | ------------------- | ---------------------------------------- |
-| Bright Light | > `2V` (up to `5V`) | > `1.32V` (`2V * .66`)                   |
-| Room Light   | `1V - 2V`           | `.66V - 1.32V`                           |
-| Darkness     | < `1V`              | < `.66V`                                 |
+LilyPad is a wearables project that's designed to be able to sewn into garments and textiles. This design intention is represented in its form factor:
 
-
-
-LilyPad is a wearables project that's designed to be able to sewn into garments and textiles. This design is represented in its form factor:
-
-![Image of LilyPad Light Sensor](../LilyPad_Light_Sensor.jpg)
+![Image of LilyPad Light Sensor](LilyPad_Light_Sensor.jpg)
 
 The connection points are rather large, however, and require some soldering to make them useful:
 
-![Photo of the finished LilyPad Sensor with wires soldered to it](../Soldered_LilyPad_Sensor.jpg)
+![Photo of the finished LilyPad Sensor with wires soldered to it](Soldered_LilyPad_Sensor.jpg)
+
+We'll walk through making these solder joints later in the lab.
+
+##### Sensor Output
+
+According to the [SparkFun](https://www.sparkfun.com/products/8464) page, the sensor should have the following outputs: 
+
+| Luminance    | 5V Voltage Output   |
+| ------------ | ------------------- |
+| Bright Light | > `2V` (up to `5V`) |
+| Room Light   | `1V - 2V`           |
+| Darkness     | < `1V`              |
+
+However, I have a few of these sensors, and when I measured the output, I got considerably different readings from the published spec. I also got pretty different readings from several of the sensors. So after soldering the wires onto the sensor, you'll want to measure your sensor output to get a sense of what to expect. 
 
 #### 22 Gauge Single Strand Wire
 
 We'll solder 22 gauge single strand wire to the sensor so that we can easily connect it the breadboard. The breadboard jumper wires from before will work just fine. If you want to get breadboard compatible wire that you can size to your own liking, I recommend [this kit, which runs USD$21 on Amazon.com](http://amzn.to/2jHgUDv):
 
 
-![](../22Ga_Wire_Kit.jpg)
+![](22Ga_Wire_Kit.jpg)
 
 #### Soldering Iron
 
@@ -67,7 +73,7 @@ As with multimeters, there is a wide selection of soldering irons from very affo
 
 A decent soldering iron can be had for relatively cheap that will likely get you through this entire tutorial. For instance, this [Abnes model is USD$20 on Amazon](http://amzn.to/2jHdG2H), and there are many more like it:
 
-![](../Abnes_Soldering_Iron.jpg)
+![](Abnes_Soldering_Iron.jpg)
 
 It comes with a decent holder, some solder, and a few tools.
 
@@ -75,7 +81,7 @@ It comes with a decent holder, some solder, and a few tools.
 
 Soldering is very common task of electronics prototyping, and a good soldering station is really nice to have. For just under [USD$100, Hakko makes a very nice professional soldering station](http://amzn.to/2jFSQ3V), which includes an adjustable temperature soldering iron, a holder, and a nice tip cleaner:
 
-![Image of the Hakko Soldering Station](../Hakko_Soldering_Station.jpg)
+![Image of the Hakko Soldering Station](Hakko_Soldering_Station.jpg)
 
 Hakko also makes an extensive range of tips for various soldering needs that fit that soldering iron.
 
@@ -83,7 +89,7 @@ Hakko also makes an extensive range of tips for various soldering needs that fit
 
 Usually, before you use your new soldering iron for the first time, and from time to time when using it, you'll need to clean and "tin" the tip. When you dip the tip of a hot soldering iron into tip cleaner and tinner, it takes the black oxides off the tip and deposits a thin layer of tin which helps the solder to melt. Tip tinner and cleaner usually comes in a small metal container and runs USD$6-10. Make sure whatever tip tinner you get is lead-free. [Here is a suitable one from Thermaltronics on Amazon for $8](http://amzn.to/2AqLSaM):
 
-![](../Tip_Tinner.jpg)
+![](Tip_Tinner.jpg)
 
 #### Lead-free Solder
 
@@ -93,13 +99,13 @@ If your soldering iron doesn't come with solder, you'll need to pick some up. Ma
 
 "Helping Hands" is an adjustable item holder that can be really helpful when soldering. It's optional, but is a beneficial add on to your toolset. [This one can be had for USD$6 on Amazon](http://amzn.to/2BE78KF):
 
-![Image of Helping Hands adjustable holder for soldering](../Helping_Hands.jpg)
+![Image of Helping Hands adjustable holder for soldering](Helping_Hands.jpg)
 
 ## Luminosity Sensor and Analog Level Shifting Circuit
 
 Most complex circuits in use are actually lots of simpler circuits joined together to provide more complex behaviors. In fact, in this lab, we're going to join two very simple circuits; a 5V light sensor circuit, and a voltage divider to reduce the voltage output of the light sensor down to a 3.3V voltage domain:
 
-![](../Level_Shifting_Lab_Circuit.svg)
+![](Level_Shifting_Lab_Circuit.svg)
 
 
 Before we build our circuit, however, we must first calculate the values of our resistors in the voltage divider, while making sure we account for the resistance of the ADC.
@@ -327,35 +333,29 @@ Now that the sensor has wires soldered to it, we can use it to build the actual 
 
 ### Breadboard Overlay
 
-The breadboard overlay for this lab can be found [here](../Level_Shifting_Lab_BB_Overlay.pdf).
+The printable breadboard overlay for this lab can be found [here](Level_Shifting_Lab_BB_Overlay.pdf).
 
 ### Schematic
 
-Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of all the components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In the case of the LilyPad sensor, it has three leads, 5V in is labeled `+`, ground/common is labeled `-`, and the analog sensor output signal comes from the `S` pin:
+Recall from the last lab that complex items and sub circuits are shown on schematics as a box with leads. In the case of the LilyPad sensor, it has three leads, 5V in is labeled `+`, ground/common is labeled `-`, and the analog sensor output signal comes from the `S` pin:
 
-![](../Level_Shifting_Lab_schem.svg)
+![](Level_Shifting_Lab_schem.svg)
 
-Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the schematic of our LilyPad Level Shifting Lab above, to the breadboard layout schematic below:
+The breadboard layout for the schematic might look something like this:
 
-![](../Level_Shifting_Lab_bb.svg)
+![](Level_Shifting_Lab_bb.svg)
 
-The breadboard view above, which I've created in [Fritzing](http://fritzing.org), is electrically equivalent to the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a fair bit more complex than the schematic:
+### Step 1: Assemble the Divider Circuit
 
-### Step 1: Assemble the Circuit
+Before we add the sensor, let's test just the divider circuit to see how well it's dividing `5V` down to a `3.3V` domain. To do this, first, assemble the circuit without the sensor in place, providing suppling `5V` directly to the divider, as illustrated in the diagram below: 
 
-A baseboard to mount the Netduino and the breadboard on is really helpful to hold the whole assembly together, though it's not required:
+![](Level_Shifting_Lab_Divider_Validation_bb.svg)
 
-![](../Level_Shifting_Lab_Exercise_2.svg)
-
-
-Our [Wilderness Labs Hack kit](http://amzn.to/2y8LzPg) includes a laser etched wooden baseboard, but if you have access to a 3D printer, you can also print one from our [3D designs repo](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Baseboards).
-
-Assemble the circuit similar to what's shown in the breadboard overlay illustration above; making sure that you supply the sensor with `5V` power, and both ground rails are connected to `GND` on the Netduino.
-
+Make sure that you're using the `5V` power pin, not the `3.3V`, and both ground rails are connected to `GND` on the Netduino.
 
 ### Step 2: Deploy the App and Test the Circuit
 
-The level shifting lab app can be found [here, in the Netduino_Samples repo](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/LilyPad_5V_Sensor_Level_Shifting). Download it, and deploy it to your Netduino. The `main.cs` code is pasted below for reference. Note that it's almost identical to the Photoresistor_Lab app from the last lab. The only thing that's changed is the light/dark threshold values and the conditional has been reversed because the LilyPad sensor supplies more voltage the brighter it is, as opposed to the photoresistor circuit, which supplied less voltage the brighter it got:
+The level shifting lab app can be found [here, in the Netduino_Samples repo](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/LilyPad_5V_Sensor_Level_Shifting). Download it, and deploy it to your Netduino. The `main.cs` code is pasted below for reference. Note that it's almost identical to the **Photoresistor_Lab** app from the last lab. The only thing that's changed is the light/dark threshold values and the conditional has been reversed because the LilyPad sensor supplies more voltage the brighter it is, as opposed to the photoresistor circuit, which supplied less voltage the brighter it got:
 
 ```csharp
 using System;
@@ -375,8 +375,8 @@ namespace LilyPad_Lab
             int averageAmbientLight = 0;
             float sensorVoltage = 0;
 
-            float lightThresholdVoltage = 1.32f;
-            float darkThresholdVoltage = .3f;
+            float lightThresholdVoltage = 1.0f;
+            float darkThresholdVoltage = 0.003f;
 
             // setup an array to hold our samples
             int numberOfSamplesToAverage = 3;
@@ -456,38 +456,47 @@ namespace LilyPad_Lab
 }
 ```
 
-## Note to EE Reviewer
+#### Output 
 
-Ok, I tested and ran this with the `1kΩ` & `2.2kΩ` resistors, and got the following output:
+When you run this, if your voltage divider is working properly, the output should read something like the following Visual Studio **output window** after the first few samples:
 
 ```
-Direct Sensor Multimeter Measured Output:
-Bright Light: 4V
-Room light: 330mV = 0.33V
-Dark: 1.8mv = 0.0018V
-
-Divided Direct Measure with Multimeter (impedance is different from ADC):
-Bright Light: 0.65V
-Room light: 62.7mV = 0.0627V
-Dark: 1.1mV = 0.0011V
-
-Expected ADC Output based on measured sensor output * .66:
-Bright: 2.64V
-Room: 0.218V
-Dark: 0.0012V
-
-Netduino ADC Reading:
-Bright Light: 1.1V
-Room Light: 0.061V
-Dark: 0 - 0.003V
+Light Level = Raw: 1023, Average: 1023, Voltage: 3.29999995
 ```
 
-What the heck is happening here? I recognize that the stated outputs for the sensor are way off, but why are my ADC readings so different than the `measured sensor output * .66`?
+`1023` is the maximum value of the analog input, so we know that the divider is outputting `3.3V` or higher. You can further test this by unplugging the wire that runs into the analog pin on the Netduino and use a multimeter in voltmeter mode to measure the output voltage from that wire (put the black lead of the multimeter into ground on the breadboard). When I measured that, I got `3.36V`, which is pretty near perfect. In fact, even though it's over `3.3V` by `0.03V`, that's less than a 1% deviation, which is well under the tolerance for the resistors that I'm using. When you measure your circuit, you will likely get a slightly different value from mine, but as long as it's reasonably close to `3.3V`, it's fine.
 
 
-#### Validating Output
+### Step 3: Calibrate the Sensor Output
 
-The **Application Output** window should display
+Now that we know our voltage divider circuit is working, we can drop in the sensor, and measure its output. I mentioned in the first part of this lab that when I measured the output of the light sensor, I got something considerably different than the published specs. 
+
+The following table has the measured sensor voltage output that I measured from the sensor, as well as the calculated output after level shifting to a 3.3V voltage domain, so that I can validate my level shifted results:
+
+| Luminance    | 5V Voltage Output   | Level Shifted to 3.3V (output multiplied by 3.3 / 5) |
+| ------------ | ------------------- | ---------------------------------------- |
+| Bright Light | > `1.9V`            | > `1.14V` (`1.9V * .66`)                 |
+| Room Light   | ~`230mV`            | ~`138mV`                                 |
+| Darkness     | < `0.005mV`         | < `0.003mV`                              |
+
+To measure your sensor output, plug the sensor into the circuit as shown breadboard circuit above, except leave the sensor output (`S`) leg out of the breadboard. Then, using a multimeter in voltmeter mode, place the negative (black) lead on the same ground circuit as the sensor, and then positive (red) measurement lead on the sensor output (`S`) leg on the sensor.
+
+Measure the sensor output in bright light (shine a flashlight or your cellphone's LED on it), room light, and then in darkness (cover the sensor with your finger, or turn the lights off in the room). Then calculate the expected outputs and write everything down:
+
+ * **Bright voltage output** = ?
+ * **Bright level-shifted voltage output (`brightValue * 0.66`)** = ?
+ * **Room light voltage output** = ?
+ * **Room light level-shifted voltage output (`roomValue * 0.66`)** = ?
+ * **Dark voltage output** = ?
+ * **Dark level-shifted voltage output (`darkValue * 0.66`)** = ?
+
+Once you've calculated those values, modify the `lightThresholdVoltage` and `darkThresholdVoltage` to be your bright level shifted voltage and dark level shifted voltage, respectively. You might want to lower your `lightThresholdVoltage`, and increase your `darkThresholdVoltage` 5-10%, to provide a little operating margin.
+
+#### Run the Application
+
+Next, plug the sensor output into the top of the voltage divider as shown in the circuit diagram, deploy and run the program. If you've updated the threshold variables in the program, the output should match up to your lighting. 
+
+Congratulations, you've learned to solder and successfully built a voltage divider circuit!
 
 
 ### Online Voltage Divider Calculator

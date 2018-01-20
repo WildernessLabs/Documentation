@@ -16,7 +16,7 @@ Vout = Vs * (R2 / R1 + R2)
 
 The final formulation; `Vout = Vs * (R2 / (R1 + R2))`, is usually how the voltage divider equation is written in textbooks and other reference material:
 
-![](../Voltage_Divider_Equation.svg)
+![](Voltage_Divider_Equation.svg)
 
 This is, presumably, because it more intuitively represents the solution to the problem. Namely; that the output voltage is a product of the division ratio. So for example, if we had `5V` input, and we needed to divide such that we got `3V` output, then we need to multiply `5` by `3 / 5`:
 
