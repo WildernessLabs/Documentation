@@ -258,3 +258,6 @@ paket-files/
 _site/
 .jekyll*
 Gemfile.lock
+
+# Mac stuff
+.DS_Store
