@@ -5,6 +5,8 @@
 @import 'normalize';
 @import 'mixins';
 @import 'variables';
-@import 'layout';
 
+@import 'base';
+@import 'layout';
+@import 'theme';
 @import 'header';

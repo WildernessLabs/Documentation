@@ -399,6 +399,15 @@ template {
    Variables
    ========================================= */
 /* ========================================= 
+   Base
+   ========================================= */
+body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
+
+img {
+  display: block; }
+
+/* ========================================= 
    Layout
    ========================================= */
 .container {
@@ -414,10 +423,45 @@ template {
       width: 82%; } }
 
 /* ========================================= 
+   Theme
+   ========================================= */
+.stripe {
+  padding: 3em 0; }
+
+.stripe--a {
+  background: #eeeeee; }
+
+.stripe--b {
+  background: white; }
+
+/* ========================================= 
    Header
    ========================================= */
 header {
+  padding: .75em 0;
   background: #524740;
-  color: #eeeeee; }
+  color: #eeeeee;
+  overflow: hidden; }
+
+.logo {
+  float: left; }
+  .logo img {
+    width: 24.563em; }
+
+.main-nav {
+  padding: 0;
+  margin: 0;
+  float: right; }
+  .main-nav li {
+    margin-left: 2.25em;
+    display: inline-block;
+    list-style-type: none; }
+    .main-nav li:last-child {
+      margin-left: 5.5em; }
+  .main-nav a {
+    font-weight: 300;
+    font-size: 28px;
+    text-decoration: none;
+    color: #eeeeee; }
 
 /*# sourceMappingURL=style.css.map */
