@@ -2,10 +2,30 @@
    Base
    ========================================= */
 
+*, 
+*:before, 
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 1.35;
+  color: $gray-brown;
+  font-size: 100%;
 }
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+a {
+  color: $light-brown;
+
+  &:hover {
+    color: $primary;
+  }
 }

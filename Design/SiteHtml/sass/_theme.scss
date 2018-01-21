@@ -3,7 +3,14 @@
    ========================================= */
 
 .stripe {
+  overflow: hidden;
   padding: 3em 0;
+
+  .col:last-child {
+    @include mq(tween, 'max-width') {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .stripe--a {

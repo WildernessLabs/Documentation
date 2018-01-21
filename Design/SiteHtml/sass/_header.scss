@@ -10,10 +10,11 @@ header {
 }
 
 .logo {
+  padding-top: .35em;
   float: left;
 
   img {
-    width: 24.563em;
+    width: 393px;
   }
 }
 
@@ -28,7 +29,7 @@ header {
     list-style-type: none;
 
     &:last-child {
-      margin-left: 5.5em;
+      margin-left: 5.75em;
     }
   }
 

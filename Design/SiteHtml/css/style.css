@@ -399,13 +399,57 @@ template {
    Variables
    ========================================= */
 /* ========================================= 
+   Typography
+   ========================================= */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+h1 {
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  color: #23abe3;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px; }
+
+p {
+  font-size: 28px; }
+
+/* ========================================= 
+   Buttons 
+   ========================================= */
+.btn {
+  display: inline-block;
+  border: 1px solid #524740;
+  padding: .25em 1em;
+  color: #b09679;
+  font-size: 28px;
+  border-radius: 5px; }
+
+/* ========================================= 
    Base
    ========================================= */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 1.35;
+  color: #524740;
+  font-size: 100%; }
 
 img {
-  display: block; }
+  display: block;
+  max-width: 100%; }
+
+a {
+  color: #b09679; }
+  a:hover {
+    color: #23abe3; }
 
 /* ========================================= 
    Layout
@@ -422,11 +466,73 @@ img {
     .container {
       width: 82%; } }
 
+.row {
+  margin: 0 -15px; }
+
+.col {
+  float: left;
+  padding: 0 15px; }
+  @media screen and (max-width: 959px) {
+    .col {
+      padding-bottom: 3em; } }
+
+.col-1-10 {
+  width: 10%; }
+
+.col-2-10 {
+  width: 20%; }
+
+.col-3-10 {
+  width: 30%; }
+
+.col-4-10 {
+  width: 40%; }
+
+.col-5-10 {
+  width: 50%; }
+
+.col-6-10 {
+  width: 60%; }
+
+.col-7-10 {
+  width: 70%; }
+
+.col-8-10 {
+  width: 80%; }
+
+.col-9-10 {
+  width: 90%; }
+
+.col-10-10 {
+  width: 100%; }
+
+@media screen and (max-width: 1023px) {
+  .col-4-10,
+  .col-6-10 {
+    width: 50%; } }
+
+@media screen and (max-width: 959px) {
+  .col-1-10,
+  .col-2-10,
+  .col-3-10,
+  .col-4-10,
+  .col-5-10,
+  .col-6-10,
+  .col-7-10,
+  .col-8-10,
+  .col-9-10,
+  .col-10-10 {
+    width: 100%; } }
+
 /* ========================================= 
    Theme
    ========================================= */
 .stripe {
+  overflow: hidden;
   padding: 3em 0; }
+  @media screen and (max-width: 959px) {
+    .stripe .col:last-child {
+      padding-bottom: 0; } }
 
 .stripe--a {
   background: #eeeeee; }
@@ -444,9 +550,10 @@ header {
   overflow: hidden; }
 
 .logo {
+  padding-top: .35em;
   float: left; }
   .logo img {
-    width: 24.563em; }
+    width: 393px; }
 
 .main-nav {
   padding: 0;
@@ -457,7 +564,7 @@ header {
     display: inline-block;
     list-style-type: none; }
     .main-nav li:last-child {
-      margin-left: 5.5em; }
+      margin-left: 5.75em; }
   .main-nav a {
     font-weight: 300;
     font-size: 28px;
