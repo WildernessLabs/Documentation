@@ -8,13 +8,25 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-  color: $primary;
   font-size: 72px;
+  color: $gray;
   font-weight: 700;
   line-height: 1;
+  margin-bottom: 25px;
+
+  &--alt {
+    color: $primary;
+  }
+}
+
+h3 {
+  font-size: 33px;
+  line-height: 40px;
   margin-bottom: 10px;
 }
 
 p {
+  margin-top: 0;
   font-size: 28px;
 }
+

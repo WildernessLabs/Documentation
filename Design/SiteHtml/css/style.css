@@ -399,6 +399,19 @@ template {
    Variables
    ========================================= */
 /* ========================================= 
+   Helpers
+   ========================================= */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.no-list-style {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+/* ========================================= 
    Typography
    ========================================= */
 h1, h2, h3, h4, h5, h6, p {
@@ -406,25 +419,43 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-  color: #23abe3;
   font-size: 72px;
+  color: #555555;
   font-weight: 700;
   line-height: 1;
+  margin-bottom: 25px; }
+  h1--alt {
+    color: #23abe3; }
+
+h3 {
+  font-size: 33px;
+  line-height: 40px;
   margin-bottom: 10px; }
 
 p {
+  margin-top: 0;
   font-size: 28px; }
 
 /* ========================================= 
    Buttons 
    ========================================= */
 .btn {
+  cursor: pointer;
   display: inline-block;
   border: 1px solid #524740;
   padding: .25em 1em;
   color: #b09679;
   font-size: 28px;
   border-radius: 5px; }
+
+a.btn--white {
+  color: white;
+  border: 1px solid white; }
+  .stripe--c a.btn--white {
+    color: white;
+    border: 1px solid white; }
+    .stripe--c a.btn--white:hover {
+      color: #555555; }
 
 /* ========================================= 
    Base
@@ -447,7 +478,9 @@ img {
   max-width: 100%; }
 
 a {
-  color: #b09679; }
+  text-decoration: none;
+  color: #b09679;
+  transition: color .15s ease; }
   a:hover {
     color: #23abe3; }
 
@@ -533,12 +566,51 @@ a {
   @media screen and (max-width: 959px) {
     .stripe .col:last-child {
       padding-bottom: 0; } }
+  .stripe ul, .stripe ol, .stripe p {
+    font-weight: 300;
+    font-size: 28px;
+    margin-bottom: 25px; }
 
 .stripe--a {
   background: #eeeeee; }
 
 .stripe--b {
   background: white; }
+
+.stripe--c {
+  background: #23abe3;
+  color: #eeeeee; }
+  .stripe--c a {
+    color: #524740; }
+    .stripe--c a:hover {
+      color: white; }
+
+.banner-logo {
+  margin-bottom: 1.5em; }
+
+.w-labs-logo {
+  width: 267px;
+  margin: 4em auto 0; }
+  @media screen and (max-width: 959px) {
+    .w-labs-logo {
+      margin: 0 auto; } }
+
+nav.secondary {
+  overflow: hidden;
+  background: #555555;
+  padding: 1.75em 0; }
+  nav.secondary ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; }
+  nav.secondary li {
+    list-style-type: none; }
+  nav.secondary a {
+    color: #eeeeee;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: 300; }
 
 /* ========================================= 
    Header

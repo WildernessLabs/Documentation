@@ -23,7 +23,9 @@ img {
 }
 
 a {
+  text-decoration: none;
   color: $light-brown;
+  transition: color .15s ease;
 
   &:hover {
     color: $primary;

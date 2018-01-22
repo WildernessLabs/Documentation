@@ -2,6 +2,7 @@
    Theme
    ========================================= */
 
+// Stripes
 .stripe {
   overflow: hidden;
   padding: 3em 0;
@@ -10,6 +11,12 @@
     @include mq(tween, 'max-width') {
       padding-bottom: 0;
     }
+  }
+
+  ul, ol, p {
+    font-weight: 300;
+    font-size: 28px;
+    margin-bottom: 25px;
   }
 }
 
@@ -20,3 +27,54 @@
 .stripe--b {
   background: white;
 }
+
+.stripe--c {
+  background: $primary;
+  color: $light-gray;
+
+  a {
+    color: $gray-brown;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.banner-logo {
+  margin-bottom: 1.5em;
+}
+
+.w-labs-logo {
+  width: 267px;
+  margin: 4em auto 0;
+
+  @include mq(tween, 'max-width') {
+    margin: 0 auto;
+  }
+}
+
+nav.secondary {
+  overflow: hidden;
+  background: $gray;
+  padding: 1.75em 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: $light-gray;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: 300;
+  }
+}
+
