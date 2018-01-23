@@ -644,32 +644,42 @@ header {
 /* ========================================= 
    Footer
    ========================================= */
-header {
-  padding: .75em 0;
-  background: #524740;
-  color: #eeeeee;
-  overflow: hidden; }
-
-.logo {
-  padding-top: .35em;
-  float: left; }
-  .logo img {
-    width: 393px; }
-
-.main-nav {
-  padding: 0;
-  margin: 0;
-  float: right; }
-  .main-nav li {
-    margin-left: 2.25em;
-    display: inline-block;
+footer {
+  padding: 1.5em 0;
+  overflow: hidden;
+  background: #555555; }
+  footer h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #b09679; }
+  footer ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none; }
-    .main-nav li:last-child {
-      margin-left: 5.75em; }
-  .main-nav a {
-    font-weight: 300;
-    font-size: 28px;
-    text-decoration: none;
-    color: #eeeeee; }
+    footer ul a {
+      color: #eeeeee;
+      font-weight: 300; }
+  footer .col {
+    display: flex;
+    justify-content: space-evenly; }
+  footer .col-footer:first-of-type {
+    color: #eeeeee;
+    text-align: center;
+    font-weight: 300; }
+  footer .copyright {
+    font-size: 16px;
+    margin-bottom: 2px; }
+  footer .tagline {
+    font-size: 14px; }
+  footer .social-icons {
+    padding-top: 15px; }
+    footer .social-icons li {
+      display: inline-block;
+      margin-left: 15px; }
+
+.footer-wlabs-logo {
+  width: 92px;
+  margin: 0 auto 10px; }
 
 /*# sourceMappingURL=style.css.map */
