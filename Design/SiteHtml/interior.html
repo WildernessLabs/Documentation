@@ -1,0 +1,203 @@
+  <!doctype html>
+  <html class="no-js" lang="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Netduino Foundation</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="apple-touch-icon" href="icon.png">
+      <!-- Place favicon.ico in the root directory -->
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700|Roboto:300,400,400i,700,900" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,700" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>   
+
+      <header class="clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col col-10-10">
+              <div class="logo">
+                <img src="img/WLabsHeaderLogo@2x.png" alt="Wilderness Labs">
+              </div>
+
+              <nav class="main-nav">
+                <div class="mobile-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <ul>
+                  <li><a href="#">netduino</a></li>
+                  <li><a href="#">developers</a></li>
+                  <li><a href="#">community</a></li>
+                  <li><a href="#">blog</a></li>
+                  <li><a href="#">sign in</a></li>
+                </ul>
+              </nav>
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </header>
+
+      <section class="header-interior">
+        <div class="container">
+          <h1>About Netduino</h1>
+          <p class="header-interior__subtitle">Represents a connectable input or output on a block.</p>
+        </div><!-- .container -->      
+      </section>
+
+      <section class="interior-content">
+        <div class="container">
+          <aside>
+            <div class="mobile-toggle--aside">
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="text">Submenu</div>
+              <div class="text--close">Close</div>
+            </div>
+
+            <ul>
+              <li>Test link here</li>
+              <li>Test link here</li>
+              <li>Test link here</li>
+              <li>Test link here</li>
+              <li>Test link here</li>
+              <li>Test link here</li>
+            </ul>
+            
+
+            <div class="mobile-toggle--aside-alt">
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="text--close">Close</div>
+            </div>
+          </aside><!-- aside -->
+
+          <div class="main">
+            <h2>Info</h2>
+            <p>Ports allow blocks to be bound together such that the output from one port can be directly piped to the input of another port. This allows a reactive programming style paradigm in which the app code more closely resembles the composability of the underlying circuits.</p>
+            <p>Ports can come in two different flavors, Input and Output, which indicate the direction of data flow. An InputPort on a Block receives signal data, and an OutputPort sends signal data.</p>
+            <p>Additionally, there is one more specialized Port called a ConfigPort. Certain Blocks can be configured to modify their output based on parameters specified by a ConfigPort. The beauty of ConfigPorts is that as opposed to having set-and-forget parameters, a ConfigPort is itself a port, meaning it can modify configuration in real-time, over time. For example, you could use the SineWave Generator Block to generate a Sine Wave signal, and then feed that into the ConfigPort, so that the configuration values would be constantly changing, in synch with the sine wave.</p>
+            <p>The following example illustrates creating Digital Pin Blocks that are bound to physical pins on the Netduino hardware (in this case pins that correspond to the onboard button and onboard LED), and then connecting the OutputPort of the Button to the InputPort on the LED, such that when the button is pressed (signal goes high), its output is sent directly to the LED and it also goes high (on):</p>
+
+            <ul>
+              <li>Test</li>
+            </ul>
+
+            <pre class="highlight">
+              <code>
+  public class Program
+  {
+    static H.Cpu.Pin buttonHardware = Pins.ONBOARD_BTN;
+    static H.Cpu.Pin ledHardware = Pins.ONBOARD_LED;
+
+    public static void Main()
+    {
+      // Create the blocks
+      var button = new DigitalInputPin (buttonHardware);
+      var led = new DigitalOutputPin (ledHardware);
+
+      button.Output.ConnectTo (led.Input);
+
+      // keep the program alive
+      while (true) {
+        System.Threading.Thread.Sleep (1000);
+      }
+    }
+  }
+              </code>
+            </pre>
+
+            <h2>Members</h2>
+
+            <h3>Constructors</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Signature</th>
+                  <th>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>public Port (BlockBase block, string 
+  name, Units units, double 
+  initialValue = 0);</td>
+                  <td>Creates a new instance of the Port class with the specified values.</td>
+                </tr>
+                <tr>
+                  <td>public Port ();</td>
+                  <td>Creates a new instance of the Port class.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Circuit</h3>
+            <p><img src="/assets/images/Sample_Circuit_Illustration.svg" alt="Sample Circuit Illustration"></p>
+
+            <h4>Heading 4 Example</h4>
+            <p>Ports allow blocks to be bound together such that the output from one port can be directly piped to the input of another port. This allows a reactive programming style paradigm in which the app code more closely resembles the composability of the underlying circuits.</p>
+          </div><!-- .main -->
+          
+        </div><!-- .container -->
+      </section>    
+
+      
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col col-10-10">
+              <div class="col-footer">
+                <img class="footer-wlabs-logo" src="img/WLabs_Footer_logo.svg" alt="Wilderness Labs">
+                <div class="copyright">2018&copy;, Wilderness Labs</div>
+                <div class="tagline">We Power Connected</div>
+              </div>
+              <div class="col-footer">
+                <h3>Products</h3>
+                <ul>
+                  <li><a href="#">Netduino</a></li>
+                </ul>
+              </div>
+              <div class="col-footer">
+                <h3>Developers</h3>
+                <ul>
+                  <li><a href="#">Getting Started</a></li>
+                  <li><a href="#">Netduino.Foundation</a></li>
+                  <li><a href="#">Community Forums</a></li>
+                </ul>
+              </div>
+              <div class="col-footer">
+                <h3>Company</h3>
+                <ul>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-footer">
+                <ul class="social-icons">
+                  <li><a href="#"><img src="img/Github_FooterLogo.svg" alt="Github"></a></li>
+                  <li><a href="#"><img src="img/Twitter_FooterLogo.svg" alt="Twitter"></a></li>
+                  <li><a href="#"><img src="img/Facebook_FooterLogo.svg" alt="Facebook"></a></li>
+                </ul>
+              </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .container -->       
+      </footer>   
+
+      <script src="js/main.js"></script>
+
+      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+      <script>
+          window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+          ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+  </html>
