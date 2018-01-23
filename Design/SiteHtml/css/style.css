@@ -446,6 +446,7 @@ p {
   padding: .25em 1em;
   color: #b09679;
   font-size: 28px;
+  font-weight: 300;
   border-radius: 5px; }
 
 a.btn--white {
@@ -505,9 +506,6 @@ a {
 .col {
   float: left;
   padding: 0 15px; }
-  @media screen and (max-width: 959px) {
-    .col {
-      padding-bottom: 3em; } }
 
 .col-1-10 {
   width: 10%; }
@@ -614,6 +612,37 @@ nav.secondary {
 
 /* ========================================= 
    Header
+   ========================================= */
+header {
+  padding: .75em 0;
+  background: #524740;
+  color: #eeeeee;
+  overflow: hidden; }
+
+.logo {
+  padding-top: .35em;
+  float: left; }
+  .logo img {
+    width: 393px; }
+
+.main-nav {
+  padding: 0;
+  margin: 0;
+  float: right; }
+  .main-nav li {
+    margin-left: 2.25em;
+    display: inline-block;
+    list-style-type: none; }
+    .main-nav li:last-child {
+      margin-left: 5.75em; }
+  .main-nav a {
+    font-weight: 300;
+    font-size: 28px;
+    text-decoration: none;
+    color: #eeeeee; }
+
+/* ========================================= 
+   Footer
    ========================================= */
 header {
   padding: .75em 0;

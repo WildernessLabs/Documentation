@@ -1,0 +1,43 @@
+/* ========================================= 
+   Footer
+   ========================================= */
+
+header {
+  padding: .75em 0;
+  background: $gray-brown;
+  color: $light-gray;
+  overflow: hidden;
+}
+
+.logo {
+  padding-top: .35em;
+  float: left;
+
+  img {
+    width: 393px;
+  }
+}
+
+.main-nav {
+  padding: 0;
+  margin: 0;
+  float: right;
+
+  li {
+    margin-left: 2.25em;
+    display: inline-block;
+    list-style-type: none;
+
+    &:last-child {
+      margin-left: 5.75em;
+    }
+  }
+
+  a {
+    font-weight: 300;
+    font-size: 28px;
+    text-decoration: none;
+    color: $light-gray;
+  }
+
+}

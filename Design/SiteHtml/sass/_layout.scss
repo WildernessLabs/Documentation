@@ -24,9 +24,6 @@
 .col {
   float: left;
   padding: 0 15px;
-  @include mq(tween, 'max-width') {
-    padding-bottom: 3em;
-  }
 }
 
 .col-1-10   { width: 10%; }
