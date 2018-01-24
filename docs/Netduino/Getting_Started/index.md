@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Getting Started with Netduino
 ---
 

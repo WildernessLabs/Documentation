@@ -2,6 +2,7 @@
 layout: SiteFrame
 ---
 
+
 <section class="header-interior">
     <div class="container">
         <h1>{{ page.title }}</h1>
@@ -29,9 +30,29 @@ layout: SiteFrame
 
 <section class="interior-content">
     <div class="container">
+        <aside>
+            <div class="mobile-toggle--aside">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="text">Submenu</div>
+                <div class="text--close">Close</div>
+            </div>
+    
+            {% include NetduinoNavigation.html %}
+    
+            <div class="mobile-toggle--aside-alt">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="text--close">Close</div>
+            </div>
+        </aside>
+
+
         <div class="main">
             {{ content }}
 
         </div><!-- .main -->
     </div><!-- .container -->
-  </section>        
+</section>        
