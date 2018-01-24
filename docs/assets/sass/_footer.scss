@@ -1,0 +1,65 @@
+/* ========================================= 
+   Footer
+   ========================================= */
+
+footer {
+  width: 100%;
+  float: left;
+  clear: both;
+  padding: 1.5em 0;
+  overflow: hidden;
+  background: $gray;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: $light-brown;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    a {
+      color: $light-gray;
+      font-weight: 300;
+    }
+  }
+
+  .col {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .col-footer {
+    &:first-of-type {
+      color: $light-gray;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+  
+  .copyright { 
+    font-size: 16px; 
+    margin-bottom: 2px;
+  }
+
+  .tagline { 
+    font-size: 14px; 
+  }
+
+  .social-icons {
+    padding-top: 15px;
+    li {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+}
+
+.footer-wlabs-logo {
+  width: 92px;
+  margin: 0 auto 10px;
+}
