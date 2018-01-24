@@ -465,8 +465,10 @@ template {
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0; }
 
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; }
+
 h1 {
-  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
   font-size: 72px;
   color: #555555;
   font-weight: 700;
@@ -483,6 +485,19 @@ h3 {
 p {
   margin-top: 0;
   font-size: 28px; }
+
+pre {
+  background: #eeeeee;
+  border-radius: 15px;
+  padding: 15px; }
+
+pre, code {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all; }
 
 /* ========================================= 
    Buttons 
@@ -505,6 +520,32 @@ a.btn--white {
     border: 1px solid white; }
     .stripe--c a.btn--white:hover {
       color: #555555; }
+
+/* ========================================= 
+   Tables
+   ========================================= */
+table {
+  border: 2px solid #555555;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5em; }
+
+th, td {
+  padding: .5em .75em; }
+
+th {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: left;
+  color: white;
+  background: #555555; }
+
+td {
+  border: 2px solid #555555;
+  font-size: 1.25em; }
+
+tbody tr:nth-child(even) {
+  background-color: #eee; }
 
 /* ========================================= 
    Base
@@ -766,6 +807,14 @@ nav.secondary {
     font-weight: 300;
     margin-bottom: 0; }
 
+.interior-content aside {
+  padding: 3em 0;
+  float: left;
+  width: 25%;
+  position: relative;
+  left: 2px;
+  border-right: 2px solid #555555; }
+
 .mobile-toggle--aside {
   display: none;
   cursor: pointer;
@@ -831,45 +880,35 @@ nav.secondary {
   width: 75%;
   padding-left: 4%;
   border-left: 2px solid #555555; }
-
-.interior-content .main a {
-  color: #b09679; }
-
-.interior-content .main a:hover {
-  color: #23ABE3; }
-
-.interior-content .main h1 {
-  font-size: 3em;
-  margin-bottom: .5em; }
-
-.interior-content .main h2 {
-  font-size: 2.25em;
-  margin-bottom: .5em;
-  font-weight: 700; }
-
-.interior-content .main h3 {
-  font-size: 1.75em;
-  margin-bottom: .5em;
-  font-weight: 400; }
-
-.interior-content .main h4 {
-  font-size: 1.5em;
-  margin-bottom: .5em;
-  font-weight: 400; }
-
-.interior-content .main ul,
-.interior-content .main ol {
-  font-size: 1.5em; }
-
+  .interior-content .main a {
+    color: #b09679; }
+    .interior-content .main a:hover {
+      color: #23abe3; }
+  .interior-content .main h1 {
+    font-size: 3em;
+    margin-bottom: .5em; }
+  .interior-content .main h2 {
+    font-size: 2.25em;
+    margin-bottom: .5em;
+    font-weight: 700; }
+  .interior-content .main h3 {
+    font-size: 1.75em;
+    margin-bottom: .5em;
+    font-weight: 400; }
+  .interior-content .main h4 {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    font-weight: 400; }
+  .interior-content .main ul {
+    font-size: 1.5em; }
+  .interior-content .main ol {
+    font-size: 1.5em; }
 .interior-content pre {
   margin-bottom: 2em; }
 
 /* ===========================================
    Syntax Highlighting
    =========================================== */
-pre.highlight {
-  padding: 0; }
-
 .highlight {
   background: #eee;
   border-radius: 15px;
