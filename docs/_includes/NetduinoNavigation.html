@@ -1,131 +1,55 @@
 <ul class="top-level">
-    <li><span>Netduino.Foundation</span>
-        <ul>
-            <li><a href="/API/ArrayEventArgs/">ArrayEventArgs</a></li>
-            <li><a href="/API/Color/">Color</a></li>
-            <li><a href="/API/CircuitTerminationType/">CircuitTerminationType</a></li>
-            <li><a href="/API/DisplayBase">DisplayBase</a></li>
-            <!--<li><a href="/API/Units">Units</a></li>-->
-        </ul>
-    </li>
-</ul>
-
-
-<ul class="top-level">
-    <li><span>Devices</span>
-        <ul>
-            <li><span>Netduino</span><!-- why isn't this working? i've tried <a> and <span> -->
+    <li><span>Netduino</span>
+        <ul class="navigation">
+            <!--<li class="active"><a href="/Netduino/Getting_Started">Getting Started</a></li>-->
+            <li><a href="/Netduino/Getting_Started">Getting Started</a></li>
+            <li><a href="/Netduino/About">About Netduino</a>
                 <ul>
-                    <!--<li><a href="/API/Devices/Netduino/Enums">Enums</a></li>-->
-                    <li><a href="/API/Devices/Netduino/I2CBus">I2CBus</a></li>
-                    <li><a href="/API/Devices/Netduino/ICommunicationBus">ICommunicationBus</a></li>
-                    <!--<li><a href="/API/Devices/Netduino/SerialTextFile">SerialTextFile</a></li>-->
-                    <li><a href="/API/Devices/Netduino/SoftwareSpiBus">SoftwareSpiBus</a></li>
-                    <!--<li><a href="/API/Devices/Netduino/SpiBus">SpiBus</a></li>-->
-                </ul>                    
-            </li>
-        </ul>
-    </li>
-</ul>
-
-<ul class="top-level">
-    <li><span>Displays</span>
-        <ul>
-            <li><a href="/API/Displays/ITextDisplay">ITextDisplay</a></li>
-            <li><a href="/API/Displays/TextDisplayConfig">TextDisplayConfig</a></li>
-        </ul>
-    </li>
-</ul>
-
-<ul class="top-level">
-    <li><span>LEDs</span>
-        <ul>
-            <li><a href="/API/LEDs/PwmLed">PwmLed</a></li>
-            <li><a href="/API/LEDs/RgbPwmLed">RgbPwmLed</a></li>
-            <li><a href="/API/LEDs/TypicalForwardVoltage">TypicalForwardVoltage</a></li>
-        </ul>
-    </li>
-</ul>
-
-<ul class="top-level">
-    <li><span>Motors</span>
-        <ul>
-            <li><a href="/API/Motors/IDCMotor">IDCMotor</a></li>
-            <li><a href="/API/Motors/HBridgeMotor">HBridgeMotor</a></li>
-        </ul>
-    </li>
-</ul>
-
-<ul class="top-level">
-    <li><span>Relays</span>
-        <ul>
-            <li><a href="/API/Relays/Relay">Relay</a></li>
-        </ul>
-    </li>
-</ul>
-
-<ul class="top-level">
-    <li><span>Sensors</span>
-        <ul>
-            <!-- this isn't working. with or without a span, or an a tag 
-            <li>Members
-                <ul> -->
-                    <li><a href="/API/Sensors/IHumiditySensor">IHumiditySensor</a></li>
-                    <li><a href="/API/Sensors/ILightSensor">ILightSensor</a></li>
-                    <li><a href="/API/Sensors/IPressureSensor">IPressureSensor</a></li>
-                    <li><a href="/API/Sensors/ITemperatureSensor">ITemperatureSensor</a></li>
-                    <li><a href="/API/Sensors/SensorFloatEventArgs">SensorFloatEventArgs</a></li>
-            <!--
+                    <li><a href="/Netduino/About/Updating_Firmware">Updating Firmware</a></li>
+                <li><a href="/Netduino/About/Downloads">Downloads</a></li>
+                <li><a href="/Netduino/About/Source">Source Files</a></li>
                 </ul>
-            </li>-->
-            <li>Buttons
+            </li>
+            <li><a href="/Netduino/Input_Output">IO</a>
                 <ul>
-                    <li><a href="/API/Sensors/Buttons/IButton">IButton</a></li>
-                    <li><a href="/API/Sensors/Buttons/PushButton">PushButton</a></li>
+                    <li><a href="/Netduino/Input_Output/Analog/">Analog</a></li>
+                    <li><a href="/Netduino/Input_Output/Digital/">Digital</a>
+                        <ul>
+                            <li><a href="/Netduino/Input_Output/Digital/I2C/">I2C Overview</a>
+                                <ul>
+                                    <li><a href="/Netduino/Input_Output/Digital/I2C/Reading">Reading from an I2C Device</a></li>
+                                    <li><a href="/Netduino/Input_Output/Digital/I2C/Writing">Writing to an I2C Device</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/Netduino/Input_Output/Digital/SPI/">SPI</a></li>
+                            <li><a href="/Netduino/Input_Output/Digital/PWM/">PWM</a></li>
+                            <li><a href="/Netduino/Input_Output/Digital/UART/">UART (Serial)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Netduino/Input_Output/Onboard_Button_+_LED/">Onboard Button and LED</a></li>
+                    <li><a href="/Netduino/Input_Output/File_Storage/">SD Card/File IO</a></li>
+                    <li><a href="/Netduino/Input_Output/Network/">Network</a></li>
+                </ul>
+            </li>
+            <li><a href="/Netduino/Application_Fundamentals/">Application Fundamentals</a>
+                <ul>
+                    <li><a href="/Netduino/Application_Fundamentals/NETMF/">.NET MicroFramework</a></li>
+                    <!--<li><a href="/Netduino/Application_Fundamentals/Memory_Management/">Memory Management</a></li>-->
                 </ul>
             </li>
             <!--
-            <li>Light
+            <li><a href="/Netduino/Peripherals/">Peripherals</a>
                 <ul>
-                    <li><a href="/API/Sensors/Light/GenericAmbientLightSensor">GenericAmbientLightSensor</a></li>
-                    <li><a href="/API/Sensors/Light/ILightSensor">ILightSensors</a></li>
+                    <li><a href="/Netduino/Peripherals/LEDs/">LEDs</a></li>
+                    <li><a href="/Netduino/Peripherals/Switches/">Switches</a></li>
+                    <li><a href="/Netduino/Peripherals/Sensors/">Sensors</a></li>
+                    <li><a href="/Netduino/Peripherals/Motors/">Motors</a></li>
+                    <li><a href="/Netduino/Peripherals/Shields/">Shields</a></li>
+                    <li><a href="/Netduino/Peripherals/Relays/">Relays</a></li>
+                    <li><a href="/Netduino/Peripherals/Bluetooth/">Bluetooth</a></li>
                 </ul>
             </li>
             -->
-            <!--
-            <li>Motion
-                <ul>
-                    <li><a href="/API/Sensors/Motion">IAccelerometer</a></li>
-                </ul>
-            </li>
-            <li>Proximity
-                <ul>
-                    <li><a href="/API/Sensors/Proximity">Proximity</a></li>
-                </ul>
-            </li>
-            -->
-            <li>Rotary Encoders
-                <ul>
-                    <li><a href="/API/Sensors/Rotary/IRotaryEncoder">IRotaryEncoder</a></li>
-                    <li><a href="/API/Sensors/Rotary/RotaryEncoder">RotaryEncoder</a></li>
-                    <li><a href="/API/Sensors/Rotary/RotaryEncoderWithButton">RotaryEncoderWithButton</a></li>
-                </ul>
-            </li>
-            <li>Switches
-                <ul>
-                    <li><a href="/API/Sensors/Switches/DipSwitch">DipSwitch</a></li>
-                    <li><a href="/API/Sensors/Switches/ISwitch">ISwitch</a></li>
-                    <li><a href="/API/Sensors/Switches/SpstSwitch">SpstSwitch</a></li>
-                </ul>
-            </li>
-            <li>Temperature</a>
-                <ul>
-                    <li><a href="/API/Sensors/Temperature/Analog">Analog Temperature Sensor</a></li>
-                <!--
-                    <li><a href="/API/Sensors/Temperature/Thermistor">Thermistor</a></li>
-                -->
-        </ul>
-            </li>
         </ul>
     </li>
 </ul>
