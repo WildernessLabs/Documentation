@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Writing to a TMP102 Temperature Sensor Using I2C
 ---
 

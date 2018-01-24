@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Reading From a TMP102 Temperature Sensor Using I2C
 ---
 

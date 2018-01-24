@@ -1,3 +1,9 @@
+---
+layout: Samples
+title: LCD Display Sample
+subtitle: Sample using the µLiquidCrystal LCD library
+---
+
 # LCD Display
 
 This sample demonstrates how to control an LCD using the Adafruit I2C/SPI LCD backpack.

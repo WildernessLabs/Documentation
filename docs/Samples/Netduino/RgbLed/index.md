@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Driving an RGB LED with PWM
 ---
 

@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Blinky
 ---
 

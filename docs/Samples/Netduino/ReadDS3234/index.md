@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Read Date and Time from DS3234 Real Time Clock
 ---
 

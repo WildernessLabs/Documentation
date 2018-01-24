@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Driving an LED with a PWM signal
 ---
 

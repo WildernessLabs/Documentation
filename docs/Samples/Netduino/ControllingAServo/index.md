@@ -1,4 +1,5 @@
 ---
+layout: Samples
 title: Controlling a Servo Using PWM
 ---
 
