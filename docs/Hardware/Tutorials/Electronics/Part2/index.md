@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Part 2 - Quantifying Electricity; Amps, Volts, and Watts
 ---
 

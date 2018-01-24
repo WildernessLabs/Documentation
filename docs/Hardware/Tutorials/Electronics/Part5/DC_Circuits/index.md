@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: DC Circuit Analysis
 ---
 

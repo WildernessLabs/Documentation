@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Reading a Resistor's Value
 ---
 

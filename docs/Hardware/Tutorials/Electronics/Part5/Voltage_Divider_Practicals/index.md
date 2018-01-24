@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Voltage Dividers Uses and Practical Considerations
 ---
 

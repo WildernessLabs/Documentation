@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Kirchhoff's Current Law
 ---
 

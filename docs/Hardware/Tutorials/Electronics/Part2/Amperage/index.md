@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Amperage (Amperes/Amps/A)
 ---
 

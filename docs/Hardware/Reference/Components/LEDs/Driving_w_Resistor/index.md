@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Driving an LED with a Resistor
 ---
 

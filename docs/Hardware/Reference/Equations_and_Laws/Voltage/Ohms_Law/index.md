@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: OHM's Law
 ---
 

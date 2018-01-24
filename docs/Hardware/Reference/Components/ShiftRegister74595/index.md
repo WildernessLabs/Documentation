@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: 74595 Shift Register
 ---
 

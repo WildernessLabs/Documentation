@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Part 3 - Power Sources & Current Types
 ---
 

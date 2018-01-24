@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Part 1 - The Physics of Electrical Theory
 ---
 
@@ -14,7 +15,7 @@ In order to understand how circuits work and how to design them, we must first u
 
 
 
-# [Part 2 - Quanitfying Electricity; amps, volts, and watts](../Part2/) 
+# [Part 2 - Quantifying Electricity; amps, volts, and watts](../Part2/) 
 
 <br/>
 

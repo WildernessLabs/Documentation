@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Controlling a Servo Using PWM
 ---
 

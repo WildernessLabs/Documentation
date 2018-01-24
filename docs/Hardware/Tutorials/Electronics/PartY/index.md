@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Part 5 - Other Circuit Components
 ---
 

@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Pull Up and Pull Down Resistors
 ---
 

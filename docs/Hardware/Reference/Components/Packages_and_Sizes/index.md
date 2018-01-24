@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Surface Mounted Devices (SMD) Packages and Sizes
 ---
 
