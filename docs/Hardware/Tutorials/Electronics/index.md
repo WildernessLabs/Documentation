@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Fundamentals of Electronics Tutorial
 ---
 
