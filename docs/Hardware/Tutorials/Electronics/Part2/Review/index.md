@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Part 2 Review
 ---
 

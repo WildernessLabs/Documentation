@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: DC Circuit Analysis
 ---
 

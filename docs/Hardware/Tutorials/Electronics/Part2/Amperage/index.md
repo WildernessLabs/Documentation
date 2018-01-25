@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Amperage (Amperes/Amps/A)
 ---
 

@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Resistors in Parallel
 ---
 

@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Kirchhoff's Voltage Law
 ---
 

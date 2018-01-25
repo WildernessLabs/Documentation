@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Voltage Dividers Uses and Practical Considerations
 ---
 

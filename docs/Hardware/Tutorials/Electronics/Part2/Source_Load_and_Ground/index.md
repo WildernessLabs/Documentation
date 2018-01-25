@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Source, Load, and Ground
 ---
 

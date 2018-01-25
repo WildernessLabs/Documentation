@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Reading Axial Resistor Values
 ---
 

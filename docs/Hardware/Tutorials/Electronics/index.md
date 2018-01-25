@@ -1,7 +1,10 @@
 ---
+layout: ElectronicsTutorial
 title: Fundamentals of Electronics Tutorial
+subtitle: A modern electronics course from the ground up, by Bryan Costanich.
 ---
-by Bryan Costanich.
+
+# Introduction
 
 This is a practical, hands-on tutorial on electronic circuits that focuses on modern circuit development for connected things. It starts with fundamentals and builds a solid foundation for doing more complex circuits, with a focus on common circuit designs and microcontroller integrations. For most of the tutorial, only basic proficiency in algebra is necessary.
 

@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Electromotive Force (EMF) and Voltage (V)
 ---
 

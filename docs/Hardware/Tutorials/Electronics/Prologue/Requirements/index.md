@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Required Tools and Components
 ---
 

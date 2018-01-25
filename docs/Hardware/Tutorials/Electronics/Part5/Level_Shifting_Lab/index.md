@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Analog Level Shifting Lab
 ---
 

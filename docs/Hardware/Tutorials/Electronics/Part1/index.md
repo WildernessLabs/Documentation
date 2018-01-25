@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Part 1 - The Physics of Electrical Theory
 ---
 

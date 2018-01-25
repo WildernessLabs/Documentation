@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Calculating Simple Resistance
 ---
 

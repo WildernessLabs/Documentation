@@ -1,4 +1,5 @@
 ---
+layout: ElectronicsTutorial
 title: Wattage, the Relationship of Amps & Volts
 ---
 
