@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Source, Load, and Ground
+subtitle: The fundamental components of a circuit.
 ---
+
+# Electrical Circuits
 
 Electrical circuits get their name because they are actually closed loops. Charge carriers flow from a positive voltage _source_ to a return point and are propelled by the electromagnetic force differential between those two points.
 
@@ -30,6 +33,4 @@ And chassis ground is:
 ![](/Common_Files/Chassis_Ground.svg)
 
 
-## [Next - Review](../Review)
-
-<br/>
+# [Next - Review](../Review)
