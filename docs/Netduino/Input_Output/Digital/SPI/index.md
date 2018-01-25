@@ -1,16 +1,19 @@
 ---
 layout: Netduino
 title: SPI
+subtitle: Netduino Serial Peripheral Interface (SPI) protocol support. 
 ---
+
+# Info
 
 Serial Peripheral Interface (SPI) is a protocol for high speed communication over short distances.  Four signals types are defined in the protocol:
 
-- Master Out, Salve In (MOSI)
-- Master In, Slave Out (MISO)
-- Serial clock (SCLK)
-- Chip Select (CS) sometimes called Slave Select (SS)
+- **Master Out, Slave In (MOSI)**
+- **Master In, Slave Out (MISO)**
+- **Serial clock (SCLK)**
+- **Chip Select (CS) sometimes called Slave Select (SS)**
 
-SPI implements a master / slave architecture and in an embedded system the master device is normally a microcontroller with sensors or output devices acting as slaves.
+SPI implements a master/slave architecture and in an embedded system the master device is normally a microcontroller with sensors or output devices acting as slaves.
 
 Although four bus signals are defined it is not always required for all four to be used.  For instance, an output only device such as an LCD may not need to use the MISO line to send data back to the master device.
 
@@ -40,13 +43,13 @@ The four possible modes are determined by the active state of the clock signal (
 
 The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](../../../About/Netduino3_Pinout.svg)
+![N3 Pinout Diagram](/Netduino/About/Netduino3_Pinout.svg)
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 
 ## Liquid Crystal Display (LCD)
 
-LCDs are readily available and provide a really useful way of displaying data in your project.  Common display sizes are 16x2 and 20x4 (16x2 = 2 lines of 16 characters each).  These usually require a large number of pins to drive them.  Luckily Adafruit have a [LCD Character Backpack](https://www.adafruit.com/product/292) that can be used to drive these displays.  The board can use SPI or [I2C](../I2C/index.md), both of which reduce the number of pins required to drive the LCD.
+LCDs are readily available and provide a really useful way of displaying data in your project.  Common display sizes are 16x2 and 20x4 (16x2 = 2 lines of 16 characters each).  These usually require a large number of pins to drive them.  Luckily Adafruit have a [LCD Character Backpack](https://www.adafruit.com/product/292) that can be used to drive these displays.  The board can use SPI or [I2C](/Netduino/Input_Output/Digital/I2C/), both of which reduce the number of pins required to drive the LCD.
 
 ### Simple Write
 
@@ -97,10 +100,10 @@ Zooming in on the output for one character shows the relationship between the cl
 
 ![Single Character in the Message](SingleCharacterOutput.png)
 
-# [Controlling the LCD](ControllingLCD)
-
 # Further Reading
 
+- [Writing to an SPI Device](Writing)
+- [Reading from an SPI Device](Reading)
 - [Serial Peripheral Interface Bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) description
 - [HD44780 LCD Interface](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) This is a common interface used to drive LCD displays.
-- [Adafruit I2C/ SPI Character LCD Backpack](https://www.adafruit.com/product/292)
+- [Adafruit I2C/SPI Character LCD Backpack](https://www.adafruit.com/product/292)
