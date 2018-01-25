@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Ohm's Law
+subtitle: The fundamental equation of resistance.
 ---
+
+# Current Flow is Proportionate to Resistance
 
 Going back to the water analogy, we can think of resistance as the valve at the bottom of the water tank:
 
@@ -27,7 +30,7 @@ But you may also see:
 I = E/R
 ```
 
-## Ohm's Test Circuit
+# Ohm's Test Circuit
 
 Consider the following circuit diagram that includes a voltage source and a resistor:
 
@@ -45,7 +48,7 @@ From that, we can also calculate the wattage/power as `(watts = amps * volts)`:
 Wattage = 1.5V * 0.03A = 0.045W
 ```
 
-### Rule of Significant Digits
+## Rule of Significant Digits
 
 Doing this math brings up an important point, which is the _rule of significant digits_, which prevents us from stating a computational answer that has more precision than actually intended.
 
@@ -54,25 +57,25 @@ After completing any calculation, it's necessary to round to the least number of
 So for the above calculation, we had inputs of `1.5V` and `0.03A` and an output of `0.045W`. The input numbers both had two significant digits, so we can only have a result of two significant digits, which means we need to round `0.045W` to `0.05W`. We can ignore the zero left of the decimal when counting significant digits because it's just a convenience marker to make it clear there is a decimal.
 
 
-### Other Forms of Ohm's Law
+## Other Forms of Ohm's Law
 
 Using algebra, we can solve the equation of Ohm's law for resistance, or voltage:
 
-#### Solved for Resistance (R)
+### Solved for Resistance (R)
 
 ```
 R = V / I
 ohms = volts / amps
 ```
 
-#### Solved for Voltage (V)
+### Solved for Voltage (V)
 
 ```
 V = I * R
 volts = amps * ohms
 ```
 
-### Ohm's Law Pyramid
+## Ohm's Law Pyramid
 
 The _Ohm's Law triangle_, also known as the _power triangle_ is helpful in remembering the various solutions of Ohm's law:
 
@@ -103,10 +106,8 @@ R = V / I
 ohms = volts / amps
 ```
 
-### Online Ohm's Law Calculator
+## Online Ohm's Law Calculator
 
 There is a fantastic Ohm's law calculator online [here](http://www.ohmslawcalculator.com/ohms-law-calculator).
 
-## [Next - Calculating Simple Resistance](../Calculating_Resistance)
-
-<br/>
+# [Next - Calculating Simple Resistance](../Calculating_Resistance)
