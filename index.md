@@ -4,7 +4,24 @@
 <a href="/Netduino/Getting_Started">Get Started</a>
 </div>
 
+<<<<<<< HEAD
 <br/><br/>
+=======
+<br/>
+
+<div class="banner_nfoundation">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Netduino.Foundation makes Netduino development easier by providing a massive peripheral driver library and a handcrafted API to use them.</p>
+<p>&nbsp;</p>
+<a href="http://Netduino.Foundation">Netduino.Foundation</a>
+</div>
+
+
+
+>>>>>>> Adde netduino.foundation banner. ugly but will work for now.
 
 <div class="banner_nfoundation">
 <p>&nbsp;</p>
