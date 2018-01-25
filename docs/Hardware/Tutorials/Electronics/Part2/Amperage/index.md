@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
-title: Amperage (Amperes/Amps/A)
+title: Amperage
+subtitle: Electrical quantity, defined in quantity of Amperes.
 ---
+
+# The Ampere
 
 One of the simplest (though not actually the official) definitions of an [ampere (amp)](https://en.wikipedia.org/wiki/Ampere) is 1 [_coulomb_](https://en.wikipedia.org/wiki/Coulomb) of charge carriers passing through a given location per second. 
 
@@ -31,4 +34,4 @@ In our water tower analogy, the quantity of water flowing over our water wheel a
 
 Amp hours are often expressed in _milliampere hours_ (mAh), which is one-thousandth of an amp hour, or 3.6 coulombs. For reference, a typical AA NiMH rechargeable battery will have ~2500 mAh (2.5Ah), and a D NiMH rechargeable has ~10,000 mAh (10 Ah).
 
-## [Next - Voltage](../Voltage)
+# [Next - Voltage](../Voltage)
