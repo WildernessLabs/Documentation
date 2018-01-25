@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Pulse-Width Modulation (PWM)
 ---
 

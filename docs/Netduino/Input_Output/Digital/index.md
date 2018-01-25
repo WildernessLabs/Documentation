@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Digital I/O
 ---
 

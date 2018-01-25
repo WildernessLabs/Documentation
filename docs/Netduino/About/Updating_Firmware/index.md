@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Updating Netduino Firmware
 ---
 

@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: I2C - Reading Data Over I2C
 ---
 

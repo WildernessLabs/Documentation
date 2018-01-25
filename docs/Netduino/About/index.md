@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: About Netduino
 ---
 

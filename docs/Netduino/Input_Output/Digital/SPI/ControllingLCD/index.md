@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Controlling an SPI LCD
 ---
 

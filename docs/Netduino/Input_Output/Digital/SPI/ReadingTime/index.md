@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Reading Date and Time Using SPI
 ---
 

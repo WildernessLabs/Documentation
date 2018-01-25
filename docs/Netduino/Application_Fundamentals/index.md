@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: Netduino Application Fundamentals
 ---
 

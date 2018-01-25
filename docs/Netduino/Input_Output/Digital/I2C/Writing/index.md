@@ -1,4 +1,5 @@
 ---
+layout: Netduino
 title: I2C - Writing Data Over I2C
 ---
 
