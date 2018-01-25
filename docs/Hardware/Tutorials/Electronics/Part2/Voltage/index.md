@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
-title: Electromotive Force (EMF) and Voltage (V)
+title: Voltage
+subtitle: Electromotive Force (EMF) of electricity, defined by the volt.
 ---
+
+# Electromotive Force (EMF)
 
 In order for a current to exist, charge carriers must be motivated to move. Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel:
 
@@ -15,7 +18,7 @@ Another way to think about voltage is to imagine that a battery provides an engi
 
 ![](../Battery_EMF.svg)
 
-### Relative Voltage
+## Relative Voltage
 
 It's important to note that this force is relative; even if the water towers were at different altitudes, the pressure at the valve is still dependent on the _voltage drop_ from the top of the water to the ground.
 
@@ -25,7 +28,7 @@ This means that current flowing from a 10V source to 5V, the potential differenc
 
 A minor, technical point, is that while EMF exists whether curent is flowing or not, voltage only applies when a current exists. 
 
-### Common Source Voltages
+## Common Source Voltages
 
 Voltage amounts vary greatly around the world, and for different uses, consider the following sources:
 
@@ -42,6 +45,4 @@ Voltage amounts vary greatly around the world, and for different uses, consider 
 
 For most of the circuits that we'll explore here, voltages of 5V and 3.3V are the most common. However, many logic circuits control higher voltage circuits that power motors, heaters, and other loads that do heavy lifting and are typically powered by household mains of 110V and 220V.
 
-## [Next - Wattage](../Wattage)
-
-<br/>
+# [Next - Wattage](../Wattage)
