@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Review
+subtitle: Important points on basic DC circuit analysis.
 ---
+
+# Important Concepts
 
 This was a big chapter of the tutorial. Along the way, we learned about Kirchhoff's laws, which are as foundational as Ohm's law and are key to analyzing, understanding, and designing circuits. We also built our first practical circuits, learned to solder, and integrated those circuits with Netduino.
 

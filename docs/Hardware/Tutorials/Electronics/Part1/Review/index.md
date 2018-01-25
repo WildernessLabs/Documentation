@@ -4,6 +4,8 @@ title: Review
 subtitle: Important concepts regarding the physics of electricity.
 ---
 
+# Important Concepts
+
 That was a lot of concepts to take in at once, but it should provide a solid set of fundamental understandings that will aid in understanding how electronic circuits work. As a quick review:
 
  * _Positive_ and _negative_ charges are arbitrarily named characteristics to describe the attractive and repulsive behavior of subatomic particles such as protons and electrons.

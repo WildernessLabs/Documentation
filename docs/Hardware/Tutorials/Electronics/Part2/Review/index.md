@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
-title: Part 2 Review
+title: Review
+subtitle: Important concepts regarding the quantification of electricity.
 ---
+
+# Important Concepts
 
  * The amount of work electricity can do is described in terms of _amperage_ and _voltage_.
  * _Amperage (A)_ describes the quantity of charge carriers flowing in an electric current.
@@ -15,5 +18,3 @@ title: Part 2 Review
  * Circuits are closed loops that consists of a voltage _source_, a _load_, and a return path called _ground_ or _common_.
 
 # [Part 3 - Current Types; AC & DC](../../Part3/Current_Types)
-
-<br/>

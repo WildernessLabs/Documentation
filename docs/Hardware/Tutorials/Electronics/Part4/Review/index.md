@@ -1,8 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Review
+subtitle: Important concepts pertaining to resistance and Ohm's law.
 ---
 
+# Important Concepts
 
 We're going to dive deeper into resistors and resistor networks later, but: 
 
