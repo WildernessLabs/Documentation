@@ -35,6 +35,16 @@
     <meta name="msapplication-wide310x150logo" content="http://developer.wildernesslabs.co/assets/favicon/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="http://developer.wildernesslabs.co/assets/favicon/mstile-310x310.png" />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89139221-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89139221-3');
+    </script>
+
   </head>
   <body>   
 {% include TopNav.html %}
@@ -45,11 +55,5 @@
         
 {% include Footer.html %}
 
-        <!-- Scripts -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
 </html>
