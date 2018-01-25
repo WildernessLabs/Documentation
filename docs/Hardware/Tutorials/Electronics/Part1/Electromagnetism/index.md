@@ -1,7 +1,7 @@
 ---
 layout: ElectronicsTutorial
 title: Electromagnetism
-subtitle: 
+subtitle: The force of electricity.
 ---
 
 # Magnetic Field
