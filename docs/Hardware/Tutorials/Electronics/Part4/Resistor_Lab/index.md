@@ -1,11 +1,14 @@
 ---
 layout: ElectronicsTutorial
 title: Resistor Lab
+subtitle: Measuring actual resistance in series and parallel configurations.
 ---
+
+# Lab Intro
 
 In this lab we're going to build some very simple resistance circuits using a breadboard, which is a common prototyping surface, and measure the resistance in the circuits using a multimeter.
 
-### Requirements
+## Requirements
 
 To do this lab, you'll need the following components and tools:
 
@@ -44,7 +47,7 @@ Breadboards simplify prototyping by creating connections without soldering. The 
 
 Each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, with the leads being separated. Additionally, many breadboards, such as the one pictured above, have power rails along the edges that are connected the whole way down. 
 
-### Power and Ground Rails
+## Power and Ground Rails
 
 Usually, the positive (`+`) side of power rails are connected to the `3.3V` or `5V` pin on the Netduino, and the negative (`-`) side is connected to ground:
 
@@ -52,17 +55,17 @@ Usually, the positive (`+`) side of power rails are connected to the `3.3V` or `
 
 This provides a very useful base for adding more complex circuits that share power and ground.
 
-#### 3.3V and 5V Power and Ground
+### 3.3V and 5V Power and Ground
 
-Sometimes, when building circuits, they might require both `3.3V` and `5V` power, in which case, you can wire one power rail to the `3.3V` pin, and one to the `5V` pin, while they both share a ground connnection:
+Sometimes, when building circuits, they might require both `3.3V` and `5V` power, in which case, you can wire one power rail to the `3.3V` pin, and one to the `5V` pin, while they both share a ground connection:
 
 ![](../Breadboard_w_3.3_and_5V_bb.svg)
 
-### Breadboard Jumper Wires
+## Breadboard Jumper Wires
 
 There are two main kinds of breadboard jumper wires; straight wires, and flexible wires.
 
-#### Straight Wires
+### Straight Wires
 
 Straight wires are made from single strand wire and are usually sold in a kit which has a variety of pre-cut sizes and colors. They can be easily bent to fit whatever circuit routing necessary. A [140 piece kit](http://amzn.to/2B6aINg) like the one shown below can be had for ~USD$7 on Amazon.com:
 
@@ -74,7 +77,7 @@ And a [350 piece kit](http://amzn.to/2hEdsJ3) runs around USD$15:
 
 I have both, and prefer the organization of the 350 piece kit, but the 140 piece kit is just fine.
 
-#### Flexible wires
+### Flexible wires
 
 Flexible jumper wires come in combinations of male to male, male to female, and female to female. They are made of multi stranded wires and so are very flexible, and are good for long connections. However, unlike the straight wires, they usually only come in two sizes, so they're not very practical for short connections; circuits built with only them can be very messy. They usually come in a ribbon that can be peeled apart, and a [pack of 80](http://amzn.to/2hFGuIq) run USD$6 on Amazon.com:
 
@@ -107,7 +110,7 @@ A multimeter is a must-have tool for hardware developers. A decent multimeter do
 
 As a bonus feature, you might consider getting a multimeter that does _transistor testing_. We'll cover transistors in more detail later, but a transistor tester will identify the legs (pins) on a transistor and also tell you if it's functional.
 
-#### Entry-Level, Pocket Mutltimeter
+### Entry-Level, Pocket Multimeter
 
 [Here is a great, pocket-sized, starter multimeter from Amazon](https://www.amazon.com/gp/product/B072XH5SJ7/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B072XH5SJ7&linkCode=as2&tag=ilderneabs-20&linkId=a5c314e3ce625c8bee20f98f7e4827f3) that costs about USD$13 and will probably get you through all of this tutorial:
 
@@ -119,7 +122,7 @@ For a midlevel multimeter, [this one](http://amzn.to/2hEjvNG) runs $37 and has a
 
 ![](../Proster_Multimeter.jpg)
 
-#### Professional Multimeter
+### Professional Multimeter
 
 For a professional level multimeter that will do pretty much everything you might want to do, [BK Precision 2707B](https://www.mouser.com/ProductDetail/BK-Precision/2707B/?qs=sGAEpiMZZMtHyRFzBQ9JV5QGausOCKjC) is a manual ranging model that has transistor testing, capacitance and diode testing, and more. At ~USD$95, they're an investment.
 
@@ -134,11 +137,11 @@ Resistor leads are pretty long, so I often trim them down a bit to put them in b
 ![](../Wire_Stripper_Cutter.jpg)
 
 
-## Exercise 1 - Measuring Series Resistance
+# Exercise 1 - Measuring Series Resistance
 
 For our first exercise, we're going to measure two resistors in series. This will allow us to learn how to use a multimeter, build a simple circuit, and verify the series resistance law.
 
-### Step 1: Build the resistance circuit.
+## Step 1: Build the resistance circuit.
 
 Select two resistors of any value from your resistor kit. For mine, I grabbed a `330Ω` resistor, and a `1kΩ` resistor. Then, arrange them in series (end-to-end) on a breadboard. How you configure them is your choice, as long as their common legs are connected. The following illustration shows a breadboard with 3 different, yet valid configurations in which to place the resistors (note that configuration 3 requires a wire to connect the two resistors, because they have no common row connection):
 
@@ -146,7 +149,7 @@ Select two resistors of any value from your resistor kit. For mine, I grabbed a 
 
 The green wires illustrate where we'll measure resistance with the probes.
 
-#### Breadboard Layout Overlays
+### Breadboard Layout Overlays
 
 To make lab component layouts easier, I've created printable breadboard overlays that you can attach to the top of your breadboard. These illustrate sample component layouts and also show the underlying copper traces, which add some clarity to the routing connections:
 
@@ -163,7 +166,7 @@ Or, for an even better deal, you can get a [pack of 40 in fancy colors for ~USD$
 The [layout overlays for this lab are here](../Resistor_Lab_BB_Overlay.pdf). Make sure that when you print them, they are printed at 100% scale, otherwise they may not fit.
 
 
-### Step 2: Measure the circuit and calculate percent error.
+## Step 2: Measure the circuit and calculate percent error.
 
 Once the circuit is built, we need to measure the resistance from one end of the resistor series to the other.
 
@@ -212,17 +215,17 @@ Following my steps, measure your total resistance and calculate the percent erro
 If your measured resistance is way off, double check the circuit to make sure it looks like one of the examples above.
 
 
-## Exercise 2 - Measuring Parallel Resistance
+# Exercise 2 - Measuring Parallel Resistance
 
 In this exercise we're going to build a parallel resistance circuit and measure it. 
 
-### Step 1: Build the circuit.
+## Step 1: Build the circuit.
 
 Just as before, choose two resistors from you resistor kit and place them in parallel wiring configuration so that they each share their legs. The following illustration shows two different sample configurations, as well as the probe test points:
 
 ![](../Parallel_Resistance_Lab_bb.svg)
 
-### Step 2: Measure actual values and calculate expected values.
+## Step 2: Measure actual values and calculate expected values.
 
 Next, measure the actual resistance and calculate the expected values. I used two, `4.7k` resistors and measured `2.32kΩ`.  Recall that parallel resistance is calculated using conductance:
 
@@ -251,6 +254,4 @@ Using the process above with your circuit, answer the following questions:
  * What is the expected value?
  * What is the percent error of actual vs. expected?
 
-## [Next - Review](../Review)
-
-<br/>
+# [Next - Review](../Review)
