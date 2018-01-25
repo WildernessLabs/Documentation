@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Voltage Division
+subtitle: Reducing voltage by dividing into two paths using a series resistor circuit.
 ---
+
+# Rewriting the Voltage Division Equation
 
 Using a little algebra, we can rewrite our `Vout = (Vs / (R1 + R2)) * R2` equation from before:
 
@@ -29,7 +32,7 @@ Therefore:
 5V * (3 / 5) = 3V
 ```
 
-## Current
+# Current
 
 This reveals another interesting fact about voltage division; the voltage drop in a circuit is determined by the ratio of resistances, not the overall resistance. Therefore, any resistor combination that fulfilled that ratio, would provide `3V` out. 
 
@@ -55,7 +58,7 @@ I = 5V / 20Ω = 0.25A = 250mA      // smaller resistors, more current
 I = 5V / 200Ω = 0.025A = 25mA    // larger resistors, less current
 ```
 
-### Current at Vout
+## Current at Vout
 
 We can also calculate the maximum amount of current available to a load hooked to `Vout` in those two divider circuits by calculating it at the first resistor:
 
@@ -70,7 +73,7 @@ I @ R1 = 5V / 80Ω = 0.0625A
 
 A load attached to `Vout` could potentially draw up to `625mA` of current from the divider circuit that had smaller resistors, and `62.5mA` from the divider circuit with larger resistors.
 
-### Power Draw
+## Power Draw
 
 Consider the two voltage divider circuits described above:
 
@@ -88,7 +91,4 @@ Circuit 2 (total R: 200Ω) Battery Time = 1000mAh / 25mA = 40 hours.
 
 As we can see, the voltage divider with more resistance is much more power efficient than the voltage divider with less resistance because it lets less current through. We might then be tempted to think that we should always use high resistance in a voltage divider, but in reality, things are a little more complicated. In order to understand why, we must consider the circuit as a whole.
 
-## [Next - Practical Considerations and Use of Voltage Dividers](../Voltage_Divider_Practicals)
-
-
-<br/>
+# [Next - Practical Considerations and Use of Voltage Dividers](../Voltage_Divider_Practicals)

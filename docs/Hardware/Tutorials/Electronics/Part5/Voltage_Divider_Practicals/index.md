@@ -1,18 +1,21 @@
 ---
 layout: ElectronicsTutorial
-title: Voltage Dividers Uses and Practical Considerations
+title: Voltage Divider Practicals
+subtitle: Uses and practical considerations when using voltage dividers.
 ---
+
+# Common Uses
 
 Voltage divider circuits have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions; reading resistive sensors, and analog level shifting.
 
 
-### Reading Resistive Sensors
+## Reading Resistive Sensors
 
 A non-obvious usage for voltage dividers is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
 
 ![](../Resistive_Sensor_Lab/Resistive_Sensor_Circuit.svg)
 
-### Analog Level Shifting
+## Analog Level Shifting
 
 Another common use of voltage dividers is to adjust, through division, the level of an analong input signal to a lower level.
 
@@ -24,7 +27,7 @@ However, Netduino has analog inputs that can read voltage from `0V` to `3.3V`. S
 
 In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run internally at 1.2V or less), but occasionally you might find an older 5V sensor that you want to use.
 
-### Potentiometers
+## Potentiometers
 
 In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable voltage output based on the adjustable resistance of the internal variable resistor. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer. The following image shows a traditional potentiometer on the left and a trimmer potentiometer (trimpot) on the right:
 
@@ -32,11 +35,11 @@ In addition to the divider circuits used in level shifting and resistive sensors
 
 Potentiometers often have a decorative knob (for instance, a volume knob) attached to them after they're installed in their finished products. Trimpots are usually used internally in products to provide very precise adjustments, often to balance circuits. They're not meant for daily use, and often their lifespan is no more than 200 cycles/turns.
 
-## Practical Considerations
+# Practical Considerations
 
 Whether voltage dividers are used to level shift or read resistive sensors, there are some practical considerations that must be understood before they can be used effectively.
 
-### Load and the Third Leg
+## Load and the Third Leg
 
 When a load is attached to `Vout`, the values of the voltage divider circuit change. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
 
@@ -73,7 +76,7 @@ Vout = 5V * (2.4Ω / 10.4Ω)) = 1.15V
 As illustrated above, a `3Ω` resistance in the load made a big difference; In this case, the load would only see `1.15V`! And because the total resistance has changed, the amount of power would have also changed.
 
 
-### Netduino Analog to Digital Converter (ADC) Load
+## Netduino Analog to Digital Converter (ADC) Load
 
 In both the level shifting and the resistive sensor, the values are read by Netduino via the _Analog to Digital Converter_ (ADC) on the STM32F microcontroller, which is the main processing chip. An ADC reads voltage signals and converts them to a digital value that describes the input voltage level (`0V` to `3.3V`) in 1,024 steps of precision (values `0` through `1,023`).
 
@@ -88,7 +91,7 @@ A value of `0` means that it read `0V`, and a value of `1,023` means that the vo
 
 The maximum voltage level that can be read is `3.3V`, but the analog input ports are `5V` tolerant, meaning they can accept up to `5V` without overloading the chip and possibly destroying it. However, to be able to read any voltage above `3.3V`, a voltage divider must be used.
 
-#### ADC Resistance and Load
+### ADC Resistance and Load
 
 The ADC is a complex and clever circuit and getting very accurate reads from it requires special considerations which will be covered in a later part of this tutorial. However, for prototyping purposes, we can ignore those complexities and design with simple concepts in mind.
 
@@ -114,7 +117,7 @@ G = 1 / 11,000Ω = 0.00009S ~= 0.0001S
 
 Luckily, even though the ADC adds resistance to the bottom half of the divider, the resistance is high enough that it has only a negligible effect, as we'll see.
 
-### Variable Load Resistance
+## Variable Load Resistance
 
 Another complication of voltage dividers is that the consideration of load resistance gets much more complex when the resistance of that load can change over time. For instance, some sub circuits might draw different amounts of power depending on what the circuit is doing. In fact, the ADC does just that, but for prototyping we can largely ignore the fluctuation. Later on, we'll dive deeper into into increasing the accuracy of analog readings.
 
@@ -143,19 +146,17 @@ This means that as the load resistance changes, it only has a minor effect on th
 
 -->
 
-### Power Efficiency
+## Power Efficiency
 
 This reveals another interesting fact about voltage dividers; in their simple form, they are very power inefficient. Using smaller resistors to account for load resistance changes means that more power is wasted.
 
 In circuit designs that require a high level of ADC accuracy, or more power efficiency, we can use a more complex circuit that uses an _operational amplifier_ (OpAmp) to amplify the sensor signal so that we can use a very small amount of power. We'll explore that circuit in a later part of this tutorial. Again, however, for prototyping, we can usually get away with just using more power. We can also average our samples to get a cleaner reading, as we'll see in a bit.
 
-### Never use a Voltage Divider as a Voltage Regulator
+## Never use a Voltage Divider as a Voltage Regulator
 
 Because of their inefficiency, voltage dividers should never be used as voltage regulator. In order to get a voltage signal that had only 10% deviation from the target value, you would have to use resistors that let 10x of the amount of power that the `Vout` required. So if the sub circuit required `100mA` of power, then you would need to push `1A` through the circuit to only get a deviation between `95mA` and `105mA`. 
 
 Instead, cheap voltage regulator chips are much more efficient than a voltage divider to provide sub circuit with clean, regular power.
 
 
-## [Next - Lab: Resistive Sensors](../Resistive_Sensor_Lab)
-
-<br/>
+# [Next - Lab: Resistive Sensors](../Resistive_Sensor_Lab)
