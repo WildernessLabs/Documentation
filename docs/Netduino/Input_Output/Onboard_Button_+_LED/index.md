@@ -1,7 +1,10 @@
 ---
 layout: Netduino
 title: Onboard Button + LED
+subtitle: Working with Netduino's onboard push button and LED.
 ---
+
+# Info
 
 Netduino has an accessible button and a blue LED onboard. This means that you can test code that uses a button or LED circuit without having to build an external one.
 
@@ -10,6 +13,13 @@ The onboard LED  is availble via the `Pins.ONBOARD_LED` enumeration, and turns o
 The onboard Button is available via `Pins.ONBOARD_BTN` enumeration, and if not bound to either an `InputPort` or `OutputPort`, will reset the Netduino by default when pressed. To disable it, simple assign a port to it.
 
 Note that the Netduino also has a white power LED indicating the board is powered. Boards that are network enabled, such as the N2+, N3 Ethernet, or N3 WiFi also have a network LED that lights up to indicate network traffic. 
+
+## Netduino.Foundation PushButton and PwmLed
+
+Both the onboard button and LED can be controlled via the Netduino.Foundation [`PushButton`](http://netduino.foundation/API/Sensors/Buttons/PushButton/) and [`PwmLed`](http://netduino.foundation/API/LEDs/PwmLed/) classes, respectively. These classes provide a modern, clean API for interacting with these peripherals.
+
+This guide is provided for information on accessing it via the low-level .NET MicroFramework classes.
+
 
 ## InputPort and OutputPort
 
