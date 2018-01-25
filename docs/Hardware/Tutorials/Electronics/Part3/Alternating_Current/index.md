@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Alternating Current (AC)
+subtitle: Alternating electron flow (polarity) current.
 ---
+
+# Overview
 
 [Alternating current (AC)](https://en.wikipedia.org/wiki/Alternating_current) is a type of current in which the direction of flow of electrons (polarity), alternates over a period of time. 
 
@@ -19,6 +22,4 @@ The symbol for an AC power source looks similar to the DC power source, but inst
 
 ![AC Power Source Symbol; A circle with a wave inside it.](/Common_Files/AC_Power.svg)
 
-## [Next - AC Power Generation](../AC_Generation)
-
-<br/>
+# [Next - AC Power Generation](../AC_Generation)

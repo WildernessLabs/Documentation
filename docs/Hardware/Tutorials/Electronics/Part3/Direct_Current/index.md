@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Direct Current
+subtitle: Constant polarity current.
 ---
+
+# Overview
 
 [Direct current (DC)](https://en.wikipedia.org/wiki/Direct_current) specifies a unidirectional flow of electrons; that is they flow in one direction only.
 
@@ -26,5 +29,3 @@ But many specific power sources have their own symbols, such as batteries, as we
 Let's examine AC next.
 
 ## [Next - Alternating Current](../Alternating_Current)
-
-<br/>
