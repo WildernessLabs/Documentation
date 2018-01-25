@@ -1,9 +1,12 @@
 ---
 layout: Netduino
 title: Digital I/O
+subtitle: Netduino digital (binary) Input/Output capabilities.
 ---
 
-Digital ports are useful for binary communication in which the port is either high/on (powered at 3.3v) or low/off (grounded at 0v). High represents a digital 1, and low represents 0. 
+# Info
+
+Digital ports are useful for binary communication in which the port is either high/on (powered at `3.3V`) or low/off (grounded at `0V`). High represents a digital `1` or boolean `true`, and low represents digital `0` or boolean `false`. 
 
 Additionally, Netduino provides built-in support for a host of different types of common digital communication protocols via the digital ports. 
 
@@ -18,7 +21,7 @@ The above protocols are sometimes called peripherals.  The location of the perip
 
 ## Pulling High or Low
 
-Digital ports can be set to stand at a high or low voltage, in what's knows as _pulling_ them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at 3.3v, until it is modified, whereas a port pulled low will be at 0v.
+Digital ports can be set to stand at a high or low voltage, in what's knows as _pulling_ them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at `3.3V`, until it is modified, whereas a port pulled low will be at `0V`.
 
 The following is the signature for one of the `InputPort` constructors:
 
@@ -28,7 +31,7 @@ public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
 
 ## Input Ports
 
-For example, the following code initializes an [`InputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx) (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to 0v, so that by default, it doesn't have a current running through it:
+The following code initializes an [`InputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx) (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to `0V`, so that by default, it doesn't have a current running through it:
 
 
 ```csharp
@@ -44,9 +47,9 @@ bool state = inputPort.Read();
 
 ### Events via InterruptPorts
 
-In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port's value changes by using an [`InterruptPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx). For example, in response to a button being pressed that connects a circuit and raises the input port's voltage from low (0v) to high (3.3v).
+In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port's value changes by using an [`InterruptPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx). For example, in response to a button being pressed that connects a circuit and raises the input port's voltage from low (`0V`) to high (`3.3V`).
 
-For example, the [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents) illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:
+The [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents) illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:
 
 ```csharp
 using System;
@@ -157,7 +160,7 @@ To write to a port, an [`OutputPort`](https://msdn.microsoft.com/en-us/library/m
 static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 ```
 
-To send a signal to the port, the `Write` method is called, passing in `false` for a low signal (0v), or `true` for a high (3.3v) signal:
+To send a signal to the port, the `Write` method is called, passing in `false` for a low signal (`0V`), or `true` for a high (`3.3V`) signal:
 
 ```csharp
 _led.Write(true); 

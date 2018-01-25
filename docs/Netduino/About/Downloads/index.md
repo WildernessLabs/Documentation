@@ -1,7 +1,10 @@
 ---
 layout: Netduino
 title: Downloads
+subtitle: Netduino resources.
 ---
+
+# Links and Resources
 
 Download links for Netduino are enumerated here for convenience. If you're new to Netduino, check out the [Getting Started](../../Getting_Started/) tutorial to get up and running.
 

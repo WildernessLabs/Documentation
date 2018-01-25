@@ -1,7 +1,10 @@
 ---
 layout: Netduino
-title: Open Source Files
+title: Source
+subtitle: Netduino design and other source files.
 ---
+
+# Open Source Hardware
 
 Netduino is an open source hardware project. Both the hardware and all the software tooling associated with it are open source.
 
