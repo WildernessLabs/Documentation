@@ -1,11 +1,16 @@
 ---
 layout: Netduino
-title: Pulse-Width Modulation (PWM)
+title: PWM
+subtitle: Complex voltage control via Pulse-Width-Modulation (PWM) signals.
 ---
+
+# Info
+
+Pulse-Width-Modulation is a way of controlling voltage digitally to emulate an analog signal.
 
 Although PWM is a modulation technique that can be used for communication, Netduino users are most likely to encounter this in three scenarios:
 
-- Controlling the amount of power being supplied to a device
+- Limiting the voltage being supplied to a device
 - Dimming LEDs
 - [Servo control](/Hardware/Reference/Peripherals/Servos)
 
