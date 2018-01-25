@@ -1,7 +1,10 @@
 ---
 layout: Netduino
-title: Netduino Application Fundamentals
+title: Application Fundamentals
+subtitle: Building .NET MicroFramework applications for Netduino.
 ---
+
+# Info
 
 Netduino a small, power-efficient computer that runs a tiny operating system. The .NET Micro Framework (abbreviated to NETMF) system is specially designed to run a single application.  It is designed to run .NET on devices with low memory profiles.
 

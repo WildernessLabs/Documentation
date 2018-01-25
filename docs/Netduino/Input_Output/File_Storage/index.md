@@ -1,9 +1,14 @@
 ---
 layout: Netduino
-title: File Storage
+title: File IO
+subtitle: Using the onboard micro SD card as a persistent storage device.
 ---
 
-Netduino 2 and 3 can access up to 2GB of storage on a Micro SD Card. Some models have an SD card slot on the board, but models that don't have one built in can use an SD Card Shield. 
+# Info
+
+Netduino 2 and 3 can access up to 2GB of storage on a Micro SD Card which provide a persistent storage mechanism similar to a hard drive. This can be useful for storing application configuration information that can be read at boot-up, or for storing log information.
+
+Network-enabled models have an SD card slot on the board, but models that don't have one built in can use an SD Card Shield. 
 
 Accessing and writing to an SD card is generally the same as in regular .NET. However, you'll need to make sure that the following DLLs are referenced:
 
@@ -11,7 +16,7 @@ Accessing and writing to an SD card is generally the same as in regular .NET. Ho
  * `SecretLabs.NETMF.IO`
  * `System.IO`
 
-When a SD card is inserted into the Netduino, it is mounted as the "SD" volume, so for example, a file called `test.txt` in the root directory of the card would be accessed via the following path:
+When a SD card is inserted into the Netduino, it is mounted as the `SD` volume, so for example, a file called `test.txt` in the root directory of the card would be accessed via the following path:
 
 `var path = Path.Combine("SD","test.txt");`
 
