@@ -12,19 +12,19 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 * [Visual Studio 2015](https://www.visualstudio.com/vs/older-downloads/) - Note, community edition is free, but you'll need to create an account if you don't already have one.
 * [.NET Micro Framework (.NETMF) v4.3.2 - QFE2 SDK](http://downloads.wildernesslabs.co/NETMF_SDK/netmf-v4.3.2-SDK-QFE2-RTM.zip)
 * .NETMF Plugin for:
-  * [Visual Studio 2015](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs14.vsix)
-  * [Visual Studio 2013](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs2013.vsix)
-* [Netduino SDK V5](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_v5.exe)
+  * [Visual Studio 2015](https://www.wildernesslabs.co/downloads?f=/NETMF_SDK/netmfvs14.vsix)
+  * [Visual Studio 2013](https://www.wildernesslabs.co/downloads?f=/NETMF_SDK/netmfvs2013.vsix)
+* [Netduino SDK](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/netduinosdk_v5.exe)
 
 ### Mac
  
 * [Xamarin Studio](http://www.monodevelop.com/download/) or [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
-* [Firmware Updater and Configuration Tool](http://downloads.wildernesslabs.co/Netduino_SDK/MacDeploy.zip)
+* [Firmware Updater and Configuration Tool](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/MacDeploy.zip)
 * [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 
 ## Windows Firmware Updater
 
-* [v4.3.2.3](http://downloads.wildernesslabs.co/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip)
+* [v4.3.2.3](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip)
 
 ## 3D Printable Prototyping Baseboard
 
@@ -53,16 +53,16 @@ Handles either a [2 channel](http://amzn.to/2xBiHSM) or [4 channel](http://amzn.
 ### Development Environment (Windows Only)
 
 * [Visual Studio Express 2010](https://www.visualstudio.com/vs/older-downloads/)
-* [NETMF SDK 4.2](http://downloads.wildernesslabs.co/NETMF_SDK/MicroFrameworkSDK_NETMF42_QFE2.MSI)
-* Netduino SDK 4.2.2.0 [32 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_32bit_NETMF42.exe) or [64 bit](http://downloads.wildernesslabs.co/Netduino_SDK/netduinosdk_64bit_NETMF42.exe)
+* [NETMF SDK 4.2](https://www.wildernesslabs.co/downloads?f=/NETMF_SDK/MicroFrameworkSDK_NETMF42_QFE2.MSI)
+* Netduino SDK 4.2.2.0 [32 bit](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/netduinosdk_32bit_NETMF42.exe) or [64 bit](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/netduinosdk_64bit_NETMF42.exe)
 
 ### Legacy Firmware Downloads
 
- * [Netduino 2 Plus, v4.2.2.2](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoPlus2_Firmware_4.2.2.2.zip)
- * [Netduino 2, v4.2.2.2](https://downloads.wildernesslabs.co/LegacyFirmware/Netduino2_Firmware_4.2.2.2.zip)
- * [Netduino Plus, v4.2.0.1](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoPlus_Firmware_4.2.0.1.zip)
- * [Netduino Mini, v4.2.0.1 (TTL)](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_TTL.zip)
- * [Netduino Mini, v4.2.0.1 (RS232)](https://downloads.wildernesslabs.co/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_RS232.zip)
+ * [Netduino 2 Plus, v4.2.2.2](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/NetduinoPlus2_Firmware_4.2.2.2.zip)
+ * [Netduino 2, v4.2.2.2](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/Netduino2_Firmware_4.2.2.2.zip)
+ * [Netduino Plus, v4.2.0.1](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/NetduinoPlus_Firmware_4.2.0.1.zip)
+ * [Netduino Mini, v4.2.0.1 (TTL)](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_TTL.zip)
+ * [Netduino Mini, v4.2.0.1 (RS232)](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/NetduinoMini_Firmware_4.2.0.1_RS232.zip)
 
 
 
