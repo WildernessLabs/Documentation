@@ -1,15 +1,22 @@
 ---
 layout: Netduino
-title: I2C
+title: I2C/IIC
+subtitle: Netduino Inter-Integrated Circuit (I2C) protocol support.
 ---
 
-[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)  is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.
+# Info
+
+[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye squared see", is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.
 
 This guide will:
 
 * Provide an overview of the I2C communication protocol
 * Demonstrate [reading data from an I2C temperature sensor](Reading/)
 * Reconfigure the I2C temperature sensor by [writing data to the I2C temperature sensor](Writing/)
+
+## Netduino.Foundation I2CBus
+
+The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/) class that makes I2C communication easy by encapsulating all of the low-level plumbing calls in an easy to use object. We recommend using that class for I2C communications rather than using the low-level calls directly.
 
 ## Overview
 
@@ -125,3 +132,4 @@ For an in-depth discussion on writing data, see the [writing to I2C guide](Writi
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
 * [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)
 * [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors)
+* [Netduino.Foundation `I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/)

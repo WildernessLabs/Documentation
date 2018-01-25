@@ -1,15 +1,16 @@
 ---
 layout: Netduino
-title: I2C - Reading Data Over I2C
+title: I2C Reading
+subtitle: Reading data from an I2C device.
 ---
+
+# Info
 
 The [previous section of this guide](../) presented an overview of the I2C protocol.  This section will demonstrate how to read some data from a sensor, specifically the TMP102 temperature sensor.
 
-As a reminder, this guide will cover:
+## Netduino.Foundation I2CBus
 
-* Provide an [overview of the I2C communication protocol](../)
-* Demonstrate reading data from an I2C temperature sensor
-* Reconfigure the I2C temperature sensor by [writing data to the I2C temperature sensor](../Writing/)
+The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/) class that makes I2C communication easy by encapsulating all of the low-level plumbing calls in an easy to use object. We recommend using that class for I2C communications rather than using the low-level calls directly.
 
 ## Netduino I2C Pins
 
@@ -184,3 +185,4 @@ The next section of this guide will reconfigure the TMP102 temperature sensor by
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
 * [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)
 * [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors)
+* [Netduino.Foundation `I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/)
