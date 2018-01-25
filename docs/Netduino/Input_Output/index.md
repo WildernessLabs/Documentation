@@ -1,7 +1,7 @@
 ---
 layout: Netduino
-title: I/O
-subtitle: General Input/Output (I/O) options available onboard the Netduino.
+title: IO
+subtitle: General Input/Output (GPIO) options available onboard the Netduino.
 ---
 
 # Info
