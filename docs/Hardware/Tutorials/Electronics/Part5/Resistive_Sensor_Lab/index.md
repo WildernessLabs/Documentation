@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Photoresistor Lab
 ---
 
@@ -26,7 +25,7 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 To build a photoresistor sensor circuit, we need to start with a photoresistor. Photoresistors usually look something like the following, and can usually be [sourced for less than USD$1](http://www.mouser.com/ProductDetail/Adafruit/161/?qs=%2fha2pyFadugRELlGV3EJvhiJsyG6%2fjztqGMot59Rgn9%2fJAtRYbFvdw%3d%3d):
 
-![](../Photoresistor.jpg)
+![](Photoresistor.jpg)
 
 There are several major component supply websites that serve the majority of the world. The most common ones we use are:
 
@@ -51,7 +50,7 @@ Resistance can't be measured directly with a Netduino, but voltage can be measur
 
 The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
 
-![](../Resistive_Sensor_Circuit.svg)
+![](Resistive_Sensor_Circuit.svg)
 
 ## Exercise 1 - Reading a Resistive Sensor
 
@@ -60,7 +59,7 @@ The following circuit schematic is the exact same as our voltage divider from be
 
 To measure the resistance of a photoresistor, set the multimeter to its resistance measurement setting, which is usually denoted by the ohm (`Ω`) symbol, and put the multimeter leads on each of the photoresistor leads. It might be helpful to put the photoresistor in a breadboard to keep it still:
 
-![](../Photoresistor_Measuring.jpg)
+![](Photoresistor_Measuring.jpg)
 
 If using a breadboard, make sure each leg of the photoresistor is on opposite sides of the center well (or on different rows), so the legs aren't connected.
 
@@ -151,7 +150,7 @@ Using that formula, I created the following table of values:
 
 The circuit therefore would look something like this:
 
-![](../Photoresistor_Circuit.svg)
+![](Photoresistor_Circuit.svg)
 
 My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.53V` and `2.2V`, which provides a good resolution for reading the value.
 
@@ -198,9 +197,30 @@ Using the expected high and low `Vout` values from your calculations in step 2, 
 
 ### Step 4: Build the circuit.
 
-To build this circuit on a breadboard, wire it similar to the following:
+The following circuit schematic represents the circuit that we're going to build. Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of many components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In this case, the Netduino is represented by one such box:
 
-![](../Photoresistor_Circuit_bb.svg)
+![](Photoresistor_Circuit_schem.svg)
+
+Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the schematic of the lab above, to the breadboard layout schematic below:
+
+![](Photoresistor_Circuit_bb.svg)
+
+The breadboard view above, which I've created in [Fritzing](http://fritzing.org), is electrically equivalent to the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a bit more complex than the schematic:
+
+#### Breadboard Overlay
+
+The printable breadboard overlay for this circuit can be found [here](Photoresistor_Lab_BB_Overlay.pdf).
+
+#### Baseboard
+
+A baseboard to mount the Netduino and the breadboard on is really helpful to hold the whole assembly together, though it's not required:
+
+![](Photoresistor_Lab.svg)
+
+Our [Wilderness Labs Hack kit](http://amzn.to/2y8LzPg) includes a laser etched wooden baseboard, but if you have access to a 3D printer, you can also print one from our [3D designs repo](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Baseboards).
+
+Assemble the circuit similar to what's shown in the breadboard overlay illustration above.
+
 
 ### Step 5: Deploy Photoresistor_Lab app to the Netduino.
 

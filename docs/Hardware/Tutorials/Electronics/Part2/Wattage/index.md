@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Wattage, the Relationship of Amps & Volts
 ---
 

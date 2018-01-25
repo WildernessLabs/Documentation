@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Part 1 Review
 ---
 

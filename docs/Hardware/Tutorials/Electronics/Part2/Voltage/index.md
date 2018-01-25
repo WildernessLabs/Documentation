@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Electromotive Force (EMF) and Voltage (V)
 ---
 

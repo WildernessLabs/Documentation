@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: AC Power Generation
 ---
 

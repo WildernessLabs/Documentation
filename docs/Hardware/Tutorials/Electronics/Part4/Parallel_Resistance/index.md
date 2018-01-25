@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Resistors in Parallel
 ---
 

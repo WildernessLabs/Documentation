@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Electrical Current
 ---
 

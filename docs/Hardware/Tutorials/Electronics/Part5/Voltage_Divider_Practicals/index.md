@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Voltage Dividers Uses and Practical Considerations
 ---
 
@@ -10,7 +9,7 @@ Voltage divider circuits have a variety of uses, but for the type of practical c
 
 A non-obvious usage for voltage dividers is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
 
-![](../Resistive_Sensor_Circuit.svg)
+![](../Resistive_Sensor_Lab/Resistive_Sensor_Circuit.svg)
 
 ### Analog Level Shifting
 
@@ -28,7 +27,7 @@ In practice, very few sensors are 5V anymore (lower voltage is faster and can be
 
 In addition to the divider circuits used in level shifting and resistive sensors, voltage division is used internally in potentiometers, which are knobs or sliders that provide a variable voltage output based on the adjustable resistance of the internal variable resistor. Potentiometers are often used on electronic devices to provide user input, for example, the volume on a stereo is often controlled by a potentiometer. The following image shows a traditional potentiometer on the left and a trimmer potentiometer (trimpot) on the right:
 
-![](../Potentiometers.jpg)
+![](Potentiometers.jpg)
 
 Potentiometers often have a decorative knob (for instance, a volume knob) attached to them after they're installed in their finished products. Trimpots are usually used internally in products to provide very precise adjustments, often to balance circuits. They're not meant for daily use, and often their lifespan is no more than 200 cycles/turns.
 
@@ -40,7 +39,7 @@ Whether voltage dividers are used to level shift or read resistive sensors, ther
 
 When a load is attached to `Vout`, the values of the voltage divider circuit change. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
 
-![](../Voltage_Divider_Third_Leg.svg)
+![](Voltage_Divider_Third_Leg.svg)
 
 Therefore, when calculating the divider resistance, the resistance of the load must also be considered.
 

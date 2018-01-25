@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Part 4 - Resistance and Ohm's Law
 ---
 

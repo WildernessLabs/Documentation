@@ -1,5 +1,4 @@
 ---
-layout: Hardware
 title: Battery Resistance; Ideal vs. Practical Voltage
 ---
 
