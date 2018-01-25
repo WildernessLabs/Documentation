@@ -34,3 +34,5 @@ The following is a list of components and tools needed to complete the labs pres
 | Netduino 2 or 3, any model             | $40 - $70              | [Part 5, Resistive Sensor Lab](../../Part5/Resistive_Sensor_Lab)    |
 | 22ga Single Strand Wire (optional)     | $20                    | [Part 5, Level Shifting Lab](../../Part5/Level_Shifting_Lab)        |
 | LilyPad 5V Light Sensor                | $2                     | [Part 5, Level Shifting Lab](../../Part5/Level_Shifting_Lab)        |
+
+# [Next: Part 1 - Physics of Electricity](/Hardware/Tutorials/Electronics/Part1/Atoms/)

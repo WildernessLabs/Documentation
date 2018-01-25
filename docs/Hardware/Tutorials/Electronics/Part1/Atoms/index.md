@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Atoms
+subtitle: Understanding the nature of electricity.
 ---
+
+# Atomic Composition
 
 In order to understand how circuits work and how to design them, we must first understand some basic physics. Electrical theory and application comes directly from the structure and forces of atoms.
 
@@ -34,19 +37,19 @@ All elements may have different isotopes. For example, the element carbon can  h
 -->
 
 
-## Electrical Charge
+# Electrical Charge
 
 Both protons and electrons have an attraction/repelling force, or "charge." Protons and electrons have the same amount of charge from a quantity standpoint, but they are qualitatively different, in that protons and electrons exert opposite forces, which cause them to attract each other, while electrons will repel each other. The amount of charge a proton or electron has is known as a [_unit electrical charge_](https://en.wikipedia.org/wiki/Elementary_charge#Quantization), often denoted as _e_, and was once thought to be the smallest amount of electrical charge possible (we now know that [quarks](https://en.wikipedia.org/wiki/Quark), have an even smaller electrical charge).
 
 **Protons are said to have a "positive charge,"** Neutrons have no charge (neutral), and **electrons have a "negative charge."**. However, the terms negative and positive in this context have no intrinsic meaning, instead, their naming has been chosen arbitrarily, in that they could have just as easily been called _up_ and _down_ charges, or protons could have been said to be negative and eletrons positive. The important part here is that they are opposites.
 
-## Ions
+# Ions
 
 Because protons and electrons have the same amount but opposite type of charge, the number of electrons in a balanced atom (in which the net electrical charge is zero), must be equal. So a hydrogen atom (atomic number of 1) should have one proton and electron. Iron, which an atomic number of 26, should naturally have 26 protons, and 26 neutrons. 
 
 However, atoms can gain or lose electrons, causing them to have a net positive (if there are more protons) or net negative charge (if there are more electrons). These atoms are called [ions](https://en.wikipedia.org/wiki/Ion). And the process of becoming ionized is ionization. 
 
-## Conductors
+# Conductors
 
 Atoms often combine together to form molecules or in a repeating lattice to form crystals and metal, by sharing electrons:
 
@@ -54,7 +57,7 @@ Atoms often combine together to form molecules or in a repeating lattice to form
 
 In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_, or _conductive_.
 
-## Insulators
+# Insulators
 
 <!-- make a note about electron shells here? insulators exist when the valence shell is full? -->
 
@@ -62,6 +65,4 @@ Materials that don't readily let electrons flow are said to be _insulators_. Mat
 
 Metal oxides (metal that have oxygen atoms bound to them) often insulate, even though the same metal without oxygen will conduct. Gasses usually make good insulators, too, because the atoms are too far apart to exchange electrons.
 
-## [Next - Electrical Current](../Electrical_Current)
-
-<br/>
+# [Next - Electrical Current](../Electrical_Current)

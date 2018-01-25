@@ -1,7 +1,10 @@
 ---
 layout: ElectronicsTutorial
 title: Electrical Current
+subtitle: The movement of electrons.
 ---
+
+# Achieving Balance
 
 Atoms want to be balanced; that is, if they are positively charged (have too few electrons), they exert an attractive forced to try and take free electrons to achieve balance; a neutral charge. Atoms that have a negative charge (too many electrons), tend to want to get rid of excess electrons.
 
@@ -26,7 +29,7 @@ This illustration isn't really accurate, because it implies electrons flowing fr
 However, in practical usage, it doesn't matter, because most everything has standardized on Benjamin Franklin's convention. For this reason, many people use the term _charge carrier_, which can mean either a positive charge (electron) or a negative charge (hole).
 
 
-### Speed of Electrical Current
+# Speed of Electrical Current
 
 We think of electricity as moving at near the speed of light, which is how we can communicate around the world on the phone or via the internet, almost instantly. But it turns out; electrons actually flow, or _drift_ as physicists say, pretty slowly. So how is this possible?
 
@@ -40,6 +43,4 @@ If you add a marble in one end, a marble will fall out of the other end almost i
 
 Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
 
-## [Next - Electromagnetism](../Electromagnetism)
-
-<br/>
+# [Next - Electromagnetism](../Electromagnetism)
