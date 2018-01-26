@@ -43,6 +43,9 @@ header {
   ul.is-visible {
     opacity: 1 !important;
     height: auto !important;
+    float: right;
+  clear: both;
+  margin-bottom: .5em;
   }
 
 }

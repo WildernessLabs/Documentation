@@ -1,11 +1,11 @@
 // Mobile menu toggle
-const el = document.querySelector('.mobile-toggle');
-const nav = document.querySelector('.main-nav ul');
+const el2 = document.querySelector('.mobile-toggle');
+const nav2 = document.querySelector('.main-nav ul');
 
-if(el) {
-  el.addEventListener('click', (e) => {
-    nav.classList.toggle('is-visible');
-    el.classList.toggle('has-open-nav');
+if(el2) {
+  el2.addEventListener('click', (e) => {
+    nav2.classList.toggle('is-visible');
+    el2.classList.toggle('has-open-nav');
   });
 }
 

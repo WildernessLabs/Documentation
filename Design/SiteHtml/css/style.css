@@ -675,7 +675,10 @@ header {
     color: #eeeeee; }
   .main-nav ul.is-visible {
     opacity: 1 !important;
-    height: auto !important; }
+    height: auto !important;
+    float: right;
+    clear: both;
+    margin-bottom: .5em; }
 
 .mobile-toggle {
   display: none;
