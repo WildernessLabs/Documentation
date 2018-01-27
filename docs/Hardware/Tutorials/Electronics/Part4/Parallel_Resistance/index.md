@@ -35,7 +35,7 @@ Therefore, to calculate the resistance of a parallel resistor network, we have t
  2. Add the conductances together
  3. Convert the sum back to resistance
 
-# Example
+## Example
 
 Let's consider the same resistor values we had in series, and calculate them in parallel:
 
