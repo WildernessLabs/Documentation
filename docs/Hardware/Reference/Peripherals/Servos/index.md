@@ -1,9 +1,14 @@
 ---
 layout: Hardware
-title: Controlling a Servo Using PWM
+title: Servos
+subtitle: Low-level hardware control guide.
 ---
 
-Servo motors (servos) are available in a wide range of sizes amd capabilities.  A servo makes it easy to add controlled motion to a project.
+# Overview
+
+Servo motors (servos) are available in a wide range of sizes and capabilities.  A servo makes it easy to add controlled motion to a project.
+
+## Servo Components
 
 A typical servo has four components:
 
@@ -22,13 +27,15 @@ The horns provide a way to connect the spindle from the servo to the rest of the
 
 The holes in the armatures of the horns allow cables and wires to be connected to the horns.  This makes it possible to translate the circular motion of the servo into linear motion to control a rudder on a boat or plane.
 
+## Wiring
+
 Three wires are used to connect the servo to the Netduino:
 
 * Power
 * Ground
 * Control signal
 
-The servo above uses a 5V power supply.  According to the data sheet the control signal should be 4.8V - 5V.  In practice, the 3.3V signal from a Netduino PWM pin can be used.
+The servo above uses a 5V power supply.  According to the data sheet the control signal should be 4.8V - 5V. However, in practice, the 3.3V signal from a Netduino PWM pin can be used without issue.
 
 ## Types of Servo Motors
 
@@ -40,6 +47,10 @@ The two common types of servos are:
 Fixed range servos have a defined sweep, typically 0 to 180 degrees.  Fixed range servos typically have hard stops built into the case.  Care should be taken not to attempt to rotate the motor past these stops.
 
 Continuous rotation servos act similar to a standard DC motor rotating in either direction continuously.
+
+## Netduino.Foundation Support
+
+[Netduino.Foundation](http://Netduino.Foundation) includes a [`Servo Core`](http://netduino.foundation/Library/Servos/Servo/) library that greatly simplifies servo control. This hardware guide is here for reference purposes, but we strongly recommend using the Server Core library to control them.
 
 ## Control Signals
 
@@ -72,14 +83,14 @@ For a low power servo, the power and ground signal can be connected directly to 
 
 ![Servo Connected to Netduino](ServoBreadboard.png)
 
-## Sweeping Through 180 Degrees
+## Sweeping Through 180 Degrees using the Netduino.Foundation Servo Core Library
 
-The <i>SG90</i> servo pictured above is capable of sweeping through 180 degrees.  The stated pulse width is 1ms (0 degrees) to 2ms (180 degrees).  An application to repeatedly sweep from 0 to 180 and then back to 0 would look something like this:
+The <i>SG90</i> servo pictured above is capable of sweeping through 180 degrees.  The stated pulse width is 1ms (0 degrees) to 2ms (180 degrees).  The following code uses the Netduino.Foundation [Servo Core library](http://netduino.foundation/Library/Servos/Servo/) to sweep the server from 0º to 180ª and then back to 0º:
 
 ```csharp
 using System.Threading;
 using SecretLabs.NETMF.Hardware.NetduinoPlus;
-using ArduinoLib;
+using Netduino.Foundation.Servos;
 
 namespace ServoTest
 {
@@ -108,71 +119,9 @@ namespace ServoTest
 
 where the `Servo` class allows the angle of the servo to be set.
 
-### Servo Class
+## Low-Level Code to Change the Angle
 
-The Arduino library contains a `servo` class which implements the functionality needed to control a servo.  The class implements the following methods:
-
-| Method            | Description                                               |
-|-------------------|-----------------------------------------------------------|
-| attach            | Attach a servo to a PWM pin.                              |
-| write             | Set the servo to a specified angle.                       |
-| writeMicroseconds | Set the PWM pulse to the specified width in microseconds. |
-| read              | Read the current angle from the servo.                    |
-| attached          | Is the servo object attached to a PWM pin?                |
-| detach            | Detach the servo class from the PWM pin.                  |
-
-Replicating this functionality will ease the process of porting Arduino code to the Netduino platform.
-
-Additionally, C# allows the use of properties to implement complex functionality such as setting the angle of the servo.
-
-Much of the code for the C# `Servo` class is obvious and the full source code is provided in the sample code.  Two key components used in the application above deserve a deep dive into the code:
-
-* `Servo` constructor
-* `Angle` property
-
-#### `Servo` Constructor
-
-The constructor sets up three of the key pieces of information required to control the servo:
-
-* PWM Pin the servo is attached to (`pin`)
-* Pulse width (in microseconds) representing 0 degrees (`minimum`)
-* Pulse width (in microseconds) representing 180 derees (`maximum`)
-
-The `minimum` and `maximum` parameters will be discussed with the `Angle` property.
-
-```csharp
-/// <summary>
-/// Create a new instance of the Servo class.  This call is equivalent to creating a new instance and
-/// then calling the <i>Attach</i> method.
-/// </summary>
-/// <param name="pin">PWM pin to which the servo is attached.</param>
-/// <param name="minimum">Minimum value for the pulse width, the default is 544.</param>
-/// <param name="maximum">Maximum value for the pulse width, the default value is 2400.</param>
-public Servo(Cpu.PWMChannel pin, int minimum = 544, int maximum = 2400)
-{
-    Attach(pin, minimum, maximum);
-}
-
-/// <summary>
-/// Attach the servo to a specific PWM pin and set the minimum and maximum pulse
-/// widths for the 0 and 180 degree angles.
-/// </summary>
-/// <param name="pin">PWM pin to use for this servo.</param>
-/// <param name="minimum">Minimum pulse width for the servo.  The minimum width define the value used for 0 degrees.</param>
-/// <param name="maximum">Maximum pulse width for the servo.  The maximum value determines the value used for 180 degrees.</param>
-void Attach(Cpu.PWMChannel pin, int minimum = 544, int maximum = 2400)
-{
-    Pin = pin;
-    MinimumPulseWidth = minimum;
-    MaximumPulseWidth = maximum;
-}
-```
-
-#### `Angle` Property
-
-In the Arduino class, the angle of the servo is set using the `write` method.  C# properties allow a more intuitive method of setting (and reading) the angle of the servo.
-
-Before looking at the code it is necessary to examine how the position of the servo is set.  The following descriptions taken from the data sheet of the <i>Microservo SG90</i> used in this project.  The terms will be common to most servos but the exact values should be taken from the servo data sheet.
+The following descriptions taken from the data sheet of the <i>Microservo SG90</i> used in this project.  The terms will be common to most servos but the exact values should be taken from the servo data sheet.
 
 ![Servo Control Signal with Measurements](ServoControlSignalWithMeasurements.png)
 
@@ -204,10 +153,6 @@ else
 
 Why 181 in the `pulseWidth` calculation, there are 181 divisions as the angle is between 0 and 180 <i>inclusive</i>.
 
-# Sample Code
-
-The sample application and the `Servo` class can be accessed through the [samples area](/Samples/Netduino/ControllingAServo/).
-
 # Practical Implementation
 
 Whilst developing the `Servo` class it was noted that using the default values did not result in a 180 degree sweep.  Experimentation with the servo showed that the servo had a wider pulse range.  The constructor for the `Servo` class became:
@@ -220,7 +165,8 @@ Servo servo = new Servo(PWMChannels.PWM_PIN_D9, 500, 2400);
 
 # Further Reading
 
+* [Netduino.Foundation Servo Core library](http://netduino.foundation/Library/Servos/Servo/)
 * [PWM on Wikipedia](https://en.wikipedia.org/wiki/Pulse-width_modulation)
 * [NETMF PWM Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.pwm(v=vs.102).aspx)
-* [Servomotros](https://en.wikipedia.org/wiki/Servomotor)
+* [Servomotors](https://en.wikipedia.org/wiki/Servomotor)
 * [Servomechanism](https://en.wikipedia.org/wiki/Servomechanism)
