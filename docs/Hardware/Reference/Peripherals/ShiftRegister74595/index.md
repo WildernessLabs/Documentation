@@ -1,7 +1,10 @@
 ---
 layout: Hardware
 title: 74595 Shift Register
+subtitle: Expanding Netduino digital outputs with an external Integrated Circuit (IC) chip.
 ---
+
+# Overview
 
 74595 shift registers provide a mechanism to convert serial data into 8 parallel outputs.  These are useful in cases where additional output pins are required.  The shift register only uses three pins for the 8 outputs it can provide.
 
@@ -24,25 +27,29 @@ One (Shift Register clock) is used to allow data to be pushed into the shift reg
 
 The second clock (Storage register / Latch clock) is used to decide when the data in the shift register is pushed into the storage register.
 
+## Netduino.Foundation Support
+
+[Netduino.Foundation](http://Netduino.Foundation) includes a [`74595`](http://netduino.foundation/Library/ICs/74595/) shift register class that greatly simplifies using a shift register. This low-level hardware guide is here for reference purposes, but we strongly recommend using Netduino.Foundation to integrate with them.
+
 ## Binary Counting
 
 The operation of the shift register can be illustrated using binary counter.  Here a single shift register will be connected to 8 LEDs.  These LEDs will represent the 8 bits in a single byte.
 
-The application will use [BitBanging](../../BitBanging/) to output the current byte as a series of bits and then display the value on the LEDs.
+The application uses [BitBanging](../../BitBanging/) to output the current byte as a series of bits and then display the value on the LEDs.
 
 ### Hardware
 
 A small number of components are required:
 
 * 1 x LED block (10 LEDs, we will only be using 8)
-* 8 x `220R` current limiting resistors (one for each LED).  Alternatively, use a resistor pack containing 8 x `220R` resistors.
+* 8 x `220R` current limiting resistors (one for each LED).  Alternatively, use a resistor network containing 8 x `220R` resistors.
 * 1 x 74HC595
 
-These components, along with a Netduino, should be connected as follows:
+These components, along with a Netduino, should be wired up as follows:
 
 ![Netduino and Shift Register](ShiftRegisterAndLEDFritzing.png)
 
-A block of LEDs has been used here are these offer 10 LEDs in a small convenient package.  You could use 8 individual LEDs if you wish.
+A block of LEDs has been used here are these offer 10 LEDs in a small convenient package.  8 individual LEDs can also be used.
 
 Note that the pins representing the outputs of the shift register are connected with bit 0 on the right and bit 7 on the left.
 
