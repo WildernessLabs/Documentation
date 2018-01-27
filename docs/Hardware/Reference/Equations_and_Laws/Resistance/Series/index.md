@@ -4,7 +4,16 @@ title: Series Resistance
 subtitle: Calculating total resistance when resistors are connected end-to-end.
 ---
 
-# Overview
+# Quick Reference
+
+## Series Resistance Calculation
+
+```
+Total R = ∑(R1...Rn)
+```
+
+# More Info
+
 Resistors can be placed in series (end to end), in a circuit like the following:
 
 ![](/Hardware/Tutorials/Electronics/Part4/Resistors_in_Series.svg)

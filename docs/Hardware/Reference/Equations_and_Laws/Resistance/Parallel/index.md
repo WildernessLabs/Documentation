@@ -4,7 +4,15 @@ title: Parallel Resistance
 subtitle: Calculating total resistance when resistors are connected side-by-side.
 ---
 
-# Overview
+# Quick Reference
+
+## Parallel Resistance Calculation
+
+```
+TotalR = 1 / ∑(1 / Rn...Rn)
+```
+
+# More Info
 
 Resistors (or resistances) can be arranged in parallel, as in the following diagram:
 
