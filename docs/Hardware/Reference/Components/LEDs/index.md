@@ -81,7 +81,7 @@ The [`PwmLed`](http://netduino.foundation/API/LEDs/PwmLed/) class represents an 
 
 ### `RgbPwmLed` Class
 
-The [`RgbPwmLed'](http://netduino.foundation/API/LEDs/RgbPwmLed/) class represents an RGB LED whose color is controlled by the duty-cycle of three PWM signals. Can be used both with LEDs that have been current limited with in-series resistors, or LEDs without resistors.
+The [`RgbPwmLed`](http://netduino.foundation/API/LEDs/RgbPwmLed/) class represents an RGB LED whose color is controlled by the duty-cycle of three PWM signals. Can be used both with LEDs that have been current limited with in-series resistors, or LEDs without resistors.
 
 ### `TypicalForwardVoltage` Class
 
