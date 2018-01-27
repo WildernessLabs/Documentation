@@ -1,8 +1,12 @@
 ---
 layout: Hardware
 title: Voltage Laws
+subtitle: Calculations involving voltage.
 ---
 
-<!-- ### [Divison](Division) -->
+# Overview
 
-### [Ohm's Law](Ohms_Law)
+Two of the most important calculations involving voltage are Ohm's law and voltage division:
+
+* [Voltage Division](Division)
+* [Ohm's Law](Ohms_Law)
