@@ -1,11 +1,12 @@
 ---
 layout: Hardware
 title: Relays
+subtitle: Electromechanical switches for controlling current on an isolated circuit.
 ---
 
-Relays are electromechanical switches that allow a circuit to switch current on another circuit while being electrically isolated from each other. Inside a relay is an electromagnet powered by the controlling circuit which physically moves a switch. Conceptually, a relay functions much like a transistor, except that because the controlling circuit is electrically isolated from the switched current, meaning that relays can use small amounts of current to physically control large amounts of current, or completely different types of current.
+# Overview
 
-<!-- TODO: Need relay photo -->
+Relays are electromechanical switches that allow a circuit to switch current on another circuit while being electrically isolated from each other. Inside a relay is an electromagnet powered by the controlling circuit which physically moves a switch. Conceptually, a relay functions much like a transistor, except that because the controlling circuit is electrically isolated from the switched current, meaning that relays can use small amounts of current to physically control large amounts of current, or completely different types of current.
 
 For example, a common type of relay is a DC controlled AC relay which uses a small amount of DC current (often supplied by a microcontroller) to switch an AC circuit on or off. This type of setup is common in appliances and other applications in which the logic circuit is DC, but various mechanical parts of the appliance are powered by AC current, such as motors, or heating elements.
 
@@ -18,6 +19,10 @@ Relays have some interesting electrical behaviors due to the fact that they're d
 For example this, [Keye Studio 2 Channel relay board](https://www.amazon.com/Keyestudio-Module-Arduino-raspberry-2-channel/dp/B0177WOT1E/ref=sr_1_1?ie=UTF8&qid=1503712979&sr=8-1&keywords=2+channel+relay+keyestudio) can control up to 10A of 250V AC or 30V DC with 5V of input:
 
 ![Photo of a Keye Studio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg)
+
+## Netduino.Foundation Support
+
+[Netduino.Foundation](http://Netduino.Foundation) includes a [`Relay`](http://netduino.foundation/API/Relays/Relay/) class that simplifies relay control.
 
 ## Pole and Throw
 
@@ -79,4 +84,6 @@ namespace Relay
 
 ## See Also
 
-[Wikipedia Relay Article](https://en.wikipedia.org/wiki/Relay)
+* [Netduino.Foundation `Relay` class](http://netduino.foundation/API/Relays/Relay/)
+* [Controlling a Coffee Maker with a relay blog post](http://blog.wildernesslabs.co/connectedcoffeemaker_part2/)
+* [Wikipedia Relay Article](https://en.wikipedia.org/wiki/Relay)
