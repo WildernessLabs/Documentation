@@ -8,7 +8,7 @@ subtitle: The fundamental equation of resistance.
 
 Going back to the water analogy, we can think of resistance as the valve at the bottom of the water tank:
 
-![Illustratino of a water pipe with a valve in the center of it, representing a resistor](../Resistor_Valve.svg)
+![Illustration of a water pipe with a valve in the center of it, representing a resistor](../Resistor_Valve.svg)
 
 Given a constant water pressure (voltage), if we put in a valve that was half the size of the pipe, we would expect that the amount of water that flows through would also be divided, proportionally, in half.
 
