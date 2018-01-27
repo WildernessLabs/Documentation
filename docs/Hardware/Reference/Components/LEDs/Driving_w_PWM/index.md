@@ -6,7 +6,7 @@ subtitle: Driving an LED with a current-limiting Pulse-Width-Modulation (PWM) Si
 
 # Overview
 
-An LEDs current can be limited with a [Pulse Width Modulation](/Netduino/Input_Output/Digital/PWM/) signal. Netduino includes 6 hardware PWM generators, availalbe on digital pins 3, 5, 6, 9, 10, and 11:
+An LED current can be limited with a [Pulse Width Modulation](/Netduino/Input_Output/Digital/PWM/) signal. Netduino includes 6 hardware PWM generators, availalbe on digital pins 3, 5, 6, 9, 10, and 11:
 
 ![Pinout diagram of the Netduino 3](../../../../../Netduino/About/Netduino3_Pinout.svg)
 
