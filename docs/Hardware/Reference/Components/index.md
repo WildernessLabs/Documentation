@@ -1,4 +1,5 @@
 ---
+layout: Hardware
 title: Component Reference
 ---
 
@@ -13,5 +14,3 @@ title: Component Reference
 #### [LEDs](LEDs)
 
 #### [Resistors](Resistors)
-
-#### [74595 Shift Register](ShiftRegister74595)
