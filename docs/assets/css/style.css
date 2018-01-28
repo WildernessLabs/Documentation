@@ -880,26 +880,26 @@ nav.secondary {
       .interior-content .main a:hover {
         color: #23abe3; }
     .interior-content .main h1 {
-      font-size: 3em;
-      margin-bottom: .5em; }
+      font-size: 48px;
+      margin-bottom: 8px; }
     .interior-content .main h2 {
-      font-size: 2.25em;
-      margin-bottom: .5em;
+      font-size: 36pxem;
+      margin-bottom: 8px;
       font-weight: 700; }
     .interior-content .main h3 {
-      font-size: 1.75em;
-      margin-bottom: .5em;
+      font-size: 28px;
+      margin-bottom: 8px;
       font-weight: 400; }
     .interior-content .main h4 {
-      font-size: 1.5em;
+      font-size: 24px;
       margin-bottom: .5em;
       font-weight: 400; }
     .interior-content .main ul {
-      font-size: 1.5em; }
+      font-size: 24px; }
     .interior-content .main ol {
-      font-size: 1.5em; }
+      font-size: 24px; }
   .interior-content pre {
-    margin-bottom: 2em; }
+    margin-bottom: 32px; }
 
 /* ===========================================
    Syntax Highlighting
@@ -1238,7 +1238,7 @@ nav.secondary {
   .interior-content aside ul > li,
   .interior-content aside ul > li a {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 33px;
     font-weight: 400;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     color: #555555; }
@@ -1246,7 +1246,7 @@ nav.secondary {
   .interior-content aside ul > li > ul li a {
     font-weight: 300;
     font-size: 22px;
-    line-height: 28px;
+    line-height: 27px;
     font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; }
   .interior-content aside li {
     padding: 1px 15px 1px 0;
