@@ -807,14 +807,6 @@ nav.secondary {
     font-weight: 300;
     margin-bottom: 0; }
 
-.interior-content aside {
-  padding: 3em 0;
-  float: left;
-  width: 25%;
-  position: relative;
-  left: 2px;
-  border-right: 2px solid #555555; }
-
 .mobile-toggle--aside {
   display: none;
   cursor: pointer;
@@ -1181,5 +1173,33 @@ nav.secondary {
   th {
     font-size: 1.25em;
     padding: .25em .5em; } }
+/* ========================================= 
+   Aside
+   ========================================= */
+aside {
+  line-height: 1.4;
+  padding: 3em 1.5em 3em 0;
+  float: left;
+  width: 25%;
+  position: relative;
+  left: 2px;
+  border-right: 2px solid #555555; }
+  aside > ul {
+    padding: 0;
+    margin: 0; }
+    aside > ul > li,
+    aside > ul > li a {
+      color: #555555;
+      font-size: 24px;
+      font-weight: 400; }
+      aside > ul > li > ul > li,
+      aside > ul > li > ul > li a,
+      aside > ul > li a > ul > li,
+      aside > ul > li a > ul > li a {
+        color: #555555;
+        font-size: 22px;
+        font-weight: 300; }
+  aside li {
+    list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

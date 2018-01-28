@@ -1,0 +1,37 @@
+/* ========================================= 
+   Aside
+   ========================================= */
+
+aside {
+  line-height: 1.4;
+  padding: 3em 1.5em 3em 0;
+  float: left;
+  width: 25%;
+  position: relative;
+  left: 2px;
+  border-right: 2px solid $gray;
+
+  > ul {
+    padding: 0;
+    margin: 0;
+
+    > li,
+    > li a {
+      color: $gray;
+      font-size: 24px;
+      font-weight: 400;
+
+      > ul > li,
+      > ul > li a {
+        color: $gray;
+        font-size: 22px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+}
