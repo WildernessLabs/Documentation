@@ -1,9 +1,12 @@
 ---
 layout: Hardware
-title: Surface Mounted Devices (SMD) Packages and Sizes
+title: SMD Packages
+subtitle: Surface Mounted Device package and size reference.
 ---
 
-Surface mount component standards are specified by the Joint Electron Device Engineering Council (JEDEC) Solid State Technology Association.
+# Intro
+
+Surface mount component standards are specified by the Joint Electron Device Engineering Council (JEDEC) Solid State Technology Association ([JEDEC.org](https://www.jedec.org/)).
 
 
 # Common Passive Rectangular Components
@@ -25,7 +28,7 @@ Also note that smaller components tend to be cheaper.
 When choosing components that will be hand soldered, anything smaller than `0603` can be very difficult to handle. For this reason, `0603` components are the smallest recommended components for hand soldered board designs.
 
 
-# Tantalum Capicitors (SMD)
+# Tantalum Capacitors (SMD)
 
 | Package Size | Imperial Dimensions (EIA Standard) | Metric Dimensions (mm) |
 |--------------|------------------------------------|-------------------------|
@@ -37,14 +40,14 @@ When choosing components that will be hand soldered, anything smaller than `0603
 
 # Semiconductors
 
-## Transitors & Diodes
+## Transistors & Diodes
 
 Transistors and diodes are usually packaged the same way. Even though a diode only requires two leads, they are given three so they can be oriented properly.
 
 Most popular:
 
  * **SOT-23 (Small Outline Transistor)** - (3 leads for diodes or transistors, but some ICs can come in this form factor too, and have more pins. 3 x 1.75 x 1.3mm.
- * **SOT-223 (Small Outline Tansistor)** - (for high powered devices, 6.7 x 3.7 x 1.8Mmm. Usually 3 leads plus a large one that acts as a heat-sink/transfer pad)
+ * **SOT-223 (Small Outline Transistor)** - (for high powered devices, 6.7 x 3.7 x 1.8Mmm. Usually 3 leads plus a large one that acts as a heat-sink/transfer pad)
 
 ## Integrated Circuit Packages
 
@@ -62,16 +65,16 @@ Complex circuits are usually built into chips known as _integrated circuits_ (IC
 
 ### Quad Flat Pack (QFP)
 
-Quad flat packs are generaic square, flat IC packages.
+Quad flat packs are generic square, flat IC packages.
  
  * **LQFP (Low-profile Quad Flat Pack)** - (pins on all four sides, height is 1.4mm, pin spacing varies)
  * **PQFP (Plastic Quad Flat Pack)** - (pins on all four sides. Usually narrow spacing with 44 or more pins for [VLSI](https://www.wikiwand.com/en/Very-large-scale_integration) circuits such as CPUs.)
- * **CQFP (Ceramic Quat Flat Pack)** - Same as PQFP but ceramic construction.
+ * **CQFP (Ceramic Quad Flat Pack)** - Same as PQFP but ceramic construction.
  * **TQFP (Thin Quad Flat Pack)** - PQFP, but thinner.
 
 ### Ball Grid Array (BGA)
 
-_Ball grid arrary_ (BGA) packages are specialized ICs that have an array of solder balls on the underside of the chip, instead of pins. BGAs typically have a 1.27mm ball spacing.
+_Ball grid array_ (BGA) packages are specialized ICs that have an array of solder balls on the underside of the chip, instead of pins. BGAs typically have a 1.27mm ball spacing.
 
 BGA packages are meant only for production PCBs, because they are very difficult to place accurately by hand, and even more difficult to solder. Their solder joints are also only verifiable with specialized x-ray equipment.
 
@@ -82,12 +85,7 @@ _Plastic leaded chip carriers_ are specialized plastic trays that a IC packages 
 
 # Further Reading
 
-https://www.jedec.org/
-
-http://www.radio-electronics.com/info/data/smt/smt_packages.php
-
-https://www.wikiwand.com/en/Surface-mount_technology
-
-https://www.wikiwand.com/en/Through-hole_technology
-
-http://www.topline.tv/SizeChart.html
+* [JEDEC.org](https://www.jedec.org/)
+* [Surface Mount Technology article on Wikipedia](https://en.wikipedia.org/wiki/Surface-mount_technology)
+* [Through-hole Technology article on Wikipedia](https://en.wikipedia.org/wiki/Through-hole_technology)
+* [Topline IC footprint and size reference](http://www.topline.tv/SizeChart.html)
