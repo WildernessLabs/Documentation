@@ -4,59 +4,11 @@
 
 aside {
   line-height: 1.45;
-  padding: 3em 1.5em 3em 0;
+  padding: 3em 0;
   float: left;
   width: 25%;
   position: relative;
   left: 2px;
   border-right: 2px solid $gray;
-
-  > ul {
-    padding: 0;
-    margin: 0;
-
-    > li:first-child {
-      color: white;
-      font-family: 'Raleway', Helvetica, Arial, sans-serif;
-
-      a {
-        color: white;
-      }
-
-      &:before {
-        content: '';
-        z-index: -100;
-        position: absolute;
-        height: 35px;
-        line-height: 35px;
-        width: 1000px;
-        right: 0;
-        background: $gray-brown;
-      }
-    }
-
-    > li,
-    > li a {
-      color: $gray;
-      font-size: 24px;
-      font-weight: 400;
-
-      ul {
-        padding-left: 1em;
-      }
-
-      > ul > li,
-      > ul > li a {
-        font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-        color: $gray;
-        font-size: 22px;
-        font-weight: 300;
-      }
-    }
-  }
-
-  li {
-    list-style-type: none;
-  }
 
 }
