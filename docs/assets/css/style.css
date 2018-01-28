@@ -1180,7 +1180,7 @@ nav.secondary {
    Aside
    ========================================= */
 .interior-content aside {
-  line-height: 1.45;
+  line-height: 1.4;
   background: #eeeeee;
   padding: 3em 0;
   float: left;
@@ -1213,7 +1213,7 @@ nav.secondary {
     font-size: 27px;
     line-height: 32px;
     color: white;
-    padding: 5px 15px 5px 0;
+    padding: 8px 15px 8px 0;
     position: relative; }
     .interior-content aside div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt):before {
       content: '';
@@ -1224,5 +1224,32 @@ nav.secondary {
       width: 100%;
       left: -100%;
       z-index: -100; }
+  .interior-content aside div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) a {
+    color: white; }
+    .interior-content aside div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) a:hover {
+      color: #23abe3; }
+  .interior-content aside a:hover {
+    color: #23abe3; }
+  .interior-content aside ul {
+    padding: 4px 0;
+    margin: 0; }
+  .interior-content aside ul ul {
+    padding-left: 1em; }
+  .interior-content aside ul > li,
+  .interior-content aside ul > li a {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: #555555; }
+  .interior-content aside ul > li > ul li,
+  .interior-content aside ul > li > ul li a {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; }
+  .interior-content aside li {
+    padding: 1px 15px 1px 0;
+    list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

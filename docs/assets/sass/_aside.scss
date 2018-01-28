@@ -3,7 +3,7 @@
    ========================================= */
 
 .interior-content aside {
-  line-height: 1.45;
+  line-height: 1.4;
   background: $light-gray;
   padding: 3em 0;
   float: left;
@@ -41,7 +41,7 @@
     font-size: 27px;
     line-height: 32px;
     color: white;
-    padding: 5px 15px 5px 0;
+    padding: 8px 15px 8px 0;
     position: relative;
 
     &:before {
@@ -54,5 +54,49 @@
       left: -100%;
       z-index: -100;
     }
+  }
+
+  div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) a {
+    color: white;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  ul {
+    padding: 4px 0;
+    margin: 0;
+  }
+
+  ul ul {
+    padding-left: 1em;
+  }
+
+  ul > li,
+  ul > li a {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: $gray;
+  }
+
+  ul > li > ul li,
+  ul > li > ul li a {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  }
+
+  li {
+    padding: 1px 15px 1px 0;
+    list-style-type: none;
   }
 }
