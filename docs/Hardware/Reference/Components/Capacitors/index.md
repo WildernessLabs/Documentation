@@ -18,16 +18,16 @@ The separation of the two metal plates in a capacitor means that a charge can bu
 
 ## Capacitance
 
-The measurement of capacitance is the Farad (symbol F).  The Farad is a large quantity and capacitance values are ofter prefixed by one of the following:
+The measurement of capacitance is the Farad (`F`).  The Farad is a large quantity and capacitance values are ofter prefixed by one of the following:
 
-| Letter | Prefix | Multiple         |
-|--------|--------|------------------|
-| p      | Pico   | 10<sup>-12</sup> |
-| n      | Nano   | 10<sup>-9</sup>  |
-| &mu;   | Micro  | 10<sup>-6</sup>  |
-| m      | Milli  | 10<sup>-13</sup> |
+| Letter | Prefix | Magnitude        | Value           |
+|--------|--------|------------------|-----------------|
+| p      | Pico   | 10<sup>-12</sup> | 0.000000000001F |
+| n      | Nano   | 10<sup>-9</sup>  | 0.000000001F    |
+| µ      | Micro  | 10<sup>-6</sup>  | 0.000001F       |
+| m      | Milli  | 10<sup>-3</sup>  | 0.001F          |
 
-So a 1&mu;F capacitor has a capacitance of 0.000001 F (or 10<sup>-6</sup> F).
+Therefore, a 1µF capacitor has a capacitance of 0.000001 F (or 10<sup>-6</sup> F).
 
 ## Voltage Rating
 
