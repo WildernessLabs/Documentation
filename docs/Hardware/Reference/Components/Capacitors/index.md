@@ -1,7 +1,10 @@
 ---
 layout: Hardware
 title: Capacitors
+subtitle: Energy storage components.
 ---
+
+# Intro
 
 ![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg)
 
