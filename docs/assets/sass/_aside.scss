@@ -1,0 +1,102 @@
+/* ========================================= 
+   Aside
+   ========================================= */
+
+.interior-content aside {
+  line-height: 1.4;
+  background: $light-gray;
+  padding: 3em 0;
+  float: left;
+  width: 25%;
+  position: relative;
+  left: 2px;
+  border-right: 2px solid $gray;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: $light-gray;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: -100%;
+    z-index: -100;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $light-gray;
+    height: 1000%;
+    top: 100%;
+    width: 200%;
+    left: -100%;
+    z-index: -100;
+  }
+
+  div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) {
+    background: $gray-brown;
+    font-weight: 300;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-size: 27px;
+    line-height: 34px;
+    color: white;
+    padding: 8px 15px 8px 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $gray-brown;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      left: -100%;
+      z-index: -100;
+    }
+  }
+
+  div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) a {
+    color: white;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  ul {
+    padding: 4px 0;
+    margin: 0;
+  }
+
+  ul ul {
+    padding-left: 1em;
+  }
+
+  ul > li,
+  ul > li a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: $gray;
+  }
+
+  ul > li > ul li,
+  ul > li > ul li a {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 27px;
+    font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  }
+
+  li {
+    padding: 2px 15px 2px 0;
+    list-style-type: none;
+  }
+}

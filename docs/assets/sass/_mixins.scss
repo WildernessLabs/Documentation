@@ -1,0 +1,30 @@
+/* ========================================= 
+   Mixins
+   ========================================= */
+
+$breakpoints: (
+  mobile-tiny: 300px,
+  mobile-portrait: 320px,
+  mobile-landscape: 480px,
+  tablet: 640px,
+  ipad: 768px,
+  tween: 960px,
+  desktop: 1024px,
+  desktop-wide: 1200px,
+  container: 1440px,
+  vw-switch: 1800px
+);
+
+@mixin mq($breakpoint, $rule:min-width) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $rule == 'max-width' {
+    $value: $value - 1;
+  }
+
+  @if $value != null {
+    @media screen and ($rule: $value) {
+      @content;
+    }
+  }
+}

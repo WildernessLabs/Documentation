@@ -1,3 +1,0 @@
----
-title: Netduino Samples
----

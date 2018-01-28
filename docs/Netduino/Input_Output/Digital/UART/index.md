@@ -1,0 +1,247 @@
+---
+layout: Netduino
+title: UART
+subtitle: UART serial communication protocol support.
+---
+
+# Info
+
+_Universal Asynchronous Receiver/Transmitter_ (UART) is a protocol used to transfer data between two devices.  Data is broken down into a series of bits and transferred to the receiver sequentially.  A second UART in the receiver reassembles the bits into the original data.  The protocol allows for data to be transmitted over a single data line.  Bi-directional communication is established by using two data lines.
+
+The data lines are normally labelled R<sub>x</sub> for receive and T<sub>x</sub> for transmit.  It is important to remember that when connecting two devices together the R<sub>x</sub> line of the receiver should be connected to the T<sub>x</sub> line of the transmitter.  For bi-directional communication, this crossing of signal lines should be repeated.
+
+### Serial Port Properties
+
+Serial ports rely upon the transmitter and the receiver being configured identically.  A mismatch in the properties can result in a communication failure.  The four properties most associated with a UART are:
+
+- Baud rate
+- Number of data bits
+- Number of stop bits
+- Parity
+
+### Voltage Levels
+
+The UART on the Netduino and many other microcontrollers operate at [TTL (Transistor - Transistor Logic)](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic) levels.  On the Netduino this is `3.3V` on other microcontrollers this may be `5V`.
+
+One serial protocol commonly used is [RS-232](https://en.wikipedia.org/wiki/RS-232).  RS-232 allows the voltage levels to vary between -15V and + 15V.  It is important not to connect a Netduino to circuits working at these voltage levels as this will damage the Netduino.  [The MAX232 series of conversion chips](http://www.ti.com/lit/ds/symlink/max232.pdf) are available to translate between Netduino and RS-232 voltage levels.
+
+# UART Pins on the Netduino
+
+There are four UARTs available on the Netduino, labeled as "COM" ports:
+
+![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg)
+
+# Simple Transmitter and Receiver
+
+Simple serial communication can be illustrated by making the Netduino talk to itself using two of the four available serial ports.  In this simple scenario one of the com ports (COM1) will transmit data while a second port (COM4) will listen to the data being transmitted and display the messages in the debug console.
+
+## Hardware
+
+The simple example under consideration requires only two wires and a Netduino.
+
+Connect R<sub>x</sub> of COM1 to SCL (T<sub>x</sub> of COM4) and T<sub>x</sub> of COM1 to SDA (R<sub>x</sub> of COM4).
+
+## Software
+
+The following example has COM1as the transmitter and COM4 as the receiver:
+
+```csharp
+using System;
+using System.Threading;
+using System.IO.Ports;
+using Microsoft.SPOT;
+using System.Text;
+
+namespace UARTTest
+{
+    public class Program
+    {
+		/// <summary>
+		/// Two com ports, one sender and one receiver.
+		/// </summary>
+		/// <remarks>
+		/// Note that the transmitter and the receiver must be configured to use the
+		/// same baud rate, number of bits etc.
+		/// </remarks>
+		static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
+		static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+
+		/// <summary>
+		/// Timer object generates and event periodically to transmit data to the receiver.
+		/// </summary>
+        static Timer timer = new Timer(Timer_Interrupt, null, 0, 2000);
+
+		/// <summary>
+		/// Variables to hold information about the messages being transmitted and received.
+		/// </summary>
+        static int count = 0;
+		static string messageBeingReceived = "";
+
+		/// <summary>
+		/// The entry point of the program, where the program control starts and ends.
+		/// </summary>
+		public static void Main()
+        {
+            transmitter.Open();
+            receiver.Open();
+			receiver.DataReceived += SerialDataReceived;
+			Thread.Sleep(Timeout.Infinite);
+        }
+
+        /// <summary>
+		/// Process data from the serial port(s)
+        /// </summary>
+        /// <param name="sender">Serial port that is receiving the data.</param>
+        /// <param name="e">Event information.</param>
+        static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+			if ((e.EventType == SerialData.Chars) && (sender == receiver))
+			{
+				const int BUFFER_SIZE = 1024;
+				byte[] buffer = new byte[BUFFER_SIZE];
+
+				int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
+				if (amount > 0)
+				{
+					char[] characters = Encoding.UTF8.GetChars(buffer);
+					for (int index = 0; index < amount; index++)
+					{
+						if (buffer[index] == '\n')
+						{
+							Debug.Print("Message received: " + messageBeingReceived);
+							messageBeingReceived = "";
+						}
+						else
+						{
+							messageBeingReceived += characters[index];
+						}
+					}
+				}
+			}
+		}
+
+        /// <summary>
+        /// Periodic interrupt generated by the timer.
+        /// </summary>
+        /// <param name="state">State.</param>
+        static void Timer_Interrupt(object state)
+        {
+            if (transmitter.IsOpen)
+            {
+                count++;
+                String messageToSend = count.ToString();
+                Debug.Print("Sending message: " + messageToSend);
+                messageToSend += "\n";
+                transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
+            }
+        }
+    }
+}
+```
+
+## Key Program Elements
+
+The first task is to create variables for the serial ports:
+
+```csharp
+/// <summary>
+/// Two com ports, one sender and one receiver.
+/// </summary>
+/// <remarks>
+/// Note that the transmitter and the receiver must be configured to use the
+/// same baud rate, number of bits etc.
+/// </remarks>
+static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
+static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+```
+
+Once created it is necessary to open the com ports:
+
+```csharp
+transmitter.Open();
+receiver.Open();
+```
+
+An event handler is used to process any data received on the _receiver_ serial port:
+
+```csharp
+receiver.DataReceived += SerialDataReceived;
+```
+
+The messages are held in .NET _string_ objects.  The _Encoding.UTF8.GetBytes_ method converts the _string_ objects into an array of bytes that can be transmitted over the serial port:
+
+```csharp
+transmitter.Write(Encoding.UTF8.GetBytes(messageToSend), 0, messageToSend.Length);
+```
+
+The _Write_ method transmits a sequence of bytes to the receiver.
+
+The most complex part of this application is the _SerialDataReceived_ event.  The method is complex due to the way in which the method is called.  The _SerialDataReceived_ method seems to be called randomly.  For instance, sending _123456789_ may generate two calls to the event handler, one of _1234_ and a second for _56789_.  The event handler needs to take this into consideration when reassembling the messages.  In this case, the newline character "\n" is used as an end of message marker.  Characters are added to the message buffer until a newline is encountered.  At this point the message is considered complete and a new message is started.
+
+```csharp
+static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
+{
+	if ((e.EventType == SerialData.Chars) && (sender == receiver))
+	{
+		const int BUFFER_SIZE = 1024;
+		byte[] buffer = new byte[BUFFER_SIZE];
+
+		int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
+		if (amount > 0)
+		{
+			char[] characters = Encoding.UTF8.GetChars(buffer);
+			for (int index = 0; index < amount; index++)
+			{
+				if (buffer[index] == '\n')
+				{
+					Debug.Print("Message received: " + messageBeingReceived);
+					messageBeingReceived = "";
+				}
+				else
+				{
+					messageBeingReceived += characters[index];
+				}
+			}
+		}
+	}
+}
+```
+
+## Logic Analyzer Output
+
+Hooking up the logic analyzer and looking at the first message generates the following output:
+
+![Serial UART Transmission](SerialDataTransmission.png)
+
+The white dots show the points where the protocol analyzer is expecting to read a bit of data.  The brown line shows the value that is being read.
+
+# Program Output
+
+Running the above application generates the following output:
+
+```
+Sending message: 1
+Message received: 1
+Sending message: 2
+Message received: 2
+Sending message: 3
+Message received: 3
+Sending message: 4
+Message received: 4
+```
+
+# Further Reading
+
+- [Wikipedia article describing UARTs](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter)
+- [MAX232 Datasheet](http://www.ti.com/lit/ds/symlink/max232.pdf)
+- [TTL (Transistor - Transistor Logic)](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic)
+- [RS-232](https://en.wikipedia.org/wiki/RS-232) serial communication
+
+# Related Hardware
+
+A number of cables and boards are available to connect TTL serial ports on the Netduino to a PC or Mac over USB.  Examples include:
+
+-	[SparkFun's FTDI boards and cables](https://www.sparkfun.com/search/results?term=ftdi)
+-	[FDTI Cable](https://www.adafruit.com/product/70)
+-	[USV to TTL Serial Cable](https://www.adafruit.com/product/954)
+-	[FTDI Friend](https://www.adafruit.com/product/284)

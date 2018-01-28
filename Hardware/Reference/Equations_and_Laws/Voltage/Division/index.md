@@ -1,3 +1,0 @@
----
-title: Voltage Division
----

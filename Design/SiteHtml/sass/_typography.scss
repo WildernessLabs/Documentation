@@ -1,0 +1,49 @@
+/* ========================================= 
+   Typography
+   ========================================= */
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 72px;
+  color: $gray;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 25px;
+
+  &--alt {
+    color: $primary;
+  }
+}
+
+h3 {
+  font-size: 33px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+pre {
+  background: #eeeeee;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+pre, code {
+  white-space: pre-wrap;      
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap;     
+  white-space: -o-pre-wrap;   
+  word-wrap: break-word;
+  word-break: break-all;
+}

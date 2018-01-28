@@ -1,0 +1,31 @@
+/* ========================================= 
+   Tables
+   ========================================= */
+
+table {
+  border: 2px solid #555555;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+th, td {
+  padding: .5em .75em;
+}
+
+th {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: left;
+  color: white;
+  background: #555555;
+}
+
+td {
+  border: 2px solid #555555;
+  font-size: 1.25em;
+}
+
+tbody tr:nth-child(even) {
+   background-color: #eee;
+}
