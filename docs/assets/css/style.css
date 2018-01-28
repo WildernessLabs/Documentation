@@ -1177,7 +1177,7 @@ nav.secondary {
    Aside
    ========================================= */
 aside {
-  line-height: 1.4;
+  line-height: 1.45;
   padding: 3em 1.5em 3em 0;
   float: left;
   width: 25%;
@@ -1187,15 +1187,33 @@ aside {
   aside > ul {
     padding: 0;
     margin: 0; }
+    aside > ul > li:first-child {
+      color: white;
+      font-family: 'Raleway', Helvetica, Arial, sans-serif; }
+      aside > ul > li:first-child a {
+        color: white; }
+      aside > ul > li:first-child:before {
+        content: '';
+        z-index: -100;
+        position: absolute;
+        height: 35px;
+        line-height: 35px;
+        width: 1000px;
+        right: 0;
+        background: #524740; }
     aside > ul > li,
     aside > ul > li a {
       color: #555555;
       font-size: 24px;
       font-weight: 400; }
+      aside > ul > li ul,
+      aside > ul > li a ul {
+        padding-left: 1em; }
       aside > ul > li > ul > li,
       aside > ul > li > ul > li a,
       aside > ul > li a > ul > li,
       aside > ul > li a > ul > li a {
+        font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
         color: #555555;
         font-size: 22px;
         font-weight: 300; }
