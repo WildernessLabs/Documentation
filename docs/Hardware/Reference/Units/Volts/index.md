@@ -1,7 +1,10 @@
 ---
 layout: Hardware
 title: Volts
+subtitle: Amount of Electromotive Force (EMF) of electricity.
 ---
+
+# Intro
 
 Voltage, measured in volts (V), is the amount of force in which charge carriers are being moved in an electric current.
 
@@ -26,3 +29,7 @@ Voltage, measured in volts (V), is the amount of force in which charge carriers 
 | volt (V)       | 1.0V           |
 | kilovolt (kV)  | 1,000V         |
 | megavolt (MV)  | 1,000,000V     |
+
+# Further Reading
+
+For a much more in depth discussion regarding amps, see the [Amount and Force section in part 2 of the Electronics Tutorial](/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/)

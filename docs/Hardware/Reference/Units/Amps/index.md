@@ -1,7 +1,10 @@
 ---
 layout: Hardware
 title: Amps
+subtitle: Quantity of electricity, in coloumbs.
 ---
+
+# Intro
 
 Amperage describes the quantity of charge carriers that are being moved passed a point in any given second.
 
@@ -31,3 +34,7 @@ Amp hours are often expressed in _milliampere hours_ (mAh), which is one-thousan
 | microamp (µA)  | 0.000001A      |
 | milliamp (mA)  | 0.001A         |
 | amp (A)        | 1.0A           |
+
+# Further Reading
+
+For a much more in depth discussion regarding amps, see [Part 2 of the Electronics Tutorial](/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/)
