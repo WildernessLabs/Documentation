@@ -189,13 +189,13 @@ nav.secondary {
     }
     h1 {
       font-size: 48px;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
       font-weight: 300;
       font-family: 'Raleway', Helvetica, Arial, sans-serif;
     }
     h2 {
       font-size: 35px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       font-weight: 500;
       font-family: 'Raleway', Helvetica, Arial, sans-serif;
     }
@@ -217,9 +217,15 @@ nav.secondary {
       font-size: 24px;
     }
   }
-  pre {
-    margin-bottom: 32px;
-  }
+}
+
+pre,
+pre.highlight {
+  margin: 0;
+}
+
+div.highlight {
+  margin: 25px 0;
 }
 
 /* ===========================================
@@ -229,8 +235,7 @@ nav.secondary {
 .highlight {
   background: #eee;
   border-radius: 15px;
-  margin-bottom: 2em;
-  padding: .5em 1.5em .25em; }
+  padding: 15px; }
   .highlight .c {
     color: #998;
     font-style: italic; }

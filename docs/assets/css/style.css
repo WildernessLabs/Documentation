@@ -484,7 +484,8 @@ h3 {
 
 p {
   margin-top: 0;
-  font-size: 28px; }
+  font-size: 24px;
+  line-height: 30px; }
 
 pre {
   background: #eeeeee;
@@ -882,12 +883,12 @@ nav.secondary {
         color: #23abe3; }
     .interior-content .main h1 {
       font-size: 48px;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
       font-weight: 300;
       font-family: 'Raleway', Helvetica, Arial, sans-serif; }
     .interior-content .main h2 {
       font-size: 35px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       font-weight: 500;
       font-family: 'Raleway', Helvetica, Arial, sans-serif; }
     .interior-content .main h3 {
@@ -903,8 +904,13 @@ nav.secondary {
       font-size: 24px; }
     .interior-content .main ol {
       font-size: 24px; }
-  .interior-content pre {
-    margin-bottom: 32px; }
+
+pre,
+pre.highlight {
+  margin: 0; }
+
+div.highlight {
+  margin: 25px 0; }
 
 /* ===========================================
    Syntax Highlighting
@@ -912,8 +918,7 @@ nav.secondary {
 .highlight {
   background: #eee;
   border-radius: 15px;
-  margin-bottom: 2em;
-  padding: .5em 1.5em .25em; }
+  padding: 15px; }
 
 .highlight .c {
   color: #998;
@@ -1216,7 +1221,7 @@ nav.secondary {
     font-weight: 300;
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     font-size: 27px;
-    line-height: 32px;
+    line-height: 34px;
     color: white;
     padding: 8px 15px 8px 0;
     position: relative; }
@@ -1243,7 +1248,7 @@ nav.secondary {
   .interior-content aside ul > li,
   .interior-content aside ul > li a {
     font-size: 24px;
-    line-height: 33px;
+    line-height: 30px;
     font-weight: 400;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     color: #555555; }
@@ -1254,7 +1259,7 @@ nav.secondary {
     line-height: 27px;
     font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; }
   .interior-content aside li {
-    padding: 1px 15px 1px 0;
+    padding: 2px 15px 2px 0;
     list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */
