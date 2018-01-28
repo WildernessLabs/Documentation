@@ -1,7 +1,10 @@
 ---
 layout: Hardware
 title: Diodes
+subtitle: Voltage direction limiting devices.
 ---
+
+# Intro
 
 Diodes are one way conductors and under normal circumstances will allow current to pass from the anode to the cathode.  The symbol for a diode is:
 
@@ -40,9 +43,9 @@ Diodes can be used to produce basic logic gates such as AND and OR gates.  A sim
 
 #### OR Gate
 
-In the circuit below, the 10K resistor acts as a pull-down resistor.  If no voltage is present then the output (Out) will be at 0V.
+In the circuit below, the `10K` resistor acts as a pull-down resistor.  If no voltage is present then the output (`Out`) will be at `0V`.
 
-If a voltage of 5V is applied to either of the inputs (A and B) then the diode will allow current to flow and the output will 5V.
+If a voltage of `5V` is applied to either of the inputs (`A` and `B`) then the diode will allow current to flow and the output will `5V`.
 
 ![OR Gate](OR_Gate.svg)
 
@@ -52,11 +55,11 @@ The AND gate circuit below uses the laziness property of electricity, it will al
 
 ![AND Gate](AND_Gate.svg)
 
-If the inputs (A and B) at at 0V then the current from the 5V source will flow through the resistor to either A or B.  The result is that the output (Out) will be 0V.
+If the inputs (A and B) at at 0V then the current from the `5V` source will flow through the resistor to either `A` or `B`.  The result is that the output (`Out`) will be `0V`.
 
-Placing a 5V signal on A and 0V on B will mean make the current flow through B.  The 5V at A resists the current flow through the diode but the 0V on B provides a path through the diode to ground.  Similarly, setting A to 0V and B to 5V will produce the same effect.
+Placing a `5V` signal on `A` and `0V` on `B` will mean make the current flow through `B`.  The `5V` at `A` resists the current flow through the diode but the `0V` on `B` provides a path through the diode to ground.  Similarly, setting `A` to `0V` and `B` to `5V` will produce the same effect.
 
-If both A and B are set to 5V then the current cannot flow through either of the diodes.  This means that the current will flow though the output (Out).
+If both `A` and `B` are set to `5V` then the current cannot flow through either of the diodes.  This means that the current will flow though the output (`Out`).
 
 ## Further Reading
 
