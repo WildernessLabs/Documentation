@@ -2,12 +2,57 @@
    Aside
    ========================================= */
 
-aside {
+.interior-content aside {
   line-height: 1.45;
+  background: $light-gray;
   padding: 3em 0;
   float: left;
   width: 25%;
   position: relative;
   left: 2px;
   border-right: 2px solid $gray;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: $light-gray;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: -100%;
+    z-index: -100;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $light-gray;
+    height: 1000%;
+    top: 100%;
+    width: 200%;
+    left: -100%;
+    z-index: -100;
+  }
+
+  div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) {
+    background: $gray-brown;
+    font-weight: 300;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-size: 27px;
+    line-height: 32px;
+    color: white;
+    padding: 5px 15px 5px 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $gray-brown;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      left: -100%;
+      z-index: -100;
+    }
+  }
 }

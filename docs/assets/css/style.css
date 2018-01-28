@@ -866,37 +866,40 @@ nav.secondary {
 .mobile-toggle--aside-alt span:nth-child(3) {
   transform: rotate(-45deg); }
 
-.interior-content .main {
-  padding: 3em 0 5em;
-  float: left;
-  width: 75%;
-  padding-left: 4%;
-  border-left: 2px solid #555555; }
-  .interior-content .main a {
-    color: #b09679; }
-    .interior-content .main a:hover {
-      color: #23abe3; }
-  .interior-content .main h1 {
-    font-size: 3em;
-    margin-bottom: .5em; }
-  .interior-content .main h2 {
-    font-size: 2.25em;
-    margin-bottom: .5em;
-    font-weight: 700; }
-  .interior-content .main h3 {
-    font-size: 1.75em;
-    margin-bottom: .5em;
-    font-weight: 400; }
-  .interior-content .main h4 {
-    font-size: 1.5em;
-    margin-bottom: .5em;
-    font-weight: 400; }
-  .interior-content .main ul {
-    font-size: 1.5em; }
-  .interior-content .main ol {
-    font-size: 1.5em; }
-.interior-content pre {
-  margin-bottom: 2em; }
+.interior-content {
+  position: relative;
+  overflow: hidden; }
+  .interior-content .main {
+    padding: 3em 0 5em;
+    float: left;
+    width: 75%;
+    padding-left: 4%;
+    border-left: 2px solid #555555; }
+    .interior-content .main a {
+      color: #b09679; }
+      .interior-content .main a:hover {
+        color: #23abe3; }
+    .interior-content .main h1 {
+      font-size: 3em;
+      margin-bottom: .5em; }
+    .interior-content .main h2 {
+      font-size: 2.25em;
+      margin-bottom: .5em;
+      font-weight: 700; }
+    .interior-content .main h3 {
+      font-size: 1.75em;
+      margin-bottom: .5em;
+      font-weight: 400; }
+    .interior-content .main h4 {
+      font-size: 1.5em;
+      margin-bottom: .5em;
+      font-weight: 400; }
+    .interior-content .main ul {
+      font-size: 1.5em; }
+    .interior-content .main ol {
+      font-size: 1.5em; }
+  .interior-content pre {
+    margin-bottom: 2em; }
 
 /* ===========================================
    Syntax Highlighting
@@ -1176,13 +1179,50 @@ nav.secondary {
 /* ========================================= 
    Aside
    ========================================= */
-aside {
+.interior-content aside {
   line-height: 1.45;
+  background: #eeeeee;
   padding: 3em 0;
   float: left;
   width: 25%;
   position: relative;
   left: 2px;
   border-right: 2px solid #555555; }
+  .interior-content aside:before {
+    content: '';
+    position: absolute;
+    background: #eeeeee;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: -100%;
+    z-index: -100; }
+  .interior-content aside:after {
+    content: '';
+    position: absolute;
+    background: #eeeeee;
+    height: 1000%;
+    top: 100%;
+    width: 200%;
+    left: -100%;
+    z-index: -100; }
+  .interior-content aside div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt) {
+    background: #524740;
+    font-weight: 300;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-size: 27px;
+    line-height: 32px;
+    color: white;
+    padding: 5px 15px 5px 0;
+    position: relative; }
+    .interior-content aside div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt):before {
+      content: '';
+      position: absolute;
+      background: #524740;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      left: -100%;
+      z-index: -100; }
 
 /*# sourceMappingURL=style.css.map */

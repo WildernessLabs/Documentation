@@ -171,6 +171,9 @@ nav.secondary {
 }
 
 .interior-content {
+  position: relative;
+  overflow: hidden;
+  
   .main {
     padding: 3em 0 5em;
     float: left;
