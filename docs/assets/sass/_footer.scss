@@ -34,6 +34,11 @@ footer {
   .col {
     display: flex;
     justify-content: space-evenly;
+
+    @include mq(tween, 'max-width') {
+      display: block;
+      text-align: center;
+    }
   }
 
   .col-footer {
@@ -41,6 +46,10 @@ footer {
       color: $light-gray;
       text-align: center;
       font-weight: 300;
+    }
+
+    @include mq(tween, 'max-width') {
+      margin-bottom: 20px;
     }
   }
   
