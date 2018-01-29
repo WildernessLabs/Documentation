@@ -462,6 +462,12 @@ template {
 /* ========================================= 
    Typography
    ========================================= */
+@font-face {
+  font-family: 'CourierPrime';
+  src: url("../fonts/CourierPrimeCode-Regular.eot");
+  src: url("../fonts/CourierPrimeCode-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/CourierPrimeCode-Regular.woff2") format("woff2"), url("../fonts/CourierPrimeCode-Regular.woff") format("woff"), url("../fonts/CourierPrimeCode-Regular.ttf") format("truetype"), url("../fonts/CourierPrimeCode-Regular.svg#CourierPrimeCode-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0; }
 
@@ -532,7 +538,7 @@ table {
   margin-bottom: 1.5em; }
 
 th, td {
-  padding: .5em .75em; }
+  padding: .4em; }
 
 th {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -544,7 +550,10 @@ th {
 
 td {
   border: 2px solid #555555;
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  color: #524740; }
+  td:first-child {
+    font-family: 'CourierPrime',  sans-serif; }
 
 tbody tr:nth-child(even) {
   background-color: #eee; }
