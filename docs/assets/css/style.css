@@ -777,6 +777,8 @@ footer {
     font-weight: 300;
     font-size: 28px;
     margin-bottom: 25px; }
+  .stripe img.show-tablet {
+    margin-bottom: 20px; }
 
 .stripe--a {
   background: #eeeeee; }
