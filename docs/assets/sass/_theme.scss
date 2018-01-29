@@ -5,7 +5,7 @@
 // Stripes
 .stripe {
   overflow: hidden;
-  padding: 3em 0;
+  padding: 2.5em 0;
 
   .col:last-child {
     @include mq(tween, 'max-width') {

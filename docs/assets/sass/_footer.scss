@@ -15,6 +15,7 @@ footer {
     margin-bottom: 0;
     font-weight: 400;
     color: $light-brown;
+    font-family: 'Roboto', Helvetica, sans-serif;
   }
 
   ul {
@@ -23,8 +24,10 @@ footer {
     list-style-type: none;
 
     a {
+      font-family: 'Lato', 'Roboto', Helvetica, sans-serif;
       color: $light-gray;
       font-weight: 300;
+      font-size: 18px;
     }
   }
 

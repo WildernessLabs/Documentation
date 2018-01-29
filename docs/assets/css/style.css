@@ -485,7 +485,7 @@ h3 {
 p {
   margin-top: 0;
   font-size: 24px;
-  line-height: 30px; }
+  line-height: 34px; }
 
 pre {
   background: #eeeeee;
@@ -724,14 +724,17 @@ footer {
     font-size: 20px;
     margin-bottom: 0;
     font-weight: 400;
-    color: #b09679; }
+    color: #b09679;
+    font-family: 'Roboto', Helvetica, sans-serif; }
   footer ul {
     margin: 0;
     padding: 0;
     list-style-type: none; }
     footer ul a {
+      font-family: 'Lato', 'Roboto', Helvetica, sans-serif;
       color: #eeeeee;
-      font-weight: 300; }
+      font-weight: 300;
+      font-size: 18px; }
   footer .col {
     display: flex;
     justify-content: space-evenly; }
@@ -759,7 +762,7 @@ footer {
    ========================================= */
 .stripe {
   overflow: hidden;
-  padding: 3em 0; }
+  padding: 2.5em 0; }
   @media screen and (max-width: 959px) {
     .stripe .col:last-child {
       padding-bottom: 0; } }
