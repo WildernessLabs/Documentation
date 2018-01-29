@@ -13,8 +13,16 @@ header {
   padding-top: .35em;
   float: left;
 
+  @include mq(desktop-wide, 'max-width') {
+    padding-top: .35em;
+}
+
   img {
     width: 393px;
+
+    @include mq(desktop-wide, 'max-width') {
+      width: 320px;
+    }
   }
 }
 
@@ -28,8 +36,21 @@ header {
     display: inline-block;
     list-style-type: none;
 
+    @include mq(desktop-wide, 'max-width') {
+      margin-left: 1.5em;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
     &:last-child {
       margin-left: 5.75em;
+
+      @include mq(desktop-wide, 'max-width') {
+        margin-left: 3.75em;
+      }
+
     }
   }
 
@@ -38,6 +59,9 @@ header {
     font-size: 28px;
     text-decoration: none;
     color: $light-gray;
+    @include mq(desktop-wide, 'max-width') {
+      font-size: 25px;
+    }
   }
 
   ul.is-visible {

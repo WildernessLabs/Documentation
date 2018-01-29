@@ -535,8 +535,9 @@ th, td {
   padding: .5em .75em; }
 
 th {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
   color: white;
   background: #555555; }
@@ -585,7 +586,7 @@ a {
   @media screen and (max-width: 1023px) {
     .container {
       width: 90%; } }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1279px) {
     .container {
       width: 82%; } }
 
@@ -656,8 +657,14 @@ header {
 .logo {
   padding-top: .35em;
   float: left; }
+  @media screen and (max-width: 1279px) {
+    .logo {
+      padding-top: .35em; } }
   .logo img {
     width: 393px; }
+    @media screen and (max-width: 1279px) {
+      .logo img {
+        width: 320px; } }
 
 .main-nav {
   padding: 0;
@@ -667,13 +674,24 @@ header {
     margin-left: 2.25em;
     display: inline-block;
     list-style-type: none; }
+    @media screen and (max-width: 1279px) {
+      .main-nav li {
+        margin-left: 1.5em; } }
+    .main-nav li:first-child {
+      margin-left: 0; }
     .main-nav li:last-child {
       margin-left: 5.75em; }
+      @media screen and (max-width: 1279px) {
+        .main-nav li:last-child {
+          margin-left: 3.75em; } }
   .main-nav a {
     font-weight: 300;
     font-size: 28px;
     text-decoration: none;
     color: #eeeeee; }
+    @media screen and (max-width: 1279px) {
+      .main-nav a {
+        font-size: 25px; } }
   .main-nav ul.is-visible {
     opacity: 1 !important;
     height: auto !important; }
@@ -918,7 +936,7 @@ div.highlight {
 .highlight {
   background: #eee;
   border-radius: 15px;
-  padding: 15px; }
+  padding: 10px; }
 
 .highlight .c {
   color: #998;
