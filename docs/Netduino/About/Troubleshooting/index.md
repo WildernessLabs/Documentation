@@ -6,6 +6,16 @@ subtitle: Debugging and fixing issues with Netduino.
 
 # Info
 
+## Deploy Issues
+
+### Unable to communicate with device USB:Netduino
+
+The protocol that the .NET MicroFramework uses (MFUSB) is flaky.
+
+#### Fix
+
+To resolve, try unplugging the device, wait 5 seconds, and plug it back in. If it still fails, try that again, or try restarting Visual Studio. Some combination of those steps should resolve it.
+
 
 ## Runtime Errors
 
