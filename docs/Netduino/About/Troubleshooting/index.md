@@ -9,6 +9,16 @@ subtitle: Debugging and fixing issues with Netduino.
 
 ## Runtime Errors
 
+### App doesn't run or `No entrypoint found!` message
+
+If you deploy your app and a `No entrypoint found!` message is displayed in the **Output Window**, or the app doesn't run, this could be because of a Visual Studio bug where the "deploy" option in the solution configuration has become un set.
+
+#### Fix
+
+Right-click on the solution and choose **properties**. In the **Configuration Properties** section, make sure **Deploy** is checked:
+
+![](DeployChecked.png)
+
 ### `Resolve: unknown type: System.Diagnostics.DebuggerBrowsableState`
 
 Right after deployment, your application fails to execute and this error show up in the **Output** window:
