@@ -16,6 +16,14 @@ The protocol that the .NET MicroFramework uses (MFUSB) is flaky.
 
 To resolve, try unplugging the device, wait 5 seconds, and plug it back in. If it still fails, try that again, or try restarting Visual Studio. Some combination of those steps should resolve it.
 
+### No Connection
+
+If deployment times out, and pinging the device from MFDeploy, TinyBooter might be in a corrupt state, effectively bricking the device to any MFUSB commands.
+
+#### Fix
+
+TinyBooter needs to be redeployed to the device from DFU mode. To do this, follow the instructions for [updating firmware](/Netduino/About/Updating_Firmware/).
+
 
 ## Runtime Errors
 
