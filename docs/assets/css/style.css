@@ -747,7 +747,7 @@ footer {
   footer .col {
     display: flex;
     justify-content: space-evenly; }
-    @media screen and (max-width: 959px) {
+    @media screen and (max-width: 479px) {
       footer .col {
         display: block;
         text-align: center; } }
@@ -755,7 +755,11 @@ footer {
     color: #eeeeee;
     text-align: center;
     font-weight: 300; }
-  @media screen and (max-width: 959px) {
+    @media screen and (max-width: 959px) {
+      footer .col-footer:first-of-type {
+        width: 100%;
+        text-align: center; } }
+  @media screen and (max-width: 479px) {
     footer .col-footer {
       margin-bottom: 20px; } }
   footer .copyright {

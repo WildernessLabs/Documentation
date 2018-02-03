@@ -35,7 +35,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
 
-    @include mq(tween, 'max-width') {
+    @include mq(mobile-landscape, 'max-width') {
       display: block;
       text-align: center;
     }
@@ -46,9 +46,14 @@ footer {
       color: $light-gray;
       text-align: center;
       font-weight: 300;
+
+      @include mq(tween, 'max-width') {
+        width: 100%;
+        text-align: center;
+      }
     }
 
-    @include mq(tween, 'max-width') {
+    @include mq(mobile-landscape, 'max-width') {
       margin-bottom: 20px;
     }
   }
