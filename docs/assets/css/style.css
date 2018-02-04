@@ -552,8 +552,6 @@ td {
   border: 2px solid #555555;
   font-size: 1.25em;
   color: #524740; }
-  td:first-child {
-    font-family: 'CourierPrime',  sans-serif; }
 
 tbody tr:nth-child(even) {
   background-color: #eee; }
