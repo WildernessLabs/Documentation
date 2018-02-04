@@ -35,7 +35,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
 
-    @include mq(mobile-landscape, 'max-width') {
+    @include mq(tween, 'max-width') {
       display: block;
       text-align: center;
     }
@@ -53,7 +53,32 @@ footer {
       }
     }
 
-    @include mq(mobile-landscape, 'max-width') {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      @include mq(tween, 'max-width') {
+        float: left;
+        width: 33.33333333%;
+        padding: 0 15px;
+        margin-bottom: 35px;
+      }
+      
+      @include mq(tablet, 'max-width') {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    &:nth-child(5) {
+      @include mq(tween, 'max-width') {
+        float: left;
+        width: 100%;
+      }
+    }
+
+    @include mq(tween, 'max-width') {
       margin-bottom: 20px;
     }
   }
