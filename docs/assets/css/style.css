@@ -965,6 +965,7 @@ nav.secondary {
 
 pre,
 pre.highlight {
+  font-size: 24px;
   margin: 0; }
 
 div.highlight {
@@ -976,7 +977,7 @@ div.highlight {
 .highlight {
   background: #eee;
   border-radius: 15px;
-  padding: 10px; }
+  padding: 5px; }
 
 .highlight .c {
   color: #998;
