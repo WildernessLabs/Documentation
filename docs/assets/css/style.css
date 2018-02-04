@@ -830,7 +830,7 @@ footer {
   margin: 4em auto 0; }
   @media screen and (max-width: 959px) {
     .w-labs-logo {
-      margin: 0 auto; } }
+      margin: 30px auto 0; } }
 
 nav.secondary {
   overflow: hidden;
