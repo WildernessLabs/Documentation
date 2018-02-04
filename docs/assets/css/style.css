@@ -658,7 +658,7 @@ a {
    Header
    ========================================= */
 header {
-  padding: .75em 0;
+  padding: .675em 0;
   background: #524740;
   color: #eeeeee;
   overflow: hidden; }
@@ -835,7 +835,7 @@ footer {
 nav.secondary {
   overflow: hidden;
   background: #555555;
-  padding: 1.75em 0; }
+  padding: 1.35em 0; }
   nav.secondary ul {
     margin: 0;
     padding: 0;
@@ -852,7 +852,7 @@ nav.secondary {
 .header-interior {
   background: #555555;
   color: white;
-  padding: 5.25em 0;
+  padding: 4.65em 0;
   border-bottom: 6px solid #23abe3; }
   .header-interior h1 {
     color: white;
@@ -1282,7 +1282,7 @@ div.highlight {
     font-size: 27px;
     line-height: 34px;
     color: white;
-    padding: 8px 15px 8px 0;
+    padding: 3px 15px 3px 0;
     position: relative; }
     .interior-content aside div:not(.mobile-toggle--aside):not(.mobile-toggle--aside-alt):before {
       content: '';
