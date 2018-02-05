@@ -14,14 +14,18 @@ header {
   float: left;
 
   @include mq(desktop-wide, 'max-width') {
-    padding-top: .35em;
-}
+    padding-top: .5em;
+  }
 
   img {
     width: 393px;
 
     @include mq(desktop-wide, 'max-width') {
       width: 320px;
+    }
+
+    @include mq(desktop, 'max-width') {
+      width: 280px;
     }
   }
 }
@@ -40,6 +44,10 @@ header {
       margin-left: 1.5em;
     }
 
+    @include mq(desktop-alt, 'max-width') {
+      margin-left: 1em;
+    }
+
     &:first-child {
       margin-left: 0;
     }
@@ -51,6 +59,10 @@ header {
         margin-left: 3.75em;
       }
 
+      @include mq(desktop-alt, 'max-width') {
+        margin-left: 3em;
+      }
+
     }
   }
 
@@ -59,8 +71,13 @@ header {
     font-size: 28px;
     text-decoration: none;
     color: $light-gray;
+
     @include mq(desktop-wide, 'max-width') {
       font-size: 25px;
+    }
+
+    @include mq(desktop-alt, 'max-width') {
+      font-size: 22px;
     }
   }
 
