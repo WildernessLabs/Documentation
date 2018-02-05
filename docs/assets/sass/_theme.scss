@@ -54,7 +54,7 @@
   margin: 4em auto 0;
 
   @include mq(tween, 'max-width') {
-    margin: 30px auto 0;
+    margin: 5px auto 35px !important;
   }
 }
 

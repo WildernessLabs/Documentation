@@ -7,6 +7,7 @@ header {
   background: $gray-brown;
   color: $light-gray;
   overflow: hidden;
+  height: 82px;
 }
 
 .logo {
@@ -91,7 +92,7 @@ header {
 .mobile-toggle {
   display: none;
   float: right;
-  margin-top: 12px;
+  margin-top: 18px;
   cursor: pointer; 
 
   span {

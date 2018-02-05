@@ -659,7 +659,8 @@ header {
   padding: .675em 0;
   background: #524740;
   color: #eeeeee;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 82px; }
 
 .logo {
   padding-top: .35em;
@@ -718,7 +719,7 @@ header {
 .mobile-toggle {
   display: none;
   float: right;
-  margin-top: 12px;
+  margin-top: 18px;
   cursor: pointer; }
   .mobile-toggle span {
     height: 4px;
@@ -840,7 +841,7 @@ footer {
   margin: 4em auto 0; }
   @media screen and (max-width: 959px) {
     .w-labs-logo {
-      margin: 30px auto 0; } }
+      margin: 5px auto 35px !important; } }
 
 nav.secondary {
   overflow: hidden;
