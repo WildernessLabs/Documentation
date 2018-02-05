@@ -4,6 +4,7 @@ const nav = document.querySelector('.main-nav ul');
 
 if(el) {
   el.addEventListener('click', (e) => {
+    e.preventDefault();
     nav.classList.toggle('is-visible');
     el.classList.toggle('has-open-nav');
   });
@@ -16,6 +17,7 @@ const navAside = document.querySelector('.interior-content aside');
 
 if(elAside) {
   elAside.addEventListener('click', (e) => {
+    e.preventDefault();
     navAside.classList.toggle('is-open');
     elAside.classList.toggle('has-open-nav');
   });
@@ -23,6 +25,7 @@ if(elAside) {
 
 if(elAsideAlt) {
   elAsideAlt.addEventListener('click', (e) => {
+    e.preventDefault();
     navAside.classList.toggle('is-open');
     elAside.classList.toggle('has-open-nav');
   });
