@@ -499,12 +499,18 @@ pre {
   padding: 15px; }
 
 pre, code {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
-  word-break: break-all; }
+  white-space: pre;
+  overflow-x: auto;
+  /*
+  @include mq(desktop, 'max-width') {
+     white-space: pre-wrap;      
+     white-space: -moz-pre-wrap; 
+     white-space: -pre-wrap;     
+     white-space: -o-pre-wrap;   
+     word-wrap: break-word;
+     word-break: break-all;
+   }  
+  */ }
 
 /* ========================================= 
    Buttons 
@@ -996,7 +1002,7 @@ nav.secondary {
 
 pre,
 pre.highlight {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0; }
 
 div.highlight {
@@ -1008,7 +1014,7 @@ div.highlight {
 .highlight {
   background: #eee;
   border-radius: 15px;
-  padding: 5px; }
+  padding: 7px; }
 
 .highlight .c {
   color: #998;
