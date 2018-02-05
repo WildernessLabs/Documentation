@@ -68,10 +68,38 @@ nav.secondary {
     padding: 0;
     display: flex; 
     justify-content: space-between;
+
+    @include mq(desktop, 'max-width') {
+      display: block;
+    }
   }
 
   li {
     list-style-type: none;
+
+    @include mq(desktop-tween, 'max-width') {
+      margin: 0 20px;
+
+      &:first-child {
+        margin: 0 20px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    @include mq(desktop, 'max-width') {
+      margin: 7px 0;
+
+      &:first-child {
+        margin: 7px 0;
+      }
+
+      &:last-child {
+        margin: 7px 0;
+      }
+    }
   }
 
   a {
@@ -79,7 +107,12 @@ nav.secondary {
     font-size: 28px;
     text-decoration: none;
     font-weight: 300;
+
+    @include mq(desktop-alt, 'max-width') {
+      font-size: 24px;
+    }
   }
+
 }
 
 // Interior Page
@@ -398,14 +431,16 @@ div.highlight {
   .main-nav li { display: block; margin-bottom: .5em; }
   .main-nav a { font-size: 1.25em; }
 
-  .stripe .col {
-    width: 100%;
-  }
-
   .stripe img.show-tablet-lg {
     margin-bottom: 1.5em;
     width: 25em;
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .stripe .col {
+    width: 100%;
   }
 }
 
