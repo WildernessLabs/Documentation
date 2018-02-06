@@ -919,6 +919,7 @@ nav.secondary {
   display: none;
   cursor: pointer;
   position: absolute;
+  z-index: 999;
   top: 12px;
   left: 4%; }
 
