@@ -52,7 +52,20 @@
       top: 0;
       width: 100%;
       left: -100%;
-      z-index: -100;
+      z-index: 200;
+    }
+
+    &:after {
+      @include mq(desktop-tween, 'max-width') {      
+        content: '';
+        position: absolute;
+        background: $gray-brown;
+        height: 100%;
+        top: 0;
+        width: 100%;
+        right: -100%;
+        z-index: 200;
+      }
     }
   }
 
@@ -108,5 +121,5 @@
   
   .mobile-toggle--aside,
   .interior-content aside.is-open .mobile-toggle--aside-alt { display: block; }
-  .interior-content aside.is-open { height: auto; background: #fff; padding: 1.5em 4% 3em; left: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, .15); }
+  .interior-content aside.is-open { height: auto; background: #fff; padding: 1.5em 9% 3em; left: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, .15); }
 }
