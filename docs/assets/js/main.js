@@ -14,20 +14,20 @@ window.onload = function(){
 
 
 // Submenu toggle
-window.onload = function(){
-  const elAside = document.querySelector('.mobile-toggle--aside');
-  const elAsideAlt = document.querySelector('.mobile-toggle--aside-alt');
-  const navAside = document.querySelector('.interior-aside');
-
-  elAside.addEventListener('click', (e) => {
-    e.preventDefault();
-    navAside.classList.toggle('is-open');
-    elAside.classList.toggle('has-open-nav');
-  });
-
-  elAsideAlt.addEventListener('click', (e) => {
-    e.preventDefault();
-    navAside.classList.toggle('is-open');
-    elAside.classList.toggle('has-open-nav');
-  });
-};
+// window.onload = function(){
+//   const elAside = document.querySelector('.mobile-toggle--aside');
+//   const elAsideAlt = document.querySelector('.mobile-toggle--aside-alt');
+//   const navAside = document.querySelector('.interior-aside');
+// 
+//   elAside.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     navAside.classList.toggle('is-open');
+//     elAside.classList.toggle('has-open-nav');
+//   });
+// 
+//   elAsideAlt.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     navAside.classList.toggle('is-open');
+//     elAside.classList.toggle('has-open-nav');
+//   });
+// };
