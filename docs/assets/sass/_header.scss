@@ -7,7 +7,7 @@ header {
   background: $gray-brown;
   color: $light-gray;
   overflow: hidden;
-  height: 82px;
+  height: 90px;
 
   &.has-open-nav {
     height: auto;
@@ -30,7 +30,7 @@ header {
     }
 
     @include mq(desktop, 'max-width') {
-      width: 280px;
+      width: 300px;
     }
   }
 }
