@@ -8,6 +8,10 @@ header {
   color: $light-gray;
   overflow: hidden;
   height: 82px;
+
+  &.has-open-nav {
+    height: auto;
+  }
 }
 
 .logo {
@@ -67,6 +71,11 @@ header {
     }
   }
 
+  &.is-visible li {
+    text-align: right;
+    margin-left: 0 !important;
+  }
+
   a {
     font-weight: 300;
     font-size: 28px;
@@ -82,9 +91,11 @@ header {
     }
   }
 
-  ul.is-visible {
+  &.is-visible ul {
     opacity: 1 !important;
     height: auto !important;
+    z-index: 9999;
+    padding-top: 50px;
   }
 
 }
@@ -93,7 +104,9 @@ header {
   display: none;
   float: right;
   margin-top: 18px;
-  cursor: pointer; 
+  cursor: pointer !important; 
+  position: relative;
+  z-index: 9999;
 
   span {
     height: 4px; 
