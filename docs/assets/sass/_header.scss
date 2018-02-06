@@ -32,6 +32,10 @@ header {
     @include mq(desktop, 'max-width') {
       width: 300px;
     }
+
+    @include mq(tablet, 'max-width') {
+      width: 95px;
+    }
   }
 }
 
@@ -103,7 +107,7 @@ header {
 .mobile-toggle {
   display: none;
   float: right;
-  margin-top: 18px;
+  margin-top: 23px;
   cursor: pointer !important; 
   position: relative;
   z-index: 9999;
