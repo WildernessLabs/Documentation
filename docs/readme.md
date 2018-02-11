@@ -13,7 +13,7 @@ To browse locally:
 
 ### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
 
-Open a terminal and navigate to the `Netduino.Foundation/docs` folder and run:
+Open a terminal and navigate to the `Documentation/docs` folder and run:
 
 ```
 $ brew install ruby
@@ -33,7 +33,7 @@ $ bundle install
 
 ### 3. Launch local server
 
-Change your terminal working directory to be the location of the git repo and run:
+Change your terminal working directory to be the location of the git repo, "docs" folder and run:
 
 ```
 bundle exec jekyll serve
