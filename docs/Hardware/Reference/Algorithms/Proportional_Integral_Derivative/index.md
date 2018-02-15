@@ -24,27 +24,35 @@ To understand why PID is so useful, we must examine what happens without it.
 
 Probably the easiest and most intuitive way to heat up a cup of coffee sitting on a hotplate is to create a loop that continuously monitors the temp of the coffee, and if the temperature is too low, start another loop that turns on the hot plate, waits until the coffee reaches the desired temperature, turns the hot plate off. That loop then finishes and when the master loop detects that the coffee has gone below the target temperature, it stars the heat up loop again.
 
-This is a very simple algorithm, but it leads to a lot of error. Consider the following graph, which is the likely outcome of that the aforementioned loop:
+This is a very simple algorithm, but it leads to a lot of error. Consider the following graph, which is the likely outcome of that the aforementioned loop, in which the brown line represents the actual temperature:
 
 ![](PID_Proportional.svg)
 
 While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the actual temperature. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal. 
 
-In order to correct for this, at a minimum, the algorithm needs to take into account the _rate of change_ of the temperature and predict control changes _before_ the target is reached.
+In order to correct for this, at a minimum, the algorithm needs to take into account the _rate of change_ of the temperature and predict control changes _before_ the target is reached. Enter, the PID algorithm.
 
-## PID Controller Diagram
+## PID Algorithm
 
-[diagram]
+[algorithm looks like the following]
+
+[inputs are reference/target, output is the control]
+
+![](PID_Block_Diagram.svg)
+
+[break it down into its components]
+
+### Proportional
 
 
+### Integral
 
+[area under the function]
 
+### Derivative
 
-## Integral
-
-
-## Derivative
-
+[rate of change]
+[used to predict behavior]
 
 # Netduino.Foundation PID Controller
 
