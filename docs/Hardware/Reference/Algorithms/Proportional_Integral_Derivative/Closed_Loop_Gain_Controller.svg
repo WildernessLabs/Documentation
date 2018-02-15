@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="620px" height="340px" viewBox="0 0 620 340" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Closed_Loop_Gain_Controller</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="620" height="340"></rect>
+        <rect id="path-2" x="381" y="70" width="80" height="50"></rect>
+        <rect id="path-3" x="232" y="40" width="150" height="110"></rect>
+        <rect id="path-4" x="153" y="70" width="80" height="50"></rect>
+        <rect id="path-5" x="232" y="190" width="150" height="110"></rect>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-99.000000, -495.000000)">
+        <g id="Closed_Loop_Gain_Controller" transform="translate(99.000000, 495.000000)">
+            <g id="Rectangle-4">
+                <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="619" height="339"></rect>
+            </g>
+            <g id="Rectangle-Copy-3">
+                <use fill="#999999" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <rect stroke="#555555" stroke-width="1" x="381.5" y="70.5" width="79" height="49"></rect>
+            </g>
+            <g id="Rectangle">
+                <use fill="#555555" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <rect stroke="#555555" stroke-width="1" x="232.5" y="40.5" width="149" height="109"></rect>
+            </g>
+            <g id="Rectangle-Copy-2">
+                <use fill="#999999" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <rect stroke="#555555" stroke-width="1" x="153.5" y="70.5" width="79" height="49"></rect>
+            </g>
+            <text id="Input" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                <tspan x="172.191895" y="100">Input</tspan>
+            </text>
+            <text id="Controller" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                <tspan x="264.649414" y="100">Controller</tspan>
+            </text>
+            <g id="Rectangle-Copy-4">
+                <use fill="#B09679" fill-rule="evenodd" xlink:href="#path-5"></use>
+                <rect stroke="#555555" stroke-width="1" x="232.5" y="190.5" width="149" height="109"></rect>
+            </g>
+            <text id="System" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                <tspan x="274.625" y="250">System</tspan>
+            </text>
+            <text id="Output" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                <tspan x="393.564941" y="100">Output</tspan>
+            </text>
+            <g id="Control-Signal" transform="translate(381.000000, 95.000000)">
+                <polyline id="Path-7" stroke="#555555" stroke-width="2" points="80 0.5 181 0.5 181 151 4 151"></polyline>
+                <text id="Control-Signal-(Gain" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABEC">
+                    <tspan x="37.3950195" y="118">Control Signal </tspan>
+                    <tspan x="69.1191406" y="139">(Gain)</tspan>
+                </text>
+                <polygon id="Triangle" fill="#555555" transform="translate(4.452381, 151.000000) rotate(-180.000000) translate(-4.452381, -151.000000) " points="8.9047619 151 0 156.5 0 145.5"></polygon>
+            </g>
+            <g id="Feedback-Signal" transform="translate(58.000000, 100.000000)">
+                <polyline id="Path-8" stroke="#555555" stroke-width="2" points="174.045406 146 0 146 0 5.5 89 5.5"></polyline>
+                <text id="Actual-Signal-(Feedb" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABEC">
+                    <tspan x="42.0908203" y="113">Actual Signal</tspan>
+                    <tspan x="49.4912109" y="134">(Feedback)</tspan>
+                </text>
+                <polygon id="Triangle" fill="#555555" transform="translate(90.452381, 5.500000) rotate(-360.000000) translate(-90.452381, -5.500000) " points="94.9047619 5.5 86 11 86 0"></polygon>
+            </g>
+            <g id="Target-Signal" transform="translate(27.000000, 35.000000)">
+                <path d="M0,51 L121.909196,51" id="Path-3" stroke="#555555" stroke-width="2"></path>
+                <text id="Target-Signal-(Refer" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABEC">
+                    <tspan x="5.58544922" y="17">Target Signal</tspan>
+                    <tspan x="11.8344727" y="38">(Reference)</tspan>
+                </text>
+                <polygon id="Triangle" fill="#555555" transform="translate(121.452381, 50.500000) rotate(-360.000000) translate(-121.452381, -50.500000) " points="125.904762 50.5 117 56 117 45"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
