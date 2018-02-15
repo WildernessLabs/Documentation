@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700px" height="450px" viewBox="0 0 700 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>PID_Reference_and_Ideal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-80.000000, -72.000000)">
+        <g id="PID_Reference_and_Ideal" transform="translate(80.000000, 72.000000)">
+            <rect id="Rectangle-3" fill="#EEEEEE" x="0" y="0" width="700" height="450"></rect>
+            <text id="Time-(t)" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#555555">
+                <tspan x="340.416504" y="427">Time (t)</tspan>
+            </text>
+            <g id="Axis" transform="translate(49.000000, 48.000000)">
+                <path d="M61,340 L591,340" id="Line" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M50,314 L60,314" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M60,340 L60,5.68434189e-14" id="Line-2" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <text id="100ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                    <tspan x="0.443847656" y="17">100ºC</tspan>
+                </text>
+                <text id="20ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                    <tspan x="5.88671875" y="320">20ºC</tspan>
+                </text>
+                <path d="M50,11 L60,11" id="Line-Copy-2" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+            <text id="Temperature" transform="translate(29.500000, 205.500000) rotate(-270.000000) translate(-29.500000, -205.500000) " font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#555555">
+                <tspan x="-21.9995117" y="212">Temperature</tspan>
+            </text>
+            <polyline id="Path-2" stroke="#7ED321" stroke-width="2" points="110 388 150 388 150 148 640 148"></polyline>
+            <path d="M110,352 L149.900385,352 C153.729882,350.798591 157.208259,346.06398 160.335518,337.796166 C177.059532,293.581395 171.623173,155.147194 200.994426,147.514149 C230.36568,139.881104 281.016818,150.707888 304.030505,150.707888 C330.831914,150.707888 378.106139,147.906006 431.344975,147.514149 C520.641653,146.856894 611.350469,148 638.078243,148" id="Path-3" stroke="#23ABE3" stroke-width="3"></path>
+        </g>
+    </g>
+</svg>
