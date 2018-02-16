@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700px" height="450px" viewBox="0 0 700 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>PID_Integral</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-847.000000, -606.000000)">
+        <g id="PID_Integral" transform="translate(847.000000, 606.000000)">
+            <rect id="Rectangle-3" fill="#EEEEEE" x="0" y="0" width="700" height="450"></rect>
+            <text id="Time-(x-=-t)" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#555555">
+                <tspan x="319.560547" y="433">Time (x = t)</tspan>
+            </text>
+            <g id="Axis" transform="translate(41.000000, 54.000000)">
+                <path d="M62,340 L592,340" id="Line" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M62,100 L592,100" id="Line-Copy-3" stroke="#555555" stroke-linecap="square" stroke-dasharray="2,5"></path>
+                <path d="M51,314 L61,314" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M61,340 L61,0" id="Line-2" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <text id="100ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                    <tspan x="0.887695312" y="17">100ºC</tspan>
+                </text>
+                <text id="20ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                    <tspan x="8.7734375" y="320">20ºC</tspan>
+                </text>
+                <path d="M51,11 L61,11" id="Line-Copy-2" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                <text id="75ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                    <tspan x="9.7734375" y="106">75ºC</tspan>
+                </text>
+                <path d="M51,100 L61,100" id="Line-Copy-4" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+            <path d="M5,229 L335,229" id="Line-Copy-5" stroke="#555555" stroke-linecap="square" stroke-dasharray="2,5" transform="translate(170.000000, 229.000000) rotate(-270.000000) translate(-170.000000, -229.000000) "></path>
+            <g id="X1" transform="translate(165.000000, 34.000000)" fill="#23ABEC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-style="condensed" font-weight="normal">
+                <text id="x" font-size="18">
+                    <tspan x="0.0986328125" y="17">x</tspan>
+                </text>
+                <text id="1" font-size="13">
+                    <tspan x="7.58251953" y="22">1</tspan>
+                </text>
+            </g>
+            <g id="X1-Copy" transform="translate(255.000000, 34.000000)" fill="#23ABEC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-style="condensed" font-weight="normal">
+                <text id="x" font-size="18">
+                    <tspan x="0.0986328125" y="17">x</tspan>
+                </text>
+                <text id="2" font-size="13">
+                    <tspan x="7.58251953" y="22">2</tspan>
+                </text>
+            </g>
+            <path d="M95,229 L425,229" id="Line-Copy-6" stroke="#555555" stroke-linecap="square" stroke-dasharray="2,5" transform="translate(260.000000, 229.000000) rotate(-270.000000) translate(-260.000000, -229.000000) "></path>
+            <text id="Temperature" transform="translate(22.500000, 211.500000) rotate(-270.000000) translate(-22.500000, -211.500000) " font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#555555">
+                <tspan x="-28.9995117" y="218">Temperature</tspan>
+            </text>
+            <polyline id="Reference" stroke="#7ED321" stroke-width="2" points="103 394 143 394 143 154 633 154"></polyline>
+            <path d="M103,358 L142.900385,358 C146.729882,356.798591 150.208259,352.06398 153.335518,343.796166 C170.059532,299.581395 171.58983,74.9937182 200.281012,74.9937182 C228.972194,74.9937182 241.755431,212.164081 274.57464,212.164081 C307.39385,212.164081 319.508617,97.8170025 348.11245,97.8170025 C376.716284,97.8170025 393.194742,179.168348 421.671478,179.168348 C450.148215,179.168348 470.516052,127.684743 495.354055,127.684743 C508.138569,127.684743 542.41606,162.657537 563.175198,162.657537 C583.934337,162.657537 622.489676,145 631.078243,145" id="Proportional" stroke="#B09679" stroke-width="3"></path>
+            <path d="M259,393 L171,393 C170.909019,287.927098 170.909019,227.931766 171,213.014003 C177.42607,143.981667 184.379366,74.9937182 200.281012,74.9937182 C224.182972,74.9937182 236.397131,170.192294 259,201.973981 C259.255804,213.365235 259.255804,277.040575 259,393 Z" id="Proportional-Copy" stroke="#524740" fill="#23ABE3"></path>
+        </g>
+    </g>
+</svg>
