@@ -93,6 +93,8 @@ The error is simply the difference between the target value value and the actual
 
 The proportional calculation is the simplest of all; it simply multiplies the error factor by a specified proportion multiplier. For instance, if the error is 25, and the `ProportionGain` is set to `0.8`, then the output gain would be adjusted by `25 * 0.8`, or `20`. 
 
+##### Proportional Effect
+
 [explanation of what it does]
 
 #### Integral Corrective Action
@@ -107,7 +109,7 @@ However, in real life systems, we almost never know that, so we sample the actua
 
 ![](PID_Integral_Approximation.svg)
 
-If the readings were: `{ 24º, 38º, 70º, 86º, 97º, 98º, 97º, 88º, 80º, 73º }`, we would add each one, multiplied by the time interval (`1minute`) to get the integral:
+If the readings were: `{ 24º, 38º, 70º, 86º, 97º, 98º, 97º, 88º, 80º, 73º }`, we would add each one, multiplied by the time interval (`1minute`) to get the signal integral:
 
 ```
 Given T1 ... T10:
@@ -118,6 +120,10 @@ Therefore:
 ```
 
 The resolution of the integral gets better as the number of data points increases, which is accomplished by reducing the interval time.
+
+##### Integral Effect
+
+By using an integral, the PID controller can adjust for error _over time_.
 
 
 
