@@ -91,11 +91,14 @@ The error is simply the difference between the target value value and the actual
 
 #### Proportional Corrective Action
 
-The proportional calculation is the simplest of all; it simply multiplies the error factor by a specified proportion multiplier. For instance, if the error is 25, and the `ProportionGain` is set to `0.8`, then the output gain would be adjusted by `25 * 0.8`, or `20`. 
+The proportional calculation is the simplest of all; it simply multiplies the error factor by a specified proportion multiplier. For instance, if the error is `25`, and the `ProportionGain` is set to `0.8`, then the output gain would be adjusted by `25 * 0.8`, or `20`. 
 
-##### Proportional Effect
+##### Effect of the Proportional Correction
 
-[explanation of what it does]
+Changing the 	`ProportionalGain` generally affects how strongly the controller responds to error. A higher `ProportionalGain` means that the controller will send a larger power change in response to a system change away from target. Systems that are resistant to change and therefore need stronger inputs will require a higher value, but systems that change easily may require subtle changes and will do better with smaller values. 
+
+When tuning the `ProportionalGain`, a good starting place for the value is `1`.
+
 
 #### Integral Corrective Action
 
@@ -121,15 +124,13 @@ Therefore:
 
 The resolution of the integral gets better as the number of data points increases, which is accomplished by reducing the interval time.
 
-##### Integral Effect
+##### Effect of the Integral Correction
 
-By using an integral, the PID controller can adjust for error _over time_.
-
-
+While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change. So while using the Proportional control alone will provide a somewhat symmetrical oscillation into the target value, the Integral action accelerates the change to target.
 
 #### Derivative Correction Action
 
-[rate of change]
+[rate of change][slop of the line][greatly affected by noise]
 [used to predict behavior]
 
 # Variations on PID
