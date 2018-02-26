@@ -22,15 +22,17 @@ The PID algorithm is a tool to heat the coffee just as illustrated above: _effic
 
 [Netduino.Foundation has a [PID controller](Link) integrated into the core, so you don't have to write the algorithm yourself, but in order to use it, it's helpful to understand how it works]
 
+[check out the Netduino.Foundation PID controller documentation for an overview of how to use it. For a more detailed understanding of PID, read on]
+
 ## Simple Control
 
 To understand why PID is so useful, we must examine what happens without it. 
 
 Probably the easiest and most intuitive way to heat up a cup of coffee sitting on a hotplate is to create a loop that continuously monitors the temp of the coffee, and if the temperature is too low, start another loop that turns on the hot plate, waits until the coffee reaches the desired temperature, and then turns the hot plate off. That loop then finishes and when the master loop detects that the coffee has gone below the target temperature, it stars the heat up loop again.
 
-This is a very simple algorithm, but it leads to a lot of error. Consider the following graph, which is the likely outcome of that the aforementioned loop, in which the brown line represents the actual temperature:
+This is a very simple algorithm, but it leads to a lot of error. Consider the following graph, which is the likely outcome of that the aforementioned loop, in which the orange line represents the actual temperature:
 
-![](PID_Proportional.svg)
+![](PID_Binary.svg)
 
 While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the actual temperature. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal. 
 
@@ -44,7 +46,7 @@ The PID algorithm can be described, visually, in the following block diagram:
 
 The inputs include:
 
- * **Reference Signal** - Represents the ideal target state and is sometimes called the _setpoint_ (SP),. I.e., 75ºC, the desired temp of coffee.
+ * **Reference Signal** - Represents the ideal target state and is sometimes called the _set point_ (SP),. I.e., 75ºC, the desired temp of coffee.
  * **Actual Signal** - Represents the actual measured state (sometimes called the _process variable_ (PV)).  I.e., current temp of coffee, say for instance, 25ºC.
 
 The output is the _control signal_, or _control variable_ (CV), which is used to control the agent of change in the system, such as the hot plate.
@@ -62,6 +64,8 @@ In this context, [_gain_](https://en.wikipedia.org/wiki/Gain_(electronics)) is t
 #### Hysteresis
 
 Additionally, this control algorithm relies on the history of the 
+
+[lagging behind]
 
 [gah, reword this. hysteresis is the dependence of the system on its history, and causes a lag between control and actual]
 The lag between the 
@@ -95,7 +99,11 @@ The proportional calculation is the simplest of all; it simply multiplies the er
 
 ##### Effect of the Proportional Correction
 
-Changing the 	`ProportionalGain` generally affects how strongly the controller responds to error. A higher `ProportionalGain` means that the controller will send a larger power change in response to a system change away from target. Systems that are resistant to change and therefore need stronger inputs will require a higher value, but systems that change easily may require subtle changes and will do better with smaller values. 
+Changing the 	`ProportionalGain` generally affects how strongly the controller responds to error. A higher `ProportionalGain` means that the controller will send a larger power change in response to a system change away from target. Systems that are resistant to change and therefore need stronger inputs will require a higher value, but systems that change easily may require subtle changes and will do better with smaller values.
+
+The following graph illustrates the reaction of a sample system to various `ProportionGain` (K). A higher gain means that the system gets to the target state faster, but has much more error. Whereas a lower gain means less error, but it takes longer to affect change:
+
+[![PID varyingP](https://upload.wikimedia.org/wikipedia/commons/a/a3/PID_varyingP.jpg)](https://commons.wikimedia.org/wiki/File%3APID_varyingP.jpg)
 
 When tuning the `ProportionalGain`, a good starting place for the value is `1`.
 
@@ -124,20 +132,52 @@ Therefore:
 
 The resolution of the integral gets better as the number of data points increases, which is accomplished by reducing the interval time.
 
+
+**from PID for dummies:**
+
+> The way to adjust how much Integral Action you have is by adjusting a term called “minutes per repeat”. Not a very intuitive name is it?
+
+> So where does this strange name come from? It is a measure of how long it will take for the Integral Action to match the Proportional Action.
+
+> In other words, if the output of the proportional box on the diagram above is 20%, the repeat time is the time it will take for the output of the Integral box to get to 20% too.
+
+>And the important point to note is that the “bigger” integral action, the quicker it will get this 20% value. That is, it will take fewer minutes to get there, so the “minutes per repeat” value will be smaller.
+
+>In other words the smaller the “minutes per repeat” is the bigger the integral action.
+
+> To make things a bit more intuitive, a lot of controllers use an alternative unit of “repeats per minute” which is obviously the inverse of “minutes per repeat”.
+
+> The nice thing about “repeats per minute” is that the bigger it is - the bigger the resulting Integral action is.
+
 ##### Effect of the Integral Correction
 
 While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change. So while using the Proportional control alone will provide a somewhat symmetrical oscillation into the target value, the Integral action accelerates the change to target.
 
+[![PID Change with Integral](https://upload.wikimedia.org/wikipedia/commons/c/c0/Change_with_Ki.png)](https://commons.wikimedia.org/wiki/File%3AChange_with_Ki.png)
+
+
 #### Derivative Correction Action
 
-[rate of change][slop of the line][greatly affected by noise]
-[used to predict behavior]
+The Derivative action calculates the _rate of change_, which is defined as the slope of the line and uses that to predict how quickly the system will change. 
 
-# Variations on PID
+[greatly affected by noise]
+[not often used (1/4 of systems)]
 
-## PI Controllers
+## Variations on PID
 
-## PD Controllers
+PID is a powerful algorithm, but it doesn't need to be used in its entirety to be effective. In fact, most uses of PID only use the PI component. 
 
-# Netduino.Foundation PID Controller
+### PI Controllers
+
+Because the Derivative is so adversely affected by input signal noise, in most real world systems, it's omitted entirely. For many needs a PI controller (Proportional and Integral only), will suffice. 
+
+### PD Controllers
+
+PD controllers, those that use the Proportional and Derivative corrective actions only, are less common, but are sometimes used to control servos when very precise movements are needed. Servos can provide very precise data on their rotation, so in conjunction with Proportional power control, a PD controller can drive a servos into not incredibly precise alignment, but do so very quickly.
+
+# Code Implementation
+
+
+# PID Tuning (Coming Soon)
+
 
