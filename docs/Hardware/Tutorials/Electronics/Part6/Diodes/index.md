@@ -10,3 +10,8 @@ subtitle: Stuff
 
 ## Characteristics
 
+## Types of Diodes
+
+## Diode Uses
+
+# [Next - LEDs](../LEDs)

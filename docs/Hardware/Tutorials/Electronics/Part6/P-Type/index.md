@@ -6,7 +6,8 @@ subtitle: Semiconductor with a majority of positive (hole) charge carriers.
 
 # Intro
 
-[silicon doped with tetravalent elements (3 electrons in the valence shell), such as boron creates a P-Type semiconductor]
+Silicon doped with tetravalent elements (elements that have 3 valence electrons), such as boron, create a _P-Type_ semiconductor.
+
 
 [a neutral charged boron atom has 3 electrons in its valence shell]
 
