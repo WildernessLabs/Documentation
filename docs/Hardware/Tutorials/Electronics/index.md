@@ -42,3 +42,5 @@ Part 4 expands the relationship between amperage and voltage, and adds another p
 Part 5 introduces two more laws that govern the behavior of electricity and explores how voltage behaves. Along the way, we'll build our first real, practical prototype circuits and learn how to do some basic soldering.
 
 ![](Part5/Kirchhoffs_Voltage_Law/Kirchhoffs_Voltage_Law.svg)
+
+### [Part 6 - Semiconductors](Part6/Semiconductors)
