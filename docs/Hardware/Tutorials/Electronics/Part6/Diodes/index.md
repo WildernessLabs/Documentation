@@ -6,10 +6,7 @@ subtitle: Stuff
 
 # Intro
 
-![](../Sketches/Conduction_graph_of_diode.png)
+[pn junction]
 
-# Reverse Biasing
+## Characteristics
 
-![](../Sketches/PN_reverse_biasing.png)
-
-# Breakdown + Avalanche Current
