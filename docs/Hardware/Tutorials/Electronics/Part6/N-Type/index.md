@@ -4,33 +4,31 @@ title: N-Type Semiconductor
 subtitle: Semiconductor with a majority of negative (electron) charge carriers.
 ---
 
-# Intro
+# Creating N-Type Semiconductors
 
-[N-type Semiconductors are electrically opposite to P-Type]
+N-Type semiconductors are electrically opposite to P-Type. By doping silicon with pentavalent materials (elements that have 5 valence electrons) such as phosphorous, an extra electron is now present in the lattice where the boron atom is. 
 
-[silicon doped with pentavalent elements (5 electrons in the valence shell), such as phosphorous creates a P-Type semiconductor]
-
-[a neutral charged phosphorous atom has 5 electrons in its valence shell]
-
-[now there is one too many electrons. which causes the electron to want to leave the valence shell, reducing the electron count of the boron atom, so now it has one more proton than electron, making it a positive ion:]
+As such, the electron is repelled out of the phosphorous atom and travels around the surrounding lattice. By losing one of it's electrons, it becomes a positively charged ion, because it now has one more proton than electron:
 
 [note: fix sketch to have the extra electron popping out]
 ![](../Sketches/N-Type_silicon_crystal.png)
 
 ## Donor Impurities
 
-[Donor impurities "donate" electrons to the material.]
+Impurities that introduce extra electrons are called _donor impurities_ because they "donate" electrons to the material.
 
 ## Electrically Neutral
 
-[however, just as with P-Type, while the phosphorous ion may be negatively charged, the overall charge of the material is still neutral, because the number of free electrons = the number of positively charged donor ions.]
+However, just as with P-Type, while the phosphorous ion may be positively charged, the overall charge of the material is still neutral, because the number of free electrons is equal the number of positively charged donor ions.
 
 ## Negative-Type Semicondutor
 
-[the result is a piece of silicon that has too many electrons (negative charge carriers) this is how it gets its name as N-Type, or _Negative-Type_.]
-
-[The real magic happens when P-Type and N-Type materials are placed next to each other to crated P-N Junctions.]
+Just as the holes move around the P-Type semiconductor, free electrons also move around the N-Type lattice, trying, in perpetuity to achieve balance. The result is an ever changing mesh of containing and abundance of negatively charged electrons, giving rise to the name N-Type, which stands for _Negative-Type_.
 
 ![](../Sketches/N-Type_Semiconductor_Lattice.png)
+
+Just as with the P-Type semiconductor, N-Type semiconductors will readily conduct electricity, because it has extra electrons moving around in it already.
+
+However, the real magic happens when P-Type and N-Type semiconductors are sandwiched together, which creates _P-N Junctions_, where interesting behaviors arise.
 
 # [Next - P-N Junctions](../P-N_Junctions)
