@@ -1,10 +1,10 @@
 ---
 layout: ElectronicsTutorial
-title: LEDs
+title: LED Lab
 subtitle: Light Emitting Diodes.
 ---
 
 # Intro
 
 
-# [Next - LED Lab](../LED_Lab)
+# [Next - Transistors](../Transistors)
