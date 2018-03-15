@@ -18,11 +18,9 @@ In this idealized example, the coffee is quickly brought up _just past_ the targ
 
 The PID algorithm is a tool to heat the coffee just as illustrated above: _efficiently_.  That is, with only a small amount of error, defined as the area between the reference temperature and the actual temperature. 
 
-## PID Controller in Netduino.Foundation
+## PID Controllers in Netduino.Foundation
 
-[Netduino.Foundation has a [PID controller](Link) integrated into the core, so you don't have to write the algorithm yourself, but in order to use it, it's helpful to understand how it works]
-
-[check out the Netduino.Foundation PID controller documentation for an overview of how to use it. For a more detailed understanding of PID, read on]
+Netduino.Foundation has two [PID controllers](http://Netduino.Foundation/API/Controllers/PID/) integrated into the core library. Getting up and running with those controllers is fairly trivial, but this article provides a more in-depth discussion to provide a deeper understanding of how the algorithm works, so as to provide a better framework for tuning it, or implementing your own, custom controller.
 
 ## Simple Control
 
@@ -34,15 +32,27 @@ This is a very simple algorithm, but it leads to a lot of error. Consider the fo
 
 ![](PID_Binary.svg)
 
-While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the actual temperature. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal. 
-
-In order to correct for this, at a minimum, the algorithm needs to take into account the _rate of change_ of the temperature and predict control changes _before_ the target is reached. Enter, the PID algorithm.
+While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the system. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal. 
 
 ## PID Controller Algorithm
 
-The PID algorithm can be described, visually, in the following block diagram:
+The PID algorithm was created specifically as a tool to provide an automated control framework to efficiently effect change within a system to get it to reach a target state. In the example above, it was heating a cup of coffee, but it could also be keeping a boat straight on course while external factors such as wind and current tries to pull it off heading, or keeping a drone level while air turbulence tried to through it off balance.
 
-![](PID_Block_Diagram.svg)
+And while PID is generally referred to as a single algorithm, in fact, there are specialized variants that tackle various different problems. Together these form a family of solutions that are all generally based on the same mathematic principles. 
+
+### Ideal vs. Standard
+
+In this guide, we're going to examine the _ideal_ PID algorithm, and the more common _standard_ algorithm. The ideal algorithm is the canonical textbook algorithm and is the basis for nearly all PID controller algorithm derivatives, however, the standard algorithm is much more versatile, common, and perhaps intuitive.
+
+In nearly all cases, PID is based on three mathematical terms:
+
+ * **Proportional** - Describes how far away from the target state the system is, and how much force to apply to change it.
+ * **Integral** - Describes the cumulative error, which is how much the change being applied is actually changing the system.
+ * **Derivative** - Describes the rate of change, and can be useful in predicting how the system will change in the future.
+
+The "ideal" PID algorithm can be described, visually, in the following block diagram:
+
+![](Ideal_PID_Block_Diagram.svg)
 
 The inputs include:
 
@@ -107,7 +117,6 @@ The following graph illustrates the reaction of a sample system to various `Prop
 
 When tuning the `ProportionalGain`, a good starting place for the value is `1`.
 
-
 #### Integral Corrective Action
 
 In calculus, the _integral_ is defined as the area under the graph of a function between two particular _x_ coordinates. For example, it could be the blue area in the following graph of our coffee :
@@ -132,29 +141,11 @@ Therefore:
 
 The resolution of the integral gets better as the number of data points increases, which is accomplished by reducing the interval time.
 
-
-**from PID for dummies:**
-
-> The way to adjust how much Integral Action you have is by adjusting a term called “minutes per repeat”. Not a very intuitive name is it?
-
-> So where does this strange name come from? It is a measure of how long it will take for the Integral Action to match the Proportional Action.
-
-> In other words, if the output of the proportional box on the diagram above is 20%, the repeat time is the time it will take for the output of the Integral box to get to 20% too.
-
->And the important point to note is that the “bigger” integral action, the quicker it will get this 20% value. That is, it will take fewer minutes to get there, so the “minutes per repeat” value will be smaller.
-
->In other words the smaller the “minutes per repeat” is the bigger the integral action.
-
-> To make things a bit more intuitive, a lot of controllers use an alternative unit of “repeats per minute” which is obviously the inverse of “minutes per repeat”.
-
-> The nice thing about “repeats per minute” is that the bigger it is - the bigger the resulting Integral action is.
-
 ##### Effect of the Integral Correction
 
 While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change. So while using the Proportional control alone will provide a somewhat symmetrical oscillation into the target value, the Integral action accelerates the change to target.
 
 [![PID Change with Integral](https://upload.wikimedia.org/wikipedia/commons/c/c0/Change_with_Ki.png)](https://commons.wikimedia.org/wiki/File%3AChange_with_Ki.png)
-
 
 #### Derivative Correction Action
 
@@ -162,6 +153,14 @@ The Derivative action calculates the _rate of change_, which is defined as the s
 
 [greatly affected by noise]
 [not often used (1/4 of systems)]
+
+## Standard PID Algorithm
+
+[builds on the ideal algorithm, but defines an integral and derivative component that have semantic meaning. ]
+
+[In the standard form, step 3 produces a single error value that uses both the integral to account for past errors and the derivative which can predict future error based on rate of change. This single error correction is then scaled (multiplied) by the proportional error constant.]
+
+![](Standard_PID_Block_Diagram.svg)
 
 ## Variations on PID
 
@@ -179,5 +178,25 @@ PD controllers, those that use the Proportional and Derivative corrective action
 
 
 # PID Tuning (Coming Soon)
+
+
+
+
+
+**from PID for dummies:**
+
+> The way to adjust how much Integral Action you have is by adjusting a term called “minutes per repeat”. Not a very intuitive name is it?
+
+> So where does this strange name come from? It is a measure of how long it will take for the Integral Action to match the Proportional Action.
+
+> In other words, if the output of the proportional box on the diagram above is 20%, the repeat time is the time it will take for the output of the Integral box to get to 20% too.
+
+>And the important point to note is that the “bigger” integral action, the quicker it will get this 20% value. That is, it will take fewer minutes to get there, so the “minutes per repeat” value will be smaller.
+
+>In other words the smaller the “minutes per repeat” is the bigger the integral action.
+
+> To make things a bit more intuitive, a lot of controllers use an alternative unit of “repeats per minute” which is obviously the inverse of “minutes per repeat”.
+
+> The nice thing about “repeats per minute” is that the bigger it is - the bigger the resulting Integral action is.
 
 

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1142px" height="397px" viewBox="0 0 1142 397" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Standard_PID_Block_Diagram Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="120" height="397"></rect>
+        <rect id="path-2" x="0" y="0" width="200" height="397"></rect>
+        <rect id="path-3" x="0" y="0" width="200" height="397"></rect>
+        <rect id="path-4" x="0" y="0" width="270" height="397"></rect>
+        <rect id="path-5" x="0" y="0" width="226" height="397"></rect>
+        <rect id="path-6" x="0" y="0" width="130" height="397"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Block-Diagrams" transform="translate(-31.000000, -885.000000)">
+            <g id="Standard_PID_Block_Diagram-Copy" transform="translate(31.000000, 885.000000)">
+                <g id="Output" transform="translate(1022.000000, 0.000000)">
+                    <g id="Rectangle-Copy-3">
+                        <use fill="#999999" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="119" height="396"></rect>
+                    </g>
+                    <text font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                        <tspan x="31.5649414" y="30">Output</tspan>
+                    </text>
+                    <text id="Control-Signal" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="31.2412109" y="202">Control</tspan>
+                        <tspan x="35.8818359" y="223">Signal</tspan>
+                    </text>
+                </g>
+                <g id="Step-3-Copy" transform="translate(823.000000, 0.000000)">
+                    <g id="Rectangle-Copy-3">
+                        <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="199" height="396"></rect>
+                    </g>
+                    <text id="4.-Multiply-by-P" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#555555">
+                        <tspan x="34.4042969" y="30">4. Multiply by P</tspan>
+                    </text>
+                    <g id="Operation" transform="translate(96.500000, 188.000000) rotate(-360.000000) translate(-96.500000, -188.000000) translate(59.000000, 131.000000)">
+                        <circle id="Oval" stroke="#555555" stroke-width="2" cx="37.5" cy="76.5" r="37.5"></circle>
+                        <polygon id="Triangle-Copy-2" fill="#555555" transform="translate(37.000000, 34.000000) rotate(-270.000000) translate(-37.000000, -34.000000) " points="41.452381 34 32.547619 39.5 32.547619 28.5"></polygon>
+                        <text id="∑" font-family="Roboto-Regular, Roboto" font-size="28" font-weight="normal" fill="#555555">
+                            <tspan x="29.3037109" y="85">∑</tspan>
+                        </text>
+                        <path d="" id="Path-9" stroke="#979797"></path>
+                        <path d="M37,0 L37,34" id="Path-10" stroke="#555555" stroke-width="2"></path>
+                    </g>
+                    <g id="Arrow" transform="translate(135.000000, 201.500000)">
+                        <path d="M0,5.5 L85,5.5" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                        <polygon id="Triangle" fill="#555555" points="88.9047619 5.5 80 11 80 0"></polygon>
+                    </g>
+                </g>
+                <g id="Step-3" transform="translate(624.000000, 0.000000)">
+                    <g id="Rectangle-Copy-3">
+                        <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="199" height="396"></rect>
+                    </g>
+                    <text id="3.-Sum-Corrections-(" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#555555">
+                        <tspan x="19.09375" y="30">3. Sum Corrections</tspan>
+                        <tspan x="53.6875" y="51">(and error)</tspan>
+                    </text>
+                    <g id="Operation" transform="translate(175.500000, 207.000000) rotate(-360.000000) translate(-175.500000, -207.000000) translate(36.000000, 141.000000)">
+                        <circle id="Oval" stroke="#555555" stroke-width="2" cx="60.5" cy="66.5" r="37.5"></circle>
+                        <text id="∑" font-family="Roboto-Regular, Roboto" font-size="28" font-weight="normal" fill="#555555">
+                            <tspan x="52.3037109" y="75">∑</tspan>
+                        </text>
+                        <text id="*" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                            <tspan x="271.248047" y="20">*</tspan>
+                        </text>
+                        <text id="+-copy" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                            <tspan x="0.795898437" y="58">+</tspan>
+                        </text>
+                        <text id="+-copy-3" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                            <tspan x="70.7958984" y="17">+</tspan>
+                        </text>
+                        <text id="+-copy-2" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                            <tspan x="70.7958984" y="128">+</tspan>
+                        </text>
+                    </g>
+                    <g id="Arrow" transform="translate(135.000000, 201.500000)">
+                        <path d="M0,5.5 L116,5.5" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                        <polygon id="Triangle" fill="#555555" points="123.904762 5.5 115 11 115 0"></polygon>
+                    </g>
+                </g>
+                <g id="Step-2" transform="translate(355.000000, 0.000000)">
+                    <g id="Rectangle-Copy">
+                        <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="269" height="396"></rect>
+                    </g>
+                    <text id="2.-Calculate-ID-Corr" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#555555">
+                        <tspan x="27.793457" y="30">2. Calculate ID Corrections</tspan>
+                    </text>
+                    <g id="Split-Tree" transform="translate(30.000000, 106.000000)">
+                        <polyline id="Path-4" stroke="#555555" stroke-width="2" points="54 0 0 0 0 200 51.5961321 200"></polyline>
+                        <polygon id="Triangle-Copy-2" fill="#555555" points="53.9047619 101 45 106.5 45 95.5"></polygon>
+                        <polygon id="Triangle-Copy-3" fill="#555555" points="53.9047619 200 45 205.5 45 194.5"></polygon>
+                        <path d="M51.304658,101 L0,101" id="Path-5" stroke="#555555" stroke-width="2"></path>
+                    </g>
+                    <g id="Derivative-Correction" transform="translate(53.000000, 277.000000)">
+                        <rect id="Rectangle-2" stroke="#555555" stroke-width="2" x="31" y="1" width="123" height="53"></rect>
+                        <text id="Derivative-Correctio" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="54.0942383" y="23">Derivative</tspan>
+                            <tspan x="51.7167969" y="44">Correction</tspan>
+                        </text>
+                        <text id="(D-*-Error---RateOfC" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#23ABE3">
+                            <tspan x="0.421875" y="76">(D * Error - RateOfChange)</tspan>
+                        </text>
+                    </g>
+                    <g id="Integral-Correction" transform="translate(83.000000, 179.000000)">
+                        <rect id="Rectangle-2" stroke="#555555" stroke-width="2" x="1" y="1" width="123" height="53"></rect>
+                        <text font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="33.2041016" y="23">Integral</tspan>
+                            <tspan x="21.7167969" y="44">Correction</tspan>
+                        </text>
+                        <text id="(I-*-Error-*-Time)" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#23ABE3">
+                            <tspan x="4.80078125" y="74">(I * Error * Time)</tspan>
+                        </text>
+                    </g>
+                    <g id="Proportional-Correction" transform="translate(503.000000, 77.000000)">
+                        <rect id="Rectangle-2" stroke="#555555" stroke-width="2" x="1" y="1" width="123" height="53"></rect>
+                        <text id="Proportional-Correct" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="14.1142578" y="24">Proportional</tspan>
+                            <tspan x="21.7167969" y="45">Correction</tspan>
+                        </text>
+                    </g>
+                    <g id="Collapsing-Tree" transform="translate(84.000000, 106.000000)">
+                        <g id="Group-3" transform="translate(0.000000, -0.000000)">
+                            <polyline id="Path-2" stroke="#555555" stroke-width="2" points="1.42108547e-14 2.84217094e-14 282 0 282 58.9718514"></polyline>
+                            <polygon id="Triangle-Copy-2" fill="#555555" transform="translate(282.000000, 59.000000) rotate(-270.000000) translate(-282.000000, -59.000000) " points="286.452381 59 277.547619 64.5 277.547619 53.5"></polygon>
+                        </g>
+                        <g id="Group-2" transform="translate(123.000000, 95.000000)">
+                            <polygon id="Triangle-Copy-2" fill="#555555" points="119.904762 6 111 11.5 111 0.5"></polygon>
+                            <path d="M117.304658,6 L0,6" id="Path-5" stroke="#555555" stroke-width="2"></path>
+                        </g>
+                        <g id="Group" transform="translate(123.000000, 139.000000)">
+                            <polyline id="Path-6" stroke="#555555" stroke-width="2" points="0 61 159 61 159 6.40531587"></polyline>
+                            <polygon id="Triangle-Copy-2" fill="#555555" transform="translate(159.000000, 5.000000) rotate(-90.000000) translate(-159.000000, -5.000000) " points="163.452381 5 154.547619 10.5 154.547619 -0.5"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="Step-1" transform="translate(130.000000, 0.000000)">
+                    <g id="Rectangle">
+                        <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="225" height="396"></rect>
+                    </g>
+                    <text id="1.-Calculate-Error" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#555555">
+                        <tspan x="43.7929688" y="30">1. Calculate Error</tspan>
+                    </text>
+                    <text id="Error" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABEC">
+                        <tspan x="169.115723" y="196">Error</tspan>
+                    </text>
+                    <text id="(Error-=-Reference--" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#23ABE3">
+                        <tspan x="15.046875" y="322">(Error = Reference - Actual)</tspan>
+                    </text>
+                    <text id="+" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                        <tspan x="49.7958984" y="199">+</tspan>
+                    </text>
+                    <text id="-" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                        <tspan x="100.03418" y="272">-</tspan>
+                    </text>
+                    <g id="Operation" transform="translate(110.500000, 207.500000) rotate(-360.000000) translate(-110.500000, -207.500000) translate(73.000000, 170.000000)">
+                        <circle id="Oval" stroke="#555555" stroke-width="2" cx="37.5" cy="37.5" r="37.5"></circle>
+                        <text id="∑" font-family="Roboto-Regular, Roboto" font-size="28" font-weight="normal" fill="#555555">
+                            <tspan x="29.3037109" y="46">∑</tspan>
+                        </text>
+                    </g>
+                    <g id="Arrow-Copy" transform="translate(149.000000, 206.000000)" stroke="#555555" stroke-linecap="square" stroke-width="2">
+                        <path d="M0,1 L106,1" id="Line-Copy"></path>
+                    </g>
+                </g>
+                <g id="Input">
+                    <g id="Rectangle-Copy-2">
+                        <use fill="#999999" fill-rule="evenodd" xlink:href="#path-6"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="129" height="396"></rect>
+                    </g>
+                    <text id="Actual-Signal" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="40.4370117" y="278">Actual</tspan>
+                        <tspan x="41.3818359" y="299">Signal</tspan>
+                    </text>
+                    <text id="Reference-Signal" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="26.0395508" y="201">Reference</tspan>
+                        <tspan x="41.8818359" y="222">Signal</tspan>
+                    </text>
+                    <text id="Inputs" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                        <tspan x="41.5644531" y="30">Inputs</tspan>
+                    </text>
+                    <g id="Arrow" transform="translate(179.500000, 265.000000) rotate(-90.000000) translate(-179.500000, -265.000000) translate(159.500000, 198.500000)">
+                        <polyline id="Line-Copy-4" stroke="#555555" stroke-width="2" stroke-linecap="square" points="0 0 0 127 36 127"></polyline>
+                        <polygon id="Triangle-Copy" fill="#555555" points="39.9047619 127 31 132.5 31 121.5"></polygon>
+                    </g>
+                    <g id="Arrow" transform="translate(113.000000, 201.000000)">
+                        <path d="M0,6 L85,6" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                        <polygon id="Triangle" fill="#555555" points="88.9047619 6 80 11.5 80 0.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
