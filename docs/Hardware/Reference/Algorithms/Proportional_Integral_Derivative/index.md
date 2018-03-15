@@ -153,6 +153,8 @@ For example, [need a good example]
 
 [remains until the bias is manually changed]
 
+[changing the bias = reset]
+
 For this reason, the integral corrective action is needed to 
 
 #### Integral Corrective Action
@@ -180,6 +182,10 @@ Therefore:
 The resolution of the integral gets better as the number of data points increases, which is accomplished by reducing the interval time.
 
 ##### Effect of the Integral Correction
+
+[breaks out of offset by continuously correcting for error]
+[know as autoreset]
+[over time, will drive the error to zero, but can take a long time, which is why the proportional control is still needed]
 
 While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change. So while using the Proportional control alone will provide a somewhat symmetrical oscillation into the target value, the Integral action accelerates the change to target.
 
