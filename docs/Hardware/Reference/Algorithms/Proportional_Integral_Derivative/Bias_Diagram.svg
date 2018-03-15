@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="672px" height="265px" viewBox="0 0 672 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Bias_Diagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="120" height="265"></rect>
+        <rect id="path-2" x="0" y="0" width="200" height="265"></rect>
+        <rect id="path-3" x="0" y="0" width="226" height="265"></rect>
+        <rect id="path-4" x="0" y="0" width="130" height="265"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Block-Diagrams" transform="translate(-32.000000, -1352.000000)">
+            <g id="Bias_Diagram" transform="translate(32.000000, 1352.000000)">
+                <g id="Output" transform="translate(552.000000, 0.000000)">
+                    <g id="Rectangle-Copy-3">
+                        <use fill="#999999" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="119" height="264"></rect>
+                    </g>
+                    <text font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                        <tspan x="31.5649414" y="33">Output</tspan>
+                    </text>
+                    <text id="Control-Signal" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="31.2412109" y="105">Control</tspan>
+                        <tspan x="35.8818359" y="126">Signal</tspan>
+                    </text>
+                </g>
+                <g id="Step-3" transform="translate(353.000000, 0.000000)">
+                    <g id="Rectangle-Copy-3">
+                        <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="199" height="264"></rect>
+                    </g>
+                    <text id="Control-Bias" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#555555">
+                        <tspan x="47.359375" y="33">Control Bias</tspan>
+                    </text>
+                    <g id="Operation" transform="translate(96.500000, 124.500000) rotate(-360.000000) translate(-96.500000, -124.500000) translate(59.000000, 73.000000)">
+                        <circle id="Oval" stroke="#555555" stroke-width="2" cx="37.5" cy="37.5" r="37.5"></circle>
+                        <text id="∑" font-family="Roboto-Regular, Roboto" font-size="28" font-weight="normal" fill="#555555">
+                            <tspan x="29.3037109" y="46">∑</tspan>
+                        </text>
+                        <text id="+-copy-2" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABE3">
+                            <tspan x="47.7958984" y="99">+</tspan>
+                        </text>
+                    </g>
+                    <g id="Arrow" transform="translate(135.000000, 104.500000)">
+                        <path d="M0,5.5 L85,5.5" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                        <polygon id="Triangle" fill="#555555" points="88.9047619 5.5 80 11 80 0"></polygon>
+                    </g>
+                </g>
+                <g id="Step-2" transform="translate(403.000000, 104.000000)" fill="#555555">
+                    <g id="Split-Tree">
+                        <polygon id="Triangle-Copy-2" points="8.9047619 6 0 11.5 0 0.5"></polygon>
+                    </g>
+                </g>
+                <g id="Step-1" transform="translate(129.000000, 0.000000)">
+                    <g id="Rectangle">
+                        <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="225" height="264"></rect>
+                    </g>
+                    <text id="Control-Calculations" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#555555">
+                        <tspan x="31.7167969" y="33">Control Calculations</tspan>
+                    </text>
+                    <text id="Output" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#23ABEC">
+                        <tspan x="161.460449" y="99">Output</tspan>
+                    </text>
+                    <g id="Operation" transform="translate(110.500000, 110.500000) rotate(-360.000000) translate(-110.500000, -110.500000) translate(73.000000, 73.000000)">
+                        <circle id="Oval" stroke="#555555" stroke-width="2" cx="37.5" cy="37.5" r="37.5"></circle>
+                        <text id="PID" font-family="Roboto-Regular, Roboto" font-size="28" font-weight="normal" fill="#555555">
+                            <tspan x="15.6796875" y="46">PID</tspan>
+                        </text>
+                    </g>
+                    <g id="Arrow-Copy" transform="translate(149.000000, 109.000000)" stroke="#555555" stroke-linecap="square" stroke-width="2">
+                        <path d="M0,1 L126,1" id="Line-Copy"></path>
+                    </g>
+                </g>
+                <g id="Input">
+                    <g id="Rectangle-Copy-2">
+                        <use fill="#999999" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <rect stroke="#555555" stroke-width="1" x="0.5" y="0.5" width="129" height="264"></rect>
+                    </g>
+                    <text id="Actual-Signal" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="40.4370117" y="171">Actual</tspan>
+                        <tspan x="41.3818359" y="192">Signal</tspan>
+                    </text>
+                    <text id="Bias" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="48.6767578" y="234">Bias</tspan>
+                    </text>
+                    <text id="Reference-Signal" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#EEEEEE">
+                        <tspan x="26.0395508" y="104">Reference</tspan>
+                        <tspan x="41.8818359" y="125">Signal</tspan>
+                    </text>
+                    <text id="Inputs" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" fill="#EEEEEE">
+                        <tspan x="41.5644531" y="33">Inputs</tspan>
+                    </text>
+                    <g id="Arrow" transform="translate(179.500000, 163.000000) rotate(-90.000000) translate(-179.500000, -163.000000) translate(164.500000, 96.500000)">
+                        <polyline id="Line-Copy-4" stroke="#555555" stroke-width="2" stroke-linecap="square" points="0 0 0 127 26 127"></polyline>
+                        <polygon id="Triangle-Copy" fill="#555555" points="29.9047619 127 21 132.5 21 121.5"></polygon>
+                    </g>
+                    <g id="Arrow" transform="translate(113.000000, 104.000000)">
+                        <path d="M0,6 L85,6" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                        <polygon id="Triangle" fill="#555555" points="88.9047619 6 80 11.5 80 0.5"></polygon>
+                    </g>
+                </g>
+                <polyline id="Path-6" stroke="#555555" stroke-width="2" points="112 229 450 229 450 154.405316"></polyline>
+                <polygon id="Triangle-Copy-2" fill="#555555" transform="translate(450.000000, 153.000000) rotate(-90.000000) translate(-450.000000, -153.000000) " points="454.452381 153 445.547619 158.5 445.547619 147.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

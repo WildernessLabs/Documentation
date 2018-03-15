@@ -18,11 +18,11 @@ In this idealized example, the coffee is quickly brought up _just past_ the targ
 
 The PID algorithm is a tool to heat the coffee just as illustrated above: _efficiently_.  That is, with only a small amount of error, defined as the area between the reference temperature and the actual temperature. 
 
-## PID Controllers in Netduino.Foundation
+# PID Controllers in Netduino.Foundation
 
 Netduino.Foundation has two [PID controllers](http://Netduino.Foundation/API/Controllers/PID/) integrated into the core library. Getting up and running with those controllers is fairly trivial, but this article provides a more in-depth discussion to provide a deeper understanding of how the algorithm works, so as to provide a better framework for tuning it, or implementing your own, custom controller.
 
-## Simple Control
+# Simple Control
 
 To understand why PID is so useful, we must examine what happens without it. 
 
@@ -32,17 +32,51 @@ This is a very simple algorithm, but it leads to a lot of error. Consider the fo
 
 ![](PID_Binary.svg)
 
-While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the system. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal. 
+While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the system. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal.
 
-## PID Controller Algorithm
+This type of oscillation an inefficient control is the reason that sophisticated control algorithms like PID exist. 
 
-The PID algorithm was created specifically as a tool to provide an automated control framework to efficiently effect change within a system to get it to reach a target state. In the example above, it was heating a cup of coffee, but it could also be keeping a boat straight on course while external factors such as wind and current tries to pull it off heading, or keeping a drone level while air turbulence tried to through it off balance.
+# Control Theory: _Closed Loop Gain Controllers_
 
-And while PID is generally referred to as a single algorithm, in fact, there are specialized variants that tackle various different problems. Together these form a family of solutions that are all generally based on the same mathematic principles. 
+PID (and other control algorithms) are part of a control system that is called a _closed loop gain_, because the control output is fed back into the system and the controller is then given the response to its previous control signal and can react appropriately to the change and further refine the output:
 
-### Ideal vs. Standard
+![](Closed_Loop_Gain_Controller.svg)
+
+In this context, [_gain_](https://en.wikipedia.org/wiki/Gain_(electronics)) is the output signal and can be either positive or negative. 
+
+## Inputs
+
+The inputs include:
+
+ * **Reference Signal** - Represents the ideal target state and is sometimes called the _set point_ (SP). For instance, `75ºC`; the desired temp of coffee.
+ * **Actual Signal** - Represents the actual measured state (sometimes called the _process variable_ (PV)).  For instance, `25ºC`; the current temp of coffee.
+
+## Output
+
+The output is the _control signal_, or _control variable_ (CV), which is used to control the agent of change in the system, such as how much power to give the hot plate.
+
+In the case of heating up a cup of coffee, the idea here is that when given the target temperature of the coffee, as well as the current actual temperature of the coffee, the algorithm calculates the amount of power to give the hotplate to the appropriate temperature, efficiently. The PID algorithm is then called repeatedly, usually in a loop, to provide continuous control adjustments based on the input.
+
+## Bias
+
+Additionally, sometimes a _bias_ is added to the control output which can be needed to maintain system stability when the error is zero. 
+
+![](Bias_Diagram.svg)
+
+For example, in the coffee example, when the coffee gets up to temp, in order to keep it at temp, we probably need to keep the hot plate on at some percent of maximum to maintain the coffee temp. Without a bias, the system may continue to oscillate after it gets to zero.
+
+
+# PID Controller Algorithm
+
+The PID algorithm was created specifically as a tool to provide an automated control framework to efficiently effect change within a system to get it to reach a target state. In the example above, it was heating a cup of coffee, but it could also be keeping a boat straight on course while external factors such as wind and current tries to pull it off heading, or keeping a drone level while air turbulence tries to throw it off balance.
+
+And while PID is referred to as a single algorithm, in fact, there are specialized variants that tackle various kinds of problems. Together these form a family of solutions that are all generally based on the same mathematic principles. 
+
+## Ideal vs. Standard
 
 In this guide, we're going to examine the _ideal_ PID algorithm, and the more common _standard_ algorithm. The ideal algorithm is the canonical textbook algorithm and is the basis for nearly all PID controller algorithm derivatives, however, the standard algorithm is much more versatile, common, and perhaps intuitive.
+
+## Terms
 
 In nearly all cases, PID is based on three mathematical terms:
 
@@ -54,23 +88,8 @@ The "ideal" PID algorithm can be described, visually, in the following block dia
 
 ![](Ideal_PID_Block_Diagram.svg)
 
-The inputs include:
 
- * **Reference Signal** - Represents the ideal target state and is sometimes called the _set point_ (SP),. I.e., 75ºC, the desired temp of coffee.
- * **Actual Signal** - Represents the actual measured state (sometimes called the _process variable_ (PV)).  I.e., current temp of coffee, say for instance, 25ºC.
-
-The output is the _control signal_, or _control variable_ (CV), which is used to control the agent of change in the system, such as the hot plate.
-
-In the case of heating up a cup of coffee, the idea here is that when given the target temperature of the coffee, as well as the current actual temperature of the coffee, the algorithm calculates the amount of power to give the hotplate to the appropriate temperature, efficiently. The PID algorithm is then called repeatedly, usually in a loop, to provide continuous control adjustments based on the input.
-
-### Closed Loop Gain Controller
-
-This type of control system is sometimes called a _closed loop gain_, because the control output is fed back into the system and the controller is then given the response to its previous control signal and can react appropriately to the change and further refine the output:
-
-![](Closed_Loop_Gain_Controller.svg)
-
-In this context, [_gain_](https://en.wikipedia.org/wiki/Gain_(electronics)) is the output signal and can be either positive or negative. 
-
+<!-- don't think this adds a lot of value
 #### Hysteresis
 
 Additionally, this control algorithm relies on the history of the 
@@ -80,6 +99,7 @@ Additionally, this control algorithm relies on the history of the
 [gah, reword this. hysteresis is the dependence of the system on its history, and causes a lag between control and actual]
 The lag between the 
 This type of system causes a condition called [_hysteresis_](https://en.wikipedia.org/wiki/Hysteresis), in which the change 
+-->
 
 ### Calculation Steps
 
@@ -89,25 +109,29 @@ The actual algorithm has three steps to it:
  2. Calculate the corrections needed to change the system state to the desired state, by multiplying the current error by the _Proportional_, _Integral_, and _Derivative_ corrective action calculations.
  3. Add together all three corrective actions into a single change quantity.
 
-The output might then be a value such as `0.75`, which specifies that the hotplate needs to be set to 75% power, in order to arrive at the desired temperature, based on the current conditions
+The output might then be a value such as `0.75`, which specifies that the hotplate needs to be set to `75%` power, in order to arrive at the desired temperature, based on the current conditions.
 
-### Individual Correction Gains and Tuning
+#### Other Output Values
 
-Each correction action is usually a property on the controller and is specific to the particular system (more specifically, the system's response to change) and is called the _gain_ factor. For instance, on the [Netduino.Foundation PIDController](link) the Proportional correction factor is exposed as the `ProportionalGain` property, and the Integral and Derivative correction factors are exposed as the `IntegralGain` and `DerivativeGain` properties. 
+If the controller were used in an system that kept a boat on a heading, or a car between lines, then the output might mean something else. For example, it might be between something like `-0.5` and `0.5`, in which a negative value meant a left heading, and a positive value meant a right heading.
+
+## Individual Correction Gain Constants and Tuning
+
+Each correction action is usually defined by a property on the controller and is specific to the particular system (more specifically, the system's response to change) and is called the _gain constant_. For instance, on the [Netduino.Foundation IPIDController](http://Netduino.Foundation/API/Controllers/PID/IPIDController/) the Proportional correction factor is exposed as the `ProportionalGain` property, and the Integral and Derivative correction factors are exposed as the `IntegralGain` and `DerivativeGain` properties. 
 
 This allows for the PID controller instance to be tuned to the particular system that it's used on. For instance, systems that require big control inputs to change, might have a high `ProportionalGain` value.
 
-In order to understand how to use these factors, it's important to understand what each one is and what its effect is on the control output. PID relies on calculus to calculate the various corrections in step 2 and each corrective term is calculated as follows.
+In order to understand how to use these factors, it's important to understand what each one is and what its effect is on the control output.
 
-#### Error
+### Error
 
 The error is simply the difference between the target value value and the actual value. For instance, if the target value is `75ºC`, and the coffee is currently at `50ºC`, then the error is `25`.
 
-#### Proportional Corrective Action
+### Proportional Corrective Action
 
 The proportional calculation is the simplest of all; it simply multiplies the error factor by a specified proportion multiplier. For instance, if the error is `25`, and the `ProportionGain` is set to `0.8`, then the output gain would be adjusted by `25 * 0.8`, or `20`. 
 
-##### Effect of the Proportional Correction
+#### Effect of the Proportional Correction
 
 Changing the 	`ProportionalGain` generally affects how strongly the controller responds to error. A higher `ProportionalGain` means that the controller will send a larger power change in response to a system change away from target. Systems that are resistant to change and therefore need stronger inputs will require a higher value, but systems that change easily may require subtle changes and will do better with smaller values.
 
@@ -116,6 +140,20 @@ The following graph illustrates the reaction of a sample system to various `Prop
 [![PID varyingP](https://upload.wikimedia.org/wikipedia/commons/a/a3/PID_varyingP.jpg)](https://commons.wikimedia.org/wiki/File%3APID_varyingP.jpg)
 
 When tuning the `ProportionalGain`, a good starting place for the value is `1`.
+
+### Offset Error
+
+For some systems, using only proportional corrective action is fine. However, proportional only controllers can lead to an error condition known as _offset_. Offset happens when the specified proportional gain constant isn't enough to counteract whatever external force is being applied to the system.
+
+**TODO**
+
+For example, [need a good example]
+
+[balance point illustration]
+
+[remains until the bias is manually changed]
+
+For this reason, the integral corrective action is needed to 
 
 #### Integral Corrective Action
 
@@ -149,10 +187,10 @@ While the proportional action will attempt to correct based on any instantaneous
 
 #### Derivative Correction Action
 
-The Derivative action calculates the _rate of change_, which is defined as the slope of the line and uses that to predict how quickly the system will change. 
+The Derivative action calculates the _rate of change_, which is defined as the slope of the line and uses that to predict how quickly the system will change. This sounds fantastic in theory, but is actually only used in about a quarter or less of all PID controllers. One of the reasons is that because it relies on the slope of the line, any noise in the sensor reading will cause wild fluctuations. However, in systems where the sensor readings are very clean, the derivative corrective action can be very effective. One way to smooth out sensor noise is to [average or _oversample_](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/#oversamplingaveraging-results) the results.
 
-[greatly affected by noise]
-[not often used (1/4 of systems)]
+
+
 
 ## Standard PID Algorithm
 
