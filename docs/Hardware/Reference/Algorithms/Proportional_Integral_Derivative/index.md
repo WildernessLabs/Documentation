@@ -213,11 +213,13 @@ In the standard form, instead of adding the PID corrections together, the integr
 
 ![](Standard_PID_Block_Diagram.svg)
 
-### Integral and Derivative Time to Zero
+### Integral and Derivative Gain Components in Relation to Time
 
 In the ideal algorithm, the integral and derivative gain constants have no intrinsic meaning; they are simply values that have a mathematical relation to whatever unit of time used to calculate the cumulative error or rate of change.
 
 The standard algorithm, by contrast, assigns meaning to both of those gain values in terms of how much time it would take for those values to have the same effect as the proportional action. This is often described in _minutes per repeat_. In this form, a higher value gain would actually mean less effect, since 4 minutes to repeat is slower than say 2 minutes to repeat. For this reason, many high-quality PID controllers invert this to _repeats per minute_, which is the inverse or `1 / minutesPerRepeat`, which provides a more intuitive gain tuning parameter, since the large the value, the greater the effect on change would be. 
+
+#### Time to Zero
 
 ** Need a review here, briank **
 
