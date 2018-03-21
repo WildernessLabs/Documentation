@@ -183,30 +183,104 @@ The resolution of the integral gets better as the number of data points increase
 
 ##### Effect of the Integral Correction
 
-[breaks out of offset by continuously correcting for error]
-[know as autoreset]
-[over time, will drive the error to zero, but can take a long time, which is why the proportional control is still needed]
+While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change.
 
-While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change. So while using the Proportional control alone will provide a somewhat symmetrical oscillation into the target value, the Integral action accelerates the change to target.
+This is important because the integral action will break out of the offset error via incremental steps beyond any proportional change limits. This means that in time it will even drive the error to zero on its, but it can be slow; which is why it's most effectively used in conjunction with the proportional action. The following graph illustrates a sample system response to an integral-only algorithm:
+
+![](PID_Integral_Only.svg)
+
+#### Autoreset
+
+The integral action is also known as _autoreset_, because it doesn't require a manual bias change to deal with the offset error.
+
+The following diagram illustrates what can happen in a sample system at various integral gain constants when the proportional and derivative gains are constant:
 
 [![PID Change with Integral](https://upload.wikimedia.org/wikipedia/commons/c/c0/Change_with_Ki.png)](https://commons.wikimedia.org/wiki/File%3AChange_with_Ki.png)
+
+Too much integral gain can cause oscillation via overcorrection, whereas too little integral gain will cause a slow approach to error.
 
 #### Derivative Correction Action
 
 The Derivative action calculates the _rate of change_, which is defined as the slope of the line and uses that to predict how quickly the system will change. This sounds fantastic in theory, but is actually only used in about a quarter or less of all PID controllers. One of the reasons is that because it relies on the slope of the line, any noise in the sensor reading will cause wild fluctuations. However, in systems where the sensor readings are very clean, the derivative corrective action can be very effective. One way to smooth out sensor noise is to [average or _oversample_](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/#oversamplingaveraging-results) the results.
 
-
-
+Derivative action is most often used in motor/servo control, and will often replace the usage of the integral action, since the exact characteristics of the bias of the system are known.
 
 ## Standard PID Algorithm
 
-[builds on the ideal algorithm, but defines an integral and derivative component that have semantic meaning. ]
+The "ideal" PID algorithm concisely describes the fundamental approach to PID, but it's actually a less common approach than the _standard_ algorithm, which changes it slightly to assign semantic meaning to the integral and derivative constants. 
 
-[In the standard form, step 3 produces a single error value that uses both the integral to account for past errors and the derivative which can predict future error based on rate of change. This single error correction is then scaled (multiplied) by the proportional error constant.]
+In the standard form, instead of adding the PID corrections together, the integral and derivative corrections are defined by constants that are related to time of change, and are computed and then their corrections are summed and that output is then scaled (multiplied) by the proportional error constant:
 
 ![](Standard_PID_Block_Diagram.svg)
 
-## Variations on PID
+### Integral and Derivative Time to Zero
+
+In the ideal algorithm, the integral and derivative gain constants have no intrinsic meaning; they are simply values that have a mathematical relation to whatever unit of time used to calculate the cumulative error or rate of change.
+
+The standard algorithm, by contrast, assigns meaning to both of those gain values in terms of how much time it would take for those values to have the same effect as the proportional action. This is often described in _minutes per repeat_. In this form, a higher value gain would actually mean less effect, since 4 minutes to repeat is slower than say 2 minutes to repeat. For this reason, many high-quality PID controllers invert this to _repeats per minute_, which is the inverse or `1 / minutesPerRepeat`, which provides a more intuitive gain tuning parameter, since the large the value, the greater the effect on change would be. 
+
+** Need a review here, briank **
+
+The [`StandardPIDController`](http://Netduino.Foundation/API/Controllers/PID/StandardPIDController/) in Netduino.Foundation takes this one step further by specifying the integral and derivative components in terms of _minutes to zero_; which is the time, in minutes, that it would take for the component gain to drive the error to zero.
+
+## Standard PID Calculation Code Example
+
+The following code comes from the Netduino.Foundation [`StandardPIDController`](http://Netduino.Foundation/API/Controllers/PID/StandardPIDController/) class, and illustrates the algorithm as expressed in code:
+
+```csharp
+public override float CalculateControlOutput()
+{
+    // init vars
+    float control = 0.0f;
+    var now = DateTime.Now;
+
+    // time delta (how long since last calculation)
+    var dt = now - _lastUpdateTime;
+    var seconds = (float)(dt.Ticks / 10000 / 1000);
+
+    // if no time has passed, don't make any changes.
+    if (dt.Ticks <= 0.0) return _lastControlOutputValue;
+
+    // copy vars
+    var input = ActualInput;
+    var target = TargetInput;
+
+    // calculate the error (how far we are from target)
+    var error = target - input;
+
+    // calculate the integral
+    _integral += error * seconds; // add to the integral history
+    var integral = (1 / (IntegralComponent * 60)) * _integral; // calculate the integral action
+
+    // calculate the derivative (rate of change, slope of line) term
+    var diff = error - _lastError / seconds;
+    var derivative = (DerivativeComponent * 60) * diff;
+
+    // add the appropriate corrections
+    control = ProportionalComponent * (error + integral + derivative);
+
+    // clamp
+    if (control > OutputMax) control = OutputMax;
+    if (control < OutputMin) control = OutputMin;
+
+    if (OutputTuningInformation)
+    {
+        Debug.Print("SP+PV+PID+O," + target.ToString() + "," + input.ToString() + "," +
+            ProportionalComponent.ToString() + "," + integral.ToString() + "," +
+            derivative.ToString() + "," + control.ToString());
+    }
+
+    // persist our state variables
+    _lastControlOutputValue = control;
+    _lastError = error;
+    _lastUpdateTime = now;
+
+    return control;
+}
+
+```
+
+## Other Variations on PID
 
 PID is a powerful algorithm, but it doesn't need to be used in its entirety to be effective. In fact, most uses of PID only use the PI component. 
 
@@ -218,29 +292,8 @@ Because the Derivative is so adversely affected by input signal noise, in most r
 
 PD controllers, those that use the Proportional and Derivative corrective actions only, are less common, but are sometimes used to control servos when very precise movements are needed. Servos can provide very precise data on their rotation, so in conjunction with Proportional power control, a PD controller can drive a servos into not incredibly precise alignment, but do so very quickly.
 
-# Code Implementation
-
 
 # PID Tuning (Coming Soon)
 
-
-
-
-
-**from PID for dummies:**
-
-> The way to adjust how much Integral Action you have is by adjusting a term called “minutes per repeat”. Not a very intuitive name is it?
-
-> So where does this strange name come from? It is a measure of how long it will take for the Integral Action to match the Proportional Action.
-
-> In other words, if the output of the proportional box on the diagram above is 20%, the repeat time is the time it will take for the output of the Integral box to get to 20% too.
-
->And the important point to note is that the “bigger” integral action, the quicker it will get this 20% value. That is, it will take fewer minutes to get there, so the “minutes per repeat” value will be smaller.
-
->In other words the smaller the “minutes per repeat” is the bigger the integral action.
-
-> To make things a bit more intuitive, a lot of controllers use an alternative unit of “repeats per minute” which is obviously the inverse of “minutes per repeat”.
-
-> The nice thing about “repeats per minute” is that the bigger it is - the bigger the resulting Integral action is.
 
 
