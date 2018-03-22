@@ -84,7 +84,13 @@ In nearly all cases, PID is based on three mathematical terms:
  * **Integral** - Describes the cumulative error, which is how much the change being applied is actually changing the system.
  * **Derivative** - Describes the rate of change, and can be useful in predicting how the system will change in the future.
 
-The "ideal" PID algorithm can be described, visually, in the following block diagram:
+## Equation and Algorithm 
+
+The ideal PID algorithm can be described mathematically as the following:
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/3b9c11fbaca16f506188101c2cbdcb060e058a94)
+
+It looks pretty complicated, but is actually quite simple, and is probably better understood visually, in the following block diagram:
 
 ![](Ideal_PID_Block_Diagram.svg)
 
@@ -105,9 +111,9 @@ This type of system causes a condition called [_hysteresis_](https://en.wikipedi
 
 The actual algorithm has three steps to it:
 
- 1. Calculate the current error, which is the difference between the desired target, _reference_ state and the current _actual_ state.
- 2. Calculate the corrections needed to change the system state to the desired state, by multiplying the current error by the _Proportional_, _Integral_, and _Derivative_ corrective action calculations.
- 3. Add together all three corrective actions into a single change quantity.
+ 1. **Calculate the Error** - The current error is the difference between the desired target, _reference_ state and the current _actual_ state.
+ 2. **Calculate the PID Corrections** - The corrections needed to change the system state to the desired state are calculated by multiplying the current error by the _Proportional_, _Integral_, and _Derivative_ corrective action calculations. While they are based on calculus, each of these calculations are trivial and examined below.
+ 3. **Sum the Corrections** - Add together all three corrective actions into a single change quantity.
 
 The output might then be a value such as `0.75`, which specifies that the hotplate needs to be set to `75%` power, in order to arrive at the desired temperature, based on the current conditions.
 
@@ -157,7 +163,7 @@ For example, [need a good example]
 
 For this reason, the integral corrective action is needed to 
 
-#### Integral Corrective Action
+### Integral Corrective Action
 
 In calculus, the _integral_ is defined as the area under the graph of a function between two particular _x_ coordinates. For example, it could be the blue area in the following graph of our coffee :
 
@@ -181,7 +187,7 @@ Therefore:
 
 The resolution of the integral gets better as the number of data points increases, which is accomplished by reducing the interval time.
 
-##### Effect of the Integral Correction
+#### Effect of the Integral Correction
 
 While the proportional action will attempt to correct based on any instantaneous error, by using an integral calculation, the PID controller can adjust for error _over time_. It tracks the accumulated error offset and attempts to either increase or decrease the rate of change.
 
@@ -189,7 +195,7 @@ This is important because the integral action will break out of the offset error
 
 ![](PID_Integral_Only.svg)
 
-#### Autoreset
+### Autoreset
 
 The integral action is also known as _autoreset_, because it doesn't require a manual bias change to deal with the offset error.
 
@@ -199,7 +205,7 @@ The following diagram illustrates what can happen in a sample system at various 
 
 Too much integral gain can cause oscillation via overcorrection, whereas too little integral gain will cause a slow approach to error.
 
-#### Derivative Correction Action
+### Derivative Correction Action
 
 The Derivative action calculates the _rate of change_, which is defined as the slope of the line and uses that to predict how quickly the system will change. This sounds fantastic in theory, but is actually only used in about a quarter or less of all PID controllers. One of the reasons is that because it relies on the slope of the line, any noise in the sensor reading will cause wild fluctuations. However, in systems where the sensor readings are very clean, the derivative corrective action can be very effective. One way to smooth out sensor noise is to [average or _oversample_](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/#oversamplingaveraging-results) the results.
 
@@ -209,7 +215,11 @@ Derivative action is most often used in motor/servo control, and will often repl
 
 The "ideal" PID algorithm concisely describes the fundamental approach to PID, but it's actually a less common approach than the _standard_ algorithm, which changes it slightly to assign semantic meaning to the integral and derivative constants. 
 
-In the standard form, instead of adding the PID corrections together, the integral and derivative corrections are defined by constants that are related to time of change, and are computed and then their corrections are summed and that output is then scaled (multiplied) by the proportional error constant:
+In the standard form, instead of adding the PID corrections together, the integral and derivative corrections are defined by constants that are related to time of change and are computed and then their corrections are summed and that output is then scaled (multiplied) by the proportional error constant:
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/c0b2251a7c96240727206f07d267fca833627cc2)
+
+Again, a visual representation of this algorithm might be more enlightening:
 
 ![](Standard_PID_Block_Diagram.svg)
 
@@ -217,13 +227,7 @@ In the standard form, instead of adding the PID corrections together, the integr
 
 In the ideal algorithm, the integral and derivative gain constants have no intrinsic meaning; they are simply values that have a mathematical relation to whatever unit of time used to calculate the cumulative error or rate of change.
 
-The standard algorithm, by contrast, assigns meaning to both of those gain values in terms of how much time it would take for those values to have the same effect as the proportional action. This is often described in _minutes per repeat_. In this form, a higher value gain would actually mean less effect, since 4 minutes to repeat is slower than say 2 minutes to repeat. For this reason, many high-quality PID controllers invert this to _repeats per minute_, which is the inverse or `1 / minutesPerRepeat`, which provides a more intuitive gain tuning parameter, since the large the value, the greater the effect on change would be. 
-
-#### Time to Zero
-
-** Need a review here, briank **
-
-The [`StandardPIDController`](http://Netduino.Foundation/API/Controllers/PID/StandardPIDController/) in Netduino.Foundation takes this one step further by specifying the integral and derivative components in terms of _minutes to zero_; which is the time, in minutes, that it would take for the component gain to drive the error to zero.
+The standard algorithm, by contrast, assigns meaning to both of those gain values in terms of how much time it would take for those values to have the same effect as the proportional action. This is often described in _minutes per repeat_. In this form, a higher value gain would actually mean less effect, since 4 minutes to repeat is slower than say 2 minutes to repeat. For this reason, many high-quality PID controllers invert this to _repeats per minute_, which is the inverse or `1 / minutesPerRepeat`, which provides a more intuitive gain tuning parameter, since the large the value, the greater the effect on change would be.
 
 ## Standard PID Calculation Code Example
 
