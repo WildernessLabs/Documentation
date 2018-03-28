@@ -57,14 +57,6 @@ The output is the _control signal_, or _control variable_ (CV), which is used to
 
 In the case of heating up a cup of coffee, the idea here is that when given the target temperature of the coffee, as well as the current actual temperature of the coffee, the algorithm calculates the amount of power to give the hotplate to the appropriate temperature, efficiently. The PID algorithm is then called repeatedly, usually in a loop, to provide continuous control adjustments based on the input.
 
-## Bias
-
-Additionally, sometimes a _bias_ is added to the control output which can be needed to maintain system stability when the error is zero. 
-
-![](Bias_Diagram.svg)
-
-For example, in the coffee example, when the coffee gets up to temp, in order to keep it at temp, we probably need to keep the hot plate on at some percent of maximum to maintain the coffee temp. Without a bias, the system may continue to oscillate after it gets to zero.
-
 
 # PID Controller Algorithm
 
@@ -134,21 +126,26 @@ The following graph illustrates the reaction of a sample system to various `Prop
 
 When tuning the `ProportionalGain`, a good starting place for the value is `1`.
 
-### Offset Error
 
-For some systems, using only proportional corrective action is fine. However, proportional only controllers can lead to an error condition known as _offset_. Offset happens when the specified proportional gain constant isn't enough to counteract whatever external force is being applied to the system.
+### Bias & Offset Error
 
-**TODO**
+Using only proportional control has a major drawback; many system will continue to oscillate forever, and never stay at a zero error. This is because if the error is zero, then the proportional correction, and therefore the control output will be at zero. But in the case of heating the coffee; that means it will cool down, causing the error to increase, and therefore repeating the process of trying to achieve zero error. 
 
-For example, [need a good example]
+For this reason, in primitive proportional only control systems, sometimes a _bias_ is added to the control output which can maintain system stability when the error is zero:
 
-[balance point illustration]
+![](Bias_Diagram.svg)
 
-[remains until the bias is manually changed]
+For example, in the coffee example, when the coffee gets up to temp, in order to keep it at temp, we probably need to keep the hot plate on at some percent of maximum to maintain the coffee temp. 
 
-[changing the bias = reset]
+#### Offset Error
 
-For this reason, the integral corrective action is needed to 
+The problem with a bias, however, is that it only works with a fixed, specific, condition. For instance, a bias of say `25%` power might keep a coffee cup at `75ºC` if the ambient air temp is `22ºC`, but what would happen if the coffee cup warmer were to be run outside on a cool day, when the ambient air temp were `5ºC`?
+
+In this case, the bias would actually produce a continuous oscillation error, since whenever the error got to zero, the bias would cause the temp to drop. In fact, if the proportional gain were not high enough, it's possible that the coffee would **never** reach ideal temp. For example, if it were so cold out that the hotplate needed to be run continuously at `80%` just to maintain a temperature of `75ºC`, but the proportional output + bias were only `75%`, it would never get to temp. 
+
+This error condition is known as _offset_. Offset happens when the specified proportional gain constant isn't enough to counteract whatever external force is being applied to the system. 
+
+To counteract this, the bias would have to be manually adjusted to suit these conditions. This manual adjustment is known as _manual reset_, and led to the inclusion of the _integral_ corrective action.
 
 ### Integral Corrective Action
 
