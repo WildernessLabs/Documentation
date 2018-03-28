@@ -94,19 +94,6 @@ It looks pretty complicated, but is actually quite simple, and is probably bette
 
 ![](Ideal_PID_Block_Diagram.svg)
 
-
-<!-- don't think this adds a lot of value
-#### Hysteresis
-
-Additionally, this control algorithm relies on the history of the 
-
-[lagging behind]
-
-[gah, reword this. hysteresis is the dependence of the system on its history, and causes a lag between control and actual]
-The lag between the 
-This type of system causes a condition called [_hysteresis_](https://en.wikipedia.org/wiki/Hysteresis), in which the change 
--->
-
 ### Calculation Steps
 
 The actual algorithm has three steps to it:
