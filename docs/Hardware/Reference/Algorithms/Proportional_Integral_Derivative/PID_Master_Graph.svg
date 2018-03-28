@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700px" height="450px" viewBox="0 0 700 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>PID_Master_Graph</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-87.000000, -66.000000)">
+            <g id="PID_Master_Graph" transform="translate(87.000000, 66.000000)">
+                <rect id="Rectangle-3" fill="#EEEEEE" x="0" y="0" width="700" height="450"></rect>
+                <text id="Time-(t)" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#555555">
+                    <tspan x="333.416504" y="433">Time (t)</tspan>
+                </text>
+                <g id="Axis" transform="translate(41.000000, 54.000000)">
+                    <path d="M62,340 L592,340" id="Line" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M62,100 L592,100" id="Line-Copy-3" stroke="#555555" stroke-linecap="square" stroke-dasharray="2,5"></path>
+                    <path d="M51,314 L61,314" id="Line-Copy" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M61,340 L61,5.68434189e-14" id="Line-2" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                    <text id="100ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                        <tspan x="0.887695312" y="17">100ºC</tspan>
+                    </text>
+                    <text id="20ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                        <tspan x="8.7734375" y="320">20ºC</tspan>
+                    </text>
+                    <path d="M51,11 L61,11" id="Line-Copy-2" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                    <text id="75ºC" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="18" font-style="condensed" font-weight="normal" fill="#23ABEC">
+                        <tspan x="9.7734375" y="106">75ºC</tspan>
+                    </text>
+                    <path d="M51,100 L61,100" id="Line-Copy-4" stroke="#555555" stroke-width="2" stroke-linecap="square"></path>
+                </g>
+                <text id="Temperature" transform="translate(22.500000, 211.500000) rotate(-270.000000) translate(-22.500000, -211.500000) " font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#555555">
+                    <tspan x="-28.9995117" y="218">Temperature</tspan>
+                </text>
+                <polyline id="Reference" stroke="#7ED321" stroke-width="2" points="103 394 143 394 143 154 633 154"></polyline>
+                <path d="M103,358 L142.900385,358 C146.729882,356.798591 150.208259,352.06398 153.335518,343.796166 C170.059532,299.581395 164.623173,161.147194 193.994426,153.514149 C223.36568,145.881104 274.016818,156.707888 297.030505,156.707888 C323.831914,156.707888 371.106139,153.906006 424.344975,153.514149 C513.641653,152.856894 604.350469,154 631.078243,154" id="Ideal" stroke="#23ABE3" stroke-width="3"></path>
+                <path d="M103,358.136647 L142.900385,358.136647 C146.729882,356.935239 150.208259,352.200627 153.335518,343.932814 C170.059532,299.718043 181.144822,211.236238 242.646072,186.031794 C304.147321,160.82735 429.522864,154.758268 482.761701,154.366411 C572.058378,153.709156 604.350469,154.136647 631.078243,154.136647" id="Integral-only" stroke="#999999" stroke-width="3"></path>
+                <path d="M103,358 L142.900385,358 C146.729882,356.798591 150.208259,352.06398 153.335518,343.796166 C170.059532,299.581395 171.58983,104.993718 200.281012,104.993718 C228.972194,104.993718 241.755431,202.164081 274.57464,202.164081 C307.39385,202.164081 319.508617,123.817003 348.11245,123.817003 C376.716284,123.817003 393.194742,172.168348 421.671478,172.168348 C450.148215,172.168348 470.516052,137.684743 495.354055,137.684743 C508.138569,137.684743 542.41606,157.657537 563.175198,157.657537 C583.934337,157.657537 622.489676,145 631.078243,145" id="Proportional" stroke="#B09679" stroke-width="3"></path>
+                <path d="M103,358 L142.900385,358 C148.939947,356.954992 152.418324,352.22038 153.335518,343.796166 C168.565067,203.916226 142.900451,72.6012536 196.544219,72.6012536 C248.86018,72.6012536 272.029404,217.938421 311.034834,217.938421 C347.262002,217.938421 317.292433,95.1460521 367.292433,95.1460521 C398.311418,95.1460521 434.600337,191.861824 451.395417,191.861824 C478.190498,191.861824 465.138469,109.717143 502.550057,109.717143 C529.716892,109.717143 550.177782,174.622043 573.049742,174.622043 C593.446691,174.622043 586.049409,123.074328 630.687361,122.519098" id="Binary" stroke="#F5A623" stroke-width="3"></path>
+            </g>
+        </g>
+    </g>
+</svg>
