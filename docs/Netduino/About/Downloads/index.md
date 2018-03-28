@@ -61,6 +61,7 @@ Handles either a [2 channel](http://amzn.to/2xBiHSM) or [4 channel](http://amzn.
 
 ### Legacy Firmware Downloads
 
+ * [Netduino 1 v4.2.0.1](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/Netduino_Firmware_4.2.0.1.zip)
  * [Netduino 2 Plus, v4.2.2.2](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/NetduinoPlus2_Firmware_4.2.2.2.zip)
  * [Netduino 2, v4.2.2.2](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/Netduino2_Firmware_4.2.2.2.zip)
  * [Netduino Plus, v4.2.0.1](https://www.wildernesslabs.co/downloads?f=/LegacyFirmware/NetduinoPlus_Firmware_4.2.0.1.zip)
