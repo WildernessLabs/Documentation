@@ -22,12 +22,18 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 ### Mac
  
 * [Xamarin Studio](http://www.monodevelop.com/download/) or [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
-* [Firmware Updater and Configuration Tool](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/MacDeploy.zip)
 * [NETMF Plugin for Xamarin Studio (instructions)](/Netduino/About/Updating_Firmware)
 
-## Windows Firmware Updater
+## Firmware Updater and Configuration Tool <a name="updater" />
 
-* [v4.3.2.3](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip)
+### Windows
+* [v2.0.3-beta](https://www.wildernesslabs.co/downloads?f=/Betas/NetduinoDeploy-Win-2.0.3-beta.zip)
+  * Bootloader driver update for WinUSB is required ([instructions](https://github.com/WildernessLabs/Netduino-Updater/blob/master/bootloader_winusb_guide.md)), 
+* [Legacy NetduinoUpdate v4.3.2.3](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip) (Firmware Updater only)
+
+### Mac
+* [v2.0.3-beta](https://www.wildernesslabs.co/downloads?f=/Betas/NetduinoDeploy-osx-2.0.3-beta.zip)
+* [v0.1.0pre](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/MacDeploy.zip)
 
 ## 3D Printable Prototyping Baseboard
 
