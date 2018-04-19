@@ -24,7 +24,7 @@ The other thing to keep in mind, is that after writing to a file, `FlushAll()` s
 
 The following sample illustrates writing some text to a file called `test.txt` to the SD card. It also outputs some general information about the card such as how much free space it has:
 
-```
+```csharp
 using System;
 using System.IO;
 using Microsoft.SPOT;
