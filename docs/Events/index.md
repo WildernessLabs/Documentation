@@ -7,7 +7,7 @@ title: Upcoming Events
 
 ### May 11th - 13th - Teardown, Portland, Oregon.
 
-Wilderness Labs CEO/Cofounder, Bryan Costanich, will be giving a talk on hacking hardware at Crowd Supply's Teardown conference!
+Wilderness Labs CEO/Cofounder, Bryan Costanich, will be giving a talk on hacking hardware at [Crowd Supply's Teardown Conference](https://www.crowdsupply.com/teardown/portland-2018)!
 
 Details to come.
 
