@@ -20,13 +20,11 @@ Co-hosted by [Portland Area DotNet User Group (PADNUG)](http://padnug.org/) and 
 
 Much thanks to PSU Business Accelerator for graciously hosting us! You can find us in the Mt. Hood Room, and find directions here: https://www.pdx.edu/accelerator/directions.
 
-### June 19th - Hardware Hackers, Seattle, 6:30pm
+### [June 19th - Hardware Hackers, Seattle, 6:30pm](https://www.meetup.com/Hardware-Hackers-Seattle/events/251488587/)
 
-Details to follow, stay tuned.
 
-### June 20th - Hardware Hackers, Vancouver, BC, 6:30pm
+### [June 20th - Hardware Hackers, Vancouver, BC, 6:30pm](https://www.meetup.com/Hardware-Hackers-Vancouver-BC/events/251488866/)
 
-Details to follow, stay tuned.
 
 ### June 25th & 26th - Hardware Hackers, San Francisco
 
@@ -36,4 +34,4 @@ Details to follow, stay tuned.
 
 ### July 3rd - Portland Area DotNet User Group (PADNUG)
 
-Secret stuff! ;)
+Details to follow, stay tuned.
