@@ -26,9 +26,14 @@ Much thanks to PSU Business Accelerator for graciously hosting us! You can find 
 ### [June 20th - Hardware Hackers, Vancouver, BC, 6:30pm](https://www.meetup.com/Hardware-Hackers-Vancouver-BC/events/251488866/)
 
 
-### June 25th & 26th - Hardware Hackers, San Francisco
+### June 25th - Hardware Hackers, San Francisco
 
-Details to follow, stay tuned.
+Details to follow.
+
+### June 26th - Hardware Hackers, San Francisco in Mountain View
+
+Details to follow.
+
 
 ## July
 
