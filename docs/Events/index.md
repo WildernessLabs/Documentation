@@ -30,9 +30,9 @@ Much thanks to [City University](http://cityu.edu) for graciously hosting us! We
 
 Details to follow.
 
-### June 26th - Hardware Hackers, San Francisco
+### [June 26th - Hardware Hackers, San Francisco](https://www.meetup.com/Hardware-Hackers-Bay-Area/events/251804376/)
 
-Details to follow.
+Hosted by the Bay Area .NET group.
 
 ## July
 
