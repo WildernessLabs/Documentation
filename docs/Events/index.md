@@ -30,7 +30,7 @@ Much thanks to [City University](http://cityu.edu) for graciously hosting us! We
 
 Details to follow.
 
-### [June 26th - Hardware Hackers, San Francisco @ Microsoft Reactor SF](https://www.meetup.com/Hardware-Hackers-Bay-Area/events/251804376/)
+### [June 26th - Hardware Hackers, San Francisco, 6:30pm @ Microsoft Reactor SF](https://www.meetup.com/Hardware-Hackers-Bay-Area/events/251804376/)
 
 Hosted by the Bay Area .NET group.
 
