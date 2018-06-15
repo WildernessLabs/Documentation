@@ -14,23 +14,23 @@ The hardware revolution is just beginning. Nest, Ring, Mellow; these are just th
 Come and get inspired to build your own connected things as Wilderness Labs CEO, Bryan Costanich, walks through hacking household appliances into connected things that you can control with your phone using Netduino and Xamarin. Come learn how [Netudino.Foundation](http://Netduino.Foundation) makes creating connected things in C# a piece of cake, with a massive library of peripheral drivers for sensors, LCDs, etc., and a handrolled API that makes building smart hardware a plug and play experience.
 
 
-### [June 13th - Hardware Hackers, Portland, 6:30pm](https://www.meetup.com/Hardware-Hackers-Portland/events/251238214/)
+### [June 13th - Hardware Hackers, Portland, 6:30pm @ PSU Business Accelerator](https://www.meetup.com/Hardware-Hackers-Portland/events/251238214/)
 
 Co-hosted by [Portland Area DotNet User Group (PADNUG)](http://padnug.org/) and Rich Claussen.
 
 Much thanks to PSU Business Accelerator for graciously hosting us! You can find us in the Mt. Hood Room, and find directions here: https://www.pdx.edu/accelerator/directions.
 
-### [June 19th - Hardware Hackers, Seattle, 6:30pm](https://www.meetup.com/Hardware-Hackers-Seattle/events/251488587/)
+### [June 19th - Hardware Hackers, Seattle, 6:30pm, @ City University](https://www.meetup.com/Hardware-Hackers-Seattle/events/251488587/)
 
 Much thanks to [City University](http://cityu.edu) for graciously hosting us! We'll be in the Victoria room. Come in through the main entrance and the front desk will point you the right way.
 
-### [June 20th - Hardware Hackers, Vancouver, BC, 6:30pm](https://www.meetup.com/Hardware-Hackers-Vancouver-BC/events/251488866/)
+### [June 20th - Hardware Hackers, Vancouver, BC, 6:30pm @ Microsoft West Georgia](https://www.meetup.com/Hardware-Hackers-Vancouver-BC/events/251488866/)
 
 ### June 25th - Hardware Hackers, San Francisco in Mountain View
 
 Details to follow.
 
-### [June 26th - Hardware Hackers, San Francisco](https://www.meetup.com/Hardware-Hackers-Bay-Area/events/251804376/)
+### [June 26th - Hardware Hackers, San Francisco @ Microsoft Reactor SF](https://www.meetup.com/Hardware-Hackers-Bay-Area/events/251804376/)
 
 Hosted by the Bay Area .NET group.
 
