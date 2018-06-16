@@ -12,13 +12,33 @@ For example, a common type of relay is a DC controlled AC relay which uses a sma
 
 ### Supporting Circuits
 
-Relays have some interesting electrical behaviors due to the fact that they're driven electromagnetically. For this reason, a relay requires a simple, but ancillary circuit to properly control them and handle current spikes created by them. For a more complete discussion of these circuits, see this [excellent tutorial](http://www.electronics-tutorials.ws/blog/relay-switch-circuit.html). However, there are many relay boards that come with a supporting circuit that can be wired up to a microcontroller very easily. 
+Relays have some interesting electrical behaviors due to the fact that they're typically driven electromagnetically. For this reason, a relay requires a simple, but ancillary circuit to properly control them and handle current spikes created by them. For a more complete discussion of these circuits, see this [excellent tutorial](http://www.electronics-tutorials.ws/blog/relay-switch-circuit.html). However, there are many relay boards that come with a supporting circuit that can be wired up to a microcontroller very easily. 
 
 ### All in One Relay Boards
 
-For example this, [Keye Studio 2 Channel relay board](https://www.amazon.com/Keyestudio-Module-Arduino-raspberry-2-channel/dp/B0177WOT1E/ref=sr_1_1?ie=UTF8&qid=1503712979&sr=8-1&keywords=2+channel+relay+keyestudio) can control up to 10A of 250V AC or 30V DC with 5V of input:
+For example this, [Keyestudio 2 Channel relay board](https://www.amazon.com/Keyestudio-Module-Arduino-raspberry-2-channel/dp/B0177WOT1E/ref=sr_1_1?ie=UTF8&qid=1503712979&sr=8-1&keywords=2+channel+relay+keyestudio) can control up to 10A of 250V AC or 30V DC with 5V of power:
 
 ![Photo of a Keye Studio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg)
+
+## Power Requirements
+
+Because these relays are electromagnetic; they can require quite a lot of power to drive. Their power requirements are usually listed in their datasheet under _coil voltage_ and _coil current_. The Songle relays on the Keyestudio relay board above take around `120mA` at `5V` each. Typically, a USB port is rated to deliver only `400mA` in total, and a microcontroller actively driving IO will often use `300mA` on its own, leaving very little power leftover for the relay. Additionally, the relay itself can cause power spikes when it operates. For this reason, it's best to use a second power supply dedicated to the relay.
+
+[general setup with two power supplies]
+
+### Keyestudio Optoisolation Circuit
+
+Additionally, the Keyestudio relay board above has a nice circuit that further isolates the power circuit from the control inputs, allowing it to be hooked to a second power source and makes sure that it draws very little power from the inputs by using an [optoisolator]() to read the inputs. 
+
+#### Keyestudio Sample Circuit
+
+Unfortunately, this design is effectively undocumented, so when using them, make sure to wire them up as shown in the following schematic and breadboard diagrams:
+
+![](Keyes_Relay_schem.svg)
+
+![](Keyes_Relay_bb.svg)
+
+Note that this configuration requires the jumper to be removed from the header.
 
 ## Netduino.Foundation Support
 
