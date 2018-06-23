@@ -5,11 +5,11 @@ Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are
 
 ## Running Locally
 
-This repo is also a Ruby site powered by jekyll (which is how it's hosted by github pages). You can run and browse this site locally, which is especially if you're contributing documentation, or you just want an offline experience.
+This repo is also a Ruby site powered by jekyll (which is how it's hosted by GitHub Pages). You can run and browse this site locally, which is especially useful if you're contributing documentation, or you just want an offline experience.
 
 To browse locally:
 
-### 1. [Install Homebrew](https://brew.sh/) (if not already installed).
+### 1. [Install Homebrew](https://brew.sh/) (if not already installed)
 
 
 ### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
