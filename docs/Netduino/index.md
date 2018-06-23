@@ -36,6 +36,8 @@ General Purpose Input/Output (GPIO) options available onboard the Netduino.
  * [Onboard Button and LED](/Netduino/Input_Output/Onboard_Button_+_LED/)
  * [SD Card/File I/O](/Netduino/Input_Output/File_Storage/)
  * [Network](/Netduino/Input_Output/Network/)
+   * [Configuration](/Netduino/Input_Output/Network/Configuration)
+   * [Connecting](/Netduino/Input_Output/Network/Connection)
 
 # [Application Fundamentals](/Netduino/Application_Fundamentals/)
 

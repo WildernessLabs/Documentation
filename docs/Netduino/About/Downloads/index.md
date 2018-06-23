@@ -26,12 +26,12 @@ Download links for Netduino are enumerated here for convenience. If you're new t
 
 ## Firmware Updater and Configuration Tool <a name="updater" />
 
-### Windows
+### Netduino.Deploy for Windows
 * [v2.0.3-beta](https://www.wildernesslabs.co/downloads?f=/Betas/NetduinoDeploy-Win-2.0.3-beta.zip)
   * Bootloader driver update for WinUSB is required ([instructions](https://github.com/WildernessLabs/Netduino-Updater/blob/master/bootloader_winusb_guide.md)), 
 * [Legacy NetduinoUpdate v4.3.2.3](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/NetduinoUpdate_4.3.2.3.zip) (Firmware Updater only)
 
-### Mac
+### Netduino.Deploy for macOS
 * [v2.0.3-beta](https://www.wildernesslabs.co/downloads?f=/Betas/NetduinoDeploy-osx-2.0.3-beta.zip)
 * [v0.1.0pre](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/MacDeploy.zip)
 
