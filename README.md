@@ -14,7 +14,7 @@ To browse locally:
 
 ### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
 
-Open a terminal and run:
+Open a terminal and navigate to the `Documentation/docs` folder and run:
 
 ```
 $ brew install ruby
@@ -34,13 +34,13 @@ $ bundle install
 
 ### 3. Launch local server
 
-Change your terminal working directory to be the location of the git repo and run:
+Change your terminal working folder to `Documentation/docs` (if it's not aleady) and run:
 
 ```
 bundle exec jekyll serve
 ```
 
-The site should be available locally at: `http://127.0.0.1:4000/`
+The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
 
 Changes should automatically be picked up and displayed on the site.
 
