@@ -56,7 +56,7 @@ Netduino 2 is offered in 2 different models, the N2 base model as well as the N2
 
 Both N2 models support [persistent storage](../Input_Output/File_Storage) with SD cards up to 2GB, and the N2+ has a micro SD slot built-in. The base model can use SD cards via most [Arduino SD Card add-on shields](https://www.google.com/search?q=arduino+SD+shield&rlz=1C5CHFA_enUS724US724&oq=arduino+SD+shield&aqs=chrome..69i57j0l5.5394j0j7&sourceid=chrome&ie=UTF-8).
 
-The N3 technical specifications are as follows:
+The N2 technical specifications are as follows:
 
 
 | Model  | MCU                | Flash   | RAM     | Network |
