@@ -6,9 +6,13 @@ subtitle: The heart of modern semiconductors.
 
 # Silicon Crystal
 
-At the heart of most modern electronic semiconductors is a wafer thin slice of silicon (Si) crystal. Silicon is considered a [Metalloid](https://en.wikipedia.org/wiki/Metalloid); not quite a metal, not quite not a metal, and it's the second most abundant element in the earth's crust (after oxygen):
+At the heart of most modern electronic semiconductors is a wafer thin slice of [silicon (Si)](https://en.wikipedia.org/wiki/Silicon) crystal. Silicon is considered a [Metalloid](https://en.wikipedia.org/wiki/Metalloid); not quite a metal, not quite not a metal, and it's the second most abundant element in the earth's crust (after oxygen):
 
 [![Image of Purified Silicon](https://upload.wikimedia.org/wikipedia/commons/e/e9/SiliconCroda.jpg)](https://commons.wikimedia.org/wiki/File:SiliconCroda.jpg)
+
+Silicon for semiconductor usage is highly purified; in fact there's only ~11 companies in the world that have the ability to purify it enough to be used. Once purified, it's sliced very thin and then individual components such as transistors are etched onto it to form the basis of chips, known as _Integrated Circuits_ (ICs):
+
+![Image of a silicon wafer with chips etched onto it, and a few of the finished chips with their plastic packaging and legs sitting on top](shutterstock_795763357_Cropped_Small.jpg)
 
 Silicon's ability to be both a conductor and an insulator, lies in it's atomic structure, which gives rise to a crystal lattice, in which every atom is connected to four other silicon atoms, creating what's known as a face-centered-diamond-cubic, which basically means that it creates a cube with a diamond structure in the middle:
 
@@ -26,7 +30,7 @@ The electrons that orbit the nucleus can exist in different energy states, which
 
 ![Atomic orbitals of Oxygen](../Sketches/Oxygen.png)
 
-The valence shell is the most chemically important portion of an atom, because it determines how readily, and with how many, it will combine, or bond, with other atoms to form molecules. A full valence shell contains 8 electrons, and when this exists, it's called a _closed shell_, and they are chemically inert. Examples of elements with a closed shell are the noble gasses; so-called because they don't react with other elements.
+The valence shell is the most chemically important portion of an atom, because it determines how readily, and with how many, it will combine (bond), with other atoms to form molecules. A full valence shell contains 8 electrons, and when this exists, it's called a _closed shell_, and they are chemically inert. Examples of elements with a closed shell are the noble gasses; so-called because they don't react with other elements.
 
 When two atoms are bonded together in a molecule or material, they share valence electrons. So an element tends to bond in ways that fill it's valence electron count to 8. For instance, water, which has the molecular signature of H<sub>2</sub>O, meaning it has (2) hydrogen atoms and one oxygen atom, fills its valence shell with 6 valence electrons from oxygen, and 1 electron from each hydrogen atom:
 
@@ -37,6 +41,8 @@ When two atoms are bonded together in a molecule or material, they share valence
 The atomic lattice shape of a silicon crystal comes from the fact that it has 4 valence electrons, and will therefore readily bond with 4 other silicon atoms, sharing an electron from each of the other four silicon atoms:
 
 ![](../Sketches/Silicon_Crystal.png)
+
+This forms a crystalline structure that acts as an insulator at room temp and loses its resistance as its temperature increases, becoming a conductor.
 
 ## Doping
 
