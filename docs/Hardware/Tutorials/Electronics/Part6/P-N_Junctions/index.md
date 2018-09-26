@@ -50,7 +50,7 @@ _Reverse biasing_ is when a voltage is applied in the opposite direction of pref
 
 ![](../Sketches/Reverse_bias.png)
 
-When this happens, the depletion region wides, which greatly increases the junction potential.
+When this happens, the depletion region widens, which greatly increases the junction potential.
 
 ### Leakage Current/Reverse Saturation Current
 
