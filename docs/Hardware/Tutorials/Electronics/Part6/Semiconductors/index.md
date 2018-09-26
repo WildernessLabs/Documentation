@@ -6,23 +6,22 @@ subtitle: The foundation of modern electronic circuits.
 
 # Intro
 
-[learned about conductors in part 1, and resistors in part 4]
+Recall from chapter 1 that conductors are materials which consist of an atomic lattice that allows the free flow of electrons, and therefore electricity.
 
-[semiconductors are the foundation of modern electronics.]
+Some conductors can have their atomic structure altered by mixing in small amounts of impurities, in a process known as _doping_, to change their electrical conduction behavior. For instance, they can be doped to primarily allow the flow of electrons, or the flow of holes. These materials can then be placed together into discrete components in such a way that they will only conduct electricity in certain ways. For example, _diodes_ will only allow electricity to flow in one direction, whilst _transistors_ and _MOSFETs_ will only allow electricity to flow if a small amount of switching electricity is applied to a third leg, therefore creating a switch.
 
-[semiconductors have an electrical conductivity somewhere between conductors and insulators, but unlike metal conductors, their resistance decreases as their temperature increases]
+Semiconductors are the foundation of nearly all modern electronics. For example, a modern CPU has billions of transistors on a single chip, a many modern microcontrollers have millions. 
 
-[by adding impurities, a process known as _doping_, the way they conduct electricity changes, as we'll explore.]
 
-[today, silicon is the most common semiconductor material, but [germanium](https://en.wikipedia.org/wiki/Germanium) and various compounds of [gallium](https://en.wikipedia.org/wiki/Gallium) are also used.] [During the first decade of semiconductor electronics was based on germanium]
+Today, silicon is the most common semiconductor material, but [germanium](https://en.wikipedia.org/wiki/Germanium) and various compounds of [gallium](https://en.wikipedia.org/wiki/Gallium) are also used. During the first decade of mass semiconductor manufacturing, most of them were based on germanium.
 
-[transistors are possible via semiconductors. billions of them in a modern cpu, and millions of them in a modern Microcontroller]
+In this chapter, we're going to cover:
 
-[in this chapter, we'll cover how semiconductors work, and explore a number of components that utilize the physical properties of semiconductance to do interesting things, including:]
+ * How semiconductors work from a physical perspective.
+ * What are some of the most common semiconductor components used in circuit design, including diodes (including LEDs), transistors, and MOSFETs.
+ * Practical usage of various semiconductors for controlling electrical flow in circuits.
 
-* Diodes (including LEDs)
-* Transistors
-* MOSFETs
+Along the way, we'll continue our exploration of circuit design, building on what we've learned up to this point, and adding semiconductor components to the mix.
 
 # [Next - Silicon](../Silicon)
 
