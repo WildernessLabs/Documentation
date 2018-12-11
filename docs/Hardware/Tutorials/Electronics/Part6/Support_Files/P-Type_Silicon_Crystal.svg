@@ -20,7 +20,7 @@
             <circle id="Oval-Copy-11" fill="#EF7D3B" cx="105" cy="113" r="12"></circle>
             <circle id="Oval-Copy-12" fill="#EF7D3B" cx="127" cy="137" r="12"></circle>
             <circle id="Oval-Copy-13" fill="#EF7D3B" cx="232" cy="120" r="12"></circle>
-            <circle id="Oval-Copy-15" stroke="#5AC0EA" fill="#D7F0FA" cx="215" cy="143" r="12"></circle>
+            <circle id="Oval-Copy-15" stroke="#5AC0EA" stroke-width="3" fill="#EEEEEE" cx="214" cy="143" r="11"></circle>
             <circle id="Oval-Copy-16" fill="#EF7D3B" cx="224" cy="239" r="12"></circle>
             <circle id="Oval-Copy-17" fill="#EF7D3B" cx="245" cy="258" r="12"></circle>
             <circle id="Oval-Copy-18" fill="#EF7D3B" cx="129" cy="233" r="12"></circle>
