@@ -18,20 +18,16 @@ The symbol is a triangle pointing in the direction of current (hole-flow) connec
 
 There are a number of different types of diodes, but all of their circuit symbols are based on the one above.
 
-But depending on how they're constructed, a diode can have some interesting behaviors. 
-
-[image of various diodes]
-
-The Wikipedia diode page lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them.
+Depending on how they're constructed, a diode can have some interesting behaviors. The Wikipedia diode page lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them.
 
 ## Common Types of Diodes
 
- * **Discrete Signal Diodes** - These are the most common type of diode.
- * **Power/Rectifier Diodes** - 
- * **Light Emitting Diodes (LEDs)** - LEDs emit photons as electrons flow through the P-N junction.
- * **Photodiodes** - Photodiodes 
-Schottky Diodes
-Zener diodes
+ * **Discrete Signal/Switching Diodes** - These are the most common type of diode. Typically, they have a `V`<sub>`f`</sub> (forward voltage) drop of `0.7v` and a low maximum current rating. The [1N4148](https://amzn.to/2OfaP2n) is a common signal diode with a `500mA` maximum forward current rating.
+ * **Power/Rectifier Diodes** - Power (aka _rectifier_) diodes are similar to signal diodes but are designed to handle higher current. The [1N4001](https://amzn.to/2DECgyK) is a common rectifier diode and is capable of handling `1A`, but the `V`<sub>`f`</sub> (forward voltage) drop is `1.1V`.
+ * **Light Emitting Diodes (LEDs)** - LEDs are a type of diode that emit photons (light) as electrons flow through the P-N junction.
+ * **Photodiodes** - Photodiodes are the opposite of LEDs, they  [solar panels use this!]
+ * **Zener diodes** - 
+ * **Schottky Diodes** - 
 
 ## Diode Uses
 
@@ -56,5 +52,7 @@ OLED
 ### Voltage Reference
 
 voltage reference - using zener diodes
+
+### Logic Gates
 
 # [Next - LEDs](../LEDs)
