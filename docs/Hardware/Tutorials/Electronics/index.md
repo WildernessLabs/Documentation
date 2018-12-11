@@ -44,3 +44,6 @@ Chapter 5 introduces two more laws that govern the behavior of electricity and e
 ![](Part5/Kirchhoffs_Voltage_Law/Kirchhoffs_Voltage_Law.svg)
 
 ### [Chapter 6 - Semiconductors Part 1: Diodes](Part6/Semiconductors)
+
+Chapter 6 is the first chapter on semiconductors and introduces what semiconductors are, how they're made, and how they work. It then examines the simplest of semiconductor components, the Diode, and dives into one of the most awesome diode components; the Light-Emitting-Diode (LED).
+

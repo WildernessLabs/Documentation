@@ -14,7 +14,7 @@ Silicon for semiconductor usage is highly purified; in fact there's only ~11 com
 
 ![Image of a silicon wafer with chips etched onto it, and a few of the finished chips with their plastic packaging and legs sitting on top](shutterstock_795763357_Cropped_Small.jpg)
 
-Silicon's ability to be both a conductor and an insulator, lies in it's atomic structure, which gives rise to a crystal lattice, in which every atom is connected to four other silicon atoms, creating what's known as a face-centered-diamond-cubic, which basically means that it creates a cube with a diamond structure in the middle:
+Silicon's ability to be both a conductor and an insulator, lies in it's atomic structure, which gives rise to a crystal lattice, in which every atom is connected to four other silicon atoms, creating what's known as a _face-centered-diamond-cubic_, which basically means that it creates a cube with a diamond structure in the middle:
 
 [![Silicon-unit-cell-3D-balls](https://upload.wikimedia.org/wikipedia/commons/f/f1/Silicon-unit-cell-3D-balls.png)](https://commons.wikimedia.org/wiki/File:Silicon-unit-cell-3D-balls.png)
 
@@ -28,13 +28,13 @@ Recall from [Part 1](/Hardware/Tutorials/Electronics/Part1/Atoms/), that an atom
 
 The electrons that orbit the nucleus can exist in different energy states, which correspond to their average distance from the nucleus. Each of these energy states is called an [_electron shell_](https://en.wikipedia.org/wiki/Electron_shell). The electrons that travel the farthest from the nucleus have the most energy and are called the [_valance electrons_](https://en.wikipedia.org/wiki/Valence_electron), which, generally, form a valance shell. For example, oxygen has 8 electrons total, but only 6 of them are in the valence shell:
 
-![Atomic orbitals of Oxygen](../Sketches/Oxygen.png)
+![Atomic orbitals of Oxygen](../Support_Files/Oxygen_Atom.svg)
 
 The valence shell is the most chemically important portion of an atom, because it determines how readily, and with how many, it will combine (bond), with other atoms to form molecules. A full valence shell contains 8 electrons, and when this exists, it's called a _closed shell_, and they are chemically inert. Examples of elements with a closed shell are the noble gasses; so-called because they don't react with other elements.
 
 When two atoms are bonded together in a molecule or material, they share valence electrons. So an element tends to bond in ways that fill it's valence electron count to 8. For instance, water, which has the molecular signature of H<sub>2</sub>O, meaning it has (2) hydrogen atoms and one oxygen atom, fills its valence shell with 6 valence electrons from oxygen, and 1 electron from each hydrogen atom:
 
-![Atomic structure of H20](../Sketches/H2O.png)
+![Atomic orbitals of Oxygen](../Support_Files/Water_Molecule.svg)
 
 ### Silicon Valence Electrons
 

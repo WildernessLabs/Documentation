@@ -7,4 +7,4 @@ subtitle: Light Emitting Diodes.
 # Intro
 
 
-# [Next - Transistors](../Transistors)
+# [Next - Chapter Review](../Review)
