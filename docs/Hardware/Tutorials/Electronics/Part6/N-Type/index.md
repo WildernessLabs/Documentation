@@ -24,7 +24,7 @@ Impurities that introduce extra electrons are called _donor impurities_ because 
 
 Just as the holes move around the P-Type semiconductor, free electrons also move around the N-Type lattice, trying in perpetuity, to achieve balance. The result is an ever changing mesh of containing and abundance of negatively charged electrons, giving rise to the name N-Type, which stands for _Negative-Type_.
 
-![[Illustration of N-Type silicon crystal lattice in which there are a few phosphorous atoms in the lattice that are postively charged, and throughout the lattice are free electrons.](../Support_Files/N-Type_Silicon_Crystal_Lattice.svg)
+![Illustration of N-Type silicon crystal lattice in which there are a few phosphorous atoms in the lattice that are postively charged, and throughout the lattice are free electrons.](../Support_Files/N-Type_Silicon_Crystal_Lattice.svg)
 
 Just as with the P-Type semiconductor, N-Type semiconductors will readily conduct electricity, because it has extra electrons moving around in it already.
 
