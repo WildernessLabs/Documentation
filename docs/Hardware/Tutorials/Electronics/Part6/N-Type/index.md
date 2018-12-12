@@ -10,8 +10,7 @@ N-Type semiconductors are electrically opposite to P-Type. By doping silicon wit
 
 As such, the electron is repelled out of the phosphorous atom and travels around the surrounding lattice. By losing one of it's electrons, it becomes a positively charged ion, because it now has one more proton than electron:
 
-[note: fix sketch to have the extra electron popping out]
-![](../Sketches/N-Type_silicon_crystal.png)
+![](../Support_Files/N-Type_Silicon_Crystal.svg)
 
 ## Electrically Neutral
 
@@ -25,7 +24,7 @@ Impurities that introduce extra electrons are called _donor impurities_ because 
 
 Just as the holes move around the P-Type semiconductor, free electrons also move around the N-Type lattice, trying in perpetuity, to achieve balance. The result is an ever changing mesh of containing and abundance of negatively charged electrons, giving rise to the name N-Type, which stands for _Negative-Type_.
 
-![](../Sketches/N-Type_Semiconductor_Lattice.png)
+![[Illustration of N-Type silicon crystal lattice in which there are a few phosphorous atoms in the lattice that are postively charged, and throughout the lattice are free electrons.](../Support_Files/N-Type_Silicon_Crystal_Lattice.svg)
 
 Just as with the P-Type semiconductor, N-Type semiconductors will readily conduct electricity, because it has extra electrons moving around in it already.
 

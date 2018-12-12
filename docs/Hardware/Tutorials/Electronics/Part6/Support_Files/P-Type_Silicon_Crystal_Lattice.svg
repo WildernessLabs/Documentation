@@ -8,7 +8,7 @@
         <g id="Illustration" transform="translate(60.000000, 77.000000)">
             <g id="Lattice">
                 <g>
-                    <rect id="Rectangle" stroke="#999999" stroke-width="2" fill="#DEDEDE" x="1" y="1" width="158" height="158"></rect>
+                    <rect id="Rectangle" stroke="#999999" stroke-width="2" fill="#D4D4D4" x="1" y="1" width="158" height="158"></rect>
                     <circle id="Oval-Copy-3" fill="#252525" cx="20.5" cy="18.5" r="10.5"></circle>
                     <circle id="Oval-Copy-5" fill="#252525" cx="20.5" cy="58.5" r="10.5"></circle>
                     <circle id="Oval-Copy-6" fill="#252525" cx="20.5" cy="98.5" r="10.5"></circle>
@@ -63,9 +63,6 @@
                 </g>
             </g>
         </g>
-        <text id="P-Type-Silicon-Cryst" font-family="Wavehaus-66Book, Wavehaus" font-size="36" font-weight="300" letter-spacing="-2.15999937" fill="#23ABE3">
-            <tspan x="13" y="44">P-Type Silicon Crystal Lattice</tspan>
-        </text>
         <text id="P-Type-Silicon-Cryst-Copy" font-family="Wavehaus-66Book, Wavehaus" font-size="36" font-weight="300" letter-spacing="-2.15999937" fill="#23ABE3">
             <tspan x="13" y="44">P-Type Silicon Crystal Lattice</tspan>
         </text>

@@ -12,17 +12,17 @@ By sandwiching a piece of P-Type and N-Type semiconductor together into what's k
 
 When P-Type and N-Type semiconductors are joined, the free electrons from the N-Type side _diffuse_ nearby into the P-Type side to fill the holes:
 
-![](../Sketches/PN_Electron_Diffusion.png)
+![](../Support_Files/P-N_Junction_Electron_Diffusion.svg)
 
 What remains are the positively and negatively charged ions along the junction boundary, since they have been stripped of the free particles that were keeping that area electrical neutral. This region is called the _depletion region_ (along with [half a dozen other names](https://en.wikipedia.org/wiki/Depletion_region)):
 
-![](../Sketches/PN_Depletion_Zone.png)
+![](../Support_Files/P-N_Junction_Depletion_Region.svg)
 
 ## Junction Electric Field
 
 The depletion region gives rise to an electric field because there's a electromagnetic force (voltage) differential between the negatively and positively charged ions:
 
-![](../Sketches/Junction_potential.png)
+![](../Support_Files/P-N_Junction_Electric_Field.svg)
 
 This electric field is known as the _Junction Potential_ and is usually between `600mV - 700mV (0.6V - 0.7V)` in silicon, and `200mV - 300mV` in germanium.
 
@@ -30,19 +30,19 @@ This electric field is known as the _Junction Potential_ and is usually between 
 
 Putting metal connectors on either side of the P-N Junction creates what are known as an _Anode_ (A) and a _Cathode_ (K). The anode is on the P-Type side, and the cathode is on the N-Type side. This effectively creates a component called a _Diode_:
 
-![Anode and Cathode](../Sketches/Anode_cathode.png)
+![Anode and Cathode](../Support_Files/Diode.svg)
 
 ## Forward Biasing
 
 Putting a positive current to the Anode and a negative current to the cathode side is a preferential _bias_, because the positive hole charge carriers and negative electrons are pushed towards the junction, thus shrinking the depletion zone. This voltage application, in the preferential direction of current flow is called _forward biasing_:
 
-![](../Sketches/Forward_bias_under_Fv.png)
+![](../Support_Files/Diode_Forward_Bias.svg)
 
 **In order for charge carriers (current) to pass through the electric field, they must have greater electromotive force (EMF, in voltage) than the junction potential to overcome the electric field.** Meaning that it takes greater than `0.7V` of EMF to get them through. In the process of overcoming that junction potential, they actually lose the same amount of EMF to it. 
 
 [note: remove depletion region lines:]
 
-![](../Sketches/Forward_bias_over_Fv.png)
+![](../Support_Files/Diode_Forward_Bias_Over_Vf.svg)
 
 **The amount of voltage needed to push forward through the depletion regis is known as the _forward voltage_ (`V`<sub>`f`</sub>), or _voltage drop_,** because if charge carriers are pushed through this region at `1.0V`, when they come out on the other side they will only have `0.3V` (`1.0V` - `0.7V`) of EMF.
 
