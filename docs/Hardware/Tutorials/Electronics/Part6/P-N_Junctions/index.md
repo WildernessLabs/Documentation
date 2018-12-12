@@ -34,25 +34,23 @@ Putting metal connectors on either side of the P-N Junction creates what are kno
 
 ## Forward Biasing
 
-Putting a positive current to the Anode and a negative current to the cathode side is a preferential _bias_, because the positive hole charge carriers and negative electrons are pushed towards the junction, thus shrinking the depletion zone. This voltage application, in the preferential direction of current flow is called _forward biasing_:
+Applying a positive current to the Anode and a negative current to the cathode side is a preferential _bias_, because the positive hole charge carriers and negative electrons are pushed towards the junction, thus shrinking the depletion zone. This voltage application, in the preferential direction of current flow is called _forward biasing_:
 
 ![](../Support_Files/Diode_Forward_Bias.svg)
 
-**In order for charge carriers (current) to pass through the electric field, they must have greater electromotive force (EMF, in voltage) than the junction potential to overcome the electric field.** Meaning that it takes greater than `0.7V` of EMF to get them through. In the process of overcoming that junction potential, they actually lose the same amount of EMF to it. 
-
-[note: remove depletion region lines:]
+**In order for charge carriers (current) to pass through the electric field, they must have greater electromotive force (EMF, in voltage) than the junction potential to overcome the electric field.** Meaning that it takes greater than `0.7V` (in silicon) of EMF to get them through. In the process of overcoming that junction potential, they actually lose the same amount of EMF to it. 
 
 ![](../Support_Files/Diode_Forward_Bias_Over_Vf.svg)
 
-**The amount of voltage needed to push forward through the depletion regis is known as the _forward voltage_ (`V`<sub>`f`</sub>), or _voltage drop_,** because if charge carriers are pushed through this region at `1.0V`, when they come out on the other side they will only have `0.3V` (`1.0V` - `0.7V`) of EMF.
+**The amount of voltage needed to push forward through the depletion region is known as the _forward voltage_ (`V`<sub>`f`</sub>), or _voltage drop_,** because if charge carriers are pushed through this region at `1.0V`, when they come out on the other side they will only have `0.3V` (`1.0V` - `0.7V`) because they dropped `0.7V` in force.
 
-Remember that concept; because it will come up over and over in circuit design.
+Voltage drop is an important concept that will come up over and over in circuit design.
 
 ## Reverse Biasing
 
 _Reverse biasing_ is when a voltage is applied in the opposite direction of preferential current flow. This causes the holes in the P-Type side to be attracted to the Anode, and the electrons in the N-Type side to be attracted to the Cathode, causing the depletion region to widen:
 
-![](../Sketches/Reverse_bias.png)
+![](../Support_Files/Diode_Reverse_Bias.svg)
 
 When this happens, the area of negative and positively charged ions increases, which also increases the junction potential.
 
