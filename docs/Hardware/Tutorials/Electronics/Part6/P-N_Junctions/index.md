@@ -68,7 +68,7 @@ Some diodes are specifically designed with this behavior in mind, and we'll exam
 
 The current response to forward and reverse bias currents is described in the following graph:
 
-![](../Sketches/Diode_response_graph.png)
+![](../Support_Files/Diode_Behavior.svg)
 
 The right half of the graph represents forward bias current, that is, positive current applied to the cathode. Until the voltage reaches the forward voltage (`V`<sub>`f`</sub>), almost zero current makes it through, but once that threshold is reached, the P-N junction readily conducts electricity.
 
