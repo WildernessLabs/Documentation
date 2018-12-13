@@ -6,5 +6,7 @@ subtitle: Light Emitting Diodes.
 
 # Intro
 
+[
 
-# [Next - Chapter Review](../Review)
+
+# [Next - Diode Logic Gate Lab](../Diode_Logic_Lab)

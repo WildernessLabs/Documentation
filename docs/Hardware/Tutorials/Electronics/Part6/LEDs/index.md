@@ -10,6 +10,8 @@ subtitle: Light Emitting Diodes.
 
 [when electrons move into the holes in the P-Type lattice, they move from a higher energy orbit to a lower energy orbit. when that happens, they lose energy. that energy is released in the form of photons (light particles)]
 
+[specifically; the electrons move from the conduction band to valence band]
+
 [illustration]
 
 [in silicon, the electron orbital drop is very small, so the light released is low energy, and the photon escapes at a low frequency of vibration, in the infrared spectrum. (the color of light depends on it's frequency)]
