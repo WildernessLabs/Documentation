@@ -27,11 +27,11 @@ varying colors
 
 | Color  | V<sub>f</sub> | I<sub>fmax</sub> |
 |--------|---------------|------------------|
-| Red    | 1.8V          | 15mA - 20mA      |
-| Green  | 2.1V          | 20ma - 30mA      |
 | Blue   | 3.4V - 3.6 V  | 20mA             |
-| Yellow | 2.0V          | 15mA             |
 | White  | 1.9V - 2.4V   | 30mA             |
+| Green  | 2.1V          | 20ma - 30mA      |
+| Yellow | 2.0V          | 15mA             |
+| Red    | 1.8V          | 15mA - 20mA      |
 
 varying packages
 
