@@ -72,14 +72,8 @@ The current response to forward and reverse bias currents is described in the fo
 
 The right half of the graph represents forward bias current, that is, positive current applied to the cathode. Until the voltage reaches the forward voltage (`V`<sub>`f`</sub>), almost zero current makes it through, but once that threshold is reached, the P-N junction readily conducts electricity.
 
-The left half of the graph represents a reverse bias current, that is, positive current applied to the anode, instead. Virtually no current (nano amps) is allowed to flow through, until the voltage reaches the reverse breakdown voltage, and an electron avalanche occurs, 
+The left half of the graph represents a reverse bias current, that is, positive current applied to the anode, instead. Virtually no current (nano amps) is allowed to flow through, until the voltage reaches the reverse breakdown voltage, and an electron avalanche occurs, if pushed at a high enough voltage, the resistance goes to almost zero, turning it into a pure conductor, and then, usually, the diode will break in an open state (no current flow).
 
-[at a high enough voltage, it reduces the resistance of the diode to almost zero and making it an almost pure conductor.]
-
-### Water Analogy
-
-[dam analogy]
-
-[when you reverse bias a diode, you expand the depletion region, and therefore the junction potential. so if a zener has a known breakdown at say `5V` - that means that the junction potential/`Vf` is `5V` at that point, so that means, if you were feeding it `8V`, it basically becomes a voltage divider (because of Kircchoff’s voltage law), allowing `3V` through.
+As we'll learn in the next section, the behavior after reaching breakdown voltage can be effectively used to do some pretty useful things.
 
 # [Next - Diodes](../Diodes)

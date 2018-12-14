@@ -6,11 +6,9 @@ subtitle: Stuff
 
 # Intro
 
-As we examined in the last section, a diode is basically just a P-N junction:
+As we examined in the last section, a diode is basically just a P-N junction with leads attached to either side. The anode (`A`) is the lead attached to the P-type side, the cathode ('K') is attached to the N-type side, and the preferential, or forward bias is when electrons flow from cathode to anode (which means anode is hooked to the positive voltage source):
 
-[Note: Add Anode/Cathode labels to legs]
-
-![](../Sketches/Diode.png)
+![](../Support_Files/Diode_Forward_Bias.svg)
 
 The symbol is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line:
 
@@ -18,16 +16,38 @@ The symbol is a triangle pointing in the direction of current (hole-flow) connec
 
 There are a number of different types of diodes, but all of their circuit symbols are based on the one above.
 
-Depending on how they're constructed, a diode can have some interesting behaviors. The Wikipedia diode page lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them.
 
 ## Water Analogy
 
-* **Forward Biased** - [One way valve]
-* **Reverse Biased** - [A dam]
+Revisiting the water analogy, we can think of a forward biased diode as a one-way valve:
 
-[dam illustration]
+[illustration]
 
-## Common Types of Diodes
+### Reverse Biasing == Water Dam
+
+However, something interesting (and it turns out, very useful) happens when a diode is reverse biased. 
+
+As the reverse bias voltage increases, the depletion region expands, which also increases the junction potential/voltage drop (`V`<sub>`f`</sub>), until it reaches its breakdown voltage. Many diodes are designed so that they're breakdown voltage is very high, so under their expected loads they're always a one way valve, but others are designed to reach that threshold at lower voltages.
+
+Reverse biased-diodes will begin conducting electricity at their threshold voltage and then, as long as they don't conduct too much current, they're not much different than a forward-biased diode. Consider the following circuit:
+
+![](../Support_Files/Zener_Voltage_Reference_Circuit.svg)
+
+In this circuit, a special type of diode, known as a _zener diode_ is used. Zener diodes are designed in such a way that they have a very precise breakdown voltage. In the case of the circuit above, a zener with a `5V` breakdown voltage is used. This diode is receiving `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Above the diode is a resistor to prevent too much current flowing and breaking the diode. There is also a line coming out between the resistor and the diode.
+
+If this circuit looks familiar, it's because it is. It's basically a voltage divider. [Kircchoff's Voltage Law]
+
+[not a voltage regulator]
+
+In this case, we can think of a reverse biased diode as a water damn:
+
+[illustration of a dam showing the height of the damn being the breakdown voltage]
+
+
+
+## Common Diode Types
+
+Depending on how they're constructed, a diode can have some interesting behaviors. The Wikipedia diode page lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them:
 
  * **Discrete Signal/Switching Diodes** - These are the most common type of diode. Typically, they have a `V`<sub>`f`</sub> (forward voltage) drop of `0.7v` and a low maximum current rating. The [1N4148](https://amzn.to/2OfaP2n) is a common signal diode with a `500mA` maximum forward current rating. We'll use these diodes a lot in circuits to ensure the intended logic of our circuits are sound.
  * **Power/Rectifier Diodes** - Power (aka _rectifier_) diodes are similar to signal diodes but are designed to handle higher current. The [1N4001](https://amzn.to/2DECgyK) is a common rectifier diode and is capable of handling `1A`, but the `V`<sub>`f`</sub> (forward voltage) drop is `1.1V`. These are commonly used to protect certain parts of circuits from voltage spikes, as well as for conversion of AC to DC electricity.
