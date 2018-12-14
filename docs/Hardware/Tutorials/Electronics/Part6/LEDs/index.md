@@ -12,7 +12,7 @@ subtitle: Light Emitting Diodes.
 
 [specifically; the electrons move from the conduction band to valence band]
 
-[illustration]
+![](../Support_Files/Photon_Emission.svg)
 
 [in silicon, the electron orbital drop is very small, so the light released is low energy, and the photon escapes at a low frequency of vibration, in the infrared spectrum. (the color of light depends on it's frequency)]
 
