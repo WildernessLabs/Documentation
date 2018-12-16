@@ -26,7 +26,7 @@ Benjamin Franklin's work kickstarted the practical use of electricity, and a big
 
 This illustration isn't really accurate, because it implies electrons flowing from a positive charge, to a negative charge. It wasn't until 150 years later, in 1897, that [Sir J. J. Thomson](https://en.wikipedia.org/wiki/J._J._Thomson) posited that atoms were made of electrons and discovered that electrons, rather than holes, were thing that was actually moving.
 
-However, in practical usage, it doesn't matter, because most everything has standardized on Benjamin Franklin's convention. For this reason, many people use the term _charge carrier_, which can mean either a positive charge (electron) or a negative charge (hole).
+However, in practical usage, it doesn't matter, because most everything has standardized on Benjamin Franklin's convention. For this reason, many people use the term _charge carrier_, which can mean either a positive charge (hole) or a negative charge (electron).
 
 
 # Speed of Electrical Current
