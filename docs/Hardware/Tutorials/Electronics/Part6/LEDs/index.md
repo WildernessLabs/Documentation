@@ -32,19 +32,27 @@ Because they have a higher electron orbital energy transition, the photons relea
 
 What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. This voltage drop increases with the light frequency:
 
-| Color  | V<sub>f</sub> | I<sub>fmax</sub> |
+| Color  | V<sub>f</sub> (Voltage drop)| I<sub>fmax</sub> (max. current) |
 |--------|---------------|------------------|
 | Red    | 1.8V          | 15mA - 20mA      |
 | Yellow | 2.0V          | 15mA             |
 | Green  | 2.1V          | 20ma - 30mA      |
-| Blue   | 3.4V - 3.6 V  | 20mA             |
+| Blue   | 2.7V - 3.6 V  | 20mA             |
 | White  | 1.9V - 2.4V   | 30mA             |
 
 White is actually created with three LEDs in one, using red, green, and, blue light in unison to create white. As such, the voltage drop is actually an average.
 
+[or they use a blue LED with a coating that makes the light look white]
+
+Powering Blue LEDs can be tricky on `3.3V` because many of them have a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases voltages. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
+
 ## Using LEDs in Circuits
 
+[two things to consider; 1 current limiting, and 2 the voltage drop]
+[limiting current]
+[turns out, most LEDs are actually too bright]
 
+### Circuit Calculations
 
 
 # [Next - LED Lab](../LED_Lab)
