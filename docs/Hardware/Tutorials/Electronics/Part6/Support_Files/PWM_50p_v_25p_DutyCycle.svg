@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="919px" height="368px" viewBox="0 0 919 368" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>PWM_50p_v_25p_DutyCycle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-24.000000, -38.000000)">
+            <g id="PWM_50p_v_25p_DutyCycle" transform="translate(23.000000, 32.000000)">
+                <g id="PWM_25p_DutyCycle" transform="translate(0.000000, 211.000000)">
+                    <g id="Axis" transform="translate(0.000000, 32.000000)">
+                        <path d="M109.5,10.5 L109.5,97.7066511" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                        <path d="M110.5,98.5 L919.502472,98.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                        <path d="M109.5,10.5 L99.5,10.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                        <path d="M109.5,98.5 L99.5,98.5" id="Line-Copy-8" stroke="#979797" stroke-linecap="square"></path>
+                        <text id="3.3v" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="60.584" y="18">3.3v</tspan>
+                        </text>
+                        <text id="0v" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="75.272" y="103">0v</tspan>
+                        </text>
+                        <text id="Time" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="491.398" y="130">Time</tspan>
+                        </text>
+                        <text id="Voltage" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="1.2955" y="60">Voltage</tspan>
+                        </text>
+                    </g>
+                    <g id="Signal" transform="translate(165.000000, 50.000000)" stroke="#23ABE3" stroke-width="5" stroke-linecap="square">
+                        <path d="M0,81 L100,81" id="Line"></path>
+                        <path d="M100,4.4199765 L100,81" id="Line-Copy-7"></path>
+                        <path d="M150,4.4199765 L150,81" id="Line-Copy-9"></path>
+                        <path d="M300,4.4199765 L300,81" id="Line-Copy-10"></path>
+                        <path d="M350,4.4199765 L350,81" id="Line-Copy-11"></path>
+                        <path d="M500,4.4199765 L500,81" id="Line-Copy-12"></path>
+                        <path d="M550,4.4199765 L550,81" id="Line-Copy-13"></path>
+                        <path d="M100,1 L150,1" id="Line-Copy"></path>
+                        <path d="M150,81 L300,81" id="Line-Copy-2"></path>
+                        <path d="M300,1 L350,1" id="Line-Copy-3"></path>
+                        <path d="M350,81 L500,81" id="Line-Copy-4"></path>
+                        <path d="M500,1 L550,1" id="Line-Copy-5"></path>
+                        <path d="M550,81 L700,81" id="Line-Copy-6"></path>
+                    </g>
+                    <text id="25%-Duty-Cycle" font-family="Lato-Regular, Lato" font-size="23" font-weight="normal" fill="#23ABE3">
+                        <tspan x="404.1895" y="23">25% Duty Cycle</tspan>
+                    </text>
+                </g>
+                <g id="PWM_50p_DutyCycle">
+                    <g id="Axis" transform="translate(0.000000, 32.000000)">
+                        <path d="M109.5,10.5 L109.5,97.7066511" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                        <path d="M110.5,98.5 L919.502472,98.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                        <path d="M109.5,10.5 L99.5,10.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                        <path d="M109.5,98.5 L99.5,98.5" id="Line-Copy-8" stroke="#979797" stroke-linecap="square"></path>
+                        <text id="3.3v" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="60.584" y="18">3.3v</tspan>
+                        </text>
+                        <text id="0v" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="75.272" y="103">0v</tspan>
+                        </text>
+                        <text id="Time" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="491.398" y="130">Time</tspan>
+                        </text>
+                        <text id="Voltage" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#524740">
+                            <tspan x="1.2955" y="60">Voltage</tspan>
+                        </text>
+                    </g>
+                    <g id="Signal" transform="translate(165.000000, 50.000000)" stroke="#23ABE3" stroke-width="5" stroke-linecap="square">
+                        <path d="M0,81 L100,81" id="Line"></path>
+                        <path d="M100,4.4199765 L100,81" id="Line-Copy-7"></path>
+                        <path d="M200,4.4199765 L200,81" id="Line-Copy-9"></path>
+                        <path d="M300,4.4199765 L300,81" id="Line-Copy-10"></path>
+                        <path d="M400,4.4199765 L400,81" id="Line-Copy-11"></path>
+                        <path d="M500,4.4199765 L500,81" id="Line-Copy-12"></path>
+                        <path d="M600,4.4199765 L600,81" id="Line-Copy-13"></path>
+                        <path d="M100,1 L200,1" id="Line-Copy"></path>
+                        <path d="M200,81 L300,81" id="Line-Copy-2"></path>
+                        <path d="M300,1 L400,1" id="Line-Copy-3"></path>
+                        <path d="M400,81 L500,81" id="Line-Copy-4"></path>
+                        <path d="M500,1 L600,1" id="Line-Copy-5"></path>
+                        <path d="M600,81 L700,81" id="Line-Copy-6"></path>
+                    </g>
+                    <text id="50%-Duty-Cycle" font-family="Lato-Regular, Lato" font-size="23" font-weight="normal" fill="#23ABE3">
+                        <tspan x="404.1895" y="23">50% Duty Cycle</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
