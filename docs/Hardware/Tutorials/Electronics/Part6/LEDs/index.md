@@ -6,7 +6,13 @@ subtitle: Light Emitting Diodes.
 
 # Overview
 
+LEDs come in a variety of packages and combinations. Many packages have an arrangement of multiple LEDs in one, such as bar graphs and _7 segment_ displays that are often used to show levels or digit characters, respectively:
+
 ![](/Hardware/Reference/Components/LEDs/SomeLEDs.jpg)
+
+However, no matter what they look like, they're all basically the same to use and there are only practical circuit concerns; first, making sure the _polarity_ is correct, and second, limiting the current through them so they don't burn out.
+
+The circuit symbol for an LED is a diode with arrows coming out of it, signifying the photon emission:
 
 ![LED symbol which is a diode with two arrows coming out, indicating photon emission](/Common_Files/LED.svg)
 
@@ -16,17 +22,19 @@ As electrons move into the holes in the P-Type lattice from the N-Type, they mov
 
 ![](../Support_Files/Photon_Emission.svg)
 
-In silicon, the electron orbital drop is very small, so the light released is also low energy, and the photon escapes at a low frequency of vibration. Since the color of light depends on its frequency, the light emitted is in the infrared spectrum. 
+In silicon, the electron orbital drop is very small, so the light released is also low energy, and the photon escapes at a low frequency of vibration. Since the color of light depends on its frequency, the light emitted is in the infrared spectrum, which is just below the frequency energies of the visible light spectrum.
 
-[image of infrared and visible light spectrum]
+Most diodes are designed in such a way that the P-N junction is hidden inside its casing, so these emissions are not visible. LEDs, however, are constructed in such a way that light can escape through them, and the materials used also have a much higher electron orbital energy drop when they combine with the holes. Typical through-hole LEDs have a flat spot on the cathode side, and a longer anode leg, signifying how to wire them up with the correct polarity:
 
-Most diodes are designed in such a way that the P-N junction is hidden inside its casing, so these emissions are not visible. LEDs, however, are constructed in such a way that light can escape through them, and the materials used also have a much higher electron orbital energy drop when they combine with the holes:
+![](../Support_Files/LED_Components.svg)
 
-[illustration of an LED cross-section]
+Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're "common anode" or "common cathode":
 
-Because they have a higher electron orbital energy transition, the photons released are at high energies, therefore at higher frequencies, usually in the visible light spectrum.
+[picture of an RGB LED]
 
-[visible light spectrum]
+Because they have a higher electron orbital energy transition, the photons released are at high energies, therefore at higher frequencies, usually in the visible light spectrum:
+
+![](../Support_Files/Linear_visible_spectrum.svg)
 
 ## LED Colors
 
@@ -48,6 +56,14 @@ Powering Blue LEDs can be tricky on `3.3V` because many of them have a `3.3V`<su
 
 ## Using LEDs in Circuits
 
+[simple LED circuit:]
+
+![](../Support_Files/LED_Resistor_Circuit.svg)
+
+[RGB LED wiring:]
+
+[RGB wiring diagram]
+
 [two things to consider; 1 current limiting, and 2 the voltage drop]
 [limiting current]
 [turns out, most LEDs are actually too bright, as well]
@@ -61,7 +77,6 @@ ohms = volts / amps
 
 [However, we have to account for the voltage drop, because the total voltage available to power has to take into account the push back]
 
-![](../Support_Files/LED_Resistor_Circuit.svg)
 
 [Resistance calculation accounting for voltage drop:]
 

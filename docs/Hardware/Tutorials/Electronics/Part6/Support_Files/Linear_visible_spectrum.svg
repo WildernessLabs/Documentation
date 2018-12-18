@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="605"
+   height="115"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46+devel"
+   sodipodi:docname="Linear_visible_spectrum.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs4">
+<linearGradient id="spectrumGradient">
+  <stop id="stop380nm" offset="0.000000" style="stop-color:#020005;" />
+  <stop id="stop385nm" offset="0.013514" style="stop-color:#020006;" />
+  <stop id="stop390nm" offset="0.027027" style="stop-color:#030008;" />
+  <stop id="stop395nm" offset="0.040541" style="stop-color:#04000A;" />
+  <stop id="stop400nm" offset="0.054054" style="stop-color:#06000D;" />
+  <stop id="stop405nm" offset="0.067568" style="stop-color:#080110;" />
+  <stop id="stop410nm" offset="0.081081" style="stop-color:#0C0117;" />
+  <stop id="stop415nm" offset="0.094595" style="stop-color:#11021F;" />
+  <stop id="stop420nm" offset="0.108108" style="stop-color:#17032A;" />
+  <stop id="stop425nm" offset="0.121622" style="stop-color:#1F053A;" />
+  <stop id="stop430nm" offset="0.135135" style="stop-color:#25084B;" />
+  <stop id="stop435nm" offset="0.148649" style="stop-color:#290A5C;" />
+  <stop id="stop440nm" offset="0.162162" style="stop-color:#2B0E6F;" />
+  <stop id="stop445nm" offset="0.175676" style="stop-color:#291380;" />
+  <stop id="stop450nm" offset="0.189189" style="stop-color:#1F237B;" />
+  <stop id="stop455nm" offset="0.202703" style="stop-color:#132E74;" />
+  <stop id="stop460nm" offset="0.216216" style="stop-color:#09376C;" />
+  <stop id="stop465nm" offset="0.229730" style="stop-color:#0A3E66;" />
+  <stop id="stop470nm" offset="0.243243" style="stop-color:#0C4667;" />
+  <stop id="stop475nm" offset="0.256757" style="stop-color:#0E4F6A;" />
+  <stop id="stop480nm" offset="0.270270" style="stop-color:#10596C;" />
+  <stop id="stop485nm" offset="0.283784" style="stop-color:#11636D;" />
+  <stop id="stop490nm" offset="0.297297" style="stop-color:#146E6F;" />
+  <stop id="stop495nm" offset="0.310811" style="stop-color:#177970;" />
+  <stop id="stop500nm" offset="0.324324" style="stop-color:#178672;" />
+  <stop id="stop505nm" offset="0.337838" style="stop-color:#1A9574;" />
+  <stop id="stop510nm" offset="0.351351" style="stop-color:#1DA375;" />
+  <stop id="stop515nm" offset="0.364865" style="stop-color:#1DB273;" />
+  <stop id="stop520nm" offset="0.378378" style="stop-color:#20C070;" />
+  <stop id="stop525nm" offset="0.391892" style="stop-color:#22CB6B;" />
+  <stop id="stop530nm" offset="0.405405" style="stop-color:#21D662;" />
+  <stop id="stop535nm" offset="0.418919" style="stop-color:#23E054;" />
+  <stop id="stop540nm" offset="0.432432" style="stop-color:#36E842;" />
+  <stop id="stop545nm" offset="0.445946" style="stop-color:#50ED28;" />
+  <stop id="stop550nm" offset="0.459459" style="stop-color:#73EB22;" />
+  <stop id="stop555nm" offset="0.472973" style="stop-color:#8FE722;" />
+  <stop id="stop560nm" offset="0.486486" style="stop-color:#A5E221;" />
+  <stop id="stop565nm" offset="0.500000" style="stop-color:#B9DC22;" />
+  <stop id="stop570nm" offset="0.513514" style="stop-color:#CBD621;" />
+  <stop id="stop575nm" offset="0.527027" style="stop-color:#DCCE20;" />
+  <stop id="stop580nm" offset="0.540541" style="stop-color:#ECC420;" />
+  <stop id="stop585nm" offset="0.554054" style="stop-color:#F2B735;" />
+  <stop id="stop590nm" offset="0.567568" style="stop-color:#F5AB42;" />
+  <stop id="stop595nm" offset="0.581081" style="stop-color:#F69F49;" />
+  <stop id="stop600nm" offset="0.594595" style="stop-color:#F7944B;" />
+  <stop id="stop605nm" offset="0.608108" style="stop-color:#F98848;" />
+  <stop id="stop610nm" offset="0.621622" style="stop-color:#FA7B42;" />
+  <stop id="stop615nm" offset="0.635135" style="stop-color:#FB6C39;" />
+  <stop id="stop620nm" offset="0.648649" style="stop-color:#FD5B2E;" />
+  <stop id="stop625nm" offset="0.662162" style="stop-color:#FC471F;" />
+  <stop id="stop630nm" offset="0.675676" style="stop-color:#F7300F;" />
+  <stop id="stop635nm" offset="0.689189" style="stop-color:#EA220D;" />
+  <stop id="stop640nm" offset="0.702703" style="stop-color:#D42215;" />
+  <stop id="stop645nm" offset="0.716216" style="stop-color:#BF2318;" />
+  <stop id="stop650nm" offset="0.729730" style="stop-color:#A92309;" />
+  <stop id="stop655nm" offset="0.743243" style="stop-color:#981F07;" />
+  <stop id="stop660nm" offset="0.756757" style="stop-color:#871B06;" />
+  <stop id="stop665nm" offset="0.770270" style="stop-color:#771805;" />
+  <stop id="stop670nm" offset="0.783784" style="stop-color:#671504;" />
+  <stop id="stop675nm" offset="0.797297" style="stop-color:#591303;" />
+  <stop id="stop680nm" offset="0.810811" style="stop-color:#4D1103;" />
+  <stop id="stop685nm" offset="0.824324" style="stop-color:#420E02;" />
+  <stop id="stop690nm" offset="0.837838" style="stop-color:#370C01;" />
+  <stop id="stop695nm" offset="0.851351" style="stop-color:#2E0A01;" />
+  <stop id="stop700nm" offset="0.864865" style="stop-color:#270801;" />
+  <stop id="stop705nm" offset="0.878378" style="stop-color:#210600;" />
+  <stop id="stop710nm" offset="0.891892" style="stop-color:#1E0400;" />
+  <stop id="stop715nm" offset="0.905405" style="stop-color:#1A0300;" />
+  <stop id="stop720nm" offset="0.918919" style="stop-color:#170200;" />
+  <stop id="stop725nm" offset="0.932432" style="stop-color:#130100;" />
+  <stop id="stop730nm" offset="0.945946" style="stop-color:#100100;" />
+  <stop id="stop735nm" offset="0.959459" style="stop-color:#0C0100;" />
+  <stop id="stop740nm" offset="0.972973" style="stop-color:#080100;" />
+  <stop id="stop745nm" offset="0.986486" style="stop-color:#060100;" />
+  <stop id="stop750nm" offset="1.000000" style="stop-color:#040100;" />
+</linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#spectrumGradient"
+       id="linearGradient3161"
+       x1="192.78572"
+       y1="378.07645"
+       x2="652.92859"
+       y2="378.07645"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.31031, 0, 0, 0.339394, -252.075, -49.3168)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.87091988"
+     inkscape:cx="243.81881"
+     inkscape:cy="99.952637"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1166"
+     inkscape:window-height="439"
+     inkscape:window-x="75"
+     inkscape:window-y="257" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Blended linear spectrum</dc:title>
+        <dc:date>2008-Aug-27</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Hall (gringer)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:description>A linear representation of the visible light spectrum.</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>colour spectrum</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity: 1; fill: url(#linearGradient3161) rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 1; stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect2383"
+       width="599"
+       height="64"
+       x="2.5"
+       y="47" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+       d="M 2.5,3.99989 L 2.5,43"
+       id="path3208" />
+    <path
+       id="path3210"
+       d="M 116.5,3.99989 L 116.5,43"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+       d="M 188.5,3.999478 L 188.5,42.999588"
+       id="path3212" />
+    <path
+       id="path3214"
+       d="M 308.5,3.99989 L 308.5,43"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+       d="M 344.50001,3.99989 L 344.50001,43"
+       id="path3216" />
+    <path
+       id="path3218"
+       d="M 392.5,3.999478 L 392.5,42.999588"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+       d="M 602.5,3.99989 L 602.5,43"
+       id="path3220" />
+    <text
+       xml:space="preserve"
+       style="font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="497.007"
+       y="30.7897"
+       id="text3270"><tspan
+         sodipodi:role="line"
+         id="tspan3272"
+         x="497.007"
+         y="30.7897">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="368.473"
+       y="30.6797"
+       id="text3274"><tspan
+         sodipodi:role="line"
+         id="tspan3276"
+         x="368.473"
+         y="30.6797">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="321.28"
+       y="30.7899"
+       id="text3278"><tspan
+         sodipodi:role="line"
+         id="tspan3280"
+         x="321.28"
+         y="30.7899">Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="248.743"
+       y="30.6797"
+       id="text3282"><tspan
+         sodipodi:role="line"
+         id="tspan3284"
+         x="248.743"
+         y="30.6797">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="152.16"
+       y="30.7897"
+       id="text3286"><tspan
+         sodipodi:role="line"
+         id="tspan3288"
+         x="152.16"
+         y="30.7897">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="59.4297"
+       y="30.7899"
+       id="text3290"><tspan
+         sodipodi:role="line"
+         id="tspan3292"
+         x="59.4297"
+         y="30.7899">V</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.4117"
+       y="13.09"
+       id="text3320"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3322"
+         x="-23.4117"
+         y="13.09">380</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.3917"
+       y="112.77"
+       id="text3324"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3326"
+         x="-23.3917"
+         y="112.77">450</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.4213"
+       y="184.77"
+       id="text3328"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3330"
+         x="-23.4213"
+         y="184.77">495</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.4267"
+       y="304.77"
+       id="text3332"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3334"
+         x="-23.4267"
+         y="304.77">570</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.4267"
+       y="340.77"
+       id="text3336"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="-23.4267"
+         y="340.77">590</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.4663"
+       y="388.77"
+       id="text3340"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3342"
+         x="-23.4663"
+         y="388.77">620</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"
+       x="-23.4817"
+       y="598.77"
+       id="text3344"
+       transform="matrix(0, -1, 1, 0, 0, 0)"><tspan
+         sodipodi:role="line"
+         id="tspan3346"
+         x="-23.4817"
+         y="598.77">750</tspan></text>
+  </g>
+</svg>
