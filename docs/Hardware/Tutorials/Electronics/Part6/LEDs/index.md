@@ -24,7 +24,9 @@ As electrons move into the holes in the P-Type lattice from the N-Type, they mov
 
 In silicon, the electron orbital drop is very small, so the light released is also low energy, and the photon escapes at a low frequency of vibration. Since the color of light depends on its frequency, the light emitted is in the infrared spectrum, which is just below the frequency energies of the visible light spectrum.
 
-Most diodes are designed in such a way that the P-N junction is hidden inside its casing, so these emissions are not visible. LEDs, however, are constructed in such a way that light can escape through them, and the materials used also have a much higher electron orbital energy drop when they combine with the holes. Typical through-hole LEDs have a flat spot on the cathode side, and a longer anode leg, signifying how to wire them up with the correct polarity:
+Most diodes are designed in such a way that the P-N junction is hidden inside its casing, so these emissions are not visible. LEDs, however, are constructed in such a way that light can escape through them, and the materials used also have a much higher electron orbital energy drop when they combine with the holes. 
+
+Typical through-hole LEDs have a flat spot on the cathode side, and a longer anode leg, signifying how to wire them up with the correct polarity:
 
 ![](../Support_Files/LED_Components.svg)
 
@@ -32,13 +34,13 @@ Through-hole RGB LEDs will have a "common" leg that's longer than the rest, whic
 
 [picture of an RGB LED]
 
-Because they have a higher electron orbital energy transition, the photons released are at high energies, therefore at higher frequencies, usually in the visible light spectrum:
+## LED Colors
+
+Because LEDs have a higher electron orbital energy transition than most diodes, the photons released are at higher energy/frequency, usually in the visible light spectrum (note that the energy/frequency is higher to the left, and lower to the right in the following image):
 
 ![](../Support_Files/Linear_visible_spectrum.svg)
 
-## LED Colors
-
-What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. This voltage drop increases with the light frequency:
+What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. The voltage drop therefore generally increases with the light frequency:
 
 | Color  | V<sub>f</sub> (Voltage drop)| I<sub>fmax</sub> (max. current) |
 |--------|---------------|------------------|
