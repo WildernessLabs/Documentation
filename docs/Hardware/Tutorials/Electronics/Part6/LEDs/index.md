@@ -70,7 +70,7 @@ This is because of conduction behavior of the P-N junction. Recall the generaliz
 
 [illustration: right half of the Diode behavior curve]
 
-The issue is that once the voltage requirements have been met to overcome the junction potential, further increases in voltage greatly reduce the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick then with LEDs is to supply just enough voltage to light them up.
+The issue is that once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduce the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick then with LEDs is to supply just enough voltage to light them up.
 
 There are two common ways to control the voltage, either with a resistor, or by driving it with a PWM signal.
 
@@ -95,13 +95,13 @@ R = (Vs - Fv) / I
 
 #### Example
 
-For example, let's say that we have a red LED that has a maximum current rating of `20mA`, and a `V`<sub>`f`</sub> of `1.8V`, that we're driving from a `5V` voltage source. Solving for `R` then:
+For example, let's say that we have a red LED that has a maximum current rating of `20mA`, and a `V`<sub>`f`</sub> of `1.8V`, and we're driving it from a `3.3V` voltage source. Solving for `R` then:
 
 ```
-R = (5V - 1.8V) / 0.020A = 160Ω
+R = (3.3V - 1.8V) / 0.020A = 75Ω
 ```
 
-The circuit would need at least a `160Ω` resistor to safely drive the LED.
+The circuit would need at least a `75Ω` resistor to safely drive the LED.
 
 However, in practice, we typically use a much larger resistor value because at the maximum current, LEDs tend to be far too bright, and therefore need to be dimmed. I typically double the required resistor value and then tune from there.  In fact, most of the time when throwing together quick circuits, I just grab a `330Ω` resistor and call it good!
 
@@ -109,7 +109,7 @@ However, in practice, we typically use a much larger resistor value because at t
 
 In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit, or use a Pulse-Width-Modulation (PWM) signal. 
 
-PWM is a way of controlling voltage digitally to emulate an analog signal, in which instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V` by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
+PWM is a way of controlling voltage digitally to emulate an analog signal, in which instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V`, by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
 
 ![PWM 50% Duty Cycle](../Support_Files/PWM_50p_DutyCycle.svg)
 
