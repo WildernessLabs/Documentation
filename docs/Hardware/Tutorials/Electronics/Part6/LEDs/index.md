@@ -52,7 +52,7 @@ What's interesting about this, is that in order to change the color of light emi
 
 White LEDs are usually a blue LED with a coating that makes the light white, however, some higher-end white LEDs actually have red, green, and blue LEDs in them which light in unison to create white.
 
-Powering Blue LEDs can be tricky on `3.3V` because many of them have a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases voltages. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
+Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases voltages. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
 
 ## Using LEDs in Circuits
 
@@ -62,7 +62,7 @@ Single LED circuits are typically fairly simple, requiring only a DC power sourc
 
 RGB LEDs are only slightly more complex, and come in two flavors, depending on whether they're common cathode common anode:
 
-[RGB wiring diagram]
+![](../Support_Files/RGB_LED_Wiring.svg)
 
 ### Reducing Voltage and Current
 
@@ -79,6 +79,8 @@ There are two common ways to control the voltage, either with a resistor, or by 
 Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when on. A PWM signal is also reasonably simple, but is often done in software. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
 
 ### Limiting Current with a Resistor
+
+[usually called a _ballast_ resistor]
 
 To calculate the resistance needed to reduce the voltage, we start with Ohm's law, solved for resistance:
 
@@ -106,6 +108,20 @@ R = (3.3V - 1.8V) / 0.020A = 75Ω
 The circuit would need at least a `75Ω` resistor to safely drive the LED.
 
 However, in practice, we typically use a much larger resistor value because at the maximum current, LEDs tend to be far too bright, and therefore need to be dimmed. I typically double the required resistor value and then tune from there.  In fact, most of the time when throwing together quick circuits, I just grab a `330Ω` resistor and call it good!
+
+### LEDs in Series
+
+[http://www.resistorguide.com/resistor-for-led/]
+
+### LEDs in Parallel
+
+[single resistor doesn't work well because the LEDs are usually not perfectly balanced, so only one will light up.]
+
+[best to use a resistor for each LED]
+
+### Online LED Resistance Calculator
+
+[link and description]
 
 ### Reducing Current with a PWM Signal
 

@@ -10,5 +10,11 @@ In this lab we'll..
 
 [creating logic gates and indicating via LEDs]
 
+# Requirements
+
+# Exercise 1: OR Gate
+
+# Exercise 2: AND Gate
+
 
 # [Next - Chapter Review](../Review)

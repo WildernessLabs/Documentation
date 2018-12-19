@@ -4,6 +4,13 @@ title: Diodes
 subtitle: Stuff
 ---
 
+# Notes:
+
+* Need to condense this page a bit and make it more intro
+* Explain the basic characteristics in which diodes are described
+* Add a table of diode types, general characteristics, circuit symbol, and use
+* Bring the dam analogy forward. Also, it applies to forward biased diodes as well.
+
 # Intro
 
 As we examined in the last section, a diode is basically just a P-N junction with leads attached to either side. The anode (`A`) is the lead attached to the P-type side, the cathode (`K`) is attached to the N-type side, and the preferential, or forward bias is when electrons flow from cathode to anode (which means anode is hooked to the positive voltage source):
