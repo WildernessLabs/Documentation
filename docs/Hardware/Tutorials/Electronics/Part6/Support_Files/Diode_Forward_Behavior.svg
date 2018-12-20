@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="370px" viewBox="0 0 900 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Diode_Forward_Behavior</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Diode_Forward_Behavior" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#EEEEEE" x="0" y="0" width="900" height="530"></rect>
+        <g id="Illustration" transform="translate(134.000000, 66.000000)">
+            <g id="Labels" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-weight="normal">
+                <text id="Current" font-size="36" letter-spacing="-2.159999" fill="#524740">
+                    <tspan x="0.4699965" y="25">Current</tspan>
+                </text>
+                <text id="Voltage" font-size="36" letter-spacing="-2.159999" fill="#524740">
+                    <tspan x="298.399996" y="227">Voltage</tspan>
+                </text>
+                <text id="Narrow-Band-of-Curre" font-size="26" letter-spacing="-1.559999" fill="#84705B">
+                    <tspan x="145.387994" y="113">Narrow Band </tspan>
+                    <tspan x="157.386995" y="139">of Current </tspan>
+                    <tspan x="169.320997" y="165">Control</tspan>
+                </text>
+            </g>
+            <g id="Graph-Lines" transform="translate(50.000000, 40.000000)">
+                <rect id="Rectangle" fill="#CAEBF8" x="44" y="138" width="30" height="40"></rect>
+                <path d="M1.352001,178.5 L227,178.5" id="Line-5" stroke="#3D3530" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M220.444444,156.444444 L220.444444,148 L222.555556,148 L222.555556,156.444444 L231,156.444444 L231,158.555556 L222.555556,158.555556 L222.555556,167 L220.444444,167 L220.444444,158.555556 L212,158.555556 L212,156.444444 L220.444444,156.444444 Z" id="Combined-Shape" fill="#23ABE3"></path>
+                <path d="M1.352001,0.5 L1.352001,233.912015" id="Line-6" stroke="#3D3530" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M44,139 L44,195.577368" id="Line-7" stroke="#23ABE3" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M74,139 L74,195.577368" id="Line-7-Copy" stroke="#23ABE3" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M89.9333858,0.5 C89.3214832,38.6660098 86.736833,70.1404484 82.8501615,95.4013237 C74.2110122,151.55026 59.1389984,177 45,177 C24.5,177 13.4827139,177 0.982713925,177" id="Path-9" stroke="#EF7D3B" stroke-width="3"></path>
+            </g>
+            <path id="Line-8" d="M122.299914,171.640597 L150.828088,145.759369 L151.568718,145.087457 L152.912543,146.568718 L152.171912,147.240631 L123.643739,173.121858 L127.675213,177.565642 L112.602997,181.788 L118.26844,167.196813 L122.299914,171.640597 Z" fill="#84705B" fill-rule="nonzero"></path>
+        </g>
+        <text id="Diode-Forward-Voltag" font-family="Wavehaus-66Book, Wavehaus" font-size="36" font-weight="300" letter-spacing="-2.159999" fill="#23ABE3">
+            <tspan x="13" y="44">Diode Forward Voltage Response</tspan>
+        </text>
+    </g>
+</svg>

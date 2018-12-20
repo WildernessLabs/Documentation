@@ -68,11 +68,11 @@ RGB LEDs are only slightly more complex, and come in two flavors, depending on w
 
 If you plug in an LED to a `3.3V` voltage source without reducing the voltage (and current), two things are likely to occur; one the LED is going to be very bright, and two, it's going to burn out.
 
-This is because of conduction behavior of the P-N junction. Recall the generalized diode behavior graph:
+This is because of conduction behavior of the P-N junction. Recall the right half of the generalized diode behavior graph:
 
-[illustration: right half of the Diode behavior curve]
+![](../Support_Files/Diode_Forward_Behavior.svg)
 
-The issue is that once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduce the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick then with LEDs is to supply just enough voltage to light them up.
+Once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduce the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick then with LEDs is to supply just enough voltage to light them up.
 
 There are two common ways to control the voltage, either with a resistor, or by driving it with a PWM signal.
 
