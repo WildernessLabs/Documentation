@@ -10,7 +10,7 @@ LEDs come in a variety of packages and combinations. Many packages have an arran
 
 ![](/Hardware/Reference/Components/LEDs/SomeLEDs.jpg)
 
-However, no matter what they look like, they're all basically the same to use and there are only practical circuit concerns; first, making sure the _polarity_ is correct, and second, limiting the current through them so they don't burn out.
+However, no matter what they look like, they're all basically the same to use and there are only two practical circuit concerns; first, making sure the _polarity_ is correct, and second, limiting the current through them so they don't burn out.
 
 The circuit symbol for an LED is a diode with arrows coming out of it, signifying the photon emission:
 
@@ -78,9 +78,9 @@ There are two common ways to control the voltage, either with a resistor, or by 
 
 Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when on. A PWM signal is also reasonably simple, but is often done in software. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
 
-### Limiting Current with a Resistor
+### Limiting Current with a Ballast Resistor
 
-[usually called a _ballast_ resistor]
+A resistor that's used to limit runaway current is sometimes called a _ballast_ resistor.
 
 To calculate the resistance needed to reduce the voltage, we start with Ohm's law, solved for resistance:
 
@@ -112,6 +112,17 @@ However, in practice, we typically use a much larger resistor value because at t
 ### LEDs in Series
 
 [http://www.resistorguide.com/resistor-for-led/]
+
+[need to add all voltage drops together]
+
+```
+R = (Vs - Vf1 - Vfn...) / I
+```
+
+[may not have enough voltage available to drive them in series, if so, drive in parallel]
+
+[q: how to account for varying current requirements?]
+
 
 ### LEDs in Parallel
 

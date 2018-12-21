@@ -6,11 +6,11 @@ subtitle: Fundamental building block of modern electronics.
 
 # Combining P-Type and N-Type Semiconductors
 
-By sandwiching a piece of P-Type and N-Type semiconductor together into what's known as a _P-N Junction_, interesting electrical properties arise from the underlying atomic drama. **The P-N Junction is the probably the single most important structure in electronics** and is the heart of many common semiconductor components such as Diodes, Transistors, Integrated Circuits, Solar Cells, and more. 
+By sandwiching a piece of P-type and N-type semiconductor together into what's known as a _P-N Junction_, interesting electrical properties arise from the underlying atomic drama. **The P-N Junction is the probably the single most important structure in electronics** and is the heart of many common semiconductor components such as diodes, transistors, integrated circuits (ICs), solar cells, and more. 
 
 ## Atomic Behavior
 
-When P-Type and N-Type semiconductors are joined, the free electrons from the N-Type side _diffuse_ nearby into the P-Type side to fill the holes:
+When P-type and N-type semiconductors are joined, the free electrons from the N-Type side _diffuse_ nearby into the P-type side to fill the holes:
 
 ![](../Support_Files/P-N_Junction_Electron_Diffusion.svg)
 
@@ -28,13 +28,13 @@ This electric field is known as the _Junction Potential_ and is usually between 
 
 ## Anode + Cathode
 
-Putting metal connectors on either side of the P-N Junction creates what are known as an _Anode_ (A) and a _Cathode_ (K). The anode is on the P-Type side, and the cathode is on the N-Type side. This effectively creates a component called a _Diode_:
+Putting metal connectors on either side of the P-N Junction creates what are known as an _anode_ (A) and a _cathode_ (K). The anode is on the P-type side, and the cathode is on the N-type side. This effectively creates a component called a _diode_:
 
 ![Anode and Cathode](../Support_Files/Diode.svg)
 
 ## Forward Biasing
 
-Applying a positive current to the Anode and a negative current to the cathode side is a preferential _bias_, because the positive hole charge carriers and negative electrons are pushed towards the junction, thus shrinking the depletion zone. This voltage application, in the preferential direction of current flow is called _forward biasing_:
+Applying a positive current to the anode and a negative current to the cathode side is a preferential _bias_, because the positive hole charge carriers and negative electrons are pushed towards the junction, thus shrinking the depletion zone. This voltage application, in the preferential direction of current flow is called _forward biasing_:
 
 ![](../Support_Files/Diode_Forward_Bias.svg)
 
@@ -42,13 +42,21 @@ Applying a positive current to the Anode and a negative current to the cathode s
 
 ![](../Support_Files/Diode_Forward_Bias_Over_Vf.svg)
 
+### Voltage Drop (`V`<sub>`f`</sub>)
+
 **The amount of voltage needed to push forward through the depletion region is known as the _forward voltage_ (`V`<sub>`f`</sub>), or _voltage drop_,** because if charge carriers are pushed through this region at `1.0V`, when they come out on the other side they will only have `0.3V` (`1.0V` - `0.7V`) because they dropped `0.7V` in force.
+
+### P-N Junctions are like Water Dams
+
+An interesting consequence of voltage drop is that it provides a sort of back pressure; any voltage above `V`<sub>`f`</sub>. is let past the junction, but the voltage measured on the side pushing will read the same as the `V`<sub>`f`</sub>. In this way, revisiting the water analogies, we can think of a P-N junction as a sort of dam, in which the dam wall is `V`<sub>`f`</sub> high, and any additional voltage is let past:
+
+[illustration of a dam in which the wall is Vf high, and excess V is let past]
 
 Voltage drop is an important concept that will come up over and over in circuit design.
 
 ## Reverse Biasing
 
-_Reverse biasing_ is when a voltage is applied in the opposite direction of preferential current flow. This causes the holes in the P-Type side to be attracted to the Anode, and the electrons in the N-Type side to be attracted to the Cathode, causing the depletion region to widen:
+_Reverse biasing_ is when a voltage is applied in the opposite direction of preferential current flow. This causes the holes in the P-type side to be attracted to the Anode, and the electrons in the N-type side to be attracted to the Cathode, causing the depletion region to widen:
 
 ![](../Support_Files/Diode_Reverse_Bias.svg)
 
@@ -56,7 +64,7 @@ When this happens, the area of negative and positively charged ions increases, w
 
 ### Leakage Current/Reverse Saturation Current
 
-However, while the junction potential is actually much higher when reverse biased, some minuscule amount of current current will actually flow because the polarity of the depletion region is opposite to the small amount of minority carriers that are present. So holes can flow from P-Type to N-Type, and electrons can flow from N-Type to P-Type. This current, however, is very small to the point of negligibility, usually in the range of nano-amperes (`nA`). A nano amp is `1 / 1,000,000,000A`.
+However, while the junction potential is actually much higher when reverse biased, some minuscule amount of current current will actually flow because the polarity of the depletion region is opposite to the small amount of minority carriers that are present. So holes can flow from P-type to N-type, and electrons can flow from N-type to P-type. This current, however, is very small to the point of negligibility, usually in the range of nano-amperes (`nA`). A nano amp is `1 / 1,000,000,000A`.
 
 ### Breakdown Voltage and Avalanche Current
 
@@ -66,7 +74,7 @@ Some diodes are specifically designed with this behavior in mind, and we'll exam
 
 ## Voltage and Current Response Characteristics
 
-The current response to forward and reverse bias currents is described in the following graph:
+Generally, the current response to forward and reverse bias currents of a P-N junction is described in the following graph:
 
 ![](../Support_Files/Diode_Behavior.svg)
 
