@@ -85,6 +85,8 @@ Schottky diodes have a very low voltage drop (`V`<sub>`f`</sub>) which makes the
 Diodes can be arranged in such a way called a _logic gate_ which provide logical operations in a circuit such as `AND` and `OR`. This allows you to determine if multiple inputs are all `ON` or `OFF` as well as if any of the inputs are `ON` or `OFF`. We'll explore how this can be useful in this chapter's labs.
 
 [illustration of a simple OR gate]
+
+[truth table]
  
 ## Zener Diodes
 
@@ -92,45 +94,23 @@ Zener diodes have a known, precise breakdown voltage, which as we'll explore, ca
    
 ### Voltage Reference
 
-Sometimes, a circuit needs a reference signal at a precise voltage [necessary for ADC conversions/comparators, and voltage regulators]
-
-[zener diodes have a known, precise breakdown voltage]
-
-[as long as you constrain the current, you can keep it within a precise band]
-
-##### Water Analogy
-
-Revisiting the water analogy, we can think of a forward biased diode as a one-way valve:
-
-[illustration]
-
-##### Reverse Biasing == Water Dam
-
-However, something interesting (and it turns out, very useful) happens when a diode is reverse biased. 
-
-As the reverse bias voltage increases, the depletion region expands, which also increases the junction potential/voltage drop (`V`<sub>`f`</sub>), until it reaches its breakdown voltage. Many diodes are designed so that they're breakdown voltage is very high, so under their expected loads they're always a one way valve, but others are designed to reach that threshold at precise, lower voltages.
-
-Another way to think of `V`<sub>`f`</sub> is that it "pushes back" at that force. So if a diode has a breakdown voltage of `5V`, this means that it holds back `5V` of force, and lets anything over `5V` flow past it.
-
-In this sense, it acts like a water damn that's `5V` high:
-
-[illustration of water going over a damn that's 5V high].
-
-No matter how much voltage goes over it, there's always `5V` of pressure behind it. This has some interesting ramifications. Consider the following circuit:
+Sometimes, a circuit needs a reference signal at a precise voltage. Because zener diodes have a precise breakdown voltage, they can be reverse biased in a circuit to use the back-pressure of their `V`<sub>`f`</sub> to provide a reference. Consider the following circuit:
 
 ![](../Support_Files/Zener_Voltage_Reference_Circuit.svg)
 
-In this circuit, a special type of diode, known as a _zener diode_ is used. Zener diodes are designed in such a way that they have a very precise breakdown voltage. In the case of the circuit above, a zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Above the diode is a resistor to prevent too much current flowing and breaking the diode. There is also a line coming out between the resistor and the diode.
+In the case of the circuit above, a zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Since the voltage drop acts like a dam, no matter how much voltage is applied, `5V` of back pressure will always be present:
+
+![](../Support_Files/Voltage_Reference.svg)
+
+As long as the current is limited, in this case with a resistor, it will stay within that precise operating band:
 
 Recall the diode behavior chart from before, specifically the breakdown behavior:
 
 [zoomed in version of the diode breakdown curve]
 
-### Voltage Reference
+While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same. 
 
-While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `VOUT` reference will always be the same. 
-
-And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable _voltage reference_, which as we'll explore in later circuits, is very useful indeed.
+And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, [necessary for ADC conversions/comparators, and voltage regulators]
 
 
 ## Light-Related Diodes
