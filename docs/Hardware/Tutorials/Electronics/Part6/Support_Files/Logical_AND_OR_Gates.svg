@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="803px" height="404px" viewBox="0 0 803 404" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Logical_AND_OR_Gates</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Logical_AND_OR_Gates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" fill="#EEEEEE">
+            <rect id="Rectangle" x="0" y="0" width="803" height="404"></rect>
+        </g>
+        <g id="Logical_AND_OR" transform="translate(58.000000, 19.000000)">
+            <g id="Group" transform="translate(64.000000, 149.000000)">
+                <path d="M64,13 L41,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M22,13 L0,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="41 26 41 0 22 13"></polygon>
+                <polygon id="Path" stroke="#000000" stroke-width="2" points="41 26 41 0 22 13"></polygon>
+                <path d="M22,26 L22,0" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <g id="Group" transform="translate(64.000000, 213.000000)">
+                <path d="M64,13 L41,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M22,13 L0,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="41 26 41 0 22 13"></polygon>
+                <polygon id="Path" stroke="#000000" stroke-width="2" points="41 26 41 0 22 13"></polygon>
+                <path d="M22,26 L22,0" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <g id="Group" transform="translate(135.000000, 0.000000)">
+                <path d="M15,19 L35,19" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M25,66 L25,19" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <text id="+3.3V" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="0" y="15">+3.3V</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(152.000000, 66.000000)" stroke="#000000" stroke-linecap="round" stroke-width="3">
+                <path d="M8,0 L8,16" id="Path"></path>
+                <path d="M8,48 L8,64" id="Path"></path>
+                <polyline id="Path" stroke-linejoin="round" points="8 16 16 18.6667 8 21.3333 0 24 8 26.6667"></polyline>
+                <polyline id="Path" stroke-linejoin="round" points="8 26.6667 16 29.3333 8 32 0 34.6667 8 37.3333"></polyline>
+                <polyline id="Path" stroke-linejoin="round" points="8 37.3333 16 40 8 42.6667 0 45.3333 8 48"></polyline>
+            </g>
+            <g id="Group" transform="translate(156.000000, 130.000000)">
+                <path d="M4,32 L4,0" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="32" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(224.000000, 184.000000)">
+                <polygon id="Path" fill-opacity="0.831372549" fill="#FFFFFF" points="0 10 8 0 64 0 64 20 8 20"></polygon>
+                <polygon id="Path" stroke="#000000" points="0 10 8 0 64 0 64 20 8 20"></polygon>
+                <text id="3" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="27" y="15">3</tspan>
+                </text>
+                <text id="Out" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="72" y="15">Out</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(156.000000, 158.000000)">
+                <path d="M4,36 L4,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="36" r="4"></circle>
+                <circle id="Oval" fill="#000000" cx="4" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(156.000000, 190.000000)">
+                <path d="M68,4 L4,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(128.000000, 158.000000)">
+                <path d="M0,4 L32,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="32" cy="4" r="4"></circle>
+            </g>
+            <path d="M128,226 L160,226" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+            <g id="Group" transform="translate(156.000000, 190.000000)">
+                <path d="M4,36 L4,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(24.000000, 58.000000)">
+                <rect id="Rectangle" fill-opacity="0.831372549" fill="#FFFFFF" x="0" y="0" width="96" height="44"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" x="0" y="0" width="96" height="44" rx="5"></rect>
+                <text id="Logical" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="8" y="18">Logical</tspan>
+                </text>
+                <text id="AND" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="33" y="36">AND</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(480.000000, 149.000000)">
+                <path d="M0,13 L22,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M41,13 L64,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="22 0 22 26 41 13"></polygon>
+                <polygon id="Path" stroke="#000000" stroke-width="2" points="22 0 22 26 41 13"></polygon>
+                <path d="M41,0 L41,26" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <g id="Group" transform="translate(568.000000, 222.000000)">
+                <path d="M8,4 L8,20" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M8,52 L8,68" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <polyline id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="8 20 16 22.6667 8 25.3333 0 28 8 30.6667"></polyline>
+                <polyline id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="8 30.6667 16 33.3333 8 36 0 38.6667 8 41.3333"></polyline>
+                <polyline id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="8 41.3333 16 44 8 46.6667 0 49.3333 8 52"></polyline>
+                <circle id="Oval" fill="#000000" cx="8" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(640.000000, 184.000000)">
+                <polygon id="Path" fill-opacity="0.831372549" fill="#FFFFFF" points="0 10 8 0 64 0 64 20 8 20"></polygon>
+                <polygon id="Path" stroke="#000000" points="0 10 8 0 64 0 64 20 8 20"></polygon>
+                <text id="7" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="27" y="15">7</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(572.000000, 190.000000)">
+                <path d="M68,4 L4,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(544.000000, 222.000000)">
+                <path d="M0,4 L32,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="32" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(572.000000, 190.000000)">
+                <path d="M4,36 L4,4" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="36" r="4"></circle>
+                <circle id="Oval" fill="#000000" cx="4" cy="4" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(440.000000, 58.000000)">
+                <rect id="Rectangle" fill-opacity="0.831372549" fill="#FFFFFF" x="0" y="0" width="96" height="44"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" x="0" y="0" width="96" height="44" rx="5"></rect>
+                <text id="Logical" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="8" y="18">Logical</tspan>
+                </text>
+                <text id="OR" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="38" y="36">OR</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(0.000000, 152.000000)">
+                <polygon id="Path" fill-opacity="0.831372549" fill="#FFFFFF" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <polygon id="Path" stroke="#000000" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <text id="1" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="27" y="15">1</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(0.000000, 216.000000)">
+                <polygon id="Path" fill-opacity="0.831372549" fill="#FFFFFF" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <polygon id="Path" stroke="#000000" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <text id="2" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="27" y="15">2</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(566.000000, 290.000000)" stroke="#000000" stroke-linecap="round" stroke-width="3">
+                <path d="M10,0 L10,64" id="Path"></path>
+                <path d="M20,64 L0,64" id="Path"></path>
+                <path d="M16,69 L4,69" id="Path"></path>
+                <path d="M12,74 L8,74" id="Path"></path>
+            </g>
+            <g id="Group" transform="translate(572.000000, 162.000000)">
+                <path d="M4,0 L4,32" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" fill="#000000" cx="4" cy="32" r="4"></circle>
+            </g>
+            <g id="Group" transform="translate(480.000000, 213.000000)">
+                <path d="M0,13 L22,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M41,13 L64,13" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+                <polygon id="Path" fill="#000000" points="22 0 22 26 41 13"></polygon>
+                <polygon id="Path" stroke="#000000" stroke-width="2" points="22 0 22 26 41 13"></polygon>
+                <path d="M41,0 L41,26" id="Path" stroke="#000000" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <path d="M544,162 L576,162" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+            <g id="Group" transform="translate(416.000000, 152.000000)">
+                <polygon id="Path" fill-opacity="0.831372549" fill="#FFFFFF" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <polygon id="Path" stroke="#000000" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <text id="4" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="27" y="15">4</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(416.000000, 216.000000)">
+                <polygon id="Path" fill-opacity="0.831372549" fill="#FFFFFF" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <polygon id="Path" stroke="#000000" points="64 10 56 20 0 20 0 0 56 0"></polygon>
+                <text id="5" fill="#000000" font-family="Helvetica" font-size="15" font-weight="normal">
+                    <tspan x="27" y="15">5</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

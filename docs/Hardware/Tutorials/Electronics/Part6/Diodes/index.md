@@ -76,17 +76,84 @@ Alternating Current (AC) electrical signals can be converted into Direct Current
 
 Rectifiers are used as the first stage in converting household mains AC current into smooth DC current for use in electronics in nearly all power AC power adapters. For example, the USB wall adapter that you plug your phone into to charge converts AC to DC using a rectifier. In fact, nearly every electronic around you that plugs into the wall use a rectifier someplace.
 
-## Schottky Diodes
+## Schottky Barrier Diodes
 
-Schottky diodes have a very low voltage drop (`V`<sub>`f`</sub>) which makes them very fast and are often used to form simple circuit logic. 
+[ON 1N5817]
+
+[metal instead of the N-type layer, but same general principal]
+
+[illustration of a Schottky cross section]
+
+[circuit symbol]
+
+Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>) of around   `0.2V` (`0.15V` - `0.45V`) which makes them very fast and also allow them to be used to form simple circuit logic.
+
+[why you would want to use them]
 
 ### Logic Gates
 
-Diodes can be arranged in such a way called a _logic gate_ which provide logical operations in a circuit such as `AND` and `OR`. This allows you to determine if multiple inputs are all `ON` or `OFF` as well as if any of the inputs are `ON` or `OFF`. We'll explore how this can be useful in this chapter's labs.
+Diode circuits can be arranged to provide logical operations in a circuit such as `AND` and `OR`, called _logic gates_. This allows you to determine if multiple inputs are all `ON` as well as if any of the inputs are `ON` or `OFF`. We'll explore how this can be useful in this chapter's labs.
 
-[illustration of a simple OR gate]
+Consider the following circuits:
+
+[NOTE: reverse these, put OR first, since it's simpler]
+
+![](../Support_Files/Logical_AND_OR_Gates.svg)
+
+#### OR Gate Truth Table
+
+_Truth tables_ are used to describe the resulting output from inputs based on the operation/function. The following truth table describes the resulting output based on the possible inputs to an `OR` gate:
+
+| Input 1 | Input 2 | Output |
+|---------|---------|--------|
+| 0       | 0       | 0      |
+| 0       | **1**   | **1**  |
+| **1**   | 0       | **1**  |
+| **1**   | **1**   | **1**  |
+
+In the truth table, `0` and `1` represent `LOW` and `HIGH`, respectively. In the case of our circuit, this means somewhere around `0V` for `LOW` and `3.3V` for `HIGH`. 
+
+In the case of an `OR` gate, as long as any input is `1`, the output will also be `1`. This makes sense, because applying voltage to either diode will provide voltage to the output.
+
+However, recall from [earlier](link) that digital logic levels don't have to be exactly `0V` and `3.3V`, but rather, `LOW` can be up to `1.1V`, and `HIGH` can be as low as `2.2V`. This is important, because in a practical circuit implementation of the above, some voltage is actually lost to the voltage drop of the diode. If the `V`<sub>`f`</sub> of the diodes are `0.2V`, then only `3.1V` is actually read on the output.
+
+
+#### AND Gate Truth Table
+
+The `AND` gate is a slightly more clever than the `OR` gate.
+
+
+| Input 1 | Input 2 | Output |
+|---------|---------|--------|
+| 0       | 0       | 0      |
+| 0       | 1       | 0      |
+| 1       | 0       | 0      |
+| **1**   | **1**   | **1**  |
 
 [truth table]
+
+# Logic Levels [Move to earlier in the tutorial]
+
+[digital isn't true digital/on/off]
+
+[note about how digital is a lie. it's all an approximation. so a schottky with a back pressure of `200mV` still reads as `0`]
+
+[Logic Levels for _CMOS_:]
+
+[0 V to 1/3 VDD	2/3 VDD to VDD]
+
+* `0V` - `1.1V` = `0`
+* `2.2V` - `3.3V` = `1`
+
+[illustration of digital signal 
+
+
+```
+0 = OFF = ~0V = GND = LOW
+1 = ON = ~3.3V = VDD = HIGH
+```
+
+
  
 ## Zener Diodes
 
