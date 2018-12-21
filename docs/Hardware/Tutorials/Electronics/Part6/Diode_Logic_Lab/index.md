@@ -17,4 +17,4 @@ In this lab we'll..
 # Exercise 2: AND Gate
 
 
-# [Next - Chapter Review](../Review)
+# [Next - Light Related Diodes](../Light_Related_Diodes)

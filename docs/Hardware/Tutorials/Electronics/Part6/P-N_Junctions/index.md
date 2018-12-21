@@ -84,4 +84,4 @@ The left half of the graph represents a reverse bias current, that is, positive 
 
 As we'll learn in the next section, the behavior after reaching breakdown voltage can be effectively used to do some pretty useful things.
 
-# [Next - Diodes](../Diodes)
+# [Next - Common Diodes and their Uses](../General_Diodes)

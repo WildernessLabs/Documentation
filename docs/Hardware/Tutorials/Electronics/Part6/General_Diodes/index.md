@@ -1,13 +1,12 @@
 ---
 layout: ElectronicsTutorial
-title: Diodes
-subtitle: Stuff
+title: General Diodes
+subtitle: Common diodes and their uses.
 ---
 
 # Notes:
 
 * Need to condense this page a bit and make it more intro
-* Add a table of diode types, general characteristics, circuit symbol, and use
 * [notes: https://www.rohm.com/electronics-basics/diodes/types-of-diodes]
 
 
@@ -23,9 +22,7 @@ The symbol is a triangle pointing in the direction of current (hole-flow) connec
 
 There are a number of different types of diodes, but all of their circuit symbols are based on the one above.
 
-# Common Diode Types and Their Uses
-
-The Wikipedia diode page lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them. As we explore more circuits, we'll also introduce additional, specialized diodes. 
+The [Wikipedia diode entry](https://en.wikipedia.org/wiki/Diode) lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them. As we explore more circuits, we'll also introduce additional, specialized diodes. 
 
 ## Diode Characteristics
 
@@ -37,7 +34,7 @@ Depending on how they're constructed, a diode can have some interesting behavior
  * **Total Power Dissipation (`P`<sub>`D(max)`</sub>)** - A diode has some resistance, so some power is lost in the form of heat. As such, a diode usually has a maximum amount of power that it can safely conduct without overheating. Total power dissipation is based on the voltage of the junction potential, and the current: `P`<sub>`D`</sub> = `V`<sub>`f`</sub> * `I`.
  * **Reverse Recovery Time (`Trr`)** - This is how quickly a diode can go from `OFF` to `ON`. It's generally only important in fast-switching circuits.
 
-## Common General Diodes
+# Common General Diodes
 
  * **Switching Diodes** - Extremely fast `Trr`, used for current switching.
  * **Rectifier/Power Diodes** - High current capacity, usually `1A` or more. Used for converting AC to DC and protection of circuits from power spikes.
@@ -86,17 +83,15 @@ Rectifiers are used as the first stage in converting household mains AC current 
 
 [circuit symbol]
 
-Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>) of around   `0.2V` (`0.15V` - `0.45V`) which makes them very fast and also allow them to be used to form simple circuit logic.
+Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also allow them to be used to form simple circuit logic.
 
-[why you would want to use them]
+### Diode Logic Gates
 
-### Logic Gates
-
-Diode circuits can be arranged to provide logical operations in a circuit such as `AND` and `OR`, called _logic gates_. This allows you to determine if multiple inputs are all `ON` as well as if any of the inputs are `ON` or `OFF`. We'll explore how this can be useful in this chapter's labs.
+These logic circuits can be arranged to provide operations such as `AND` and `OR`, called _logic gates_. This allows you to determine if multiple inputs are all `ON` as well as if any of the inputs are `ON` or `OFF`.
 
 Consider the following circuits:
 
-[NOTE: reverse these, put OR first, since it's simpler]
+[NOTE: reverse these, put OR first, since it's simpler. also, recreate, because of iCircuit's labeling nonsense]
 
 ![](../Support_Files/Logical_AND_OR_Gates.svg)
 
@@ -120,8 +115,7 @@ However, recall from [earlier](link) that digital logic levels don't have to be 
 
 #### AND Gate Truth Table
 
-The `AND` gate is a slightly more clever than the `OR` gate.
-
+The `AND` gate is a slightly more clever than the `OR` gate. In the case of the `AND` operation, a `HIGH` voltage is only seen at the output when both inputs are `HIGH`, therefore, blocking the ground path for the `3.3V` voltage source:
 
 | Input 1 | Input 2 | Output |
 |---------|---------|--------|
@@ -130,7 +124,9 @@ The `AND` gate is a slightly more clever than the `OR` gate.
 | 1       | 0       | 0      |
 | **1**   | **1**   | **1**  |
 
-[truth table]
+#### Logic Gate Uses
+
+In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if conditions are met within a circuit, such as if multiple inputs are `ON`. We'll explore this more by building these gates in one of this chapter's labs.
 
 # Logic Levels [Move to earlier in the tutorial]
 
@@ -177,36 +173,4 @@ While this circuit looks a lot like a two resistor voltage divider, it's got a h
 
 And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, [necessary for ADC conversions/comparators, and voltage regulators]
 
-
-## Light-Related Diodes
-
-In addition to the diodes listed above that perform circuit functions, there are a number of other diodes that do some pretty interesting things to do with light.
-
-### Light Emitting Diodes (LEDs)
-
-LEDs are a type of diode that emit photons (light) as electrons flow through the P-N junction. These are awesome! LEDs are everywhere around us; they're used as lights, indicators, and even display screens. 
-
-These bar graph displays use LEDs to indicate a battery charge or an operating value:
-
-![](LED_Graph_Displays.jpg)
-
-Many modern [displays](https://en.wikipedia.org/wiki/LED_display) also use LEDs to power their pixels, with each pixel containing three diodes; red, green, and blue. With each color (R, G, B) brightness controlled individually to create nearly any color.
-
-### Photodiodes
-
-[image of a photo diode]
-
-Photodiodes are the opposite of LEDs, when photons enter, they get converted into electrical energy. They're often used as light sensors and this is also how solar panels work. By the way, a fun fact about LEDs; though not as efficient, they can also be used as photodiodes!
-
-[photodiodes are often used in conjunction with transistors because they generate power, as opposed to a photoresistor, which requires power to use]
-[on/off as opposed to gradient levels like a photoresistor]
-[reacts faster than a photoresistor]
-
-### Solar Panels
-
-Solar panels are really just big, flat P-N junctions! In fact, they're technically photodiodes. :)
-
-[illustration/image]
-
-
-# [Next - LEDs](../LEDs)
+# [Next - Lab: Diode Logic Gates](../Diode_Logic_Lab)
