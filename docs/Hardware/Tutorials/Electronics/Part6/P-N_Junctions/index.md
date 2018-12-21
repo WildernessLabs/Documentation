@@ -46,11 +46,11 @@ Applying a positive current to the anode and a negative current to the cathode s
 
 **The amount of voltage needed to push forward through the depletion region is known as the _forward voltage_ (`V`<sub>`f`</sub>), or _voltage drop_,** because if charge carriers are pushed through this region at `1.0V`, when they come out on the other side they will only have `0.3V` (`1.0V` - `0.7V`) because they dropped `0.7V` in force.
 
-### P-N Junctions are like Water Dams
+#### `V`<sub>`f`</sub> is like a Water Dam
 
 An interesting consequence of voltage drop is that it provides a sort of back pressure; any voltage above `V`<sub>`f`</sub>. is let past the junction, but the voltage measured on the side pushing will read the same as the `V`<sub>`f`</sub>. In this way, revisiting the water analogies, we can think of a P-N junction as a sort of dam, in which the dam wall is `V`<sub>`f`</sub> high, and any additional voltage is let past:
 
-[illustration of a dam in which the wall is Vf high, and excess V is let past]
+![Illustration of a dam in which the wall is Vf high, and excess V is let past.](../Support_Files/Voltage_Drop_Dam.svg)
 
 Voltage drop is an important concept that will come up over and over in circuit design.
 
