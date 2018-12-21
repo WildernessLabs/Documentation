@@ -102,11 +102,9 @@ In the case of the circuit above, a zener with a `5V` breakdown voltage is being
 
 ![](../Support_Files/Voltage_Reference.svg)
 
-As long as the current is limited, in this case with a resistor, it will stay within that precise operating band:
+As long as the current is limited, in this case with a resistor, it will stay within that precise operating band. Recall the diode behavior chart from before, specifically the breakdown behavior:
 
-Recall the diode behavior chart from before, specifically the breakdown behavior:
-
-[zoomed in version of the diode breakdown curve]
+![zoomed in version of the diode breakdown curve](../Support_Files/Diode_Reverse_Behavior.svg)
 
 While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same. 
 
