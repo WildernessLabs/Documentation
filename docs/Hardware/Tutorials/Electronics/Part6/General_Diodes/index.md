@@ -38,13 +38,13 @@ Depending on how they're constructed, a diode can have some interesting behavior
 
  * **Switching Diodes** - Extremely fast `Trr`, used for current switching.
  * **Rectifier/Power Diodes** - High current capacity, usually `1A` or more. Used for converting AC to DC and protection of circuits from power spikes.
- * **Schottky Diodes** - Have a very low voltage drop, so they can be used in a clever way to get to a digital `0`/`OFF`. Also very fast. Used for basic logic control.
+ * **Schottky Barrier Diodes** - Have a very low voltage drop, so they can be used in a clever way to get to a digital `0`/`OFF`. Also very fast. Used for basic logic control.
  * **Zener Diodes** - Have a precise breakdown voltage. Typically used in a reverse bias configuration to provide a voltage reference.
 
 
 ## Switching Diodes
 
-[image of a switching diodes]
+[image of a switching diode]
 
 These are the most common type of diode. Typically, they have a `V`<sub>`f`</sub> (forward voltage) drop of `0.7v` and a low maximum current rating. The [1N4148](https://amzn.to/2OfaP2n) is a common signal diode with a `500mA` maximum forward current rating. 
 
@@ -75,9 +75,10 @@ Rectifiers are used as the first stage in converting household mains AC current 
 
 ## Schottky Barrier Diodes
 
-[ON 1N5817]
+[typically just called Schottky diodes, [metal instead of the N-type layer, but same general principal]
 
-[metal instead of the N-type layer, but same general principal]
+[ON 1N5817 - move this to the lab]
+
 
 [illustration of a Schottky cross section]
 
@@ -128,7 +129,7 @@ The `AND` gate is a slightly more clever than the `OR` gate. In the case of the 
 
 In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if conditions are met within a circuit, such as if multiple inputs are `ON`. We'll explore this more by building these gates in one of this chapter's labs.
 
-# Logic Levels [Move to earlier in the tutorial]
+# Logic Levels [Move to DC section the tutorial]
 
 [digital isn't true digital/on/off]
 
