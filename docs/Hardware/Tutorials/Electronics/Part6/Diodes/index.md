@@ -28,9 +28,9 @@ There are a number of different types of diodes, but all of their circuit symbol
 
 The Wikipedia diode page lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them. As we explore more circuits, we'll also introduce additional, specialized diodes. 
 
-Depending on how they're constructed, a diode can have some interesting behaviors. For general diodes, there are a number of characteristics that are used to describe how they work.
-
 ## Diode Characteristics
+
+Depending on how they're constructed, a diode can have some interesting behaviors. For general diodes, there are a number of characteristics that are used to describe how they work:
 
 | Name          | Symbolization         | Description                                  |
 |---------------|-----------------------|----------------------------------------------|
