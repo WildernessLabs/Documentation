@@ -69,7 +69,9 @@ Flywheel diodes provide circuit protected from collapsing magnetic fields create
 
 Alternating Current (AC) electrical signals can be converted into Direct Current (DC) through a clever arrangement of diodes known as a _rectifier_. 
 
-[illustration]
+![](../Support_Files/Rectifier_Circuit.svg)
+
+[illustration of waveform in and out]
 
 Rectifiers are used as the first stage in converting household mains AC current into smooth DC current for use in electronics in nearly all power AC power adapters. For example, the USB wall adapter that you plug your phone into to charge converts AC to DC using a rectifier. In fact, nearly every electronic around you that plugs into the wall use a rectifier someplace.
 
@@ -129,7 +131,7 @@ The `AND` gate is a slightly more clever than the `OR` gate. In the case of the 
 
 In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if conditions are met within a circuit, such as if multiple inputs are `ON`. We'll explore this more by building these gates in one of this chapter's labs.
 
-# Logic Levels [Move to DC section the tutorial]
+# Logic Levels [Move to DC section of the tutorial]
 
 [digital isn't true digital/on/off]
 
@@ -174,4 +176,4 @@ While this circuit looks a lot like a two resistor voltage divider, it's got a h
 
 And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, [necessary for ADC conversions/comparators, and voltage regulators]
 
-# [Next - Lab: Diode Logic Gates](../Diode_Logic_Lab)
+# [Next - Light-Related Diodes](../Light_Related_Diodes)
