@@ -84,7 +84,7 @@ Rectifiers are used as the first stage in converting household mains AC current 
 
 [illustration of a Schottky cross section]
 
-[circuit symbol]
+![](/Common_Files/Schottky_Diode.svg)
 
 Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also allow them to be used to form simple circuit logic.
 
