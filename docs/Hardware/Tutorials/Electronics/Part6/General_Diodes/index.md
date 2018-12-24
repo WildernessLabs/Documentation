@@ -94,8 +94,6 @@ These logic circuits can be arranged to provide operations such as `AND` and `OR
 
 Consider the following circuits:
 
-[NOTE: reverse these, put OR first, since it's simpler. also, recreate, because of iCircuit's labeling nonsense]
-
 ![](../Support_Files/Logical_AND_OR_Gates.svg)
 
 #### OR Gate Truth Table
