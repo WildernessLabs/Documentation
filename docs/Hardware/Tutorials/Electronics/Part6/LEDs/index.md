@@ -42,7 +42,7 @@ Because LEDs have a higher electron orbital energy transition than most diodes, 
 
 What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. The voltage drop therefore generally increases with the light frequency:
 
-| Color  | V<sub>f</sub> (Voltage drop)| I<sub>fmax</sub> (max. current) |
+| Color  | `V`<sub>`f`</sub> (Voltage drop)| `I`<sub>`fmax`</sub> (max. current) |
 |--------|---------------|------------------|
 | Red    | 1.8V          | 15mA - 20mA      |
 | Yellow | 2.0V          | 15mA             |
@@ -109,30 +109,66 @@ The circuit would need at least a `75Ω` resistor to safely drive the LED.
 
 However, in practice, we typically use a much larger resistor value because at the maximum current, LEDs tend to be far too bright, and therefore need to be dimmed. I typically double the required resistor value and then tune from there.  In fact, most of the time when throwing together quick circuits, I just grab a `330Ω` resistor and call it good!
 
+
+### LEDs in Parallel
+
+It's technically possible to use a single resistor with LEDs in parallel:
+
+![](../Support_Files/LED_Parallel_Circuit.svg)
+
+However, in practice, it's nearly impossible, because the voltage drop of LEDs are almost never perfectly balanced, which means that only one out of them will typically light up, and since the resistor would be calculated for the total power of all resistors, it's likely that resistor will receive too much current and fail, thus starting a cascade of failing LEDs.
+
+Instead, the best practice is to use a resistor for each LED:
+
+![](../Support_Files/LED_Parallel_Circuit_Practical.svg)
+
+In this case, each resistor is calculated as normal. If the LEDs are all roughly the same, then the same resistor can be used. To calculate the total current draw, simply add the current from each LED up. as per [Kirchhoff's Current Law](/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/).
+
+
 ### LEDs in Series
 
-[http://www.resistorguide.com/resistor-for-led/]
+LEDs can be placed in series, as in the following configuration:
 
-[need to add all voltage drops together]
+![](../Support_Files/LED_Series_Circuit.svg)
+
+However, there are two important considerations in this particular configuration. 
+
+First, since the [current for all the components in series is the same](/Hardware/Tutorials/Electronics/Part4/Series_Resistance/#common-current-different-voltage), all the LEDs have to be rated for the same current; you _can_ mix colors and get the same amount of brightness from each one, but they have to have the same current rating.
+
+Secondly, the `V`<sub>`f`</sub> of each LED is additive; which requires a voltage source with a high enough voltage to overcome the sum of the voltage drops, with enough leftover voltage to still drive current. A general guide is to use a voltage source that is about `1.5x` the sum of the voltage drops.
+
+#### Resistor Calculation
+
+Calculating the resistance needed is the same as a single LED, except that you must remove all the voltage drops from the voltage source, and the current (`I`) must be the same:
 
 ```
 R = (Vs - Vf1 - Vfn...) / I
 ```
 
-[may not have enough voltage available to drive them in series, if so, drive in parallel]
+#### Sample Circuit
 
-[q: how to account for varying current requirements?]
+Consider the following series LED circuit:
 
+![](../Support_Files/LED_Series_Circuit_Example.svg)
 
-### LEDs in Parallel
+The first thing to consider here is the voltage requirement; the circuit contains two LEDs, one green LED with a `V`<sub>`f`</sub> of `2V`, and a blue LED with a `V`<sub>`f`</sub> of `3V`, for a total of `5V` voltage drop. That means that we'll likely need at least somewhere near `7.5V` to power the LEDs; something that would be impossible to power directly form a `3.3V` output from a Meadow or Netduino board. In this case, we'd need to power from an external power supply and switch via a transistor (which we'll cover in the next chapter). Instead it would probably be simpler just to wire them in parallel.
 
-[single resistor doesn't work well because the LEDs are usually not perfectly balanced, so only one will light up.]
+However, if we did have an adequate voltage source, the resistance needed is easy to solve for:
 
-[best to use a resistor for each LED]
+```
+Given: 
+R = (Vs - Vf1 - Vfn...) / I
+
+Therefore:
+R = (9V - 2V - 3V) / .020A
+R = 200Ω
+```
+
+In this case, we'd need at least `200Ω` resistor to keep them within their current limits.
 
 ### Online LED Resistance Calculator
 
-[link and description]
+While iCircuit is my go to tool for circuit simulation and calculation, for one-off LED resistor calculations, there's a fantastic [LED resistor calculator at OhmsLawCalculator.com](http://www.ohmslawcalculator.com/led-resistor-calculator).
 
 ### Reducing Current with a PWM Signal
 
@@ -157,6 +193,12 @@ In the above diagram, the frequency is the same in both cases (note how the risi
 Because a PWM signal is actually a pulse, at lower frequencies, it can cause a noticeable flicker. Humans start to perceive a flicker around `60Hz` (60 cycles per second) or lower, so it's best to make sure the frequency is above that. Fortunately, this isn't typically an issue, since modern microcontrollers (like the ones that power Meadow and Netduino) are capable of driving PWM signals at many thousands of hertz (Hz).
 
 Incidentally, pigeons notice flicker around `100hz`, so if you're designing circuits for pigeons, you'll need to make sure that your PWM frequency is `100Hz` or higher. 🤣
+
+# Non-Ohmic Devices
+
+[worth a mention]
+
+[resistor is actually limiting voltage]
 
 
 # [Next - LED Lab](../LED_Lab)
