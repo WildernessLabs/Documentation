@@ -30,9 +30,9 @@ Typical through-hole LEDs have a flat spot on the cathode side, and a longer ano
 
 ![](../Support_Files/LED_Components.svg)
 
-Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're "common anode" or "common cathode":
+Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're _common anode_ or _common cathode_:
 
-[picture of an RGB LED]
+![Photo of an RGB LED showing one leg longer than the rest.](../Support_Files/RGB_LED_Photo.jpg)
 
 ## LED Colors
 
