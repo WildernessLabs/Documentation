@@ -67,9 +67,9 @@ Flywheel diodes provide circuit protected from collapsing magnetic fields create
 
 ### Rectifiers
 
-Alternating Current (AC) electrical signals can be converted into Direct Current (DC) through a clever arrangement of diodes known as a _rectifier_. 
+Alternating Current (AC) electrical signals can be converted into Direct Current (DC) through a clever arrangement of diodes known as a _rectifier_:
 
-![](../Support_Files/Rectifier_Circuit.svg)
+![](../Support_Files/Rectification_Circuit.svg)
 
 [illustration of waveform in and out]
 
