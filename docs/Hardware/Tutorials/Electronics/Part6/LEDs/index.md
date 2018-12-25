@@ -54,7 +54,7 @@ White LEDs are usually a blue LED with a coating that makes the light white, how
 
 Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases voltages. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
 
-## Using LEDs in Circuits
+# Using LEDs in Circuits
 
 Single LED circuits are typically fairly simple, requiring only a DC power source, and typically, a resistor to restrict current flow:
 
@@ -116,7 +116,7 @@ It's technically possible to use a single resistor with LEDs in parallel:
 
 ![](../Support_Files/LED_Parallel_Circuit.svg)
 
-However, in practice, it's nearly impossible, because the voltage drop of LEDs are almost never perfectly balanced, which means that only one out of them will typically light up, and since the resistor would be calculated for the total power of all resistors, it's likely that resistor will receive too much current and fail, thus starting a cascade of failing LEDs.
+However, in practice, it's nearly impossible, because the voltage drop of LEDs are almost never perfectly balanced, which causes only one of them to conduct, pass too much current and fail, thus starting a cascade of failing LEDs.
 
 Instead, the best practice is to use a resistor for each LED:
 
@@ -124,6 +124,44 @@ Instead, the best practice is to use a resistor for each LED:
 
 In this case, each resistor is calculated as normal. If the LEDs are all roughly the same, then the same resistor can be used. To calculate the total current draw, simply add the current from each LED up. as per [Kirchhoff's Current Law](/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/).
 
+### Non-Ohmic Devices
+
+The failure that happens when LEDs are in parallel gives a glimpse of some interesting P-N junction behaviors that deserve a conversation.
+
+LEDs (actually, all P-N junctions) are referred to as _non-ohmic_ devices. Non-ohmic is a bit of a misnomer, because it implies that that they don't abide by Ohm's law; and this is a common source of confusion. To understand what this really means, we need to revisit Ohm's law. Ohm's law states that the amount of current than can pass through a device is a proportional function of how much force (voltage) is pushing against resistance:
+
+```
+Current = Force / Resistance
+I = V / R
+```
+
+This means that as we increase the voltage (amount of force), as long as the resistance stays the same, the amount of current allowed to flow is proportional:
+
+[illustration of a linear 45º line]
+
+However, recall that with a P-N junction, as the voltage increases, the resistance actually goes down, which means that more current is allowed to flow. So a plot of the same scenario with a P-N junction looks like this [fix transition and introduce this]:
+
+![](../Support_Files/Diode_Behavior.svg)
+
+#### Understanding the Failure
+
+To understand the failure of parallel LEDs with a single resistor, imagine the circuit as a deep river gorge that has three dams. Each of these dams has a little different voltage height, due slight variations during manufacture:
+
+![front view illustration of the dams](../Support_Files/Dam_w_Varying_Heights.svg)
+
+When the river "turns on," behind the dams, the river will rise until it reaches the top of the first dam, and when it does, it'll start to flow over it:
+
+![Front view of water flowing over the first dam.](../Support_Files/Dam_w_Single_LED.svg)
+
+However, as soon as that dam starts to let water flow, it actually gets lower, which means _more_ current is allowed to flow, current that was intended to spill over the other dams.
+
+![](../Support_Files/Dam_w_Avalanche_Breakdown.svg)
+
+Finally, with ALL the current that was intended to be distributed across three dams, it will fail and for a brief moment, let a lot of current through, before the gorge gives way and closes off that river (ok, the analogy is a little strained, but this is the diode breaking).
+
+[illustration of the left river closed off]
+
+Then the process repeats itself for the remaining dam.
 
 ### LEDs in Series
 
@@ -168,7 +206,7 @@ In this case, we'd need at least `200Ω` resistor to keep them within their curr
 
 ### Online LED Resistance Calculator
 
-While iCircuit is my go to tool for circuit simulation and calculation, for one-off LED resistor calculations, there's a fantastic [LED resistor calculator at OhmsLawCalculator.com](http://www.ohmslawcalculator.com/led-resistor-calculator).
+While [iCircuit](http://icircuitapp.com/) is my go to tool for circuit simulation and calculation, for one-off LED resistor calculations, there's a fantastic [LED resistor calculator at OhmsLawCalculator.com](http://www.ohmslawcalculator.com/led-resistor-calculator).
 
 ### Reducing Current with a PWM Signal
 
@@ -194,11 +232,6 @@ Because a PWM signal is actually a pulse, at lower frequencies, it can cause a n
 
 Incidentally, pigeons notice flicker around `100hz`, so if you're designing circuits for pigeons, you'll need to make sure that your PWM frequency is `100Hz` or higher. 🤣
 
-# Non-Ohmic Devices
-
-[worth a mention]
-
-[resistor is actually limiting voltage]
 
 
 # [Next - LED Lab](../LED_Lab)
