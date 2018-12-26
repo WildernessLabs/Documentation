@@ -64,19 +64,36 @@ RGB LEDs are only slightly more complex, and come in two flavors, depending on w
 
 ![](../Support_Files/RGB_LED_Wiring.svg)
 
-### Reducing Voltage and Current
+## Controlling Current
 
-If you plug in an LED to a `3.3V` voltage source without reducing the voltage (and current), two things are likely to occur; one the LED is going to be very bright, and two, it's going to burn out.
+If you plug in an LED to a `3.3V` voltage source without reducing the voltage (and current), the LED is going to be very bright and then it's going to burn out.
 
-This is because of conduction behavior of the P-N junction. Recall the right half of the generalized diode behavior graph:
+### Non-Ohmic Devices
+
+This failure illuminates some interesting P-N junction behaviors that warrant further explanation.
+
+LEDs (actually, all P-N junctions) are referred to as _non-ohmic_ devices. Non-ohmic is a bit of a misnomer, because it implies that that they don't abide by Ohm's law; and this is a common source of confusion. To understand what this really means, we need to revisit Ohm's law. Ohm's law states that the amount of current than can pass through a device is a proportional function of how much force (voltage) is pushing against resistance:
+
+```
+Current = Force / Resistance
+I = V / R
+```
+
+This means that as we increase the voltage (amount of force), as long as the resistance stays the same, the amount of current allowed to flow is proportional:
+
+![illustration of a linear 45º line](../Support_Files/Ohms_Law_Behavior_Graph.svg)
+
+However, recall that with a P-N junction, as the voltage increases, the resistance actually goes down, which means that more current is allowed to flow. Recall the same scenario with a P-N junction looks like this:
 
 ![](../Support_Files/Diode_Forward_Behavior.svg)
 
 Once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduce the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick then with LEDs is to supply just enough voltage to light them up.
 
+### Options for Limiting Current
+
 There are two common ways to control the voltage, either with a resistor, or by driving it with a PWM signal.
 
-Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when on. A PWM signal is also reasonably simple, but is often done in software. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
+Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when `ON`. A PWM signal is also reasonably simple, but is often done in software. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
 
 ### Limiting Current with a Ballast Resistor
 
@@ -97,6 +114,8 @@ This means that the overall voltage available to the LED is actually reduced by 
 R = (Vs - Fv) / I
 ```
 
+![](../Support_Files/Single_LED_Circuit.svg)
+
 #### Example
 
 For example, let's say that we have a red LED that has a maximum current rating of `20mA`, and a `V`<sub>`f`</sub> of `1.8V`, and we're driving it from a `3.3V` voltage source. Solving for `R` then:
@@ -109,8 +128,7 @@ The circuit would need at least a `75Ω` resistor to safely drive the LED.
 
 However, in practice, we typically use a much larger resistor value because at the maximum current, LEDs tend to be far too bright, and therefore need to be dimmed. I typically double the required resistor value and then tune from there.  In fact, most of the time when throwing together quick circuits, I just grab a `330Ω` resistor and call it good!
 
-
-### LEDs in Parallel
+## LEDs in Parallel
 
 It's technically possible to use a single resistor with LEDs in parallel:
 
@@ -124,26 +142,7 @@ Instead, the best practice is to use a resistor for each LED:
 
 In this case, each resistor is calculated as normal. If the LEDs are all roughly the same, then the same resistor can be used. To calculate the total current draw, simply add the current from each LED up. as per [Kirchhoff's Current Law](/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/).
 
-### Non-Ohmic Devices
-
-The failure that happens when LEDs are in parallel gives a glimpse of some interesting P-N junction behaviors that deserve a conversation.
-
-LEDs (actually, all P-N junctions) are referred to as _non-ohmic_ devices. Non-ohmic is a bit of a misnomer, because it implies that that they don't abide by Ohm's law; and this is a common source of confusion. To understand what this really means, we need to revisit Ohm's law. Ohm's law states that the amount of current than can pass through a device is a proportional function of how much force (voltage) is pushing against resistance:
-
-```
-Current = Force / Resistance
-I = V / R
-```
-
-This means that as we increase the voltage (amount of force), as long as the resistance stays the same, the amount of current allowed to flow is proportional:
-
-[illustration of a linear 45º line]
-
-However, recall that with a P-N junction, as the voltage increases, the resistance actually goes down, which means that more current is allowed to flow. So a plot of the same scenario with a P-N junction looks like this [fix transition and introduce this]:
-
-![](../Support_Files/Diode_Behavior.svg)
-
-#### Understanding the Failure
+### Understanding the Failure
 
 To understand the failure of parallel LEDs with a single resistor, imagine the circuit as a deep river gorge that has three dams. Each of these dams has a little different voltage height, due slight variations during manufacture:
 
@@ -157,13 +156,13 @@ However, as soon as that dam starts to let water flow, it actually gets lower, w
 
 ![](../Support_Files/Dam_w_Avalanche_Breakdown.svg)
 
-Finally, with ALL the current that was intended to be distributed across three dams, it will fail and for a brief moment, let a lot of current through, before the gorge gives way and closes off that river (ok, the analogy is a little strained, but this is the diode breaking).
+Finally, with ALL the current that was intended to be distributed across three dams, it will fail and for a brief moment, let a lot of current through, before the infrastructure completely gives out (diode breaks), and closes off that river:
 
-[illustration of the left river closed off]
+![illustration of the left river closed off](../Support_files/Dam_w_Diode_Failure.svg)
 
-Then the process repeats itself for the remaining dam.
+Then the process repeats itself for the remaining dams.
 
-### LEDs in Series
+## LEDs in Series
 
 LEDs can be placed in series, as in the following configuration:
 
@@ -175,7 +174,7 @@ First, since the [current for all the components in series is the same](/Hardwar
 
 Secondly, the `V`<sub>`f`</sub> of each LED is additive; which requires a voltage source with a high enough voltage to overcome the sum of the voltage drops, with enough leftover voltage to still drive current. A general guide is to use a voltage source that is about `1.5x` the sum of the voltage drops.
 
-#### Resistor Calculation
+### Resistor Calculation
 
 Calculating the resistance needed is the same as a single LED, except that you must remove all the voltage drops from the voltage source, and the current (`I`) must be the same:
 
@@ -183,7 +182,7 @@ Calculating the resistance needed is the same as a single LED, except that you m
 R = (Vs - Vf1 - Vfn...) / I
 ```
 
-#### Sample Circuit
+### Sample Circuit
 
 Consider the following series LED circuit:
 
@@ -204,11 +203,11 @@ R = 200Ω
 
 In this case, we'd need at least `200Ω` resistor to keep them within their current limits.
 
-### Online LED Resistance Calculator
+## Online LED Resistance Calculator
 
 While [iCircuit](http://icircuitapp.com/) is my go to tool for circuit simulation and calculation, for one-off LED resistor calculations, there's a fantastic [LED resistor calculator at OhmsLawCalculator.com](http://www.ohmslawcalculator.com/led-resistor-calculator).
 
-### Reducing Current with a PWM Signal
+## Reducing Current with a PWM Signal
 
 In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit, or use a Pulse-Width-Modulation (PWM) signal. 
 
@@ -226,7 +225,7 @@ To lower the voltage, we typically reduce the duty cycle:
 
 In the above diagram, the frequency is the same in both cases (note how the rising edges of the signal are aligned to the same point in time).  However, the lower signal is high for only 25% of the time compared to 50% for the upper trace.
 
-#### Frequency and Flicker
+### Frequency and Flicker
 
 Because a PWM signal is actually a pulse, at lower frequencies, it can cause a noticeable flicker. Humans start to perceive a flicker around `60Hz` (60 cycles per second) or lower, so it's best to make sure the frequency is above that. Fortunately, this isn't typically an issue, since modern microcontrollers (like the ones that power Meadow and Netduino) are capable of driving PWM signals at many thousands of hertz (Hz).
 
