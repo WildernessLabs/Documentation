@@ -1,12 +1,12 @@
 ---
 layout: ElectronicsTutorial
 title: Review
-subtitle: Diode and LED Reference
+subtitle: Semiconductor, P-N Junction, and Diode reference.
 ---
 
 # Important Concepts
 
-This chapter introduced the most fundamental structure in modern electronics; the semiconductor P-N junction, and did a thorough examination of diodes, arguably the simplest yet incredibly versatile semiconductor component. We also built some more practical circuits, and got familiar with the all important LED.
+This chapter introduced the most fundamental structure in modern electronics; the semiconductor P-N junction, and did a thorough examination of diodes. We also built some more practical circuits, and got familiar with the all important LED.
 
 Along the way we covered probably more ground than any other chapter. Take a moment for a quick review before tackling the next chapter on transistors:
 
@@ -20,7 +20,7 @@ Along the way we covered probably more ground than any other chapter. Take a mom
 
 ## P-N Junctions and Diodes
 
- * **P-N junctions** - When P-type and N-type semiconductors are sandwiched together, the extra electrons from the N-type travel to fill the nearby P-type holes along the junction, causing an electric potential along the **depletion zone**.
+ * **P-N junctions** are created when P-type and N-type semiconductors are sandwiched together. The extra electrons from the N-type travel to fill the nearby P-type holes along the junction, causing an electric potential along the **depletion zone**.
  * The electric field created in the depletion zone is called the **junction potential** and is the amount of electromagnetic force (EMF) in volts, needed to to push current through.
  * This amount of force doesn't make it through the P-N junction, which acts like a dam, and is known as the **voltage drop (`V`<sub>`f`</sub>)**.
 
@@ -34,7 +34,7 @@ Along the way we covered probably more ground than any other chapter. Take a mom
 
 ### Diode Types
 
- * The most common non-light diodes are **switching diodes**, **rectifier/power diodes**, **Schottky diodes**, and **zener diodes**.
+ * The most common non-light-related diodes are **switching diodes**, **rectifier/power diodes**, **Schottky diodes**, and **zener diodes**.
  * Switching diodes are good for switching current.
  * Power diodes can handle a lot of current.
  * Schottky diodes have a very low voltage drop and are good for circuit logic.
@@ -42,14 +42,14 @@ Along the way we covered probably more ground than any other chapter. Take a mom
 
 ### Light-Related Diodes
 
- * Light-related diodes take advantage of the P-N junctions inherent photon reactivity.
+ * Light-related diodes take advantage of the inherit photon reactivity of a P-N junction.
  * **LEDs** are awesome and efficiently convert voltage to photons when electrons lose energy and move from the conductive energy band to the valence band.
  * **Photodiodes** work just the opposite; photons striking them cause them to liberate from their valence shells and make them "free" to conduct.
  * **Solar panels** are just big, flat photodiodes. They're also awesome.
 
 ### LEDs
 
- * LEDs need their current limited, otherwise they will fail. Two common ways to limit current is either with a **ballast resistor** or to drive them with a **PWM signal**.
+ * LEDs need their current limited, otherwise they will fail. Usually a **ballast resistor** or a **PWM signal** is used to limit current.
  * Resistor-only LED configurations only allow you to turn an LED `ON`/`OFF`, whereas a PWM signal can finely control the brightness, allowing them to "pulse" `ON`/`OFF`.
  * To calculate the resistance needed to limit current through an LED, you can use Ohm's law solved for `R`, and remove the voltage drop of the LED from the voltage source; `R = (Vs - Fv) / I`.
  * To wire **LEDs in series**, their voltage drops need to be added up and removed from the voltage source; `R = (Vs - (Vf1 + Vfn...)) / I`
