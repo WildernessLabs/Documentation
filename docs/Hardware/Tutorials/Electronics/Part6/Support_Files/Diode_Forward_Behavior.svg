@@ -14,7 +14,7 @@
             <g id="Graph-Lines" transform="translate(0.000000, 34.000000)">
                 <rect id="Rectangle" fill="#CAEBF8" x="256" y="138" width="30" height="40"></rect>
                 <path d="M213.352001,178.5 L439,178.5" id="Line-5" stroke="#3D3530" stroke-width="3" stroke-linecap="square"></path>
-                <path d="M432.444444,156.444444 L432.444444,148 L434.555556,148 L434.555556,156.444444 L443,156.444444 L443,158.555556 L434.555556,158.555556 L434.555556,167 L432.444444,167 L432.444444,158.555556 L424,158.555556 L424,156.444444 L432.444444,156.444444 Z" id="Combined-Shape" fill="#23ABE3"></path>
+                <path d="M433,157 L433,151 L435,151 L435,157 L441,157 L441,159 L435,159 L435,165 L433,165 L433,159 L427,159 L427,157 L433,157 Z" id="Combined-Shape" fill="#3D3530"></path>
                 <path d="M213.352001,0.5 L213.352001,233.912015" id="Line-6" stroke="#3D3530" stroke-width="3" stroke-linecap="square"></path>
                 <path d="M256,139 L256,195.577368" id="Line-7" stroke="#23ABE3" stroke-width="2" stroke-linecap="square"></path>
                 <path d="M286,139 L286,195.577368" id="Line-7-Copy" stroke="#23ABE3" stroke-width="2" stroke-linecap="square"></path>

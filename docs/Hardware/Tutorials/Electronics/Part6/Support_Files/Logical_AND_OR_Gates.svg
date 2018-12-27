@@ -12,13 +12,13 @@
                 <polygon id="Path-2" fill="#3D3530" points="24.5 0 44 13 24.5 26"></polygon>
                 <path d="M44,13 L70,13" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
                 <path d="M0,13 L24.5,13" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
-                <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="39 5 39 1 44 1 44 25 49 25 49 21"></polyline>
+                <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="49 5 49 1 44 1 44 25 39 25 39 21"></polyline>
             </g>
             <g id="Schottky_Diode-Copy" transform="translate(150.000000, 239.000000) rotate(-180.000000) translate(-150.000000, -239.000000) translate(115.000000, 226.000000)">
                 <polygon id="Path-2" fill="#3D3530" points="24.5 0 44 13 24.5 26"></polygon>
                 <path d="M44,13 L70,13" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
                 <path d="M0,13 L24.5,13" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
-                <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="39 5 39 1 44 1 44 25 49 25 49 21"></polyline>
+                <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="49 5 49 1 44 1 44 25 39 25 39 21"></polyline>
             </g>
             <g id="DC_Rail" transform="translate(216.000000, 53.500000) rotate(-90.000000) translate(-216.000000, -53.500000) translate(190.500000, 38.500000)" stroke="#3D3530" stroke-width="3">
                 <path d="M-5.32907052e-15,15 L50,15" id="Path-2-Copy"></path>
@@ -44,17 +44,17 @@
         <g id="OR_Gate" transform="translate(42.000000, 36.000000)">
             <g id="Components" transform="translate(115.000000, 2.000000)">
                 <polyline id="Resistor-Copy" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" transform="translate(101.000000, 137.000000) rotate(90.000000) translate(-101.000000, -137.000000) " points="66 137 71 137 76 124 86 150 96 124 106 150 116 124 126 150 131 137 136 137"></polyline>
-                <g id="Schottky_Diode-Copy-2">
+                <g id="Schottky_Diode" transform="translate(0.000000, 64.000000)">
                     <polygon id="Path-2" fill="#3D3530" points="24.5 0 44 13 24.5 26"></polygon>
                     <path d="M44,13 L70,13" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
                     <path d="M0,13 L24.5,13" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
-                    <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="39 5 39 1 44 1 44 25 49 25 49 21"></polyline>
+                    <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="49 5 49 1 44 1 44 25 39 25 39 21"></polyline>
                 </g>
-                <g id="Schottky_Diode-Copy-3" transform="translate(0.000000, 64.000000)">
+                <g id="Schottky_Diode-Copy-3">
                     <polygon id="Path-2" fill="#3D3530" points="24.5 0 44 13 24.5 26"></polygon>
                     <path d="M44,13 L70,13" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
                     <path d="M0,13 L24.5,13" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
-                    <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="39 5 39 1 44 1 44 25 49 25 49 21"></polyline>
+                    <polyline id="Path" stroke="#3D3530" stroke-width="3" stroke-linejoin="round" points="49 5 49 1 44 1 44 25 39 25 39 21"></polyline>
                 </g>
                 <g id="Ground" transform="translate(101.000000, 209.500000) rotate(-90.000000) translate(-101.000000, -209.500000) translate(63.500000, 176.500000)" stroke="#3D3530" stroke-width="3">
                     <path d="M25,33 L75,33" id="Path-2-Copy"></path>

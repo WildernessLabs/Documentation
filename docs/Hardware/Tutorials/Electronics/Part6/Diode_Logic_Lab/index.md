@@ -9,6 +9,8 @@ subtitle: Creating simple logic control with diodes.
 In this lab we'll..
 
 [creating logic gates and indicating via LEDs]
+[ON 1N5817 - move this to the lab]
+
 
 # Requirements
 

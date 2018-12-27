@@ -81,23 +81,23 @@ Alternating Current (AC) electrical signals can be converted into Direct Current
 
 ![](../Support_Files/Rectification_Circuit.svg)
 
-[illustration of waveform in and out]
+The above circuit will transform a two-phase AC wave form into positive only voltages:
+
+![illustration of waveform in and out](../Support_Files/Rectification_Transform.svg)
+
+With some additional components, the DC wave output above can be transformed into a smooth, level DC signal.
 
 Rectifiers are used as the first stage in converting household mains AC current into smooth DC current for use in electronics in nearly all power AC power adapters. For example, the USB wall adapter that you plug your phone into to charge converts AC to DC using a rectifier. In fact, nearly every electronic around you that plugs into the wall use a rectifier someplace.
 
 ## Schottky Barrier Diodes
 
-[typically just called Schottky diodes, [metal instead of the N-type layer, but same general principal]
+Typically just called _Schottky diodes_, instead of a P-type semiconductor, it just a piece of metal against the N-type. This results in a much lower voltage drop, and also fast switching speeds.
 
-[ON 1N5817 - move this to the lab]
+The circuit symbol for a Schottky diode looks similar to the diode symbol, except that the perpendicular line looks similar to an `S`.
 
-
-[illustration of a Schottky cross section]
-
-![](/Common_Files/Schottky_Diode.svg)
+![](../Support_Files/Schottky_Diode.svg)
 
 Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also makes them ideal for use in simple circuit logic.
-
 
 
 ### Diode Logic Gates
