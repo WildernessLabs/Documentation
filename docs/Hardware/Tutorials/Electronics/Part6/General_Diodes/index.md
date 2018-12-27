@@ -4,12 +4,6 @@ title: General Diodes
 subtitle: Common diodes and their uses.
 ---
 
-# Notes:
-
-* Need to condense this page a bit and make it more intro
-* [notes: https://www.rohm.com/electronics-basics/diodes/types-of-diodes]
-
-
 # Intro
 
 As we examined in the last section, a diode is basically just a P-N junction with leads attached to either side. The anode (`A`) is the lead attached to the P-type side, the cathode (`K`) is attached to the N-type side, and the preferential, or forward bias is when electrons flow from cathode to anode (which means anode is hooked to the positive voltage source):
