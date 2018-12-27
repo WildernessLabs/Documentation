@@ -128,29 +128,6 @@ The `AND` gate is a slightly more clever than the `OR` gate. In the case of the 
 #### Logic Gate Uses
 
 In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if conditions are met within a circuit, such as if multiple inputs are `ON`. We'll explore this more by building these gates in one of this chapter's labs.
-
-# Logic Levels [Move to DC section of the tutorial]
-
-[digital isn't true digital/on/off]
-
-[note about how digital is a lie. it's all an approximation. so a schottky with a back pressure of `200mV` still reads as `0`]
-
-[Logic Levels for _CMOS_:]
-
-[0 V to 1/3 VDD	2/3 VDD to VDD]
-
-* `0V` - `1.1V` = `0`
-* `2.2V` - `3.3V` = `1`
-
-[illustration of digital signal 
-
-
-```
-0 = OFF = ~0V = GND = LOW
-1 = ON = ~3.3V = VDD = HIGH
-```
-
-
  
 ## Zener Diodes
 
