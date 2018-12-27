@@ -9,14 +9,26 @@ subtitle: Creating simple logic control with diodes.
 In this lab we'll..
 
 [creating logic gates and indicating via LEDs]
-[ON 1N5817 - move this to the lab]
+
 
 
 # Requirements
 
+| Item                                     | Approximate Cost (USD) |
+| ---------------------------------------- | ---------------------- |
+| 1N5817 Shottky Diodes                    |
+| (2) Switches                             |
+| LEDs  ||
+| Push Buttons   ||
+
 # Exercise 1: OR Gate
 
-# Exercise 2: AND Gate
+
+# Exercise 2: Inverted AND Gate w/Buttons
 
 
-# [Next - Light Related Diodes](../Light_Related_Diodes)
+# Exercise 3: AND Gate w/Switches
+
+
+
+# [Next - Review](../Review)

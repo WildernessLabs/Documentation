@@ -1,7 +1,7 @@
 ---
 layout: ElectronicsTutorial
 title: LED Lab
-subtitle: Light Emitting Diodes.
+subtitle: Building practical LED circuits.
 ---
 
 # Intro
@@ -12,24 +12,57 @@ In this lab, we're going to build a simple LED circuit that uses a resistor to l
 
 # Requirements
 
+To do this lab, you'll need the following new items:
+
+| Item                                     | Approximate Cost (USD) |
+| ---------------------------------------- | ---------------------- |
+| (2) LEDs, any color                      | < $1                   |
+| (1) Push button     | |
+| Resistor Kit      |  |
+| 9V Battery Adapter  |
+| 9V Battery  |
+
+
 # Exercise 1: Single LED Circuit
 
-## Step 1 - Build the Circuit
+[simple LED circuit with a ballast resistor and a push button to actuate]
 
-## Step 2 - Test
+## Step 1 - Design
+
+[i like to design my circuits in iCircuit first, allows me to get values close to correct:]
+
+![](../Support_Files/SS_iCircuit_Single_LED_Lab.png)
+
+[very simple circuit we'll build on.]
+
+[Manual calculation: single green LED. `2.1V`<sub>`f`, `20mA` max current]
+
+```
+R = V / I
+R = 3.3V - 2.1V / 0.02A = 60Ω
+```
+
+Can start with a `68Ω` resistor.
+
+## Step 1 - Build and Test
+
+
 
 # Exercise 2: Series LED Circuit
 
+[Button actuated, ballast resistor, but two LEDs, blue and red]
 
-## Step 1 - Build the Circuit
+[3.3V and 2.1V voltage drop = 5.4V total. So we'll power with a 9V battery]
 
-## Step 2 - Test
+## Step 1 - Design
 
-# Exercise 3: Parallel LED Circuit
+```
+R = V / I
+R = 9V - (3.3V + 2.1V) / 0.02A = 180Ω
+```
 
-## Step 1 - Build the Circuit
+## Step 2 - Build and Test
 
-## Step 2 - Test
 
 
 # [Next - Diode Logic Gate Lab](../Diode_Logic_Lab)
