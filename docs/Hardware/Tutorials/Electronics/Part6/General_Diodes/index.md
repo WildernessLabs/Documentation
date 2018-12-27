@@ -16,13 +16,23 @@ As we examined in the last section, a diode is basically just a P-N junction wit
 
 ![](../Support_Files/Diode_Forward_Bias.svg)
 
-The symbol is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line:
+The symbol is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line which represents the junction:
 
-![Diode symbol with a triangle pointing in the direction of current flow butting up against a line.](/Common_Files/Diode.svg)
+![Diode symbol with a triangle pointing in the direction of current flow butting up against a line.](../Support_Files/Diode.svg)
 
 There are a number of different types of diodes, but all of their circuit symbols are based on the one above.
 
 The [Wikipedia diode entry](https://en.wikipedia.org/wiki/Diode) lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them. As we explore more circuits, we'll also introduce additional, specialized diodes. 
+
+## Polarity
+
+To differentiate which end of a diode is the anode, and which is the cathode, they usually have a marking on end denoting the **cathode**. The following photo shows four different diodes, each with their cathode mark on the right:
+
+![](../Support_Files/Diodes_Cropped.jpg)
+
+Recall that positive charge carriers (holes) flow preferentially from anode to cathode, so the diodes above are in the same orientation as the circuit symbol below:
+
+![Diode Symbol illustration with Cathode and Anode marked](../Support_Files/Diode_Polarity.svg)
 
 ## Diode Characteristics
 
