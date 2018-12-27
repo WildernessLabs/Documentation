@@ -20,19 +20,21 @@ Many modern [displays](https://en.wikipedia.org/wiki/LED_display) also use LEDs 
 
 ### Photodiodes
 
-[image of a photo diode]
+Photodiodes are the opposite of LEDs, when photons enter, they get converted into electrical energy. Fun fact about LEDs; although not as efficient, they can also be used as photodiodes!
 
-Photodiodes are the opposite of LEDs, when photons enter, they get converted into electrical energy. They're often used as light sensors and this is also how solar panels work. By the way, a fun fact about LEDs; though not as efficient, they can also be used as photodiodes!
+![image of a photo diode](../Support_Files/Photodiode_Medium.jpg)
 
-[photodiodes are often used in conjunction with transistors because they generate power, as opposed to a photoresistor, which requires power to use]
-[on/off as opposed to gradient levels like a photoresistor]
-[reacts faster than a photoresistor]
+#### Vs. Photoresistor
+
+Photodiodes differ from photoresistors in that while a photoresistor can tell you how much ambient light is present, a photodiode is really only effective at differentiating from light and dark. Unlike a photoresistor, which has a variable resistance depending on the amount of light hitting it, when light hits a photodiode, it actually converts the photons to free electrons and creates a small electric current. 
+
+Additionally, photodiodes are very fast, reacting to light much faster than photoresistors, so they're sometimes used in a special opto-isolator circuits in which an LED is pointed at a photodiode to transmit digital information between circuits without having an electrical connection. In fact, fiber optic communications are done this way; an LED is connected to a photodiode via a fiber optic cable.
 
 ### Solar Panels
 
-Solar panels are really just big, flat P-N junctions! In fact, they're technically photodiodes. :)
+Solar panels are really just big, flat P-N junctions! In fact, they're actually photodiodes. As photons hit electrons in the P-type semiconductor, they add enough energy to the electrons to pop them out of their valence orbits and make turn them into free electrons which migrate to strips of metal on top of the cell which serve as anode plates. The pressure of these free electrons causes them to flow to out to a load, and then they recombine with the holes in the P-type semiconductor:
 
-[illustration/image]
+![](../Support_Files/Solar_Panel.svg)
 
 
 # [Next - LEDs](../LEDs)

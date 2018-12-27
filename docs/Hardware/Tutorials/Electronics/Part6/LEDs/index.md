@@ -14,7 +14,7 @@ However, no matter what they look like, they're all basically the same to use an
 
 The circuit symbol for an LED is a diode with arrows coming out of it, signifying the photon emission:
 
-![LED symbol which is a diode with two arrows coming out, indicating photon emission](/Common_Files/LED.svg)
+![LED symbol which is a diode with two arrows coming out, indicating photon emission](../Support_Files/LED.svg)
 
 ## Physics
 
@@ -58,7 +58,7 @@ Powering blue LEDs can be tricky on `3.3V` because many of them have more than a
 
 Single LED circuits are typically fairly simple, requiring only a DC power source, and typically, a resistor to restrict current flow:
 
-![](../Support_Files/LED_Resistor_Circuit.svg)
+![](../Support_Files/LED_Circuit_Simplified.svg)
 
 RGB LEDs are only slightly more complex, and come in two flavors, depending on whether they're common cathode common anode:
 
