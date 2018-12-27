@@ -36,13 +36,21 @@ The logic level is based on what `HIGH` means in a circuit, and falls into two c
 
 ### Complementary Metal-Oxide-Semiconductor (CMOS)
 
-CMOS is the technology that nearly all modern integrated circuits use. CMOS `HIGH` signals can vary but they're defined as the `V`<sub>`DD`</sub> level, which is usually `3.3V` in most common circuits. For nearly all circuits we'll create, we'll use the CMOS standard with `V`<sub>`DD`</sub> = `3.3V` as the primary logic level. Internally, most microcontrollers, CPUs, and other complex chips use a lower `V`<sub>`DD`</sub>, often `1.8V` or less, which allows them to operate at faster speeds. However, most microcontrollers use `3.3V` on their IO.
+CMOS is the technology that nearly all modern integrated circuits use. CMOS `HIGH` signals can vary but they're defined as the `V`<sub>`DD`</sub> level, which is usually `3.3V` in most common circuits. In fact, for nearly all circuits we'll create, we'll use the CMOS standard with `V`<sub>`DD`</sub> = `3.3V` as the upper end of the voltage supply source. 
+
+Internally, most microcontrollers, CPUs, and other complex chips use a lower `V`<sub>`DD`</sub>, often `1.8V` or less, which allows them to operate at faster speeds. However, most microcontrollers use `3.3V` on their IO pins.
 
 ### Transistor-Transistor-Logic (TTL)
 
 TTL is based on older transistor technologies in which the `HIGH` signal is defined as `V`<sub>`CC`</sub>, which is usually `5V`. 
 
+### VCC/VDD
+
+While CMOS and TTL logic define differing terms for upper end of their supply voltage (`V`<sub>`DD`</sub> and `V`<sub>`CC`</sub>, respectively), they both refer to the same thing.
+
 ### Acceptable Logic Levels
+
+The following levels are acceptable for CMOS and TTL circuits:
 
 | Technology | Acceptable `LOW` Voltage | Acceptable `HIGH` Voltage |
 |------------|--------------------------|---------------------------|

@@ -86,7 +86,9 @@ Rectifiers are used as the first stage in converting household mains AC current 
 
 ![](/Common_Files/Schottky_Diode.svg)
 
-Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also allow them to be used to form simple circuit logic.
+Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also makes them ideal for use in simple circuit logic.
+
+
 
 ### Diode Logic Gates
 
@@ -111,7 +113,7 @@ In the truth table, `0` and `1` represent `LOW` and `HIGH`, respectively. In the
 
 In the case of an `OR` gate, as long as any input is `1`, the output will also be `1`. This makes sense, because applying voltage to either diode will provide voltage to the output.
 
-However, recall from [earlier](link) that digital logic levels don't have to be exactly `0V` and `3.3V`, but rather, `LOW` can be up to `1.1V`, and `HIGH` can be as low as `2.2V`. This is important, because in a practical circuit implementation of the above, some voltage is actually lost to the voltage drop of the diode. If the `V`<sub>`f`</sub> of the diodes are `0.2V`, then only `3.1V` is actually read on the output.
+However, recall from [earlier](/Hardware/Tutorials/Electronics/Part3/Direct_Current#digital-logic-levels) that digital logic levels don't have to be exactly `0V` and `3.3V`, but rather, `LOW` can be up to `1.1V`, and `HIGH` can be as low as `2.2V`. This is important, because in a practical circuit implementation of the above, some voltage is actually lost to the voltage drop of the diode. If the `V`<sub>`f`</sub> of the diodes are `0.2V`, then only `3.1V` is actually read on the output.
 
 
 #### AND Gate Truth Table
