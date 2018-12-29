@@ -25,6 +25,11 @@ In this lab we'll..
 
 [going through two diodes, the logic/Schottky diode and the LED, so have to account for both voltage drops]
 
+If you have [iCircuit](http://icircuitapp.com), you can begin your design in there. It will help to get the various values of your circuit components at least close to correct:
+
+![](../Support_Files/SS_iCircuit_Single_LED_Lab.png)
+
+
 
 # Exercise 2: Inverted AND Gate w/Buttons
 
