@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="250px" viewBox="0 0 900 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Lab_Circuit_Dual_LED_w_Ballast_Resistor</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Lab_Circuit_Dual_LED_w_Ballast_Resistor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustration_Frame">
+            <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#EEEEEE" x="1" y="1" width="898" height="248"></rect>
+            <rect id="Rectangle-Copy" stroke="#3D3530" stroke-width="2" fill="#F8FAE4" x="1" y="206" width="898" height="43"></rect>
+            <text id="Exercise-1:-Dual-LED" font-family="Wavehaus-66Book, Wavehaus" font-size="24" font-weight="300" letter-spacing="0.6666667" fill="#23ABE3">
+                <tspan x="398.477332" y="235">Exercise 1: Dual LEDs with Ballast Resistor</tspan>
+            </text>
+        </g>
+        <g id="Circuit" transform="translate(164.000000, 29.000000)">
+            <g id="Pushbutton" transform="translate(43.000000, 61.000000)">
+                <g>
+                    <g id="Connection" transform="translate(0.000000, 13.000000)" fill="#3D3530">
+                        <circle cx="5" cy="5" r="5"></circle>
+                    </g>
+                    <g id="Connection" transform="translate(60.000000, 13.000000)" fill="#3D3530">
+                        <circle cx="5" cy="5" r="5"></circle>
+                    </g>
+                    <path d="M5,8 L65,8" id="Path" stroke="#3D3530" stroke-width="3"></path>
+                    <rect id="Rectangle" fill="#3D3530" x="26" y="0" width="18" height="7"></rect>
+                </g>
+            </g>
+            <g id="Resistor" transform="translate(343.000000, 66.000000)" stroke="#3D3530" stroke-linejoin="round" stroke-width="3">
+                <polyline points="0 13 5 13 10 0 20 26 30 0 40 26 50 0 60 26 65 13 70 13"></polyline>
+            </g>
+            <g id="Ground" transform="translate(412.000000, 78.000000)" stroke="#3D3530">
+                <g transform="translate(33.000000, 37.500000) rotate(-90.000000) translate(-33.000000, -37.500000) translate(-4.500000, 4.500000)">
+                    <path d="M25,33 L75,33" id="Path-2-Copy" stroke-width="3"></path>
+                    <path d="M13,13 L13,53" id="Path-4" stroke-width="3"></path>
+                    <path d="M1,27 L1,39" id="Path-4-Copy" stroke-width="3"></path>
+                    <path d="M25,0 L25,66" id="Path-3-Copy" stroke-width="3"></path>
+                </g>
+            </g>
+            <g id="LED" transform="translate(243.000000, 37.000000)">
+                <g>
+                    <polygon id="Path-2" fill="#3D3530" points="24.5 29 44 42 24.5 55"></polygon>
+                    <path d="M44,42 L70,42" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
+                    <path d="M44,29 L44,55" id="Path-4-Copy" stroke="#3D3530" stroke-width="3"></path>
+                    <path d="M0,42 L24.5,42" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+                    <g id="Arrow" transform="translate(43.647114, 19.941343) rotate(-150.000000) translate(-43.647114, -19.941343) translate(39.147114, 6.441343)">
+                        <polygon id="Triangle" fill="#3D3530" transform="translate(4.633975, 19.633975) scale(1, -1) translate(-4.633975, -19.633975) " points="4.6339746 13.1339746 8.6339746 26.1339746 0.633974596 26.1339746"></polygon>
+                        <path d="M4.5,0 L4.5,20" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+                    </g>
+                    <g id="Arrow" transform="translate(33.647114, 13.941343) rotate(-150.000000) translate(-33.647114, -13.941343) translate(29.147114, 0.441343)">
+                        <polygon id="Triangle" fill="#3D3530" transform="translate(4.633975, 19.633975) scale(1, -1) translate(-4.633975, -19.633975) " points="4.6339746 13.1339746 8.6339746 26.1339746 0.633974596 26.1339746"></polygon>
+                        <path d="M4.5,1.13686838e-13 L4.5,20" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="LED" transform="translate(143.000000, 37.000000)">
+                <g>
+                    <polygon id="Path-2" fill="#3D3530" points="24.5 29 44 42 24.5 55"></polygon>
+                    <path d="M44,42 L70,42" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
+                    <path d="M44,29 L44,55" id="Path-4-Copy" stroke="#3D3530" stroke-width="3"></path>
+                    <path d="M0,42 L24.5,42" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+                    <g id="Arrow" transform="translate(43.647114, 19.941343) rotate(-150.000000) translate(-43.647114, -19.941343) translate(39.147114, 6.441343)">
+                        <polygon id="Triangle" fill="#3D3530" transform="translate(4.633975, 19.633975) scale(1, -1) translate(-4.633975, -19.633975) " points="4.6339746 13.1339746 8.6339746 26.1339746 0.633974596 26.1339746"></polygon>
+                        <path d="M4.5,0 L4.5,20" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+                    </g>
+                    <g id="Arrow" transform="translate(33.647114, 13.941343) rotate(-150.000000) translate(-33.647114, -13.941343) translate(29.147114, 0.441343)">
+                        <polygon id="Triangle" fill="#3D3530" transform="translate(4.633975, 19.633975) scale(1, -1) translate(-4.633975, -19.633975) " points="4.6339746 13.1339746 8.6339746 26.1339746 0.633974596 26.1339746"></polygon>
+                        <path d="M4.5,1.13686838e-13 L4.5,20" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+                    </g>
+                </g>
+            </g>
+            <text id="9V" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#524740">
+                <tspan x="1.5" y="17">9V</tspan>
+            </text>
+            <g id="DC_Rail" transform="translate(0.000000, 29.000000)" stroke="#3D3530">
+                <g transform="translate(15.000000, 25.500000) rotate(-90.000000) translate(-15.000000, -25.500000) translate(-10.500000, 10.500000)">
+                    <path d="M-5.32907052e-15,15 L50,15" id="Path-2-Copy" stroke-width="3"></path>
+                    <path d="M50,-4.26325641e-14 L50,30" id="Path-4" stroke-width="3"></path>
+                </g>
+            </g>
+            <g id="Wiring" transform="translate(15.000000, 78.000000)" stroke="#3D3530" stroke-width="2">
+                <path d="M398,1 L430,1" id="Path"></path>
+                <path d="M298,1 L328,1" id="Path-2"></path>
+                <path d="M198,1 L228,1" id="Path-2-Copy"></path>
+                <path d="M93,1 L128,1" id="Path-3"></path>
+                <path d="M0,1 L33,1" id="Path-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

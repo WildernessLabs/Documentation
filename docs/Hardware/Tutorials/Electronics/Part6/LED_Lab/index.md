@@ -31,6 +31,12 @@ To do this lab, you'll need the following new items:
 
 ![](../Support_Files/Lab_Circuit_Single_LED_w_Ballast_Resistor.svg)
 
+[new circuit symbol is a pushbutton:]
+
+![](../Support_Files/Pushbutton.svg)
+
+[power from the `3.3V` rail on the Meadow or Netduino board, and use an LED of your choosing that has less than a `3.3V`<sub>`f`</sub>.]
+
 ## Step 1 - Design
 
 [i like to design my circuits in iCircuit first, allows me to get values close to correct:]
@@ -48,7 +54,7 @@ R = 3.3V - 2.1V / 0.02A = 60Ω
 
 Can start with a `68Ω` resistor.
 
-## Step 1 - Build and Test
+## Step 2 - Build and Test
 
 
 
@@ -57,6 +63,8 @@ Can start with a `68Ω` resistor.
 [Button actuated, ballast resistor, but two LEDs, blue and red]
 
 [3.3V and 2.1V voltage drop = 5.4V total. So we'll power with a 9V battery]
+
+![](../Support_Files/Lab_Circuit_Dual_LED_w_Ballast_Resistor.svg)
 
 ## Step 1 - Design
 
