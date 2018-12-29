@@ -16,12 +16,14 @@ In this lab we'll..
 
 | Item                                     | Approximate Cost (USD) |
 | ---------------------------------------- | ---------------------- |
-| 1N5817 Shottky Diodes                    |
+| 1N5817 Schottky Diodes                    |
 | (2) Switches                             |
 | LEDs  ||
 | Push Buttons   ||
 
 # Exercise 1: OR Gate
+
+[going through two diodes, the logic/Schottky diode and the LED, so have to account for both voltage drops]
 
 
 # Exercise 2: Inverted AND Gate w/Buttons

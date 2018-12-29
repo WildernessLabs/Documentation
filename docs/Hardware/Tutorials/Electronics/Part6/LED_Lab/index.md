@@ -10,6 +10,8 @@ In this lab, we're going to build a simple LED circuit that uses a resistor to l
 
 [lab can be done in iCircuit, but is much more fun when actually built physically].
 
+[try to build them from schematic without looking at the breadboard solutions]
+
 # Requirements
 
 To do this lab, you'll need the following new items:
@@ -26,6 +28,8 @@ To do this lab, you'll need the following new items:
 # Exercise 1: Single LED Circuit
 
 [simple LED circuit with a ballast resistor and a push button to actuate]
+
+![](../Support_Files/Lab_Circuit_Single_LED_w_Ballast_Resistor.svg)
 
 ## Step 1 - Design
 
