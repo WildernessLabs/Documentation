@@ -75,13 +75,13 @@ Alternating Current (AC) electrical signals can be converted into Direct Current
 
 ![](../Support_Files/Rectification_Circuit.svg)
 
-The above circuit will transform a two-phase AC wave form into positive only voltages:
+The above circuit will transform a two-phase AC wave form into positive and ground voltages:
 
 ![illustration of waveform in and out](../Support_Files/Rectification_Transform.svg)
 
 With some additional components, the DC wave output above can be transformed into a smooth, level DC signal.
 
-Rectifiers are used as the first stage in converting household mains AC current into smooth DC current for use in electronics in nearly all power AC power adapters. For example, the USB wall adapter that you plug your phone into to charge converts AC to DC using a rectifier. In fact, nearly every electronic around you that plugs into the wall use a rectifier someplace.
+Rectifiers are used as the first stage in converting household mains AC current into DC current for use in electronics in nearly all AC power adapters. For example, the USB wall adapter that you plug your phone into to charge converts AC to DC using a rectifier. In fact, nearly every electronic device around you that plugs into the wall use a rectifier circuit.
 
 ## Schottky Barrier Diodes
 
@@ -137,15 +137,15 @@ In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if c
  
 ## Zener Diodes
 
-Zener diodes have a known, precise breakdown voltage, which as we'll explore, can make them very useful for providing a _reference voltage_.
+Zener diodes have a known, precise breakdown voltage, which make them very useful for providing a _reference voltage_.
    
 ### Voltage Reference
 
-Sometimes, a circuit needs a reference signal at a precise voltage. Because zener diodes have a precise breakdown voltage, they can be reverse biased in a circuit to use the back-pressure of their `V`<sub>`f`</sub> to provide a reference. Consider the following circuit:
+Sometimes, a circuit needs a reference signal at a precise voltage. By utilizing the breakdown voltage of a reverse-biased Zener in a circuit, its `V`<sub>`f`</sub> back-pressure can provide that voltage reference. Consider the following circuit:
 
 ![](../Support_Files/Zener_Voltage_Reference_Circuit.svg)
 
-In the case of the circuit above, a zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Since the voltage drop acts like a dam, no matter how much voltage is applied, `5V` of back pressure will always be present:
+In the case of the circuit above, a Zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Since the voltage drop acts like a dam, no matter how much voltage is applied, `5V` of back pressure will always be present:
 
 ![](../Support_Files/Voltage_Reference.svg)
 
@@ -155,6 +155,6 @@ As long as the current is limited, in this case with a resistor, it will stay wi
 
 While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same. 
 
-And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, [necessary for ADC conversions/comparators, and voltage regulators]
+And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, which is used in ADC conversions, voltage regulator circuits, and more.
 
 # [Next - Light-Related Diodes](../Light_Related_Diodes)
