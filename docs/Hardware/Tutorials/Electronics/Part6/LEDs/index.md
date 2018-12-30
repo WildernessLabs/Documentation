@@ -229,7 +229,7 @@ In the above diagram, the time where the signal is high is the same as the time 
 
 To lower the voltage, we typically reduce the duty cycle (amount of time `ON`):
 
-![50% and 25% Duty Cycle](../Support_Files/PWM_50p_v_25p_DutyCycle.svg)
+![50% and 25% Duty Cycle](../Support_Files/PWM_25p_DutyCycle.svg)
 
 In the above diagram, the frequency is the same in both cases; note how the rising edges of the signal are aligned to the same point in time.  However, the lower signal is high for only 25% of the time compared to 50% for the upper trace.
 
