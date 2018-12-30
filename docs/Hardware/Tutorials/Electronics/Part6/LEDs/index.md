@@ -10,7 +10,7 @@ LEDs come in a variety of packages and combinations. Many packages have an arran
 
 ![](/Hardware/Reference/Components/LEDs/SomeLEDs.jpg)
 
-However, no matter what they look like, they're all basically the same to use and there are only two practical circuit concerns; first, making sure the _polarity_ is correct, and second, limiting the current through them so they don't burn out.
+However, no matter what they look like, they're all basically the same to use, and there are only two practical circuit concerns; first, making sure the _polarity_ is correct, and second, limiting the current through them so they don't burn out.
 
 The circuit symbol for an LED is a diode with arrows coming out of it, signifying the photon emission:
 
@@ -40,7 +40,7 @@ Because LEDs have a higher electron orbital energy transition than most diodes, 
 
 What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. The voltage drop therefore generally increases with the light frequency:
 
-| Color  | `V`<sub>`f`</sub> (Voltage drop)| `I`<sub>`fmax`</sub> (max. current) |
+| Color  | Typical `V`<sub>`f`</sub> (Voltage drop)| Typical `I`<sub>`fmax`</sub> (max. current) |
 |--------|---------------|------------------|
 | Red    | 1.8V          | 15mA - 20mA      |
 | Yellow | 2.0V          | 15mA             |
@@ -48,13 +48,13 @@ What's interesting about this, is that in order to change the color of light emi
 | Blue   | 2.7V - 3.6 V  | 20mA             |
 | White  | 1.9V - 2.4V   | 30mA             |
 
-White LEDs are usually a blue LED with a coating that makes the light white, however, some higher-end white LEDs actually have red, green, and blue LEDs in them which light in unison to create white.
+White LEDs are usually a blue LED with a coating that turns the light white, however, some higher-end white LEDs actually have red, green, and blue LEDs in them which light in unison to create white.
 
-Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases voltages. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
+Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases the voltage if there is only `3.3V` available, as in the case with the digital output on Meadow and Netduino. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
 
 ### Red, Green, Blue (RGB) LEDs
 
-Red, Green, Blue (RGB) LEDs are available that have all three color components in a single package. By varying the amount of current to each leg, nearly any hue in the rainbow can be created.
+RGB LEDs are available that have all three color components in a single package. By varying the amount of current to each leg, nearly any hue in the rainbow can be created.
 
 Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're _common anode_ or _common cathode_:
 
@@ -66,7 +66,7 @@ Single LED circuits are typically fairly simple, requiring only a DC power sourc
 
 ![](../Support_Files/LED_Circuit_Simplified.svg)
 
-RGB LEDs are only slightly more complex, and come in two flavors, depending on whether they're common cathode common anode:
+RGB LEDs are only slightly more complex, and come in two flavors, depending on whether they're common cathode or common anode:
 
 ![](../Support_Files/RGB_LED_Wiring.svg)
 
@@ -76,7 +76,7 @@ If you plug in an LED to a `3.3V` voltage source without reducing the voltage (a
 
 ### Non-Ohmic Devices
 
-This failure illuminates some interesting P-N junction behaviors that warrant further explanation.
+This failure illuminates an interesting behavior of P-N junctions that warrant further explanation.
 
 LEDs (actually, all P-N junctions) are referred to as _non-ohmic_ devices. Non-ohmic is a bit of a misnomer, because it implies that that they don't abide by Ohm's law; and this is a common source of confusion. To understand what this really means, we need to revisit Ohm's law. Ohm's law states that the amount of current than can pass through a device is a proportional function of how much force (voltage) is pushing against resistance:
 
@@ -93,13 +93,13 @@ However, recall that with a P-N junction, as the voltage increases, the resistan
 
 ![](../Support_Files/Diode_Forward_Behavior.svg)
 
-Once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduce the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick then with LEDs is to supply just enough voltage to light them up.
+Once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduces the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick with LEDs then is to supply just enough voltage to light them up.
 
 ### Options for Limiting Current
 
-There are two common ways to control the voltage, either with a resistor, or by driving it with a PWM signal.
+There are two common ways to control the voltage, either with a resistor, or by driving it with a _PWM_ signal.
 
-Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when `ON`. A PWM signal is also reasonably simple, but is often done in software. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
+Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when `ON`. A PWM signal is also reasonably simple, but is usually generated inside a microcontroller and controlled by software, rather than generated by an external circuit. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
 
 ### Limiting Current with a Ballast Resistor
 
@@ -146,7 +146,9 @@ Instead, the best practice is to use a resistor for each LED:
 
 ![](../Support_Files/LED_Parallel_Circuit_Practical.svg)
 
-In this case, each resistor is calculated as normal. If the LEDs are all roughly the same, then the same resistor can be used. To calculate the total current draw, simply add the current from each LED up. as per [Kirchhoff's Current Law](/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/).
+In this case, each resistor is calculated as individual LED circuits. 
+
+If you need to calculate the total current draw, simply add the current from each LED up, as per [Kirchhoff's Current Law](/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/).
 
 ### Understanding the Failure
 
@@ -185,7 +187,7 @@ Secondly, the `V`<sub>`f`</sub> of each LED is additive; which requires a voltag
 Calculating the resistance needed is the same as a single LED, except that you must remove all the voltage drops from the voltage source, and the current (`I`) must be the same:
 
 ```
-R = (Vs - Vf1 - Vfn...) / I
+R = (Vs - (Vf1 + Vfn...)) / I
 ```
 
 ### Sample Circuit
@@ -200,10 +202,10 @@ However, if we did have an adequate voltage source, the resistance needed is eas
 
 ```
 Given: 
-R = (Vs - Vf1 - Vfn...) / I
+R = (Vs - (Vf1 + Vfn...)) / I
 
 Therefore:
-R = (9V - 2V - 3V) / .020A
+R = (9V - (2V + 3V)) / .020A
 R = 200Ω
 ```
 
@@ -215,21 +217,21 @@ While [iCircuit](http://icircuitapp.com/) is my go to tool for circuit simulatio
 
 ## Reducing Current with a PWM Signal
 
-In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit, or use a Pulse-Width-Modulation (PWM) signal. 
-
-PWM is a way of controlling voltage digitally to emulate an analog signal, in which instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V`, by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
+In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit, or use a Pulse-Width-Modulation (PWM) signal:
 
 ![PWM 50% Duty Cycle](../Support_Files/PWM_50p_DutyCycle.svg)
 
-A PWM signal generated by Meadow is a square wave. The two key parameters available to control it are the _frequency_ and the _duty cycle_.
+PWM is a way of controlling voltage digitally to emulate an analog signal, in which instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V`; by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
 
-In the above diagram, the time where the signal is high is the same as the time where the signal is low.  The percentage of time the signal is on (high) is called the duty cycle. So, in the above, the signal is high 50% of the one cycle and so the duty cycle is 50%. Therefore, the voltage is `1.6V`.
+A PWM signal generated by Meadow is a _square_ wave and the two key parameters available to control it are the _frequency_ and the _duty cycle_.
 
-To lower the voltage, we typically reduce the duty cycle:
+In the above diagram, the time where the signal is high is the same as the time where the signal is low.  The percentage of time the signal is on (`HIGH`) is called the duty cycle. In the above illustration the signal is high 50% of each cycle and therefore the duty cycle is 50%. Consequently, the average voltage of the signal is 50% of `3.3V`, or `1.6V`.
+
+To lower the voltage, we typically reduce the duty cycle (amount of time `ON`):
 
 ![50% and 25% Duty Cycle](../Support_Files/PWM_50p_v_25p_DutyCycle.svg)
 
-In the above diagram, the frequency is the same in both cases (note how the rising edges of the signal are aligned to the same point in time).  However, the lower signal is high for only 25% of the time compared to 50% for the upper trace.
+In the above diagram, the frequency is the same in both cases; note how the rising edges of the signal are aligned to the same point in time.  However, the lower signal is high for only 25% of the time compared to 50% for the upper trace.
 
 ### Frequency and Flicker
 
