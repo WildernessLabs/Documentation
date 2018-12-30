@@ -26,13 +26,11 @@ In silicon, the electron orbital drop is very small, so the light released is al
 
 Most diodes are designed in such a way that the P-N junction is hidden inside its casing, so these emissions are not visible. LEDs, however, are constructed in such a way that light can escape through them, and the materials used also have a much higher electron orbital energy drop when they combine with the holes. 
 
+### Polarity
+
 Typical through-hole LEDs have a flat spot on the cathode side, and a longer anode leg, signifying how to wire them up with the correct polarity:
 
 ![](../Support_Files/LED_Components.svg)
-
-Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're _common anode_ or _common cathode_:
-
-![Photo of an RGB LED showing one leg longer than the rest.](../Support_Files/RGB_LED_Photo.jpg)
 
 ## LED Colors
 
@@ -53,6 +51,14 @@ What's interesting about this, is that in order to change the color of light emi
 White LEDs are usually a blue LED with a coating that makes the light white, however, some higher-end white LEDs actually have red, green, and blue LEDs in them which light in unison to create white.
 
 Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases voltages. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
+
+### Red, Green, Blue (RGB) LEDs
+
+Red, Green, Blue (RGB) LEDs are available that have all three color components in a single package. By varying the amount of current to each leg, nearly any hue in the rainbow can be created.
+
+Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're _common anode_ or _common cathode_:
+
+![Photo of an RGB LED showing one leg longer than the rest.](../Support_Files/RGB_LED_Photo.jpg)
 
 # Using LEDs in Circuits
 
