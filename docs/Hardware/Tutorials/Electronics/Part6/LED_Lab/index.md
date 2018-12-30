@@ -54,8 +54,11 @@ A pack of 100 black ones runs [~USD$7 on Amazon](https://amzn.to/2StraPJ). Also,
 
 ### Pushbutton Wiring
 
-[two sets of legs connected together:]
+These pushbuttons have two sets of legs, with the top set and the bottom set always connected. When the switch is pressed, the top and bottom set are connected:
 
+![](../Support_Files/Pushbutton_Wiring.svg)
+
+Having four legs instead of two makes them more stable.
 
 # Exercise 1: Single LED Circuit
 
@@ -90,21 +93,23 @@ Try various resistor values to see where the LED brightness lands. If you have e
 
 In this simple circuit, the most likely failure point is getting the polarity of the LED wrong. If it doesn't work, first try reversing the LED leads.
 
-You can also test the voltage across the resistor with a multimeter:
+You can also test the voltage across the LED with a multimeter:
 
-[image of multimeter test leads on both sides of the LED]
+![Image of multimeter test leads on both sides of the LED](../Support_Files/LED_Lead_Test_Medium.jpg)
 
 # Exercise 2: Series LED Circuit
 
-[Button actuated, ballast resistor, but two LEDs, blue and red]
-
-[3.3V and 2.1V voltage drop = 5.4V total. So we'll power with a 9V battery]
-
-[if you don't have a 9V battery and/or connector, you can choose two LEDs with smaller voltage drops and power from the `5V` power rail on the Meadow or Netduino board]
+For this exercise, we're going to wire up two LEDs in series that are button actuated as before and use a ballast resistor:
 
 ![](../Support_Files/Lab_Circuit_Dual_LED_w_Ballast_Resistor.svg)
 
+For my circuit, I've chosen a red and a blue LED that have a `2.1V` and a `3.3V` `V`<sub>`f`</sub>, respectively. That means a total `V`<sub>`f`</sub> of `5.4V`, so I'm going to power the circuit with a `9V` battery.
+
+If you don't have a `9V` battery and/or connector, you can choose two LEDs with smaller voltage drops and power from the `5V` power rail on the Meadow or Netduino board.
+
 ## Step 1 - Design
+
+The same Ohm's law applies as before, but this time we have to take into account both LED voltage drops. Mine looks like the following:
 
 ```
 R = V / I
@@ -113,15 +118,17 @@ R = 9V - (3.3V + 2.1V) / 0.02A = 180Ω
 
 ## Step 2 - Build and Test
 
+Once you've calculated your necessary voltage source and resistor, build and test the circuit as before.
+
 # Exercise 3: 7 Color RGB LED Circuit
 
-By putting a pushbutton in front of each color component of an RGB LED, 7 different colors can be created, depending on the combination of switch presses. Eeach button has two possible values, and there are three buttons, therefore there are 8 combinations (`2 x 2 x 2`), however, one combination is all `OFF`, which is no color at all.
+By putting a pushbutton in front of each color component of an RGB LED, 7 different colors can be created, depending on the combination of switch presses. Each button has two possible values, and there are three buttons, therefore there are 8 combinations (`2 x 2 x 2`), however, one combination is all `OFF`, which is no color at all.
 
 The circuit we're going to build looks like this:
 
 ![](../Support_Files/Lab_Circuit_7_Color_RGB.svg)
 
-Note that it doesn't matter which side of the LED (or button) the resistor goes on, since each LED current path has the same amount of current flowing through it at any given point, but as we'll see, wiring it this makes it fit on the breadboard nicely.
+It doesn't matter which side of the LED (or button) the resistor goes on, since each LED current path has the same amount of current flowing through it at any given point, but as we'll see, wiring it this makes it fit on the breadboard nicely. In fact, I was able to comfortably fit all four of the exercises in this lab on a single breadboard.
 
 ## Step 1 - Design
 
@@ -146,11 +153,20 @@ I rounded up to the nearest preferred resistor values, which might seem high, bu
 
 ## Step 2 - Build and Test
 
+Once you've calculated your resistor values, assemble and test the circuit. Try the various button press combinations to create different colors. Also, put your hand or a piece of paper above the LED and look at it when all three buttons are pressed for white. Notice that light paths don't line up perfectly; and only where all three intersect is it white.
+
+The wiring for this exercise can be a little tricky. Look at the solution below if you get stuck.
+
+# Exercise 4: Specific Color RGB LED Circuit
+
+TBD
 
 
+# Breadboard Solutions
 
-# Exercise 4: Any Hue RGB LED Circuit
+![](../Support_Files/LED_Lab_Breadboard_Solution.png)
 
+[temp image]
 
 
 # [Next - Diode Logic Gate Lab](../Diode_Logic_Lab)
