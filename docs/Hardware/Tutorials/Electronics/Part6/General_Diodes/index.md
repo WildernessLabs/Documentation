@@ -40,23 +40,25 @@ Depending on how they're constructed, a diode can have some interesting behavior
 
 # Common General Diodes
 
- * **Switching Diodes** - Extremely fast `Trr`, used for current switching.
+ * **Switching Diodes** - Also known as _small signal_ diodes, they have an extremely fast `Trr`, and are used for fast current switching.
  * **Rectifier/Power Diodes** - High current capacity, usually `1A` or more. Used for converting AC to DC and protection of circuits from power spikes.
  * **Schottky Barrier Diodes** - Have a very low voltage drop, so they can be used in a clever way to get to a digital `0`/`OFF`. Also very fast. Used for basic logic control.
  * **Zener Diodes** - Have a precise breakdown voltage. Typically used in a reverse bias configuration to provide a voltage reference.
 
 
-## Switching Diodes
+## Switching/Small Signal Diodes
 
-[image of a switching diode]
+Switching diodes are one of the most common diodes available, largely because of their usefulness in high frequency circuits like radios, where their fast switching abilities are required.
 
-These are the most common type of diode. Typically, they have a `V`<sub>`f`</sub> (forward voltage) drop of `0.7v` and a low maximum current rating. The [1N4148](https://amzn.to/2OfaP2n) is a common signal diode with a `500mA` maximum forward current rating. 
+![](../Support_Files/Signal_Diodes_Medium.jpg)
 
-[power switching]
+They typically have small power ratings, `150mA` or less, and a `V`<sub>`f`</sub> of `0.7V`. 
+
+Despite their commonality, most of the digital circuits we'll explore will use other diodes.
 
 ## Power/Rectifier Diodes
 
-Power (aka _rectifier_) diodes are similar to signal diodes but are designed to handle higher current. The [1N4001](https://amzn.to/2DECgyK) is a common rectifier diode and is capable of handling `1A`, but the `V`<sub>`f`</sub> (forward voltage) drop is `1.1V`. These are commonly used to protect certain parts of circuits from voltage spikes, as well as for conversion of AC to DC electricity.
+Power (aka _rectifier_) diodes are similar to signal diodes but are designed to handle higher current. The [1N4001](https://octopart.com/search?q=1N4001) is a common rectifier diode and is capable of handling `1A`, but the `V`<sub>`f`</sub> (forward voltage) drop is `1.1V`. These are commonly used to protect certain parts of circuits from voltage spikes, as well as for conversion of AC to DC electricity.
 
 Because diodes control the direction of current, they're often used to protect circuits from unwanted current, especially power spikes.
 
@@ -66,8 +68,9 @@ Flywheel diodes provide circuit protected from collapsing magnetic fields create
 
 ### Voltage Clamping
 
-[Voltage clamping allows us to adapt an input signal to an acceptable range.]
-[need a better explanation]
+Voltage clamping refers to clipping a signal to a maximum/minimum value to prevent it from going outside a particular range, or shifting an entire AC signal wave above or below `0V`.
+
+[illustration/circuit? see pg 414 of practical electronics for inventors]
 
 ### Rectifiers
 
@@ -93,6 +96,12 @@ The circuit symbol for a Schottky diode looks similar to the diode symbol, excep
 
 Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also makes them ideal for use in simple circuit logic.
 
+### Reverse Current Protection
+
+[prevent frying a circuit when a battery is plugged in the wrong way.]
+[low `V`<sub>`f`</sub> means that it doesn't cost much voltage to protect the circuit]
+
+[circuit illustration]
 
 ### Diode Logic Gates
 
@@ -118,7 +127,6 @@ In the truth table, `0` and `1` represent `LOW` and `HIGH`, respectively. In the
 In the case of an `OR` gate, as long as any input is `1`, the output will also be `1`. This makes sense, because applying voltage to either diode will provide voltage to the output.
 
 However, recall from [earlier](/Hardware/Tutorials/Electronics/Part3/Direct_Current#digital-logic-levels) that digital logic levels don't have to be exactly `0V` and `3.3V`, but rather, `LOW` can be up to `1.1V`, and `HIGH` can be as low as `2.2V`. This is important, because in a practical circuit implementation of the above, some voltage is actually lost to the voltage drop of the diode. If the `V`<sub>`f`</sub> of the diodes are `0.2V`, then only `3.1V` is actually read on the output.
-
 
 #### AND Gate Truth Table
 
