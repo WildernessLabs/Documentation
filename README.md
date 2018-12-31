@@ -52,6 +52,12 @@ For more information, please see the [Contributing](Contributing) page.
 
 ## License
 
+### Copyright
+
+Content copyright Wilderness Labs.
+
+Electronics tutorial copyright Bryan Costanich.
+
 ### Documentation Prose
 
 All the documentation prose is released under a [Creative Commons 
