@@ -70,7 +70,7 @@ Flywheel diodes provide circuit protected from collapsing magnetic fields create
 
 Voltage clamping refers to clipping a signal to a maximum/minimum value to prevent it from going outside a particular range, or shifting an entire AC signal wave above or below `0V`.
 
-[illustration/circuit? see pg 414 of practical electronics for inventors]
+![](../Support_Files/Voltage_Clamping.svg)
 
 ### Rectifiers
 
@@ -98,10 +98,7 @@ Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typi
 
 ### Reverse Current Protection
 
-[prevent frying a circuit when a battery is plugged in the wrong way.]
-[low `V`<sub>`f`</sub> means that it doesn't cost much voltage to protect the circuit]
-
-[circuit illustration]
+Because diodes act like one-way valves, they can prevent reverse current from happening in situations where a battery is plugged in the wrong way. Schottky diodes are ideal for this because their low `V`<sub>`f`</sub> means that it doesn't cost much battery voltage to protect the circuit.
 
 ### Diode Logic Gates
 
@@ -164,5 +161,9 @@ As long as the current is limited, in this case with a resistor, it will stay wi
 While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same. 
 
 And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, which is used in ADC conversions, voltage regulator circuits, and more.
+
+### Zener Diodes come in many Reverse Voltage Ratings
+
+Because Zener diodes are often used as voltage references, they come in a wide variety of reverse voltages. In fact, Zeners cover all common voltages you're likely to find in modern circuits.
 
 # [Next - Light-Related Diodes](../Light_Related_Diodes)

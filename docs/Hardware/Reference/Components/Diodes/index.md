@@ -89,6 +89,7 @@ If both `A` and `B` are set to `5V` then the current cannot flow through either 
 
 ## Further Reading
 
+* [Electronics Tutorial, Chapter 6 (Diodes)](/Hardware/Tutorials/Electronics/Part6/Semiconductors/)
 * [Diode description on Wikipedia](https://en.wikipedia.org/wiki/Diode)
 * [Diode usage in modern circuits - Lifewire.com](https://www.lifewire.com/applications-of-diodes-818815)
 * [Diode Applications - Sparkfun.com](https://learn.sparkfun.com/tutorials/diodes/diode-applications)
