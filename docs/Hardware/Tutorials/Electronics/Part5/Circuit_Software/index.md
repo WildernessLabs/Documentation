@@ -24,7 +24,7 @@ Much of the circuits created in this tutorial are done in Fritzing.
 
 # iCircuit
 
-[iCircuit](http://icircuitapp.com/) is a commercial, yet affordable (USD$5 - $10), and very powerful real time circuit simulator. It's available for iOS, Android, Windows Phone, Mac, and Windows, and has a lot of great example circuits. It's great for doing all the circuit math for you and actually modeling how a circuit works in real time. The following screenshot is a circuit that has a 555 timer changing a 7-segment LED, and what's neat about it, is that you can watch the 7-segment LED go through numbers in the app!
+[iCircuit](http://icircuitapp.com/) is a commercial, yet affordable (USD$5 - $10), and very powerful real time circuit simulator. It's available for iOS, Android, Windows Phone, Mac, and Windows, and has a lot of great example circuits. It's great for doing all the circuit math for you and actually model how a circuit works in real time. The following screenshot is a circuit that has a 555 timer changing a 7-segment LED, and what's neat about it, is that you can watch the 7-segment LED go through numbers in the app!
 
 ![](iCircuit.png)
 

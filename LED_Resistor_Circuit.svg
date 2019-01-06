@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="717px" height="262px" viewBox="0 0 717 262" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>LED_Resistor_Circuit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-7.000000, -40.000000)">
+            <g id="LED_Resistor_Circuit" transform="translate(7.000000, 36.000000)">
+                <g id="Resistor" transform="translate(232.000000, 46.000000)" stroke-width="3" stroke="#524740">
+                    <polyline points="0 26 10 26 20 0 40.1283482 51.451451 60 0 80 51.451451 100 0 120 51.451447 130 26 140 26"></polyline>
+                </g>
+                <g id="Singlecell_Battery" transform="translate(133.000000, 168.000000) rotate(-90.000000) translate(-133.000000, -168.000000) translate(63.000000, 142.000000)" stroke="#524740" stroke-width="3">
+                    <path d="M0,26 L64,26" id="Path-2"></path>
+                    <path d="M76,26 L140,26" id="Path-2-Copy"></path>
+                    <path d="M64,14 L64,38" id="Path-4"></path>
+                    <path d="M76,0 L76,52" id="Path-3-Copy"></path>
+                </g>
+                <g id="LED" transform="translate(500.000000, 168.000000) rotate(-270.000000) translate(-500.000000, -168.000000) translate(430.000000, 113.000000)">
+                    <polygon id="Path-2" stroke="#524740" stroke-width="3" fill="#524740" fill-rule="nonzero" stroke-linejoin="bevel" points="49 58 88 84 49 110"></polygon>
+                    <path d="M88,84 L140,84" id="Path-2-Copy" stroke="#524740" stroke-width="3"></path>
+                    <path d="M88,58 L88,110" id="Path-4-Copy" stroke="#524740" stroke-width="3"></path>
+                    <path d="M0,84 L49,84" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    <g id="Arrow" transform="translate(93.000000, 34.500000) rotate(-135.000000) translate(-93.000000, -34.500000) translate(88.000000, 8.000000)">
+                        <polygon id="Triangle" fill="#524740" fill-rule="nonzero" transform="translate(5.000000, 40.000000) scale(-1, 1) rotate(-180.000000) translate(-5.000000, -40.000000) " points="5 27 10 53 0 53"></polygon>
+                        <path d="M5,0 L5,40" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    </g>
+                    <g id="Arrow-Copy" transform="translate(80.000000, 22.500000) rotate(-135.000000) translate(-80.000000, -22.500000) translate(75.000000, -4.000000)">
+                        <polygon id="Triangle" fill="#524740" fill-rule="nonzero" transform="translate(5.000000, 40.000000) scale(-1, 1) rotate(-180.000000) translate(-5.000000, -40.000000) " points="5 27 10 53 0 53"></polygon>
+                        <path d="M5,0 L5,40" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    </g>
+                </g>
+                <polyline id="Path" stroke="#524740" stroke-width="3" points="133 98 133 72 232 72"></polyline>
+                <polyline id="Path-Copy-2" stroke="#524740" stroke-width="3" transform="translate(302.000000, 251.000000) scale(1, -1) translate(-302.000000, -251.000000) " points="133 264 133 238 471 238 471 264"></polyline>
+                <text id="+" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                    <tspan x="151.932475" y="148">+</tspan>
+                </text>
+                <text id="-" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                    <tspan x="153.808975" y="192">-</tspan>
+                </text>
+                <text id="Source-Voltage-(Vs)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                    <tspan x="21.8788516" y="161">Source </tspan>
+                    <tspan x="0.785703212" y="183">Voltage (Vs)</tspan>
+                </text>
+                <text id="Resistor-(R)" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                    <tspan x="253.635203" y="18">Resistor (R)</tspan>
+                </text>
+                <text id="LED-Voltage-Drop-(Vf" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" letter-spacing="0.695049465" fill="#555555">
+                    <tspan x="626.793926" y="148">LED</tspan>
+                    <tspan x="570.38558" y="170">Voltage Drop (Vf)</tspan>
+                    <tspan x="600.784728" y="192">Current (I)</tspan>
+                </text>
+                <polyline id="Path-Copy" stroke="#524740" stroke-width="3" transform="translate(421.500000, 85.000000) scale(-1, 1) translate(-421.500000, -85.000000) " points="372 98 372 72 471 72"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

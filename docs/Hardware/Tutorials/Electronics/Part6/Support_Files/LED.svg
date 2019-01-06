@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>LED</title>
+    <desc>Created with Sketch.</desc>
+    <g id="LED" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#EEEEEE" x="1" y="1" width="198" height="198"></rect>
+        <g id="TitleBlock" transform="translate(0.000000, 156.000000)">
+            <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#F8FAE4" x="1" y="1" width="198" height="42"></rect>
+            <text id="LED" font-family="Wavehaus-66Book, Wavehaus" font-size="24" font-weight="300" letter-spacing="0.6666667" fill="#23ABE3">
+                <tspan x="147.136" y="28">LED</tspan>
+            </text>
+        </g>
+        <g transform="translate(65.000000, 43.000000)">
+            <polygon id="Path-2" fill="#3D3530" points="24.5 29 44 42 24.5 55"></polygon>
+            <path d="M44,42 L70,42" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
+            <path d="M44,29 L44,55" id="Path-4-Copy" stroke="#3D3530" stroke-width="3"></path>
+            <path d="M0,42 L24.5,42" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+            <g id="Arrow" transform="translate(43.647114, 19.941343) rotate(-150.000000) translate(-43.647114, -19.941343) translate(39.147114, 6.441343)">
+                <polygon id="Triangle" fill="#3D3530" transform="translate(4.633975, 19.633975) scale(1, -1) translate(-4.633975, -19.633975) " points="4.6339746 13.1339746 8.6339746 26.1339746 0.633974596 26.1339746"></polygon>
+                <path d="M4.5,0 L4.5,20" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+            </g>
+            <g id="Arrow" transform="translate(33.647114, 13.941343) rotate(-150.000000) translate(-33.647114, -13.941343) translate(29.147114, 0.441343)">
+                <polygon id="Triangle" fill="#3D3530" transform="translate(4.633975, 19.633975) scale(1, -1) translate(-4.633975, -19.633975) " points="4.6339746 13.1339746 8.6339746 26.1339746 0.633974596 26.1339746"></polygon>
+                <path d="M4.5,1.13686838e-13 L4.5,20" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

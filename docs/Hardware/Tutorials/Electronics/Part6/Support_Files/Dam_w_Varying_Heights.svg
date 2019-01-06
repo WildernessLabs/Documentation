@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="290px" viewBox="0 0 900 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Dam_w_Varying_Heights</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dam_w_Varying_Heights" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#EEEEEE" x="1" y="1" width="898" height="428"></rect>
+        <g id="Illustration" transform="translate(168.000000, 13.000000)">
+            <path d="M0,4.26325641e-14 C31,42 59.8932601,68.3698417 71,99.5 C78.4044933,120.253439 78.4044933,153.420106 71,199 L0,199 C0,91.6666667 0,25.3333333 0,4.26325641e-14 Z" id="Path-5" fill="#84705B"></path>
+            <polygon id="Path-6" fill="#B2B2B2" points="71 131 182 131 182 199 71 199"></polygon>
+            <rect id="Rectangle" fill="#4D4D4D" x="182" y="100" width="21" height="99"></rect>
+            <polygon id="Path-6-Copy" fill="#B2B2B2" points="203 108 314 108 314 199 203 199"></polygon>
+            <path d="M440.66,198 C433.886667,153.333333 435.804,119.333333 446.412,96 C457.02,72.6666667 479.932,43 515.148,7 L515.148,198 L440.66,198 Z" id="Path-7" fill="#84705B"></path>
+            <polygon id="Path-6-Copy-2" fill="#B2B2B2" points="333 119 444 119 444 199 333 199"></polygon>
+            <rect id="Rectangle-Copy-2" fill="#4D4D4D" x="314" y="100" width="21" height="99"></rect>
+        </g>
+        <g id="TitleBlock" transform="translate(0.000000, 245.000000)">
+            <rect id="Rectangle-Copy" stroke="#3D3530" stroke-width="2" fill="#F8FAE4" x="1" y="1" width="898" height="43"></rect>
+            <text id="Varying-LED-Voltage-Copy" font-family="Wavehaus-66Book, Wavehaus" font-size="24" font-weight="300" letter-spacing="0.6666667" fill="#23ABE3">
+                <tspan x="567.797332" y="30">Varying LED Voltage Drops</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
