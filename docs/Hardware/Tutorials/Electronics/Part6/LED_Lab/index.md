@@ -157,16 +157,19 @@ Once you've calculated your resistor values, assemble and test the circuit. Try 
 
 The wiring for this exercise can be a little tricky. Look at the solution below if you get stuck.
 
-# Exercise 4: Specific Color RGB LED Circuit
-
-TBD
-
 
 # Breadboard Solutions
 
+PDF versions coming soon. In the meantime, here's a photo:
+
 ![](../Support_Files/LED_Lab_Breadboard_Solution.png)
 
-[temp image]
+Note the jumpers to the left of the RGB buttons that connect the bottom legs to the resistor.
+
+
+# Exercise 4: Specific Color RGB LED Circuit
+
+Coming Soon.
 
 
 # [Next - Diode Logic Gate Lab](../Diode_Logic_Lab)
