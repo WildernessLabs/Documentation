@@ -2,6 +2,9 @@
 title: Batteries
 ---
 
+TODO: Add [Battery vs Supercapacitors](https://www.machinedesign.com/batteriespower-supplies/what-s-difference-between-batteries-and-capacitors)
+
+
 Batteries are made by placing two conductive materials, an anode (`-`) and a cathode (`+`), in paralell and separating them with an electrically conductive solution known as an [electrolyte](https://en.wikipedia.org/wiki/Electrolyte).
 
 The chemical reactions in the battery causes a build of electrons in the electrolyte at the anode side, but they are unable to travel directly to the cathode through the solution becuse of the voltage differential. 
