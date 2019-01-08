@@ -104,6 +104,21 @@ Therefore:
 
 # Exercise 2: AND Gate w/Switches
 
+![](../Support_Files/Lab_Circuit_Logical_AND_Gate.svg)
+
+# Exercise 3: AND Gate w/Buttons
+
+[impossibru]
+
+![](../Support_Files/SS_iCircuit_Impossible_AND_Gate.png)
+
+[but wait.. logical inversion!]
+
+
+![](../Support_Files/Lab_Circuit_Logical_AND_Gate_Inverted.svg)
+
+
+
 
 
 # [Next - Review](../Review)
