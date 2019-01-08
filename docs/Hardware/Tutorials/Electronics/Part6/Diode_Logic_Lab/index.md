@@ -35,7 +35,15 @@ These circuits use the LED circuits from the last lab as indicators of the outpu
 
 ## Switches
 
-[SPDT]
+[Pole and throw]
+
+[pole is...]
+
+[throw is how many endpoints you can "throw the switch to."]
+
+[SPST - Single Pole, Single Throw]
+
+[SPDT - Single Pole, Dual Throw]
 
 # Exercise 1: OR Gate
 
@@ -106,19 +114,21 @@ Therefore:
 
 ![](../Support_Files/Lab_Circuit_Logical_AND_Gate.svg)
 
-# Exercise 3: AND Gate w/Buttons
+# Exercise 3: Inverted AND Gate w/Buttons
 
-[impossibru]
+[And Gate needs fully shorted high or low on the left hand side. If you try to use buttons and a pull-down resistor, you wind up with an impossible circuit:]
 
 ![](../Support_Files/SS_iCircuit_Impossible_AND_Gate.png)
 
-[but wait.. logical inversion!]
+[the issue here is that the pull down resistors have to be small enough to provide ground, but blah]
 
+[all is not lost however, there's another way to approach this. if we define an open circuit on the buttons (UP) as `1`/`True` we can actually create an AND gate with buttons:]
 
 ![](../Support_Files/Lab_Circuit_Logical_AND_Gate_Inverted.svg)
 
+[in this case, it's a bit of a logical inversion. This circuit may not fit our programmer definition of AND, (this is technically NOT?), but it's a useful circuit to think about, because as a software engineer, I tend to think of on as `1`, and in fact, often times in circuits, we can use an inversion like this to solve tricky designs]
 
-
+[don't have to build this]
 
 
 # [Next - Review](../Review)
