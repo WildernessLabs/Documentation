@@ -159,6 +159,8 @@ MOSFETs are variable resistors. So in high-current situations, you may need a he
 
 `R`<sub>`DS`</sub> * `I`<sup>`2`</sup>
 
-## Example Sources
+# Example Sources + Labs
+
+* [transistor optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
 
 * [Hackster Motor Speed Control with Transistor](https://www.hackster.io/Marcazzan_M/motor-speed-control-with-one-transistor-0921a8)
