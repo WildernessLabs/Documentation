@@ -13,7 +13,7 @@ You'll use the Netduino.Deploy tool for macOS or Windows to update your Netduino
 
 ## Install the latest firmware
 
- 1. Download [Netduino.Deploy](https://www.wildernesslabs.co/downloads) for either Windows or macOS.
+ 1. Download [Netduino.Deploy](http://www.wildernesslabs.co/downloads) for either Windows or macOS.
  2. With your Netduino is unplugged, hold down the button and then plug it in to your computer. This puts the Netduino into _DFU Bootloader Mode_:
  ![](EnteringBootMode.gif)
  3. Launch Netduino.Deploy, your Netduino should show up in the **Model** dropdown.
