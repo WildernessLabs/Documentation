@@ -122,6 +122,8 @@ Therefore:
 
 [the issue here is that the pull down resistors have to be small enough to provide ground, but blah]
 
+[you can play with the iCircuit file [here](../Support_Files/Logical_AND_Gate_w_Buttons.icircuit).]
+
 [all is not lost however, there's another way to approach this. if we define an open circuit on the buttons (UP) as `1`/`True` we can actually create an AND gate with buttons:]
 
 ![](../Support_Files/Lab_Circuit_Logical_AND_Gate_Inverted.svg)
