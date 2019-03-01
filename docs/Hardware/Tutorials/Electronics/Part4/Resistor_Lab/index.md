@@ -254,4 +254,4 @@ Using the process above with your circuit, answer the following questions:
  * What is the expected value?
  * What is the percent error of actual vs. expected?
 
-# [Next - Review](../Review)
+# [Next - Pull-Up and Pull-Down Resistors](../PullUp_PullDown_Resistors/)

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="48 32 376 330" preserveAspectRatio="xMinYMin meet" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g class="SPST Push Switch">
+<line x1="160" y1="224" x2="192" y2="224" stroke="#877777" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="224" y1="224" x2="256" y2="224" stroke="#07F707" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<ellipse cx="192" cy="224" rx="4" ry="4" fill="#877777" fill-opacity="1" stroke="none" />
+<ellipse cx="224" cy="224" rx="4" ry="4" fill="#07F707" fill-opacity="1" stroke="none" />
+<line x1="192" y1="212" x2="224" y2="212" stroke="#000000" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="208" y1="209" x2="208" y2="206" stroke="#000000" stroke-opacity="1" stroke-width="6" stroke-linecap="round" fill="none" />
+</g>
+<g class="DC Rail">
+<line x1="278" y1="81" x2="298" y2="81" stroke="#07F707" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="288" y1="128" x2="288" y2="81" stroke="#07F707" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<text x="263" y="77" font-family="sans-serif" font-size="15">+3.3V</text>
+</g>
+<g class="Port">
+<polygon fill="#FFFFFF" fill-opacity="0.831372549019608" stroke="none" points="320,224 328,214 384,214 384,234 328,234 " />
+<polygon stroke="#000000" stroke-opacity="1" stroke-width="1" fill="none" points="320,224 328,214 384,214 384,234 328,234 " />
+<text x="347" y="229" font-family="sans-serif" font-size="15">1</text>
+</g>
+<g class="Resistor">
+<line x1="288" y1="128" x2="288" y2="144" stroke="#07F707" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="288" y1="176" x2="288" y2="192" stroke="#07F707" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<polyline stroke="#07F707" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none" points="288,144 296,146.6667 288,149.3333 280,152 288,154.6667 " />
+<polyline stroke="#07F707" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none" points="288,154.6667 296,157.3333 288,160 280,162.6667 288,165.3333 " />
+<polyline stroke="#07F707" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none" points="288,165.3333 296,168 288,170.6667 280,173.3333 288,176 " />
+<text x="303" y="165" font-family="sans-serif" font-size="15">10k</text>
+</g>
+<g class="Ground">
+<line x1="96" y1="256" x2="96" y2="320" stroke="#877777" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="106" y1="320" x2="86" y2="320" stroke="#877777" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="102" y1="325" x2="90" y2="325" stroke="#877777" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+<line x1="98" y1="330" x2="94" y2="330" stroke="#877777" stroke-opacity="1" stroke-width="3" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="288" y1="192" x2="288" y2="224" stroke="#07F707" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" fill="none" />
+<ellipse cx="288" cy="224" rx="4" ry="4" fill="#07F707" fill-opacity="1" stroke="none" />
+</g>
+<g class="Wire">
+<line x1="288" y1="224" x2="320" y2="224" stroke="#07F707" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" fill="none" />
+<ellipse cx="288" cy="224" rx="4" ry="4" fill="#07F707" fill-opacity="1" stroke="none" />
+</g>
+<g class="Wire">
+<line x1="256" y1="224" x2="288" y2="224" stroke="#07F707" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" fill="none" />
+<ellipse cx="288" cy="224" rx="4" ry="4" fill="#07F707" fill-opacity="1" stroke="none" />
+</g>
+<g class="Wire">
+<line x1="160" y1="224" x2="96" y2="224" stroke="#877777" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+<g class="Wire">
+<line x1="96" y1="224" x2="96" y2="256" stroke="#877777" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" fill="none" />
+</g>
+</svg>
