@@ -30,11 +30,9 @@ However, a _pull-down_ resistor can be used, which connects the floating wire to
 
 This provides a known, default value of `LOW` when the button isn't pressed.
 
-### Override Logic [this needs help]
+### Logic
 
 When then button is pressed, the input at `1` will see a `HIGH` signal, even though some current will flow to ground.
-
-Typically, in modern circuits, the resistance used is very high, `10kΩ` or more, which allows only a small amount of current (`0.00033A`, or `0.33µA` if connected to `3.3V`) to leak.
 
 ## Pull-Up Resistors
 
@@ -42,8 +40,17 @@ A _pull-up_ resistor is much like a pull-down resistor, but provides a default `
 
 ![](../Support_Files/PullUp_Resistor_Circuit.svg)
 
-[Just as with a pull-down resistor, when the button is pressed, it shorts to ground, so the ]
+Just as with a pull-down resistor, when the button is pressed, it shorts to ground, so the input at `1` will see a `LOW` signal, because any voltage at `1` will _sink_ to ground.
 
+## Strong vs. Weak Pulling Resistors
+
+Typically, in modern, power-efficient circuits where the switching components react to voltage, rather than current, the resistance used in pull ups and pull downs is very high, `10kΩ` or more, up to millions of Ohms, which allows only a small amount of current to leak.
+
+A lower amount of resistance will exert a stronger "pull" one way or the other, and a higher amount of resistance will exert a weaker pull. For this reason, high value pulling resistors are known as _weak_ pull-downs or pull-ups, and lower value resistors are known as _strong_ pull-ups or pull-downs.
+
+Because of the physical nature of electricity, stronger pull-ups and pull-downs will react also faster than weaker ones.
+
+We'll examine these considerations more deeply later.
 
 ## Internal Pull-Ups and Pull-Downs
 
