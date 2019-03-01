@@ -1,7 +1,7 @@
 ---
 layout: ElectronicsTutorial
 title: Pull-up & Pull-down Resistors
-subtitle: Providing a default value to a circuit.
+subtitle: Providing a default value to an input in a circuit.
 ---
 
 # Pull-up & Pull-Down Resistors
