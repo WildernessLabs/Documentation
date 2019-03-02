@@ -6,7 +6,7 @@ subtitle: The movement of electrons.
 
 # Achieving Balance
 
-Atoms want to be balanced; that is, if they are positively charged (have too few electrons), they exert an attractive forced to try and take free electrons to achieve balance; a neutral charge. Atoms that have a negative charge (too many electrons), tend to want to get rid of excess electrons.
+Atoms want to be balanced; that is, if they are positively charged (have too few electrons), they exert an attractive force to try and take free electrons to achieve balance; a neutral charge. Atoms that have a negative charge (too many electrons), tend to want to get rid of excess electrons.
 
 Usually, electrons jump from negatively charged atoms to positively charged locations. We can think of this as an electron filling a "hole." When an electron moves in this direction, it leaves a hole behind it, which has a positive charge. so we can think of electrons flowing one way, and holes (or positive charges) flowing the other way.
 
