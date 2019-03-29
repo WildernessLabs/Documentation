@@ -31,7 +31,7 @@ Resistor kits are available from a number of suppliers, most kits have a selecti
 
 SparkFun makes a [great one that runs about USD$8](https://www.sparkfun.com/products/10969) and has 500 of the most common resistors in 5% tolerance:
 
-![](../SparkFun_Resistor_Kit.jpg)
+![](../Support_Files/Tools_and_Components/SparkFun_Resistor_Kit.jpg)
 
 Joe Knows Electronics also makes [a great kit that contains 860, 1% tolerance resistors for ~USD$20](http://amzn.to/2iwbWtq), and is available on Amazon.com.
 
@@ -69,11 +69,11 @@ There are two main kinds of breadboard jumper wires; straight wires, and flexibl
 
 Straight wires are made from single strand wire and are usually sold in a kit which has a variety of pre-cut sizes and colors. They can be easily bent to fit whatever circuit routing necessary. A [140 piece kit](http://amzn.to/2B6aINg) like the one shown below can be had for ~USD$7 on Amazon.com:
 
-![](../140pc_Fixed_Breadboard_Jumper_Kit.jpg)
+![](../Support_Files/Tools_and_Components/140pc_Fixed_Breadboard_Jumper_Kit.jpg)
 
 And a [350 piece kit](http://amzn.to/2hEdsJ3) runs around USD$15:
 
-![](../350pc_Fixed_Breadboard_Jumper_Kit.jpg)
+![](../Support_Files/Tools_and_Components/350pc_Fixed_Breadboard_Jumper_Kit.jpg)
 
 I have both, and prefer the organization of the 350 piece kit, but the 140 piece kit is just fine.
 
@@ -81,7 +81,7 @@ I have both, and prefer the organization of the 350 piece kit, but the 140 piece
 
 Flexible jumper wires come in combinations of male to male, male to female, and female to female. They are made of multi stranded wires and so are very flexible, and are good for long connections. However, unlike the straight wires, they usually only come in two sizes, so they're not very practical for short connections; circuits built with only them can be very messy. They usually come in a ribbon that can be peeled apart, and a [pack of 80](http://amzn.to/2hFGuIq) run USD$6 on Amazon.com:
 
-![](../80Pc_MaleMale_Flexible_Jumpers.jpg)
+![](../Support_Files/Tools_and_Components/80Pc_MaleMale_Flexible_Jumpers.jpg)
 
 For most circuits, male to male are all that you'll need, but certain circuits later will require male to female wires. 
 
@@ -97,7 +97,7 @@ It's nice to have both straight and flexible wires, but for this lab, the straig
 
 We make a [Wilderness Labs hack kit](http://amzn.to/2iyFoPx) that comes with a nice half size breadboard, flexible jumper wires, and laser etched board to mount a Netduino and the included breadboard:
 
-![](../WLabs_Hack_Kit.jpg)
+![](../Support_Files/Tools_and_Components/WLabs_Hack_Kit.jpg)
 
 ### Multimeters
 
@@ -114,19 +114,19 @@ As a bonus feature, you might consider getting a multimeter that does _transisto
 
 [Here is a great, pocket-sized, starter multimeter from Amazon](https://www.amazon.com/gp/product/B072XH5SJ7/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B072XH5SJ7&linkCode=as2&tag=ilderneabs-20&linkId=a5c314e3ce625c8bee20f98f7e4827f3) that costs about USD$13 and will probably get you through all of this tutorial:
 
-![](../Affordable_Digital_Mutlimeter.jpg)
+![](../Support_Files/Tools_and_Components/Affordable_Digital_Mutlimeter.jpg)
 
 #### Mid-level Multimeter
 
 For a midlevel multimeter, [this one](http://amzn.to/2hEjvNG) runs $37 and has a transistor tester, temperature sensor, and more:
 
-![](../Proster_Multimeter.jpg)
+![](../Support_Files/Tools_and_Components/Proster_Multimeter.jpg)
 
 ### Professional Multimeter
 
 For a professional level multimeter that will do pretty much everything you might want to do, [BK Precision 2707B](https://www.mouser.com/ProductDetail/BK-Precision/2707B/?qs=sGAEpiMZZMtHyRFzBQ9JV5QGausOCKjC) is a manual ranging model that has transistor testing, capacitance and diode testing, and more. At ~USD$95, they're an investment.
 
-![](../BK_Precision_2707B_alt.jpg)
+![](../Support_Files/Tools_and_Components/BK_Precision_2707B_alt.jpg)
 
 And while you manually have to set the range, they're actually much faster than auto-ranging models.
 
@@ -134,7 +134,7 @@ And while you manually have to set the range, they're actually much faster than 
 
 Resistor leads are pretty long, so I often trim them down a bit to put them in breadboards; it makes the circuits a lot cleaner. I suggest a wire cutter/stripper combo tool, so that you can also strip wire. Make sure to get one that handles the size of wires that are typically used for prototyping, usually between 20 and 30 gauge. [Klein tools makes a nice one](http://amzn.to/2hG0iLB) for ~USD$22:
 
-![](../Wire_Stripper_Cutter.jpg)
+![](../Support_Files/Tools_and_Components/Wire_Stripper_Cutter.jpg)
 
 
 # Exercise 1 - Measuring Series Resistance
@@ -161,7 +161,7 @@ The overlays can be pinned down as shown in the photos above by using some break
 
 Or, for an even better deal, you can get a [pack of 40 in fancy colors for ~USD$9 on Amazon](http://amzn.to/2jzbD0B)!
 
-![](../Colored_Breakaway_Headers.jpg)
+![](../Support_Files/Tools_and_Components/Colored_Breakaway_Headers.jpg)
 
 The [layout overlays for this lab are here](../Resistor_Lab_BB_Overlay.pdf). Make sure that when you print them, they are printed at 100% scale, otherwise they may not fit.
 
@@ -254,4 +254,4 @@ Using the process above with your circuit, answer the following questions:
  * What is the expected value?
  * What is the percent error of actual vs. expected?
 
-# [Next - Review](../Review)
+# [Next - Pull-Up and Pull-Down Resistors](../PullUp_PullDown_Resistors/)

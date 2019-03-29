@@ -26,5 +26,9 @@ We're going to dive deeper into resistors and resistor networks later, but:
  * Resistors have a tolerance which specifies a range that their actual resistance falls into.
  * Resistors come in a set of values that covers the range of possible values, adjusted for tolerance, with only small overlap.
  * _Breadboards_ reduce prototyping complexity by allowing you to create circuits without soldering.
+ * A _pull-up_ resistor provides a default `HIGH` value at an input in a circuit by connecting the input to a voltage source and allowing a small amount of current to flow.
+ * A _pull-down_ resistor is the opposite of a pull-down, and provides a default value of `LOW` at an input in a circuit.
+ * Pull-up and pull-down resistors are one of the most common tools in circuit design.
+ * Pull-ups and pull-downs with smaller resistance values are known as _strong_ pull-ups and pull-downs, and act quicker than _weak_ pull-ups and pull-downs, which have a larger resistance value.
 
 ## [Part 5 - DC Circuit Analysis](../../Part5/DC_Circuits)
