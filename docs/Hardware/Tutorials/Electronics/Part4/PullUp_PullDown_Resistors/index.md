@@ -12,7 +12,7 @@ Resistors are used in one of the single-most important and common utility config
 
 To understand the usefulness of this, consider the following button circuit:
 
-![](../Support_Files/Pull_Resistors_Floating_Circuit.svg)
+![](../Support_Files/Floating_Button_Circuit.svg)
 
 Note that the symbol in the center of the circuit represents a common pushbutton:
 
