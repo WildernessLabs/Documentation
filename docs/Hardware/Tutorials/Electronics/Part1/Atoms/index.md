@@ -18,7 +18,7 @@ Most molecules are very small, atoms are very, very small. To give an idea of th
 
 Atoms are composed of three more elementary particles; protons, neutrons, and electrons.
 
-Protons and neutrons are incredibly dense and make up the core, or _nucleus_ of an atom. In fact, they're so dense, that a teaspon of them packed together would weigh many tons on earth. However, an atom is mostly empty space, because while the protons and neutrons are tightly clustered in the center of the atom, electrons orbit a distance around the nucleus:
+Protons and neutrons are incredibly dense and make up the core, or _nucleus_ of an atom. In fact, they're so dense, that a teaspoon of them packed together would weigh many tons on earth. However, an atom is mostly empty space, because while the protons and neutrons are tightly clustered in the center of the atom, electrons orbit a distance around the nucleus:
  
 ![](../Atom.svg)
 
@@ -39,7 +39,7 @@ All elements may have different isotopes. For example, the element carbon can  h
 
 # Electrical Charge
 
-Both protons and electrons have an attraction/repelling force, or "charge." Protons and electrons have the same amount of charge from a quantity standpoint, but they are qualitatively different, in that protons and electrons exert opposite forces, which cause them to attract each other, while electrons will repel each other. The amount of charge a proton or electron has is known as a [_unit electrical charge_](https://en.wikipedia.org/wiki/Elementary_charge#Quantization), often denoted as _e_, and was once thought to be the smallest amount of electrical charge possible (we now know that [quarks](https://en.wikipedia.org/wiki/Quark), have an even smaller electrical charge).
+Both protons and electrons have an attraction/repelling force, or "charge." Protons and electrons have the same amount of charge from a quantity standpoint, but they are qualitatively different, in that protons and electrons exert opposite forces, which cause them to attract each other, while electrons will repel each other. Similarly, two protons will also repel each other. The amount of charge a proton or electron has is known as a [_unit electrical charge_](https://en.wikipedia.org/wiki/Elementary_charge#Quantization), often denoted as _e_, and was once thought to be the smallest amount of electrical charge possible (we now know that [quarks](https://en.wikipedia.org/wiki/Quark), have an even smaller electrical charge).
 
 **Protons are said to have a "positive charge,"** Neutrons have no charge (neutral), and **electrons have a "negative charge."**. However, the terms negative and positive in this context have no intrinsic meaning, instead, their naming has been chosen arbitrarily, in that they could have just as easily been called _up_ and _down_ charges, or protons could have been said to be negative and eletrons positive. The important part here is that they are opposites.
 
