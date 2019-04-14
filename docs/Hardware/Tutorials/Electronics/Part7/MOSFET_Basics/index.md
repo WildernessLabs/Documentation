@@ -36,3 +36,6 @@ MOSFETs are variable resistors. So in high-current situations, you may need a he
 `P` = `R` x `I`<sup>`2`</sup>
 
 `R`<sub>`DS`</sub> * `I`<sup>`2`</sup>
+
+
+# [Next - Basics of BJT Usage](../BJT_Basics)

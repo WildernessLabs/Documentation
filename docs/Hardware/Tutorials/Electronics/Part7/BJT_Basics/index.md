@@ -80,5 +80,3 @@ NPN = **N**ever **P**oints i**N**.
 * **Switched On** - Also known as _saturation_, transistor is fully "on:" `I`<sub>`C`</sub> `= I(saturation`
 * **Switched Off** - Also known as _cut off_, transistor is fully "off:" `I`<sub>`C`</sub> `= 0`
 
-
-# [Next - Basics of MOSFET Usage](../MOSFET_Basics)
