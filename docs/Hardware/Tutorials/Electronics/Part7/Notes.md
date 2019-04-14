@@ -9,32 +9,8 @@
 
 
 
-## Beta (β)
-
-Relationship between Base current and current flowing from Collector to Emitter.
-
-Also known as `HFE`.
-
-`I`<sub>`C`</sub> `= I`<sub>`B`</sub> `* β`
-
-### Terminology
-
-===
-* **Current Amplifier** - Also known as _active region_: `I`<sub>`C`</sub> `= I`<sub>`B`</sub> `* β`
-* **Switched On** - Also known as _saturation_, transistor is fully "on:" `I`<sub>`C`</sub> `= I(saturation`
-* **Switched Off** - Also known as _cut off_, transistor is fully "off:" `I`<sub>`C`</sub> `= 0`
-
 
  
-[Note: `VCC` comes from Common Voltage at all Collectors in an IC.]
-
-
- * **`V`<sub>`c`</sub>** - Voltage at the Collector
- * **`i`<sub>`B`</sub>** - Current at Base
- * **`V`<sub>`BE`</sub>** - Voltage from Base to Emitter
-
-
-# <<<=============
 
 
 ### Types N-Channel/NPN & P-Channel/PNP

@@ -59,7 +59,7 @@ While Wikipedia lists [52 different types of transistors](https://en.wikipedia.o
 * **BJT** = Bipolar Junction Transistor
 * **MOSFET** = Metal-Oxide Semiconductor Field-Effect Transistors
 
-Both are "transistors," however, BJTs are usually what people have historically thought of as transistors. They're the original transistor design and have been used for 70+ years. 
+Both are "transistors," however, BJTs are usually what people have historically thought of as transistors. They're basically the original transistor design and have been used for 70+ years. 
 
 BJTs are fine, but for modern circuits, we use MOSFETs for nearly everything. They're inherently more power efficient, because as we will learn, they operate on voltage, rather than current.
 
