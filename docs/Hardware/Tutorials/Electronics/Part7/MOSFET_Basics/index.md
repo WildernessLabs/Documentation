@@ -6,9 +6,13 @@ subtitle: Using Metal-Oxide Semiconductor Field-Effect Transistors
 
 ## MOSFET
 
+MOSFETs are the most common type of transistors in use today. 
+
+
 Two types:
-* **Depletion** - Current flows by default. Applying a negative voltage causes the current flow to stop.
+
 * **Enhancement** - Comes in N-channel and P-channel types. N-channel MOSFETs are the ones you'll use most often.
+* **Depletion** - Current flows by default. Applying a negative voltage causes the current flow to stop.
 
 ### Parts
 
@@ -37,5 +41,8 @@ MOSFETs are variable resistors. So in high-current situations, you may need a he
 
 `R`<sub>`DS`</sub> * `I`<sup>`2`</sup>
 
+## Caution - Static Electricity
+
+[susceptible to destruction via static electric discharge]
 
 # [Next - Basics of BJT Usage](../BJT_Basics)

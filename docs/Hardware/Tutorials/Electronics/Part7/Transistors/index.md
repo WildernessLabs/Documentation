@@ -42,7 +42,7 @@ Transistors have two primary functions; **they work both as an electronic switch
 
 Most often, we use transistors to digitally switch (logical `ON`/`OFF`) higher current or voltage loads with a smaller controlling current. For instance, if we wanted to control a `12V` DC motor using a `3.3V` digital output on a Meadow board, we could use a transistor circuit that acts a sort of digital "switch" to allow `12V` from an external source to flow through the motor.
 
-[diagram]
+![](../Support_Files/Transistor_as_Switch.svg)
 
 ### As an Amplifier
 
@@ -71,10 +71,6 @@ Additionally, when working with larger current loads, you'll almost always want 
 There's another 
 -->
 
-### Circuit Symbols
-
-[MOSFET and BJT]
-
 ## Anatomy; Base, Collector, Emitter/Gate, Source, Drain
 
 Whether BJT, MOSFET, or nearly any other type, transistors almost always have three legs and though they're called different things on a BJT or a MOSFET, they basically do the same thing:
@@ -82,8 +78,8 @@ Whether BJT, MOSFET, or nearly any other type, transistors almost always have th
 | Lead Function | MOSFET Name | BJT Name    |
 |---------------|-------------|-------------|
 | **Control**   | _Gate_      | _Base_      |
-| ? | _Source_    | _Collector_ |
-| ? | _Drain_     | _Emitter_   |
+| Lead 1 | _Source_    | _Collector_ |
+| Lead 2 | _Drain_     | _Emitter_   |
 
 The _gate_ or _base_ is the lead that controls current flow between the _source_ and _drain_ (on a MOSFET), or the _collector_ and _emitter_ on a BJT.
 
