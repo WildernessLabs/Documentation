@@ -863,7 +863,10 @@ footer {
 
 nav.secondary {
   overflow: hidden;
-  background: #555555;
+  background: #14607f;
+  border-top: 10px solid #10485e;
+  border-bottom: 10px solid #1a80aa;
+  font-family: "MrsEavesOT-SmallCaps", serif;
   padding: 1.35em 0; }
   nav.secondary ul {
     margin: 0;
@@ -891,7 +894,7 @@ nav.secondary {
           margin: 7px 0; } }
   nav.secondary a {
     color: #eeeeee;
-    font-size: 28px;
+    font-size: 22px;
     text-decoration: none;
     font-weight: 300; }
     @media screen and (max-width: 1199px) {
@@ -899,19 +902,18 @@ nav.secondary {
         font-size: 24px; } }
 
 .header-interior {
-  background: #555555;
+  background: #cfdf48;
   color: white;
-  padding: 4.65em 0;
-  border-bottom: 6px solid #23abe3; }
+  padding: 3.65em 0; }
   .header-interior h1 {
-    color: white;
-    font-family: 'Raleway', 'Roboto', Helvetica, Arial, sans-serif;
+    color: #524740;
+    font-family: "MrsEavesOT-SmallCaps", serif;
     font-weight: 300;
     font-size: 72px;
     margin-bottom: 5px; }
   .header-interior__subtitle {
     font-size: 28px;
-    color: #b09679;
+    color: #524740;
     font-weight: 300;
     margin-bottom: 0; }
 
