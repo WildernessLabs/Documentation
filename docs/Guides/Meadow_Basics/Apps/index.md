@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Meadow Applications
+subtitle: Guides and documentation for Meadow
+---
+
 # Meadow Applications
 
 Meadow applications are basically just .NET console applications. In fact, for now, to create a new Meadow application, you'll create a regular console application and in `static void Main`, launch a [`Meadow.IApp`](xref:Meadow.IApp):
@@ -121,4 +127,4 @@ namespace HelloLED
 }
 ```
 
-# [Next - Input/Output](/guides/Meadow_Basics/IO/index.html)
+# [Next - Input/Output](/Guides/Meadow_Basics/IO/)

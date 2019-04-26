@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Input/Output (IO)
+subtitle: Guides and documentation for Meadow
+---
+
 # Input/Output (IO)
 
 IO is a big part of what makes Meadow magical. Meadow boards expose a wide variety of ways to control and interact with external peripherals and hardware via _Input/Output_ (IO) ports.
@@ -99,5 +105,5 @@ IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLE
 
 When building Meadow applications, most of the time, you'll use high level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
-## [Next - Meadow.Foundation](/guides/Meadow.Foundation/index.html)
+## [Next - Meadow.Foundation](/Guides/Meadow.Foundation/)
 

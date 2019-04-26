@@ -1,5 +1,10 @@
-# Meadow F7 Micro Beta Status
+---
+layout: Meadow
+title: Meadow F7 Micro Beta Status
+subtitle: Guides and documentation for Meadow
+---
 
+# Meadow F7 Micro Beta Status
 
 ## GPIO
 
@@ -38,4 +43,4 @@
 | Battery Voltage Level | | Waiting on co-proc comms integration. |
 | Power Management | | Not implemented. |
 
-## [Next - Fundamentals of Meadow Apps](/guides/Meadow_Basics/Apps/index.html)
+## [Next - Fundamentals of Meadow Apps](/Guides/Meadow_Basics/Apps/)

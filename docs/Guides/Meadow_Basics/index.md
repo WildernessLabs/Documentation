@@ -1,10 +1,16 @@
+---
+layout: Meadow
+title: Meadow Basics
+subtitle: Guides and documentation for Meadow
+---
+
 # Basics of Meadow Development
 
 This section covers the fundamentals of creating Meadow applications.
 
- * [Beta Feature Status](/guides/Meadow_Basics/Status/index.html)
- * [Meadow Applications](/guides/Meadow_Basics/Apps/index.html)
- * [Input & Output (IO)](/guides/Meadow_Basics/IO/index.html)
+ * [Beta Feature Status](/Guides/Meadow_Basics/Status/)
+ * [Meadow Applications](/Guides/Meadow_Basics/Apps/)
+ * [Input & Output (IO)](/Guides/Meadow_Basics/IO/)
 
-## [Next - Meadow.Foundation](/guides/Meadow.Foundation/index.html)
+## [Next - Meadow.Foundation](/Guides/Meadow.Foundation/)
  
