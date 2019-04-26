@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Unified GPIO Architecture
+subtitle: Guides and documentation for Meadow.Foundation
+---
+
 # Meadow.Foundation Unified GPIO Architecture
 
 Meadow.Foundation incorporates an architecture that was designed to extend peripheral support seamlessly across expansion peripherals such as I2C/SPI/etc. I/O expansion chips. For example, you can connect an MCP23x or 74x595 I/O expansion chip to a Meadow, and then drive a `Relay` via one of the pins on the expansion chip, just as if it were connected directly to the Netduino!

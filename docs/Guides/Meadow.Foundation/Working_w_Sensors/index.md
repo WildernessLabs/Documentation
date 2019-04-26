@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Working with Sensors
+subtitle: Guides and documentation for Meadow.Foundation
+---
+
 # Working with Sensors in Meadow.Foundation
 
 ## Polling and Events
