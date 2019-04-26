@@ -1,8 +1,14 @@
+---
+layout: Meadow
+title: Setup
+subtitle: Guides and documentation for Meadow
+---
+
 # Configuring the Meadow Build Environment
 
- 1. [Connect Meadow to the ST-Link V2](stlink/index.html)
+ 1. [Connect Meadow to the ST-Link V2](stlink/)
  *  Configure Your Development Environment:
-    * [macOS](macos/index.html)
-    * [Windows](Windows/index.html)
+    * [macOS](macos/)
+    * [Windows](Windows/)
 
-## [Next - Deploy Meadow OS](/guides/Getting_Started/Deploying_Meadow/index.html)
+## [Next - Deploy Meadow OS](/Guides/Getting_Started/Deploying_Meadow/)

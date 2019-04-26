@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Hello World
+subtitle: Guides and documentation for Meadow
+---
+
 # Hello, World
 
 Meadow applications are just familiar .NET Framework 4.7.2 console applications. To access the GPIO and Meadow-specific features, your project references the **Meadow.Core** library.

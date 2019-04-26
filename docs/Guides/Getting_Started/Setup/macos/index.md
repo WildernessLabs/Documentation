@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: macOS Setup
+subtitle: Guides and documentation for Meadow
+---
+
 # macOS Setup
 
 To configure your Mac you'll install several tools.

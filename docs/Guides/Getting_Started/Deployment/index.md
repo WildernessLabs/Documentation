@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Deployment
+subtitle: Guides and documentation for Meadow
+---
+
 # Deploy a Meadow application
 
 * [macOS](macos/index.html)

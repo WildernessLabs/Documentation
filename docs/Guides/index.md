@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Guides
+subtitle: Guides and documentation for Meadow
+---
+
 # Welcome to the Meadow Guides
 
 Pardon our dust! Meadow is still an early beta project. Deployment is a bit tricky right now, and the docs are in progress, but things are getting better every day!

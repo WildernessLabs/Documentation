@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Deploying a Meadow App in MacOS
+subtitle: Guides and documentation for Meadow
+---
+
 # Deploy a Meadow Test App
 
 To verify that your Meadow OS is installed correctly and everything is setup, you should deploy a known working test app. We've provided an app that controls Meadow's onboard RGB led.

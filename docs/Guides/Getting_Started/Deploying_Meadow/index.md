@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Deploy Meadow OS
+subtitle: Guides and documentation for Meadow
+---
+
 # Deploying Meadow OS
 
 Before you deploy and run a Meadow application, you must flash the board with Meadow OS. This step only needs to be done once per update of Meadow OS.

@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Windows Setup
+subtitle: Guides and documentation for Meadow
+---
+
 # Windows Setup
 
 ## Prerequisites
