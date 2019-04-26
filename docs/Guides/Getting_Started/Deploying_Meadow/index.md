@@ -24,7 +24,7 @@ Extract the zip to a convenient location that you can access using the Command P
 
 ### macOS
 
-If you followed the [macOS Setup guide](/guides/Getting_Started/Setup/macos/index.html), you're all set. Otherwise follow the steps below.
+If you followed the [macOS Setup guide](/Guides/Getting_Started/Setup/macos/), you're all set. Otherwise follow the steps below.
 
 For macOS, you'll need Brew. To install:
  1. Install [Brew](https://brew.sh/) if it isn't installed already.
@@ -104,4 +104,4 @@ Notes:
 
 You're now ready to deploy C# applications to Meadow!
 
-## [Next - Deploy a Test App](/guides/Getting_Started/Deployment/index.html)
+## [Next - Deploy a Test App](/Guides/Getting_Started/Deployment/)
