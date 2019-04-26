@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Bluetooth
-subtitle: Guides and documentation for Meadow
+subtitle: Meadow Basics
 ---
 
 # Bluetooth

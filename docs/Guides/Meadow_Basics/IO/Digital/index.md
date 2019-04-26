@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Digital IO
-subtitle: Guides and documentation for Meadow
+subtitle: Meadow Basics
 ---
 
 # Digital IO

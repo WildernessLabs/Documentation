@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Networking
-subtitle: Guides and documentation for Meadow
+subtitle: Meadow Basics
 ---
 
 # Networking

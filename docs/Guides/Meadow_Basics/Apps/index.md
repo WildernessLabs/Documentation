@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Meadow Applications
-subtitle: Guides and documentation for Meadow
+subtitle: Meadow Basics
 ---
 
 # Meadow Applications
