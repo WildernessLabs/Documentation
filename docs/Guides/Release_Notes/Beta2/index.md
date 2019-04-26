@@ -1,3 +1,9 @@
+---
+layout: Meadow
+title: Meadow Beta 2
+subtitle: Release Notes
+---
+
 # Meadow Beta 2
 
 ## New Core Features
