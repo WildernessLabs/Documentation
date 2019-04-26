@@ -217,7 +217,7 @@ You're now ready to build and deploy your Meadow app.
  1. Build the application.
  * Using Finder or the File Explorer, navigate to the folder that contains your application.
  * Open the **bin->Debug** folder, you should see **App.exe** and some **\*.dll** files; you'll need both to deploy your app to Meadow.
- * Follow the [Deployment instructions here](../Deployment/index.html) to deploy your app.
+ * Follow the [Deployment instructions here](../Deployment/) to deploy your app.
 
 
-## [Next - Meadow Basics](/guides/Meadow_Basics/index.html)
+## [Next - Meadow Basics](/Guides/Meadow_Basics/)
