@@ -4,7 +4,7 @@ The current release of Meadow is [Beta2](../Beta2/index.md)
 
 ## Current Release - Beta 2
 
-[Beta 2 Release Notes](/guides/Release_Notes/Beta2/)
+[Beta 2 Release Notes](/Guides/Release_Notes/Beta2/)
 
 ## Future
 

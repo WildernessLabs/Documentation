@@ -20,4 +20,4 @@ Relay relay = new Relay(relayPort);
 relay.Toggle();
 ```
 
-## [Next - Check out the Peripheral Library!](/guides/Meadow.Foundation/Peripherals/index.html)
+## [Next - Check out the Peripheral Library!](/Guides/Meadow.Foundation/Peripherals)

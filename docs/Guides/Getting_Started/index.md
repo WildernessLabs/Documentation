@@ -13,4 +13,4 @@ To get up and running with Meadow, follow these steps:
  * [Deploy a Blinky Test App](/Guides/Getting_Started/Deployment/)
  * [Hello, World; Meadow-style](/Guides/Getting_Started/Hello_World/)
 
-## [Next - Meadow Basics](/Guides/Meadow_Basics/index.html)
+## [Next - Meadow Basics](/Guides/Meadow_Basics)

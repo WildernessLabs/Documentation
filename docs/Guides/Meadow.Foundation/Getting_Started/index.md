@@ -2,7 +2,7 @@
 
 ## Hello, World!
 
-1. [Configure your Meadow development environment](/guides/Getting_Started/Setup/index.html).
+1. [Configure your Meadow development environment](/Guides/Getting_Started/Setup).
 3. Create a new .NET console application.
 4. `Install-Package Meadow.Foundation` (Detailed Nuget instructions: [Mac](https://docs.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough), [Windows](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui)).
 5. Plug the longer leg (cathode) of a green LED into pin `11` and the other leg into `GND`:
@@ -36,6 +36,6 @@ namespace HelloPulsy
 
 That's it, and you're up and running using Meadow.Foundation!
 
-Next up, check out how to work with sensors; which comprise a huge portion of the Meadow.Foundation [peripheral library](/guides/Meadow.Foundation/Peripherals/index.html).
+Next up, check out how to work with sensors; which comprise a huge portion of the Meadow.Foundation [peripheral library](/Guides/Meadow.Foundation/Peripherals).
 
-## [Next - Working with Sensors](/guides/Meadow.Foundation/Working_w_Sensors/index.html)
+## [Next - Working with Sensors](/Guides/Meadow.Foundation/Working_w_Sensors)

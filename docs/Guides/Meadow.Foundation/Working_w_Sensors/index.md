@@ -52,4 +52,4 @@ var hih6130 = new HIH6130(
 In between updates, the thread that polls the sensor is put to sleep, allowing the CPU to go into a power-saving mode, if no other processing is happening; therefore, a lower polling frequency can greatly affect power usage, and should be taken into consideration when powering from a limited current source such as a battery.
 -->
 
-## [Next - Unified GPIO Architecture](/guides/Meadow.Foundation/Unified_GPIO_Arch/index.html)
+## [Next - Unified GPIO Architecture](/Guides/Meadow.Foundation/Unified_GPIO_Arch)
