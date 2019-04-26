@@ -16,7 +16,7 @@ To deploy an app to Meadow you'll need several things:
 
 ## Setup
 
-1. Follow the steps in the [Setup](/guides/Getting_Started/Setup/index.html). 
+1. Follow the steps in the [Setup](/Guides/Getting_Started/Setup/). 
 1. Open the terminal.
 
 ## Prepare your app for deployment
@@ -29,7 +29,7 @@ We've provided sample binaries for you to deploy:
 
 ## Connect Meadow to your mac
 
-1. Follow this instructions to [connect your ST-Link V2 to Meadow](/guides/Getting_Started/Setup/stlink/index.html).
+1. Follow this instructions to [connect your ST-Link V2 to Meadow](/Guides/Getting_Started/Setup/stlink/).
 * Insert your ST-Link V2 into a free USB port on your host PC.
 * Open the terminal.
 * Navigate to the folder where your [downloaded the st-link](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/STLink.zip).
@@ -58,4 +58,4 @@ If you ran the provided sample app, you should see the RGB led changing color!
 1. Enter `quit` to close gdb.
 1. st-util will continue listening on port 4242; you can now update the application in the tmp folder and restart GDB to deploy your updated app.
 
-## [Next - Hello, World](/guides/Getting_Started/Hello_World/index.html)
+## [Next - Hello, World](/Guides/Getting_Started/Hello_World/)

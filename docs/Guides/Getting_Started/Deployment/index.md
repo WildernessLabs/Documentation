@@ -6,8 +6,8 @@ subtitle: Guides and documentation for Meadow
 
 # Deploy a Meadow application
 
-* [macOS](macos/index.html)
-* [Windows](Windows/index.html)
-* [Linux](Linux/index.html)
+* [macOS](macos/)
+* [Windows](Windows/)
+* [Linux](Linux/)
 
-## [Next - Hello, World](/guides/Getting_Started/Hello_World/index.html)
+## [Next - Hello, World](/Guides/Getting_Started/Hello_World/)
