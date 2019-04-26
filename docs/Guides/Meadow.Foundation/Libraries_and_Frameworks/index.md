@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Libraries and Frameworks
-subtitle: Guides and documentation for Meadow.Foundation
+subtitle: Meadow.Foundation
 ---
 
 # Meadow.Foundation Libraries and Frameworks

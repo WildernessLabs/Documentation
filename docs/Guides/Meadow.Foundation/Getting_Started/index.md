@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Getting Started
-subtitle: Guides and documentation for Meadow.Foundation
+subtitle: Meadow.Foundation
 ---
 
 # Getting Started with Meadow.Foundation

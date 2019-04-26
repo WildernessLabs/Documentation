@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Peripherals Library
-subtitle: Guides and documentation for Meadow.Foundation
+subtitle: Meadow.Foundation
 ---
 
 # Meadow.Foundation Peripherals Library

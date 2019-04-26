@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Working with Sensors
-subtitle: Guides and documentation for Meadow.Foundation
+subtitle: Meadow.Foundation
 ---
 
 # Working with Sensors in Meadow.Foundation

@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Unified GPIO Architecture
-subtitle: Guides and documentation for Meadow.Foundation
+subtitle: Meadow.Foundation
 ---
 
 # Meadow.Foundation Unified GPIO Architecture
