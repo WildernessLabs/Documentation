@@ -1,0 +1,90 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "src": "../Meadow.Core/source/Meadow.Core"
+        }
+      ],
+      "dest": "api/Meadow",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/Samples/**"
+          ],
+          "src": "../Meadow.Foundation"
+        }
+      ],
+      "dest": "api/Meadow.Foundation",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/Meadow/index.md",
+          "api/Meadow.Foundation/index.md"
+        ]
+      },
+      {
+        "files": [
+          "guides/**.md",
+          "guides/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "Common_Assets/**",
+          "API_Assets/**",
+          "guides/**/*.png",
+          "guides/**/*.svg",
+          "guides/**/*.jpg",
+          "guides/**/*.jpeg",
+          "guides/**/*.giv",
+          "guides/**/*.bmp"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "api-override/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "docs/**"
+        ]
+      }
+    ],
+    "dest": "docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "_exported_templates/default"
+    ],
+    "postProcessors": [],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}
