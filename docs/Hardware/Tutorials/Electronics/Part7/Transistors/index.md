@@ -71,6 +71,10 @@ Additionally, when working with larger current loads, you'll almost always want 
 There's another 
 -->
 
+## Transistor Uses
+
+[name some of the useful things we do with transistors; controlling motors, relays, fundamental building blocks of more complex circuits, etc.]
+
 ## Anatomy; Base, Collector, Emitter/Gate, Source, Drain
 
 Whether BJT, MOSFET, or nearly any other type, transistors almost always have three legs and though they're called different things on a BJT or a MOSFET, they basically do the same thing:
