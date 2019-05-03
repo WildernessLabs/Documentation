@@ -6,7 +6,7 @@
           "files": [
             "/**.csproj"
           ],
-          "src": "../Meadow.Core/source/Meadow.Core"
+          "src": "../../Meadow.Core/source/Meadow.Core"
         }
       ],
       "dest": "api/Meadow",
@@ -22,7 +22,7 @@
           "exclude": [
             "/Source/Samples/**"
           ],
-          "src": "../Meadow.Foundation"
+          "src": "../../Meadow.Foundation"
         }
       ],
       "dest": "api/Meadow.Foundation",
