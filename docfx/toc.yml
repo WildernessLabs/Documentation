@@ -1,6 +1,12 @@
-- name: Return
-  homepage: ../
+- name: Guides
+  homepage: /Guides
+- name: Hardware + Circuits
+  homepage: /Hardware
+- name: Electronics Tutorial
+  homepage: /Hardware/Tutorials/Electronics
+- name: Samples
+  homepage: /Samples
 - name: Meadow API
-  homepage: api/Meadow/index.md
+  homepage: /docs/api/Meadow/
 - name: Meadow.Foundation API
-  homepage: api/Meadow.Foundation/index.md
+  homepage: /docs/api/Meadow.Foundation/
