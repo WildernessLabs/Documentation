@@ -1,5 +1,5 @@
 cd docs
-bundle exec jekyll build
+bundle exec jekyll serve &
 cd ..
 cd docfx
 ./build-docs.sh
