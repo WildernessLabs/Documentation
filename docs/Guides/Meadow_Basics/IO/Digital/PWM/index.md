@@ -88,7 +88,6 @@ For PWM frequencies below 1hz, as found in industrial control systems [HVAC, etc
 
 [Servo Core Code]
 
-
 --
 Note that the onboard LED can also be configured as a PWM channel.
 
