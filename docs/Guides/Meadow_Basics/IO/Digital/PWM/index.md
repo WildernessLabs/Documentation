@@ -55,7 +55,39 @@ PWM signals can be generated via hardware (on the microcontroller) as well as vi
 [tbd]
 
 
-# Meadow PWM Pins
+# PWM Support in Meadow
+
+## Hardware/Pins
+
+Nearly every digital pin on the Meadow F7 board supports PWM
+
+![](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+
+[separated into timer groups, in which each pin must be set on an integer multiple of each other]
+
+## APIs
+
+
+[`IPwmPort`](/docs/api/Meadow/Meadow.Hardware.IPwmPort.html) Class
+
+[creating a PWM Port on an F7 pin]
+
+### SoftPwm
+
+For PWM frequencies below 1hz, as found in industrial control systems [HVAC, etc., there is a soft pwm class] 
+
+[SoftPwm class]
+
+# Examples
+
+## Driving an LED
+
+[PwmLed sample code]
+
+## Controlling a Servo
+
+[Servo Core Code]
+
 
 --
 Note that the onboard LED can also be configured as a PWM channel.

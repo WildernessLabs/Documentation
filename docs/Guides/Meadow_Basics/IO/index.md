@@ -46,7 +46,7 @@ Analog ports can operate at a range of voltages between `0V` and `3.3V`, which i
 
 GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 Micro, and many of these pins are actually overloaded to support multiple functions, as shown below:
 
-![](/Common_Assets/Meadow_F7_Micro_Pinout.svg)
+![](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 The function that they serve depends on how they are configured when a _port_ is instantiated on one of them. For instance, pin `D00` can be configured to be used a digital input or output, or as the `RX` (receive) half of a Serial UART port available as "COM4".
 
