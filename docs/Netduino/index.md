@@ -1,7 +1,7 @@
 ---
 layout: Netduino
 title: Guides
-subtitle: Guides and documentation for Meadow
+subtitle: Guides and documentation for Netduino
 ---
 
 # [Getting Started](/Netduino/Getting_Started)
