@@ -10,14 +10,14 @@ subtitle: Guides and documentation for Meadow
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Basic Digital IO | Yes. | |
-| Analog           | Yes, with caveat. | Returning invalid values. |
-| PWM              | | In Progress. SoftPwmPort available in Meadow.Foundation as a low-speed workaround for now. |
-| Serial (UART)    | | Planned |
-| I2C              | | Planned |
-| SPI              | | Planned. SoftSpi available as a workaround for now. |
-| CAN              | | Planned |
-| DAC              | | Not implemented. |
+| **Basic Digital IO** | Yes. | |
+| **Analog**           | Yes, with caveat. | Returning invalid values. |
+| **PWM**              | Yes. | |
+| **Serial (UART)**    | | Planned, RC-1 |
+| **I2C**              | Yes. | |
+| **SPI**              | Yes. | |
+| **CAN**              | | Planned, RTW |
+| **DAC**              | | Not implemented. Post-RTW |
 
 ## Working GPIO Ports
 
@@ -32,15 +32,15 @@ subtitle: Guides and documentation for Meadow
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| WiFi	| | Working on co-proc. Not hooked to API. |
-| Bluetooth | | Working on co-proc. Not hooked to API. |
+| WiFi	| Yes. | |
+| Bluetooth | | Working on co-proc. Not hooked to API. Planned for RC-1. |
 
 ## Other Features
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
 | Battery Charing  | Yes. |
-| Battery Voltage Level | | Waiting on co-proc comms integration. |
+| Battery Voltage Level | ? | Waiting on co-proc comms integration. |
 | Power Management | | Not implemented. |
 
 ## [Next - Fundamentals of Meadow Apps](/Guides/Meadow_Basics/Apps/)
