@@ -56,7 +56,7 @@ For a more in depth discussion on how to determine ideal resistance value, see t
 
 ## Creating an I2C Bus
 
-To use I2C in meadow, first create an [`II2cBus`](/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, passing the appropriate pins:
+To use I2C in Meadow, first create an [`II2cBus`](/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, passing the appropriate pins, and optionally, the bus speed (in KHz):
 
 ```csharp
 II2cBus i2cBus = Device.CreateI2cBus(Device.Pins.Groups.I2c1, 100);
