@@ -7,7 +7,7 @@ subtitle: Communication Protocols
 
 | Protocol | Speed | Multiple Peripheral Support | # of Wires                                                | Common use cases |
 |----------|-------|-----------------------------|-----------|-----|
-|   **[I2C](/Guides/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)    | Slow (100kB/sec or less)  | Yes | Two | | Short distance. Sensors, LCD displays, low-speed peripherals. |
+|   **[I2C](/Guides/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)    | Slow to Medium (100Khz up to 5MHz)  | Yes | Two | | Short distance. Sensors, LCD displays, low-speed peripherals. |
 |   **[SPI](/Guides/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)   | Fast  | Yes | Minimum of 2, Typically 3. |  |
 |  **[UART](/Guides/Meadow_Basics/IO/Digital/Protocols/UART)** (RS232 Serial)  | Slow  | No | 2 | Used for communication between boards or with computers. |
 | **[CAN](/Guides/Meadow_Basics/IO/Digital/Protocols/CAN)** |
