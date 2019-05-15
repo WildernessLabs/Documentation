@@ -6,9 +6,9 @@ subtitle: Inter-Integrated Circuit
 
 # Info
 
-[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye squared see", is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground). 
+[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye squared see", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground): 
 
-[illustration]
+![](I2C_Circuit.svg)
 
 I2C uses a _bus_ architecture which allows multiple peripherals to share a single set of communication wires.
 
