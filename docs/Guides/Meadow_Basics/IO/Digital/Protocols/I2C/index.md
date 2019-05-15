@@ -52,9 +52,37 @@ The value of the pull-up resistors depends on the speed and number of devices, l
 
 For a more in depth discussion on how to determine ideal resistance value, see the [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors) article.
 
-# Meadow I2C API
+# Using the Meadow I2C API
 
-[put in here]
+## Creating an I2C Bus
+
+To use I2C in meadow, first create an [`II2cBus`](/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, passing the appropriate pins:
+
+```csharp
+II2cBus i2cBus = Device.CreateI2cBus(Device.Pins.Groups.I2c1, 100);
+```
+
+## Working with I2C Peripherals
+
+Once the I2C Bus has been created, peripherals can be created by passing in the I2C Bus and the address of the peripheral:
+
+```csharp
+II2cPeripheral i2cPeripheral = new I2cPeripheral(i2cBus, 39);
+```
+
+### Peripheral Communication
+
+Generally, you won't need to handle low-level I2C peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](/docs/api/Meadow/Meadow.Hardware.IByteCommunications.html) interface, which I2C peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
+
+```csharp
+i2cPeripheral.WriteByte(0x01);
+```
+
+These methods are also available via the I2C bus, but require the address of the device to be explicitly passed:
+
+```csharp
+i2cBus.WriteByte(i2cPeripheral.Address, 0x01);
+```
 
 ## Samples
 
