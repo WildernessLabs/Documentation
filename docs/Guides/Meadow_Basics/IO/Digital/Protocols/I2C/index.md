@@ -12,7 +12,7 @@ subtitle: Inter-Integrated Circuit
 
 ## Hardware
 
-I2C uses a _bus_ architecture which allows multiple peripherals to share two wires; one carrying a clock signal, and another carrying the message data.
+I2C uses a _bus_ architecture which allows multiple peripherals to share two wires; one carrying a clock signal, and another carrying message data.
 
 ### Clock Signal (`CLK`)
 
@@ -36,7 +36,7 @@ I2C uses a multi-master, multi-client model in which multiple master devices can
 
 The use of multiple devices on the single bus is made possible through 7-bit device addresses. Each client device on the bus is allocated a specific address by the manufacturer of the device. Many times peripherals have a way to toggle between additional addresses to help prevent address collisions.
 
-The master initiates communication with a client device by first transmitting the slave device's address. The client device that has its address set to the address transmitted now knows that all data transmitted between now and the stop bit is intended for itself.
+The master initiates communication with a client device by first transmitting the client device's address. The client device that has its address set to the address transmitted knows that all data transmitted between the address and the stop bit is intended for itself.
 
 The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is usually much lower.
 
