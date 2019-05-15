@@ -6,7 +6,7 @@ subtitle: Release Notes
 
 # Meadow V1.0 Roadmap
 
-The current release of Meadow is [Beta3](../Beta3/index.md)
+The current release of Meadow is [Beta3](../Beta3/)
 
 ## Current Release - Beta 3
 
