@@ -12,3 +12,8 @@ subtitle: Communication Protocols
 |  **[UART](/Guides/Meadow_Basics/IO/Digital/Protocols/UART)** (RS232 Serial)  | Slow  | No | 2 | Used for communication between boards or with computers. |
 | **[CAN](/Guides/Meadow_Basics/IO/Digital/Protocols/CAN)** |
 | **[I2S](/Guides/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus) |
+
+
+# IByteCommunications
+
+For both I2C and SPI, even though the hardware standard is slightly different, the 

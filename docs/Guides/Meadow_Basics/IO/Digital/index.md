@@ -27,3 +27,4 @@ Digital IO also includes built-in support for a host of different types of commo
 * **[UART](/Guides/Meadow_Basics/IO/Digital/Protocols/UART)** (RS232 Serial) 
 * **[CAN](/Guides/Meadow_Basics/IO/Digital/Protocols/CAN)** 
 * **[I2S](/Guides/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus)
+
