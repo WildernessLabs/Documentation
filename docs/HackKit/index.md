@@ -1,6 +1,13 @@
+---
+layout: Meadow
+title: Wilderness Labs' Hack Kits
+subtitle: Instructions and inspiration for Wilderness Labs Hack Kits.
+---
 
 
 # Hack Kits
+
+![](Hack_Kit_Pro.png)
 
 Got an awesome Wilderness Labs Hack Kit and want to know what to build with it? If you just can't wait, here are a couple of awesome projects you can build with either one right now:
 
