@@ -14,6 +14,10 @@ Wahoo!! No more painful JTAG deployment, deploying your app is now a cinch via t
 
 [explain]
 
+### Visual Studio Windows and Mac Extensions
+
+[explain]
+
 
 ### Digital Outputs and Protocols
 
@@ -45,10 +49,12 @@ The SPI protocol is now working. Along with it; [list of new Meadow.Foundation p
 
 * [Pull-up and Pull-Down resistors don't work](https://github.com/WildernessLabs/Meadow_Issues/issues/6) - Fixed. You no longer need external PU/PDs, you can use the internal ones.
 * [Tasks Behave Strangely](https://github.com/WildernessLabs/Meadow_Issues/issues/2) - This was just an error in the sample. Thanks [Ryan Davis](https://github.com/rdavisau) for the fix.
+* [BiDirectionPort doesn't work](https://github.com/WildernessLabs/Meadow_Issues/issues/9) - Works now! Thanks to [Adam Patridge](https://github.com/patridge) for pointing it out. We regressed the API right before beta 2 release.
+* [`AnalogInputPort`](https://github.com/WildernessLabs/Meadow_Issues/issues/7) readings are not correct. - Fixed this was a hardware issue. [TODO: Verify]
+
 
 ## Known Issues
 
 * Meadow runtime is slow. For instance, we're currently only able to get about 30-40hz out of the `SoftPwmPort`. There's still a lot of debug code, so this will get much faster in future releases.
-* [`AnalogInputPort`](https://github.com/WildernessLabs/Meadow_Issues/issues/7) readings are not correct.
 * `GlitchFilterCycleCount` is not implemented in `DigitalInputPort`. This is coming soon.
 * [`Debug.Write` calls don't output to the console](https://github.com/WildernessLabs/Meadow_Issues/issues/3) - Workaround is to use `Console.Write` calls.
