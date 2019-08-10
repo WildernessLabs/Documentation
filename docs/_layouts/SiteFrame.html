@@ -9,9 +9,12 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700|Roboto:300,400,400i,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/dist/assets/fonts/web/wlabs-fonts.css" data-la-initdispnone="true">
+    <link rel="stylesheet" href="/assets/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/dist/css/main.css">
 
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/dist/js/jquery.min.js"></script>
+
 
     <!-- favicon madness -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://developer.wildernesslabs.co/assets/favicon/apple-touch-icon-57x57.png" />
@@ -46,15 +49,20 @@
     </script>
 
   </head>
-  <body>   
-     
+  <body class="developers">
+
 {% include TopNav.html %}
 
-        
-{{ content }}
-        
-        
+<main>
+  <section id="developers-section">
+    {% include SecondaryNav.html %}
+
+    {{ content }}
+  </section>
+</main>
+
 {% include Footer.html %}
 
+    <script src="/assets/dist/js/main.js"></script>
     </body>
 </html>
