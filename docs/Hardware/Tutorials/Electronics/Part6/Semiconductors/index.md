@@ -4,7 +4,7 @@ title: Semiconductors Part 1 (Diodes)
 subtitle: The foundation of modern electronic circuits.
 ---
 
-![](../Support_Files/Semiconductor_Microchips_on_Wafer.svg)
+![](../Support_Files/Semiconductor_Microchips_on_Wafer.svg){:standalone}
 
 # CHAPTER IN BETA
 
@@ -16,7 +16,7 @@ The semiconductor is easily the most important apparatus of modern electronics. 
 
 The scale at which semiconductors have been manufactured is incredible. A modern CPU chip has billions of transistors on a single chip, and many modern microcontrollers have millions.
 
-![](../Support_Files/2.9_Sextillion_Transistors.svg)
+![](../Support_Files/2.9_Sextillion_Transistors.svg){:standalone}
 
 **In 2014, Forbes magazine estimated the number of transistors ever manufactured since their invention in 1947. [The number they came up with was somewhere in the neighborhood of 2,913,276,327,576,980,000,000](https://www.forbes.com/sites/jimhandy/2014/05/26/how-many-transistors-have-ever-shipped/#7406af54425b)**. That's 2.9 sextillion; a number that's so large as to be absolutely meaningless to our sapient brains. It's more than the square of all the stars in the Milky Way Galaxy, at 200 billion. It's the equivalent to all of the cells in every human in the State of California. 
 
@@ -31,7 +31,7 @@ In this first chapter on them, we're going to explore:
 
 Along the way, we'll also continue our exploration of circuit design, building on what we've learned up to this point and adding new concepts to build more complex circuits, including simple _logic gates_:
 
-![](../Support_Files/Logical_AND_OR_Gates.svg)
+![](../Support_Files/Logical_AND_OR_Gates.svg){:standalone}
 
 # [Next - Silicon](../Silicon)
 

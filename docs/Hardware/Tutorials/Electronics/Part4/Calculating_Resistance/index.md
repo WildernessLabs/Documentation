@@ -8,7 +8,7 @@ subtitle: Practice problems for single resistor circuits.
 
 Given the following circuit:
 
-![](../Resistance_Calc_Circuit.svg)
+![](../Resistance_Calc_Circuit.svg){:standalone}
 
 Which includes:
 

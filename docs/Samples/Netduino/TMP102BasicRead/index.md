@@ -9,7 +9,7 @@ The full discussion can be found in the [Wilderness Labs Developer](http://devel
 
 ## Hardware
 
-![Netduino and TMP102 Temperature Sensor](NetduinoAndTMP102FritzingDiagram.png)
+![Netduino and TMP102 Temperature Sensor](NetduinoAndTMP102FritzingDiagram.png){:standalone}
 
 ## Code
 

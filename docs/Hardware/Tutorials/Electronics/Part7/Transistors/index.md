@@ -10,11 +10,11 @@ Transistors are P-N Junctions with an additional P-Type or N-Type semiconductor 
 
 Putting two diodes end to end like this seems a little non-intuitive, as there's no way the electricity can flow through without a reverse breakdown:
 
-![](../Sketches/PNP_No_Base.png)
+![](../Sketches/PNP_No_Base.png){:standalone}
 
 However, things become a little clearer when we add a lead to the center, where current can be sent:
 
-![](../Sketches/PNP_w_Base.png)
+![](../Sketches/PNP_w_Base.png){:standalone}
 
 In this configuration, 
 
@@ -36,7 +36,7 @@ In this configuration,
 
 ## Base, Collector, Emitter
 
-![](../Sketches/BJT_diagrams.png)
+![](../Sketches/BJT_diagrams.png){:standalone}
 
 
  * **`V`<sub>`c`</sub>** - Voltage at the Collector

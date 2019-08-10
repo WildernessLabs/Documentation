@@ -12,11 +12,11 @@ Resistors are used in one of the single-most important and common utility config
 
 To understand the usefulness of this, consider the following button circuit:
 
-![](../Support_Files/Floating_Button_Circuit.svg)
+![](../Support_Files/Floating_Button_Circuit.svg){:standalone}
 
 Note that the symbol in the center of the circuit represents a common pushbutton:
 
-![](/Common_Files/Circuit_Symbols/Pushbutton.svg)
+![](/Common_Files/Circuit_Symbols/Pushbutton.svg){:standalone}
 
 In this case, when the button is in its default state; not pressed, the value at the input port, 1, is in a _floating_ state, in which it's neither connected to ground or high, and can actually be indeterminate. In fact, a floating wire (or wire trace on a PCB), acts like an antenna and can pick up interference, giving it a fluctuating voltage signal.
 
@@ -26,7 +26,7 @@ There may not be much power/current in the floating termination, but many modern
 
 However, a _pull-down_ resistor can be used, which connects the floating wire to `GND`:
 
-![](../Support_Files/PullDown_Resistor_Circuit.svg)
+![](../Support_Files/PullDown_Resistor_Circuit.svg){:standalone}
 
 This provides a known, default value of `LOW` when the button isn't pressed.
 
@@ -38,7 +38,7 @@ When then button is pressed, the input at `1` will see a `HIGH` signal, even tho
 
 A _pull-up_ resistor is much like a pull-down resistor, but provides a default `HIGH` value, and can be used when the logic is inverted; as in the following circuit, where the button connects to ground when pressed:
 
-![](../Support_Files/PullUp_Resistor_Circuit.svg)
+![](../Support_Files/PullUp_Resistor_Circuit.svg){:standalone}
 
 Just as with a pull-down resistor, when the button is pressed, it shorts to ground, so the input at `1` will see a `LOW` signal, because any voltage at `1` will _sink_ to ground.
 

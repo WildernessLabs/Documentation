@@ -22,7 +22,7 @@ Once your development environment is configured, make sure your board has the la
 ### Visual Studio for Windows
 
  1. Launch Visual Studio and create a new solution of type **Visual C# > Micro Framework > Console Application** and name it whatever you want:
- ![New Solution Dialog](02-New_Solution_VS.png)
+ ![New Solution Dialog](02-New_Solution_VS.png){:standalone}
  
  2. Right-click on the **References** folder in the Solution Explorer and add:
  
@@ -33,7 +33,7 @@ Once your development environment is configured, make sure your board has the la
 ### Visual Studio for mac
 
  1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Application** and name it whatever you want:
-![New Solution Dialog](01-NewSolution_XS.png)
+![New Solution Dialog](01-NewSolution_XS.png){:standalone}
 
  2. Double-click on the **References** folder in the Solution Pad and add:
  
@@ -93,25 +93,25 @@ This code does the following things:
  1. Make sure your Netduino is plugged in.
   	
  2. Double-click on the **Properties** item in the Solution Explorer, select **.NET Micro Framework** on the left, and the under **Deployment** choose **USB** and in the **Device** drop down, choose your Netduino device:
- ![Device Chooser](04-VS_Device_Choose.png)
+ ![Device Chooser](04-VS_Device_Choose.png){:standalone}
 
  3. Click the **Start >** button in the toolbar to deploy to your device.
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05-blinking_Netduino.gif)
+![](05-blinking_Netduino.gif){:standalone}{:standalone}
 
 
 #### Visual Studio for Mac
 
  1. Make sure your Netduino is plugged in. It should show up in the build bar at the top:
-![Xamarin Studio Build Bar](03-Build_Bar.png)
+![Xamarin Studio Build Bar](03-Build_Bar.png){:standalone}
 
  2. Hit the ">" button to deploy.
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05-blinking_Netduino.gif)
+![](05-blinking_Netduino.gif){:standalone}{:standalone}
 
 You should also see the debug output in the **Application Output** window:
 

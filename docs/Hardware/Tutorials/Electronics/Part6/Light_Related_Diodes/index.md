@@ -14,7 +14,7 @@ LEDs are a type of diode that emit photons (light) as electrons flow through the
 
 These bar graph displays use LEDs to indicate a battery charge or an operating value:
 
-![](LED_Graph_Displays.jpg)
+![](LED_Graph_Displays.jpg){:standalone}
 
 Many modern [displays](https://en.wikipedia.org/wiki/LED_display) also use LEDs to power their pixels, with each pixel containing three diodes; red, green, and blue. With each color (R, G, B) brightness controlled individually to create nearly any color.
 
@@ -22,7 +22,7 @@ Many modern [displays](https://en.wikipedia.org/wiki/LED_display) also use LEDs 
 
 Photodiodes are the opposite of LEDs, when photons enter, they get converted into electrical energy. Fun fact about LEDs; although not as efficient, they can also be used as photodiodes!
 
-![image of a photo diode](../Support_Files/Photodiode_Medium.jpg)
+![image of a photo diode](../Support_Files/Photodiode_Medium.jpg){:standalone}
 
 #### Vs. Photoresistors
 
@@ -36,7 +36,7 @@ Additionally, photodiodes are very fast, reacting to light much faster than phot
 
 Solar panels are really just big, flat P-N junctions! In fact, they're technically photodiodes. As photons hit electrons in the P-type semiconductor, they add enough energy to the electrons to pop them out of their valence orbits and make turn them into free electrons which migrate to strips of metal on top of the cell which serve as anode plates. The pressure of these free electrons causes them to flow to out to a load, and then they recombine with the holes in the P-type semiconductor:
 
-![](../Support_Files/Solar_Panel.svg)
+![](../Support_Files/Solar_Panel.svg){:standalone}
 
 
 # [Next - LEDs](../LEDs)

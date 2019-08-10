@@ -148,7 +148,7 @@ namespace ReadDS3234
 
 The DS3234 should be connected to the Netduino as follows:
 
-![Netduino and DS3234](NetduinoDS3234Fritzing.png)
+![Netduino and DS3234](NetduinoDS3234Fritzing.png){:standalone}
 
 # [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 

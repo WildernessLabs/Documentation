@@ -18,7 +18,7 @@ Relays have some interesting electrical behaviors due to the fact that they're t
 
 For example this, [Keyestudio 2 Channel relay board](https://www.amazon.com/Keyestudio-Module-Arduino-raspberry-2-channel/dp/B0177WOT1E/ref=sr_1_1?ie=UTF8&qid=1503712979&sr=8-1&keywords=2+channel+relay+keyestudio) can control up to 10A of 250V AC or 30V DC with 5V of power:
 
-![Photo of a Keye Studio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg)
+![Photo of a Keye Studio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg){:standalone}
 
 ## Power Requirements
 
@@ -34,9 +34,9 @@ Additionally, the Keyestudio relay board above has a nice circuit that further i
 
 Unfortunately, this design is effectively undocumented, so when using them, make sure to wire them up as shown in the following schematic and breadboard diagrams:
 
-![](Keyes_Relay_schem.svg)
+![](Keyes_Relay_schem.svg){:standalone}
 
-![](Keyes_Relay_bb.svg)
+![](Keyes_Relay_bb.svg){:standalone}
 
 Note that this configuration requires the jumper to be removed from the header.
 
@@ -48,7 +48,7 @@ Note that this configuration requires the jumper to be removed from the header.
 
 Relays, like other switches, come in various _pole_ (P) and _throw_ (T) configurations. Pole refers to the source current nodes, and throw refers to the switched current nodes, and they are often come in single (S), and dual (D) configurations:
 
-![Illustration of the four common pole and throw configurations](/Common_Files/Switch_Pole_and_Throw.svg)
+![Illustration of the four common pole and throw configurations](/Common_Files/Switch_Pole_and_Throw.svg){:standalone}
 
 The most common set of configurations are: 
 
@@ -63,11 +63,11 @@ The throw end of the switch most commonly comes in a _normally closed_ (NC), or 
 
 The following schematic shows a simplified circuit diagram of how to use a relay to power LEDs. In this example, the current controlled by the relay is actually on the same circuit as the current that controls the relay for simplicity, but in a practical scenario, instead of LEDs, the relay might power an AC appliance circuit for a fan, heater, or similar:
 
-![](Relay_schematic.svg)
+![](Relay_schematic.svg){:standalone}
 
 Note that the relay in this schematic actually represents a relay circuit such as one contained in the Keyes all in one relay board mentioned above. So a practical example might look like the following:
 
-![](Relay_Practical_OFF_small.jpg)
+![](Relay_Practical_OFF_small.jpg){:standalone}
 
 ## Controlling the Relay
 

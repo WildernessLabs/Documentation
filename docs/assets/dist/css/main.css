@@ -182,7 +182,7 @@ h1.large {
   /* identical to box height */
   color: #14607F; }
 
-#developers-section p {
+#developers-section p, #developers-section li {
   font-family: 'MrsEavesOT-Roman';
   font-style: normal;
   font-weight: normal;
@@ -919,15 +919,12 @@ nav.secondary {
   padding: 0 0 0 0;
   color: #524740;
   background: #eee;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #developers-section h1 {
     margin-bottom: 15px; }
   #developers-section .subcategory h2 {
     padding-bottom: 8px; }
-  #developers-section .columns {
-    position: relative; }
-    #developers-section .columns .row {
-      margin: 0; }
   #developers-section p {
     margin-bottom: 20px; }
   #developers-section nav.subcategory h2 {
@@ -1015,8 +1012,6 @@ nav.secondary {
 .content-banner {
   border: 2px solid #7D7D7D;
   margin-bottom: 35px; }
-  .content-banner img, .content-banner h2 {
-    width: 100%; }
   .content-banner h2 {
     background: #F9FBE7;
     border-top: 2px solid #7D7D7D;
@@ -1024,6 +1019,9 @@ nav.secondary {
     text-align: right;
     margin: 0;
     padding: 5px 3% 5px 0; }
+
+.content img, .content h2 {
+  width: 100%; }
 
 .link-selector {
   width: 90%;
@@ -1308,7 +1306,7 @@ nav.secondary {
         border-left: 1px solid #B35E2C; }
   nav.secondary a {
     padding: 13px 8px 5px 8px;
-    font-size: 1.125em; }
+    font-size: 18px; }
   .banner.small {
     padding: 70px 5% 70px 5%; } }
 
@@ -1480,7 +1478,7 @@ nav.secondary {
     white-space: nowrap; }
   nav.secondary a {
     padding: 18px 15px 10px 15px;
-    font-size: 1.375em; }
+    font-size: 22px; }
   .banner.small {
     padding: 70px 5% 70px 5%; }
   #secondary-col {
@@ -1529,13 +1527,27 @@ nav.secondary {
     width: 1200px; } }
 
 @media (min-width: 1680px) {
-  .content-banner.floated {
-    float: right;
-    margin: 15px; }
-  .wide .content-banner, .wide .content-block {
-    display: inline-block; }
-  .wide .content-banner {
-    width: 50%;
-    margin-top: -100px; }
-  .wide .content-block p, .wide .content-block h1, .wide .content-block h3, .wide .content-block h4, .wide .content-block h5, .wide .content-block div:not(.banner) {
-    width: 45%; } }
+  .wide {
+    overflow: hidden; }
+    .wide .content-banner, .wide .content-block {
+      display: inline-block; }
+    .wide .content-banner {
+      width: 50%;
+      margin-top: -100px; }
+    .wide .content-block p, .wide .content-block h1, .wide .content-block h3, .wide .content-block h4, .wide .content-block h5, .wide .content-block div {
+      width: 45%; }
+    .wide .content-block .language-csharp {
+      border: 1px solid #514740;
+      padding: 15px; }
+      .wide .content-block .language-csharp div {
+        width: 100%; }
+    .wide .content-block figure, .wide .content-block img.floated {
+      float: right;
+      margin: 15px;
+      max-width: 700px; }
+    .wide .content-block h1, .wide .content-block h2, .wide .content-block h3 {
+      clear: both; }
+    .wide ol li {
+      float: left; }
+    .wide .content-image {
+      width: 40%; } }

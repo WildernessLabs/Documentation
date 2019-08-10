@@ -27,7 +27,7 @@ In this lab we'll..
 
 If you have [iCircuit](http://icircuitapp.com), you can begin your design in there. It will help to get the various values of your circuit components at least close to correct:
 
-![](../Support_Files/SS_iCircuit_Single_LED_Lab.png)
+![](../Support_Files/SS_iCircuit_Single_LED_Lab.png){:standalone}
 
 
 

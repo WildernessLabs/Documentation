@@ -8,7 +8,7 @@ subtitle: Light Emitting Diodes
 
 An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](/Hardware/Circuits/Diodes/) (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:
 
-![LED Circuit Symbol](LED.svg)
+![LED Circuit Symbol](LED.svg){:standalone}
 
 Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the [Cathode](https://en.wikipedia.org/wiki/Cathode)) than the other (the [Anode](https://en.wikipedia.org/wiki/Anode)). The cathode (longer leg) indicates that it should be hooked to the positive (`+`) side of a circuit.
 
@@ -16,7 +16,7 @@ Because it is a diode, it only works when a voltage is applied one way. For this
 
 LEDs are an incredibly common component that come in a variety of packages here are just a few:
 
-![Some LED Packages](SomeLEDs.jpg)
+![Some LED Packages](SomeLEDs.jpg){:standalone}
 
 The above shows, starting from the left, Red, Green, Yellow, Blue, RGB, Infrared, Bar LED (actually 10 independent LEDs in a single package) and a Seven Segment display with decimal point.
 

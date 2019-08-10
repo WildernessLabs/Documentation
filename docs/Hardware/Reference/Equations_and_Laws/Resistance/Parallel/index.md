@@ -16,7 +16,7 @@ TotalR = 1 / ∑(1 / Rn...Rn)
 
 Resistors (or resistances) can be arranged in parallel, as in the following diagram:
 
-![](/Hardware/Tutorials/Electronics/Part4/Resistors_in_Parallel.svg)
+![](/Hardware/Tutorials/Electronics/Part4/Resistors_in_Parallel.svg){:standalone}
 
 ## Conductance; the Siemens (S)
 

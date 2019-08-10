@@ -39,9 +39,6 @@
   font-family:"Wavehaus-66Book";
   src: url("/assets/dist/fonts/web/wavehaus/Wavehaus-66Book.eot");
   src: local("☺"),
-	   url("/assets/dist/fonts/web/wavehaus/Wavehaus-66Book.woff2") format("woff2"),
-       url("/assets/dist/fonts/web/wavehaus/Wavehaus-66Book.woff") format("woff"),
-       url("/assets/dist/fonts/web/wavehaus/Wavehaus-66Book.ttf") format("truetype"),
        url("/assets/dist/fonts/web/wavehaus/Wavehaus-66Book.svg#Wavehaus-66Book") format("svg"),
        url("/assets/dist/fonts/web/wavehaus/Wavehaus-66Book.eot?#iefix") format("embedded-opentype");
   font-weight: normal;

@@ -29,7 +29,7 @@ One serial protocol commonly used is [RS-232](https://en.wikipedia.org/wiki/RS-2
 
 There are four UARTs available on the Netduino, labeled as "COM" ports:
 
-![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg)
+![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg){:standalone}
 
 # Simple Transmitter and Receiver
 
@@ -211,7 +211,7 @@ static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
 
 Hooking up the logic analyzer and looking at the first message generates the following output:
 
-![Serial UART Transmission](SerialDataTransmission.png)
+![Serial UART Transmission](SerialDataTransmission.png){:standalone}
 
 The white dots show the points where the protocol analyzer is expecting to read a bit of data.  The brown line shows the value that is being read.
 

@@ -17,7 +17,7 @@ Additionally, Netduino provides built-in support for a host of different types o
 
 The above protocols are sometimes called peripherals.  The location of the peripherals is shown on the pin out diagram for the boards.  The Netduino 3 and Netduino 3 WiFi pin out is as follows:
 
-![](../../About/Netduino3_Pinout.svg)
+![](../../About/Netduino3_Pinout.svg){:standalone}
 
 ## Pulling High or Low
 

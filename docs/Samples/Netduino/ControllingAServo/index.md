@@ -43,7 +43,7 @@ namespace ServoTest
 
 Connect the Netduino to the servo as follows:
 
-![Servo Connected to Netduino](ServoBreadboard.png)
+![Servo Connected to Netduino](ServoBreadboard.png){:standalone}
 
 # [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 

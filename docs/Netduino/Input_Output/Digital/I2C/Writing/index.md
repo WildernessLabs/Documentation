@@ -271,7 +271,7 @@ A key point to note here is that a write and a read transaction are both execute
 
 Executing the above will result in a write following by a read:
 
-![Read Configuration from TMP102](ReadConfiguration.png)
+![Read Configuration from TMP102](ReadConfiguration.png){:standalone}
 
 The second green dot indicates the change from the write operation (setting the pointer register) to the read operation (reading the configuration register).
 
@@ -288,7 +288,7 @@ Thread.Sleep(1000);
 
 This results in the following data transmission:
 
-![N3 Writing Configuration Data to TMP102](WriteConfiguration.png)
+![N3 Writing Configuration Data to TMP102](WriteConfiguration.png){:standalone}
 
 The `Sleep` method call ensures that the TMP102 has time to make at least one measurement before the application starts to read the temperature from the sensor.
 
@@ -302,7 +302,7 @@ reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
 
 The read operation differs from the first application as it ensures that it is reading from the temperature register but explicitly setting the register (write transaction) before it reads the data from the register:
 
-![Read Temperature From TMP102](ReadTemperature.png)
+![Read Temperature From TMP102](ReadTemperature.png){:standalone}
 
 #### Program Output
 

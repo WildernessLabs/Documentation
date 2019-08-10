@@ -96,11 +96,11 @@ namespace RGB_Blinky
 
 ## Schematic
 
-![](RGB_Blinky_schem.svg)
+![](RGB_Blinky_schem.svg){:standalone}
 
 ### Breadboard View
 
-![](RGB_Blinky_bb.svg)
+![](RGB_Blinky_bb.svg){:standalone}
 
 
 # [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)

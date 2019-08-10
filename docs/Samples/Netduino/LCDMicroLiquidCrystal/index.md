@@ -8,7 +8,7 @@ subtitle: Sample using the µLiquidCrystal LCD library
 
 This sample demonstrates how to control an LCD using the Adafruit I2C/SPI LCD backpack.
 
-![LCD Backpack](SPILCDHelloWorld.png)
+![LCD Backpack](SPILCDHelloWorld.png){:standalone}
 
 # Code
 
@@ -58,7 +58,7 @@ namespace HelloWorld
 
 Connect the LCD to the Netduino as follows:
 
-![](NetduinoAndLCDFritzing.png)
+![](NetduinoAndLCDFritzing.png){:standalone}
 
 ## Discussion
 

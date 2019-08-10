@@ -14,7 +14,7 @@ In the standard form, instead of adding the PID corrections together, the integr
 
 Again, a visual representation of this algorithm might be more enlightening:
 
-![](../Standard_PID_Block_Diagram.svg)
+![](../Standard_PID_Block_Diagram.svg){:standalone}
 
 ### Integral and Derivative Gain Components in Relation to Time
 

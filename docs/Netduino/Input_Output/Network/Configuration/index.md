@@ -18,7 +18,7 @@ To update your network settings:
  2. Hold down the button on your Netduino and connect it to your computer (this places your Netuino in bootloader mode).
  3. Launch Netduino.Deploy and ensure your device is correctly shown in the **Models** dropdown.
  4. Scroll down to the **Network Configuration** section.
- ![ Network Configuration in Netduino.Deploy](NetduinoDeploy_03.png)
+ ![ Network Configuration in Netduino.Deploy](NetduinoDeploy_03.png){:standalone}
  5. Configure the network settings as appropriate for your local WiFi network.
  6. Tap the `Update` button to save the changes. 
 

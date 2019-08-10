@@ -16,13 +16,13 @@ Direct curent is also used in [long distance, high power, electrical transmissio
 
 Netduino provides two _power rails_ that supply 5V and 3.3V direct current. They can be found on the power header:
 
-![](/Common_Files/Netduino3_Pinout.svg)
+![](/Common_Files/Netduino3_Pinout.svg){:standalone}
 
 ## DC Power Symbols
 
 A general DC power source symbol looks like the following:
 
-![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/DC_Power.svg)
+![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/DC_Power.svg){:standalone}
 
 But many specific power sources have their own symbols, such as batteries, as we'll see later.
 
@@ -59,7 +59,7 @@ The following levels are acceptable for CMOS and TTL circuits:
 
 Therefore, for a `3.3V` CMOS circuit, the acceptable levels are between `0V` - `1.1V` for `LOW`, and `2.2V` - `3.3V` for `HIGH`:
 
-![illustration of digital signal](../CMOS_Digital_Logic_Levels.svg)
+![illustration of digital signal](../CMOS_Digital_Logic_Levels.svg){:standalone}
 
 ### Logic Level Shifters
 

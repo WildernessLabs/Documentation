@@ -12,13 +12,13 @@ Also known as _primary batteries_, once the charge is depleted, they cannot be e
 
 [Alkaline batteries](https://en.wikipedia.org/wiki/Alkaline_battery) are the most common consumer non-rechargeable battery and most cylindrical batteries in the AA, AAA, C, etc., size are alkaline. Alkaline batteries have both a good charge density and shelf life. 
 
-![](../Alkaline_Batteries_Cropped.jpg)
+![](../Alkaline_Batteries_Cropped.jpg){:standalone}
 
 #### Lithium
 
 [Lithium batteries](https://en.wikipedia.org/wiki/Lithium_battery) are most often the coin cell batteries used in watches, key fobs, etc. However, 9V lithium batteries are often found for use in smoke detectors. Recently, non-rechargeable lithium batteries have also been made in AA and AAA sizes and are meant to power high drain devices such as digital cameras. Lithium batteries have a high charge density and long shelf life, but are also more expensive than alkalines.
 
-![](../Lithium_Batteries_Cropped.jpg)
+![](../Lithium_Batteries_Cropped.jpg){:standalone}
 
 #### Carbon-Zinc
 
@@ -48,17 +48,17 @@ reverse the chemical process by applying voltage in the reverse direction]
 
 #### Nickel-Metal Hydride (NiMH)
 
-![](../NiMH_Batteries_Cropped.jpg)
+![](../NiMH_Batteries_Cropped.jpg){:standalone}
 
 #### Lead-Acid
 
 #### Lithium Ion
 
-![](../Lithium_Ion_Battery_Cropped.jpg)
+![](../Lithium_Ion_Battery_Cropped.jpg){:standalone}
 
 #### Lithium Polymer
 
-![](../LiPo_Battery_Cropped.jpg)
+![](../LiPo_Battery_Cropped.jpg){:standalone}
 
 ## [Next - Battery Circuits](../Battery_Circuits)
 

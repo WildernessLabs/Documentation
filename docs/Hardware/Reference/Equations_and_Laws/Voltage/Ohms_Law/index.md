@@ -16,7 +16,7 @@ I = V / R
 
 ## Power Triangle:
 
-![Illustration of a triangle divided into three sections with volts in the top and the bottom divided again with amps on the left and ohms on the right](/Hardware/Tutorials/Electronics/Part4/Ohms_Law_Pyramid.svg)
+![Illustration of a triangle divided into three sections with volts in the top and the bottom divided again with amps on the left and ohms on the right](/Hardware/Tutorials/Electronics/Part4/Ohms_Law_Pyramid.svg){:standalone}
 
 # More Info
 
@@ -70,7 +70,7 @@ amps = volts / ohms
 
 The _Ohm's Law triangle_, also known as the _power triangle_ is helpful in remembering the various solutions of Ohm's law:
 
-![Illustration of a triangle divided into three sections with volts in the top and the bottom divided again with amps on the left and ohms on the right](/Hardware/Tutorials/Electronics/Part4/Ohms_Law_Pyramid.svg)
+![Illustration of a triangle divided into three sections with volts in the top and the bottom divided again with amps on the left and ohms on the right](/Hardware/Tutorials/Electronics/Part4/Ohms_Law_Pyramid.svg){:standalone}
 
 It roughly represents the mathematical relationship of Ohm's law; it's divided vertically by a line that indicates division (below `V`), and horizontally, with a line that stands for multiplication (between `I` and `R`).
 

@@ -13,7 +13,7 @@
   });
 
   if($('#secondary-col'))
-    $('#primary-col').height($('#secondary-col').height() + 100);
+    $('#primary-col').css('min-height', $('#secondary-col').height() + 100);
 })();
 
 

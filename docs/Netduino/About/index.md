@@ -43,7 +43,7 @@ The N3 technical specifications are as follows:
 
 For compatibility with Arduino hardware, Netduino has the same header and pin configuration as Arduino. The following diagram illustrates which features are available on which header/pin, as well as the location of major components:
 
-![N3 Pinout Diagram](Netduino3_Pinout.svg)
+![N3 Pinout Diagram](Netduino3_Pinout.svg){:standalone}
 
 
 ## Netduino 2
@@ -68,7 +68,7 @@ The N2 technical specifications are as follows:
 
 For compatibility with Arduino hardware, Netduino has the same header and pin configuration as Arduino. The following diagram illustrates which features are available on which header/pin, as well as the location of major components:
 
-![N2 Pinout Diagram](Netduino2_Pinout.svg)
+![N2 Pinout Diagram](Netduino2_Pinout.svg){:standalone}
 
 
 # Powering Netduino

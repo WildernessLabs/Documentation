@@ -6,7 +6,7 @@ subtitle: Calculating
 
 # Quick Reference
 
-![](/Hardware/Tutorials/Electronics/Part5/Voltage_Division/Voltage_Divider_Equation.svg)
+![](/Hardware/Tutorials/Electronics/Part5/Voltage_Division/Voltage_Divider_Equation.svg){:standalone}
 
 ## Voltage Division Calculations
 

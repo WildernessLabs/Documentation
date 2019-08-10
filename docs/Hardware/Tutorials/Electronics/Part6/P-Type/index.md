@@ -10,7 +10,7 @@ Silicon doped with _tetravalent_ elements (elements that have 3 valence electron
 
 A neutrally charged boron atom has 5 protons (positively charged), and 5 electrons (negatively charged), with 3 of those electrons in its valence shell. So when it's combined with 4 other silicon atoms, there is by default, a total of 7 electrons shared between them, creating a positively charged _hole_ (remember, atoms want 8 in their valence shell to be happy). **That hole attracts nearby electrons to try and fill it it. When this occurs, the boron atom turns into a negatively charged ion**, because it attracts an extra electron, which causes it to have one more electron that proton:
 
-![](../Support_Files/P-Type_Silicon_Crystal.svg)
+![](../Support_Files/P-Type_Silicon_Crystal.svg){:standalone}
 
 ## Neutral Electric Charge
 
@@ -26,7 +26,7 @@ The hole surrounding a boron (or other acceptor impurity) is not continuously oc
 
 The resulting silicon crystal has an ever changing mesh of abundant positively charged holes, giving rise to the name P-type, which stands for _Positive-type_:
 
-![Illustration of P-type silicon crystal lattice in which there are a few boron atoms in the lattice that are negatively charged, and throughout the lattice are free holes where electrons are missing.](../Support_Files/P-Type_Silicon_Crystal_Lattice.svg)
+![Illustration of P-type silicon crystal lattice in which there are a few boron atoms in the lattice that are negatively charged, and throughout the lattice are free holes where electrons are missing.](../Support_Files/P-Type_Silicon_Crystal_Lattice.svg){:standalone}
 
 P-type silicon will readily conduct electricity because electrons want to flow into it to fill the holes.
 

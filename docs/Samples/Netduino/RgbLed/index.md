@@ -178,7 +178,7 @@ namespace RgbLed
 
 A common anode LED should be connected to the Netduino as follows:
 
-![RGB LED on Breadboard](RGBLedBreadboardFritzing.png)
+![RGB LED on Breadboard](RGBLedBreadboardFritzing.png){:standalone}
 
 # [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 

@@ -19,11 +19,11 @@ A typical servo has four components:
 
 The motor provides the motion turning the spindle.  Gears connect the spindle from the motor to the project.  A small controller board translates the signals from the Netduino into a position for the spindle.  All of this in a small package:
 
-![Servo Motor](Servo.png)
+![Servo Motor](Servo.png){:standalone}
 
 The horns provide a way to connect the spindle from the servo to the rest of the project.  Servos are normally supplied with several horns allowing a number of methods to connect the servo:
 
-![Servo horns](ServoHorns.png)
+![Servo horns](ServoHorns.png){:standalone}
 
 The holes in the armatures of the horns allow cables and wires to be connected to the horns.  This makes it possible to translate the circular motion of the servo into linear motion to control a rudder on a boat or plane.
 
@@ -56,7 +56,7 @@ Continuous rotation servos act similar to a standard DC motor rotating in either
 
 A typical servo uses a 50Hz signal to control the position of the servo.  The position is determined by the width of the high pulse of the signal so a control signal will look something like this:
 
-![Servo Control Signal](ServoControlSignal.png)
+![Servo Control Signal](ServoControlSignal.png){:standalone}
 
 This makes PWM ideal to control a servo.  Code to set the initial position of a servo is as simple as this:
 
@@ -81,7 +81,7 @@ Only three connections are required:
 
 For a low power servo, the power and ground signal can be connected directly to the Netduino 5V lines.  It is advisable to connect the control signal through a current limiting resistor, in the case of the <i>Microservo SG90</i> a 470&Omega; resistor was used to connect digital pin 9 to the control signal of the servo.
 
-![Servo Connected to Netduino](ServoBreadboard.png)
+![Servo Connected to Netduino](ServoBreadboard.png){:standalone}
 
 ## Sweeping Through 180 Degrees using the Netduino.Foundation Servo Core Library
 
@@ -123,7 +123,7 @@ where the `Servo` class allows the angle of the servo to be set.
 
 The following descriptions taken from the data sheet of the <i>Microservo SG90</i> used in this project.  The terms will be common to most servos but the exact values should be taken from the servo data sheet.
 
-![Servo Control Signal with Measurements](ServoControlSignalWithMeasurements.png)
+![Servo Control Signal with Measurements](ServoControlSignalWithMeasurements.png){:standalone}
 
 The frequency of the signal is 50Hz giving a <i>period</i> of 20,000 microseconds (20 ms).
 

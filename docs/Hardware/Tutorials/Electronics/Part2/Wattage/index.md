@@ -10,7 +10,7 @@ North American and European household electricity mains have different voltages 
 
 Through an induction circuit, we can actually trade voltage for amperage, or vice-versa, as long as the overall amount of work (amps & volts) stays the same. Going back to our water analogy, we can think of water in a pipe. If we use a bigger pipe, but lower our drop (voltage), more water will travel through (amps), but it will have less speed/force:
 
-![](../Water_Tower_Trading_volts_for_amps.svg)
+![](../Water_Tower_Trading_volts_for_amps.svg){:standalone}
 
 This proportional relationship between amperage and voltage is codified in a rule called [_Ohm's law_](https://en.wikipedia.org/wiki/Ohm%27s_law), which we'll explore in part 3.
 

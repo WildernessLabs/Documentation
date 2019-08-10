@@ -8,7 +8,7 @@ subtitle: Netduino design and other source files.
 
 Netduino is an open source hardware project. Both the hardware and all the software tooling associated with it are open source.
 
-![](oshw-logo-outline.svg)
+![](oshw-logo-outline.svg){:standalone}
 
 Source files and documentation can be found in the following locations:
 

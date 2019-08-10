@@ -14,7 +14,7 @@ Resistors are probably the most commonly used component in circuits. In fact, re
 
 When prototyping, the most commonly used resistors are axial-lead resistors that have a wire coming out of each end and are [color coded](/Hardware/Reference/Components/Resistors/Reading) which specifies the amount of resistance that they have:
 
-![Picture of a few axial lead resistors](../Resistors_Cropped.jpg)
+![Picture of a few axial lead resistors](../Resistors_Cropped.jpg){:standalone}
 
 
 ## General Application of Resistance
@@ -35,7 +35,7 @@ The heat that a resistor can safely dissipate is dependent on the amount of curr
 
 In an electronic circuit schematic, a resistor is typically symbolized as the following:
 
-![Circuit symbol for a resistor; a zig zag line with leads extending from both ends.](/Common_Files/Resistor.svg)
+![Circuit symbol for a resistor; a zig zag line with leads extending from both ends.](/Common_Files/Resistor.svg){:standalone}
 
 
 # [Next - Ohm's Law](../Ohms_Law)

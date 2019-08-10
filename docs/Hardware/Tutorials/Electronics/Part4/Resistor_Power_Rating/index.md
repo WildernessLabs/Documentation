@@ -72,7 +72,7 @@ P = V^2 / R
 
 Recalling the simple resistant circuit:
 
-![](../Ohms_Circuit.svg)
+![](../Ohms_Circuit.svg){:standalone}
 
 And our power calculation shortcuts:
 

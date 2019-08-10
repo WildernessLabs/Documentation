@@ -14,11 +14,11 @@ There are a number of good and decent circuit simulation and design programs out
 
 Here's a screenshot showing the schematic view:
 
-![](Fritzing_Schematic_View.png)
+![](Fritzing_Schematic_View.png){:standalone}
 
 And the breadboard view of the same schematic:
 
-![](Fritzing_Breadboard_View.png)
+![](Fritzing_Breadboard_View.png){:standalone}
 
 Much of the circuits created in this tutorial are done in Fritzing.
 
@@ -26,7 +26,7 @@ Much of the circuits created in this tutorial are done in Fritzing.
 
 [iCircuit](http://icircuitapp.com/) is a commercial, yet affordable (USD$5 - $10), and very powerful real time circuit simulator. It's available for iOS, Android, Windows Phone, Mac, and Windows, and has a lot of great example circuits. It's great for doing all the circuit math for you and actually model how a circuit works in real time. The following screenshot is a circuit that has a 555 timer changing a 7-segment LED, and what's neat about it, is that you can watch the 7-segment LED go through numbers in the app!
 
-![](iCircuit.png)
+![](iCircuit.png){:standalone}
 
 # Eagle CAD
 
@@ -36,11 +36,11 @@ SparkFun and Adafruit publish most of their open-source designs in eagle, so it'
 
 The following screenshot shows the schematic view in Eagle:
 
-![](Eagle_Schematic_View.png)
+![](Eagle_Schematic_View.png){:standalone}
 
 And the PCB editor looks like the following:
 
-![](Eagle_PCB_Design_View.png)
+![](Eagle_PCB_Design_View.png){:standalone}
 
 # KiCAD
 
@@ -48,11 +48,11 @@ And the PCB editor looks like the following:
 
 The following is a screenshot of the schematic editor:
 
-![](KiCad_Schematic_View.png)
+![](KiCad_Schematic_View.png){:standalone}
 
 And the PCB editor looks like the following:
 
-![](KiCad_PCB_Design_View.png)
+![](KiCad_PCB_Design_View.png){:standalone}
 
 # Others
 
