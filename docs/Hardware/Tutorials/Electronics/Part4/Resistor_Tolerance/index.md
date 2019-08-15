@@ -4,7 +4,7 @@ title: Resistor Tolerance and Preferred Values
 subtitle: Resistor manufacturing precision and common resistor values.
 ---
 
-# Resistor Manufacturing Variance 
+## Resistor Manufacturing Variance 
 
 Resistors are mass produced components that have slight variances from one to another. These variances effect how much resistance they actually have, which can vary up to a certain amount from their stated resistance. For this reason, resistors have a _tolerance_ rating which represents the percent error that the actual resistance can deviate from the stated resistance.
 
@@ -12,7 +12,7 @@ For example, a `570Ω` resistor with a 10% tolerance can have an actual resistan
 
 The tolerance needed depends on the circuit being designed. We'll explore which kinds of circuits need which tolerances later, when we start looking at various circuit designs.
 
-# Preferred Values
+## Preferred Values
 
 Resistors common in values from 1Ω to many mega (million) Ω values. Because of the wide range of values that resistors could possibly come in, and the fact that due to tolerances, most stated resistor values would realistically have overlapping actual values, they come in what is known as [_preferred values_](https://en.wikipedia.org/wiki/Preferred_number#E-series). 
 
@@ -49,4 +49,4 @@ Resistor series that have a higher tolerance need more preferred values to cover
 It continues on from there as well. The E96 series has a tolerance of 1%, so it has 96 preferred values, and there's even an E192 series that has a huge set of 192 possible values per magnitude. Given that there are 7 possible magnitudes (ranging from 1 to 1,000,000), that means that the E192 series has 1,344 (`192 * 7`) different resistor values!
 
 
-# [Next - Resistor Lab](../Resistor_Lab)
+## [Next - Resistor Lab](../Resistor_Lab)

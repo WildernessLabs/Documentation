@@ -4,7 +4,7 @@ title: Connecting to a Network
 subtitle: Configuring and initialing the Network interface and accessing network resources.
 ---
 
-## Waiting for the Network to Initialize
+### Waiting for the Network to Initialize
 
 On the Netduino, it's common that a deployed application will start before the network has fully initialized. 
 We want to ensure we have a valid network connection before making network calls.
@@ -12,9 +12,9 @@ We want to ensure we have a valid network connection before making network calls
 There are two fundamental ways to do this. The simplest is to wait in a loop while the IP address is obtained (if using DHCP), or accepted (if using a static IP). 
 The more sophisticated way is to raise an event from your network code to notify the application when it's ready.
 
-## Wait Loop
+### Wait Loop
 
-### Using DHCP
+#### Using DHCP
 
 If DHCP is configured, a call to the static `IPAddress.GetDefaultLocalAddress()`  will suffice:
 
@@ -27,7 +27,7 @@ while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any) {
 
 `IPAddress.Any` returns an empty IP address (`0.0.0.0`), so this loop will run until a real IP Address is obtained.
 
-### Using a Static IP
+#### Using a Static IP
 
 When using a static IP, add the `NetduinoExtensions.dll` reference and make a call to 
 
@@ -38,7 +38,7 @@ while (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) 
 };
 ```
 
-## Multithreading + Events
+### Multithreading + Events
 
 Netduino has sophisticated multithreading support (especially for an MCU platform), so for a more elegant solution that also saves on power consumption, 
 we place the work to connect and wait for an IP address within a thread, using `Thread.Sleep` to free up CPU resources while waiting.
@@ -46,7 +46,7 @@ We then raise an event from our network code to notify the main application that
 
 The code is shown below. Alternatively you can use the `Netduino.Foundation.Network` [nuget package](https://www.nuget.org/packages/Netduino.Foundation.Network).
 
-### Code Example
+#### Code Example
  
 ```csharp 
 using Microsoft.SPOT.Hardware;

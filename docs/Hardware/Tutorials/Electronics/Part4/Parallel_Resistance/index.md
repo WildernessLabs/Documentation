@@ -4,19 +4,19 @@ title: Resistors in Parallel
 subtitle: Calculating resistance when resistors are placed side by side.
 ---
 
-# Intro
+## Intro
 
 When arranging resistors (or resistances) in parallel, as in the following diagram, something interesting occurs:
 
-![](../Resistors_in_Parallel.svg)
+![](../Resistors_in_Parallel.svg){:standalone}
 
 Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to put turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there is three resistor valves that let water through:
 
-![](../Parallel_Resistances.svg)
+![](../Parallel_Resistances.svg){:standalone}
 
 Each resistor lets through some current, so in order to figure out how much total resistance there is, we actually have to figure out how much is current is conducted by each resistor, add those conductances together, and then convert back to resistance.
 
-# Conductance; the Siemens (S)
+## Conductance; the Siemens (S)
 
 Perhaps intuitively then, we could reason that conductance could be expressed as the opposite of resistance. It turns out, that's exactly true; conductance is measured in _siemens_ (S), which is defined as the reciprocal of resistance: 
 
@@ -35,7 +35,7 @@ Therefore, to calculate the resistance of a parallel resistor network, we have t
  2. Add the conductances together
  3. Convert the sum back to resistance
 
-## Example
+### Example
 
 Let's consider the same resistor values we had in series, and calculate them in parallel:
 
@@ -65,7 +65,7 @@ Resistance = 0.211 S = 1/0.211 = 4.74Ω
 
 Total resistance with the same resistors as we had in series is now `4.7Ω` in parallel.
 
-# Parallel Resistor Banks
+## Parallel Resistor Banks
 
 Sometimes, resistors in parallel come in banks of the same resistor values. In this case, there's a shortcut to calculate the total resistance:
 
@@ -79,11 +79,11 @@ Therefore, (10), 5KΩ resistors in parallel would be:
 5,000Ω / 10 = 500Ω
 ```
 
-# Common Voltage, Different Current
+## Common Voltage, Different Current
 
 In a parallel resistance circuit, the voltage at each resistor is the same, but the current flowing through each resistor is dependent on the amount of resistance that resistor has.
 
-## Power Calculation
+### Power Calculation
 
 Since we know the voltage and resistance, we can use the `P = V^2 / R` form of the power calculation equation, and just as with series resistance, we add an `n` to specify power and resistance at resistor number `n`:
 
@@ -91,4 +91,4 @@ Since we know the voltage and resistance, we can use the `P = V^2 / R` form of t
 Pn = V^2 / Rn
 ```
 
-# [Next - Reading Resistors](../Reading_Resistors)
+## [Next - Reading Resistors](../Reading_Resistors)

@@ -4,7 +4,7 @@ title: I2C/IIC
 subtitle: Netduino Inter-Integrated Circuit (I2C) protocol support.
 ---
 
-# Info
+## Info
 
 [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye squared see", is a communication protocol allowing bi-directional communication between two or more devices using only two signal wires (in addition to power and ground).  One of the main advantages of this protocol is the ability to communicate with multiple devices using only a two wire bus.
 
@@ -14,15 +14,15 @@ This guide will:
 * Demonstrate [reading data from an I2C temperature sensor](Reading/)
 * Reconfigure the I2C temperature sensor by [writing data to the I2C temperature sensor](Writing/)
 
-## Netduino.Foundation I2CBus
+### Netduino.Foundation I2CBus
 
 The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/) class that makes I2C communication easy by encapsulating all of the low-level plumbing calls in an easy to use object. We recommend using that class for I2C communications rather than using the low-level calls directly.
 
-## Overview
+### Overview
 
 I2C devices are connected to the Netduino via the `SCL` and `SDA` pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:
 
-![I2C Bus Master / Slave Illustration](I2CBusIllustration.jpg)
+![I2C Bus Master / Slave Illustration](I2CBusIllustration.jpg){:standalone}
 
 In this circuit:
 
@@ -40,17 +40,17 @@ I2C is normally used to connect low speed devices over short distances.  Compare
 |   SPI    | Minimum of two wires, often more<br/>High speed                                                            |
 |  Serial  | Low speed<br/>Used for communication between boards<br/>Can be used to communicate on to on board devices  |
 
-### Clock Signal (`SCL`)
+#### Clock Signal (`SCL`)
 
 Typical clock speeds are 100KHz for low speed devices with speeds of 3.4MHz possible for high speed devices.  Common speeds encountered are 100KHz and 400KHz.
 
 The clock signal determines the rate at which data can be transferred between the master and slave devices.
 
-### Data Signal (`SDA`)
+#### Data Signal (`SDA`)
 
 Both master and slave can transmit and receive on the bus.
 
-## Communicating with I2C Devices
+### Communicating with I2C Devices
 
 From a high level, the following events take place when the master device is communicating with slave device:
 
@@ -82,7 +82,7 @@ reading[0] = I2CDevice.CreateReadTransaction(buffer);
 Reading from an I2C device is covered in more detail in the [reading](Reading/) section.
 
 
-### Device Addresses
+#### Device Addresses
 
 The use of multiple devices on the single bus is made possible through 7-bit device addresses.  Each slave device on the bus is allocated a specific address by the manufacturer of the device.
 
@@ -101,11 +101,11 @@ I2CDevice bme280 = new I2CDevice(new I2CDevice.Configuration(0x77, 50));
 
 The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is much lower.
 
-### Read / Write Bit
+#### Read / Write Bit
 
 In addition to the 7 address bits, the master device will also send a single bit that indicates the mode of the communication: _read_ or _write_.  The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.
 
-## Pull-up Resistors
+### Pull-up Resistors
 
 Both of the bus lines (`SDA` and `SCL`) require [pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/) to be connected to them.  The value of the pull-up resistor will depend upon the capacitance of the bus.  The number of components on the board, type of substrate used will all influence the bus capacitance.
 
@@ -113,21 +113,21 @@ Most I2C breakout boards are supplied with pull-up resistors already on the brea
 
 For a more in depth discussion on why pull-up resistors are important and how to determine ideal resistance value, see the [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors) article.
 
-## Netduino I2C Pins
+### Netduino I2C Pins
 
 The Netduino has two pins allocated for the I2C protocol.  These pins are labelled **SD** (for `SDA`) and **SC** (for `SCL`) and can be found above the 14 digital pins on the right of the board as viewed below:
 
-![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
+![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg){:standalone}
 
-# Reading Data from an I2C Device
+## Reading Data from an I2C Device
 
 For an in-depth discussion on reading data, see the [Reading the Temperature from an I2C Temperature Sensor guide](Reading/).
 
-# Writing Data to an I2C Device
+## Writing Data to an I2C Device
 
 For an in-depth discussion on writing data, see the [writing to I2C guide](Writing/).
 
-# Further Information
+## Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
 * [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)

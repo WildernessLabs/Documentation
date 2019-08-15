@@ -4,11 +4,11 @@ title: Volts
 subtitle: Amount of Electromotive Force (EMF) of electricity.
 ---
 
-# Intro
+## Intro
 
 Voltage, measured in volts (V), is the amount of force in which charge carriers are being moved in an electric current.
 
-## Common Source Voltages
+### Common Source Voltages
 
 | Source                          | Voltage             |
 |---------------------------------|---------------------|
@@ -20,7 +20,7 @@ Voltage, measured in volts (V), is the amount of force in which charge carriers 
 | Netduino Digital IO             | 3.3V                |
 | Low-power Peripherals           | 1.8V                |
 
-## Common Unit Magnitudes
+### Common Unit Magnitudes
 
 | Magnitude      | Value in volts |
 |----------------|----------------|
@@ -30,6 +30,6 @@ Voltage, measured in volts (V), is the amount of force in which charge carriers 
 | kilovolt (kV)  | 1,000V         |
 | megavolt (MV)  | 1,000,000V     |
 
-# Further Reading
+## Further Reading
 
 For a much more in depth discussion regarding amps, see the [Amount and Force section in part 2 of the Electronics Tutorial](/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/)

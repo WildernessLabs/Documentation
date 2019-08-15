@@ -5,7 +5,7 @@ title: Read Date and Time from DS3234 Real Time Clock
 
 This application reads the date and time values from the [Sparkfun DeadOn RTC Breakout Board](https://www.sparkfun.com/products/10160).  This board contains the DS3234 Real Time Clock module.
 
-# Code
+## Code
 ```csharp
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -144,12 +144,12 @@ namespace ReadDS3234
 
 ```
 
-# Hardware
+## Hardware
 
 The DS3234 should be connected to the Netduino as follows:
 
-![Netduino and DS3234](NetduinoDS3234Fritzing.png)
+![Netduino and DS3234](NetduinoDS3234Fritzing.png){:standalone}
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

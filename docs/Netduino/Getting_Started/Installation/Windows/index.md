@@ -3,8 +3,9 @@ layout: Netduino
 title: Windows Installation
 subtitle: Installing the .NET MicroFramework and Netduino SDKs on Windows.
 ---
+## Windows
 
-# Instructions
+### Instructions
 
 Download and install the following:
 
@@ -14,13 +15,13 @@ Download and install the following:
 <!-- or [Visual Studio 2013](http://downloads.wildernesslabs.co/NETMF_SDK/netmfvs2013.vsix)-->
 4. [Netduino SDK](https://www.wildernesslabs.co/downloads?f=/Netduino_SDK/netduinosdk_v5.exe)
 
-# Troubleshooting
+### Troubleshooting
 
-## 0x80131700 Build Error on .NET Micro Framework
+### 0x80131700 Build Error on .NET Micro Framework
 
 This error can happen when building an application on newer versions of Windows as .NET Framework 2.0 is not installed by default.
 
-### Solution
+#### Solution
 
 Download and install .NET Framework 3.5 (this also contains .NET Framework 2.0).  This can be done by [downloading the framework from Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=22) or through Control Panel.
 

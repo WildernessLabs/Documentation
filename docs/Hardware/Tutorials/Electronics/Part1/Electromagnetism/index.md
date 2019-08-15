@@ -4,13 +4,13 @@ title: Electromagnetism
 subtitle: The force of electricity.
 ---
 
-# Magnetic Field
+## Magnetic Field
 
 One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects that arise from the underlying physics. But first, we need to understand electromagnetism.
 
 Magnetism, that is, the effect of a magnetic field, is caused by rotating electrical charges; that is, electrons orbiting and "spinning" around a nucleus. <!-- Spin is another arbitrarily named characteristic of subatomic particles, similar to charge. --> In simple terms, we can think of magnetism as a kind of magnification of electrical charges, caused by the angular momentum of electrons. Unlike simple attraction or repulsion in all directions like simple electric charge, however, a magnetic field has a three dimensional polarity with a north/south:
 
-![](../Magnetic_Field.svg)
+![](../Magnetic_Field.svg){:standalone}
 
 Magnetic North and South are arbitrary names just like positive and negative charge used to describe repulsion of like polarity and attraction of opposite polarity along an axis.
 
@@ -18,9 +18,9 @@ Magnetism in metals arises when enough electrons have a similar angular momentum
 
 A magnetic field can also be created electrically. A weak magnetic field is created when a current flows through a piece of straight wire, but if that wire is coiled, a much stronger magnetic field is created. In fact, a simple, yet effective magnet can be created with just a standard AA battery, a piece of coated wire, and a nail:
 
-![](../Nail_Magnet.svg)
+![](../Nail_Magnet.svg){:standalone}
 
-## Induction
+### Induction
 
 Just as a magnetic field arises from the electric charges, a magnetic field can _induce_ current into a wire that enters the magnetic field.
 
@@ -39,4 +39,4 @@ For further reading on magnetism, see:
  * [Introduction to Magnetism and Induced Current, Rensselaer Polytechnic Institute](http://www.rpi.edu/dept/phys/ScIT/InformationStorage/faraday/magnetism_a.html)
  * [Electromagnetism, Electronics-Tutorials.ws](http://www.electronics-tutorials.ws/electromagnetism/electromagnetism.html)
 
-# [Next - Part 1 Review](../Review/)
+## [Next - Part 1 Review](../Review/)

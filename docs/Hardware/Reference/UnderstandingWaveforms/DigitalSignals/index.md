@@ -39,7 +39,7 @@ The Nedtuino family of boards use 3.3V to represent a digital 1 and ground to re
 
 An oscilloscope can be used to examine a digital signal in a circuit:
 
-![Oscilloscope Trace](SquareWave.png)
+![Oscilloscope Trace](SquareWave.png){:standalone}
 
 When understanding digital signals it is essential to understand a number of key terms:
 
@@ -53,7 +53,7 @@ When understanding digital signals it is essential to understand a number of key
 
 Binary signals are represented by a high (logic level 1 or true) and low (logic level 0 or false):
 
-![High and logic levels](HighAndLow.png)
+![High and logic levels](HighAndLow.png){:standalone}
 
 This shows a simple trace where the signal is high for 50% of the time and low for 50% of the time.
 
@@ -61,13 +61,13 @@ This shows a simple trace where the signal is high for 50% of the time and low f
 
 The **duty cylce** is a percentage of time the signal is high.  When the time the signal is high is the same as the time the signal is low then the duty cycle is 50%:
 
-![50% Duty Cycle](DutyCycle50Percent.png)
+![50% Duty Cycle](DutyCycle50Percent.png){:standalone}
 
 The measurement panel on the right of the oscilloscope trace presents a number of measurements for the signal.  This shows that the duty cycle is 50%.
 
 Compare this with the following:
 
-![25% Duty Cycle](DutyCycle25Percent.png)
+![25% Duty Cycle](DutyCycle25Percent.png){:standalone}
 
 In this trace the amount of time the signal is high is lower than in the previous trace.  The measurement panel gives the duty cycle as 26%.
 
@@ -75,7 +75,7 @@ In this trace the amount of time the signal is high is lower than in the previou
 
 The digital signals shown all present a transition from low to high and high to low.  The transitions are known as rising and falling edges:
 
-![Rising and falling edges](RisingAndFallingEdges.png)
+![Rising and falling edges](RisingAndFallingEdges.png){:standalone}
 
 The trace at point 1 represents a **rising edge** where the digital signal makes a transition from 0 to 1.  This is sometimes known as a _positive_ edge.
 
@@ -89,7 +89,7 @@ Signals with a repeating pattern such as a clock signal have two related propert
 
 The period is the time between two rising edges:
 
-![Period](Period.png)
+![Period](Period.png){:standalone}
 
 ### Frequency
 

@@ -4,13 +4,13 @@ title: LCD Display Sample
 subtitle: Sample using the µLiquidCrystal LCD library
 ---
 
-# LCD Display
+## LCD Display
 
 This sample demonstrates how to control an LCD using the Adafruit I2C/SPI LCD backpack.
 
-![LCD Backpack](SPILCDHelloWorld.png)
+![LCD Backpack](SPILCDHelloWorld.png){:standalone}
 
-# Code
+## Code
 
 The application producing the above output is as follows:
 
@@ -54,24 +54,24 @@ namespace HelloWorld
 }
 ```
 
-# Hardware
+## Hardware
 
 Connect the LCD to the Netduino as follows:
 
-![](NetduinoAndLCDFritzing.png)
+![](NetduinoAndLCDFritzing.png){:standalone}
 
-## Discussion
+### Discussion
 
 A full discussion on SPI and the software can be found on the [Wilderness Labs](https://www.wildernesslabs.co/) SPI Pages:
 
 * [Introduction to SPI](http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/SPI/)
 * [Controlling an LCD](http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/SPI/ControllingLCD/)
 
-## Hardware Required
+### Hardware Required
 
 * [Netduino](https://www.wildernesslabs.co/Netduino)
 * [Adafruit I2C / SPI LCD Backpack](https://www.adafruit.com/product/292)
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

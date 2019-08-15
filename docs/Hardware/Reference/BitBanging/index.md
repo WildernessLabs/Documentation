@@ -42,7 +42,7 @@ public static void Main()
 
 The steps necessary to create the above code will be used as a guide to how other protocols can be implemented.
 
-# 74595 Example
+## 74595 Example
 
 The first step in BitBanging a protocol is to extract the protocol characteristics from the device data sheet.  In the case of the 74595 the pertinent points are:
 
@@ -53,7 +53,7 @@ The first step in BitBanging a protocol is to extract the protocol characteristi
 
 The application code can then be constructed from the above points.
 
-## Data Pins
+### Data Pins
 
 Using the above characteristics we can deduce that the 74595 requires three pins:
 
@@ -71,7 +71,7 @@ OutputPort latchPin = new OutputPort(Pins.GPIO_PIN_D7, false);
 
 Note that all three signals are set low when the pin objects are created.
 
-## Bit Order
+### Bit Order
 
 It was noted that the bits should be transmitted MSB first.  This can be implemented using a mask to define the bit order:
 
@@ -83,7 +83,7 @@ for (byte mask = 0x80; mask > 0; mask >>= 1)
 ```
 The `mask` is moving from 0x80 down to 0x01 one bit at a time.
 
-## Clock and Data Signals
+### Clock and Data Signals
 
 The data sheet specified that the data should be available on the rising edge of the clock.  So the data pin should be set before the clock signal is generated:
 
@@ -96,7 +96,7 @@ for (byte mask = 0x80; mask > 0; mask >>= 1)
 }
 ```
 
-## Latching the Data
+### Latching the Data
 
 A full 8 bits of data are sent to the 74595 and then transferred to the output pins by toggling the latch pin on the register:
 
@@ -106,7 +106,7 @@ latchPin.Write(true);
 latchPin.Write(false);
 ```
 
-# Summary
+## Summary
 
 The following key points should be taken into consideration when using BitBanging:
 

@@ -4,17 +4,17 @@ title: SPI Writing
 subtitle: Writing data using the SPI protocol.
 ---
 
-# Info
+## Info
 
 The [SPI guide](/Netduino/Input_Output/Digital/SPI) demonstrated simple data transmission using SPI. This guide demonstrates using the SPI protocol to communicate with an [LCD display fitted with an SPI backpack](https://www.adafruit.com/product/292) via an examination of the µLiquidCrystal library's SPI LCD implementation.
 
-![Netduino Controlling 16x2 LCD](LCDDisplay.gif)
+![Netduino Controlling 16x2 LCD](LCDDisplay.gif){:standalone}
 
-## Netduino.Foundation Display Drivers
+### Netduino.Foundation Display Drivers
 
 If you're looking to use an LCD display with Netduino, we recommend using the various [display drivers available via Netduino.Foundation](http://netduino.foundation/Library/#display-and-graphics-drivers). They provide an easy to use API for various displays. This guide is meant as an informational resource to explain the low-level workings of the SPI protocol.
 
-## LCD Displays
+### LCD Displays
 
 LCD displays provide a simple and convenient way to present information to the user of a project. The range of products and their relatively low cost make them ideal for this purpose.
 
@@ -30,7 +30,7 @@ Some displays will have higher numbers such as 128 x 64.  In these cases the num
 
 This guide will concentrate on character LCD displays.
 
-## LCD Display Interface (HD44780)
+### LCD Display Interface (HD44780)
 
 The common interface for the LCD displays is the [HD44780 LCD Interface](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller).  This uses up to 16 pins including the power and ground pins.
 
@@ -64,7 +64,7 @@ The `lcd` object here starts the communication with a 16 x 2 LCD display.
 
 This library is the `MicroLiquidCrystal` library.
 
-## MicroLiquidCrystal Library
+### MicroLiquidCrystal Library
 
 The [MicroLiquidCrystal](https://microliquidcrystal.codeplex.com/) library is based upon the [Arduino Liquid Crystal Library](https://www.arduino.cc/en/Reference/LiquidCrystal).  The original implementation was documented on [Szymon Kobalczyk's Blog](http://geekswithblogs.net/kobush/archive/2010/09/05/netmf_liquid_crystal.aspx).
 
@@ -110,14 +110,14 @@ namespace HelloWorld
 }
 ```
 
-## Wiring up the LCD Display
+### Wiring up the LCD Display
 
 As noted, the backpack allows the Netduino to talk to the LCD using SPI.  This requires three wires plus power connections.  The LCD Backpack should be wired as follows:
 
-![Netduino and LCD wiring](NetduinoAndLCDFritzing.png)
+![Netduino and LCD wiring](NetduinoAndLCDFritzing.png){:standalone}
 
 
-## Software
+### Software
 
 The MicroLiquidCrystal library allows a number of different way to connect to an LCD display.  The mechanism used is defined by a _Transfer Provider_.  In the cas of the [Adafruit LCD Backpack](https://www.adafruit.com/product/292) this is a [74595 shift register](/Hardware/Reference/Components/ShiftRegister74595).  This register takes 8 data bits transmitted serially (using SPI) and presents them to the display as 8 parallel data bits.
 
@@ -174,11 +174,11 @@ while (true)
 
 The source code including the MicroLiquidCrystal source files can be found [here](/Samples/Netduino/LCDMicroLiquidCrystal/).
 
-# [Reading Data From an SPI Device](../ReadingTime)
+## [Reading Data From an SPI Device](../ReadingTime)
 
 The next section  of the guide on SPI will demonstrate how to read data from an SPI device.
 
-# Further Reading
+## Further Reading
 
 * [Serial Peripheral Interface Bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) on Wikipedia.
 * [HD44780 LCD Interface](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) This is a common interface used to drive LCD displays.

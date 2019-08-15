@@ -4,33 +4,33 @@ title: I2C Reading
 subtitle: Reading data from an I2C device.
 ---
 
-# Info
+## Info
 
 The [previous section of this guide](../) presented an overview of the I2C protocol.  This section will demonstrate how to read some data from a sensor, specifically the TMP102 temperature sensor.
 
-## Netduino.Foundation I2CBus
+### Netduino.Foundation I2CBus
 
 The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/) class that makes I2C communication easy by encapsulating all of the low-level plumbing calls in an easy to use object. We recommend using that class for I2C communications rather than using the low-level calls directly.
 
-## Netduino I2C Pins
+### Netduino I2C Pins
 
 The Netduino has two pins allocated for the I2C protocol.  These pins are labelled **SD** (for `SDA`) and **SC** (for `SCL`) and can be found above the 14 digital pins on the right of the board as viewed below:
 
-![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
+![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg){:standalone}
 
-## TMP102 I2C Temperature Breakout Board
+### TMP102 I2C Temperature Breakout Board
 
 Use of the I2C bus on the Netduino will be illustrated using a temperature module.  The TMP102 is a commonly available temperature module capable of measuring temperatures in the range -40&deg;C to +125&deg;C with a maximum resolution of 0.0625&deg;C.  This device uses I2C and can be powered by a 3.3V signal, ideal for use with Netduino.
 
-### Purchasing
+#### Purchasing
 
 TMP102 breakout modules can be purchased from [Sparkfun](https://www.sparkfun.com/products/13314).
 
-## Using I2C on the Netduino
+### Using I2C on the Netduino
 
-Reading the current temperature from the TMP102 will illustrate the basic software requirements for successful communication with an I2C device, namely a simple read operation. 
+Reading the current temperature from the TMP102 will illustrate the basic software requirements for successful communication with an I2C device, namely a simple read operation.
 
-### Wiring up the TMP102 and Netduino
+#### Wiring up the TMP102 and Netduino
 
 Firstly, ensure that the Netduino is disconnected from power and the USB connector.  Once complete, place the TMP102 into a piece of breadboard (you will need to solder male pins to the breakout board first).
 
@@ -44,9 +44,9 @@ Next make the following connections between the temperature breakout board and t
 | GND             | GND               | Black                     |
 | ADD0            | GND               | Black                     |
 
-![Netduino Connected to TMP102](NetduinoAndTMP102FritzingDiagram.png)
+![Netduino Connected to TMP102](NetduinoAndTMP102FritzingDiagram.png){:standalone}
 
-### Software
+#### Software
 
 Open Visual Studio (or Xamarin Studio) and follow the instructions on the [Getting Started](/Netduino/Getting_Started/) page and start a new project.  Copy the following code and paste it into the _program.cs_ file replacing the default code.
 
@@ -97,7 +97,7 @@ namespace TMP102
 
 Reconnect the Netduino to the USB cable then save and run the application.  If everything has been connected correctly you will start to see temperature measurements in the _Application Output / Debug_ window.
 
-#### Key Elements
+##### Key Elements
 
 The data sheet for the TMP102 states that the default address for the TMP102 is 0x48, so the first task is to create a new `I2CDevice` object that defines how we connect to the TMP102:
 
@@ -134,7 +134,7 @@ The `Execute` method above takes an array of transactions, in our case the singl
 
 The remainder of the code simply calculates the temperature using the formula derived from the data sheet.
 
-#### Program Output
+##### Program Output
 
 Successful deployment of the application should reduce in a stream of temperature readings, one per second:
 
@@ -147,13 +147,13 @@ Successful deployment of the application should reduce in a stream of temperatur
 22.5625 C / 72.612500000000011 F
 ```
 
-#### Logic Analyser Output
+##### Logic Analyser Output
 
 The output from the Netduino can be interpreted by using a [logic analyzer](https://en.wikipedia.org/wiki/Logic_analyzer).
 
 The logic analyzer was configured to read data for two-seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:
 
-![Logic Analyzer Trace](I2CLogicAnalyserOutput.png)
+![Logic Analyzer Trace](I2CLogicAnalyserOutput.png){:standalone}
 
 The trace has been annotated to indicate the signal line and the protocol being analyzed.
 
@@ -176,11 +176,11 @@ In the case of the above application, the address is 0x48 and Netduino is readin
 
 When reading the logic analyzer traces, read operations to this device have the first byte set to 0x91 whilst write operations to the same device have the first byte set to 0x90.
 
-# Writing Data Using I2C
+## Writing Data Using I2C
 
 The next section of this guide will reconfigure the TMP102 temperature sensor by [writing some data to the sensor](../Writing/).
 
-# Further Information
+## Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
 * [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)

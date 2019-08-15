@@ -4,11 +4,11 @@ title: Photoresistor Lab
 subtitle: Building a voltage divider circuit to read a resistive sensor with Netduino.
 ---
 
-# Lab Overview
+## Lab Overview
 
 In this lab we're going to build a simple and practical circuit to read a resistive sensor. Our sensor will be a photoresistor which will measure the amount of light available, but the steps and process are the same no matter what kind of resistive sensor is used.
 
-## Requirements
+### Requirements
 
 To do this lab, you'll need the following new items:
 
@@ -25,11 +25,11 @@ Additionally, you'll reuse the following tools and components from earlier labs:
  * Breadboard jumper wires
  * Wire cutter (optional, for trimming resistors)
 
-### Component Sourcing
+#### Component Sourcing
 
 To build a photoresistor sensor circuit, we need to start with a photoresistor. Photoresistors usually look something like the following, and can usually be [sourced for less than USD$1](http://www.mouser.com/ProductDetail/Adafruit/161/?qs=%2fha2pyFadugRELlGV3EJvhiJsyG6%2fjztqGMot59Rgn9%2fJAtRYbFvdw%3d%3d):
 
-![](Photoresistor.jpg)
+![](Photoresistor.jpg){:standalone}
 
 There are several major component supply websites that serve the majority of the world. The most common ones we use are:
 
@@ -40,13 +40,13 @@ There are several major component supply websites that serve the majority of the
  * [Adafruit](https://www.adafruit.com)
  * [Alibaba](https://www.alibaba.com)
 
-### Datasheets
+#### Datasheets
 
 Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use. Datasheets are usually easy to find; simply searching on Google for the part number + "datasheet" will often turn up a PDF datasheet.
 
 In the case of my photoresistor, I found it in a pile of components, so I'm not sure if it conforms to the values in the above datasheet, since I'm not sure it's the same component. That's not a problem, however, with a simple resistive sensor like this because I can just measure the resistance with a multimeter under varying conditions to determine its characteristics. 
 
-# Resistive Sensors
+## Resistive Sensors
 
 There is a class of sensors, called resistive sensors, that have a variable resistance based on various input such as light or heat. [Photoresistors](https://www.wikipedia.com/en/Photoresistor), for instance, provide less resistance the more light that they receive. Similarly, [thermistors](https://en.wikipedia.org/wiki/Thermistor) change their resistance (either more resistance or less resistance, depending on the type), as their temperature changes.
 
@@ -54,16 +54,16 @@ Resistance can't be measured directly with a Netduino, but voltage can be measur
 
 The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
 
-![](Resistive_Sensor_Circuit.svg)
+![](Resistive_Sensor_Circuit.svg){:standalone}
 
-# Exercise 1 - Reading a Resistive Sensor
+## Exercise 1 - Reading a Resistive Sensor
 
 
-## Step 1: Measure the photoresistor resistance in various light conditions.
+### Step 1: Measure the photoresistor resistance in various light conditions.
 
 To measure the resistance of a photoresistor, set the multimeter to its resistance measurement setting, which is usually denoted by the ohm (`Ω`) symbol, and put the multimeter leads on each of the photoresistor leads. It might be helpful to put the photoresistor in a breadboard to keep it still:
 
-![](Photoresistor_Measuring.jpg)
+![](Photoresistor_Measuring.jpg){:standalone}
 
 If using a breadboard, make sure each leg of the photoresistor is on opposite sides of the center well (or on different rows), so the legs aren't connected.
 
@@ -81,7 +81,7 @@ I live in the Pacific Northwest and on a November day, sunlight is a commodity t
 
 The datasheet for the Adafruit photoresistor gave a range of `200kΩ - 10kΩ`, so I'm glad I measured mine.
 
-### Lab Process & Questions:
+#### Lab Process & Questions:
 
 Using a multimeter in resistance measuring mode, measure your photoresistor under varying conditions. What resistance does it supply in the following conditions? Write them down:
 
@@ -89,11 +89,11 @@ Using a multimeter in resistance measuring mode, measure your photoresistor unde
  * A moderately lit room
  * When the sensor's light collector is covered by something dark (a dark condition)
 
-## Step 2: Calculate the fixed resistor (`R1`) value.
+### Step 2: Calculate the fixed resistor (`R1`) value.
 
 Netduino has an onboard Analog to Digital Converter (ADC) that reads voltage values from `0V` - `3.3V` in 1,024 steps, which means it will give a value from `0` to `1023` that represents the voltage. For the best resolution therefore, we want the total resistance when it's very bright to be near the ADC max of `3.3V`. And when it's low, it should be near `0V`. This ensures that we are using the biggest range possible.
 
-### Calculating the High and Low Resistance Values of the Bottom Half of the Voltage Divider
+#### Calculating the High and Low Resistance Values of the Bottom Half of the Voltage Divider
 
 The easiest way to select an `R1` resistor is to choose a value that splits the difference between the high and low resistance threshold values of the bottom half of the voltage divider (resistive sensor and ADC). Recall that the parallel resistance of the resistive sensor and the ADC is calculated using conductance (G):
 
@@ -114,7 +114,7 @@ High (dark) = 0.00091S + 0.000013S = 0.00010391S = 9,624Ω ~= 9.6kΩ
 
 Since these are approximations, I've rounded them a little to make the calculations simpler.
 
-### Choosing an `R1` that Splits the Difference
+#### Choosing an `R1` that Splits the Difference
 
 Therefore, I would need an R1 that has a value halfway between `9.6kΩ` and `0.9kΩ`.  You might be able to guess at a midpoint in your head that's close enough, but we can also use a formula that calculates the difference between the two resistors, divides it in half, and then subtracts that from the bigger resistor:
 
@@ -130,7 +130,7 @@ Halfway = 9.6kΩ - ((9.6kΩ - 0.9kΩ) / 2) = 5.3kΩ
 
 In practice, there's no real need to do this next step; you can simply grab a resistor that is somewhere near the halfway point, put the voltage divider together and then test the resulting output under various conditions to find the threshold values that you're happy with. However, for the purposes of understanding, I think it's important to go through these steps.
 
-### Calculating Expected `Vout`
+#### Calculating Expected `Vout`
 
 Using the voltage divider equation from before (`Vout = Vs * (R2 / (R1 + R2))`), and using the total parallel resistance of `R2` & `ADC` as the new value for `R2`, we can calculate the expected spread of values. For example, the following calculation is for **very bright** resistance:
 
@@ -154,11 +154,11 @@ Using that formula, I created the following table of values:
 
 The circuit therefore would look something like this:
 
-![](Photoresistor_Circuit.svg)
+![](Photoresistor_Circuit.svg){:standalone}
 
 My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.53V` and `2.2V`, which provides a good resolution for reading the value.
 
-### Lab Process & Questions:
+#### Lab Process & Questions:
 
 Using the resistance values you measured with your photoresistor, and the example calculations above:
 
@@ -171,7 +171,7 @@ Using the resistance values you measured with your photoresistor, and the exampl
    * What is the closest common resistor?
  * Create a table of expected values that match your photoresistor and `R1` choice
 
-## Step 3: Convert expected voltages to digital values and back.
+### Step 3: Convert expected voltages to digital values and back.
 
 In order to write our code and validate our readings, we need to know what the expected voltage readings will be when they are read.
 
@@ -199,34 +199,34 @@ Using the expected high and low `Vout` values from your calculations in step 2, 
  * Moderate Digital Value = ?
  * Dark Digital Value = ?
 
-## Step 4: Build the circuit.
+### Step 4: Build the circuit.
 
 The following circuit schematic represents the circuit that we're going to build. Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of many components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In this case, the Netduino is represented by one such box:
 
-![](Photoresistor_Circuit_schem.svg)
+![](Photoresistor_Circuit_schem.svg){:standalone}
 
 Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the schematic of the lab above, to the breadboard layout schematic below:
 
-![](Photoresistor_Circuit_bb.svg)
+![](Photoresistor_Circuit_bb.svg){:standalone}
 
 The breadboard view above, which I've created in [Fritzing](http://fritzing.org), is electrically equivalent to the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a bit more complex than the schematic:
 
-### Breadboard Overlay
+#### Breadboard Overlay
 
 The printable breadboard overlay for this circuit can be found [here](Photoresistor_Lab_BB_Overlay.pdf).
 
-### Baseboard
+#### Baseboard
 
 A baseboard to mount the Netduino and the breadboard on is really helpful to hold the whole assembly together, though it's not required:
 
-![](Photoresistor_Lab.svg)
+![](Photoresistor_Lab.svg){:standalone}
 
 Our [Wilderness Labs Hack kit](http://amzn.to/2y8LzPg) includes a laser etched wooden baseboard, but if you have access to a 3D printer, you can also print one from our [3D designs repo](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Baseboards).
 
 Assemble the circuit similar to what's shown in the breadboard overlay illustration above.
 
 
-## Step 5: Deploy Photoresistor_Lab app to the Netduino.
+### Step 5: Deploy Photoresistor_Lab app to the Netduino.
 
 If you haven't setup your development environment yet, follow the [Getting Started Guide](/Netduino/Getting_Started/).
 
@@ -295,7 +295,7 @@ namespace Photoresistor_Lab
 In a later part of this tutorial, we'll examine reading analog signals and digital communication in a more depth.
 
 
-### Oversampling/Averaging Results
+#### Oversampling/Averaging Results
 
 When I run this application, I mostly get the results that I expect, but the output has quite a bit of variance within any given light condition. This has to do with the way the ADC does the actual sampling. In a later part of the tutorial, we're going to examine some circuit modifications to deal with this to smooth out the readings, but we can actually clean some of this up using code, as well. 
 
@@ -449,4 +449,4 @@ These values are fairly close to what I expect. The dark reading is a little off
 Run the new code with your sensor. What are your output values under varying conditions?
 
 
-# [Next - Lab: Level Shifting with a Voltage Divider](../Level_Shifting_Lab)
+## [Next - Lab: Level Shifting with a Voltage Divider](../Level_Shifting_Lab)

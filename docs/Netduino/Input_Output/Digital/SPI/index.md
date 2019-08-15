@@ -4,7 +4,7 @@ title: SPI
 subtitle: Netduino Serial Peripheral Interface (SPI) protocol support. 
 ---
 
-# Info
+## Info
 
 Serial Peripheral Interface (SPI) is a protocol for high speed communication over short distances.  Four signals types are defined in the protocol:
 
@@ -17,41 +17,41 @@ SPI implements a master/slave architecture and in an embedded system the master 
 
 Although four bus signals are defined it is not always required for all four to be used.  For instance, an output only device such as an LCD may not need to use the MISO line to send data back to the master device.
 
-### MOSI
+#### MOSI
 
 Data from the master is transmitted to the slave devices on the MOSI signal line.
 
-### MISO
+#### MISO
 
 Slave devices send data to the master device using the MISO channel.
 
-### SCLK
+#### SCLK
 
 The clock signal is controlled by the master device.  The short distances involved mean that high clock speeds are possible.
 
-### CS
+#### CS
 
 SPI allows for multiple devices to be connected to the SPI bus.  The CS line allows a specific device to be selected.  It may be necessary to have more than one CS line, normally one line per device on the SPI bus.
 
-### Modes
+#### Modes
 
 SPI defines four possible modes of operation and these modes determine when the data is sampled.  As we will see later, the .NET Microframework uses arguments in the _SPI.Configuration_ object to control how the data is sampled.
 
 The four possible modes are determined by the active state of the clock signal (high or low) and when the data is sampled (rising or falling edge of the clock).
 
-## Netduino SPI Pins
+### Netduino SPI Pins
 
 The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](/Netduino/About/Netduino3_Pinout.svg)
+![N3 Pinout Diagram](/Netduino/About/Netduino3_Pinout.svg){:standalone}
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 
-## Liquid Crystal Display (LCD)
+### Liquid Crystal Display (LCD)
 
 LCDs are readily available and provide a really useful way of displaying data in your project.  Common display sizes are 16x2 and 20x4 (16x2 = 2 lines of 16 characters each).  These usually require a large number of pins to drive them.  Luckily Adafruit have a [LCD Character Backpack](https://www.adafruit.com/product/292) that can be used to drive these displays.  The board can use SPI or [I2C](/Netduino/Input_Output/Digital/I2C/), both of which reduce the number of pins required to drive the LCD.
 
-### Simple Write
+#### Simple Write
 
 First thing that any SPI application needs to do is to configure the SPI interface to match the characteristics of the device being used.  The following application demonstrates basic SPI setup and how to output data:
 
@@ -94,13 +94,13 @@ Note that the application used [named arguments](https://docs.microsoft.com/en-u
 
 Executing this application results in the following output on a logic analyzer:
 
-![Basic SPI Output on Logic Analyzer](BasicSPIOutput.png)
+![Basic SPI Output on Logic Analyzer](BasicSPIOutput.png){:standalone}
 
 Zooming in on the output for one character shows the relationship between the clock and the data being transmitted:
 
-![Single Character in the Message](SingleCharacterOutput.png)
+![Single Character in the Message](SingleCharacterOutput.png){:standalone}
 
-# Further Reading
+## Further Reading
 
 - [Writing to an SPI Device](Writing)
 - [Reading from an SPI Device](Reading)
