@@ -11,12 +11,12 @@
   $('.content-slider').each(function(index, e){
     var c = new ContentCarousel(e);
   });
-})();
 
+})();
 
 // Displays an overlay based on an element on the page
 function Overlay(elId, toggleId, modifier) {
-
+ 
   var overlayToggle = $(toggleId);
   var overlayContent = $(elId).clone();
   var close = $('#close-modal');

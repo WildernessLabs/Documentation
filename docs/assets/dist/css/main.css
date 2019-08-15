@@ -1264,6 +1264,8 @@ nav.subcategory ul {
     margin-bottom: 20px; }
   #developers-section nav.subcategory h2, #developers-section nav.subcategory h2 a {
     font-size: 27px; }
+  #developers-section #primary-col h1:not(:first-of-type), #developers-section #primary-col h2:not(:first-of-type), #developers-section #primary-col h3:not(:first-of-type), #developers-section #primary-col h4:not(:first-of-type), #developers-section #primary-col h5:not(:first-of-type) {
+    padding-top: 35px; }
 
 #secondary-col {
   padding-right: 0; }
@@ -1276,8 +1278,6 @@ nav.subcategory ul {
   #primary-col .content {
     margin: 0;
     padding: 35px 3% 3%; }
-  #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
-    padding-top: 25px; }
 
 .banner.small {
   position: relative; }
@@ -1779,18 +1779,6 @@ nav.subcategory ul {
     font-size: 22px; }
   .banner.small {
     padding: 70px 5% 70px 5%; }
-  #secondary-col {
-    width: 370px;
-    position: absolute;
-    background: #eee;
-    vertical-align: top;
-    height: 100%;
-    border-right: 2px solid #7D7D7D; }
-  #primary-col {
-    width: auto;
-    padding-left: 410px; }
-    #primary-col .content {
-      padding: 35px 0 3% 0; }
   .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul {
     padding-left: 60px; }
   .developers nav.subcategory ul ul {
@@ -1798,7 +1786,28 @@ nav.subcategory ul {
   .developers .banner.small {
     padding-right: 60px; }
   .developers header .logo {
-    margin-left: 60px; } }
+    margin-left: 60px; }
+  .developers .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  #secondary-col {
+    width: 370px;
+    -ms-flex-preferred-size: 370px;
+        flex-basis: 370px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    background: #eee;
+    vertical-align: top;
+    height: 100%; }
+  #primary-col {
+    width: auto;
+    border-left: 2px solid #7D7D7D;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 370px;
+            flex: 1 1 370px; }
+    #primary-col .content {
+      padding: 35px 0 3% 0; } }
 
 @media (min-width: 1200px) {
   header nav ul li a {
@@ -1843,10 +1852,7 @@ nav.subcategory ul {
       width: 100%; }
     .wide .content-block figure, .wide .content-block img.floated {
       margin-left: 15px;
-      max-width: 500px;
       margin-top: -100px; }
-    .wide .content-block h1, .wide .content-block h2, .wide .content-block h3 {
-      clear: both; }
     .wide ol li {
       float: left; }
     .wide .content-image {

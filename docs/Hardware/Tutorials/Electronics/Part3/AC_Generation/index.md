@@ -16,7 +16,7 @@ AC current has historically been created by electrical generators, which, in its
 
 As the rotor turns, the wire coils get closer to the magnetic, and then farther away; causing an alternating voltage to be induced as the electrons are moved back and forth in the wires. As such, alternating current looks like a sine wave when the voltage is mapped over time, because the induction is actually a function of a circle:
 
-![](../Circle_cos_sin.gif){:standalone}{:standalone}
+![](../Circle_cos_sin.gif){:standalone}
 
 ### Multiphase AC Generation
 

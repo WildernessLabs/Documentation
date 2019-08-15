@@ -99,7 +99,7 @@ This code does the following things:
 
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05-blinking_Netduino.gif){:standalone}{:standalone}
+![](05-blinking_Netduino.gif){:standalone}
 
 
 ##### Visual Studio for Mac
@@ -111,7 +111,7 @@ The app should deploy and after a moment, the LED should start blinking on the N
 
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05-blinking_Netduino.gif){:standalone}{:standalone}
+![](05-blinking_Netduino.gif){:standalone}
 
 You should also see the debug output in the **Application Output** window:
 
