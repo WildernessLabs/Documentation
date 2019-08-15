@@ -4,7 +4,7 @@ title: Diode Logic Gate Lab
 subtitle: Creating simple logic control with diodes.
 ---
 
-# Intro
+## Intro
 
 In this lab we'll..
 
@@ -12,7 +12,7 @@ In this lab we'll..
 
 
 
-# Requirements
+## Requirements
 
 | Item                                     | Approximate Cost (USD) |
 | ---------------------------------------- | ---------------------- |
@@ -21,7 +21,7 @@ In this lab we'll..
 | LEDs  ||
 | Push Buttons   ||
 
-# Exercise 1: OR Gate
+## Exercise 1: OR Gate
 
 [going through two diodes, the logic/Schottky diode and the LED, so have to account for both voltage drops]
 
@@ -31,11 +31,11 @@ If you have [iCircuit](http://icircuitapp.com), you can begin your design in the
 
 
 
-# Exercise 2: Inverted AND Gate w/Buttons
+## Exercise 2: Inverted AND Gate w/Buttons
 
 
-# Exercise 3: AND Gate w/Switches
+## Exercise 3: AND Gate w/Switches
 
 
 
-# [Next - Review](../Review)
+## [Next - Review](../Review)

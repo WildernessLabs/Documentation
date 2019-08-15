@@ -4,7 +4,7 @@ title: Network Info
 subtitle: Configuring and initialing the Network interface and accessing network resources.
 ---
 
-# Network Info
+## Network Info
 
 The network-enabled Netduinos; N2+, N3E, and N3WiFi have a robustly featured network stack that includes support for high level network APIs such as `HttpWebRequest` as well as low-level socket programming, UDP multicast support, and more.
 

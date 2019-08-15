@@ -4,7 +4,7 @@ title: AC Power Generation
 subtitle: How alternating current is created.
 ---
 
-# Generators
+## Generators
 
 Alternating current gets its waveform by the way that it's generated.
 
@@ -18,10 +18,10 @@ As the rotor turns, the wire coils get closer to the magnetic, and then farther 
 
 ![](../Circle_cos_sin.gif){:standalone}{:standalone}
 
-## Multiphase AC Generation
+### Multiphase AC Generation
 
 By adding multiple wire coils to a stator, a generator can create multiple AC waves that are _out of phase_ to each other. For instance, most modern electrical generators, like the kind found at power generating plants, have three, 120º opposed inductors that create [_three phase electric power_](https://en.wikipedia.org/wiki/Three-phase_electric_power), which is effectively the worldwide standard for AC power generation and transmission.
 
 ![](../Three_Phase_Generator.svg){:standalone}
 
-# [Next - AC Characteristics](../AC_Characteristics)
+## [Next - AC Characteristics](../AC_Characteristics)

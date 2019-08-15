@@ -4,7 +4,7 @@ title: Kirchhoff's Current Law
 subtitle: What goes in, must come out.
 ---
 
-# Intro
+## Intro
 
 Kirchhoff's first law is also known as _Kirchhoff's current law_, _Kirchhoff's point rule_, or _Kirchhoff's junction rule_, and it states very simply; the amount of current flowing into a point is the same amount flowing out:
 
@@ -20,7 +20,7 @@ Sometimes this is also known as the _conservation of charge_, which as it implie
 
 -->
 
-## Branching Circuits
+### Branching Circuits
 
 When circuits branch off at a node, they're known as _branching circuits_. Consider the following parallel branching circuit:
 
@@ -46,4 +46,4 @@ Current at Junction A = 1.2A + 8A = 9.2A
 Additionally, the current flowing in and out of `D` is also `9.2A`.
 
 
-# [Next - Kirchhoff's Voltage Law](../Kirchhoffs_Voltage_Law)
+## [Next - Kirchhoff's Voltage Law](../Kirchhoffs_Voltage_Law)

@@ -4,7 +4,7 @@ title: AC Characteristics
 subtitle: Describing the shape of alternating current.
 ---
 
-# Characteristics
+## Characteristics
 
 AC electricity is described in terms of _period_, _frequency_, and _amplitude_.
 
@@ -14,7 +14,7 @@ AC electricity is described in terms of _period_, _frequency_, and _amplitude_.
 * **Frequency** - Measured in _hertz_ (hz), frequency is the number of time the waveform repeats itself in one second. In the United States, this is usually `60hz`, and `50hz` in most of the rest of the world.
 * **Amplitude** - This is the magnitude of the waveform and is usually measured in volts or amps.
 
-# Other Waveforms
+## Other Waveforms
 
 Alternating current is not always a perfect sine wave. In fact, alternating currents are often generated digitally by using triangle and square waves:
 
@@ -30,4 +30,4 @@ In fact, this is how radio transmissions work! A message signal is added to a ca
 
 -->
 
-# [Next - Review](../Review)
+## [Next - Review](../Review)

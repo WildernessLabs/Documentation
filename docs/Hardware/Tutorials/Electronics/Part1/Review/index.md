@@ -4,7 +4,7 @@ title: Review
 subtitle: Important concepts regarding the physics of electricity.
 ---
 
-# Important Concepts
+## Important Concepts
 
 That was a lot of concepts to take in at once, but it should provide a solid set of fundamental understandings that will aid in understanding how electronic circuits work. As a quick review:
 
@@ -20,4 +20,4 @@ That was a lot of concepts to take in at once, but it should provide a solid set
 
 
 
-# [Part 2 - Quantifying Electricity; amps, volts, and watts](../../Part2/Amount_and_Force)
+## [Part 2 - Quantifying Electricity; amps, volts, and watts](../../Part2/Amount_and_Force)

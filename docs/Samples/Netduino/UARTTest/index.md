@@ -7,7 +7,7 @@ This example uses two UARTs on the Netduino and demonstrates how to send a messa
 
 The full discussion regarding UARTs can be found on the [Wilderness Labs Developer Portal](http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/UART/).
 
-## Code
+### Code
 
 ```csharp
 using System;
@@ -104,6 +104,6 @@ namespace UARTTest
 ```
 
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

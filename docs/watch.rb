@@ -1,11 +1,11 @@
 require 'filewatcher'
 require 'fileutils'
 
+# Path to /dist/ directory in the Wildernesslabs Repo
 path_from_dist = '/Users/bbilfield/Library/Mobile Documents/com~apple~CloudDocs/Work/personal/wilderness/code/web.full/src/WildernessLabs.Web/wwwroot/dist/'
 
 
 # CSS Watcher
-
 path_from_css = path_from_dist + 'css'
 path_to_dist_css = './assets/dist/css'
 
@@ -14,8 +14,6 @@ puts "Watching -- " + path_from_css
 Filewatcher.new([path_from_css]).watch do |filename, event|
 
   # specify files which should not be copied
-  dont_copy = []
-
   puts "Copying files from WildernessLabs CSS to Documentation site --------------- "
 
   from_dir = path_from_css

@@ -6,7 +6,7 @@ title: Onboard Button & LED
 Illustrates basic Port IO by reading the value of the Onboard Button circuit and lighting the onboard LED when the button is pressed.
 
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -39,6 +39,6 @@ namespace OnboardButtonAndLed
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

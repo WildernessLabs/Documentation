@@ -10,7 +10,7 @@ This sample makes a web request to http://google.com. It illustrates how to:
  * Request an IP from a DHCP server and wait until one is obtained
  * Make an `HttpWebRequest`
 
-# Code
+## Code
 
 ```csharp 
 using Microsoft.SPOT.Hardware;
@@ -241,6 +241,6 @@ namespace Blinky
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

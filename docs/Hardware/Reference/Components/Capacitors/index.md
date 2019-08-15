@@ -4,7 +4,7 @@ title: Capacitors
 subtitle: Energy storage components.
 ---
 
-# Intro
+## Intro
 
 ![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg){:standalone}
 
@@ -71,7 +71,7 @@ Filters circuits can be used to remove (filter out) signals of a defined frequen
 
 Various combination of capacitors, [resistors](../Resistors/) and inductors are used to build these filters.
 
-# Further Reading
+## Further Reading
 * [Capacitor description on Wikipedia](https://en.wikipedia.org/wiki/Capacitor)
 * [RC Circuits](https://en.wikipedia.org/wiki/RC_circuit)
 * [Decoupling Capacitor](https://en.wikipedia.org/wiki/Decoupling_capacitor)

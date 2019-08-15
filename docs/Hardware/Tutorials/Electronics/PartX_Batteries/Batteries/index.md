@@ -12,7 +12,7 @@ Connecting a wire between the anode and cathode allows those electrons to flow f
 
 Most common batteries are cylindrical, which offers a compromise between a perfect volume to surface area ratio, e.g. a sphere, and an arrayable/stackable shape, such as a rectangle. These batteries are made by making a rectangular stack of cathode, electrolyte, and anode and rolling it up. Because of this, they're known as [jelly roll batteries](https://en.wikipedia.org/wiki/Jelly_roll_(battery)).
 
-## Battery Circuit Symbol
+### Battery Circuit Symbol
 
 The circuit symbol for a battery is two uneven plates:
 
@@ -30,6 +30,6 @@ In some circuit diagrams, they have polarity markings:
 
 If no polarity markings are present, polarity can be reasoned by the mnemonic that the longer side has more (`+`), and the short side has less (`-`).
 
-## [Next - Battery Types](../Battery_Types)
+### [Next - Battery Types](../Battery_Types)
 
 <br/>

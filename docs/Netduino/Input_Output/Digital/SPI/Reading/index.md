@@ -4,13 +4,13 @@ title: SPI Reading
 subtitle: Reading data using the SPI protocol.
 ---
 
-# SPI Reading
+## SPI Reading
 
-## Info
+### Info
 
 This guide demonstrates how to read data from an SPI device using the `WriteRead` method of the `SPI` class.
 
-## Hardware
+### Hardware
 
 The [Sparkfun DeadOn RTC Breakout - DS3234](https://www.sparkfun.com/products/10160) board hosts a small Real Time Clock (RTC) chip, the DS3234 along with a battery holder and some supporting discrete components.  The DS3224 is a highly accurate RTC that keeps track fo the date and time even over leap years.  The chip also provides a number of other features:
 
@@ -27,7 +27,7 @@ The Netduino and DeadOn RTC breakout board are connected as follows:
 
 The DS3234 chip will start to increment the time as soon as it is connected to power or a battery is inserted into the board.
 
-## Software
+### Software
 
 The DS3234 stores the current date and time in a series of registers on the chip.  The first 8 of these byte registers contain the date and time encoded in [Binary Coded Decimal](https://en.wikipedia.org/wiki/Binary-coded_decimal).
 
@@ -66,9 +66,9 @@ In order to read the registers the Netduino must issue a read command to the DS3
   ```
 </figure>
 
-## Key Points
+### Key Points
 
-### SPI Configuration
+#### SPI Configuration
 
 The SPI bus is configured as follows:
 
@@ -91,7 +91,7 @@ SPI spi = new SPI(spiConfig);
 
 The clock is set to be low when idle and the data is read on the training edge of the clock pulse.
 
-### Data Buffers
+#### Data Buffers
 
 Two data buffers are defined:
 
@@ -106,7 +106,7 @@ byte[] dataIn = new byte[REG_SIZE];
 
 `dataIn` is the data store for the contents of the registers as they are read from the DS3234.  `REG_SIZE` defines the number of bytes that will be read.
 
-### Reading the Data
+#### Reading the Data
 
 The read command and the data in the registers are read using a single statement:
 
@@ -120,7 +120,7 @@ spi.WriteRead(dataOut, dataIn, 1);
 
 The third parameter is an offset for the read operation and is better understood by examining the output from the chip using a logic analyzer.
 
-#### Logic Analyzer Output
+##### Logic Analyzer Output
 
 The above application generated the following trace:
 
@@ -137,7 +137,7 @@ The simplest form of the `WriteRead` method is `spi.WriteRead(dataOut, dataIn)`.
 
 There is however a better option, tell the Netduino to ignore the first byte and only store the register data. `spi.WriteRead(dataOut, dataIn, 1)` does exactly this.  The third parameter is the number of bytes in the input stream (MISO) that should be ignored before the Netduino starts to populate the `dataIn` buffer.
 
-## Debug Output
+### Debug Output
 
 Successful deployment of the application should result in debug output similar to the following:
 
@@ -155,7 +155,7 @@ The first line shows the bytes in the `dataIn` buffer, the second line shows the
 
 Comparing the contents of the `dataIn` buffer with the logic analyzer output above it can be seen that the first byte in the input stream (MISO) has been rejected by the `WriteRead` method.
 
-## Further Reading
+### Further Reading
 
 * [SPI Overview](/Netduino/Input_Output/Digital/SPI/)
 * [Writing to SPI](/Netduino/Input_Output/Digital/SPI/Writing/) - Review writing data to an SPI device (16x2 LCD)

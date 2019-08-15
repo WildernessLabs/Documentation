@@ -4,12 +4,12 @@ title: Amount & Force
 subtitle: Quantifying electricity's ability to do work
 ---
 
-# Intro
+## Intro
 
 In part 1 of our electronics primer we got an understanding of the physical nature of electricity. In this part, we're going to start to look at some of the practical aspects that arise from that nature.
 
 
-# Describing Electrical Amount and Force
+## Describing Electrical Amount and Force
 
 Electricity is useful because of its ability to do work. We can heat with electricity, generate light, and use the magnetic force of electricity to turn electric motors that propel our cars, vacuum our houses, and mix our smoothies.
 
@@ -42,4 +42,4 @@ This system, taken as a whole, is analgous to something like a cordless electric
 
 ![](../Drill.svg){:standalone}
 
-# [Next - Amperage](../Amperage)
+## [Next - Amperage](../Amperage)

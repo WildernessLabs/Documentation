@@ -11,7 +11,7 @@ You'll use the Netduino.Deploy tool for macOS or Windows to update your Netduino
 ## (Windows only) Install latest WinUSB.sys driver
  [Click here for instructions](https://github.com/WildernessLabs/Netduino-Updater/blob/master/bootloader_winusb_guide.md)
 
-## Install the latest firmware
+### Install the latest firmware
 
  1. Download [Netduino.Deploy](http://www.wildernesslabs.co/downloads) for either Windows or macOS.
  2. With your Netduino is unplugged, hold down the button and then plug it in to your computer. This puts the Netduino into _DFU Bootloader Mode_:
@@ -23,7 +23,7 @@ You'll use the Netduino.Deploy tool for macOS or Windows to update your Netduino
  ![image](NetduinoDeploy_02.png){:standalone}{:standalone}
  5. When it's done, you should reboot the Netduino before making additional changes.
 
-## Manually install firmware from .hex or .s19 files
+### Manually install firmware from .hex or .s19 files
 
 The Netduino.Deploy tool also enables manual firmware deployment:
 

@@ -4,7 +4,7 @@ title: Mac Installation
 subtitle: Installing the Netduino Visual Studio for Mac add-in and downloading tools.
 ---
 
-# Instructions
+## Instructions
 
 Download and install the latest [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) or [Xamarin Studio](http://www.monodevelop.com/download/)
 

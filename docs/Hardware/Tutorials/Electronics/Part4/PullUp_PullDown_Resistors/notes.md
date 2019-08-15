@@ -1,4 +1,4 @@
-# Notes on Pulling resistors
+## Notes on Pulling resistors
 
 Sources:
 
@@ -7,7 +7,7 @@ Sources:
  * [Transistor Biasing @ Electronics Tutorials](https://www.electronics-tutorials.ws/amplifier/transistor-biasing.html)
 
  
-# Notes about Values
+## Notes about Values
 
 From the wiki article:
 

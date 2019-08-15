@@ -5,7 +5,7 @@ title: Button Interrupt Events
 
 This sample illustrates wiring up an event to fire when interrupts come in on an `InterruptPort` when wired up to a circuit that sends intermittent signals such as a button.
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -52,6 +52,6 @@ namespace ButtonInterruptEvents
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

@@ -4,11 +4,11 @@ title: Network Configuration
 subtitle: Configuring the Network interface
 ---
 
-# Configuring Network Access
+## Configuring Network Access
 
 The first step in accessing the network from a Netduino is to configure the network settings. Settings are stored directly on the device and are configured using the Netduino.Deploy tool.
 
-## Use Netduino.Deploy to configure network settings
+### Use Netduino.Deploy to configure network settings
 Netduino.Deploy is a firmware update and network configuration tool provided by Wilderness Labs.
 
 You can find the latest version on the [downloads page here](https://www.wildernesslabs.co/About/Downloads/).

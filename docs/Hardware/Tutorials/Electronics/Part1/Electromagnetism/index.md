@@ -4,7 +4,7 @@ title: Electromagnetism
 subtitle: The force of electricity.
 ---
 
-# Magnetic Field
+## Magnetic Field
 
 One last point of clarification on the physics of electricity, and we'll be ready to start looking at practical aspects that arise from the underlying physics. But first, we need to understand electromagnetism.
 
@@ -20,7 +20,7 @@ A magnetic field can also be created electrically. A weak magnetic field is crea
 
 ![](../Nail_Magnet.svg){:standalone}
 
-## Induction
+### Induction
 
 Just as a magnetic field arises from the electric charges, a magnetic field can _induce_ current into a wire that enters the magnetic field.
 
@@ -39,4 +39,4 @@ For further reading on magnetism, see:
  * [Introduction to Magnetism and Induced Current, Rensselaer Polytechnic Institute](http://www.rpi.edu/dept/phys/ScIT/InformationStorage/faraday/magnetism_a.html)
  * [Electromagnetism, Electronics-Tutorials.ws](http://www.electronics-tutorials.ws/electromagnetism/electromagnetism.html)
 
-# [Next - Part 1 Review](../Review/)
+## [Next - Part 1 Review](../Review/)

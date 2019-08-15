@@ -4,7 +4,7 @@ title: Silicon (Si)
 subtitle: The heart of modern semiconductors.
 ---
 
-# Silicon Crystal
+## Silicon Crystal
 
 At the heart of most modern electronic semiconductors is a wafer thin slice of [silicon (Si)](https://en.wikipedia.org/wiki/Silicon) crystal. Silicon is considered a [Metalloid](https://en.wikipedia.org/wiki/Metalloid); not quite a metal, not quite _not_ a metal, and is the second most abundant element in the earth's crust (after oxygen):
 
@@ -20,7 +20,7 @@ Silicon's ability to be both a conductor and an insulator, lies in its atomic st
 
 In order to understand why silicon is such a great semiconductor, we have to first understand its atomic structure.
 
-## Valence Electrons
+### Valence Electrons
 
 Recall from [chapter 1](/Hardware/Tutorials/Electronics/Part1/Atoms/), that an atom is made up of a nucleus, containing positively-charged protons and neutrally-charged neutrons, and negatively-charged electrons orbiting around it:
 
@@ -36,7 +36,7 @@ When two atoms are bonded together in a molecule or material, they share valence
 
 ![Illustration showing the atomic structure of a water molecule in which both hydrogen atoms share two electrons each with the oxygen atom.](../Support_Files/Water_Molecule.svg){:standalone}
 
-### Silicon Valence Electrons
+#### Silicon Valence Electrons
 
 The atomic lattice shape of a silicon crystal comes from the fact that it has 4 valence electrons, and will therefore readily bond with 4 other silicon atoms, sharing an electron from each of the other four silicon atoms:
 
@@ -44,8 +44,8 @@ The atomic lattice shape of a silicon crystal comes from the fact that it has 4 
 
 This forms a crystalline structure that acts as an insulator at room temp and loses its resistance as its temperature increases, becoming a conductor.
 
-## Doping
+### Doping
 
 Pure silicon like this is known as an _intrinsic semiconductor_, and isn't very interesting in terms of it's behavior. However, through a process known as _doping_, in which impurities are added in precise amounts to change it's chemical structure, _extrinsic semiconductors_ are created. There are two extrinsic semiconductors used in electronics, _P-type_, and _N-type_. Let's examine P-type, first.
 
-# [Next - P-type Semicondutor](../P-Type)
+## [Next - P-type Semicondutor](../P-Type)

@@ -5,7 +5,7 @@ title: Driving an LED with a PWM signal
 
 This sample lights up an LED with a PWM signal so that a current limiting resistor isn't needed to prevent the LED from burning out.
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -51,6 +51,6 @@ namespace DrivingLED_w_PWM
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

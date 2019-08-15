@@ -7,7 +7,7 @@ title: Battery Circuits
 
 
 
-## Batteries in Series
+### Batteries in Series
 
 ![](../Batteries_in_Series_Voltage_Diagram.svg){:standalone}
 
@@ -32,12 +32,12 @@ Batteries are often arranged in serial to get the desired voltage necxessary to 
 
 [image of battery pack]
 
-## Batteries in Series with Opposing Polarity
+### Batteries in Series with Opposing Polarity
 
 ![](../Batteries_in_Series_Opposing_Voltage_Diagram.svg){:standalone}
 
 
-## Batteries in Parallel
+### Batteries in Parallel
 
 ![](../Batteries_in_Parallel_Voltage_Diagram.svg){:standalone}
 
@@ -45,12 +45,12 @@ Batteries are often arranged in serial to get the desired voltage necxessary to 
 
 Total voltage is the same as a single battery, but they last x number of batteries.
 
-## Battery Capacity
+### Battery Capacity
 
-[mAh is additive, but assuming a fixed load that, it will deplete x # of batteries in serial, vs. parallel]
+[mAh is additive, but assuming a fixed load that, it will deplete x ## of batteries in serial, vs. parallel]
 
 
 
-## [Next - Battery Resistance](../Battery_Resistance)
+### [Next - Battery Resistance](../Battery_Resistance)
 
 <br/>

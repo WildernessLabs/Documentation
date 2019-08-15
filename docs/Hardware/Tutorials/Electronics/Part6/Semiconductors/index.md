@@ -6,11 +6,11 @@ subtitle: The foundation of modern electronic circuits.
 
 ![](../Support_Files/Semiconductor_Microchips_on_Wafer.svg){:standalone}
 
-# CHAPTER IN BETA
+## CHAPTER IN BETA
 
 **NOTE:** This chapter is in beta, for review. The labs are incomplete and there are likely errors.
 
-# Intro
+## Intro
 
 The semiconductor is easily the most important apparatus of modern electronics. By taking metalloid elements like germanium or silicon and adding minor impurities, they can be made to conduct electricity in very specific ways; such as primarily allowing the flow of electrons, or holes. Start sandwiching those materials together, and they create structures whose behavior allows us to precisely control electricity by creating one way valves such as _diodes_, switches such as _transistors_, or even memory. 
 
@@ -33,5 +33,5 @@ Along the way, we'll also continue our exploration of circuit design, building o
 
 ![](../Support_Files/Logical_AND_OR_Gates.svg){:standalone}
 
-# [Next - Silicon](../Silicon)
+## [Next - Silicon](../Silicon)
 

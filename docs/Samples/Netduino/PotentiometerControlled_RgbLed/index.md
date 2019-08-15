@@ -5,7 +5,7 @@ title: RGB LED Controlled with Potentiometer
 
 This sample sets the color of an RGB LED from the value read from a potentiometer. It illustrates reading an analog input and controlling PWMs with it.
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -174,6 +174,6 @@ namespace PotentiometerControlled_RgbLed
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

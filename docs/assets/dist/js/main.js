@@ -11,9 +11,6 @@
   $('.content-slider').each(function(index, e){
     var c = new ContentCarousel(e);
   });
-
-  if($('#secondary-col'))
-    $('#primary-col').css('min-height', $('#secondary-col').height() + 100);
 })();
 
 

@@ -4,7 +4,7 @@ title: Resistors in Series
 subtitle: Calculating resistance when resistors are placed end to end.
 ---
 
-# Intro
+## Intro
 
 Resistors can be placed in series (end to end), in a circuit like the following:
 
@@ -22,7 +22,7 @@ Then the total resistance would be:
 Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 ```
 
-# Common Current, Different Voltage
+## Common Current, Different Voltage
 
 Resistors in a series share a common current, that is the amount of amps flowing through each one is the same, since there's only one path. 
 
@@ -36,7 +36,7 @@ So no matter where in the circuit that we measure the current, we would get the 
 
 ![](../Common_Current_w_Values.svg){:standalone}
 
-## Power Calculation
+### Power Calculation
 
 Given that we know the current and resistance at any resistor in a series, we can use the `P = I^2 * R` form of the power law we derived earlier from Ohm's law and the definition of the watt. However, since there are multiple resistors in the series, we add an `n` to specific power and resistance at resistor number `n`:
 
@@ -44,12 +44,12 @@ Given that we know the current and resistance at any resistor in a series, we ca
 Pn = I^2 * Rn
 ```
 
-## Voltage Division
+### Voltage Division
 
 Although the current at any given point in a series circuit is the same, the voltage drops as it passes through each component as the electromagnetic force is resisted. Because of this, resistances in series forms the fundamental circuit for _voltage division_, which we're going to explore more thoroughly in part 5 of this tutorial.
 
 
-# Advantages and Disadvantages of Series Resistors
+## Advantages and Disadvantages of Series Resistors
 
 Because series resistance is simply the sum of each of the individual resistances, stringing resistors together end to end allows for a specific resistance to be built using various combinations of individual resistors. This can be especially useful when using spare parts for prototyping.
 
@@ -58,4 +58,4 @@ A disadvantage of series resistance is that if one resistor fails open (no longe
 Because there's little advantage to a series resistor network in terms of pure resistance, usually resistors in series are used in circuits to divide voltage.
 
 
-# [Next - Parallel Resistance](../Parallel_Resistance)
+## [Next - Parallel Resistance](../Parallel_Resistance)
