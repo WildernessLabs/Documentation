@@ -1,6 +1,6 @@
 ---
 layout: Samples
-title: Netduino Samples
+title: Meadow Samples
 ---
 
 The following samples can be found in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/). 
