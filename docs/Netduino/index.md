@@ -1,6 +1,6 @@
 ---
 layout: Netduino
-title: Guides
+title: Netduino
 subtitle: Guides and documentation for Netduino
 ---
 
