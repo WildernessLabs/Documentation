@@ -1794,6 +1794,8 @@ nav.subcategory ul {
   #secondary-col {
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    -ms-flex-preferred-size: 370px;
+        flex-basis: 370px;
     background: #eee;
     vertical-align: top; }
   #primary-col {
