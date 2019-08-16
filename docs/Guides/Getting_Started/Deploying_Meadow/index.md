@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Deploy Meadow OS
 subtitle: Guides and documentation for Meadow
 ---

@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Unified GPIO Architecture
 subtitle: Meadow.Foundation
 ---

@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Working with Sensors
 subtitle: Meadow.Foundation
 ---

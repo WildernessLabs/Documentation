@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Getting Started
 subtitle: Meadow.Foundation
 ---

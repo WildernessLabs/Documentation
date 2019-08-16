@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: SPI
 subtitle: Serial Peripheral Interface
 ---

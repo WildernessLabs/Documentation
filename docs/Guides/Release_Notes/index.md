@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Meadow V1.0 Roadmap
 subtitle: Guides and documentation for Meadow
 ---

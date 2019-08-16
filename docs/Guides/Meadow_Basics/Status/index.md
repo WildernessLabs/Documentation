@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Meadow F7 Micro Beta Status
 subtitle: Guides and documentation for Meadow
 ---

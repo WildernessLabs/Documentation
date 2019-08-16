@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Bluetooth
 subtitle: Meadow Basics
 ---

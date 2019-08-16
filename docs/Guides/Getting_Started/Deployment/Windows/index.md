@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Deploying a Meadow App in Windows
 subtitle: Guides and documentation for Meadow
 ---

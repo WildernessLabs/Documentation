@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Input/Output (IO)
 subtitle: Meadow Basics
 ---

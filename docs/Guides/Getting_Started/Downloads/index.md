@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Downloads
 subtitle: Guides and documentation for Meadow
 ---

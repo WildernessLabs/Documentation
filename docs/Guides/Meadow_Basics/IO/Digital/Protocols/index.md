@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Digital Protocols
 subtitle: Communication Protocols
 ---

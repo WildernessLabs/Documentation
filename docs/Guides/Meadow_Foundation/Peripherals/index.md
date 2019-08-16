@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Peripherals Library
 subtitle: Meadow.Foundation
 ---

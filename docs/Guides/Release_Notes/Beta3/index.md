@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Meadow Beta 3
 subtitle: Release Notes
 ---

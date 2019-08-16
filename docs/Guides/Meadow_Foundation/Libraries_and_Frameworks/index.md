@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Libraries and Frameworks
 subtitle: Meadow.Foundation
 ---

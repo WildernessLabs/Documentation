@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: macOS Setup
 subtitle: Guides and documentation for Meadow
 ---

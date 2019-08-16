@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: I2C
 subtitle: Inter-Integrated Circuit
 ---

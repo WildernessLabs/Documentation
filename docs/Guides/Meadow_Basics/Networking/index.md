@@ -1,5 +1,5 @@
 ---
-layout: Meadow
+layout: Guides
 title: Networking
 subtitle: Meadow Basics
 ---
