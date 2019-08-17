@@ -1,5 +1,140 @@
 @charset "UTF-8";
 @import url("bootstrap.css");
+p, li, a, button, label, input, h3 {
+  font-family: "MrsEavesOT-Roman", serif; }
+
+h1, h2, nav li a, footer li a {
+  font-family: "MrsEavesOT-SmallCaps", serif; }
+
+h1.large {
+  font-family: "MrsEavesOT-Bold", serif;
+  letter-spacing: 1px; }
+
+.main-banner h1 {
+  font-family: "FuturaNDCn-Medium", helvetica;
+  letter-spacing: 1px; }
+
+.main-banner h2 {
+  font-family: "MrsEavesOT-Bold", serif;
+  letter-spacing: 1px; }
+
+.main-banner p {
+  font-family: "MrsEavesOT-Bold", serif; }
+
+.main-banner .cta {
+  font-family: 'FuturaNDCn-Medium', helvetica; }
+
+.content-section h2 {
+  font-family: "Wavehaus-95SemiBold", helvetica; }
+
+.content-section h2.smallcaps {
+  font-family: "MrsEavesOT-SmallCaps", serif; }
+
+.content-section .cta {
+  font-family: 'FuturaNDCn-Medium', helvetica; }
+
+.content-section .tutorials h1 {
+  font-family: "MrsEavesOT-Bold", serif; }
+
+.content-slider .copy h1, .content-slider .copy ul.paging p {
+  font-family: "Wavehaus-95SemiBold", helvetica; }
+
+.content-slider .copy ul.paging p span {
+  font-family: "MrsEavesOT-Roman", serif; }
+
+.lig {
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+          font-variant-ligatures: discretionary-ligatures;
+  letter-spacing: normal; }
+
+#code code {
+  font-family: "FuturaND-Medium", helvetica !important;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+.meadow #code p {
+  font-family: "Wavehaus-95SemiBold"; }
+
+.meadow #join .cta {
+  font-family: "MrsEavesOT-Roman"; }
+
+.meadow .content-slider .copy h1 {
+  font-family: "MrsEavesOT-Italic";
+  color: #514740;
+  font-size: em(50);
+  letter-spacing: 1px; }
+
+.meadow .content-slider .copy h2 {
+  font-family: "MrsEavesOT-SmallCaps";
+  color: #9A9999;
+  font-size: em(32);
+  letter-spacing: 1;
+  line-height: 1em; }
+
+.meadow .content-slider .copy p {
+  font-size: em(24);
+  color: #514740;
+  line-height: em(20); }
+
+.meadow #compare h1 {
+  font-family: "Wavehaus-95SemiBold", helvetica; }
+
+#developers-section h1, #developers-section h1 a {
+  font-family: 'Wavehaus-42Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 60px;
+  /* identical to box height */
+  text-transform: none; }
+
+#developers-section h2, #developers-section h2 a {
+  font-family: 'Wavehaus-42Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  /* identical to box height */ }
+
+#developers-section h3, #developers-section h3 a {
+  font-family: 'Wavehaus-66Book';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px; }
+
+#developers-section h4, #developers-section h4 a {
+  font-family: 'MrsEavesOT-Roman';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 26px;
+  /* identical to box height */
+  color: #14607F; }
+
+#developers-section h5, #developers-section h5 a {
+  font-family: 'MrsEavesOT-Roman';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 30px;
+  /* identical to box height */
+  color: #14607F; }
+
+#developers-section p, #developers-section li {
+  font-family: 'MrsEavesOT-Roman';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 30px;
+  color: #3D3530; }
+
+#developers-section .code {
+  font-family: 'CourierPrime', Courier;
+  color: #844936; }
+
+.meadow h1 {
+  font-family: "Wavehaus-128Bold"; }
+
 pre,
 pre.highlight {
   font-size: 20px;
@@ -354,141 +489,6 @@ a {
   text-decoration: underline; }
   .content a:hover {
     text-decoration: none; }
-
-p, li, a, button, label, input, h3 {
-  font-family: "MrsEavesOT-Roman", serif; }
-
-h1, h2, nav li a, footer li a {
-  font-family: "MrsEavesOT-SmallCaps", serif; }
-
-h1.large {
-  font-family: "MrsEavesOT-Bold", serif;
-  letter-spacing: 1px; }
-
-.main-banner h1 {
-  font-family: "FuturaNDCn-Medium", helvetica;
-  letter-spacing: 1px; }
-
-.main-banner h2 {
-  font-family: "MrsEavesOT-Bold", serif;
-  letter-spacing: 1px; }
-
-.main-banner p {
-  font-family: "MrsEavesOT-Bold", serif; }
-
-.main-banner .cta {
-  font-family: 'FuturaNDCn-Medium', helvetica; }
-
-.content-section h2 {
-  font-family: "Wavehaus-95SemiBold", helvetica; }
-
-.content-section h2.smallcaps {
-  font-family: "MrsEavesOT-SmallCaps", serif; }
-
-.content-section .cta {
-  font-family: 'FuturaNDCn-Medium', helvetica; }
-
-.content-section .tutorials h1 {
-  font-family: "MrsEavesOT-Bold", serif; }
-
-.content-slider .copy h1, .content-slider .copy ul.paging p {
-  font-family: "Wavehaus-95SemiBold", helvetica; }
-
-.content-slider .copy ul.paging p span {
-  font-family: "MrsEavesOT-Roman", serif; }
-
-.lig {
-  -webkit-font-variant-ligatures: discretionary-ligatures;
-          font-variant-ligatures: discretionary-ligatures;
-  letter-spacing: normal; }
-
-#code code {
-  font-family: "FuturaND-Medium", helvetica !important;
-  font-weight: bold;
-  letter-spacing: 2px; }
-
-.meadow #code p {
-  font-family: "Wavehaus-95SemiBold"; }
-
-.meadow #join .cta {
-  font-family: "MrsEavesOT-Roman"; }
-
-.meadow .content-slider .copy h1 {
-  font-family: "MrsEavesOT-Italic";
-  color: #514740;
-  font-size: 3.125em;
-  letter-spacing: 1px; }
-
-.meadow .content-slider .copy h2 {
-  font-family: "MrsEavesOT-SmallCaps";
-  color: #9A9999;
-  font-size: 2em;
-  letter-spacing: 1;
-  line-height: 1em; }
-
-.meadow .content-slider .copy p {
-  font-size: 1.5em;
-  color: #514740;
-  line-height: 1.25em; }
-
-.meadow #compare h1 {
-  font-family: "Wavehaus-95SemiBold", helvetica; }
-
-#developers-section h1, #developers-section h1 a {
-  font-family: 'Wavehaus-42Light';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 50px;
-  line-height: 60px;
-  /* identical to box height */
-  text-transform: none; }
-
-#developers-section h2, #developers-section h2 a {
-  font-family: 'Wavehaus-42Light';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 38px;
-  /* identical to box height */ }
-
-#developers-section h3, #developers-section h3 a {
-  font-family: 'Wavehaus-66Book';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 34px; }
-
-#developers-section h4, #developers-section h4 a {
-  font-family: 'MrsEavesOT-Roman';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 26px;
-  /* identical to box height */
-  color: #14607F; }
-
-#developers-section h5, #developers-section h5 a {
-  font-family: 'MrsEavesOT-Roman';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 30px;
-  /* identical to box height */
-  color: #14607F; }
-
-#developers-section p, #developers-section li {
-  font-family: 'MrsEavesOT-Roman';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 30px;
-  color: #3D3530; }
-
-#developers-section .code {
-  font-family: 'CourierPrime', Courier;
-  color: #844936; }
-
-.meadow h1 {
-  font-family: "Wavehaus-128Bold"; }
 
 .meadow a {
   color: #fcfdfd; }
@@ -1200,7 +1200,7 @@ nav.secondary {
     display: block;
     font-family: "Mrs Eaves OT";
     color: #E3F4FB;
-    font-size: 1.25em; }
+    font-size: 20px; }
     nav.secondary a:hover, nav.secondary a:focus {
       color: #C9DB31;
       text-decoration: none; }
@@ -1593,20 +1593,7 @@ nav.subcategory ul {
   .meadow #production {
     padding-top: 10%; }
   .meadow .code-block code {
-    font-size: 1.25em; }
-  nav.secondary ul {
-    width: 100%;
-    padding-left: 5%;
-    white-space: nowrap; }
-    nav.secondary ul li {
-      border-right: 1px solid #B35E2C; }
-      nav.secondary ul li:first-child {
-        border-left: 1px solid #B35E2C; }
-  nav.secondary a {
-    padding: 13px 8px 5px 8px;
-    font-size: 18px; }
-  .banner.small {
-    padding: 70px 5% 70px 5%; } }
+    font-size: 1.25em; } }
 
 @media (min-width: 992px) {
   .mobile {
@@ -1625,8 +1612,7 @@ nav.subcategory ul {
       padding-right: 0px; }
     header .logo {
       margin-top: 20px;
-      width: 304px;
-      height: 48px;
+      width: 280px;
       float: left; }
       header .logo img {
         cursor: pointer; }
@@ -1774,9 +1760,15 @@ nav.subcategory ul {
     width: 100%;
     padding-left: 5%;
     white-space: nowrap; }
+    nav.secondary ul li {
+      border-right: 1px solid #B35E2C; }
+      nav.secondary ul li:first-child {
+        border-left: 1px solid #B35E2C; }
   nav.secondary a {
-    padding: 18px 15px 10px 15px;
-    font-size: 22px; }
+    padding: 18px 8px 10px 8px;
+    font-size: 18px; }
+  .banner.small {
+    padding: 70px 5% 70px 5%; }
   .banner.small {
     padding: 70px 5% 70px 5%; }
   .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul {
@@ -1829,8 +1821,9 @@ nav.subcategory ul {
     font-size: 2.25em; }
   .meadow #kickstarter p {
     font-size: 2.25em; }
-  nav.secondary ul {
-    width: 1200px; } }
+  nav.secondary a {
+    padding: 18px 15px 10px 15px;
+    font-size: 20px; } }
 
 @media (min-width: 1680px) {
   .wide {
@@ -1840,20 +1833,16 @@ nav.subcategory ul {
     .wide .content-banner {
       width: 50%;
       margin-top: -100px; }
-    .wide .content-block p, .wide .content-block div {
-      width: 45%; }
     .wide .content-block .language-csharp, .wide .content-block figure, .wide .content-block img.floated {
       float: right;
       display: inline-block;
       width: 50%;
-      margin-top: -100px; }
+      margin-left: 20px;
+      margin-top: 15px; }
     .wide .content-block .language-csharp pre {
       font-size: 16px; }
     .wide .content-block .language-csharp div {
       width: 100%; }
-    .wide .content-block figure, .wide .content-block img.floated {
-      margin-left: 15px;
-      margin-top: -100px; }
     .wide ol li {
       float: left; }
     .wide .content-image {

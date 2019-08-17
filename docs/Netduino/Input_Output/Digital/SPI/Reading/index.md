@@ -33,7 +33,6 @@ The DS3234 stores the current date and time in a series of registers on the chip
 
 In order to read the registers the Netduino must issue a read command to the DS3234.  This command will tell the DS3234 which of the registers should be read first.  Subsequent reads will return the next register in the chip incrementing the register pointer after each read.
 
-<figure markdown="1">
   ```csharp
   SPI.Configuration spiConfig = new SPI.Configuration(
                   ChipSelect_Port: Pins.GPIO_PIN_D7,      // Chip select is digital IO 7.
@@ -64,7 +63,6 @@ In order to read the registers the Netduino must issue a read command to the DS3
       Thread.Sleep(2000);
   }
   ```
-</figure>
 
 ### Key Points
 
@@ -72,7 +70,6 @@ In order to read the registers the Netduino must issue a read command to the DS3
 
 The SPI bus is configured as follows:
 
-<figure markdown="1">
 ```csharp
 SPI.Configuration spiConfig = new SPI.Configuration(
                 ChipSelect_Port: Pins.GPIO_PIN_D7,      // Chip select is digital IO 7.
@@ -87,7 +84,6 @@ SPI.Configuration spiConfig = new SPI.Configuration(
 
 SPI spi = new SPI(spiConfig);
 ```
-</figure>
 
 The clock is set to be low when idle and the data is read on the training edge of the clock pulse.
 
