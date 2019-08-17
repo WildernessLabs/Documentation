@@ -1828,8 +1828,6 @@ nav.subcategory ul {
 @media (min-width: 1680px) {
   .wide {
     overflow: hidden; }
-    .wide .content-banner, .wide .content-block {
-      display: inline-block; }
     .wide .content-banner {
       width: 50%;
       margin-top: -100px; }
