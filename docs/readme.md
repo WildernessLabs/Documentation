@@ -42,3 +42,14 @@ bundle exec jekyll serve
 The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
 
 Changes should automatically be picked up and displayed on the site.
+
+## Modifying Styles
+
+Styles are generated from the WildernessLabs.co repository and its normal workflow.
+
+### ruby watch.rb
+
+Use this task in the `docs` directory to build the CSS for the documentation site.
+
+- Setup path to `dist` directory in WildernessLabs.co repository in `watch_config.json`
+- Run the ruby watch.rb task from the `docs` directory in this repository while working on the CSS to build for the Documentation site

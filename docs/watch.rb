@@ -1,9 +1,12 @@
 require 'filewatcher'
 require 'fileutils'
 
-# Path to /dist/ directory in the Wildernesslabs Repo
-path_from_dist = '/Users/bbilfield/Library/Mobile Documents/com~apple~CloudDocs/Work/personal/wilderness/code/web.full/src/WildernessLabs.Web/wwwroot/dist/'
+require 'json'
+file = File.read('config.json')
+data_hash = JSON.parse(file)
 
+# Path to /dist/ directory in the Wildernesslabs Repo
+path_from_dist = data_hash['path_from_dist'];
 
 # CSS Watcher
 path_from_css = path_from_dist + 'css'
