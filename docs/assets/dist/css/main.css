@@ -1831,6 +1831,8 @@ nav.subcategory ul {
     .wide .content-banner {
       width: 50%;
       margin-top: -100px; }
+    .wide .content-block .highlighter-rouge {
+      width: 48%; }
     .wide .content-block .language-csharp, .wide .content-block figure, .wide .content-block img.floated {
       float: right;
       display: inline-block;
