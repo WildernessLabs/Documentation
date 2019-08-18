@@ -13,7 +13,7 @@ To browse locally:
 
 ### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
 
-Open a terminal and navigate to the `Documentation/docs` folder and run:
+Open a terminal and navigate to the `Documentation/docs` folder and run (Ruby version 2.6.3 required for Jekyll):
 
 ```
 $ brew install ruby
@@ -52,4 +52,4 @@ Styles are generated from the WildernessLabs.co repository and its normal workfl
 Use this task in the `docs` directory to build the CSS for the documentation site.
 
 - Setup path to `dist` directory in WildernessLabs.co repository in `watch_config.json`
-- Run the ruby watch.rb task from the `docs` directory in this repository while working on the CSS to build for the Documentation site
+- Run the `ruby watch.rb` task from the `docs` directory in this repository while working on the CSS to build for the Documentation site
