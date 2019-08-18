@@ -1262,6 +1262,9 @@ nav.subcategory ul {
     padding-bottom: 8px; }
   #developers-section p {
     margin-bottom: 20px; }
+  #developers-section li {
+    font-size: 24px;
+    line-height: 22px; }
   #developers-section nav.subcategory h2, #developers-section nav.subcategory h2 a {
     font-size: 27px; }
   #developers-section #primary-col h1:not(:first-of-type), #developers-section #primary-col h2:not(:first-of-type), #developers-section #primary-col h3:not(:first-of-type), #developers-section #primary-col h4:not(:first-of-type), #developers-section #primary-col h5:not(:first-of-type) {
