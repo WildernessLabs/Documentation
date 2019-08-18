@@ -2,7 +2,7 @@ require 'filewatcher'
 require 'fileutils'
 
 require 'json'
-file = File.read('config.json')
+file = File.read('watch_config.json')
 data_hash = JSON.parse(file)
 
 # Path to /dist/ directory in the Wildernesslabs Repo
