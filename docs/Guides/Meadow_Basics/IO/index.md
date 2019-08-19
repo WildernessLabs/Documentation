@@ -12,7 +12,7 @@ IO ports can be accessed from your application to read sensors, listen to button
 
 ## Types of IO
 
-Meadow IO ports are divided into two categories; _Digital_ and _Analog_. 
+Meadow IO ports are divided into two categories; _Digital_ and _Analog_.
 
 Digital and analog refer to the type of electrical signal used; either `HIGH`/`LOW` for digital, or a range of voltage for analog, and they're used for different things.
 
@@ -48,7 +48,7 @@ Analog ports can operate at a range of voltages between `0V` and `3.3V`, which i
 
 GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 Micro, and many of these pins are actually overloaded to support multiple functions, as shown below:
 
-![](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
 The function that they serve depends on how they are configured when a _port_ is instantiated on one of them. For instance, pin `D00` can be configured to be used a digital input or output, or as the `RX` (receive) half of a Serial UART port available as "COM4".
 
@@ -70,7 +70,7 @@ IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`.
 foreach(var pin in Device.Pins.AllPins) {
    Console.WriteLine("Found pin: " + pin.Name);
    foreach (var channel in pin.SupportedChannels) {
-            Console.WriteLine("Contains a " + channel.GetType() 
+            Console.WriteLine("Contains a " + channel.GetType()
             + "channel called: " + channel.Name + ".");
    }
 }
@@ -108,4 +108,3 @@ IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLe
 When building Meadow applications, most of the time, you'll use high level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
 ## [Next - Meadow.Foundation](/Guides/Meadow.Foundation/)
-

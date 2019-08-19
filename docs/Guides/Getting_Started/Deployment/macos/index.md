@@ -50,7 +50,7 @@ The application may take several minutes to deploy. You'll see periods appear in
 
 If you ran the provided sample app, you should see the RGB led changing color!
 
-![Meadow app deploying](./app_deploy.png)
+![Meadow app deploying](./app_deploy.png){:standalone}
 
 ## Stop the application
 

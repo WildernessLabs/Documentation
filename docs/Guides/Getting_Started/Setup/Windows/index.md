@@ -28,7 +28,7 @@ http://downloads.wildernesslabs.co/Meadow_Beta/config.sh)** to the folder (worki
 
   Vagrant will automatically start your virtual machine. You can access your VM by entering `vagrant ssh` from the command prompt.
 
-  ![VM initializing](./vm_start.png)
+  ![VM initializing](./vm_start.png){:standalone}
 
 ## Stop the VM
 

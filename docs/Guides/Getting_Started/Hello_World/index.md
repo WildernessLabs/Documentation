@@ -18,11 +18,11 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 ### Windows
 
-Install Visual Studio 2017. Visual Studio 2019 beta *should* work but isn't officially supported yet. 
+Install Visual Studio 2017. Visual Studio 2019 beta *should* work but isn't officially supported yet.
 
 You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
 
-![VS2017 Installer](vs2017_install.png)
+![VS2017 Installer](vs2017_install.png){:standalone}
 
 ### macOS
 
@@ -128,7 +128,7 @@ Now we'll add fields to control the onboard LED and toggle its red, green, and b
 
  1. Add three (3) fields of type `DigitalOutputPort` named `redLed`, `greenLed`, and `blueLed`.
  * In the `InitializeHardware method, instantiate each output port using `Device.Pins` to reference the onboard internal pins to control each color of the led:
-  
+
   ```csharp
   IDigitalOutputPort redLed;
   IDigitalOutputPort greenLed;
@@ -143,7 +143,7 @@ Now we'll add fields to control the onboard LED and toggle its red, green, and b
   }
   ```
 
-Now we'll add a method to toggle the LEDs. We do this by controlling the `DigitalOutputPort`'s boolean `State` property. Within the while loop, we'll write the current state to the Console and toggle the LEDs in sequence. 
+Now we'll add a method to toggle the LEDs. We do this by controlling the `DigitalOutputPort`'s boolean `State` property. Within the while loop, we'll write the current state to the Console and toggle the LEDs in sequence.
 
 We'll need two (2) additional `using` statements, add `System` and `System.Threading` if they're not there already.
 
@@ -212,7 +212,7 @@ The last thing we need to do is create an instance of the `App` class when the a
 
 ## Compile and run the application
 
-You're now ready to build and deploy your Meadow app. 
+You're now ready to build and deploy your Meadow app.
 
  1. Build the application.
  * Using Finder or the File Explorer, navigate to the folder that contains your application.

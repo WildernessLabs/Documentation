@@ -829,9 +829,9 @@ footer {
 @media (min-width: 1680px) {
   .wide {
     overflow: hidden; }
-    .wide .content-block .highlighter-rouge {
-      width: 48%; }
-    .wide .content-block .language-csharp, .wide .content-block figure, .wide .content-block img.floated, .wide .content-block .content-banner {
+    .wide ol, .wide .highlighter-rouge {
+      overflow: hidden; }
+    .wide .content-block div.highlighter-rouge, .wide .content-block figure, .wide .content-block img.floated, .wide .content-block .content-banner {
       float: right;
       display: inline-block;
       width: 50%;

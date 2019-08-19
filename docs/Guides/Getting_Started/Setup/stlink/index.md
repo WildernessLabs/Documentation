@@ -23,11 +23,11 @@ You'll connect four (4) pins on the ST-Link to Meadow
 1. Clock (SWCLK)
 
 You can see the pinout on the Meadow debug header below:
-![Meadow pinout](stlink-pinout.png)
+![Meadow pinout](stlink-pinout.png){:standalone}
 
 The pins should be labelled on the ST-Link V2. Not all ST-Links have the same pinout so **check your specific ST-Link** for the pinout. It should be labelled.
 
-![Meadow st-link](stlink-meadow.png)
+![Meadow st-link](stlink-meadow.png){:standalone}
 
 You're now ready to connect your ST-Link to your host PC.
 
