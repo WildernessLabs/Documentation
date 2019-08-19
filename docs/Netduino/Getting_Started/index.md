@@ -22,7 +22,10 @@ Once your development environment is configured, make sure your board has the la
 #### Visual Studio for Windows
 
  1. Launch Visual Studio and create a new solution of type **Visual C### > Micro Framework > Console Application** and name it whatever you want:
- ![New Solution Dialog](02-New_Solution_VS.png){:standalone}
+
+ <figure markdown="1">
+ ![New Solution Dialog](02-New_Solution_VS.png)
+ </figure>
 
  2. Right-click on the **References** folder in the Solution Explorer and add:
 
@@ -33,7 +36,10 @@ Once your development environment is configured, make sure your board has the la
 #### Visual Studio for mac
 
  1. Launch Xamarin Studio and create a new solution of type **C### > MicroFramework > MicroFramework Console Application** and name it whatever you want:
-![New Solution Dialog](01-NewSolution_XS.png){:standalone}
+
+<figure markdown="1">
+![New Solution Dialog](01-NewSolution_XS.png)
+</figure>
 
  2. Double-click on the **References** folder in the Solution Pad and add:
 
@@ -93,26 +99,28 @@ This code does the following things:
  1. Make sure your Netduino is plugged in.
 
  2. Double-click on the **Properties** item in the Solution Explorer, select **.NET Micro Framework** on the left, and the under **Deployment** choose **USB** and in the **Device** drop down, choose your Netduino device:
- ![Device Chooser](04-VS_Device_Choose.png){:standalone}
-
+  <figure markdown="1">
+ ![Device Chooser](04-VS_Device_Choose.png)
+</figure>
  3. Click the **Start >** button in the toolbar to deploy to your device.
 
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
-
-![](05-blinking_Netduino.gif){:standalone}
-
+ <figure markdown="1">
+![](05-blinking_Netduino.gif)
+</figure>
 
 ##### Visual Studio for Mac
 
  1. Make sure your Netduino is plugged in. It should show up in the build bar at the top:
-![Xamarin Studio Build Bar](03-Build_Bar.png){:standalone}
-
+  <figure markdown="1">
+![Xamarin Studio Build Bar](03-Build_Bar.png)
+</figure>
  2. Hit the ">" button to deploy.
 
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
-
-![](05-blinking_Netduino.gif){:standalone}
-
+ <figure markdown="1">
+![](05-blinking_Netduino.gif)
+</figure>
 You should also see the debug output in the **Application Output** window:
 
 ```
