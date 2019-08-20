@@ -782,6 +782,9 @@ footer {
     padding: 35px 3% 3%; }
   #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
     padding-top: 35px; }
+  #primary-col figure {
+    border: 1px solid #514740;
+    padding: 10px; }
 
 .content-banner {
   border: 2px solid #7D7D7D;
@@ -794,10 +797,10 @@ footer {
     margin: 0;
     padding: 5px 3% 5px 0; }
 
-.language-csharp pre {
+div.highlighter-rouge pre {
   font-size: 15px; }
 
-.language-csharp div {
+div.highlighter-rouge div {
   width: 100%; }
 
 @media (min-width: 320px) {
@@ -848,7 +851,7 @@ footer {
     .wide .content-block > h2, .wide .content-block > h3, .wide .content-block > h4, .wide .content-block > h5 {
       clear: both;
       margin-bottom: 15px; }
-    .wide .content-block > div.highlighter-rouge, .wide .content-block > figure, .wide .content-block img.floated, .wide .content-block .content-banner {
+    .wide .content-block div.highlighter-rouge, .wide .content-block > figure, .wide .content-block img.floated, .wide .content-block .content-banner {
       float: right;
       clear: right;
       display: inline-block;
