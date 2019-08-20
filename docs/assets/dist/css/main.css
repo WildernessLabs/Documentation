@@ -792,6 +792,12 @@ footer {
     margin: 0;
     padding: 5px 3% 5px 0; }
 
+.language-csharp pre {
+  font-size: 15px; }
+
+.language-csharp div {
+  width: 100%; }
+
 @media (min-width: 320px) {
   #primary-col {
     width: 100%; } }
@@ -831,18 +837,17 @@ footer {
     overflow: hidden; }
     .wide ol, .wide .highlighter-rouge {
       overflow: hidden; }
-    .wide .content-block div.highlighter-rouge, .wide .content-block figure, .wide .content-block img.floated, .wide .content-block .content-banner {
+    .wide .content-block > p, .wide .content-block > h2, .wide .content-block > h3, .wide .content-block > h4, .wide .content-block > h5, .wide .content-block > ul, .wide .content-block > ol {
+      float: left;
+      clear: left;
+      width: 48%; }
+    .wide .content-block > div.highlighter-rouge, .wide .content-block > figure, .wide .content-block img.floated, .wide .content-block .content-banner {
       float: right;
+      clear: right;
       display: inline-block;
       width: 50%;
       margin-left: 20px;
       margin-top: 15px; }
-    .wide .content-block .language-csharp pre {
-      font-size: 16px; }
-    .wide .content-block .language-csharp div {
-      width: 100%; }
-    .wide ol li {
-      float: left; }
     .wide .content-image {
       width: 40%; } }
 
