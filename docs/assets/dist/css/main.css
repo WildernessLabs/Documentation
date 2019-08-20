@@ -835,6 +835,8 @@ footer {
       padding: 35px 0 3% 0; } }
 
 @media (min-width: 1680px) {
+  div.highlight {
+    margin: 0px 0; }
   .wide {
     overflow: hidden; }
     .wide ol, .wide .highlighter-rouge {
@@ -843,17 +845,16 @@ footer {
       float: left;
       clear: left;
       width: 48%; }
-    .wide .content-block > h2, .wide .content-block > h3 {
-      clear: both; }
+    .wide .content-block > h2, .wide .content-block > h3, .wide .content-block > h4, .wide .content-block > h5 {
+      clear: both;
+      margin-bottom: 15px; }
     .wide .content-block > div.highlighter-rouge, .wide .content-block > figure, .wide .content-block img.floated, .wide .content-block .content-banner {
       float: right;
       clear: right;
       display: inline-block;
       width: 50%;
       margin-left: 20px;
-      margin-top: 15px;
-      position: relative;
-      top: -25px; }
+      position: relative; }
     .wide .content-image {
       width: 40%; } }
 
