@@ -761,6 +761,8 @@ footer {
     padding-bottom: 8px; }
   #developers-section p {
     margin-bottom: 20px; }
+    #developers-section p .highlighter-rouge {
+      font-size: 20px; }
   #developers-section li {
     font-size: 24px; }
   #developers-section .banner.small {
