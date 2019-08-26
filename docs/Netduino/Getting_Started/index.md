@@ -30,12 +30,12 @@ Once your development environment is configured, make sure your board has the la
      * SecretLabs.NETMF.Hardware
      * SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
 
-### Visual Studio for mac
+### Visual Studio for Mac
 
  1. Launch Xamarin Studio and create a new solution of type **C# > MicroFramework > MicroFramework Console Application** and name it whatever you want:
 ![New Solution Dialog](01-NewSolution_XS.png)
 
- 2. Double-click on the **References** folder in the Solution Pad and add:
+ 2. Double-click on the **References** folder in the Solution pad and add:
  
     * Microsoft.Spot.Hardware
     * SecretLabs.NETMF.Hardware
@@ -43,7 +43,7 @@ Once your development environment is configured, make sure your board has the la
 
 ### Add the Application Code
 
-After you've created the project and configured the references, add the following code to your **program.cs** file.
+After you've created the project and configured the references, add the following code to your **Program.cs** file.
 
 ```csharp
 using System;
@@ -82,11 +82,10 @@ namespace NetduinoBlink
 This code does the following things:
 
  1. It creates an `OutputPort`. An `OutputPort` allows you to "write" to a pin, e.g. power it on or off.
- 2. Loops forever, writing to the port on, then waiting 250ms, then turning it off.
+ 2. Loops forever: writing to the port to turn on, then waiting 250ms, then turning it off.
  3. Prints to the **Debug Window** the loop iteration it's on.
 
 ### Deploy
-
  
 #### Visual Studio for Windows
 
@@ -99,7 +98,7 @@ This code does the following things:
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05-blinking_Netduino.gif)
+![Animated GIF of a Netduino board blinking the on-board LED repeatedly](05-blinking_Netduino.gif)
 
 
 #### Visual Studio for Mac
@@ -111,7 +110,7 @@ The app should deploy and after a moment, the LED should start blinking on the N
  
 The app should deploy and after a moment, the LED should start blinking on the Netduino:
 
-![](05-blinking_Netduino.gif)
+![Animated GIF of a Netduino board blinking the on-board LED repeatedly](05-blinking_Netduino.gif)
 
 You should also see the debug output in the **Application Output** window:
 
