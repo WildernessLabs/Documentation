@@ -6,11 +6,21 @@ subtitle: Release Notes
 
 # Meadow Beta 3
 
+Beta 3 is here, and it's awesome! This is the biggest release we've done yet and is the first beta that makes Meadow truly productive. We're excited to get it in your hands.
+
 ## New Core Features
+
+* USB Deployment
+* PWM, I2C, SPI
+
 
 ### USB Deployment
 
 Wahoo!! No more painful JTAG deployment, deploying your app is now a cinch via the USB deployment feature.
+
+#### Meadow.CLI
+
+We've created a _Command Line Interface_ for meadow that allows you to deploy a Meadow application to a Meadow device over USB.
 
 [explain]
 
@@ -41,7 +51,7 @@ The SPI protocol is now working. Along with it; [list of new Meadow.Foundation p
 
 
 
-## New Meadow.Foundation Features
+## New Meadow.Foundation Peripherals and Features
 
 
 
