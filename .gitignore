@@ -262,4 +262,4 @@ Gemfile.lock
 # Mac stuff
 .DS_Store
 
-watch_config.json
+docs/watch_config.json

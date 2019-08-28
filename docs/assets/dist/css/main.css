@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("bootstrap.css");
 p, li, a, button, label, input, h3 {
   font-family: "MrsEavesOT-Roman", serif; }
 
@@ -764,7 +763,8 @@ footer {
     #developers-section p .highlighter-rouge {
       font-size: 20px; }
   #developers-section li {
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 25px; }
   #developers-section .banner.small {
     padding-top: 55px;
     padding-bottom: 45px; }
@@ -783,7 +783,6 @@ footer {
   #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
     padding-top: 35px; }
   #primary-col figure {
-    border: 1px solid #514740;
     padding: 10px; }
 
 .content-banner {
