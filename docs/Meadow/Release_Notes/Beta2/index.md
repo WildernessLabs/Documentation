@@ -141,9 +141,9 @@ It's time to break out your [analog temp sensors](xref:Meadow.Foundation.Sensors
 
 ## New Meadow.Foundation Features
 
-Meadow.Foundation got quite a few more core [peripheral drivers](/Guides/Meadow.Foundation/Peripherals) added, as well as a few non-core drivers.
+Meadow.Foundation got quite a few more core [peripheral drivers](/Meadow/Meadow.Foundation/Peripherals) added, as well as a few non-core drivers.
 
-We'll be releasing additional Meadow.Foundation updates out-of-band from the beta releases, so make sure to check the [peripheral drivers list page](/Guides/Meadow.Foundation/Peripherals) for updates often, and update your nuget packages.
+We'll be releasing additional Meadow.Foundation updates out-of-band from the beta releases, so make sure to check the [peripheral drivers list page](/Meadow/Meadow.Foundation/Peripherals) for updates often, and update your nuget packages.
 
 
 ## Fixed Bugs

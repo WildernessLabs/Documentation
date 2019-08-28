@@ -37,6 +37,6 @@ We have a custom version of the open-source st-tools developed by [ST](https://w
 
 We recommend installing the tools directly as described above. If you run into issues, you can alternatively use the provided prebuilt virtual machine. This requires you install Vagrant and VirualBox.
 
-You can follow [the Windows instructions](/Guides/Getting_Started/Setup/Windows/); you'll use the macOS terminal in place of the Windows Command Prompt.
+You can follow [the Windows instructions](/Meadow/Getting_Started/Setup/Windows/); you'll use the macOS terminal in place of the Windows Command Prompt.
 
-## [Next - Deploy Meadow OS](/Guides/Getting_Started/Deploying_Meadow/)
+## [Next - Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow/)

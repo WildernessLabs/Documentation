@@ -220,4 +220,4 @@ You're now ready to build and deploy your Meadow app.
  * Follow the [Deployment instructions here](../Deployment/) to deploy your app.
 
 
-## [Next - Meadow Basics](/Guides/Meadow_Basics/)
+## [Next - Meadow Basics](/Meadow/Meadow_Basics/)

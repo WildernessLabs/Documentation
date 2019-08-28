@@ -31,4 +31,4 @@ The pins should be labelled on the ST-Link V2. Not all ST-Links have the same pi
 
 You're now ready to connect your ST-Link to your host PC.
 
-## [Next - Configure your Dev Environment](/Guides/Getting_Started/Setup/Windows/)
+## [Next - Configure your Dev Environment](/Meadow/Getting_Started/Setup/Windows/)

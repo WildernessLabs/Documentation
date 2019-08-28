@@ -45,4 +45,4 @@ We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 | Battery Voltage Level | No | Planed, Beta 4; Relies on Networking co-processor.
 | Power Management APIs | No | Planned for RC-1 |
 
-## [Next - Fundamentals of Meadow Apps](/Guides/Meadow_Basics/Apps/)
+## [Next - Fundamentals of Meadow Apps](/Meadow/Meadow_Basics/Apps/)

@@ -19,7 +19,7 @@ To deploy an app to Meadow you'll need several things:
 
 ## Setup
 
-1. Follow the steps in the [Setup](/Guides/Getting_Started/Setup/) .
+1. Follow the steps in the [Setup](/Meadow/Getting_Started/Setup/) .
 1. Open the terminal.
 
 
@@ -51,7 +51,7 @@ make release
 ```
 
 ## Connect Meadow to your PC
-1. Follow this instructions to [connect your ST-Link V2 to Meadow](/Guides/Getting_Started/Setup/stlink/).
+1. Follow this instructions to [connect your ST-Link V2 to Meadow](/Meadow/Getting_Started/Setup/stlink/).
 * Insert your ST-Link V2 into a free USB port on your host PC.
 * Open the terminal.
 * Navigate to the folder where you compliled ST-Link.
@@ -76,4 +76,4 @@ If you ran the provided sample app, you should see the RGB led changing color!
 1. Enter `quit` to close gdb.
 1. st-util will continue listening on port 4242 - you can now update the application in the tmp folder and restart gdp to deploy your updated app.
 
-## [Next - Hello, World](/Guides/Getting_Started/Hello_World/)
+## [Next - Hello, World](/Meadow/Getting_Started/Hello_World/)

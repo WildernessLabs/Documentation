@@ -8,9 +8,9 @@ subtitle: Guides and documentation for Meadow
 
 This section covers the fundamentals of creating Meadow applications.
 
- * [Beta Feature Status](/Guides/Meadow_Basics/Status)
- * [Meadow Applications](/Guides/Meadow_Basics/Apps)
- * [Input & Output (IO)](/Guides/Meadow_Basics/IO)
+ * [Beta Feature Status](/Meadow/Meadow_Basics/Status)
+ * [Meadow Applications](/Meadow/Meadow_Basics/Apps)
+ * [Input & Output (IO)](/Meadow/Meadow_Basics/IO)
 
-## [Next - Meadow.Foundation](/Guides/Meadow.Foundation)
+## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation)
  

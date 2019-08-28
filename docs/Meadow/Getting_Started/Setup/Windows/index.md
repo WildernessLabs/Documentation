@@ -46,4 +46,4 @@ You can delete the virtual machine by entering `vagrant destroy`. You can then r
 
 If you're unable to delete the VM, you may need to stop it first. Open the **Oracle VM VirtualBox Manager** (installed with VirtualBox), right click on the running VM and select *Close -> Power off*. You should now be able to run `vagrant destroy`.
 
-## [Next - Deploy Meadow OS](/Guides/Getting_Started/Deploying_Meadow/)
+## [Next - Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow/)

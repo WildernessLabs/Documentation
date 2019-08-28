@@ -11,4 +11,4 @@ subtitle: Guides and documentation for Meadow
     * [macOS](macos/)
     * [Windows](Windows/)
 
-## [Next - Deploy Meadow OS](/Guides/Getting_Started/Deploying_Meadow/)
+## [Next - Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow/)

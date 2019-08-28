@@ -31,15 +31,15 @@ We've created a _Command Line Interface_ for meadow that allows you to deploy a 
 
 ### Digital Outputs and Protocols
 
-#### [Pulse-Width-Modulation (PWM)](/Guides/Meadow_Basics/IO/Digital/PWM/)
+#### [Pulse-Width-Modulation (PWM)](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 PWM is now live! Along with it, PwmLed, RgbPwmLed, Servo Core, etc. [add links as they become available].
 
-#### [Inter-Integrated Circuits (I2C)](/Guides/Meadow_Basics/IO/Digital/Protocols/I2C/)
+#### [Inter-Integrated Circuits (I2C)](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/)
 
 The I2C protocol is now working. Along with it; [list of new Meadow.Foundation peripherals]
 
-#### [Serial Peripheral Interface (SPI)](/Guides/Meadow_Basics/IO/Digital/Protocols/SPI/)
+#### [Serial Peripheral Interface (SPI)](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/)
 
 The SPI protocol is now working. Along with it; [list of new Meadow.Foundation peripherals]
 

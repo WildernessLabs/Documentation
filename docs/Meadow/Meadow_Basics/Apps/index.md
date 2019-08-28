@@ -127,4 +127,4 @@ namespace HelloLED
 }
 ```
 
-# [Next - Input/Output](/Guides/Meadow_Basics/IO/)
+# [Next - Input/Output](/Meadow/Meadow_Basics/IO/)

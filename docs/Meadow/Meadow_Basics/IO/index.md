@@ -16,17 +16,17 @@ Meadow IO ports are divided into two categories; _Digital_ and _Analog_.
 
 Digital and analog refer to the type of electrical signal used; either `HIGH`/`LOW` for digital, or a range of voltage for analog, and they're used for different things.
 
-### [Digital IO](/Guides/Meadow_Basics/IO/Digital/)
+### [Digital IO](/Meadow/Meadow_Basics/IO/Digital/)
 
 Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO.
 
-Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. Additionally, the digital ports have built-in support for a host of different types of common digital [communication protocols](/Guides/Meadow_Basics/IO/Digital/Protocols/) including:
+Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. Additionally, the digital ports have built-in support for a host of different types of common digital [communication protocols](/Meadow/Meadow_Basics/IO/Digital/Protocols/) including:
 
-* **[I2C](/Guides/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)
-* **[SPI](/Guides/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)
-* **[UART](/Guides/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial)
-* **[CAN](/Guides/Meadow_Basics/IO/Digital/Protocols/CAN)** (Car Area Network)
-* **[I2S](/Guides/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus)
+* **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)
+* **[SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)
+* **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial)
+* **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** (Car Area Network)
+* **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus)
 
 <!--
 | Protocol | Characteristics                                                |
@@ -36,11 +36,11 @@ Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at
 |  Serial  | Low speed<br/>Used for communication between boards<br/>Can be used to communicate with on board devices<br/>Generally supports only one device per COM channel.  |
 -->
 
-### [Pulse-Width-Modulation PWM](/Guides/Meadow_Basics/IO/Digital/PWM/)
+### [Pulse-Width-Modulation PWM](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 Additionally, digital output ports can be used to generate a _Pulse-Width-Modulation_ (PWM) signal, which approximates an intermediate voltage between `LOW` or `HIGH` by switching between ON and OFF very quickly. PWM signals are frequently used to control the brightness of LEDs, as well as serve as the control signal for precision motors such as servos and stepper motors.
 
-### [Analog IO](/Guides/Meadow_Basics/IO/Analog/)
+### [Analog IO](/Meadow/Meadow_Basics/IO/Analog/)
 
 Analog ports can operate at a range of voltages between `0V` and `3.3V`, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal. For instance an analog temperature sensor that is able to detect temperatures from `0ºC` to `100ºC` might output a voltage of `1.6V` (halfway between `0V` and `3.3V`) for `50º`.
 
@@ -107,4 +107,4 @@ IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLe
 
 When building Meadow applications, most of the time, you'll use high level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
-## [Next - Meadow.Foundation](/Guides/Meadow.Foundation/)
+## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/)
