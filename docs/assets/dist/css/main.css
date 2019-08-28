@@ -783,8 +783,7 @@ footer {
   #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
     padding-top: 35px; }
   #primary-col figure {
-    padding: 10px;
-    width: 50%; }
+    padding: 10px; }
     #primary-col figure figcaption {
       display: none; }
 
@@ -809,6 +808,10 @@ div.highlighter-rouge div {
   #primary-col {
     width: 100%; } }
 
+@media (min-width: 320px) {
+  figure {
+    width: 80%; } }
+
 @media (min-width: 992px) {
   .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul {
     padding-left: 45px; }
@@ -822,6 +825,8 @@ div.highlighter-rouge div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .developers figure {
+    width: 80%; }
   #secondary-col {
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -838,6 +843,10 @@ div.highlighter-rouge div {
     min-width: 0; }
     #primary-col .content {
       padding: 35px 0 3% 0; } }
+
+@media (min-width: 1200px) {
+  .developers figure {
+    width: 60%; } }
 
 @media (min-width: 1680px) {
   div.highlight {
