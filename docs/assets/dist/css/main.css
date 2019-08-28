@@ -458,15 +458,12 @@ nav.subcategory ul {
   padding-left: 20%; }
   nav.subcategory ul li {
     list-style-type: none;
-    font-style: normal;
-    font-weight: bold;
     font-size: 24px;
     line-height: 22px;
     padding: 6px 0 0 0; }
     nav.subcategory ul li a {
       color: #555;
-      font-weight: bold;
-      font-family: "Mrs Eaves OT"; }
+      font-family: "MrsEavesOT-Bold"; }
       nav.subcategory ul li a:hover, nav.subcategory ul li a:focus {
         color: #23ABE3;
         text-decoration: none; }
@@ -480,7 +477,7 @@ nav.subcategory ul {
         font-weight: normal;
         line-height: 23px; }
         nav.subcategory ul li ul li a {
-          font-weight: normal; }
+          font-family: "MrsEavesOT-Roman"; }
 
 #secondary-col nav.subcategory {
   margin: 35px 0 0 0; }
