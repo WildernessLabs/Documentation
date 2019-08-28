@@ -6,24 +6,26 @@ subtitle: Guides and documentation for Meadow
 
 # Meadow F7 Micro Beta Status
 
+We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
+
 ## GPIO
 
-| Feature          | Tested Working      | Notes                             |
-|------------------|---------------------|-----------------------------------|
-| **Basic Digital IO** | Yes. | |
-| **Analog**           | Yes, with caveat. | Returning invalid values. |
-| **PWM**              | Yes. | |
-| **Serial (UART)**    | | Planned, RC-1 |
-| **I2C**              | Yes. | |
-| **SPI**              | Yes. | |
-| **CAN**              | | Planned, RTW |
-| **DAC**              | | Not implemented. Post-RTW |
+| Feature              | Tested Working      | Notes                             |
+|----------------------|---------------------|-----------------------------------|
+| **Basic Digital IO** | Yes | |
+| **Analog**           | Yes | |
+| **PWM**              | Yes | |
+| **Serial (UART)**    | No | Planned, Beta 4 |
+| **I2C**              | Yes | |
+| **SPI**              | Yes | |
+| **CAN**              | No | Planned, RTW |
+| **DAC**              | No | Not implemented. Post-RTW |
 
 ## Working GPIO Ports
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| @"Meadow.Hardware.AnalogInputPort" | Yes, see notes. | Returning invalid values. |
+| @"Meadow.Hardware.AnalogInputPort" | Yes | |
 | @"Meadow.Hardware.DigitalOutputPort" | Yes | |
 | @"Meadow.Hardware.DigitalInputPort" | Yes | |
 | @"Meadow.Hardware.BiDirectionalPort" | Yes | |
@@ -32,15 +34,15 @@ subtitle: Guides and documentation for Meadow
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| WiFi	| Yes. | |
-| Bluetooth | | Working on co-proc. Not hooked to API. Planned for RC-1. |
+| WiFi	| No| In progress. Planned Beta 4 |
+| Bluetooth | No | Working on co-proc. Not hooked to API. Planned for RC-1. |
 
 ## Other Features
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Battery Charing  | Yes. |
-| Battery Voltage Level | ? | Waiting on co-proc comms integration. |
-| Power Management | | Not implemented. |
+| Battery Charging  | Yes | |
+| Battery Voltage Level | No | Planed, Beta 4; Relies on Networking co-processor.
+| Power Management APIs | No | Planned for RC-1 |
 
 ## [Next - Fundamentals of Meadow Apps](/Guides/Meadow_Basics/Apps/)
