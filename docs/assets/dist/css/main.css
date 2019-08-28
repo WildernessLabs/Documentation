@@ -784,6 +784,8 @@ footer {
     padding-top: 35px; }
   #primary-col figure {
     padding: 10px; }
+    #primary-col figure figcaption {
+      display: none; }
 
 .content-banner {
   border: 2px solid #7D7D7D;
@@ -847,7 +849,7 @@ div.highlighter-rouge div {
       float: left;
       clear: left;
       width: 48%; }
-    .wide .content-block > h2, .wide .content-block > h3, .wide .content-block > h4, .wide .content-block > h5 {
+    .wide .content-block > h1, .wide .content-block > h2, .wide .content-block > h3, .wide .content-block > h4, .wide .content-block > h5 {
       clear: both;
       margin-bottom: 15px; }
     .wide .content-block div.highlighter-rouge, .wide .content-block > figure, .wide .content-block img.floated, .wide .content-block .content-banner {
