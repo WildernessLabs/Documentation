@@ -432,7 +432,7 @@ nav.secondary {
   nav.secondary a {
     padding: 10px 15px 3px 0px;
     display: block;
-    font-family: "Mrs Eaves OT";
+    font-family: "MrsEavesOT-Roman";
     color: #E3F4FB;
     font-size: 20px; }
     nav.secondary a:hover, nav.secondary a:focus {
@@ -783,7 +783,8 @@ footer {
   #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
     padding-top: 35px; }
   #primary-col figure {
-    padding: 10px; }
+    padding: 10px;
+    width: 50%; }
     #primary-col figure figcaption {
       display: none; }
 
@@ -859,6 +860,8 @@ div.highlighter-rouge div {
       width: 50%;
       margin-left: 20px;
       position: relative; }
+      .wide .content-block div.highlighter-rouge img, .wide .content-block > figure img, .wide .content-block img.floated img, .wide .content-block .content-banner img {
+        width: 90%; }
     .wide .content-image {
       width: 40%; } }
 
