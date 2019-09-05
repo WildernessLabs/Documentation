@@ -83,24 +83,24 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Graphics.GraphicsLibrary"        | General purpose graphics library | | |
-| @"Meadow.Foundation.Displays.Lcd.CharacterDisplay"   | LCD display | Yes | digital IO only | | |
-| @"Meadow.Foundation.Displays.LED.SevenSegment"       | Seven Segment Display | Yes | |
-| @"Meadow.Foundation.Displays.PCD8544"                | PCD8544 LCD driver (Nokia 5110) | | Blocked on SPI |
-| @"Meadow.Foundation.Displays.SerialLCD"              | SparkFun serial LCD backpack driver | | Blocked on serial |
-| @"Meadow.Foundation.Displays.SSD1306"                | SSD1306 OLED Display.  Currently supports 128x64 and 128x32 pixel I2C displays | | |
-| @"Meadow.Foundation.Displays.TextDisplayMenu"        | Text Display Menu for LCD displays | | Blocked on SPI |
-| @"Meadow.Foundation.Displays.Tft"                    | Thin Film Transistor (TFT) SPI Library | | Blocked on SPI |
-| @"Meadow.Foundation.Displays.ePaper"                 | ePaper/eInk display Library | | Blocked on SPI |
+| [GraphicsLibrary](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library | | |
+| [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | Yes | digital IO only | | |
+| [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.LED.SevenSegment.html) | Seven Segment Display | Yes | |
+| [PCD8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.PCD8544.html) | PCD8544 LCD driver (Nokia 5110) | | Blocked on SPI |
+| [SerialLCD](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SerialLCD.html) | SparkFun serial LCD backpack driver | | Blocked on serial |
+| [SSD1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | SSD1306 OLED Display.  Currently supports 128x64 and 128x32 pixel I2C displays | | |
+| [TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text Display Menu for LCD displays | | Blocked on SPI |
+| [Tft](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | | Blocked on SPI |
+| [ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | ePaper/eInk display Library | | Blocked on SPI |
 
 ### Integrated Circuits (ICs)
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.ICs.EEPROM.AT24Cxx"              | AT24Cxx Family of EEPROMs including AT24C32 | | Blocked on I2C |
-| @"Meadow.Foundation.ICs.IOExpanders.x74595"          | 74595 shift register for digital output expansion | | Blocked on SPI |
-| @"Meadow.Foundation.ICs.IOExpanders.MCP23008"        | MCP23008 for digital output expansion | | Blocked on I2C |
-| @"Meadow.Foundation.RTCs.DS323x"                     | Real Time Clock modules | | Blocked on I2C |
+| [AT24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.AT24Cxx.html) | AT24Cxx Family of EEPROMs including AT24C32 | | |
+| [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion | | Blocked on SPI |
+| [MCP23008]() | MCP23008 for digital output expansion | | |
+| [DS323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.DS323x.html) | Real Time Clock modules | | |
 
 ### Sensors
 
@@ -108,57 +108,57 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.Atmospheric.BME280"      | Combined I2C/SPI temperature, humidity, and pressure sensor | | Blocked on I2C/SPI |
-| @"Meadow.Foundation.Sensors.Atmospheric.GroveTH02"   | Grove TH02 temperature and humidity sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Atmospheric.HIH6130"     | Combined I2C temperature and humidity sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Atmospheric.SHT31D"      | Combined I2C temperature and humidity sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Atmospheric.SI7021"      | Combined I2C temperature and humidity sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Barometric.MPL115A2"     | MPL115A2 Barometric sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Barometric.MPL3115A2"    | MPL3115A2 Barometric sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Temperature.DS18B20"     | DS18B20 temperature sensor | | 1-Wire bus |
-| @"Meadow.Foundation.Sensors.Temperature.TMP102"      | TMP102 temperature sensor | | Blocked on I2C |
+| [BME280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.BME280.html) | Combined I2C/SPI temperature, humidity, and pressure sensor | | Blocked on SPI |
+| [GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | Grove TH02 temperature and humidity sensor | | |
+| [HIH6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | Combined I2C temperature and humidity sensor | | |
+| [SHT31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | Combined I2C temperature and humidity sensor | | |
+| [SI7021](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI7021.html) | Combined I2C temperature and humidity sensor | | |
+| [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL115A2.html) | MPL115A2 Barometric sensor | | |
+| [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL3115A2.html) | MPL3115A2 Barometric sensor | | |
+| [DS18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.DS18B20.html) | DS18B20 temperature sensor | | 1-Wire bus |
+| [TMP102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.TMP102.html) | TMP102 temperature sensor | | |
 
 #### Distance Sensors
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.Distance.HCSR04"  | HCSR04 distance sensor | Yes | |
-| @"Meadow.Foundation.Sensors.Distance.HYSRF05" | HYSRF05 distance sensor | Yes | |
+| [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | HCSR04 distance sensor | Yes | |
+| [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HYSRF05.html) | HYSRF05 distance sensor | Yes | |
 
 #### GPS Sensors & Libraries
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.GPS.NMEA"                | Generic GPS sentence decoder library | Yes | |
+| [NMEA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.GPS.NMEA.html) | Generic GPS sentence decoder library | Yes | |
 
 #### Light Sensors
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.Light.ALSPT19315C"       | Analog light sensor | | |
-| @"Meadow.Foundation.Sensors.Light.SI1145"            | I2C infrared, ultraviolet, and ambient light sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Light.TSL2561"           | I2C infrared-compensated light sensor | | Blocked on I2C |
+| [ALSPT19315C](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.ALSPT19315C.html) | Analog light sensor | | |
+| [SI1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | I2C infrared, ultraviolet, and ambient light sensor | | |
+| [TSL2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | I2C infrared-compensated light sensor | | |
 
 #### Soil Moisture Sensors
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.Moisture.Capacitive" | Capacitive Soil Moisture Sensor | | |
-| @"Meadow.Foundation.Sensors.Moisture.FC28"       | FC-28 Soil Moisture Sensor | | |
+| [Capacitive](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | Capacitive Soil Moisture Sensor | | |
+| [FC28](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.FC28.html) | FC-28 Soil Moisture Sensor | | |
 
 #### Motion and Orientation Sensors
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.Motion.ADXL335"     | Analog triple axis, +/-3g accelerometer | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Motion.ADXL345"     | I2C triple axis accelerometer, +/-16g accelerometer | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Motion.ADXL362"     | I2C ultralow power, 3-axis MEMS accelerometer | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Motion.BNO055"      | I2C 9-Axis absolute orientation sensor | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Motion.MAG3110"     | I2C three axis magnetometer | | Blocked on I2C |
-| @"Meadow.Foundation.Sensors.Motion.ParallaxPir" | Parallax PIR Rev B digital motion detector | | |
+| [ADXL335](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ADXL335.html) | Analog triple axis, +/-3g accelerometer | | |
+| [ADXL345](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ADXL345.html) | I2C triple axis accelerometer, +/-16g accelerometer | | |
+| [ADXL362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ADXL362.html) | I2C ultralow power, 3-axis MEMS accelerometer | | |
+| [BNO055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.BNO055.html) | I2C 9-Axis absolute orientation sensor | | |
+| [MAG3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.MAG3110.html) | I2C three axis magnetometer | | |
+| [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector | | |
 
 ### Servos
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| @"Meadow.Foundation.Sensors.ServoCore"               | Generic servo library | | |
+| [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library | | |
