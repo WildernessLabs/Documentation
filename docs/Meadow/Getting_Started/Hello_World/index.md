@@ -6,7 +6,7 @@ subtitle: Guides and documentation for Meadow
 
 # Hello, World
 
-Meadow applications are just familiar .NET Framework 4.7.2 console applications. To access the GPIO and Meadow-specific features, your project references the **Meadow.Core** library.
+Meadow applications are very similiar to familiar .NET Framework 4.7.2 console applications. To access the IO (GPIO, I2C, SPI, etc.) and Meadow-specific features, your project references the **Meadow.Core** library.
 
 Let's create a new Meadow app!
 
@@ -18,7 +18,7 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 ### Windows
 
-Install Visual Studio 2017. Visual Studio 2019 beta *should* work but isn't officially supported yet.
+Install Visual Studio 2017 or 2019.
 
 You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
 
@@ -28,76 +28,41 @@ You'll need to ensure the **.NET Framework 4.7.2 development tools** are install
 
 Install the latest version of Visual Studio for Mac.
 
+You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
+
+1. On the menu go to *Visual Studio -> Extensions*
+#. Click the **Gallery** tab
+#. Search for **Meadow**
+#. Select the Meadow IDE extension
+#. Click **Install...** 
+
+![Meadow extension for Visual Studio for macOS](meadow_extension.png){:standalone}
+
 ## Part 1: Creating a new Meadow Project
 
 ### Windows
 
- 1. Open Visual Studio.
- * Create a new Project: *File -> New -> Project...*.
- * Choose the **Console App (.NET Framework)** C# template.
- * Choose an app name, a location, and set the framework to **4.7.2**, and press **OK**.
+ *Coming soon*
 
 ### macOS
 
  1. Open Visual Studio.
  * Create a new Project: *File -> New Solution..*.
- * In the **Other** section, select *.NET -> Console Project*, make sure it's using C#, and press **Next**.
+ * In the **Meadow** section, select *Meadow Application* and press **Next**.
  * Choose an app name and location.
  * Press **Create**.
 
-#### Set the .NET version (macOS only)
-
- 1. Control-click or right-click on the project in the Solution Explorer.
- * Select **Options**.
- * Go to *Build -> General*.
- * Set the *Target framework:* to *.NET Framework 4.7.2*.
- * Press **OK**.
-
-## Add the Meadow NuGet package
-
-### Windows
-
- 1. Right-click on the project in the Solution Explorer.
- * Select *Manage Nuget Packages...*.
- * In the **Browse** tab, search for **Meadow**.
- * Click the **Install** button to add the Nuget package to your project.
-
-### macOS
-
- 1. Control-click or right-click on the project in the Solution Explorer.
- * Select *Add -> Add Nuget Packages...*.
- * Search for **Meadow**.
- * Check the package in the search results and press **Add Package**.
-
-## Set the App assembly name
-
-Currently, Meadow is configured to run a .NET console app named **App.exe**. You can either manually rename your application after its compiled or change the assembly name in Visual Studio.
-
-### Windows
-
- 1. Right-click on the project in the Solution Explorer.
- * Select **Options**.
- * Open the **Application** section.
- * Change the **Assembly name** to **App**.
-
-### macOS
-
- 1. Control-click or right-click on the project in the Solution Explorer.
- * Select **Options**.
- * Go to *Build -> Output*.
- * Change the **Assembly name** to **App**.
-
 ## Part 2: Hello, World
 
-Now that your project is setup, we'll create an application that will control the onboard RGB led and write text to the console.
+Now that your project is setup, we'll walk through the default application that controls the onboard RGB led and writes text to the console. 
 
-## Add the App class
+## The App class
 
-Wilderness Labs recommends placing your logic in an application class that's instantiated in the `Program` class when the app starts.
+Wilderness Labs recommends placing your logic in an application class that's instantiated in the `Program` class when the app starts. This class is created automatically but you can create it manaually.
 
- 1. Create a new `public` class named `App`.
+ 1. Create a new `public` class named `MeadowApp`.
  * Add `using` statements to `Meadow`, `Meadow.Devices`, and `Meadow.Hardware`.
- * Change the class signature to derive from `AppBase<F7Micro, App>`.
+ * Change the class signature to derive from `App<F7Micro, App>`.
  * Add a `void` returning method named `InitializeHardware`.
  * Call `InitializeHardware` from the constructor:
 
@@ -108,7 +73,7 @@ Wilderness Labs recommends placing your logic in an application class that's ins
 
   namespace HelloLED
   {
-      public class App : AppBase<F7Micro, App>
+      public class MeadowApp : App<F7Micro, App>
       {
           public App()
           {
@@ -137,9 +102,9 @@ Now we'll add fields to control the onboard LED and toggle its red, green, and b
 
   void InitializeHardware()
   {
-      redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLEDRed);
-      blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLEDBlue);
-      greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLEDGreen);
+      redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
+      blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
+      greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
   }
   ```
 
@@ -204,7 +169,7 @@ The last thing we need to do is create an instance of the `App` class when the a
           static IApp app;
           static void Main(string[] args)
           {
-              app = new App();
+              app = new MeadowApp();
           }
       }
   }
@@ -214,10 +179,14 @@ The last thing we need to do is create an instance of the `App` class when the a
 
 You're now ready to build and deploy your Meadow app.
 
- 1. Build the application.
- * Using Finder or the File Explorer, navigate to the folder that contains your application.
- * Open the **bin->Debug** folder, you should see **App.exe** and some **\*.dll** files; you'll need both to deploy your app to Meadow.
- * Follow the [Deployment instructions here](../Deployment/) to deploy your app.
+### macOS
 
+1. Connect your Meadow device to your development machine
+#. Press the **Play** button in Visual Studio to compile and deploy your application
+#. Wait 30-60 seconds for your application to start
+
+### Windows
+
+Coming soon
 
 ## [Next - Meadow Basics](/Meadow/Meadow_Basics/)

@@ -6,7 +6,7 @@ subtitle: Guides and documentation for Meadow
 
 # Welcome to the Meadow Guides
 
-Pardon our dust! Meadow is still an early beta project. Deployment is a bit tricky right now, and the docs are in progress, but things are getting better every day!
+Pardon our dust! Meadow is still a beta project. Deployment may be a bit tricky right now, and the docs are in progress, but things are getting better every day!
 
 Meadow OS issues can be filed at the Wilderness Labs [Meadow_Issues](https://github.com/WildernessLabs/Meadow_Issues) repo.
 
