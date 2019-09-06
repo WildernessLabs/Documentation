@@ -39,13 +39,13 @@ First, check to make sure that everything is included. See the below content lis
 | [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | 1 | 0 | Sonar-based distance sensor good for up to 1 meter. |
 | [Push Button (Various Colors)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | ~40 | ~10 | Simple tactile switches in a variety of colors. |
 | Photoresistor | 2 | 1 | Sensor that can measure the amount of light it receives. Needs to be wired up as part of a voltage divider. See the [Resistive Sensor Lab](/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/) |
-| LM35DZ Analog Temperature Sensor | 2 | 1 | `0ºC - 100ºC` temperature sensor with analog output. |
+| [LM35DZ Analog Temperature Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | 2 | 1 | `0ºC - 100ºC` temperature sensor with analog output. |
 | [Moisture Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | 1 | 0 | Capacitive soil moisture sensor with digital output. |
 | [74595 Shift Register](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 2 | 1 | 8-port digital output expander chip. Adds 8 additional `DigitalOutputPort`s to a Meadow. Can be chained up to 8 for 64 total additional outputs. |
 | MCP23008 IO Expander | 2 | 1 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. |
 | [H-Bridge Motor Controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | 1 | 1 | SN754410. Provides digital control for two motors using an external power source, controlled via PWM. |
-| Rainbow LED Bargraph | 1 | 0 | Green, yellow, red, LED array. |
-| Rainbow LED Battery Bargraph | 1 | 1 | Green, yellow, red, LED array that has a battery shape. |
+| [Rainbow LED Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | 0 | Green, yellow, red, LED array. |
+| [Rainbow LED Battery Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | 1 | Green, yellow, red, LED array that has a battery shape. |
 | [4x20 LCD Character Display](http://staging-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. |
 | [Color LCD Display](http://staging-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | 1 | 0 | 1.3", full-color, 240x240 pixel, graphic display. |
 | Resistor Kit | 1 | 1 | ~300 resistors of varying resistance. |
