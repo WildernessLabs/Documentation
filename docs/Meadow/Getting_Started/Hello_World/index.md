@@ -18,7 +18,11 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 ### Windows
 
+<<<<<<< HEAD
 Install Visual Studio 2017 or 2019.
+=======
+Install Visual Studio 2017 or 2019. 
+>>>>>>> f526f9b87b800d28aeb8919eb30b352e835322f0
 
 You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
 

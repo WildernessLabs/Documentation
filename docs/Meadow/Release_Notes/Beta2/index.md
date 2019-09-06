@@ -80,7 +80,7 @@ Another big part of this release is that we got interrupts to propagate properly
 Here is a simple example of using an input `Changed` event:
 
 ```csharp
-public class ButtonEventsApp : AppBase<F7Micro, ButtonEventsApp>
+public class ButtonEventsApp : App<F7Micro, ButtonEventsApp>
 {
     IDigitalInputPort _input;
 
@@ -102,7 +102,7 @@ public class ButtonEventsApp : AppBase<F7Micro, ButtonEventsApp>
 However, we didn't stop with just traditional events. We also added `System.IObservable` support, along with a [`FilterableObserver`](xref:Meadow.FilterableObserver) that allows you to subscribe to an observable, with an optional filter on the events, as well as a handler shortcut. Consider the following code:
 
 ```csharp
-public class InputObservableApp : AppBase<F7Micro, InputObservableApp>
+public class InputObservableApp : App<F7Micro, InputObservableApp>
 {
     IDigitalInputPort _input;
 

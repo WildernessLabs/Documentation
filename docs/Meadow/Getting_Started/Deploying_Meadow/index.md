@@ -6,7 +6,9 @@ subtitle: Guides and documentation for Meadow
 
 # Deploying Meadow OS
 
-Before you deploy and run a Meadow application, you must flash the board with Meadow OS. This step only needs to be done once per update of Meadow OS.
+Your Meadow board comes with the operating system pre-installed. 
+
+When Meadow OS updates are released, you will flash the latest version to your Meadow board. This step only needs to be done once per update of Meadow OS.
 
 
 The [Meadow OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) is distributed in two files: **Meadow.OS_Kernel.bin** and **Meadow.OS_Runtime.bin**.
