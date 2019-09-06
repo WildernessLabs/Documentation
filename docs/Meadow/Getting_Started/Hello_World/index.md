@@ -18,7 +18,7 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 ### Windows
 
-Install Visual Studio 2017. Visual Studio 2019 beta *should* work but isn't officially supported yet.
+Install Visual Studio 2017 or 2019. 
 
 You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
 
