@@ -6,12 +6,13 @@ subtitle: Guides and documentation for Meadow
 
 # Deploying Meadow OS
 
-Your Meadow board comes with the operating system pre-installed. 
+Your Meadow board needs an operating system installed before you can deploy applications. You'll need to flash the OS before using Meadow.
 
-When Meadow OS updates are released, you will flash the latest version to your Meadow board. This step only needs to be done once per update of Meadow OS.
-
+As well, Meadow OS updates are released, you will flash the latest version to your Meadow board. This step only needs to be done once per update of Meadow OS.
 
 The [Meadow OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) is distributed in two files: **Meadow.OS_Kernel.bin** and **Meadow.OS_Runtime.bin**.
+
+The first time you flash the Meadow OS to your board, you'll need to reboot Meadow and wait 20 minutes to allow Meadow to format the flash.
 
 ## Installing dfu-util
 
@@ -93,6 +94,9 @@ To flash Meadow to the board:
    ```
 
    Make sure to replace *[DEVICE_SERIAL]* with the serial number you found in the previous step.
+
+* When the flash is complete, press the reset button *RST* to exit bootloader mode
+* If this is the first time flashing Meadow OS, you'll need to wait 20 minutes after pressing reset to allow Meadow to format the flash
 
 Notes:
 

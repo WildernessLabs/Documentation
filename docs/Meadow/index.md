@@ -16,9 +16,8 @@ Also, make sure to join the [Wilderness Labs Slack](http://slackinvite.wildernes
 
 If you're just beginning, check out the [Getting Started](/Meadow/Getting_Started) walkthrough to get your development environment configured and deploy your first Meadow application:
 
- * [Set up your Build Environment](/Meadow/Getting_Started/Setup)
+ * [Assemble your Meadow board](/Meadow/Getting_Started/Assemble_Meadow)
  * [Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow)
- * [Deploy a Sample Meadow App](/Meadow/Getting_Started/Deployment)
  * [Hello, World](/Meadow/Getting_Started/Hello_World)
 
 ## Meadow Basics
