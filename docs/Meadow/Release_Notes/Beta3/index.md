@@ -17,6 +17,10 @@ Beta 3 is here, and it's awesome! This is the biggest release we've done yet and
 
 Wahoo!! No more painful JTAG deployment, deploying your app is now a cinch via the USB deployment feature.
 
+#### Meadow.CLI
+
+We've created a _Command Line Interface_ for meadow that allows you to deploy a Meadow application to a Meadow device over USB. Check out the guide on how to [Deploy Meadow OS to your Board](/Meadow/Getting_Started/).
+
 ### Visual Studio Windows and Mac Extensions
 
 Say hello to productivity! That's right, we now have extensions for [Visual Studio](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) and [Visual Studio for Mac](https://addins.monodevelop.com/Project/Index/394) to deploy apps. To get up and running, check out [Hello, World; Meadow-style](/Meadow/Getting_Started/).

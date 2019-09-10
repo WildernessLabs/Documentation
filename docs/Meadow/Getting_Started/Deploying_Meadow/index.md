@@ -106,4 +106,4 @@ Notes:
 
 You're now ready to deploy C# applications to Meadow!
 
-## [Next - Deploy a Test App](/Meadow/Getting_Started/Deployment/)
+## [Next - Deploy a Test App](/Meadow/Getting_Started/Hello_World/)
