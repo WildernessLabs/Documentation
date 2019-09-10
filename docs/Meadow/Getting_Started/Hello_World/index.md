@@ -83,7 +83,7 @@ Wilderness Labs recommends placing your logic in an application class that's ins
   {
       public class MeadowApp : App<F7Micro, App>
       {
-          public App()
+          public MeadowApp()
           {
               InitializeHardware();
           }
