@@ -11,7 +11,22 @@ Beta 3 is here, and it's awesome! This is the biggest release we've done yet and
 ## New Core Features
 
 * USB Deployment
-* PWM, I2C
+* PWM is now enabled! You can use it like the code snippet below:
+
+```
+IPwmPort pwm = Device.CreatePwmPort(
+    pin: Device.Pins.D05, 
+    frequency: 100, 
+    dutyCycle: 0.5f);
+pwm.Start();
+```
+
+* I2C is also available in our latest Meadow OS version, and you can use it like following code snippet:
+
+```
+II2cBus i2c = Device.CreateI2cBus();
+GY521Test(i2c); // Pass i2c to an I2C capable device
+```
 
 ### USB Deployment
 
