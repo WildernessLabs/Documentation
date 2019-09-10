@@ -11,22 +11,7 @@ Beta 3 is here, and it's awesome! This is the biggest release we've done yet and
 ## New Core Features
 
 * USB Deployment
-* PWM is now enabled! You can use it like the code snippet below:
-
-```
-IPwmPort pwm = Device.CreatePwmPort(
-    pin: Device.Pins.D05, 
-    frequency: 100, 
-    dutyCycle: 0.5f);
-pwm.Start();
-```
-
-* I2C is also available in our latest Meadow OS version, and you can use it like following code snippet:
-
-```
-II2cBus i2c = Device.CreateI2cBus();
-GY521Test(i2c); // Pass i2c to an I2C capable device
-```
+* PWM, I2C
 
 ### USB Deployment
 
@@ -46,9 +31,22 @@ Say hello to productivity! That's right, we now have extensions for [Visual Stud
 
 PWM is now live! Along with it, PwmLed, RgbPwmLed, Servo Core, etc.
 
+```
+IPwmPort pwm = Device.CreatePwmPort(
+    pin: Device.Pins.D05, 
+    frequency: 100, 
+    dutyCycle: 0.5f);
+pwm.Start();
+```
+
 #### [Inter-Integrated Circuits (I2C)](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/)
 
-The I2C protocol is now working.
+The I2C protocol is also available in our latest Meadow OS.
+
+```
+II2cBus i2c = Device.CreateI2cBus();
+GY521Test(i2c); // Pass i2c to an I2C capable device
+```
 
 ## Fixed Bugs
 
