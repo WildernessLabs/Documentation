@@ -37,10 +37,10 @@ Install the latest version of Visual Studio for Mac.
 You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
 1. On the menu go to *Visual Studio -> Extensions*
-#. Click the **Gallery** tab
-#. Search for **Meadow**
-#. Select the Meadow IDE extension
-#. Click **Install...** 
+1. Click the **Gallery** tab
+1. Search for **Meadow**
+1. Select the Meadow IDE extension
+1. Click **Install...** 
 
 ![Meadow extension for Visual Studio for macOS](meadow_extension.png){:standalone}
 
@@ -55,10 +55,10 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 ### macOS
 
  1. Open Visual Studio.
- * Create a new Project: *File -> New Solution..*.
- * In the **Meadow** section, select *Meadow Application* and press **Next**.
- * Choose an app name and location.
- * Press **Create**.
+ 1. Create a new Project: *File -> New Solution..*.
+ 1. In the **Meadow** section, select *Meadow Application* and press **Next**.
+ 1. Choose an app name and location.
+ 1. Press **Create**.
 
 ## Part 2: Hello, World
 
@@ -69,10 +69,10 @@ Now that your project is setup, we'll walk through the default application that 
 Wilderness Labs recommends placing your logic in an application class that's instantiated in the `Program` class when the app starts. This class is created automatically but you can create it manaually.
 
  1. Create a new `public` class named `MeadowApp`.
- * Add `using` statements to `Meadow`, `Meadow.Devices`, and `Meadow.Hardware`.
- * Change the class signature to derive from `App<F7Micro, App>`.
- * Add a `void` returning method named `InitializeHardware`.
- * Call `InitializeHardware` from the constructor:
+ 1. Add `using` statements to `Meadow`, `Meadow.Devices`, and `Meadow.Hardware`.
+ 1. Change the class signature to derive from `App<F7Micro, App>`.
+ 1. Add a `void` returning method named `InitializeHardware`.
+ 1. Call `InitializeHardware` from the constructor:
 
   ```csharp
   using Meadow;
@@ -100,7 +100,7 @@ Wilderness Labs recommends placing your logic in an application class that's ins
 Now we'll add fields to control the onboard LED and toggle its red, green, and blue components off and on periodically.
 
  1. Add three (3) fields of type `DigitalOutputPort` named `redLed`, `greenLed`, and `blueLed`.
- * In the `InitializeHardware method, instantiate each output port using `Device.Pins` to reference the onboard internal pins to control each color of the led:
+ 1. In the `InitializeHardware` method, instantiate each output port using `Device.Pins` to reference the onboard internal pins to control each color of the led:
 
   ```csharp
   IDigitalOutputPort redLed;
@@ -163,9 +163,9 @@ public App()
 The last thing we need to do is create an instance of the `App` class when the application starts.
 
  1. Open Program.cs.
- * A `using` statement for `Meadow`.
- * Create a static field of type `IApp` named **app**.
- * In the constructor, instantiate an `App` instance and assign it to **app**:
+ 1. A `using` statement for `Meadow`.
+ 1. Create a static field of type `IApp` named **app**.
+ 1. In the constructor, instantiate an `App` instance and assign it to **app**:
 
   ```csharp
   using Meadow;
