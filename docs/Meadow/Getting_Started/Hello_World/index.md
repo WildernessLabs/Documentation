@@ -24,6 +24,12 @@ You'll need to ensure the **.NET Framework 4.7.2 development tools** are install
 
 ![VS2017 Installer](vs2017_install.png){:standalone}
 
+You'll also need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
+
+1. In Visual Studio, go to Extensions > Manage Extensions
+1. Click **Online** and search for **Meadow**
+1. Install **VS Tools for Meadow**
+
 ### macOS
 
 Install the latest version of Visual Studio for Mac.
@@ -42,7 +48,9 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
 ### Windows
 
- *Coming soon*
+ * To install the template project, enter `dotnet new -i WildernessLabs.Meadow.Template` in the command prompt.
+ * Next, create a new project `dotnet new Meadow -n MyMeadow`
+ * Open the project in Visual Studio
 
 ### macOS
 
@@ -187,6 +195,8 @@ You're now ready to build and deploy your Meadow app.
 
 ### Windows
 
-Coming soon
+1. Connect your Meadow device to your development machine
+1. Hit Ctrl+Shift+M to open Meadow Device Explorer and select device
+1. Right-click project in Solution Explorer and hit "Deploy"
 
 ## [Next - Meadow Basics](/Meadow/Meadow_Basics/)
