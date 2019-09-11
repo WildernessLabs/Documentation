@@ -12,7 +12,7 @@ To deploy an app to Meadow you'll need several things:
 
 1. A copy of [mscorlib.dll](http://downloads.wildernesslabs.co/Meadow_Beta/binaries/mscorlib.dll)
 1. A copy of [System.Core.dll](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/binaries/System.Core.dll)
-1. A .NET 4.7.2 console application that references the Meadow nuget package - to validate your setup, you can download the provided sample [app.exe](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/HelloMeadow.zip)
+1. A .NET 4.7.2 console application that references the Meadow NuGet package - to validate your setup, you can download the provided sample [app.exe](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/HelloMeadow.zip)
 
 ## Setup
 

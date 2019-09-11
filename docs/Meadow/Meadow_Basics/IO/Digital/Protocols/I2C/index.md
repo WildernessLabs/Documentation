@@ -6,9 +6,9 @@ subtitle: Inter-Integrated Circuit
 
 # Introduction
 
-[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye-squared-sea", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground): 
+[I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye-squared-sea", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground):
 
-![](I2C_Circuit.svg){:standalone}
+![Illustration of a Meadow F7 Micro board with two peripherals (addresses 0x40 and 0x72) connected to I2C via pin D06 as the data line and D07 as the clock line along with 3.3V pull-up resistors on both lines](I2C_Circuit.svg){:standalone}
 
 ## Hardware
 
@@ -26,7 +26,7 @@ The I2C `CLK` pin can be found on the Meadow F7 Micro labeled `D07`.
 
 ### Data Signal (`DAT`)
 
-The data signal wire carries the actual messages and can be found on the F7 Micro labeled `D06`.
+The data signal wire carries the actual messages and can be found on the F7 Micro pin labeled `D06`.
 
 ## Master + Client Messaging
 
@@ -38,17 +38,17 @@ The use of multiple devices on the single bus is made possible through 7-bit dev
 
 The master initiates communication with a client device by first transmitting the client device's address. The client device that has its address set to the address transmitted knows that all data transmitted between the address and the stop bit is intended for itself.
 
-The use of seven bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is usually much lower.
+The use of 7-bit addresses restricts the number of devices to 128 per bus although in practice the number of devices connected to the bus is usually much lower.
 
 #### Read / Write Bit
 
-In addition to the 7 address bits, the master device will also send a single bit that indicates the mode of the communication: _read_ or _write_. The combination of the 7-bit address and the single read / write bit gives an eight bit packet header.
+In addition to the seven address bits, the master device will also send a single bit that indicates the mode of the communication: _read_ or _write_. The combination of the 7-bit address and the single read/write bit gives an 8-bit packet header.
 
 ## Pull-Up Resistors
 
-Both of the bus lines require [pull up resistors](http://127.0.0.1:4002/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) to be connected to them. Pull-up resistors allow a tiny amount of current to flow on the bus lines which gives them a default logic value of `1`/`ON`, so that clean digital logic transitions can occur and provide a reliable signal.
+Both of the bus lines require [pull-up resistors](http://127.0.0.1:4002/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) to be connected to them. Pull-up resistors allow a tiny amount of current to flow on the bus lines which gives them a default logic value of `1`/`ON`, so that clean digital logic transitions can occur and provide a reliable signal.
 
-The value of the pull-up resistors depends on the speed and number of devices, length of the bus, and capacitance. However, in practice, most I2C circuits will work reliably with a couple of `4.7KΩ` resistors. In fact, many I2C breakout boards already have `4.7kΩ` resistors installed on them.
+The value of the pull-up resistors depends on the speed and number of devices, length of the bus, and capacitance. However, in practice, most I2C circuits will work reliably with a couple of `4.7kΩ` resistors. In fact, many I2C breakout boards already have `4.7kΩ` resistors installed on them.
 
 For a more in depth discussion on how to determine ideal resistance value, see the [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors) article.
 
@@ -85,6 +85,5 @@ i2cBus.WriteByte(i2cPeripheral.Address, 0x01);
 ```
 
 ## Samples
-
 
 
