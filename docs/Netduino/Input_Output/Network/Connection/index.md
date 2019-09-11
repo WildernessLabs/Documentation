@@ -20,8 +20,8 @@ If DHCP is configured, a call to the static `IPAddress.GetDefaultLocalAddress()`
 
 ```csharp
 while (IPAddress.GetDefaultLocalAddress () == IPAddress.Any) {
-	Debug.Print ("Sleep while obtaining an IP");
-	Thread.Sleep (10);
+    Debug.Print ("Sleep while obtaining an IP");
+    Thread.Sleep (10);
 };
 ```
 
@@ -33,8 +33,8 @@ When using a static IP, add the `NetduinoExtensions.dll` reference and make a ca
 
 ```csharp
 while (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) {
-	Debug.Print ("Sleep while obtaining waiting for the network to initialize.");
-	Thread.Sleep (10);
+    Debug.Print ("Sleep while obtaining waiting for the network to initialize.");
+    Thread.Sleep (10);
 };
 ```
 
@@ -44,11 +44,11 @@ Netduino has sophisticated multithreading support (especially for an MCU platfor
 we place the work to connect and wait for an IP address within a thread, using `Thread.Sleep` to free up CPU resources while waiting.
 We then raise an event from our network code to notify the main application that we have a valid IP address.
 
-The code is shown below. Alternatively you can use the `Netduino.Foundation.Network` [nuget package](https://www.nuget.org/packages/Netduino.Foundation.Network).
+The code is shown below. Alternatively you can use the [`Netduino.Foundation.Network` NuGet package](https://www.nuget.org/packages/Netduino.Foundation.Network).
 
 #### Code Example
- 
-```csharp 
+
+```csharp
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 using System;
@@ -60,36 +60,36 @@ using Microsoft.SPOT.Net.NetworkInformation;
 
 namespace BlinkUntilConnected
 {
-	public class Program
-	{
+    public class Program
+    {
         static bool IsConnecting = true;
 
-		public static void Main()
-		{
+        public static void Main()
+        {
             Initializer.NetworkConnected += Connected;
             Initializer.InitializeNetwork();
 
-			OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
-			while (IsConnecting)
-			{
-				led.Write(true); // turn on the LED
-				Thread.Sleep(250); // sleep for 250ms
-				led.Write(false); // turn off the LED
-				Thread.Sleep(250); // sleep for 250ms
-			}
+            OutputPort led = new OutputPort(Pins.ONBOARD_LED, false);
+            while (IsConnecting)
+            {
+                led.Write(true); // turn on the LED
+                Thread.Sleep(250); // sleep for 250ms
+                led.Write(false); // turn off the LED
+                Thread.Sleep(250); // sleep for 250ms
+            }
 
-			Debug.Print ("Network connected!");
-		}
+            Debug.Print ("Network connected!");
+        }
 
         private static void NetworkConnected (object sender, EventArgs e)
         {
             IsConnecting = false; //we're connected!
         }
-	}
+    }
 
-	public static class Initializer
-	{
-		private static NetworkInterface[] _interfaces;
+    public static class Initializer
+    {
+        private static NetworkInterface[] _interfaces;
 
         public delegate void NetworkConnectedDelegate(object sender, EventArgs e);
         public static event NetworkConnectedDelegate NetworkConnected;
@@ -99,7 +99,7 @@ namespace BlinkUntilConnected
             if (Microsoft.SPOT.Hardware.SystemInfo.SystemID.SKU == 3)
             {
                 Debug.Print("Wireless tests run only on Device");
-                return; 
+                return;
             }
 
             _interfaces = NetworkInterface.GetAllNetworkInterfaces();
@@ -109,7 +109,6 @@ namespace BlinkUntilConnected
             var th = new Thread(() => CheckNetworkInterfacesForConnection(uri));
             th.Start();
         }
-    
 
         private static bool CheckNetworkInterfacesForConnection (string uri)
         {

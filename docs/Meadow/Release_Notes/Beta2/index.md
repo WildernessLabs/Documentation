@@ -8,9 +8,9 @@ subtitle: Release Notes
 
 ## New Core Features
 
-### Meadow Core Now Published as a Nuget Package
+### Meadow Core Now Published as a NuGet Package
 
-Meadow is now published as a [Nuget package](https://www.nuget.org/packages/Meadow/), so you don't have to manually reference the dll.
+Meadow is now published as a [NuGet package](https://www.nuget.org/packages/Meadow/), so you don't have to manually reference the dll.
 
 To use it, your application must target .NET 4.7.2.
 
@@ -29,6 +29,7 @@ foreach(var pin in Device.Pins.AllPins) {
    }
 }
 ```
+
 Here’s an excerpt from the output the above code returns:
 
 ```bash
@@ -143,8 +144,7 @@ It's time to break out your [analog temp sensors](xref:Meadow.Foundation.Sensors
 
 Meadow.Foundation got quite a few more core [peripheral drivers](/Meadow/Meadow.Foundation/Peripherals) added, as well as a few non-core drivers.
 
-We'll be releasing additional Meadow.Foundation updates out-of-band from the beta releases, so make sure to check the [peripheral drivers list page](/Meadow/Meadow.Foundation/Peripherals) for updates often, and update your nuget packages.
-
+We'll be releasing additional Meadow.Foundation updates out-of-band from the beta releases, so make sure to check the [peripheral drivers list page](/Meadow/Meadow.Foundation/Peripherals) for updates often, and update your NuGet packages.
 
 ## Fixed Bugs
 
