@@ -12,9 +12,9 @@ IO ports can be accessed from your application to read sensors, listen to button
 
 ## Types of IO
 
-Meadow IO ports are divided into two categories; _Digital_ and _Analog_.
+Meadow IO ports are divided into two categories: _Digital_ and _Analog_.
 
-Digital and analog refer to the type of electrical signal used; either `HIGH`/`LOW` for digital, or a range of voltage for analog, and they're used for different things.
+Digital and analog refer to the type of electrical signal used; either `HIGH`/`LOW` for digital, or a range of voltages for analog, and they're used for different things.
 
 ### [Digital IO](/Meadow/Meadow_Basics/IO/Digital/)
 
@@ -36,7 +36,7 @@ Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at
 |  Serial  | Low speed<br/>Used for communication between boards<br/>Can be used to communicate with on board devices<br/>Generally supports only one device per COM channel.  |
 -->
 
-### [Pulse-Width-Modulation PWM](/Meadow/Meadow_Basics/IO/Digital/PWM/)
+### [Pulse-Width-Modulation (PWM)](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 Additionally, digital output ports can be used to generate a _Pulse-Width-Modulation_ (PWM) signal, which approximates an intermediate voltage between `LOW` or `HIGH` by switching between ON and OFF very quickly. PWM signals are frequently used to control the brightness of LEDs, as well as serve as the control signal for precision motors such as servos and stepper motors.
 
@@ -48,17 +48,17 @@ Analog ports can operate at a range of voltages between `0V` and `3.3V`, which i
 
 GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 Micro, and many of these pins are actually overloaded to support multiple functions, as shown below:
 
-![](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Meadow pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
-The function that they serve depends on how they are configured when a _port_ is instantiated on one of them. For instance, pin `D00` can be configured to be used a digital input or output, or as the `RX` (receive) half of a Serial UART port available as "COM4".
+The function that they serve depends on how they are configured when a _port_ is instantiated on one of the pins. For instance, pin `D00` can be configured to be used a digital input or output, or as the `RX` (receive) half of a Serial UART port available as "COM4".
 
 ### Pins, Ports, and ChannelInfos
 
 When working with IO in Meadow, there are three different terms/concepts to be aware of:
 
 * **[IPin](/docs/api/Meadow/Meadow.Hardware.IPin.html)** - Represents a physical connection point on a device, such as pin `D01`.
-* **[IPort](/docs/api/Meadow/Meadow.Hardware.IPort.html)** - Represents the underlying IO feature that allows communication, such as a @"Meadow.Hardware.DigitalInputPort" which reads digital input signals on a particular pin.
-* **[IChannelInfo](/docs/api/Meadow/Meadow.Hardware.IChannelInfo.html)** - Describes the capabilities of a particular pin or port, for instance, whether or not a pin supports digital interrupts (notification on change).
+* **[IPort](/docs/api/Meadow/Meadow.Hardware.IPort.html)** - Represents the underlying IO feature that allows communication, such as a `Meadow.Hardware.DigitalInputPort` which reads digital input signals on a particular pin.
+* **[IChannelInfo](/docs/api/Meadow/Meadow.Hardware.IChannelInfo.html)** - Describes the capabilities of a particular pin or port, for instance, whether or not a pin supports digital interrupts (a notification when the state changes).
 
 ### IIODevice
 
@@ -76,7 +76,7 @@ foreach(var pin in Device.Pins.AllPins) {
 }
 ```
 
-Here’s an excerpt from the output the above code returns:
+Here's an excerpt from the output the above code returns:
 
 ```bash
 Found pin: A05
@@ -105,6 +105,6 @@ IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLe
 
 ## Meadow.Foundation
 
-When building Meadow applications, most of the time, you'll use high level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
+When building Meadow applications, most of the time, you'll use high-level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
 ## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/)

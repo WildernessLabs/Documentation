@@ -30,19 +30,19 @@ namespace HelloLED
 
 ## Meadow Package
 
-When you create a new Meadow application, the `Meadow` core package should be automatically added. It can manually installed via Nuget:
+When you create a new Meadow application, the `Meadow` core package should be automatically added. It can manually installed via NuGet:
 
-```
+```cmd
 > nuget install Meadow
 ```
 
 ## `App` Class
 
-The main Meadow application class should inherit @"Meadow.App", which provides a way for Meadow OS to notify the application of system events such as going to sleep, or waking up.
+The main Meadow application class should inherit @"Meadow.App", which provides a way for Meadow OS to notify the application of system events, such as going to sleep or waking up.
 
-Currently, we don't enforce the use of `App`, but in a future build of Meadow, it'll scan your Meadow application assembly for a class that implements `IApp` and launch that automatically, so it's a good practice to use the pattern now.
+Currently, we don't enforce the use of `App`, but in a future build of Meadow, it'll scan your Meadow application assembly for a class that implements `IApp` and launch that automatically. So, it's a good practice to use this pattern now.
 
-The `App` declaration requires two generic parameters; `D`, and `A`, representing the device type and the application class type, respectively. For `D`, you'll need to pass a `Meadow.IDevice` that represents the board you're using, such as `F7Micro`. For `A`, you should pass the typename of your application class itself. 
+The `App` declaration requires two generic parameters; `D`, and `A`, representing the device type and the application class type, respectively. For `D`, you'll need to pass a `Meadow.IDevice` that represents the board you're using, such as `F7Micro`. For `A`, you should pass the typename of your application class itself.
 
 For example, if your app class is called `LEDApp`, and you're using a Meadow F7 Micro board, your `LEDApp` declaration would look like the following:
 
@@ -62,20 +62,19 @@ var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
 
 Specifying the `A` type parameter in `App` allows the app class instance to be available via the `Current` property and strongly typed:
 
-```
+```csharp
 MyApp myApp = MyApp.Current;
 ```
 
 Therefore, any public members are also available without having to cast. For instance, if your app class had a property called `InstalledName`, it could be accessed as follows:
 
-```
+```csharp
 var name = MyApp.Current.InstalledName;
 ```
 
 ## Sample Meadow Application
 
 Here is a complete example of an application that cycles through some colors on the onboard LED:
-
 
 ```csharp
 using System;

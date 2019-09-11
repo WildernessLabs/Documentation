@@ -6,4 +6,4 @@ subtitle: Meadow Basics
 
 # Bluetooth
 
-Bluetooth isn't fully implemented yet. Docs to come with working implementation.
+Bluetooth isn't fully implemented yet. Docs will be coming with a working implementation.
