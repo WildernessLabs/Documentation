@@ -4,7 +4,7 @@ title: Pull-up & Pull-down Resistors
 subtitle: Providing a default value to an input in a circuit.
 ---
 
-## Pull-up & Pull-Down Resistors
+## Pull-up & Pull-down Resistors
 
 Resistors are used in one of the single-most important and common utility configurations in circuit design; as _pull-up_ and _pull-down_ resistors. Pull-up and pull-down resistors provide a default value (`HIGH` or `LOW`) in a circuit where otherwise, the circuit might have an indeterminate value part of the time.
 
