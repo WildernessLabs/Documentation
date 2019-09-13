@@ -95,8 +95,9 @@ To flash Meadow to the board:
 
    Make sure to replace *[DEVICE_SERIAL]* with the serial number you found in the previous step.
 
-* When the flash is complete, press the reset button *RST* to exit bootloader mode
-* If this is the first time flashing Meadow OS, you'll need to wait 20 minutes after pressing reset to allow Meadow to format the flash
+* When the flash is complete, press the reset button *RST* to exit bootloader mode.
+
+IMPORTANT - If this is the first time flashing Meadow OS, you'll need to **wait 20 minutes** after pressing reset to allow Meadow to format the flash.
 
 Notes:
 
