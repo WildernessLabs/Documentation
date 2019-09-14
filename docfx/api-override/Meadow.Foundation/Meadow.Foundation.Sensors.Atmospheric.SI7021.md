@@ -106,6 +106,6 @@ namespace SI7021_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.SI7021/SI7021.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SI7021/SI7021.svg)
 
 Both the Sparkfun and Adafruit boards have pull-up resistors already installed on the breakout boards and so these are not required to use the sensor.

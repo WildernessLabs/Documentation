@@ -133,6 +133,6 @@ namespace TSL2561_Sample
 
 The basic configuration of the TSL2561 requires only the data and power connections to be made:
 
-![](/API_Assets/Meadow.Foundation.Sensors.Light.TSL2561/TSL2561.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Light.TSL2561/TSL2561.svg)
 
 Note that the connection between the `Int` pin and `D9` is only required when using the device in interrupt mode.

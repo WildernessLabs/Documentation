@@ -57,4 +57,4 @@ namespace ALSPT19315C_Sample
 
 The ALS-PT19C is a simple analog device requiring only three connections:
 
-![](/API_Assets/Meadow.Foundation.Sensors.Light.ALSPT19315C/ALSPT19315C.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Light.ALSPT19315C/ALSPT19315C.svg)

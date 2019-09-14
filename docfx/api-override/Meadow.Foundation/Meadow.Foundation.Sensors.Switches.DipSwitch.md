@@ -5,7 +5,7 @@ remarks: *content
 
 Represents a DIP-switch wired in a bus configuration, in which all switches are terminated to the same ground/common or high pin.
 
-![](/API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg)
 
 ---
 uid: Meadow.Foundation.Sensors.Switches.DipSwitch
@@ -53,4 +53,4 @@ namespace DipSwitch_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DipSwitch.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DipSwitch.svg)

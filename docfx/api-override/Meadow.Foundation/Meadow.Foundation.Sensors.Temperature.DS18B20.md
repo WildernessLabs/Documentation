@@ -101,4 +101,4 @@ namespace DS18B20_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg)

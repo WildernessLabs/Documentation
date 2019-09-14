@@ -102,4 +102,4 @@ namespace TMP102_Sample
 
 TMP102 sensors can be connected to Meadow using only four connections:
 
-![](/API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102.svg)

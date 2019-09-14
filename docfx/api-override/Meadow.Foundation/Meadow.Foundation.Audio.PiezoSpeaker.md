@@ -100,4 +100,4 @@ namespace PiezoSpeaker_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Audio.PiezoSpeaker/PiezoSpeaker.svg)
+![](../../API_Assets/Meadow.Foundation.Audio.PiezoSpeaker/PiezoSpeaker.svg)

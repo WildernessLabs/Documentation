@@ -50,4 +50,4 @@ namespace LinearHallEffectTachometer_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg)

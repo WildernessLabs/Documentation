@@ -22,4 +22,4 @@ An example will be available once the driver is implemented.
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085.svg)

@@ -5,7 +5,7 @@ remarks: *content
 
 An LED Bar Graph is basically an LED array. Using an LED bar it’s as easy as connecting 10 individual LEDs with 10 output pins. Generally its used as a Battery level Indicator, Audio equipments, and Industrial Control panels. There are many other applications of LED bar graphs.
 
-![](/API_Assets/Meadow.Foundation.LEDs.LedBarGraph/img_LedBarGraph.jpg)
+![](../../API_Assets/Meadow.Foundation.LEDs.LedBarGraph/img_LedBarGraph.jpg)
 
 LED bars come in various sizes and single or multicolored. Using `LedBarGraph`, when creating an object, all it needs is to pass in an array of `IDigitalPin`.
 
@@ -91,4 +91,4 @@ namespace SegmentedLedBar_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.LEDs.LedBarGraph/LedBarGraph.svg)
+![](../../API_Assets/Meadow.Foundation.LEDs.LedBarGraph/LedBarGraph.svg)

@@ -14,4 +14,4 @@ An example will be available once the driver is implemented.
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.HTU21DF/HTU21DF.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HTU21DF/HTU21DF.svg)

@@ -113,7 +113,7 @@ namespace ADXL345_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Motion.ADXL345/ADXL345.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ADXL345/ADXL345.svg)
 
 This diagram shows how to connect the ADXL345 to Meadow when interrupts are not required.
 

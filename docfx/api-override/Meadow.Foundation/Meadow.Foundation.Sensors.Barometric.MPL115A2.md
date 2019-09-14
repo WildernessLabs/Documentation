@@ -122,7 +122,7 @@ namespace MPL115A2_InterruptSample
 
 The simplest method of connecting the MPL115A2 to Meadow requires only four connections:
 
-![](/API_Assets/Meadow.Foundation.Sensors.Barometric.MPL115A2/MPL115A2.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL115A2/MPL115A2.svg)
 
 In this diagram, the shutdown (`SDWN`) and reset (`RST`) pins have been left floating.  Both of these pins are active low and can be tied to V<sub>cc</sub> in normal operation.
 

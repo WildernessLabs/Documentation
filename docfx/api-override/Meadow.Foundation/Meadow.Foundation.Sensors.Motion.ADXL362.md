@@ -117,4 +117,4 @@ namespace ADXL362_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Motion.ADXL362/ADXL362.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ADXL362/ADXL362.svg)

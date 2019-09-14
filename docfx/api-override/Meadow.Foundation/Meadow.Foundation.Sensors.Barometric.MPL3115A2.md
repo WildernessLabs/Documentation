@@ -104,4 +104,4 @@ namespace MPL3115A2_InterruptSample
 
 MPL3115A2 configured for polling more data reads:
 
-![](/API_Assets/Meadow.Foundation.Sensors.Barometric.MPL3115A2/MPL3115A2.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL3115A2/MPL3115A2.svg)

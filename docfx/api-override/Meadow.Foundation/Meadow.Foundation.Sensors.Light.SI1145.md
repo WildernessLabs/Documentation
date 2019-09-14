@@ -61,4 +61,4 @@ namespace SI1145_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg)

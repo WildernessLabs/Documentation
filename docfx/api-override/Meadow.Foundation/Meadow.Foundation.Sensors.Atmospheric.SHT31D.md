@@ -113,4 +113,4 @@ The SHT31D breakout board from Adafruit is supplied with pull-up resistors insta
 
 The `ADR` line is tied low giving and I2C address of 0x44.  This address line can also be tied high and in this case the I2C address is 0x45.
 
-![](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D.svg)

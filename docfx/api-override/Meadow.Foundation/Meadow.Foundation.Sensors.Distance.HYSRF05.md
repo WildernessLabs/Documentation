@@ -62,4 +62,4 @@ namespace HYSRF05_Sample
 
 The HY-SRF05 sensor has 5 pins, but you’ll only connect 4: power, ground, echo and trigger (out isn’t used).
 
-![](/API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05.svg)

@@ -134,6 +134,6 @@ The BME280 can be connected using I2C or SPI.  Only 4 wires are required when us
 * SDA
 * SCL
 
-![](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.BME280/BME280.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BME280/BME280.svg)
 
 It should be noted that the Sparkfun board is supplied with pull-up resistors enabled by default.  The Adafruit board does not have any pull-up resistors onboard.  It is therefore necessary to add two pull-up resistors (`4.7 K` should be adequate for a single device) between 3.3V and SDA and 3.3V and SCL.

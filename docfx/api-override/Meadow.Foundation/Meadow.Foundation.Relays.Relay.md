@@ -55,4 +55,4 @@ namespace Relay
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Relays.Relay/Relay.svg)
+![](../../API_Assets/Meadow.Foundation.Relays.Relay/Relay.svg)

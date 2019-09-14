@@ -60,4 +60,4 @@ namespace PwmLedSample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.LEDs.PwmLed/PwmLed.svg)
+![](../../API_Assets/Meadow.Foundation.LEDs.PwmLed/PwmLed.svg)

@@ -63,4 +63,4 @@ namespace ParallaxPIR_Sample
 
 The Parallax PIR sensor requires only three connections, power, ground and motion detection signal:
 
-![](/API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPIR/ParallaxPIR.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPIR/ParallaxPIR.svg)

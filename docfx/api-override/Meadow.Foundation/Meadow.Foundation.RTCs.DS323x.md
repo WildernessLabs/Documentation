@@ -65,7 +65,7 @@ namespace LedSample
 
 The DS3231 real time clock module (see image below) requires only four (for simple timekeeping) or five (for alarms) connections
 
-![](/API_Assets/Meadow.Foundation.RTCs.DS323x/DS323x.svg)
+![](../../API_Assets/Meadow.Foundation.RTCs.DS323x/DS323x.svg)
 
 | Meadow Pin | Sensor Pin        | Wire Color |
 |--------------|-------------------|------------|

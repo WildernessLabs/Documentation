@@ -117,4 +117,4 @@ namespace BNO055_Sample
 
 The following diagram shows the BNO055 configured for bas
 
-![](/API_Assets/Meadow.Foundation.Sensors.Motion.BNO055/BNO055.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Motion.BNO055/BNO055.svg)

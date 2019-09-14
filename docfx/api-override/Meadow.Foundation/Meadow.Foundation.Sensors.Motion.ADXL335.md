@@ -115,6 +115,6 @@ namespace ADXL335_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Motion.ADXL335/ADXL335.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ADXL335/ADXL335.svg)
 
 The datasheet notes that bypass capacitors should be installed for the X, Y and Z outputs from the sensor.  Both the Sparkfun and Adafruit breakout boards have `0.1uF` capacitors installed on the board.
