@@ -58,4 +58,4 @@ The chip used to develop this library is one that is available on a common DS323
 
 * [DS3231 with integrated EEPROM](https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=ds3231)
 
-![](/API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx.svg)
+![](../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx.svg)

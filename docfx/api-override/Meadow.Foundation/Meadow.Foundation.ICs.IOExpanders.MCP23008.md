@@ -17,7 +17,7 @@ In addition to the MCP23008, the MCP family of chips includes; the MCP23017, whi
 
 The I2C address of the chip is configurable via the address pins and is in the binary form of `0100[A2][A1][A0]`, where `A2`, `A1`, and `A0` refer to the three address pins on the chip:
 
-![](Address_Pins.png)
+![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.MCP23008/MCP23008_Pins.png)
 
 For example, if all address pins were tied to ground, then the address of the chip would be `0100000` in binary, or `0x20` in hex, and `32` in decimal.
 
@@ -97,4 +97,4 @@ namespace LedSample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.ICs.IOExpanders.MCP23008/MCP23008.svg)
+![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.MCP23008/MCP23008.svg)

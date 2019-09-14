@@ -57,4 +57,4 @@ namespace SerialLCD_Sample
 
 The Serial LCD requires only three connections; power, ground and serial data. The Tx pin on Meadow should be connected to the Rx pin on the serial backpack:
 
-![](/API_Assets/Meadow.Foundation.Displays.SerialLCD/SerialLCD.svg)
+![](../../API_Assets/Meadow.Foundation.Displays.SerialLCD/SerialLCD.svg)

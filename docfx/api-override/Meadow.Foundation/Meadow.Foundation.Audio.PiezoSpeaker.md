@@ -7,7 +7,7 @@ The PiezoSpeaker class represents a simple piezo speaker that can be used to gen
 
 The positive pin of the piezo speaker connects to a PWM capable pin on the Meadow and the negative pin connects to common/ground. A resistor can be placed in-line to reduce volume.
 
-![](/API_Assets/Meadow.Foundation.Audio.PiezoSpeaker/img_PiezoSpeaker.jpg)
+![](../../API_Assets/Meadow.Foundation.Audio.PiezoSpeaker/img_PiezoSpeaker.jpg)
 
 ---
 uid: Meadow.Foundation.Audio.PiezoSpeaker

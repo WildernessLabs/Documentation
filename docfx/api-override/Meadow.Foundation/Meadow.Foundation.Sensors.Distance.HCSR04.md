@@ -60,4 +60,4 @@ namespace HCSR04_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg)

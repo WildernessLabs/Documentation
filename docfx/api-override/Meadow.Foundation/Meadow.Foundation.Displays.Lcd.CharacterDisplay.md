@@ -57,4 +57,4 @@ namespace LedSample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay.svg)
+![](../../API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay.svg)

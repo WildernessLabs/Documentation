@@ -63,4 +63,4 @@ namespace x74595_Sample
 
 ##### Example Circuit
 
-![](/API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg)
+![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg)
