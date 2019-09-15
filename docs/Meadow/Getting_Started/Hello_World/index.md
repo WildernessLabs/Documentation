@@ -81,7 +81,7 @@ Wilderness Labs recommends placing your logic in an application class that's ins
 
   namespace HelloLED
   {
-      public class MeadowApp : App<F7Micro, App>
+      public class MeadowApp : App<F7Micro, MeadowApp>
       {
           public MeadowApp()
           {
