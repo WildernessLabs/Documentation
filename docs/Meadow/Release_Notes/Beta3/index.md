@@ -8,13 +8,16 @@ subtitle: Release Notes
 
 ## Beta 3.1
 
-### Visual Studio Extension Updated
+### SPI
 
-* Meadow project templates are now integrated, [check out the update](/Meadow/Getting_Started/Hello_World/).
-* Debugging remains unavailable, but the console app gracefully exists now.
+We got SPI validated and merged. We’re excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you’ll need to flash your Meadow board with the [latest OS firmware binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip).
+
+### Visual Studio Extension
+
+Our project template is now included enabling the creation of new Meadow Apps within Visual Studio, [check out the update](/Meadow/Getting_Started/Hello_World/). Debugging remains unavailable, but the console app gracefully exists.
 
 ### Meadow.CLI
-* Now available for [download](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
+Now available for [download](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
 
 <hr />
 
