@@ -201,6 +201,7 @@ You're now ready to build and deploy your Meadow app.
 1. Connect your Meadow device to your development machine
 1. Go to View > Other Windows > Meadow (or Ctrl+Shift+M) to open Meadow Device Explorer and select device
 1. Right-click project in Solution Explorer and hit "Deploy"
+1. Wait 30-60 seconds for your application to start
 
 NOTE: Debugging is currently not available and if started, the application will be deployed to the Meadow device, but the console application will close.
 
