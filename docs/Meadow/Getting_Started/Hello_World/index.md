@@ -18,7 +18,7 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 ### Windows
 
-Install Visual Studio 2017 or 2019.
+Install Visual Studio 2019.
 
 You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
 
@@ -28,7 +28,7 @@ You'll also need to install the VS Tools for Meadow Extension by [downloading it
 
 1. In Visual Studio, go to Extensions > Manage Extensions
 1. Click **Online** and search for **Meadow**
-1. Install **VS Tools for Meadow**
+1. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart
 
 ### macOS
 
@@ -48,9 +48,12 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
 ### Windows
 
- * To install the template project, enter `dotnet new -i WildernessLabs.Meadow.Template` in the command prompt.
- * Next, create a new project `dotnet new Meadow -n MyMeadow`
- * Open the project in Visual Studio
+1. Open Visual Studio 2019
+1. Click **Create a new project**
+1. Search for **meadow** (make sure to clear all filters)
+1. Select **Meadow Console** and press **Next**
+1. Choose a project name and location
+1. Press **Create**
 
 ### macOS
 
@@ -190,13 +193,15 @@ You're now ready to build and deploy your Meadow app.
 ### macOS
 
 1. Connect your Meadow device to your development machine
-#. Press the **Play** button in Visual Studio to compile and deploy your application
-#. Wait 30-60 seconds for your application to start
+1. Press the **Play** button in Visual Studio to compile and deploy your application
+1. Wait 30-60 seconds for your application to start
 
 ### Windows
 
 1. Connect your Meadow device to your development machine
-1. Hit Ctrl+Shift+M to open Meadow Device Explorer and select device
+1. Go to View > Other Windows > Meadow (or Ctrl+Shift+M) to open Meadow Device Explorer and select device
 1. Right-click project in Solution Explorer and hit "Deploy"
+
+NOTE: Debugging is currently not available and if started, the application will be deployed to the Meadow device, but the console application will close.
 
 ## [Next - Meadow Basics](/Meadow/Meadow_Basics/)
