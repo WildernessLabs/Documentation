@@ -54,16 +54,16 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| [RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | A simple rotary encoder | Yes | |
-| [RotaryEncoderWithButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) | A rotary encoder that includes a push button | Yes | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
+| [RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | A simple rotary encoder | | |
+| [RotaryEncoderWithButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) | A rotary encoder that includes a push button | | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
 
 #### Switches
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
 | [SpstSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpstSwitch.html) | A simple single-pole, single-throw (SPST) switch | Yes | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
-| [SpdtSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpdtSwitch.html) | A simple single-pole, dual-throw (SPDT) switch | Yes | |
-| [DipSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.DipSwitch.html)  | A multi-pole dip switch | Yes | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
+| [SpdtSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpdtSwitch.html) | A simple single-pole, dual-throw (SPDT) switch | | |
+| [DipSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.DipSwitch.html)  | A multi-pole dip switch | | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
 
 #### Temperature
 
@@ -79,28 +79,42 @@ The peripherals are split into two groups; the first group is general, core peri
 
 ## Additional Peripherals
 
+### Audio
+
+| Driver           | Description | Tested Working      | Notes                             |
+|------------------|-------------|---------------------|-----------------------------------|
+| [TEA5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.TEA5767.html) | FM radio module | Yes | |
+
 ### Display and Graphics Drivers
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| [GraphicsLibrary](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library | | |
-| [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | Yes | digital IO only | | |
+| [GraphicsLibrary](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library | Yes | |
+| [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | Yes | digital IO only |
 | [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.LED.SevenSegment.html) | Seven Segment Display | Yes | |
-| [PCD8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.PCD8544.html) | PCD8544 LCD driver (Nokia 5110) | | Blocked on SPI |
+| [PCD8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.PCD8544.html) | PCD8544 LCD driver (Nokia 5110) | Yes | |
 | [SerialLCD](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SerialLCD.html) | SparkFun serial LCD backpack driver | | Blocked on serial |
-| [SSD1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | SSD1306 OLED Display.  Currently supports 128x64 and 128x32 pixel I2C displays | | |
-| [TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text Display Menu for LCD displays | | Blocked on SPI |
-| [Tft](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | | Blocked on SPI |
-| [ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | ePaper/eInk display Library | | Blocked on SPI |
+| [SSD1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | | Yes | |
+| [ST7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ST7565.html) | | Yes | |
+| [TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text Display Menu for LCD displays | | |
+| [TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | Yes | Support for displays ILI9163, ILI9341, S6D02A1, SSD1331, SSD1351, ST7735, ST7789 |
+| [WaveShare ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | ePaper/eInk display Library | | |
 
 ### Integrated Circuits (ICs)
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
 | [AT24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.AT24Cxx.html) | AT24Cxx Family of EEPROMs including AT24C32 | | |
-| [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion | | Blocked on SPI |
+| [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion | |  |
 | [MCP23008]() | MCP23008 for digital output expansion | | |
+| [HT16K33]() | HT16K33 for digital output expansion | | |
+
+### Real Time Clocks (RTCs)
+
+| Driver           | Description | Tested Working      | Notes                             |
+|------------------|-------------|---------------------|-----------------------------------|
 | [DS323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.DS323x.html) | Real Time Clock modules | | |
+| [SD1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.SD1307.html) | Real Time Clock SD1307 | Yes | |
 
 ### Sensors
 
@@ -108,7 +122,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| [BME280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.BME280.html) | Combined I2C/SPI temperature, humidity, and pressure sensor | | Blocked on SPI |
+| [BME280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.BME280.html) | Combined I2C/SPI temperature, humidity, and pressure sensor | Yes | |
 | [GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | Grove TH02 temperature and humidity sensor | | |
 | [HIH6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | Combined I2C temperature and humidity sensor | | |
 | [SHT31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | Combined I2C temperature and humidity sensor | | |
@@ -122,8 +136,9 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | HCSR04 distance sensor | Yes | |
-| [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HYSRF05.html) | HYSRF05 distance sensor | Yes | |
+| [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | HCSR04 distance sensor | | |
+| [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HYSRF05.html) | HYSRF05 distance sensor | | |
+| [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.SFSR02.html) | SFSR02 distance sensor | | |
 
 #### GPS Sensors & Libraries
 
@@ -154,11 +169,12 @@ The peripherals are split into two groups; the first group is general, core peri
 | [ADXL345](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ADXL345.html) | I2C triple axis accelerometer, +/-16g accelerometer | | |
 | [ADXL362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ADXL362.html) | I2C ultralow power, 3-axis MEMS accelerometer | | |
 | [BNO055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.BNO055.html) | I2C 9-Axis absolute orientation sensor | | |
+| [GY521](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.GY521.html) | I2C 6-Axis absolute orientation sensor | | |
 | [MAG3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.MAG3110.html) | I2C three axis magnetometer | | |
-| [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector | | |
+| [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector | Yes | |
 
 ### Servos
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library | | |
+| [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library | Yes | |
