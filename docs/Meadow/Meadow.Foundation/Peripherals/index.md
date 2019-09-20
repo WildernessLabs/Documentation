@@ -69,7 +69,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Driver           | Description | Tested Working      | Notes                             |
 |------------------|-------------|---------------------|-----------------------------------|
-| [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) | | |
+| [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) | Blocked on analog | |
 
 #### Hall Effect
 
@@ -94,10 +94,10 @@ The peripherals are split into two groups; the first group is general, core peri
 | [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.LED.SevenSegment.html) | Seven Segment Display | Yes | |
 | [PCD8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.PCD8544.html) | PCD8544 LCD driver (Nokia 5110) | Yes | |
 | [SerialLCD](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SerialLCD.html) | SparkFun serial LCD backpack driver | | Blocked on serial |
-| [SSD1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | | Yes | |
-| [ST7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ST7565.html) | | Yes | |
+| [SSD1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | OLED single color display | Yes | |
+| [ST7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ST7565.html) | Single color positive LCD | Yes | |
 | [TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text Display Menu for LCD displays | | |
-| [TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | Yes | Support for displays ILI9163, ILI9341, S6D02A1, SSD1331, SSD1351, ST7735, ST7789 |
+| [TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | Yes | |
 | [WaveShare ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | ePaper/eInk display Library | | |
 
 ### Integrated Circuits (ICs)
@@ -107,7 +107,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | [AT24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.AT24Cxx.html) | AT24Cxx Family of EEPROMs including AT24C32 | | |
 | [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion | |  |
 | [MCP23008]() | MCP23008 for digital output expansion | | |
-| [HT16K33]() | HT16K33 for digital output expansion | | |
+| [HT16K33]() | HT16K33 for digital output expansion | Yes | |
 
 ### Real Time Clocks (RTCs)
 
