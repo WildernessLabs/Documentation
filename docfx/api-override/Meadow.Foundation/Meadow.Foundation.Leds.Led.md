@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.LEDs.Led
+uid: Meadow.Foundation.Leds.Led
 remarks: *content
 ---
 
@@ -8,7 +8,7 @@ An LED is a diode (a component that attempts to let current flow only one way th
 Unlike the `PwmLed`, in which you can pass the forward voltage (voltage drop) of the led to limit its current, to use `Led` it is required to limit the current to the LED using a resistor.
 
 ---
-uid: Meadow.Foundation.LEDs.Led
+uid: Meadow.Foundation.Leds.Led
 example: [*content]
 ---
 
@@ -57,4 +57,4 @@ namespace LedSample
 
 ##### Example Circuit
 
-![](../../API_Assets/Meadow.Foundation.LEDs.Led/Led_bb.svg)
+![](../../API_Assets/Meadow.Foundation.Leds.Led/Led_bb.svg)

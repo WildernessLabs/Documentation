@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.LEDs.PwmLed
+uid: Meadow.Foundation.Leds.PwmLed
 remarks: *content
 ---
 
@@ -12,7 +12,7 @@ To use without resistors, pass in the forward voltage (voltage drop) of the LED 
 To use with an LED that has a resistor in series, pass `0.0` or `TypicalForwardVoltage.ResistorLimited` for the `forwardVoltage` parameter.
 
 ---
-uid: Meadow.Foundation.LEDs.PwmLed
+uid: Meadow.Foundation.Leds.PwmLed
 example: [*content]
 ---
 
@@ -60,4 +60,4 @@ namespace PwmLedSample
 
 ##### Example Circuit
 
-![](../../API_Assets/Meadow.Foundation.LEDs.PwmLed/PwmLed.svg)
+![](../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed.svg)
