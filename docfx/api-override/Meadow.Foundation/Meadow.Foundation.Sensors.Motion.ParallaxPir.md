@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Motion.ParallaxPIR
+uid: Meadow.Foundation.Sensors.Motion.ParallaxPir
 remarks: *content
 ---
 
@@ -12,7 +12,7 @@ The parallax PIR sensor is available from Parallax Inc:
 * [Parallax PIR Rev B](https://www.parallax.com/product/555-28027)
 
 ---
-uid: Meadow.Foundation.Sensors.Motion.ParallaxPIR
+uid: Meadow.Foundation.Sensors.Motion.ParallaxPir
 example: [*content]
 ---
 
@@ -63,4 +63,4 @@ namespace ParallaxPIR_Sample
 
 The Parallax PIR sensor requires only three connections, power, ground and motion detection signal:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPIR/ParallaxPIR.svg)
+![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPir/ParallaxPIR.svg)
