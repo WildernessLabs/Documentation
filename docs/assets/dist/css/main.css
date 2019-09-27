@@ -893,12 +893,7 @@ div.highlighter-rouge div {
       width: 48%; }
     .developers .wide .content-block > h1, .developers .wide .content-block > h2, .developers .wide .content-block > h3, .developers .wide .content-block > h4, .developers .wide .content-block > h5 {
       clear: both;
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      background-image: url("/assets/dist/assets/images/border-dot.png");
-      background-position: left bottom;
-      background-size: 16px 2px;
-      background-repeat: repeat-x; }
+      margin-bottom: 15px; }
     .developers .wide .content-block div.highlighter-rouge, .developers .wide .content-block > figure, .developers .wide .content-block img.floated, .developers .wide .content-block .content-banner {
       float: right;
       clear: right;
