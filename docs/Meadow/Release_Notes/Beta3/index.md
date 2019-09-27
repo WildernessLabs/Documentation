@@ -6,6 +6,28 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+## Beta 3.2
+
+### New File System
+
+We upgraded the file system that Meadow uses to LittleFS; which has the distinct advantage of initializing and formatting in seconds, as opposed to the 15-20 minutes of the last file system we were using.
+
+Now, after when you deploy Meadow.OS, the first startup should be very fast, and you won't need to wait for the flash to format.
+
+To upgrade, you'll need to flash the latest version of Meadow.OS to your device.
+
+### Basic Analog Input is Up
+
+We got basic [analog](/Meadow/Meadow_Basics/IO/Analog/) input ports working on pins `A0` through `A3`. To read an analog input value, create an [`AnalogInputPort`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html) on one of those pins and call the [`Read()`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html#Meadow_Hardware_AnalogInputPort_Read_System_Int32_System_Int32_) method. 
+
+Note that advanced `IObservable` and events do not work at this time.
+
+To use analog inputs, make sure you update the `Meadow.Core` nuget packages in your projects.
+
+### Debug Output on Visual Studio for Windows
+
+`Console.WriteLine()` calls are now being forwarded to a Meadow output window in Visual Studio on Windows, enabling basic debug output. Make sure to upgrade your Meadow Visual Studio extension to get support.
+
 ## Beta 3.1
 
 ### SPI
