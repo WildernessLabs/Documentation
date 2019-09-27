@@ -10,18 +10,17 @@ Your Meadow board needs an operating system installed before you can deploy appl
 
 As well, Meadow OS updates are released, you will flash the latest version to your Meadow board. This step only needs to be done once per update of Meadow OS.
 
-The [Meadow OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) is distributed in two files: **Meadow.OS_Kernel.bin** and **Meadow.OS_Runtime.bin**.
+The [Meadow OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) is distributed in two files: `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin`.
 
 The first time you flash the Meadow OS to your board, you'll need to reboot Meadow and wait 20 minutes to allow Meadow to format the flash.
 
 ## Installing dfu-util
 
-We'll use the _dfu-util_ app to flash the firmware files to Meadow. dfu-util is already installed in Meadow development virtual machine.
-Alternatively, you can install it and run it locally from Windows, macOS or Linux.
+We'll use the _dfu-util_ app to flash the firmware files to Meadow. 
 
 ### Windows
 
-You can download from [Sourceforge](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip).
+You can download dfu-util from [Sourceforge](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip).
 
 Extract the zip to a convenient location that you can access using the Command Prompt.
 
@@ -77,10 +76,10 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 
 To flash Meadow to the board:
 
- 1. Copy **Meadow.OS_Kernel.bin** and **Meadow.OS_Runtime.bin** into a folder.
+ 1. Copy `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin` into a folder.
  * Open the Command Prompt (Windows) or Terminal (macOS/Linux).
  * Navigate to the folder the contains the Meadow bin files.
- * Enter **dfu-util --list** to see a list of dfu enabled devices:
+ * Enter `dfu-util --list` to see a list of dfu enabled devices:
 
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
 
@@ -93,21 +92,15 @@ To flash Meadow to the board:
    dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 && dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
    ```
 
-   Make sure to replace *[DEVICE_SERIAL]* with the serial number you found in the previous step.
+   Make sure to replace `[DEVICE_SERIAL]` with the serial number you found in the previous step.
 
-* When the flash is complete, press the reset button *RST* to exit bootloader mode.
+* When the flash is complete, press the reset (**RST**) button to exit bootloader mode.
 
-IMPORTANT - If this is the first time flashing Meadow OS, you'll need to **wait 20 minutes** after pressing reset to allow Meadow to format the flash.
 
 Notes:
 
- * If you only have one dfu enabled device connected to your PC, you can omit -S [DEVICE_SERIAL].
- * Linux may require sudo to access USB devices.
- * The provided Linux VM requires sudo and should only have one dfu device so the command would be:
-
-   ```bash
-   sudo dfu-util -a 0 -D Meadow.OS_Kernel.bin -s 0x08000000 && sudo dfu-util -a 0 -D Meadow.OS_Runtime.bin -s 0x08040000
-   ```
+ * If you only have one dfu enabled device connected to your PC, you can omit `-S [DEVICE_SERIAL]`.
+ * Linux may require `sudo` to access USB devices.
 
 You're now ready to deploy C# applications to Meadow!
 
