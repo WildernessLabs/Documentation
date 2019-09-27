@@ -14,7 +14,7 @@ We upgraded the file system that Meadow uses to LittleFS; which has the distinct
 
 Now, after when you deploy Meadow.OS, the first startup should be very fast, and you won't need to wait for the flash to format.
 
-To upgrade, you'll need to flash the latest version of Meadow.OS to your device.
+To upgrade, you'll need to [flash the latest version of Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow/) to your device.
 
 ### Basic Analog Input is Up
 
@@ -27,6 +27,10 @@ To use analog inputs, make sure you update the `Meadow.Core` nuget packages in y
 ### Debug Output on Visual Studio for Windows
 
 `Console.WriteLine()` calls are now being forwarded to a Meadow output window in Visual Studio on Windows, enabling basic debug output. Make sure to upgrade your Meadow Visual Studio extension to get support.
+
+### Meadow.CLI Udpdates
+
+In order to be compatible with the file system changes, the `Meadow.CLI` has also been updated. Make sure download and use the [new binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
 
 ## Beta 3.1
 
