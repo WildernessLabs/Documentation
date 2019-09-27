@@ -28,7 +28,11 @@ From there, the voltage can be read via the [`Read()` method](/docs/api/Meadow/M
 float voltage = analogIn.Read();
 ```
 
+**NOTE:** Only analog pins `A0` through `A3` are currently configured. `A4` and `A5` will not currently work.
+
 ### Events and IObservable API
+
+**NOTE:** Analog eventing and `IObservable` is currently broken. Only simple `Reads` are working appropriately right now.
 
 As with other input APIs, the Analog input APIs support both events and the `IObservable` pattern, for advanced notification filtering. For more information, see the [Events and IObservable guide](/Meadow/Meadow_Basics/Events_and_IObservable/).
 
