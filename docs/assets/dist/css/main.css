@@ -890,7 +890,7 @@ div.highlighter-rouge div {
     overflow: hidden; }
     .developers .wide ol, .developers .wide .highlighter-rouge {
       overflow: hidden; }
-    .developers .wide .content-block > p, .developers .wide .content-block > h1, .developers .wide .content-block > h2, .developers .wide .content-block > h3, .developers .wide .content-block > h4, .developers .wide .content-block > h5, .developers .wide .content-block > ul, .developers .wide .content-block > ol {
+    .developers .wide .content-block > p, .developers .wide .content-block > h1, .developers .wide .content-block > h2, .developers .wide .content-block > h3, .developers .wide .content-block > h4, .developers .wide .content-block > h5, .developers .wide .content-block > ul, .developers .wide .content-block > ol, .developers .wide .content-block > table {
       float: left;
       clear: left;
       width: 48%; }
