@@ -1,10 +1,8 @@
 ---
 layout: Meadow
-title: Peripherals Library
-subtitle: Meadow.Foundation
+title: Meadow.Foundation Peripherals Library
+subtitle: Drivers for hardware peripherals such as sensors, buttons, displays, and more!
 ---
-
-# Meadow.Foundation Peripherals Library
 
 The Meadow.Foundation peripherals library is an [open source](https://github.com/WildernessLabs/Meadow.Foundation) repository of drivers for various peripherals such as sensors, motors, displays, cameras, and other peripherals which make it easy to add hardware to your Meadow application.
 
