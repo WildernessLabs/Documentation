@@ -4,8 +4,6 @@ title: Deploy Meadow OS
 subtitle: Guides and documentation for Meadow
 ---
 
-# Deploying Meadow OS
-
 Your Meadow board needs an operating system installed before you can deploy applications. You'll need to flash the OS before using Meadow.
 
 As well, Meadow OS updates are released, you will flash the latest version to your Meadow board. This step only needs to be done once per update of Meadow OS.
