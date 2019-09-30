@@ -4,8 +4,6 @@ title: Getting Started
 subtitle: Meadow.Foundation
 ---
 
-# Getting Started with Meadow.Foundation
-
 ## Hello, World!
 
 1. [Configure your Meadow development environment](/Meadow/Getting_Started/Setup).
