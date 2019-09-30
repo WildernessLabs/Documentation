@@ -4,9 +4,7 @@ title: Assemble Meadow Board
 subtitle: Guides and documentation for Meadow
 ---
 
-# Assemble Meadow
-
-You have finally received your brand-new Meadow developer kit and in this guide we will walk you through the steps to assemble your Meadow development board to get you started.
+This guide will walk you through the steps to assemble your Meadow development board to get you started.
 
 ### Parts
 
