@@ -4,8 +4,6 @@ title: Downloads
 subtitle: Guides and documentation for Meadow
 ---
 
-# Downloads
-
 ## Dev Environment
 
  * [Meadow.CLI](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip)
