@@ -4,8 +4,6 @@ title: Hello World
 subtitle: Guides and documentation for Meadow
 ---
 
-# Hello, World
-
 Meadow applications are very similiar to familiar .NET Framework 4.7.2 console applications. To access the IO (GPIO, I2C, SPI, etc.) and Meadow-specific features, your project references the **Meadow.Core** library.
 
 Let's create a new Meadow app!
