@@ -32,8 +32,6 @@ float voltage = analogIn.Read();
 
 ### Events and IObservable API
 
-**NOTE:** Analog eventing and `IObservable` is currently broken. Only simple `Reads` are working appropriately right now.
-
 As with other input APIs, the Analog input APIs support both events and the `IObservable` pattern, for advanced notification filtering. For more information, see the [Events and IObservable guide](/Meadow/Meadow_Basics/Events_and_IObservable/).
 
 ### Input Voltage Tolerance
