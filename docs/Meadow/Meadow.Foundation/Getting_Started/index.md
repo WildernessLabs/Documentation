@@ -9,8 +9,8 @@ subtitle: Meadow.Foundation
 1. [Configure your Meadow development environment](/Meadow/Getting_Started/Setup).
 1. Create a new .NET console application.
 1. `Install-Package Meadow.Foundation` (Detailed NuGet instructions: [Mac](https://docs.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough), [Windows](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui)).
-1. Plug the longer leg (cathode) of a green LED into pin `11` and the other leg into `GND`:
-  [Need image]
+1. Plug the longer leg (anode) of a green LED into pin `11` and the other leg into `GND`:
+![](PwmLed.png)
 1. Add the following code to the `program.cs` file in your application, then deploy and run:
 
 ```csharp
