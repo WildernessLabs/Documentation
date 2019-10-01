@@ -6,6 +6,7 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+<!--
 ## Beta 3.3
 
 This is a small release with some sundry fixes:
@@ -15,6 +16,8 @@ This is a small release with some sundry fixes:
 * **VS Extension Updates** - We've made some sundry fixes to the Meadow project templates. Meadow.Foundation is now linked by default, and **File** > **New** > **Meadow App** now creates an app that walks the color hue spectrum on the onboard LED.
 
 To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip), as well as update your IDE extensions.
+
+-->
 
 ## Beta 3.2
 
