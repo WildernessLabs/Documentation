@@ -6,7 +6,6 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
-<!--
 ## Beta 3.3
 
 This is a small release with some sundry fixes:
@@ -17,7 +16,6 @@ This is a small release with some sundry fixes:
 
 To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip), as well as update your IDE extensions.
 
--->
 
 ## Beta 3.2
 
