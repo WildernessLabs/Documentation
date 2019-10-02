@@ -100,6 +100,9 @@ Connect a red LED with the long leg (anode) on the D13 pin and the short leg (ca
 
 Create a Meadow project named `PwmLed_Sample` and copy the code so your app looks like this:
 
+If you want to know more about `PwmLed`, You can check out the [`Meadow.Foundation.Servo Reference API`](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) 
+
+
 ```csharp
 using System;
 using System.Threading;
@@ -150,7 +153,7 @@ namespace PwmLed_Sample
 
 ## Controlling a Servo
 
-Here is another complete example of a [`Meadow.Foundation`](http://beta-developer.wildernesslabs.co/Meadow/Meadow.Foundation/) application that controls a servo motor using a *Servo* driver available as a [`NuGet`](https://www.nuget.org/packages/Meadow.Foundation.Servo/) package, and shows how to initialize it and use its API methods.
+Here is another complete example of a [`Meadow.Foundation`](http://beta-developer.wildernesslabs.co/Meadow/Meadow.Foundation/) application that controls a servo motor using a `Servo` driver available as a [`NuGet Package`](https://www.nuget.org/packages/Meadow.Foundation.Servo/), and shows how to initialize it and use its API methods.
 
 ### Hardware
 
@@ -169,6 +172,8 @@ Connect your servo like the following fritzing diagram:
 Create a Meadow project named `Servo_Sample` and paste the following code. Make sure to add the [`Meadow.Foundation.Servos`](https://www.nuget.org/packages/Meadow.Foundation.Servo/) NuGet Package so the project builds and runs.
 
 Notice that when initializing *servo*, the library provides a set of `NamedServoConfigs` that especifies a predefined group of values such as minimum and maximum angles, minimum and maximum pulse durations and frequency. If your servo is not behaving like you would expect, you can create your own `ServoConfig` object and pass it in the constructor.
+
+If you want to know more about `Servo`, You can check out the [`Meadow.Foundation.Servos Reference API`](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) 
 
 ```csharp
 using System;
