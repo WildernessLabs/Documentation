@@ -14,13 +14,13 @@ The current release of Meadow is [Beta3](../Beta3/)
 
 ## Future
 
-### Release Candidate 1 - June Target
+### Beta 4/Release Candidate 1
 
 RC1 will see final hardware to kickstarter backers and the last of the major feature set released, including:
 
- * Meadow Board in-IDE Activation
- * One touch deploy of Meadow OS + Meadow Apps
+ * Meadow Board in-IDE Activation (turning on the Meadow Security stack)
  * In-IDE debugging of Meadow Apps
+ * Network APIs
  * Bluetooth APIs
 
 Additionally, we're hoping to squeeze in some bonus features:
