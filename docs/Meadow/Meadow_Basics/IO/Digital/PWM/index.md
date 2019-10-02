@@ -52,7 +52,9 @@ PWM signals can be generated via hardware (on the microcontroller) as well as vi
 
 ### API
 
-[tbd]
+```csharp
+public IPwmPort CreatePwmPort(IPin pin, float frequency = 100F, float dutyCycle = 0F)
+```
 
 # PWM Support in Meadow
 
@@ -68,23 +70,157 @@ Nearly every digital pin on the Meadow F7 board supports PWM.
 
 [`IPwmPort`](/docs/api/Meadow/Meadow.Hardware.IPwmPort.html) Class
 
-[creating a PWM Port on an F7 pin]
+```csharp
+IPwmPort pwm = Device.CreatePwmPort(Device.Pins.D07, 100, 0.5f);
+pwm.Start();
+```
 
 ### SoftPwm
 
 For PWM frequencies below 1hz, as found in industrial control systems [HVAC, etc., there is a soft pwm class]
 
-[SoftPwm class]
+```csharp
+IDigitalOutputPort digiOut = Device.CreateDigitalOutputPort(Device.Pins.D00);
+SoftPwmPort softPwmPort = new SoftPwmPort(digiOut); 
+```
 
 # Examples
 
 ## Driving an LED
 
-[PwmLed sample code]
+Here is a complete example of a [`Meadow.Foundation`](http://beta-developer.wildernesslabs.co/Meadow/Meadow.Foundation/) application that controls an LED using a PwmLed object and shows the different methods the API provides to turn it on or off, make it blink and pulse
+
+### Hardware
+
+Connect a red LED with the long leg (anode) on the D13 pin and the short leg (cathode) to GND, like the following fritzing diagram:
+
+![](driving_led.png){:standalone}
+
+### Software
+
+Create a Meadow project named `PwmLed_Sample` and copy the code so your app looks like this:
+
+```csharp
+using System;
+using System.Threading;
+using Meadow;
+using Meadow.Devices;
+using Meadow.Foundation.Leds;
+using System.Threading;
+
+namespace PwmLed_Sample
+{
+    class MainClass
+    {
+        static IApp app;
+
+        public static void Main(string[] args)
+        {
+            app = new PwmLedApp();
+            Thread.Sleep(Timeout.Infinite);
+        }
+    }
+
+    public class PwmLedApp : App<F7Micro, PwmLedApp>
+    {
+        PwmLed pwmLed;
+
+        public PwmLedApp()
+        {
+            pwmLed = new PwmLed(Device.CreatePwmPort(Device.Pins.D02), TypicalForwardVoltage.Red),
+            
+            while (true)
+            {                
+                pwmLed.IsOn = true;
+                Thread.Sleep(500);
+                pwmLed.IsOn = false;
+
+                pwmLed.StartBlink();
+                Thread.Sleep(3000);
+                pwmLed.Stop();
+
+                pwmLed.StartPulse();
+                Thread.Sleep(3000);
+                pwmLed.Stop();
+            }
+        }
+    }
+}
+```
 
 ## Controlling a Servo
 
-[Servo Core Code]
+Here is another complete example of a [`Meadow.Foundation`](http://beta-developer.wildernesslabs.co/Meadow/Meadow.Foundation/) application that controls a servo motor using a *Servo* driver available as a [`NuGet`](https://www.nuget.org/packages/Meadow.Foundation.Servo/) package, and shows how to initialize it and use its API methods.
 
+### Hardware
+
+Connect your servo like the following fritzing diagram:
+
+| Servo      | Meadow Pin |
+|------------|------------|
+| GND        | GND        |
+| VCC        | 3V3        |
+| PWM Signal | D13        |
+
+![](driving_servo.png){:standalone}
+
+### Software
+
+Create a Meadow project named `Servo_Sample` and paste the following code. Make sure to add the [`Meadow.Foundation.Servos`](https://www.nuget.org/packages/Meadow.Foundation.Servo/) NuGet Package so the project builds and runs.
+
+Notice that when initializing *servo*, the library provides a set of `NamedServoConfigs` that especifies a predefined group of values such as minimum and maximum angles, minimum and maximum pulse durations and frequency. If your servo is not behaving like you would expect, you can create your own `ServoConfig` object and pass it in the constructor.
+
+```csharp
+using System;
+using System.Threading;
+using Meadow;
+using Meadow.Devices;
+using Meadow.Foundation.Servos;
+using System.Threading;
+
+namespace Servo_Sample
+{
+    class MainClass
+    {
+        static IApp app;
+
+        public static void Main(string[] args)
+        {
+            app = new ServoApp();
+            Thread.Sleep(Timeout.Infinite);
+        }
+    }
+
+    public class ServoApp : App<F7Micro, ServoApp>
+    {
+        readonly IPwmPort pwm;
+        readonly Servo servo;
+
+        public ServoApp() 
+        {
+            pwm = Device.CreatePwmPort(Device.Pins.D05);
+            servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
+
+            while(true)
+            {
+                if (servo.Angle <= servo.Config.MinimumAngle)
+                {
+                    Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
+                    servo.RotateTo(servo.Config.MaximumAngle);
+                }
+                else
+                {
+                    Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
+                    servo.RotateTo(servo.Config.MinimumAngle);
+                }
+
+                Thread.Sleep(4000);
+            }
+        }
+    }
+}
+```
+
+## Summary
 --
 Note that the onboard LED can also be configured as a PWM channel.
