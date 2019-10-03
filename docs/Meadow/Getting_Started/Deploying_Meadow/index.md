@@ -1,18 +1,16 @@
 ---
 layout: Meadow
-title: Deploy Meadow OS
-subtitle: Guides and documentation for Meadow
+title: Meadow OS Deployment
+subtitle: Flashing the Meadow with the latest OS via Device Firmware Upgrade (DFU).
 ---
 
-Your Meadow board needs an operating system installed before you can deploy applications. You'll need to flash the OS before using Meadow.
+When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it. To do this, you'll need to:
 
-As well, Meadow OS updates are released, you will flash the latest version to your Meadow board. This step only needs to be done once per update of Meadow OS.
+ 1. Download the latest [Meadow.OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) files.
+ 2. Put the device into Device Firmware Upgrade (DFU) mode.
+ 3. Upload the files to the device.
 
-The [Meadow OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) is distributed in two files: `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin`.
-
-The first time you flash the Meadow OS to your board, you'll need to reboot Meadow and wait 20 minutes to allow Meadow to format the flash.
-
-## Installing dfu-util
+## Step 1: Instal dfu-util
 
 We'll use the _dfu-util_ app to flash the firmware files to Meadow. 
 
@@ -20,11 +18,11 @@ We'll use the _dfu-util_ app to flash the firmware files to Meadow.
 
 You can download dfu-util from [Sourceforge](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip).
 
-Extract the zip to a convenient location that you can access using the Command Prompt.
+Extract the zip to a convenient location that you can access using the Terminal/Command Prompt.
 
 ### macOS
 
-For macOS, you'll need Brew. To install:
+For macOS, you'll first need to install Brew, if you don't already have it:
 
  1. Install [Brew](https://brew.sh/) if it isn't installed already.
  * Open the terminal.
@@ -45,19 +43,18 @@ You can install dfu-util using the **apt** package manager.
    sudo apt-get install dfu-util
    ```
 
-## Bootloader Mode
+## Step 2: Put the device into DFU Bootloader mode.
 
-To update the OS, Meadow must be in bootloader mode. To enter bootloader mode:
+To update the OS, Meadow must be in DFU bootloader mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
 
- 1. Disconnect Meadow, including USB cables and the ST-Link.
- * Hold down the **boot** button on Meadow.
- * With the boot button pressed, connect Meadow to your PC using a Micro USB cable. If you have a board with two microUSB ports, use the *primary* port, or the port *not* on the debug extension.
+**If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
 
-  ![Primary USB port](./primary_usb.png){:standalone}
+![Primary USB port](./primary_usb.png){:standalone}
 
-## Flashing Meadow
+**If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
-To flash Meadow, you'll need _dfu-util_ installed and you'll need a microUSB cable.
+
+## Step 3: Upload Meadow.OS
 
 The instructions are essentially the same on all supported platforms (Windows, macOS, Linux).
 
@@ -73,16 +70,16 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 
 To flash Meadow to the board:
 
- 1. Copy `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin` into a folder.
+ 1. Unzip the Meadow.OS.zip package. It should contain `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin` files.
  * Open the Command Prompt (Windows) or Terminal (macOS/Linux).
  * Navigate to the folder the contains the Meadow bin files.
  * Enter `dfu-util --list` to see a list of dfu enabled devices:
 
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
 
-  Note - Meadow will show four (4) dfu devices when in bootloader mode. All four devices will have the same serial number.
+  Note - Meadow will show four (4) DFU devices when in bootloader mode. All four devices will have the same serial number.
 
- * Note the serial number of your Meadow board.
+ * Select and copy the serial number of your Meadow board.
  * Execute:
 
    ```bash
@@ -91,14 +88,13 @@ To flash Meadow to the board:
 
    Make sure to replace `[DEVICE_SERIAL]` with the serial number you found in the previous step.
 
-* When the flash is complete, press the reset (**RST**) button to exit bootloader mode.
+* When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
 
+Your board is now ready to have a Meadow application deployed to it!
 
-Notes:
+#### Notes:
 
  * If you only have one dfu enabled device connected to your PC, you can omit `-S [DEVICE_SERIAL]`.
  * Linux may require `sudo` to access USB devices.
-
-You're now ready to deploy C# applications to Meadow!
 
 ## [Next - Hello World](/Meadow/Getting_Started/Hello_World/)
