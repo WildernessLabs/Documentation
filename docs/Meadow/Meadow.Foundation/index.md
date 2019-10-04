@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Meadow.Foundation
-subtitle: Guides and documentation for Meadow
+subtitle: Peripheral driver library and hardware control libraries that make IoT development plug-and-play.
 ---
 
 ![Meadow.Foundation Logo](Meadow.Foundation_Logo.svg){:standalone}
