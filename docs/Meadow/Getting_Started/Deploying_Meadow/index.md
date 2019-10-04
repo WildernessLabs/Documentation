@@ -44,7 +44,7 @@ You can install dfu-util using the **apt** package manager.
 
 ## Step 2: Put the device into DFU Bootloader mode.
 
-To update the OS, Meadow must be in DFU bootloader mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
+To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
 
 **If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
 
@@ -70,16 +70,16 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 To flash Meadow to the board:
 
  1. Unzip the Meadow.OS.zip package. It should contain `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin` files.
- * Open the Command Prompt (Windows) or Terminal (macOS/Linux).
- * Navigate to the folder the contains the Meadow bin files.
- * Enter `dfu-util --list` to see a list of dfu enabled devices:
+ 2. Open the Command Prompt (Windows) or Terminal (macOS/Linux).
+ 3. Navigate to the folder the contains the Meadow bin files.
+ 4. Enter `dfu-util --list` to see a list of dfu enabled devices:
 
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
 
   Note - Meadow will show four (4) DFU devices when in bootloader mode. All four devices will have the same serial number.
 
- * Select and copy the serial number of your Meadow board.
- * Execute:
+ 5. Select and copy the serial number of your Meadow board.
+ 6. Execute:
 
    ```bash
    dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 && dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
@@ -87,7 +87,7 @@ To flash Meadow to the board:
 
    Make sure to replace `[DEVICE_SERIAL]` with the serial number you found in the previous step.
 
-* When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
+When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
 
 Your board is now ready to have a Meadow application deployed to it!
 
