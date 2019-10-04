@@ -76,17 +76,15 @@ To flash Meadow to the board:
 
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
 
-  Note - Meadow will show four (4) DFU devices when in bootloader mode. All four devices will have the same serial number.
+  **Note:** Meadow will show four (4) DFU devices when in bootloader mode. All four devices will have the same serial number.
 
  5. Select and copy the serial number of your Meadow board.
- 6. Execute:
+ 6. Execute the following command, replacing `[DEVICE_SERIAL]` with the serial number you found in the previous step:
 
    ```bash
    dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 && dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
    ```
-
-   Make sure to replace `[DEVICE_SERIAL]` with the serial number you found in the previous step.
-
+   
 When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
 
 Your board is now ready to have a Meadow application deployed to it!
