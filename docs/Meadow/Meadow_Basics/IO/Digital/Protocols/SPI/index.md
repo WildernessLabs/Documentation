@@ -53,7 +53,7 @@ Any pin that supports digital output can be used as a chip select line.
 To use SPI in Meadow, first create an [`ISpiBus`](/docs/api/Meadow/Meadow.Hardware.ISpiBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using:
 
 ```csharp
-ISpiBus spiBus = Device.CreateSpiBus(Device.Pins.Groups.Spi1);
+ISpiBus spiBus = Device.CreateSpiBus();
 ```
 
 ## Working with SPI Peripherals
