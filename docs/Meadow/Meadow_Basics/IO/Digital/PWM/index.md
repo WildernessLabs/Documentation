@@ -50,12 +50,6 @@ Higher frequencies create smoother signals, and are required in some cases. For 
 
 PWM signals can be generated via hardware (on the microcontroller) as well as via software. However, except for very slow frequencies, the hardware PWM generator should be used, as it doesn't cause any load on the processor.
 
-### API
-
-```csharp
-public IPwmPort CreatePwmPort(IPin pin, float frequency = 100F, float dutyCycle = 0F)
-```
-
 # PWM Support in Meadow
 
 ## Hardware/Pins
@@ -64,27 +58,34 @@ Nearly every digital pin on the Meadow F7 board supports PWM.
 
 ![Illustration of the Meadow F7 Micro board with all pins labeled; the D00 through D15 pins support PWM](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
-[separated into timer groups, in which each pin must be set on an integer multiple of each other]
+<!-- TODO:
+[separated into timer groups, in which each pin frequency must be set on an integer multiple of each other]
+-->
+
 
 ## APIs
 
-[`IPwmPort`](/docs/api/Meadow/Meadow.Hardware.IPwmPort.html) Class
+### Hardware PWM
+
+Hardware PWM signals are controlled via an [`IPwmPort`](/docs/api/Meadow/Meadow.Hardware.IPwmPort.html), which is created via an `IIODevice`:
 
 ```csharp
 IPwmPort pwm = Device.CreatePwmPort(Device.Pins.D07, 100, 0.5f);
 pwm.Start();
 ```
 
-### SoftPwm
+### Software Generated via `SoftPwmPort`
 
-For PWM frequencies below 1hz, as found in industrial control systems [HVAC, etc., there is a soft pwm class]
+For PWM frequencies below `1hz` (one cycle per second), as used in industrial control systems such as HVACs, Meadow.Foundation contains a [`Generators.SoftPwmPort`](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Generators.SoftPwmPort.html) that can be created on any  `IDigitalOutputPort` and used just like a hardware PWM port:
 
 ```csharp
 IDigitalOutputPort digiOut = Device.CreateDigitalOutputPort(Device.Pins.D00);
-SoftPwmPort softPwmPort = new SoftPwmPort(digiOut); 
+IPwmPort softPwmPort = new SoftPwmPort(digiOut); 
 ```
 
 # Examples
+
+<!-- TODO: just link to these examples where they're doc'd -->
 
 ## Driving an LED
 
@@ -225,7 +226,3 @@ namespace Servo_Sample
     }
 }
 ```
-
-## Summary
---
-Note that the onboard LED can also be configured as a PWM channel.
