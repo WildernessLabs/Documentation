@@ -25,7 +25,7 @@ Extract the zip to a convenient location that you can access using the Terminal/
 For macOS, you'll first need to install [Brew](https://brew.sh/), if you don't already have it. Once brew is installed, you can use it install dfu-util:
 
  1. Open the terminal.
- * Execute the following command:
+ 2. Execute the following command:
 
    ```bash
    brew install dfu-util
@@ -36,7 +36,7 @@ For macOS, you'll first need to install [Brew](https://brew.sh/), if you don't a
 You can install dfu-util using the **apt** package manager.
 
  1. Open the terminal.
- * Execute:
+ 2. Execute:
 
    ```bash
    sudo apt-get install dfu-util
