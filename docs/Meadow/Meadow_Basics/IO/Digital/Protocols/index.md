@@ -1,9 +1,10 @@
 ---
 layout: Meadow
 title: Digital Protocols
-subtitle: Communication Protocols
+subtitle: An overview of communication protocols for digital communications.
 ---
 
+Meadow has support for the following digital communication protocols:
 
 | Protocol | Speed | Multiple Peripheral Support | # of Wires                                                | Common use cases |
 |----------|-------|-----------------------------|-----------|-----|
@@ -12,8 +13,3 @@ subtitle: Communication Protocols
 |  **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (RS232 Serial)  | Slow  | No | 2 | Used for communication between boards or with computers. |
 | **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** |
 | **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus) |
-
-
-# IByteCommunications
-
-For both I2C and SPI, even though the hardware standard is slightly different, the 
