@@ -19,8 +19,8 @@ You'll need to ensure the **.NET Framework 4.7.2 development tools** are install
 You'll also need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
  1. In Visual Studio, go to **Extensions** > **Manage Extensions**
- * Click **Online** and search for **Meadow**
- * Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart
+ 2. Click **Online** and search for **Meadow**
+ 3. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart
 
 ### macOS
 
@@ -29,10 +29,10 @@ Install the latest version of Visual Studio for Mac.
 You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
  1. On the menu go to *Visual Studio -> Extensions*
- * Click the **Gallery** tab
- * Search for **Meadow**
- * Select the Meadow IDE extension
- * Click **Install...** 
+ 2. Click the **Gallery** tab
+ 3. Search for **Meadow**
+ 4. Select the Meadow IDE extension
+ 5. Click **Install...** 
 
 ![Meadow extension for Visual Studio for macOS](meadow_extension.png){:standalone}
 
@@ -41,19 +41,19 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 ### Windows
 
  1. Open Visual Studio 2019
- * Click **Create a new project**
- * Search for **meadow** (make sure to clear all filters)
- * Select **Meadow Console** and press **Next**
- * Name your project `HelloMeadow` and location
- * Press **Create**
+ 2. Click **Create a new project**
+ 3. Search for **meadow** (make sure to clear all filters)
+ 4. Select **Meadow Console** and press **Next**
+ 5. Name your project `HelloMeadow` and location
+ 6. Press **Create**
 
 ### macOS
 
  1. Open Visual Studio.
- * Create a new Project: *File -> New Solution..*.
- * In the **Meadow** section, select *Meadow Application* and press **Next**.
- * Choose an app name and location.
- * Press **Create**.
+ 2. Create a new Project: *File -> New Solution..*.
+ 3. In the **Meadow** section, select *Meadow Application* and press **Next**.
+ 4. Choose an app name and location.
+ 5. Press **Create**.
 
 ## Step 3: Deploy your Application
 
@@ -62,15 +62,15 @@ The Meadow application template is a simple application that will blink the onbo
 ### macOS
 
  1. Connect your Meadow device to your development machine
- * Press the **Play** button in Visual Studio to compile and deploy your application
- * Wait 30-60 seconds for your application to start
+ 2. Press the **Play** button in Visual Studio to compile and deploy your application
+ 3. Wait 30-60 seconds for your application to start
 
 ### Windows
 
  1. Connect your Meadow device to your development machine
- * Go to View > Other Windows > Meadow (or Ctrl+Shift+M) to open Meadow Device Explorer and select device
- * Right-click project in Solution Explorer and hit "Deploy"
- * Wait 30-60 seconds for your application to start
+ 2. Go to View > Other Windows > Meadow (or Ctrl+Shift+M) to open Meadow Device Explorer and select device
+ 3. Right-click project in Solution Explorer and hit "Deploy"
+ 4. Wait 30-60 seconds for your application to start
 
 <!--
 After a brief boot up wait, your device should start blinking the onboard LED in a variety of colors:
