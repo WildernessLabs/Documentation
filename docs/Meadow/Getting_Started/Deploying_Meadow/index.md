@@ -22,11 +22,10 @@ Extract the zip to a convenient location that you can access using the Terminal/
 
 ### macOS
 
-For macOS, you'll first need to install Brew, if you don't already have it:
+For macOS, you'll first need to install [Brew](https://brew.sh/), if you don't already have it. Once brew is installed, you can use it install dfu-util:
 
- 1. Install [Brew](https://brew.sh/) if it isn't installed already.
- * Open the terminal.
- * Install _dfu-util_ by executing the command:
+ 1. Open the terminal.
+ * Execute the following command:
 
    ```bash
    brew install dfu-util
