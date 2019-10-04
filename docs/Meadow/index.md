@@ -1,10 +1,10 @@
 ---
 layout: Meadow
-title: Guides
-subtitle: Guides and documentation for Meadow
+title: Meadow Guides
+subtitle: Guides and documentation for Meadow devices and applications.
 ---
 
-# Welcome to the Meadow Guides
+# Welcome!!
 
 Pardon our dust! Meadow is still in beta! :)
 
@@ -16,9 +16,9 @@ Also, make sure to join the [Wilderness Labs Slack](http://slackinvite.wildernes
 
 If you're just beginning, check out the [Getting Started](/Meadow/Getting_Started) walkthrough to get your development environment configured and deploy your first Meadow application:
 
- * [Assemble your Meadow board](/Meadow/Getting_Started/Assemble_Meadow)
- * [Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow)
- * [Hello, World](/Meadow/Getting_Started/Hello_World)
+ * [Assembling your Meadow board](/Meadow/Getting_Started/Assemble_Meadow)
+ * [Deploying Meadow OS](/Meadow/Getting_Started/Deploying_Meadow)
+ * [Hello, Meadow](/Meadow/Getting_Started/Hello_World)
 
 ## Meadow Basics
 
@@ -38,7 +38,6 @@ Then continue on to the [Meadow Basics](/Meadow/Meadow_Basics) Guides to learn a
 Finally, check out [Meadow.Foundation](/Meadow/Meadow.Foundation) to learn how it can greatly simplify building connected things.
 
  * [Getting Started w/Meadow.Foundation](/Meadow/Meadow.Foundation/Getting_Started)
- * [Working w/Sensors in Meadow.Foundation](/Meadow/Meadow.Foundation/Working_w_Sensors)
- * [Unified GPIO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch)
  * [Meadow.Foundation Peripheral Library](/Meadow/Meadow.Foundation/Peripherals)
+ * [Unified GPIO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch)
  * [Meadow.Foundation Libraries and Frameworks](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)
