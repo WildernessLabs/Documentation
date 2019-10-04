@@ -97,4 +97,4 @@ Your board is now ready to have a Meadow application deployed to it!
  * If you only have one dfu enabled device connected to your PC, you can omit `-S [DEVICE_SERIAL]`.
  * Linux may require `sudo` to access USB devices.
 
-## [Next - Hello World](/Meadow/Getting_Started/Hello_World/)
+## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)
