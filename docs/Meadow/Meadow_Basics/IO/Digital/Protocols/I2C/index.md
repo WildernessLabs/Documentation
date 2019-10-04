@@ -1,10 +1,8 @@
 ---
 layout: Meadow
 title: I2C
-subtitle: Inter-Integrated Circuit
+subtitle: Introduction to the Inter-Integrated Circuit (IIC/I2C) protocol.
 ---
-
-# Introduction
 
 [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye-squared-sea", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground):
 
@@ -56,10 +54,10 @@ For a more in depth discussion on how to determine ideal resistance value, see t
 
 ## Creating an I2C Bus
 
-To use I2C in Meadow, first create an [`II2cBus`](/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, passing the appropriate pins, and optionally, the bus speed (in KHz):
+To use I2C in Meadow, first create an [`II2cBus`](/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using:
 
 ```csharp
-II2cBus i2cBus = Device.CreateI2cBus(Device.Pins.Groups.I2c1, 100);
+II2cBus i2cBus = Device.CreateI2cBus();
 ```
 
 ## Working with I2C Peripherals
@@ -83,7 +81,4 @@ These methods are also available via the I2C bus, but require the address of the
 ```csharp
 i2cBus.WriteByte(i2cPeripheral.Address, 0x01);
 ```
-
-## Samples
-
 
