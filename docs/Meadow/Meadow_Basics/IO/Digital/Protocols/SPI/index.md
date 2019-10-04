@@ -79,6 +79,4 @@ These methods are also available via the SPI bus, but require the chip select po
 spiBus.WriteByte(spiPeriph.ChipSelect, 0x01);
 ```
 
-## Samples
-
 
