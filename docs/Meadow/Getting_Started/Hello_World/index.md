@@ -1,22 +1,16 @@
 ---
 layout: Meadow
-title: Hello World
-subtitle: Guides and documentation for Meadow
+title: Hello, Meadow!
+subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-Meadow applications are very similiar to familiar .NET Framework 4.7.2 console applications. To access the IO (GPIO, I2C, SPI, etc.) and Meadow-specific features, your project references the **Meadow.Core** library.
+Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow), you can create and deploy Meadow apps to it.
 
-Let's create a new Meadow app!
+## Step 1: Install Visual Studio Meadow Extensions
 
-## Prerequisites
+You'll need Visual Studio 2019 for either Windows or Mac; [available here](https://visualstudio.microsoft.com/downloads/). You can use any edition including Enterprise, Professional, or the free Community edition.  
 
-You'll need Visual Studio: [available here](https://visualstudio.microsoft.com/downloads/)
-
-You can use any edition including Enterprise, Professional, or the free Community edition.  
-
-### Windows
-
-Install Visual Studio 2019.
+## Windows
 
 You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
 
@@ -24,9 +18,9 @@ You'll need to ensure the **.NET Framework 4.7.2 development tools** are install
 
 You'll also need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
-1. In Visual Studio, go to Extensions > Manage Extensions
-1. Click **Online** and search for **Meadow**
-1. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart
+ 1. In Visual Studio, go to **Extensions** > **Manage Extensions**
+ * Click **Online** and search for **Meadow**
+ * Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart
 
 ### macOS
 
@@ -34,173 +28,224 @@ Install the latest version of Visual Studio for Mac.
 
 You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
-1. On the menu go to *Visual Studio -> Extensions*
-1. Click the **Gallery** tab
-1. Search for **Meadow**
-1. Select the Meadow IDE extension
-1. Click **Install...** 
+ 1. On the menu go to *Visual Studio -> Extensions*
+ * Click the **Gallery** tab
+ * Search for **Meadow**
+ * Select the Meadow IDE extension
+ * Click **Install...** 
 
 ![Meadow extension for Visual Studio for macOS](meadow_extension.png){:standalone}
 
-## Part 1: Creating a new Meadow Project
+## Step 2: Create a new Meadow Project
 
 ### Windows
 
-1. Open Visual Studio 2019
-1. Click **Create a new project**
-1. Search for **meadow** (make sure to clear all filters)
-1. Select **Meadow Console** and press **Next**
-1. Choose a project name and location
-1. Press **Create**
+ 1. Open Visual Studio 2019
+ * Click **Create a new project**
+ * Search for **meadow** (make sure to clear all filters)
+ * Select **Meadow Console** and press **Next**
+ * Name your project `HelloMeadow` and location
+ * Press **Create**
 
 ### macOS
 
  1. Open Visual Studio.
- 1. Create a new Project: *File -> New Solution..*.
- 1. In the **Meadow** section, select *Meadow Application* and press **Next**.
- 1. Choose an app name and location.
- 1. Press **Create**.
+ * Create a new Project: *File -> New Solution..*.
+ * In the **Meadow** section, select *Meadow Application* and press **Next**.
+ * Choose an app name and location.
+ * Press **Create**.
 
-## Part 2: Hello, World
+## Step 3: Deploy your Application
 
-Now that your project is setup, we'll walk through the default application that controls the onboard RGB led and writes text to the console. 
+The Meadow application template is a simple application that will blink the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .Net application:
 
-## The App class
+### macOS
 
-Wilderness Labs recommends placing your logic in an application class that's instantiated in the `Program` class when the app starts. This class is created automatically but you can create it manaually.
+ 1. Connect your Meadow device to your development machine
+ * Press the **Play** button in Visual Studio to compile and deploy your application
+ * Wait 30-60 seconds for your application to start
 
- 1. Create a new `public` class named `MeadowApp`.
- 1. Add `using` statements to `Meadow`, `Meadow.Devices`, and `Meadow.Hardware`.
- 1. Change the class signature to derive from `App<F7Micro, App>`.
- 1. Add a `void` returning method named `InitializeHardware`.
- 1. Call `InitializeHardware` from the constructor:
+### Windows
 
-  ```csharp
-  using Meadow;
-  using Meadow.Devices;
-  using Meadow.Hardware;
+ 1. Connect your Meadow device to your development machine
+ * Go to View > Other Windows > Meadow (or Ctrl+Shift+M) to open Meadow Device Explorer and select device
+ * Right-click project in Solution Explorer and hit "Deploy"
+ * Wait 30-60 seconds for your application to start
 
-  namespace HelloLED
-  {
-      public class MeadowApp : App<F7Micro, MeadowApp>
-      {
-          public MeadowApp()
-          {
-              InitializeHardware();
-          }
+<!--
+After a brief boot up wait, your device should start blinking the onboard LED in a variety of colors:
 
-          void InitializeHardware()
-          {
-          }
-      }
-  }
-  ```
+[image]
 
-## Control the Onboard LED
+-->
 
-Now we'll add fields to control the onboard LED and toggle its red, green, and blue components off and on periodically.
+## Understanding the `Hello, World` App
 
- 1. Add three (3) fields of type `DigitalOutputPort` named `redLed`, `greenLed`, and `blueLed`.
- 1. In the `InitializeHardware` method, instantiate each output port using `Device.Pins` to reference the onboard internal pins to control each color of the led:
+The Meadow app template has two files; `Program.cs` and `App.cs`, let's take a quick look at them:
 
-  ```csharp
-  IDigitalOutputPort redLed;
-  IDigitalOutputPort greenLed;
-  IDigitalOutputPort blueLed;
-  ...
+### Program.cs
 
-  void InitializeHardware()
-  {
-      redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
-      blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
-      greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
-  }
-  ```
-
-Now we'll add a method to toggle the LEDs. We do this by controlling the `DigitalOutputPort`'s boolean `State` property. Within the while loop, we'll write the current state to the Console and toggle the LEDs in sequence.
-
-We'll need two (2) additional `using` statements, add `System` and `System.Threading` if they're not there already.
-
-Add the code below:
+If you've created a .Net console app before, the `Program` class should look familiar; it's very simple and only includes a `static void Main()` method that instantiates our Meadow app:
 
 ```csharp
-using System;
-using System.Threading;
-...
+using Meadow;
 
-public void ToggleLeds()
+namespace BasicTestyMeadow
 {
-    bool state = false;
-    int sleepTime = 150; //in ms
-
-    while(true)
+    class Program
     {
-        state = !state;
-
-        Console.WriteLine($"State: {state}");
-
-        blueLed.State = state;
-        Thread.Sleep(sleepTime);
-        redLed.State = state;
-        Thread.Sleep(sleepTime);
-        greenLed.State = state;
-        Thread.Sleep(sleepTime);
+        static IApp app;
+        public static void Main(string[] args)
+        {
+            // instantiate and run new meadow app
+            app = new HelloMeadow();
+        }
     }
 }
 ```
 
-Finally, call `ToggleLeds` from the constructor after `InitializeHardware`:
+This pattern allows us to have an App instance, in which all things Meadow are done.
+
+### App.cs
+
+Let's take a brief look at the app class:
 
 ```csharp
-public App()
+using System;
+using System.Threading;
+using Meadow;
+using Meadow.Devices;
+using Meadow.Hardware;
+
+namespace HelloWorld
 {
-    InitializeHardware();
-    ToggleLeds();
+    public class HelloMeadow : App<F7Micro, HelloMeadow>
+    {
+        IDigitalOutputPort redLed;
+        IDigitalOutputPort blueLed;
+        IDigitalOutputPort greenLed;
+
+        public App()
+        {
+            ConfigurePorts();
+            BlinkLeds();
+        }
+
+        public void ConfigurePorts()
+        {
+            redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
+            blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
+            greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
+        }
+
+        public void BlinkLeds()
+        {
+            var state = false;
+
+            while (true) {
+                state = !state;
+
+                Console.WriteLine($"State: {state}");
+
+                redLed.State = state;
+                Thread.Sleep(500);
+                blueLed.State = state;
+                Thread.Sleep(500);
+                greenLed.State = state;
+                Thread.Sleep(500);
+            }
+        }
+    }
+}
+
+```
+
+### Meadow Namespaces
+
+Let's break this down into pieces, first; the Meadow namespaces:
+
+```csharp
+using Meadow;
+using Meadow.Devices;
+using Meadow.Hardware;
+using Meadow.Foundation;
+```
+
+These are the typical minimum set of namespaces in a Meadow app class and provide the following functionality:
+
+ * `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
+ * `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Micro Dev board, or the F7 Micro embeddable board.
+ * `Meadow.Hardware` - This namespace contains hardware classes that enable you to interact directly with hardware IO.
+ * `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
+
+### App Class Definition
+
+Notice that the `HellowMeadow` application class inherits from `App`, and has two generic arguments, in this case `F7Micro`, and `HelloMeadow`:
+
+```csharp
+public class HelloMeadow : App<F7Micro, HelloMeadow>
+```
+
+All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.App-2.html) base class. Under the hood, `App` registers itself with the Meadow.OS. It also provides hooks for getting notified during system events, such as the board being put to sleep.
+
+`App` requires two parameters; first, the current device definition, and second, the type definition of your custom `IApp` class. These are passed to provide a strongly-typed reference to the current device, as well as the current instance of the application from anywhere in the app.
+
+The device class defines properties and capabilities of the current device such as the pins, via the `Device` property on the `App` base class, and allows you to access them using autocomplete, via the specific device type:
+
+```csharp
+var redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
+```
+
+### Controlling the Onboard LED via Ports
+
+<!-- TODO: convert to Meadow.Foundation and explain that. -->
+
+Direct access to hardware Input/Output (IO) is generally available via _ports_ and _buses_. In this case, we create a `IDigitalOutputPort` for each color component (red, green, and blue) of the onboard LED:
+
+```csharp
+
+IDigitalOutputPort redLed;
+IDigitalOutputPort blueLed;
+IDigitalOutputPort greenLed;
+
+...
+
+redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
+blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
+greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
+```
+
+Ports are created from the device itself, and the `Pins` property provides named pins that map to the pins available on the particular device specified above in the `App` definition.
+
+
+#### Digital Output
+
+To vary the color of the light emitted via the onboard LED, we can _write_ to the internal pins that are connected to the LED, via the `State` property, causing them to have a voltage of `HIGH`/`ON`, or `LOW`/`OFF`:
+
+
+```csharp
+public void BlinkLeds()
+{
+    var state = false;
+
+    while (true) {
+        state = !state;
+
+        Console.WriteLine($"State: {state}");
+
+        redLed.State = state;
+        Thread.Sleep(500);
+        blueLed.State = state;
+        Thread.Sleep(500);
+        greenLed.State = state;
+        Thread.Sleep(500);
+    }
 }
 ```
 
-## Instantiate the App class
+## Next
 
-The last thing we need to do is create an instance of the `App` class when the application starts.
+Now that you understand the basic of a Meadow application, we recommend learning about the following topics:
 
- 1. Open Program.cs.
- 1. A `using` statement for `Meadow`.
- 1. Create a static field of type `IApp` named **app**.
- 1. In the constructor, instantiate an `App` instance and assign it to **app**:
-
-  ```csharp
-  using Meadow;
-
-  namespace HelloLED
-  {
-      class Program
-      {
-          static IApp app;
-          static void Main(string[] args)
-          {
-              app = new MeadowApp();
-          }
-      }
-  }
-  ```
-
-## Compile and run the application
-
-You're now ready to build and deploy your Meadow app.
-
-### macOS
-
-1. Connect your Meadow device to your development machine
-1. Press the **Play** button in Visual Studio to compile and deploy your application
-1. Wait 30-60 seconds for your application to start
-
-### Windows
-
-1. Connect your Meadow device to your development machine
-1. Go to View > Other Windows > Meadow (or Ctrl+Shift+M) to open Meadow Device Explorer and select device
-1. Right-click project in Solution Explorer and hit "Deploy"
-1. Wait 30-60 seconds for your application to start
-
-NOTE: Debugging is currently not available and if started, the application will be deployed to the Meadow device, but the console application will close.
-
-## [Next - Meadow Basics](/Meadow/Meadow_Basics/)
+ * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
+ * [Meadow.Foundation](/Meadow/Meadow.Foundation/)
