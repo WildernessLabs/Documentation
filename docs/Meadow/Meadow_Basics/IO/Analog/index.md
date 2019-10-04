@@ -1,10 +1,10 @@
 ---
 layout: Meadow
-title: Meadow Basics
-subtitle: Meadow Basics
+title: Analog I/O
+subtitle: Reading and writing non-binary voltages via the Analog-to-Digital Converter (ADC), and Digital-to-Analog Converter (DAC).
 ---
 
-# Analog IO
+# Intro
 
 In modern digital electronics, we often deal with finite states of `HIGH` or `LOW`, which represent digital `1`/`0`, or `On`/`Off`, respectively. However, there are many sensors or other integrations that communicate not in binary, but in a range of voltages. For instance, a [TMP35 analog temp sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) might output `0V` when it's reading an ambient temperature of `0ºC`, `1.6V` @ `50ºC`, and `3.3V` @ `100ºC`.
 
