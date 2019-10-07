@@ -40,25 +40,36 @@ namespace HBridgeMotor_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : AppBase<F7Micro, App>
     {
-        public App ()
+        public MeadowApp ()
         {
-            var motor1 = new HBridgeMotor(Device.Pins.D08, Device.Pins.D10, Device.Pins.D09);
-            var motor2 = new HBridgeMotor(Device.Pins.D12, Device.Pins.D14, Device.Pins.D13);
+            var motorRight = new HBridgeMotor
+            (
+                a1Pin: Device.CreatePwmPort(Device.Pins.D02),
+                a2Pin: Device.CreatePwmPort(Device.Pins.D03),
+                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D04)
+            );
+
+            var motorLeft = new HBridgeMotor
+            (
+                a1Pin: Device.CreatePwmPort(Device.Pins.D07),
+                a2Pin: Device.CreatePwmPort(Device.Pins.D08),
+                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
+            );
 
             while (true)
             {
-                // set the speed on both motors to 100% forward
-                motor1.Speed = 1f;
-                motor2.Speed = 1f;
+                motorLeft.Speed = 1f;
+                motorRight.Speed = 1f;
                 Thread.Sleep(1000);
-                motor1.Speed = 0f;
-                motor2.Speed = 0f;
+
+                motorLeft.Speed = 0f;
+                motorRight.Speed = 0f;
                 Thread.Sleep(500);
-                // 100% reverse
-                motor1.Speed = -1f;
-                motor2.Speed = -1f;
+
+                motorLeft.Speed = -1f;
+                motorRight.Speed = -1f;
                 Thread.Sleep(1000);
             }
         }
