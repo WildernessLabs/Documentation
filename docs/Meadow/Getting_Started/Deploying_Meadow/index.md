@@ -77,12 +77,23 @@ To flash Meadow to the board:
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
 
   **Note:** Meadow will show four (4) DFU devices when in bootloader mode. All four devices will have the same serial number.
+  
+  **Help for Windows error: "Cannot open DFU device 0483:df11"** This error can occur when Windows uses
+  a default driver for the USB device that doesn't support the commands needed for DFU. Use
+  [Zadiq](https://zadig.akeo.ie/) to replace the default driver with a WinUSB driver. Refer to
+  [Scott Hanselman's blog]( https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx)
+  for more details.
+
 
  5. Select and copy the serial number of your Meadow board.
- 6. Execute the following command, replacing `[DEVICE_SERIAL]` with the serial number you found in the previous step:
+ 6. Execute the following commands, replacing `[DEVICE_SERIAL]` with the serial number you found in
+ the previous step. Each command should complete with `File downloaded successfully`
 
    ```bash
-   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 && dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
+   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000
+   ```
+   ```bash
+   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
    ```
    
 When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
