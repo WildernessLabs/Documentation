@@ -3,65 +3,75 @@ uid: Meadow.Foundation.Displays.LED.SevenSegment
 remarks: *content
 ---
 
-The TEA5767 FM module is based on the TEA5767GH which is a single-chip, electronically tuned, FM stereo radio for low-voltage applications with fully integrated Intermediate Frequency (IF) selectivity and demodulation. 
+A seven-segment display is a form of electronic display device for displaying decimal numerals that is an alternative to the more complex dot matrix displays. These displays are widely used in digital clocks, electronic meters, basic calculators, and other electronic devices that display numerical information.
 
-It can be connected to a microcontroller through an I2C interface to digitally control its tuning frequency and other characteristics, giving room for opportunities to digitize some of its operations. It comes with tow headphone jacks, one for connection to a headphone/speaker while the other is for connection to the antenna which usually comes with the module.
-
-![](../../API_Assets/Meadow.Foundation.Displays.LED.SevenSegment/SevenSegment.png)
+![](../../API_Assets/Meadow.Foundation.Displays.LED.SevenSegment/SevenSegment.jpg)
 
 ### Purchasing
 
-You can get TEA5767 module with an antenna include it from the following suppliers:
+You can get 7 Segment displays from the following suppliers:
 
-* [ebay](https://www.ebay.com/itm/76-108MHZ-TEA5767-FM-Stereo-Radio-Module-Cable-Antenna-for-Arduino-/221610856360)
-* [newegg](https://www.newegg.ca/p/2S7-01JA-0KY52?item=9SIAJHJ8XC0373&source=region&nm_mc=knc-googleadwordscamkpl-pc&cm_mmc=knc-googleadwordscamkpl-pc-_-pla-lyx+tech+ltd-_-gadgets-_-9SIAJHJ8XC0373&gclid=Cj0KCQjwoKzsBRC5ARIsAITcwXFdQwVcwKklE8IqlrxY8GWLK0dcccGzBlp7OGjuNijObuUBybiqWuwaAqjwEALw_wcB)
+* [ebay](https://www.ebay.ca/i/382536833454?chn=ps&norover=1&mkevt=1&mkrid=706-89093-2056-0&mkcid=2&itemid=382536833454&targetid=607627058052&device=c&mktype=pla&googleloc=9060815&poi=&campaignid=1669215008&mkgroupid=63013116685&rlsatarget=pla-607627058052&abcId=1063836&merchantid=117591375&gclid=Cj0KCQjw_5rtBRDxARIsAJfxvYBVzC0Y5B2nPdn-LTI1cS-4XEHNhwh7q3XmXmod-9JrF7td50NABUwaAseaEALw_wcB)
+* [Digi-Key](https://www.digikey.ca/product-detail/en/kingbright-company-llc/SA05-11SRWA/754-1677-5-ND/3084460?utm_adgroup=&mkwid=sEc2Kbmrm&pcrid=311487093563&pkw=&pmt=&pdv=c&productid=3084460&slid=&gclid=Cj0KCQjw_5rtBRDxARIsAJfxvYA-QhkE8ReFOaIaxWxF3q54830jvZKy1GHBbQu0E68FXQ5fudSMumAaAvw_EALw_wcB)
+* [Elmwood Electronics](https://elmwoodelectronics.ca/products/8546?variant=28162038787&currency=CAD&utm_campaign=gs-2019-02-19&utm_source=google&utm_medium=smart_campaign&gclid=Cj0KCQjw_5rtBRDxARIsAJfxvYCC-J_psvSkkcZ5TwJHb_jiCvhzJg8Qie0PYdPdpWE8i96i65x-A9oaAqrUEALw_wcB)
 
 ### Code Example
 
-The following example shows how to initialize a TEA5767 and look for radio stations:
+The following example shows how to initialize a SevenSegment display and iterates through all possible characters:
 
 ```csharp
 using System;
 using System.Threading;
 using Meadow;
 using Meadow.Devices;
-using Meadow.Foundation.Audio.Radio;
+using Meadow.Foundation.Displays.LED;
 
-namespace TEA5767_Sample
+namespace SevenSegment_Sample
 {
     public class Program
     {
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
+            Thread.Sleep(Timeout.Infinite);
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : AppBase<F7Micro, App>
     {
-        public App ()
+        public MeadowApp ()
         {
-            Console.WriteLine("Initialize App");
+            SevenSegment sevenSegment = new SevenSegment
+            (
+                portA: Device.CreateDigitalOutputPort(Device.Pins.D14),
+                portB: Device.CreateDigitalOutputPort(Device.Pins.D15),
+                portC: Device.CreateDigitalOutputPort(Device.Pins.D06),
+                portD: Device.CreateDigitalOutputPort(Device.Pins.D07),
+                portE: Device.CreateDigitalOutputPort(Device.Pins.D08),
+                portF: Device.CreateDigitalOutputPort(Device.Pins.D13),
+                portG: Device.CreateDigitalOutputPort(Device.Pins.D12),
+                portDecimal: Device.CreateDigitalOutputPort(Device.Pins.D05),
+                isCommonCathode: false
+            );
 
-            Console.WriteLine("Create I2C bus");
-            var i2cBus = Device.CreateI2cBus();
+            bool showDecimal = false;
 
-            Console.WriteLine("Create TEA5767 instance");
-            var radio = new TEA5767(i2cBus);
-
-            Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
-
-            for (int i = 0; i < 8; i++)
+            while (true)
             {
-                Thread.Sleep(1000);
+                foreach (CharacterType character in Enum.GetValues(typeof(CharacterType)))
+                {
+                    if (character != CharacterType.count)
+                    {
+                        Console.WriteLine("Character: {0}", character.ToString());
+                        sevenSegment.SetDisplay(character, showDecimal);
+                    }
 
-                radio.SearchNextSilent();
+                    Thread.Sleep(1000);
+                }
 
-                Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
-            }
-
-            radio.SelectFrequency(94.5f);
+                showDecimal = !showDecimal;
+            }            
         }
     }
 }
@@ -71,12 +81,17 @@ namespace TEA5767_Sample
 
 To wire a TEA5767 to your Meadow board, connect the following:
 
-| TEA5767 | Meadow Pin    |
-|---------|---------------|
-| GND     | GND           |
-| SCL     | D08 (SCL Pin) |
-| SDA     | D07 (SDA Pin) |
-| VCC     | 3V3           |
+| SevenSegment | Meadow Pin |
+|--------------|------------|
+| portA        | D14        |
+| portB        | D15        |
+| PortC        | D06        |
+| PortD        | D07        |
+| PortE        | D08        |
+| PortF        | D13        |
+| PortG        | D12        |
+| portDecimal  | D05        |
+| Common Anode | GND        |
 
 It should look like the following diagram:
 
