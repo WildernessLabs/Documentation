@@ -10,7 +10,7 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
  2. Put the device into Device Firmware Upgrade (DFU) mode.
  3. Upload the files to the device.
 
-## Step 1: Instal dfu-util
+## Step 1: Install dfu-util
 
 We'll use the _dfu-util_ app to flash the firmware files to Meadow. 
 
