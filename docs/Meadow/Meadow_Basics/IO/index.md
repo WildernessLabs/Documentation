@@ -44,6 +44,15 @@ Additionally, digital output ports can be used to generate a _Pulse-Width-Modula
 
 Analog ports can operate at a range of voltages between `0V` and `3.3V`, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal. For instance an analog temperature sensor that is able to detect temperatures from `0ºC` to `100ºC` might output a voltage of `1.6V` (halfway between `0V` and `3.3V`) for `50º`.
 
+### I/O Power Tolerance
+
+**Important:**
+
+Both the digital and analog I/O on the Meadow F7 board nominally operate at a range of `0V` to `3.3V`. However, when they are configured for _digital_ operation, they are `5V` _tolerant_; meaning that they can accept input voltages up to `5V`. When they are configured for _analog_ operation, they are only `3.3V` tolerant, and any input voltages higher than that, may burn out that I/O, and or damage the chip.
+
+For reading analog voltages higher than `3.3V`, see the [analog I/O guide](/Meadow/Meadow_Basics/IO/Analog/)
+
+
 ### F7 Micro IO Pinout
 
 GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 Micro, and many of these pins are actually overloaded to support multiple functions, as shown below:
