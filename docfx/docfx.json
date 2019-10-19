@@ -20,7 +20,8 @@
             "/**.csproj"
           ],
           "exclude": [
-            "/Source/Samples/**"
+            "/Source/Meadow.Foundation_Samples/**",
+            "/Source/Peripheral_Libs_Samples/**"
           ],
           "src": "../../Meadow.Foundation"
         }
