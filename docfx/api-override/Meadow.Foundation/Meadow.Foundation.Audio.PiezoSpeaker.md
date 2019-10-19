@@ -19,27 +19,31 @@ The following example shows how to initialize a PiezoSpeaker and play a melody u
 ```csharp
 using System.Threading;
 using Meadow;
+using Meadow.Devices;
 using Meadow.Foundation.Audio;
 
 namespace PiezoSpeaker_Sample
 {
     public class Program
     {
-        static IApp _app; 
-        public static void Main()
+        static IApp app;
+        public static void Main(string[] args)
         {
-            _app = new App();
+            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+
+            // instantiate and run new meadow app
+            app = new MeadowApp();
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         const int NUMBER_OF_NOTES = 16;
         float[] melody;
 
-        public App ()
+        public MeadowApp()
         {
-            melody = new float[NUMBER_OF_NOTES] 
+            melody = new float[NUMBER_OF_NOTES]
             {
                 NoteFrequencies.NOTE_A3,
                 NoteFrequencies.NOTE_B3,
@@ -59,17 +63,17 @@ namespace PiezoSpeaker_Sample
                 NoteFrequencies.NOTE_A3,
             };
 
-            var piezo = new PiezoSpeaker(Device.Pins.D10);
+            var piezo = new PiezoSpeaker(Device.CreatePwmPort(Device.Pins.D10));
 
             while (true)
             {
-                for(int i = 0; i < NUMBER_OF_NOTES; i++)
+                for (int i = 0; i < NUMBER_OF_NOTES; i++)
                 {
                     //PlayTone with a duration in synchronous
                     piezo.PlayTone(melody[i], 600);
                     Thread.Sleep(50);
                 }
-                
+
                 Thread.Sleep(1000);
 
                 //PlayTone without a duration will return immediately and play the tone
