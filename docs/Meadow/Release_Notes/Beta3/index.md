@@ -46,7 +46,7 @@ To use analog inputs, make sure you update the `Meadow.Core` nuget packages in y
 
 `Console.WriteLine()` calls are now being forwarded to a Meadow output window in Visual Studio on Windows, enabling basic debug output. Make sure to upgrade your Meadow Visual Studio extension to get support.
 
-### Meadow.CLI Udpdates
+### Meadow.CLI Updates
 
 In order to be compatible with the file system changes, the `Meadow.CLI` has also been updated. Make sure download and use the [new binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
 
