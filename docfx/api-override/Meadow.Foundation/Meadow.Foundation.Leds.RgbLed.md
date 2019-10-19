@@ -24,22 +24,23 @@ The following example code loops through all the colors possible with digital ou
 ```csharp
 using System.Threading;
 using Meadow;
-using Meadow.Foundation.LEDs;
+using Meadow.Foundation.Leds;
+using Meadow.Devices;
 
 namespace RgbLedSample
 {
     public class Program
     {
-        static IApp _app; 
+        static IApp _app;
         public static void Main()
         {
-            _app = new App();
+            _app = new RgbLedApp();
         }
     }
 
-    public App : AppBase<F7Micro, App>
+    public class RgbLedApp : App<F7Micro, RgbLedApp>
     {
-        public App()
+        public RgbLedApp()
         {
             // create a new common cathode RgbLed (otherwise set IsCommonCathode = false)
             var rgbLed = new RgbLed(
