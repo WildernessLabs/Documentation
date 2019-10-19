@@ -17,27 +17,28 @@ The following example shows how to turn on and off the LED using the `IsOn` prop
 ```csharp
 using System.Threading;
 using Meadow;
-using Meadow.Foundation.LEDs;
+using Meadow.Foundation.Leds;
+using Meadow.Devices;
 
 namespace LedSample
 {
     public class Program
     {
-        static IApp _app; 
+        static IApp _app;
         public static void Main()
         {
-            _app = new App();
+            _app = new LedApp();
         }
     }
-    
-    public class App : AppBase<F7Micro, App>
+
+    public class LedApp : App<F7Micro, LedApp>
     {
-        public App ()
+        public LedApp()
         {
             // create a new Led on pin 8
-            var led = new Led(Device.Pins.D08);
+            var led = new Led(Device.CreateDigitalOutputPort(Device.Pins.D08));
 
-            while(true)
+            while (true)
             {
                 led.IsOn = true;    // Led ON
                 Thread.Sleep(3000); // 3 seconds
@@ -49,11 +50,11 @@ namespace LedSample
                 led.StartBlink(500, 1000);
                 Thread.Sleep(5000); // 5 seconds
                 led.Stop();
+                Thread.Sleep(1500); // 1.5 seconds, ensure last blink cycle is complete
             }
         }
     }
-}
-```
+}```
 
 ##### Example Circuit
 
