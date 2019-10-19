@@ -38,7 +38,7 @@ namespace SevenSegment_Sample
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, App>
     {
         public MeadowApp ()
         {
@@ -52,7 +52,7 @@ namespace SevenSegment_Sample
                 portF: Device.CreateDigitalOutputPort(Device.Pins.D13),
                 portG: Device.CreateDigitalOutputPort(Device.Pins.D12),
                 portDecimal: Device.CreateDigitalOutputPort(Device.Pins.D05),
-                isCommonCathode: false
+                isCommonCathode: true
             );
 
             bool showDecimal = false;
@@ -79,19 +79,19 @@ namespace SevenSegment_Sample
 
 ### Circuit Example
 
-To wire a TEA5767 to your Meadow board, connect the following:
+To wire a Common Cathode Seven Segment Display (like the 5161AS) to your Meadow board, connect the following:
 
-| SevenSegment | Meadow Pin |
-|--------------|------------|
-| portA        | D14        |
-| portB        | D15        |
-| PortC        | D06        |
-| PortD        | D07        |
-| PortE        | D08        |
-| PortF        | D13        |
-| PortG        | D12        |
-| portDecimal  | D05        |
-| Common Anode | GND        |
+| SevenSegment   | Meadow Pin |
+|----------------|------------|
+| portA          | D14        |
+| portB          | D15        |
+| PortC          | D06        |
+| PortD          | D07        |
+| PortE          | D08        |
+| PortF          | D13        |
+| PortG          | D12        |
+| portDecimal    | D05        |
+| Common Cathode | GND        |
 
 It should look like the following diagram:
 
