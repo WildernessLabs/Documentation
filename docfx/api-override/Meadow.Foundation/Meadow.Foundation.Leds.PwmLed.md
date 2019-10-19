@@ -21,26 +21,27 @@ The following example alternates between blinking and pulsing an LED:
 ```csharp
 using System.Threading;
 using Meadow;
-using Meadow.Foundation.LEDs;
+using Meadow.Devices;
+using Meadow.Foundation.Leds;
 
 namespace PwmLedSample
 {
     public class Program
     {
-        static IApp _app; 
+        static IApp _app;
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
 
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        public App()
+        public MeadowApp()
         {
             // create a new PwmLed on pin 8
             var pwmLed = new PwmLed(
-                Device.Pins.D08,
+                Device.CreatePwmPort(Device.Pins.D08),
                 TypicalForwardVoltage.Green
             );
 
