@@ -48,7 +48,7 @@ We've also made some updates to the Meadow.CLI to enable the IDE extensions to c
 
 #### Meadow.CLI Updates
 
-The `--ListFiles` command now returns [CRC values](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) for each of the files.
+There is a new command, `--ListFilesAndCrcs`, that lists files as well as the [CRC values](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) for each of the files.
 
 #### IDE Extension Enhancements
 
