@@ -6,6 +6,54 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+## Beta 3.4
+
+This is another small release that expands the SPI capabilities, adds robustness to the IDE extensions, and sees some more things open-sourced.
+
+### Advanced SPI Configuration
+
+When using SPI, you can now have control over advanced configuration such as speed, clock polarity, and phase. This adds the ability to use more SPI peripherals, such as the OLED display included in the Hack Kit Pro, and NeoPixels!
+
+To use the new SPI configurations, simply pass them in during construction:
+
+```csharp
+Device.CreateSpiBus(
+    Device.Pins.SCK,
+    Device.Pins.MOSI,
+    Device.Pins.MISO,
+    new SpiBus.ClockConfiguration(4000, SpiBus.Mode.Mode2));
+```
+
+You can also change configurations during runtime.
+
+#### ST7789 OLED Display Meadow.Foundation Driver
+
+Along with the configuration options, we've also released a [Meadow.Foundation driver for the state ST7789 OLED display](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.ST7789.html) included in the Hack Kit Pro:
+
+![](ST7789_OLED.jpg)
+
+ 
+### Visual Studio IDE Extensions Open-Sourced
+ 
+We've open sourced the Visual Studio Meadow extensions! We're slowly working towards open sourcing all of the Meadow tooling, but we need to clean a lot of it up first, so this is the first step.
+
+You can find the source code in the following repos:
+
+ * [VS Windows Meadow Extension Repo](https://github.com/WildernessLabs/VS_Win_Meadow_Extension)
+ * [VS Mac Meadow Extension Repo](https://github.com/WildernessLabs/VS_Mac_Meadow_Extension)
+
+### Meadow.CLI and Visual Studio Extension Enhancements
+
+We've also made some updates to the Meadow.CLI to enable the IDE extensions to check for updates to files already deployed on the Meadow device. 
+
+#### Meadow.CLI Updates
+
+The `--ListFiles` command now returns [CRC values](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) for each of the files.
+
+#### IDE Extension Enhancements
+
+With the CLI returning CRC values, the IDE extensions now check to see if any files need updating when deploying. This solves an issue where if a dll such as Meadow.Foundation.dll had already been deployed to the device, and a newer version existed in the project, it wouldn't get updated. 
+
 ## Beta 3.3
 
 This is a small release with some sundry fixes:
