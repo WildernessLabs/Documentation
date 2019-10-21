@@ -6,6 +6,7 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+<!--
 ## Beta 3.4
 
 This is another small release that expands the SPI capabilities, adds robustness to the IDE extensions, and sees some more things open-sourced.
@@ -53,6 +54,8 @@ There is a new command, `--ListFilesAndCrcs`, that lists files as well as the [C
 #### IDE Extension Enhancements
 
 With the CLI returning CRC values, the IDE extensions now check to see if any files need updating when deploying. This solves an issue where if a dll such as Meadow.Foundation.dll had already been deployed to the device, and a newer version existed in the project, it wouldn't get updated. 
+
+-->
 
 ## Beta 3.3
 
