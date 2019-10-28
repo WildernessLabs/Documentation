@@ -34,6 +34,8 @@ Along with the configuration options, we've also released a [Meadow.Foundation d
 
  
 ### Visual Studio IDE Extensions Open-Sourced
+
+**Note**: These will be opened October 28th, 2019 @ 6p PT.
  
 We've open sourced the Visual Studio Meadow extensions! We're slowly working towards open sourcing all of the Meadow tooling, but we need to clean a lot of it up first, so this is the first step.
 
