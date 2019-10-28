@@ -6,7 +6,6 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
-<!--
 ## Beta 3.4
 
 This is another small release that expands the SPI capabilities, adds robustness to the IDE extensions, and sees some more things open-sourced.
@@ -55,7 +54,9 @@ There is a new command, `--ListFilesAndCrcs`, that lists files as well as the [C
 
 With the CLI returning CRC values, the IDE extensions now check to see if any files need updating when deploying. This solves an issue where if a dll such as Meadow.Foundation.dll had already been deployed to the device, and a newer version existed in the project, it wouldn't get updated. 
 
--->
+### Updating
+
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
 
 ## Beta 3.3
 
@@ -65,7 +66,7 @@ This is a small release with some sundry fixes:
 * **Analog IObservable** - These now work. They actually worked all along, but our sample was using `Debug.WriteLine()` which doesn't currently work (`Console.WriteLine()` is fine).
 * **VS Extension Updates** - We've made some sundry fixes to the Meadow project templates. Meadow.Foundation is now linked by default, and **File** > **New** > **Meadow App** now creates an app that walks the color hue spectrum on the onboard LED.
 
-To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip), as well as update your IDE extensions.
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
 
 **Note:** Meadow.Core updates also require the latest `Meadow.dll` be deployed to your Meadow. Currently, the IDE extensions will not update this dll if it's already on your board, so you'll need to manually delete it via the CLI, via the following command:
 
