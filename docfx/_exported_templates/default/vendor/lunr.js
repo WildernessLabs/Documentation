@@ -1,4 +1,4 @@
-/**
+//*
  * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.1.2
  * Copyright (C) 2017 Oliver Nightingale
  * @license MIT
@@ -6,7 +6,7 @@
 
 ;(function(){
 
-/**
+//*
  * A convenience function for configuring and constructing
  * a new lunr Index.
  *
@@ -55,33 +55,33 @@ var lunr = function (config) {
 }
 
 lunr.version = "2.1.2"
-/*!
+//!
  * lunr.utils
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * A namespace containing utils for the rest of the lunr library
  */
 lunr.utils = {}
 
-/**
+//*
  * Print a warning message to the console.
  *
  * @param {String} message The message to be printed.
  * @memberOf Utils
  */
 lunr.utils.warn = (function (global) {
-  /* eslint-disable no-console */
+  // eslint-disable no-console */
   return function (message) {
     if (global.console && console.warn) {
       console.warn(message)
     }
   }
-  /* eslint-enable no-console */
+  // eslint-enable no-console */
 })(this)
 
-/**
+//*
  * Convert an object to a string.
  *
  * In the case of `null` and `undefined` the function returns
@@ -123,7 +123,7 @@ lunr.FieldRef.fromString = function (s) {
 lunr.FieldRef.prototype.toString = function () {
   return this._stringValue
 }
-/**
+//*
  * A function to calculate the inverse document frequency for
  * a posting. This is shared between the builder and the index
  *
@@ -144,7 +144,7 @@ lunr.idf = function (posting, documentCount) {
   return Math.log(1 + Math.abs(x))
 }
 
-/**
+//*
  * A token wraps a string representation of a token
  * as it is passed through the text processing pipeline.
  *
@@ -157,7 +157,7 @@ lunr.Token = function (str, metadata) {
   this.metadata = metadata || {}
 }
 
-/**
+//*
  * Returns the token string that is being wrapped by this object.
  *
  * @returns {string}
@@ -166,7 +166,7 @@ lunr.Token.prototype.toString = function () {
   return this.str
 }
 
-/**
+//*
  * A token update function is used when updating or optionally
  * when cloning a token.
  *
@@ -175,7 +175,7 @@ lunr.Token.prototype.toString = function () {
  * @param {Object} metadata - All metadata associated with this token.
  */
 
-/**
+//*
  * Applies the given function to the wrapped string token.
  *
  * @example
@@ -191,7 +191,7 @@ lunr.Token.prototype.update = function (fn) {
   return this
 }
 
-/**
+//*
  * Creates a clone of this token. Optionally a function can be
  * applied to the cloned token.
  *
@@ -202,12 +202,12 @@ lunr.Token.prototype.clone = function (fn) {
   fn = fn || function (s) { return s }
   return new lunr.Token (fn(this.str, this.metadata), this.metadata)
 }
-/*!
+//!
  * lunr.tokenizer
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * A function for splitting a string into tokens ready to be inserted into
  * the search index. Uses `lunr.tokenizer.separator` to split strings, change
  * the value of this property to change how strings are split into tokens.
@@ -258,7 +258,7 @@ lunr.tokenizer = function (obj) {
   return tokens
 }
 
-/**
+//*
  * The separator used to split a string into tokens. Override this property to change the behaviour of
  * `lunr.tokenizer` behaviour when tokenizing strings. By default this splits on whitespace and hyphens.
  *
@@ -266,12 +266,12 @@ lunr.tokenizer = function (obj) {
  * @see lunr.tokenizer
  */
 lunr.tokenizer.separator = /[\s\-]+/
-/*!
+//!
  * lunr.Pipeline
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * lunr.Pipelines maintain an ordered list of functions to be applied to all
  * tokens in documents entering the search index and queries being ran against
  * the index.
@@ -306,7 +306,7 @@ lunr.Pipeline = function () {
 
 lunr.Pipeline.registeredFunctions = Object.create(null)
 
-/**
+//*
  * A pipeline function maps lunr.Token to lunr.Token. A lunr.Token contains the token
  * string as well as all known metadata. A pipeline function can mutate the token string
  * or mutate (or add) metadata for a given token.
@@ -327,7 +327,7 @@ lunr.Pipeline.registeredFunctions = Object.create(null)
  * @returns {(?lunr.Token|lunr.Token[])}
  */
 
-/**
+//*
  * Register a function with the pipeline.
  *
  * Functions that are used in the pipeline should be registered if the pipeline
@@ -348,7 +348,7 @@ lunr.Pipeline.registerFunction = function (fn, label) {
   lunr.Pipeline.registeredFunctions[fn.label] = fn
 }
 
-/**
+//*
  * Warns if the function is not registered as a Pipeline function.
  *
  * @param {lunr.PipelineFunction} fn - The function to check for.
@@ -362,7 +362,7 @@ lunr.Pipeline.warnIfFunctionNotRegistered = function (fn) {
   }
 }
 
-/**
+//*
  * Loads a previously serialised pipeline.
  *
  * All functions to be loaded must already be registered with lunr.Pipeline.
@@ -388,7 +388,7 @@ lunr.Pipeline.load = function (serialised) {
   return pipeline
 }
 
-/**
+//*
  * Adds new functions to the end of the pipeline.
  *
  * Logs a warning if the function has not been registered.
@@ -404,7 +404,7 @@ lunr.Pipeline.prototype.add = function () {
   }, this)
 }
 
-/**
+//*
  * Adds a single function after a function that already exists in the
  * pipeline.
  *
@@ -425,7 +425,7 @@ lunr.Pipeline.prototype.after = function (existingFn, newFn) {
   this._stack.splice(pos, 0, newFn)
 }
 
-/**
+//*
  * Adds a single function before a function that already exists in the
  * pipeline.
  *
@@ -445,7 +445,7 @@ lunr.Pipeline.prototype.before = function (existingFn, newFn) {
   this._stack.splice(pos, 0, newFn)
 }
 
-/**
+//*
  * Removes a function from the pipeline.
  *
  * @param {lunr.PipelineFunction} fn The function to remove from the pipeline.
@@ -459,7 +459,7 @@ lunr.Pipeline.prototype.remove = function (fn) {
   this._stack.splice(pos, 1)
 }
 
-/**
+//*
  * Runs the current list of functions that make up the pipeline against the
  * passed tokens.
  *
@@ -484,7 +484,7 @@ lunr.Pipeline.prototype.run = function (tokens) {
   return tokens
 }
 
-/**
+//*
  * Convenience method for passing a string through a pipeline and getting
  * strings out. This method takes care of wrapping the passed string in a
  * token and mapping the resulting tokens back to strings.
@@ -500,7 +500,7 @@ lunr.Pipeline.prototype.runString = function (str) {
   })
 }
 
-/**
+//*
  * Resets the pipeline by removing any existing processors.
  *
  */
@@ -508,7 +508,7 @@ lunr.Pipeline.prototype.reset = function () {
   this._stack = []
 }
 
-/**
+//*
  * Returns a representation of the pipeline ready for serialisation.
  *
  * Logs a warning if the function has not been registered.
@@ -522,12 +522,12 @@ lunr.Pipeline.prototype.toJSON = function () {
     return fn.label
   })
 }
-/*!
+//!
  * lunr.Vector
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * A vector is used to construct the vector space of documents and queries. These
  * vectors support operations to determine the similarity between two documents or
  * a document and a query.
@@ -549,7 +549,7 @@ lunr.Vector = function (elements) {
 }
 
 
-/**
+//*
  * Calculates the position within the vector to insert a given index.
  *
  * This is used internally by insert and upsert. If there are duplicate indexes then
@@ -602,7 +602,7 @@ lunr.Vector.prototype.positionForIndex = function (index) {
   }
 }
 
-/**
+//*
  * Inserts an element at an index within the vector.
  *
  * Does not allow duplicates, will throw an error if there is already an entry
@@ -617,7 +617,7 @@ lunr.Vector.prototype.insert = function (insertIdx, val) {
   })
 }
 
-/**
+//*
  * Inserts or updates an existing index within the vector.
  *
  * @param {Number} insertIdx - The index at which the element should be inserted.
@@ -636,7 +636,7 @@ lunr.Vector.prototype.upsert = function (insertIdx, val, fn) {
   }
 }
 
-/**
+//*
  * Calculates the magnitude of this vector.
  *
  * @returns {Number}
@@ -655,7 +655,7 @@ lunr.Vector.prototype.magnitude = function () {
   return this._magnitude = Math.sqrt(sumOfSquares)
 }
 
-/**
+//*
  * Calculates the dot product of this vector and another vector.
  *
  * @param {lunr.Vector} otherVector - The vector to compute the dot product with.
@@ -684,7 +684,7 @@ lunr.Vector.prototype.dot = function (otherVector) {
   return dotProduct
 }
 
-/**
+//*
  * Calculates the cosine similarity between this vector and another
  * vector.
  *
@@ -696,7 +696,7 @@ lunr.Vector.prototype.similarity = function (otherVector) {
   return this.dot(otherVector) / (this.magnitude() * otherVector.magnitude())
 }
 
-/**
+//*
  * Converts the vector to an array of the elements within the vector.
  *
  * @returns {Number[]}
@@ -711,7 +711,7 @@ lunr.Vector.prototype.toArray = function () {
   return output
 }
 
-/**
+//*
  * A JSON serializable representation of the vector.
  *
  * @returns {Number[]}
@@ -719,14 +719,14 @@ lunr.Vector.prototype.toArray = function () {
 lunr.Vector.prototype.toJSON = function () {
   return this.elements
 }
-/* eslint-disable */
-/*!
+// eslint-disable */
+//!
  * lunr.stemmer
  * Copyright (C) 2017 Oliver Nightingale
  * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
  */
 
-/**
+//*
  * lunr.stemmer is an english language stemmer, this is a JavaScript
  * implementation of the PorterStemmer taken from http://tartarus.org/~martin
  *
@@ -941,12 +941,12 @@ lunr.stemmer = (function(){
 })();
 
 lunr.Pipeline.registerFunction(lunr.stemmer, 'stemmer')
-/*!
+//!
  * lunr.stopWordFilter
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * lunr.generateStopWordFilter builds a stopWordFilter function from the provided
  * list of stop words.
  *
@@ -969,7 +969,7 @@ lunr.generateStopWordFilter = function (stopWords) {
   }
 }
 
-/**
+//*
  * lunr.stopWordFilter is an English language stop word list filter, any words
  * contained in the list will not be passed through the filter.
  *
@@ -1104,12 +1104,12 @@ lunr.stopWordFilter = lunr.generateStopWordFilter([
 ])
 
 lunr.Pipeline.registerFunction(lunr.stopWordFilter, 'stopWordFilter')
-/*!
+//!
  * lunr.trimmer
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * lunr.trimmer is a pipeline function for trimming non word
  * characters from the beginning and end of tokens before they
  * enter the index.
@@ -1131,12 +1131,12 @@ lunr.trimmer = function (token) {
 }
 
 lunr.Pipeline.registerFunction(lunr.trimmer, 'trimmer')
-/*!
+//!
  * lunr.TokenSet
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * A token set is used to store the unique list of all tokens
  * within an index. Token sets are also used to represent an
  * incoming query to the index, this query token set and index
@@ -1164,7 +1164,7 @@ lunr.TokenSet = function () {
   lunr.TokenSet._nextId += 1
 }
 
-/**
+//*
  * Keeps track of the next, auto increment, identifier to assign
  * to a new tokenSet.
  *
@@ -1174,7 +1174,7 @@ lunr.TokenSet = function () {
  */
 lunr.TokenSet._nextId = 1
 
-/**
+//*
  * Creates a TokenSet instance from the given sorted array of words.
  *
  * @param {String[]} arr - A sorted array of strings to create the set from.
@@ -1192,7 +1192,7 @@ lunr.TokenSet.fromArray = function (arr) {
   return builder.root
 }
 
-/**
+//*
  * Creates a token set from a query clause.
  *
  * @private
@@ -1209,7 +1209,7 @@ lunr.TokenSet.fromClause = function (clause) {
   }
 }
 
-/**
+//*
  * Creates a token set representing a single string with a specified
  * edit distance.
  *
@@ -1363,7 +1363,7 @@ lunr.TokenSet.fromFuzzyString = function (str, editDistance) {
   return root
 }
 
-/**
+//*
  * Creates a TokenSet from a string.
  *
  * The string may contain one or more wildcard characters (*)
@@ -1378,7 +1378,7 @@ lunr.TokenSet.fromString = function (str) {
       root = node,
       wildcardFound = false
 
-  /*
+  //
    * Iterates through all characters within the passed string
    * appending a node for each character.
    *
@@ -1412,7 +1412,7 @@ lunr.TokenSet.fromString = function (str) {
   return root
 }
 
-/**
+//*
  * Converts this TokenSet into an array of strings
  * contained within the TokenSet.
  *
@@ -1448,7 +1448,7 @@ lunr.TokenSet.prototype.toArray = function () {
   return words
 }
 
-/**
+//*
  * Generates a string representation of a TokenSet.
  *
  * This is intended to allow TokenSets to be used as keys
@@ -1485,7 +1485,7 @@ lunr.TokenSet.prototype.toString = function () {
   return str
 }
 
-/**
+//*
  * Returns a new TokenSet that is the intersection of
  * this TokenSet and the passed TokenSet.
  *
@@ -1626,12 +1626,12 @@ lunr.TokenSet.Builder.prototype.minimize = function (downTo) {
     this.uncheckedNodes.pop()
   }
 }
-/*!
+//!
  * lunr.Index
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * An index contains the built index of all documents and provides a query interface
  * to the index.
  *
@@ -1655,7 +1655,7 @@ lunr.Index = function (attrs) {
   this.pipeline = attrs.pipeline
 }
 
-/**
+//*
  * A result contains details of a document matching a search query.
  * @typedef {Object} lunr.Index~Result
  * @property {string} ref - The reference of the document this result represents.
@@ -1663,7 +1663,7 @@ lunr.Index = function (attrs) {
  * @property {lunr.MatchData} matchData - Contains metadata about this match including which term(s) caused the match.
  */
 
-/**
+//*
  * Although lunr provides the ability to create queries using lunr.Query, it also provides a simple
  * query language which itself is parsed into an instance of lunr.Query.
  *
@@ -1705,7 +1705,7 @@ lunr.Index = function (attrs) {
  * hello~2
  */
 
-/**
+//*
  * Performs a search against the index using lunr query syntax.
  *
  * Results will be returned sorted by their score, the most relevant results
@@ -1724,7 +1724,7 @@ lunr.Index.prototype.search = function (queryString) {
   })
 }
 
-/**
+//*
  * A query builder callback provides a query object to be used to express
  * the query to perform on the index.
  *
@@ -1733,7 +1733,7 @@ lunr.Index.prototype.search = function (queryString) {
  * @this lunr.Query
  */
 
-/**
+//*
  * Performs a query against the index using the yielded lunr.Query object.
  *
  * If performing programmatic queries against the index, this method is preferred
@@ -1764,7 +1764,7 @@ lunr.Index.prototype.query = function (fn) {
   fn.call(query, query)
 
   for (var i = 0; i < query.clauses.length; i++) {
-    /*
+    //
      * Unless the pipeline has been disabled for this term, which is
      * the case for terms with wildcards, we need to pass the clause
      * term through the search pipeline. A pipeline returns an array
@@ -1784,7 +1784,7 @@ lunr.Index.prototype.query = function (fn) {
     for (var m = 0; m < terms.length; m++) {
       var term = terms[m]
 
-      /*
+      //
        * Each term returned from the pipeline needs to use the same query
        * clause object, e.g. the same boost and or edit distance. The
        * simplest way to do this is to re-use the clause object but mutate
@@ -1792,7 +1792,7 @@ lunr.Index.prototype.query = function (fn) {
        */
       clause.term = term
 
-      /*
+      //
        * From the term in the clause we create a token set which will then
        * be used to intersect the indexes token set to get a list of terms
        * to lookup in the inverted index
@@ -1801,7 +1801,7 @@ lunr.Index.prototype.query = function (fn) {
           expandedTerms = this.tokenSet.intersect(termTokenSet).toArray()
 
       for (var j = 0; j < expandedTerms.length; j++) {
-        /*
+        //
          * For each term get the posting and termIndex, this is required for
          * building the query vector.
          */
@@ -1810,7 +1810,7 @@ lunr.Index.prototype.query = function (fn) {
             termIndex = posting._index
 
         for (var k = 0; k < clause.fields.length; k++) {
-          /*
+          //
            * For each field that this query term is scoped by (by default
            * all fields are in scope) we need to get all the document refs
            * that have this term in that field.
@@ -1822,7 +1822,7 @@ lunr.Index.prototype.query = function (fn) {
               fieldPosting = posting[field],
               matchingDocumentRefs = Object.keys(fieldPosting)
 
-          /*
+          //
            * To support field level boosts a query vector is created per
            * field. This vector is populated using the termIndex found for
            * the term and a unit value with the appropriate boost applied.
@@ -1834,7 +1834,7 @@ lunr.Index.prototype.query = function (fn) {
             queryVectors[field] = new lunr.Vector
           }
 
-          /*
+          //
            * Using upsert because there could already be an entry in the vector
            * for the term we are working with. In that case we just add the scores
            * together.
@@ -1842,7 +1842,7 @@ lunr.Index.prototype.query = function (fn) {
           queryVectors[field].upsert(termIndex, 1 * clause.boost, function (a, b) { return a + b })
 
           for (var l = 0; l < matchingDocumentRefs.length; l++) {
-            /*
+            //
              * All metadata for this term/field/document triple
              * are then extracted and collected into an instance
              * of lunr.MatchData ready to be returned in the query
@@ -1871,7 +1871,7 @@ lunr.Index.prototype.query = function (fn) {
       results = {}
 
   for (var i = 0; i < matchingFieldRefs.length; i++) {
-    /*
+    //
      * Currently we have document fields that match the query, but we
      * need to return documents. The matchData and scores are combined
      * from multiple fields belonging to the same document.
@@ -1896,7 +1896,7 @@ lunr.Index.prototype.query = function (fn) {
     }
   }
 
-  /*
+  //
    * The results object needs to be converted into a list
    * of results, sorted by score before being returned.
    */
@@ -1909,7 +1909,7 @@ lunr.Index.prototype.query = function (fn) {
     })
 }
 
-/**
+//*
  * Prepares the index for JSON serialization.
  *
  * The schema for this JSON blob will be described in a
@@ -1938,7 +1938,7 @@ lunr.Index.prototype.toJSON = function () {
   }
 }
 
-/**
+//*
  * Loads a previously serialized lunr.Index
  *
  * @param {Object} serializedIndex - A previously serialized lunr.Index
@@ -1985,12 +1985,12 @@ lunr.Index.load = function (serializedIndex) {
 
   return new lunr.Index(attrs)
 }
-/*!
+//!
  * lunr.Builder
  * Copyright (C) 2017 Oliver Nightingale
  */
 
-/**
+//*
  * lunr.Builder performs indexing on a set of documents and
  * returns instances of lunr.Index ready for querying.
  *
@@ -2030,7 +2030,7 @@ lunr.Builder = function () {
   this.metadataWhitelist = []
 }
 
-/**
+//*
  * Sets the document field used as the document reference. Every document must have this field.
  * The type of this field in the document should be a string, if it is not a string it will be
  * coerced into a string by calling toString.
@@ -2046,7 +2046,7 @@ lunr.Builder.prototype.ref = function (ref) {
   this._ref = ref
 }
 
-/**
+//*
  * Adds a field to the list of document fields that will be indexed. Every document being
  * indexed should have this field. Null values for this field in indexed documents will
  * not cause errors but will limit the chance of that document being retrieved by searches.
@@ -2060,7 +2060,7 @@ lunr.Builder.prototype.field = function (field) {
   this._fields.push(field)
 }
 
-/**
+//*
  * A parameter to tune the amount of field length normalisation that is applied when
  * calculating relevance scores. A value of 0 will completely disable any normalisation
  * and a value of 1 will fully normalise field lengths. The default is 0.75. Values of b
@@ -2078,7 +2078,7 @@ lunr.Builder.prototype.b = function (number) {
   }
 }
 
-/**
+//*
  * A parameter that controls the speed at which a rise in term frequency results in term
  * frequency saturation. The default value is 1.2. Setting this to a higher value will give
  * slower saturation levels, a lower value will result in quicker saturation.
@@ -2089,7 +2089,7 @@ lunr.Builder.prototype.k1 = function (number) {
   this._k1 = number
 }
 
-/**
+//*
  * Adds a document to the index.
  *
  * Before adding fields to the index the index should have been fully setup, with the document
@@ -2166,7 +2166,7 @@ lunr.Builder.prototype.add = function (doc) {
   }
 }
 
-/**
+//*
  * Calculates the average document length for this index
  *
  * @private
@@ -2197,7 +2197,7 @@ lunr.Builder.prototype.calculateAverageFieldLengths = function () {
   this.averageFieldLength = accumulator
 }
 
-/**
+//*
  * Builds a vector space model of every document using lunr.Vector
  *
  * @private
@@ -2239,7 +2239,7 @@ lunr.Builder.prototype.createFieldVectors = function () {
   this.fieldVectors = fieldVectors
 }
 
-/**
+//*
  * Creates a token set of all tokens in the index using lunr.TokenSet
  *
  * @private
@@ -2250,7 +2250,7 @@ lunr.Builder.prototype.createTokenSet = function () {
   )
 }
 
-/**
+//*
  * Builds the index, creating an instance of lunr.Index.
  *
  * This completes the indexing process and should only be called
@@ -2273,7 +2273,7 @@ lunr.Builder.prototype.build = function () {
   })
 }
 
-/**
+//*
  * Applies a plugin to the index builder.
  *
  * A plugin is a function that is called with the index builder as its context.
@@ -2292,7 +2292,7 @@ lunr.Builder.prototype.use = function (fn) {
   args.unshift(this)
   fn.apply(this, args)
 }
-/**
+//*
  * Contains and collects metadata about a matching document.
  * A single instance of lunr.MatchData is returned as part of every
  * lunr.Index~Result.
@@ -2323,7 +2323,7 @@ lunr.MatchData = function (term, field, metadata) {
   this.metadata[term][field] = clonedMetadata
 }
 
-/**
+//*
  * An instance of lunr.MatchData will be created for every term that matches a
  * document. However only one instance is required in a lunr.Index~Result. This
  * method combines metadata from another instance of lunr.MatchData with this
@@ -2364,7 +2364,7 @@ lunr.MatchData.prototype.combine = function (otherMatchData) {
     }
   }
 }
-/**
+//*
  * A lunr.Query provides a programmatic way of defining queries to be performed
  * against a {@link lunr.Index}.
  *
@@ -2380,7 +2380,7 @@ lunr.Query = function (allFields) {
   this.allFields = allFields
 }
 
-/**
+//*
  * Constants for indicating what kind of automatic wildcard insertion will be used when constructing a query clause.
  *
  * This allows wildcards to be added to the beginning and end of a term without having to manually do any string
@@ -2408,7 +2408,7 @@ lunr.Query.wildcard.NONE = 0
 lunr.Query.wildcard.LEADING = 1
 lunr.Query.wildcard.TRAILING = 2
 
-/**
+//*
  * A single clause in a {@link lunr.Query} contains a term and details on how to
  * match that term against a {@link lunr.Index}.
  *
@@ -2420,7 +2420,7 @@ lunr.Query.wildcard.TRAILING = 2
  * @property {number} [wildcard=0] - Whether the term should have wildcards appended or prepended.
  */
 
-/**
+//*
  * Adds a {@link lunr.Query~Clause} to this query.
  *
  * Unless the clause contains the fields to be matched all fields will be matched. In addition
@@ -2460,7 +2460,7 @@ lunr.Query.prototype.clause = function (clause) {
   return this
 }
 
-/**
+//*
  * Adds a term to the current query, under the covers this will create a {@link lunr.Query~Clause}
  * to the list of clauses that make up this query.
  *
@@ -2894,7 +2894,7 @@ lunr.QueryParser.parseBoost = function (parser) {
   }
 }
 
-  /**
+  //*
    * export the module via AMD, CommonJS or as a browser global
    * Export code from https://github.com/umdjs/umd/blob/master/returnExports.js
    */
@@ -2903,7 +2903,7 @@ lunr.QueryParser.parseBoost = function (parser) {
       // AMD. Register as an anonymous module.
       define(factory)
     } else if (typeof exports === 'object') {
-      /**
+      //*
        * Node. Does not work with strict CommonJS, but
        * only CommonJS-like enviroments that support module.exports,
        * like Node.
@@ -2914,7 +2914,7 @@ lunr.QueryParser.parseBoost = function (parser) {
       root.lunr = factory()
     }
   }(this, function () {
-    /**
+    //*
      * Just return a value to define the module export.
      * This example returns an object, but the module
      * can return a function as the exported value.

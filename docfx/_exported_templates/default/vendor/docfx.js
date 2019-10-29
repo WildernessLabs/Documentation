@@ -18,7 +18,6 @@ $(function () {
   renderNavbar();
   renderSidebar();
   renderAffix();
-  renderFooter();
   renderLogo();
 
   breakText();
@@ -368,7 +367,7 @@ $(function () {
         if (index > -1) {
           navrel = navbarPath.substr(0, index + 1);
         }
-        $('#navbar>ul').addClass('navbar-nav');
+
         var currentAbsPath = util.getAbsolutePath(window.location.pathname);
         // set active item
         $('#navbar').find('a[href]').each(function (i, e) {
@@ -649,47 +648,6 @@ $(function () {
     }
   }
 
-  // Show footer
-  function renderFooter() {
-    initFooter();
-    $(window).on("scroll", showFooterCore);
-
-    function initFooter() {
-      if (needFooter()) {
-        shiftUpBottomCss();
-        $("footer").show();
-      } else {
-        resetBottomCss();
-        $("footer").hide();
-      }
-    }
-
-    function showFooterCore() {
-      if (needFooter()) {
-        shiftUpBottomCss();
-        $("footer").fadeIn();
-      } else {
-        resetBottomCss();
-        $("footer").fadeOut();
-      }
-    }
-
-    function needFooter() {
-      var scrollHeight = $(document).height();
-      var scrollPosition = $(window).height() + $(window).scrollTop();
-      return (scrollHeight - scrollPosition) < 1;
-    }
-
-    function resetBottomCss() {
-      $(".sidetoc").removeClass("shiftup");
-      $(".sideaffix").removeClass("shiftup");
-    }
-
-    function shiftUpBottomCss() {
-      $(".sidetoc").addClass("shiftup");
-      $(".sideaffix").addClass("shiftup");
-    }
-  }
 
   function renderLogo() {
     // For LOGO SVG
