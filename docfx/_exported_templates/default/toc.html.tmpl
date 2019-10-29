@@ -12,9 +12,11 @@
     {{/_disableSideFilter}}
     <div class="sidetoc">
       <div class="toc" id="toc">
-        {{^leaf}}
-          {{>partials/li}}
-        {{/leaf}}
+        <nav class="subcategory navigation-overlay" id="subcat-nav" aria-label="Subcategory Navigation">
+          {{^leaf}}
+            {{>partials/li}}
+          {{/leaf}}
+        </nav>
       </div>
     </div>
   </div>
