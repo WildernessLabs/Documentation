@@ -23,6 +23,12 @@ $(function () {
   breakText();
   renderTabs();
 
+  // delay setting the fixed element to make sure the window calculations are correct
+  setTimeout(function(){
+    renderTOC();
+    setFixed('#affix');
+  },1000);
+
   window.refresh = function (article) {
     // Update markup result
     if (typeof article == 'undefined' || typeof article.content == 'undefined')
@@ -34,8 +40,44 @@ $(function () {
     renderAlerts();
     renderAffix();
     renderTabs();
+    renderTOC();
   }
 
+  function renderTOC(){
+
+    var minContentHeight = 500;
+    var contentHeight = document.getElementById('_content').offsetHeight;
+    var primaryHeight = contentHeight > minContentHeight ? contentHeight : minContentHeight;
+
+    var el = $("#sidetoggle");
+    if(el.height() > primaryHeight) el.find('.sidetoc').height(primaryHeight);
+  }
+
+  function setFixed(el){
+
+    var scrollTop = document.getElementById('main-banner').offsetHeight + document.getElementById('secondary-nav').offsetHeight
+    var offsetTop = document.getElementById('header-wrapper').offsetHeight;
+    var footerOffset = document.getElementById('footer').offsetTop;
+
+    var el = $(el);
+    el.height(el.height());
+
+    $(window).scroll(function(){
+
+      var currentOffsetTop = el.offset().top;
+      var scrollPosition = $(window).scrollTop() + $('header').height();
+
+      var elementOffset = scrollPosition + el.height();
+
+      if(scrollPosition > scrollTop && elementOffset < footerOffset){
+       el.css('position','fixed').css('top', offsetTop);
+     } else if(elementOffset > footerOffset){
+        el.css('position','absolute').css({'top':'auto','bottom': '0px'}).css('top');
+      } else {
+       el.css('position','relative').css({'top':'0px','bottom': 'inherit'});
+     }
+    });
+  }
   // Add this event listener when needed
   // window.addEventListener('content-update', contentUpdate);
 
@@ -416,9 +458,9 @@ $(function () {
       $('#toc a.active').parents('li').each(function (i, e) {
         $(e).addClass(active).addClass(expanded);
         $(e).children('a').addClass(active);
-        top += $(e).position().top;
+        $(e).children('a').focus();
       })
-      $('.sidetoc').scrollTop(top - 50);
+
 
       if ($('footer').is(':visible')) {
         $('.sidetoc').addClass('shiftup');
@@ -542,10 +584,8 @@ $(function () {
       var html = '<h5 class="title">In This Article</h5>'
       html += util.formList(hierarchy, ['nav', 'bs-docs-sidenav']);
       $("#affix").empty().append(html);
-      if ($('footer').is(':visible')) {
-        $(".sideaffix").css("bottom", "70px");
-      }
-      $('#affix a').click(function() {
+
+      $('#affix a').click(function(e) {
         var scrollspy = $('[data-spy="scroll"]').data()['bs.scrollspy'];
         var target = e.target.hash;
         if (scrollspy && target) {

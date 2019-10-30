@@ -11,7 +11,7 @@
   {{>partials/head}}
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
-      <header class="container-fluid fixed">
+      <header class="container-fluid fixed" id="header-wrapper">
           <a href="/" class="logo" title="Click to go home">
               <img src="/dist/assets/svg/logo.svg" alt="Wilderness Labs">
           </a>
@@ -35,12 +35,12 @@
       <main>
         <section id="developers-section">
 
-          <div class="secondary-nav-wrapper">
+          <div class="secondary-nav-wrapper" id="secondary-nav">
             {{^_disableNavbar}}
             {{>partials/navbar}}
             {{/_disableNavbar}}
           </div>
-          <div class="banner small">
+          <div class="banner small" id="main-banner">
             <h1>Transistors</h1>
             <p>Bipolar Junction Transistors (BJT); amplifiers, switches, and the fundamental building blocks of modern electronics.</p>
           </div>
@@ -57,28 +57,18 @@
               <div id="secondary-col" class="desktop">
                 {{^_disableToc}}
                 {{>partials/toc}}
-              </div>
-              <div class="primary-col">
-                <div class="article row grid-right">
                 {{/_disableToc}}
-                {{#_disableToc}}
-                  <div class="article row grid">
-                    {{/_disableToc}}
-                    {{#_disableAffix}}
-                    <div class="col-md-12">
-                    {{/_disableAffix}}
-                    {{^_disableAffix}}
-                      <div class="col-md-10">
-                      {{/_disableAffix}}
-                        <article class="content wrap" id="_content" data-uid="{{uid}}">
-                            {{!body}}
-                        </article>
-                      </div>
-                    {{^_disableAffix}}
-                    {{>partials/affix}}
-                    {{/_disableAffix}}
-                    </div>
-                  </div>
+              </div>
+              <div class="primary-col row" id="primary">
+                <div class="article col-md-10">
+                  <article class="content wrap" id="_content" data-uid="{{uid}}">
+                      {{!body}}
+                  </article>
+                </div>
+                <div class="affixed hidden-sm col-md-2">
+                  {{^_disableAffix}}
+                  {{>partials/affix}}
+                  {{/_disableAffix}}
                 </div>
               </div>
             </div>
