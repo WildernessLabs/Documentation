@@ -6,6 +6,11 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow), you can create and deploy Meadow apps to it.
 
+The video below shows you how to create and deploy your first Meadow app on a Mac:
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/wkekz5I7ycE" frameborder="3" allowfullscreen></iframe></p>
+
+Alternatively, you can follow this step by step guide for both macOS and Windows: 
+
 ## Step 1: Install Visual Studio Meadow Extensions
 
 You'll need Visual Studio 2019 for either Windows or Mac; [available here](https://visualstudio.microsoft.com/downloads/). You can use any edition including Enterprise, Professional, or the free Community edition.  
