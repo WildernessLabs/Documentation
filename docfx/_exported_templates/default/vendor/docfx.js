@@ -17,9 +17,7 @@ $(function () {
   renderLinks();
   renderNavbar();
   renderSidebar();
-  renderAffix();
   renderLogo();
-
   breakText();
   renderTabs();
 
@@ -27,9 +25,14 @@ $(function () {
   setTimeout(function(){
     renderTOC();
     renderContent();
+    renderAffix();
     setFixed('.sideaffix');
     setFixed('#sidetoggle');
-  },1000);
+  },200);
+
+  window.onresize = function(){
+   renderAffix();
+  }
 
   window.refresh = function (article) {
     // Update markup result
@@ -80,16 +83,15 @@ $(function () {
       var elementOffset = scrollPosition + elem.height();
 
       if(scrollPosition > scrollTop && elementOffset < footerOffset){
-        elem.css('position','fixed').css('top', offsetTop);
+        elem.removeClass('static-top fixed-bottom').addClass('fixed-element').css('top', offsetTop);
 
       } else if(elementOffset > footerOffset){
-        elem.css('position','absolute').css({'top':'auto','bottom': '0px'}).css('top');
+        elem.removeClass('fixed-element static-top').addClass('fixed-bottom').css({'top':'auto','bottom': '0px'});
 
       } else {
-        elem.css('position','relative').css({'top':'0px','bottom': 'inherit'});
+        elem.removeClass('fixed-element fixed-bottom').addClass('static-top').css({'top':'0px','bottom': 'inherit'});
       }
     }
-
   }
   // Add this event listener when needed
   // window.addEventListener('content-update', contentUpdate);
@@ -606,8 +608,29 @@ $(function () {
         }
       });
 
-      // set fixed width for fixed state
-      $('.sideaffix').width($('.affixed').width());
+      var side = $('.sideaffix');
+      // set width & height for fixed state
+      side.width($('.affixed').width());
+
+      // set left hand offset for fixed positioning
+      var columnOffset = offset(document.querySelector('.affixed'));
+      side.css('left', columnOffset.left);
+
+      if(side.height() > window.innerHeight){
+        side.height(window.innerHeight);
+      } else if(side.height() > $('#_content').height()){
+        side.height($('#_content').height());
+      } else {
+        side.height('100%')
+      }
+
+    }
+
+    function offset(el) {
+        var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
     }
 
     function getHierarchy() {

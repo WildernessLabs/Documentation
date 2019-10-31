@@ -804,15 +804,14 @@ div.embeddedvideo iframe {
     z-index: 1;
   }
   .sideaffix {
-    font-size: 12px;
-    max-height: 100%;
-    min-width: 272px;
+    background: #1a80aa;
     height: 100%;
     overflow: hidden;
     bottom: 10px;
     color: #e3f4fb;
     top: 0px;
-    right: 0px;
+    right: 10px;
+    overflow-y: auto;
   }
 
   .affixed {
@@ -826,15 +825,15 @@ div.embeddedvideo iframe {
     width: 100%;
   }
 
-  #affix a {
+  .affixed a, #affix .nav a {
     color: #fcfdfd;
     font-size: 18px
   }
 
-  #affix .active {
+  .affixed .active {
     padding: 0 0 0 10px;
   }
-  #affix .active a::before {
+  .affixed .active a::before {
     content: ">";
     padding-right: 4px;
   }
@@ -844,18 +843,47 @@ div.embeddedvideo iframe {
     display: block;
   }
 
-  #affix .nav > .nav {
+  .affixed .nav > .nav {
     padding: 0 0 25px 0;
   }
 
-
-  #affix .nav>li>a {
+  .affixed .nav>li>a {
     padding: 0 0 0 10px;
   }
-  #affix .nav>li>a:hover {
+  .affixed .nav>li>a:hover {
     background-color: inherit;
     text-decoration: underline;
   }
-  #affix .nav>li>ul {
+  .affixed .nav>li>ul {
     padding: 0 0 25px 0;
+  }
+
+  .affixed .contribution .nav {
+    margin-top: 15px;
+  }
+  .affixed .contribution .nav li {
+    width: 100%;
+  }
+  .affixed .contribution .nav a {
+    margin: 0;
+    padding: 0px;
+  }
+
+  .fixed-element {
+    position: fixed;
+    z-index: 9990;
+   /* MAGIC HAPPENS HERE */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  .sideaffix.fixed-element {
+    padding-left: 15px;
+  }
+
+  .fixed-bottom {
+    position: absolute;
+    left: 15px !important;
+  }
+  .static-top {
+    position: static;
   }
