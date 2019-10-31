@@ -781,11 +781,15 @@ div.embeddedvideo iframe {
 
   /* DOCFX Overrides for Restyling */
 
+  #primary {
+    width: 100%;
+  }
   nav.secondary {
     overflow: hidden;
   }
   #_content {
     padding-bottom: 3%;
+    padding-right: 3%;
   }
   .fixed-element {
     position: fixed;
@@ -793,10 +797,10 @@ div.embeddedvideo iframe {
   .sidetoggle {
     border-right: 2px solid #555555;
     width: 370px;
+    overflow-y: auto;
   }
   .sidetoc {
     overflow-x: hidden;
-    overflow-y: auto;
     z-index: 1;
   }
   .sideaffix {
@@ -808,11 +812,20 @@ div.embeddedvideo iframe {
     bottom: 10px;
     color: #e3f4fb;
     top: 0px;
+    right: 0px;
   }
 
   .affixed {
     background: #1a80aa;
+    height: 100%;
+    right: 0;
+    top: 0;
   }
+
+  .article {
+    width: 100%;
+  }
+
   #affix a {
     color: #fcfdfd;
     font-size: 18px
@@ -831,9 +844,18 @@ div.embeddedvideo iframe {
     display: block;
   }
 
-  #affix .nav {
-    padding: 25px 0 0 0;
+  #affix .nav > .nav {
+    padding: 0 0 25px 0;
   }
+
+
   #affix .nav>li>a {
     padding: 0 0 0 10px;
+  }
+  #affix .nav>li>a:hover {
+    background-color: inherit;
+    text-decoration: underline;
+  }
+  #affix .nav>li>ul {
+    padding: 0 0 25px 0;
   }
