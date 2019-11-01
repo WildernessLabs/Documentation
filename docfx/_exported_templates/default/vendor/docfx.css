@@ -754,7 +754,16 @@ div.embeddedvideo iframe {
 
   #primary {
     width: 100%;
+    display: flex;
   }
+  .article {
+    width: 80%;
+  }
+  .affixed {
+    width: 20%;
+    position: relative;
+  }
+
   nav.secondary {
     overflow: hidden;
   }
@@ -802,6 +811,7 @@ div.embeddedvideo iframe {
     top: 0px;
     right: 10px;
     overflow-y: auto;
+    padding-left: 15px;
   }
 
   .affixed {
@@ -871,7 +881,7 @@ div.embeddedvideo iframe {
 
   }
   .sideaffix.fixed-bottom {
-    left: 15px !important;
+    left: 0 !important;
   }
   .static-top {
     position: static;
