@@ -2,50 +2,52 @@
 
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{#inClass}}
-<div class="inheritance">
+<section class="inheritance">
   <h3>{{__global.inheritance}}</h3>
   {{#inheritance}}
-  <div class="level{{index}}">{{{specName.0.value}}}</div>
+  <p class="level{{index}}">{{{specName.0.value}}}</p>
   {{/inheritance}}
-  <div class="level{{level}}"><span class="xref">{{name.0.value}}</span></div>
+  <p class="level{{level}}"><span class="xref">{{name.0.value}}</span></p>
   {{#derivedClasses}}
-    <div class="level{{index}}">{{{specName.0.value}}}</div>
+  <p class="level{{index}}">{{{specName.0.value}}}</p>
   {{/derivedClasses}}
-</div>
+</section>
 {{/inClass}}
 {{#implements.0}}
-<div classs="implements">
+<section classs="implements">
   <h3>{{__global.implements}}</h3>
 {{/implements.0}}
 {{#implements}}
-  <div>{{{specName.0.value}}}</div>
+  <p>{{{specName.0.value}}}</p>
 {{/implements}}
 {{#implements.0}}
-</div>
+</section>
 {{/implements.0}}
 {{#inheritedMembers.0}}
-<div class="inheritedMembers">
+<section class="inheritedMembers">
   <h3>{{__global.inheritedMembers}}</h3>
 {{/inheritedMembers.0}}
 {{#inheritedMembers}}
-  <div>
+  <p>
   {{#definition}}
     <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
   {{/definition}}
   {{^definition}}
     <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
   {{/definition}}
-  </div>
+  </p>
 {{/inheritedMembers}}
 {{#inheritedMembers.0}}
-</div>
+</section>
 {{/inheritedMembers.0}}
-<p class="description"><strong>{{__global.namespace}}</strong>: {{{namespace.specName.0.value}}}</p>
-<p class="description"><strong>{{__global.assembly}}</strong>: {{assemblies.0}}.dll</p>
+<section>
+  <p class="description"><strong>{{__global.namespace}}</strong>: {{{namespace.specName.0.value}}}</p>
+  <p class="description"><strong>{{__global.assembly}}</strong>: {{assemblies.0}}.dll</p>
+</section>
 <h3 id="{{id}}_syntax">{{__global.syntax}}</h3>
-<div class="codewrapper">
+<section class="codewrapper">
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
-</div>
+</section>
 {{#syntax.parameters.0}}
 <h3 class="parameters">{{__global.parameters}}</h3>
 <table class="table table-bordered table-striped table-condensed">
@@ -109,7 +111,7 @@
 {{/syntax.typeParameters.0}}
 {{#remarks}}
 <h3 id="{{id}}_remarks"><strong>{{__global.remarks}}</strong></h3>
-<div class="markdown level0 remarks">{{{remarks}}}</div>
+<section class="markdown level0 remarks">{{{remarks}}}<section>
 {{/remarks}}
 {{#example.0}}
 <h3 id="{{id}}_examples"><strong>{{__global.examples}}</strong></h3>
