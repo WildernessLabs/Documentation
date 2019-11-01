@@ -48,7 +48,7 @@ h2,
 h3,
 .h3 {
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-weight: 400;
 }
 h4,
@@ -755,9 +755,13 @@ div.embeddedvideo iframe {
   #primary {
     width: 100%;
     display: flex;
+    background: #fdfdfd;
   }
   .article {
     width: 80%;
+  }
+  .article section, .article table {
+    margin-bottom: 25px;
   }
   .affixed {
     width: 20%;
@@ -828,7 +832,7 @@ div.embeddedvideo iframe {
   }
   .affixed a, #affix .nav a {
     color: #fcfdfd;
-    font-size: 18px
+    font-size: 20px
   }
 
   .affixed ul {
@@ -904,17 +908,50 @@ div.embeddedvideo iframe {
     color: #1a80aa;
   }
 
+  .hljs-title {
+    color: #737d45;
+  }
+
   h4.decalaration {
     font-weight: normal;
   }
 
-  #developers-section #inheritance p {
-    margin-bottom: 5px;
+  #developers-section .pull-right {
+    font-size: 18px;
   }
 
-  #developers-section h3 {
+  #developers-section .article p {
+    margin-bottom: 10px;
+  }
+
+  #developers-section .article h3 {
     margin-top: 20px;
   }
-  #developers-section h3:first-of-type {
+  #developers-section .article h3:first-of-type {
     margin-top: 0px;
+  }
+
+  #developers-section .article h4, #developers-section .article h4 a, #developers-section .article p {
+    font-size: 26px;
+  }
+
+  #developers-section .table-responsive table th {
+    background: #555;
+    color: #eee;
+    border-color: #555;
+  }
+
+  #developers-section .table-responsive table td, #developers-section .table-responsive tbody table tr {
+    background: #eee;
+    color: #555;
+  }
+
+  #developers-section .table-bordered > tbody > tr > td {
+    border: 3px solid #555;
+  }
+
+  #developers-section pre {
+    border-radius: 8px;
+    border-color: #555;
+    background: #eee;
   }
