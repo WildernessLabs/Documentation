@@ -113,27 +113,6 @@ header .navbar {
   min-height: 40px;
 }
 
-.inheritance h5, .inheritedMembers h5{
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ccc;
-}
-
-article h1, article h2, article h3, article h4{
-  margin-top: 25px;
-}
-
-article h4{
-  border-bottom: 1px solid #ccc;
-}
-
-article span.small.pull-right{
-  margin-top: 20px;
-}
-
-article section {
-  margin-left: 1em;
-}
-
 /*.expand-all {
   padding: 10px 0;
 }*/
@@ -372,7 +351,7 @@ article section {
 .expand-stub {
   position: absolute;
   left: 25px;
-  top: 6px;
+  top: 12px;
 }
 .toc .nav > li {
   background: #524740;
@@ -518,7 +497,7 @@ article section {
 }
 
 .article {
-  padding: 0 0 0 40px;
+  /* padding: 0 0 0 40px; */
 }
 .article img {
   max-width: 100%;
@@ -598,15 +577,7 @@ article section {
     padding-bottom: 0px;
     border: none;
   }
-  .toc .nav > li, .toc .nav > li >a {
-    display: inline-block;
-  }
-  .toc li:after {
-    margin-left: -3px;
-    margin-right: 5px;
-    content: ", ";
-    color: #666666;
-  }
+
   .toc .level1 > li {
     display: block;
   }
@@ -787,9 +758,28 @@ div.embeddedvideo iframe {
   nav.secondary {
     overflow: hidden;
   }
+  #secondary-col .sidenav nav.subcategory {
+    padding: 0px;
+    margin: 10px 0 0 0;
+  }
+  #secondary-col .sidenav nav.subcategory ul {
+    padding: 0px;
+  }
+  #nav-overlay nav.subcategory #sidetoc ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  #nav-overlay .toc-filter {
+    display: none;
+  }
   #_content {
-    padding-bottom: 3%;
-    padding-right: 3%;
+    padding: 25px 3% 10% 5%;
+  }
+  #developers-section .subcat-nav-trigger {
+    width: auto;
+    font-family: 'Wavehaus-66Book';
+    font-size: 15px;
+    background-position: left 2px;
   }
   .fixed-element {
     position: fixed;
@@ -819,10 +809,6 @@ div.embeddedvideo iframe {
     height: 100%;
     right: 0;
     top: 0;
-  }
-
-  .article {
-    width: 100%;
   }
 
   .affixed a, #affix .nav a {
@@ -882,8 +868,19 @@ div.embeddedvideo iframe {
 
   .fixed-bottom {
     position: absolute;
+
+  }
+  .sideaffix.fixed-bottom {
     left: 15px !important;
   }
   .static-top {
     position: static;
+  }
+
+  .hljs-keyword, .hljs-selector-tag, .hljs-type, .article h3, .article h4, .article h5 {
+    color: #1a80aa;
+  }
+
+  h4.decalaration {
+    font-weight: normal;
   }

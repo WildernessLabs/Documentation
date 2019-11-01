@@ -41,13 +41,13 @@
             {{/_disableNavbar}}
           </div>
           <div class="banner small" id="main-banner">
-            <h1>Transistors</h1>
-            <p>Bipolar Junction Transistors (BJT); amplifiers, switches, and the fundamental building blocks of modern electronics.</p>
+            <h1>{{>partials/title}}</h1>
+            <p>{{{summary}}}</p>
           </div>
           <!-- {{^_disableBreadcrumb}}
           {{>partials/breadcrumb}}
           {{/_disableBreadcrumb}} -->
-          <button href="#" class="subcat-nav-trigger mobile-nav-trigger mobile" aria-expanded="false" data-la-initdispnone="true">Submenu</button>
+          <button href="#" class="subcat-nav-trigger mobile-nav-trigger mobile" aria-expanded="false" data-la-initdispnone="true">Table of Contents</button>
           {{#_enableSearch}}
           <div class="container body-content">
             {{>partials/searchResults}}
@@ -60,12 +60,12 @@
                 {{/_disableToc}}
               </div>
               <div class="primary-col row" id="primary">
-                <div class="article col-md-9 col-lg-10">
+                <div class="article col-md-9">
                   <article class="content wrap" id="_content" data-uid="{{uid}}">
                       {{!body}}
                   </article>
                 </div>
-                <div class="affixed hidden-sm col-md-3 col-lg-2">
+                <div class="affixed hidden-sm col-md-2">
                   {{^_disableAffix}}
                   {{>partials/affix}}
                   {{/_disableAffix}}
