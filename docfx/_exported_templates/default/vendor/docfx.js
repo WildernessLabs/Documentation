@@ -619,14 +619,6 @@ $(function () {
       var columnOffset = offset(document.querySelector('.affixed'));
       side.css('left', columnOffset.left);
 
-      if(side.height() > window.innerHeight){
-        side.height(window.innerHeight);
-      } else if(side.height() > $('#_content').height()){
-        side.height($('#_content').height());
-      } else {
-        side.height('100%')
-      }
-
     }
 
     function offset(el) {
