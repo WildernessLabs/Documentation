@@ -5,9 +5,9 @@
 <div class="inheritance">
   <h3>{{__global.inheritance}}</h3>
   {{#inheritance}}
-  <div class="level{{index}}">{{{specName.0.value}}}</div>
+  <p class="level{{index}}">{{{specName.0.value}}}</p>
   {{/inheritance}}
-  <div class="level{{level}}"><span class="xref">{{name.0.value}}</span></div>
+  <p class="level{{level}}"><span class="xref">{{name.0.value}}</span></p>
   {{#derivedClasses}}
     <div class="level{{index}}">{{{specName.0.value}}}</div>
   {{/derivedClasses}}
@@ -18,7 +18,7 @@
   <h3>{{__global.implements}}</h3>
 {{/implements.0}}
 {{#implements}}
-  <div>{{{specName.0.value}}}</div>
+  <p>{{{specName.0.value}}}</p>
 {{/implements}}
 {{#implements.0}}
 </div>
@@ -28,14 +28,14 @@
   <h3>{{__global.inheritedMembers}}</h3>
 {{/inheritedMembers.0}}
 {{#inheritedMembers}}
-  <div>
+  <p>
   {{#definition}}
     <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
   {{/definition}}
   {{^definition}}
     <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
   {{/definition}}
-  </div>
+  </p>
 {{/inheritedMembers}}
 {{#inheritedMembers.0}}
 </div>
