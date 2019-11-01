@@ -1,7 +1,7 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 {{!include(/^vendor/.*/)}}
-{{!include(/^fonts/.*/)}}
 {{!include(/^dist/.*/)}}
+{{!include(/^fonts/.*/)}}
 {{!include(favicon.ico)}}
 {{!include(logo.svg)}}
 {{!include(search-stopwords.json)}}
@@ -59,13 +59,13 @@
                 {{>partials/toc}}
                 {{/_disableToc}}
               </div>
-              <div class="primary-col row" id="primary">
-                <div class="article col-md-9">
+              <div class="primary-col" id="primary">
+                <div class="article">
                   <article class="content wrap" id="_content" data-uid="{{uid}}">
                       {{!body}}
                   </article>
                 </div>
-                <div class="affixed hidden-sm col-md-2">
+                <div class="affixed hidden-sm">
                   {{^_disableAffix}}
                   {{>partials/affix}}
                   {{/_disableAffix}}
