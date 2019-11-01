@@ -24,14 +24,16 @@ $(function () {
   // delay setting the fixed element to make sure the window calculations are correct
   setTimeout(function(){
     renderTOC();
-    renderContent();
     renderAffix();
     setFixed('.sideaffix');
     setFixed('#sidetoggle');
   },200);
 
   window.onresize = function(){
-   renderAffix();
+    renderTOC();
+    renderAffix();
+    setFixed('.sideaffix');
+    setFixed('#sidetoggle');
   }
 
   window.refresh = function (article) {
@@ -45,21 +47,22 @@ $(function () {
     renderAlerts();
     renderAffix();
     renderTabs();
-    renderTOC();
     renderContent();
   }
 
   function renderTOC(){
     var el = $("#sidetoggle");
-    if(el.height() > window.innerHeight) el.height(window.innerHeight);
-  }
-
-  function renderContent(){
-    var sidetoggle = $("#sidetoggle");
     var content = $("#_content");
 
-    if(content.height() < sidetoggle.height()) content.height(sidetoggle.height());
+    // set the TOC to the height of the window if it exceeds, so that it can scroll internally when fixed
+    console.log("Reset Height", window.innerHeight);
+    el.height(window.innerHeight);
+
+    //set the content height to the height of the TOC if it is smaller
+    // prevents the page from collapsing when the TOC is in 'fixed' position
+    if(content.height() < el.height()) content.height(el.height());
   }
+
 
   function setFixed(el){
 

@@ -1,6 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function(){
-
   // Initialize Navigation
   var nav = new Overlay('#main-nav', '#main-nav-trigger', 'main-nav-transition');
 
@@ -16,9 +15,8 @@
 
 // Displays an overlay based on an element on the page
 function Overlay(elId, toggleId, modifier) {
- 
+
   var overlayToggle = $(toggleId);
-  var overlayContent = $(elId).clone();
   var close = $('#close-modal');
 
   // click event for toggling mobile navigation
@@ -29,6 +27,7 @@ function Overlay(elId, toggleId, modifier) {
     body.addClass(`${modifier}`);
 
     // create modal instance
+    var overlayContent = $(elId).clone();
     var modal = $('<div id="nav-overlay" tabindex="-1" aria-label="Overlay"><a href="#" id="close-modal" class="mobile-nav-trigger mobile" aria-expanded="false"><span class="visually-hidden>Close</span>"</a></div>');
     body.prepend(modal.append(overlayContent));
 
@@ -57,6 +56,8 @@ function Overlay(elId, toggleId, modifier) {
 
 // Initialize carousel based on HTML element
 function ContentCarousel(element){
+
+  console.log(element);
 
   var el = $(element);
   var copy = el.find('.copy');
@@ -88,7 +89,7 @@ function ContentCarousel(element){
 
       // initialize carousel with custom counter & paging
       copy.slick({
-        asNavFor: element + ' .images',
+        asNavFor: images,
         dots: true,
         dotsClass: 'paging',
         customPaging: function (slider, i) {
