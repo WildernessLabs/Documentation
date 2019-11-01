@@ -821,17 +821,32 @@ div.embeddedvideo iframe {
     top: 0;
   }
 
+  #developers-section .affixed .title {
+    color: #eeeeee;
+    font-size: 22px;
+    font-weight: bold;
+  }
   .affixed a, #affix .nav a {
     color: #fcfdfd;
     font-size: 18px
   }
 
-  .affixed .active {
-    padding: 0 0 0 10px;
+  .affixed ul {
+    padding: 0 0 0 0px;
   }
-  .affixed .active a::before {
+  .affixed .nav>li>ul {
+    padding: 0 0 25px 10px;
+  }
+  .affixed .active > a::before {
+    content: "|";
+    padding-right: 4px;
+    font-family: "Wavehaus-66Book";
+    margin-right: 5px;
+  }
+  .affixed .active ul .active a::before {
     content: ">";
     padding-right: 4px;
+    margin: 0 4px 0 0;
   }
 
   .bs-docs-sidenav li {
@@ -844,15 +859,13 @@ div.embeddedvideo iframe {
   }
 
   .affixed .nav>li>a {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 0;
   }
   .affixed .nav>li>a:hover {
     background-color: inherit;
     text-decoration: underline;
   }
-  .affixed .nav>li>ul {
-    padding: 0 0 25px 0;
-  }
+
 
   .affixed .contribution .nav {
     margin-top: 15px;
@@ -872,8 +885,8 @@ div.embeddedvideo iframe {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
   }
-  .sideaffix.fixed-element {
-    padding-left: 15px;
+  .sideaffix {
+    padding-left: 25px;
   }
 
   .fixed-bottom {
