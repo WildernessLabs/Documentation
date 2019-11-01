@@ -545,7 +545,7 @@ nav.subcategory ul {
     top: 27px;
     width: 22px;
     height: 22px;
-    background: url("/assets/dist/assets/svg/hamburger-icon.svg"); }
+    background: url("/dist/assets/svg/hamburger-icon.svg"); }
   #main-nav ul li {
     border-top: 1px solid #666; }
     #main-nav ul li a {
@@ -569,7 +569,7 @@ nav.subcategory ul {
     width: 22px;
     height: 25px;
     display: block;
-    background: left 4px url("/assets/dist/assets/svg/hamburger-icon-blue.svg") no-repeat;
+    background: left 4px url("/dist/assets/svg/hamburger-icon-blue.svg") no-repeat;
     font-family: 'Wavehaus-66Book';
     font-size: em(20);
     padding: 0 0 0 30px;
@@ -845,15 +845,15 @@ div.highlighter-rouge div {
     width: 80%; } }
 
 @media (min-width: 992px) {
-  .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul {
+  .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul, #developers-section nav.secondary ul, #developers-section .banner.small, #developers-section nav.subcategory h2, #developers-section nav.subcategory ul {
     padding-left: 45px; }
-  .developers nav.subcategory ul ul {
+  .developers nav.subcategory ul ul, #developers-section nav.subcategory ul ul {
     padding-left: 3%; }
-  .developers .banner.small {
+  .developers .banner.small, #developers-section .banner.small {
     padding-right: 45px; }
-  .developers header .logo {
+  .developers header .logo, #developers-section header .logo {
     margin-left: 45px; }
-  .developers .columns {
+  .developers .columns, #developers-section .columns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -1079,7 +1079,7 @@ main .content-slider {
     main .content-slider .slick-slider.copy .slick-prev, main .content-slider .slick-slider.copy .slick-next {
       position: absolute;
       z-index: 2;
-      background: url("/assets/dist/assets/svg/slider-arrow.svg") left top no-repeat;
+      background: url("/dist/assets/svg/slider-arrow.svg") left top no-repeat;
       height: 90px;
       width: 40px;
       border: 0px;
@@ -1205,13 +1205,13 @@ p {
   text-transform: uppercase;
   font-size: 1.375em; }
   .cta.arrow {
-    background: url("/assets/dist/assets/images/cta-arrow.png") left 7px no-repeat;
+    background: url("/dist/assets/images/cta-arrow.png") left 7px no-repeat;
     background-size: 22px;
     letter-spacing: 1px;
     padding: 0 0 0 35px;
     font-weight: normal; }
     .cta.arrow.dark {
-      background: url("/assets/dist/assets/images/cta-arrow-dark.png") left 5px no-repeat;
+      background: url("/dist/assets/images/cta-arrow-dark.png") left 5px no-repeat;
       background-size: 24px; }
   .cta.round {
     color: #353535;
@@ -1239,7 +1239,7 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/assets/dist/assets/images/mainbanner.jpg") center center no-repeat;
+    background: url("/dist/assets/images/mainbanner.jpg") center center no-repeat;
     background-size: cover; }
   main .main-banner {
     position: relative; }
@@ -1290,7 +1290,7 @@ main {
       display: inline-block;
       margin-top: 2%; }
     main .content-section.foundation {
-      background: url("/assets/dist/assets/images/netduino-bg.jpg") bottom no-repeat; }
+      background: url("/dist/assets/images/netduino-bg.jpg") bottom no-repeat; }
       main .content-section.foundation h2 {
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -1319,7 +1319,7 @@ main {
         right: 0;
         bottom: 0;
         left: 0;
-        background: url("/assets/dist/assets/images/guide-bg.jpg") center center no-repeat;
+        background: url("/dist/assets/images/guide-bg.jpg") center center no-repeat;
         background-size: cover; }
       main .content-section.learning .guide {
         position: relative;
@@ -1389,7 +1389,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-intro-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-intro-bg.jpg") center center no-repeat;
       background-size: cover;
       z-index: 2; }
     .meadow #intro::after {
@@ -1400,7 +1400,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/svg/meadow-intro-overlay.svg") center center no-repeat;
+      background: url("/dist/assets/svg/meadow-intro-overlay.svg") center center no-repeat;
       background-size: cover;
       z-index: 3;
       background-position: left -25%;
@@ -1411,7 +1411,7 @@ main {
         content: " "; }
   .meadow .plug-wrapper {
     padding: 30% 0 0 0;
-    background-image: url("/assets/dist/assets/images/meadow-plug-header.jpg");
+    background-image: url("/dist/assets/images/meadow-plug-header.jpg");
     background-size: 100%; }
   .meadow .plug-content-bg {
     position: relative; }
@@ -1423,7 +1423,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-plug-new-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-plug-new-bg.jpg") center center no-repeat;
       background-size: cover; }
   .meadow #plug {
     padding: 0 0 2% 0; }
@@ -1441,7 +1441,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-professional-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-professional-bg.jpg") center center no-repeat;
       background-size: cover; }
   .meadow #cloud {
     position: relative;
@@ -1454,7 +1454,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-cloud-full-bg.png") center center no-repeat;
+      background: url("/dist/assets/images/meadow-cloud-full-bg.png") center center no-repeat;
       background-size: cover; }
   .meadow .cloud-overlay {
     position: absolute;
@@ -1475,7 +1475,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-production-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-production-bg.jpg") center center no-repeat;
       background-size: cover; }
   .meadow #code {
     position: relative;
@@ -1530,7 +1530,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-join-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-join-bg.jpg") center center no-repeat;
       background-size: cover; }
     .meadow #join h1 {
       color: #eee;
@@ -1696,7 +1696,7 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/assets/dist/assets/images/developers-banner-bg.png") center center no-repeat;
+    background: url("/dist/assets/images/developers-banner-bg.png") center center no-repeat;
     background-size: cover;
     background-position: left top; }
 
