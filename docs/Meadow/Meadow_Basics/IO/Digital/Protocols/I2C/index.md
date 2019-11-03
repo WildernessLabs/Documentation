@@ -20,11 +20,11 @@ The clock signal determines the rate at which data can be transferred, however, 
 
 Additionally, adding more devices to the bus can also limit the maximum speed.
 
-The I2C `CLK` pin can be found on the Meadow F7 Micro labeled `D07`.
+The I2C `CLK` pin can be found on the Meadow F7 Micro labeled `D08`.
 
 ### Data Signal (`DAT`)
 
-The data signal wire carries the actual messages and can be found on the F7 Micro pin labeled `D06`.
+The data signal wire carries the actual messages and can be found on the F7 Micro pin labeled `D07`.
 
 ## Master + Client Messaging
 
