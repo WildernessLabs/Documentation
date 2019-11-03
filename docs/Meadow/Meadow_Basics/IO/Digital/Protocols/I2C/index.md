@@ -6,7 +6,7 @@ subtitle: Introduction to the Inter-Integrated Circuit (IIC/I2C) protocol.
 
 [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye-squared-sea", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground):
 
-![Illustration of a Meadow F7 Micro board with two peripherals (addresses 0x40 and 0x72) connected to I2C via pin D06 as the data line and D07 as the clock line along with 3.3V pull-up resistors on both lines](I2C_Circuit.svg){:standalone}
+![Illustration of a Meadow F7 Micro board with two peripherals (addresses 0x40 and 0x72) connected to I2C via pin D07 as the data line and D08 as the clock line along with 3.3V pull-up resistors on both lines](I2C_Circuit.svg){:standalone}
 
 ## Hardware
 
