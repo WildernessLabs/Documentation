@@ -151,7 +151,7 @@ div.highlight {
   margin: 25px 0; }
 
 /* ===========================================
-   Syntax Highlighting
+   Syntax Highlighting  
    =========================================== */
 .highlight {
   background: #eee;
@@ -545,7 +545,7 @@ nav.subcategory ul {
     top: 27px;
     width: 22px;
     height: 22px;
-    background: url("/assets/dist/assets/svg/hamburger-icon.svg"); }
+    background: url("/dist/assets/svg/hamburger-icon.svg"); }
   #main-nav ul li {
     border-top: 1px solid #666; }
     #main-nav ul li a {
@@ -569,7 +569,7 @@ nav.subcategory ul {
     width: 22px;
     height: 25px;
     display: block;
-    background: left 4px url("/assets/dist/assets/svg/hamburger-icon-blue.svg") no-repeat;
+    background: left 4px url("/dist/assets/svg/hamburger-icon-blue.svg") no-repeat;
     font-family: 'Wavehaus-66Book';
     font-size: em(20);
     padding: 0 0 0 30px;
@@ -756,6 +756,9 @@ footer {
     footer .footer-logo {
       margin-bottom: 160px; } }
 
+.developers-landing header .logo {
+  margin-left: 3%; }
+
 #developers-section {
   margin: 0;
   padding: 0 0 0 0;
@@ -776,6 +779,129 @@ footer {
     padding-bottom: 45px; }
     #developers-section .banner.small p {
       font-size: 28px; }
+    #developers-section .banner.small a {
+      position: relative; }
+  #developers-section .landing .banner.small {
+    padding-left: 3%; }
+    #developers-section .landing .banner.small .cta {
+      background: #635444;
+      border: 2px solid #98A645;
+      border-radius: 10px;
+      font-family: 'MrsEavesOT-Roman';
+      font-size: 36px;
+      color: #98A645;
+      letter-spacing: 0;
+      text-transform: inherit;
+      padding: 3px 20px 3px;
+      margin-top: 10px;
+      display: inline-block; }
+    #developers-section .landing .banner.small p {
+      font-family: 'MrsEavesOT-Roman';
+      color: #10485E;
+      letter-spacing: 0; }
+  #developers-section .landing nav.secondary ul {
+    padding-left: 3%; }
+  #developers-section .split-banners {
+    overflow: hidden;
+    background: lightblue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch; }
+    #developers-section .split-banners h3 img {
+      float: none;
+      margin: 0; }
+    #developers-section .split-banners .banner {
+      border-box: box-sizing;
+      padding: 30px 3% 30px 3%; }
+      #developers-section .split-banners .banner h3 {
+        font-family: 'Wavehaus-66Book';
+        font-size: 38px;
+        display: block; }
+      #developers-section .split-banners .banner ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; }
+        #developers-section .split-banners .banner ul li {
+          list-style-type: none;
+          display: inline-block;
+          width: 49%; }
+      #developers-section .split-banners .banner p, #developers-section .split-banners .banner a, #developers-section .split-banners .banner li {
+        font-family: 'MrsEavesOT-Roman';
+        color: #E3F4FB;
+        letter-spacing: 0;
+        line-height: 20px; }
+      #developers-section .split-banners .banner a:hover {
+        color: #C9DB31; }
+    #developers-section .split-banners .guides {
+      background: #1A80AA; }
+      #developers-section .split-banners .guides a, #developers-section .split-banners .guides li, #developers-section .split-banners .guides h3 {
+        color: #E3F4FB; }
+      #developers-section .split-banners .guides a:hover {
+        color: #E1EB8B;
+        text-decoration: underline; }
+      #developers-section .split-banners .guides p {
+        color: #E1EB8B; }
+    #developers-section .split-banners .foundation {
+      background: #EEF3BD;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0; }
+      #developers-section .split-banners .foundation p, #developers-section .split-banners .foundation a, #developers-section .split-banners .foundation li {
+        color: #3D3530; }
+      #developers-section .split-banners .foundation h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px; }
+        #developers-section .split-banners .foundation h3 img {
+          float: none;
+          width: 100%; }
+      #developers-section .split-banners .foundation a {
+        width: 32%;
+        display: inline-block;
+        font-family: 'MrsEavesOT-Roman';
+        color: #1A80AA;
+        letter-spacing: 0;
+        line-height: 20px;
+        vertical-align: middle; }
+        #developers-section .split-banners .foundation a:hover {
+          color: #B35E2C;
+          text-decoration: underline; }
+    #developers-section .split-banners .tutorials {
+      background: #404040; }
+      #developers-section .split-banners .tutorials p, #developers-section .split-banners .tutorials a, #developers-section .split-banners .tutorials li, #developers-section .split-banners .tutorials h3 {
+        color: #F8FAE4;
+        margin-right: 20px; }
+      #developers-section .split-banners .tutorials h3 {
+        margin-bottom: 20px; }
+    #developers-section .split-banners .netduino {
+      background: #524740; }
+      #developers-section .split-banners .netduino p, #developers-section .split-banners .netduino a, #developers-section .split-banners .netduino li {
+        color: #F8FAE4; }
+      #developers-section .split-banners .netduino h3 {
+        margin-bottom: 30px; }
+  #developers-section .links {
+    height: 280px;
+    position: relative;
+    padding: 100px 0 0 0; }
+    #developers-section .links a {
+      position: relative;
+      font-family: 'MrsEavesOT-Bold';
+      font-size: 48px;
+      color: #FDFDFD;
+      letter-spacing: 0;
+      text-align: center;
+      display: block;
+      text-transform: inherit; }
+      #developers-section .links a::before {
+        content: '->';
+        padding-right: 10px;
+        font-size: 44px;
+        top: -5px;
+        position: relative; }
 
 #secondary-col {
   padding-right: 0; }
@@ -842,21 +968,52 @@ div.highlighter-rouge div {
 
 @media (min-width: 320px) {
   .developers figure {
-    width: 80%; } }
+    width: 80%; }
+  #developers-section .split-banners .banner {
+    height: auto;
+    font-size: 18px;
+    width: 100%; }
+  #developers-section .split-banners .image-right img {
+    float: right;
+    margin: 0px 30px 25px 30px; }
+  #developers-section .split-banners .image-right h3 img {
+    float: none;
+    margin: 0px; }
+  #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
+    font-size: 24px; }
+  #developers-section .split-banners .foundation h3 {
+    display: inline-block;
+    text-align: center;
+    width: auto; } }
 
 @media (min-width: 992px) {
-  .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul {
+  .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul, #developers-section nav.secondary ul, #developers-section .banner.small, #developers-section nav.subcategory h2, #developers-section nav.subcategory ul {
     padding-left: 45px; }
-  .developers nav.subcategory ul ul {
+  .developers nav.subcategory ul ul, #developers-section nav.subcategory ul ul {
     padding-left: 3%; }
-  .developers .banner.small {
+  .developers .banner.small, #developers-section .banner.small {
     padding-right: 45px; }
-  .developers header .logo {
+  .developers header .logo, #developers-section header .logo {
     margin-left: 45px; }
-  .developers .columns {
+  .developers .columns, #developers-section .columns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .developers .landing .banner.small, #developers-section .landing .banner.small {
+    padding-right: 40%; }
+  .developers .split-banners p, .developers .split-banners li, .developers .split-banners a, #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
+    font-size: 20px; }
+  .developers .split-banners .banner, #developers-section .split-banners .banner {
+    width: 50%; }
+  .developers .split-banners .foundation p, #developers-section .split-banners .foundation p {
+    padding: 0 20%; }
+  .developers .split-banners .foundation h3, #developers-section .split-banners .foundation h3 {
+    width: auto; }
+  .developers .split-banners .foundation h3 img, #developers-section .split-banners .foundation h3 img {
+    width: auto; }
+  .developers .split-banners .image-right img, #developers-section .split-banners .image-right img {
+    margin: 0px 0 15px 15px;
+    width: 40%; }
   #secondary-col {
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -878,7 +1035,11 @@ div.highlighter-rouge div {
   .developers figure {
     width: 70%; }
   .developers table {
-    width: 90%; } }
+    width: 90%; }
+  #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
+    font-size: 24px; }
+  #developers-section .split-banners .image-right img {
+    width: auto; } }
 
 @media (min-width: 1680px) {
   .developers div.highlight {
@@ -904,10 +1065,12 @@ div.highlighter-rouge div {
       margin-bottom: 10px;
       position: relative; }
       .developers .wide .content-block div.highlighter-rouge img, .developers .wide .content-block > figure img, .developers .wide .content-block img.floated img, .developers .wide .content-block .content-banner img {
-        width: 95%;
+        width: 94%;
         float: right; }
     .developers .wide .content-image {
       width: 40%; }
+  #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
+    font-size: 24px; }
   #primary-col {
     position: relative; }
     #primary-col section.wide {
@@ -1079,7 +1242,7 @@ main .content-slider {
     main .content-slider .slick-slider.copy .slick-prev, main .content-slider .slick-slider.copy .slick-next {
       position: absolute;
       z-index: 2;
-      background: url("/assets/dist/assets/svg/slider-arrow.svg") left top no-repeat;
+      background: url("/dist/assets/svg/slider-arrow.svg") left top no-repeat;
       height: 90px;
       width: 40px;
       border: 0px;
@@ -1205,13 +1368,13 @@ p {
   text-transform: uppercase;
   font-size: 1.375em; }
   .cta.arrow {
-    background: url("/assets/dist/assets/images/cta-arrow.png") left 7px no-repeat;
+    background: url("/dist/assets/images/cta-arrow.png") left 7px no-repeat;
     background-size: 22px;
     letter-spacing: 1px;
     padding: 0 0 0 35px;
     font-weight: normal; }
     .cta.arrow.dark {
-      background: url("/assets/dist/assets/images/cta-arrow-dark.png") left 5px no-repeat;
+      background: url("/dist/assets/images/cta-arrow-dark.png") left 5px no-repeat;
       background-size: 24px; }
   .cta.round {
     color: #353535;
@@ -1239,7 +1402,7 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/assets/dist/assets/images/mainbanner.jpg") center center no-repeat;
+    background: url("/dist/assets/images/mainbanner.jpg") center center no-repeat;
     background-size: cover; }
   main .main-banner {
     position: relative; }
@@ -1290,7 +1453,7 @@ main {
       display: inline-block;
       margin-top: 2%; }
     main .content-section.foundation {
-      background: url("/assets/dist/assets/images/netduino-bg.jpg") bottom no-repeat; }
+      background: url("/dist/assets/images/netduino-bg.jpg") bottom no-repeat; }
       main .content-section.foundation h2 {
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -1319,7 +1482,7 @@ main {
         right: 0;
         bottom: 0;
         left: 0;
-        background: url("/assets/dist/assets/images/guide-bg.jpg") center center no-repeat;
+        background: url("/dist/assets/images/guide-bg.jpg") center center no-repeat;
         background-size: cover; }
       main .content-section.learning .guide {
         position: relative;
@@ -1389,7 +1552,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-intro-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-intro-bg.jpg") center center no-repeat;
       background-size: cover;
       z-index: 2; }
     .meadow #intro::after {
@@ -1400,7 +1563,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/svg/meadow-intro-overlay.svg") center center no-repeat;
+      background: url("/dist/assets/svg/meadow-intro-overlay.svg") center center no-repeat;
       background-size: cover;
       z-index: 3;
       background-position: left -25%;
@@ -1411,7 +1574,7 @@ main {
         content: " "; }
   .meadow .plug-wrapper {
     padding: 30% 0 0 0;
-    background-image: url("/assets/dist/assets/images/meadow-plug-header.jpg");
+    background-image: url("/dist/assets/images/meadow-plug-header.jpg");
     background-size: 100%; }
   .meadow .plug-content-bg {
     position: relative; }
@@ -1423,7 +1586,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-plug-new-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-plug-new-bg.jpg") center center no-repeat;
       background-size: cover; }
   .meadow #plug {
     padding: 0 0 2% 0; }
@@ -1441,7 +1604,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-professional-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-professional-bg.jpg") center center no-repeat;
       background-size: cover; }
   .meadow #cloud {
     position: relative;
@@ -1454,7 +1617,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-cloud-full-bg.png") center center no-repeat;
+      background: url("/dist/assets/images/meadow-cloud-full-bg.png") center center no-repeat;
       background-size: cover; }
   .meadow .cloud-overlay {
     position: absolute;
@@ -1475,7 +1638,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-production-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-production-bg.jpg") center center no-repeat;
       background-size: cover; }
   .meadow #code {
     position: relative;
@@ -1530,7 +1693,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("/assets/dist/assets/images/meadow-join-bg.jpg") center center no-repeat;
+      background: url("/dist/assets/images/meadow-join-bg.jpg") center center no-repeat;
       background-size: cover; }
     .meadow #join h1 {
       color: #eee;
@@ -1696,9 +1859,33 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/assets/dist/assets/images/developers-banner-bg.png") center center no-repeat;
+    background: url("/dist/assets/images/developers-banner-bg.png") center center no-repeat;
     background-size: cover;
     background-position: left top; }
+
+.landing .banner.small::before {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/dist/assets/images/developers/developers-main-banner.png") center center no-repeat;
+  background-size: cover;
+  background-position: left top; }
+
+.landing .links::before {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/dist/assets/images/developers/wood-bg.png") center center no-repeat;
+  background-size: cover;
+  background-position: left top; }
 
 .content img {
   width: 100%; }

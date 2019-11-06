@@ -10,7 +10,7 @@ path_from_dist = data_hash['path_from_dist'];
 
 # CSS Watcher
 path_from_css = path_from_dist + 'css'
-path_to_dist_css = './assets/dist/css'
+path_to_dist_css = './dist/css'
 
 if path_from_dist.eql? "<path to wwwroot dist>"
   raise ArgumentError, 'You need to configure your path_from_dist variable, point this to the location of your Wildernesslabs wwwroot dist directory and try running this task again.'
@@ -44,7 +44,7 @@ else
 
     file_names.each do |file_name|
       text = File.read(file_name)
-      new_contents = text.gsub("../../assets/", "/assets/dist/assets/")
+      new_contents = text.gsub("../../assets/", "/dist/assets/")
 
       # To write changes to the file, use:
       File.open(file_name, "w") {|file| file.puts new_contents }
