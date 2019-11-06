@@ -1,55 +1,55 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 
-<h1 id="{{id}}" data-uid="{{uid}}" class="text-break">{{>partials/title}}</h1>
-<div class="markdown level0 summary">{{{summary}}}</div>
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{#inClass}}
-<div class="inheritance">
-  <h5>{{__global.inheritance}}</h5>
+<section class="inheritance">
+  <h3>{{__global.inheritance}}</h3>
   {{#inheritance}}
-  <div class="level{{index}}">{{{specName.0.value}}}</div>
+  <p class="level{{index}}">{{{specName.0.value}}}</p>
   {{/inheritance}}
-  <div class="level{{level}}"><span class="xref">{{name.0.value}}</span></div>
+  <p class="level{{level}}"><span class="xref">{{name.0.value}}</span></p>
   {{#derivedClasses}}
-    <div class="level{{index}}">{{{specName.0.value}}}</div>
+  <p class="level{{index}}">{{{specName.0.value}}}</p>
   {{/derivedClasses}}
-</div>
+</section>
 {{/inClass}}
 {{#implements.0}}
-<div classs="implements">
-  <h5>{{__global.implements}}</h5>
+<section classs="implements">
+  <h3>{{__global.implements}}</h3>
 {{/implements.0}}
 {{#implements}}
-  <div>{{{specName.0.value}}}</div>
+  <p>{{{specName.0.value}}}</p>
 {{/implements}}
 {{#implements.0}}
-</div>
+</section>
 {{/implements.0}}
 {{#inheritedMembers.0}}
-<div class="inheritedMembers">
-  <h5>{{__global.inheritedMembers}}</h5>
+<section class="inheritedMembers">
+  <h3>{{__global.inheritedMembers}}</h3>
 {{/inheritedMembers.0}}
 {{#inheritedMembers}}
-  <div>
+  <p>
   {{#definition}}
     <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
   {{/definition}}
   {{^definition}}
     <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
   {{/definition}}
-  </div>
+  </p>
 {{/inheritedMembers}}
 {{#inheritedMembers.0}}
-</div>
+</section>
 {{/inheritedMembers.0}}
-<h6><strong>{{__global.namespace}}</strong>: {{{namespace.specName.0.value}}}</h6>
-<h6><strong>{{__global.assembly}}</strong>: {{assemblies.0}}.dll</h6>
-<h5 id="{{id}}_syntax">{{__global.syntax}}</h5>
-<div class="codewrapper">
+<section>
+  <p class="description"><strong>{{__global.namespace}}</strong>: {{{namespace.specName.0.value}}}</p>
+  <p class="description"><strong>{{__global.assembly}}</strong>: {{assemblies.0}}.dll</p>
+</section>
+<h3 id="{{id}}_syntax">{{__global.syntax}}</h3>
+<section class="codewrapper">
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
-</div>
+</section>
 {{#syntax.parameters.0}}
-<h5 class="parameters">{{__global.parameters}}</h5>
+<h3 class="parameters">{{__global.parameters}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -72,7 +72,7 @@
 </table>
 {{/syntax.parameters.0}}
 {{#syntax.return}}
-<h5 class="returns">{{__global.returns}}</h5>
+<h3 class="returns">{{__global.returns}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -89,7 +89,7 @@
 </table>
 {{/syntax.return}}
 {{#syntax.typeParameters.0}}
-<h5 class="typeParameters">{{__global.typeParameters}}</h5>
+<h3 class="typeParameters">{{__global.typeParameters}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -110,11 +110,11 @@
 </table>
 {{/syntax.typeParameters.0}}
 {{#remarks}}
-<h5 id="{{id}}_remarks"><strong>{{__global.remarks}}</strong></h5>
-<div class="markdown level0 remarks">{{{remarks}}}</div>
+<h3 id="{{id}}_remarks"><strong>{{__global.remarks}}</strong></h3>
+<section class="markdown level0 remarks">{{{remarks}}}<section>
 {{/remarks}}
 {{#example.0}}
-<h5 id="{{id}}_examples"><strong>{{__global.examples}}</strong></h5>
+<h3 id="{{id}}_examples"><strong>{{__global.examples}}</strong></h3>
 {{/example.0}}
 {{#example}}
 {{{.}}}

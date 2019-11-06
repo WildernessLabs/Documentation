@@ -27,7 +27,7 @@
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
 </div>
 {{#parameters.0}}
-<h5 class="parameters">{{__global.parameters}}</h5>
+<h3 class="parameters">{{__global.parameters}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -50,7 +50,7 @@
 </table>
 {{/parameters.0}}
 {{#return}}
-<h5 class="returns">{{__global.returns}}</h5>
+<h3 class="returns">{{__global.returns}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -67,7 +67,7 @@
 </table>
 {{/return}}
 {{#typeParameters.0}}
-<h5 class="typeParameters">{{__global.typeParameters}}</h5>
+<h3 class="typeParameters">{{__global.typeParameters}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -88,7 +88,7 @@
 </table>
 {{/typeParameters.0}}
 {{#fieldValue}}
-<h5 class="fieldValue">{{__global.fieldValue}}</h5>
+<h3 class="fieldValue">{{__global.fieldValue}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -105,7 +105,7 @@
 </table>
 {{/fieldValue}}
 {{#propertyValue}}
-<h5 class="propertyValue">{{__global.propertyValue}}</h5>
+<h3 class="propertyValue">{{__global.propertyValue}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -122,7 +122,7 @@
 </table>
 {{/propertyValue}}
 {{#eventType}}
-<h5 class="eventType">{{__global.eventType}}</h5>
+<h3 class="eventType">{{__global.eventType}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -140,21 +140,21 @@
 {{/eventType}}
 {{/syntax}}
 {{#overridden}}
-<h5 class="overrides">{{__global.overrides}}</h5>
+<h3 class="overrides">{{__global.overrides}}</h3>
 <div><xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/></div>
 {{/overridden}}
 {{#remarks}}
-<h5 id="{{id}}_remarks">{{__global.remarks}}</h5>
+<h3 id="{{id}}_remarks">{{__global.remarks}}</h3>
 <div class="markdown level1 remarks">{{{remarks}}}</div>
 {{/remarks}}
 {{#example.0}}
-<h5 id="{{id}}_examples">{{__global.examples}}</h5>
+<h3 id="{{id}}_examples">{{__global.examples}}</h3>
 {{/example.0}}
 {{#example}}
 {{{.}}}
 {{/example}}
 {{#exceptions.0}}
-<h5 class="exceptions">{{__global.exceptions}}</h5>
+<h3 class="exceptions">{{__global.exceptions}}</h3>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -175,7 +175,7 @@
 </table>
 {{/exceptions.0}}
 {{#seealso.0}}
-<h5 id="{{id}}_seealso">{{__global.seealso}}</h5>
+<h3 id="{{id}}_seealso">{{__global.seealso}}</h3>
 <div class="seealso">
 {{/seealso.0}}
 {{#seealso}}
