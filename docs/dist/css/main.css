@@ -782,7 +782,7 @@ footer {
     #developers-section .banner.small a {
       position: relative; }
   #developers-section .landing .banner.small {
-    padding-left: 5%;
+    padding-left: 3%;
     padding-top: 25px;
     padding-bottom: 25px; }
     #developers-section .landing .banner.small h1 {
@@ -1011,7 +1011,10 @@ div.highlighter-rouge div {
     position: relative;
     top: -55px; }
   .developers .split-banners .image-right h3 img, #developers-section .split-banners .image-right h3 img {
-    position: static; } }
+    position: static; }
+  .developers .split-banners .banner, #developers-section .split-banners .banner {
+    width: 50%;
+    padding: 25px 2% 25px 3%; } }
 
 @media (min-width: 992px) {
   .developers .links-banner a, #developers-section .links-banner a {
@@ -1019,7 +1022,7 @@ div.highlighter-rouge div {
   .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul, #developers-section nav.secondary ul, #developers-section .banner.small, #developers-section nav.subcategory h2, #developers-section nav.subcategory ul {
     padding-left: 45px; }
   .developers nav.subcategory ul ul, #developers-section nav.subcategory ul ul {
-    padding-left: 5%; }
+    padding-left: 3%; }
   .developers .banner.small, #developers-section .banner.small {
     padding-right: 45px; }
   .developers header .logo, #developers-section header .logo {
@@ -1034,7 +1037,7 @@ div.highlighter-rouge div {
     font-size: 20px; }
   .developers .split-banners .banner, #developers-section .split-banners .banner {
     width: 50%;
-    padding: 25px 2% 25px 5%; }
+    padding: 25px 2% 25px 3%; }
   .developers .split-banners .foundation, #developers-section .split-banners .foundation {
     padding-left: 3%; }
     .developers .split-banners .foundation p, #developers-section .split-banners .foundation p {
