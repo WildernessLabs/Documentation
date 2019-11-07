@@ -978,8 +978,10 @@ div.highlighter-rouge div {
     width: 100%; }
   .developers figure {
     width: 80%; }
-  .links a {
+  #developers-section .links a {
     font-size: 40px; }
+  #developers-section .landing .banner.small .cta {
+    font-size: 30px; }
   #developers-section .split-banners .banner {
     height: auto;
     font-size: 18px;
