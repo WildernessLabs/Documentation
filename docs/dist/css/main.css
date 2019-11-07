@@ -757,7 +757,7 @@ footer {
       margin-bottom: 160px; } }
 
 .developers-landing header .logo {
-  margin-left: 3%; }
+  margin-left: 5%; }
 
 #developers-section {
   margin: 0;
@@ -782,7 +782,7 @@ footer {
     #developers-section .banner.small a {
       position: relative; }
   #developers-section .landing .banner.small {
-    padding-left: 3%;
+    padding-left: 5%;
     padding-top: 25px;
     padding-bottom: 25px; }
     #developers-section .landing .banner.small h1 {
@@ -805,7 +805,7 @@ footer {
       letter-spacing: 0;
       font-size: 24px; }
   #developers-section .landing nav.secondary ul {
-    padding-left: 3%; }
+    padding-left: 5%; }
   #developers-section .split-banners {
     overflow: hidden;
     background: lightblue;
@@ -820,8 +820,7 @@ footer {
       float: none;
       margin: 0; }
     #developers-section .split-banners .banner {
-      border-box: box-sizing;
-      padding: 25px 2% 25px 3%; }
+      border-box: box-sizing; }
       #developers-section .split-banners .banner h3, #developers-section .split-banners .banner h3 a {
         font-family: 'Wavehaus-66Book';
         font-size: 36px; }
@@ -864,9 +863,7 @@ footer {
         color: #E1EB8B; }
     #developers-section .split-banners .foundation {
       background: #EEF3BD;
-      text-align: center;
-      padding-left: 0;
-      padding-right: 0; }
+      text-align: center; }
       #developers-section .split-banners .foundation p, #developers-section .split-banners .foundation a, #developers-section .split-banners .foundation li {
         color: #3D3530; }
       #developers-section .split-banners .foundation h3 {
@@ -905,7 +902,6 @@ footer {
     #developers-section .links a {
       position: relative;
       font-family: 'MrsEavesOT-Bold';
-      font-size: 48px;
       color: #FDFDFD;
       letter-spacing: 0;
       text-align: center;
@@ -922,14 +918,14 @@ footer {
   padding-right: 0; }
 
 #primary-col {
-  padding: 0 3% 3% 3%;
+  padding: 0 5% 5% 5%;
   background: #fcfdfd;
   /* =========================================
      Tables
      ========================================= */ }
   #primary-col .content {
     margin: 0;
-    padding: 35px 3% 3%; }
+    padding: 35px 5% 5%; }
   #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
     padding-top: 35px; }
   #primary-col figure {
@@ -969,7 +965,7 @@ footer {
     color: #28B4E7;
     text-align: right;
     margin: 0;
-    padding: 5px 3% 5px 0; }
+    padding: 5px 5% 5px 0; }
 
 div.highlighter-rouge pre {
   font-size: 15px; }
@@ -982,21 +978,22 @@ div.highlighter-rouge div {
     width: 100%; }
   .developers figure {
     width: 80%; }
+  .links a {
+    font-size: 40px; }
   #developers-section .split-banners .banner {
     height: auto;
     font-size: 18px;
-    width: 100%; }
-  #developers-section .split-banners .image-right {
-    height: 320px; }
-    #developers-section .split-banners .image-right img {
-      float: none;
-      width: 95%;
-      margin-bottom: 20px;
-      text-align: center; }
-    #developers-section .split-banners .image-right h3 img {
-      float: none;
-      margin: 0px;
-      width: auto; }
+    width: 100%;
+    padding: 25px 5% 25px 5%; }
+  #developers-section .split-banners .image-right img {
+    float: none;
+    width: 95%;
+    margin-bottom: 20px;
+    text-align: center; }
+  #developers-section .split-banners .image-right h3 img {
+    float: none;
+    margin: 0px;
+    width: auto; }
   #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
     font-size: 24px; }
   #developers-section .split-banners .foundation h3 {
@@ -1015,10 +1012,12 @@ div.highlighter-rouge div {
     position: static; } }
 
 @media (min-width: 992px) {
+  .developers .links a, #developers-section .links a {
+    font-size: 48px; }
   .developers nav.secondary ul, .developers .banner.small, .developers nav.subcategory h2, .developers nav.subcategory ul, #developers-section nav.secondary ul, #developers-section .banner.small, #developers-section nav.subcategory h2, #developers-section nav.subcategory ul {
     padding-left: 45px; }
   .developers nav.subcategory ul ul, #developers-section nav.subcategory ul ul {
-    padding-left: 3%; }
+    padding-left: 5%; }
   .developers .banner.small, #developers-section .banner.small {
     padding-right: 45px; }
   .developers header .logo, #developers-section header .logo {
@@ -1032,12 +1031,15 @@ div.highlighter-rouge div {
   .developers .split-banners p, .developers .split-banners li, .developers .split-banners a, #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
     font-size: 20px; }
   .developers .split-banners .banner, #developers-section .split-banners .banner {
-    width: 50%; }
-  .developers .split-banners .foundation p, #developers-section .split-banners .foundation p {
-    padding: 0 20%; }
-  .developers .split-banners .foundation h3, .developers .split-banners .foundation h3 img, #developers-section .split-banners .foundation h3, #developers-section .split-banners .foundation h3 img {
-    width: auto;
-    margin-bottom: 20px; }
+    width: 50%;
+    padding: 25px 2% 25px 5%; }
+  .developers .split-banners .foundation, #developers-section .split-banners .foundation {
+    padding-left: 3%; }
+    .developers .split-banners .foundation p, #developers-section .split-banners .foundation p {
+      padding: 0 20%; }
+    .developers .split-banners .foundation h3, .developers .split-banners .foundation h3 img, #developers-section .split-banners .foundation h3, #developers-section .split-banners .foundation h3 img {
+      width: auto;
+      margin-bottom: 20px; }
   .developers .split-banners .guides, #developers-section .split-banners .guides {
     min-height: 270px; }
   .developers .split-banners .netduino ul, #developers-section .split-banners .netduino ul {
@@ -1063,7 +1065,7 @@ div.highlighter-rouge div {
             flex: 1 1 370px;
     min-width: 0; }
     #primary-col .content {
-      padding: 35px 0 3% 0; } }
+      padding: 35px 0 5% 0; } }
 
 @media (min-width: 1200px) {
   .developers figure {
@@ -1097,7 +1099,7 @@ div.highlighter-rouge div {
       clear: right;
       display: inline-block;
       width: 50%;
-      padding-left: 3%;
+      padding-left: 5%;
       margin-left: 20px;
       margin-bottom: 10px;
       position: relative; }
