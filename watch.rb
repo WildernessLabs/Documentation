@@ -54,6 +54,7 @@ else
 
   Filewatcher.new([path_from_dist]).watch do |filename, event|
 
+    #if the site is the docfx site, we need to compile the files specially
     if !args.key?('site') || args['site'] == "docfx"
       # specify files which should not be copied
       puts "> > > Copying files from WildernessLabs to DOCFX site "

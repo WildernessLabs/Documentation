@@ -27,7 +27,7 @@ function Overlay(elId, toggleId, modifier) {
     body.addClass(`${modifier}`);
 
     // create modal instance
-    var overlayContent = $(elId).clone(); 
+    var overlayContent = $(elId).clone();
     var modal = $('<div id="nav-overlay" tabindex="-1" aria-label="Overlay"><a href="#" id="close-modal" class="mobile-nav-trigger mobile" aria-expanded="false"><span class="visually-hidden>Close</span>"</a></div>');
     body.prepend(modal.append(overlayContent));
 
@@ -56,8 +56,6 @@ function Overlay(elId, toggleId, modifier) {
 
 // Initialize carousel based on HTML element
 function ContentCarousel(element){
-
-  console.log(element);
 
   var el = $(element);
   var copy = el.find('.copy');
