@@ -17,6 +17,7 @@ svg:hover path {
   display: inline;
   background-color: inherit;
   padding: 0;
+  white-space: nowrap;
 }
 /* additional spacing fixes */
 .btn + .btn {
@@ -754,9 +755,13 @@ div.embeddedvideo iframe {
 
   #primary {
     width: 100%;
-    display: flex;
     background: #fdfdfd;
+    overflow: hidden;
   }
+  .article, .affixed {
+    float: left;
+  }
+
   .article {
     width: 80%;
   }
@@ -793,6 +798,9 @@ div.embeddedvideo iframe {
     font-family: 'Wavehaus-66Book';
     font-size: 15px;
     background-position: left 2px;
+  }
+  #developers-section .banner.small.api-banner h1, #developers-section .banner.small.api-banner p {
+    color: #F5F1EE;
   }
   .fixed-element {
     position: fixed;
@@ -840,6 +848,7 @@ div.embeddedvideo iframe {
   }
   .affixed .nav>li>ul {
     padding: 0 0 25px 10px;
+    width: 100%;
   }
   .affixed .active > a::before {
     content: "|";
@@ -852,18 +861,18 @@ div.embeddedvideo iframe {
     padding-right: 4px;
     margin: 0 4px 0 0;
   }
-
-  .bs-docs-sidenav li {
-    width: 100%;
-    display: block;
+  #developers-section .affixed li {
+    width: 95%;
   }
-
   .affixed .nav > .nav {
     padding: 0 0 25px 0;
   }
 
   .affixed .nav>li>a {
     padding: 0 0 0 0;
+  }
+  .nav>li>a:hover {
+    background-color: inherit;
   }
   .affixed .nav>li>a:hover {
     background-color: inherit;
@@ -874,9 +883,7 @@ div.embeddedvideo iframe {
   .affixed .contribution .nav {
     margin-top: 15px;
   }
-  .affixed .contribution .nav li {
-    width: 100%;
-  }
+
   .affixed .contribution .nav a {
     margin: 0;
     padding: 0px;
@@ -925,8 +932,10 @@ div.embeddedvideo iframe {
   }
 
   #developers-section .article h3 {
+    position: relative;
     margin-top: 20px;
   }
+
   #developers-section .article h3:first-of-type {
     margin-top: 0px;
   }
@@ -939,19 +948,95 @@ div.embeddedvideo iframe {
     background: #555;
     color: #eee;
     border-color: #555;
+    font-family: 'MrsEavesOT-Bold';
+    color: #EEEEEE;
+    letter-spacing: 0;
+    padding-bottom: 0px;
   }
 
   #developers-section .table-responsive table td, #developers-section .table-responsive tbody table tr {
-    background: #eee;
+    background: #FDFDFD;
     color: #555;
+    font-family: 'MrsEavesOT-Roman';
+    color: #3D3530;
+    letter-spacing: 0;
+  }
+  #developers-section .table-responsive table a {
+    color: #1A80AA;
+    text-decoration: none;
+  }
+  #developers-section .table-responsive table a:hover {
+    text-decoration: underline;
+  }
+  #developers-section .table-responsive tbody table tr p {
+    margin-bottom: 5px;
   }
 
   #developers-section .table-bordered > tbody > tr > td {
-    border: 3px solid #555;
+    border: 2px solid #555;
   }
 
   #developers-section pre {
     border-radius: 8px;
     border-color: #555;
     background: #eee;
+    font-size: 15px;
+  }
+
+  @media (min-width: 320px) {
+    .article {
+      width: 100%;
+    }
+    #developers-section .table-responsive table td,
+    #developers-section .table-responsive tbody table tr,
+    #developers-section .table-responsive table th {
+      font-size: 24px;
+    }
+    #developers-section .anchorjs-link {
+      right: 0;
+    }
+   }
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {
+    .article {
+      width: 70%;
+    }
+    .affixed {
+      width: 30%;
+    }
+
+    .landing #secondary-col {
+      flex-basis: 300px;
+    }
+    .sidetoggle {
+      width: 300px;
+    }
+    #developers-section .anchorjs-link {
+      right: auto;
+    }
+  }
+  @media (min-width: 1200px) {
+    .article {
+      width: 75%;
+    }
+    .affixed {
+      width: 25%;
+    }
+
+    .landing #secondary-col {
+      flex-basis: 370px;
+    }
+    .sidetoggle {
+      width: 370px;
+    }
+  }
+  @media (min-width: 1600px) {
+    .article {
+      width: 80%;
+    }
+    .affixed {
+      width: 20%;
+    }
   }

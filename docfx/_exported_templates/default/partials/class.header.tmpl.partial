@@ -1,49 +1,76 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
-{{#inClass}}
-<section class="inheritance">
-  <h3>{{__global.inheritance}}</h3>
-  {{#inheritance}}
-  <p class="level{{index}}">{{{specName.0.value}}}</p>
-  {{/inheritance}}
-  <p class="level{{level}}"><span class="xref">{{name.0.value}}</span></p>
-  {{#derivedClasses}}
-  <p class="level{{index}}">{{{specName.0.value}}}</p>
-  {{/derivedClasses}}
-</section>
-{{/inClass}}
-{{#implements.0}}
-<section classs="implements">
-  <h3>{{__global.implements}}</h3>
-{{/implements.0}}
-{{#implements}}
-  <p>{{{specName.0.value}}}</p>
-{{/implements}}
-{{#implements.0}}
-</section>
-{{/implements.0}}
-{{#inheritedMembers.0}}
-<section class="inheritedMembers">
-  <h3>{{__global.inheritedMembers}}</h3>
-{{/inheritedMembers.0}}
-{{#inheritedMembers}}
-  <p>
-  {{#definition}}
-    <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
-  {{/definition}}
-  {{^definition}}
-    <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
-  {{/definition}}
-  </p>
-{{/inheritedMembers}}
-{{#inheritedMembers.0}}
-</section>
-{{/inheritedMembers.0}}
-<section>
-  <p class="description"><strong>{{__global.namespace}}</strong>: {{{namespace.specName.0.value}}}</p>
-  <p class="description"><strong>{{__global.assembly}}</strong>: {{assemblies.0}}.dll</p>
-</section>
+<table>
+  <thead>
+    <tr>
+      <th>Characteristic</th>
+      <th>Locus</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#inClass}}
+    <tr>
+      <td>{{__global.inheritance}}</td>
+      <td>
+        {{#inheritance}}
+        <span class="level{{index}}">{{{specName.0.value}}}</span>
+        {{/inheritance}}
+        <span class="level{{level}}"><span class="xref">&gt; {{name.0.value}}</span></span>
+        {{#derivedClasses}}
+        <span class="level{{index}}">&gt; {{{specName.0.value}}}</span>
+        {{/derivedClasses}}
+      </td>
+    </tr>
+    {{/inClass}}
+    {{#implements.0}}
+    <tr>
+      <td classs="implements">
+        <span>{{__global.implements}}</span>
+      </td>
+      <td>
+      {{/implements.0}}
+      {{#implements}}
+        <span>{{{specName.0.value}}}</span>
+      {{/implements}}
+      {{#implements.0}}
+      </td>
+    </tr>
+    {{/implements.0}}
+    {{#inheritedMembers.0}}
+    <tr class="inheritedMembers">
+      <td><span>{{__global.inheritedMembers}}</span></td>
+      {{/inheritedMembers.0}}
+      {{#inheritedMembers.0}}
+        <td>
+      {{/inheritedMembers.0}}
+          {{#inheritedMembers}}
+            <span>
+            {{#definition}}
+              <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
+            {{/definition}}
+            {{^definition}}
+              <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
+            {{/definition}}
+           </span>
+           {{/inheritedMembers}}
+      {{#inheritedMembers.0}}
+       </td>
+      {{/inheritedMembers.0}}
+      {{#inheritedMembers.0}}
+    </tr>
+    {{/inheritedMembers.0}}
+    <tr>
+      <td>{{__global.namespace}}</td>
+      <td>{{{namespace.specName.0.value}}}</td>
+    </tr>
+    <tr>
+      <td>{{__global.assembly}}</td>
+      <td>{{assemblies.0}}.dll</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="{{id}}_syntax">{{__global.syntax}}</h3>
 <section class="codewrapper">
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
