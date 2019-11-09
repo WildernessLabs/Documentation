@@ -868,6 +868,9 @@ div.embeddedvideo iframe {
   .affixed .nav>li>a {
     padding: 0 0 0 0;
   }
+  .nav>li>a:hover {
+    background-color: inherit;
+  }
   .affixed .nav>li>a:hover {
     background-color: inherit;
     text-decoration: underline;

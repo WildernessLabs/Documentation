@@ -612,11 +612,11 @@ $(function () {
 
       var side = $('.sideaffix');
       // set width & height for fixed state
-      side.width($('.affixed').width());
+      side.width($('.affixed').width() - 25);
 
       // set left hand offset for fixed positioning
-      var columnOffset = offset(document.querySelector('.affixed'));
-      side.css('left', columnOffset.left);
+      // var columnOffset = offset(document.querySelector('.affixed'));
+      side.css('right', 0);
 
     }
 
