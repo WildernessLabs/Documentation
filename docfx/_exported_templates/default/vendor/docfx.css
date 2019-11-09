@@ -932,8 +932,10 @@ div.embeddedvideo iframe {
   }
 
   #developers-section .article h3 {
+    position: relative;
     margin-top: 20px;
   }
+
   #developers-section .article h3:first-of-type {
     margin-top: 0px;
   }
@@ -990,6 +992,9 @@ div.embeddedvideo iframe {
     #developers-section .table-responsive table th {
       font-size: 24px;
     }
+    #developers-section .anchorjs-link {
+      right: 0;
+    }
    }
   @media (min-width: 768px) {
 
@@ -1007,6 +1012,9 @@ div.embeddedvideo iframe {
     }
     .sidetoggle {
       width: 300px;
+    }
+    #developers-section .anchorjs-link {
+      right: auto;
     }
   }
   @media (min-width: 1200px) {
