@@ -8,7 +8,12 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 
  1. Download the latest [Meadow.OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) files.
  2. Put the device into Device Firmware Upgrade (DFU) mode.
- 3. Upload the files to the device.
+ 3. Upload the files to the device. 
+
+The following video walks you through all that using a Mac:
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/PXAC0cpgPmc" frameborder="3" allowfullscreen></iframe></p>
+
+Alternatively, you can follow this step by step guide for both macOS and Windows: 
 
 ## Step 1: Install dfu-util
 

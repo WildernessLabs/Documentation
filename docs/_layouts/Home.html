@@ -1,15 +1,54 @@
 ---
 layout: SiteFrame
 ---
-<section class="banner small">
-  <h1>Welcome!</h1>
-  <p class="header-interior__subtitle"><span>To the Wilderness Labs developer documentation site.</span></p>
-</section>
-
-<div id="primary-col">
-  <section class="content wide" aria-label="main-content">
-    <div class="content-block">
-      {{ content }}
+<div class="landing">
+    <div class="banner small">
+        <h1>Get Started with Meadow</h1>
+        <p>Get up and running with the Meadow Getting Started Guides. Setup your development environment, configure your Meadow dev kit, and deploy your first application.</p>
+        <a href="/Meadow/Getting_Started/" class="cta">Getting Started Guide</a>
     </div>
-  </section>
-</div>
+    <section class="split-banners">
+        <div class="banner guides">
+            <h3><a href="/Meadow/">Meadow Guides</a></h3>
+            <p>Get to know the fundamentals of creating Meadow apps</p>
+            <ul>
+                <li><a href="/Meadow/Meadow_Basics/Apps/">Meadow Apps</a></li>
+                <li class="subpage"><a href="/Meadow/Getting_Started/Downloads/">Downloads</a></li>
+                <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable/">Events & IObservable</a></li>
+                <li><a href="/Meadow/Release_Notes/">Release Notes</a></li>
+                <!--<li><a href="#">Networking</a></li>
+                <li><a href="#">Bluetooth</a></li>-->
+                <li><a href="/Meadow/Meadow_Basics/IO/">Input/Output (I/O)</a></li>
+                <li class="subpage"><a href="/Meadow/Meadow_Basics/IO/Analog/">Analog</a>, <a href="/Meadow/Meadow_Basics/IO/Digital/">Digital</a></li>
+                <li class="subpage"><a href="/Meadow/Meadow_Basics/IO/Digital/PWM/">PWM</a></li>
+                <li class="subpage"><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols/">Protocols:</a> <a href="/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/">I2C</a>, <a href="/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/">SPI</a><!--, UART--></li>
+            </ul>
+
+        </div>
+        <div class="banner foundation">
+            <h3><img src="./dist/assets/images/landing-meadow-logo.svg" alt="Meadow Foundation Logo"/></h3>
+            <p>Create IoT solutions the fast and easy way; with Meadow.Foundation</p>
+            <a href="/Meadow/Meadow.Foundation/Getting_Started/">Getting Started</a>
+            <a href="/Meadow/Meadow.Foundation/Peripherals/">Peripheral Driver Library</a>
+            <a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks/">Libraries + Frameworks</a>
+        </div>
+        <div class="banner tutorials image-right">
+            <h3><a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a></h3>
+            <img src="./dist/assets/images/landing-electronics-tutorial.jpg" alt="Electronics Tutorial Example" />
+            <p>New to electronics? Wanna learn the difference between voltage and current? Take a dive into electronics the easy way with our electronics tutorial.</p>
+        </div>
+        <div class="banner netduino image-right">
+            <h3><img src="./dist/assets/images/Netduino_Logo.svg" alt="Netduino Logo" /></h3>
+            <img src="./dist/assets/images/landing-netduino-photo.png" alt="Netduino Example" />
+            <ul>
+              <li><a href="/Netduino/Getting_Started/">Getting Started</a></li>
+              <li><a href="/Netduino/About/">About</a></li>
+              <li><a href="http://netduino.foundation/">Netduino.Foundation</a></li>
+              <li><a href="https://www.hackster.io/search?i=projects&q=netduino">Hackster.io Samples</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="links-banner">
+       <a href="https://www.hackster.io/wildernesslabs" class="cta">View more projects &#64; Hackster.io</a>
+    </div>
+  </div>
