@@ -848,6 +848,7 @@ div.embeddedvideo iframe {
   }
   .affixed .nav>li>ul {
     padding: 0 0 25px 10px;
+    width: 100%;
   }
   .affixed .active > a::before {
     content: "|";
@@ -860,12 +861,9 @@ div.embeddedvideo iframe {
     padding-right: 4px;
     margin: 0 4px 0 0;
   }
-
-  .bs-docs-sidenav li {
-    width: 100%;
-    display: block;
+  #developers-section .affixed li {
+    width: 95%;
   }
-
   .affixed .nav > .nav {
     padding: 0 0 25px 0;
   }
@@ -885,9 +883,7 @@ div.embeddedvideo iframe {
   .affixed .contribution .nav {
     margin-top: 15px;
   }
-  .affixed .contribution .nav li {
-    width: 100%;
-  }
+
   .affixed .contribution .nav a {
     margin: 0;
     padding: 0px;
