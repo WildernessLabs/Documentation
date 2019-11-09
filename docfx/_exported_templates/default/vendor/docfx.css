@@ -794,7 +794,7 @@ div.embeddedvideo iframe {
     font-size: 15px;
     background-position: left 2px;
   }
-  #developers-section .banner.small.api-banner h1 {
+  #developers-section .banner.small.api-banner h1, #developers-section .banner.small.api-banner p {
     color: #F5F1EE;
   }
   .fixed-element {
@@ -942,19 +942,67 @@ div.embeddedvideo iframe {
     background: #555;
     color: #eee;
     border-color: #555;
+    font-family: 'MrsEavesOT-Bold';
+    font-size: 28px;
+    color: #EEEEEE;
+    letter-spacing: 0;
+    padding-bottom: 0px;
   }
 
   #developers-section .table-responsive table td, #developers-section .table-responsive tbody table tr {
-    background: #eee;
+    background: #FDFDFD;
     color: #555;
+    font-family: 'MrsEavesOT-Roman';
+    font-size: 28px;
+    color: #3D3530;
+    letter-spacing: 0;
+  }
+  #developers-section .table-responsive tbody table tr p {
+    margin-bottom: 5px;
   }
 
   #developers-section .table-bordered > tbody > tr > td {
-    border: 3px solid #555;
+    border: 2px solid #555;
   }
 
   #developers-section pre {
     border-radius: 8px;
     border-color: #555;
     background: #eee;
+    font-size: 15px;
+    white-space: no-wrap;
+    overflow-x: auto;
+  }
+
+  @media (min-width: 320px) {
+    .article {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {
+    .article {
+      width: 70%;
+    }
+    .affixed {
+      width: 30%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .article {
+      width: 70%;
+    }
+    .affixed {
+      width: 30%;
+    }
+  }
+  @media (min-width: 1600px) {
+    .article {
+      width: 80%;
+    }
+    .affixed {
+      width: 20%;
+    }
   }
