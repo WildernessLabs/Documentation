@@ -959,6 +959,13 @@ div.embeddedvideo iframe {
     color: #3D3530;
     letter-spacing: 0;
   }
+  #developers-section .table-responsive table a {
+    color: #1A80AA;
+    text-decoration: none;
+  }
+  #developers-section .table-responsive table a:hover {
+    text-decoration: underline;
+  }
   #developers-section .table-responsive tbody table tr p {
     margin-bottom: 5px;
   }

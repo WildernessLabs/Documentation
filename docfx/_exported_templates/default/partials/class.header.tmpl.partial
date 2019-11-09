@@ -16,9 +16,9 @@
         {{#inheritance}}
         <span class="level{{index}}">{{{specName.0.value}}}</span>
         {{/inheritance}}
-        <span class="level{{level}}"><span class="xref">{{name.0.value}}</span></span>
+        <span class="level{{level}}"><span class="xref">&gt; {{name.0.value}}</span></span>
         {{#derivedClasses}}
-        <span class="level{{index}}">{{{specName.0.value}}}</span>
+        <span class="level{{index}}">&gt; {{{specName.0.value}}}</span>
         {{/derivedClasses}}
       </td>
     </tr>
