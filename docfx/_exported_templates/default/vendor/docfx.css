@@ -794,6 +794,9 @@ div.embeddedvideo iframe {
     font-size: 15px;
     background-position: left 2px;
   }
+  #developers-section .banner.small.api-banner h1 {
+    color: #F5F1EE;
+  }
   .fixed-element {
     position: fixed;
   }
