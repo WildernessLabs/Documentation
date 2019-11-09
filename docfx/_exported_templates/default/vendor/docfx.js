@@ -55,7 +55,6 @@ $(function () {
     var content = $("#_content");
 
     // set the TOC to the height of the window if it exceeds, so that it can scroll internally when fixed
-    console.log("Reset Height", window.innerHeight);
     el.height(window.innerHeight);
 
     //set the content height to the height of the TOC if it is smaller
