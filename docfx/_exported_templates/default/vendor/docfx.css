@@ -17,6 +17,7 @@ svg:hover path {
   display: inline;
   background-color: inherit;
   padding: 0;
+  white-space: nowrap;
 }
 /* additional spacing fixes */
 .btn + .btn {
@@ -754,9 +755,13 @@ div.embeddedvideo iframe {
 
   #primary {
     width: 100%;
-    display: flex;
     background: #fdfdfd;
+    overflow: hidden;
   }
+  .article, .affixed {
+    float: left;
+  }
+
   .article {
     width: 80%;
   }
@@ -946,7 +951,6 @@ div.embeddedvideo iframe {
     color: #eee;
     border-color: #555;
     font-family: 'MrsEavesOT-Bold';
-    font-size: 28px;
     color: #EEEEEE;
     letter-spacing: 0;
     padding-bottom: 0px;
@@ -956,7 +960,6 @@ div.embeddedvideo iframe {
     background: #FDFDFD;
     color: #555;
     font-family: 'MrsEavesOT-Roman';
-    font-size: 28px;
     color: #3D3530;
     letter-spacing: 0;
   }
@@ -973,15 +976,18 @@ div.embeddedvideo iframe {
     border-color: #555;
     background: #eee;
     font-size: 15px;
-    white-space: no-wrap;
-    overflow-x: auto;
   }
 
   @media (min-width: 320px) {
     .article {
       width: 100%;
     }
-  }
+    #developers-section .table-responsive table td,
+    #developers-section .table-responsive tbody table tr,
+    #developers-section .table-responsive table th {
+      font-size: 24px;
+    }
+   }
   @media (min-width: 768px) {
 
   }
@@ -992,13 +998,27 @@ div.embeddedvideo iframe {
     .affixed {
       width: 30%;
     }
+
+    .landing #secondary-col {
+      flex-basis: 300px;
+    }
+    .sidetoggle {
+      width: 300px;
+    }
   }
   @media (min-width: 1200px) {
     .article {
-      width: 70%;
+      width: 75%;
     }
     .affixed {
-      width: 30%;
+      width: 25%;
+    }
+
+    .landing #secondary-col {
+      flex-basis: 370px;
+    }
+    .sidetoggle {
+      width: 370px;
     }
   }
   @media (min-width: 1600px) {
