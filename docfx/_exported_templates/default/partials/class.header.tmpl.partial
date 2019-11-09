@@ -55,7 +55,7 @@
            </span>
            {{/inheritedMembers}}
       {{#inheritedMembers.0}}
-       <td>
+       </td>
       {{/inheritedMembers.0}}
       {{#inheritedMembers.0}}
     </tr>
