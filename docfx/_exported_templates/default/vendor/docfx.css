@@ -17,7 +17,7 @@ svg:hover path {
   display: inline;
   background-color: inherit;
   padding: 0;
-  white-space: nowrap;
+  white-space: pre;
 }
 /* additional spacing fixes */
 .btn + .btn {
