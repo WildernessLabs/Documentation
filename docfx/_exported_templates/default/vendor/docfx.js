@@ -1161,9 +1161,9 @@ $(function () {
       }
     }
 
-    $(window).on('hashchange', scrollToCurrent);
+    //$(window).on('hashchange', scrollToCurrent);
     // Exclude tabbed content case
     $('a:not([data-tab])').click(delegateAnchors);
-    scrollToCurrent();
+    //scrollToCurrent();
   }
 });
