@@ -466,22 +466,12 @@ $(function () {
       loadToc();
     } else {
       registerTocEvents();
-      if ($('footer').is(':visible')) {
-        $('.sidetoc').addClass('shiftup');
-      }
 
       // Scroll to active item
-      var top = 0;
       $('#toc a.active').parents('li').each(function (i, e) {
         $(e).addClass(active).addClass(expanded);
         $(e).children('a').addClass(active);
-        $(e).children('a').focus();
       })
-
-
-      if ($('footer').is(':visible')) {
-        $('.sidetoc').addClass('shiftup');
-      }
 
       renderBreadcrumb();
     }
@@ -1161,9 +1151,9 @@ $(function () {
       }
     }
 
-    //$(window).on('hashchange', scrollToCurrent);
+    $(window).on('hashchange', scrollToCurrent);
     // Exclude tabbed content case
     $('a:not([data-tab])').click(delegateAnchors);
-    //scrollToCurrent();
+    scrollToCurrent();
   }
 });
