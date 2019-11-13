@@ -6,6 +6,39 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+## Beta 3.5
+
+This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and open-sourced the Meadow.CLI.
+
+### Serial/UART
+
+Meadow now has Serial/UART support! 
+
+[TTL, you'll need an adapter for industrial and old school RS-232]
+
+### SPI + I2C Fixes
+
+[better error messages]  
+[I2C Speed setting]
+
+### Meadow.CLI Upgrades and Open-Sourcing
+
+CLI Comms
+
+CLI open source
+
+
+### Meadow.Foundation 
+
+Display Updates
+
+Meadow.Foundation Sensor upgrades
+
+### New Developer Site
+
+[meadow docs integration (w/brand new home page), big new redesign, and major API Docs design and information architecture overhaul] 
+
+
 ## Beta 3.4
 
 This is another small release that expands the SPI capabilities, adds robustness to the IDE extensions, and sees some more things open-sourced.
