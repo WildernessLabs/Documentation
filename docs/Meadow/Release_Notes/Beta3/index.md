@@ -6,6 +6,10 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+# Pre-Release
+
+**Hello folks! These beta 3.5 notes are a WIP for our next release, the current beta is 3.4, and if you're reading this, you're on our beta staging site. Head over to our new [developer](http://developer.wildernesslabs.co/Meadow/Release_Notes/Beta3/) site to see the current production status.**
+
 ## Beta 3.5
 
 This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and open-sourced the Meadow.CLI.
