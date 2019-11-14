@@ -16,9 +16,7 @@ This is quite a big release with new features, including UART, and a major overh
 
 ### Serial/UART
 
-Meadow now has Serial/UART support! 
-
-[TTL, you'll need an adapter for industrial and old school RS-232]
+Meadow now has Serial/UART support! Check out the new [UART guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/) for all the details!
 
 ### SPI + I2C Fixes
 
@@ -32,16 +30,16 @@ CLI Comms
 CLI open source
 
 
-### Meadow.Foundation 
+### Meadow.Foundation
+
+Meadow.Foundation got a major sensor overhaul for b3.5, including the new `Read()`, `StartUpdating()`, and `StopUpdating()` pattern for sensor reads. We also published a new [Working with Sensors in Meadow.Foundation](/Meadow/Meadow.Foundation/Working_with_Sensors/) guide that is recommended reading, and explains the new pattern.
 
 Display Updates
 
-Meadow.Foundation Sensor upgrades
 
 ### New Developer Site
 
-[meadow docs integration (w/brand new home page), big new redesign, and major API Docs design and information architecture overhaul] 
-
+You're looking at it! We took our beta-developer site live, with the hot new redesign, and of course, Meadow docs! The whole site has been redesigned, including the API docs, which also got a major information architecture overhaul.
 
 ## Beta 3.4
 
