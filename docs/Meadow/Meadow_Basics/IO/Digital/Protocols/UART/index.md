@@ -60,16 +60,63 @@ The Meadow F7 Micro has two exposed serial ports, named `COM4` and `COM1` with t
 
 # Using the Meadow Serial API
 
-## Creating a Serial Port
+## Creating and Opening a Serial Port
 
-To use serial in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, using the port name, and the desired speed:
+To use serial in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, using the port name, and the desired speed (baud rate), and then call `Open()` to establish a connection with a peripheral:
 
 ```csharp
 var serial = Device.CreateSerialPort(Device.SerialPortNames.Com4, 115200);
+serialPort.Open();
 ```
+
+Optionally, you can also specify the number of data bits in a message frame, parity, and number of stop bits. The datasheet on your serial peripheral should specify what those values should be. The most common is `8n1`, which means `8` data bits, no parity check, or `Parity.None`, and one stop bit, or `StopBits.One`. These are the defaults for the `SerialPort` constructor, but you can specify something different as well:
+
+```csharp
+var serial = Device.CreateSerialPort(Device.SerialPortNames.Com4, 9600, 7, Parity.Even, StopBits.Two);
+serialPort.Open();
+```
+
 
 ## Reading and Writing
 
-[need to talk about the API hotness]
+Once the `SerialPort` is opened, communication is done via reads and writes which pass `byte[]` messages.
 
+### Writing to the Peripheral
 
+To write, call the [`Write(byte[] buffer)`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Write_System_Byte___) method and pass in the bytes to send to the peripheral:
+
+```csharp
+var buffer = new byte[] { 0x00, 0x0F, 0x01 };
+serialPort.Write(buffer);
+```
+
+### Reading from the Receive Buffer
+
+When data from the peripheral is received, it's placed in an internal [circular buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read. 
+
+For example, the following code will read 7 bytes from the buffer:
+
+```csharp
+byte[] response = new byte[7];
+this.serialPort.Read(response, 0, 7);
+```
+
+Read will also remove (dequeue) those bytes from the buffer. If you want to read from the buffer without removing the data, you can use the [`Peek()` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Peek).
+
+#### ReadToToken()
+
+If the received data is separated by a known token, such as a new line indicator (`/n`), you can use the [`ReadToToken(byte token)`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_ReadToToken_System_Byte_) method to automatically read the bytes until the token is found.
+
+#### Buffer
+
+By default, the `SerialPort` is created with a `4,096` byte input buffer, but that size can be set during port construction.
+
+### Event Notifications
+
+The `SerialPort` also has a [`DataReceived` event](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_DataReceived) that is raised when data is present.
+
+**However, that functionality is currently broken, so for now, you must manually poll the buffer to see if there is data.**
+
+### Additional APIs
+
+There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](http://beta-developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.
