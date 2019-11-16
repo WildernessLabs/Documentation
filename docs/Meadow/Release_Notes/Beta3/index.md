@@ -23,12 +23,9 @@ Meadow now has Serial/UART support! Check out the new [UART guide](/Meadow/Meado
 [better error messages]  
 [I2C Speed setting]
 
-### Meadow.CLI Upgrades and Open-Sourcing
+### Meadow.CLI Docs
 
-CLI Comms
-
-CLI open source
-
+[note about how we got them up]
 
 ### Meadow.Foundation
 
