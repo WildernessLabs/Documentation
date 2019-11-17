@@ -52,6 +52,10 @@ Better display support:
 
 You're looking at it! We took our beta-developer site live, with the hot new redesign, and of course, Meadow docs! The whole site has been redesigned, including the API docs, which also got a major information architecture overhaul.
 
+### Updating
+
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
+
 ## Beta 3.4
 
 This is another small release that expands the SPI capabilities, adds robustness to the IDE extensions, and sees some more things open-sourced.
