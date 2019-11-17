@@ -8,27 +8,19 @@ subtitle: Guides and documentation for Meadow
 
 We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 
-## GPIO
+## General IO Features
 
 | Feature              | Tested Working      | Notes                             |
 |----------------------|---------------------|-----------------------------------|
 | **Basic Digital IO** | Yes | |
-| **Analog**           | Yes | |
+| **Analog**           | Yes | Analog pins `A0` - `A3` working. |
 | **PWM**              | Yes | |
-| **Serial (UART)**    | No | Planned, Beta 4 |
+| **Serial (UART)**    | Yes | |
 | **I2C**              | Yes | |
 | **SPI**              | Yes | |
-| **CAN**              | No | Planned, RTW |
+| **CAN**              | No | Planned, v1.0 |
 | **DAC**              | No | Not implemented. Post-RTW |
 
-## Working GPIO Ports
-
-| Feature          | Tested Working      | Notes                             |
-|------------------|---------------------|-----------------------------------|
-| @"Meadow.Hardware.AnalogInputPort" | Yes | |
-| @"Meadow.Hardware.DigitalOutputPort" | Yes | |
-| @"Meadow.Hardware.DigitalInputPort" | Yes | |
-| @"Meadow.Hardware.BiDirectionalPort" | Yes | |
 
 ## Communications
 
@@ -41,6 +33,7 @@ We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
+| Debugging        | No                  | Planned for Beta 4.               |
 | Battery Charging  | Yes | |
 | Battery Voltage Level | No | Planed, Beta 4; Relies on Networking co-processor.
 | Power Management APIs | No | Planned for RC-1 |

@@ -6,6 +6,56 @@ subtitle: Release Notes
 
 # Meadow Beta 3 Release Notes
 
+## Beta 3.5
+
+This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and added docs for Meadow.CLI.
+
+### Serial/UART
+
+Meadow now has Serial/UART support! Check out the new [UART guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/) for all the details!
+
+### Better Digital Protocol Errs
+
+As part of the Serial work, we also improved error messaging across all the digital protocols (I2C, SPI, UART). We now get an actual linux error number back when things go wrong. Those error numbers still need to be looked up online to make sense of them, but before we were only getting `-1` when something wrong. There's still work to be done here, though. We plan on recreating common failures, mapping their errors, and generally trying to provide better guidance.
+
+### I2C Speed Setting
+
+You can now set the speed of the I2C bus. Somehow we missed this when we launched the I2C feature.
+
+### Meadow.CLI Docs
+
+We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Basics/Meadow_CLI/).
+
+### Meadow.Foundation
+
+#### `Read()`, `StartUpdating()`, and `StopUpdating` Sensor Pattern
+
+Meadow.Foundation got a major sensor overhaul for b3.5, including the new `Read()`, `StartUpdating()`, and `StopUpdating()` pattern for sensor reads. We also published a new [Working with Sensors in Meadow.Foundation](/Meadow/Meadow.Foundation/Working_with_Sensors/) guide that is recommended reading, and explains the new pattern.
+
+#### Display Updates
+
+We've added new features to `GraphicsLibrary`:
+- two new large pixel fonts: 12x16 and a 12x20
+- new `Rotation` property allows screen rotation on any display (even if the driver doesn't support it directly)
+- smarter drawing calls, allows more optimizations to be performed by the display driver
+
+SPI display driver performance:
+- drivers share a buffer with SPI bus under-the-hood, this reduces memory usage and should help performance
+- drivers now caches color values to reduce conversions from 24bit color to display-specific values
+- automatic partial screen updates (when possible) to reduce drawing time
+
+Better display support:
+- fixes to improve display support across several drivers including support for the 135x240 varient of the ST7789 display
+- re-write of the ePaper display drivers to expand supported displays and make it easier to identify the correct driver
+
+### New Developer Site
+
+You're looking at it! We took our beta-developer site live, with the hot new redesign, and of course, Meadow docs! The whole site has been redesigned, including the API docs, which also got a major information architecture overhaul.
+
+### Updating
+
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
+
 ## Beta 3.4
 
 This is another small release that expands the SPI capabilities, adds robustness to the IDE extensions, and sees some more things open-sourced.
