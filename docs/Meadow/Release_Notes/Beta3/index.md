@@ -12,26 +12,33 @@ subtitle: Release Notes
 
 ## Beta 3.5
 
-This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and open-sourced the Meadow.CLI.
+This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and added docs for Meadow.CLI.
 
 ### Serial/UART
 
 Meadow now has Serial/UART support! Check out the new [UART guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/) for all the details!
 
-### SPI + I2C Fixes
+### Better Digital Protocol Errs
 
-[better error messages]  
-[I2C Speed setting]
+As part of the Serial work, we also improved error messaging across all the digital protocols (I2C, SPI, UART). We now get an actual linux error number back when things go wrong. Those error numbers still need to be looked up online to make sense of them, but before we were only getting `-1` when something wrong. There's still work to be done here, though. We plan on recreating common failures, mapping their errors, and generally trying to provide better guidance.
+
+### I2C Speed Setting
+
+You can now set the speed of the I2C bus. Somehow we missed this when we launched the I2C feature.
 
 ### Meadow.CLI Docs
 
-[note about how we got them up]
+We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Basics/Meadow_CLI/).
 
 ### Meadow.Foundation
 
+#### `Read()`, `StartUpdating()`, and `StopUpdating` Sensor Pattern
+
 Meadow.Foundation got a major sensor overhaul for b3.5, including the new `Read()`, `StartUpdating()`, and `StopUpdating()` pattern for sensor reads. We also published a new [Working with Sensors in Meadow.Foundation](/Meadow/Meadow.Foundation/Working_with_Sensors/) guide that is recommended reading, and explains the new pattern.
 
-Display Updates
+#### Display Updates
+
+**ADRIAN TO UPDATE**
 
 
 ### New Developer Site
