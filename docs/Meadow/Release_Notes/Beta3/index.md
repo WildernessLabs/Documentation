@@ -40,7 +40,7 @@ Meadow.Foundation got a major sensor overhaul for b3.5, including the new `Read(
 
 We've added new features to `GraphicsLibrary`:
 - two new large pixel fonts: 12x16 and a 12x20
-- new **CurrentRotation** property allows screen rotation on any display (even if the driver doesn't support it directly)
+- new `Rotation` property allows screen rotation on any display (even if the driver doesn't support it directly)
 - smarter drawing calls, allows more optimizations to be performed by the display driver
 
 SPI display driver performance:
