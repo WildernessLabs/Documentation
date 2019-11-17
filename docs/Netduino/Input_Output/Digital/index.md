@@ -4,7 +4,7 @@ title: Digital I/O
 subtitle: Netduino digital (binary) Input/Output capabilities.
 ---
 
-# Info
+## Info
 
 Digital ports are useful for binary communication in which the port is either high/on (powered at `3.3V`) or low/off (grounded at `0V`). High represents a digital `1` or boolean `true`, and low represents digital `0` or boolean `false`. 
 
@@ -17,9 +17,9 @@ Additionally, Netduino provides built-in support for a host of different types o
 
 The above protocols are sometimes called peripherals.  The location of the peripherals is shown on the pin out diagram for the boards.  The Netduino 3 and Netduino 3 WiFi pin out is as follows:
 
-![](../../About/Netduino3_Pinout.svg)
+![](../../About/Netduino3_Pinout.svg){:standalone}
 
-## Pulling High or Low
+### Pulling High or Low
 
 Digital ports can be set to stand at a high or low voltage, in what's knows as _pulling_ them high, or pulling them low. So for instance, a digital port that is pulled high will be powered at `3.3V`, until it is modified, whereas a port pulled low will be at `0V`.
 
@@ -29,7 +29,7 @@ The following is the signature for one of the `InputPort` constructors:
 public InputPort(Cpu.Pin portId, bool glitchFilter, Port.ResistorMode resistor);
 ```
 
-## Input Ports
+### Input Ports
 
 The following code initializes an [`InputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx) (used for reading the port's value) on GPIO Digital Pin #2 that's pulled down to `0V`, so that by default, it doesn't have a current running through it:
 
@@ -45,7 +45,7 @@ The port's value can then be accessed via the `Read` method:
 bool state = inputPort.Read();
 ```
 
-### Events via InterruptPorts
+#### Events via InterruptPorts
 
 In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port's value changes by using an [`InterruptPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx). For example, in response to a button being pressed that connects a circuit and raises the input port's voltage from low (`0V`) to high (`3.3V`).
 
@@ -97,7 +97,7 @@ namespace ButtonInterruptEvents
 }
 ```
 
-### Glitch Filtering
+#### Glitch Filtering
 
 Sometimes, switches and other circuits don't produce a perfectly clean signal, especially during activation. In this case, multiple events can be raised in quick succession when a single event was expected.
 
@@ -152,7 +152,7 @@ namespace GlitchFilter
 }
 ```
 
-## Output
+### Output
 
 To write to a port, an [`OutputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx) is instantiated. The code below is from the same [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents):
 
@@ -166,7 +166,7 @@ To send a signal to the port, the `Write` method is called, passing in `false` f
 _led.Write(true); 
 ```
 
-# See Also
+## See Also
 
 * [`InputPort` API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx)
 * [`OutputPort` API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx)

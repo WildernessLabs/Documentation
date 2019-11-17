@@ -7,7 +7,7 @@ Blinky is the much revered "Hello, World" app for Netduino.
 
 It illustrates a basic program flow in Netduino and how to make the onboard LED blink.
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -38,6 +38,6 @@ namespace Blinky
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

@@ -4,13 +4,13 @@ title: UART
 subtitle: UART serial communication protocol support.
 ---
 
-# Info
+## Info
 
 _Universal Asynchronous Receiver/Transmitter_ (UART) is a protocol used to transfer data between two devices.  Data is broken down into a series of bits and transferred to the receiver sequentially.  A second UART in the receiver reassembles the bits into the original data.  The protocol allows for data to be transmitted over a single data line.  Bi-directional communication is established by using two data lines.
 
 The data lines are normally labelled R<sub>x</sub> for receive and T<sub>x</sub> for transmit.  It is important to remember that when connecting two devices together the R<sub>x</sub> line of the receiver should be connected to the T<sub>x</sub> line of the transmitter.  For bi-directional communication, this crossing of signal lines should be repeated.
 
-### Serial Port Properties
+#### Serial Port Properties
 
 Serial ports rely upon the transmitter and the receiver being configured identically.  A mismatch in the properties can result in a communication failure.  The four properties most associated with a UART are:
 
@@ -19,29 +19,29 @@ Serial ports rely upon the transmitter and the receiver being configured identic
 - Number of stop bits
 - Parity
 
-### Voltage Levels
+#### Voltage Levels
 
 The UART on the Netduino and many other microcontrollers operate at [TTL (Transistor - Transistor Logic)](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic) levels.  On the Netduino this is `3.3V` on other microcontrollers this may be `5V`.
 
 One serial protocol commonly used is [RS-232](https://en.wikipedia.org/wiki/RS-232).  RS-232 allows the voltage levels to vary between -15V and + 15V.  It is important not to connect a Netduino to circuits working at these voltage levels as this will damage the Netduino.  [The MAX232 series of conversion chips](http://www.ti.com/lit/ds/symlink/max232.pdf) are available to translate between Netduino and RS-232 voltage levels.
 
-# UART Pins on the Netduino
+## UART Pins on the Netduino
 
 There are four UARTs available on the Netduino, labeled as "COM" ports:
 
-![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg)
+![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg){:standalone}
 
-# Simple Transmitter and Receiver
+## Simple Transmitter and Receiver
 
 Simple serial communication can be illustrated by making the Netduino talk to itself using two of the four available serial ports.  In this simple scenario one of the com ports (COM1) will transmit data while a second port (COM4) will listen to the data being transmitted and display the messages in the debug console.
 
-## Hardware
+### Hardware
 
 The simple example under consideration requires only two wires and a Netduino.
 
 Connect R<sub>x</sub> of COM1 to SCL (T<sub>x</sub> of COM4) and T<sub>x</sub> of COM1 to SDA (R<sub>x</sub> of COM4).
 
-## Software
+### Software
 
 The following example has COM1as the transmitter and COM4 as the receiver:
 
@@ -139,7 +139,7 @@ namespace UARTTest
 }
 ```
 
-## Key Program Elements
+### Key Program Elements
 
 The first task is to create variables for the serial ports:
 
@@ -207,15 +207,15 @@ static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
 }
 ```
 
-## Logic Analyzer Output
+### Logic Analyzer Output
 
 Hooking up the logic analyzer and looking at the first message generates the following output:
 
-![Serial UART Transmission](SerialDataTransmission.png)
+![Serial UART Transmission](SerialDataTransmission.png){:standalone}
 
 The white dots show the points where the protocol analyzer is expecting to read a bit of data.  The brown line shows the value that is being read.
 
-# Program Output
+## Program Output
 
 Running the above application generates the following output:
 
@@ -230,14 +230,14 @@ Sending message: 4
 Message received: 4
 ```
 
-# Further Reading
+## Further Reading
 
 - [Wikipedia article describing UARTs](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter)
 - [MAX232 Datasheet](http://www.ti.com/lit/ds/symlink/max232.pdf)
 - [TTL (Transistor - Transistor Logic)](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic)
 - [RS-232](https://en.wikipedia.org/wiki/RS-232) serial communication
 
-# Related Hardware
+## Related Hardware
 
 A number of cables and boards are available to connect TTL serial ports on the Netduino to a PC or Mac over USB.  Examples include:
 

@@ -35,7 +35,7 @@ Note that particular LED is "Common Anode", meaning the long pin needs to be hoo
 
 A common cathode LED would probably not need that logic inversion.
 
-## Code
+### Code
 
 ```csharp
 using System;
@@ -94,15 +94,15 @@ namespace RGB_Blinky
 }
 ```
 
-## Schematic
+### Schematic
 
-![](RGB_Blinky_schem.svg)
+![](RGB_Blinky_schem.svg){:standalone}
 
-### Breadboard View
+#### Breadboard View
 
-![](RGB_Blinky_bb.svg)
+![](RGB_Blinky_bb.svg){:standalone}
 
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

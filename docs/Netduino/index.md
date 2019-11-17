@@ -1,17 +1,17 @@
 ---
 layout: Netduino
-title: Netduino Guides
+title: Netduino
 subtitle: Guides and documentation for Netduino
 ---
 
-# [Getting Started](/Netduino/Getting_Started)
+## [Getting Started](/Netduino/Getting_Started)
 
 Guides for getting up and running with Netduino.
 
  * [Mac Installation](/Netduino/Getting_Started/Installation/Mac)
  * [Windows Installation](/Netduino/Getting_Started/Installation/Windows)
 
-# [About Netduino](/Netduino/About)
+## [About Netduino](/Netduino/About)
 
 Netduino features, downloads, and source.
 
@@ -19,7 +19,7 @@ Netduino features, downloads, and source.
  * [Downloads](/Netduino/About/Downloads)
  * [Source Files](/Netduino/About/Source)
 
-# [I/O](/Netduino/Input_Output)
+## [I/O](/Netduino/Input_Output)
 
 General Purpose Input/Output (GPIO) options available onboard the Netduino.
 
@@ -39,9 +39,8 @@ General Purpose Input/Output (GPIO) options available onboard the Netduino.
    * [Configuration](/Netduino/Input_Output/Network/Configuration)
    * [Connecting](/Netduino/Input_Output/Network/Connection)
 
-# [Application Fundamentals](/Netduino/Application_Fundamentals/)
+## [Application Fundamentals](/Netduino/Application_Fundamentals/)
 
 Building .NET MicroFramework applications for Netduino.
 
  * [.NET MicroFramework](/Netduino/Application_Fundamentals/NETMF/)
-    

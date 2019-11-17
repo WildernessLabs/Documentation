@@ -4,7 +4,7 @@ title: File IO
 subtitle: Using the onboard micro SD card as a persistent storage device.
 ---
 
-# Info
+## Info
 
 Netduino 2 and 3 can access up to 2GB of storage on a Micro SD Card which provide a persistent storage mechanism similar to a hard drive. This can be useful for storing application configuration information that can be read at boot-up, or for storing log information.
 

@@ -7,7 +7,7 @@ title: Upcoming Events
 
 We're kicking off our Hardware Hackers roadshow in June! Join us in Portland, Seattle, Vancouver BC, San Francisco, and more as we launch our new meetup groups dedicated to hacking hardware with C# and .NET!
 
-#### Hacking Appliances and Prototyping Connected things with Netduino and Xamarin.
+### Hacking Appliances and Prototyping Connected things with Netduino and Xamarin.
 
 The hardware revolution is just beginning. Nest, Ring, Mellow; these are just the tip of the iceberg. Advances in hardware and software have opened a new world of connected possibilities that extends beyond just the consumer and into the industrial and commercial IoT world. And if you can develop apps, you can build hardware!
 

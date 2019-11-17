@@ -4,7 +4,7 @@ title: 74595 Shift Register
 subtitle: Expanding Netduino digital outputs with an external Integrated Circuit (IC) chip.
 ---
 
-# Overview
+## Overview
 
 74595 shift registers provide a mechanism to convert serial data into 8 parallel outputs.  These are useful in cases where additional output pins are required.  The shift register only uses three pins for the 8 outputs it can provide.
 
@@ -12,7 +12,7 @@ It is even possible to chain two or more 74595 shift requesters together gaining
 
 A block diagram of the internals of the 74595 is as follows:
 
-![Shift Register](ShiftRegister.png)
+![Shift Register](ShiftRegister.png){:standalone}
 
 Data is transmitted to the shift register on the data line.  Data is transferred to the shift register on the positive edge of the clock signal.  At this point the data exists only in the shift register.  The latches are still presenting the old data to the lines Q0 - Q7.
 
@@ -27,17 +27,17 @@ One (Shift Register clock) is used to allow data to be pushed into the shift reg
 
 The second clock (Storage register / Latch clock) is used to decide when the data in the shift register is pushed into the storage register.
 
-## Netduino.Foundation Support
+### Netduino.Foundation Support
 
 [Netduino.Foundation](http://Netduino.Foundation) includes a [`74595`](http://netduino.foundation/Library/ICs/74595/) shift register class that greatly simplifies using a shift register. This low-level hardware guide is here for reference purposes, but we strongly recommend using Netduino.Foundation to integrate with them.
 
-## Binary Counting
+### Binary Counting
 
 The operation of the shift register can be illustrated using binary counter.  Here a single shift register will be connected to 8 LEDs.  These LEDs will represent the 8 bits in a single byte.
 
 The application uses [BitBanging](../../BitBanging/) to output the current byte as a series of bits and then display the value on the LEDs.
 
-### Hardware
+#### Hardware
 
 A small number of components are required:
 
@@ -47,7 +47,7 @@ A small number of components are required:
 
 These components, along with a Netduino, should be wired up as follows:
 
-![Netduino and Shift Register](ShiftRegisterAndLEDFritzing.png)
+![Netduino and Shift Register](ShiftRegisterAndLEDFritzing.png){:standalone}
 
 A block of LEDs has been used here are these offer 10 LEDs in a small convenient package.  8 individual LEDs can also be used.
 
@@ -55,9 +55,9 @@ Note that the pins representing the outputs of the shift register are connected 
 
 Translating this to breadboard gives something like the following:
 
-![Netduino and Shift Register Circuit](ShiftRegisterCircuitOnBreadboard.jpg)
+![Netduino and Shift Register Circuit](ShiftRegisterCircuitOnBreadboard.jpg){:standalone}
 
-### Software
+#### Software
 
 Create a new project and enter the following code:
 
@@ -100,7 +100,7 @@ namespace ShiftRegister
 }
 ```
 
-#### `Main`
+##### `Main`
 
 This method sets up three `OutputPort` objects, one for the data and two for the clock signals.
 
@@ -123,7 +123,7 @@ latchPin.Write(false);
 
 A short pause and the loop moves on to the next number.
 
-#### `BitBang`
+##### `BitBang`
 
 The `BitBang` method pushes the data out to the shift register one bit at a time:
 

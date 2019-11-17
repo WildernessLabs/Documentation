@@ -22,8 +22,8 @@ title: Part 4 - Resistance and Ohm's Law
 ### [Review](Review)
 
 <!--
- 
-# Things to add
+
+## Things to add
 
  * [Derating and Temperature Coefficient](https://www.digikey.com/en/maker/blogs/a8c993213afd48c3b08b65d2e372197c)
 

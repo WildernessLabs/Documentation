@@ -4,7 +4,7 @@ title: Review
 subtitle: Important points on basic DC circuit analysis.
 ---
 
-# Important Concepts
+## Important Concepts
 
 This was a big chapter of the tutorial. Along the way, we learned about Kirchhoff's laws, which are as foundational as Ohm's law and are key to analyzing, understanding, and designing circuits. We also built our first practical circuits, learned to solder, and integrated those circuits with Netduino.
 
@@ -21,4 +21,4 @@ This was a big chapter of the tutorial. Along the way, we learned about Kirchhof
  * There are lots of different software applications to help design and analyze circuits. Some of the most common and accessible apps are Fritzing, iCircuit, Eagle CAD and KiCad.
 
 
-# Part 6 - Coming Soon!
+## Part 6 - Coming Soon!

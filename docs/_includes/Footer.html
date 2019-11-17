@@ -1,39 +1,52 @@
-<footer>
-    <div class="container">
-        <div class="row">
-        <div class="col col-10-10">
-            <div class="col-footer">
-            <a href="http://www.wildernesslabs.co"><img class="footer-wlabs-logo" src="/assets/img/WLabs_Footer_logo.svg" alt="Wilderness Labs"></a>
-            <div class="copyright">&copy; 2018, Wilderness Labs</div>
-            <div class="tagline">We power connected things.</div>
-            </div>
-            <div class="col-footer">
-            <h3>Products</h3>
+<footer class="container-fluid">
+    <section class="section-left">
+        <a href="/" class="footer-logo"><img src="/dist/assets/svg/footer-logo.svg"></a>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/wildernesslabs" class="icon" title="Launches Facebook (in new window)" target="_blank"><img alt="Facebook Icon" src="/dist/assets/svg/facebook.svg"></a></li>
+            <li><a href="https://twitter.com/wildernesslabs" class="icon" title="Launches Twitter (in new window)" target="_blank"><img alt="Twitter Icon" src="/dist/assets/svg/twitter.svg"></a></li>
+            <li><a href="https://github.com/wildernesslabs" class="icon" title="Launches Github (in new window)" target="_blank"><img alt="Github Icon" src="/dist/assets/svg/github.svg"></a></li>
+            <li><a href="http://slackinvite.wildernesslabs.co" class="icon" title="Launches Slack (in new window)" target="_blank"><img alt="Slack Icon" src="/dist/assets/svg/slack.svg" width="35"></a></li>
+        </ul>
+    </section>
+
+    <div class="section-right-wrapper">
+        <section>
+            <h1>Contact</h1>
+            <p>
+                <a href="mailto:Hello@wildernesslabs.co">Hello@wildernesslabs.co</a><br>
+                Portland, Oregon
+            </p>
+        </section>
+        <section class="newsletter">
+            <h1>Newsletter</h1>
+            <form id="newsletter-form" method="post" action="/Newsletter">
+                <div class="fields">
+                    <label for="newsletter-email">Email</label>
+                    <input id="newsletter-email" name="email" type="email" placeholder="your@email">
+                </div>
+                <div class="action">
+                    <button type="submit">Submit</button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8EJlCDPVnu5IqTXCShG3OAs15L7CHyd1ZP7ukIeF1zlricfmTuSD7Bw5tatE4e5cwTkdqKAlG87WFe3Vxo7KBRaKIsvzEeTFyjydbhk7uEu5o6JMmEJd0gnUDT4kIYJrzIK0GnC975yfZLlOBGU2hSM" data-la-initdispnone="true"></form>
+        </section>
+        <section class="links">
             <ul>
-                <li><a href="https://www.wildernesslabs.co/Netduino">Netduino</a></li>
+                <li><a href="/meadow">Meadow</a></li>
+                <li><a href="/netduino">Netduino</a></li>
+                <li><a href="https://community.wildernesslabs.co/">Community</a></li>
+                <li><a href="http://developer.wildernesslabs.co/">Developers</a></li>
+                <li><a href="https://blog.wildernesslabs.co/">Blog</a></li>
             </ul>
-            </div>
-            <div class="col-footer">
-            <h3>Developers</h3>
+        </section>
+        <section class="more-links">
+            <h1>More</h1>
             <ul>
-                <li><a href="http://developer.wildernesslabs.co/Netduino/Getting_Started/">Getting Started</a></li>
-                <li><a href="http://Netduino.Foundation">Netduino.Foundation</a></li>
-                <li><a href="http://community.wildernesslabs.co">Community Forums</a></li>
+                <li><a href="/terms">Terms of Use</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
             </ul>
-            </div>
-            <div class="col-footer">
-            <h3>Company</h3>
-            <ul>
-                <li><a href="http://blog.wildernesslabs.co">Blog</a></li>
-            </ul>
-            </div>
-            <div class="col-footer">
-            <ul class="social-icons">
-                <li><a href="https://github.com/wildernesslabs/"><img src="/assets/img/GitHub_FooterLogo.svg" alt="Github"></a></li>
-                <li><a href="https://twitter.com/wildernesslabs"><img src="/assets/img/Twitter_FooterLogo.svg" alt="Twitter"></a></li>
-                <li><a href="https://www.facebook.com/netduino/"><img src="/assets/img/Facebook_FooterLogo.svg" alt="Facebook"></a></li>
-            </ul>
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->       
-</footer>   
+        </section>
+    </div>
+    <section class="terms">
+        <p>© Wilderness Labs 2018 <a href="/terms">Terms of Use</a></p>
+    </section>
+</footer>

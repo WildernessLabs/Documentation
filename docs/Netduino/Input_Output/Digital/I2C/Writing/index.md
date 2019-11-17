@@ -4,15 +4,15 @@ title: I2C Writing
 subtitle: Writing data to an I2C device.
 ---
 
-# Info
+## Info
 
 The previous sections of this guide presented an [overview of the I2C protocol](../) and demonstrated how to [read from the TMP102 temperature sensor](../Reading/).  This section will demonstrate how to write some data to the TMP102 temperature sensor.
 
-## Netduino.Foundation I2CBus
+### Netduino.Foundation I2CBus
 
 The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/) class that makes I2C communication easy by encapsulating all of the low-level plumbing calls in an easy to use object. We recommend using that class for I2C communications rather than using the low-level calls directly.
 
-# Writing to Registers and Multiple Transactions
+## Writing to Registers and Multiple Transactions
 
 As noted in the [reading guide](../Reading/), the `Execute` method can execute multiple transactions in a single call.  This will be illustrated in the following application that will:
 
@@ -32,13 +32,13 @@ The call to `tmp102.Execute` in the above code will use the transactions in the 
 
 Configuration of the TMP102 is managed by a number of registers.  It should be noted that the use of registers to store data and configuration is common to both I2C and [SPI](../../SPI/index.md) devices.
 
-## Registers
+### Registers
 
 In the above example the application used the default power on state for the TMP102.  The default state allows the application to read the temperature.  The temperature itself is maintained in one of the internal registers and the read operation is simply returning the value in the register.
 
 The number of registers and their meaning are usually documented in the data sheet for the component in question.
 
-### TMP102 Registers
+#### TMP102 Registers
 
 The TMP102 has five registers:
 
@@ -50,7 +50,7 @@ The TMP102 has five registers:
 
 The current temperature register is read only and is the one that the above application reads.  The remaining four registers are read-write registers and can be used to change the operation of the TMP102.
 
-#### Pointer Register
+##### Pointer Register
 
 The pointer register is an 8 bit wide register that indicates which of the remaining four registers should be accessed.  Applications can write to bits 0 and 1 of this register, bits 2-7 should be set to zero.  The pointer register is interpreted as follows:
 
@@ -63,11 +63,11 @@ The pointer register is an 8 bit wide register that indicates which of the remai
 
 The default power on value of the TMP102 pointer register is 0 (temperature register).
 
-#### Temperature Register
+##### Temperature Register
 
 The temperature register holds 0&deg;C at power up.  Following a conversion the temperature reading is transferred to the temperature register.  The two byte register holds a 12 (or 13) bit value indicating the last reading along with a single bit indicating if this is a 12 or 13 bit reading.
 
-##### 12-bit Reading:
+###### 12-bit Reading:
 
 Byte 1:
 
@@ -81,7 +81,7 @@ Byte 2:
 |-----|-----|-----|-----|-----|-----|-----|-----|
 | T03 | T02 | T01 | T00 |  0  |  0  |  0  |  0  |
 
-##### 13-bit Reading:
+###### 13-bit Reading:
 
 Byte 1:
 
@@ -96,7 +96,7 @@ Byte 2:
 | T04 | T03 | T02 | T01 | T00 |  0  |  0  |  1  |
 
 
-#### Configuration Register
+##### Configuration Register
 
 The configuration register controls how the TMP102 functions.  This register is a 16-bit register and as noted, this is a read-write register.  The control register allows the configuration of the following:
 
@@ -113,11 +113,11 @@ For the purpose of this exercise the application will be changing only the _Exte
 
 From the data sheet, the EM bit is bit 4 in the second byte of the configuration register.
 
-### Writing To Registers
+#### Writing To Registers
 
 The Pointer Register changes the register being accessed.  Multiple reads will use the previous value in the Pointer Register if a new value is not supplied.  Write operations require the pointer register to be supplied for each write operation.
 
-## Software
+### Software
 
 The specification for the application was defined as follows:
 
@@ -236,7 +236,7 @@ namespace TMP102ReadWrite
 }
 ```
 
-### Key Elements
+#### Key Elements
 
 The application will read the configuration twice, once to verify the power on state, the second time to verify that the change from 12-bit mode to 13-bit mode has been applied.
 
@@ -271,7 +271,7 @@ A key point to note here is that a write and a read transaction are both execute
 
 Executing the above will result in a write following by a read:
 
-![Read Configuration from TMP102](ReadConfiguration.png)
+![Read Configuration from TMP102](ReadConfiguration.png){:standalone}
 
 The second green dot indicates the change from the write operation (setting the pointer register) to the read operation (reading the configuration register).
 
@@ -288,7 +288,7 @@ Thread.Sleep(1000);
 
 This results in the following data transmission:
 
-![N3 Writing Configuration Data to TMP102](WriteConfiguration.png)
+![N3 Writing Configuration Data to TMP102](WriteConfiguration.png){:standalone}
 
 The `Sleep` method call ensures that the TMP102 has time to make at least one measurement before the application starts to read the temperature from the sensor.
 
@@ -302,9 +302,9 @@ reading[1] = I2CDevice.CreateReadTransaction(temperatureData);
 
 The read operation differs from the first application as it ensures that it is reading from the temperature register but explicitly setting the register (write transaction) before it reads the data from the register:
 
-![Read Temperature From TMP102](ReadTemperature.png)
+![Read Temperature From TMP102](ReadTemperature.png){:standalone}
 
-#### Program Output
+##### Program Output
 
 Successful deployment will give output similar to the following:
 
@@ -321,7 +321,7 @@ Temperature data: 0x0c, 0xb1
 25.375 C / 77.675000000000011 F
 ```
 
-# Further Information
+## Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
 * [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)

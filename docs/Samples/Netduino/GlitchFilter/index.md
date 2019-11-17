@@ -5,7 +5,7 @@ title: Glitch Filtering
 
 The following sample illustrates configuring the glitch filter to 5 milliseconds.
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -40,6 +40,6 @@ namespace GlitchFilter
 }
 ```
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

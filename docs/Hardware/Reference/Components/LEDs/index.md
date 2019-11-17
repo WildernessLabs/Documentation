@@ -4,11 +4,11 @@ title: LEDs
 subtitle: Light Emitting Diodes
 ---
 
-# Overview
+## Overview
 
 An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](/Hardware/Circuits/Diodes/) (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:
 
-![LED Circuit Symbol](LED.svg)
+![LED Circuit Symbol](LED.svg){:standalone}
 
 Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the [Cathode](https://en.wikipedia.org/wiki/Cathode)) than the other (the [Anode](https://en.wikipedia.org/wiki/Anode)). The cathode (longer leg) indicates that it should be hooked to the positive (`+`) side of a circuit.
 
@@ -16,7 +16,7 @@ Because it is a diode, it only works when a voltage is applied one way. For this
 
 LEDs are an incredibly common component that come in a variety of packages here are just a few:
 
-![Some LED Packages](SomeLEDs.jpg)
+![Some LED Packages](SomeLEDs.jpg){:standalone}
 
 The above shows, starting from the left, Red, Green, Yellow, Blue, RGB, Infrared, Bar LED (actually 10 independent LEDs in a single package) and a Seven Segment display with decimal point.
 
@@ -41,7 +41,7 @@ LEDs require a minimum voltage drop across the LED in order for it to open it's 
 
 ## Maximum Current
 
-Maximum current (I<sub>fmax</sub>) rating is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED. Exceeding the maximum current rating for an LED by very much will usually burn out an LED quite quickly. 
+Maximum current (I<sub>fmax</sub>) rating is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED. Exceeding the maximum current rating for an LED by very much will usually burn out an LED quite quickly.
 
 
 ## LED Colors
@@ -86,8 +86,8 @@ The [`RgbPwmLed`](http://netduino.foundation/API/LEDs/RgbPwmLed/) class represen
 ### `TypicalForwardVoltage` Class
 
 The [`TypicalForwardVoltage`](http://netduino.foundation/API/LEDs/TypicalForwardVoltage/) class defines typical forward voltages for LEDs. Useful when creating a `PwmLed` or `RgbPwmLed` to limit the maximum PWM duty cycle to an average voltage that won’t burn out the LED.
- 
-# Digital LEDs
+
+## Digital LEDs
 
 In recent years a number of digital RGB LEDs have become available.  These products are RGB LEDs in combination with a small current controller IC.  The most prevalent of these are:
 
@@ -98,6 +98,6 @@ These devices are available as single units as well as flexible strips, straight
 
 The driver in the WS8211 LEDs requires precise timing control in order to be able to set the colour of the LED.  The APA102 is more forgiving as this uses a basic serial protocol (data and clock only).  The APA102 chips are better suited to the Netduino.
 
-# Further Information
+## Further Information
 
 [LED on Wikipedia](https://en.wikipedia.org/wiki/Light-emitting_diode)

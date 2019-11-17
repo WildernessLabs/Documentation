@@ -4,11 +4,11 @@ title: Requirements
 subtitle: Necessary components and tools required for tutorial completion.
 ---
 
-# Tools and Components
+## Tools and Components
 
 The following is a list of components and tools needed to complete the labs presented in this tutorial, along with links to the labs in which they are first used. Note that many tools and components are used but these tables list when they are first needed, so they don't need to be purchased all at once. Before purchasing of the tools and components listed, make sure to read the labs in which the tools used, because I discuss various options as well as their costs.
 
-## Tools
+### Tools
 
 | Tool                                             | Approximate US$ Cost   | Needed By                                                       |
 |--------------------------------------------------|------------------------|-----------------------------------------------------------------|
@@ -21,7 +21,7 @@ The following is a list of components and tools needed to complete the labs pres
 | Baseboard (optional, but highly recommended)     | 3D Printable or $20    | [Part 5, Level Shifting Lab](../../Part5/Level_Shifting_Lab)    |
 
 
-## Components
+### Components
 
 | Component                              | Approximate US$ Cost   | Needed By                                                           |
 |----------------------------------------|------------------------|---------------------------------------------------------------------|
@@ -35,4 +35,4 @@ The following is a list of components and tools needed to complete the labs pres
 | 22ga Single Strand Wire (optional)     | $20                    | [Part 5, Level Shifting Lab](../../Part5/Level_Shifting_Lab)        |
 | LilyPad 5V Light Sensor                | $2                     | [Part 5, Level Shifting Lab](../../Part5/Level_Shifting_Lab)        |
 
-# [Next: Part 1 - Physics of Electricity](/Hardware/Tutorials/Electronics/Part1/Atoms/)
+## [Next: Part 1 - Physics of Electricity](/Hardware/Tutorials/Electronics/Part1/Atoms/)

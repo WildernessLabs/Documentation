@@ -4,7 +4,7 @@ title: Voltage Laws
 subtitle: Calculations involving voltage.
 ---
 
-# Overview
+## Overview
 
 Two of the most important calculations involving voltage are Ohm's law and voltage division:
 

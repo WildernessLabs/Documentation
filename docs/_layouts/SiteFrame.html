@@ -9,9 +9,12 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700|Roboto:300,400,400i,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/dist/assets/fonts/web/wlabs-fonts.css" data-la-initdispnone="true">
+    <link rel="stylesheet" href="/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/dist/css/main.css">
 
-    <script src="/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
     <!-- favicon madness -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://developer.wildernesslabs.co/assets/favicon/apple-touch-icon-57x57.png" />
@@ -36,25 +39,30 @@
     <meta name="msapplication-square310x310logo" content="http://developer.wildernesslabs.co/assets/favicon/mstile-310x310.png" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89139221-3"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89139221-13"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-89139221-3');
+      gtag('config', 'UA-89139221-13');
     </script>
 
   </head>
-  <body>   
-     
+  <body class="developers">
+
 {% include TopNav.html %}
 
-        
-{{ content }}
-        
-        
+<main>
+  <section id="developers-section">
+    {% include SecondaryNav.html %}
+
+    {{ content }}
+  </section>
+</main>
+
 {% include Footer.html %}
 
+    <script src="/dist/js/main.js"></script>
     </body>
 </html>

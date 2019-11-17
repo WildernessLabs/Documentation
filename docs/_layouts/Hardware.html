@@ -2,51 +2,27 @@
 layout: SiteFrame
 ---
 
-
-<section class="header-interior">
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p class="header-interior__subtitle">{% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}</p>
-    </div><!-- .container -->      
+<section class="banner small">
+  <h1>{{ page.title }}</h1>
+  <p class="header-interior__subtitle">{% if page.subtitle %}<span>{{ page.subtitle }}</small>{% endif %}</p>
 </section>
 
-<section class="clearfix">        
-    <nav class="secondary">
-        <div class="container">
-        <div class="row">
-            <div class="col col-10-10">
-            <ul>
-                <li><a href="/Netduino">Netduino Guides</a></li>
-                <li><a href="/Hardware">Hardware &amp; Circuits</a></li>
-                <li><a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a></li>
-                <li><a href="/Samples">Samples</a></li>
-                <li><a href="/Events">Events</a></li>
-            </ul>
-            </div><!-- .col -->
-        </div><!-- .row -->
-        </div><!-- .container -->
-    </nav>            
-</section>
-
-<section class="interior-content">
-    <div class="container">
-        <aside class="interior-aside">
-            <div class="mobile-toggle--aside">
-                <span></span>
-                <span></span>
-                <span></span>
-                <div class="text">Submenu</div>
-                <div class="text--close">Close</div>
-            </div>
-    
-            {% include HardwareNavigation.html %}
-    
-        </aside>
-
-
-        <div class="main">
-            {{ content }}
-
-        </div><!-- .main -->
+<button href="#" class="subcat-nav-trigger mobile-nav-trigger mobile" aria-expanded="false" data-la-initdispnone="true">Submenu</button>
+<div class="columns">
+    <div id="secondary-col" class="desktop">
+        {% include HardwareNavigation.html %}
     </div><!-- .container -->
-</section>        
+
+    <div id="primary-col">
+      <section class="content wide" aria-label="main-content">
+        <div class="content-block">
+          {{ content }}
+
+          <p class="small content-message">These docs are <a href="https://github.com/WildernessLabs/Documentation">open source</a>. If you
+          find an issue, please file a <a href="https://github.com/WildernessLabs/Documentation/issues">bug</a>, or
+          send us a pull request. And if you want to contribute, we'd love that too!</p>
+        </div>
+      </section>
+      <div class="background-underlay"></div>
+    </div><!-- .main -->
+</div>

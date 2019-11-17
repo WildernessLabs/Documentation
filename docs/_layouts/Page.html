@@ -5,26 +5,8 @@ layout: SiteFrame
 <section class="header-interior">
     <div class="container">
         <h1>{{ page.title }}</h1>
-        <p class="header-interior__subtitle">{% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}</p>
-    </div><!-- .container -->      
-</section>
-
-<section class="clearfix">        
-    <nav class="secondary">
-        <div class="container">
-        <div class="row">
-            <div class="col col-10-10">
-            <ul>
-                <li><a href="/Netduino">Netduino Guides</a></li>
-                <li><a href="/Hardware">Hardware &amp; Circuits</a></li>
-                <li><a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a></li>
-                <li><a href="/Samples">Samples</a></li>
-                <li><a href="/Events">Events</a></li>
-            </ul>
-            </div><!-- .col -->
-        </div><!-- .row -->
-        </div><!-- .container -->
-    </nav>            
+        <p class="header-interior__subtitle">{% if page.subtitle %}<span>{{ page.subtitle }}</small>{% endif %}</p>
+    </div><!-- .container -->
 </section>
 
 <section class="interior-content">
@@ -32,10 +14,9 @@ layout: SiteFrame
         <div class="main">
             {{ content }}
 
-            <hr>
-            These docs are <a href="https://github.com/WildernessLabs/Documentation">open source</a>. If you 
-            find an issue, please file a <a href="https://github.com/WildernessLabs/Documentation/issues">bug</a>, or 
-            send us a pull request. And if you want to contribute, we'd love that too!
+            <p class="small content-message">These docs are <a href="https://github.com/WildernessLabs/Documentation">open source</a>. If you
+            find an issue, please file a <a href="https://github.com/WildernessLabs/Documentation/issues">bug</a>, or
+            send us a pull request. And if you want to contribute, we'd love that too!</p>
         </div><!-- .main -->
     </div><!-- .container -->
-  </section>        
+  </section>

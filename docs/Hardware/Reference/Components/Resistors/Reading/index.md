@@ -4,17 +4,17 @@ title: Reading a Resistor's Value
 subtitle: Determining a resistor's value from its band markings.
 ---
 
-# Through-hole (PTH) Axial Resistor Colored Bands
+## Through-hole (PTH) Axial Resistor Colored Bands
 
 Axial resistors, the kind that is most often used when prototyping, have color coded bands that specify the resistance value and tolerance of the resistor. They usually come in 4 or 5 band flavors, with 5 band resistors being more precise.
 
 To read a banded resistor, align it so that the three (or four) closely spaced bands are on the left, and the furthest spaced band is on the right. Then, use the following chart to determine the values from left to right:
 
-![4-band resistor color chart](/Common_Files/Reading_Axial_Resistors.svg)
+![4-band resistor color chart](/Common_Files/Reading_Axial_Resistors.svg){:standalone}
 
-The first 2 (or 3 bands, on a 5-band resistor) specify the resistance value, and the 3rd (or 4th) specify the magnitude multiplier. 
+The first 2 (or 3 bands, on a 5-band resistor) specify the resistance value, and the 3rd (or 4th) specify the magnitude multiplier.
 
-## Sample Reading
+### Sample Reading
 
 For example, the resistor shown above has the following values:
 
@@ -27,7 +27,7 @@ For example, the resistor shown above has the following values:
 Therefore, the resistor has `160Ω * 1k = 160kΩ`, with a tolerance of `±5%`.
 
 
-# Surface Mount (SMD)
+## Surface Mount (SMD)
 There are 2 primary methods of labeling SMD resistors.
 
 The first uses 3 numbers such as `424`, this can be understood as 42 * 10<sup>4</sup> = 42 x 10,000 = `420kΩ`.  If the resistor were labeled as `420` it would be 42 * 10<sup>0</sup> = 42 * 1 = `42Ω`.

@@ -7,11 +7,11 @@ This example demonstrates how to read from and write to a [TMP102 temperature se
 
 The full discussion can be found in the [Wilderness Labs Developer](http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/I2C/Writing/) portal.
 
-## Hardware
+### Hardware
 
-![Netduino and TMP102 Temperature Sensor](NetduinoAndTMP102FritzingDiagram.png)
+![Netduino and TMP102 Temperature Sensor](NetduinoAndTMP102FritzingDiagram.png){:standalone}
 
-# Code
+## Code
 
 ```csharp
 using Microsoft.SPOT;
@@ -123,12 +123,12 @@ namespace TMP102ReadWrite
 }
 ```
 
-# Hardware Required
+## Hardware Required
 
 * Netduino
 * [TMP102 I2C Temperature Sensor](https://www.sparkfun.com/products/13314)
 
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

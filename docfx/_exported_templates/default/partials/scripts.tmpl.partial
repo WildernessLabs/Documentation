@@ -1,0 +1,6 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<script type="text/javascript" src="{{_rel}}vendor/docfx.vendor.js"></script>
+<script type="text/javascript" src="{{_rel}}vendor/docfx.js"></script>
+<script type="text/javascript" src="{{_rel}}vendor/main.js"></script>
+<script type="text/javascript" src="{{_rel}}dist/js/main.js"></script>

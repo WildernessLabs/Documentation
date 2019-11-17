@@ -1,27 +1,21 @@
-<header class="header clearfix">
-    <div class="container">
-        <div class="row">
-        <div class="col col-10-10">
-            <div class="logo">
-                <a class="hide-mobile" href="http://www.wildernesslabs.co"><img src="/assets/img/WLabsHeaderLogo@2x.png" alt="Wilderness Labs"></a>
-                <a class="show-mobile" href="http://www.wildernesslabs.co"><img src="/assets/img/WLabsHeaderLogo@2x-mobile.png" alt="Wilderness Labs"></a>
-            </div>
-
-            <nav class="main-nav">
-            <div class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul>
-                <li><a href="http://www.wildernesslabs.co/netduino">netduino</a></li>
-                <li><a href="/">developers</a></li>
-                <li><a href="http://community.wildernesslabs.co">community</a></li>
-                <li><a href="http://blog.wildernesslabs.co">blog</a></li>
-                <li><a href="http://www.wildernesslabs.co/login">sign in</a></li>
-            </ul>
-            </nav>
-        </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->
+<header class="container-fluid fixed">
+    <a href="https://www.wildernesslabs.co" class="logo" title="Click to go home">
+        <img src="/dist/assets/svg/logo.svg" alt="Wilderness Labs">
+    </a>
+    <button id="main-nav-trigger" class="mobile-nav-trigger mobile" aria-expanded="false" data-la-initdispnone="true"><span class="visually-hidden">Toggle Main Navigation</span></button>
+    <div class="nav-wrapper">
+      <nav id="main-nav" class="navigation-overlay">
+          <ul>
+              <li><a href="https://www.wildernesslabs.co/meadow">Meadow</a></li>
+              <li><a href="https://store.wildernesslabs.co/">Shop</a></li>
+              <li><a href="https://community.wildernesslabs.co/">Community</a></li>
+              <li><a href="http://developer.wildernesslabs.co/">Developers</a></li>
+              <li><a href="https://blog.wildernesslabs.co/">Blog</a></li>
+              <li class="util">
+                      <a href="/login">Sign in</a>
+                  <a href="mailto:hello@wildernesslabs.co">Contact</a>
+              </li>
+          </ul>
+      </nav>
+    </div>
 </header>

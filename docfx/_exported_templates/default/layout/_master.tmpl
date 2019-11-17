@@ -1,0 +1,82 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+{{!include(/^vendor/.*/)}}
+{{!include(/^dist/.*/)}}
+{{!include(/^fonts/.*/)}}
+{{!include(favicon.ico)}}
+{{!include(logo.svg)}}
+{{!include(search-stopwords.json)}}
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {{>partials/head}}
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper" class="landing">
+      <header class="container-fluid fixed" id="header-wrapper">
+          <a href="/" class="logo" title="Click to go home">
+              <img src="/dist/assets/svg/logo.svg" alt="Wilderness Labs">
+          </a>
+          <button id="main-nav-trigger" class="mobile-nav-trigger mobile" aria-expanded="false" data-la-initdispnone="true"><span class="visually-hidden">Toggle Main Navigation</span></button>
+          <div class="nav-wrapper">
+            <nav id="main-nav" class="navigation-overlay">
+                <ul>
+                    <li><a href="/meadow">Meadow</a></li>
+                    <li><a href="/netduino">Netduino</a></li>
+                    <li><a href="https://community.wildernesslabs.co/">Community</a></li>
+                    <li><a href="http://developer.wildernesslabs.co/">Developers</a></li>
+                    <li><a href="https://blog.wildernesslabs.co/">Blog</a></li>
+                    <li class="util">
+                            <a href="/login">Sign in</a>
+                        <a href="mailto:hello@wildernesslabs.co">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+      </header>
+      <main>
+        <section id="developers-section">
+
+          <div class="secondary-nav-wrapper" id="secondary-nav">
+            {{^_disableNavbar}}
+            {{>partials/navbar}}
+            {{/_disableNavbar}}
+          </div>
+          <div class="banner small api-banner" id="main-banner">
+            <h1>{{>partials/title}}</h1>
+            <p>{{{summary}}}</p>
+          </div>
+          <!-- {{^_disableBreadcrumb}}
+          {{>partials/breadcrumb}}
+          {{/_disableBreadcrumb}} -->
+          <button href="#" class="subcat-nav-trigger mobile-nav-trigger mobile" aria-expanded="false" data-la-initdispnone="true">Table of Contents</button>
+          {{#_enableSearch}}
+          <div class="container body-content">
+            {{>partials/searchResults}}
+          </div>
+          {{/_enableSearch}}
+          <div class="columns">
+              <div id="secondary-col" class="desktop">
+                {{^_disableToc}}
+                {{>partials/toc}}
+                {{/_disableToc}}
+              </div>
+              <div class="primary-col" id="primary">
+                <div class="article">
+                  <article class="content wrap" id="_content" data-uid="{{uid}}">
+                      {{!body}}
+                  </article>
+                </div>
+                <div class="affixed hidden-sm">
+                  {{^_disableAffix}}
+                  {{>partials/affix}}
+                  {{/_disableAffix}}
+                </div>
+              </div>
+            </div>
+        </section>
+      </main>
+      {{^_disableFooter}}
+      {{>partials/footer}}
+      {{/_disableFooter}}
+    </div>
+    {{>partials/scripts}}
+  </body>

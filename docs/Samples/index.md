@@ -1,6 +1,6 @@
 ---
 layout: Samples
-title: Netduino Samples
+title: Meadow Samples
 ---
 
 The following samples can be found in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/). 
@@ -23,12 +23,12 @@ The following samples can be found in the [WildernessLabs Documentation repo](ht
 * **[Read DS3234 Using SPI](Netduino/ReadDS3234)** - Read the current date / time from a DS3234 RTC using SPI.
 
 
-### Contributing
+#### Contributing
 
 All samples in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/) are distributed under the Apache 2 license. If you have a cool sample that you'd like to document and share, please submit a pull request! We love quality contributions.
 
 
-## Additional NETMF Samples
+### Additional NETMF Samples
 
 Additionally, the [Netduino version of the NETMF SDK](https://github.com/WildernessLabs/Netduino_SDK) includes a number of [Samples](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples), including:
 

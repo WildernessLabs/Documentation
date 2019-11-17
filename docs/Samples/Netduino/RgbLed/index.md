@@ -7,7 +7,7 @@ This sample cycles an [RGB LED](https://www.sparkfun.com/products/105) through t
 
 It works by using the [Additive Color](https://www.wikiwand.com/en/Additive_color) mixing model in which the three primary colors, _red_, _green_, and _blue_, are added in varying amounts to create various colors.
 
-# Code
+## Code
 
 ```csharp
 using System;
@@ -174,12 +174,12 @@ namespace RgbLed
 
 ```
 
-# Hardware
+## Hardware
 
 A common anode LED should be connected to the Netduino as follows:
 
-![RGB LED on Breadboard](RGBLedBreadboardFritzing.png)
+![RGB LED on Breadboard](RGBLedBreadboardFritzing.png){:standalone}
 
-# [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
+## [Netduino Samples Github Repository](https://github.com/WildernessLabs/Netduino_Samples)
 
 Full source code for all of the samples can be found in the Netduino Samples repository on Github.

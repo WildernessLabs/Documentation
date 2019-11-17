@@ -4,9 +4,9 @@ title: Capacitors
 subtitle: Energy storage components.
 ---
 
-# Intro
+## Intro
 
-![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg)
+![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg){:standalone}
 
 A capacitor is an electrical device capable of storing energy.
 
@@ -47,11 +47,11 @@ The ability of a capacitor to store and release energy at short notice makes it 
 
 Mechanical switches are noisy devices.  Pressing a button does not always result in a single clean signal.  The mechanical properties of the switch mean that contact can sometimes generate spurious signals:
 
-![Switch Bounce](SwitchBounce.jpg)
+![Switch Bounce](SwitchBounce.jpg){:standalone}
 
 RC Circuits can be used to smooth out the signal.  Adding an RC circuit results in signals such as the following:
 
-![RC Debounced Switch Signal](RCAddedToSwitch.jpg)
+![RC Debounced Switch Signal](RCAddedToSwitch.jpg){:standalone}
 
 Notice the curved nature of both the falling and rising signals.
 
@@ -71,7 +71,7 @@ Filters circuits can be used to remove (filter out) signals of a defined frequen
 
 Various combination of capacitors, [resistors](../Resistors/) and inductors are used to build these filters.
 
-# Further Reading
+## Further Reading
 * [Capacitor description on Wikipedia](https://en.wikipedia.org/wiki/Capacitor)
 * [RC Circuits](https://en.wikipedia.org/wiki/RC_circuit)
 * [Decoupling Capacitor](https://en.wikipedia.org/wiki/Decoupling_capacitor)
