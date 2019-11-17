@@ -49,7 +49,7 @@ Once your development environment is configured, make sure your board has the la
 
 #### Add the Application Code
 
-After you've created the project and configured the references, add the following code to your **program.cs** file.
+After you've created the project and configured the references, add the following code to your **Program.cs** file.
 
 ```csharp
 using System;
@@ -88,7 +88,7 @@ namespace NetduinoBlink
 This code does the following things:
 
  1. It creates an `OutputPort`. An `OutputPort` allows you to "write" to a pin, e.g. power it on or off.
- 2. Loops forever, writing to the port on, then waiting 250ms, then turning it off.
+ 2. Loops forever: writing to the port to turn on, then waiting 250ms, then turning it off.
  3. Prints to the **Debug Window** the loop iteration it's on.
 
 #### Deploy

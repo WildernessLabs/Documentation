@@ -17,7 +17,7 @@ A non-obvious usage for voltage dividers is for reading resistive sensors. Resis
 
 ### Analog Level Shifting
 
-Another common use of voltage dividers is to adjust, through division, the level of an analong input signal to a lower level.
+Another common use of voltage dividers is to adjust, through division, the level of an analog input signal to a lower level.
 
 For instance, a 5V analog temperature sensor may output `0V` to `5V`, depending on the temperature that it's sensing. At the highest temperature it can sense, it might output a `5V` signal, `0V` at the lowest temperature, and voltage in between representing temperatures between those two points. 
 
