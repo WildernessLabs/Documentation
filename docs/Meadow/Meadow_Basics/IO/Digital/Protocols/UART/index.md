@@ -92,7 +92,7 @@ serialPort.Write(buffer);
 
 ### Reading from the Receive Buffer
 
-When data from the peripheral is received, it's placed in an internal [circular buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read. 
+When data from the peripheral is received, it's placed in an internal [circular recieve buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read. 
 
 For example, the following code will read 7 bytes from the buffer:
 
@@ -107,9 +107,9 @@ Read will also remove (dequeue) those bytes from the buffer. If you want to read
 
 If the received data is separated by a known token, such as a new line indicator (`/n`), you can use the [`ReadToToken(byte token)`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_ReadToToken_System_Byte_) method to automatically read the bytes until the token is found.
 
-#### Buffer
+#### Receive Buffer
 
-By default, the `SerialPort` is created with a `4,096` byte input buffer, but that size can be set during port construction.
+By default, the `SerialPort` is created with a `4,096` byte receive buffer, but that size can be set during port construction.
 
 ### Event Notifications
 
