@@ -40,17 +40,17 @@ Meadow.Foundation got a major sensor overhaul for b3.5, including the new `Read(
 
 We've added new features to `GraphicsLibrary`:
 - two new large pixel fonts: 12x16 and a 12x20
-- new `CurrentRotation` property allowing screen rotation on any display (even if the display driver doesn't support it directly)
-- now smarter about drawing calls, allowing more optimizations to be performed by the display drivers
+- new **CurrentRotation** property allows screen rotation on any display (even if the driver doesn't support it directly)
+- smarter drawing calls, allows more optimizations to be performed by the display driver
 
 SPI display driver performance:
 - drivers share a buffer with SPI bus under-the-hood, this reduces memory usage and should help performance
 - drivers now caches color values to reduce conversions from 24bit color to display-specific values
-- automatic partial screen updates when possible to reduce drawing time
+- automatic partial screen updates (when possible) to reduce drawing time
 
 Better display support:
-- We've made fixes to improve display support across several drivers including support for the 135x240 varient of the ST7789 display
-- We've done a big re-write to the ePaper display drivers to expand supported displays and make it easier to identify the correct driver
+- fixes to improve display support across several drivers including support for the 135x240 varient of the ST7789 display
+- re-write of the ePaper display drivers to expand supported displays and make it easier to identify the correct driver
 
 ### New Developer Site
 
