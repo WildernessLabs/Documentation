@@ -4,8 +4,6 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
-# Meadow Beta 3 Release Notes
-
 ## Beta 3.5
 
 This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and added docs for Meadow.CLI.
