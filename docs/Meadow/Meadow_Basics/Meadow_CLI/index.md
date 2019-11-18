@@ -1,22 +1,18 @@
 ---
 layout: Meadow
-title: Meadow CLI
+title: Meadow.CLI
 subtitle: Command Line Interface for Meadow
 ---
 
-# Meadow CLI
+The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with the board and perform functions via a terminal window.
 
-## Getting Started
+The Meadow.CLI tool supports device and file management including file transfers, flash partitioning, and MCU reset.
 
-The CLI tool supports DFU flashing for `nuttx.bin` and `nuttx_user.bin`. When the application is run with `-d`, it looks for `nuttx.bin` and `nuttx_user.bin` in the application directory and if not found, it will abort. Optionally, paths for the files can be specific with `--osFile` and `--userFile`.
+To run Meadow.CLI on Windows, open a command window and run `MeadowCLI.exe`. On macOS, call **mono MeadowCLI.exe** to execute it via mono.
 
-The CLI tool also supports device and file management including file transfers, flash partitioning, and MCU reset.
+## Enumerating Options
 
-To run MeadowCLI on Windows, run MeadowCLI.exe from the command prompt. On Mac and Windows, call **mono MeadowCLI.exe**.
-
-## Options
-
-To see the options, run the application with the --help arg.
+To see the options, run the application with the `--help` arg.
 
 ## Running Commands 
 
@@ -31,29 +27,44 @@ Note: MeadowCLI automatically caches the serial port name. Once you've sent a co
 ### Set the trace level
 
 You can set the debug trace level to values 1, 2, 3, or 4. 2 in the most useful.
-`MeadowCLI.exe --SetTraceLevel --Level 2 --SerialPort [NameOfSerialPort]`
+
+```bash
+MeadowCLI.exe --SetTraceLevel --Level 2 --SerialPort [NameOfSerialPort]
+```
 
 ### File transfers
 
-`MeadowCLI.exe --WriteFile -f [NameOfFile] --SerialPort [NameOfSerialPort]`
+```bash
+MeadowCLI.exe --WriteFile -f [NameOfFile] --SerialPort [NameOfSerialPort]
+```
 
 ### List files in flash
 
-`MeadowCLI.exe --ListFiles --SerialPort [NameOfSerialPort]`
+```bash
+MeadowCLI.exe --ListFiles --SerialPort [NameOfSerialPort]
+```
 
 ### Delete a File
 
-`MeadowCLI.exe -s [NameOfSerialPort] --DeleteFile --TargetFileName [nameOfFile]`
+```bash
+MeadowCLI.exe -s [NameOfSerialPort] --DeleteFile --TargetFileName [nameOfFile]
+```
 
 ### Reformat the flash
 
-`MeadowCLI.exe --EraseFlash`
+```bash
+MeadowCLI.exe --EraseFlash
+```
 
 ### Stop/start the installed application from running automatically
 
-`MeadowCLI.exe --MonoDisable`
+```bash
+MeadowCLI.exe --MonoDisable
+```
 
-`MeadowCLI.exe --MonoEnable`
+```bash
+MeadowCLI.exe --MonoEnable
+```
 
 ## Running applications 
 
