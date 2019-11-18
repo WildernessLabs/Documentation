@@ -18,6 +18,12 @@ Standard serial uses two lines for communication; a transmit (`TX`) line for sen
 
 It's important to note that the `TX` pin on the Meadow board should connect to the `RX` pin on the peripheral, and the `RX` pin on the Meadow board should connect to the `TX` pin on the peripheral.
 
+### Ground and Power
+
+In addition to `TX` and `RX`, serial devices will also have ground and power pins/leads. Ground will need to be connected to `GND` on the Meadow board. The power lead will need to be connected either to the Meadow board's `3.3V` rail or `5V` rail, depending on what the device needs are.
+
+If the device is powered by an external power supply, you must make sure the external power's ground is connected to the Meadow `GND` so that their voltages are the same.
+
 
 ### UART/TTL vs RS-232
 
@@ -65,14 +71,14 @@ The Meadow F7 Micro has two exposed serial ports, named `COM4` and `COM1` with t
 To use serial in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, using the port name, and the desired speed (baud rate), and then call `Open()` to establish a connection with a peripheral:
 
 ```csharp
-var serial = Device.CreateSerialPort(Device.SerialPortNames.Com4, 115200);
+var serialPort = Device.CreateSerialPort(Device.SerialPortNames.Com4, 115200);
 serialPort.Open();
 ```
 
 Optionally, you can also specify the number of data bits in a message frame, parity, and number of stop bits. The datasheet on your serial peripheral should specify what those values should be. The most common is `8n1`, which means `8` data bits, no parity check, or `Parity.None`, and one stop bit, or `StopBits.One`. These are the defaults for the `SerialPort` constructor, but you can specify something different as well:
 
 ```csharp
-var serial = Device.CreateSerialPort(Device.SerialPortNames.Com4, 9600, 7, Parity.Even, StopBits.Two);
+var serialPort = Device.CreateSerialPort(Device.SerialPortNames.Com4, 9600, 7, Parity.Even, StopBits.Two);
 serialPort.Open();
 ```
 
