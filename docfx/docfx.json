@@ -21,7 +21,8 @@
           ],
           "exclude": [
             "/Source/Meadow.Foundation.Core.Samples/**",
-            "/Source/Meadow.Foundation.Peripherals/**/Samples/**_Sample/**"
+            "/Source/Meadow.Foundation.Peripherals/**/Samples/**_Sample/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/Sensors.GPS.NMEA_Sample"
           ],
           "src": "../../Meadow.Foundation"
         }
