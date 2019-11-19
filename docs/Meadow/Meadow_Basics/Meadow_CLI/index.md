@@ -10,6 +10,9 @@ The Meadow.CLI tool supports device and file management including file transfers
 
 To run Meadow.CLI on Windows, open a command window and run `MeadowCLI.exe`. On macOS, call **mono MeadowCLI.exe** to execute it via mono.
 
+You can download the Meadow.CLI executable from the [downloads page](/Meadow/Getting_Started/Downloads/). 
+
+
 ## Enumerating Options
 
 To see the options, run the application with the `--help` arg.
