@@ -41,7 +41,8 @@ namespace ST7789_Sample
 
         public MeadowApp ()
         {
-            spiBus = Device.CreateSpiBus();
+            var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
+            spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
             ST7789 = new ST7789(
                 device: Device, 
