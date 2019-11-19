@@ -76,7 +76,7 @@ You can also change configurations during runtime.
 
 #### ST7789 OLED Display Meadow.Foundation Driver
 
-Along with the configuration options, we've also released a [Meadow.Foundation driver for the state ST7789 OLED display](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.ST7789.html) included in the Hack Kit Pro:
+Along with the configuration options, we've also released a [Meadow.Foundation driver for the state ST7789 OLED display](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.ST7789.html) included in the Hack Kit Pro:
 
 ![](ST7789_OLED.jpg)
 
