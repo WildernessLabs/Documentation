@@ -21,7 +21,11 @@ To see the options, run the application with the `--help` arg.
 
 File and device commands require you to specify the serial port. You can determine the serial port name in Windows by viewing the Device Manager.
 
-On Mac and Linux, the serial port will show up in the **/dev** folder, generally with the prefix **tty.usb**. You can likely find the serial port name by running the command `ls /dev/tty.usb`.
+On Mac and Linux, the serial port will show up in the **/dev** folder, generally with the prefix **tty.usb**. You can likely find the serial port name by running the command:
+
+```bash
+ls /dev/tty.usb*
+```
 
 Note: MeadowCLI automatically caches the serial port name. Once you've sent a command using the `--SerialPort` parameter, you can omit in future calls.
 
