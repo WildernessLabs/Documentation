@@ -36,41 +36,41 @@ Note: MeadowCLI automatically caches the serial port name. Once you've sent a co
 You can set the debug trace level to values 1, 2, 3, or 4. 2 in the most useful.
 
 ```bash
-MeadowCLI.exe --SetTraceLevel --Level 2 --SerialPort [NameOfSerialPort]
+Meadow.CLI.exe --SetTraceLevel --Level 2 --SerialPort [NameOfSerialPort]
 ```
 
 ### File transfers
 
 ```bash
-MeadowCLI.exe --WriteFile -f [NameOfFile] --SerialPort [NameOfSerialPort]
+Meadow.CLI.exe --WriteFile -f [NameOfFile] --SerialPort [NameOfSerialPort]
 ```
 
 ### List files in flash
 
 ```bash
-MeadowCLI.exe --ListFiles --SerialPort [NameOfSerialPort]
+Meadow.CLI.exe --ListFiles --SerialPort [NameOfSerialPort]
 ```
 
 ### Delete a File
 
 ```bash
-MeadowCLI.exe -s [NameOfSerialPort] --DeleteFile --TargetFileName [nameOfFile]
+Meadow.CLI.exe -s [NameOfSerialPort] --DeleteFile --TargetFileName [nameOfFile]
 ```
 
 ### Reformat the flash
 
 ```bash
-MeadowCLI.exe --EraseFlash
+Meadow.CLI.exe --EraseFlash
 ```
 
 ### Stop/start the installed application from running automatically
 
 ```bash
-MeadowCLI.exe --MonoDisable
+Meadow.CLI.exe --MonoDisable
 ```
 
 ```bash
-MeadowCLI.exe --MonoEnable
+Meadow.CLI.exe --MonoEnable
 ```
 
 ## Running applications 
