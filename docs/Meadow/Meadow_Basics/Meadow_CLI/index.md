@@ -33,7 +33,7 @@ Note: MeadowCLI automatically caches the serial port name. Once you've sent a co
 
 ### Set the trace level
 
-You can set the debug trace level to values 1, 2, 3, or 4. 2 in the most useful.
+You can set the debug trace level to values 1, 2, 3, or 4. Trace level 2 is the most useful.
 
 ```bash
 Meadow.CLI.exe --SetTraceLevel --Level 2 --SerialPort [NameOfSerialPort]
@@ -83,4 +83,4 @@ You'll typically need at least six files installed to the Meadow flash to run a 
 5. Meadow.Foundation.dll
 6. App.exe (your app)
 
-It's a good idea to disable mono first, copy the files, and then enable mono
+It's a good idea to disable mono first, copy the files, and then enable mono.
