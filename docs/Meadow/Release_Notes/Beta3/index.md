@@ -10,7 +10,7 @@ This is quite a big release with new features, including UART, and a major overh
 
 ### Serial/UART
 
-Meadow now has Serial/UART support! Check out the new [UART guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/) for all the details!
+Meadow now has Serial/UART support! Check out the new [UART guide](/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/) for all the details!
 
 ### Better Digital Protocol Errs
 
@@ -22,7 +22,7 @@ You can now set the speed of the I2C bus. Somehow we missed this when we launche
 
 ### Meadow.CLI Docs
 
-We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Basics/Meadow_CLI/).
+We've published a [guide for the Meadow.CLI (Command Line Interface)](/docs/Meadow/Meadow_Basics/Meadow_CLI/).
 
 ### Meadow.Foundation
 
@@ -136,7 +136,7 @@ To upgrade, you'll need to [flash the latest version of Meadow.OS](/Meadow/Getti
 
 ### Basic Analog Input is Up
 
-We got basic [analog](/Meadow/Meadow_Basics/IO/Analog/) input ports working on pins `A0` through `A3`. To read an analog input value, create an [`AnalogInputPort`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html) on one of those pins and call the [`Read()`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html#Meadow_Hardware_AnalogInputPort_Read_System_Int32_System_Int32_) method. 
+We got basic [analog](/docs/Meadow/Meadow_Basics/IO/Analog/) input ports working on pins `A0` through `A3`. To read an analog input value, create an [`AnalogInputPort`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html) on one of those pins and call the [`Read()`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html#Meadow_Hardware_AnalogInputPort_Read_System_Int32_System_Int32_) method. 
 
 Note that advanced `IObservable` and events do not work at this time.
 
@@ -154,7 +154,7 @@ In order to be compatible with the file system changes, the `Meadow.CLI` has als
 
 ### SPI
 
-We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merged. We’re excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you’ll need to flash your Meadow board with the [latest OS firmware binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip).
+We got [SPI](/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merged. We’re excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you’ll need to flash your Meadow board with the [latest OS firmware binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip).
 
 ### Visual Studio Extension
 
@@ -188,7 +188,7 @@ Say hello to productivity! That's right, we now have extensions for [Visual Stud
 
 #### Digital Outputs and Protocols
 
-##### [Pulse-Width-Modulation (PWM)](/Meadow/Meadow_Basics/IO/Digital/PWM/)
+##### [Pulse-Width-Modulation (PWM)](/docs/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 PWM is now live! Along with it, PwmLed, RgbPwmLed, Servo Core, etc.
 
@@ -200,7 +200,7 @@ IPwmPort pwm = Device.CreatePwmPort(
 pwm.Start();
 ```
 
-##### [Inter-Integrated Circuits (I2C)](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/)
+##### [Inter-Integrated Circuits (I2C)](/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/)
 
 The I2C protocol is also available in our latest Meadow OS.
 
@@ -221,4 +221,4 @@ GY521Test(i2c); // Pass i2c to an I2C capable device
 * Meadow runtime is slow. For instance, we're currently only able to get about 30-40hz out of the `SoftPwmPort`. There's still a lot of debug code, so this will get much faster in future releases.
 * `GlitchFilterCycleCount` is not implemented in `DigitalInputPort`. This is coming soon.
 * [`Debug.Write` calls don't output to the console](https://github.com/WildernessLabs/Meadow_Issues/issues/3) - Workaround is to use `Console.Write` calls.
-* [Serial Peripheral Interface (SPI)](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) - not working as expected, investigating.
+* [Serial Peripheral Interface (SPI)](/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) - not working as expected, investigating.

@@ -6,7 +6,7 @@ subtitle: Guides and documentation for Meadow
 
 # Meadow F7 Micro Beta Status
 
-We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
+We are currently in [Meadow Beta 3](/docs/Meadow/Release_Notes/Beta3/).
 
 ## General IO Features
 
@@ -38,4 +38,4 @@ We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 | Battery Voltage Level | No | Planed, Beta 4; Relies on Networking co-processor.
 | Power Management APIs | No | Planned for RC-1 |
 
-## [Next - Fundamentals of Meadow Apps](/Meadow/Meadow_Basics/Apps/)
+## [Next - Fundamentals of Meadow Apps](/docs/Meadow/Meadow_Basics/Apps/)

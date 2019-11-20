@@ -252,5 +252,5 @@ public void BlinkLeds()
 
 Now that you understand the basic of a Meadow application, we recommend learning about the following topics:
 
- * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
- * [Meadow.Foundation](/Meadow/Meadow.Foundation/)
+ * [Hardware I/O](/docs/Meadow/Meadow_Basics/IO/)
+ * [Meadow.Foundation](/docs/Meadow/Meadow.Foundation/)

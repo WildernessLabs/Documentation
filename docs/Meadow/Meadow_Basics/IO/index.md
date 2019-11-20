@@ -116,4 +116,4 @@ IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLe
 
 When building Meadow applications, most of the time, you'll use high-level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
-## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/)
+## [Next - Meadow.Foundation](/docs/Meadow/Meadow.Foundation/)
