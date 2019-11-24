@@ -28,48 +28,88 @@ The sensor operates in interrupt mode by default.
 The following application will generate interrupts when changes to any one of the temperature, humidity or pressure readings exceed their threshold values:
 
 ```csharp
+using System;
 using System.Threading;
+using System.Threading.Tasks;
 using Meadow;
+using Meadow.Devices;
+using Meadow.Peripherals.Sensors.Atmospheric;
 using Meadow.Foundation.Sensors.Atmospheric;
+using Meadow.Hardware;
 
 namespace BME280_Sample
 {
     public class Program
     {
-        static IApp _app; 
-        public static void Main()
+        static IApp app;
+        public static void Main(string[] args)
         {
-            _app = new App();
+            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+
+            // instantiate and run new meadow app
+            app = new MeadowApp();
+            Thread.Sleep(Timeout.Infinite);
         }
     }
-    
-    public class App : AppBase<F7Micro, App>
+        
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        public App ()
+        BME280 bme280;
+
+        public MeadowApp()
         {
-            // BME280 temperature, humidity and pressure object.  This object should
-            // raise an interrupt when the changes in the sensor readings exceed the
-            // following:
-            //
-            // Temperature: +/- 1 C
-            // Humidity: +/- 1 %
-            // Pressure: +/- 10 kPa (the default value for this threshold)
-            BME280 sensor = new BME280(temperatureChangeNotificationThreshold: 0.1F,
-                humidityChangeNotificationThreshold: 1.0f);
-            
-            // Attach interrupt handlers to the temperature, humidity and pressure sensor.
-            sensor.HumidityChanged += (s, e) =>
+            Console.WriteLine("Initializing...");
+
+            // configure our BME280 on the I2C Bus
+            var i2c = Device.CreateI2cBus();
+            bme280 = new BME280 (
+                i2c,
+                BME280.I2cAddress.Adddress0x77 //default
+            );
+
+            // TODO: SPI version
+
+            // Example that uses an IObservable subscription to only be notified
+            // when the temperature changes by at least a degree, and humidty by 5%.
+            // (blowing hot breath on the sensor should trigger)
+            bme280.Subscribe(new FilterableObserver<AtmosphericConditionChangeResult, AtmosphericConditions>(
+                h => {
+                    Console.WriteLine($"Temp and pressure changed by threshold; new temp: {h.New.Temperature}, old: {h.Old.Temperature}");
+                },
+                e => {
+                    return (
+                        (Math.Abs(e.Delta.Temperature) > 1)
+                        &&
+                        (Math.Abs(e.Delta.Pressure) > 5)
+                        );
+                }
+            ));
+
+            // classical .NET events can also be used:
+            bme280.Updated += (object sender, AtmosphericConditionChangeResult e) => 
             {
-                Console.WriteLine("Current humidity: " + e.CurrentValue.ToString("f2"));
+                Console.WriteLine($"  Temperature: {e.New.Temperature}ºC");
+                Console.WriteLine($"  Pressure: {e.New.Pressure}hPa");
+                Console.WriteLine($"  Relative Humidity: {e.New.Humidity}%");
             };
-            sensor.PressureChanged += (s, e) =>
-            {
-                Console.WriteLine("Current pressure: " + (e.CurrentValue / 100).ToString("f2"));
-            };
-            sensor.TemperatureChanged += (s, e) =>
-            {
-                Console.WriteLine("Current temperature: " + e.CurrentValue.ToString("f2"));
-            };
+
+            // get chip id
+            Console.WriteLine($"ChipID: {bme280.GetChipID():X2}");            
+
+            // get an initial reading
+            ReadConditions().Wait();
+
+            // start updating continuously
+            bme280.StartUpdating();
+        }
+
+        protected async Task ReadConditions()
+        {
+            var conditions = await bme280.Read();
+            Console.WriteLine("Initial Readings:");
+            Console.WriteLine($"  Temperature: {conditions.Temperature}ºC");
+            Console.WriteLine($"  Pressure: {conditions.Pressure}hPa");
+            Console.WriteLine($"  Relative Humidity: {conditions.Humidity}%");
         }
     }
 }
