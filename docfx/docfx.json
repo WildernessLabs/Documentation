@@ -77,6 +77,22 @@
       }
     ],
     "dest": "docs",
+    "globalMetadata": 
+    {
+      "_appTitle": "Meadow.Foundation API website",
+      "_appFooter": "Meadow.Foundation API website",
+      "_gitContribute": 
+      {
+        "repo": "https://github.com/WildernessLabs/Meadow.Foundation",
+        "branch": "master",
+        "path": ""
+      },
+      "_gitUrlPattern": "",
+      "newFileRepository": 
+      {
+        "branch": "master"
+      }
+    },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
