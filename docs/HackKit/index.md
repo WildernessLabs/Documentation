@@ -11,21 +11,30 @@ subtitle: Instructions and inspiration for Wilderness Labs Hack Kits.
 
 Got an awesome Wilderness Labs Hack Kit and want to know what to build with it? If you just can't wait, here are a couple of awesome projects you can build with either one right now:
 
- * x
- * y
+ * [Getting Started w/ Meadow by Controlling the Onboard RGB LED](https://www.hackster.io/wilderness-labs/getting-started-w-meadow-by-controlling-the-onboard-rgb-led-ea6bc0)
+ * [Control an LED w/ Digital Output or PWM Ports Using Meadow](https://www.hackster.io/wilderness-labs/control-an-led-w-digital-output-or-pwm-ports-using-meadow-11005a)
+ * [Control an RGB LED w/ Digital Output or PWM ports in Meadow](https://www.hackster.io/wilderness-labs/control-an-rgb-led-w-digital-output-or-pwm-ports-in-meadow-7fd611)
+ * [Build Your Own Simon Game with Meadow](https://www.hackster.io/wilderness-labs/build-your-own-simon-game-with-meadow-3701d5)
+ * [Soil Moisture Sensor and LED Bar Graph Using Meadow](https://www.hackster.io/wilderness-labs/soil-moisture-sensor-and-led-bar-graph-using-meadow-88c2c3)
 
 If you have a Hack Kit Pro, here are a couple of awesome projects to build:
  
  * x
  * y
 
+And here are other Meadow projects that use some parts of the Hack Kits
+
+* [Working with Graphics on a TFT SPI Display Using Meadow](https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-tft-spi-display-using-meadow-e2295a)
+* [Christmas Countdown Timer w/ an LCD Display, RTC and Meadow](https://www.hackster.io/wilderness-labs/christmas-countdown-timer-w-an-lcd-display-rtc-and-meadow-e4cf9c)
+* [Build an FM Radio Player with Meadow](https://www.hackster.io/wilderness-labs/build-an-fm-radio-player-with-meadow-8c0a63)
+
 First, check to make sure that everything is included. See the below content list for ingredients. If you're missing something, [let us know](need form).
 
 
 ## Contents
 
-| Item                   | Hack Kit Pro QTY. | Hack Kit Lite QTY. | Description | Photo |
-|------------------------|--------------|---------------|---------------|-------|
+| Item                   | Pro | Lite | Description |
+|------------------------|-----|------|-------------|
 | Hack Kit Box           | 1 | 1 | Box that holds all the hack goodies. |
 | Laser-etched Baseboard | 1 | 1 | Baseboard that holds a Meadow and a Half+ size breadboard for prototyping. |
 | Half+ Breadboard       | 2 | 2 | Breadboard for quick, temporary, prototyping. |
@@ -56,20 +65,14 @@ First, check to make sure that everything is included. See the below content lis
 | USB Breakout | 1 | 1 | Used to expose the `5V` and `GND` pins of a USB adapter so that it can be used as an external power supply to drive motors, and such. |
 | DC Motor | 2 | 1 | `6V` motor that can be used in conjunction with either the motor controller or BJTs and a `5V` power source. |
 | `9V` Batter Adapter | 1 | 0 | Plugs into a `9V` battery and exposes the power and ground via wires. |
-| 
-
-
-
-4	8	1N914 Diode
-2	10	1N5817 Diode
-4	20	BS170 N-Channel MOSFET
-1	2	TIP120 Power Transistor
-2	10	2N3904 NPN Transistor
-2	2	2N3906 PNP Transistor
-2	2	SPDT Switch
-4	4	M2x8MM Hex Bolts
-1	1	Jumper Kit
-1	1	Photodiode
-8	8	M2 Nuts
-
-## Hack Kit Sample Projects
+| 1N914 Diode | 8 | 4 | |
+| 1N5817 Diode | 10 | 2 | |
+| BS170 N-Channel MOSFET | 20 | 4 | |
+| TIP120 Power Transistor | 2 | 1 | |
+| 2N3904 NPN Transistor | 10 | 2 | | 
+| 2N3906 PNP Transistor | 2 | 2 |  |
+| SPDT Switch | 2 | 2 | |
+| M2x8MM Hex Bolts | 4 | 4 | |
+| Jumper Kit | 1 | 1 | |
+| Photodiode | 1 | 1 | |
+| M2 Nuts | 8 | 8 | |
