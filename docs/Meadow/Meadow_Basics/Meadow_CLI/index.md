@@ -63,6 +63,8 @@ Meadow.CLI.exe -s [NameOfSerialPort] --DeleteFile --TargetFileName [nameOfFile]
 Meadow.CLI.exe --EraseFlash
 ```
 
+This operation takes just over 2 minutes to complete.  It is recommended that you leave your Meadow device connected to your computer for about 3-5 minutes following the execution of this command and then reset the board.
+
 ### Stop/start the installed application from running automatically
 
 ```bash
