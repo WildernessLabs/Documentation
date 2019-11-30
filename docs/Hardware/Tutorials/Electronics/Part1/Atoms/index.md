@@ -10,7 +10,7 @@ In order to understand how circuits work and how to design them, we must first u
 
 Physical things we interact with in the world are made of molecules, which are then composed of atoms.
 
-![](../Water_Molecules.svg){:standalone}
+![](../Support_Files/Water_Molecules.svg){:standalone}
 
 Most molecules are very small, atoms are very, very small. To give an idea of the size of an atom; a cup of water has about 6.022 x 10<sup>24</sup> water molecules. Water's chemical symbol is H<sub>2</sub>0, meaning that it is a molecule made of Hydrogen (x2) atoms, and one Oxygen atom. Therefore there are three times as many atoms as molecules in a glass of water, or 18.066 x 10<sup>24</sup> or 18,066,000,000,000,000,000,000,000 atoms.
 
@@ -20,7 +20,7 @@ Atoms are composed of three more elementary particles; protons, neutrons, and el
 
 Protons and neutrons are incredibly dense and make up the core, or _nucleus_ of an atom. In fact, they're so dense, that a teaspoon of them packed together would weigh many tons on earth. However, an atom is mostly empty space, because while the protons and neutrons are tightly clustered in the center of the atom, electrons orbit a distance around the nucleus:
 
-![](../Atom.svg){:standalone}
+![](../Support_Files/Atom.svg){:standalone}
 
 Atoms are classified on the [periodic table](http://www.ptable.com/) by the number of protons they posess, which is also their _atomic number_. So for example, hydrogen has (1) proton, so therefore its atomic number is 1. Helium has 2 protons, so its atomic number is 2, lead has 82, and so forth.
 
@@ -53,7 +53,7 @@ However, atoms can gain or lose electrons, causing them to have a net positive (
 
 Atoms often combine together to form molecules or in a repeating lattice to form crystals and metal, by sharing electrons:
 
-![](../Atoms_Sharing_an_Electron.svg){:standalone}
+![](../Support_Files/Atoms_Sharing_an_Electron.svg){:standalone}
 
 In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_, or _conductive_.
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="280px" viewBox="0 0 900 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Nail_Magnet</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Nail_Magnet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustration_Frame">
+            <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#EEEEEE" fill-rule="evenodd" x="1" y="1" width="898" height="278"></rect>
+            <rect id="Rectangle-Copy" stroke="#3D3530" stroke-width="2" fill="#F8FAE4" fill-rule="evenodd" x="1" y="236" width="898" height="43"></rect>
+            <text id="Illustration-Title" font-family="Wavehaus-66Book, Wavehaus" font-size="24" font-weight="300" letter-spacing="0.6666667" fill="#23ABE3">
+                <tspan x="738.026666" y="265">Nail Magnet</tspan>
+            </text>
+        </g>
+        <g transform="translate(371.000000, 37.000000)">
+            <path d="M138.630859,117.619141 C152.073568,119.686849 158.406901,126.147786 157.630859,137.001953 C156.466797,153.283203 149.214844,166.996094 112.554688,166.929928 C75.8945312,166.863281 56.4775391,166.863281 38.1845703,166.929928 C25.9892578,166.974038 18.9645182,154.954427 17.1103516,130.871094" id="Path-12" stroke="#23ABE3" stroke-width="2"></path>
+            <path d="M18.9697266,14.1591797 C18.9899602,9.2483724 26.0033322,5.83528646 40.0098426,3.91992188 C61.0196083,1.046875 68.2167969,9.65072101 89.2871094,13.0136719 C103.333984,15.2556391 117.146484,16.4737381 130.724609,16.6679688" id="Path-13" stroke="#23ABE3" stroke-width="2"></path>
+            <g id="Battery" transform="translate(0.000000, 14.000000)" stroke="#979797">
+                <rect id="Rectangle-6" fill="#999999" x="0.5" y="6.5" width="36" height="110"></rect>
+                <rect id="Rectangle-7" fill="#F8E71C" x="12.5" y="0.5" width="13" height="6"></rect>
+            </g>
+            <path d="M142.5,0.5 L126.5,0.5 L126.5,3.5 L130.5,3.5 L130.5,142.5 L131,142.5 L134.5,147.166667 L138,142.5 L138.5,142.5 L138.5,3.5 L142.5,3.5 L142.5,0.5 Z" id="Combined-Shape" stroke="#979797" fill="#EEEEEE"></path>
+            <path d="M139.734375,17.7402344 C142.455729,18.3639323 143.580729,19.0371094 143.109375,19.7597656 C133.617188,22.3860677 127.795573,24.0423177 125.644531,24.7285156 C123.49349,25.4147135 124.988932,26.1191406 130.130859,26.8417969" id="Path-11" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,27.7402344 C142.455729,28.3639323 143.580729,29.0371094 143.109375,29.7597656 C133.617188,32.3860677 127.795573,34.0423177 125.644531,34.7285156 C123.49349,35.4147135 124.988932,36.1191406 130.130859,36.8417969" id="Path-11-Copy" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,37.7402344 C142.455729,38.3639323 143.580729,39.0371094 143.109375,39.7597656 C133.617188,42.3860677 127.795573,44.0423177 125.644531,44.7285156 C123.49349,45.4147135 124.988932,46.1191406 130.130859,46.8417969" id="Path-11-Copy-2" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,47.7402344 C142.455729,48.3639323 143.580729,49.0371094 143.109375,49.7597656 C133.617188,52.3860677 127.795573,54.0423177 125.644531,54.7285156 C123.49349,55.4147135 124.988932,56.1191406 130.130859,56.8417969" id="Path-11-Copy-3" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,57.7402344 C142.455729,58.3639323 143.580729,59.0371094 143.109375,59.7597656 C133.617188,62.3860677 127.795573,64.0423177 125.644531,64.7285156 C123.49349,65.4147135 124.988932,66.1191406 130.130859,66.8417969" id="Path-11-Copy-4" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,67.7402344 C142.455729,68.3639323 143.580729,69.0371094 143.109375,69.7597656 C133.617188,72.3860677 127.795573,74.0423177 125.644531,74.7285156 C123.49349,75.4147135 124.988932,76.1191406 130.130859,76.8417969" id="Path-11-Copy-5" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,77.7402344 C142.455729,78.3639323 143.580729,79.0371094 143.109375,79.7597656 C133.617188,82.3860677 127.795573,84.0423177 125.644531,84.7285156 C123.49349,85.4147135 124.988932,86.1191406 130.130859,86.8417969" id="Path-11-Copy-6" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,87.7402344 C142.455729,88.3639323 143.580729,89.0371094 143.109375,89.7597656 C133.617188,92.3860677 127.795573,94.0423177 125.644531,94.7285156 C123.49349,95.4147135 124.988932,96.1191406 130.130859,96.8417969" id="Path-11-Copy-7" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,97.7402344 C142.455729,98.3639323 143.580729,99.0371094 143.109375,99.7597656 C133.617188,102.386068 127.795573,104.042318 125.644531,104.728516 C123.49349,105.414714 124.988932,106.119141 130.130859,106.841797" id="Path-11-Copy-8" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path d="M139.734375,107.740234 C142.455729,108.363932 143.580729,109.037109 143.109375,109.759766 C133.617188,112.386068 127.795573,114.042318 125.644531,114.728516 C123.49349,115.414714 124.988932,116.119141 130.130859,116.841797" id="Path-11-Copy-9" stroke="#23ABE3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

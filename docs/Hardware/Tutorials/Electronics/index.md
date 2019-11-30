@@ -16,7 +16,7 @@ The tutorial is full of practical, real world labs which build a number of diffe
 
 Chapter 1 explores the fundamental physics that give electricity its behavior. As a bonus, after reading this, you'll know how magnets work!
 
-![](Part1/Atoms_Sharing_an_Electron.svg){:standalone}
+![](Part1/Support_Files/Atoms_Sharing_an_Electron.svg){:standalone}
 
 ### [Chapter 2 - Quantifying Electricity; Amps, Volts, and Watts](Part2/Amount_and_Force)
 

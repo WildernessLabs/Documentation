@@ -10,7 +10,7 @@ One last point of clarification on the physics of electricity, and we'll be read
 
 Magnetism, that is, the effect of a magnetic field, is caused by rotating electrical charges; that is, electrons orbiting and "spinning" around a nucleus. <!-- Spin is another arbitrarily named characteristic of subatomic particles, similar to charge. --> In simple terms, we can think of magnetism as a kind of magnification of electrical charges, caused by the angular momentum of electrons. Unlike simple attraction or repulsion in all directions like simple electric charge, however, a magnetic field has a three dimensional polarity with a north/south:
 
-![](../Magnetic_Field.svg){:standalone}
+![](../Support_Files/Magnetic_Field.svg){:standalone}
 
 Magnetic North and South are arbitrary names just like positive and negative charge used to describe repulsion of like polarity and attraction of opposite polarity along an axis.
 
@@ -18,7 +18,7 @@ Magnetism in metals arises when enough electrons have a similar angular momentum
 
 A magnetic field can also be created electrically. A weak magnetic field is created when a current flows through a piece of straight wire, but if that wire is coiled, a much stronger magnetic field is created. In fact, a simple, yet effective magnet can be created with just a standard AA battery, a piece of coated wire, and a nail:
 
-![](../Nail_Magnet.svg){:standalone}
+![](../Support_Files/Nail_Magnet.svg){:standalone}
 
 ### Induction
 

@@ -22,7 +22,7 @@ Hole flow was first observed and measured in the 1740s by [Benjamin Franklin](ht
 
 Benjamin Franklin's work kickstarted the practical use of electricity, and a big part of electrical theory and electrical engineering were based on it. For this reason, when we see a diagram like the following, it's actually misleading:
 
-![](../Hole_Flow.svg){:standalone}
+![](../Support_Files/Hole_Flow.svg){:standalone}
 
 This illustration isn't really accurate, because it implies electrons flowing from a positive charge, to a negative charge. It wasn't until 150 years later, in 1897, that [Sir J. J. Thomson](https://en.wikipedia.org/wiki/J._J._Thomson) posited that atoms were made of electrons and discovered that electrons, rather than holes, were thing that was actually moving.
 
@@ -35,11 +35,11 @@ We think of electricity as moving at near the speed of light, which is how we ca
 
 Well, it turns out, what actually moves is the _electromagnetic wave_, which is the propagation of the charge moving. Consider a hypothetical tube full of marbles:
 
-![](../Tube_of_Marbles.svg){:standalone}
+![](../Support_Files/Tube_of_Marbles.svg){:standalone}
 
 If you add a marble in one end, a marble will fall out of the other end almost immediately, even though each marble only moved a small amount:
 
-![](../Electromagnetic_Wave.svg){:standalone}
+![](../Support_Files/Electromagnetic_Wave.svg){:standalone}
 
 Now imagine that those marbles are electrons; the **effect** of adding an electron is near instantaneous, or as fast as anything can actually travel; the speed of light. In a conductive material, electricity works the exact same way, even if it's a very long wire. So the data that's encoded in the patterns of electrons on a wire when a phone call is made around the world, may actually only travel a short distance, but on the other end, the effect is the exact same as if those electrons traveled the whole way.
 
