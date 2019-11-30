@@ -13,7 +13,7 @@ Voltage divider circuits have a variety of uses, but for the type of practical c
 
 A non-obvious usage for voltage dividers is for reading resistive sensors. Resistive sensors are specialized resistors that have a variable resistance depending on whatever input they're sensing. For instance, a photoresistor may have `30kΩ` of resistance in the dark, but only `1kΩ` of resistance in bright sunlight. There's no way to measure resistance directly with a Netduino, but if the resistive sensor is put in place of one of the resistors in a voltage divider circuit, the `Vout` voltage can be read, and the sensor's resistance can be calculated based on the known resistance of the other resistor in series:
 
-![](../Resistive_Sensor_Lab/Resistive_Sensor_Circuit.svg){:standalone}
+![](../Support_Files/Resistive_Sensor_Circuit.svg){:standalone}
 
 ### Analog Level Shifting
 
@@ -23,7 +23,7 @@ For instance, a 5V analog temperature sensor may output `0V` to `5V`, depending 
 
 However, Netduino has analog inputs that can read voltage from `0V` to `3.3V`. So in order to convert (or _level shift_) the signal from a 5V sensor to a 3.3V analog input, it needs to be divided:
 
-![](../5V_to_3.3V_Signal_Division.svg){:standalone}
+![](../Support_Files/5V_to_3.3V_Signal_Division.svg){:standalone}
 
 In practice, very few sensors are 5V anymore (lower voltage is faster and can be used on smaller circuits; most modern CPUs run internally at 1.2V or less), but occasionally you might find an older 5V sensor that you want to use.
 
@@ -43,7 +43,7 @@ Whether voltage dividers are used to level shift or read resistive sensors, ther
 
 When a load is attached to `Vout`, the values of the voltage divider circuit change. This is because a load has resistance, and that means that `R2` + `Load` become a parallel resistance circuit:
 
-![](Voltage_Divider_Third_Leg.svg){:standalone}
+![](../Support_Files/Voltage_Divider_Third_Leg.svg){:standalone}
 
 Therefore, when calculating the divider resistance, the resistance of the load must also be considered.
 
@@ -154,7 +154,7 @@ In circuit designs that require a high level of ADC accuracy, or more power effi
 
 ### Never use a Voltage Divider as a Voltage Regulator
 
-Because of their inefficiency, voltage dividers should never be used as voltage regulator. In order to get a voltage signal that had only 10% deviation from the target value, you would have to use resistors that let 10x of the amount of power that the `Vout` required. So if the sub circuit required `100mA` of power, then you would need to push `1A` through the circuit to only get a deviation between `95mA` and `105mA`. 
+Because of their inefficiency, voltage dividers should never be used as voltage regulator. In order to get a voltage signal that had only `10%` deviation from the target value, you would have to use resistors that let `10x` of the amount of power that the `Vout` required. So if the sub circuit required `100mA` of power, then you would need to push `1A` through the circuit to only get a deviation between `95mA` and `105mA`. 
 
 Instead, cheap voltage regulator chips are much more efficient than a voltage divider to provide sub circuit with clean, regular power.
 

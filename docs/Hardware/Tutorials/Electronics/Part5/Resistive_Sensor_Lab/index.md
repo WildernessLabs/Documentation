@@ -54,7 +54,7 @@ Resistance can't be measured directly with a Netduino, but voltage can be measur
 
 The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
 
-![](Resistive_Sensor_Circuit.svg){:standalone}
+![](../Support_Files/Resistive_Sensor_Circuit.svg){:standalone}
 
 ## Exercise 1 - Reading a Resistive Sensor
 
@@ -154,7 +154,7 @@ Using that formula, I created the following table of values:
 
 The circuit therefore would look something like this:
 
-![](Photoresistor_Circuit.svg){:standalone}
+![](../Support_Files/Photoresistor_Circuit.svg){:standalone}
 
 My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.53V` and `2.2V`, which provides a good resolution for reading the value.
 

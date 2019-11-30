@@ -6,7 +6,7 @@ subtitle: Reducing 5V sensor output to 3.3V so it can be read by the Netduino An
 
 ## Lab Overview
 
-In this lab, we'll build a circuit that powers a 5V luminosity (light level) sensor and uses a voltage divider to level shift the sensor's output from a 5V _voltage domain_ to a 3.3V voltage domain. Along the way, we'll also learn how to do some basic soldering, which will needed to build the prototype circuit.
+In this lab, we'll build a circuit that powers a `5V` luminosity (light level) sensor and uses a voltage divider to level shift the sensor's output from a `5V` _voltage domain_ to a `3.3V` voltage domain. Along the way, we'll also learn how to do some basic soldering, which will needed to build the prototype circuit.
 
 Voltage dividers are the only practical way of level shifting an analog signal (one in which the signal may have a varying degree of voltage). While this circuit will also work for a digital signal, in which the voltage is either high (in our case `3.3V`), or low (`0V`), there are circuits which can be built out of transistors that are much more efficient.
 
@@ -109,7 +109,7 @@ If your soldering iron doesn't come with solder, you'll need to pick some up. Ma
 
 Most complex circuits in use are actually lots of simpler circuits joined together to provide more complex behaviors. In fact, in this lab, we're going to join two very simple circuits; a 5V light sensor circuit, and a voltage divider to reduce the voltage output of the light sensor down to a 3.3V voltage domain:
 
-![](Level_Shifting_Lab_Circuit.svg){:standalone}
+![](../Support_Files/Level_Shifting_Lab_Circuit.svg){:standalone}
 
 
 Before we build our circuit, however, we must first calculate the values of our resistors in the voltage divider, while making sure we account for the resistance of the ADC.

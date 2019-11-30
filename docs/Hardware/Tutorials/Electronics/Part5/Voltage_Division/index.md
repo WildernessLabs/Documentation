@@ -20,7 +20,7 @@ Vout = Vs * (R2 / R1 + R2)
 
 The final formulation; `Vout = Vs * (R2 / (R1 + R2))`, is usually how the voltage divider equation is written in textbooks and other reference material:
 
-![](Voltage_Divider_Equation.svg){:standalone}
+![](../Support_Files/Voltage_Divider_Equation.svg){:standalone}
 
 This is, presumably, because it more intuitively represents the solution to the problem. Namely; that the output voltage is a product of the division ratio. So for example, if we had `5V` input, and we needed to divide such that we got `3V` output, then we need to multiply `5` by `3 / 5`:
 
@@ -77,10 +77,10 @@ A load attached to `Vout` could potentially draw up to `625mA` of current from t
 
 Consider the two voltage divider circuits described above:
 
-| Voltage Divider ## | R1   | R2   | ∑(R1 + R2) | Total Current Draw | Current @ Vout |
-|-------------------|------|------|------------|--------------------|----------------|
-| 1                 | 8Ω   | 12Ω  | 20Ω        | 250mA              | 625mA          |
-| 2                 | 80Ω  | 120Ω | 200Ω       | 25mA               | 62.5mA         |
+| Voltage Divider ## | R1     | R2     | ∑(R1 + R2) | Total Current Draw | Current @ Vout |
+|--------------------|--------|--------|------------|--------------------|----------------|
+| 1                  | `8Ω`   | `12Ω`  | `20Ω`      | `250mA`            | `625mA`        |
+| 2                  | `80Ω`  | `120Ω` | `200Ω`     | `25mA`             | `62.5mA`       |
 
 If these were hooked to a `5V` battery that had `1000mAh` of charge, we can calculate the amount of time (in theory, with a perfect battery) that it would take to drain that battery for each circuit:
 

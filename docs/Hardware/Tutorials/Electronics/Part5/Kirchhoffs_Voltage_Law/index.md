@@ -10,7 +10,7 @@ In part 4, we learned from Ohm's law that resistance reduces the amount of curre
 
 In fact, _Kirchhoff's voltage law_ states that the sum of all voltage drops around a circuit loop is equal to the sum of all voltage sources. In other words, if we had a circuit loop as in following illustration, with a `5V` voltage source, the total drop in voltage across all the resistors would be `5V`:
 
-![](Kirchhoffs_Voltage_Law.svg){:standalone}
+![](../Support_Files/Kirchhoffs_Voltage_Law.svg){:standalone}
 
 Algebraically, we can express this as:
 
@@ -27,7 +27,7 @@ We can calculate Kirchhoff's voltage law from Ohm's law.
 
 Recall that in a series resistance, each resistor experiences the same amount of current:
 
-![](VoltageLaw_Calculation_Circuit.svg){:standalone}
+![](../Support_Files/VoltageLaw_Calculation_Circuit.svg){:standalone}
 
 In this case, the total resistance (series resistances are additive), is `20Ω`, therefore the current is:
 
@@ -61,7 +61,7 @@ The total amount of voltage drop is the exact same amount as the voltage source!
 
 Revisiting the previous circuit, if we put a voltmeter between points `B`, `C`, `D`, and ground, we'd get `2V`, `.5V`, and `0V`, respectively:
 
-![](VoltageLaw_Calculated_Circuit.svg){:standalone}
+![](../Support_Files/VoltageLaw_Calculated_Circuit.svg){:standalone}
 
 This is because the voltage drop is removed from the source voltage to get the output voltage after each resistor:
 
@@ -79,7 +79,7 @@ Voltage drop is often referred to as _forward voltage_ (V<sub>f</sub>). In many 
 
 Since we know that resistors in series are additive, if we want to know the voltage drop at any point between resistors in series (as in the above diagram), we can simplify the previous circuit by considering any series resistances as a single resistor by adding them up, as illustrated in the following circuit diagram:
 
-![](VoltageDrop_Simplification.svg){:standalone}
+![](../Support_Files/VoltageDrop_Simplification.svg){:standalone}
 
 Note that the sigma (`∑`) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
 
@@ -105,7 +105,7 @@ V (at point B) = 5V - 4.5 = 0.5V
 
 By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a little clearer if we simplify the circuit diagram even further:
 
-![](Voltage_Divider_Network_2.svg){:standalone}
+![](../Support_Files/Voltage_Divider_Network_2.svg){:standalone}
 
 In this case, we see that `Vout = VS - R1Vf` and `R2Vf = VS - R1Vf`, which means that `Vout = R2Vf`. Therefore, if we want to calculate `Vout`, we can simplify things by calculating the voltage drop of `R2`.
 
