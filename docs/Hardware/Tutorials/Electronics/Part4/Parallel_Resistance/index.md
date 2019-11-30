@@ -10,7 +10,7 @@ When arranging resistors (or resistances) in parallel, as in the following diagr
 
 ![](../Support_Files/Resistors_in_Parallel.svg){:standalone}
 
-Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to put turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there is three resistor valves that let water through:
+Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there is three resistor valves that let water through:
 
 ![](../Support_Files/Parallel_Resistance.svg){:standalone}
 
