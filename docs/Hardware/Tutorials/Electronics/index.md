@@ -22,7 +22,7 @@ Chapter 1 explores the fundamental physics that give electricity its behavior. A
 
 Chapter 2 builds on the physical fundamentals and explores the ability of electricity to do work and introduces amperage, voltage, and wattage.
 
-![](Part2/Water_Tower_w_Units.svg){:standalone}
+![](Part2/Support_Files/Water_Tower_w_Units.svg){:standalone}
 
 ### [Chapter 3 - Current Types; AC & DC](Part3/Current_Types)
 
