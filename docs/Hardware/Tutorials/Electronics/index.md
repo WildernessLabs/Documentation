@@ -35,7 +35,7 @@ Chapter 3 introduces the two fundamental current types, direct current (DC), and
 
 Chapter 4 expands the relationship between amperage and voltage, and adds another piece to the fundamental laws of electricity; resistance. In doing so, it explores one of the most important laws in electricity, Ohm's law, and explains how to use it.
 
-![](Part4/Ohms_Law_Pyramid.svg){:standalone}
+![](Part4/Support_Files/Ohms_Law_Pyramid.svg){:standalone}
 
 ### [Chapter 5 - DC Circuit Basics](Part5/DC_Circuits)
 

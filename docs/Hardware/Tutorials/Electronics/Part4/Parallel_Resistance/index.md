@@ -8,11 +8,11 @@ subtitle: Calculating resistance when resistors are placed side by side.
 
 When arranging resistors (or resistances) in parallel, as in the following diagram, something interesting occurs:
 
-![](../Resistors_in_Parallel.svg){:standalone}
+![](../Support_Files/Resistors_in_Parallel.svg){:standalone}
 
 Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to put turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there is three resistor valves that let water through:
 
-![](../Parallel_Resistances.svg){:standalone}
+![](../Support_Files/Parallel_Resistance.svg){:standalone}
 
 Each resistor lets through some current, so in order to figure out how much total resistance there is, we actually have to figure out how much is current is conducted by each resistor, add those conductances together, and then convert back to resistance.
 
@@ -39,9 +39,9 @@ Therefore, to calculate the resistance of a parallel resistor network, we have t
 
 Let's consider the same resistor values we had in series, and calculate them in parallel:
 
- * R1 - 100Ω
- * R2 - 5Ω
- * R3 - 1KΩ
+ * R1 - `100Ω`
+ * R2 - `5Ω`
+ * R3 - `1KΩ`
 
 First, we need to convert each value to siemens:
 
@@ -73,7 +73,7 @@ Sometimes, resistors in parallel come in banks of the same resistor values. In t
 Total Resistance = Resistance of Each Resistor / Number of Resistors
 ```
 
-Therefore, (10), 5KΩ resistors in parallel would be:
+Therefore, (10), `5KΩ` resistors in parallel would be:
 
 ```
 5,000Ω / 10 = 500Ω

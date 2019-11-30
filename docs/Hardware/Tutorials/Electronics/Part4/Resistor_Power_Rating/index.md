@@ -10,7 +10,7 @@ In addition to amount of resistance, resistors have another other important char
 
 When power flows through a resistor, some of the energy is converted into heat. The amount of heat a resistor can safely dissipate is characterized by its power rating, and is specified in wattage.
 
-Most common resistors have a power rating between 1/8 watt (0.125W), and 1 watt. Resistors with higher power ratings are usually referred to as _power resistors_, and used specifically to dissipate power.
+Most common resistors have a power rating between `1/8 watt` (`0.125W`), and `1 watt`. Resistors with higher power ratings are usually referred to as _power resistors_, and used specifically to dissipate power.
 
 <!-- TODO: get some power resistor images in here -->
 
@@ -72,7 +72,7 @@ P = V^2 / R
 
 Recalling the simple resistant circuit:
 
-![](../Ohms_Circuit.svg){:standalone}
+![](../Support_Files/Ohms_Circuit.svg){:standalone}
 
 And our power calculation shortcuts:
 
@@ -89,7 +89,7 @@ Let's walk through some sample problems:
 P = 0.100A ^2 * 20Ω = 0.2W
 ```
 
-The nearest power rating to `0.2` would usually be a 1/4 watt.
+The nearest power rating to `0.2` would usually be a `1/4 watt`.
 
 #### 2) If the source voltage is 5V, and the resistance is 100Ω, what minimum power rating must the resistor have?
 
