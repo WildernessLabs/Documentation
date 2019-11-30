@@ -25,7 +25,7 @@ Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at
 * **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)
 * **[SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)
 * **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial)
-* **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** (Car Area Network)
+* **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** (Controller Area Network)
 * **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus)
 
 <!--
