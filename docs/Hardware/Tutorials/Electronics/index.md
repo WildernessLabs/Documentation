@@ -28,7 +28,7 @@ Chapter 2 builds on the physical fundamentals and explores the ability of electr
 
 Chapter 3 introduces the two fundamental current types, direct current (DC), and alternating current. It explores the difference between the two, and what they're used for.
 
-![](Part3/AC_DC.svg){:standalone}
+![](Part3/Support_Files/AC_DC.svg){:standalone}
 
 
 ### [Chapter 4 - Resistance & Ohm's Law](Part4/Resistance)

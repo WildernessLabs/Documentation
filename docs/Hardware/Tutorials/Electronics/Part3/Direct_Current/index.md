@@ -12,17 +12,17 @@ The simple nature of direct current lends itself well to creating digital logic 
  
 Because DC is used as the primary type of current in digital logic circuits, most of this tutorial will focus on DC circuits.
 
-Direct curent is also used in [long distance, high power, electrical transmission lines](https://en.wikipedia.org/wiki/High-voltage_direct_current) (usually >250kV) because of lower electrical losses.
+Direct curent is also used in [long distance, high power, electrical transmission lines](https://en.wikipedia.org/wiki/High-voltage_direct_current) (usually `>250kV`) because of lower electrical losses.
 
-Netduino provides two _power rails_ that supply 5V and 3.3V direct current. They can be found on the power header:
+Meadow provides two _power rails_ that supply `5V` and `3.3V` direct current. The `3.3V` rail can be found on the left header, and the `5V` rail can be found on the right header:
 
-![](/Common_Files/Netduino3_Pinout.svg){:standalone}
+![](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
 ### DC Power Symbols
 
 A general DC power source symbol looks like the following:
 
-![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/DC_Power.svg){:standalone}
+![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/Circuit_Symbols/DC_Power.svg){:standalone}
 
 But many specific power sources have their own symbols, such as batteries, as we'll see later.
 
@@ -59,7 +59,7 @@ The following levels are acceptable for CMOS and TTL circuits:
 
 Therefore, for a `3.3V` CMOS circuit, the acceptable levels are between `0V` - `1.1V` for `LOW`, and `2.2V` - `3.3V` for `HIGH`:
 
-![illustration of digital signal](../CMOS_Digital_Logic_Levels.svg){:standalone}
+![illustration of digital signal](../Support_Files/CMOS_Digital_Logic_Levels.svg){:standalone}
 
 #### Logic Level Shifters
 
