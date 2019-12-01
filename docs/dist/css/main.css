@@ -1111,10 +1111,12 @@ div.highlighter-rouge div {
       padding-right: 0.5%;
       margin-left: 20px;
       margin-bottom: 10px;
-      position: relative; }
+      position: relative;
+      overflow: hidden;
+      text-align: left; }
       .developers .wide .content-block div.highlighter-rouge img, .developers .wide .content-block > figure img, .developers .wide .content-block img.floated img, .developers .wide .content-block .content-banner img {
-        width: 94%;
-        float: right; }
+        max-width: 100%;
+        width: auto; }
     .developers .wide .content-image {
       width: 40%; }
   #developers-section .split-banners p, #developers-section .split-banners li, #developers-section .split-banners a {
@@ -1920,6 +1922,18 @@ main {
   bottom: 0;
   left: 0;
   background: url("/dist/assets/images/landing-developers-main-banner.png") center center no-repeat;
+  background-size: cover;
+  background-position: left top; }
+
+.landing .banner.small.api-banner::before {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/dist/assets/images/api-header-bg.png") center center no-repeat;
   background-size: cover;
   background-position: left top; }
 
