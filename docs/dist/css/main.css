@@ -1091,6 +1091,8 @@ div.highlighter-rouge div {
     height: 75px; } }
 
 @media (min-width: 1680px) {
+  #primary-col {
+    padding-left: 2%; }
   .developers div.highlight {
     margin: 0px 0; }
   .developers .wide {
@@ -1108,7 +1110,7 @@ div.highlighter-rouge div {
       float: right;
       clear: right;
       display: inline-block;
-      width: 50%;
+      width: 46%;
       padding-left: 3.5%;
       padding-right: 0.5%;
       margin-left: 20px;
