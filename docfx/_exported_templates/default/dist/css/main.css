@@ -929,8 +929,11 @@ footer {
   #primary-col .content {
     margin: 0;
     padding: 35px 5% 5%; }
-    #primary-col .content .no-scale img {
-      width: auto; }
+    #primary-col .content figure {
+      width: 100%; }
+    #primary-col .content img {
+      width: auto;
+      max-width: 100%; }
   #primary-col h1:not(:first-of-type), #primary-col h2:not(:first-of-type), #primary-col h3:not(:first-of-type), #primary-col h4:not(:first-of-type), #primary-col h5:not(:first-of-type) {
     padding-top: 35px; }
   #primary-col figure {
