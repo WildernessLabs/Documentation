@@ -929,8 +929,6 @@ footer {
   #primary-col .content {
     margin: 0;
     padding: 35px 5% 5%; }
-    #primary-col .content figure {
-      width: 100%; }
     #primary-col .content img {
       width: auto;
       max-width: 100%; }
@@ -984,8 +982,8 @@ div.highlighter-rouge div {
 @media (min-width: 320px) {
   #primary-col {
     width: 100%; }
-  .developers figure {
-    width: 95%; }
+  .developers .wide .content-block > figure {
+    width: 100%; }
   #developers-section .links-banner a {
     font-size: 40px; }
   #developers-section .landing .banner.small .cta {
