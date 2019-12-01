@@ -12,11 +12,11 @@ As we examined in the last section, a diode is basically just a P-N junction wit
 
 The symbol is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line which represents the junction:
 
-![Diode symbol with a triangle pointing in the direction of current flow butting up against a line.](../Support_Files/Diode.svg){:standalone}
+![Diode symbol with a triangle pointing in the direction of current flow butting up against a line.](../Support_Files/Diode.svg){:standalone .no-scale}
 
 There are a number of different types of diodes, but all of their circuit symbols are based on the one above.
 
-The [Wikipedia diode entry](https://en.wikipedia.org/wiki/Diode) lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them. As we explore more circuits, we'll also introduce additional, specialized diodes. 
+The [Wikipedia diode entry](https://en.wikipedia.org/wiki/Diode) lists almost 20 different types of diodes, but in practice, most circuit design only uses a handful of them. As we explore more circuits, we'll also introduce additional, specialized diodes.
 
 ### Polarity
 
@@ -26,13 +26,13 @@ To differentiate which end of a diode is the anode, and which is the cathode, th
 
 Recall that positive charge carriers (holes) flow preferentially from anode to cathode, so the diodes above are in the same orientation as the circuit symbol below:
 
-![Diode Symbol illustration with Cathode and Anode marked](../Support_Files/Diode_Polarity.svg){:standalone}
+![Diode Symbol illustration with Cathode and Anode marked](../Support_Files/Diode_Polarity.svg){:standalone .no-scale}
 
 ### Diode Characteristics
 
 Depending on how they're constructed, a diode can have some interesting behaviors. For general diodes, there are a number of characteristics that are used to describe how they work:
 
- * **Forward Voltage (`V`<sub>`f`</sub>)** - This is the amount of voltage drop, or the amount of voltage needed to enable current flow. 
+ * **Forward Voltage (`V`<sub>`f`</sub>)** - This is the amount of voltage drop, or the amount of voltage needed to enable current flow.
  * **Maximum Forward Current (`I`<sub>`f(max)`</sub>)** - This is the maximum amount of current that the diode can safely conduct when forward-biased without breaking.
  * **Peak Inverse Voltage (PIV) or _maximum reverse voltage_ (`V`<sub>`R(max)`</sub>)** - This is the maximum amount of voltage that can be applied in reverse bias without an avalanche breakdown.
  * **Total Power Dissipation (`P`<sub>`D(max)`</sub>)** - A diode has some resistance, so some power is lost in the form of heat. As such, a diode usually has a maximum amount of power that it can safely conduct without overheating. Total power dissipation is based on the voltage of the junction potential, and the current: `P`<sub>`D`</sub> = `V`<sub>`f`</sub> * `I`.
@@ -52,7 +52,7 @@ Switching diodes are one of the most common diodes available, largely because of
 
 ![](../Support_Files/Signal_Diodes_Medium.jpg){:standalone}
 
-They typically have small power ratings, `150mA` or less, and a `V`<sub>`f`</sub> of `0.7V`. 
+They typically have small power ratings, `150mA` or less, and a `V`<sub>`f`</sub> of `0.7V`.
 
 Despite their commonality, most of the digital circuits we'll explore will use other diodes.
 
@@ -119,7 +119,7 @@ _Truth tables_ are used to describe the resulting output from inputs based on th
 | **1**   | 0       | **1**  |
 | **1**   | **1**   | **1**  |
 
-In the truth table, `0` and `1` represent `LOW` and `HIGH`, respectively. In the case of our circuit, this means somewhere around `0V` for `LOW` and `3.3V` for `HIGH`. 
+In the truth table, `0` and `1` represent `LOW` and `HIGH`, respectively. In the case of our circuit, this means somewhere around `0V` for `LOW` and `3.3V` for `HIGH`.
 
 In the case of an `OR` gate, as long as any input is `1`, the output will also be `1`. This makes sense, because applying voltage to either diode will provide voltage to the output.
 
@@ -139,11 +139,11 @@ The `AND` gate is a slightly more clever than the `OR` gate. In the case of the 
 ##### Logic Gate Uses
 
 In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if conditions are met within a circuit, such as if multiple inputs are `ON`. We'll explore this more by building these gates in one of this chapter's labs.
- 
+
 ### Zener Diodes
 
 Zener diodes have a known, precise breakdown voltage, which make them very useful for providing a _reference voltage_.
-   
+
 #### Voltage Reference
 
 Sometimes, a circuit needs a reference signal at a precise voltage. By utilizing the breakdown voltage of a reverse-biased Zener in a circuit, its `V`<sub>`f`</sub> back-pressure can provide that voltage reference. Consider the following circuit:
@@ -158,7 +158,7 @@ As long as the current is limited, in this case with a resistor, it will stay wi
 
 ![zoomed in version of the diode breakdown curve](../Support_Files/Diode_Reverse_Behavior.svg){:standalone}
 
-While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same. 
+While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same.
 
 And while the limited amount of current prevents this from being a useful voltage regulator, it does serve as a reliable voltage reference, which is used in ADC conversions, voltage regulator circuits, and more.
 
