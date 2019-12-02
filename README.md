@@ -40,6 +40,20 @@ Change your terminal working folder to `Documentation/docs` (if it's not aleady)
 bundle exec jekyll serve
 ```
 
+## Customizing the front end
+
+The three sites: Wildernesslabs.co, Docs, and Docfx share the same core front end code. Because of this, all front end modifications come from the [WildernessLabs Web Repository](https://github.com/WildernessLabs/WLabs_Web).
+
+To update the front end, setup a version of that repository and follow the instructions to make updates. Once you have that setup you can configure your watcher.
+
+1. Go into the `watch_config.json` file contained at root of the documentation repo. Update the path in that configuration to point to your WLabs_Web repo's dist directory
+2. Run the `watch.rb` task using the command below. This will watch the dist directory for any changes that are made and move them to the 'docs' and 'docsfx repo'
+3. In WLabs_Web repo run `gulp watch` and update any front end files or `gulp dist`
+
+```
+ruby watch.rb
+```
+
 The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
 
 Changes should automatically be picked up and displayed on the site.
@@ -60,7 +74,7 @@ Electronics tutorial copyright Bryan Costanich.
 
 ### Documentation Prose
 
-All the documentation prose is released under a [Creative Commons 
+All the documentation prose is released under a [Creative Commons
 Attribution + Noncommercial + NoDerivatives (CC BY-NC-ND) license](Licenses/CreativeCommons_BY_NC_ND.md). Feel free to share verbatim in non-commercial usage and provide attribution. Commercial usage may be granted in certain use cases. If you need a more permissive license, please contact us at [hello@wildernesslabs.co](mailto:hello@wildernesslabs.co).
 
 ![Creative Commons BY-NC-ND Logo](Licenses/Cc-by-nc-nd_icon.png)
