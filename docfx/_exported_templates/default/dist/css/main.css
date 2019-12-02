@@ -928,7 +928,7 @@ footer {
      ========================================= */ }
   #primary-col .content {
     margin: 0;
-    padding: 35px 5% 5%; }
+    padding: 35px 0 0%; }
     #primary-col .content img {
       width: auto;
       max-width: 100%; }
@@ -1110,7 +1110,7 @@ div.highlighter-rouge div {
       float: right;
       clear: right;
       display: inline-block;
-      width: 46%;
+      width: 48%;
       padding-left: 1%;
       padding-right: 1%;
       margin-left: 20px;
