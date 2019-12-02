@@ -4,7 +4,7 @@ title: Semiconductors Part 1 (Diodes)
 subtitle: The foundation of modern electronic circuits.
 ---
 
-![](../Support_Files/Semiconductor_Microchips_on_Wafer.svg){:standalone}
+![](../Support_Files/Semiconductor_Microchips_on_Wafer.svg)
 
 ## CHAPTER IN BETA
 
