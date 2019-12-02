@@ -39,6 +39,9 @@ Change your terminal working folder to `Documentation/docs` (if it's not aleady)
 ```
 bundle exec jekyll serve
 ```
+The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
+
+Changes should automatically be picked up and displayed on the site.
 
 ## Customizing the front end
 
@@ -53,10 +56,6 @@ To update the front end, setup a version of that repository and follow the instr
 ```
 ruby watch.rb
 ```
-
-The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
-
-Changes should automatically be picked up and displayed on the site.
 
 ## [Contributing](Contributing)
 
