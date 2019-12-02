@@ -51,11 +51,13 @@ To update the front end, setup a version of that repository and follow the instr
 
 1. Go into the `watch_config.json` file contained at root of the documentation repo. Update the path in that configuration to point to your WLabs_Web repo's dist directory
 2. Run the `watch.rb` task using the command below. This will watch the dist directory for any changes that are made and move them to the 'docs' and 'docsfx repo'
-3. In WLabs_Web repo run `gulp watch` and update any front end files or `gulp dist`
 
 ```
 ruby watch.rb
 ```
+
+3. In WLabs_Web repo run `gulp watch` and update any front end files or `gulp dist`
+
 
 ## [Contributing](Contributing)
 
