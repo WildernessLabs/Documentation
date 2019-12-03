@@ -19,7 +19,7 @@ At a high level, the sensor drivers in Meadow.Foundation provide three important
 
 Because sensors are generally reading, or _sampling_, input conditions from the physical world, they're subject to environment _noise_, which causes their values to fluctuate from the actual value that they're sampling:
 
-![](/Common_Files/Sensor_Noise.svg)
+![](/Common_Files/Sensor_Noise.svg){:standalone}
 
 Generally, there are two approaches to remove or mitigate this noise; either in hardware with a [filtering circuit](https://www.arrow.com/en/research-and-events/articles/using-capacitors-to-filter-electrical-noise), or in software by _oversampling_.
 
@@ -27,7 +27,7 @@ Generally, there are two approaches to remove or mitigate this noise; either in 
 
 Oversampling means to take multiple readings (samples), and then average their values to get a value that more closely matches the real-world conditions:
 
-![](/Common_Files/Sensor_Sampling.svg)
+![](/Common_Files/Sensor_Sampling.svg){:standalone}
 
 Nearly all sensor drivers in Meadow.Foundation have support for automatic oversampling built into them, and are generally controlled by the following parameters:
 
