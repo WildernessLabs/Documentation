@@ -17,11 +17,6 @@ Got an awesome Wilderness Labs Hack Kit and want to know what to build with it? 
  * [Build Your Own Simon Game with Meadow](https://www.hackster.io/wilderness-labs/build-your-own-simon-game-with-meadow-3701d5)
  * [Soil Moisture Sensor and LED Bar Graph Using Meadow](https://www.hackster.io/wilderness-labs/soil-moisture-sensor-and-led-bar-graph-using-meadow-88c2c3)
 
-If you have a Hack Kit Pro, here are a couple of awesome projects to build:
- 
- * x
- * y
-
 And here are other Meadow projects that use some parts of the Hack Kits
 
 * [Working with Graphics on a TFT SPI Display Using Meadow](https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-tft-spi-display-using-meadow-e2295a)
