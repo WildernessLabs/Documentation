@@ -32,16 +32,18 @@ To deploy an app to Meadow you'll need several things:
 You'll need to download the source code and compile a customized version the software used to communicate the ST-Link V2 USB device.
 
 ### Setup
-You'll need several packages installed to compile ST-Util.
-To install, call `apt-get install` followed by the package name.
+You'll need several packages, listed below, installed to compile ST-Util.
+* libusb-1.0.0
+* gdb-multiarch
+* make
+* cmake
+* dfu-util
+* git
 
-Open the terminal and enter the following commands to install each package:
-* `sudo apt-get install libusb-1.0.0`
-* `sudo apt-get installgdb-multiarch`
-* `sudo apt-get installmake`
-* `sudo apt-get installcmake`
-* `sudo apt-get installdfu-util`
-* `sudo apt-get git`
+Open the terminal and enter the following command to install the required packages at once:
+```bash
+sudo apt-get install libusb-1.0.0 gdb-multiarch make cmake installdfu-util git
+```
 
 ### Compile ST-Link
 ```bash
