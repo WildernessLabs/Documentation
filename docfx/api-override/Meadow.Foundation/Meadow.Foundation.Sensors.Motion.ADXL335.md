@@ -5,17 +5,14 @@ remarks: *content
 
 The ADXL335 is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes.
 
-## Purchasing
+### Purchasing
 
 The ADXL335 sensor can be purchased on a breakout board from the following suppliers:
 
 * [Adafruit ADXL335](https://www.adafruit.com/product/163)
 * [Sparkfun ADXL335](https://www.sparkfun.com/products/9269)
 
----
-uid: Meadow.Foundation.Sensors.Motion.ADXL335
-example: [*content]
----
+### Usage
 
 The ADXL335 can operate in interrupt and polling mode.
 
@@ -113,7 +110,7 @@ namespace ADXL335_Sample
 }
 ```
 
-##### Example Circuit
+### Example Circuit
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ADXL335/ADXL335.svg)
 
