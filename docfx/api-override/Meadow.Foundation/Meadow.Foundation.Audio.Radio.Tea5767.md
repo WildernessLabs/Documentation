@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Audio.Radio.TEA5767
+uid: Meadow.Foundation.Audio.Radio.Tea5767
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ The TEA5767 FM module is based on the TEA5767GH which is a single-chip, electron
 
 It can be connected to a microcontroller through an I2C interface to digitally control its tuning frequency and other characteristics, giving room for opportunities to digitize some of its operations. It comes with tow headphone jacks, one for connection to a headphone/speaker while the other is for connection to the antenna which usually comes with the module.
 
-![](../../API_Assets/Meadow.Foundation.Audio.Radio.TEA5767/TEA5767.png)
+![](../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767.png)
 
 ### Purchasing
 
@@ -29,28 +29,34 @@ using Meadow.Foundation.Audio.Radio;
 
 namespace TEA5767_Sample
 {
-    public class Program
+    class Program
     {
-        static IApp _app; 
-        public static void Main()
+        static IApp app;
+        public static void Main(string[] args)
         {
-            _app = new App();
+            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+
+            // instantiate and run new meadow app
+            app = new MeadowApp();
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        public App ()
+        protected Tea5767 radio;
+
+        public MeadowApp()
         {
-            Console.WriteLine("Initialize App");
+            Console.WriteLine("Initializing...");
+            
+            radio = new Tea5767(Device.CreateI2cBus());
 
-            Console.WriteLine("Create I2C bus");
-            var i2cBus = Device.CreateI2cBus();
+            TestTEA5767();
+        }
 
-            Console.WriteLine("Create TEA5767 instance");
-            var radio = new TEA5767(i2cBus);
-
-            Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
+        protected void TestTEA5767() 
+        {
+            Console.WriteLine("TestTEA5767...");
 
             for (int i = 0; i < 8; i++)
             {
@@ -80,4 +86,4 @@ To wire a TEA5767 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-![](../../API_Assets/Meadow.Foundation.Audio.Radio.TEA5767/TEA5767_Frizzing.png)
+![](../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Frizzing.png)
