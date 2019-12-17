@@ -1,11 +1,11 @@
 ---
-uid: Meadow.Foundation.Displays.LED.SevenSegment
+uid: Meadow.Foundation.Displays.Led.SevenSegment
 remarks: *content
 ---
 
 A seven-segment display is a form of electronic display device for displaying decimal numerals that is an alternative to the more complex dot matrix displays. These displays are widely used in digital clocks, electronic meters, basic calculators, and other electronic devices that display numerical information.
 
-![](../../API_Assets/Meadow.Foundation.Displays.LED.SevenSegment/SevenSegment.jpg)
+![](../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg)
 
 ### Purchasing
 
@@ -24,21 +24,23 @@ using System;
 using System.Threading;
 using Meadow;
 using Meadow.Devices;
-using Meadow.Foundation.Displays.LED;
+using Meadow.Foundation.Displays.Led;
 
 namespace SevenSegment_Sample
 {
-    public class Program
+    class Program
     {
-        static IApp _app; 
-        public static void Main()
+        static IApp app;
+        public static void Main(string[] args)
         {
-            _app = new MeadowApp();
-            Thread.Sleep(Timeout.Infinite);
+            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+
+            // instantiate and run new meadow app
+            app = new MeadowApp();
         }
     }
     
-    public class MeadowApp : App<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         public MeadowApp ()
         {
@@ -95,4 +97,4 @@ To wire a Common Cathode Seven Segment Display (like the 5161AS) to your Meadow 
 
 It should look like the following diagram:
 
-![](../../API_Assets/Meadow.Foundation.Displays.LED.SevenSegment/SevenSegment_Frizzing.png)
+![](../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Frizzing.png)
