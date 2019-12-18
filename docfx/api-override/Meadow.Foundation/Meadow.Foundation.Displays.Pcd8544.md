@@ -3,7 +3,14 @@ uid: Meadow.Foundation.Displays.Pcd8544
 remarks: *content
 ---
 
-The PCD8544 display, also known as a Nokia 5110 LCD is very popular among the hardware tinkerers. These modules are used on wide variety of applications that require some sort of interface or display data to the user. They have a resolution of 84*48 dot matrix LCD, and you can easily control them using SPI.
+| PCD8544 |             |
+|---------|-------------|
+| Status        | Working             |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544)            |
+| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.PCD8544.svg?label=NuGet)
+| | |
+
+The **PCD8544** display, also known as a Nokia 5110 LCD is very popular among the hardware tinkerers. These modules are used on wide variety of applications that require some sort of interface or display data to the user. They have a resolution of 84*48 dot matrix LCD, and you can easily control them using SPI.
 
 ### Purchasing
 
@@ -14,96 +21,55 @@ The PCD8544 display, also known as a Nokia 5110 LCD is very popular among the ha
 The following example shows how to initialize a TEA5767 and look for radio stations:
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Displays;
-using Meadow.Foundation.Graphics;
-
-namespace Pcd8544_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    class Program
-    {
-        static IApp app;
-        public static void Main(string[] args)
-        {
-            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+    Pcd8544 display;
+    GraphicsLibrary graphics;
 
-            // instantiate and run new meadow app
-            app = new MeadowApp();
-        }
+    public MeadowApp()
+    {
+        Console.WriteLine("Initializing...");
+
+        var config = new Meadow.Hardware.SpiClockConfiguration(
+            Pcd8544.DEFAULT_SPEED, 
+            Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
+
+        display = new Pcd8544
+        (
+            device: Device,
+            spiBus: Device.CreateSpiBus(
+                Device.Pins.SCK, 
+                Device.Pins.MOSI, Device.Pins.MISO, 
+                config),
+            chipSelectPin: Device.Pins.D01,
+            dcPin: Device.Pins.D00,
+            resetPin: Device.Pins.D02
+        );
+
+        graphics = new GraphicsLibrary(display);
+        graphics.Rotation = GraphicsLibrary.RotationType._180Degrees;
+
+        TestPcd8544();
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    void TestPcd8544() 
     {
-        Pcd8544 display;
-        GraphicsLibrary graphics;
+        Console.WriteLine("TestPcd8544...");
 
-        public MeadowApp()
-        {
-            Console.WriteLine("Initializing...");
+        // Drawing with Display Graphics Library
+        graphics.Clear(true);
+        graphics.CurrentFont = new Font8x12();
+        graphics.DrawText(0, 0, "PCD8544");
+        graphics.DrawRectangle(5, 14, 30, 10, true);
 
-            var config = new Meadow.Hardware.SpiClockConfiguration(
-                Pcd8544.DEFAULT_SPEED, 
-                Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
-
-            display = new Pcd8544
-            (
-                device: Device,
-                spiBus: Device.CreateSpiBus(
-                    Device.Pins.SCK, 
-                    Device.Pins.MOSI, D
-                    evice.Pins.MISO, 
-                    config),
-                chipSelectPin: Device.Pins.D01,
-                dcPin: Device.Pins.D00,
-                resetPin: Device.Pins.D02
-            );
-
-            graphics = new GraphicsLibrary(display);
-            graphics.Rotation = GraphicsLibrary.RotationType._180Degrees;
-
-            TestPcd8544();
-
-            Thread.Sleep(10000);
-
-            CounterDemo();
-        }
-
-        void CounterDemo()
-        {
-            int count = 0;
-
-            graphics.CurrentFont = new Font12x20();
-
-            while(true)
-            {
-                graphics.Clear();
-                graphics.DrawText(0, 0, $"Count:");
-                graphics.DrawText(0, 24, $"{count}");
-                graphics.Show();
-                count++;
-            }
-        }
-        
-        void TestPcd8544() 
-        {
-            Console.WriteLine("TestPcd8544...");
-
-            // Drawing with Display Graphics Library
-            graphics.Clear(true);
-            graphics.CurrentFont = new Font8x12();
-            graphics.DrawText(0, 0, "PCD8544");
-            graphics.DrawRectangle(5, 14, 30, 10, true);
-
-            graphics.Show();
-        }
+        graphics.Show();
     }
 }
 ```
 
-### Circuit Example
+[Source code avaliable on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544/Samples/Displays.PCD8854_Sample) 
+
+### Wiring Example
 
  To wire a PCD8544 to your Meadow board, connect the following:
 

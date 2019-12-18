@@ -3,6 +3,13 @@ uid: Meadow.Foundation.Displays.SSD1306
 remarks: *content
 ---
 
+| SSD1306 |             |
+|---------|-------------|
+| Status        | Working             |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306)            |
+| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.SSD1306.svg?label=NuGet)
+| | |
+
 OLED displays based upon the SSD1306 chip set are small, high contrast, single color displays. These displays generate their own light; no backlight is required.
 
 ### Purchasing
@@ -19,71 +26,38 @@ Board are also available from [Adafruit](www.adafruit.com).
 The following example shows how to initialize a TEA5767 and look for radio stations:
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-
-namespace SSD1306_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+    SSD1306 display;
+    GraphicsLibrary graphics;
+
+    public MeadowApp()
+    {            
+        var i2CBus = Device.CreateI2cBus();         
+        display = new SSD1306(i2CBus, 60, SSD1306.DisplayType.OLED128x32);
+        graphics = new GraphicsLibrary(display);
+
+        TestDisplayGraphicsAPI();
     }
-    
-    public class MeadowApp : AppBase<F7Micro, MeadowApp>
+
+    void TestDisplayGraphicsAPI() 
     {
-        protected SSD1306 display;
-        protected GraphicsLibrary graphics;
+        graphics.Clear();
 
-        public MeadowApp()
-        {            
-            var i2CBus = Device.CreateI2cBus();         
-            display = new SSD1306(i2CBus, 60, SSD1306.DisplayType.OLED128x32);
-            graphics = new GraphicsLibrary(display);
+        graphics.CurrentFont = new Font8x12();
+        graphics.DrawText(0, 0, "Meadow F7");
+        graphics.DrawRectangle(5, 14, 30, 10, true);
 
-            Console.WriteLine("Test display API");
-            TestRawDisplayAPI();
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Create Graphics Library");
-            TestDisplayGraphicsAPI();
-        }
-
-        void TestRawDisplayAPI()
-        {
-            display.Clear(true);
-
-            for (int i = 0; i < 30; i++)
-            {
-                display.DrawPixel(i, i, true);
-                display.DrawPixel(30 + i, i, true);
-                display.DrawPixel(60 + i, i, true);
-            }
-
-            display.Show();
-        }
-
-        void TestDisplayGraphicsAPI() 
-        {
-            graphics.Clear();
-
-            graphics.CurrentFont = new Font8x12();
-            graphics.DrawText(0, 0, "Meadow F7");
-            graphics.DrawRectangle(5, 14, 30, 10, true);
-
-            graphics.Show();
-        }
-    }
+        graphics.Show();
+    }  
 }
 ```
 
+[Source code avaliable on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306/Samples/Displays.SSD1306_Sample) 
+
 ### Circuit Example
 
- To wire a SSD1306 to your Meadow board, connect the following:
+ To wire a SSD1306 to your Meadow board using I2C, connect the following:
 
 | SSD1306 | Meadow Pin    |
 |---------|---------------|
@@ -92,6 +66,6 @@ namespace SSD1306_Sample
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
 
-The OLED displays are available with a SPI or I2C interfaces. The driver currently only supports I2C displays. Wiring for the I2C interface is as follows:
+The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C interface is as follows:
 
 ![](../../API_Assets/Meadow.Foundation.Displays.SSD1306/SSD1306_Frizzing.png)

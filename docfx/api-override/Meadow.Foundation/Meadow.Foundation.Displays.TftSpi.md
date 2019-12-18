@@ -1,0 +1,18 @@
+---
+uid: Meadow.Foundation.Displays.TftSpi
+remarks: *content
+---
+
+| TftSpi |             |
+|---------|-------------|
+| Status        | Working             |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi)            |
+| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet)
+| | |
+
+The Meadow.Foundation TftSpi package contains a selction of drivers for common color displays that use the SPI bus.
+
+These displays commonly include additional pins for Reset, Data control and Chip select. If your display doesn't include any of these pins, you can typically pass null for that pin.
+
+Some displays require alternate SPI modes. If your display isn't working, try creating a `SpiClockConfiguration`, set the SPI mode, and pass it to the `SpiBus` during instantiation. See the `ST7789` sample for an example.
+
