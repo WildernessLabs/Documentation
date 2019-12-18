@@ -61,7 +61,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 In it's basic configuration the magnetometer requires four connections:
 

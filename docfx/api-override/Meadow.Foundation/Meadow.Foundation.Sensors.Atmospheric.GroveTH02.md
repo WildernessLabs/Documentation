@@ -7,6 +7,6 @@ This is a multifunctional sensor that gives you temperature and relative humidit
 
 An example will be available once the driver is implemented.
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.GroveTH02/GroveTH02.svg)

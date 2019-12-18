@@ -16,6 +16,6 @@ The SI1145 is a low power infrared, ultraviolet and ambient light sensor with an
 
 The following application reads the sensor output Infrared, Ultraviolet and Visibility once per second and outputs the result on the output console:
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg)

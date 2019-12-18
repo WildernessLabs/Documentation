@@ -18,6 +18,6 @@ Note that when using this chip care should be taken to make sure that the total 
 
 The application below uses a ShiftRegister74595 object to cycle through the bits on the shift register and light the appropriate LED.
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg)

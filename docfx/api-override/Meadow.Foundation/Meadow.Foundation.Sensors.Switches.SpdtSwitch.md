@@ -37,6 +37,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SpdtSwitch.svg)

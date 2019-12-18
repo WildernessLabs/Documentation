@@ -35,6 +35,6 @@ public class Program
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton.svg)

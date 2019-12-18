@@ -14,6 +14,6 @@ The BMP085 sensor is available as a breakout board from the following suppliers:
 
 An example will be available once the driver is implemented.
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085.svg)

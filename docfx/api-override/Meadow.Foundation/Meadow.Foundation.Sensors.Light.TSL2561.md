@@ -92,7 +92,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 The basic configuration of the TSL2561 requires only the data and power connections to be made:
 

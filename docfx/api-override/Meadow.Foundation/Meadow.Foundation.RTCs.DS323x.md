@@ -40,7 +40,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 The DS3231 real time clock module (see image below) requires only four (for simple timekeeping) or five (for alarms) connections
 

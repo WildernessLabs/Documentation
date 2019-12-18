@@ -3,16 +3,16 @@ uid: Meadow.Foundation.ICs.EEPROM.AT24Cxx
 remarks: *content
 ---
 
-| AT24Cxx   |             |
-|-----------|-------------|
-| Status    | Not Working |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.AT24Cxx)  |
-| NuGet package      | Not Published
+| AT24Cxx       |             |
+|---------------|-------------|
+| Status        | Not Working |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.AT24Cxx) |
+| NuGet package | Not Published |
 | | |
 
 The AT24Cxx series of chips provide a mechanism for storing data that will survive a power outage or battery failure.  These EEPROMs are available in varying sizes and are accessible using the I2C interface.
 
-The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):
+### Code Example
 
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
@@ -38,7 +38,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 The chip used to develop this library is one that is available on a common DS3231 RTC module with EEPROM memory module:
 

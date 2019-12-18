@@ -8,7 +8,7 @@ BNO055 is a 9-axis absolute orientation sensor.  The three sensors (acceleromete
 ### Purchasing
 * [Tindie BNO-055 9-axis motion sensor with fusion hardware](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-fusion/)
 
-### Example Wiring
+### Wiring Example
 
 The following diagram shows the BNO055 configured for bas
 

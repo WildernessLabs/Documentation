@@ -62,7 +62,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 Though h-bridge motor controllers come in various form factors, they typically share the following pins and usages:
 

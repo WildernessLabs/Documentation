@@ -57,6 +57,6 @@ public MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Leds.RgbPwmLed/RgbPwmLed.svg)

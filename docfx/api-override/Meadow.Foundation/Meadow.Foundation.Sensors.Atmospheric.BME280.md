@@ -114,7 +114,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 The BME280 can be connected using I2C or SPI.  Only 4 wires are required when using I2C:
 

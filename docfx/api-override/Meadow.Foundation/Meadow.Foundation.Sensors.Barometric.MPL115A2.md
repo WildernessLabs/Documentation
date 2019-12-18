@@ -77,7 +77,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 The simplest method of connecting the MPL115A2 to Meadow requires only four connections:
 

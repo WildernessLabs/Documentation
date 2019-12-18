@@ -38,6 +38,6 @@ The following application creates a **HC-SR04** object, invokes **MeasureDistanc
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg)

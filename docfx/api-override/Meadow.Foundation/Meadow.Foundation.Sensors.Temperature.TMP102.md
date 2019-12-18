@@ -61,7 +61,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 TMP102 sensors can be connected to Meadow using only four connections:
 

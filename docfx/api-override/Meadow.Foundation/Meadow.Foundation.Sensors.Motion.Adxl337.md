@@ -17,6 +17,6 @@ The ADXL337 sensor can be purchased on a breakout board from the following suppl
 The ADXL337 can operate in interrupt and polling mode.
 
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Adx337/Adx337_Fritzing.svg)

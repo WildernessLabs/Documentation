@@ -79,7 +79,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 Consider the TMP36, this sensor requires only three connections; power, ground and the analog output:
 

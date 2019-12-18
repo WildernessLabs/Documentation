@@ -41,6 +41,6 @@ public class LedApp : App<F7Micro, LedApp>
 }
 ```
 
-### Example Wiring
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Leds.Led/Led_bb.svg)
