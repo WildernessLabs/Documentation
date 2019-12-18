@@ -32,7 +32,7 @@ namespace Capacitive_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         Capacitive _Capacitive;
 

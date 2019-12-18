@@ -91,54 +91,35 @@ example: [*content]
 The following example shows how to initialize a PiezoSpeaker and play a melody using an array of notes:
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Servos;
-using Meadow.Hardware;
-
-namespace Servo_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    readonly IPwmPort pwm;
+    readonly Servo servo;
+
+    public App() 
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new App();
-        }
+        pwm = Device.CreatePwmPort(Device.Pins.D12);
+
+        servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
+
+        TestServo();
     }
-    
-    public class App : AppBase<F7Micro, App>
+
+    void TestServo()
     {
-        readonly IPwmPort pwm;
-        readonly Servo servo;
-
-        public App() 
+        while(true)
         {
-            pwm = Device.CreatePwmPort(Device.Pins.D12);
-
-            servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
-
-            TestServo();
-        }
-
-        void TestServo()
-        {
-            while(true)
+            if (servo.Angle <= servo.Config.MinimumAngle)
             {
-                if (servo.Angle <= servo.Config.MinimumAngle)
-                {
-                    Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
-                    servo.RotateTo(servo.Config.MaximumAngle);
-                }
-                else
-                {
-                    Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
-                    servo.RotateTo(servo.Config.MinimumAngle);
-                }
-                Thread.Sleep(4000);
+                Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
+                servo.RotateTo(servo.Config.MaximumAngle);
             }
+            else
+            {
+                Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
+                servo.RotateTo(servo.Config.MinimumAngle);
+            }
+            Thread.Sleep(4000);
         }
     }
 }

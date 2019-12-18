@@ -30,7 +30,7 @@ namespace MAG3110_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         public App ()
         {
@@ -73,7 +73,7 @@ namespace MAG3110_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         public App ()
         {

@@ -32,7 +32,7 @@ namespace FC28_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         FC28 _FC28;
 

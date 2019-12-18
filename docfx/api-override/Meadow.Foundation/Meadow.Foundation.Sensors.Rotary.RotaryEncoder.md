@@ -47,7 +47,7 @@ namespace RotaryEncoder_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         protected RotaryEncoder _rotary = null;
         protected PwmLed _led = null;

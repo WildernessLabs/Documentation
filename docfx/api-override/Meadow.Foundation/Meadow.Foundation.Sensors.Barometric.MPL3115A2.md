@@ -43,7 +43,7 @@ namespace MPL3115A2_InterruptSample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         public App ()
         {
@@ -83,7 +83,7 @@ namespace MPL3115A2_InterruptSample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         public App ()
         {

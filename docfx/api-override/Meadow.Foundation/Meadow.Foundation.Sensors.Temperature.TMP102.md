@@ -38,7 +38,7 @@ namespace TMP102_Sample
         }
     }
     
-    public class App : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         public App ()
         {
@@ -67,32 +67,16 @@ namespace TMP102_Sample
 The following application reads the temperature from the TMP102 sensor every second and displays the results in the debug console:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Temperature;
-
-namespace TMP102_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public App ()
     {
-        static IApp _app; 
-        public static void Main()
+        Console.WriteLine("TMP102 Test");
+        var tmp102 = new TMP102();
+        while (true)
         {
-            _app = new App();
-        }
-    }
-    
-    public class App : AppBase<F7Micro, App>
-    {
-        public App ()
-        {
-            Console.WriteLine("TMP102 Test");
-            var tmp102 = new TMP102();
-            while (true)
-            {
-                Console.WriteLine("Temperature: " + tmp102.Temperature.ToString("f2"));
-                Thread.Sleep(1000);
-            }
+            Console.WriteLine("Temperature: " + tmp102.Temperature.ToString("f2"));
+            Thread.Sleep(1000);
         }
     }
 }
