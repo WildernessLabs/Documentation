@@ -3,7 +3,14 @@ uid: Meadow.Foundation.Sensors.Light.Alspt19315C
 remarks: *content
 ---
 
-The ALS-PT19-315C is a low cost ambient light sensor, consisting of phototransistor in miniature SMD.
+| ALS-PT19-315C |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Alspt19315C) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.ALSPT19.svg?label=NuGet) |
+| | |
+
+The **ALS-PT19-315C** is a low cost analog ambient light sensor, consisting of phototransistor in a miniature SMD.
 
 ### Purchasing
 
@@ -12,27 +19,6 @@ The ALS-PT19 senors are available on breakout boards and as individual sensors:
 * [Adafruit breakout board](https://www.adafruit.com/product/2748)
 * [Sparkfun ALS-PT19 Sensor](https://www.proto-pic.co.uk/als-pt19-light-sensor.html)
 * [Sparkfun Weather Shield](https://www.proto-pic.co.uk/weather-shield.html)
-
-### Code Example
-
-The following application reads the sensor output voltage once per second and outputs the result on the output console:
-
-```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    public MeadowApp()
-    {
-        Console.WriteLine("Alspt19315C Test");
-        var sensor = new Alspt19315C(Cpu.AnalogChannel.ANALOG_1, 3.3);
-        
-        while (true)
-        {
-            Console.WriteLine("Sensor reading: " + sensor.Voltage.ToString("f2"));
-            Thread.Sleep(1000);
-        }
-    }
-}
-```
 
 ### Circuit Example
 

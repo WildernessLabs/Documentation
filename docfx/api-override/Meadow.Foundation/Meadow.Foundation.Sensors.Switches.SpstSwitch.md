@@ -3,10 +3,10 @@ uid: Meadow.Foundation.Sensors.Switches.SpstSwitch
 remarks: *content
 ---
 
-| SpstSwitch |             |
-|-----------|-------------|
-| Status        | Working          |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
+| SpstSwitch  |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
 | | |
 
 Represents a simple, on/off, Single-Pole-Single-Throw (SPST) switch that closes a circuit to either ground/common or high:

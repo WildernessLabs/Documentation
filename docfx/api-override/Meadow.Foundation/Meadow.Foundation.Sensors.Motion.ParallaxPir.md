@@ -3,6 +3,13 @@ uid: Meadow.Foundation.Sensors.Motion.ParallaxPir
 remarks: *content
 ---
 
+| ParallaxPir   |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.ParallaxPir) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.ParallaxPIR.svg?label=NuGet)|
+| | |
+
 The Parallax PIR detects motion by emitting a high signal when motion is detected. The signal returns to a low state when motion stops.
 
 ####Purchasing

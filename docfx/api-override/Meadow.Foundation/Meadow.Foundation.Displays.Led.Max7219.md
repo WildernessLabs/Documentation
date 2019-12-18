@@ -3,7 +3,6 @@ uid: Meadow.Foundation.Displays.Led.Max7219
 remarks: *content
 ---
 
-
 | MAX7219 |             |
 |---------|-------------|
 | Status  | Working     |

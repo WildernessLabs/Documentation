@@ -3,17 +3,12 @@ uid: Meadow.Foundation.Sensors.Motion.Adxl377
 remarks: *content
 ---
 
-ADXL362 is an ultralow power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. 
-
-## Purchasing
-
-The ADXL362 is available on a small breakout board:
-
-* [Sparkfun ADXL362 Breakout Board](https://www.sparkfun.com/products/11446)
-
-### Usage
-
-The ADXL362 can operating in interrupt and polling mode.  Polling applications are responsible for determining when a sensor is read.  Interrupt applications will be notified when the sensor reading changes by + / - a threshold value.
+| ADXL337       |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl337) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl337.svg?label=NuGet) |
+| | |
 
 ### Wiring Example
 

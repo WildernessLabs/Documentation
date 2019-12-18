@@ -3,7 +3,14 @@ uid: Meadow.Foundation.Sensors.Motion.Adxl335
 remarks: *content
 ---
 
-The ADXL335 is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes.
+| ADXL335       |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl335) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl335.svg?label=NuGet) |
+| | |
+
+The **ADXL335** is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes.
 
 ### Purchasing
 

@@ -3,7 +3,14 @@ uid: Meadow.Foundation.Sensors.Barometric.MPL3115A2
 remarks: *content
 ---
 
-The MPL3115A2 is a barometric pressure sensor capable of reading both temperature and temperature compensated pressure reading.  This sensor includes the following features:
+| MPL3115A2     |             |
+|---------------|-------------|
+| Status        | Not working |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.MPL3115A2) |
+| NuGet package | Not published |
+| | |
+
+The **MPL3115A2** is a barometric pressure sensor capable of reading both temperature and temperature compensated pressure reading.  This sensor includes the following features:
 
 * I2C digital interface
 * 24-bit ADC

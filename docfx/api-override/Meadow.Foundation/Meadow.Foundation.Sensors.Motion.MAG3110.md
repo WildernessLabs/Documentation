@@ -3,7 +3,14 @@ uid: Meadow.Foundation.Sensors.Motion.MAG3110
 remarks: *content
 ---
 
-The MAG3110 is a three axis magnetometer with an I2C interface.  The magnetometer is capable of single shot readings and also continuous readings.
+| MAG3110       |             |
+|---------------|-------------|
+| Status        | Not tested  |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110) |
+| NuGet package | Not published |
+| | |
+
+The **MAG3110** is a three axis magnetometer with an I2C interface.  The magnetometer is capable of single shot readings and also continuous readings.
 
 ### Code Example
 
