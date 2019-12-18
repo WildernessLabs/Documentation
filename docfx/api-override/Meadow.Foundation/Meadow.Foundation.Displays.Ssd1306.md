@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.Ssd1306
 remarks: *content
 ---
 
-| Ssd1306       |             |
+| SSD1306       |             |
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306) |

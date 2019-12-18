@@ -3,7 +3,7 @@ uid: Meadow.Foundation.ICs.IOExpanders.HT16K33
 remarks: *content
 ---
 
-| Max7219       |             |
+| HT16K33       |             |
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.HT16K33) |

@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Relays.Relay
 remarks: *content
 ---
 
-| Relay |             |
+| Relay     |             |
 |-----------|-------------|
 | Status        | Untested             |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Relays/)  |
