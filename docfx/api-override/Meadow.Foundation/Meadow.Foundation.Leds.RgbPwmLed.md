@@ -3,10 +3,10 @@ uid: Meadow.Foundation.Leds.RgbPwmLed
 remarks: *content
 ---
 
-| RgbPwmLed |             |
-|-----------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
+| RgbPwmLed   |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/) |
 | | |
 
 Represents an RGB LED whose color is controlled by the duty-cycle of three PWM signals. Can be used both with LEDs that have been current limited with in-series resistors, or LEDs without resistors.

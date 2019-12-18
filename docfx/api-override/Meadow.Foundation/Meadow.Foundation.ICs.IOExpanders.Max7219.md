@@ -19,7 +19,9 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
     public MeadowApp()
     {
-        Init();
+        Console.WriteLine("Init...");
+
+        display = new Max7219(Device, Device.CreateSpiBus(), Device.Pins.D02, 1, true);
 
         while(true)
         {
@@ -85,13 +87,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
             }
             display.Show();
         }
-    }
-
-    public void Init()
-    {
-        Console.WriteLine("Init...");
-
-        display = new Max7219(Device, Device.CreateSpiBus(), Device.Pins.D02, 1, true);
     }
 }
 ```

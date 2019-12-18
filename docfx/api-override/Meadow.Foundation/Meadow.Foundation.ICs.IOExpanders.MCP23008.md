@@ -3,11 +3,11 @@ uid: Meadow.Foundation.ICs.IOExpanders.MCP23008
 remarks: *content
 ---
 
-| MCP23008  |             |
-|-----------|-------------|
-| Status    | Not Working |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23008)  |
-| NuGet package      | Not Published
+| MCP23008      |             |
+|---------------|-------------|
+| Status        | Not Working |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23008) |
+| NuGet package | Not Published |
 | | |
 
 The MCP23008 chip is an 8-bit (8 port) digital I/O expander chip that uses I2C to communicate. It can be used to add additional digital input and output ports to a Netduino and can be combined with up to 8 MCP23008 chips in total, providing up to 64 additional ports.
@@ -53,6 +53,8 @@ In addition to the address pins, there are a number of other pins that must be c
  * **SCL** and **SDA** - The `SCL` and `SDA` pins are the I2C clock and data pins and go to the `SC` and `SD` pins on the Netduino, respectively. Each of these should also generally be pulled high (`3.3V`) via a `4.7kΩ` resistor. See the [I2C guide](http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/I2C/) for more information.
  * **INT** - The `INT` pin is for interrupt notifications, and is only necessary when using the GPIO pins in input mode and you want an event raised when the input value changes.
  * **VSS** and **VDD** - These go to ground and 3.3V power, respectively, and power the chip.
+
+ ### Code Example
 
 The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):
 

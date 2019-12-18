@@ -3,10 +3,10 @@ uid: Meadow.Foundation.Leds.RgbLed
 remarks: *content
 ---
 
-| RgbLed |             |
-|-----------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
+| RgbLed      |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
 | | |
 
 Represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
@@ -23,7 +23,7 @@ To connect these LEDs to Meadow, it is recommended to use an external resistor o
 
 ![](../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonCathode.png)
 
-###Displaying all the colors
+### Code Example
 
 The following example code loops through all the colors possible with digital output ports only.
 

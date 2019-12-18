@@ -3,10 +3,10 @@ uid: Meadow.Foundation.Leds.PwmLed
 remarks: *content
 ---
 
-| PwmLed |             |
-|-----------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
+| PwmLed      |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
 | | |
 
 Represents an LED whose voltage (and brightness) is controlled by the duty-cycle of a PWM signal. Can be used both with LEDs that have been current limited with in-series resistors, or LEDs without resistors.
@@ -16,6 +16,8 @@ Controlling an LED via a PWM signal is more power efficient than using a current
 To use without resistors, pass in the forward voltage (voltage drop) of the LED to the `forwardVoltage` constructor parameter, and the class will limit its output to the maximum forward voltage rating of the LED.
 
 To use with an LED that has a resistor in series, pass `0.0` or `TypicalForwardVoltage.ResistorLimited` for the `forwardVoltage` parameter.
+
+### Code Example
 
 The following example alternates between blinking and pulsing an LED:
 
