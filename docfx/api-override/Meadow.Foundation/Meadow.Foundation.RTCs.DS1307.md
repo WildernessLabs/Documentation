@@ -3,50 +3,41 @@ uid: Meadow.Foundation.RTCs.DS1307
 remarks: *content
 ---
 
-The DS323x ICs offer a low cost accurate real time clock with a temperature compensation crystal oscillator.  This range of chips offers the following functionality:
-
-* Temperature compensation
-* Battery backup
-* I2C (DS3231) and SPI (DS3234) interfaces.
-* Two programmable alarms
-* 32.768 KHz square wave output
-
-## Purchasing
-
-A variety of modules are available including low cost modules with integrated EEPROM:
-
-* [DS3231 with integrated EEPROM](https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=ds3231)
-* [Sparkfun DS3234 Breakout board](https://www.sparkfun.com/products/10160)
+| DS1307        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS1307) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.DS1307.svg?label=NuGet) |
+| | |
 
 ### Code Example
 
 ```csharp
-public class DS1307App : App<F7Micro, DS1307App>
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    protected DS1307 dS1307;
+    protected DS1307 ds1307;
 
     public DS1307App()
     {
-        dS1307 = new DS1307(Device.CreateI2cBus());
+        ds1307 = new DS1307(Device.CreateI2cBus());
 
-        var running = dS1307.IsRunning;
-        if (!running)
+        if (ds1307.IsRunning == false)
         {
             Console.WriteLine("Starting RTC...");
-            dS1307.IsRunning = true;
+            dSs1307.IsRunning = true;
         }
 
-        DateTime now = new DateTime();
         while (true)
         {
             for (int i = 0; i < 3; i++)
             {
-                now = dS1307.GetTime();
+                var now = ds1307.GetTime();
                 Console.WriteLine($"Current time: {now.ToString("MM/dd/yy HH:mm:ss")}");
                 Thread.Sleep(1000);
             }
 
             var rand = new Random();
+
             if (now.Year < 2019)
             {
                 now = DateTime.Now;
@@ -63,9 +54,9 @@ public class DS1307App : App<F7Micro, DS1307App>
             }
 
             Console.WriteLine($"Writing to RTC RAM   : {BitConverter.ToString(data)}");
-            dS1307.WriteRAM(0, data);
+            ds1307.WriteRAM(0, data);
             Console.Write($"Reading from RTC RAM : ");
-            data = dS1307.ReadRAM(0, 56);
+            data = ds1307.ReadRAM(0, 56);
             Console.WriteLine(BitConverter.ToString(data));
 
         }

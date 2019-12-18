@@ -3,9 +3,9 @@ uid: Meadow.Foundation.Motors.Stepper.Uln2003
 remarks: *content
 ---
 
-| TEA5767       |             |
+| ULN2003       |             |
 |---------------|-------------|
-| Status        | Not Working |
+| Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003) |
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Stepper.Uln2003.svg?label=NuGet) |
 | | |

@@ -3,7 +3,14 @@ uid: Meadow.Foundation.Sensors.Atmospheric.BME280
 remarks: *content
 ---
 
-The BME280 is a combined temperature, pressure and humidity sensor.
+| BME280        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.BME280.svg?label=NuGet) |
+| | |
+
+The **BME280** is a combined temperature, pressure and humidity sensor.
 
 ## Purchasing
 

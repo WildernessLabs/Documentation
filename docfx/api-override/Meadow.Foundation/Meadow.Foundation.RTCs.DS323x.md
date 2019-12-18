@@ -3,6 +3,13 @@ uid: Meadow.Foundation.RTCs.DS323x
 remarks: *content
 ---
 
+| DS323x        |             |
+|---------------|-------------|
+| Status        | Untested   |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS323x) |
+| NuGet package | Not published |
+| | |
+
 The DS323x ICs offer a low cost accurate real time clock with a temperature compensation crystal oscillator.  This range of chips offers the following functionality:
 
 * Temperature compensation

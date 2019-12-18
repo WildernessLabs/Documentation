@@ -15,25 +15,31 @@ Example:
 
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    public MeadowApp()
     {
-        // Create a new HIH6130 and set the temperature change threshold to half a degree.
-        var hih6130 = new HIH6130(temperatureChangeNotificationThreshold: 0.5F);
-        
-        // Hook up the temperature interrupt handler.            
-        hih6130.TemperatureChanged += (s, e) =>
+
+        Hih6130 sensor;
+
+        public MeadowApp()
         {
-            Console.WriteLine("Temperature changed: " + e.CurrentValue.ToString("f2"));
-        };
-        
-        // Hook up the humidity interrupt handler.
-        hih6130.HumidityChanged += (s, e) =>
+            Initialize();
+
+            sensor.StartUpdating();
+
+            sensor.Updated += Sensor_Updated;
+        }
+
+        private void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
         {
-            Console.WriteLine("Humidity changed: " + e.CurrentValue.ToString("f2"));
-        };
+            Console.WriteLine($"Humidity: {e.New.Humidity}, Temperature: {e.New.Temperature}");
+        }
+
+        public void Initialize()
+        {
+            Console.WriteLine("Init...");
+
+            sensor = new Hih6130(Device.CreateI2cBus());
+        }
     }
-}
 ```
 
 ### Wiring Example
@@ -42,9 +48,9 @@ The HIH6130 requires only four connections between Meadow and the breakout board
 
 | Meadow Pin   | Sensor Pin     | Wire Color |
 |--------------|----------------|------------|
-| 3.3V         | V<sub>cc</sub> | Red        |
+| 3.3V         | Vcc            | Red        |
 | GND          | GND            | Black      |
 | SC           | SCK            | Blue       |
-| SD           | SDA            | White      |
+| SD           | SDC            | White      |
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130.svg)
