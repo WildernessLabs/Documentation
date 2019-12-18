@@ -34,7 +34,7 @@ In order for electricity to be useful, we must have both a quantity of charge ca
 
 ![](../Support_Files/Electricity_in_Equilibrium.svg){:standalone}
 
-Even though charge carriers exist, there is no different in height to create a potential, or force to move them.
+Even though charge carriers exist, there is no difference in height to create a potential, or force to move them.
 
 Similarly, even with a very tall, but empty tower, if there are no charge carriers to move, there can be no work done, even though gravity could be acting over a large height difference.
 
