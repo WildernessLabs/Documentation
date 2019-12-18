@@ -39,7 +39,7 @@ namespace MPL3115A2_InterruptSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -79,7 +79,7 @@ namespace MPL3115A2_InterruptSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -100,7 +100,7 @@ namespace MPL3115A2_InterruptSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 MPL3115A2 configured for polling more data reads:
 

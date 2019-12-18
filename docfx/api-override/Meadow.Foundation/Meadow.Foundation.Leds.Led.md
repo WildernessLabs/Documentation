@@ -57,6 +57,6 @@ namespace LedSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Leds.Led/Led_bb.svg)

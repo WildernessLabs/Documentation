@@ -28,7 +28,7 @@ namespace FC28_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -57,6 +57,6 @@ namespace FC28_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Moisture.FC28/FC28.svg)

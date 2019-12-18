@@ -59,6 +59,6 @@ namespace PwmLedSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed.svg)

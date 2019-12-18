@@ -66,7 +66,7 @@ namespace LedSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -95,6 +95,6 @@ namespace LedSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Max7219/Max7219_Fritzing.png)

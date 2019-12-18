@@ -104,7 +104,7 @@ namespace AnalogTemperature_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 Consider the TMP36, this sensor requires only three connections; power, ground and the analog output:
 

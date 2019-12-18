@@ -43,7 +43,7 @@ namespace RotaryEncoder_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -96,7 +96,7 @@ namespace RotaryEncoder_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 Note, depending on your encoder, it may have a common/ground (gnd) or (-) leg in addition to the positive (+) leg. If it does, make sure to wire it to ground.
 

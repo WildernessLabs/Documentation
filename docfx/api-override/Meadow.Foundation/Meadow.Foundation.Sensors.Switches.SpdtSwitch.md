@@ -28,7 +28,7 @@ namespace SpdtSwitch_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -54,6 +54,6 @@ namespace SpdtSwitch_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SpdtSwitch.svg)

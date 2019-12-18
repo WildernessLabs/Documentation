@@ -28,7 +28,7 @@ namespace LinearHallEffectTachometer_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -48,6 +48,6 @@ namespace LinearHallEffectTachometer_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg)

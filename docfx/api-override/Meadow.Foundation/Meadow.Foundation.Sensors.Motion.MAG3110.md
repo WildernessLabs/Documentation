@@ -26,7 +26,7 @@ namespace MAG3110_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -69,7 +69,7 @@ namespace MAG3110_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -98,7 +98,7 @@ namespace MAG3110_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 In it's basic configuration the magnetometer requires four connections:
 

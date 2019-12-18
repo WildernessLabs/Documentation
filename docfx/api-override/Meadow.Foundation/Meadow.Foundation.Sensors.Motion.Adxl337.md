@@ -36,7 +36,7 @@ namespace Adx337_Sample
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, App>
     {
         public MeadowApp()
         {
@@ -66,7 +66,7 @@ namespace AdxL337_Sample
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, App>
     {
         public MeadowApp ()
         {
@@ -76,6 +76,6 @@ namespace AdxL337_Sample
 }
 ```
 
-### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Adx337/Adx337_Fritzing.svg)

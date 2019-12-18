@@ -34,7 +34,7 @@ namespace TMP102_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -82,7 +82,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 TMP102 sensors can be connected to Meadow using only four connections:
 

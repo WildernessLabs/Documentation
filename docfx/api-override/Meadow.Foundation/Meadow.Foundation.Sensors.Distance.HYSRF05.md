@@ -30,7 +30,7 @@ namespace HYSRF05_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -58,7 +58,7 @@ namespace HYSRF05_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The HY-SRF05 sensor has 5 pins, but you’ll only connect 4: power, ground, echo and trigger (out isn’t used).
 

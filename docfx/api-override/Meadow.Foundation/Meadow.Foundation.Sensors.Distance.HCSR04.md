@@ -30,7 +30,7 @@ namespace HCSR04_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -58,6 +58,6 @@ namespace HCSR04_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg)

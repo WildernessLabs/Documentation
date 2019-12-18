@@ -30,7 +30,7 @@ namespace ParallaxPIR_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -59,7 +59,7 @@ namespace ParallaxPIR_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The Parallax PIR sensor requires only three connections, power, ground and motion detection signal:
 

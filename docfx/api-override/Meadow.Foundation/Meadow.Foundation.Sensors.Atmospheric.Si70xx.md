@@ -23,11 +23,11 @@ namespace Si70xx_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, App>
     {
         public MeadowApp ()
         {

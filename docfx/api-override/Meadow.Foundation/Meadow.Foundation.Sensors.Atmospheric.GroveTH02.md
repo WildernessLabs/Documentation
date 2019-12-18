@@ -12,6 +12,6 @@ example: [*content]
 
 An example will be available once the driver is implemented.
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.GroveTH02/GroveTH02.svg)

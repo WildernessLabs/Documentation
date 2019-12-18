@@ -38,7 +38,7 @@ namespace DS1307_Sample
         }
     }
     
-    public class DS1307App : AppBase<F7Micro, DS1307App>
+    public class DS1307App : App<F7Micro, DS1307App>
     {
         protected DS1307 dS1307;
 

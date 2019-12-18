@@ -133,7 +133,7 @@ namespace BME280_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -165,7 +165,7 @@ namespace BME280_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The BME280 can be connected using I2C or SPI.  Only 4 wires are required when using I2C:
 

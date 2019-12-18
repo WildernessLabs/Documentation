@@ -41,7 +41,7 @@ namespace DS18B20_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -79,7 +79,7 @@ namespace DS18B20_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -99,6 +99,6 @@ namespace DS18B20_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg)

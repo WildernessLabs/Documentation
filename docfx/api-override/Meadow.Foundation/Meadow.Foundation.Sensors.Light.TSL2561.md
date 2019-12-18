@@ -42,7 +42,7 @@ namespace TSL2561_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -93,7 +93,7 @@ namespace TSL2561_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -129,7 +129,7 @@ namespace TSL2561_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The basic configuration of the TSL2561 requires only the data and power connections to be made:
 

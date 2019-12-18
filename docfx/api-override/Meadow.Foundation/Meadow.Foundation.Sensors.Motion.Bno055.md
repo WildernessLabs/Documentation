@@ -29,7 +29,7 @@ namespace Bno055_Sample
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, App>
     {
         public MeadowApp ()
         {
@@ -39,7 +39,7 @@ namespace Bno055_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The following diagram shows the BNO055 configured for bas
 

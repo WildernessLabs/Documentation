@@ -24,7 +24,7 @@ namespace LedSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -52,7 +52,7 @@ namespace LedSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The chip used to develop this library is one that is available on a common DS3231 RTC module with EEPROM memory module:
 

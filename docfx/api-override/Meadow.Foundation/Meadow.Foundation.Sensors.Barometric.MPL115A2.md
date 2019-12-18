@@ -34,7 +34,7 @@ namespace MPL115A2_InterruptSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -81,7 +81,7 @@ namespace MPL115A2_InterruptSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -118,7 +118,7 @@ namespace MPL115A2_InterruptSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The simplest method of connecting the MPL115A2 to Meadow requires only four connections:
 

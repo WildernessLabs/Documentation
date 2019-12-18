@@ -34,7 +34,7 @@ namespace SHT31D_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -84,7 +84,7 @@ namespace SHT31D_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -107,7 +107,7 @@ namespace SHT31D_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The SHT31D breakout board from Adafruit is supplied with pull-up resistors installed on the `SCL` and `SDA` lines.
 

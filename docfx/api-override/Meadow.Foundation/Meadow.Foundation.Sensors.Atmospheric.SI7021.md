@@ -38,7 +38,7 @@ namespace SI7021_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -79,7 +79,7 @@ namespace SI7021_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -104,7 +104,7 @@ namespace SI7021_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SI7021/SI7021.svg)
 

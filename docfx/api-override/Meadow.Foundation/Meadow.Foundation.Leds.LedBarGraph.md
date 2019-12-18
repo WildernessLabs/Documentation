@@ -32,7 +32,7 @@ namespace SegmentedLedBar_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -89,6 +89,6 @@ namespace SegmentedLedBar_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/LedBarGraph.svg)

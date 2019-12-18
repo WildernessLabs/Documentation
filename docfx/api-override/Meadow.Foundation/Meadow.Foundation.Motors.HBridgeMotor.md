@@ -36,11 +36,11 @@ namespace HBridgeMotor_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, App>
+    public class MeadowApp : App<F7Micro, App>
     {
         public MeadowApp ()
         {
@@ -77,7 +77,7 @@ namespace HBridgeMotor_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 Though h-bridge motor controllers come in various form factors, they typically share the following pins and usages:
 

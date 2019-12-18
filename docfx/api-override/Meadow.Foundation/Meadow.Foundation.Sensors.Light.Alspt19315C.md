@@ -29,7 +29,7 @@ namespace Alspt19315C_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     

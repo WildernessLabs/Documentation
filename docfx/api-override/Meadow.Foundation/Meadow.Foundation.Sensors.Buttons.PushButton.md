@@ -45,6 +45,6 @@ namespace PushButtonSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton.svg)

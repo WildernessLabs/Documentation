@@ -37,7 +37,7 @@ namespace LedSample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -61,7 +61,7 @@ namespace LedSample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The DS3231 real time clock module (see image below) requires only four (for simple timekeeping) or five (for alarms) connections
 

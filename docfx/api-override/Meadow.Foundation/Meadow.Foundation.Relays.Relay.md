@@ -53,6 +53,6 @@ namespace Relay
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Relays.Relay/Relay.svg)

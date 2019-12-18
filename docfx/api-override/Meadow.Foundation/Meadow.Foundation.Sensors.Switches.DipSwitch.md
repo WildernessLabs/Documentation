@@ -24,7 +24,7 @@ namespace DipSwitch_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
 
@@ -51,6 +51,6 @@ namespace DipSwitch_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DipSwitch.svg)

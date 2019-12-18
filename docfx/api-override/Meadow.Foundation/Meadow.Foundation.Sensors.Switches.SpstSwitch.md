@@ -30,7 +30,7 @@ namespace SpstSwitch_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -56,6 +56,6 @@ namespace SpstSwitch_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpstSwitch/SpstSwitch.svg)

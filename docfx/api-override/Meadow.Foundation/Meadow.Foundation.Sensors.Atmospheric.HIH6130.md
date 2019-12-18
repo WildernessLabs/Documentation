@@ -30,7 +30,7 @@ namespace HIH6130_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -57,7 +57,7 @@ namespace HIH6130_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 The HIH6130 requires only four connections between Meadow and the breakout board.
 

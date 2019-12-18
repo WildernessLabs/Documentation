@@ -33,7 +33,7 @@ namespace SI1145_Sample
         static IApp _app; 
         public static void Main()
         {
-            _app = new App();
+            _app = new MeadowApp();
         }
     }
     
@@ -59,6 +59,6 @@ namespace SI1145_Sample
 }
 ```
 
-##### Example Circuit
+### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg)

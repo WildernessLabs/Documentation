@@ -34,7 +34,7 @@ namespace TM1637_Sample
         }
     }
     
-    public class MeadowApp : AppBase<F7Micro, MeadowApp>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         protected TM1637 display;
         protected GraphicsLibrary graphics;
