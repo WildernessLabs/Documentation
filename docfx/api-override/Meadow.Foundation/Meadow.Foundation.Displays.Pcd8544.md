@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Pcd8544
 remarks: *content
 ---
 
-| PCD8544 |             |
-|---------|-------------|
-| Status  | Working     |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.PCD8544)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.PCD8854.svg?label=NuGet)
+| PCD8544       |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.PCD8544) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.PCD8854.svg?label=NuGet) |
 | | |
 
 

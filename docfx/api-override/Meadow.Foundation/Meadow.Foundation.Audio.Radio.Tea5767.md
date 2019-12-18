@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Audio.Radio.Tea5767
 remarks: *content
 ---
 
-| TEA5767 |             |
-|---------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.TEA5767.svg?label=NuGet)
+| TEA5767       |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.TEA5767.svg?label=NuGet) |
 | | |
 
 The **TEA5767** FM module is based on the TEA5767GH which is a single-chip, electronically tuned, FM stereo radio for low-voltage applications with fully integrated Intermediate Frequency (IF) selectivity and demodulation. 
@@ -58,8 +58,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Source code available on GitHub](
-https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
+[Source code available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
 
 ### Wiring Example
 

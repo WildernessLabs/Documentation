@@ -4,10 +4,10 @@ remarks: *content
 ---
 
 | CharacterDisplay |             |
-|---------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.LCD.CharacterDisplay.svg?label=NuGet)
+|------------------|-------------|
+| Status           | Working     |
+| Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
+| NuGet package    | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.LCD.CharacterDisplay.svg?label=NuGet) |
 | | |
 
 ### Code Example

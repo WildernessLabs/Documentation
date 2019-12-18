@@ -3,10 +3,11 @@ uid: Meadow.Foundation.Audio.PiezoSpeaker
 remarks: *content
 ---
 
-| PiezoSpeaker |             |
-|-----------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Speakers)            |
+| PiezoSpeaker  |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Speakers) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=NuGet) |
 | | |
 
 The PiezoSpeaker class represents a simple piezo speaker that can be used to generate tones across a range of frequencies. They typically perform well between 1-5kHz but may go as high as 100kHz. PiezoSpeaker Implements IToneGenerator.
