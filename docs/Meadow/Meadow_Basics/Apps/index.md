@@ -30,7 +30,7 @@ namespace HelloLED
 
 ## Meadow Package
 
-When you create a new Meadow application, the `Meadow` core package should be automatically added. It can manually installed via NuGet:
+When you create a new Meadow application, the `Meadow` core package should be automatically added. It can be manually installed via NuGet:
 
 ```bash
 > nuget install Meadow
