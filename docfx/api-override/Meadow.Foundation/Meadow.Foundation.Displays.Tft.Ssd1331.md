@@ -1,13 +1,13 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.SSD1331
+uid: Meadow.Foundation.Displays.Tft.Ssd1331
 remarks: *content
 ---
 
-| TftSpi  |             |
-|---------|-------------|
-| Status  | Working     |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet)
+| TftSpi        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
 ### Code Example
@@ -15,14 +15,14 @@ remarks: *content
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    SSD1331 display;
+    Ssd1331 display;
     GraphicsLibrary graphics;
 
     public MeadowApp ()
     {
         var spiBus = Device.CreateSpiBus();
 
-        display = new SSD1331(
+        display = new Ssd1331(
             device: Device, 
             spiBus: spiBus,
             chipSelectPin: null,

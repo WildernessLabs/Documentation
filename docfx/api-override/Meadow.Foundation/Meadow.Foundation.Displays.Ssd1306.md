@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Ssd1306
 remarks: *content
 ---
 
-| Ssd1306 |             |
-|---------|-------------|
-| Status  | Working     |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd1306.svg?label=NuGet)
+| Ssd1306       |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd1306.svg?label=NuGet) |
 | | |
 
 OLED displays based upon the Ssd1306 chip set are small, high contrast, single color displays. These displays generate their own light; no backlight is required.

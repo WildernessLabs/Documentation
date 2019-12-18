@@ -1,13 +1,13 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.SSD1351
+uid: Meadow.Foundation.Displays.Tft.Ili9341
 remarks: *content
 ---
 
-| TftSpi  |             |
-|---------|-------------|
-| Status  | Working     |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet)
+| TftSpi        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
 ### Code Example
@@ -15,20 +15,20 @@ remarks: *content
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    SSD1351 display;
+    Ili9341 display;
     GraphicsLibrary graphics;
 
     public MeadowApp ()
     {
         var spiBus = Device.CreateSpiBus();
 
-        display = new SSD1351(
+        display = new Ili9341(
             device: Device, 
             spiBus: spiBus,
             chipSelectPin: null,
             dcPin: Device.Pins.D01,
             resetPin: Device.Pins.D00,
-            width: 96, height: 64);
+            width: 240, height: 320);
 
         graphics = new GraphicsLibrary(display);
 

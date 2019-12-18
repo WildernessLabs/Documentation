@@ -1,20 +1,20 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.ILI9163
+uid: Meadow.Foundation.Displays.Tft.Ili9163
 remarks: *content
 ---
 
-| TftSpi  |             |
-|---------|-------------|
-| Status  | Working     |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet)
+| TftSpi        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
 ### Purchasing
 
-You can get ILI9163 displays from the following suppliers:
+You can get Ili9163 displays from the following suppliers:
 
-* [1.8 Inch 128X160 ILI9163/ST7735](https://www.ebay.com/itm/1-8-Inch-128X160-ILI9163-ST7735-TFT-LCD-Module-With-PCB-Baseboard-SPI-Serial-Por/123860977338?hash=item1cd6b086ba:g:jWAAAOSwvdxdQ~qo)
+* [1.8 Inch 128X160 ILI9163/ST7735](https://www.ebay.com/itm/1-8-Inch-128X160-Ili9163-ST7735-TFT-LCD-Module-With-PCB-Baseboard-SPI-Serial-Por/123860977338?hash=item1cd6b086ba:g:jWAAAOSwvdxdQ~qo)
 * [128x160 ILI9163 / ST7735 TFT Module LCD](https://www.amazon.fr/ILS-Pouces-128x160-ILI9163-Plinthe/dp/B07M7DWWD5)
 
 ### Code Example
@@ -52,9 +52,9 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
- To wire a ILI9163 to your Meadow board, connect the following:
+ To wire a Ili9163 to your Meadow board, connect the following:
 
-| ILI9163 | Meadow Pin |
+| Ili9163 | Meadow Pin |
 |---------|------------|
 | LED-    | 3V3        |
 | LED+    | GND        |
@@ -68,4 +68,4 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 It should look like the following diagram:
 
-![](../../API_Assets/Meadow.Foundation.Displays.Tft.ILI9163/ILI9163_Frizzing.png)
+![](../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9163/Ili9163_Frizzing.png)
