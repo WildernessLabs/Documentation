@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Leds.LedBarGraph
 remarks: *content
 ---
 
+| LedBarGraph |             |
+|-----------|-------------|
+| Status        | Working             |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
+| | |
+
 An LED Bar Graph is basically an LED array. Using an LED bar it’s as easy as connecting 10 individual LEDs with 10 output pins. Generally its used as a Battery level Indicator, Audio equipments, and Industrial Control panels. There are many other applications of LED bar graphs.
 
 ![](../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/img_LedBarGraph.jpg)

@@ -3,6 +3,13 @@ uid: Meadow.Foundation.ICs.EEPROM.AT24Cxx
 remarks: *content
 ---
 
+| AT24Cxx   |             |
+|-----------|-------------|
+| Status    | Not Working s|
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.AT24Cxx)  |
+| NuGet package      | Not published
+| | |
+
 The AT24Cxx series of chips provide a mechanism for storing data that will survive a power outage or battery failure.  These EEPROMs are available in varying sizes and are accessible using the I2C interface.
 
 The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):

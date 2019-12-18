@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Motors.HBridgeMotor
 remarks: *content
 ---
 
+| HBridgeMotor |             |
+|-----------|-------------|
+| Status        | Untested             |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Motors/)  |
+| | |
+
 An h-bridge motor controller enables a control signal to drive a much larger load in either polarity, allowing the Netduino to drive DC motors in forward or reverse from an external power supply. Using pulse-width-modulation (PWM) as the control signal, provides not just forward or reverse control, but variable speeds in either direction.
 
 ![](../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridges.jpg)

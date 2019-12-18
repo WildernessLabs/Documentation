@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Sensors.Switches.DipSwitch
 remarks: *content
 ---
 
+| DipSwitch |             |
+|-----------|-------------|
+| Status        | Working          |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
+| | |
+
 Represents a DIP-switch wired in a bus configuration, in which all switches are terminated to the same ground/common or high pin.
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg)

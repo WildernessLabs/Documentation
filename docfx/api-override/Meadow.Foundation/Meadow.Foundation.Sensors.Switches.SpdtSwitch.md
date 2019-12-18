@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
 remarks: *content
 ---
 
+| SpdtSwitch |             |
+|-----------|-------------|
+| Status        | Working          |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
+| | |
+
 Represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that closes a circut to either ground/common or high depending on position.
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png)

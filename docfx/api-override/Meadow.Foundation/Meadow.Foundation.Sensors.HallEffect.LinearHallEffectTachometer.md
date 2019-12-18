@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer
 remarks: *content
 ---
 
+| LinearHallEffectTachometer |             |
+|-----------|-------------|
+| Status        | Not Tested             |
+| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/HallEffect)  |
+| | |
+
 A Hall effect sensor is a device that is used to measure the magnitude of a magnetic field. Its output voltage is directly proportional to the magnetic field strength through it. These sensors are commonly used for proximity sensing, positioning, speed detection, and current sensing applications.
 
 Frequently, a Hall sensor is combined with threshold detection so that it acts as and is called a switch. Commonly seen in industrial applications such as the pictured pneumatic cylinder, they are also used in consumer equipment; for example some computer printers use them to detect missing paper and open covers. They can also be used in computer keyboards, an application that requires ultra-high reliability.
