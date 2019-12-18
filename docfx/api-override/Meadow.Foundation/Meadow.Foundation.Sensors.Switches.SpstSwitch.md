@@ -9,11 +9,6 @@ Represents a simple, on/off, Single-Pole-Single-Throw (SPST) switch that closes 
 
 Use the [`CircuitTerminationType`](/API/CircuitTerminationType) to specify whether the other side of the switch terminates to ground or high.
 
----
-uid: Meadow.Foundation.Sensors.Switches.SpstSwitch
-example: [*content]
----
-
 The following example shows how to use a SPST switch:
 
 ```csharp

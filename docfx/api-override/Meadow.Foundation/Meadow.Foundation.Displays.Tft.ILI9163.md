@@ -3,9 +3,9 @@ uid: Meadow.Foundation.Displays.Tft.ILI9163
 remarks: *content
 ---
 
-| TftSpi |             |
+| TftSpi  |             |
 |---------|-------------|
-| Status        | Working             |
+| Status  | Working     |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi)            |
 | NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet)
 | | |

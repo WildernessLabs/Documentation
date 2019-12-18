@@ -4,7 +4,7 @@ remarks: *content
 ---
 
 | PiezoSpeaker |             |
-|---------|-------------|
+|-----------|-------------|
 | Status        | Working             |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Speakers)            |
 | | |

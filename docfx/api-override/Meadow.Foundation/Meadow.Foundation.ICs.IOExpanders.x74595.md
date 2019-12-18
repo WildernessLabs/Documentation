@@ -9,11 +9,6 @@ This class allows Meadow to control the output pins on a 74HCT595 shift register
 
 Note that when using this chip care should be taken to make sure that the total output load of the chip does not exceed the current and thermal dissipation properties for the specific shift register being used.
 
----
-uid: Meadow.Foundation.ICs.IOExpanders.x74595
-example: [*content]
----
-
 The application below uses a ShiftRegister74595 object to cycle through the bits on the shift register and light the appropriate LED.
 
 ```csharp

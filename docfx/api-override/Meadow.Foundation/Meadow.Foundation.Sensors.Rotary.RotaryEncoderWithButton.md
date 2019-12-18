@@ -27,11 +27,6 @@ This rotary encoder driver works with most rotary encoders which return a two-bi
 
 Some rotary encoders, such as the ones pictured above, have an integrated push button. This driver exposes that button as a PushButton via the Button property.
 
----
-uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton
-example: [*content]
----
-
 The following example shows how to register event handlers to print in the console when pressing and relasing the push button:
 
 ```csharp

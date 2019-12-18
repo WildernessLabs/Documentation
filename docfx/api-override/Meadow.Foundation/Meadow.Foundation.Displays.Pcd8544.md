@@ -3,12 +3,7 @@ uid: Meadow.Foundation.Displays.Pcd8544
 remarks: *content
 ---
 
-| PCD8544 |             |
-|---------|-------------|
-| Status        | Working             |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.PCD8544.svg?label=NuGet)
-| | |
+c
 
 The **PCD8544** display, also known as a Nokia 5110 LCD is very popular among the hardware tinkerers. These modules are used on wide variety of applications that require some sort of interface or display data to the user. They have a resolution of 84*48 dot matrix LCD, and you can easily control them using SPI.
 

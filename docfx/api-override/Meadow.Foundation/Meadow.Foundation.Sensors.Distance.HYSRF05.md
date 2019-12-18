@@ -11,10 +11,6 @@ The HY-SRF05 sensor is available in ebay:
 
 * [Ultrasonic Sensor - HY-SRF05](https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=HYSRF05&_sacat=0)
 
----
-uid: Meadow.Foundation.Sensors.Distance.HYSRF05
-example: [*content]
----
 
 The following application creates a **HY-SRF05** object, invokes **MeasureDistanceSensor** every second and attaches interrupt handlers to the **DistanceDetected** event that its triggered when the sensor picks up a rebound signal:
 

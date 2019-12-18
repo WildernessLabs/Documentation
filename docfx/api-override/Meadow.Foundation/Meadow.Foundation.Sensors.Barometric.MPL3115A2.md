@@ -18,11 +18,6 @@ The MPL3115A2 is available on breakout boards and a weather shield:
 * [Sparkfun MPL3115A2 Breakout Board](https://www.sparkfun.com/products/11084)
 * [Sparkfun Weather Shield](https://www.sparkfun.com/products/13956)
 
----
-uid: Meadow.Foundation.Sensors.Barometric.MPL3115A2
-example: [*content]
----
-
 #### Interrupt Mode
 
 The application below connects the MPL3115A2 to two interrupt handlers.  These interrupt handlers (events) will display the `Temperature` and `Pressure` properties when the handlers are triggered.  The sensor is checked every 100 milliseconds (the default for the `updatePeriod`).

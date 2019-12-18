@@ -18,11 +18,6 @@ DS18B20 sensors are available in TO-92 packaging and also in a waterproof versio
 
 Note that when purchasing a DS18B20 you will require a 4K7 pull-up resistor if one is not already supplied with the sensor.
 
----
-uid: Meadow.Foundation.Sensors.Temperature.DS18B20
-example: [*content]
----
-
 The driver for the DS18B20 temperature sensor can operate in interrupt or polling mode.
 
 ### Interrupt Mode

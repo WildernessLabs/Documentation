@@ -11,11 +11,6 @@ The SHT31D temperature and humidity is available on a breakout board from Adafru
 
 * [SHT31D Temperature and Humidity Sensor](https://www.adafruit.com/product/2857)
 
----
-uid: Meadow.Foundation.Sensors.Atmospheric.SHT31D
-example: [*content]
----
-
 The SHT31D can operate in interrupt or polling mode.  The default mode is interrupt mode.
 
 #### Interrupt Mode

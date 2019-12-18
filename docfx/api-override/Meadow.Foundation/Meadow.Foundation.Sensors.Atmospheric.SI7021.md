@@ -15,11 +15,6 @@ The Si7021 is available on a breakout board from the the following suppliers:
 
 Note that the Tessel Climate module is compatible with this library.
 
----
-uid: Meadow.Foundation.Sensors.Atmospheric.SI7021
-example: [*content]
----
-
 The SI7021 can operate is a polling or interrupt mode.  The default operation is interrupt mode.
 
 ### Interrupt Mode

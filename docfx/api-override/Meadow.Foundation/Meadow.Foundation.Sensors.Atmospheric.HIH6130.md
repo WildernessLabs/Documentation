@@ -11,11 +11,6 @@ The HIH6130 sensor is available on a breakout board from Sparkfun.
 
 * [Sparkfun HIH6130 Breakout Board](https://www.sparkfun.com/products/11295)
 
----
-uid: Meadow.Foundation.Sensors.Atmospheric.HIH6130
-example: [*content]
----
-
 Example:
 
 ```csharp

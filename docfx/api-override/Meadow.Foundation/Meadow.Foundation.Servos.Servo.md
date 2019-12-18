@@ -83,11 +83,6 @@ Servo cable colors vary by manufacture, but they're always in the same order. Th
 | 2   | VCC     | Red           | Red or Brown    | Red       |
 | 3   | Control | White         | Yellow or White | Orange    |
 
----
-uid: Meadow.Foundation.Servos.Servo
-example: [*content]
----
-
 The following example shows how to initialize a PiezoSpeaker and play a melody using an array of notes:
 
 ```csharp

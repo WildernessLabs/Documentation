@@ -11,11 +11,6 @@ LED bars come in various sizes and single or multicolored. Using `LedBarGraph`, 
 
 Use `SetLed` method to turn on or off LEDs individually, or assign a value on the `Percentage` property to represent it visually on the graph bar, like a battery indicator, temperature, humidity, etc.  
 
----
-uid: Meadow.Foundation.Leds.LedBarGraph
-example: [*content]
----
-
 The following example shows how to use the property **Percentage** to slowly fill and empty a 10 LED battery level graph:
 
 ```csharp

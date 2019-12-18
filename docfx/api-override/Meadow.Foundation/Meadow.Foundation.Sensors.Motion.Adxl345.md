@@ -11,10 +11,6 @@ The ADXL345 is available on a small breakout board:
 
 * [Sparkfun ADXL345 Breakout Board](https://www.sparkfun.com/products/9836)
 
----
-uid: Meadow.Foundation.Sensors.Motion.ADXL345
-example: [*content]
----
 
 The ADXL345 can operating in interrupt and polling mode.  Polling applications are responsible for determining when a sensor is read.  Interrupt applications will be notified when the sensor reading changes by + / - a threshold value.
 

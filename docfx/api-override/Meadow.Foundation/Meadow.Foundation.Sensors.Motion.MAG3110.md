@@ -5,11 +5,6 @@ remarks: *content
 
 The MAG3110 is a three axis magnetometer with an I2C interface.  The magnetometer is capable of single shot readings and also continuous readings.
 
----
-uid: Meadow.Foundation.Sensors.Motion.MAG3110
-example: [*content]
----
-
 ### Code Example
 
 This library supports interrupts when the sensor completes a reading:

@@ -7,11 +7,6 @@ Represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that clo
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png)
 
----
-uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
-example: [*content]
----
-
 The following example shows how to use a SPDT switch:
 
 ```csharp

@@ -23,11 +23,6 @@ TMP36 sensors can be purchased from a number of suppliers including:
 * [Adafruit](https://www.adafruit.com/product/165)
 * [Sparkfun](https://www.sparkfun.com/products/10988)
 
----
-uid: Meadow.Foundation.Sensors.Temperature.AnalogTemperature
-example: [*content]
----
-
 The following application demonstrates how to use the TMP36 in interrupt mode. The sensor will be read every second and changes in values greater than +/- 0.1C will generate and interrupt:
 
 ```csharp

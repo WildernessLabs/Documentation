@@ -7,11 +7,6 @@ An LED is a diode (a component that attempts to let current flow only one way th
 
 Unlike the `PwmLed`, in which you can pass the forward voltage (voltage drop) of the led to limit its current, to use `Led` it is required to limit the current to the LED using a resistor.
 
----
-uid: Meadow.Foundation.Leds.Led
-example: [*content]
----
-
 The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):
 
 ```csharp

@@ -47,11 +47,6 @@ In addition to the address pins, there are a number of other pins that must be c
  * **INT** - The `INT` pin is for interrupt notifications, and is only necessary when using the GPIO pins in input mode and you want an event raised when the input value changes.
  * **VSS** and **VDD** - These go to ground and 3.3V power, respectively, and power the chip.
 
----
-uid: Meadow.Foundation.ICs.IOExpanders.Max7219
-example: [*content]
----
-
 The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):
 
 ```csharp

@@ -15,11 +15,6 @@ The MPL115A2 sensor is available on a breakout board from Adafruit
 
 * [Adafruit MPL115A2 Breakout Board](https://www.adafruit.com/product/992)
 
----
-uid: Meadow.Foundation.Sensors.Barometric.MPL115A2
-example: [*content]
----
-
 The application below connects the MPL115A2 to two interrupt handlers.  These interrupt handlers (events) will display the `Temperature` and `Pressure` properties when the handlers are triggered.  The sensor is checked every 500 milliseconds.
 
 ```csharp

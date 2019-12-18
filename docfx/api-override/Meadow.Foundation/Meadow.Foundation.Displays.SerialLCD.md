@@ -4,8 +4,8 @@ remarks: *content
 ---
 
 | SerialLCD |             |
-|---------|-------------|
-| Status        | Not Working             |
+|-----------|-------------|
+| Status    | Not Working s|
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.SerialLcd/Driver/Displays.SerialLCD)            |
 | NuGet package      | Not published
 | | |
@@ -15,11 +15,6 @@ Serial LCD backpacks provide a convenient way to display data on a 16x2 or 20x4 
 ### Purchasing
 
 This driver supports the [Sparkfun Serial Backpack](https://www.sparkfun.com/products/retired/258). This can also be purchased as a [kit](https://www.sparkfun.com/products/10097) with both the serial backpack and the LCD.
-
----
-uid: Meadow.Foundation.Displays.SerialLCD
-example: [*content]
----
 
 The application below outputs Hello, world on the LCD:
 

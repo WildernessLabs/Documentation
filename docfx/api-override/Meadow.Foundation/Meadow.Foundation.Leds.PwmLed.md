@@ -11,11 +11,6 @@ To use without resistors, pass in the forward voltage (voltage drop) of the LED 
 
 To use with an LED that has a resistor in series, pass `0.0` or `TypicalForwardVoltage.ResistorLimited` for the `forwardVoltage` parameter.
 
----
-uid: Meadow.Foundation.Leds.PwmLed
-example: [*content]
----
-
 The following example alternates between blinking and pulsing an LED:
 
 ```csharp

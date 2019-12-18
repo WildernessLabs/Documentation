@@ -23,11 +23,6 @@ For this reason, rotary encoders are particularly useful in connected things, in
 
 This rotary encoder driver works with most rotary encoders which return a two-bit Gray Code which is the minimum number of bits necessary to describe direction. Most common rotary encoders use two-bit Gray Code, so this driver should work with most common rotary encoders.
 
----
-uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoder
-example: [*content]
----
-
 The following example uses a rotary encoder to adjust the brightness of a PwmLed.
 
 ```csharp

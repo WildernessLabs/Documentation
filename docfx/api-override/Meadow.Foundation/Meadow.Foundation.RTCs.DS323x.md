@@ -18,11 +18,6 @@ A variety of modules are available including low cost modules with integrated EE
 * [DS3231 with integrated EEPROM](https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=ds3231)
 * [Sparkfun DS3234 Breakout board](https://www.sparkfun.com/products/10160)
 
----
-uid: Meadow.Foundation.RTCs.DS323x
-example: [*content]
----
-
 The following application sets an alarm to trigger at when the current second is equal to 15.  The interrupt routine displays the time and then clears the interrupt flag:
 
 ```csharp

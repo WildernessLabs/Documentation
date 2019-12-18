@@ -16,11 +16,6 @@ The TSL2561 is available as a breakout board from the following suppliers:
 * [Adafruit](https://www.adafruit.com/product/439)
 * [Sparkfun](https://www.sparkfun.com/products/12055)
 
----
-uid: Meadow.Foundation.Sensors.Light.TSL2561
-example: [*content]
----
-
 Applications using the TSL2561 can operating in two ways:
 
 * Polled

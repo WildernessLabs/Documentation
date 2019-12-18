@@ -13,11 +13,6 @@ This generic driver works with standard h-bridges ICs such as the Texas Instrume
 
 It should also work with heavier duty [L298N](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=l298n) drivers.
 
----
-uid: Meadow.Foundation.Motors.HBridgeMotor
-example: [*content]
----
-
 The following example uses a dual h-bridge chip to control two motors. Both the L293NE and NS754410 are dual h-bridge chips that can drive two motors in both forward and reverse. This is a common configuration for wheeled robots. Forward and reverse motion is obtained by setting both the motors to have the same forward or reverse speed, and turning is accomplished by setting them to different speeds.
 
 ###Code

@@ -11,11 +11,6 @@ The parallax PIR sensor is available from Parallax Inc:
 
 * [Parallax PIR Rev B](https://www.parallax.com/product/555-28027)
 
----
-uid: Meadow.Foundation.Sensors.Motion.ParallaxPir
-example: [*content]
----
-
 The following application creates a ParallaxPIR object and attaches interrupt handlers to the `OnMotionStart` and `OnMotionEnd` events:
 
 ```csharp

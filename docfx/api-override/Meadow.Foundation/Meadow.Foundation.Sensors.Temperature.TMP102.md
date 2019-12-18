@@ -11,11 +11,6 @@ TMP102 sensors are available on a breakout board from the following suppliers:
 
 * [Sparkfun TMP102 Breakout Board](https://www.sparkfun.com/products/13314)
 
----
-uid: Meadow.Foundation.Sensors.Temperature.TMP102
-example: [*content]
----
-
 The TMP102 temperature sensor can operate in interrupt or polling mode.
 
 ### Interrupt Mode

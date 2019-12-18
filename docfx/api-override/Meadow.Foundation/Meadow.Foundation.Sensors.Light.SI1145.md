@@ -14,11 +14,6 @@ The SI1145 is a low power infrared, ultraviolet and ambient light sensor with an
 
 * [SI1145 from Adafruit](https://www.adafruit.com/product/1777)
 
----
-uid: Meadow.Foundation.Sensors.Light.SI1145
-example: [*content]
----
-
 The following application reads the sensor output Infrared, Ultraviolet and Visibility once per second and outputs the result on the output console:
 
 ### Example Wiring
