@@ -5,7 +5,7 @@ remarks: *content
 
 | SSD1306 |             |
 |---------|-------------|
-| Status  | Working     s|
+| Status  | Working     |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306)            |
 | NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.SSD1306.svg?label=NuGet)
 | | |
