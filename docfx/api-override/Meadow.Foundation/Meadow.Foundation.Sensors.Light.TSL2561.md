@@ -31,47 +31,31 @@ Applications using the TSL2561 can operating in two ways:
 A polled application will read the sensor whenever it needs access to a sensor reading.  The following application sets the sensor to high gain with an integration cycle of 402 milliseconds.  The sensor is then read every 2 seconds:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Light;
-
-namespace TSL2561_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        var tsl2561 = new TSL2561();
+
+        Console.WriteLine("Polled TSL2561 Application.");
+        Console.WriteLine("Device ID: " + tsl2561.ID.ToString());
+        
+        tsl2561.TurnOff();
+        tsl2561.SensorGain = TSL2561.Gain.High;
+        tsl2561.Timing = TSL2561.IntegrationTiming.Ms402;
+        tsl2561.TurnOn();
+        
+        // Wait for at least one integration cycle (set to 402 milliseconds above).
+        Thread.Sleep(500);
+
+        // Repeatedly read the light intensity.
+        while (true)
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            var tsl2561 = new TSL2561();
+            ushort[] adcData = tsl2561.SensorReading;
+            Console.WriteLine("Data0: " + adcData[0].ToString() + ", Data1: " + adcData[1].ToString());
+            Console.WriteLine("Light intensity: " + tsl2561.Lux.ToString());
 
-            Console.WriteLine("Polled TSL2561 Application.");
-            Console.WriteLine("Device ID: " + tsl2561.ID.ToString());
-            
-            tsl2561.TurnOff();
-            tsl2561.SensorGain = TSL2561.Gain.High;
-            tsl2561.Timing = TSL2561.IntegrationTiming.Ms402;
-            tsl2561.TurnOn();
-            
-            // Wait for at least one integration cycle (set to 402 milliseconds above).
-            Thread.Sleep(500);
-
-            // Repeatedly read the light intensity.
-            while (true)
-            {
-                ushort[] adcData = tsl2561.SensorReading;
-                Console.WriteLine("Data0: " + adcData[0].ToString() + ", Data1: " + adcData[1].ToString());
-                Console.WriteLine("Light intensity: " + tsl2561.Lux.ToString());
-
-                Thread.Sleep(2000);
-            }
+            Thread.Sleep(2000);
         }
     }
 }
@@ -82,49 +66,33 @@ namespace TSL2561_Sample
 In the following application, a threshold window of 100 to 2000 is set.  An interrupt will be generated when the light reading on ADC Channel 0 falls below 100 or rises above 2000.  In a moderately lit room, covering the sensor will generate a reading below 100 and a low power torch will take the reading above 2000.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Light;
-
-namespace TSL2561_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        var tsl2561 = new TSL2561();
+
+        Console.WriteLine("Testing the TSL2561 Class.");
+        Console.WriteLine("Device ID: " + tsl2561.ID.ToString());
+
+        tsl2561.TurnOff();
+        tsl2561.SensorGain = TSL2561.Gain.High;
+        tsl2561.Timing = TSL2561.IntegrationTiming.Ms402;
+        tsl2561.ThresholdLow = 100;
+        tsl2561.ThresholdHigh = 2000;
+        tsl2561.ReadingOutsideThresholdWindow += tsl2561_ReadingOutsideThresholdWindow;
+        tsl2561.SetInterruptMode(TSL2561.InterruptMode.Enable, 1, Pins.GPIO_PIN_D7);
+        tsl2561.TurnOn();
+
+        Thread.Sleep(Timeout.Infinite);
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    private void tsl2561_ReadingOutsideThresholdWindow(System.DateTime time)
     {
-        public App ()
-        {
-            var tsl2561 = new TSL2561();
-
-            Console.WriteLine("Testing the TSL2561 Class.");
-            Console.WriteLine("Device ID: " + tsl2561.ID.ToString());
-
-            tsl2561.TurnOff();
-            tsl2561.SensorGain = TSL2561.Gain.High;
-            tsl2561.Timing = TSL2561.IntegrationTiming.Ms402;
-            tsl2561.ThresholdLow = 100;
-            tsl2561.ThresholdHigh = 2000;
-            tsl2561.ReadingOutsideThresholdWindow += tsl2561_ReadingOutsideThresholdWindow;
-            tsl2561.SetInterruptMode(TSL2561.InterruptMode.Enable, 1, Pins.GPIO_PIN_D7);
-            tsl2561.TurnOn();
-
-            Thread.Sleep(Timeout.Infinite);
-        }
-
-        private void tsl2561_ReadingOutsideThresholdWindow(System.DateTime time)
-        {
-            ushort[] adcData = tsl2561.SensorReading;
-            Console.WriteLine("Data0: " + adcData[0].ToString() + ", Data1: " + adcData[1].ToString());
-            Console.WriteLine("Light intensity: " + tsl2561.Lux.ToString());
-            tsl2561.ClearInterrupt();
-        }
+        ushort[] adcData = tsl2561.SensorReading;
+        Console.WriteLine("Data0: " + adcData[0].ToString() + ", Data1: " + adcData[1].ToString());
+        Console.WriteLine("Light intensity: " + tsl2561.Lux.ToString());
+        tsl2561.ClearInterrupt();
     }
 }
 ```

@@ -25,53 +25,37 @@ The following example uses a dual h-bridge chip to control two motors. Both the 
 The following code creates an h-bridge controller with the PWM controllers on pins 3 and 5, and the enable pin on pin 4. It then sets the motor speed to 100% forward, stops the motor for half a second, and then sets the motor speed to 100% reverse.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Motors;
-
-namespace HBridgeMotor_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp ()
     {
-        static IApp _app; 
-        public static void Main()
+        var motorRight = new HBridgeMotor
+        (
+            a1Pin: Device.CreatePwmPort(Device.Pins.D02),
+            a2Pin: Device.CreatePwmPort(Device.Pins.D03),
+            enablePin: Device.CreateDigitalOutputPort(Device.Pins.D04)
+        );
+
+        var motorLeft = new HBridgeMotor
+        (
+            a1Pin: Device.CreatePwmPort(Device.Pins.D07),
+            a2Pin: Device.CreatePwmPort(Device.Pins.D08),
+            enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
+        );
+
+        while (true)
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, App>
-    {
-        public MeadowApp ()
-        {
-            var motorRight = new HBridgeMotor
-            (
-                a1Pin: Device.CreatePwmPort(Device.Pins.D02),
-                a2Pin: Device.CreatePwmPort(Device.Pins.D03),
-                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D04)
-            );
+            motorLeft.Speed = 1f;
+            motorRight.Speed = 1f;
+            Thread.Sleep(1000);
 
-            var motorLeft = new HBridgeMotor
-            (
-                a1Pin: Device.CreatePwmPort(Device.Pins.D07),
-                a2Pin: Device.CreatePwmPort(Device.Pins.D08),
-                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
-            );
+            motorLeft.Speed = 0f;
+            motorRight.Speed = 0f;
+            Thread.Sleep(500);
 
-            while (true)
-            {
-                motorLeft.Speed = 1f;
-                motorRight.Speed = 1f;
-                Thread.Sleep(1000);
-
-                motorLeft.Speed = 0f;
-                motorRight.Speed = 0f;
-                Thread.Sleep(500);
-
-                motorLeft.Speed = -1f;
-                motorRight.Speed = -1f;
-                Thread.Sleep(1000);
-            }
+            motorLeft.Speed = -1f;
+            motorRight.Speed = -1f;
+            Thread.Sleep(1000);
         }
     }
 }

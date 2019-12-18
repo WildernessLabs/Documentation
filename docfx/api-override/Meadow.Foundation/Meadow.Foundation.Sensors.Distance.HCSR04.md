@@ -5,40 +5,20 @@ remarks: *content
 
 The HC-SR04 ultrasonic sensor uses sonar to determine distance to an object (like bats). It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package.
 
-###Purchasing
+### Purchasing
 
 The HC-SR04 sensor is available from Sparkfun:
 
 * [Ultrasonic Sensor - HC-SR04](https://www.sparkfun.com/products/13959)
 
----
-uid: Meadow.Foundation.Sensors.Distance.HCSR04
-example: [*content]
----
-
 The following application creates a **HC-SR04** object, invokes **MeasureDistanceSensor** every second and attaches interrupt handlers to the **DistanceDetected** event that its triggered when the sensor picks up a rebound signal:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Distance;
-
-namespace HCSR04_Sample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
     public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        public App ()
+        public MeadowApp()
         {
-            var  _HCSR04 = new HCSR04(Device.Pins.D14, Device.Pins.D13);
+            var _HCSR04 = new HCSR04(Device.Pins.D14, Device.Pins.D13);
             _HCSR04.DistanceDetected += OnDistanceDetected;
 
             while (true)

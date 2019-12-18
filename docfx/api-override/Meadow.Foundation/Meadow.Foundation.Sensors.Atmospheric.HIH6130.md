@@ -19,40 +19,24 @@ example: [*content]
 Example:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Atmospheric;
-
-namespace HIH6130_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        // Create a new HIH6130 and set the temperature change threshold to half a degree.
+        var hih6130 = new HIH6130(temperatureChangeNotificationThreshold: 0.5F);
+        
+        // Hook up the temperature interrupt handler.            
+        hih6130.TemperatureChanged += (s, e) =>
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
+            Console.WriteLine("Temperature changed: " + e.CurrentValue.ToString("f2"));
+        };
+        
+        // Hook up the humidity interrupt handler.
+        hih6130.HumidityChanged += (s, e) =>
         {
-            // Create a new HIH6130 and set the temperature change threshold to half a degree.
-            HIH6130 hih6130 = new HIH6130(temperatureChangeNotificationThreshold: 0.5F);
-            
-            // Hook up the temperature interrupt handler.            
-            hih6130.TemperatureChanged += (s, e) =>
-            {
-                Console.WriteLine("Temperature changed: " + e.CurrentValue.ToString("f2"));
-            };
-            
-            // Hook up the humidity interrupt handler.
-            hih6130.HumidityChanged += (s, e) =>
-            {
-                Console.WriteLine("Humidity changed: " + e.CurrentValue.ToString("f2"));
-            };
-        }
+            Console.WriteLine("Humidity changed: " + e.CurrentValue.ToString("f2"));
+        };
     }
 }
 ```

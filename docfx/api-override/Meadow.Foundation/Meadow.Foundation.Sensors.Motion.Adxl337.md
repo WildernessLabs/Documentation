@@ -16,65 +16,6 @@ The ADXL337 sensor can be purchased on a breakout board from the following suppl
 
 The ADXL337 can operate in interrupt and polling mode.
 
-### Interrupt Mode
-
-The example below uses the default setting to check the sensor every 100 milliseconds.  The sensor will generate and interrupt if the acceleration changes by more than 0.1g:
-
-```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Motion;
-
-namespace Adx337_Sample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, App>
-    {
-        public MeadowApp()
-        {
-
-        }
-    }
-}
-```
-
-### Polling Mode
-
-The following code will set up the sensor and display the G force and raw sensor data every 250 milliseconds:
-
-```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Motion;
-
-namespace AdxL337_Sample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, App>
-    {
-        public MeadowApp ()
-        {
-
-        }
-    }
-}
-```
 
 ### Example Wiring
 

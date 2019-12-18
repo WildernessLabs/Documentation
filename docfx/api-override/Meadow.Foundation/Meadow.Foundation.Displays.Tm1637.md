@@ -19,64 +19,48 @@ Board are also available from [Adafruit](www.adafruit.com).
 The following example shows how to initialize a TEA5767 and look for radio stations:
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-
-namespace TM1637_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+    protected TM1637 display;
+    protected GraphicsLibrary graphics;
+
+    public MeadowApp()
+    {            
+        var i2CBus = Device.CreateI2cBus();         
+        display = new TM1637(i2CBus, 60, TM1637.DisplayType.OLED128x32);
+        graphics = new GraphicsLibrary(display);
+
+        Console.WriteLine("Test display API");
+        TestRawDisplayAPI();
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Create Graphics Library");
+        TestDisplayGraphicsAPI();
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    void TestRawDisplayAPI()
     {
-        protected TM1637 display;
-        protected GraphicsLibrary graphics;
+        display.Clear(true);
 
-        public MeadowApp()
-        {            
-            var i2CBus = Device.CreateI2cBus();         
-            display = new TM1637(i2CBus, 60, TM1637.DisplayType.OLED128x32);
-            graphics = new GraphicsLibrary(display);
-
-            Console.WriteLine("Test display API");
-            TestRawDisplayAPI();
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Create Graphics Library");
-            TestDisplayGraphicsAPI();
-        }
-
-        void TestRawDisplayAPI()
+        for (int i = 0; i < 30; i++)
         {
-            display.Clear(true);
-
-            for (int i = 0; i < 30; i++)
-            {
-                display.DrawPixel(i, i, true);
-                display.DrawPixel(30 + i, i, true);
-                display.DrawPixel(60 + i, i, true);
-            }
-
-            display.Show();
+            display.DrawPixel(i, i, true);
+            display.DrawPixel(30 + i, i, true);
+            display.DrawPixel(60 + i, i, true);
         }
 
-        void TestDisplayGraphicsAPI() 
-        {
-            graphics.Clear();
+        display.Show();
+    }
 
-            graphics.CurrentFont = new Font8x12();
-            graphics.DrawText(0, 0, "Meadow F7");
-            graphics.DrawRectangle(5, 14, 30, 10, true);
+    void TestDisplayGraphicsAPI() 
+    {
+        graphics.Clear();
 
-            graphics.Show();
-        }
+        graphics.CurrentFont = new Font8x12();
+        graphics.DrawText(0, 0, "Meadow F7");
+        graphics.DrawRectangle(5, 14, 30, 10, true);
+
+        graphics.Show();
     }
 }
 ```

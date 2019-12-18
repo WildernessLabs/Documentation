@@ -16,38 +16,6 @@ example: [*content]
 
 The following example instantiates a LinearHallEffectTachometer object, and registers the RPMsChanged event handler, and it outputs the RPMs in the output console. To trigger the event of the sensor, you can place a magnet on a rotating object like a small motor, or even a fidget spinner, and make sure that the magnet passes very close to the sensor in every rotation so it picks up the electromagnetic field and it will start measuring RPMs.
 
-```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.HallEffect;
-
-namespace LinearHallEffectTachometer_Sample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            var _tach = new LinearHallEffectTachometer(Device.Pins.D10);
-            _tach.RPMsChanged += RPMsChanged;
-        }
-
-        private void RPMsChanged(object sender, Sensors.SensorFloatEventArgs e)
-        {
-            Debug.Print("RPMs: " + e.CurrentValue);
-        }
-    }
-}
-```
-
 ### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg)

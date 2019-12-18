@@ -28,7 +28,7 @@ The application below outputs Hello, world on the LCD:
     
 public class DisplayApp : App<F7Micro, DisplayApp>
 {
-    public App ()
+    public MeadowApp()
     {
         var display = new SerialLCD();
         //

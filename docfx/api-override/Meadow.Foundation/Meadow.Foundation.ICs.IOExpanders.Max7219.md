@@ -55,24 +55,9 @@ example: [*content]
 The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.LEDs;
-
-namespace LedSample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
     public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        public App ()
+        public MeadowApp()
         {
             // create a new Led on pin 8
             var led = new Led(Device.Pins.D08);

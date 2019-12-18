@@ -23,47 +23,31 @@ The SHT31D can operate in interrupt or polling mode.  The default mode is interr
 The application below generates and interrupt when the temperature or humidity changes by more than 0.1 &deg;C.  The sensor is checked every 100 milliseconds.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Atmospheric;
-
-namespace SHT31D_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        // Create a new SHT31D object that will generate interrupts when
+        // the temperature changes by more than +/- 0.1C or the humidity
+        // changes by more than 1%.
+        SHT31D sht31d = new SHT31D(temperatureChangeNotificationThreshold: 0.1F,
+            humidityChangeNotificationThreshold: 1.0F);
+
+        // Hook up the two interrupt handlers to display the changes in
+        // temperature and humidity.
+        sht31d.HumidityChanged += (s, e) =>
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
+            Console.WriteLine("Current humidity: " + e.CurrentValue.ToString("f2"));
+        };
+
+        sht31d.TemperatureChanged += (s, e) =>
         {
-            // Create a new SHT31D object that will generate interrupts when
-            // the temperature changes by more than +/- 0.1C or the humidity
-            // changes by more than 1%.
-            SHT31D sht31d = new SHT31D(temperatureChangeNotificationThreshold: 0.1F,
-                humidityChangeNotificationThreshold: 1.0F);
+            Console.WriteLine("Current temperature: " + e.CurrentValue.ToString("f2"));
+        };
 
-            // Hook up the two interrupt handlers to display the changes in
-            // temperature and humidity.
-            sht31d.HumidityChanged += (s, e) =>
-            {
-                Console.WriteLine("Current humidity: " + e.CurrentValue.ToString("f2"));
-            };
-
-            sht31d.TemperatureChanged += (s, e) =>
-            {
-                Console.WriteLine("Current temperature: " + e.CurrentValue.ToString("f2"));
-            };
-
-            // Main program loop can now go to sleep as the work
-            // is being performed by the interrupt handlers.
-            Thread.Sleep(Timeout.Infinite);
-        }
+        // Main program loop can now go to sleep as the work
+        // is being performed by the interrupt handlers.
+        Thread.Sleep(Timeout.Infinite);
     }
 }
 ```
@@ -73,35 +57,19 @@ namespace SHT31D_Sample
 The application below polls the sensor every 1000 milliseconds and displays the temperature and humidity on the debug console:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Atmospheric;
-
-namespace SHT31D_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            SHT31D sht31d = new SHT31D(updateInterval: 0);
+        SHT31D sht31d = new SHT31D(updateInterval: 0);
 
-            Console.WriteLine("SHT31D Temperature / Humidity Test");
+        Console.WriteLine("SHT31D Temperature / Humidity Test");
 
-            while (true)
-            {
-                sht31d.Update();
-                Console.WriteLine("Temperature: " + sht31d.Temperature.ToString("f2") + ", Humidity: " + sht31d.Humidity.ToString("f2"));
-                Thread.Sleep(1000);
-            }
+        while (true)
+        {
+            sht31d.Update();
+            Console.WriteLine("Temperature: " + sht31d.Temperature.ToString("f2") + ", Humidity: " + sht31d.Humidity.ToString("f2"));
+            Thread.Sleep(1000);
         }
     }
 }

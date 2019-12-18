@@ -7,46 +7,25 @@ Represents a DIP-switch wired in a bus configuration, in which all switches are 
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg)
 
----
-uid: Meadow.Foundation.Sensors.Switches.DipSwitch
-example: [*content]
----
-
 ```csharp
-using Meadow;
-using System.Threading;
-using Meadow.Foundation.Sensors.Switches;
-
-namespace DipSwitch_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public void App()
     {
-        static IApp _app; 
-        public static void Main()
+        var dipSwitch = new DipSwitch(IDigitalPin[] {
+            Device.Pins.D05, Device.Pins.D06, 
+            Device.Pins.D07, Device.Pins.D08, 
+            Device.Pins.D09, Device.Pins.D10, 
+            Device.Pins.D11, Device.Pins.D12,  },
+            CircuitTerminationType.CommonGround);
+
+        dipSwitch.Changed += (object s, ArrayEventArgs e) =>
         {
-            _app = new MeadowApp();
-        }
-    }
+            Debug.Print("Switch " + e.ItemIndex + " changed to " 
+                + (((ISwitch)e.Item).IsOn ? "on" : "off"));
+        };
 
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public void App()
-        {
-            var dipSwitch = new DipSwitch(IDigitalPin[] {
-                Device.Pins.D05, Device.Pins.D06, 
-                Device.Pins.D07, Device.Pins.D08, 
-                Device.Pins.D09, Device.Pins.D10, 
-                Device.Pins.D11, Device.Pins.D12,  },
-                CircuitTerminationType.CommonGround);
-
-            dipSwitch.Changed += (object s, ArrayEventArgs e) =>
-            {
-                Debug.Print("Switch " + e.ItemIndex + " changed to " 
-                    + (((ISwitch)e.Item).IsOn ? "on" : "off"));
-            };
-
-            Thread.Sleep(Timeout.Infinite);
-        }
+        Thread.Sleep(Timeout.Infinite);
     }
 }
 ```

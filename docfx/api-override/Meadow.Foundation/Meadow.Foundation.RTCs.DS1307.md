@@ -21,72 +21,53 @@ A variety of modules are available including low cost modules with integrated EE
 ### Code Example
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.RTCs;
-
-namespace DS1307_Sample
+public class DS1307App : App<F7Micro, DS1307App>
 {
-    public class Program
-    {
-        static IApp app;
+    protected DS1307 dS1307;
 
-        static void Main(string[] args)
+    public DS1307App()
+    {
+        dS1307 = new DS1307(Device.CreateI2cBus());
+
+        var running = dS1307.IsRunning;
+        if (!running)
         {
-            app = new DS1307App();
-            Thread.Sleep(Timeout.Infinite);
+            Console.WriteLine("Starting RTC...");
+            dS1307.IsRunning = true;
         }
-    }
-    
-    public class DS1307App : App<F7Micro, DS1307App>
-    {
-        protected DS1307 dS1307;
 
-        public DS1307App()
+        DateTime now = new DateTime();
+        while (true)
         {
-            dS1307 = new DS1307(Device.CreateI2cBus());
-
-            var running = dS1307.IsRunning;
-            if (!running)
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("Starting RTC...");
-                dS1307.IsRunning = true;
+                now = dS1307.GetTime();
+                Console.WriteLine($"Current time: {now.ToString("MM/dd/yy HH:mm:ss")}");
+                Thread.Sleep(1000);
             }
 
-            DateTime now = new DateTime();
-            while (true)
+            var rand = new Random();
+            if (now.Year < 2019)
             {
-                for (int i = 0; i < 3; i++)
-                {
-                    now = dS1307.GetTime();
-                    Console.WriteLine($"Current time: {now.ToString("MM/dd/yy HH:mm:ss")}");
-                    Thread.Sleep(1000);
-                }
-
-                var rand = new Random();
-                if (now.Year < 2019)
-                {
-                    now = DateTime.Now;
-                }
-                else
-                {
-                    now = now.AddSeconds(rand.Next(1, 30));
-                }
-
-                var data = new byte[56];
-                for (int i = 0; i < 56; i++)
-                {
-                    data[i] = (byte)rand.Next(256);
-                }
-
-                Console.WriteLine($"Writing to RTC RAM   : {BitConverter.ToString(data)}");
-                dS1307.WriteRAM(0, data);
-                Console.Write($"Reading from RTC RAM : ");
-                data = dS1307.ReadRAM(0, 56);
-                Console.WriteLine(BitConverter.ToString(data));
-
-                Thread.Sleep(rand.Next(1, 5));            
+                now = DateTime.Now;
             }
+            else
+            {
+                now = now.AddSeconds(rand.Next(1, 30));
+            }
+
+            var data = new byte[56];
+            for (int i = 0; i < 56; i++)
+            {
+                data[i] = (byte)rand.Next(256);
+            }
+
+            Console.WriteLine($"Writing to RTC RAM   : {BitConverter.ToString(data)}");
+            dS1307.WriteRAM(0, data);
+            Console.Write($"Reading from RTC RAM : ");
+            data = dS1307.ReadRAM(0, 56);
+            Console.WriteLine(BitConverter.ToString(data));
+
         }
     }
 }

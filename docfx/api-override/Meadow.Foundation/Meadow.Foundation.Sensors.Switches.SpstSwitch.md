@@ -17,41 +17,23 @@ example: [*content]
 The following example shows how to use a SPST switch:
 
 ```csharp
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Sensors.Switches;
-using Meadow.Hardware;
-using System.Threading;
-
-namespace SpstSwitch_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    DigitalOutputPort _blueLED;
+    SpstSwitch _spstSwitch;
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
+
+        _spstSwitch = new SpstSwitch(Device.Pins.D13, CircuitTerminationType.High);
+        _spstSwitch.Changed += (s, e) =>
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        DigitalOutputPort _blueLED;
-        SpstSwitch _spstSwitch;
+            Console.WriteLine("Switch Changed");
+            Console.WriteLine("Switch on: " + _spstSwitch.IsOn.ToString());
+        };
 
-        public App ()
-        {
-            _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
-
-            _spstSwitch = new SpstSwitch(Device.Pins.D13, CircuitTerminationType.High);
-            _spstSwitch.Changed += (s, e) =>
-            {
-                Console.WriteLine("Switch Changed");
-                Console.WriteLine("Switch on: " + _spstSwitch.IsOn.ToString());
-            };
-
-            Console.WriteLine("Initial switch state, isOn: " + _spstSwitch.IsOn.ToString());
-        }
+        Console.WriteLine("Initial switch state, isOn: " + _spstSwitch.IsOn.ToString());
     }
 }
 ```

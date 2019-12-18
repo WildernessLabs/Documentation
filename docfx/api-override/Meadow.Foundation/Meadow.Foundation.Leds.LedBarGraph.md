@@ -19,70 +19,52 @@ example: [*content]
 The following example shows how to use the property **Percentage** to slowly fill and empty a 10 LED battery level graph:
 
 ```csharp
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.LEDs;
-using Meadow.Hardware;
-using System.Threading;
-
-namespace SegmentedLedBar_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    DigitalOutputPort _blueLED;
+    LedBarGraph _ledBarGraph;
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
+
+        var pins = new IDigitalPin[10];
+        pins[0] = Device.Pins.D06;
+        pins[1] = Device.Pins.D07;
+        pins[2] = Device.Pins.D08;
+        pins[3] = Device.Pins.D09;
+        pins[4] = Device.Pins.D10;
+        pins[5] = Device.Pins.D11;
+        pins[6] = Device.Pins.D12;
+        pins[7] = Device.Pins.D13;
+        pins[8] = Device.Pins.D14;
+        pins[9] = Device.Pins.D15;
+
+        _ledBarGraph = new LedBarGraph(pins);
+
+        Run();
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    void Run()
     {
-        DigitalOutputPort _blueLED;
-        LedBarGraph _ledBarGraph;
-
-        public App ()
+        while (true)
         {
-            _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
+            float percentage = 0;
 
-            var pins = new IDigitalPin[10];
-            pins[0] = Device.Pins.D06;
-            pins[1] = Device.Pins.D07;
-            pins[2] = Device.Pins.D08;
-            pins[3] = Device.Pins.D09;
-            pins[4] = Device.Pins.D10;
-            pins[5] = Device.Pins.D11;
-            pins[6] = Device.Pins.D12;
-            pins[7] = Device.Pins.D13;
-            pins[8] = Device.Pins.D14;
-            pins[9] = Device.Pins.D15;
-
-            _ledBarGraph = new LedBarGraph(pins);
-
-            Run();
-        }
-
-        void Run()
-        {
-            while (true)
+            while (percentage < 1)
             {
-                float percentage = 0;
+                _ledBarGraph.Percentage = percentage;
+                percentage += 0.1f;
+                Thread.Sleep(200);                    
+            }
 
-                while (percentage < 1)
-                {
-                    _ledBarGraph.Percentage = percentage;
-                    percentage += 0.1f;
-                    Thread.Sleep(200);                    
-                }
+            percentage = 1.0f;
 
-                percentage = 1.0f;
-
-                while (percentage > 0)
-                {
-                    _ledBarGraph.Percentage = percentage;
-                    percentage -= 0.1f;
-                    Thread.Sleep(200);                    
-                }
+            while (percentage > 0)
+            {
+                _ledBarGraph.Percentage = percentage;
+                percentage -= 0.1f;
+                Thread.Sleep(200);                    
             }
         }
     }

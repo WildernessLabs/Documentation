@@ -30,35 +30,19 @@ The driver for the DS18B20 temperature sensor can operate in interrupt or pollin
 The example below will check the temperature every second.  An interrupt will be raised if the difference in temperature between the last reported reading and the current reading is greater than + / - 0.5 &deg;C.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Temperature;
-
-namespace DS18B20_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        DS18B20 ds18B20 = new DS18B20(Pins.GPIO_PIN_D3, updateInterval: 1000, temperatureChangeNotificationThreshold: 0.5F);
+        ds18B20.TemperatureChanged += ds18b20_TemperatureChanged;
+        Thread.Sleep(Timeout.Infinite);
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            DS18B20 ds18B20 = new DS18B20(Pins.GPIO_PIN_D3, updateInterval: 1000, temperatureChangeNotificationThreshold: 0.5F);
-            ds18B20.TemperatureChanged += ds18b20_TemperatureChanged;
-            Thread.Sleep(Timeout.Infinite);
-        }
 
-        /// Temperature of ds18b20 has changed by more than 0.001 C
-        private static void ds18b20_TemperatureChanged(object sender, Netduino.Foundation.Sensors.SensorFloatEventArgs e)
-        {
-            Debug.Print("Temperature: " + ((DS18B20) sender).Temperature.ToString("F2"));
-        }
+    /// Temperature of ds18b20 has changed by more than 0.001 C
+    private static void ds18b20_TemperatureChanged(object sender, Netduino.Foundation.Sensors.SensorFloatEventArgs e)
+    {
+        Debug.Print("Temperature: " + ((DS18B20) sender).Temperature.ToString("F2"));
     }
 }
 ```
@@ -68,32 +52,16 @@ namespace DS18B20_Sample
 The following application reads the temperature from the DS18B20 sensor every 0.5 seconds and displays the results in the debug console:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Temperature;
-
-namespace DS18B20_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        DS18B20 ds18b20 = new DS18B20(Pins.GPIO_PIN_D3, updateInterval: 0);
+        while (true)
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            DS18B20 ds18b20 = new DS18B20(Pins.GPIO_PIN_D3, updateInterval: 0);
-            while (true)
-            {
-                ds18b20.Update();
-                Debug.Print("Current temperature: " + ds18b20.Temperature);
-                Thread.Sleep(500);
-            }
+            ds18b20.Update();
+            Debug.Print("Current temperature: " + ds18b20.Temperature);
+            Thread.Sleep(500);
         }
     }
 }

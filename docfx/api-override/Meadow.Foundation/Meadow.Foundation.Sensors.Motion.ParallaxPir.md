@@ -19,42 +19,26 @@ example: [*content]
 The following application creates a ParallaxPIR object and attaches interrupt handlers to the `OnMotionStart` and `OnMotionEnd` events:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Motion;
-
-namespace ParallaxPIR_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    ParallaxPIR parallax;
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        parallax = new ParallaxPIR(Device.Pins.D13);
+
+        parallax.OnMotionStart += ParallaxMotionStarted;
+        parallax.OnMotionEnd += ParallaxMotionEnded;
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    void ParallaxMotionEnded(object sender)
     {
-        ParallaxPIR parallax;
+        Console.WriteLine("Motion stopped.");
+    }
 
-        public App ()
-        {
-            parallax = new ParallaxPIR(Device.Pins.D13);
-
-            parallax.OnMotionStart += ParallaxMotionStarted;
-            parallax.OnMotionEnd += ParallaxMotionEnded;
-        }
-
-        void ParallaxMotionEnded(object sender)
-        {
-            Console.WriteLine("Motion stopped.");
-        }
-
-        void ParallaxMotionStarted(object sender)
-        {
-            Console.WriteLine("Motion detected.");
-        }
+    void ParallaxMotionStarted(object sender)
+    {
+        Console.WriteLine("Motion detected.");
     }
 }
 ```

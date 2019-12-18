@@ -26,37 +26,21 @@ example: [*content]
 The following application sets an alarm to trigger at when the current second is equal to 15.  The interrupt routine displays the time and then clears the interrupt flag:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.RTCs;
-
-namespace LedSample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        DS3231 rtc = new DS3231(0x68, 100, Device.Pins.D08);
+        rtc.ClearInterrupt(DS323x.Alarm.BothAlarmsRaised);
+        rtc.SetAlarm(DS323x.Alarm.Alarm1Raised, new DateTime(2017, 10, 29, 9, 43, 15), DS323x.AlarmType.WhenSecondsMatch);
+        rtc.OnAlarm1Raised += RtcOnAlarm1Raised;
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            DS3231 rtc = new DS3231(0x68, 100, Device.Pins.D08);
-            rtc.ClearInterrupt(DS323x.Alarm.BothAlarmsRaised);
-            rtc.SetAlarm(DS323x.Alarm.Alarm1Raised, new DateTime(2017, 10, 29, 9, 43, 15), DS323x.AlarmType.WhenSecondsMatch);
-            rtc.OnAlarm1Raised += RtcOnAlarm1Raised;
-        }
 
-        static void RtcOnAlarm1Raised(object sender)
-        {
-            DS3231 rtc = (DS3231) sender;
-            Debug.Print("Alarm 1 has been activated: " + rtc.CurrentDateTime.ToString());
-            rtc.ClearInterrupt(DS323x.Alarm.Alarm1Raised);
-        }
+    static void RtcOnAlarm1Raised(object sender)
+    {
+        DS3231 rtc = (DS3231) sender;
+        Debug.Print("Alarm 1 has been activated: " + rtc.CurrentDateTime.ToString());
+        rtc.ClearInterrupt(DS323x.Alarm.Alarm1Raised);
     }
 }
 ```

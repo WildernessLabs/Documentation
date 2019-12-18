@@ -31,65 +31,48 @@ example: [*content]
 The following example uses a rotary encoder to adjust the brightness of a PwmLed.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.LEDs;
-using Meadow.Foundation.Sensors.Rotary;
-
-namespace RotaryEncoder_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    protected RotaryEncoder _rotary = null;
+    protected PwmLed _led = null;
+    // how much to change the brightness per rotation step. 
+    // 0.05 = 20 clicks to 100%
+    protected float _brightnessStepChange = 0.05F; 
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        // instantiate our peripherals
+        _rotary = new RotaryEncoder(Device.Pins.D07, Device.Pins.D09);
+        _rotary.Rotated += RotaryRotated;
+
+        _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
     {
-        protected RotaryEncoder _rotary = null;
-        protected PwmLed _led = null;
-        // how much to change the brightness per rotation step. 
-        // 0.05 = 20 clicks to 100%
-        protected float _brightnessStepChange = 0.05F; 
-
-        public App()
+        // if clockwise, turn it up! clamp to 1, so we don't go over.
+        if (e.Direction == RotationDirection.Clockwise)
         {
-            // instantiate our peripherals
-            _rotary = new RotaryEncoder(Device.Pins.D07, Device.Pins.D09);
-            _rotary.Rotated += RotaryRotated;
-
-            _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
-        }
-
-        protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
-        {
-            // if clockwise, turn it up! clamp to 1, so we don't go over.
-            if (e.Direction == RotationDirection.Clockwise)
+            if(_led.Brightness >= 1) 
             {
-                if(_led.Brightness >= 1) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness + 
-                        _brightnessStepChange).Clamp(0,1));
-                }
+                return;
             } 
-            else // otherwise, turn it down. clamp to 0 so we don't go below. 
-            { 
-                if (_led.Brightness <= 0) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness - 
-                        _brightnessStepChange).Clamp(0,1));
-                }
+            else 
+            {
+                _led.SetBrightness((_led.Brightness + 
+                    _brightnessStepChange).Clamp(0,1));
+            }
+        } 
+        else // otherwise, turn it down. clamp to 0 so we don't go below. 
+        { 
+            if (_led.Brightness <= 0) 
+            {
+                return;
+            } 
+            else 
+            {
+                _led.SetBrightness((_led.Brightness - 
+                    _brightnessStepChange).Clamp(0,1));
             }
         }
     }

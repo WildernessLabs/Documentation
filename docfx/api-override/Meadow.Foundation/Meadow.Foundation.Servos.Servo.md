@@ -96,7 +96,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     readonly IPwmPort pwm;
     readonly Servo servo;
 
-    public App() 
+    public MeadowApp() 
     {
         pwm = Device.CreatePwmPort(Device.Pins.D12);
 

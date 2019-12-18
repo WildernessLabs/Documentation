@@ -18,33 +18,17 @@ The ALS-PT19 senors are available on breakout boards and as individual sensors:
 The following application reads the sensor output voltage once per second and outputs the result on the output console:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Light;
-
-namespace Alspt19315C_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        Console.WriteLine("Alspt19315C Test");
+        var sensor = new Alspt19315C(Cpu.AnalogChannel.ANALOG_1, 3.3);
+        
+        while (true)
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            Console.WriteLine("Alspt19315C Test");
-            var sensor = new Alspt19315C(Cpu.AnalogChannel.ANALOG_1, 3.3);
-            
-            while (true)
-            {
-                Console.WriteLine("Sensor reading: " + sensor.Voltage.ToString("f2"));
-                Thread.Sleep(1000);
-            }
+            Console.WriteLine("Sensor reading: " + sensor.Voltage.ToString("f2"));
+            Thread.Sleep(1000);
         }
     }
 }

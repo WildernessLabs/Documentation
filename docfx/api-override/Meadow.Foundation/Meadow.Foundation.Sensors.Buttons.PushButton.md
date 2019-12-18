@@ -13,35 +13,30 @@ example: [*content]
 The following example shows how to register event handlers to print in the console when pressing and relasing the push button:
 
 ```csharp
-using System.Threading;
-using Meadow;
-
-namespace PushButtonSample
+public class Program
 {
-    public class Program
+    public static void Main()
     {
-        public static void Main()
-        {
-            var pushButton = new PushButton(
-                Device.Pins.D08, 
-                Meadow.Foundation.CircuitTerminationType.High
-            );
-            pushButton.PressStarted += PushButtonPressStarted;
-            pushButton.PressEnded += PushButtonPressEnded;
+        var pushButton = new PushButton(
+            Device.Pins.D08, 
+            Meadow.Foundation.CircuitTerminationType.High
+        );
+        pushButton.PressStarted += PushButtonPressStarted;
+        pushButton.PressEnded += PushButtonPressEnded;
 
-            Thread.Sleep(Timeout.Infinite);
-        }
-
-        private void PushButtonPressStarted(object sender, EventArgs e)
-        {
-            Console.WriteLine("Press Started..."); 
-        }
-
-        private void PushButtonPressEnded(object sender, EventArgs e)
-        {
-            Console.WriteLine("Press Ended...");
-        }
+        Thread.Sleep(Timeout.Infinite);
     }
+
+    private void PushButtonPressStarted(object sender, EventArgs e)
+    {
+        Console.WriteLine("Press Started..."); 
+    }
+
+    private void PushButtonPressEnded(object sender, EventArgs e)
+    {
+        Console.WriteLine("Press Ended...");
+    }
+    
 }
 ```
 

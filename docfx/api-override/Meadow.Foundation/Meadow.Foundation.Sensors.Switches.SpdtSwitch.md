@@ -15,41 +15,23 @@ example: [*content]
 The following example shows how to use a SPDT switch:
 
 ```csharp
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Sensors.Switches;
-using Meadow.Hardware;
-using System.Threading;
-
-namespace SpdtSwitch_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    DigitalOutputPort _blueLED;
+    SpdtSwitch _spdtSwitch;
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
+
+        _spdtSwitch = new SpdtSwitch(Device.Pins.D13);
+        _spdtSwitch.Changed += (s, e) =>
         {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        DigitalOutputPort _blueLED;
-        SpdtSwitch _spdtSwitch;
+            Console.WriteLine("Switch Changed");
+            Console.WriteLine("Switch on: " + _spdtSwitch.IsOn.ToString());
+        };
 
-        public App ()
-        {
-            _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
-
-            _spdtSwitch = new SpdtSwitch(Device.Pins.D13);
-            _spdtSwitch.Changed += (s, e) =>
-            {
-                Console.WriteLine("Switch Changed");
-                Console.WriteLine("Switch on: " + _spdtSwitch.IsOn.ToString());
-            };
-
-            Console.WriteLine("Initial switch state, isOn: " + _spdtSwitch.IsOn.ToString());
-        }
+        Console.WriteLine("Initial switch state, isOn: " + _spdtSwitch.IsOn.ToString());
     }
 }
 ```

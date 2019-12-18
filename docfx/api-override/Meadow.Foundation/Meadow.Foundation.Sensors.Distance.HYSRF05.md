@@ -19,41 +19,25 @@ example: [*content]
 The following application creates a **HY-SRF05** object, invokes **MeasureDistanceSensor** every second and attaches interrupt handlers to the **DistanceDetected** event that its triggered when the sensor picks up a rebound signal:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Distance;
-
-namespace HYSRF05_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        var  _HYSRF05 = new HYSRF05(Device.Pins.D14, Device.Pins.D13);
+        _HYSRF05.DistanceDetected += OnDistanceDetected;
+
+        while (true)
         {
-            _app = new MeadowApp();
+            // Send a echo
+            _HYSRF05.MeasureDistance();
+            Thread.Sleep(500);
         }
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    // Fired when detecting an obstacle
+    private static void OnDistanceDetected(object sender, DistanceEventArgs e) 
     {
-        public App ()
-        {
-            var  _HYSRF05 = new HYSRF05(Device.Pins.D14, Device.Pins.D13);
-            _HYSRF05.DistanceDetected += OnDistanceDetected;
-
-            while (true)
-            {
-                // Send a echo
-                _HYSRF05.MeasureDistance();
-                Thread.Sleep(500);
-            }
-        }
-
-        // Fired when detecting an obstacle
-        private static void OnDistanceDetected(object sender, DistanceEventArgs e) 
-        {
-            Debug.Print(e.Distance.ToString());
-        }
+        Debug.Print(e.Distance.ToString());
     }
 }
 ```

@@ -7,33 +7,6 @@ The HTU21D is a low-cost, easy to use, highly accurate, digital humidity sensor.
 
 An example will be available once the driver is implemented.
 
-### Code Example
-
-```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Motors;
-
-namespace Htu21d_Sample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, App>
-    {
-        public MeadowApp ()
-        {
-
-        }
-    }
-}
-```
 
 ### Circuit Example
 

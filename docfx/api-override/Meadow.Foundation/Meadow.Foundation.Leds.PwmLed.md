@@ -19,41 +19,24 @@ example: [*content]
 The following example alternates between blinking and pulsing an LED:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Leds;
-
-namespace PwmLedSample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app;
-        public static void Main()
+        // create a new PwmLed on pin 8
+        var pwmLed = new PwmLed(
+            Device.CreatePwmPort(Device.Pins.D08),
+            TypicalForwardVoltage.Green
+        );
+
+        // alternate between blinking and pulsing the LED 
+        while (true)
         {
-            _app = new MeadowApp();
-        }
-    }
+            pwmLed.StartBlink();
+            Thread.Sleep(5000); // 5 seconds
 
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public MeadowApp()
-        {
-            // create a new PwmLed on pin 8
-            var pwmLed = new PwmLed(
-                Device.CreatePwmPort(Device.Pins.D08),
-                TypicalForwardVoltage.Green
-            );
-
-            // alternate between blinking and pulsing the LED 
-            while (true)
-            {
-                pwmLed.StartBlink();
-                Thread.Sleep(5000); // 5 seconds
-
-                pwmLed.StartPulse(lowBrightness: 0.2F);
-                Thread.Sleep(10000); // 10 seconds
-            }
+            pwmLed.StartPulse(lowBrightness: 0.2F);
+            Thread.Sleep(10000); // 10 seconds
         }
     }
 }

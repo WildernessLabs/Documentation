@@ -21,44 +21,6 @@ example: [*content]
 
 The following application reads the sensor output Infrared, Ultraviolet and Visibility once per second and outputs the result on the output console:
 
-```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Light;
-
-namespace SI1145_Sample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        public App ()
-        {
-            Console.WriteLine("SI1145 Test");
-            var sensor = new SI1145();
-            
-            while (true)
-            {
-                Console.WriteLine(
-                    "Sensor reading - " + 
-                    "Ultraviolet = " + sensor.Ultraviolet().ToString("f2") +
-                    "Infrared = " + sensor.Infrared().ToString("f2") +
-                    "Visible = " + sensor.Visible().ToString("f2"));
-
-                Thread.Sleep(1000);
-            }
-        }
-    }
-}
-```
-
 ### Example Wiring
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg)

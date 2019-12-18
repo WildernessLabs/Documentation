@@ -35,81 +35,64 @@ example: [*content]
 The following example shows how to register event handlers to print in the console when pressing and relasing the push button:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.LEDs;
-using Meadow.Foundation.Sensors.Rotary;
-
-namespace RotaryEncoder_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    protected RotaryEncoderWithButton _rotary = null;
+    protected PwmLed _led = null;
+    // how much to change the brightness per rotation step. 
+    // 0.05 = 20 clicks to 100%
+    protected float _brightnessStepChange = 0.05F; 
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        // instantiate our peripherals
+        _rotary = new RotaryEncoder(
+            Device.Pins.D05, Device.Pins.D06,
+            CircuitTerminationType.CommonGround);
+        _rotary.Rotated += RotaryRotated;
+        _rotary.Clicked += RotaryClicked;
+
+        _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
     {
-        protected RotaryEncoderWithButton _rotary = null;
-        protected PwmLed _led = null;
-        // how much to change the brightness per rotation step. 
-        // 0.05 = 20 clicks to 100%
-        protected float _brightnessStepChange = 0.05F; 
-
-        public App()
+        // if clockwise, turn it up! clamp to 1, so we don't go over.
+        if (e.Direction == RotationDirection.Clockwise)
         {
-            // instantiate our peripherals
-            _rotary = new RotaryEncoder(
-                Device.Pins.D05, Device.Pins.D06,
-                CircuitTerminationType.CommonGround);
-            _rotary.Rotated += RotaryRotated;
-            _rotary.Clicked += RotaryClicked;
-
-            _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
-        }
-
-        protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
-        {
-            // if clockwise, turn it up! clamp to 1, so we don't go over.
-            if (e.Direction == RotationDirection.Clockwise)
+            if(_led.Brightness >= 1) 
             {
-                if(_led.Brightness >= 1) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness + 
-                        _brightnessStepChange).Clamp(0,1));
-                }
-            } 
-            else // otherwise, turn it down. clamp to 0 so we don't go below. 
-            { 
-                if (_led.Brightness <= 0) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness - 
-                        _brightnessStepChange).Clamp(0,1));
-                }
-            }
-        }
-
-        private void RotaryClicked(object sender, EventArgs e)
-        {
-            if (_led.Brightness > 0) 
-            {
-                _led.SetBrightness(0f);
+                return;
             } 
             else 
             {
-                _led.SetBrightness(_lastOnBrightness);
+                _led.SetBrightness((_led.Brightness + 
+                    _brightnessStepChange).Clamp(0,1));
             }
+        } 
+        else // otherwise, turn it down. clamp to 0 so we don't go below. 
+        { 
+            if (_led.Brightness <= 0) 
+            {
+                return;
+            } 
+            else 
+            {
+                _led.SetBrightness((_led.Brightness - 
+                    _brightnessStepChange).Clamp(0,1));
+            }
+        }
+    }
+
+    private void RotaryClicked(object sender, EventArgs e)
+    {
+        if (_led.Brightness > 0) 
+        {
+            _led.SetBrightness(0f);
+        } 
+        else 
+        {
+            _led.SetBrightness(_lastOnBrightness);
         }
     }
 }

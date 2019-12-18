@@ -17,41 +17,25 @@ example: [*content]
 The following example shows how read the soil moisture every second:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Moisture;
-
-namespace Capacitive_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    Capacitive _Capacitive;
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
+        // create a new Capacitive sensor object connected to analog pin A01
+        _Capacitive = new Capacitive(Device.Pins.A01);
+
+        Run();
     }
-    
-    public class MeadowApp : App<F7Micro, MeadowApp>
+
+    async Task Run()
     {
-        Capacitive _Capacitive;
-
-        public App ()
+        while (true)
         {
-            // create a new Capacitive sensor object connected to analog pin A01
-            _Capacitive = new Capacitive(Device.Pins.A01);
-
-            Run();
-        }
-
-        async Task Run()
-        {
-            while (true)
-            {
-                float moisture = await _Capacitive.Read();
-                Console.WriteLine($"Moisture: {0}", moisture);
-                Thread.Sleep(1000);
-            }
+            float moisture = await _Capacitive.Read();
+            Console.WriteLine($"Moisture: {0}", moisture);
+            Thread.Sleep(1000);
         }
     }
 }

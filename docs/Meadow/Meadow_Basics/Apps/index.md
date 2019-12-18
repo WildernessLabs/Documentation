@@ -77,50 +77,41 @@ var name = MyApp.Current.InstalledName;
 Here is a complete example of an application that cycles through some colors on the onboard LED:
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Hardware;
-
-namespace HelloLED
+class LEDApp : App<F7Micro, LEDApp>
 {
-    class LEDApp : App<F7Micro, LEDApp>
+    private IDigitalOutputPort redLed;
+    private IDigitalOutputPort blueLed;
+    private IDigitalOutputPort greenLed;
+
+    public override void Run()
     {
-        private IDigitalOutputPort redLed;
-        private IDigitalOutputPort blueLed;
-        private IDigitalOutputPort greenLed;
+        CreateOutputs();
+        ShowLights();
+    }
 
-        public override void Run()
+    public void CreateOutputs()
+    {
+        redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
+        blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
+        greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
+    }
+
+    public void ShowLights()
+    {
+        var state = false;
+
+        while(true)
         {
-            CreateOutputs();
-            ShowLights();
-        }
+            state = !state;
 
-        public void CreateOutputs()
-        {
-            redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
-            blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
-            greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
-        }
+            Console.WriteLine($"State: {state}");
 
-        public void ShowLights()
-        {
-            var state = false;
-
-            while(true)
-            {
-                state = !state;
-
-                Console.WriteLine($"State: {state}");
-
-                redLed.State = state;
-                Thread.Sleep(200);
-                greenLed.State = state;
-                Thread.Sleep(200);
-                blueLed.State = state;
-                Thread.Sleep(200);
-            }
+            redLed.State = state;
+            Thread.Sleep(200);
+            greenLed.State = state;
+            Thread.Sleep(200);
+            blueLed.State = state;
+            Thread.Sleep(200);
         }
     }
 }

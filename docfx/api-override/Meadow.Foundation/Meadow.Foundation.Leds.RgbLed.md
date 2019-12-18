@@ -22,46 +22,29 @@ To connect these LEDs to Meadow, it is recommended to use an external resistor o
 The following example code loops through all the colors possible with digital output ports only.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Leds;
-using Meadow.Devices;
-
-namespace RgbLedSample
+public class RgbLedApp : App<F7Micro, RgbLedApp>
 {
-    public class Program
+    public RgbLedApp()
     {
-        static IApp _app;
-        public static void Main()
-        {
-            _app = new RgbLedApp();
-        }
-    }
+        // create a new common cathode RgbLed (otherwise set IsCommonCathode = false)
+        var rgbLed = new RgbLed(
+            Device.CreateDigitalOutputPort(Device.Pins.D14),
+            Device.CreateDigitalOutputPort(Device.Pins.D13),
+            Device.CreateDigitalOutputPort(Device.Pins.D12));
 
-    public class RgbLedApp : App<F7Micro, RgbLedApp>
-    {
-        public RgbLedApp()
+        // alternate between blinking and pulsing the LED 
+        while (true)
         {
-            // create a new common cathode RgbLed (otherwise set IsCommonCathode = false)
-            var rgbLed = new RgbLed(
-                Device.CreateDigitalOutputPort(Device.Pins.D14),
-                Device.CreateDigitalOutputPort(Device.Pins.D13),
-                Device.CreateDigitalOutputPort(Device.Pins.D12));
-
-            // alternate between blinking and pulsing the LED 
-            while (true)
+            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
             {
-                for (int i = 0; i < (int)RgbLed.Colors.count; i++)
-                {
-                    rgbLed.SetColor((RgbLed.Colors)i);
-                    Thread.Sleep(500);
-                }
+                rgbLed.SetColor((RgbLed.Colors)i);
+                Thread.Sleep(500);
+            }
 
-                for (int i = 0; i < (int)RgbLed.Colors.count; i++)
-                {
-                    rgbLed.StartBlink((RgbLed.Colors)i);
-                    Thread.Sleep(3000);
-                }
+            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
+            {
+                rgbLed.StartBlink((RgbLed.Colors)i);
+                Thread.Sleep(3000);
             }
         }
     }
