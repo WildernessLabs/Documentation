@@ -58,7 +58,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Source code avaliable on GitHub](
+[Source code available on GitHub](
 https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
 
 ### Wiring Example

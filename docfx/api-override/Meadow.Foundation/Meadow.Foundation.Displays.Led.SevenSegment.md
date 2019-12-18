@@ -65,7 +65,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ```
 
-[Source code avaliable on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Samples/Displays.LED.SevenSegment_Sample) 
+[Source code available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Samples/Displays.LED.SevenSegment_Sample) 
 
 
 ### Wiring Example

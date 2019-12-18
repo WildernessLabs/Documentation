@@ -53,7 +53,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Source code avaliable on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306/Samples/Displays.SSD1306_Sample) 
+[Source code available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306/Samples/Displays.SSD1306_Sample) 
 
 ### Circuit Example
 

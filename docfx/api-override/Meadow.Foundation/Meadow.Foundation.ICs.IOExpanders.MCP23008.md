@@ -5,9 +5,9 @@ remarks: *content
 
 | MCP23008  |             |
 |-----------|-------------|
-| Status    | Not Working s|
+| Status    | Not Working |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23008)  |
-| NuGet package      | Not published
+| NuGet package      | Not Published
 | | |
 
 The MCP23008 chip is an 8-bit (8 port) digital I/O expander chip that uses I2C to communicate. It can be used to add additional digital input and output ports to a Netduino and can be combined with up to 8 MCP23008 chips in total, providing up to 64 additional ports.

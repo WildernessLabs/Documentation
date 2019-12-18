@@ -43,7 +43,7 @@ class CharacterDisplayApp : App<F7Micro, CharacterDisplayApp>
     }
 }
 
-[Source code avaliable on GitHub](
+[Source code available on GitHub](
 https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/Displays.Lcd.CharacterDisplay_Sample) 
 
 ```
