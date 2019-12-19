@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
-The Meadow.Foundation TftSpi package contains a selction of drivers for common color displays that use the SPI bus.
+The Meadow.Foundation TftSpi package contains a selection of drivers for common color displays that use the SPI bus. This includes common TFT and color OLED displays.
 
 These displays commonly include additional pins for Reset, Data control and Chip select. If your display doesn't include any of these pins, you can typically pass null for that pin.
 

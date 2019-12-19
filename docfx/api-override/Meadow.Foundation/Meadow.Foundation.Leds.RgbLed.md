@@ -9,11 +9,11 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
 | | |
 
-Represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
+**RgbLed** represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
 
 ![](../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed.jpg)
 
-To connect these LEDs to Meadow, it is recommended to use an external resistor of about 270 to 1K ohms to prevent too much current flowing through it. 
+To connect these deds to Meadow, it is recommended to use an external resistor of ~270 to 1K ohms to prevent too much current from flowing through the led and causing damage. 
 
 ### Circuit of a common anode RGB LED
 

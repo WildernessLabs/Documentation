@@ -10,6 +10,10 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
+The **ILI9341** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These displays are commonly found with a resolution of 320x240.
+
+The Meadow.Foundation ILI9341 driver currently only supports 16bpp RGB565.
+
 ### Code Example
 
 ```csharp

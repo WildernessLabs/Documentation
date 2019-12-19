@@ -10,12 +10,15 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=NuGet) |
 | | |
 
+The **SSD1608** is a two-color display controller for ePaper displays. Data is sent to the controller via SPI and supports full screen updates only.
+
+The SSD1608 is paired with a wide range of two color ePaper display sizes and resolutions.
 
 ### Wiring Example
 
- To control a ILI0373 from Meadow, connect the following:
+ To control a SSD1608 from Meadow, connect the following:
 
-| ILI037  | Meadow Pin |
+| SSD1608 | Meadow Pin |
 |---------|------------|
 | BUSY    | Dxx        |
 | RST     | Dxx        |

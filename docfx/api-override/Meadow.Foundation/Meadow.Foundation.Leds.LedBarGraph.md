@@ -9,13 +9,13 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/) |
 | | |
 
-An LED Bar Graph is basically an LED array. Using an LED bar it’s as easy as connecting 10 individual LEDs with 10 output pins. Generally its used as a Battery level Indicator, Audio equipments, and Industrial Control panels. There are many other applications of LED bar graphs.
+An LED Bar Graph is packaged array of LEDs commonly used to indicate level or progress and commonly include 8 or 10 leds.
+
+The **LedBarGraph** class allows you to control an led bar graph using GPIO.
 
 ![](../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/img_LedBarGraph.jpg)
 
-LED bars come in various sizes and single or multicolored. Using `LedBarGraph`, when creating an object, all it needs is to pass in an array of `IDigitalPin`.
-
-Use `SetLed` method to turn on or off LEDs individually, or assign a value on the `Percentage` property to represent it visually on the graph bar, like a battery indicator, temperature, humidity, etc.  
+Use the `SetLed` method to turn on or off LEDs individually, or assign a value on the `Percentage` property to represent it visually on the graph bar, like a battery indicator, temperature, humidity, etc.  
 
 ### Code Example
 

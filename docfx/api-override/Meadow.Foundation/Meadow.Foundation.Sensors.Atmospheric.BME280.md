@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.BME280.svg?label=NuGet) |
 | | |
 
-The **BME280** is a combined temperature, pressure and humidity sensor.
+The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
 
 ## Purchasing
 

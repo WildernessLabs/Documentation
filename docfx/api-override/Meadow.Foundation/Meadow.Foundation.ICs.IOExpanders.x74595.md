@@ -14,9 +14,7 @@ Shift registers offer the ability to increase the number of outputs on a microco
 
 This class allows Meadow to control the output pins on a 74HCT595 shift register using the SPI interface.
 
-Note that when using this chip care should be taken to make sure that the total output load of the chip does not exceed the current and thermal dissipation properties for the specific shift register being used.
-
-The application below uses a ShiftRegister74595 object to cycle through the bits on the shift register and light the appropriate LED.
+Note that when using this chip, care should be taken to ensure that the total output load of the chip does not exceed the current and thermal dissipation properties for the specific shift register being used.
 
 ### Wiring Example
 
