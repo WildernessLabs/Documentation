@@ -75,5 +75,3 @@ namespace Displays.Tm1637_Sample
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
-
-![](../../API_Assets/Meadow.Foundation.Displays.Tm1637/TM1637_Frizzing.png)
