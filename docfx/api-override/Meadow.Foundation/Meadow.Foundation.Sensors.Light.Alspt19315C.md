@@ -12,6 +12,36 @@ remarks: *content
 
 The **ALS-PT19-315C** is a low cost analog ambient light sensor, consisting of phototransistor in a miniature SMD.
 
+### Code Example
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    Alspt19315C sensor;
+
+    public MeadowApp()
+    {
+        Init();
+
+        Task.Run(async () =>
+        {
+            while(true)
+            {
+                Console.WriteLine($"Relative light intensity: {await sensor.GetVoltage()}");
+                await Task.Delay(500);
+            }
+        });
+    }
+
+    public void Init()
+    {
+        Console.WriteLine("Init...");
+
+        sensor = new Alspt19315C(Device, Device.Pins.A01);
+    }
+}
+```
+
 ### Purchasing
 
 The ALS-PT19 senors are available on breakout boards and as individual sensors:

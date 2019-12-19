@@ -35,10 +35,10 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     {
         radio = new Tea5767(Device.CreateI2cBus());
 
-        TestTEA5767();
+        Scan();
     }
 
-    void TestTEA5767() 
+    void Scan() 
     {
         Console.WriteLine("TestTEA5767...");
 

@@ -21,24 +21,37 @@ The following example shows how read the soil moisture every second:
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    FC28 _FC28;
+    FC28 fc28;
 
     public MeadowApp()
     {
-        // create a new FC-28 object connected to analog pin A01 and digital pin 14
-        _FC28 = new FC28(Device.Pins.A01, Device.Pins.D14);
+        Console.WriteLine("Initializing...");
 
-        Run();
+        fc28 = new FC28(
+            Device.CreateAnalogInputPort(Device.Pins.A01),
+            Device.CreateDigitalOutputPort(Device.Pins.D15),
+            minimumVoltageCalibration: 3.24f,
+            maximumVoltageCalibration: 2.25f
+        );
+
+        TestFC28Updating();
     }
 
-    async Task Run()
+    void TestFC28Updating() 
     {
-        while (true)
+        Console.WriteLine("TestFC28Updating...");
+
+        fc28.Subscribe(new FilterableObserver<FloatChangeResult, float>(
+            h => { Console.WriteLine($"Moisture values: {Math.Truncate(h.New)}, old: {Math.Truncate(h.Old)}, delta: {h.DeltaPercent}"); },
+            e => { return true; }
+        ));
+
+        fc28.Updated += (object sender, FloatChangeResult e) =>
         {
-            float moisture = await _FC28.Read();
-            Console.WriteLine($"Moisture: {0}", moisture);
-            Thread.Sleep(1000);
-        }
+            Console.WriteLine($"Moisture Updated: {e.New}");
+        };
+
+        fc28.StartUpdating();
     }
 }
 ```

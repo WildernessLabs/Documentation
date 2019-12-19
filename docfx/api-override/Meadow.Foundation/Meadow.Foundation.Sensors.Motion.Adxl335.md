@@ -12,6 +12,27 @@ remarks: *content
 
 The **ADXL335** is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes. The ADXL335 is controlled via I2C.
 
+### Code Sample
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    Adxl335 sensor;
+
+    public MeadowApp()
+    {
+        sensor = new Adxl335(Device, Device.Pins.A01, Device.Pins.A02, Device.Pins.A03, 500);
+
+        sensor.AccelerationChanged += Sensor_AccelerationChanged;
+    }
+
+    private void Sensor_AccelerationChanged(object sender, Meadow.Foundation.Sensors.SensorVectorEventArgs e)
+    {
+        Console.WriteLine($"X: {e.CurrentValue.X}, Y: {e.CurrentValue.Y}, Z: {e.CurrentValue.Z}");
+    }
+}
+```
+
 ### Purchasing
 
 The ADXL335 sensor can be purchased on a breakout board from the following suppliers:

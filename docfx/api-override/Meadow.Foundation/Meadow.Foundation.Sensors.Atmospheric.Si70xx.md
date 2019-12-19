@@ -23,6 +23,40 @@ The **SI70xx** is a humidity and temperature sensor controlled via I2C.
 * 150 µA active current 
 * 60 nA standby current
 
+### Code Example
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    Si70xx si7021;
+
+    public MeadowApp()
+    {
+        Console.WriteLine("Initializing...");
+
+        // configure our SI7021 on the I2C Bus
+        var i2cBus = Device.CreateI2cBus();
+
+        si7021 = new Si70xx(i2cBus);
+
+        // get an initial reading
+        ReadConditions().Wait();
+
+        // start updating continuously
+        si7021.StartUpdating();
+    }
+
+    protected async Task ReadConditions()
+    {
+        var conditions = await si7021.Read();
+        Console.WriteLine("Initial Readings:");
+        Console.WriteLine($"  Temperature: {conditions.Temperature}ºC");
+        Console.WriteLine($"  Pressure: {conditions.Pressure}hPa");
+        Console.WriteLine($"  Relative Humidity: {conditions.Humidity}%");
+    }
+}
+```
+
 ## Purchasing
 
 The Si7021 is available on a breakout board from the the following suppliers:

@@ -60,7 +60,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
                     Console.WriteLine("Character: {0}", character.ToString());
                     sevenSegment.SetDisplay(character, showDecimal);
                 }
-
                 Thread.Sleep(1000);
             }
 
