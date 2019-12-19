@@ -80,6 +80,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
 ### Wiring Example
 
 Note, depending on your encoder, it may have a common/ground (gnd) or (-) leg in addition to the positive (+) leg. If it does, make sure to wire it to ground.

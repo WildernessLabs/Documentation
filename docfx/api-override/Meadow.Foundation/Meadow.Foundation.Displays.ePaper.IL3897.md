@@ -14,6 +14,8 @@ The **IL3897** is a dual-color display controller for ePaper displays. Data is s
 
 The IL3897 is commonly paired with a 2.13" two color ePaper display.
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
+
 ### Wiring Example
 
  To control a IL3897 from Meadow, connect the following:

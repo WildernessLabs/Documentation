@@ -16,6 +16,8 @@ An interrupt pin allows the sensor to generate an interrupt if the sensor readin
 
 The sensor is controlled and data read over the I2C bus.
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2561/Samples/) 
+
 ## Purchasing
 
 The TSL2561 is available as a breakout board from the following suppliers:

@@ -50,6 +50,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples)
+
 ### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Audio.PiezoSpeaker/PiezoSpeaker.svg)

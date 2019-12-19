@@ -87,6 +87,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Samples/) 
+
 ### Polling Mode
 
 In polling mode, it is the responsibility of the main application to check the sensor readings ona periodic basis.  The following application creates an instance of the `BME280` class using the I2C interface.  The temperature, pressure and humidity are read every second and the readings displayed using the debugger.

@@ -38,6 +38,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS1307/Samples) 
+
 ### Wiring Example
 
 The chip used to develop this library is one that is available on a common DS3231 RTC module with EEPROM memory module:

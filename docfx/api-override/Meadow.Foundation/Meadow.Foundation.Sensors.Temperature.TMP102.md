@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Temperature.TMP102
+uid: Meadow.Foundation.Sensors.Temperature.Tmp102
 remarks: *content
 ---
 
@@ -57,7 +57,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 {
     public MeadowApp()
     {
-        Console.WriteLine("TMP102 Test");
+      gi  Console.WriteLine("TMP102 Test");
         var tmp102 = new TMP102();
         while (true)
         {
@@ -67,6 +67,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
+
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Samples/) 
 
 ### Wiring Example
 

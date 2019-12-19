@@ -42,6 +42,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Alspt19315C/Samples/) 
+
 ### Purchasing
 
 The ALS-PT19 senors are available on breakout boards and as individual sensors:

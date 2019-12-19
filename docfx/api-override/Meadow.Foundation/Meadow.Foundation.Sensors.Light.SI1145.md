@@ -17,6 +17,8 @@ The **SI1145** is a low power infrared, ultraviolet and ambient light sensor wit
 * Independent LED drivers
 * I2C interface up to 3.4 MBps
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Samples/) 
+
 ## Purchasing
 
 * [SI1145 from Adafruit](https://www.adafruit.com/product/1777)

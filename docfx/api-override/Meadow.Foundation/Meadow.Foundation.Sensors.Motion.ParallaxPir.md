@@ -45,6 +45,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.ParallaxPir/Samples/) 
+
 ### Wiring Example
 
 The Parallax PIR sensor requires only three connections, power, ground and motion detection signal:

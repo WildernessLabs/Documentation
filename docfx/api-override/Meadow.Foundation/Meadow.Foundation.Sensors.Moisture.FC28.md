@@ -56,6 +56,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.FC28/Samples/) 
+
 ### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Moisture.FC28/FC28.svg)

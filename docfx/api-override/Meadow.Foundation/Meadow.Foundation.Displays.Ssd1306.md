@@ -57,7 +57,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Source code available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306/Samples/Displays.Ssd1306_Sample) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306/Samples) 
 
 ### Wiring Example
 

@@ -69,6 +69,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.DS18B20/Samples/) 
+
 ### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg)

@@ -25,4 +25,4 @@ The Meadow.Foundation.Displays.ePaper package contains a collection of two and t
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)

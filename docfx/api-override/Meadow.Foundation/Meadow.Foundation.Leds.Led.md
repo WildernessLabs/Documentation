@@ -43,6 +43,8 @@ public class LedApp : App<F7Micro, LedApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
 ### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Leds.Led/Led_bb.svg)

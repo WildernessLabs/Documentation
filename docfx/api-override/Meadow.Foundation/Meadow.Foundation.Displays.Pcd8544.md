@@ -71,7 +71,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Source code available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544/Samples/Displays.PCD8854_Sample) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544/Samples/) 
 
 ### Wiring Example
 

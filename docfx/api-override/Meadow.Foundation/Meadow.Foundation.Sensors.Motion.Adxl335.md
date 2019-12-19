@@ -33,6 +33,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl335/Samples/) 
+
 ### Purchasing
 
 The ADXL335 sensor can be purchased on a breakout board from the following suppliers:

@@ -39,6 +39,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Samples/) 
+
 ### Polling Mode
 
 The following application reads the values from the magnetometer and displays the readings on the debug output:

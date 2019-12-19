@@ -35,6 +35,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Samples/) 
+
 ## Purchasing
 
 The SHT31D temperature and humidity is available on a breakout board from Adafruit:

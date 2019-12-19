@@ -56,3 +56,5 @@ public class RgbLedApp : App<F7Micro, RgbLedApp>
     }
 }
 ```
+
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 

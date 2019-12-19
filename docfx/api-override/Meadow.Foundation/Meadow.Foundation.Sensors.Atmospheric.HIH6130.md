@@ -37,6 +37,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ```
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130/Samples/) 
+
 ## Purchasing
 
 The HIH6130 sensor is available on a breakout board from Sparkfun.

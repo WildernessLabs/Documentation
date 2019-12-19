@@ -14,6 +14,7 @@ The **IL91874** is a tri-color display controller for ePaper displays. Data is s
 
 The IL91874 is commonly paired with a 2.7" 264x176 three color ePaper display.
 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
 ### Wiring Example
 
