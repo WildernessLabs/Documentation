@@ -3,7 +3,6 @@ uid: Meadow.Foundation.Servos.Servo
 remarks: *content
 ---
 
-
 | Servo         |             |
 |---------------|-------------|
 | Status        | Working     |

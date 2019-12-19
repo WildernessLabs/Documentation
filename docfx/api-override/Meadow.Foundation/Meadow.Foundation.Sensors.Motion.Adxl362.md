@@ -10,7 +10,9 @@ remarks: *content
 | NuGet package | Not published |
 | | |
 
-**ADXL362** is an ultralow power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. 
+**ADXL362** is an ultra-low power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. 
+
+The ADXL345 is controlled via I2C.
 
 ## Purchasing
 

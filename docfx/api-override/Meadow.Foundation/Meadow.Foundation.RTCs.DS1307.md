@@ -10,6 +10,8 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.DS1307.svg?label=NuGet) |
 | | |
 
+The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
+
 ### Code Example
 
 ```csharp

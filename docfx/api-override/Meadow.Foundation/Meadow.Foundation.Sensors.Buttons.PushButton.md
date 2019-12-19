@@ -11,7 +11,7 @@ remarks: *content
 
 The **PushButton** class represents a simple push button, such as a tactile momentary button. To get notified when it’s clicked, subscribe to the Clicked event. If you need to know when the button is held down, subscribe to the PressStarted and PressEnded events.
 
-The following example shows how to register event handlers to print in the console when pressing and relasing the push button:
+### Code Example
 
 ```csharp
 public class Program

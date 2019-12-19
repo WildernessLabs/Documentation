@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.SHT31D.svg?label=NuGet) |
 | | |
 
-The **SHT31D** is a temperature and humidity sensor with a built in I2C interface.  The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
+The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
 ## Purchasing
 

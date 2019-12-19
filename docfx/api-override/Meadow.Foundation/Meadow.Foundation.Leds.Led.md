@@ -9,9 +9,9 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/) |
 | | |
 
-An LED is a diode (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. Because it is a diode, it only works when a voltage is applied one way. For this reason, LEDs usually have one lead longer (the Cathode) than the other (the Anode). The cathode (longer leg) indicates that it should be hooked to the positive (+) side of a circuit.
+An **LED** is a diode (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. Because it is a diode, it only works when a voltage is applied in one direction. 
 
-Unlike the `PwmLed`, in which you can pass the forward voltage (voltage drop) of the led to limit its current, to use `Led` it is required to limit the current to the LED using a resistor.
+LEDs commonly have one lead longer (the Cathode) than the other (the Anode). The longer cathode leg indicates that it should be connected to the positive (+) side of a circuit.
 
 ### Code Example
 

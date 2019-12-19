@@ -10,6 +10,8 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
+The **SSD1351** is a display controller used to drive 16bpp (RGB565) color OLED displays over SPI. These displays are commonly found with a resolution of 128x128.
+
 ### Code Example
 
 ```csharp

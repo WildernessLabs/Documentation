@@ -10,14 +10,16 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=NuGet) |
 | | |
 
-The **IL91874** is a display controller allowing SPI control of ePaper displays.
+The **IL91874** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and supports partial screen updates.
+
+The IL91874 is commonly paired with a 2.7" 264x176 three color ePaper display.
 
 
 ### Wiring Example
 
- To control a ILI0373 from Meadow, connect the following:
+ To control a IL91874 from Meadow, connect the following:
 
-| ILI037  | Meadow Pin |
+| IL91874 | Meadow Pin |
 |---------|------------|
 | BUSY    | Dxx        |
 | RST     | Dxx        |

@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | Not published |
 | | |
 
-The DS323x ICs offer a low cost accurate real time clock with a temperature compensation crystal oscillator.  This range of chips offers the following functionality:
+The **DS323x** is a low-cost and accurate real-time clock with a temperature compensation crystal oscillator. This range of chips offers the following functionality:
 
 * Temperature compensation
 * Battery backup

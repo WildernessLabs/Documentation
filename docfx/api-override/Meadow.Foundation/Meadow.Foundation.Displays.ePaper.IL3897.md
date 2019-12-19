@@ -10,14 +10,15 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=NuGet) |
 | | |
 
-The **IL3897** is a display controller allowing SPI control of ePaper displays.
+The **IL3897** is a dual-color display controller for ePaper displays. Data is sent to the controller via SPI and supports full screen updates only.
 
+The IL3897 is commonly paired with a 2.13" two color ePaper display.
 
 ### Wiring Example
 
- To control a ILI0373 from Meadow, connect the following:
+ To control a IL3897 from Meadow, connect the following:
 
-| ILI037  | Meadow Pin |
+| IL3897  | Meadow Pin |
 |---------|------------|
 | BUSY    | Dxx        |
 | RST     | Dxx        |

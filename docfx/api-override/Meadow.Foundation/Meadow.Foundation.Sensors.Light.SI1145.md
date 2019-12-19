@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | Not published |
 | | |
 
-The SI1145 is a low power infrared, ultraviolet and ambient light sensor with an I2C interface.
+The **SI1145** is a low power infrared, ultraviolet and ambient light sensor with an I2C interface.
 
 * Ultraviolet / Infrared / ambient light sensor
 * Proximity sensor

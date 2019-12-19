@@ -10,9 +10,13 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
+The **ILI9163** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight.
+
+The Meadow.Foundation ILI9163 driver currently only supports 16bpp RGB565.
+
 ### Purchasing
 
-You can get Ili9163 displays from the following suppliers:
+You can get ILI9163 displays from the following suppliers:
 
 * [1.8 Inch 128X160 ILI9163/ST7735](https://www.ebay.com/itm/1-8-Inch-128X160-Ili9163-ST7735-TFT-LCD-Module-With-PCB-Baseboard-SPI-Serial-Por/123860977338?hash=item1cd6b086ba:g:jWAAAOSwvdxdQ~qo)
 * [128x160 ILI9163 / ST7735 TFT Module LCD](https://www.amazon.fr/ILS-Pouces-128x160-ILI9163-Plinthe/dp/B07M7DWWD5)

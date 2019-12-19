@@ -11,7 +11,7 @@ remarks: *content
 | | |
 
 
-The **HIH6130** sensor allows the reading of the relative humidity and temperature providing the data over an I2C interface.
+The **HIH6130** sensor allows the reading of the relative humidity and temperature via I2C.
 
 ## Purchasing
 

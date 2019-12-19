@@ -17,9 +17,9 @@ The IL0376F is most commonly paired with a a tri-color 1.54" 200x200 pixel displ
 
 ### Wiring Example
 
- To control a ILI0373 from Meadow, connect the following:
+ To control a IL0376F from Meadow, connect the following:
 
-| ILI037  | Meadow Pin |
+| IL0376F  | Meadow Pin |
 |---------|------------|
 | BUSY    | Dxx        |
 | RST     | Dxx        |

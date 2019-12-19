@@ -11,7 +11,9 @@ remarks: *content
 | | |
 
 
-The **PCD8544** display, also known as a Nokia 5110 LCD is very popular among the hardware tinkerers. These modules are used on wide variety of applications that require some sort of interface or display data to the user. They have a resolution of 84*48 dot matrix LCD, and you can easily control them using SPI.
+The **PCD8544** display, also known as a Nokia 5110 LCD, is a single color 84x84 LCD display. Data is sent to the display via SPI. The also typically also include an led backlight controlled via a single pin. 
+
+These displays have excellent visibility in daylight, even without the backlight, making them a good choice for builds with low-power restrictions and require visibility is bright light or daylight.
 
 ### Purchasing
 

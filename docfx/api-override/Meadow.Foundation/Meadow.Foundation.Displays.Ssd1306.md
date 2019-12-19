@@ -10,7 +10,11 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd1306.svg?label=NuGet) |
 | | |
 
-OLED displays based upon the Ssd1306 chip set are small, high contrast, single color displays. These displays generate their own light; no backlight is required.
+The **SSD1306** is a display controller used to control small, low resolution, single color OLED displays. OLED displays generate their own light - no backlight is included or required.
+
+SDD1306 displays can be found supporting both I2C and SPI and come in resolutions of 32x128, 64x128, 16x96 and 64x96.
+
+You may find mutlicolor variants, however, the color is achieved by placing one or more color filter over the single color display.
 
 ### Purchasing
 

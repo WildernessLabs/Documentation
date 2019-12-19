@@ -3,9 +3,9 @@ uid: Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer
 remarks: *content
 ---
 
-| LinearHallEffectTachometer |             |
-|-----------|-------------|
-| Status        | Not Tested             |
+| LinearHallEffectTachometer |  |
+|-----------|----------------|
+| Status    | Not Tested     |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/HallEffect)  |
 | | |
 

@@ -9,11 +9,11 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/) |
 | | |
 
-Represents an RGB LED whose color is controlled by the duty-cycle of three PWM signals. Can be used both with LEDs that have been current limited with in-series resistors, or LEDs without resistors.
+**RgbPwmLed** represents an RGB LED whose color is controlled by the duty-cycle of three PWM signals. Can be used both with LEDs that have been current limited with in-series resistors, or LEDs without resistors.
 
 Controlling an RGB LED via a PWM signal is more power efficient than using a current-limiting resistor, and it provides more control; allowing thousands of different colors, as opposed to the 8 colors of non-PWM powered RGB LED.
 
-To use without resistors, pass in the forward voltages (voltage drop) of each of the LED components to the `redLedForwardVotlage`, `greenLedForwardVotlage`, and `blueLedForwardVotlage`, constructor parameters, and the class will limit its output to the maximum forward voltage rating for those LEDs.
+To use without resistors, pass in the forward voltages (voltage drop) of each of the LED components to the `redLedForwardVoltage`, `greenLedForwardVoltage`, and `blueLedForwardVoltage`, constructor parameters, and the class will limit its output to the maximum forward voltage rating for those LEDs.
 
 To use with an LED that has a resistor in series, pass `0.0` or `TypicalForwardVoltage.ResistorLimited` for the `forwardVoltage` parameter.
 

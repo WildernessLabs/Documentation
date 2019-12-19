@@ -10,6 +10,10 @@ remarks: *content
 | NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet)
 | | |
 
+The **S6D02A1** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These displays are commonly found with a resolution of 128x160.
+
+The Meadow.Foundation S6D02A1 driver currently only supports 16bpp RGB565.
+
 ### Code Example
 
 ```csharp

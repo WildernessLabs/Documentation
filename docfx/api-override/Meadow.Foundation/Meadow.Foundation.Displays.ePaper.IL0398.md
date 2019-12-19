@@ -17,9 +17,9 @@ The IL0398 is commonly paired with 4.2" 400x300 tri-color ePaper display.
 
 ### Wiring Example
 
- To control a ILI0373 from Meadow, connect the following:
+ To control a IL0398 from Meadow, connect the following:
 
-| ILI037  | Meadow Pin |
+| IL0398  | Meadow Pin |
 |---------|------------|
 | BUSY    | Dxx        |
 | RST     | Dxx        |

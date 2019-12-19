@@ -10,6 +10,12 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=NuGet) |
 | | |
 
+The **ST7789** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These are typically paired with high pixel density displays, the most common being a 1.5" 240x240 display.
+
+ST7789 displays typically use SPI mode 3, but you may find variants that require different modes.
+
+The Meadow.Foundation ST7789 driver currently only supports 16bpp RGB565.
+
 ### Purchasing
 
 You can get ST7789 displays from the following suppliers:

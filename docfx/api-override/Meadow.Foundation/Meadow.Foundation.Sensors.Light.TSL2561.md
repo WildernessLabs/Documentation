@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | Not published |
 | | |
 
-The **TSL2561** is alight sensor that is compensated for the presence of infrared light.  This compensation allows for the reading to be closer to that experienced by the human eye.
+The **TSL2561** is alight sensor that is compensated for the presence of infrared light. This compensation allows for the reading to be closer to that experienced by the human eye.
 
 An interrupt pin allows the sensor to generate an interrupt if the sensor reading goes below a lower threshold or exceeds an upper threshold.
 
