@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl335.svg?label=NuGet) |
 | | |
 
-The **ADXL335** is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes.
+The **ADXL335** is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes. The ADXL335 is controlled via I2C.
 
 ### Purchasing
 
