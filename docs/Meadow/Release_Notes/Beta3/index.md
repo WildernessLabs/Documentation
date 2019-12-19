@@ -17,9 +17,28 @@ This release is focused on quality and stabilization. It's mostly bug fixes, API
 #### Changes
 
 #### New Peripheral Drivers
+This is a big update, there are numerous improvements and fixes across published drivers. 
+
+As well, we've published 14 new drivers via NuGet:
+* PCD8544 LCD display controller
+* MAX7219 led display controller
+* TM1637 led display controller
+* ULN2003 stepper motor controller
+* HIH6130 I2C temperature and humidity sensor
+* HTU21D I2C temperature and humidity sensor
+* SI70xx I2C temperature and humidity sensor
+* ALS-PT19-315C light sensor
+* ADXL335 Analog triple axis, +/-3g accelerometer
+* ADXL337 Analog triple axis, +/-3g accelerometer
+* ADXL345 I2C triple axis accelerometer, +/-16g accelerometer
+* ADXL377 Analog triple axis, +/-200g accelerometer
+* BNO055 I2C 9-Axis absolute orientation sensor
+* TMP102 I2C temperature sensor
 
 ### Meadow.CLI Fixes and Updates
 
+### Samples and Documentation 
+We've updated and standardized all of the sample projects in Meadow.Foundation to match the latest template. And we've invested heavily in our docs, you'll notice we've added details and wiring diagrams for most of our peripheral docs.
 
 ## Beta 3.5
 
