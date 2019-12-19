@@ -10,9 +10,9 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=NuGet) |
 | | |
 
-The PiezoSpeaker class represents a simple piezo speaker that can be used to generate tones across a range of frequencies. They typically perform well between 1-5kHz but may go as high as 100kHz. PiezoSpeaker Implements IToneGenerator.
+The **PiezoSpeaker** class represents a piezoelectric speaker that can be used to generate tones across a range of frequencies. They typically perform well between 1-5kHz but may go as high as 100kHz. PiezoSpeaker Implements IToneGenerator.
 
-The positive pin of the piezo speaker connects to a PWM capable pin on the Meadow and the negative pin connects to common/ground. A resistor can be placed in-line to reduce volume.
+The positive pin of the piezo speaker connects to a pulse width modulation (PWM) capable pin on the Meadow and the negative pin connects to common/ground. A resistor can be placed in-line to reduce volume.
 
 ![](../../API_Assets/Meadow.Foundation.Audio.PiezoSpeaker/img_PiezoSpeaker.jpg)
 
@@ -21,18 +21,6 @@ The positive pin of the piezo speaker connects to a PWM capable pin on the Meado
 The following example shows how to initialize a PiezoSpeaker and play a melody using an array of notes:
 
 ```csharp
-public class Program
-{
-    static IApp app;
-    public static void Main(string[] args)
-    {
-        if (args.Length > 0 && args[0] == "--exitOnDebug") return;
-
-        // instantiate and run new meadow app
-        app = new MeadowApp();
-    }
-}
-
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
     const int NUMBER_OF_NOTES = 16;
@@ -75,12 +63,12 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
             //PlayTone without a duration will return immediately and play the tone
             piezo.PlayTone(NoteFrequencies.NOTE_A4);
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
 
             //call StopTone to end a tone started without a duration
             piezo.StopTone();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
         }
     }
 }

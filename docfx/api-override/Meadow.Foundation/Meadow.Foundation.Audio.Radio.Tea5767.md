@@ -12,7 +12,7 @@ remarks: *content
 
 The **TEA5767** FM module is based on the TEA5767GH which is a single-chip, electronically tuned, FM stereo radio for low-voltage applications with fully integrated Intermediate Frequency (IF) selectivity and demodulation. 
 
-It can be connected to a microcontroller through an I2C interface to digitally control its tuning frequency and other characteristics, giving room for opportunities to digitize some of its operations. It comes with tow headphone jacks, one for connection to a headphone/speaker while the other is for connection to the antenna which usually comes with the module.
+The TEA5767 is controlled via I2C. It comes with two 1/4" jacks, one for connection to a headphone/speaker and one to connect an antenna (often sold with the module).
 
 ![](../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767.png)
 
@@ -29,18 +29,16 @@ The following example shows how to initialize a TEA5767 radio and seek radio sta
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    protected Tea5767 radio;
+    Tea5767 radio;
 
     public MeadowApp()
     {
-        Console.WriteLine("Initializing...");
-        
         radio = new Tea5767(Device.CreateI2cBus());
 
         TestTEA5767();
     }
 
-    protected void TestTEA5767() 
+    void TestTEA5767() 
     {
         Console.WriteLine("TestTEA5767...");
 
