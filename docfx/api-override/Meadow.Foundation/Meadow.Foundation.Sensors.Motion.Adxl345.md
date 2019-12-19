@@ -14,14 +14,39 @@ The **ADXL345** is a small, low power, triple axis acceleration sensor capable o
 
 The ADXL345 is controlled via I2C.
 
-## Purchasing
+
+The ADXL345 can operating in interrupt and polling mode. Polling applications are responsible for determining when a sensor is read.  Interrupt applications will be notified when the sensor reading changes by + / - a threshold value.
+
+### Purchasing
 
 The ADXL345 is available on a small breakout board:
 
 * [Sparkfun ADXL345 Breakout Board](https://www.sparkfun.com/products/9836)
 
+### Code Example
 
-The ADXL345 can operating in interrupt and polling mode.  Polling applications are responsible for determining when a sensor is read.  Interrupt applications will be notified when the sensor reading changes by + / - a threshold value.
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    Adxl345 sensor;
+
+    public MeadowApp()
+    {
+        sensor = new Adxl345(Device.CreateI2cBus(), 83, 0);
+
+        sensor.SetPowerState(false, false, true, false, Adxl345.Frequency.EightHz);
+
+        while (true)
+        {
+            sensor.Update();
+
+            Console.WriteLine($"{sensor.X}, {sensor.Y}, {sensor.Z}");
+
+            Thread.Sleep(500);
+        } 
+    }
+}
+```
 
 ### Wiring Example
 

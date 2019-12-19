@@ -60,7 +60,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
             Console.Write($"Reading from RTC RAM : ");
             data = ds1307.ReadRAM(0, 56);
             Console.WriteLine(BitConverter.ToString(data));
-
         }
     }
 }

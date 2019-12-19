@@ -42,7 +42,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
             device: Device,
             spiBus: Device.CreateSpiBus(
                 Device.Pins.SCK, 
-                Device.Pins.MOSI, Device.Pins.MISO, 
+                Device.Pins.MOSI, 
+                Device.Pins.MISO, 
                 config),
             chipSelectPin: Device.Pins.D01,
             dcPin: Device.Pins.D00,

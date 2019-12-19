@@ -12,6 +12,27 @@ remarks: *content
 
 The **ADXL377** is a low power accelerometer capable of measuring +/- 200g of acceleration along three axes. The ADXL377 is controlled via I2C.
 
+### Code Example
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    Adxl377 sensor;
+
+    public MeadowApp()
+    {
+        sensor = new Adxl377(Device, Device.Pins.A01, Device.Pins.A02, Device.Pins.A03, 500);
+
+        sensor.AccelerationChanged += Sensor_AccelerationChanged;
+    }
+
+    void Sensor_AccelerationChanged(object sender, Meadow.Foundation.Sensors.SensorVectorEventArgs e)
+    {
+        Console.WriteLine($"X: {e.CurrentValue.X}, Y: {e.CurrentValue.Y}, Z: {e.CurrentValue.Z}");
+    }
+}
+```
+
 ### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl377/Adxl377_Fritzing.svg)

@@ -12,7 +12,6 @@ remarks: *content
 
 The **SSD1331** is a display controller used to drive 16bpp (RGB565) color OLED displays over SPI. These displays are commonly found with a resolution of 96x64.
 
-
 ### Code Example
 
 ```csharp

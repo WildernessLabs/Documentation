@@ -12,6 +12,29 @@ remarks: *content
 
 The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
+### Code Example
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    SHT31D sensor;
+
+    public MeadowApp()
+    {
+        sensor = new SHT31D(Device.CreateI2cBus());
+        sensor.Updated += Sensor_Updated;
+
+        sensor.StartUpdating();
+    }
+
+    void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
+    {
+        Console.WriteLine($"Temp: {e.New.Temperature}, Humidity: {e.New.Humidity}");
+    }
+}
+
+```
+
 ## Purchasing
 
 The SHT31D temperature and humidity is available on a breakout board from Adafruit:

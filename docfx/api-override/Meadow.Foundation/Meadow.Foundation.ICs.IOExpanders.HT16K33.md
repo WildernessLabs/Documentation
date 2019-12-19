@@ -21,7 +21,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
     public MeadowApp()
     {
-        Console.WriteLine("Initialize...");
         ht16k33 = new HT16K33(Device.CreateI2cBus());
 
         TestHT16K33();
@@ -29,8 +28,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
     void TestHT16K33() 
     {
-        Console.WriteLine("TestHT16K33...");
-
         int index = 0;
         bool on = true;
 

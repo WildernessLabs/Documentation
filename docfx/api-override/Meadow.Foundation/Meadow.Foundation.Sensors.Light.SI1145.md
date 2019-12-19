@@ -5,7 +5,7 @@ remarks: *content
 
 | SL1145        |             |
 |---------------|-------------|
-| Status        | Not Working  |
+| Status        | Not Working |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |
 | NuGet package | Not published |
 | | |

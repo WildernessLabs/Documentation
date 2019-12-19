@@ -13,6 +13,30 @@ remarks: *content
 
 The **HIH6130** sensor allows the reading of the relative humidity and temperature via I2C.
 
+### Code Example
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    Hih6130 sensor;
+
+    public MeadowApp()
+    {
+        sensor = new Hih6130(Device.CreateI2cBus());
+
+        sensor.StartUpdating();
+
+        sensor.Updated += Sensor_Updated;
+    }
+
+    private void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
+    {
+        Console.WriteLine($"Humidity: {e.New.Humidity}, Temperature: {e.New.Temperature}");
+    }
+}
+
+```
+
 ## Purchasing
 
 The HIH6130 sensor is available on a breakout board from Sparkfun.
