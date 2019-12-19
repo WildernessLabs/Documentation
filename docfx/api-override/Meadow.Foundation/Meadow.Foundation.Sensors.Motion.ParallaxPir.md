@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.ParallaxPIR.svg?label=NuGet)|
 | | |
 
-The Parallax PIR detects motion by emitting a high signal when motion is detected. The signal returns to a low state when motion stops.
+The Parallax PIR detects motion via infrared. It emits a high signal over the data pin when motion is detected. The pin returns to a low state when motion stops.
 
 ####Purchasing
 

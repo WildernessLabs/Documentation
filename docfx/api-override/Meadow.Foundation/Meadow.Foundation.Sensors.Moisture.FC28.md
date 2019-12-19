@@ -14,7 +14,7 @@ remarks: *content
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Moisture.FC28/img_FC28.jpg)
 
-The biggest issue of this sensor is the corrosion of the probes, not just because it is in contact with the soil but also because there is a DC current flowing which causes electrolysis of the sensors. A workararound to prolong the life of the probes is to not constantly have the sensor powered on, but activate it everytime the sensor will perform a read using a digital output port connected to the VCC pin. The code and circuit example shows you how to use it.
+The biggest issue of this sensor is the corrosion of the probes, not just because it is in contact with the soil but also because there is a DC current flowing which causes electrolysis of the sensors. A work-around to prolong the life of the probes is to not constantly have the sensor powered on, but activate it every time the sensor will perform a read using a digital output port connected to the VCC pin. The code and circuit example shows you how to use it.
 
 The following example shows how read the soil moisture every second:
 

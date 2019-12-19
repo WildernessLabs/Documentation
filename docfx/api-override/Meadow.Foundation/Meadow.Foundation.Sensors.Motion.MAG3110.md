@@ -10,7 +10,7 @@ remarks: *content
 | NuGet package | Not published |
 | | |
 
-The **MAG3110** is a three axis magnetometer with an I2C interface.  The magnetometer is capable of single shot readings and also continuous readings.
+The **MAG3110** is a three axis magnetometer with an I2C interface. The magnetometer is capable of single and continuous readings.
 
 ### Code Example
 
