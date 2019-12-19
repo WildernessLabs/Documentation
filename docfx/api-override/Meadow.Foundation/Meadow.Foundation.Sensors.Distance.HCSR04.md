@@ -3,42 +3,29 @@ uid: Meadow.Foundation.Sensors.Distance.HCSR04
 remarks: *content
 ---
 
-The HC-SR04 ultrasonic sensor uses sonar to determine distance to an object (like bats). It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package.
+| HC-SR04       |             |
+|---------------|-------------|
+| Status        | Not working |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04) |
+| NuGet package | Not published |
+| | |
 
-###Purchasing
+The **HC-SR04** ultrasonic sensor uses sonar to determine distance to an object (like bats). It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package.
+
+### Purchasing
 
 The HC-SR04 sensor is available from Sparkfun:
 
 * [Ultrasonic Sensor - HC-SR04](https://www.sparkfun.com/products/13959)
 
----
-uid: Meadow.Foundation.Sensors.Distance.HCSR04
-example: [*content]
----
-
 The following application creates a **HC-SR04** object, invokes **MeasureDistanceSensor** every second and attaches interrupt handlers to the **DistanceDetected** event that its triggered when the sensor picks up a rebound signal:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Distance;
-
-namespace HCSR04_Sample
-{
-    public class Program
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        static IApp _app; 
-        public static void Main()
+        public MeadowApp()
         {
-            _app = new App();
-        }
-    }
-    
-    public class App : AppBase<F7Micro, App>
-    {
-        public App ()
-        {
-            var  _HCSR04 = new HCSR04(Device.Pins.D14, Device.Pins.D13);
+            var _HCSR04 = new HCSR04(Device.Pins.D14, Device.Pins.D13);
             _HCSR04.DistanceDetected += OnDistanceDetected;
 
             while (true)
@@ -58,6 +45,6 @@ namespace HCSR04_Sample
 }
 ```
 
-##### Example Circuit
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg)

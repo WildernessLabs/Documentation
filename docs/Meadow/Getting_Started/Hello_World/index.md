@@ -130,7 +130,7 @@ namespace HelloWorld
         IDigitalOutputPort blueLed;
         IDigitalOutputPort greenLed;
 
-        public App()
+        public MeadowApp()
         {
             ConfigurePorts();
             BlinkLeds();

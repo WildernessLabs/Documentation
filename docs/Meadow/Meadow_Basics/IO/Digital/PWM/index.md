@@ -177,51 +177,30 @@ Notice that when initializing *servo*, the library provides a set of `NamedServo
 If you want to know more about `Servo`, You can check out the [`Meadow.Foundation.Servos Reference API`](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) 
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Servos;
-using System.Threading;
-
-namespace Servo_Sample
+public class ServoApp : App<F7Micro, ServoApp>
 {
-    class MainClass
+    readonly IPwmPort pwm;
+    readonly Servo servo;
+
+    public ServoApp() 
     {
-        static IApp app;
+        pwm = Device.CreatePwmPort(Device.Pins.D05);
+        servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
 
-        public static void Main(string[] args)
+        while(true)
         {
-            app = new ServoApp();
-            Thread.Sleep(Timeout.Infinite);
-        }
-    }
-
-    public class ServoApp : App<F7Micro, ServoApp>
-    {
-        readonly IPwmPort pwm;
-        readonly Servo servo;
-
-        public ServoApp() 
-        {
-            pwm = Device.CreatePwmPort(Device.Pins.D05);
-            servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
-
-            while(true)
+            if (servo.Angle <= servo.Config.MinimumAngle)
             {
-                if (servo.Angle <= servo.Config.MinimumAngle)
-                {
-                    Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
-                    servo.RotateTo(servo.Config.MaximumAngle);
-                }
-                else
-                {
-                    Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
-                    servo.RotateTo(servo.Config.MinimumAngle);
-                }
-
-                Thread.Sleep(4000);
+                Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
+                servo.RotateTo(servo.Config.MaximumAngle);
             }
+            else
+            {
+                Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
+                servo.RotateTo(servo.Config.MinimumAngle);
+            }
+
+            Thread.Sleep(4000);
         }
     }
 }

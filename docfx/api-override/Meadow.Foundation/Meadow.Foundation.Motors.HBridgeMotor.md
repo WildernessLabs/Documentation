@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Motors.HBridgeMotor
 remarks: *content
 ---
 
+| HBridgeMotor |             |
+|--------------|-------------|
+| Status       | Working    |
+| Source code  | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Motors/) |
+| | |
+
 An h-bridge motor controller enables a control signal to drive a much larger load in either polarity, allowing the Netduino to drive DC motors in forward or reverse from an external power supply. Using pulse-width-modulation (PWM) as the control signal, provides not just forward or reverse control, but variable speeds in either direction.
 
 ![](../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridges.jpg)
@@ -13,71 +19,50 @@ This generic driver works with standard h-bridges ICs such as the Texas Instrume
 
 It should also work with heavier duty [L298N](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=l298n) drivers.
 
----
-uid: Meadow.Foundation.Motors.HBridgeMotor
-example: [*content]
----
-
 The following example uses a dual h-bridge chip to control two motors. Both the L293NE and NS754410 are dual h-bridge chips that can drive two motors in both forward and reverse. This is a common configuration for wheeled robots. Forward and reverse motion is obtained by setting both the motors to have the same forward or reverse speed, and turning is accomplished by setting them to different speeds.
 
-###Code
+### Code Example
 
 The following code creates an h-bridge controller with the PWM controllers on pins 3 and 5, and the enable pin on pin 4. It then sets the motor speed to 100% forward, stops the motor for half a second, and then sets the motor speed to 100% reverse.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Motors;
-
-namespace HBridgeMotor_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp ()
     {
-        static IApp _app; 
-        public static void Main()
+        var motorRight = new HBridgeMotor
+        (
+            a1Pin: Device.CreatePwmPort(Device.Pins.D02),
+            a2Pin: Device.CreatePwmPort(Device.Pins.D03),
+            enablePin: Device.CreateDigitalOutputPort(Device.Pins.D04)
+        );
+
+        var motorLeft = new HBridgeMotor
+        (
+            a1Pin: Device.CreatePwmPort(Device.Pins.D07),
+            a2Pin: Device.CreatePwmPort(Device.Pins.D08),
+            enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
+        );
+
+        while (true)
         {
-            _app = new App();
-        }
-    }
-    
-    public class MeadowApp : AppBase<F7Micro, App>
-    {
-        public MeadowApp ()
-        {
-            var motorRight = new HBridgeMotor
-            (
-                a1Pin: Device.CreatePwmPort(Device.Pins.D02),
-                a2Pin: Device.CreatePwmPort(Device.Pins.D03),
-                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D04)
-            );
+            motorLeft.Speed = 1f;
+            motorRight.Speed = 1f;
+            Thread.Sleep(1000);
 
-            var motorLeft = new HBridgeMotor
-            (
-                a1Pin: Device.CreatePwmPort(Device.Pins.D07),
-                a2Pin: Device.CreatePwmPort(Device.Pins.D08),
-                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
-            );
+            motorLeft.Speed = 0f;
+            motorRight.Speed = 0f;
+            Thread.Sleep(500);
 
-            while (true)
-            {
-                motorLeft.Speed = 1f;
-                motorRight.Speed = 1f;
-                Thread.Sleep(1000);
-
-                motorLeft.Speed = 0f;
-                motorRight.Speed = 0f;
-                Thread.Sleep(500);
-
-                motorLeft.Speed = -1f;
-                motorRight.Speed = -1f;
-                Thread.Sleep(1000);
-            }
+            motorLeft.Speed = -1f;
+            motorRight.Speed = -1f;
+            Thread.Sleep(1000);
         }
     }
 }
 ```
 
-##### Example Circuit
+### Wiring Example
 
 Though h-bridge motor controllers come in various form factors, they typically share the following pins and usages:
 

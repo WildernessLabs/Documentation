@@ -3,18 +3,20 @@ uid: Meadow.Foundation.Sensors.Atmospheric.SHT31D
 remarks: *content
 ---
 
-The SHT31D is a temperature and humidity sensor with a built in I2C interface.  The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
+| SHT31D        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.SHT31D) |
+| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.SHT31D.svg?label=NuGet) |
+| | |
+
+The **SHT31D** is a temperature and humidity sensor with a built in I2C interface.  The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
 ## Purchasing
 
 The SHT31D temperature and humidity is available on a breakout board from Adafruit:
 
 * [SHT31D Temperature and Humidity Sensor](https://www.adafruit.com/product/2857)
-
----
-uid: Meadow.Foundation.Sensors.Atmospheric.SHT31D
-example: [*content]
----
 
 The SHT31D can operate in interrupt or polling mode.  The default mode is interrupt mode.
 
@@ -23,47 +25,31 @@ The SHT31D can operate in interrupt or polling mode.  The default mode is interr
 The application below generates and interrupt when the temperature or humidity changes by more than 0.1 &deg;C.  The sensor is checked every 100 milliseconds.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Atmospheric;
-
-namespace SHT31D_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        // Create a new SHT31D object that will generate interrupts when
+        // the temperature changes by more than +/- 0.1C or the humidity
+        // changes by more than 1%.
+        SHT31D sht31d = new SHT31D(temperatureChangeNotificationThreshold: 0.1F,
+            humidityChangeNotificationThreshold: 1.0F);
+
+        // Hook up the two interrupt handlers to display the changes in
+        // temperature and humidity.
+        sht31d.HumidityChanged += (s, e) =>
         {
-            _app = new App();
-        }
-    }
-    
-    public class App : AppBase<F7Micro, App>
-    {
-        public App ()
+            Console.WriteLine("Current humidity: " + e.CurrentValue.ToString("f2"));
+        };
+
+        sht31d.TemperatureChanged += (s, e) =>
         {
-            // Create a new SHT31D object that will generate interrupts when
-            // the temperature changes by more than +/- 0.1C or the humidity
-            // changes by more than 1%.
-            SHT31D sht31d = new SHT31D(temperatureChangeNotificationThreshold: 0.1F,
-                humidityChangeNotificationThreshold: 1.0F);
+            Console.WriteLine("Current temperature: " + e.CurrentValue.ToString("f2"));
+        };
 
-            // Hook up the two interrupt handlers to display the changes in
-            // temperature and humidity.
-            sht31d.HumidityChanged += (s, e) =>
-            {
-                Console.WriteLine("Current humidity: " + e.CurrentValue.ToString("f2"));
-            };
-
-            sht31d.TemperatureChanged += (s, e) =>
-            {
-                Console.WriteLine("Current temperature: " + e.CurrentValue.ToString("f2"));
-            };
-
-            // Main program loop can now go to sleep as the work
-            // is being performed by the interrupt handlers.
-            Thread.Sleep(Timeout.Infinite);
-        }
+        // Main program loop can now go to sleep as the work
+        // is being performed by the interrupt handlers.
+        Thread.Sleep(Timeout.Infinite);
     }
 }
 ```
@@ -73,41 +59,25 @@ namespace SHT31D_Sample
 The application below polls the sensor every 1000 milliseconds and displays the temperature and humidity on the debug console:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Sensors.Atmospheric;
-
-namespace SHT31D_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new App();
-        }
-    }
-    
-    public class App : AppBase<F7Micro, App>
-    {
-        public App ()
-        {
-            SHT31D sht31d = new SHT31D(updateInterval: 0);
+        SHT31D sht31d = new SHT31D(updateInterval: 0);
 
-            Console.WriteLine("SHT31D Temperature / Humidity Test");
+        Console.WriteLine("SHT31D Temperature / Humidity Test");
 
-            while (true)
-            {
-                sht31d.Update();
-                Console.WriteLine("Temperature: " + sht31d.Temperature.ToString("f2") + ", Humidity: " + sht31d.Humidity.ToString("f2"));
-                Thread.Sleep(1000);
-            }
+        while (true)
+        {
+            sht31d.Update();
+            Console.WriteLine("Temperature: " + sht31d.Temperature.ToString("f2") + ", Humidity: " + sht31d.Humidity.ToString("f2"));
+            Thread.Sleep(1000);
         }
     }
 }
 ```
 
-##### Example Circuit
+### Wiring Example
 
 The SHT31D breakout board from Adafruit is supplied with pull-up resistors installed on the `SCL` and `SDA` lines.
 

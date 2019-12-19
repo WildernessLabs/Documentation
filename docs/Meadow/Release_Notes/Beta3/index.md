@@ -4,6 +4,23 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.6
+
+This release is focused on quality and stabilization. It's mostly bug fixes, API stabilization, and new drivers based on that work. This is also just the first part of this work. We have a number of additional bug fixes that were originally due for b3.6, but there are so many good things already in this, we decided not to wait until they were all in and instead break it up into multiple releases, so there will likely be a b3.7 release soon as well.
+
+### API Fixes
+
+### Bug Fixes
+
+### Meadow.Foundation Fixes and New Drivers
+
+#### Changes
+
+#### New Peripheral Drivers
+
+### Meadow.CLI Fixes and Updates
+
+
 ## Beta 3.5
 
 This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and added docs for Meadow.CLI.
