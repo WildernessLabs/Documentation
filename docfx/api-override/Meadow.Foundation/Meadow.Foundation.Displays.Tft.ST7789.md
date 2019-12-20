@@ -74,4 +74,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 It should look like the following diagram:
 
-![](../../API_Assets/Meadow.Foundation.Displays.Tft.ST7789/ST7789_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.ST7789/ST7789_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

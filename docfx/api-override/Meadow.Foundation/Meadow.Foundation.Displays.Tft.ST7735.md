@@ -47,3 +47,24 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 ```
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+
+### Wiring Example
+
+ To wire a ST7735 to your Meadow board, connect the following:
+
+| ST7735 | Meadow Pin |
+|---------|------------|
+| LED-    | 3V3        |
+| LED+    | GND        |
+| MOSI    | MOSI       |
+| SCK     | SCK        |
+| RESET   | D15        |
+| A0      | D14        |
+| CS      | D13        |
+| VCC     | 3V3        |
+| GND     | GND        |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.ST7735/ST7735_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
