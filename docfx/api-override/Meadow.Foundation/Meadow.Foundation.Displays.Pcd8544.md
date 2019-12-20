@@ -86,4 +86,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 | CE      | D01        |
 | RST     | D02        |
 
-![](../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Frizzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Frizzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

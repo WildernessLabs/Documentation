@@ -48,11 +48,11 @@ class CharacterDisplayApp : App<F7Micro, CharacterDisplayApp>
         }
     }
 }
+```
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/) 
 
-```
+### Wiring Example
 
-##### Wiring Example
-
-![](../../API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay.svg)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

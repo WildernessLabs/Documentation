@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Led.Max7219
+uid: Meadow.Foundation.Displays.Max7219
 remarks: *content
 ---
 
@@ -102,3 +102,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 ```
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Max7219/Samples/) 
+
+<img src="../../API_Assets/Meadow.Foundation.Displays.Max7219/Max7219_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
