@@ -7,8 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
-| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.BME280.svg?label=NuGet) |
-| | |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.BME280.svg?label=NuGet" style="width: auto;" /> |
 
 The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
 

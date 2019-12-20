@@ -7,8 +7,8 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.Servo.Core) |
-| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Servo.svg?label=NuGet) |
-| | |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servo.svg?label=NuGet" style="width: auto;" /> |
+
 
 Servos are integrated packages that usually include a DC electric motor, torque-increasing gearing, and electronics to control the motor: 
 

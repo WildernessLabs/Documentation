@@ -7,9 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.PCD8544) |
-| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.PCD8854.svg?label=NuGet) |
-| | |
-
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.PCD8854.svg?label=NuGet" style="width: auto;" /> |
 
 The **PCD8544** display, also known as a Nokia 5110 LCD, is a single color 84x84 LCD display. Data is sent to the display via SPI. The also typically also include an led backlight controlled via a single pin. 
 

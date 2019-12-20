@@ -7,7 +7,6 @@ remarks: *content
 |-------------------|-------------|
 | Status            | Working     |
 | Source code       | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Temperature)  |
-| | |
 
 The analog temperature sensor driver can be used with any sensor that has a linear voltage response. It has been tested with the following series of temperature sensors:
 

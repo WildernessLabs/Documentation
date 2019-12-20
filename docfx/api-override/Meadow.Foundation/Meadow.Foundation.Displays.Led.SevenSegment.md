@@ -7,8 +7,7 @@ remarks: *content
 |--------------|---------|
 | Status       | Working |
 | Source code  | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment)            |
-| NuGet package      | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.Displays.LED.SevenSegment.svg?label=NuGet)
-| | |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.LED.SevenSegment.svg?label=NuGet" style="width: auto;" /> |
 
 A seven-segment display is a form of electronic display device used to show  decimal numbers. These displays are widely used in digital clocks, electronic meters, basic calculators, and other electronic devices that display numerical information.
 

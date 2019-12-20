@@ -8,7 +8,6 @@ remarks: *content
 | Status        | Not tested    |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.DS18B20) |
 | NuGet package | Not published |
-| | |
 
 The **DS18B20** is a 1-Wire temperature sensor manufactured by Maxim.  The sensor can operate in 9, 10, 11 or 12 bit precision and has a range of -55&deg;C to 125 &deg;C.
 

@@ -8,7 +8,6 @@ remarks: *content
 | Status        | Not Working |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.SerialLcd/Driver/Displays.SerialLcd) |
 | NuGet package | Not Published |
-| | |
 
 Serial LCD backpacks provide a convenient way to display data on a 16x2 or 20x4 LCD display. (this driver not currently working)
 

@@ -8,7 +8,6 @@ remarks: *content
 | Status        | Not tested  |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110) |
 | NuGet package | Not published |
-| | |
 
 The **MAG3110** is a three axis magnetometer with an I2C interface. The magnetometer is capable of single and continuous readings.
 

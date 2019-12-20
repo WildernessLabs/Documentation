@@ -8,7 +8,6 @@ remarks: *content
 | Status        | Not working |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.MPL3115A2) |
 | NuGet package | Not published |
-| | |
 
 The **MPL3115A2** is a barometric pressure sensor capable of reading both temperature and temperature compensated pressure reading.  This sensor includes the following features:
 

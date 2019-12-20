@@ -7,8 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS1307) |
-| NuGet package | ![NuGet](https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.DS1307.svg?label=NuGet) |
-| | |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.DS1307.svg?label=NuGet" style="width: auto;" /> |
 
 The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
 

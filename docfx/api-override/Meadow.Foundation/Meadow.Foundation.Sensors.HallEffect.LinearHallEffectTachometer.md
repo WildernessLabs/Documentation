@@ -7,7 +7,6 @@ remarks: *content
 |-----------|----------------|
 | Status    | Not Tested     |
 | Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/HallEffect)  |
-| | |
 
 A Hall effect sensor is a device that is used to measure the magnitude of a magnetic field. Its output voltage is directly proportional to the magnetic field strength through it. These sensors are commonly used for proximity sensing, positioning, speed detection, and current sensing applications.
 
