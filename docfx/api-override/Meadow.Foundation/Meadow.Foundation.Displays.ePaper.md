@@ -13,10 +13,10 @@ The Meadow.Foundation.Displays.ePaper package contains a collection of two and t
 
 | Display | Meadow Pin |
 |---------|------------|
-| BUSY    | Dxx        |
-| RST     | Dxx        |
-| DC      | Dxx        |
-| CS      | Dxx        |
+| BUSY    | D15        |
+| RST     | D14        |
+| DC      | D13        |
+| CS      | D12        |
 | CLK     | SCK        |
 | DIN     | MOSI       |
 | GND     | GND        |

@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Il91874V3
+uid: Meadow.Foundation.Displays.ePaper.IL91874V3
 remarks: *content
 ---
 
@@ -21,13 +21,16 @@ The IL91874V3 is paired with a wide range of three color ePaper display sizes an
 
 | IL91874V3 | Meadow Pin |
 |-----------|------------|
-| BUSY      | Dxx        |
-| RST       | Dxx        |
-| DC        | Dxx        |
-| CS        | Dxx        |
+| BUSY      | D15        |
+| RST       | D14        |
+| DC        | D13        |
+| CS        | D12        |
 | CLK       | SCK        |
 | DIN       | MOSI       |
 | GND       | GND        |
 | VCC       | 3V3        |
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
+
+<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL91874V3/ePaper_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
