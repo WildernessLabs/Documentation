@@ -57,6 +57,14 @@ Meadow.CLI.exe --ListFiles --SerialPort [NameOfSerialPort]
 Meadow.CLI.exe -s [NameOfSerialPort] --DeleteFile --TargetFileName [nameOfFile]
 ```
 
+### Renew file system
+
+```bash
+Meadow.CLI.exe -s [NameOfSerialPort] --RenewFileSys
+```
+
+This command recreates the files system. After invalidating the current file system, this command restarts Meadow, after which, a new, empty flash file system exists. This command makes the reformatting command (EraseFlash) unnecessary unless confidential information needs to be erased.
+
 ### Reformat the flash
 
 ```bash
