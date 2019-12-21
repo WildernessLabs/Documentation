@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Moisture.FC28
+uid: Meadow.Foundation.Sensors.Moisture.Fc28
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.FC28) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Moisture.FC28.svg?label=NuGet" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Moisture.Fc28.svg?label=Meadow.Foundation.Sensors.Moisture.Fc28" style="width: auto;" /> |
 
 **FC-28** Soil Moisture Sensor is a simple breakout for measuring the moisture in soil and similar materials. The sensor has two probes and measures the resistance between them, which means this sensor is of type Resistive. Since water is conductive, as moisture in the soil increases, the resistance decreases allowing the sensor to determine soil humidity. 
 
@@ -20,13 +20,13 @@ The following example shows how read the soil moisture every second:
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    FC28 fc28;
+    Fc28 fc28;
 
     public MeadowApp()
     {
         Console.WriteLine("Initializing...");
 
-        fc28 = new FC28(
+        fc28 = new Fc28(
             Device.CreateAnalogInputPort(Device.Pins.A01),
             Device.CreateDigitalOutputPort(Device.Pins.D15),
             minimumVoltageCalibration: 3.24f,

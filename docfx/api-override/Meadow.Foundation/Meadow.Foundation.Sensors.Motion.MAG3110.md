@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Motion.MAG3110
+uid: Meadow.Foundation.Sensors.Motion.Mag3110
 remarks: *content
 ---
 
@@ -21,14 +21,14 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     public MeadowApp()
     {
         Console.WriteLine("MAG3110 Test Application");
-        MAG3110 mag3110 = new MAG3110(0x0e, 400, Pins.GPIO_PIN_D8);
+        Mag3110 mag3110 = new Mag3110(0x0e, 400, Pins.GPIO_PIN_D8);
         mag3110.OnReadingComplete += mag3110_OnReadingComplete;
         mag3110.InterruptsEnabled = true;
         mag3110.Standby = false;
         Thread.Sleep(Timeout.Infinite);
     }
 
-    static void mag3110_OnReadingComplete(MAG3110.SensorReading sensorReading)
+    static void mag3110_OnReadingComplete(Mag3110.SensorReading sensorReading)
     {
         Console.WriteLine(
             "Reading: x = " + sensorReading.X.ToString() + 
@@ -50,7 +50,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     public MeadowApp()
     {
         Console.WriteLine("MAG3110 Test Application");
-        MAG3110 mag3110 = new MAG3110();
+        Mag3110 mag3110 = new Mag3110();
         mag3110.Standby = false;
         int readingCount = 0;
 
