@@ -7,6 +7,7 @@ remarks: *content
 |-------------|-------------|
 | Status      | Working     |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto;" /> |
 
 **RgbLed** represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
 

@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.ICs.EEPROM.AT24Cxx
+uid: Meadow.Foundation.ICs.EEPROM.At24Cxx
 remarks: *content
 ---
 

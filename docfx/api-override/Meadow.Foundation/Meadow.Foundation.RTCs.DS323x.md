@@ -1,11 +1,11 @@
 ---
-uid: Meadow.Foundation.RTCs.DS323x
+uid: Meadow.Foundation.RTCs.Ds1307
 remarks: *content
 ---
 
-| DS323x        |             |
-|---------------|-------------|
-| Status        | Untested    |
+| DS323x        |               |
+|---------------|---------------|
+| Status        | Untested      |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS323x) |
 | NuGet package | Not published |
 
@@ -31,7 +31,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 {
     public MeadowApp()
     {
-        DS3231 rtc = new DS3231(0x68, 100, Device.Pins.D08);
+        Ds3231 rtc = new Ds3231(0x68, 100, Device.Pins.D08);
         rtc.ClearInterrupt(DS323x.Alarm.BothAlarmsRaised);
         rtc.SetAlarm(DS323x.Alarm.Alarm1Raised, new DateTime(2017, 10, 29, 9, 43, 15), DS323x.AlarmType.WhenSecondsMatch);
         rtc.OnAlarm1Raised += RtcOnAlarm1Raised;
@@ -39,7 +39,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
     static void RtcOnAlarm1Raised(object sender)
     {
-        DS3231 rtc = (DS3231) sender;
+        Ds3231 rtc = (Ds3231) sender;
         Debug.Print("Alarm 1 has been activated: " + rtc.CurrentDateTime.ToString());
         rtc.ClearInterrupt(DS323x.Alarm.Alarm1Raised);
     }

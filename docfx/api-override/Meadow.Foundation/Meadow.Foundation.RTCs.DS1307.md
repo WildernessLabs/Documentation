@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.RTCs.DS1307
+uid: Meadow.Foundation.RTCs.Ds1307
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS1307) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.DS1307.svg?label=NuGet" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds1307.svg?label=Meadow.Foundation.RTCs.Ds1307" style="width: auto;" /> |
 
 The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
 
@@ -16,11 +16,11 @@ The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    protected DS1307 ds1307;
+    protected Ds1307 ds1307;
 
     public DS1307App()
     {
-        ds1307 = new DS1307(Device.CreateI2cBus());
+        ds1307 = new Ds1307(Device.CreateI2cBus());
 
         if (ds1307.IsRunning == false)
         {
