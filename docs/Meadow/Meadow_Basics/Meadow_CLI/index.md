@@ -14,7 +14,7 @@ You can download the Meadow.CLI executable from the [downloads page](/Meadow/Get
 
 ## Enumerating Options
 
-To see the options, run the application with the `--help` arg.
+To see the options, run the application with the `--help` arg. Some options exist that are of little or no use to the C# developer. This have not been include in the following list.
 
 ## Running Commands
 
@@ -40,7 +40,7 @@ Writes a file into the Meadow's flash file system.
 Meadow.CLI.exe --WriteFile -f [NameOfFile] --SerialPort [NameOfSerialPort]
 ```
 
-### List files in flash
+### List files in flash file system
 
 Lists all the files in the flash file system.
 
@@ -48,9 +48,9 @@ Lists all the files in the flash file system.
 Meadow.CLI.exe --ListFiles --SerialPort [NameOfSerialPort]
 ```
 
-### List files in flash including CRC checksum
+### List files and CRC checksum in flash file system
 
-The command lists the same files as `--ListFiles` but includes the CRC checksum. Because this command must separately read each file, this command takes longer to execute.
+The command lists the same files as `--ListFiles` but includes the CRC checksum. Because this command must separately read each file, this command takes longer to execute than `--ListFiles`
 
 ```bash
 Meadow.CLI.exe --ListFilesAndCrcs --SerialPort [NameOfSerialPort]
@@ -58,7 +58,7 @@ Meadow.CLI.exe --ListFilesAndCrcs --SerialPort [NameOfSerialPort]
 
 ### Delete a File
 
-Deletes one existing file from the flash file system.
+Deletes one file from the flash file system.
 
 ```bash
 Meadow.CLI.exe --DeleteFile --TargetFileName [nameOfFile] --SerialPort [NameOfSerialPort]
@@ -66,7 +66,7 @@ Meadow.CLI.exe --DeleteFile --TargetFileName [nameOfFile] --SerialPort [NameOfSe
 
 ### Get Meadow's device information
 
-Requests the Meadows device information, including Meadow.OS version.
+Requests the Meadows device information and including Meadow.OS version.
 
 ```bash
 Meadow.CLI.exe --GetDeviceInfo --SerialPort [NameOfSerialPort]
@@ -78,7 +78,7 @@ Meadow.CLI.exe --GetDeviceInfo --SerialPort [NameOfSerialPort]
 Meadow.CLI.exe --RenewFileSys --SerialPort [NameOfSerialPort]
 ```
 
-This command recreates the files system. After invalidating the current file system, this command restarts Meadow, after which, a new, empty flash file system exists. This command makes the reformatting command (EraseFlash) unnecessary unless confidential information needs to be erased.
+This command recreates the files system. After invalidating the current file system, this command restarts Meadow. Once restarted Meadow recreates a new, empty flash file system. This command makes the reformatting command `--EraseFlash` unnecessary, unless confidential information needs to be erased.
 
 ### Reformat the flash
 
@@ -90,7 +90,7 @@ This operation takes just over 2 minutes to complete.  It is recommended that yo
 
 ### Restart Meadow
 
-This command causes Meadow to be restated from the Meadow.CLI.
+This command causes Meadow to be restarted from the Meadow.CLI.
 
 ```bash
 Meadow.CLI.exe --ResetMeadow --SerialPort [NameOfSerialPort]
@@ -108,18 +108,10 @@ Meadow.CLI.exe --MonoEnable --SerialPort [NameOfSerialPort]
 
 ### Read the mono run state
 
-Requests Meadows to return whether mono will run or not on restart.
+Reports whether mono will run or not on restart.
 
 ```bash
 Meadow.CLI.exe --MonoRunState --SerialPort [NameOfSerialPort]
-```
-
-### Set the trace level
-
-This command is generally not necessary for normal Meadow app development, as it reports the MeadowOS internal trace information. You can set the debug trace level to values 0, 1, 2 or 3. Trace level 3 being the most verbose and level 0 restores the internal default. Trace level 2 is the most useful.
-
-```bash
-Meadow.CLI.exe --SetTraceLevel --Level 2 --SerialPort [NameOfSerialPort]
 ```
 
 ## Running applications
