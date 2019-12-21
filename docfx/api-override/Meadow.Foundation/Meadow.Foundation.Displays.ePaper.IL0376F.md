@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.IL0376F
+uid: Meadow.Foundation.Displays.ePaper.Il0376F
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper)            |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=NuGet" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" style="width: auto;" /> |
 
 The **IL0376F** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and only supports full screen updates.
 

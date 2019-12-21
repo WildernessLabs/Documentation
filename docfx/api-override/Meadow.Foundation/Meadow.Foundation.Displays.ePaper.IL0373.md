@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.IL0373
+uid: Meadow.Foundation.Displays.ePaper.Il0373
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=NuGet" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" style="width: auto;" /> |
 
 The **IL0373** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and supports partial screen updates.
 
@@ -18,14 +18,14 @@ The IL0373 is commonly paired with 1.54", 2.13" or 2.9" dual or tri-color ePaper
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    IL0373 display;
+    Il0373 display;
 
     public MeadowApp()
     {
         var spiBus = Device.CreateSpiBus();
 
         Console.WriteLine("Create display driver instance");
-        display = new IL0373(device: Device, spiBus: spiBus,
+        display = new Il0373(device: Device, spiBus: spiBus,
             chipSelectPin: Device.Pins.D02,
             dcPin: Device.Pins.D01,
             resetPin: Device.Pins.D00,
