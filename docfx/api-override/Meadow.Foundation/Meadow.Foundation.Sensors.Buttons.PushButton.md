@@ -3,10 +3,11 @@ uid: Meadow.Foundation.Sensors.Buttons.PushButton
 remarks: *content
 ---
 
-| PushButton |             |
-|------------|-------------|
-| Status     | Working     |
-| Source code        | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Buttons/)  |
+| PushButton    |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Buttons/) |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto;" /> |
 
 The **PushButton** class represents a simple push button, such as a tactile momentary button. To get notified when it’s clicked, subscribe to the Clicked event. If you need to know when the button is held down, subscribe to the PressStarted and PressEnded events.
 

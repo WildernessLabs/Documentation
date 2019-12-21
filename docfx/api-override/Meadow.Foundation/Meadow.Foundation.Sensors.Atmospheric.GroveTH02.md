@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Atmospheric.GroveTH02
+uid: Meadow.Foundation.Sensors.Atmospheric.GroveTh02
 remarks: *content
 ---
 

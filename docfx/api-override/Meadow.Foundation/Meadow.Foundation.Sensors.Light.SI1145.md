@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Light.SI1145
+uid: Meadow.Foundation.Sensors.Light.Si1145
 remarks: *content
 ---
 

@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Light.TSL2561
+uid: Meadow.Foundation.Sensors.Light.Tsl2561
 remarks: *content
 ---
 
@@ -38,7 +38,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 {
     public MeadowApp()
     {
-        var tsl2561 = new TSL2561();
+        var tsl2561 = new Tsl2561();
 
         Console.WriteLine("Polled TSL2561 Application.");
         Console.WriteLine("Device ID: " + tsl2561.ID.ToString());
@@ -73,7 +73,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 {
     public MeadowApp()
     {
-        var tsl2561 = new TSL2561();
+        var tsl2561 = new Tsl2561();
 
         Console.WriteLine("Testing the TSL2561 Class.");
         Console.WriteLine("Device ID: " + tsl2561.ID.ToString());

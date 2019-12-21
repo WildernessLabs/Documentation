@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Atmospheric.BME280
+uid: Meadow.Foundation.Sensors.Atmospheric.Bme280
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.BME280.svg?label=NuGet" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bme280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bme280" style="width: auto;" /> |
 
 The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
 
@@ -31,7 +31,7 @@ The following application will generate interrupts when changes to any one of th
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    BME280 bme280;
+    Bme280 bme280;
 
     public MeadowApp()
     {
@@ -39,9 +39,9 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
         // configure our BME280 on the I2C Bus
         var i2c = Device.CreateI2cBus();
-        bme280 = new BME280 (
+        bme280 = new Bme280 (
             i2c,
-            BME280.I2cAddress.Adddress0x77 //default
+            Bme280.I2cAddress.Adddress0x77 //default
         );
 
         bme280.Subscribe(new FilterableObserver<AtmosphericConditionChangeResult, AtmosphericConditions>(
@@ -101,7 +101,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     {
         // Create a new BME280 object and put the sensor into polling
         // mode (update interval set to 0ms).
-        BME280 sensor = new BME280(updateInterval: 0);
+        Bme280 sensor = new Bme280(updateInterval: 0);
 
         string message;
         while (true)

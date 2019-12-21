@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Distance.HYSRF05
+uid: Meadow.Foundation.Sensors.Distance.Hysrf05
 remarks: *content
 ---
 
