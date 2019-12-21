@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.Max7219)            |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.Max7219.svg?label=Meadow.Foundation.Displays.Led.Max7219" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.Max7219.svg?label=Meadow.Foundation.Displays.Led.Max7219" style="width: auto; height: -webkit-fill-available;" /> |
 
 The **MAX7219** is an LED display driver capable of driving 64 outputs. As well, the MAX7219 contains an 2-wire data bus allowing multiple MAX7219 chip to be connected together and controlled by a single I2C interface.
 

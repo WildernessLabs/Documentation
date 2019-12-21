@@ -7,7 +7,7 @@ remarks: *content
 |------------------|-------------|
 | Status           | Working     |
 | Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" style="width: auto;" /> |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" style="width: auto; height: -webkit-fill-available;" /> |
 
 
 The **CharacterDisplay** class represents a multiline liquid crystal character display.
