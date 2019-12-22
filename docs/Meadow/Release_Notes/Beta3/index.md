@@ -28,7 +28,14 @@ AoT compilation (which should give us at least two magnitudes of performance imp
 
 #### Changes
 
+We fixed the following drivers:
+
+* `PwmLed` - Pulse now works without blinking.
+* `RgbPwmLed` - Pulse and colors now work without blinking. Also, we fixed it to work with common anode LEDs, so it now works with the onboard LED.
+* `PushButton` - Resistor stuff now works. 
+
 #### New Peripheral Drivers
+
 This is a big update, there are numerous improvements and fixes across published drivers. 
 
 As well, we've published 14 new drivers via NuGet:
