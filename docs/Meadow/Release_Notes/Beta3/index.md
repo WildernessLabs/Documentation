@@ -22,6 +22,8 @@ This release is focused on quality and stabilization. It's mostly bug fixes, API
 
 While Meadow.OS is still slow overall, due to the fact that we're running .NET code in interpreted mode (as opposed to compiled via Just-in-Time (JIT) or Ahead-of-Time (AoT) compilation), we did optimize some things within Meadow.Core, and realized `~380%` speed increase in digital output writes. In running the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks), digital output writes went from `~16ms` to `~4ms`, which, while still slow, is a major improvement.
 
+AoT compilation (which should give us at least two magnitudes of performance improvement) is still schedule for b4.0.
+
 ### Meadow.Foundation Fixes and New Drivers
 
 #### Changes
