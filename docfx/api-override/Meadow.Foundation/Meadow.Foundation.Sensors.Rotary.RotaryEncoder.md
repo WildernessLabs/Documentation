@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoder
 remarks: *content
 ---
 
+| RotaryEncoder |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Rotary)  |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+
 Rotary encoders are similar in form factor to potentiometers, but instead of modifying a voltage output, they send a digital signal encoded using Gray Code when rotated that can be decoded to ascertain the direction of turn.
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.jpg)
@@ -23,80 +29,60 @@ For this reason, rotary encoders are particularly useful in connected things, in
 
 This rotary encoder driver works with most rotary encoders which return a two-bit Gray Code which is the minimum number of bits necessary to describe direction. Most common rotary encoders use two-bit Gray Code, so this driver should work with most common rotary encoders.
 
----
-uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoder
-example: [*content]
----
-
 The following example uses a rotary encoder to adjust the brightness of a PwmLed.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.LEDs;
-using Meadow.Foundation.Sensors.Rotary;
-
-namespace RotaryEncoder_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    protected RotaryEncoder _rotary = null;
+    protected PwmLed _led = null;
+    // how much to change the brightness per rotation step. 
+    // 0.05 = 20 clicks to 100%
+    protected float _brightnessStepChange = 0.05F; 
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new App();
-        }
+        // instantiate our peripherals
+        _rotary = new RotaryEncoder(Device.Pins.D07, Device.Pins.D09);
+        _rotary.Rotated += RotaryRotated;
+
+        _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
     }
-    
-    public class App : AppBase<F7Micro, App>
+
+    protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
     {
-        protected RotaryEncoder _rotary = null;
-        protected PwmLed _led = null;
-        // how much to change the brightness per rotation step. 
-        // 0.05 = 20 clicks to 100%
-        protected float _brightnessStepChange = 0.05F; 
-
-        public App()
+        // if clockwise, turn it up! clamp to 1, so we don't go over.
+        if (e.Direction == RotationDirection.Clockwise)
         {
-            // instantiate our peripherals
-            _rotary = new RotaryEncoder(Device.Pins.D07, Device.Pins.D09);
-            _rotary.Rotated += RotaryRotated;
-
-            _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
-        }
-
-        protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
-        {
-            // if clockwise, turn it up! clamp to 1, so we don't go over.
-            if (e.Direction == RotationDirection.Clockwise)
+            if(_led.Brightness >= 1) 
             {
-                if(_led.Brightness >= 1) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness + 
-                        _brightnessStepChange).Clamp(0,1));
-                }
+                return;
             } 
-            else // otherwise, turn it down. clamp to 0 so we don't go below. 
-            { 
-                if (_led.Brightness <= 0) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness - 
-                        _brightnessStepChange).Clamp(0,1));
-                }
+            else 
+            {
+                _led.SetBrightness((_led.Brightness + 
+                    _brightnessStepChange).Clamp(0,1));
+            }
+        } 
+        else // otherwise, turn it down. clamp to 0 so we don't go below. 
+        { 
+            if (_led.Brightness <= 0) 
+            {
+                return;
+            } 
+            else 
+            {
+                _led.SetBrightness((_led.Brightness - 
+                    _brightnessStepChange).Clamp(0,1));
             }
         }
     }
 }
 ```
 
-##### Example Circuit
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
+### Wiring Example
 
 Note, depending on your encoder, it may have a common/ground (gnd) or (-) leg in addition to the positive (+) leg. If it does, make sure to wire it to ground.
 

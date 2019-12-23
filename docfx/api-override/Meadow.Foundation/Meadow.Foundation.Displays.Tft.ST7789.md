@@ -3,6 +3,18 @@ uid: Meadow.Foundation.Displays.Tft.ST7789
 remarks: *content
 ---
 
+| TftSpi        |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" style="width: auto; height: -webkit-fill-available;" /> |
+
+The **ST7789** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These are typically paired with high pixel density displays, the most common being a 1.5" 240x240 display.
+
+ST7789 displays typically use SPI mode 3, but you may find variants that require different modes.
+
+The Meadow.Foundation ST7789 driver currently only supports 16bpp RGB565.
+
 ### Purchasing
 
 You can get ST7789 displays from the following suppliers:
@@ -13,62 +25,39 @@ You can get ST7789 displays from the following suppliers:
 
 ### Code Example
 
-The following example shows how to initialize a ST7789 display and draw three lines using `DrawPixel` method:
-
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Displays.Tft;
-using Meadow.Hardware;
-
-namespace ST7789_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    ST7789 display;
+    GraphicsLibrary graphics;
+
+    public MeadowApp ()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new MeadowApp();
-        }
-    }
-    
-    public class MeadowApp : AppBase<F7Micro, App>
-    {
-        protected ISpiBus spiBus;
-        protected ST7789 ST7789;
+        var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
+        var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        public MeadowApp ()
-        {
-            var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
-            spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
+        display = new ST7789(
+            device: Device, 
+            spiBus: spiBus,
+            chipSelectPin: null,
+            dcPin: Device.Pins.D01,
+            resetPin: Device.Pins.D00,
+            width: 240, height: 240);
 
-            ST7789 = new ST7789(
-                device: Device, 
-                spiBus: spiBus,
-                chipSelectPin: null,
-                dcPin: Device.Pins.D01,
-                resetPin: Device.Pins.D00,
-                width: 240, height: 240);
+        graphics = new GraphicsLibrary(display);
 
-            Console.WriteLine("Clear display");
-            ST7789.ClearScreen(250);
-            ST7789.Refresh();
-
-            Console.WriteLine("Draw lines");
-            for (int i = 0; i < 30; i++)
-            {
-                ST7789.DrawPixel(i, i, true);
-                ST7789.DrawPixel(30 + i, i, true);
-                ST7789.DrawPixel(60 + i, i, true);
-            }
-
-            ST7789.Show(); 
-        }
+        graphics.CurrentFont = new Font8x8();
+        graphics.Clear();
+        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
+        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
+        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
+        graphics.DrawText(5, 5, "Meadow F7 SPI");
+        graphics.Show();
     }
 }
 ```
+
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
 
 ### Circuit Example
 
@@ -85,4 +74,5 @@ namespace ST7789_Sample
 
 It should look like the following diagram:
 
-![](../../API_Assets/Meadow.Foundation.Displays.Tft.ST7789/ST7789_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.ST7789/ST7789_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

@@ -1,9 +1,15 @@
 ---
-uid: Meadow.Foundation.ICs.IOExpanders.MCP23008
+uid: Meadow.Foundation.ICs.IOExpanders.Mcp23008
 remarks: *content
 ---
 
-The MCP23008 chip is an 8-bit (8 port) digital I/O expander chip that uses I2C to communicate. It can be used to add additional digital input and output ports to a Netduino and can be combined with up to 8 MCP23008 chips in total, providing up to 64 additional ports.
+| MCP23008      |             |
+|---------------|-------------|
+| Status        | Not Working |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23008) |
+| NuGet package | Not Published |
+
+The **MCP23008** chip is an 8-bit (8 port) digital I/O expander chip that uses I2C to communicate. It can be used to add additional digital input and output ports to Meadow and can be combined with up to eight MCP23008 chips in total, providing 64 additional ports.
 
 MCP23008 is a ubiquitous chip in the hardware world and is the typical interface chip for common I2C LCD backpacks, with the 74595 chip being the typical interface chip for SPI LCD backpacks.
 
@@ -36,65 +42,17 @@ The I2C addresses can then be as follows, where `0` represents an address pin co
 
 Because there are 8 address possibilities, it's possible to put 8 MCP23008 chips on a single I2C bus.
 
-To make this simpler, when instantiating an MCP23008 object, there is a constructor overload that takes the address pin configurations instead of an address, so that Netduino.Foundation uses the appropriate address based on the pins, instead of requiring a pre-computed address.
+To make this simpler, when instantiating an MCP23008 object, there is a constructor overload that takes the address pin configurations instead of an address, so that Meadow.Foundation uses the appropriate address based on the pins, instead of requiring a pre-computed address.
 
 ### Other Pins
 
 In addition to the address pins, there are a number of other pins that must be connected up:
 
  * **Not Reset** - The `RESET` pin is actually a "Not Reset." The line above "Reset" means "not." So unless that pin is pulled high (`3.3V`), the chip will reset itself at random times and you'll get connection errors.
- * **SCL** and **SDA** - The `SCL` and `SDA` pins are the I2C clock and data pins and go to the `SC` and `SD` pins on the Netduino, respectively. Each of these should also generally be pulled high (`3.3V`) via a `4.7kΩ` resistor. See the [I2C guide](http://developer.wildernesslabs.co/Netduino/Input_Output/Digital/I2C/) for more information.
+ * **SCL** and **SDA** - The `SCL` and `SDA` pins are the I2C clock and data pins and go to the `SC` and `SD` pins on the Meadow, respectively. Each of these should also generally be pulled high (`3.3V`) via a `4.7kΩ` resistor. See the [I2C guide](http://developer.wildernesslabs.co/Meadow/Input_Output/Digital/I2C/) for more information.
  * **INT** - The `INT` pin is for interrupt notifications, and is only necessary when using the GPIO pins in input mode and you want an event raised when the input value changes.
  * **VSS** and **VDD** - These go to ground and 3.3V power, respectively, and power the chip.
 
----
-uid: Meadow.Foundation.ICs.IOExpanders.MCP23008
-example: [*content]
----
-
-The following example shows how to turn on and off the LED using the `IsOn` property, and uses a `StartBlink(onDuration, offDuration)` API method to make the LED blink staying on for 500ms (0.5s) and off for 1000ms (1s):
-
-```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.LEDs;
-
-namespace LedSample
-{
-    public class Program
-    {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new App();
-        }
-    }
-    
-    public class App : AppBase<F7Micro, App>
-    {
-        public App ()
-        {
-            // create a new Led on pin 8
-            var led = new Led(Device.Pins.D08);
-
-            while(true)
-            {
-                led.IsOn = true;    // Led ON
-                Thread.Sleep(3000); // 3 seconds
-                led.IsOn = false;   // Led OFF
-                Thread.Sleep(2000); // 2 seconds
-                led.IsOn = true;    // Led ON
-                Thread.Sleep(1000); // 1 second
-
-                led.StartBlink(500, 1000);
-                Thread.Sleep(5000); // 5 seconds
-                led.Stop();
-            }
-        }
-    }
-}
-```
-
-##### Example Circuit
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.MCP23008/MCP23008.svg)

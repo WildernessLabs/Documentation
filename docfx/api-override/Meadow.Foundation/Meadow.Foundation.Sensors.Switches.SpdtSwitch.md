@@ -3,57 +3,42 @@ uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
 remarks: *content
 ---
 
-Represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that closes a circut to either ground/common or high depending on position.
+| SpdtSwitch  |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+
+**SpdtSwitch** represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that closes a circuit to either ground/common or high depending on position.
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png)
-
----
-uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
-example: [*content]
----
 
 The following example shows how to use a SPDT switch:
 
 ```csharp
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Sensors.Switches;
-using Meadow.Hardware;
-using System.Threading;
-
-namespace SpdtSwitch_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    DigitalOutputPort _blueLED;
+    SpdtSwitch _spdtSwitch;
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
+        _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
+
+        _spdtSwitch = new SpdtSwitch(Device.Pins.D13);
+        _spdtSwitch.Changed += (s, e) =>
         {
-            _app = new App();
-        }
-    }
-    
-    public class App : AppBase<F7Micro, App>
-    {
-        DigitalOutputPort _blueLED;
-        SpdtSwitch _spdtSwitch;
+            Console.WriteLine("Switch Changed");
+            Console.WriteLine("Switch on: " + _spdtSwitch.IsOn.ToString());
+        };
 
-        public App ()
-        {
-            _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
-
-            _spdtSwitch = new SpdtSwitch(Device.Pins.D13);
-            _spdtSwitch.Changed += (s, e) =>
-            {
-                Console.WriteLine("Switch Changed");
-                Console.WriteLine("Switch on: " + _spdtSwitch.IsOn.ToString());
-            };
-
-            Console.WriteLine("Initial switch state, isOn: " + _spdtSwitch.IsOn.ToString());
-        }
+        Console.WriteLine("Initial switch state, isOn: " + _spdtSwitch.IsOn.ToString());
     }
 }
 ```
 
-##### Example Circuit
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SpdtSwitch.svg)

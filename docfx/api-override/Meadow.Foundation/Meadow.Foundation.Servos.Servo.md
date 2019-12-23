@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Servos.Servo
 remarks: *content
 ---
 
+| Servo         |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.Servo.Core) |
+| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servo.svg?label=Meadow.Foundation.Servo" style="width: auto; height: -webkit-fill-available;" /> |
+
 Servos are integrated packages that usually include a DC electric motor, torque-increasing gearing, and electronics to control the motor: 
 
 ![](../../API_Assets/Meadow.Foundation.Servos.Servo/Servos_Medium.jpg)
@@ -83,63 +89,41 @@ Servo cable colors vary by manufacture, but they're always in the same order. Th
 | 2   | VCC     | Red           | Red or Brown    | Red       |
 | 3   | Control | White         | Yellow or White | Orange    |
 
----
-uid: Meadow.Foundation.Servos.Servo
-example: [*content]
----
-
 The following example shows how to initialize a PiezoSpeaker and play a melody using an array of notes:
 
 ```csharp
-using System;
-using System.Threading;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Servos;
-using Meadow.Hardware;
-
-namespace Servo_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    readonly IPwmPort pwm;
+    readonly Servo servo;
+
+    public MeadowApp() 
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new App();
-        }
+        pwm = Device.CreatePwmPort(Device.Pins.D12);
+
+        servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
+
+        TestServo();
     }
-    
-    public class App : AppBase<F7Micro, App>
+
+    void TestServo()
     {
-        readonly IPwmPort pwm;
-        readonly Servo servo;
-
-        public App() 
+        while(true)
         {
-            pwm = Device.CreatePwmPort(Device.Pins.D12);
-
-            servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
-
-            TestServo();
-        }
-
-        void TestServo()
-        {
-            while(true)
+            if (servo.Angle <= servo.Config.MinimumAngle)
             {
-                if (servo.Angle <= servo.Config.MinimumAngle)
-                {
-                    Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
-                    servo.RotateTo(servo.Config.MaximumAngle);
-                }
-                else
-                {
-                    Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
-                    servo.RotateTo(servo.Config.MinimumAngle);
-                }
-                Thread.Sleep(4000);
+                Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
+                servo.RotateTo(servo.Config.MaximumAngle);
             }
+            else
+            {
+                Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
+                servo.RotateTo(servo.Config.MinimumAngle);
+            }
+            Thread.Sleep(4000);
         }
     }
 }
 ```
+
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.Servo.Core/Samples/) 

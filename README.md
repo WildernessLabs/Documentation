@@ -7,10 +7,9 @@ Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are
 
 This repo is also a Ruby site powered by jekyll (which is how it's hosted by GitHub Pages). You can run and browse this site locally, which is especially useful if you're contributing documentation, or you just want an offline experience.
 
-To browse locally:
+To browse locally on OSX (Steps 1 and 2):
 
 ### 1. [Install Homebrew](https://brew.sh/) (if not already installed)
-
 
 ### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
 
@@ -27,14 +26,44 @@ $ gem install jekyll bundler
 ```
 
 With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
+(Change your terminal working folder to `Documentation/docs`)
+
+```
+$ bundle install
+```
+
+To browse locally on Windows (Steps 1 and 2):
+
+### 1. [Install Chocolatey](https://chocolatey.org/install) (if not already installed)
+
+### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
+
+Open a Powershell prompt and navigate to the `Documentation/docs` folder and run:
+
+```
+choco install ruby
+```
+
+Install MSYS2. Choose MSYS2 and MINGW development toolchain option
+
+```
+ridk install
+```
+
+Once you have Ruby and MSYS2, you'll need Jekyll and Bundler to build and host the site locally (tip: you may need to restart your shell):
+
+```
+$ gem install jekyll bundler
+```
+
+With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
+(Change your Powershell working folder to `Documentation/docs`)
 
 ```
 $ bundle install
 ```
 
 ### 3. Launch local server
-
-Change your terminal working folder to `Documentation/docs` (if it's not aleady) and run:
 
 ```
 bundle exec jekyll serve

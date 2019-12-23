@@ -3,11 +3,17 @@ uid: Meadow.Foundation.Leds.RgbLed
 remarks: *content
 ---
 
-Represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
+| RgbLed      |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+
+**RgbLed** represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
 
 ![](../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed.jpg)
 
-To connect these LEDs to Meadow, it is recommended to use an external resistor of about 270 to 1K ohms to prevent too much current flowing through it. 
+To connect these deds to Meadow, it is recommended to use an external resistor of ~270 to 1K ohms to prevent too much current from flowing through the led and causing damage. 
 
 ### Circuit of a common anode RGB LED
 
@@ -17,53 +23,38 @@ To connect these LEDs to Meadow, it is recommended to use an external resistor o
 
 ![](../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonCathode.png)
 
-###Displaying all the colors
+### Code Example
 
 The following example code loops through all the colors possible with digital output ports only.
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.Leds;
-using Meadow.Devices;
-
-namespace RgbLedSample
+public class RgbLedApp : App<F7Micro, RgbLedApp>
 {
-    public class Program
+    public RgbLedApp()
     {
-        static IApp _app;
-        public static void Main()
-        {
-            _app = new RgbLedApp();
-        }
-    }
+        // create a new common cathode RgbLed (otherwise set IsCommonCathode = false)
+        var rgbLed = new RgbLed(
+            Device.CreateDigitalOutputPort(Device.Pins.D14),
+            Device.CreateDigitalOutputPort(Device.Pins.D13),
+            Device.CreateDigitalOutputPort(Device.Pins.D12));
 
-    public class RgbLedApp : App<F7Micro, RgbLedApp>
-    {
-        public RgbLedApp()
+        // alternate between blinking and pulsing the LED 
+        while (true)
         {
-            // create a new common cathode RgbLed (otherwise set IsCommonCathode = false)
-            var rgbLed = new RgbLed(
-                Device.CreateDigitalOutputPort(Device.Pins.D14),
-                Device.CreateDigitalOutputPort(Device.Pins.D13),
-                Device.CreateDigitalOutputPort(Device.Pins.D12));
-
-            // alternate between blinking and pulsing the LED 
-            while (true)
+            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
             {
-                for (int i = 0; i < (int)RgbLed.Colors.count; i++)
-                {
-                    rgbLed.SetColor((RgbLed.Colors)i);
-                    Thread.Sleep(500);
-                }
+                rgbLed.SetColor((RgbLed.Colors)i);
+                Thread.Sleep(500);
+            }
 
-                for (int i = 0; i < (int)RgbLed.Colors.count; i++)
-                {
-                    rgbLed.StartBlink((RgbLed.Colors)i);
-                    Thread.Sleep(3000);
-                }
+            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
+            {
+                rgbLed.StartBlink((RgbLed.Colors)i);
+                Thread.Sleep(3000);
             }
         }
     }
 }
 ```
+
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 

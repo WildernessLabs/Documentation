@@ -4,6 +4,63 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.6
+
+This release is focused on quality and stabilization. It's mostly bug fixes, API stabilization, and new drivers based on that work. This is also just the first part of this work. We have a number of additional bug fixes that were originally due for b3.6, but there are so many good things already in this, we decided not to wait until they were all in and instead break it up into multiple releases, so there will likely be a b3.7 release soon as well.
+
+### Bug Fixes
+
+* [#45 - Typos in DigitalChannelIInfoBase](https://github.com/WildernessLabs/Meadow_Issues/issues/45) - Fixed typos in the API.
+* [#42 - Device.CreateAnalogInputPort() prints debug messages](https://github.com/WildernessLabs/Meadow_Issues/issues/42) - Got rid of the debug output.
+* [#35 - SPI Exception when calling ReadRegister](https://github.com/WildernessLabs/Meadow_Issues/issues/35) - Fixed. `SpiPeripheral` got reworked.
+* [#26 - `PwmPort.From` does not show friendly error when the target pin doesn't support pwm](https://github.com/WildernessLabs/Meadow_Issues/issues/26) - Proper error checks now.
+* [#24 - Get Build Date with version](https://github.com/WildernessLabs/Meadow_Issues/issues/24) - Fixed. Returns both the proper version and build date/time now.
+* [#20 - DigitalInputPortEventArgs.Value always returns false](https://github.com/WildernessLabs/Meadow_Issues/issues/20) - `Value` now returns the actual post-event value
+* [#19 - DigitalInputPortEventArgs - Rename Value to State To Be Consistent with pin properties](https://github.com/WildernessLabs/Meadow_Issues/issues/19) - Fixed. Now uses the `State` property.
+
+### Performance Improvements
+
+While Meadow.OS is still slow overall, due to the fact that we're running .NET code in interpreted mode (as opposed to compiled via Just-in-Time (JIT) or Ahead-of-Time (AoT) compilation), we did optimize some things within Meadow.Core, and realized `~380%` speed increase in digital output writes. In running the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks), digital output writes went from `~16ms` to `~4ms`, which, while still slow, is a major improvement.
+
+AoT compilation (which should give us at least two magnitudes of performance improvement) is still schedule for b4.0.
+
+### Meadow.Foundation Fixes and New Drivers
+
+#### Changes
+
+We fixed the following drivers:
+
+* `PwmLed` - Pulse now works without blinking.
+* `RgbPwmLed` - Pulse and colors now work without blinking. Also, we fixed it to work with common anode LEDs, so it now works with the onboard LED.
+* `PushButton` - Resistor stuff now works. 
+
+#### New Peripheral Drivers
+
+This is a big update, there are numerous improvements and fixes across published drivers. 
+
+As well, we've published 14 new drivers via NuGet:
+* PCD8544 LCD display controller
+* MAX7219 led display controller
+* TM1637 led display controller
+* ULN2003 stepper motor controller
+* HIH6130 I2C temperature and humidity sensor
+* HTU21D I2C temperature and humidity sensor
+* SI70xx I2C temperature and humidity sensor
+* ALS-PT19-315C light sensor
+* ADXL335 Analog triple axis, +/-3g accelerometer
+* ADXL337 Analog triple axis, +/-3g accelerometer
+* ADXL345 I2C triple axis accelerometer, +/-16g accelerometer
+* ADXL377 Analog triple axis, +/-200g accelerometer
+* BNO055 I2C 9-Axis absolute orientation sensor
+* TMP102 I2C temperature sensor
+
+### Meadow.CLI Fixes and Updates
+
+Most of the Meadow.CLI changes involve more complete information being returned by Meadow. Previously, Meadow only returned text strings. Now it returns more structured information and is more stable. Some of these changes will become important in future releases. One new command was added, `RenewFileSys`. This command recreates a new, empty file system.
+
+### Samples and Documentation 
+We've updated and standardized all of the sample projects in Meadow.Foundation to match the latest template. And we've invested heavily in our docs, you'll notice we've added details and wiring diagrams for most of our peripheral docs.
+
 ## Beta 3.5
 
 This is quite a big release with new features, including UART, and a major overhaul to Meadow.Foundation. We also launched a new developer site and added docs for Meadow.CLI.

@@ -3,54 +3,41 @@ uid: Meadow.Foundation.Sensors.Switches.DipSwitch
 remarks: *content
 ---
 
-Represents a DIP-switch wired in a bus configuration, in which all switches are terminated to the same ground/common or high pin.
+| DipSwitch   |             |
+|-------------|-------------|
+| Status      | Working     |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+
+**DipSwitch** represents a DIP-switch wired in a bus configuration, in which all switches are terminated to the same ground/common or high pin.
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg)
 
----
-uid: Meadow.Foundation.Sensors.Switches.DipSwitch
-example: [*content]
----
-
 ```csharp
-using Meadow;
-using System.Threading;
-using Meadow.Foundation.Sensors.Switches;
-
-namespace DipSwitch_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    public void App()
     {
-        static IApp _app; 
-        public static void Main()
+        var dipSwitch = new DipSwitch(IDigitalPin[] {
+            Device.Pins.D05, Device.Pins.D06, 
+            Device.Pins.D07, Device.Pins.D08, 
+            Device.Pins.D09, Device.Pins.D10, 
+            Device.Pins.D11, Device.Pins.D12,  },
+            CircuitTerminationType.CommonGround);
+
+        dipSwitch.Changed += (object s, ArrayEventArgs e) =>
         {
-            _app = new App();
-        }
-    }
+            Debug.Print("Switch " + e.ItemIndex + " changed to " 
+                + (((ISwitch)e.Item).IsOn ? "on" : "off"));
+        };
 
-    public class App : AppBase<F7Micro, App>
-    {
-        public void App()
-        {
-            var dipSwitch = new DipSwitch(IDigitalPin[] {
-                Device.Pins.D05, Device.Pins.D06, 
-                Device.Pins.D07, Device.Pins.D08, 
-                Device.Pins.D09, Device.Pins.D10, 
-                Device.Pins.D11, Device.Pins.D12,  },
-                CircuitTerminationType.CommonGround);
-
-            dipSwitch.Changed += (object s, ArrayEventArgs e) =>
-            {
-                Debug.Print("Switch " + e.ItemIndex + " changed to " 
-                    + (((ISwitch)e.Item).IsOn ? "on" : "off"));
-            };
-
-            Thread.Sleep(Timeout.Infinite);
-        }
+        Thread.Sleep(Timeout.Infinite);
     }
 }
 ```
 
-##### Example Circuit
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DipSwitch.svg)

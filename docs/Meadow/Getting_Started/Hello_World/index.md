@@ -37,7 +37,7 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  2. Click the **Gallery** tab.
  3. Search for `Meadow`.
  4. Select the **Meadow** IDE extension.
- 5. Click **Install...** 
+ 5. Click **Install...**
 
 ![Meadow extension for Visual Studio for macOS](meadow_extension.png){:standalone}
 
@@ -48,9 +48,10 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  1. Open Visual Studio 2019.
  2. Click **Create a new project**.
  3. Search for `Meadow` (make sure to clear all filters).
- 4. Select **Meadow Console** and press **Next**.
+ 4. Select **Meadow Application** and press **Next**.
  5. Name your project `HelloMeadow` and choose project location.
  6. Press **Create**.
+ 7. Right-click `HelloMeadow` project in Solution Explorer > Click `Manage Nuget Packages` > Update Meadow.Foundation package to latest version.
 
 ### macOS
 
@@ -59,10 +60,11 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  3. In the **Meadow** section, select *Meadow Application* and press **Next**.
  4. Name your project `HelloMeadow` and choose project location.
  5. Press **Create**.
+ 6. Update Meadow.Foundation package to latest version.
 
 ## Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will blink the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .Net application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .Net application:
 
 ### macOS
 
@@ -94,19 +96,25 @@ If you've created a .Net console app before, the `Program` class should look fam
 
 ```csharp
 using Meadow;
+using System.Threading;
 
-namespace BasicTestyMeadow
+namespace HelloMeadow
 {
     class Program
     {
         static IApp app;
         public static void Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+
             // instantiate and run new meadow app
-            app = new HelloMeadow();
+            app = new MeadowApp();
+
+            Thread.Sleep(Timeout.Infinite);
         }
     }
 }
+
 ```
 
 This pattern allows us to have an App instance, in which all things Meadow are done.
@@ -120,45 +128,42 @@ using System;
 using System.Threading;
 using Meadow;
 using Meadow.Devices;
-using Meadow.Hardware;
+using Meadow.Foundation;
+using Meadow.Foundation.Leds;
 
-namespace HelloWorld
+namespace HelloMeadow
 {
-    public class HelloMeadow : App<F7Micro, HelloMeadow>
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        IDigitalOutputPort redLed;
-        IDigitalOutputPort blueLed;
-        IDigitalOutputPort greenLed;
+        const int pulseDuration = 3000;
+        RgbPwmLed rgbPwmLed;
 
-        public App()
+        public MeadowApp()
         {
-            ConfigurePorts();
-            BlinkLeds();
+            rgbPwmLed = new RgbPwmLed(Device,
+                Device.Pins.OnboardLedRed,
+                Device.Pins.OnboardLedGreen,
+                Device.Pins.OnboardLedBlue);
+
+            PulseRgbPwmLed();
         }
 
-        public void ConfigurePorts()
+        protected void PulseRgbPwmLed()
         {
-            redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
-            blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
-            greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
-        }
-
-        public void BlinkLeds()
-        {
-            var state = false;
-
-            while (true) {
-                state = !state;
-
-                Console.WriteLine($"State: {state}");
-
-                redLed.State = state;
-                Thread.Sleep(500);
-                blueLed.State = state;
-                Thread.Sleep(500);
-                greenLed.State = state;
-                Thread.Sleep(500);
+            while (true)
+            {
+                Pulse(Color.Red);
+                Pulse(Color.Green);
+                Pulse(Color.Blue);
             }
+        }
+
+        protected void Pulse(Color color)
+        {
+            rgbPwmLed.StartPulse(color);
+            Console.WriteLine($"Pulsing {color}");
+            Thread.Sleep(pulseDuration);
+            rgbPwmLed.Stop();
         }
     }
 }
@@ -172,15 +177,14 @@ Let's break this down into pieces, first; the Meadow namespaces:
 ```csharp
 using Meadow;
 using Meadow.Devices;
-using Meadow.Hardware;
 using Meadow.Foundation;
+using Meadow.Foundation.Leds;
 ```
 
 These are the typical minimum set of namespaces in a Meadow app class and provide the following functionality:
 
  * `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
  * `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Micro Dev board, or the F7 Micro embeddable board.
- * `Meadow.Hardware` - This namespace contains hardware classes that enable you to interact directly with hardware IO.
  * `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
 
 ### App Class Definition
@@ -198,7 +202,7 @@ All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.Ap
 The device class defines properties and capabilities of the current device such as the pins, via the `Device` property on the `App` base class, and allows you to access them using autocomplete, via the specific device type:
 
 ```csharp
-var redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
+Device.Pins.OnboardLedRed
 ```
 
 ### Controlling the Onboard LED via Ports
@@ -208,16 +212,13 @@ var redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
 Direct access to hardware Input/Output (IO) is generally available via _ports_ and _buses_. In this case, we create a `IDigitalOutputPort` for each color component (red, green, and blue) of the onboard LED:
 
 ```csharp
-
-IDigitalOutputPort redLed;
-IDigitalOutputPort blueLed;
-IDigitalOutputPort greenLed;
-
+RgbPwmLed rgbPwmLed;
 ...
 
-redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
-blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
-greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
+rgbPwmLed = new RgbPwmLed(Device,
+    Device.Pins.OnboardLedRed,
+    Device.Pins.OnboardLedGreen,
+    Device.Pins.OnboardLedBlue);
 ```
 
 Ports are created from the device itself, and the `Pins` property provides named pins that map to the pins available on the particular device specified above in the `App` definition.
@@ -225,32 +226,32 @@ Ports are created from the device itself, and the `Pins` property provides named
 
 #### Digital Output
 
-To vary the color of the light emitted via the onboard LED, we can _write_ to the internal pins that are connected to the LED, via the `State` property, causing them to have a voltage of `HIGH`/`ON`, or `LOW`/`OFF`:
+To pulse the color of the light emitted via the onboard LED, we can utilize the built in `StartPulse()` method of the `RgbPwmLed` class:
 
 
 ```csharp
-public void BlinkLeds()
+protected void PulseRgbPwmLed()
 {
-    var state = false;
-
-    while (true) {
-        state = !state;
-
-        Console.WriteLine($"State: {state}");
-
-        redLed.State = state;
-        Thread.Sleep(500);
-        blueLed.State = state;
-        Thread.Sleep(500);
-        greenLed.State = state;
-        Thread.Sleep(500);
+    while (true)
+    {
+        Pulse(Color.Red);
+        Pulse(Color.Green);
+        Pulse(Color.Blue);
     }
+}
+
+protected void Pulse(Color color)
+{
+    rgbPwmLed.StartPulse(color);
+    Console.WriteLine($"Pulsing {color}");
+    Thread.Sleep(_pulseDuration);
+    rgbPwmLed.Stop();
 }
 ```
 
 ## Next
 
-Now that you understand the basic of a Meadow application, we recommend learning about the following topics:
+Now that you understand the basics of a Meadow application, we recommend learning about the following topics:
 
  * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
  * [Meadow.Foundation](/Meadow/Meadow.Foundation/)

@@ -3,6 +3,12 @@ uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton
 remarks: *content
 ---
 
+| RotaryEncoderWithButton |             |
+|-------------------------|-------------|
+| Status                  | Not tested  |
+| Source code             | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Rotary)  |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+
 Rotary encoders are similar in form factor to potentiometers, but instead of modifying a voltage output, they send a digital signal encoded using Gray Code when rotated that can be decoded to ascertain the direction of turn.
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.jpg)
@@ -27,94 +33,74 @@ This rotary encoder driver works with most rotary encoders which return a two-bi
 
 Some rotary encoders, such as the ones pictured above, have an integrated push button. This driver exposes that button as a PushButton via the Button property.
 
----
-uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton
-example: [*content]
----
-
 The following example shows how to register event handlers to print in the console when pressing and relasing the push button:
 
 ```csharp
-using System.Threading;
-using Meadow;
-using Meadow.Foundation.LEDs;
-using Meadow.Foundation.Sensors.Rotary;
-
-namespace RotaryEncoder_Sample
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public class Program
+    protected RotaryEncoderWithButton _rotary = null;
+    protected PwmLed _led = null;
+    // how much to change the brightness per rotation step. 
+    // 0.05 = 20 clicks to 100%
+    protected float _brightnessStepChange = 0.05F; 
+
+    public MeadowApp()
     {
-        static IApp _app; 
-        public static void Main()
-        {
-            _app = new App();
-        }
+        // instantiate our peripherals
+        _rotary = new RotaryEncoder(
+            Device.Pins.D05, Device.Pins.D06,
+            CircuitTerminationType.CommonGround);
+        _rotary.Rotated += RotaryRotated;
+        _rotary.Clicked += RotaryClicked;
+
+        _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
     }
-    
-    public class App : AppBase<F7Micro, App>
+
+    protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
     {
-        protected RotaryEncoderWithButton _rotary = null;
-        protected PwmLed _led = null;
-        // how much to change the brightness per rotation step. 
-        // 0.05 = 20 clicks to 100%
-        protected float _brightnessStepChange = 0.05F; 
-
-        public App()
+        // if clockwise, turn it up! clamp to 1, so we don't go over.
+        if (e.Direction == RotationDirection.Clockwise)
         {
-            // instantiate our peripherals
-            _rotary = new RotaryEncoder(
-                Device.Pins.D05, Device.Pins.D06,
-                CircuitTerminationType.CommonGround);
-            _rotary.Rotated += RotaryRotated;
-            _rotary.Clicked += RotaryClicked;
-
-            _led = new PwmLed(Device.Pins.D12, TypicalForwardVoltage.Red);
-        }
-
-        protected void RotaryRotated(object sender, RotaryTurnedEventArgs e)
-        {
-            // if clockwise, turn it up! clamp to 1, so we don't go over.
-            if (e.Direction == RotationDirection.Clockwise)
+            if(_led.Brightness >= 1) 
             {
-                if(_led.Brightness >= 1) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness + 
-                        _brightnessStepChange).Clamp(0,1));
-                }
-            } 
-            else // otherwise, turn it down. clamp to 0 so we don't go below. 
-            { 
-                if (_led.Brightness <= 0) 
-                {
-                    return;
-                } 
-                else 
-                {
-                    _led.SetBrightness((_led.Brightness - 
-                        _brightnessStepChange).Clamp(0,1));
-                }
-            }
-        }
-
-        private void RotaryClicked(object sender, EventArgs e)
-        {
-            if (_led.Brightness > 0) 
-            {
-                _led.SetBrightness(0f);
+                return;
             } 
             else 
             {
-                _led.SetBrightness(_lastOnBrightness);
+                _led.SetBrightness((_led.Brightness + 
+                    _brightnessStepChange).Clamp(0,1));
             }
+        } 
+        else // otherwise, turn it down. clamp to 0 so we don't go below. 
+        { 
+            if (_led.Brightness <= 0) 
+            {
+                return;
+            } 
+            else 
+            {
+                _led.SetBrightness((_led.Brightness - 
+                    _brightnessStepChange).Clamp(0,1));
+            }
+        }
+    }
+
+    private void RotaryClicked(object sender, EventArgs e)
+    {
+        if (_led.Brightness > 0) 
+        {
+            _led.SetBrightness(0f);
+        } 
+        else 
+        {
+            _led.SetBrightness(_lastOnBrightness);
         }
     }
 }
 ```
 
-##### Example Circuit
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton/RotaryEncoderWithButton.svg)

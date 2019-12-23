@@ -3,48 +3,46 @@ uid: Meadow.Foundation.Sensors.Buttons.PushButton
 remarks: *content
 ---
 
-The PushButton class represents a simple push button, such as a tactile momentary button. To get notified when it’s clicked, subscribe to the Clicked event. If you need to know when the button is held down, subscribe to the PressStarted and PressEnded events.
+| PushButton    |             |
+|---------------|-------------|
+| Status        | Working     |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Buttons/) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
 
----
-uid: Meadow.Foundation.Sensors.Buttons.PushButton
-example: [*content]
----
+The **PushButton** class represents a simple push button, such as a tactile momentary button. To get notified when it’s clicked, subscribe to the Clicked event. If you need to know when the button is held down, subscribe to the PressStarted and PressEnded events.
 
-The following example shows how to register event handlers to print in the console when pressing and relasing the push button:
+### Code Example
 
 ```csharp
-using System.Threading;
-using Meadow;
-
-namespace PushButtonSample
+public class Program
 {
-    public class Program
+    public static void Main()
     {
-        public static void Main()
-        {
-            var pushButton = new PushButton(
-                Device.Pins.D08, 
-                Meadow.Foundation.CircuitTerminationType.High
-            );
-            pushButton.PressStarted += PushButtonPressStarted;
-            pushButton.PressEnded += PushButtonPressEnded;
+        var pushButton = new PushButton(
+            Device.Pins.D08, 
+            Meadow.Foundation.CircuitTerminationType.High
+        );
+        pushButton.PressStarted += PushButtonPressStarted;
+        pushButton.PressEnded += PushButtonPressEnded;
 
-            Thread.Sleep(Timeout.Infinite);
-        }
-
-        private void PushButtonPressStarted(object sender, EventArgs e)
-        {
-            Console.WriteLine("Press Started..."); 
-        }
-
-        private void PushButtonPressEnded(object sender, EventArgs e)
-        {
-            Console.WriteLine("Press Ended...");
-        }
+        Thread.Sleep(Timeout.Infinite);
     }
+
+    private void PushButtonPressStarted(object sender, EventArgs e)
+    {
+        Console.WriteLine("Press Started..."); 
+    }
+
+    private void PushButtonPressEnded(object sender, EventArgs e)
+    {
+        Console.WriteLine("Press Ended...");
+    }
+    
 }
 ```
 
-##### Example Circuit
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
+### Wiring Example
 
 ![](../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton.svg)
