@@ -19,8 +19,6 @@ These displays have excellent visibility in daylight, even without the backlight
 
 ### Code Example
 
-The following example shows how to initialize a TEA5767 and look for radio stations:
-
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
