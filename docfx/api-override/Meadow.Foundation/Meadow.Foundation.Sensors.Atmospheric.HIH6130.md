@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Hih6130.svg?label=Meadow.Foundation.Sensors.Atmospheric.Hih6130" style="width: auto; height: -webkit-fill-available;" /> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Hih6130/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Hih6130.svg?label=Meadow.Foundation.Sensors.Atmospheric.Hih6130" style="width: auto; height: -webkit-fill-available;" /></a> |
 
 The **HIH6130** sensor allows the reading of the relative humidity and temperature via I2C.
 
