@@ -54,12 +54,20 @@ As well, we've published 14 new drivers via NuGet:
 * BNO055 I2C 9-Axis absolute orientation sensor
 * TMP102 I2C temperature sensor
 
-### Meadow.CLI Fixes and Updates
+### Meadow.CLI Fixes, Updates, and Open-Sourcing
 
 Most of the Meadow.CLI changes involve more complete information being returned by Meadow. Previously, Meadow only returned text strings. Now it returns more structured information and is more stable. Some of these changes will become important in future releases. One new command was added, `RenewFileSys`. This command recreates a new, empty file system.
 
+#### Open Sourced
+
+Also, we open-sourced the [Meadow.CLI](https://github.com/WildernessLabs/Meadow.CLI) code. Some of the code is ugly. We know. :)
+
 ### Samples and Documentation 
 We've updated and standardized all of the sample projects in Meadow.Foundation to match the latest template. And we've invested heavily in our docs, you'll notice we've added details and wiring diagrams for most of our peripheral docs.
+
+### Updating
+
+You'll need to flash new Meadow.OS binaries to your device, upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
 
 ## Beta 3.5
 
