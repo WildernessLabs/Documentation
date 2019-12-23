@@ -6,8 +6,8 @@ remarks: *content
 | PCD8544       |             |
 |---------------|-------------|
 | Status        | Working     |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.PCD8544) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Pcd8544.svg?label=Meadow.Foundation.Displays.Pcd8544" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Pcd8544/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Pcd8544.svg?label=Meadow.Foundation.Displays.Pcd8544" style="width: auto; height: -webkit-fill-available;" /></a> |
 
 The **PCD8544** display, also known as a Nokia 5110 LCD, is a single color 84x84 LCD display. Data is sent to the display via SPI. The also typically also include an led backlight controlled via a single pin. 
 
@@ -18,8 +18,6 @@ These displays have excellent visibility in daylight, even without the backlight
 * [NOKIA 5110 SPI LCD graphic display 84x48](https://www.ebay.com/sch/i.html?LH_CAds=&_ex_kw=&_fpos=&_fspt=1&_mPrRngCbx=1&_nkw=Nokia+5110+arduino&_sacat=&_sadis=&_sop=12&_udhi=&_udlo=&_fosrp=1)
 
 ### Code Example
-
-The following example shows how to initialize a TEA5767 and look for radio stations:
 
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
