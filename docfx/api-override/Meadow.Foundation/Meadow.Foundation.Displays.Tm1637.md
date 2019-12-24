@@ -56,3 +56,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
+
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
