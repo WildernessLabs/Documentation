@@ -95,8 +95,7 @@ To flash Meadow to the board:
  the previous step. Each command should complete with `File downloaded successfully`
 
    ```bash
-   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 &&
-   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
+   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 && dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
    ```
    
 When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
