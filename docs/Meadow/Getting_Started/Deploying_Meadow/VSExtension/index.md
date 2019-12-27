@@ -14,7 +14,7 @@ First, you need to install the latest **VS Tools for Meadow Extension** by [down
 
 Next, let's install MeadowOS.
 
-*Important: If you previously installed MeadowOS via DFU, you need to uninstall the WinUSB bootloader driver. See **Uninstall WinUSB Bootloader Driver** below.*
+*Important: If you previously installed MeadowOS with `dfu-util` and updated the STM32 BOOTLOADER driver from STTub30 to WinUSB through Zadig, you need to uninstall the WinUSB driver. See **Uninstall WinUSB Bootloader Driver** below.*
 
 1. Open Visual Studio 2019 and select **Continue without code**.
 1. Open Meadow Device Explorer: View > Other Windows > Meadow (or Ctrl+Shift+M).  
@@ -26,7 +26,7 @@ Next, let's install MeadowOS.
 
 ## Uninstall WinUSB Bootloader Driver
 
-*If you did not installed MeadowOS via DFU previously, you can skip this section.*
+*If you did not install MeadowOS via `dfu-util` previously, you can skip this section.*
 
 1. Connect your device in bootloader mode.
 1. Open **Device Manager**.
@@ -35,6 +35,6 @@ Next, let's install MeadowOS.
 1. In the Uninstall Device window, check **Delete the driver software for this device.** and click Uninstall.  
 ![Driver Uninstall](driver_uninstall.png){:standalone}
 1. After uninstall is completed, the device will appear as **STM Device in DFU Mode** under Universal Serial Bus controllers.
-1. Now, try flashing the device again in Visual Studio.
+1. Reconnect the device in bootloader mode.
 
 ## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)

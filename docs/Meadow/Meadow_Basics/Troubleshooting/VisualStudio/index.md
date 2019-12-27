@@ -8,7 +8,7 @@ subtitle: Troubleshooting guide for Visual Studio
 
 * First thing is to verify your device is in bootloader mode. To do this, connect the USB cable to the Meadow device while holding down the BOOT button.
 
-* If you previously updated the STM32 BOOTLOADER driver from STTub30 to WinUSB through Zadig, you will need to uninstall the WinUSB driver since the Meadow extension uses the ST driver. Here are the steps to uninstall the WinUSB driver:
+* If you previously installed MeadowOS with `dfu-util` and updated the STM32 BOOTLOADER driver from STTub30 to WinUSB through Zadig, you need to uninstall the WinUSB driver:
   1. Connect your device in bootloader mode.
   1. Open **Device Manager**.
   1. Find Universal Serial Bus devices > STM32 BOOTLOADER
@@ -16,7 +16,7 @@ subtitle: Troubleshooting guide for Visual Studio
   1. In the Uninstall Device window, check **Delete the driver software for this device.** and click Uninstall  
   ![Driver Uninstall](driver_uninstall.png){:standalone}
   1. After uninstall is completed, the device will appear as **STM Device in DFU Mode** under Universal Serial Bus controllers.
-  1. Now, try flashing the device again in Visual Studio.
+  1. Reconnect the device in bootloader mode.
 
 ## Which COM port do I use?
 
