@@ -30,7 +30,8 @@ Next, let's install MeadowOS.
 1. Open **Device Manager**.
 1. Find Universal Serial Bus devices > STM32 BOOTLOADER.
 1. Right-click **STM32 BOOTLOADER** and select Uninstall Device.
-1. In the Uninstall Device window, check **Delete the driver software for this device.** and click Uninstall.
+1. In the Uninstall Device window, check **Delete the driver software for this device.** and click Uninstall.  
+![Driver Uninstall](driver_uninstall.png){:standalone}
 1. After uninstall is completed, the device will appear as **STM Device in DFU Mode** under Universal Serial Bus controllers.
 1. Now, try flashing the device again in Visual Studio.
 
