@@ -17,9 +17,9 @@ You'll need Visual Studio 2019 for either Windows or Mac; [available here](https
 
 ## Windows
 
-You'll need to ensure the **.NET Framework 4.7.2 development tools** are installed. To verify, run the Visual Studio Installer and click **Modify**. Under **Installation details**, expand **.NET desktop development** and ensure that **.NET Framework 4.7.2 development tools** is checked.
+You'll need to ensure the **.NET Framework 4.7.2 SDK and targeting pack** are installed. To verify, run the Visual Studio Installer and click More > Modify. Under **Individual Components**, check **.NET Framework 4.7.2 SDK** and **.NET Framework 4.7.2 targeting pack** and install.
 
-![VS2017 Installer](vs2017_install.png){:standalone}
+![VS2019 Installer](vs2019_install.png){:standalone}
 
 You'll also need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
@@ -75,7 +75,7 @@ The Meadow application template is a simple application that will pulse the onbo
 ### Windows
 
  1. Connect your Meadow device to your development machine
- 2. Go to **View** > **Other Windows** > **Meadow** (or Ctrl+Shift+M) to open _Meadow Device Explorer_ and select your device.
+ 2. Go to **View** > **Other Windows** > **Meadow** (or Ctrl+Shift+M) to open _Meadow Device Explorer_ and select your device. *Hint: open Device Manager and expand Ports (COM & LPT), the correct Meadow device COM port is **USB Serial Device**.*
  3. Right-click project in Solution Explorer and choose **Deploy**.
  4. Wait 30-60 seconds for your application to start
 
