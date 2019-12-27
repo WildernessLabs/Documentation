@@ -76,7 +76,7 @@ To flash Meadow to the board:
 
  1. Unzip the Meadow.OS.zip package. It should contain `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin` files.
  2. Open the Command Prompt (Windows) or Terminal (macOS/Linux).
- 3. Navigate to the folder the contains the Meadow bin files.
+ 3. Navigate to the folder that contains the Meadow bin files.
  4. Enter `dfu-util --list` to see a list of dfu enabled devices:
 
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
