@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.ST7735
+uid: Meadow.Foundation.Displays.Tft.St7735
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" style="width: auto; height: -webkit-fill-available;" /> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" style="width: auto; height: -webkit-fill-available;" /></a> |
 
 The **ST7735** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These displays are commonly found with a resolution of 128x160.
 
@@ -18,14 +18,14 @@ The Meadow.Foundation ST7735 driver currently only supports 16bpp RGB565.
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    ST7735 display;
+    St7735 display;
     GraphicsLibrary graphics;
 
     public MeadowApp ()
     {
         var spiBus = Device.CreateSpiBus();
 
-        display = new ST7735(
+        display = new St7735(
             device: Device, 
             spiBus: spiBus,
             chipSelectPin: null,

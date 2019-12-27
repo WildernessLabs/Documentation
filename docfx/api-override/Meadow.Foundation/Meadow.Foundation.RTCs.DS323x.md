@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.RTCs.Ds1307
+uid: Meadow.Foundation.RTCs.Ds323x
 remarks: *content
 ---
 

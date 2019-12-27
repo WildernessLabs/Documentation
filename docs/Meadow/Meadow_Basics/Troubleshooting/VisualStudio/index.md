@@ -24,8 +24,3 @@ ___
 ___
 
 * After successfully flashing, the Meadow device shows up as **USB Serial Device (COMXX)** in Device Manager under Ports (COM & LPT). In the Meadow Device Explorer window in Visual Studio, select the appropriate **COMXX** port to target your Meadow device.
-
-<br />
-<br />
-<br />
-<br />

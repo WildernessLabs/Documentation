@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Tm1637.svg?label=Meadow.Foundation.Displays.Tm1637" style="width: auto; height: -webkit-fill-available;" /> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Tm1637/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Tm1637.svg?label=Meadow.Foundation.Displays.Tm1637" style="width: auto; height: -webkit-fill-available;" /></a> |
 
 The **TM1637** is a led driver and keyboard scan interface. However, this chip is almost exclusively found pre-assembled with with 4 7-segment displays.
 
@@ -56,3 +56,6 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
+
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

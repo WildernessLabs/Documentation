@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.ST7789
+uid: Meadow.Foundation.Displays.Tft.St7789
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |---------------|-------------|
 | Status        | Working     |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" style="width: auto; height: -webkit-fill-available;" /> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" style="width: auto; height: -webkit-fill-available;" /></a> |
 
 The **ST7789** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These are typically paired with high pixel density displays, the most common being a 1.5" 240x240 display.
 
@@ -28,7 +28,7 @@ You can get ST7789 displays from the following suppliers:
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    ST7789 display;
+    St7789 display;
     GraphicsLibrary graphics;
 
     public MeadowApp ()
@@ -36,7 +36,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
         var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
         var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        display = new ST7789(
+        display = new St7789(
             device: Device, 
             spiBus: spiBus,
             chipSelectPin: null,
