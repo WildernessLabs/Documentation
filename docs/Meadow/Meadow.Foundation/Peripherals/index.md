@@ -33,9 +33,9 @@ The peripherals are split into two groups; the first group is general, core peri
 
 ### Audio
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.TEA5767.html) | FM radio module | |
+| Status | Driver | Description | 
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.TEA5767.html) | FM radio module |
 
 ### Display and Graphics Drivers
 
@@ -56,62 +56,62 @@ The peripherals are split into two groups; the first group is general, core peri
 
 ### FeatherWings
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [JoyWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.JoyWing.html) | A 2-axis joystick and 5 momentary buttons gamepad | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [JoyWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.JoyWing.html) | A 2-axis joystick and 5 momentary buttons gamepad |
 
 ### Integrated Circuits (ICs)
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [AT24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.AT24Cxx.html) | AT24Cxx Family of EEPROMs including AT24C32 | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [HT16K33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16K33.html) | HT16K33 for digital output expansion | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MCP23008](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23008.html) | MCP23008 for digital output expansion | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [AT24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.AT24Cxx.html) | AT24Cxx Family of EEPROMs including AT24C32 |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [HT16K33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16K33.html) | HT16K33 for digital output expansion |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MCP23008](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23008.html) | MCP23008 for digital output expansion |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion |
 
 ### Motors
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-orange" />      | [Uln2003](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003.html) | A 2-axis joystick and 5 momentary buttons gamepad | |
+| <img src="https://img.shields.io/badge/Working-orange" />      | [Uln2003](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003.html) | A 2-axis joystick and 5 momentary buttons gamepad | Slow due interpret mode |
 
 ### Real Time Clocks (RTCs)
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SD1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.SD1307.html) | Real Time Clock SD1307 | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [DS323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.DS323x.html) | Real Time Clock modules | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SD1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.SD1307.html) | Real Time Clock SD1307 |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [DS323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.DS323x.html) | Real Time Clock modules |
 
 ### Sensors
 
 #### Atmospheric (Temperature, Humidity, Barometer, Altitude) Sensors
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bme280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280.html) | I2C/SPI temperature, humidity, and pressure sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html) | I2C pressure sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | Grove TH02 temperature and humidity sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | I2C temperature and humidity sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | I2C temperature and humidity sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL115A2.html) | Barometric sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL3115A2.html) | Barometric sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | I2C temperature and humidity sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI70xx.html) |  I2C temperature and humidity sensor | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bme280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280.html) | I2C/SPI temperature, humidity, and pressure sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html) | I2C pressure sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | Grove TH02 temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL115A2.html) | Barometric sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL3115A2.html) | Barometric sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI70xx.html) |  I2C temperature and humidity sensor |
 
 #### Cameras
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Pending-yellow" /> | [Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html) | A VGA CMOS camera sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" /> | [ArducamMini](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.ArducamMini.html) | A high definition 2MP SPI camera | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Pending-yellow" /> | [Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html) | A VGA CMOS camera sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" /> | [ArducamMini](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.ArducamMini.html) | A high definition 2MP SPI camera |
 
 #### Distance Sensors
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | Sonic distance sensor   | |
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HYSRF05.html) | Sonic distance sensor | |
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.SFSR02.html) | Sonic distance sensor   | |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HYSRF05.html) | Sonic distance sensor | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.SFSR02.html) | Sonic distance sensor   | Needs AOT compilation |
 
 #### GPS Sensors & Libraries
 
@@ -121,33 +121,33 @@ The peripherals are split into two groups; the first group is general, core peri
 
 #### Light Sensors
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ALSPT19315C](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.ALSPT19315C.html) | Analog light sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Si1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | I2C infrared, ultraviolet, and ambient light sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Tsl2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | I2C infrared-compensated light sensor | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ALSPT19315C](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.ALSPT19315C.html) | Analog light sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Si1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | I2C infrared, ultraviolet, and ambient light sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Tsl2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | I2C infrared-compensated light sensor |
 
 #### Soil Moisture Sensors
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Capacitive](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | Capacitive Soil Moisture Sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Fc28](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.FC28.html) | Soil Moisture Sensor | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Capacitive](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | Capacitive Soil Moisture Sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Fc28](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.FC28.html) | Soil Moisture Sensor |
 
 #### Motion and Orientation Sensors
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl335](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html) | Analog triple axis, +/-3g accelerometer | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl337](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337.html) | Analog triple axis, +/-3g accelerometer | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl345](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl345.html) | I2C triple axis accelerometer, +/-16g accelerometer | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Adxl362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html) | SPI low power, 3-axis MEMS accelerometer | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl377](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html) | Analog triple axis, +/-200g accelerometer | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor | |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | I2C three axis magnetometer | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl335](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html) | Analog triple axis, +/-3g accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl337](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337.html) | Analog triple axis, +/-3g accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl345](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl345.html) | I2C triple axis accelerometer, +/-16g accelerometer |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Adxl362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html) | SPI low power, 3-axis MEMS accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl377](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html) | Analog triple axis, +/-200g accelerometer |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | I2C three axis magnetometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector |
 
 #### Temperature Sensors
 
