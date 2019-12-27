@@ -16,7 +16,9 @@ Next, let's install MeadowOS.
 
 *Important: If you previously installed MeadowOS via DFU, you need to uninstall the WinUSB bootloader driver. See **Uninstall WinUSB Bootloader Driver** below.*
 
-1. In Visual Studio, open Meadow Device Explorer: View > Other Windows > Meadow (or Ctrl+Shift+M).
+1. Open Visual Studio 2019 and select **Continue without code**.
+1. Open Meadow Device Explorer: View > Other Windows > Meadow (or Ctrl+Shift+M).  
+![Meadow Device Explorer](explorer.png){:standalone}
 1. Click **Download MeadowOS**.
 1. Connect your Meadow device in bootloader mode by connecting your device while holding down the **BOOT** button.
 1. Click **Flash Device**. This will take a couple minutes to complete.
