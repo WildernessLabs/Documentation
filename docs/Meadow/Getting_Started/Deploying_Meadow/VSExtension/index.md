@@ -10,7 +10,7 @@ First, you need to install the latest **VS Tools for Meadow Extension** by [down
 
 1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
 1. Click **Online** and search for `Meadow`.
-1. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart.
+1. Install **VS Tools for Meadow** (version 0.6.0 or later), shut down all instances of Visual Studio, and restart.
 
 Next, let's install MeadowOS.
 
