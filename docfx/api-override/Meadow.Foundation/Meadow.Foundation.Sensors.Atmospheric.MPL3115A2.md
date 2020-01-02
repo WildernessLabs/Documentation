@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Barometric.Mpl3115A2
+uid: Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2
 remarks: *content
 ---
 

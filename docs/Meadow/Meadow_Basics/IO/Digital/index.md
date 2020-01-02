@@ -68,9 +68,9 @@ input.Changed += (s, e) =>
 
 ## Timing
 
->**NOTE FROM THE WILDERNESS LABS TEAM:**
-> 
->These timing values are measurements from Beta 3.6. We recognize that they are not fast enough for all applications, but they are adequate for many. Keep in mind that these values are a significant improvement from earlier Betas and the expectation is for them to improve drastically as we move toward release, so if they don't meet your needs feel free to contact us with your requirements to find our when to expect a release that will meet your needs.
+**NOTE FROM THE WILDERNESS LABS TEAM:**
+ 
+These timing values are measurements from Beta 3.6. We recognize that they are not fast enough for all applications, but they are adequate for many. Keep in mind that these values are a significant improvement from earlier Betas and the expectation is for them to improve drastically as we move toward release, so if they don't meet your needs feel free to contact us with your requirements to find our when to expect a release that will meet your needs.
 
 
 An important consideration for most applications is the minimum timing capabilities of the platform on which you're running.

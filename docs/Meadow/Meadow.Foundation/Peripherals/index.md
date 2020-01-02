@@ -35,15 +35,15 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | 
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.TEA5767.html) | FM radio module |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.TEA5767.html) | I2C FM radio module |
 
 ### Display and Graphics Drivers
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
 | <img src="https://img.shields.io/badge/Working-orange" />      | [ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | ePaper/eInk display Library | Slow due interpret mode |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | digital IO only |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.LED.SevenSegment.html) | Seven Segment display | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | Digital IO only |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SevenSegment.html) | Seven Segment display | |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Max7219](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html) | MAX7219 led display driver Library | |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Pcd8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html) | PCD8544 LCD driver (Nokia 5110) | |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [SerialLCD](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SerialLCD.html) | SparkFun serial LCD backpack driver | |
@@ -79,8 +79,8 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SD1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.SD1307.html) | Real Time Clock SD1307 |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [DS323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.DS323x.html) | Real Time Clock modules |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ds1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds1307.html) | Real Time Clock SD1307 |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Ds323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x.html) | Real Time Clock modules |
 
 ### Sensors
 
@@ -91,10 +91,10 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bme280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280.html) | I2C/SPI temperature, humidity, and pressure sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html) | I2C pressure sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | Grove TH02 temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.HIH6130.html) | I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL115A2.html) | Barometric sensor |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Barometric.MPL3115A2.html) | Barometric sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.html) | Barometric sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html) | Barometric sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI70xx.html) |  I2C temperature and humidity sensor |
 
@@ -117,7 +117,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [NMEA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.GPS.NMEA.html) | Generic GPS sentence decoder library | |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [NMEA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.GPS.NMEA.html) | Generic GPS sentence decoder library | Needs serial events |
 
 #### Light Sensors
 
@@ -158,6 +158,6 @@ The peripherals are split into two groups; the first group is general, core peri
 
 ### Servos
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library  | |
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library |
