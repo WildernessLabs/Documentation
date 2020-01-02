@@ -18,7 +18,7 @@ It is important to ensure that you have a USB cable capable of providing data tr
 
 It is important to ensure that Windows computers have the correct driver installed.
 
-Scott Hanselman has written a good [blog post](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) about how to check this and ensure that the correct driver in installed.
+Scott Hanselman has written a good [blog post](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) about how to check this and ensure that the correct driver is installed.
 
 ## Deploying from a Virtual Machine
 
