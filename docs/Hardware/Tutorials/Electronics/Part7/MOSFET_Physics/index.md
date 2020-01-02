@@ -14,15 +14,21 @@ In the illustration above, there are two _channels_ of N-type (negatively charge
 
 ## Depletion Region
 
-Recall from the last chapter that the P-type and N-type junction creates a depletion region because the nearby holes and electrons combine. Without any free charge carriers, the area between the P and N-type silicon becomes an insulator:
+Recall from the last chapter that the P-type and N-type junction creates a [depletion region](/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/) because the nearby holes and electrons combine. Without any free charge carriers, the area between the P and N-type silicon becomes an insulator:
 
 ![](../Support_Files/MOSFET_Depletion_Region.svg){:standalone}
+
+Also recall from the previous chapter, that in the P-type silicon, there are still a small number of of electrons available, known as a _minority charge carriers_.
 
 ## Making Current Flow
 
 As the name implies, MOSFETs work by creating an electric field. If we apply a positive voltage to the gate, it creates an electric field that attracts electrons to the area between the channels and the gate electrode:
 
 ![](../Support_Files/MOSFET_Gate_Voltage.svg){:standalone}
+
+You might be wondering, "where did those electrons come from?" Recal
+
+[those electrons are _minority charge carriers_ in the P-type]
 
 Now, with free electrons in that area, current can flow between the gate and source leads.
 

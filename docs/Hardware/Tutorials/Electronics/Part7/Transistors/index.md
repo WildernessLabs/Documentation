@@ -55,7 +55,7 @@ However, transistors can be used for more than just switching, in fact, they can
 
 This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and to a lesser degree, capacitors (which we'll dive into later).
 
-## BJTs and MOSFETs
+## MOSFETs and BJTs
 
 While Wikipedia lists [52 different types of transistors](https://en.wikipedia.org/wiki/Category:Transistor_types?sa=X&ved=0ahUKEwiMvbG4l8zhAhWBsJ4KHdwtBvUQ1i8IJzAh), there are really only two types of transistors that are commonly used in modern digital circuits, _MOSFETs_, and _BJTs_.
 
