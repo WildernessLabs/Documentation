@@ -119,4 +119,4 @@ Mnemonics:
 <!-- ## [Next - Transistor Lab](../Transistor_Lab) -->
 [diagram of a few different three lead transistor packages]
 
-# [Next - Physics of Transistors](../Physics)
+# [Next - Physics of MOSFETs](../MOSFET_Physics)

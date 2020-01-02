@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="400px" viewBox="0 0 900 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>MOSFET_Gate_Double_Voltage</title>
+    <desc>Created with Sketch.</desc>
+    <g id="MOSFET_Gate_Double_Voltage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustration_Frame">
+            <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#EEEEEE" fill-rule="evenodd" x="1" y="1" width="898" height="398"></rect>
+            <rect id="Rectangle-Copy" stroke="#3D3530" stroke-width="2" fill="#F8FAE4" fill-rule="evenodd" x="1" y="356" width="898" height="43"></rect>
+            <text id="Illustration-Title" font-family="Wavehaus-66Book, Wavehaus" font-size="24" font-weight="300" letter-spacing="0.6666667" fill="#23ABE3">
+                <tspan x="592.098666" y="385">Voltage Applied to Gate</tspan>
+            </text>
+        </g>
+        <g id="MOSFET" transform="translate(250.000000, 32.000000)">
+            <rect id="Border" stroke="#3D3530" stroke-width="2" x="-1" y="142" width="402" height="152"></rect>
+            <rect id="Insulator" fill="#B09679" x="0" y="143" width="400" height="40"></rect>
+            <rect id="Rectangle-Copy" fill="#737373" x="150" y="158" width="100" height="15"></rect>
+            <g id="P-Type" transform="translate(0.000000, 183.000000)">
+                <rect id="Rectangle" fill="#D4D4D4" x="0" y="0" width="400" height="110"></rect>
+                <text font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#524740">
+                    <tspan x="164.5" y="93">P-Type</tspan>
+                </text>
+            </g>
+            <g id="Drain-Channel" transform="translate(235.000000, 183.000000)">
+                <path d="M0,0 L100,0 L100,27.5 C100,42.6878306 87.6878306,55 72.5,55 L27.5,55 C12.3121694,55 5.41268649e-15,42.6878306 0,27.5 L0,0 L0,0 Z" id="Rectangle-Copy-5" fill="#7D7570"></path>
+                <g id="Electrons" transform="translate(23.000000, 4.000000)" fill="#EF7D3B">
+                    <circle id="Oval-Copy-57" cx="13.25" cy="13.25" r="3.25"></circle>
+                    <circle id="Oval-Copy-58" cx="3.25" cy="3.25" r="3.25"></circle>
+                    <circle id="Oval-Copy-59" cx="23.25" cy="3.25" r="3.25"></circle>
+                    <circle id="Oval-Copy-60" cx="41.25" cy="11.25" r="3.25"></circle>
+                </g>
+                <text id="N-Type-Copy" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#E0DEDD">
+                    <tspan x="12" y="31">N-Type</tspan>
+                </text>
+            </g>
+            <g id="Source-Channel" transform="translate(65.000000, 183.000000)">
+                <path d="M0,0 L100,0 L100,27.5 C100,42.6878306 87.6878306,55 72.5,55 L27.5,55 C12.3121694,55 5.41268649e-15,42.6878306 0,27.5 L0,0 L0,0 Z" id="Rectangle-Copy-5" fill="#7D7570"></path>
+                <g id="Electrons" transform="translate(23.000000, 4.000000)" fill="#EF7D3B">
+                    <circle id="Oval-Copy-57" cx="13.25" cy="13.25" r="3.25"></circle>
+                    <circle id="Oval-Copy-58" cx="3.25" cy="3.25" r="3.25"></circle>
+                    <circle id="Oval-Copy-59" cx="23.25" cy="3.25" r="3.25"></circle>
+                    <circle id="Oval-Copy-60" cx="41.25" cy="11.25" r="3.25"></circle>
+                </g>
+                <text id="N-Type-Copy" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#E0DEDD">
+                    <tspan x="12" y="31">N-Type</tspan>
+                </text>
+            </g>
+            <g id="Holes" transform="translate(4.000000, 185.000000)">
+                <circle id="Oval-Copy-145" stroke="#84D0EF" stroke-width="2" cx="47.25" cy="80.25" r="4.25"></circle>
+                <circle id="Oval-Copy-146" stroke="#84D0EF" stroke-width="2" cx="21.25" cy="91.25" r="4.25"></circle>
+                <circle id="Oval-Copy-147" stroke="#84D0EF" stroke-width="2" cx="3.25" cy="100.25" r="4.25"></circle>
+                <circle id="Oval-Copy-92" stroke="#84D0EF" stroke-width="2" cx="24.25" cy="29.25" r="4.25"></circle>
+                <circle id="Oval-Copy-95" stroke="#84D0EF" stroke-width="2" cx="6.25" cy="78.25" r="4.25"></circle>
+                <circle id="Oval-Copy-96" stroke="#84D0EF" stroke-width="2" cx="29.25" cy="68.25" r="4.25"></circle>
+                <circle id="Oval-Copy-97" stroke="#84D0EF" stroke-width="2" cx="37.25" cy="94.25" r="4.25"></circle>
+                <circle id="Oval-Copy-98" stroke="#84D0EF" stroke-width="2" cx="62.25" cy="99.25" r="4.25"></circle>
+                <circle id="Oval-Copy-142" stroke="#84D0EF" stroke-width="2" cx="83.25" cy="91.25" r="4.25"></circle>
+                <circle id="Oval-Copy-143" stroke="#84D0EF" stroke-width="2" cx="101.25" cy="98.25" r="4.25"></circle>
+                <circle id="Oval-Copy-169" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="95.25" cy="51.25" r="4.25"></circle>
+                <circle id="Oval-Copy-170" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="83.25" cy="57.25" r="4.25"></circle>
+                <circle id="Oval-Copy-171" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="77.25" cy="44.25" r="4.25"></circle>
+                <circle id="Oval-Copy-172" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="65.25" cy="46.25" r="4.25"></circle>
+                <circle id="Oval-Copy-173" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="66.25" cy="31.25" r="4.25"></circle>
+                <circle id="Oval-Copy-174" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="59.25" cy="21.25" r="4.25"></circle>
+                <circle id="Oval-Copy-175" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="63.25" cy="12.25" r="4.25"></circle>
+                <circle id="Oval-Copy-176" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="57.25" cy="3.25" r="4.25"></circle>
+                <circle id="Oval-Copy-100" stroke="#84D0EF" stroke-width="2" cx="110.25" cy="85.25" r="4.25"></circle>
+                <circle id="Oval-Copy-101" stroke="#84D0EF" stroke-width="2" cx="131.25" cy="96.25" r="4.25"></circle>
+                <circle id="Oval-Copy-102" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="139.25" cy="43.25" r="4.25"></circle>
+                <circle id="Oval-Copy-166" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="129.25" cy="57.25" r="4.25"></circle>
+                <circle id="Oval-Copy-103" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="153.25" cy="37.25" r="4.25"></circle>
+                <circle id="Oval-Copy-104" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="148.25" cy="51.25" r="4.25"></circle>
+                <circle id="Oval-Copy-105" stroke="#84D0EF" stroke-width="2" cx="188.25" cy="99.25" r="4.25"></circle>
+                <circle id="Oval-Copy-106" stroke="#84D0EF" stroke-width="2" cx="185.25" cy="39.25" r="4.25"></circle>
+                <circle id="Oval-Copy-107" stroke="#84D0EF" stroke-width="2" cx="196.25" cy="59.25" r="4.25"></circle>
+                <circle id="Oval-Copy-140" stroke="#84D0EF" stroke-width="2" cx="160.25" cy="97.25" r="4.25"></circle>
+                <circle id="Oval-Copy-141" stroke="#84D0EF" stroke-width="2" cx="174.25" cy="67.25" r="4.25"></circle>
+                <circle id="Oval-Copy-112" fill="#EF7D3B" cx="182.25" cy="4.25" r="3.25"></circle>
+                <circle id="Oval-Copy-113" fill="#EF7D3B" cx="181.25" cy="15.25" r="3.25"></circle>
+                <circle id="Oval-Copy-114" fill="#EF7D3B" cx="195.25" cy="13.25" r="3.25"></circle>
+                <circle id="Oval-Copy-117" fill="#EF7D3B" cx="213.25" cy="16.25" r="3.25"></circle>
+                <circle id="Oval-Copy-109" stroke="#84D0EF" stroke-width="2" cx="209.25" cy="47.25" r="4.25"></circle>
+                <circle id="Oval-Copy-110" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="160.25" cy="19.25" r="4.25"></circle>
+                <circle id="Oval-Copy-167" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="118.25" cy="47.25" r="4.25"></circle>
+                <circle id="Oval-Copy-168" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="107.25" cy="54.25" r="4.25"></circle>
+                <circle id="Oval-Copy-151" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="164.25" cy="31.25" r="4.25"></circle>
+                <circle id="Oval-Copy-111" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="152.25" cy="10.25" r="4.25"></circle>
+                <circle id="Oval-Copy-152" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="162.25" cy="3.25" r="4.25"></circle>
+                <circle id="Oval-Copy-153" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="229.25" cy="4.25" r="4.25"></circle>
+                <circle id="Oval-Copy-177" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="233.25" cy="16.25" r="4.25"></circle>
+                <circle id="Oval-Copy-178" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="228.25" cy="26.25" r="4.25"></circle>
+                <circle id="Oval-Copy-179" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="238.25" cy="31.25" r="4.25"></circle>
+                <circle id="Oval-Copy-180" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="237.25" cy="46.25" r="4.25"></circle>
+                <circle id="Oval-Copy-181" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="249.25" cy="43.25" r="4.25"></circle>
+                <circle id="Oval-Copy-182" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="251.25" cy="52.25" r="4.25"></circle>
+                <circle id="Oval-Copy-183" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="262.25" cy="52.25" r="4.25"></circle>
+                <circle id="Oval-Copy-184" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="276.25" cy="56.25" r="4.25"></circle>
+                <circle id="Oval-Copy-185" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="284.25" cy="49.25" r="4.25"></circle>
+                <circle id="Oval-Copy-186" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="292.25" cy="53.25" r="4.25"></circle>
+                <circle id="Oval-Copy-187" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="305.25" cy="55.25" r="4.25"></circle>
+                <circle id="Oval-Copy-188" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="313.25" cy="47.25" r="4.25"></circle>
+                <circle id="Oval-Copy-189" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="327.25" cy="43.25" r="4.25"></circle>
+                <circle id="Oval-Copy-190" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="327.25" cy="27.25" r="4.25"></circle>
+                <circle id="Oval-Copy-191" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="333.25" cy="17.25" r="4.25"></circle>
+                <circle id="Oval-Copy-192" stroke="#84D0EF" stroke-width="2" fill="#EF7D3B" cx="327.25" cy="6.25" r="4.25"></circle>
+                <circle id="Oval-Copy-115" stroke="#84D0EF" stroke-width="2" cx="211.25" cy="71.25" r="4.25"></circle>
+                <circle id="Oval-Copy-116" stroke="#84D0EF" stroke-width="2" cx="145.25" cy="81.25" r="4.25"></circle>
+                <circle id="Oval-Copy-119" stroke="#84D0EF" stroke-width="2" cx="238.25" cy="88.25" r="4.25"></circle>
+                <circle id="Oval-Copy-120" stroke="#84D0EF" stroke-width="2" cx="257.25" cy="96.25" r="4.25"></circle>
+                <circle id="Oval-Copy-123" stroke="#84D0EF" stroke-width="2" cx="287.25" cy="91.25" r="4.25"></circle>
+                <circle id="Oval-Copy-125" stroke="#84D0EF" stroke-width="2" cx="311.25" cy="96.25" r="4.25"></circle>
+                <circle id="Oval-Copy-127" stroke="#84D0EF" stroke-width="2" cx="339.25" cy="82.25" r="4.25"></circle>
+                <circle id="Oval-Copy-130" stroke="#84D0EF" stroke-width="2" cx="366.25" cy="35.25" r="4.25"></circle>
+                <circle id="Oval-Copy-133" stroke="#84D0EF" stroke-width="2" cx="369.25" cy="9.25" r="4.25"></circle>
+                <circle id="Oval-Copy-134" stroke="#84D0EF" stroke-width="2" cx="386.25" cy="54.25" r="4.25"></circle>
+                <circle id="Oval-Copy-135" stroke="#84D0EF" stroke-width="2" cx="383.25" cy="26.25" r="4.25"></circle>
+                <circle id="Oval-Copy-136" stroke="#84D0EF" stroke-width="2" cx="360.25" cy="60.25" r="4.25"></circle>
+                <circle id="Oval-Copy-137" stroke="#84D0EF" stroke-width="2" cx="376.25" cy="78.25" r="4.25"></circle>
+                <circle id="Oval-Copy-138" stroke="#84D0EF" stroke-width="2" cx="357.25" cy="94.25" r="4.25"></circle>
+                <circle id="Oval-Copy-139" stroke="#84D0EF" stroke-width="2" cx="387.25" cy="93.25" r="4.25"></circle>
+                <circle id="Oval-Copy-131" fill="#EF7D3B" cx="209.25" cy="4.25" r="3.25"></circle>
+                <circle id="Oval-Copy-132" fill="#EF7D3B" cx="196.25" cy="3.25" r="3.25"></circle>
+                <circle id="Oval-Copy-124" fill="#EF7D3B" cx="173.25" cy="20.25" r="3.25"></circle>
+                <circle id="Oval-Copy-122" fill="#EF7D3B" cx="181.25" cy="26.25" r="3.25"></circle>
+                <circle id="Oval-Copy-121" fill="#EF7D3B" cx="193.25" cy="29.25" r="3.25"></circle>
+                <circle id="Oval-Copy-118" fill="#EF7D3B" cx="203.25" cy="22.25" r="3.25"></circle>
+                <circle id="Oval-Copy-154" fill="#EF7D3B" cx="212.25" cy="26.25" r="3.25"></circle>
+                <circle id="Oval-Copy-144" fill="#EF7D3B" cx="191.25" cy="21.25" r="3.25"></circle>
+                <circle id="Oval-Copy-93" stroke="#84D0EF" stroke-width="2" cx="15.25" cy="50.25" r="4.25"></circle>
+                <circle id="Oval-Copy-149" stroke="#84D0EF" stroke-width="2" cx="315.25" cy="81.25" r="4.25"></circle>
+                <circle id="Oval-Copy-150" stroke="#84D0EF" stroke-width="2" cx="333.25" cy="100.25" r="4.25"></circle>
+                <circle id="Oval-Copy-148" stroke="#84D0EF" stroke-width="2" cx="6.25" cy="35.25" r="4.25"></circle>
+                <circle id="Oval-Copy-94" stroke="#84D0EF" stroke-width="2" cx="6.25" cy="12.25" r="4.25"></circle>
+            </g>
+            <g id="Drain-Lead" transform="translate(265.000000, 29.000000)">
+                <rect id="Rectangle" fill="#3D3530" x="0" y="0" width="40" height="154"></rect>
+                <circle id="Oval-Copy-59" fill="#EF7D3B" cx="19.25" cy="141.25" r="3.25"></circle>
+                <circle id="Oval-Copy-61" fill="#EF7D3B" cx="23.25" cy="125.25" r="3.25"></circle>
+                <circle id="Oval-Copy-62" fill="#EF7D3B" cx="13.25" cy="106.25" r="3.25"></circle>
+                <circle id="Oval-Copy-63" fill="#EF7D3B" cx="26.25" cy="87.25" r="3.25"></circle>
+                <circle id="Oval-Copy-64" fill="#EF7D3B" cx="16.25" cy="74.25" r="3.25"></circle>
+                <circle id="Oval-Copy-65" fill="#EF7D3B" cx="23.25" cy="51.25" r="3.25"></circle>
+                <circle id="Oval-Copy-66" fill="#EF7D3B" cx="12.25" cy="34.25" r="3.25"></circle>
+                <circle id="Oval-Copy-67" fill="#EF7D3B" cx="15.25" cy="12.25" r="3.25"></circle>
+                <circle id="Oval-Copy-83" fill="#EF7D3B" cx="27.25" cy="144.25" r="3.25"></circle>
+                <circle id="Oval-Copy-82" fill="#EF7D3B" cx="14.25" cy="127.25" r="3.25"></circle>
+                <circle id="Oval-Copy-81" fill="#EF7D3B" cx="20.25" cy="111.25" r="3.25"></circle>
+                <circle id="Oval-Copy-80" fill="#EF7D3B" cx="14.25" cy="92.25" r="3.25"></circle>
+                <circle id="Oval-Copy-79" fill="#EF7D3B" cx="23.25" cy="79.25" r="3.25"></circle>
+                <circle id="Oval-Copy-78" fill="#EF7D3B" cx="30.25" cy="56.25" r="3.25"></circle>
+                <circle id="Oval-Copy-77" fill="#EF7D3B" cx="26.25" cy="39.25" r="3.25"></circle>
+                <circle id="Oval-Copy-76" fill="#EF7D3B" cx="29.25" cy="20.25" r="3.25"></circle>
+            </g>
+            <g id="Gate-Lead" transform="translate(180.000000, 29.000000)">
+                <rect id="Rectangle-Copy-4" fill="#3D3530" x="0" y="0" width="40" height="129"></rect>
+                <g id="Holes" transform="translate(5.000000, 82.000000)" stroke="#84D0EF" stroke-width="2">
+                    <circle id="Oval-Copy-111" cx="3.25" cy="39.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-155" cx="15.25" cy="39.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-156" cx="27.25" cy="39.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-159" cx="3.25" cy="27.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-158" cx="15.25" cy="27.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-157" cx="27.25" cy="27.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-162" cx="3.25" cy="15.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-161" cx="15.25" cy="15.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-160" cx="27.25" cy="15.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-165" cx="3.25" cy="3.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-164" cx="15.25" cy="3.25" r="4.25"></circle>
+                    <circle id="Oval-Copy-163" cx="27.25" cy="3.25" r="4.25"></circle>
+                </g>
+            </g>
+            <g id="Source-Lead" transform="translate(95.000000, 29.000000)">
+                <rect id="Rectangle-Copy-2" fill="#3D3530" x="0" y="0" width="40" height="154"></rect>
+                <circle id="Oval-Copy-59" fill="#EF7D3B" cx="24.25" cy="144.25" r="3.25"></circle>
+                <circle id="Oval-Copy-61" fill="#EF7D3B" cx="23.25" cy="125.25" r="3.25"></circle>
+                <circle id="Oval-Copy-62" fill="#EF7D3B" cx="13.25" cy="106.25" r="3.25"></circle>
+                <circle id="Oval-Copy-63" fill="#EF7D3B" cx="26.25" cy="87.25" r="3.25"></circle>
+                <circle id="Oval-Copy-64" fill="#EF7D3B" cx="16.25" cy="74.25" r="3.25"></circle>
+                <circle id="Oval-Copy-65" fill="#EF7D3B" cx="23.25" cy="51.25" r="3.25"></circle>
+                <circle id="Oval-Copy-66" fill="#EF7D3B" cx="16.25" cy="34.25" r="3.25"></circle>
+                <circle id="Oval-Copy-67" fill="#EF7D3B" cx="22.25" cy="15.25" r="3.25"></circle>
+                <circle id="Oval-Copy-75" fill="#EF7D3B" cx="15.25" cy="136.25" r="3.25"></circle>
+                <circle id="Oval-Copy-74" fill="#EF7D3B" cx="19.25" cy="120.25" r="3.25"></circle>
+                <circle id="Oval-Copy-73" fill="#EF7D3B" cx="25.25" cy="100.25" r="3.25"></circle>
+                <circle id="Oval-Copy-72" fill="#EF7D3B" cx="22.25" cy="82.25" r="3.25"></circle>
+                <circle id="Oval-Copy-71" fill="#EF7D3B" cx="12.25" cy="69.25" r="3.25"></circle>
+                <circle id="Oval-Copy-70" fill="#EF7D3B" cx="19.25" cy="46.25" r="3.25"></circle>
+                <circle id="Oval-Copy-69" fill="#EF7D3B" cx="12.25" cy="29.25" r="3.25"></circle>
+                <circle id="Oval-Copy-68" fill="#EF7D3B" cx="18.25" cy="10.25" r="3.25"></circle>
+            </g>
+            <text id="Drain" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#1A80AA">
+                <tspan x="256.5" y="17">Drain</tspan>
+            </text>
+            <text id="Gate" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#1A80AA">
+                <tspan x="178" y="17">Gate</tspan>
+            </text>
+            <text id="Source" font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#1A80AA">
+                <tspan x="81" y="17">Source</tspan>
+            </text>
+            <path d="M115,29 L115,193 L285,193 L285,29" id="Path-6" stroke="#EF7D3B" stroke-width="8" stroke-dasharray="8,9"></path>
+            <g id="Positive-Voltage" transform="translate(211.245195, 60.000000)">
+                <path id="Path-4" d="M131.423493,22.056479 L132.086118,23.943521 L14.295,65.304 L16.2832886,70.966269 L0.754805489,69 L11.6449105,57.7569749 L13.632,63.417 L131.423493,22.056479 Z" fill="#1A80AA" fill-rule="nonzero"></path>
+                <text font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#524740">
+                    <tspan x="123.754805" y="17">Positive Voltage</tspan>
+                </text>
+            </g>
+            <g id="Current-Flow" transform="translate(284.245195, 90.000000)">
+                <path id="Path-4-Copy" d="M108.520752,22.0277764 L108.988859,23.9722236 L14.6,46.695 L16.0043133,52.5288117 L0.754805489,49 L12.7275595,38.9176808 L14.132,44.751 L108.520752,22.0277764 Z" fill="#1A80AA" fill-rule="nonzero"></path>
+                <text font-family="MrsEavesOT-Roman, Mrs Eaves OT" font-size="24" font-weight="normal" line-spacing="20" fill="#524740">
+                    <tspan x="100.754805" y="17">Current Flow</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
