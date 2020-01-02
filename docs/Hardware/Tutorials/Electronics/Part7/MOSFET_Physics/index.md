@@ -1,7 +1,7 @@
 ---
 layout: ElectronicsTutorial
 title: MOSFET Physics
-subtitle: Atomic operation of Metal-Oxide Semiconductor Field-Effect Transistors.
+subtitle: Understanding the atomic operation of Metal-Oxide Semiconductor Field-Effect Transistors.
 ---
 
 ## Components of a MOSFET

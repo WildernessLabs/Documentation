@@ -8,7 +8,7 @@
             <rect id="Rectangle" stroke="#3D3530" stroke-width="2" fill="#EEEEEE" fill-rule="evenodd" x="1" y="1" width="898" height="398"></rect>
             <rect id="Rectangle-Copy" stroke="#3D3530" stroke-width="2" fill="#F8FAE4" fill-rule="evenodd" x="1" y="356" width="898" height="43"></rect>
             <text id="Illustration-Title" font-family="Wavehaus-66Book, Wavehaus" font-size="24" font-weight="300" letter-spacing="0.6666667" fill="#23ABE3">
-                <tspan x="592.098666" y="385">Voltage Applied to Gate</tspan>
+                <tspan x="524.949332" y="385">More Voltage Applied to Gate</tspan>
             </text>
         </g>
         <g id="MOSFET" transform="translate(250.000000, 32.000000)">
