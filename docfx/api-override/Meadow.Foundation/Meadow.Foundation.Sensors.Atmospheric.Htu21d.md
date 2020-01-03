@@ -5,7 +5,7 @@ remarks: *content
 
 | HTU21D        |             |
 |---------------|-------------|
-| Status        | Working     |
+| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.HTU21D) |
 | NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Htu21d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Htu21d" style="width: auto; height: -webkit-fill-available;" /> |
 

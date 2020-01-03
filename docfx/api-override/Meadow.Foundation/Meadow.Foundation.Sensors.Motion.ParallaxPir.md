@@ -5,7 +5,7 @@ remarks: *content
 
 | ParallaxPir   |             |
 |---------------|-------------|
-| Status        | Working     |
+| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.ParallaxPir) |
 | NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.ParallaxPir.svg?label=Meadow.Foundation.Sensors.Motion.ParallaxPir" style="width: auto; height: -webkit-fill-available;" /> ||
 

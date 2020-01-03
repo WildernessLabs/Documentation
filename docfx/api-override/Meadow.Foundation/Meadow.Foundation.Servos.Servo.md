@@ -5,7 +5,7 @@ remarks: *content
 
 | Servo         |             |
 |---------------|-------------|
-| Status        | Working     |
+| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.Servo.Core) |
 | NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servo.svg?label=Meadow.Foundation.Servo" style="width: auto; height: -webkit-fill-available;" /> |
 

@@ -5,7 +5,7 @@ remarks: *content
 
 | FC-28         |             |
 |---------------|-------------|
-| Status        | Working     |
+| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.FC28) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Moisture.FC28/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Moisture.Fc28.svg?label=Meadow.Foundation.Sensors.Moisture.Fc28" style="width: auto; height: -webkit-fill-available;" /></a> |
 

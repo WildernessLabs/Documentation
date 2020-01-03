@@ -5,7 +5,7 @@ remarks: *content
 
 | TEA5767       |             |
 |---------------|-------------|
-| Status        | Working     |
+| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Radio.TEA5767/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.Tea5767.svg?label=Meadow.Foundation.Audio.Radio.Tea5767" style="width: auto; height: -webkit-fill-available;" /></a> |
 
