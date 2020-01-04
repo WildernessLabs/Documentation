@@ -50,4 +50,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 The Parallax PIR sensor requires only three connections, power, ground and motion detection signal:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPir/ParallaxPIR.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPir/ParallaxPIR.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

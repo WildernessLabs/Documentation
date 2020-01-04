@@ -21,4 +21,5 @@ The HC-SR04 sensor is available from Sparkfun:
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

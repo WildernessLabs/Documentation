@@ -54,4 +54,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 The following diagram shows the BNO055 configured for bas
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Bno055/Bno055_Fritzing.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Bno055/Bno055_Fritzing.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

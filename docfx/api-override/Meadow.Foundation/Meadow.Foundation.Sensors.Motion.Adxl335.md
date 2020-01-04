@@ -43,4 +43,5 @@ The ADXL335 sensor can be purchased on a breakout board from the following suppl
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl335/Adxl335_Fritzing.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl335/Adxl335_Fritzing.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

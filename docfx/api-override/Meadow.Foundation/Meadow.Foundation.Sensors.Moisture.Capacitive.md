@@ -11,7 +11,8 @@ remarks: *content
 
 Capacitive Soil Moisture sensor is a simple breakout for measuring the moisture in soil and similar materials. This sensor measures moisture levels by capacitive sensing, rather then resistive sensing like other types of moisture sensor such as the FC-28.
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Moisture.Capacitive/img_Capacitive.jpg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.Capacitive/img_Capacitive.jpg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 Capacitive sensing means measuring the dielectrum that is formed by the soil and the water is the most important factor that forms the dielectrum. Even though this kind of sensor might be a little pricier, it is made of corrosion resistant material giving it a longer service of life than a resistive sensor.
 
@@ -46,4 +47,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Moisture.Capacitive/Capacitive.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.Capacitive/Capacitive.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

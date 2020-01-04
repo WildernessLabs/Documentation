@@ -18,7 +18,8 @@ The analog temperature sensor driver can be used with any sensor that has a line
 
 These sensors exhibit a linear change in the analog voltage for each degree centigrade. This is often presented in the datasheet as follows:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.AnalogTemperature/AnalogSensorLinearResponse.png)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Temperature.AnalogTemperature/AnalogSensorLinearResponse.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 This driver should work with any sensor of this type.
 
@@ -85,4 +86,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 Consider the TMP36, this sensor requires only three connections; power, ground and the analog output:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.AnalogTemperature/AnalogTemperature.svg)
+<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Frizzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

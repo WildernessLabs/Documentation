@@ -11,7 +11,8 @@ remarks: *content
 
 **SpstSwitch** represents a simple, on/off, Single-Pole-Single-Throw (SPST) switch that closes a circuit to either ground/common or high:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpstSwitch/SPST_Switch.jpg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpstSwitch/SPST_Switch.jpg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 Use the [`CircuitTerminationType`](/API/CircuitTerminationType) to specify whether the other side of the switch terminates to ground or high.
 
@@ -43,4 +44,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpstSwitch/SpstSwitch.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpstSwitch/SpstSwitch.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

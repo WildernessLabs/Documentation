@@ -36,4 +36,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Adx337/Adx337_Fritzing.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adx337/Adx337_Fritzing.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

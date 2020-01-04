@@ -11,6 +11,10 @@ remarks: *content
 
 The **AT24Cxx** series of chips provide a mechanism for storing data that will survive a power outage or battery failure.  These EEPROMs are available in varying sizes and are accessible using the I2C interface.
 
+### Purchasing
+
+* [DS3231 with integrated EEPROM](https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=ds3231)
+
 ### Code Example
 
 ```csharp
@@ -43,6 +47,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 The chip used to develop this library is one that is available on a common DS3231 RTC module with EEPROM memory module:
 
-* [DS3231 with integrated EEPROM](https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=ds3231)
-
-![](../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx.svg)
+<img src="../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

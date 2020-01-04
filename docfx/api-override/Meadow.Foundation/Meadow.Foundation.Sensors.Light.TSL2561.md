@@ -104,6 +104,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 The basic configuration of the TSL2561 requires only the data and power connections to be made:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Light.TSL2561/TSL2561.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.TSL2561/TSL2561.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 Note that the connection between the `Int` pin and `D9` is only required when using the device in interrupt mode.

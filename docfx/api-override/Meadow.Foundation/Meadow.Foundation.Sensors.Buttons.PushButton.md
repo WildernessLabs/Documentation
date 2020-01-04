@@ -45,4 +45,5 @@ public class Program
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

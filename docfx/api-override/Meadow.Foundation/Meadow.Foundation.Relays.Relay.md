@@ -15,4 +15,5 @@ A relay is an electrically operated or electromechanical switch composed of an e
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Relays.Relay/Relay.svg)
+<img src="../../API_Assets/Meadow.Foundation.Relays.Relay/Relay.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

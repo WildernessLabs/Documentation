@@ -13,7 +13,8 @@ The **TEA5767** FM module is based on the TEA5767GH which is a single-chip, elec
 
 The TEA5767 is controlled via I2C. It comes with two 1/4" jacks, one for connection to a headphone/speaker and one to connect an antenna (often sold with the module).
 
-![](../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767.png)
+<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 ### Purchasing
 

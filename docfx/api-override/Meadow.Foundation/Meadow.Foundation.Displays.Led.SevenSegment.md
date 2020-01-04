@@ -17,7 +17,8 @@ The displays are simply a collection of single color leds in a pre-configured so
 
 The pinouts vary from device to device, check the documentation to map the pinouts to a specific segment. The come in a wide selection of colors and may be common anode or common cathode.
 
-![](../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 ### Purchasing
 

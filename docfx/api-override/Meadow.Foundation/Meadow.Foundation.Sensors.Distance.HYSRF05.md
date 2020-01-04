@@ -17,4 +17,5 @@ The **HY-SRF05** ultrasonic sensor uses sonar to determine distance to an object
 
 The HY-SRF05 sensor has 5 pins, but you’ll only connect 4: power, ground, echo and trigger (out isn’t used).
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

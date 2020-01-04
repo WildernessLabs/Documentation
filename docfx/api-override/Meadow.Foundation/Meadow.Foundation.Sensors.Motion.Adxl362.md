@@ -27,4 +27,5 @@ The ADXL362 can operating in interrupt and polling mode.  Polling applications a
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl362/Adxl362_Fritzing.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl362/Adxl362_Fritzing.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

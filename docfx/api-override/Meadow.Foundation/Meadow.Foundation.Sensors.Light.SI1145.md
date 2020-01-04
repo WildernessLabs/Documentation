@@ -26,4 +26,5 @@ The following application reads the sensor output Infrared, Ultraviolet and Visi
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

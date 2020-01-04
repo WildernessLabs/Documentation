@@ -19,4 +19,5 @@ Note that when using this chip, care should be taken to ensure that the total ou
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg)
+<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

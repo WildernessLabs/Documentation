@@ -73,4 +73,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 TMP102 sensors can be connected to Meadow using only four connections:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

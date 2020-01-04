@@ -29,7 +29,8 @@ The application below connects the MPL115A2 to two interrupt handlers.  These in
 
 Connecting the MPL115A2 to Meadow requires four connections:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL115A2/MPL115A2.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL115A2/MPL115A2.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 In this diagram, the shutdown (`SDWN`) and reset (`RST`) pins have been left floating.  Both of these pins are active low and can be tied to V<sub>cc</sub> in normal operation.
 

@@ -15,4 +15,5 @@ The **BMP085** is a high-precision, low-power barometric pressure sensor. The BM
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

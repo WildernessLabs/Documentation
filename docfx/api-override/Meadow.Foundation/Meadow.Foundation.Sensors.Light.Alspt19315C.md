@@ -55,4 +55,5 @@ The ALS-PT19 senors are available on breakout boards and as individual sensors:
 
 The ALS-PT19C is a simple analog device requiring only three connections:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Light.Alspt19315C/Alspt19315C_Fritzing.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Alspt19315C/Alspt19315C_Fritzing.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

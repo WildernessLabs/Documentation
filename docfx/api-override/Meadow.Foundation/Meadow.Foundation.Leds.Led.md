@@ -47,4 +47,5 @@ public class LedApp : App<F7Micro, LedApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Leds.Led/Led_bb.svg)
+<img src="../../API_Assets/Meadow.Foundation.Leds.Led/Led_bb.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

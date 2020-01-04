@@ -52,7 +52,8 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 The DS3231 real time clock module (see image below) requires only four (for simple timekeeping) or five (for alarms) connections
 
-![](../../API_Assets/Meadow.Foundation.RTCs.DS323x/DS323x.svg)
+<img src="../../API_Assets/Meadow.Foundation.RTCs.DS323x/DS323x.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 | Meadow Pin | Sensor Pin        | Wire Color |
 |--------------|-------------------|------------|

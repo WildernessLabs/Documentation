@@ -51,4 +51,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Motion.ADXL345/ADXL345.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.ADXL345/ADXL345.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

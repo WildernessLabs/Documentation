@@ -72,4 +72,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

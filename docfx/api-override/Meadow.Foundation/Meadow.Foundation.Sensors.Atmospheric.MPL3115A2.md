@@ -75,4 +75,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 MPL3115A2 configured for polling more data reads:
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL3115A2/MPL3115A2.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL3115A2/MPL3115A2.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

@@ -49,4 +49,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed.svg)
+<img src="../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

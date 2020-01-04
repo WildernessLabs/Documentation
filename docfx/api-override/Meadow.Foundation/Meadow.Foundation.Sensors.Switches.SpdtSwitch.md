@@ -11,7 +11,8 @@ remarks: *content
 
 **SpdtSwitch** represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that closes a circuit to either ground/common or high depending on position.
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 The following example shows how to use a SPDT switch:
 
@@ -41,4 +42,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SpdtSwitch.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SpdtSwitch.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

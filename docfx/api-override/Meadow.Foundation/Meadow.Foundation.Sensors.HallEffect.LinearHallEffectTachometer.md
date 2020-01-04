@@ -19,4 +19,5 @@ The following example instantiates a LinearHallEffectTachometer object, and regi
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
