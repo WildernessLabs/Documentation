@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.St7565
 remarks: *content
 ---
 
-| PCD8544       |             |
+| ST7565        |             |
 |---------------|-------------|
 | Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ST7565) |

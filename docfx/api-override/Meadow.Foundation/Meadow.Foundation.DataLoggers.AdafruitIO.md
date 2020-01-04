@@ -3,7 +3,7 @@ uid: Meadow.Foundation.DataLoggers.AdafruitIO
 remarks: *content
 ---
 
-| TEA5767       |             |
+| AdafruitIO    |             |
 |---------------|-------------|
 | Status        | Untested    |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Libraries_and_Frameworks/DataLoggers.AdafruitIO) |

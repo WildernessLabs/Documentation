@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Sensors.Light.Si1145
 remarks: *content
 ---
 
-| SL1145        |             |
+| SI1145        |             |
 |---------------|-------------|
 | Status        | Not Working |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |

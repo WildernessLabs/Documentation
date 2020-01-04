@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.Tft.Ssd1351
 remarks: *content
 ---
 
-| TftSpi        |             |
+| SSD1351       |             |
 |---------------|-------------|
 | Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |

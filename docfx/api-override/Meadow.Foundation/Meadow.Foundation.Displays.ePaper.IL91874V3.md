@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.ePaper.Il91874V3
 remarks: *content
 ---
 
-| ePaper        |             |
+| IL91874V3     |             |
 |---------------|-------------|
 | Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
