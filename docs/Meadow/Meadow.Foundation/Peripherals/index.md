@@ -12,22 +12,22 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Led](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | Simple LED | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [PwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) | Pulse-Width-Modulation powered LED | |  
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [RgbPwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | Pulse-Width-Modulation powered RGB LED | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [LedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | Generic segmented LED bar | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [HBridgeMotor](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | Generic h-bridge motor controller | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Relay](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | Electrically isolated switch | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [PushButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | Simple push-button | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Led](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | Simple LED | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) | Pulse-Width-Modulation powered LED | |  
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [RgbPwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | Pulse-Width-Modulation powered RGB LED | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [LedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | Generic segmented LED bar | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [HBridgeMotor](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | Generic h-bridge motor controller | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Relay](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | Electrically isolated switch | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PushButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | Simple push-button | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [DigitalTachometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer.html) | Hall Effect Linear Tachometer sensor | |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | A generic analog joystick | | 
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | A simple rotary encoder | | 
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [RotaryEncoderWithButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) | A rotary encoder that includes a push button | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [DipSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.DipSwitch.html)  | A multi-pole dip switch | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [SpdtSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpdtSwitch.html) | A simple single-pole, dual-throw (SPDT) switch | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [SpstSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpstSwitch.html) | A simple single-pole, single-throw (SPST) switch | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [PiezoSpeaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | A piezo-electric speaker capable of generating tones via PWM | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SpstSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpstSwitch.html) | A simple single-pole, single-throw (SPST) switch | Requires external [PU/PD resistor](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PiezoSpeaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | A piezo-electric speaker capable of generating tones via PWM | |
 
 ## External Peripherals
 
@@ -35,23 +35,23 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | 
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.TEA5767.html) | I2C FM radio module |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.Tea5767.html) | I2C FM radio module |
 
 ### Display and Graphics Drivers
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
 | <img src="https://img.shields.io/badge/Working-orange" />      | [ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | ePaper/eInk display Library | Slow due interpret mode |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | Digital IO only |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SevenSegment.html) | Seven Segment display | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Max7219](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html) | MAX7219 led display driver Library | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Pcd8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html) | PCD8544 LCD driver (Nokia 5110) | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | LCD display | Digital IO only |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SevenSegment.html) | Seven Segment display | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Max7219](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html) | MAX7219 led display driver Library | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Pcd8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html) | PCD8544 LCD driver (Nokia 5110) | |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [SerialLCD](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SerialLCD.html) | SparkFun serial LCD backpack driver | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Ssd1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | OLED single color display | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [St7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7565.html) | Single color positive LCD | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Tm1637](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html) | Segmented LCD display | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [GraphicsLibrary](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ssd1306](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | OLED single color display | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [St7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7565.html) | Single color positive LCD | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | Thin Film Transistor (TFT) SPI Library | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tm1637](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html) | Segmented LCD display | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [GraphicsLibrary](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library | |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text Display Menu for LCD displays | |
 
 ### FeatherWings
@@ -65,7 +65,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [At24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html) | AT24Cxx Family of EEPROMs including AT24C32 |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Ht16K33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16K33.html) | HT16K33 for digital output expansion |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ht16K33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16K33.html) | HT16K33 for digital output expansion |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mcp23008](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23008.html) | MCP23008 for digital output expansion |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion |
 
@@ -79,7 +79,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Ds1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds1307.html) | Real Time Clock SD1307 |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ds1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds1307.html) | Real Time Clock SD1307 |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Ds323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x.html) | Real Time Clock modules |
 
 ### Sensors
@@ -88,15 +88,15 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Bme280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280.html) | I2C/SPI temperature, humidity, and pressure sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html) | I2C pressure sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bme280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280.html) | I2C/SPI temperature, humidity, and pressure sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html) | I2C pressure sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | Grove TH02 temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html) | I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html) | I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.html) | Barometric sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html) | Barometric sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI70xx.html) |  I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI70xx.html) |  I2C temperature and humidity sensor |
 
 #### Cameras
 
@@ -123,7 +123,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [ALSPT19315C](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.ALSPT19315C.html) | Analog light sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ALSPT19315C](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.ALSPT19315C.html) | Analog light sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Si1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | I2C infrared, ultraviolet, and ambient light sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Tsl2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | I2C infrared-compensated light sensor |
 
@@ -131,33 +131,33 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Capacitive](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | Capacitive Soil Moisture Sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Fc28](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.FC28.html) | Soil Moisture Sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Capacitive](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | Capacitive Soil Moisture Sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Fc28](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.FC28.html) | Soil Moisture Sensor |
 
 #### Motion and Orientation Sensors
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Adxl335](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html) | Analog triple axis, +/-3g accelerometer |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Adxl337](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337.html) | Analog triple axis, +/-3g accelerometer |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Adxl345](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl345.html) | I2C triple axis accelerometer, +/-16g accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl335](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html) | Analog triple axis, +/-3g accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl337](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337.html) | Analog triple axis, +/-3g accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl345](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl345.html) | I2C triple axis accelerometer, +/-16g accelerometer |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Adxl362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html) | SPI low power, 3-axis MEMS accelerometer |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Adxl377](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html) | Analog triple axis, +/-200g accelerometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl377](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html) | Analog triple axis, +/-200g accelerometer |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | I2C three axis magnetometer |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector |
 
 #### Temperature Sensors
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
 | <img src="https://img.shields.io/badge/Blocked-red" />         | [Ds18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.DS18B20.html) | Temperature sensor | 1-Wire bus |
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.TMP102.html) | I2C temperature sensor | |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.TMP102.html) | I2C temperature sensor | |
 
 ### Servos
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> | [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | Generic servo library |
