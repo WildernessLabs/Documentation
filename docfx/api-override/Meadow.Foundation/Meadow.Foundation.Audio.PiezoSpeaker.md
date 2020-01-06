@@ -18,7 +18,7 @@ The positive pin of the piezo speaker connects to a pulse width modulation (PWM)
 
 ### Code Example
 
-The following example shows how to initialize a PiezoSpeaker and play a melody using an array of notes:
+The following example shows how to initialize a PiezoSpeaker and play an A4 note for one second:
 
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
