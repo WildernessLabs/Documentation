@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Sensors.Light.Temt6000
 remarks: *content
 ---
 
-| Temt6000        |             |
+| Temt6000      |             |
 |---------------|-------------|
 | Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Meadow.Foundation.Sensors.Light.Temt6000) |
@@ -14,7 +14,21 @@ remarks: *content
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
+    Temt6000 sensor;
 
+    public MeadowApp()
+    {
+        sensor = new Temt6000(Device, Device.Pins.A03);
+
+        Task.Run(async () =>
+        {
+            while(true)
+            {
+                Console.WriteLine($"Voltage: {await sensor.GetVoltage()}");
+                await Task.Delay(500);
+            }
+        });
+    }
 }
 ```
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 

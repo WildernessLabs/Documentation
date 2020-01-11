@@ -14,16 +14,30 @@ remarks: *content
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
+    Bh1750 sensor;
 
+    public MeadowApp()
+    {
+        sensor = new Bh1750(Device.CreateI2cBus(), Bh1750.I2cAddressLow);
+
+        Task.Run(async () =>
+        {
+            while(true)
+            {
+                Console.WriteLine($"Illuminance: {sensor.GetIlluminance()}lux");
+                await Task.Delay(1000);
+            }
+        });
+    }
 }
 ```
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
 
 ### Wiring Example
 
-To wire a Ms5611 to your Meadow board, connect the following:
+To wire a Bh1750 to your Meadow board, connect the following:
 
-| Bh1745  | Meadow Pin  |
+| Bh1750  | Meadow Pin  |
 |---------|-------------|
 | GND     | GND         |
 | SCL     | D08 (SCL)   |

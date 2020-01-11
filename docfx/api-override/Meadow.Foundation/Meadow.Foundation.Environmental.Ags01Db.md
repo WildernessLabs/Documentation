@@ -14,7 +14,21 @@ remarks: *content
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
+    Ags01Db sensor;
 
+    public MeadowApp()
+    {
+        sensor = new Ags01Db(Device.CreateI2cBus());
+
+        Console.WriteLine($"Version: v{sensor.GetVersion()}");
+
+        while (true)
+        {
+            Console.WriteLine($"VOC gas concentration: {sensor.GetConcentration()}ppm");
+
+            Thread.Sleep(2000);
+        }
+    }
 }
 ```
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
