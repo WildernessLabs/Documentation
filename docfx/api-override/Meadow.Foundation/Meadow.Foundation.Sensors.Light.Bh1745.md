@@ -60,7 +60,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1745/Samples/Sensors.Light.Bh1745_Sample) 
 
 ### Wiring Example
 

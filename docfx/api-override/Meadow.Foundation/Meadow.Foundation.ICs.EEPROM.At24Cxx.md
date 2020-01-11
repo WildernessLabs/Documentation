@@ -55,7 +55,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS1307/Samples) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.AT24Cxx/Samples/ICS.EEPROM.AT24Cxx) 
 
 ### Wiring Example
 

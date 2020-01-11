@@ -56,7 +56,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS323x/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS323x/Samples/RTCs.DS323x_Sample) 
 
 ### Wiring Example
 

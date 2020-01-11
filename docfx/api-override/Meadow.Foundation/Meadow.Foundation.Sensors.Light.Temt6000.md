@@ -31,7 +31,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Temt6000/Samples/Sensors.Light.Temt6000_Sample) 
 
 ### Wiring Example
 
