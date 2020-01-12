@@ -37,12 +37,12 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 To wire a Ms5611 to your Meadow board, connect the following:
 
-| Temt6000  | Meadow Pin  |
-|---------|-------------|
-| GND     | GND         |
-| SCL     | D08 (SCL)   |
-| SDA     | D07 (SDA)   |
-| VCC     | 3V3         |
+| Temt6000 | Meadow Pin  |
+|----------|-------------|
+| GND      | GND         |
+| SCL      | D08 (SCL)   |
+| SDA      | D07 (SDA)   |
+| VCC      | 3V3         |
 
 It should look like the following diagram:
 

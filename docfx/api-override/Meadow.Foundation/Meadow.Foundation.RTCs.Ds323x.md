@@ -72,7 +72,7 @@ The DS3231 real time clock module (see image below) requires only four (for simp
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.RTCs.DS323x/DS323x.svg" 
+<img src="../../API_Assets/Meadow.Foundation.RTCs.DS323x/DS323x_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 The 32K pin outputs the 32,768 Hz clock signal from the module.  This signal is only available when power is supplied by V<sub>cc</sub>, it is not available when the module is on battery power.
