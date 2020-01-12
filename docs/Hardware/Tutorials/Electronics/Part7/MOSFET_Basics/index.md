@@ -4,15 +4,18 @@ title: MOSFET Basics
 subtitle: Using Metal-Oxide Semiconductor Field-Effect Transistors
 ---
 
-## MOSFET
+## Voltage Controlled Variable Resistor
 
-MOSFETs are the most common type of transistors in use today. 
+It may be useful to think of MOSFETs as variable resistor that is controlled by the voltage at its gate. But unlike a simple resistor, MOSFETs come in four basic designs that enable them to be incredibly versatile.
 
+## Enhancement vs. Depletion Mode
 
-Two types:
+There are two basic modes of operations for MOSFETs, which describes how they work in their default state:
 
-* **Enhancement** - Comes in N-channel and P-channel types. N-channel MOSFETs are the ones you'll use most often.
-* **Depletion** - Current flows by default. Applying a negative voltage causes the current flow to stop.
+ * **Enhancement** - By default, if no voltage is applied to the gate, the resistance between source and drain is at its highest, and therefore current will not flow.
+ * **Depletion** - By default, if no voltage is applied to the gate, the resistance between source and drain is at the lowest, so current will flow.
+
+##
 
 ### Parts
 
