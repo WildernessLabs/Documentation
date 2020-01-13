@@ -62,7 +62,7 @@ Continuous rotation servos still have a minimum and maximum pulse durations, but
 
 Servos can draw a lot of current, especially under load. Additionally, most common hobby servos require `6V`. For this reason, an external power supply should be used when they're used in practical applications.
 
-For just testing however, they can be powered via the `5V` rail on the netduino as follows:
+For just testing however, they can be powered via the `5V` rail on the Meadow as follows:
 
 ### Testing Circuit
 

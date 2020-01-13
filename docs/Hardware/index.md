@@ -34,7 +34,7 @@ Important circuit calculation equations and the laws that define them.
 
 ## Peripherals
 
-Contains information on using various peripherals. For a library of peripheral drivers, please see [Netduino.Foundation](http://Netduino.Foundation)
+Contains information on using various peripherals. For a library of peripheral drivers, please see [Meadow.Foundation](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/)
 
  * [Relays](/Hardware/Reference/Peripherals/Relays)
  * [74595 Shift Register](/Hardware/Reference/Peripherals/ShiftRegister74595)

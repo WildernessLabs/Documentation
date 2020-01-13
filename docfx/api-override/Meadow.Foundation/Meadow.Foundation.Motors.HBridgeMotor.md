@@ -75,7 +75,7 @@ Though h-bridge motor controllers come in various form factors, they typically s
 | **[3,4]A** or **INPUT [3,4]**   | Motor 2 control inputs.                              |
 | **GROUND** or **GND**           | Common/ground. Both the motor power supply and the logic power supply should be tied together on the same common ground plane. |
 | **V<sub>CC2</sub>**, **+12V**, or **V<sub>s</sub>** | This is the positive voltage supply that drives the motors. Depending on the chip used, this may be anywhere from `4.5V` up to `50V`. |
-| **V<sub>CC1</sub>**, **+5V**, or **V<sub>SS</sub>** | This is the logic voltage supply that powers the chip logic. This should be tied into the `5V` voltage pin on the netduino.    |
+| **V<sub>CC1</sub>**, **+5V**, or **V<sub>SS</sub>** | This is the logic voltage supply that powers the chip logic. This should be tied into the `5V` voltage pin on the Meadow.    |
 
 The following breadboard diagram illustrates connecting two motors to an h-bridge chip that uses a external power supply to drive the motors:
 

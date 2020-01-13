@@ -41,7 +41,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 
     /// Temperature of ds18b20 has changed by more than 0.001 C
-    private static void ds18b20_TemperatureChanged(object sender, Netduino.Foundation.Sensors.SensorFloatEventArgs e)
+    private static void ds18b20_TemperatureChanged(object sender, Meadow.Foundation.Sensors.SensorFloatEventArgs e)
     {
         Debug.Print("Temperature: " + ((DS18B20) sender).Temperature.ToString("F2"));
     }
