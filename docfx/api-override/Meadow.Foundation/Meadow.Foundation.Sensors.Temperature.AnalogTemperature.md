@@ -84,7 +84,15 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-Consider the TMP36, this sensor requires only three connections; power, ground and the analog output:
+To wire a TMP36 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Frizzing.png" 
+| TMP36 | Meadow Pin |
+|-------|------------|
+| GND   | GND        |
+| IN    | A1         |
+| VCC   | 5V         |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Temperature.AnalogTemperature/AnalogTemperature_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
