@@ -4,6 +4,59 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.7
+
+Though this is a point release, it's actually cut from the `b4.0` work, and represents a significant Meadow upgrade. It continues the API stabilization and bug fixes started in `b3.6`, but also includes major performance increases, an up-to-date Mono runtime (with pre-cursor support for Core 3.x), and a pile of new Meadow.Foundation drivers that were unlocked by both the performance improvements and IO bug fixes.
+
+### Performance Improvements
+
+We enabled various low-level caching mechanisms available on the F7 chip and fixed some long-outstanding memory bugs that were preventing their use up until this point. With these fixes and optimizations, we're able to realize one to two magnitudes of performance increases across various aspects of execution. The most significant being in IO access, which saw an 8,600% increase since `b3.6`. However, we also saw significant improvement in general execution, as well. The following tables are excerpted from the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) readme:
+
+**TODO: Replace with charts - these tables are suck**
+
+#### Pi Calculation
+
+| Operation          | **b3.5**    | **b3.6**    | **b3.7**    |
+|--------------------|-------------|-------------|-------------|
+| 50 digit Pi calc   | `11s`       | `11s`       | `2.3s`      |
+| 100 digit Pi calc  | `54s`       | `54s`       | `10.8s`     |
+| 150 digit Pi calc  | `127s`      | `126s`      | `24.4s`     |
+ 
+#### List Operations
+
+| Operation          | **b3.5**   | **b3.6**   | **b3.7**   |
+|--------------------|------------|------------|------------|
+| List instantiation | `30ms`     | `30ms`     | `30ms`     |
+| List population    | `120ms`    | `120ms`    | `20ms`     |
+| List summation     | `130ms`    | `120ms`    | `30ms`     |
+| List clearing      | `59s`      | `59s`      | `7.7s`     |
+
+#### Digital Output Port Operations
+
+| Operation              | **b3.5**  | **b3.6**  | **b3.7**  |
+|------------------------|-----------|-----------|-----------|
+| Port initialization    | `2.7s`    | `2.8s`    | `2.0s`    |
+| 300 Port writes        | `48s`     | `13s`     | `0.15s`   |
+| Average time per write | `159ms`   | `42ms`    | `0.5ms`   |
+
+Overall, since `b3.5`, IO writes have gotten `318x` faster. And since the last beta, general operation execution speed has gotten `4-8x` faster. 
+
+These improvements made several additional Meadow.Foundation drivers practical, now that execution speed can handle them. 
+
+### CLI/Deployment Stabilization
+
+[fixed HCOM thread stuff]
+
+### Bug Fixes
+
+* [#43 - Issues with Multiple Analog Inputs](https://github.com/WildernessLabs/Meadow_Issues/issues/43) - Fixed. Multiple analog inputs now work, as expected.
+* [#18 - PushButton only works with constructor where Device is passed.](https://github.com/WildernessLabs/Meadow_Issues/issues/18) - Fixed. There was a code issue in the driver itself, the underlying IO was working as expected.
+* 
+
+### Meadow.Foundation
+
+
+
 ## Beta 3.6
 
 This release is focused on quality and stabilization. It's mostly bug fixes, API stabilization, and new drivers based on that work. This is also just the first part of this work. We have a number of additional bug fixes that were originally due for b3.6, but there are so many good things already in this, we decided not to wait until they were all in and instead break it up into multiple releases, so there will likely be a b3.7 release soon as well.
