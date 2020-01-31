@@ -12,32 +12,14 @@ Though this is a point release, it's actually cut from the `b4.0` work, and repr
 
 We enabled various low-level caching mechanisms available on the F7 chip and fixed some long-outstanding memory bugs that were preventing their use up until this point. With these fixes and optimizations, we're able to realize one to two magnitudes of performance increases across various aspects of execution. The most significant being in IO access, which saw an `8,600%` increase since `b3.6`. However, we also saw significant improvement in general execution, as well. The following tables are excerpted from the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) readme:
 
-**TODO: Replace with charts - these tables are suck**
-
-#### Pi Calculation
-
-| Operation          | **b3.5**    | **b3.6**    | **b3.7**    |
-|--------------------|-------------|-------------|-------------|
-| 50 digit Pi calc   | `11s`       | `11s`       | `2.3s`      |
-| 100 digit Pi calc  | `54s`       | `54s`       | `10.8s`     |
-| 150 digit Pi calc  | `127s`      | `126s`      | `24.4s`     |
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2104450466&amp;format=interactive"></iframe>
  
-#### List Operations
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=103861413&amp;format=interactive"></iframe>
 
-| Operation          | **b3.5**   | **b3.6**   | **b3.7**   |
-|--------------------|------------|------------|------------|
-| List instantiation | `30ms`     | `30ms`     | `30ms`     |
-| List population    | `120ms`    | `120ms`    | `20ms`     |
-| List summation     | `130ms`    | `120ms`    | `30ms`     |
-| List clearing      | `59s`      | `59s`      | `7.7s`     |
 
-#### Digital Output Port Operations
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2010951639&amp;format=interactive"></iframe>
 
-| Operation              | **b3.5**  | **b3.6**  | **b3.7**  |
-|------------------------|-----------|-----------|-----------|
-| Port initialization    | `2.7s`    | `2.8s`    | `2.0s`    |
-| 300 Port writes        | `48s`     | `13s`     | `0.15s`   |
-| Average time per write | `159ms`   | `42ms`    | `0.5ms`   |
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=867053354&amp;format=interactive"></iframe>
 
 Overall, since `b3.5`, IO writes have gotten `318x` faster. And since the last beta, general operation execution speed has gotten `4-8x` faster. 
 
