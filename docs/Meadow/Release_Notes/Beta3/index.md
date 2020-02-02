@@ -37,7 +37,24 @@ These improvements made several additional Meadow.Foundation drivers practical, 
 
 ### Meadow.Foundation
 
+#### New Peripheral Drivers
 
+This is a big update, there are numerous improvements and fixes across published drivers. 
+
+As well, we've published 13 new drivers via NuGet:
+* Environmental.Ags01Db
+* ICs.EEPROM.AT24C
+* ICs.IOExpanders.x74595
+* RTCs.Ds323x
+* Sensors.Atmospheric.Bmp085
+* Sensors.Atmospheric.Bmp180
+* Sensors.Atmospheric.Dhtxx
+* Sensors.Atmospheric.Ms5611
+* Sensors.Light.Bh1745
+* Sensors.Light.Bh1750
+* Sensors.Light.Temt6000
+* Sensors.Motion.ADXL362
+* Sensors.Motion.Hcsens0040
 
 ## Beta 3.6
 
