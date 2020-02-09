@@ -98,20 +98,20 @@ We fixed the following drivers:
 This is a big update, there are numerous improvements and fixes across published drivers. 
 
 As well, we've published 14 new drivers via NuGet:
-* PCD8544 LCD display controller
-* MAX7219 led display controller
-* TM1637 led display controller
-* ULN2003 stepper motor controller
-* HIH6130 I2C temperature and humidity sensor
-* HTU21D I2C temperature and humidity sensor
-* SI70xx I2C temperature and humidity sensor
-* ALS-PT19-315C light sensor
-* ADXL335 Analog triple axis, +/-3g accelerometer
-* ADXL337 Analog triple axis, +/-3g accelerometer
-* ADXL345 I2C triple axis accelerometer, +/-16g accelerometer
-* ADXL377 Analog triple axis, +/-200g accelerometer
-* BNO055 I2C 9-Axis absolute orientation sensor
-* TMP102 I2C temperature sensor
+* [PCD8544 LCD display controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html)
+* [MAX7219 led display controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html)
+* [TM1637 led display controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html)
+* [ULN2003 stepper motor controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003.html)
+* [HIH6130 I2C temperature and humidity sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html)
+* [HTU21D I2C temperature and humidity sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html)
+* [SI70xx I2C temperature and humidity sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx.html)
+* [ALS-PT19-315C light sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Alspt19315C.html)
+* [ADXL335 Analog triple axis, +/-3g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html)
+* [ADXL337 Analog triple axis, +/-3g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337.html)
+* [ADXL345 I2C triple axis accelerometer, +/-16g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl345.html)
+* [ADXL377 Analog triple axis, +/-200g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html)
+* [BNO055 I2C 9-Axis absolute orientation sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html)
+* [TMP102 I2C temperature sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html)
 
 ### Meadow.CLI Fixes, Updates, and Open-Sourcing
 
