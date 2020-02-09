@@ -49,19 +49,20 @@ These improvements made several additional Meadow.Foundation drivers practical, 
 This is a big update, there are numerous improvements and fixes across published drivers. 
 
 As well, we've published 13 new drivers via NuGet:
-* Environmental.Ags01Db
-* ICs.EEPROM.AT24C
-* ICs.IOExpanders.x74595
-* RTCs.Ds323x
-* Sensors.Atmospheric.Bmp085
-* Sensors.Atmospheric.Bmp180
-* Sensors.Atmospheric.Dhtxx
-* Sensors.Atmospheric.Ms5611
-* Sensors.Light.Bh1745
-* Sensors.Light.Bh1750
-* Sensors.Light.Temt6000
-* Sensors.Motion.ADXL362
-* Sensors.Motion.Hcsens0040
+* [Environmental.Ags01Db]()
+* [ICs.EEPROM.AT24C](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html)
+* [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html)
+* [RTCs.Ds323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x.html)
+* [Sensors.Atmospheric.Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html)
+* [Sensors.Atmospheric.Bmp180](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp180.html)
+* [Sensors.Atmospheric.Dht10](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht10.html)
+* [Sensors.Atmospheric.Dht12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht12.html)
+* [Sensors.Atmospheric.Ms5611](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Ms5611.html)
+* [Sensors.Light.Bh1745](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1745.html)
+* [Sensors.Light.Bh1750](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1750.html)
+* [Sensors.Light.Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html)
+* [Sensors.Motion.ADXL362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html)
+* [Sensors.Motion.Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html)
 
 ## Beta 3.6
 
