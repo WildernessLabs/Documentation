@@ -55,11 +55,12 @@ With that said, there are still three bugs that we were hoping to squish, but di
 
 ### Meadow.Foundation
 
-#### New Peripheral Drivers
-
 This is a big update, there are numerous improvements and fixes across published drivers. 
 
+#### New Peripheral Drivers
+
 As well, we've published 13 new drivers via NuGet:
+
 * [ICs.EEPROM.AT24C](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html)
 * [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html)
 * [RTCs.Ds323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x.html)
