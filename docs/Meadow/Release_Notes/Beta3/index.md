@@ -54,7 +54,7 @@ This release is a major leap in API stability. We closed nearly all of the open 
 
 #### Known Issues
 
-With that said, there are still three bugs that we were hoping to squish, but did not:
+With that said, there are still two bugs that we were hoping to squish, but did not:
 
 * [#59 - Multiple inputs trigger duplicate/incorrect interrupts](https://github.com/WildernessLabs/Meadow_Issues/issues/59)
 * [#37 - Threading and event callback lockup ](https://github.com/WildernessLabs/Meadow_Issues/issues/37)
