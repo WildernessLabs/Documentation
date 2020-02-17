@@ -21,13 +21,11 @@ We enabled various low-level caching mechanisms available on the F7 chip and fix
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=867053354&amp;format=interactive"></iframe>
 
-**Overall, since `b3.5`, IO writes have gotten `318x` faster. And since the last beta, general operation execution speed has gotten `4-8x` faster.** 
+**Overall, since `b3.5`, IO writes have gotten `318x` faster. And since the last beta, general operation execution speed is `4-8x` faster.** 
 
 These improvements made several additional Meadow.Foundation drivers practical, now that execution speed can handle them. 
 
 ### CLI/Deployment Stabilization
-
-[fixed HCOM thread stuff]
 
 ### Bug Fixes
 
