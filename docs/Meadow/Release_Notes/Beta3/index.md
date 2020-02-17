@@ -8,6 +8,10 @@ subtitle: Release Notes
 
 Though this is a point release, it's actually cut from the `b4.0` work, and represents a significant Meadow upgrade. It continues the API stabilization and bug fixes started in `b3.6`, but also includes major performance increases, an up-to-date Mono runtime (with pre-cursor support for Core 3.x), and a pile of new Meadow.Foundation drivers that were unlocked by both the performance improvements and IO bug fixes.
 
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
 ### Performance Improvements
 
 We enabled various low-level caching mechanisms available on the F7 chip and fixed some long-outstanding memory bugs that were preventing their use up until this point. With these fixes and optimizations, we're able to realize one to two magnitudes of performance increases across various aspects of execution. The most significant being in IO access, which saw an `8,600%` increase since `b3.6`. However, we also saw significant improvement in general execution, as well. The following charts were created from the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) readme data:
@@ -25,7 +29,11 @@ We enabled various low-level caching mechanisms available on the F7 chip and fix
 
 These improvements made several additional Meadow.Foundation drivers practical, now that execution speed can handle them. 
 
-### CLI/Deployment Stabilization
+### Meadow Deployment
+
+We made a number of optimizations to the CLI, including making deployment much more robust.
+
+We also merged the OS binaries into a single binary.
 
 ### Bug Fixes
 
@@ -73,6 +81,7 @@ As well, we've published 13 new drivers via NuGet:
 * [Sensors.Light.Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html)
 * [Sensors.Motion.ADXL362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html)
 * [Sensors.Motion.Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html)
+
 
 ## Beta 3.6
 
