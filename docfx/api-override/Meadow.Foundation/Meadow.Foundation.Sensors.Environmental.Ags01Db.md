@@ -9,6 +9,16 @@ remarks: *content
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Environmental.Ags01Db) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.Ags01Db/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Environmental.Ags01Db.svg?label=Meadow.Foundation.Sensors.Environmental.Ags01Db" style="width: auto; height: -webkit-fill-available;" /></a> |
 
+The AGS01DB is a MEMS VOC gas sensor that commuincates over I2C. 
+
+Supply voltage(V)	    3.3~5.5
+Supply current(mA)	    ＜30
+Measuring range(ppm)	0~100
+Operating range (°C)	0~50
+Operating range (% RH)	0~95
+Interface 	            I²C
+Size:L*W*H (mm)	        23.3*12.5*5.8
+
 ### Code Example
 
 ```csharp
