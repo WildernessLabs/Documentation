@@ -5,7 +5,7 @@ remarks: *content
 
 | x74595        |               |
 |---------------|---------------|
-| Status        | Not Working   |
+| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" />   |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) |
 | NuGet package | Not Published |
 
@@ -24,7 +24,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
     public MeadowApp()
     {
-        shiftRegister = new x74595(Device, Device.CreateSpiBus(), Device.Pins.D03, 8);
+        shiftRegister =new x74595(Device, Device.CreateSpiBus(), Device.Pins.D03, 8);
 
         shiftRegister.Clear(true);
 

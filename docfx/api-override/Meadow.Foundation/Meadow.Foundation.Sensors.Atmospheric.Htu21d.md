@@ -34,5 +34,20 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 
 ```
-
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu21d/Samples/) 
+
+### Wiring Example
+
+To wire a HTU21D to your Meadow board, connect the following:
+
+| HTU21D | Meadow Pin  |
+|--------|-------------|
+| GND    | GND         |
+| SCL    | D08 (SCL)   |
+| SDA    | D07 (SDA)   |
+| VCC    | 3V3         |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Htu21d/Htu21d_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

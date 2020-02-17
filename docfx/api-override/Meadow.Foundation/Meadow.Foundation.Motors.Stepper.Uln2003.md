@@ -45,5 +45,22 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
-
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Samples/) 
+
+### Wiring Example
+
+To wire a ULN2003 to your Meadow board, connect the following:
+
+| ULN2003 | Meadow Pin  |
+|---------|-------------|
+| GND     | GND         |
+| VCC     | 3V3         |
+| INT1    | D01         |
+| INT2    | D02         |
+| INT3    | D03         |
+| INT4    | D04         |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Motors.Stepper.Uln2003/Uln2003_Fritzing.png" 
+    style="width: 40%; display: block; margin-left: auto; margin-right: auto;" />

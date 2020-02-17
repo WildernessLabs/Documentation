@@ -4,6 +4,85 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.7
+
+Though this is a point release, it's actually cut from the `b4.0` work, and represents a significant Meadow upgrade. It continues the API stabilization and bug fixes started in `b3.6`, but also includes major performance increases, an up-to-date Mono runtime (with pre-cursor support for Core 3.x), and a pile of new Meadow.Foundation drivers that were unlocked by both the performance improvements and IO bug fixes.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Performance Improvements
+
+We enabled various low-level caching mechanisms available on the F7 chip and fixed some long-outstanding memory bugs that were preventing their use up until this point. With these fixes and optimizations, we're able to realize one to two magnitudes of performance increases across various aspects of execution. The most significant being in IO access, which saw an `8,600%` increase since `b3.6`. However, we also saw significant improvement in general execution, as well. The following charts were created from the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) readme data:
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2104450466&amp;format=interactive"></iframe>
+ 
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=103861413&amp;format=interactive"></iframe>
+
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2010951639&amp;format=interactive"></iframe>
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=867053354&amp;format=interactive"></iframe>
+
+**Overall, since `b3.5`, IO writes have gotten `318x` faster. And since the last beta, general operation execution speed is `4-8x` faster.** 
+
+These improvements made several additional Meadow.Foundation drivers practical, now that execution speed can handle them. 
+
+### Meadow Deployment
+
+We made a number of optimizations to the CLI, including making deployment much more robust.
+
+We also merged the OS binaries into a single binary.
+
+### Bug Fixes
+
+This release is a major leap in API stability. We closed nearly all of the open bugs around the IO API, including:
+
+* [#5 - Calling DateTime.Now causes exception](https://github.com/WildernessLabs/Meadow_Issues/issues/5) - Fixed.
+* [#18 - PushButton only works with constructor where Device is passed.](https://github.com/WildernessLabs/Meadow_Issues/issues/18) - Fixed. There was a code issue in the driver itself, the underlying IO was working as expected.
+* [#21 - Issues with multiple buttons](https://github.com/WildernessLabs/Meadow_Issues/issues/21) - Fixed. 
+* [#22 - I2C Frequency cannot be set.](https://github.com/WildernessLabs/Meadow_Issues/issues/22) - Fixed. We made it public. Was a silly API mistake.
+* [#43 - Issues with Multiple Analog Inputs](https://github.com/WildernessLabs/Meadow_Issues/issues/43) - Fixed. Multiple analog inputs now work, as expected.
+* [#48 - PwmPorts on D11 and D13 are linked together](https://github.com/WildernessLabs/Meadow_Issues/issues/48) - Fixed.
+* [#50 - SpiPeripheral.ReadRegister always returns 0](https://github.com/WildernessLabs/Meadow_Issues/issues/50) - Fixed.
+* [#55 - Feature request : SPI frequency change](https://github.com/WildernessLabs/Meadow_Issues/issues/55) - Fixed; you can now change the configuration after constructing, including frequency and polarity.
+* [#56 - Setting PWM frequency on D13 changed D12](https://github.com/WildernessLabs/Meadow_Issues/issues/56) - This is fixed. We did an overhaul of the checks during this API call. PWMs on the same timer must have the same frequency, though their duty cycle can differ. We now throw an exception if you try and create two PWM channels on the same timer using different frequencies.
+* [#57 - Console.WriteLine output disappearing](https://github.com/WildernessLabs/Meadow_Issues/issues/57) - Fixed. We re-architected and re-implemted how the output gets passed from Meadow to the CLI, and it's much cleaner, simpler, and hopefully, works better.
+* [#58 - Can't deploy due to HCOM thread starvation](https://github.com/WildernessLabs/Meadow_Issues/issues/58) - At least partially fixed. This issue cropped up for folks on a second deploy, where they were unable to deploy or even make CLI calls. The thread that listens for the CLI wasn't responding. The workaround was to reset the board and then immediately make a call to recreate the file system via the CLI. It seems to be more or less fixed now, though we have some additional improvements on the plate for the future.
+
+#### Known Issues
+
+With that said, there are still three bugs that we were hoping to squish, but did not:
+
+* [#29 - Pin D04 as Digital Output is not responsive when pin D03 is setup as PWM](https://github.com/WildernessLabs/Meadow_Issues/issues/29)
+* [#59 - Multiple inputs trigger duplicate/incorrect interrupts](https://github.com/WildernessLabs/Meadow_Issues/issues/59)
+* [#37 - Threading and event callback lockup ](https://github.com/WildernessLabs/Meadow_Issues/issues/37)
+
+### Meadow.Foundation
+
+This is a big update, there are numerous improvements and fixes across published drivers. 
+
+#### New Peripheral Drivers
+
+As well, we've published 13 new drivers via NuGet:
+
+* [ICs.EEPROM.AT24C](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html)
+* [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html)
+* [RTCs.Ds323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x.html)
+* [Sensors.Atmospheric.Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html)
+* [Sensors.Atmospheric.Bmp180](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp180.html)
+* [Sensors.Atmospheric.Dht10](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht10.html)
+* [Sensors.Atmospheric.Dht12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht12.html)
+* [Sensors.Atmospheric.Ms5611](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Ms5611.html)
+* [Sensors.Environmental.Ags01Db](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ags01Db.html)
+* [Sensors.Light.Bh1745](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1745.html)
+* [Sensors.Light.Bh1750](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1750.html)
+* [Sensors.Light.Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html)
+* [Sensors.Motion.ADXL362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html)
+* [Sensors.Motion.Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html)
+
+
 ## Beta 3.6
 
 This release is focused on quality and stabilization. It's mostly bug fixes, API stabilization, and new drivers based on that work. This is also just the first part of this work. We have a number of additional bug fixes that were originally due for b3.6, but there are so many good things already in this, we decided not to wait until they were all in and instead break it up into multiple releases, so there will likely be a b3.7 release soon as well.
@@ -39,20 +118,20 @@ We fixed the following drivers:
 This is a big update, there are numerous improvements and fixes across published drivers. 
 
 As well, we've published 14 new drivers via NuGet:
-* PCD8544 LCD display controller
-* MAX7219 led display controller
-* TM1637 led display controller
-* ULN2003 stepper motor controller
-* HIH6130 I2C temperature and humidity sensor
-* HTU21D I2C temperature and humidity sensor
-* SI70xx I2C temperature and humidity sensor
-* ALS-PT19-315C light sensor
-* ADXL335 Analog triple axis, +/-3g accelerometer
-* ADXL337 Analog triple axis, +/-3g accelerometer
-* ADXL345 I2C triple axis accelerometer, +/-16g accelerometer
-* ADXL377 Analog triple axis, +/-200g accelerometer
-* BNO055 I2C 9-Axis absolute orientation sensor
-* TMP102 I2C temperature sensor
+* [PCD8544 LCD display controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html)
+* [MAX7219 led display controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html)
+* [TM1637 led display controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html)
+* [ULN2003 stepper motor controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003.html)
+* [HIH6130 I2C temperature and humidity sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html)
+* [HTU21D I2C temperature and humidity sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html)
+* [SI70xx I2C temperature and humidity sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx.html)
+* [ALS-PT19-315C light sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Alspt19315C.html)
+* [ADXL335 Analog triple axis, +/-3g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html)
+* [ADXL337 Analog triple axis, +/-3g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337.html)
+* [ADXL345 I2C triple axis accelerometer, +/-16g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl345.html)
+* [ADXL377 Analog triple axis, +/-200g accelerometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html)
+* [BNO055 I2C 9-Axis absolute orientation sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html)
+* [TMP102 I2C temperature sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html)
 
 ### Meadow.CLI Fixes, Updates, and Open-Sourcing
 
