@@ -35,6 +35,7 @@ This release is a major leap in API stability. We closed nearly all of the open 
 * [#18 - PushButton only works with constructor where Device is passed.](https://github.com/WildernessLabs/Meadow_Issues/issues/18) - Fixed. There was a code issue in the driver itself, the underlying IO was working as expected.
 * [#21 - Issues with multiple buttons](https://github.com/WildernessLabs/Meadow_Issues/issues/21) - Fixed. 
 * [#22 - I2C Frequency cannot be set.](https://github.com/WildernessLabs/Meadow_Issues/issues/22) - Fixed. We made it public. Was a silly API mistake.
+* [#29 - Pin D04 as Digital Output is not responsive when pin D03 is setup as PWM](https://github.com/WildernessLabs/Meadow_Issues/issues/29) - Fixed, with an ugly hack.
 * [#43 - Issues with Multiple Analog Inputs](https://github.com/WildernessLabs/Meadow_Issues/issues/43) - Fixed. Multiple analog inputs now work, as expected.
 * [#48 - PwmPorts on D11 and D13 are linked together](https://github.com/WildernessLabs/Meadow_Issues/issues/48) - Fixed.
 * [#50 - SpiPeripheral.ReadRegister always returns 0](https://github.com/WildernessLabs/Meadow_Issues/issues/50) - Fixed.
@@ -48,7 +49,6 @@ This release is a major leap in API stability. We closed nearly all of the open 
 With that said, there are still three bugs that we were hoping to squish, but did not:
 
 * [#59 - Multiple inputs trigger duplicate/incorrect interrupts](https://github.com/WildernessLabs/Meadow_Issues/issues/59)
-* [#29 - Pin D04 as Digital Output is not responsive when pin D03 is setup as PWM](https://github.com/WildernessLabs/Meadow_Issues/issues/29)
 * [#37 - Threading and event callback lockup ](https://github.com/WildernessLabs/Meadow_Issues/issues/37)
 
 ### Meadow.Foundation
