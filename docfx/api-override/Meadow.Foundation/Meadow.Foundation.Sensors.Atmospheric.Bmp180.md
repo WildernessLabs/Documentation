@@ -9,6 +9,8 @@ remarks: *content
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180) |
 | NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bmp180.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bmp180" style="width: auto; height: -webkit-fill-available;" /> |
 
+The BMP180 is a high-precision, low-power barometric pressure sensor. The BMP180 offers a measuring range of 300 to 1100 hPa with an absolute accuracy of down to 0.03 hPa. It's based on piezo-resistive technology for EMC robustness, high accuracy and linearity as well as long term stability. It is designed to be connected directly to a micro-controller via the I2C bus.
+
 ### Code Example
 
 ```csharp

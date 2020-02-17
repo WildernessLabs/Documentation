@@ -9,6 +9,8 @@ remarks: *content
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1750) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Bh1750/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Bh1750.svg?label=Meadow.Foundation.Sensors.Light.Bh1750" style="width: auto; height: -webkit-fill-available;" /></a> |
 
+The BH1750 is a light intensity sensor that communicates over I2C. 
+
 ### Code Example
 
 ```csharp

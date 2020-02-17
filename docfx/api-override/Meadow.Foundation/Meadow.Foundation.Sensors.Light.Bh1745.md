@@ -9,6 +9,8 @@ remarks: *content
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1745) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Bh1745/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Bh1745.svg?label=Meadow.Foundation.Sensors.Light.Bh1745" style="width: auto; height: -webkit-fill-available;" /></a> |
 
+The BH1745 is a RGB color and luminance sensor that communicates over I2C.
+
 ### Code Example
 
 ```csharp

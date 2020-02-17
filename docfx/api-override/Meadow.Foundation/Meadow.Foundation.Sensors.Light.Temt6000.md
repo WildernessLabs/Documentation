@@ -9,6 +9,8 @@ remarks: *content
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Temt6000) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Temt6000/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Temt6000.svg?label=Meadow.Foundation.Sensors.Light.Temt6000" style="width: auto; height: -webkit-fill-available;" /></a> |
 
+The TEMT6000 is an analog ambient light sensor.
+
 ### Code Example
 
 ```csharp
@@ -35,13 +37,12 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-To wire a Ms5611 to your Meadow board, connect the following:
+To wire a Temt6000 to your Meadow board, connect the following:
 
 | Temt6000 | Meadow Pin  |
 |----------|-------------|
 | GND      | GND         |
-| SCL      | D08 (SCL)   |
-| SDA      | D07 (SDA)   |
+| SIG      | A03         |
 | VCC      | 3V3         |
 
 It should look like the following diagram:
