@@ -10,4 +10,4 @@ subtitle: Guides and documentation for Meadow
 
 ## Meadow OS
 
- * [Meadow OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip)
+ * [Meadow OS](http://wldrn.es/latestmeadowos)

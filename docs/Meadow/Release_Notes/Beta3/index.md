@@ -196,7 +196,7 @@ You're looking at it! We took our beta-developer site live, with the hot new red
 
 ### Updating
 
-To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](http://wldrn.es/latestmeadowos), as well as update your IDE extensions.
 
 ## Beta 3.4
 
@@ -248,7 +248,7 @@ With the CLI returning CRC values, the IDE extensions now check to see if any fi
 
 ### Updating
 
-To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](http://wldrn.es/latestmeadowos), as well as update your IDE extensions.
 
 ## Beta 3.3
 
@@ -258,7 +258,7 @@ This is a small release with some sundry fixes:
 * **Analog IObservable** - These now work. They actually worked all along, but our sample was using `Debug.WriteLine()` which doesn't currently work (`Console.WriteLine()` is fine).
 * **VS Extension Updates** - We've made some sundry fixes to the Meadow project templates. Meadow.Foundation is now linked by default, and **File** > **New** > **Meadow App** now creates an app that walks the color hue spectrum on the onboard LED.
 
-To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip), as well as update your IDE extensions.
+To use this new beta, you'll need to reflash your board with the [latest Meadow.OS binaries](http://wldrn.es/latestmeadowos), as well as update your IDE extensions.
 
 **Note:** Meadow.Core updates also require the latest `Meadow.dll` be deployed to your Meadow. Currently, the IDE extensions will not update this dll if it's already on your board, so you'll need to manually delete it via the CLI, via the following command:
 
@@ -298,7 +298,7 @@ In order to be compatible with the file system changes, the `Meadow.CLI` has als
 
 ### SPI
 
-We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merged. We’re excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you’ll need to flash your Meadow board with the [latest OS firmware binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip).
+We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merged. We’re excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you’ll need to flash your Meadow board with the [latest OS firmware binaries](http://wldrn.es/latestmeadowos).
 
 ### Visual Studio Extension
 
