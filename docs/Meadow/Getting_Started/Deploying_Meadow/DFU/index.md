@@ -6,7 +6,7 @@ subtitle: Flashing the Meadow with the latest OS via Device Firmware Upgrade (DF
 
 When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it. To do this, you'll need to:
 
- 1. Download the latest [Meadow.OS](https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/MeadowOS.zip) files.
+ 1. Download the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
  2. Put the device into Device Firmware Upgrade (DFU) mode.
  3. Upload the files to the device. 
 
