@@ -23,7 +23,7 @@ Because sensors are generally reading, or _sampling_, input conditions from the 
 
 Generally, there are two approaches to remove or mitigate this noise; either in hardware with a [filtering circuit](https://www.arrow.com/en/research-and-events/articles/using-capacitors-to-filter-electrical-noise), or in software by _oversampling_.
 
-### Software Oversmapling
+### Software Oversampling
 
 Oversampling means to take multiple readings (samples), and then average their values to get a value that more closely matches the real-world conditions:
 
