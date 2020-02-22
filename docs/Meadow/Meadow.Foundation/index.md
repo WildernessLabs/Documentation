@@ -17,22 +17,36 @@ With Meadow.Foundation, you can use drivers and hardware abstractions directly, 
 ```csharp
 using System.Threading;
 using Meadow;
-using Meadow.Foundation;
+using Meadow.Devices;
+using Meadow.Foundation.Leds;
 
-public class HelloBlinky
+class HelloBlinky
 {
-    public static void Main()
+    public static void Main(string[] args) 
+    {
+        if (args.Length > 0 && args[0] == "--exitOnDebug") return;
+
+        // instantiate and run new meadow app
+        new MeadowApp();
+
+        Thread.Sleep(Timeout.Infinite);
+    }
+}
+
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    public MeadowApp()
     {
         var pwmLed = new PwmLed(
-            Device,
-            Device.Pins.OnboardLedGreen, 
-            TypicalForwardVoltage.Green);
+                    Device,
+                    Device.Pins.OnboardLedGreen,
+                    TypicalForwardVoltage.Green);
 
-            // blink the LED
-            pwmLed.StartBlink();
+        // blink the LED
+        pwmLed.StartBlink();
 
-            // keep the app running
-            Thread.Sleep(Timeout.Infinite);
+        // keep the app running
+        Thread.Sleep(Timeout.Infinite);
     }
 }
 ```
