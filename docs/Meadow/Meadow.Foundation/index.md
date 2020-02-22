@@ -23,12 +23,13 @@ public class HelloBlinky
 {
     public static void Main()
     {
-        var pwmLed = new LEDs.PwmLed(
-            App.Device.D01, 
-            LEDs.TypicalForwardVoltage.Green);
+        var pwmLed = new PwmLed(
+            Device,
+            Device.Pins.OnboardLedGreen, 
+            TypicalForwardVoltage.Green);
 
-            // pulse the LED
-            pwmLed.StartPulse();
+            // blink the LED
+            pwmLed.StartBlink();
 
             // keep the app running
             Thread.Sleep(Timeout.Infinite);
