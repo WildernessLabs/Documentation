@@ -29,7 +29,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     {
         Console.WriteLine("Initializing...");
 
-        piezoSpeaker = new PiezoSpeaker(Device.CreatePwmPort(Device.Pins.D05));
+        piezoSpeaker = new PiezoSpeaker(Device.CreatePwmPort(Device.Pins.D10));
 
         TestPiezoSpeaker();
     }
