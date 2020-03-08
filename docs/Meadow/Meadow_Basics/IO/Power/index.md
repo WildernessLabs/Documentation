@@ -39,13 +39,23 @@ You can manually upgrade a `v1.c` board to handle `800mA` of current via the `5V
 
 You should generally reserve up to `400mA` of the power budget for onbaord functionality including both MCUs, RAM, and flash. This leaves, at a minimum, `100mA` for peripherals, including anything drawing power from the IOs on the board.
 
+##### Peripheral Usage
+
+In addition to the overall power budget, the amount of power being delivered to peripherals via the IO pins must be considered. There is both an overall maximum that the MCU can drive, as well as a per pin maximum.
+
+[what are they?]
+
 ##### Battery Charger Usage
+
+[omgerd this paragraph needs work, Mark couldn't even parse what I was trying to say.]
 
 The battery charging circuit is hooked directly to the `USB` power rail, and to the `5V` rail via a diode. Meaning that when power input comes from the `USB` connector, up to `200mA` of current should be subtracted from the USB power budget, rather than the board power budget. So for instance, if the `USB` connector is hooked to a USB power supply that can supply `1A` of power, then the board still has `800mA` available. However, if power input comes from the `5V` rail, then the charging current comes from the onboard power budget; either `500mA` for revision `1.c` or `800mA` for `1.d`.
 
 ## Solar + Battery Power
 
 The board can be adequately powered by a solar panel that outputs a minimum of `500mA` at `6V`, but it's best to pair a solar panel with a battery in order to provide backup power when solar power is not available.
+
+[schematic needed - TODO]
 
 ## Real-Time Clock (RTC)
 
@@ -57,27 +67,42 @@ The STM32F7 is equipped with a real-time clock (RTC), which, when set, will reta
 
 ### Reset (`RST`)
 
-[pull this pin low momentarily and it will reset the board.]
+The _reset_ pin is used to do an MCU system reset. If you pull this pin `LOW` (to `GND`) momentarily, the MCU will reboot, clearing out it's volatile registers. The `RST` button on the board does exactly this.
 
-[if `3V3` rail has power, either from powering the `5V` rail, or having an attached battery, will not reset the RTC on the MCU]
+Note that as long as the board still has power, the RTC will continue to keep time without resetting.
 
-### `3V3` Power Rail (`3V3`)
+### `3.3V` Power Rail (`3V3`)
+
+The `3.3V` power rail is exposed via the `3V3` header pin. 
 
 ### Analog Reference (`AREF`)
 
-[we automatically connect to 3v3
+The _analog reference_ (`AREF`) pin provides a reference voltage for the [_Analog to Digital Converter_ (ADC)](/Meadow/Meadow_Basics/IO/Analog/) to compare against. Typically, this should be supplied with `3.3V`, so as a convenience, the `AREF` pin is actually connected to the `3.3V` rail via `0Ω` resistor that is located next to the `D08` pin, just below the main MCU:
 
-if you apply a voltage on AREF this you will need to make a small modification to the board to remove the 3.3V we supply from the AREF pin.]
+[image TODO]
+
+If you need to provide a different analog reference voltage, make sure to remove that resistor before hooking `AREF` to your voltage reference.
 
 ### Ground (`GND`)
 
+The _ground_ rail (`GND`) provides a common `0V` voltage sink and reference. It's important to make sure all connected peripherals are tied into this ground, otherwise they may not operate correctly.
+
 ### Battery (`BAT`)
+
+The _battery_ pin (`BAT`) provides an alternative positive terminal connection for an external battery or power source to the built-in JST-PH battery connector. If using the `BAT` pin, make sure to tie the negative terminal of the battery to the board ground (`GND`).
 
 ### Enable (`EN`)
 
-[Pulling low will power down the MCU (but if you have `BAT` hooked up, it'll keep the RTC]
+The _enable_ pin (`EN`) serves as a sort of power switch for the board. By default, it is pulled `HIGH` (`3.3V`), but when pulled `LOW` (`0V`), it will disconnect most of the power to the MCU. However, it will not disconnect backup power to the MCU, so that it will keep the RTC going and keeping time.
+
+To create a power switch for the development board, hook the `EN` pin to a switch that sinks to `GND` (`0V`) when in the `OFF` position, as shown in the following schematic:
+
+[schematic needed - TODO]
 
 ### `5V` Power Rail (`5V`)
 
+The `5V` power rail is exposed via the `5V` header pin.
+
 ## Adding Power to External Peripherals
 
+[because of the limits on how much power the board can drive, it may be necessary to provide external power to certain peripherals, such as motors, relays, and other high power devices]
