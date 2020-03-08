@@ -33,7 +33,9 @@ When powered via the `USB` connector, the budget is limited only by the `3.3V` p
 
 However, in practice, a typical USB port is only rated to deliver `500mA` of power. Some USB charging adapters will deliver much more than this, however.
 
-You can manually upgrade a `v1.c` board to handle `800mA` of current via the `5V` rail by swapping out a diode. [guide coming soon]
+You can manually upgrade a `v1.c` board to the `v1.d` version that can handle `800mA` of current via the `5V` rail by swapping out the following diode with a [`BAT60AE6327HTSA1`](https://octopart.com/bat60ae6327htsa1-infineon-21384716?r=sp):
+
+![Image showing the location of the 5V rail diode, which is just below the top left mounting hole, next to the edge of the board, when the board is turned so that the USB connector is on top.](/Common_Files/F7_Micro_5V_Diode.svg)
 
 #### Nominal Power Usage
 
@@ -79,7 +81,7 @@ The `3.3V` power rail is exposed via the `3V3` header pin.
 
 The _analog reference_ (`AREF`) pin provides a reference voltage for the [_Analog to Digital Converter_ (ADC)](/Meadow/Meadow_Basics/IO/Analog/) to compare against. Typically, this should be supplied with `3.3V`, so as a convenience, the `AREF` pin is actually connected to the `3.3V` rail via `0Ω` resistor that is located next to the `D08` pin, just below the main MCU:
 
-[image TODO]
+![Image showing the location of the AREF 0Ω resistor, which is just below the F7 MCU, and on the right side, when the board is turned so that the USB connector is on top. The resistor is immediately to the left of the D08 header pin.](/Common_Files/F7_Micro_AREF_Resistor.svg)
 
 If you need to provide a different analog reference voltage, make sure to remove that resistor before hooking `AREF` to your voltage reference.
 
