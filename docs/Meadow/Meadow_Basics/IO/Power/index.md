@@ -1,10 +1,12 @@
 ---
 layout: Meadow
-title: Power
-subtitle: Understanding power IO and stuffs.
+title: Power IO
+subtitle: Power administration on the F7 Micro Development board.
 ---
 
 ## Powering the Meadow F7 Micro
+
+**NOTE: This document is a work-in-progress**
 
 The Meadow F7 Micro development board is designed such that it can be powered by supplying the appropriate voltage to either the `USB` connector, or the `5V` or `3.3V` power rails. 
 
