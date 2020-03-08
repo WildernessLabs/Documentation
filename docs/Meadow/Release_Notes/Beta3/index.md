@@ -4,6 +4,25 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.8 
+
+This is another point release but it get's us another step closer to `b4.0`. The `b3.8` adds further API stabilization and functionality, specifically focusing on I2C and SPI features. This release also takes advantage of the performance increases in `b3.7` to unlock more peripherals, include a couple of exciting input peripherals: `AnalogJoystick` and `RotaryEncoder`.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Meadow.Foundation
+
+There's continuous improvement of driver features and stability as well as a handful of new peripheral drivers.
+
+#### New Peripheral Drivers
+
+As well, we've published xxx new drivers via NuGet:
+
+
+
+
 ## Beta 3.7
 
 Though this is a point release, it's actually cut from the `b4.0` work, and represents a significant Meadow upgrade. It continues the API stabilization and bug fixes started in `b3.6`, but also includes major performance increases, an up-to-date Mono runtime (with pre-cursor support for Core 3.x), and a pile of new Meadow.Foundation drivers that were unlocked by both the performance improvements and IO bug fixes.
