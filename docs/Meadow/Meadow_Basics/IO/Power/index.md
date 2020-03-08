@@ -20,9 +20,9 @@ If you supply voltage only to the `3.3V` power rail, the board will operate as e
 
 ### Power Budget
 
-When powered by either `USB` connector or the `5V` rail, the amount of combined `3.3V` current available onboard (including the `3V3` power rail, MCUs, and IO peripherals) is limited is known as the _power budget_. 
+When powered by either `USB` connector or the `5V` rail, the amount of combined `3.3V` current available onboard (including the `3V3` power rail, MCUs, and IO peripherals) is limited, and is known as the _power budget_. 
 
-When powered via the `USB` connector, the budget is limited only by the `3.3V` power regulator, which is good for `800mA` of output. However, on revision `1.c` of the board, it's limited by a diode that has a `500mA` maximum power throughput:
+When powered via the `USB` connector, the budget is limited only by the `3.3V` power regulator, which is good for `800mA` of output. However, on revision `1.c` of the board, when power input comes from the `5V` rail, it's limited by a diode that has a `500mA` maximum power throughput. Therefore, the onboard `3.3V` power budget is as follows:
 
 | Revision | Power Input | Budget  |
 |----------|-------------|---------|
@@ -41,11 +41,11 @@ You should generally reserve up to `400mA` of the power budget for onbaord funct
 
 ##### Battery Charger Usage
 
-The battery charging circuit is hooked directly to the `USB` power rail, and to the `5V` rail via a diode. Meaning that when power input comes from the `USB` connector, up to `200mA` of current should be subtracted from the USB power budget, rather than the board power budget. So for instance, if the `USB` connector is hooked to a USB power supply that can supply `1A` of power, then the board still has `800mA` available. However, is power input comes from the `5V` rail, then the charging current comes from the diode limit; either `500mA` for revision `1.c` or `800mA` for `1.d`.
+The battery charging circuit is hooked directly to the `USB` power rail, and to the `5V` rail via a diode. Meaning that when power input comes from the `USB` connector, up to `200mA` of current should be subtracted from the USB power budget, rather than the board power budget. So for instance, if the `USB` connector is hooked to a USB power supply that can supply `1A` of power, then the board still has `800mA` available. However, if power input comes from the `5V` rail, then the charging current comes from the onboard power budget; either `500mA` for revision `1.c` or `800mA` for `1.d`.
 
 ## Solar + Battery Power
 
-The board can be adequately powered by only a solar panel that outputs a minimum of `500mA` at `6V`, but it's best to pair a battery with the solar panel in order to provide backup power when solar power is not available.
+The board can be adequately powered by a solar panel that outputs a minimum of `500mA` at `6V`, but it's best to pair a solar panel with a battery in order to provide backup power when solar power is not available.
 
 ## Real-Time Clock (RTC)
 
