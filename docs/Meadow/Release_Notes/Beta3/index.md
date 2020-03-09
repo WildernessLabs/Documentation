@@ -25,7 +25,7 @@ There's continuous improvement of driver features and stability as well as a han
 
 #### New Peripheral Drivers
 
-As well, we've published five new drivers via NuGet:
+As well, we've published eight new drivers:
 
 * [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html)
 * [Sensors.Rotary.RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html)
