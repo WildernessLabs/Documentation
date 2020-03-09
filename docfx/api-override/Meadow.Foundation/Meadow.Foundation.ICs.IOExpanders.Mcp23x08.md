@@ -30,7 +30,7 @@ For example, if all address pins were tied to ground, then the address of the ch
 
 The I2C addresses can then be as follows, where `0` represents an address pin connected to ground, and `1` represents an address pin connected to `3.3V`:
 
-| address header | A2  | A1  | A0  | Resulting Hex Address | Resulting Decimal Address |
+| Address Header | A2  | A1  | A0  | Resulting Hex Address | Resulting Decimal Address |
 |----------------|-----|-----|-----|-----------------------|---------------------------|
 | `0100`         | `0` | `0` | `0` | `0x20`                | `32`                      | 
 | `0100`         | `0` | `0` | `1` | `0x21`                | `33`                      | 
