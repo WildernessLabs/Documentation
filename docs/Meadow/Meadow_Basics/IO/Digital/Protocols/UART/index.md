@@ -49,7 +49,7 @@ However, most modern microcontrollers have UART chips that operate at a TTL (Tra
 
 Fortunately, many modern serial peripherals operate on TTL voltage levels. However, most industrial serial peripherals still use RS-232, which allows them to operate in noisy environments.
 
-When using an RS-232 peripheral, the signal voltages must be level-shifted and inverted (high voltage in RS-232 signifies `0`, whereas low-voltage at TTL signifies `0`) in order to communicate. Fortunately there are low cost ICs (Integrated Circuits) that do this, such as the [MAX232](https://octopart.com/search?q=max232) chip.
+When using an RS-232 peripheral, the signal voltages must be level-shifted and inverted (high voltage in RS-232 signifies `0`, whereas low-voltage at TTL signifies `0`) in order to communicate. Fortunately there are low cost ICs (Integrated Circuits) that do this, such as the MAX232 chip.
 
 Additionally, [Sparkfun has an RS-232 to TTL Shifter breakout board](https://www.sparkfun.com/products/449) that not only converts RS-232 to TTL levels, but also includes an onboard RS-232 connector:
 

@@ -44,7 +44,7 @@ In addition to the seven address bits, the master device will also send a single
 
 ## Pull-Up Resistors
 
-Both of the bus lines require [pull-up resistors](http://127.0.0.1:4002/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) to be connected to them. Pull-up resistors allow a tiny amount of current to flow on the bus lines which gives them a default logic value of `1`/`ON`, so that clean digital logic transitions can occur and provide a reliable signal.
+Both of the bus lines require [pull-up resistors](/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) to be connected to them. Pull-up resistors allow a tiny amount of current to flow on the bus lines which gives them a default logic value of `1`/`ON`, so that clean digital logic transitions can occur and provide a reliable signal.
 
 The value of the pull-up resistors depends on the speed and number of devices, length of the bus, and capacitance. However, in practice, most I2C circuits will work reliably with a couple of `4.7kΩ` resistors. In fact, many I2C breakout boards already have `4.7kΩ` resistors installed on them.
 

@@ -4,6 +4,42 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.8 
+
+This is another point release but it get's us another step closer to `b4.0`. The `b3.8` adds further API stabilization and functionality, specifically focusing on I2C and SPI features. This release also takes advantage of the performance increases in `b3.7` to unlock more peripherals, include a couple of exciting input peripherals: `AnalogJoystick` and `RotaryEncoder`.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Bug Fixes
+
+* [#65 - Feature request : SPI reading/writing ushorts without address](https://github.com/WildernessLabs/Meadow_Issues/issues/65) - This was actually two parts. One was adding an overload to allow `ushorts`, the other part was making it possible to do 16-bit words in SPI. Now you can write words of any length.
+* [#63 - I2C frequencies not correct](https://github.com/WildernessLabs/Meadow_Issues/issues/63) - This wasn't so much a bug, but we made the frequency setting make some more sense.
+* [#55 - Feature request : SPI frequency change](https://github.com/WildernessLabs/Meadow_Issues/issues/55) - Ok, hopefully this is fixed for real this time. :)
+* [#22 - I2C Frequency cannot be set.](https://github.com/WildernessLabs/Meadow_Issues/issues/22) - Fixed again. :)
+
+### Meadow.Foundation
+
+There's continuous improvement of driver features and stability as well as a handful of new peripheral drivers.
+
+#### New Peripheral Drivers
+
+As well, we've published eight new drivers:
+
+* [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html)
+* [Sensors.Rotary.RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html)
+* [Sensors.Rotary.RotaryEncoderWithButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html)
+* [ICs.IOExpanders.Mcp23x08](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.html)
+* [Displays.Ssd1309](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1309.html)
+* [Sensors.Temperature.Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html)
+* [Sensors.Power.Ina260](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.Ina260.html)
+* [Transceivers.SX127x](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.SX127x.html)
+
+### New Power Guide
+
+We added a [guide on Power IO](/Meadow/Meadow_Basics/IO/Power/) that explains the options for powering the board, battery charging, solar, and more.
+
 ## Beta 3.7
 
 Though this is a point release, it's actually cut from the `b4.0` work, and represents a significant Meadow upgrade. It continues the API stabilization and bug fixes started in `b3.6`, but also includes major performance increases, an up-to-date Mono runtime (with pre-cursor support for Core 3.x), and a pile of new Meadow.Foundation drivers that were unlocked by both the performance improvements and IO bug fixes.
