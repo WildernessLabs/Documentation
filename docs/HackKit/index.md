@@ -50,13 +50,13 @@ First, check to make sure that everything is included. See the below content lis
 | [H-Bridge Motor Controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | 1 | 1 | SN754410. Provides digital control for two motors using an external power source, controlled via PWM. |
 | [Rainbow LED Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | 0 | Green, yellow, red, LED array. |
 | [Rainbow LED Battery Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | 1 | Green, yellow, red, LED array that has a battery shape. |
-| [4x20 LCD Character Display](http://staging-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. |
-| [Color LCD Display](http://staging-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1306.html) | 1 | 0 | 1.3", full-color, 240x240 pixel, graphic display. |
+| [4x20 LCD Character Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. |
+| [SSD7899 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | 1 | 0 | 1.3", 16bbp color, 240x240 pixel, graphic display. |
 | Resistor Kit | 1 | 1 | ~300 resistors of varying resistance. |
 | Resistor Network Kit | 1 | 1 | 5 different values of 8 resistors in a single  package. Typically used in conjunction with LED bargraphs. |
 | Capacitor Kit | 1 | 1 | Various value capacitors for general digital circuit usage. |
 | 1N4004 Diode | ~8 | ~4 | General purpose, `1A` power rectification diode. |
-| Temt6000 Luminosity Sensor | 1 | 1 | `5V` light sensor used as an example of how to use a voltage divider to reduce a `5V` analog signal to `3.3V`. See the [Level-Shifting Lab](http://127.0.0.1:4002/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/). |
+| Temt6000 Luminosity Sensor | 1 | 1 | `5V` light sensor used as an example of how to use a voltage divider to reduce a `5V` analog signal to `3.3V`. See the [Level-Shifting Lab](/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/). |
 | USB Breakout | 1 | 1 | Used to expose the `5V` and `GND` pins of a USB adapter so that it can be used as an external power supply to drive motors, and such. |
 | DC Motor | 2 | 1 | `6V` motor that can be used in conjunction with either the motor controller or BJTs and a `5V` power source. |
 | `9V` Batter Adapter | 1 | 0 | Plugs into a `9V` battery and exposes the power and ground via wires. |
