@@ -12,6 +12,13 @@ This is another point release but it get's us another step closer to `b4.0`. The
 
 You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
 
+### Bug Fixes
+
+* [#65 - Feature request : SPI reading/writing ushorts without address](https://github.com/WildernessLabs/Meadow_Issues/issues/65) - This was actually two parts. One was adding an overload to allow `ushorts`, the other part was making it possible to do 16-bit words in SPI. Now you can write words of any length.
+* [#63 - I2C frequencies not correct](https://github.com/WildernessLabs/Meadow_Issues/issues/63) - This wasn't so much a bug, but we made the frequency setting make some more sense.
+* [#55 - Feature request : SPI frequency change](https://github.com/WildernessLabs/Meadow_Issues/issues/55) - Ok, hopefully this is fixed for real this time. :)
+* [#22 - I2C Frequency cannot be set.](https://github.com/WildernessLabs/Meadow_Issues/issues/22) - Fixed again. :)
+
 ### Meadow.Foundation
 
 There's continuous improvement of driver features and stability as well as a handful of new peripheral drivers.
