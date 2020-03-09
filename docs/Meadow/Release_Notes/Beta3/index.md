@@ -6,7 +6,7 @@ subtitle: Release Notes
 
 ## Beta 3.8 
 
-This is another point release but it get's us another step closer to `b4.0`. The `b3.8` adds further API stabilization and functionality, specifically focusing on I2C and SPI features. This release also takes advantage of the performance increases in `b3.7` to unlock more peripherals, include a couple of exciting input peripherals: `AnalogJoystick` and `RotaryEncoder`.
+This is another point release but it gets us another step closer to `b4.0`. The `b3.8` release adds further API stabilization and functionality, specifically focusing on I2C and SPI. This release also takes advantage of the performance increases from `b3.7` to unlock more drivers, including a couple of exciting input peripherals: `AnalogJoystick` and `RotaryEncoder`.
 
 ### Updating
 
@@ -21,11 +21,11 @@ You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Sta
 
 ### Meadow.Foundation
 
-There's continuous improvement of driver features and stability as well as a handful of new peripheral drivers.
+There's continued improvement of driver features and stability as well as a handful of new peripheral drivers.
 
 #### New Peripheral Drivers
 
-As well, we've published eight new drivers:
+We've published eight new drivers:
 
 * [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html)
 * [Sensors.Rotary.RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html)
