@@ -37,6 +37,10 @@ As well, we've published five new drivers via NuGet:
 * [Sensors.Power.Ina260](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.Ina260.html)
 * [Transceivers.SX127x](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.SX127x.html)
 
+### New Power Guide
+
+We added a [guide on Power IO](/Meadow/Meadow_Basics/IO/Power/) that explains the options for powering the board, battery charging, solar, and more.
+
 ## Beta 3.7
 
 Though this is a point release, it's actually cut from the `b4.0` work, and represents a significant Meadow upgrade. It continues the API stabilization and bug fixes started in `b3.6`, but also includes major performance increases, an up-to-date Mono runtime (with pre-cursor support for Core 3.x), and a pile of new Meadow.Foundation drivers that were unlocked by both the performance improvements and IO bug fixes.
