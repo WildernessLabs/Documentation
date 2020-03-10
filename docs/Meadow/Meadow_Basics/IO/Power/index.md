@@ -51,7 +51,7 @@ In addition to the overall power budget, the amount of power being delivered to 
 
 ##### Battery Charger Usage
 
-[omgerd this paragraph needs work, Mark couldn't even parse what I was trying to say.]
+<!-- [omgerd this paragraph needs work, Mark couldn't even parse what I was trying to say.] -->
 
 The battery charging circuit is hooked directly to the `USB` power rail, and to the `5V` rail via a diode. Meaning that when power input comes from the `USB` connector, up to `200mA` of current should be subtracted from the USB power budget, rather than the board power budget. So for instance, if the `USB` connector is hooked to a USB power supply that can supply `1A` of power, then the board still has `800mA` available. However, if power input comes from the `5V` rail, then the charging current comes from the onboard power budget; either `500mA` for revision `1.c` or `800mA` for `1.d`.
 
@@ -107,6 +107,9 @@ To create a power switch for the development board, hook the `EN` pin to a switc
 
 The `5V` power rail is exposed via the `5V` header pin.
 
+<!--
 ## Adding Power to External Peripherals
 
 [because of the limits on how much power the board can drive, it may be necessary to provide external power to certain peripherals, such as motors, relays, and other high power devices]
+
+-->
