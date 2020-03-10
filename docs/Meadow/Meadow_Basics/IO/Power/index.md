@@ -12,7 +12,7 @@ The Meadow F7 Micro development board is designed such that it can be powered by
 
 ### Battery Charging Circuit
 
-Supplying voltage via either the `USB` connector or `5V` rail is effectively the same, and will output `3.3V` on the `3V3` power rail, as well as enable the battery charging circuit, which will charge any standard `3.7V` LiPo/LiIon battery.
+Supplying voltage via either the `USB` connector or `5V` rail is effectively the same; it will output `3.3V` on the `3V3` power rail, and enable the battery charging circuit, which will charge any standard `3.7V` LiPo/LiIon battery.
 
 To use a battery, you can either hook it to the JST-PH battery connector, or wire it directly to the `VBAT` and `GND` pins on the header. Both [Adafruit](https://www.adafruit.com/category/916) and [SparkFun](https://www.sparkfun.com/categories/54) have a good selection of LiPo/LiIon batteries that will work.
 
@@ -41,7 +41,7 @@ You can manually upgrade a `v1.c` board to the `v1.d` version that can handle `8
 
 #### Nominal Power Usage
 
-You should generally reserve up to `400mA` of the power budget for onbaord functionality including both MCUs, RAM, and flash. This leaves, at a minimum, `100mA` for peripherals, including anything drawing power from the IOs on the board.
+You should generally reserve up to `400mA` of the power budget for onboard functionality including both MCUs, RAM, and flash. This leaves, at a minimum, `100mA` for peripherals, including anything drawing power from the IOs on the board.
 
 ##### Peripheral Usage
 
@@ -51,9 +51,9 @@ In addition to the overall power budget, the amount of power being delivered to 
 
 ##### Battery Charger Usage
 
-<!-- [omgerd this paragraph needs work, Mark couldn't even parse what I was trying to say.] -->
+The battery charging circuit is hooked directly to the `USB` power rail. When powering Meadow via USB and charging a battery, the battery charging circut will pull up to `200mA`. This means you should subtract `200mA` from your USB power budget. For example, if you're powering Meadow with a USB power supply that can deliver `0.75A` at `5V`, you should subtract `200mA` from the USB power budget. The Meadow board will have `550mA` avaliable.
 
-The battery charging circuit is hooked directly to the `USB` power rail, and to the `5V` rail via a diode. Meaning that when power input comes from the `USB` connector, up to `200mA` of current should be subtracted from the USB power budget, rather than the board power budget. So for instance, if the `USB` connector is hooked to a USB power supply that can supply `1A` of power, then the board still has `800mA` available. However, if power input comes from the `5V` rail, then the charging current comes from the onboard power budget; either `500mA` for revision `1.c` or `800mA` for `1.d`.
+The battery charging circut is also connected to the `5V` rail via a diode. You can charge a battery when powering Meadow via the `5V` rail. However, this will cause up to `200mA` to flow through the `5V` rail reducing your `5V` power budget. This is important because Meadow has a current limit on the `5V` rail, `500mA` for `1.c` boards and `800mA` for `1.d` boards. You'll only be able to safely use and additional `300mA` for `1.c` boards and `600mA` for `1.d` boards regardless of the avalaible current of the external power supply.
 
 ## Solar + Battery Power
 
