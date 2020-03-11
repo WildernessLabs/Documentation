@@ -4,7 +4,7 @@ title: Hack Kit Pro
 subtitle: Instructions and inspiration for Wilderness Labs Hack Kit Pro.
 ---
 
-Got an awesome Wilderness Labs Hack Kit and want to build something awesome with it? You're at the right spot. This page has instructions and information for the Hack Kit Pro, for information on the discontinued Hack Kit Lite, check [here](HackKitLite/).
+Got a cool Wilderness Labs Hack Kit and want to build something awesome with it? You're at the right spot. This page has instructions and information for the Hack Kit Pro, for information on the discontinued Hack Kit Lite, check [here](HackKitLite/).
 
 ![](Hack_Kit.jpg){:standalone}
 
