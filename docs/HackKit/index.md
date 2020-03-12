@@ -16,7 +16,7 @@ If you haven't setup your development environment yet, and gone through Hello, L
 
 ## Hackster.io Project Inspiration
 
-Here are some awesome projects you can build:
+Here are some awesome projects you can build with a Hack Kit Pro:
 
 | Project       | Image |
 |---------------|-------|
