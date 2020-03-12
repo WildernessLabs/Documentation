@@ -25,35 +25,35 @@ Here are some awesome projects you can build:
 
 ### F7 Micro Dev Kit
 
-| Item                   | QTY | Description |
-|------------------------|-----|-------------|
-| Laser-etched Baseboard | 1 | Baseboard that holds a Meadow and a Half+ size breadboard for prototyping. |
-| Half+ Breadboard       | 2 | Breadboard for quick, temporary, prototyping. |
-| M2x8MM Hex Bolts | 4 | |
-| M2 Nuts | 8 | |
+| Item                   | QTY | Description | |
+|------------------------|-----|-------------|-|
+| Laser-etched Baseboard | 1 | Baseboard that holds a Meadow and a Half+ size breadboard for prototyping. | ![](protoboard.jpg) |
+| Half+ Breadboard       | 2 | Breadboard for quick, temporary, prototyping. | ![](breadboards.jpg) |
+| M2x8MM Hex Bolts | 4 | | ![](bolts.jpg) |
+| M2 Nuts | 8 | | ![](nuts.jpg) |
 
 ### Large Items
 
-| Item                   | QTY | Description |
-|------------------------|-----|-------------|
+| Item                   | QTY | Description | |
+|------------------------|-----|-------------|-|
 | Hack Kit Box           | 1 | Box that holds all the hack goodies. |
 | Wire Jumpers (M/M, M/F, F/F) | 1 | A set of flexible jumper wires for breadboard prototyping. |
 | Jumper Kit | 1 | Box of various length breadboard jumper wires. |
-| [Micro Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | 1 | Motor with precision 180º rotation control. |
-| [2-Channel Relay Board](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | 1 | Digitally controlled, isolated circuit switch for controlling external power, often used to switch household mains electricity (`110V/240V` AC). |
-| [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | 1 | Sonar-based distance sensor good for up to 1 meter. |
-| [Moisture Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | 1 | Capacitive soil moisture sensor with digital output. |
-| [4x20 LCD Character Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. |
-| [ST7899 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. |
-| Resistor Kit | 1 | ~300 resistors of varying resistance. |
-| Capacitor Kit | 1 | Various value capacitors for general digital circuit usage. |
-| Single-row Breakaway Headers | 4 | |
-| [Rotary Encoder w/Pushbutton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) + Knobs | 2 | Continuous rotation digital input knob with integrated pushbutton. |
-| [Piezo Speaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | 1 | 1 | Simple, single-frequency sound emitting device for generating tones, beeps, and other simple sounds. |
-| `9V` Batter Adapter | 1 | Plugs into a `9V` battery and exposes the power and ground via wires. |
-| DC Motor | 2 | `6V` motor that can be used in conjunction with either the motor controller or BJTs and a `5V` power source. |
-| USB Breakout | 1 | Used to expose the `5V` and `GND` pins of a USB adapter so that it can be used as an external power supply to drive motors, and such. |
-| SPDT Switch | 2 | Small two-position switch. |
+| [Micro Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | 1 | Motor with precision 180º rotation control. | ![](servo.jpg) |
+| [2-Channel Relay Board](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | 1 | Digitally controlled, isolated circuit switch for controlling external power, often used to switch household mains electricity (`110V/240V` AC). | ![](relay.jpg) |
+| [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | 1 | Sonar-based distance sensor good for up to 1 meter. | ![](distanceSensor.jpg) |
+| [Moisture Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | 1 | Capacitive soil moisture sensor with digital output. | ![](soilMoisture.jpg) |
+| [4x20 LCD Character Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. | ![](characterDisplay.jpg) |
+| [ST7899 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. | ![](ST7789.jpg) |
+| Resistor Kit | 1 | ~300 resistors of varying resistance. | ![](resistors.jpg) |
+| Capacitor Kit | 1 | Various value capacitors for general digital circuit usage. | ![](capacitors.jpg) |
+| Single-row Breakaway Headers | 4 | | ![](headers.jpg) |
+| [Rotary Encoder w/Pushbutton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) + Knobs | 2 | Continuous rotation digital input knob with integrated pushbutton. | ![](rotaryEncoders.jpg) |
+| [Piezo Speaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | 1 | Simple, single-frequency sound emitting device for generating tones, beeps, and other simple sounds. | ![](piezo.jpg) |
+| `9V` Battery Adapter | 1 | Plugs into a `9V` battery and exposes the power and ground via wires. | ![](9vAdapter.jpg) |
+| DC Motor | 2 | `6V` motor that can be used in conjunction with either the motor controller or BJTs and a `5V` power source. | ![](motors.jpg) |
+| USB Breakout | 1 | Used to expose the `5V` and `GND` pins of a USB adapter so that it can be used as an external power supply to drive motors, and such. | ![](usbBreakout.jpg) |
+| SPDT Switch | 2 | Small two-position switch. | ![](switches.jpg) |
 
 
 ### ICs
