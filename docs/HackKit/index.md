@@ -6,7 +6,7 @@ subtitle: Instructions and inspiration for Wilderness Labs Hack Kit Pro.
 
 Got a cool Wilderness Labs Hack Kit and want to build something awesome with it? You're at the right spot. This page has instructions and information for the Hack Kit Pro, for information on the discontinued Hack Kit Lite, check [here](HackKitLite/).
 
-![](Hack_Kit.jpg){:standalone}
+![](Wilderness_Labs_Hack_Kit.svg){:standalone}
 
 If you'd like to purchase one, check out the [Wilderness Labs Store](https://store.wildernesslabs.co/).
 
