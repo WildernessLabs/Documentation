@@ -7,7 +7,7 @@ subtitle: Reading and getting updates from sensors in Meadow.Foundation.
 
 # Intro
 
-Meadow.Foundation extends the underlying [events and IObservable](Meadow/Meadow_Basics/Events_and_IObservable/) pattern found in Meadow.Core to sensors, providing a simple, yet powerful way to read, poll, and filter input from sensors automatically.
+Meadow.Foundation extends the underlying [events and IObservable](/Meadow/Meadow_Basics/Events_and_IObservable/) pattern found in Meadow.Core to sensors, providing a simple, yet powerful way to read, poll, and filter input from sensors automatically.
 
 At a high level, the sensor drivers in Meadow.Foundation provide three important methods to get sensor data:
 
