@@ -46,10 +46,10 @@ And here are other Meadow projects that use some parts of the Hack Kits
 | Jumper Kit | 1 | Box of various length breadboard jumper wires. |
 | [Micro Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | 1 | Motor with precision 180º rotation control. |
 | [2-Channel Relay Board](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | 1 | Digitally controlled, isolated circuit switch for controlling external power, often used to switch household mains electricity (`110V/240V` AC). |
-| [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | 1 | Sonar-based distance sensor good for up to 1 meter. |
+| [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | 1 | Sonar-based distance sensor good for up to 1 meter. |
 | [Moisture Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | 1 | Capacitive soil moisture sensor with digital output. |
 | [4x20 LCD Character Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. |
-| [SSD7899 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. |
+| [ST7899 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. |
 | Resistor Kit | 1 | ~300 resistors of varying resistance. |
 | Capacitor Kit | 1 | Various value capacitors for general digital circuit usage. |
 | Single-row Breakaway Headers | 4 | |
