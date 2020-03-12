@@ -26,7 +26,7 @@ Here are some awesome projects you can build:
 ### F7 Micro Dev Kit
 
 | Item                   | QTY | Description | |
-|------------------------|-----|-------------|-|
+|------------------------|:---:|-------------|-|
 | Laser-etched Baseboard | 1 | Baseboard that holds a Meadow and a Half+ size breadboard for prototyping. | ![](protoboard.jpg) |
 | Half+ Breadboard       | 2 | Breadboard for quick, temporary, prototyping. | ![](breadboards.jpg) |
 | M2x8MM Hex Bolts | 4 | | ![](bolts.jpg) |
@@ -35,7 +35,7 @@ Here are some awesome projects you can build:
 ### Large Items
 
 | Item                   | QTY | Description | |
-|------------------------|-----|-------------|-|
+|------------------------|:---:|-------------|-|
 | Hack Kit Box           | 1 | Box that holds all the hack goodies. |
 | Wire Jumpers (M/M, M/F, F/F) | 1 | A set of flexible jumper wires for breadboard prototyping. |
 | Jumper Kit | 1 | Box of various length breadboard jumper wires. |
@@ -59,7 +59,7 @@ Here are some awesome projects you can build:
 ### ICs
 
 | Item                   | QTY | Description |
-|------------------------|-----|-------------|
+|------------------------|:---:|-------------|
 | [74595 Shift Register](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 2 | 8-port digital output expander chip. Adds 8 additional `DigitalOutputPort`s to a Meadow. Can be chained up to 8 for 64 total additional outputs. |
 | MCP23008 IO Expander | 2 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. |
 | [H-Bridge Motor Controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | 1 | SN754410. Provides digital control for two motors using an external power source, controlled via PWM. |
@@ -68,7 +68,7 @@ Here are some awesome projects you can build:
 ### LEDs
 
 | Item                   | QTY | Description |
-|------------------------|-----|-------------|
+|------------------------|:---:|-------------|
 | [Red, Green, Blue (RGB) LED](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | ~10 | 3-component Light-Emitting-Diode (LED) that can display nearly any color by varying the red, green, and blue input voltage. |
 | [Various Color LEDs](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | ~25 | 5 types of single-color LEDs. |
 | [Rainbow LED Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | Green, yellow, red, LED array. |
@@ -77,7 +77,7 @@ Here are some awesome projects you can build:
 ### Transistors
 
 | Item                   | QTY | Description |
-|------------------------|-----|-------------|
+|------------------------|:---:|-------------|
 | BS170 N-Channel MOSFET | 20 | |
 | TIP120 Power Transistor | 2 | |
 | 2N3904 NPN Transistor | 10 | | 
@@ -86,7 +86,7 @@ Here are some awesome projects you can build:
 ### Small Parts
 
 | Item                   | QTY | Description |
-|------------------------|-----|-------------|
+|------------------------|:---:|-------------|
 | [Push Button (Various Colors)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | ~40 | Simple tactile switches in a variety of colors. |
 | [LM35DZ Analog Temperature Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | 2 | `0ºC - 100ºC` temperature sensor with analog output. |
 | Temt6000 Luminosity Sensor | 1 | `5V` light sensor used as an example of how to use a voltage divider to reduce a `5V` analog signal to `3.3V`. See the [Level-Shifting Lab](/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/). |
