@@ -11,7 +11,7 @@ remarks: *content
 
 ### Code Example
 
-The following example alternates between blinking and pulsing an LED:
+The following example prints horizontal and vertical values ranging from -1 to 1, 0 being the center position:
 
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
