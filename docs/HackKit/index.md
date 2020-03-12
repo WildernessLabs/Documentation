@@ -14,17 +14,12 @@ If you'd like to purchase one, check out the [Wilderness Labs Store](https://sto
 
 Here are some awesome projects you can build:
 
+ * [Working with Graphics on a TFT SPI Display Using Meadow](https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-tft-spi-display-using-meadow-e2295a)
  * [Getting Started w/ Meadow by Controlling the Onboard RGB LED](https://www.hackster.io/wilderness-labs/getting-started-w-meadow-by-controlling-the-onboard-rgb-led-ea6bc0)
  * [Control an LED w/ Digital Output or PWM Ports Using Meadow](https://www.hackster.io/wilderness-labs/control-an-led-w-digital-output-or-pwm-ports-using-meadow-11005a)
  * [Control an RGB LED w/ Digital Output or PWM ports in Meadow](https://www.hackster.io/wilderness-labs/control-an-rgb-led-w-digital-output-or-pwm-ports-in-meadow-7fd611)
  * [Build Your Own Simon Game with Meadow](https://www.hackster.io/wilderness-labs/build-your-own-simon-game-with-meadow-3701d5)
  * [Soil Moisture Sensor and LED Bar Graph Using Meadow](https://www.hackster.io/wilderness-labs/soil-moisture-sensor-and-led-bar-graph-using-meadow-88c2c3)
-
-And here are other Meadow projects that use some parts of the Hack Kits
-
-* [Working with Graphics on a TFT SPI Display Using Meadow](https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-tft-spi-display-using-meadow-e2295a)
-* [Christmas Countdown Timer w/ an LCD Display, RTC and Meadow](https://www.hackster.io/wilderness-labs/christmas-countdown-timer-w-an-lcd-display-rtc-and-meadow-e4cf9c)
-* [Build an FM Radio Player with Meadow](https://www.hackster.io/wilderness-labs/build-an-fm-radio-player-with-meadow-8c0a63)
 
 ## Contents
 
