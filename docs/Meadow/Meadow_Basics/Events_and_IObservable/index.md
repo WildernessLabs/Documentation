@@ -32,7 +32,7 @@ public class ButtonEventsApp : App<F7Micro, ButtonEventsApp>
 
 ## `IObservable`/Reactive Pattern
 
-However, for more advanced filtering we've exposed `System.IObservable` support, along with a [`FilterableObserver<T>`](/docs/api/Meadow/Meadow.FilterableObserver-1.html) that allows you to subscribe to an observable, with an optional filter on the events, as well as a handler shortcut. Consider the following code:
+However, for more advanced filtering we've exposed `System.IObservable` support, along with a [`FilterableObserver<T>`](/docs/api/Meadow/Meadow.FilterableObserver-1.html) that allows you to subscribe to an observable, with an optional predicate to filter on the events, as well as a handler shortcut. Consider the following code:
 
 ```csharp
 public class InputObservableApp : App<F7Micro, InputObservableApp>
@@ -57,7 +57,15 @@ public class InputObservableApp : App<F7Micro, InputObservableApp>
 }
 ```
 
-In the case of the code above, it uses a `FilterableObserver` to filter out events that occur less than a second after the last notification.
+A filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableObservable` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used.
+
+In the above code, it filters out events that occur less than a second after the last notification:
+
+```csharp
+return (f.Time - f.PreviousTime > new TimeSpan(0, 0, 0, 0, 1000));
+```
+
+### General Use
 
 However, the `Subscribe` method will take any `IObservable`, so you can also use whatever Reactive pattern and framework you choose.
 
