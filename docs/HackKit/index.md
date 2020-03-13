@@ -71,7 +71,7 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 | Item                   | QTY | Description | |
 |------------------------|:---:|-------------|-|
 | [74595 Shift Register](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 2 | 8-port digital output expander chip. Adds 8 additional `DigitalOutputPort`s to a Meadow. Can be chained up to 8 for 64 total additional outputs. | ![](74HC595.jpg) |
-| MCP23008 IO Expander | 2 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. | ![](MCP23008.jpg) |
+| [MCP23008 IO Expander](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.html) | 2 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. | ![](MCP23008.jpg) |
 | [H-Bridge Motor Controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | 1 | SN754410. Provides digital control for two motors using an external power source, controlled via PWM. | ![](HBridgeMotor.jpg) |
 
 
