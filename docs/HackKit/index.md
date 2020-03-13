@@ -79,19 +79,19 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 
 | Item                   | QTY | Description |
 |------------------------|:---:|-------------|
-| [Red, Green, Blue (RGB) LED](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | ~10 | 3-component Light-Emitting-Diode (LED) that can display nearly any color by varying the red, green, and blue input voltage. |
-| [Various Color LEDs](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | ~25 | 5 types of single-color LEDs. |
-| [Rainbow LED Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | Green, yellow, red, LED array. |
-| [Rainbow LED Battery Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | Green, yellow, red, LED array that has a battery shape. |
+| [Red, Green, Blue (RGB) LED](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | ~10 | 3-component Light-Emitting-Diode (LED) that can display nearly any color by varying the red, green, and blue input voltage. | ![](RgbLed.jpg) |
+| [Various Color LEDs](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | ~25 | 5 types of single-color LEDs. | ![](Led.jpg) |
+| [Rainbow LED Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | Green, yellow, red, LED array. | ![](BarGraph.jpg) |
+| [Rainbow LED Battery Bargraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | 1 | Green, yellow, red, LED array that has a battery shape. | ![](BatteryBarGraph.jpg) |
 
 ### Transistors
 
-| Item                   | QTY | Description |
-|------------------------|:---:|-------------|
-| BS170 N-Channel MOSFET | 20 | |
-| TIP120 Power Transistor | 2 | |
-| 2N3904 NPN Transistor | 10 | | 
-| 2N3906 PNP Transistor | 2 | |
+| Item                   | QTY | Description | |
+|------------------------|:---:|-------------|-|
+| BS170 N-Channel MOSFET | 20 | Manufactured through DMOS technology, best suited for low voltage, low current applications like servo motor control, power MOSFET gate drivers and other switching application. |![](BS170.jpg) |
+| TIP120 Power Transistor | 2 | Great for whenever you need to control medium to high-power electronics such as motors, solenoids, or 1W+ LEDs. | ![](TIP120.jpg) |
+| 2N3904 NPN Transistor | 10 | Well suited for TV and home appliance equipment. | ![](2N3904.jpg) |
+| 2N3906 PNP Transistor | 2 | Commonly used PNP bipolar junction transistor intended for general purpose low-power amplifying or switching applications. | ![](2N3906.jpg) |
 
 ### Small Parts
 
