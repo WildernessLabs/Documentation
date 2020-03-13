@@ -54,7 +54,7 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 | [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | 1 | Sonar-based distance sensor good for up to 1 meter. | ![](Images/distanceSensor.jpg) |
 | [Moisture Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | 1 | Capacitive soil moisture sensor with digital output. | ![](Images/soilMoisture.jpg) |
 | [4x20 LCD Character Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. | ![](Images/characterDisplay.jpg) |
-| [ST7899 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. | ![](Images/ST7789.jpg) |
+| [ST7789 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. | ![](Images/ST7789.jpg) |
 | Resistor Kit | 1 | ~300 resistors of varying resistance. | ![](Images/resistors.jpg) |
 | Capacitor Kit | 1 | Various value capacitors for general digital circuit usage. | ![](Images/capacitors.jpg) |
 | Single-row Breakaway Headers | 4 | | ![](Images/headers.jpg) |
