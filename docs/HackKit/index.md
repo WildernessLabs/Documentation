@@ -24,12 +24,12 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 | [Simone, a simple Simon with lights and sound.](https://www.hackster.io/wilderness-labs/build-your-own-simon-game-with-meadow-3701d5) | ![](Gifs/Simon.gif) |
 | [Soil Moisture Sensor display on an LED Bargraph.](https://www.hackster.io/wilderness-labs/soil-moisture-sensor-and-led-bar-graph-using-meadow-88c2c3) | ![](Gifs/MoistureMeter.gif) |
 | [Add up to 64 IO Ports using a Shift Register.](https://www.hackster.io/wilderness-labs/expanding-io-ports-of-a-meadow-with-a-74hc595-dde681) | ![](Gifs/Shift_Register.gif) |
+| [Working with Graphics on a TFT SPI Display Using Meadow](https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-tft-spi-display-using-meadow-e2295a) | ![](Gifs/GraphicsLibrary.gif) |
 | [Control a servo with the push of a button using Servo.Core.](https://www.hackster.io/wilderness-labs/control-a-servo-with-a-push-button-using-meadow-c6c996) | ![](Gifs/ServoButton.gif) |
+| [Temperature Room Monitor.](https://www.hackster.io/wilderness-labs/build-your-own-temperature-monitor-with-meadow-edc696) | ![](Gifs/TemperatureMonitor.gif) |
 | [Electronic Dice with LEDs and a Button.](https://www.hackster.io/wilderness-labs/roll-an-led-dice-with-a-push-button-using-meadow-3beb46) | ![](Gifs/Dice.gif) |
 | [Control the brightness of an LED using PWM.](https://www.hackster.io/wilderness-labs/control-an-led-w-digital-output-or-pwm-ports-using-meadow-11005a) | ![](Gifs/PWM_LED.gif) |
 | [Control the colors of an RGB LED using PWM.](https://www.hackster.io/wilderness-labs/control-an-rgb-led-w-digital-output-or-pwm-ports-in-meadow-7fd611) | ![](Gifs/RGB_PWM_LED.gif) |
-
- * [Working with Graphics on a TFT SPI Display Using Meadow](https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-tft-spi-display-using-meadow-e2295a)
 
 ## Contents
 
