@@ -100,8 +100,8 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.html) | Barometric sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html) | Barometric sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ms5611](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Ms5611.html) | I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SHT31D.html) | I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.SI70xx.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Sht31D.html) | I2C temperature and humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx.html) | I2C temperature and humidity sensor |
 
 #### Cameras
 
@@ -114,9 +114,9 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HCSR04.html) | Sonic distance sensor   | Needs AOT compilation |
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.HYSRF05.html) | Sonic distance sensor | Needs AOT compilation |
-| <img src="https://img.shields.io/badge/Blocked-red" /> | [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.SFSR02.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hysrf05.html) | Sonic distance sensor | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" /> | [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Sfsr02.html) | Sonic distance sensor   | Needs AOT compilation |
 
 #### GPS Sensors & Libraries
 
