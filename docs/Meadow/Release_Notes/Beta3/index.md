@@ -4,6 +4,28 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.9
+
+
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+
+### Changes
+
+### Bug Fixes
+
+* [#81 - Feature request: serial buffer overrun event](https://github.com/WildernessLabs/Meadow_Issues/issues/81) - Added!
+* [#79 - PWM.Period cannot be set when TimeScale is different from Seconds](https://github.com/WildernessLabs/Meadow_Issues/issues/79) - Fixed.
+* [#78 - PWM Channel info is null](https://github.com/WildernessLabs/Meadow_Issues/issues/78) - Fixed. 
+* [#71 - Unhandled exceptions do not output information to the Console](https://github.com/WildernessLabs/Meadow_Issues/issues/71) - Fixed. We added exception handling to the `App` class, so they should catch most things. 
+* [#61 - Meadow Serial Communication not working](https://github.com/WildernessLabs/Meadow_Issues/issues/61) - Fixed. We broke this in the last build. Ooops. Someday we'll have integration tests that run on hardware to catch things like this.
+* [#29 - Pin D04 as DigitalOutputPin is not responsive when pin D03 is setup as PWM.](https://github.com/WildernessLabs/Meadow_Issues/issues/29) - Fixed with hacky workaround. This issue is because of the underlying funkiness of the NuttX API. We've implemented a workaround for it for now. Long term, we'll need to revisit this.
+
+### Meadow.Foundation
+
 ## Beta 3.8 
 
 This is another point release but it gets us another step closer to `b4.0`. The `b3.8` release adds further API stabilization and functionality, specifically focusing on I2C and SPI. This release also takes advantage of the performance increases from `b3.7` to unlock more drivers, including a couple of exciting input peripherals: `AnalogJoystick` and `RotaryEncoder`.
