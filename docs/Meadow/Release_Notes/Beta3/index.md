@@ -6,14 +6,25 @@ subtitle: Release Notes
 
 ## Beta 3.9
 
-
+`b3.9` is a minor release that adds more API stability, fixes some things we broke in `b3.8`, and adds some new features, including exposing the Real-Time-Clock on Meadow.
 
 ### Updating
 
 You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
 
+### New Features & Changes
 
-### Changes
+#### Real-Time-Clock Setting
+
+We've exposed an API to set the system clock:
+
+*NOTE: need to update with actual code:*
+
+```csharp
+Device.SetTime(xxxx);
+```
+
+As long as the board is continuously powered, the clock will retain its time. Check out the [power guide](/Meadow/Meadow_Basics/IO/Power/) for more information on keeping the clock active.
 
 ### Bug Fixes
 
