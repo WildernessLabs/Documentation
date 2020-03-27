@@ -133,7 +133,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bh1750](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1750.html) | I2C infrared, ultraviolet, and ambient light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Max44009](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Max44009.html) | I2C infrared, ultraviolet, and ambient light sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Si1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | I2C infrared, ultraviolet, and ambient light sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html) | I2C infrared, ultraviolet, and ambient light sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html) | Analog light sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Tsl2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | I2C infrared-compensated light sensor |
 
 #### Soil Moisture Sensors
