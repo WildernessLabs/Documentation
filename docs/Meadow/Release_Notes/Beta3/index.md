@@ -38,11 +38,7 @@ As long as the board is continuously powered, the clock will retain its time. Ch
 
 ### Meadow.Foundation
 
-We've added a new driver for the Veml7700 light sensor and improved the performance of the Max7219 driver.
-
-#### New Peripheral Drivers
-
-We've published eight new drivers:
+We've added a new driver for the Veml7700 light sensor and improved the performance of the Max7219 driver. You can find an example of the Max7219 in action in the [Meadow Samples GitHub repo](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/Meadow.Foundation/Tetris).
 
 ## Beta 3.8 
 
