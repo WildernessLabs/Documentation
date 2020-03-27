@@ -364,7 +364,7 @@ To use analog inputs, make sure you update the `Meadow.Core` nuget packages in y
 
 ### Meadow.CLI Updates
 
-In order to be compatible with the file system changes, the `Meadow.CLI` has also been updated. Make sure download and use the [new binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
+In order to be compatible with the file system changes, the `Meadow.CLI` has also been updated. Make sure download and use the [new binaries](http://wldrn.es/latestmeadowcli).
 
 ## Beta 3.1
 
@@ -377,7 +377,7 @@ We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merg
 Our project template is now included enabling the creation of new Meadow Apps within Visual Studio, [check out the update](/Meadow/Getting_Started/Hello_World/). Debugging remains unavailable, but the console app gracefully exists.
 
 ### Meadow.CLI
-Now available for [download](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
+Now available for [download](http://wldrn.es/latestmeadowcli).
 
 <hr />
 
