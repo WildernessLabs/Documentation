@@ -4,6 +4,42 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.9
+
+`b3.9` is a minor release that adds more API stability, fixes some things we broke in `b3.8`, and adds some new features, including exposing the Real-Time-Clock on Meadow.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### New Features & Changes
+
+#### Real-Time-Clock Setting
+
+We've exposed an API to set the system clock:
+
+```csharp
+//Set the current date and time to March 30, 2020 at 12pm
+Device.SetClock(new DateTime(2020, 3, 30, 12, 0, 0));
+//Can now use DateTime.Now and the RTC will accurately mainting the correct time
+Console.WriteLine($"Today is: {DateTime.Now}");
+```
+
+As long as the board is continuously powered, the clock will retain its time. Check out the [power guide](/Meadow/Meadow_Basics/IO/Power/) for more information on keeping the clock active.
+
+### Bug Fixes
+
+* [#81 - Feature request: serial buffer overrun event](https://github.com/WildernessLabs/Meadow_Issues/issues/81) - Added!
+* [#79 - PWM.Period cannot be set when TimeScale is different from Seconds](https://github.com/WildernessLabs/Meadow_Issues/issues/79) - Fixed.
+* [#78 - PWM Channel info is null](https://github.com/WildernessLabs/Meadow_Issues/issues/78) - Fixed. 
+* [#71 - Unhandled exceptions do not output information to the Console](https://github.com/WildernessLabs/Meadow_Issues/issues/71) - Fixed. We added exception handling to the `App` class, so they should catch most things. 
+* [#61 - Meadow Serial Communication not working](https://github.com/WildernessLabs/Meadow_Issues/issues/61) - Fixed. We broke this in the last build. Ooops. Someday we'll have integration tests that run on hardware to catch things like this.
+* [#29 - Pin D04 as DigitalOutputPin is not responsive when pin D03 is setup as PWM.](https://github.com/WildernessLabs/Meadow_Issues/issues/29) - Fixed with hacky workaround. This issue is because of the underlying funkiness of the NuttX API. We've implemented a workaround for it for now. Long term, we'll need to revisit this.
+
+### Meadow.Foundation
+
+We've added a new driver for the Veml7700 light sensor and improved the performance of the Max7219 driver. You can find an example of the Max7219 in action in the [Meadow Samples GitHub repo](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/Meadow.Foundation/Tetris).
+
 ## Beta 3.8 
 
 This is another point release but it gets us another step closer to `b4.0`. The `b3.8` release adds further API stabilization and functionality, specifically focusing on I2C and SPI. This release also takes advantage of the performance increases from `b3.7` to unlock more drivers, including a couple of exciting input peripherals: `AnalogJoystick` and `RotaryEncoder`.
@@ -328,7 +364,7 @@ To use analog inputs, make sure you update the `Meadow.Core` nuget packages in y
 
 ### Meadow.CLI Updates
 
-In order to be compatible with the file system changes, the `Meadow.CLI` has also been updated. Make sure download and use the [new binaries](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
+In order to be compatible with the file system changes, the `Meadow.CLI` has also been updated. Make sure download and use the [new binaries](http://wldrn.es/latestmeadowcli).
 
 ## Beta 3.1
 
@@ -341,7 +377,7 @@ We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merg
 Our project template is now included enabling the creation of new Meadow Apps within Visual Studio, [check out the update](/Meadow/Getting_Started/Hello_World/). Debugging remains unavailable, but the console app gracefully exists.
 
 ### Meadow.CLI
-Now available for [download](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip).
+Now available for [download](http://wldrn.es/latestmeadowcli).
 
 <hr />
 

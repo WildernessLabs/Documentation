@@ -6,7 +6,7 @@ subtitle: Guides and documentation for Meadow
 
 ## Dev Environment
 
- * [Meadow.CLI](https://www.wildernesslabs.co/downloads?f=/Meadow_CLI/Latest/MeadowCLI.zip)
+ * [Meadow.CLI](http://wldrn.es/latestmeadowcli)
 
 ## Meadow OS
 
