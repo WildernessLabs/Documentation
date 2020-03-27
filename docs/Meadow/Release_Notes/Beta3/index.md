@@ -18,10 +18,11 @@ You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Sta
 
 We've exposed an API to set the system clock:
 
-*NOTE: need to update with actual code:*
-
 ```csharp
-Device.SetTime(xxxx);
+//Set the current date and time to March 30, 2020 at 12pm
+Device.SetClock(new DateTime(2020, 3, 30, 12, 0, 0));
+//Can now use DateTime.Now and the RTC will accurately mainting the correct time
+Console.WriteLine($"Today is: {DateTime.Now}");
 ```
 
 As long as the board is continuously powered, the clock will retain its time. Check out the [power guide](/Meadow/Meadow_Basics/IO/Power/) for more information on keeping the clock active.
@@ -36,6 +37,12 @@ As long as the board is continuously powered, the clock will retain its time. Ch
 * [#29 - Pin D04 as DigitalOutputPin is not responsive when pin D03 is setup as PWM.](https://github.com/WildernessLabs/Meadow_Issues/issues/29) - Fixed with hacky workaround. This issue is because of the underlying funkiness of the NuttX API. We've implemented a workaround for it for now. Long term, we'll need to revisit this.
 
 ### Meadow.Foundation
+
+We've added a new driver for the Veml7700 light sensor and improved the performance of the Max7219 driver.
+
+#### New Peripheral Drivers
+
+We've published eight new drivers:
 
 ## Beta 3.8 
 
