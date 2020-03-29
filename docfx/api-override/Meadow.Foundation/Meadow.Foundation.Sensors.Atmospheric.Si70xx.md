@@ -22,6 +22,14 @@ The **SI70xx** is a humidity and temperature sensor controlled via I2C.
 * 150 µA active current 
 * 60 nA standby current
 
+## Purchasing
+
+The Si7021 is available on a breakout board from the the following suppliers:
+
+* [Adafruit Si7021 Breakout Board](https://www.adafruit.com/product/3251)
+* [Sparkfun Si7021 Breakout Board](https://www.sparkfun.com/products/13763)
+* [Tessel Climate Module](https://www.seeedstudio.com/Tessel-Climate-Module-p-2225.html)
+
 ### Code Example
 
 ```csharp
@@ -58,10 +66,18 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Si70xx/Samples/) 
 
-## Purchasing
+### Wiring Example
 
-The Si7021 is available on a breakout board from the the following suppliers:
+To wire a Si7021 to your Meadow board, connect the following:
 
-* [Adafruit Si7021 Breakout Board](https://www.adafruit.com/product/3251)
-* [Sparkfun Si7021 Breakout Board](https://www.sparkfun.com/products/13763)
-* [Tessel Climate Module](https://www.seeedstudio.com/Tessel-Climate-Module-p-2225.html)
+| Si7021 | Meadow Pin  |
+|---------|-------------|
+| GND     | GND         |
+| SCL     | D08 (SCL)   |
+| SDA     | D07 (SDA)   |
+| VCC     | 3V3         |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Si70xx/Si7021_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
