@@ -88,7 +88,7 @@ After a brief boot up wait, your device should start blinking the onboard LED in
 
 ## Understanding the `Hello, World` App
 
-The Meadow app template has two files; `Program.cs` and `App.cs`, let's take a quick look at them:
+The Meadow app template has two files; `Program.cs` and `MeadowApp.cs`, let's take a quick look at them:
 
 ### Program.cs
 
@@ -119,9 +119,9 @@ namespace HelloMeadow
 
 This pattern allows us to have an App instance, in which all things Meadow are done.
 
-### App.cs
+### MeadowApp.cs
 
-Let's take a brief look at the app class:
+Let's take a brief look at the MeadowApp class:
 
 ```csharp
 using System;
@@ -133,37 +133,61 @@ using Meadow.Foundation.Leds;
 
 namespace HelloMeadow
 {
-    public class MeadowApp : App<F7Micro, MeadowApp>
     {
-        const int pulseDuration = 3000;
-        RgbPwmLed rgbPwmLed;
+        RgbPwmLed onboardLed;
 
         public MeadowApp()
         {
-            rgbPwmLed = new RgbPwmLed(Device,
-                Device.Pins.OnboardLedRed,
-                Device.Pins.OnboardLedGreen,
-                Device.Pins.OnboardLedBlue);
-
-            PulseRgbPwmLed();
+            Initialize();
+            CycleColors(1000);
         }
 
-        protected void PulseRgbPwmLed()
+        void Initialize()
         {
+            Console.WriteLine("Initialize hardware...");
+
+            onboardLed = new RgbPwmLed(device: Device,
+                redPwmPin: Device.Pins.OnboardLedRed,
+                greenPwmPin: Device.Pins.OnboardLedGreen,
+                bluePwmPin: Device.Pins.OnboardLedBlue,
+                3.3f, 3.3f, 3.3f,
+                Meadow.Peripherals.Leds.IRgbLed.CommonType.CommonAnode);
+        }
+
+        void CycleColors(int duration)
+        {
+            Console.WriteLine("Cycle colors...");
+
             while (true)
             {
-                Pulse(Color.Red);
-                Pulse(Color.Green);
-                Pulse(Color.Blue);
+                ShowColorPulse(Color.Blue, duration);
+                ShowColorPulse(Color.Cyan, duration);
+                ShowColorPulse(Color.Green, duration);
+                ShowColorPulse(Color.GreenYellow, duration);
+                ShowColorPulse(Color.Yellow, duration);
+                ShowColorPulse(Color.Orange, duration);
+                ShowColorPulse(Color.OrangeRed, duration);
+                ShowColorPulse(Color.Red, duration);
+                ShowColorPulse(Color.MediumVioletRed, duration);
+                ShowColorPulse(Color.Purple, duration);
+                ShowColorPulse(Color.Magenta, duration);
+                ShowColorPulse(Color.Pink, duration);
             }
         }
 
-        protected void Pulse(Color color)
+        void ShowColorPulse(Color color, int duration = 1000)
         {
-            rgbPwmLed.StartPulse(color);
-            Console.WriteLine($"Pulsing {color}");
-            Thread.Sleep(pulseDuration);
-            rgbPwmLed.Stop();
+            onboardLed.StartPulse(color, (uint)(duration / 2));
+            Thread.Sleep(duration);
+            onboardLed.Stop();
+        }
+
+        void ShowColor(Color color, int duration = 1000)
+        {
+            Console.WriteLine($"Color: {color}");
+            onboardLed.SetColor(color);
+            Thread.Sleep(duration);
+            onboardLed.Stop();
         }
     }
 }
@@ -187,9 +211,9 @@ These are the typical minimum set of namespaces in a Meadow app class and provid
  * `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Micro Dev board, or the F7 Micro embeddable board.
  * `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
 
-### App Class Definition
+### MeadowApp Class Definition
 
-Notice that the `HellowMeadow` application class inherits from `App`, and has two generic arguments, in this case `F7Micro`, and `HelloMeadow`:
+Notice that the `HelloMeadow` application class inherits from `App`, and has two generic arguments, in this case `F7Micro`, and `HelloMeadow`:
 
 ```csharp
 public class HelloMeadow : App<F7Micro, HelloMeadow>
@@ -205,6 +229,16 @@ The device class defines properties and capabilities of the current device such 
 Device.Pins.OnboardLedRed
 ```
 
+```csharp
+public MeadowApp()
+{
+    Initialize();
+    CycleColors(1000);
+}
+```
+
+This MeadowApp() call calls an initialization method, described below, and also a new method called CycleColors with a duration of 1000ms.
+
 ### Controlling the Onboard LED via Ports
 
 <!-- TODO: convert to Meadow.Foundation and explain that. -->
@@ -212,41 +246,59 @@ Device.Pins.OnboardLedRed
 Direct access to hardware Input/Output (IO) is generally available via _ports_ and _buses_. In this case, we create a `IDigitalOutputPort` for each color component (red, green, and blue) of the onboard LED:
 
 ```csharp
-RgbPwmLed rgbPwmLed;
+RgbPwmLed onboardLed;
 ...
 
-rgbPwmLed = new RgbPwmLed(Device,
-    Device.Pins.OnboardLedRed,
-    Device.Pins.OnboardLedGreen,
-    Device.Pins.OnboardLedBlue);
+void Initialize()
+{
+    Console.WriteLine("Initialize hardware...");
+
+    onboardLed = new RgbPwmLed(device: Device,
+        redPwmPin: Device.Pins.OnboardLedRed,
+        greenPwmPin: Device.Pins.OnboardLedGreen,
+        bluePwmPin: Device.Pins.OnboardLedBlue,
+        3.3f, 3.3f, 3.3f,
+        Meadow.Peripherals.Leds.IRgbLed.CommonType.CommonAnode);
+}
 ```
 
-Ports are created from the device itself, and the `Pins` property provides named pins that map to the pins available on the particular device specified above in the `App` definition.
+The `Initialize` call writes to the console for informational purposes, useful when debugging and watching your app start. Then ports are created from the device itself, and the `Pins` property provides named pins that map to the pins available on the particular device specified above in the `App` definition.
 
 
 #### Digital Output
 
-To pulse the color of the light emitted via the onboard LED, we can utilize the built in `StartPulse()` method of the `RgbPwmLed` class:
+To pulse the color of the light emitted via the onboard LED, we can utilize the built in `StartPulse()` method of the `RgbPwmLed` class, this is done in the ShowColorPulse method, which takes a color and duration. All of this is tied together with the CycleColors call which will simply cycle through a variety of colors:
 
 
 ```csharp
-protected void PulseRgbPwmLed()
+void CycleColors(int duration)
 {
+    Console.WriteLine("Cycle colors...");
+
     while (true)
     {
-        Pulse(Color.Red);
-        Pulse(Color.Green);
-        Pulse(Color.Blue);
+        ShowColorPulse(Color.Blue, duration);
+        ShowColorPulse(Color.Cyan, duration);
+        ShowColorPulse(Color.Green, duration);
+        ShowColorPulse(Color.GreenYellow, duration);
+        ShowColorPulse(Color.Yellow, duration);
+        ShowColorPulse(Color.Orange, duration);
+        ShowColorPulse(Color.OrangeRed, duration);
+        ShowColorPulse(Color.Red, duration);
+        ShowColorPulse(Color.MediumVioletRed, duration);
+        ShowColorPulse(Color.Purple, duration);
+        ShowColorPulse(Color.Magenta, duration);
+        ShowColorPulse(Color.Pink, duration);
     }
 }
 
-protected void Pulse(Color color)
+void ShowColorPulse(Color color, int duration = 1000)
 {
-    rgbPwmLed.StartPulse(color);
-    Console.WriteLine($"Pulsing {color}");
-    Thread.Sleep(_pulseDuration);
-    rgbPwmLed.Stop();
+    onboardLed.StartPulse(color, (uint)(duration / 2));
+    Thread.Sleep(duration);
+    onboardLed.Stop();
 }
+
 ```
 
 ## Next
