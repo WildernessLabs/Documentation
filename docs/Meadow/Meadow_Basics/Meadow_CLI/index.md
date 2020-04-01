@@ -8,7 +8,7 @@ The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with t
 
 The Meadow.CLI tool supports device and file management including file transfers, and MCU reset.
 
-To run Meadow.CLI on Windows, open a command window and run `MeadowCLI.exe`. On macOS, call **mono MeadowCLI.exe** to execute it via mono.
+To run Meadow.CLI on Windows, open a command window and run `Meadow.CLI.exe`. On macOS, call **mono Meadow.CLI.exe** to execute it via mono.
 
 You can download the Meadow.CLI executable from the [downloads page](/Meadow/Getting_Started/Downloads/).
 
@@ -28,7 +28,7 @@ ls /dev/tty.usb*
 
 Note: The serial port can be specified with either `--Serial Port [NameOfSerialPort]` or simply `-s [NameOfSerialPort]`.
 
-Note: MeadowCLI automatically caches the serial port name. Once you've sent a command using the `--SerialPort` parameter, you can omit in future calls.
+Note: Meadow.CLI automatically caches the serial port name. Once you've sent a command using the `--SerialPort` parameter, you can omit in future calls.
 
 ## Useful commands
 
