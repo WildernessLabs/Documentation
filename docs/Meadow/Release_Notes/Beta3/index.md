@@ -6,7 +6,7 @@ subtitle: Release Notes
 
 ## Beta 3.10
 
-Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` that slipped through the cracks. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. 
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. 
 
 ### Updating
 
@@ -14,9 +14,11 @@ You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Sta
 
 ### Bug Fixes
 
-* [#66 - Resources do not work](https://github.com/WildernessLabs/Meadow_Issues/issues/66)
-* [#76 - DateTime.Parse() enters an infinite loop](https://github.com/WildernessLabs/Meadow_Issues/issues/76)
-* [#88 - Board works only if plugged in USB socket](https://github.com/WildernessLabs/Meadow_Issues/issues/88)
+* [#66 - Resources do not work](https://github.com/WildernessLabs/Meadow_Issues/issues/66) - Regression. Fixed.
+* [#76 - DateTime.Parse() enters an infinite loop](https://github.com/WildernessLabs/Meadow_Issues/issues/76) - Fixed.
+* [#85 - Reading only 0 from serial (UART) receive buffer](https://github.com/WildernessLabs/Meadow_Issues/issues/85) - Regression. Fixed.
+* [#86 - b3.9 UART issues](https://github.com/WildernessLabs/Meadow_Issues/issues/86) - Regression. Fixed.
+* [#88 - Board works only if plugged in USB socket](https://github.com/WildernessLabs/Meadow_Issues/issues/88) - Regression. Fixed.
 
 ## Beta 3.9
 
