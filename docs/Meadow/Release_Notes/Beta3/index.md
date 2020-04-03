@@ -6,11 +6,17 @@ subtitle: Release Notes
 
 ## Beta 3.10
 
-Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. 
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward.
+
+We also unlocked another serial (UART) port on the Meadow, so there are two accessible serial ports.
 
 ### Updating
 
 You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Additional Free Serial Port
+
+Previously, `COM1` (pins `D13` and `D12`) was unavailable for use as a serial port because we were outputting debug information from Meadow.OS on that port. However, we've moved that debug stream to USB, freeing that port (and pins) for use. For more information see the [Serial (UART) guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
 
 ### Bug Fixes
 
