@@ -4,6 +4,20 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.10
+
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` that slipped through the cracks. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. 
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Bug Fixes
+
+* [#66 - Resources do not work](https://github.com/WildernessLabs/Meadow_Issues/issues/66)
+* [#76 - DateTime.Parse() enters an infinite loop](https://github.com/WildernessLabs/Meadow_Issues/issues/76)
+* [#88 - Board works only if plugged in USB socket](https://github.com/WildernessLabs/Meadow_Issues/issues/88)
+
 ## Beta 3.9
 
 `b3.9` is a minor release that adds more API stability, fixes some things we broke in `b3.8`, and adds some new features, including exposing the Real-Time-Clock on Meadow.
