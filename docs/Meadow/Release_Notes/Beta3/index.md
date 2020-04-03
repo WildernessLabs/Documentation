@@ -6,9 +6,7 @@ subtitle: Release Notes
 
 ## Beta 3.10
 
-Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward.
-
-We also unlocked another serial (UART) port on the Meadow, so there are two accessible serial ports.
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finall, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
 
 ### Updating
 
