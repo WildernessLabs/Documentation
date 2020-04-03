@@ -24,8 +24,13 @@ Previously, `COM1` (pins `D13` and `D12`) was unavailable for use as a serial po
 * [#86 - b3.9 UART issues](https://github.com/WildernessLabs/Meadow_Issues/issues/86) - Regression. Fixed.
 * [#88 - Board works only if plugged in USB socket](https://github.com/WildernessLabs/Meadow_Issues/issues/88) - Regression. Fixed.
 
-
 ### Meadow Foundation
+
+This release includes bug fixes and performance improvements in several drivers:
+
+* **CharacterDisplay** improves error checking and gracefully handles long strings
+* **AnalogTemperatureSensor** fixes a voltage to temperature calculation bug
+* **GraphicsLibrary** fixes a bug when  vertical and horizontal lines were drawn 1 pixel too short
 
 #### Bug Fixes
 
