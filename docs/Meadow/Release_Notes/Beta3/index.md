@@ -24,6 +24,13 @@ Previously, `COM1` (pins `D13` and `D12`) was unavailable for use as a serial po
 * [#86 - b3.9 UART issues](https://github.com/WildernessLabs/Meadow_Issues/issues/86) - Regression. Fixed.
 * [#88 - Board works only if plugged in USB socket](https://github.com/WildernessLabs/Meadow_Issues/issues/88) - Regression. Fixed.
 
+
+### Meadow Foundation
+
+#### Bug Fixes
+
+* We merged two pull-requests fixing analog temperature sensor calculation. Thanks to [James Fraser](https://github.com/jbfraser1) for the fixes.
+
 ## Beta 3.9
 
 `b3.9` is a minor release that adds more API stability, fixes some things we broke in `b3.8`, and adds some new features, including exposing the Real-Time-Clock on Meadow.
