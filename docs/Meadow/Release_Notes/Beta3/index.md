@@ -4,6 +4,38 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.10
+
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finall, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Additional Free Serial Port
+
+Previously, `COM1` (pins `D13` and `D12`) was unavailable for use as a serial port because we were outputting debug information from Meadow.OS on that port. However, we've moved that debug stream to USB, freeing that port (and pins) for use. For more information see the [Serial (UART) guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
+
+### Bug Fixes
+
+* [#66 - Resources do not work](https://github.com/WildernessLabs/Meadow_Issues/issues/66) - Regression. Fixed.
+* [#76 - DateTime.Parse() enters an infinite loop](https://github.com/WildernessLabs/Meadow_Issues/issues/76) - Fixed.
+* [#85 - Reading only 0 from serial (UART) receive buffer](https://github.com/WildernessLabs/Meadow_Issues/issues/85) - Regression. Fixed.
+* [#86 - b3.9 UART issues](https://github.com/WildernessLabs/Meadow_Issues/issues/86) - Regression. Fixed.
+* [#88 - Board works only if plugged in USB socket](https://github.com/WildernessLabs/Meadow_Issues/issues/88) - Regression. Fixed.
+
+### Meadow Foundation
+
+This release includes bug fixes and performance improvements in several drivers:
+
+* **CharacterDisplay** improves error checking and gracefully handles long strings
+* **AnalogTemperatureSensor** fixes a voltage to temperature calculation bug
+* **GraphicsLibrary** fixes a bug when  vertical and horizontal lines were drawn 1 pixel too short
+
+#### Bug Fixes
+
+* We merged two pull-requests fixing analog temperature sensor calculation. Thanks to [James Fraser](https://github.com/jbfraser1) for the fixes.
+
 ## Beta 3.9
 
 `b3.9` is a minor release that adds more API stability, fixes some things we broke in `b3.8`, and adds some new features, including exposing the Real-Time-Clock on Meadow.
