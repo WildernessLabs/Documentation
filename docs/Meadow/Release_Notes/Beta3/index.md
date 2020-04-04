@@ -26,15 +26,16 @@ Previously, `COM1` (pins `D13` and `D12`) was unavailable for use as a serial po
 
 ### Meadow Foundation
 
-This release includes bug fixes and performance improvements in several drivers:
-
-* **CharacterDisplay** improves error checking and gracefully handles long strings
-* **AnalogTemperatureSensor** fixes a voltage to temperature calculation bug
-* **GraphicsLibrary** fixes a bug when  vertical and horizontal lines were drawn 1 pixel too short
+This release includes bug fixes and performance improvements in several drivers.
 
 #### Bug Fixes
 
-* We merged two pull-requests fixing analog temperature sensor calculation. Thanks to [James Fraser](https://github.com/jbfraser1) for the fixes.
+* **GraphicsLibrary** - We fixed a bug when  vertical and horizontal lines were drawn 1 pixel too short.
+* **Analog Temperature Sensors** - We merged two pull-requests fixing analog temperature sensor calculation. Thanks to [James Fraser](https://github.com/jbfraser1) for the fixes.
+
+#### Other Improvements
+
+* **CharacterDisplay** - We improved error checking and gracefull handle long strings.
 
 ## Beta 3.9
 
