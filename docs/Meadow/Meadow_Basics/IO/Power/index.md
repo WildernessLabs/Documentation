@@ -59,7 +59,7 @@ The battery charging circut is also connected to the `5V` rail via a diode. You 
 
 The board can be adequately powered by a solar panel that outputs a minimum of `500mA` at `6V`, but it's best to pair a solar panel with a battery in order to provide backup power when solar power is not available.
 
-[schematic needed - TODO]
+![](/Common_Files/MeadowPower.svg)
 
 ## Real-Time Clock (RTC)
 
