@@ -48,9 +48,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     public MeadowApp()
     {
         // instantiate our peripherals
-        _rotary = new RotaryEncoder(
-            Device.Pins.D05, Device.Pins.D06,
-            CircuitTerminationType.CommonGround);
+        _rotary = new RotaryEncoderWithButton(Device, Device.Pins.D07, Device.Pins.D08, Device.Pins.D06);
         _rotary.Rotated += RotaryRotated;
         _rotary.Clicked += RotaryClicked;
 
