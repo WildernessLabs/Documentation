@@ -8,11 +8,15 @@ subtitle: Meadow Basics
 
 IO is a big part of what makes Meadow magical. Meadow boards expose a wide variety of ways to control and interact with external peripherals and hardware via _Input/Output_ (IO) ports.
 
-IO ports can be accessed from your application to read sensors, listen to button presses, light LEDs, drive motors, communicate with other systems, and lots more.
+## Pins + Connectors
+
+IO ports are exposed physically on the board via pins and other connectors. These physical connections can be accessed from your application code to read sensors, listen to button presses, light LEDs, drive motors, communicate with other systems, and lots more.
+
+Many of the pins on a Meadow board are multifunction, which means that they can serve as different types of IO, depending on how they're configured in code.
 
 ## Types of IO
 
-Meadow IO ports are divided into two categories: _Digital_ and _Analog_.
+Meadow IO ports are generally divided into two categories: _Digital_ and _Analog_. There is also another type of IO, _Power_, which is discussed in the [power guide](Power).
 
 Digital and analog refer to the type of electrical signal used; either `HIGH`/`LOW` for digital, or a range of voltages for analog, and they're used for different things.
 
@@ -20,7 +24,11 @@ Digital and analog refer to the type of electrical signal used; either `HIGH`/`L
 
 Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO.
 
-Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. Additionally, the digital ports have built-in support for a host of different types of common digital [communication protocols](/Meadow/Meadow_Basics/IO/Digital/Protocols/) including:
+Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. They can also be setup as input ports which can read signal inputs to know if they're `HIGH`, `LOW`, and can also raise notifications on change, via _interrupts_.
+
+#### Digital Communications Protocols
+
+Additionally, the digital ports have built-in support for a host of different types of common digital [communication protocols](/Meadow/Meadow_Basics/IO/Digital/Protocols/) including:
 
 * **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)
 * **[SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)

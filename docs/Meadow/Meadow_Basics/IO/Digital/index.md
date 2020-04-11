@@ -49,7 +49,9 @@ var currentState = input.State;
 
 ### Interrupts
 
-Interrupts allow your application to be notified of the change of state of a Digital Input without having to poll the value. Enabling interrupts requires two things from your application: setting the `InterruptMode` of the `IDigitalInputPort` instance and then adding a handler for the instance's `Changed` event.
+Interrupts allow your application to be notified of the change of state of a Digital Input without having to poll the value. Enabling interrupts requires two things from your application: setting the `InterruptMode` of the `IDigitalInputPort` and then subscribing to notifications either via the `Changed` event, or using the `IObservable` pattern. 
+
+#### Example
 
 For example, if you wanted your application to get notified when the `D03` input pin changed from `LOW` to `HIGH` (a rising interrupt), you could use the following code:
 
@@ -66,12 +68,20 @@ input.Changed += (s, e) =>
 };
 ```
 
+For more information, check out the [Events and IObservable guide](/Meadow/Meadow_Basics/Events_and_IObservable/).
+
+#### Interrupt Groups
+
+One thing to bear in mind when creating interrupts on multiple pins is that input pins share _interrupt groups_, in which only one input within any given interrupt group can be enabled as an interrupt. So when choosing pins to use as interrupts, refer to the pinout diagram and make sure that for each interrupt you want to use, they're in a unique interrupt group:
+
+![Meadow pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+
+
 ## Timing
 
 **NOTE FROM THE WILDERNESS LABS TEAM:**
  
 These timing values are measurements from Beta 3.6. We recognize that they are not fast enough for all applications, but they are adequate for many. Keep in mind that these values are a significant improvement from earlier Betas and the expectation is for them to improve drastically as we move toward release, so if they don't meet your needs feel free to contact us with your requirements to find our when to expect a release that will meet your needs.
-
 
 An important consideration for most applications is the minimum timing capabilities of the platform on which you're running.
 
