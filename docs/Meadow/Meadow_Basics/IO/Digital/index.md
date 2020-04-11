@@ -16,14 +16,14 @@ Setting the state of a Digital Output is done using an implementation of the `ID
 
 For example, if you wanted to be able to control the state of the D05 pin on the F7 Meadow, you could use the following code to create an instance of the IDigitalOutputPort with an initial state of `LOW`:
 
-```
+```csharp
 var output = Device.CreateDigitalOutputPort(
     Device.Pins.D05, false);
 ```
 
 You could then assert a state on the pin to `LOW` or `HIGH` using one of the following:
 
-```
+```csharp
 output.State = false;   // assert LOW
 output.State = true;    // assert HIGH
 ```
@@ -34,7 +34,7 @@ Reading the state of a Digital Input is done using an implementation of the `IDi
 
 For example, if you wanted to be able to read the state of the D03 pin on the F7 Meadow, you could use the following code to create an instance of the IDigitalOutputPort with an initial state of `LOW`:
 
-```
+```csharp
 var input = Device.CreateDigitalInputPort(
     Device.Pins.D03);
 ```
@@ -43,7 +43,7 @@ Optional constructor parameters allow you to set the internal resistor mode, int
 
 To poll the state of the input, you read the `State` property:
 
-```
+```csharp
 var currentState = input.State;
 ```
 
@@ -55,7 +55,7 @@ Interrupts allow your application to be notified of the change of state of a Dig
 
 For example, if you wanted your application to get notified when the `D03` input pin changed from `LOW` to `HIGH` (a rising interrupt), you could use the following code:
 
-```
+```csharp
 // create the InputPort with interrupts enabled
 var input = Device.CreateDigitalInputPort(
     Device.Pins.D03,
@@ -93,7 +93,7 @@ Some basic timing measurements and expectations are as follows:
 
 How fast can the platform cycle a simple digital output?  The following test, measured with an oscilloscope, shows that the line has a 50% duty cycle, with each `HIGH` and `LOW` state maintained for approximately 4.1ms:
 
-```
+```csharp
 var d04 = Device.CreateDigitalOutputPort(Device.Pins.D04);
 
 while (true)
@@ -107,7 +107,7 @@ while (true)
 
 Given an incoming interrupt, how fact can the platform react and execute some handler?  The following test, measured with an oscilloscope, shows that the time from the rising input edge to the rising output edge to be approximately 50ms:
 
-```
+```csharp
 var input = Device.CreateDigitalInputPort(
     Device.Pins.D03,
     InterruptMode.EdgeRising);
