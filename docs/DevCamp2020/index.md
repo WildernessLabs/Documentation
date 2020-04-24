@@ -8,11 +8,11 @@ subtitle: Building IoT with .NET
 
 # Friday, May 22nd 2020
 
-Join us for a day of live stream fun, hacking and building IoT with Meadow, using full .NET! Tickets are free, but you must register to attend.
+Join us for a day of live stream fun, hacking and building IoT with Meadow, using full .NET! Tickets are free, but you must register to attend. 
 
 ## [Get your free tickets here!]()
 
-[live stream, zoom + slack]
+We'll be live streaming the sessions via Zoom, and we'll be online in the Wilderness Labs public Slack. If you haven't joined the Slack org yet, you can do so [here](http://slackinvite.wildernesslabs.co/).
 
 ## Schedule
 
@@ -33,25 +33,23 @@ Join us for a day of live stream fun, hacking and building IoT with Meadow, usin
 
 All times in Pacific Daylight Savings Time (GMT -8).
 
-
-
 # Session Abstracts
 
 ### Keynote - Bryan Costanich
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. Pellentesque viverra odio id tortor tincidunt lobortis. Suspendisse elementum finibus lorem id sagittis. Integer fermentum et dolor ut porta. Donec et porttitor sem. Morbi commodo a ante ac lacinia.
+Did you know that in just a few years there will be 10x as many non-mobile connected things on the planet as humans? IoT/hardware is the quiet revolution in technology today, and it’s bigger than anything that’s come before it. Join us as we demystiy IoT and show you just how easy it can be to build connected hardware with C#, using Meadow; the latest innovation from former Xamarin folk that enables you to run full .NET applications on real embedded hardware: microcontrollers.
 
 ### Getting Started with Meadow - Adrian Stevens
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. 
+Join Adrian Stevens as he shows you how to tet up and running with the Meadow. Setup your development environment, configure your Meadow dev kit, and deploy your first application.
 
 ### Rapidly Building Hardware with Meadow.Foundation - Adrian Stevens
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. Pellentesque viverra odio id tortor tincidunt lobortis. Suspendisse elementum finibus lorem id sagittis. 
+Meadow.Foundation greatly simplifies the task of building connected things with Meadow, by providing a unified driver and library framework that includes drivers and abstractions for common peripherals such as sensors, displays, motors, and more. Join us to learn just how easy it can be to build with Meadow.Foundation.
 
 ### Somethign Awesome - Frank Kruger
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. Pellentesque viverra odio id tortor tincidunt lobortis. Suspendisse elementum finibus lorem id sagittis. 
+[TBD]
 
 ### Social Hour and Expert 1x1s
 
@@ -59,22 +57,23 @@ Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor 
 
 ### Designing a Custom Meadow PCB Wing - Bryan Costanich
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl.
+Designing custom circuits may be intimidating, but they don't have to be. Join Bryan as he walks through designing a custom Meadow wing circuit board from start to finish. 
 
 ### Designing a Meadow Enclosure with Fusion 360 - Jorge Ramirez
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. 
+Building a Meadow project and need an enclosure? Even with a cheap 3D printer, you can print just about anything these days. Join Jorge as he walks through creating a simple 3D printable product enclosure for Meadow in Fusion 360.
 
 ### Meadow Network Stack Demo - Mark Stevens
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. 
+[TBD]
 
 ### Hack Show and Tell - You!
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. 
+Do you have a cool hack that you've done with Meadow? Sign up for a 5-10 minute slot to show it off and tell us about it!
 
 ### Closing Fireside and Q&A - Karina Ung & Bryan Costanich
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. 
+We're wrapping the day up with a frieside chat, hosted by Karina, who will be interviewing Bryan and moderating a community Q&A.
+
 
 # [Register for the live stream now!]()
