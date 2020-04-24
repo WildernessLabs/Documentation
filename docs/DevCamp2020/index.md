@@ -8,15 +8,13 @@ subtitle: Building IoT with .NET
 
 # Friday, May 22nd 2020
 
-Join us for a day of fun, hacking and building IoT with Meadow, using full .NET! Tickets are free, but you must register to attend.
+Join us for a day of live stream fun, hacking and building IoT with Meadow, using full .NET! Tickets are free, but you must register to attend.
 
 ## [Get your free tickets here!]()
 
-lorem
+[live stream, zoom + slack]
 
 ## Schedule
-
-All times in Pacific Daylight Savings Time (GMT -8).
 
 | Time            | Session Track | Speaker         |
 |-----------------|---------------|-----------------|
@@ -31,7 +29,13 @@ All times in Pacific Daylight Savings Time (GMT -8).
 | 3:40p - 4:10p   | Hack Show and Tell | You! |
 | 4:20p - 5p      | Closing Fireside and Q&A | Karina Ung & Bryan Costanich |
 
-## Sessions
+<br/>
+
+All times in Pacific Daylight Savings Time (GMT -8).
+
+
+
+# Session Abstracts
 
 ### Keynote - Bryan Costanich
 
@@ -73,4 +77,4 @@ Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor 
 
 Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. 
 
-## [Register for the live stream now!]()
+# [Register for the live stream now!]()
