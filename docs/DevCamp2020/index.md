@@ -8,7 +8,9 @@ subtitle: Building IoT with .NET
 
 # Friday, May 22nd 2020
 
-Join us for a day of live stream fun, hacking and building IoT with Meadow, using full .NET! Tickets are free, but you must register to attend. 
+Join us for a day of live stream fun, hacking and building IoT with Meadow. In these fun filled  sessions, we're going to demystify embedded hardware and show you that building IoT can be as easy as web or mobile development, using full .NET on real embeddable hardware! 
+
+Tickets are free, but you must register to attend. 
 
 ## [Get your free tickets here!]()
 
