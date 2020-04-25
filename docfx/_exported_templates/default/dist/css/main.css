@@ -926,6 +926,8 @@ footer {
   /* =========================================
      Tables
      ========================================= */ }
+  #primary-col.blank {
+    margin: 0 5%; }
   #primary-col .content {
     margin: 0;
     padding: 35px 0 0%; }
