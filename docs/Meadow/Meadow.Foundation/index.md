@@ -4,7 +4,7 @@ title: Meadow.Foundation
 subtitle: Peripheral driver library and hardware control libraries that make IoT development plug-and-play.
 ---
 
-![Meadow.Foundation Logo](Meadow.Foundation_Logo.svg){:standalone}
+![Meadow.Foundation Logo](Meadow.Foundation_Logo_white_BG.svg){:standalone}
 
 Meadow.Foundation greatly simplifies the task of building connected things with Meadow, by providing a unified driver and library framework that includes drivers and abstractions for common peripherals such as sensors, displays, motors, and more. Additionally, it includes utility functions and helpers for common tasks when building connected things.
 
