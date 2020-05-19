@@ -20,7 +20,7 @@ We'll be live streaming the sessions via Zoom, and we'll be online in the Wilder
 
 | Time            | Track 1                          | Track 2         |
 |-----------------|----------------------------------|-----------------|
-| 9a - 9:50a      | Keynote :: Bryan Costanich       ||
+| 9:30a - 10a      | Keynote :: Bryan Costanich       ||
 | 10a - 10:30a    | Getting Started with Meadow :: Adrian Stevens ||
 | 10:30a - 11:20a | Rapidly Building Hardware with Meadow.Foundation :: Adrian Stevens ||
 | 11:30a - Noon   | Project and Network Demos :: Wilderness Labs Team ||
