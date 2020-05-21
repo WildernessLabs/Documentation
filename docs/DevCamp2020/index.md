@@ -27,8 +27,8 @@ We'll be live streaming the sessions via Zoom, and we'll be online in the Wilder
 | Noon - 1p       | Social Hour & Expert 1x1s | |
 | 1p - 1:50p      | Designing a Meadow Enclosure with Fusion 360 :: Jorge Ramirez | Designing an enclosure with OpenJSCAD :: Frank Krueger |
 | 2p - 2:50p       | Integrating low-power wireless communications with Meadow :: Bryn Lewis | Designing a Custom Meadow PCB Wing :: Bryan Costanich |
-| 3p - 3:50p       | Meadow Hack Show and Tell :: You! | |
-| 4p - 4:50p      | Closing Fireside and Q&A :: Karina Ung & Bryan Costanich ||
+| 3p - 3:20p       | Meadow Hack Show and Tell :: You! | |
+| 3:30p - 4:30p      | Closing Fireside and Q&A :: Karina Ung & Bryan Costanich ||
 
 <br/>
 
