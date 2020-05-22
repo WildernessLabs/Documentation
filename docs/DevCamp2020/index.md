@@ -44,11 +44,11 @@ If you're planning on attending, we highly recommend picking up a [Hack Kit Pro]
 
 ### Keynote - Bryan Costanich
 
-Did you know that in just a few years there will be 10x as many non-mobile connected things on the planet as humans? IoT/hardware is the quiet revolution in technology today, and it’s bigger than anything that’s come before it. Join us as we demystiy IoT and show you just how easy it can be to build connected hardware with C#, using Meadow; the latest innovation from former Xamarin folk that enables you to run full .NET applications on real embedded hardware: microcontrollers.
+Did you know that in just a few years there will be 10x as many non-mobile connected things on the planet as humans? IoT/hardware is the quiet revolution in technology today, and it’s bigger than anything that’s come before it. Join us as we demystify IoT and show you just how easy it can be to build connected hardware with C#, using Meadow; the latest innovation from former Xamarin folk that enables you to run full .NET applications on real embedded hardware: microcontrollers.
 
 ### Getting Started with Meadow - Adrian Stevens
 
-Join Adrian Stevens as he shows you how to tet up and running with the Meadow. Setup your development environment, configure your Meadow dev kit, and deploy your first application.
+Join Adrian Stevens as he shows you how to get up and running with the Meadow. Setup your development environment, configure your Meadow dev kit, and deploy your first application.
 
 ### Rapidly Building Hardware with Meadow.Foundation - Adrian Stevens
 
@@ -56,7 +56,6 @@ Meadow.Foundation greatly simplifies the task of building connected things with 
 
 ### Social Hour and Expert 1x1s
 
-Vestibulum a diam ligula. Fusce ornare, neque eget finibus pellentesque, tortor mi commodo mauris, in luctus quam dui eu massa. Ut vel venenatis ex. Aenean varius vitae nulla vitae feugiat. Aenean ornare lobortis nisl. 
 
 ### Integrating Low-power Wireless Communications with Meadow - Bryn Lewis
 
