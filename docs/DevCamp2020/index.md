@@ -10,11 +10,10 @@ subtitle: Building IoT with .NET
 
 Join us for a day of live stream fun, hacking and building IoT with Meadow. In these fun filled  sessions, we're going to demystify embedded hardware and show you that building IoT can be as easy as web or mobile development, using full .NET on real embeddable hardware! 
 
-Tickets are free, but you must [register](https://wildernesslabs-devcamp.eventbrite.com/?aff=Website) to attend. 
+Join right now!
 
-## [Get your free tickets here!](https://wildernesslabs-devcamp.eventbrite.com/?aff=Website)
-
-We'll be live streaming the sessions via Zoom, and we'll be online in the Wilderness Labs public Slack. If you haven't joined the Slack org yet, you can do so [here](http://slackinvite.wildernesslabs.co/).
+Track 1: [http://wldrn.es/DevCamp1](http://wldrn.es/DevCamp1)  
+Track 2: [http://wldrn.es/DevCamp2](http://wldrn.es/DevCamp2)
 
 ## Schedule
 
