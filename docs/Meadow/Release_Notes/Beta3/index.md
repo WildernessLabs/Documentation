@@ -4,6 +4,43 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.11
+
+Beta 3.11 is a major release that brings a pile of stabilizations and fixes across Meadow.OS, Meadow.Core, and Meadow.Foundation.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Meadow.Core Changes
+
+* **Improved I2C support in Meadow.Core** - **@Tacke - what is this?**
+* **Fixed internal Pull-Up & Pull-Down resistor settings** - `DigitalInputPort` now has working internal pull-up and pull-down resistors.
+* **Improved Interrupts** - 
+
+### Meadow.Foundation Changes
+
+#### Motion Sensor Read/StartUpdating/IObservable fixes
+
+We did a major overhaul to the motion sensor (accelerometers and such) APIs, updating their APIs to match the [`Read()`, `StartUpdating()`, `StopUpdating()` and `IFilterableObservable` pattern](/Meadow/Meadow.Foundation/Working_with_Sensors/) found in the other drivers.
+
+#### Driver Improvement
+
+* **`ITextDisplay`** - **@Adrian what did we do here?**
+* **`RotaryEncoder`** - [improved, how?]
+* **`PushButton`** - [improed, how?]
+* **`RgbPwmLed`** - [supports more configurations. not sure what this means]
+* **`Max7219`** - [Supports more configurations]
+* **`TftSpi` Display Driver** - Performance improvements.
+
+#### Graphics Library Improvements
+
+[@adrian what?]
+
+#### `TextDisplayMenu` Draft
+
+[right? initial draft?]
+
 ## Beta 3.10
 
 Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finall, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
