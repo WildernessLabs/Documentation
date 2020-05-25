@@ -14,7 +14,7 @@ You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Sta
 
 ### Meadow.OS Changes
 
-We reduced the time resolution in the underlying OS to `0.1ms`, down from `10ms`. This should fix a number of issues where `10ms` delays were happening with calls, and the time functions such as `Stopwatch` were reporting incorrect timings.
+We reduced the time resolution in the underlying OS to `1ms`, down from `10ms`. This should fix a number of issues where `10ms` delays were happening with calls, and the time functions such as `Stopwatch` were reporting incorrect timings.
 
 ### Meadow.Core Changes
 
