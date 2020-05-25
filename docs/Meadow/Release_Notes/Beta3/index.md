@@ -12,11 +12,15 @@ Beta 3.11 is a major release that brings a pile of stabilizations and fixes acro
 
 You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
 
+### Meadow.OS Changes
+
+We reduced the time resolution in the underlying OS to `0.1ms`, down from `10ms`. This should fix a number of issues where `10ms` delays were happening with calls, and the time functions such as `Stopwatch` were reporting incorrect timings.
+
 ### Meadow.Core Changes
 
-* **Improved I2C support in Meadow.Core** - **@Tacke - what is this?**
+* **Improved I2C support in Meadow.Core** - I2C now uses a `Span<byte>` internally and the I2CPeripheral added overloads taking `Span<byte>` params. `Span<T>` was introduced in .NET Core 2.1 and allows I2C comms to be much more efficient in their use of memory.
 * **Fixed internal Pull-Up & Pull-Down resistor settings** - `DigitalInputPort` now has working internal pull-up and pull-down resistors.
-* **Improved Interrupts** - 
+* **Improved Interrupts** - We implemented a glitch filter and reworked the debounce filter to move it further down the OS stack to operate with less overhead. Docs on glitch filter coming soon.
 
 ### Meadow.Foundation Changes
 
