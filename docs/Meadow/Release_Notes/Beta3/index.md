@@ -30,24 +30,20 @@ We did a major overhaul to the motion sensor (accelerometers and such) APIs, upd
 
 #### Driver Improvement
 
-* **`ITextDisplay`** - **@Adrian what did we do here?**
-* **`RotaryEncoder`** - [improved, how?]
-* **`PushButton`** - [improed, how?]
-* **`RgbPwmLed`** - [supports more configurations. not sure what this means]
-* **`Max7219`** - [Supports more configurations]
-* **`TftSpi` Display Driver** - Performance improvements.
-
-#### Graphics Library Improvements
-
-[@adrian what?]
+* **`ITextDisplay`** - Updated the API to work with larger variety of display types, `TextDisplayMenu` coming soon!
+* **`RotaryEncoder`** - Is now more responsive when turning quickly 
+* **`RgbPwmLed`** - Improved brightness control when setting the color
+* **`Max7219`** - Has been updated to support more display configutations when driving 8x8 led arrays
+* **`TftSpi` Display Driver** - Improved performance when making partial screen updates  
+* **`GraphicsLibrary`** - Performance improvements and several rendering fixes when drawing basic shapes 
 
 #### `TextDisplayMenu` Draft
 
-[right? initial draft?]
+TextDisplayMenu prerelease nuget published! You can now leverage the power of TextDisplayMenu in your Meadow projects with any display currently supported in Meadow.Foundation!
 
 ## Beta 3.10
 
-Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finall, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finally, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
 
 ### Updating
 
