@@ -36,6 +36,7 @@ We did a major overhaul to the motion sensor (accelerometers and such) APIs, upd
 * **`Max7219`** - Has been updated to support more display configutations when driving 8x8 led arrays
 * **`TftSpi` Display Driver** - Improved performance when making partial screen updates  
 * **`GraphicsLibrary`** - Performance improvements and several rendering fixes when drawing basic shapes 
+* **`Button`** - Long press does not raise click event and is disabled by default
 
 #### `TextDisplayMenu` Draft
 
