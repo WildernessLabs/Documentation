@@ -4,9 +4,47 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.11
+
+Beta 3.11 is a major release that brings a pile of stabilizations and fixes across Meadow.OS, Meadow.Core, and Meadow.Foundation.
+
+### Updating
+
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+
+### Meadow.OS Changes
+
+We reduced the time resolution in the underlying OS to `0.1ms`, down from `10ms`. This should fix a number of issues where `10ms` delays were happening with calls, and the time functions such as `Stopwatch` were reporting incorrect timings.
+
+### Meadow.Core Changes
+
+* **Improved I2C support in Meadow.Core** - I2C now uses a `Span<byte>` internally and the I2CPeripheral added overloads taking `Span<byte>` params. `Span<T>` was introduced in .NET Core 2.1 and allows I2C comms to be much more efficient in their use of memory.
+* **Fixed internal Pull-Up & Pull-Down resistor settings** - `DigitalInputPort` now has working internal pull-up and pull-down resistors.
+* **Improved Interrupts** - We implemented a glitch filter and reworked the debounce filter to move it further down the OS stack to operate with less overhead. Docs on glitch filter coming soon.
+
+### Meadow.Foundation Changes
+
+#### Motion Sensor Read/StartUpdating/IObservable fixes
+
+We did a major overhaul to the motion sensor (accelerometers and such) APIs, updating their APIs to match the [`Read()`, `StartUpdating()`, `StopUpdating()` and `IFilterableObservable` pattern](/Meadow/Meadow.Foundation/Working_with_Sensors/) found in the other drivers.
+
+#### Driver Improvement
+
+* **`ITextDisplay`** - Updated the API to work with larger variety of display types, `TextDisplayMenu` coming soon!
+* **`RotaryEncoder`** - Is now more responsive when turning quickly 
+* **`RgbPwmLed`** - Improved brightness control when setting the color
+* **`Max7219`** - Has been updated to support more display configutations when driving 8x8 led arrays
+* **`TftSpi` Display Driver** - Improved performance when making partial screen updates  
+* **`GraphicsLibrary`** - Performance improvements and several rendering fixes when drawing basic shapes 
+* **`Button`** - Long press does not raise click event and is disabled by default
+
+#### `TextDisplayMenu` Draft
+
+TextDisplayMenu prerelease nuget published! You can now leverage the power of TextDisplayMenu in your Meadow projects with any display currently supported in Meadow.Foundation!
+
 ## Beta 3.10
 
-Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finall, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
+Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` and `b3.9` due to a mismatch in git submodules that slipped through the cracks and resulted in an awkward build. It's also an opportunity for us to test out our new release pipelines and QA processes, which should lead to greatly increased quality of releases from here forward. Finally, we also unlocked another serial (UART) port on the Meadow, so there are now two accessible serial ports.
 
 ### Updating
 
