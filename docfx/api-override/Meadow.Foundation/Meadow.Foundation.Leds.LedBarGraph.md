@@ -32,19 +32,21 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     {
         _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
 
-        var pins = new IDigitalPin[10];
-        pins[0] = Device.Pins.D06;
-        pins[1] = Device.Pins.D07;
-        pins[2] = Device.Pins.D08;
-        pins[3] = Device.Pins.D09;
-        pins[4] = Device.Pins.D10;
-        pins[5] = Device.Pins.D11;
-        pins[6] = Device.Pins.D12;
-        pins[7] = Device.Pins.D13;
-        pins[8] = Device.Pins.D14;
-        pins[9] = Device.Pins.D15;
+        IDigitalOutputPort[] ports =
+        {
+            Device.CreateDigitalOutputPort(Device.Pins.D06),
+            Device.CreateDigitalOutputPort(Device.Pins.D07),
+            Device.CreateDigitalOutputPort(Device.Pins.D08),
+            Device.CreateDigitalOutputPort(Device.Pins.D09),
+            Device.CreateDigitalOutputPort(Device.Pins.D10),
+            Device.CreateDigitalOutputPort(Device.Pins.D11),
+            Device.CreateDigitalOutputPort(Device.Pins.D12),
+            Device.CreateDigitalOutputPort(Device.Pins.D13),
+            Device.CreateDigitalOutputPort(Device.Pins.D14),
+            Device.CreateDigitalOutputPort(Device.Pins.D15),
+        };
 
-        _ledBarGraph = new LedBarGraph(pins);
+        _ledBarGraph = new LedBarGraph(ports);
 
         Run();
     }
