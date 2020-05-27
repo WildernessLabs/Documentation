@@ -103,11 +103,11 @@ p {
   text-transform: uppercase;
   font-size: em(22);
   &.arrow {
-    background: url('../../assets/images/cta-arrow.png') left 7px no-repeat;
+    background: url('../assets/images/cta-arrow.png') left 7px no-repeat;
     background-size: 22px;
     letter-spacing: 1px;
     &.dark {
-      background: url('../../assets/images/cta-arrow-dark.png') left 5px no-repeat;
+      background: url('../assets/images/cta-arrow-dark.png') left 5px no-repeat;
       background-size: 24px;
     }
     padding: 0 0 0 35px;
@@ -142,7 +142,7 @@ main {
   }
 
   .main-banner::before {
-    @include bg('../../assets/images/mainbanner.jpg');
+    @include bg('../assets/images/mainbanner.jpg');
   }
 
   // primary banner on homepage
@@ -215,7 +215,7 @@ main {
       margin-top: 2%;
     } // Netduino Foundation Section
     &.foundation {
-      background: url('../../assets/images/netduino-bg.jpg') bottom no-repeat;
+      background: url('../assets/images/netduino-bg.jpg') bottom no-repeat;
       h2 {
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -243,7 +243,7 @@ main {
         z-index: 5;
       }
       .guide::before {
-        @include bg('../../assets/images/guide-bg.jpg');
+        @include bg('../assets/images/guide-bg.jpg');
       }
       .guide {
         position: relative;
@@ -327,7 +327,7 @@ main {
     text-align: left;
     z-index: 1;
     &::before {
-      @include bg('../../assets/images/meadow-intro-bg.jpg');
+      @include bg('../assets/images/meadow-intro-bg.jpg');
       z-index: 2;
     }
     &::after {
@@ -345,12 +345,12 @@ main {
   }
   .plug-wrapper {
     padding: 30% 0 0 0;
-    background-image: url('../../assets/images/meadow-plug-header.jpg');
+    background-image: url('../assets/images/meadow-plug-header.jpg');
     background-size: 100%;
   }
   .plug-content-bg {
     &::before {
-      @include bg('../../assets/images/meadow-plug-new-bg.jpg');
+      @include bg('../assets/images/meadow-plug-new-bg.jpg');
     }
     position: relative;
   }
@@ -365,7 +365,7 @@ main {
   }
   #professional {
     &::before {
-      @include bg('../../assets/images/meadow-professional-bg.jpg');
+      @include bg('../assets/images/meadow-professional-bg.jpg');
     }
     position: relative;
   }
@@ -373,7 +373,7 @@ main {
     position: relative;
     z-index: 100;
     &::before {
-      @include bg('../../assets/images/meadow-cloud-full-bg.png');
+      @include bg('../assets/images/meadow-cloud-full-bg.png');
     }
   }
   .cloud-overlay {
@@ -390,7 +390,7 @@ main {
   #production {
     position: relative;
     &::before {
-      @include bg('../../assets/images/meadow-production-bg.jpg');
+      @include bg('../assets/images/meadow-production-bg.jpg');
     }
   }
   #code {
@@ -452,7 +452,7 @@ main {
     position: relative;
     background: #4a4b4a;
     &::before {
-      @include bg('../../assets/images/meadow-join-bg.jpg');
+      @include bg('../assets/images/meadow-join-bg.jpg');
     }
     h1 {
       color: #eee;
@@ -670,28 +670,28 @@ main {
     line-height: 30px;
   }
   &::before {
-    @include bg('../../assets/images/developers-banner-bg.png');
+    @include bg('../assets/images/developers-banner-bg.png');
     background-position: left top;
   }
 }
 
 .landing .banner.small {
   &::before {
-    @include bg('../../assets/images/landing-developers-main-banner.png');
+    @include bg('../assets/images/landing-developers-main-banner.png');
     background-position: left top;
   }
 }
 
 .landing .banner.small.api-banner {
   &::before {
-    @include bg('../../assets/images/api-header-bg.png');
+    @include bg('../assets/images/api-header-bg.png');
     background-position: left top;
   }
 }
 
 .landing .links-banner {
   &::before {
-    @include bg('../../assets/images/landing-wood-bg.png');
+    @include bg('../assets/images/landing-wood-bg.png');
     background-position: left top;
   }
 }

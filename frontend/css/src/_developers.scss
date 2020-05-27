@@ -315,6 +315,11 @@ div.highlighter-rouge {
   }
 }
 
+.content-block {
+  p iframe {
+    width: 100%
+  }
+}
 // end 320 media query
 $developers-page-gutter: 45px;
 
