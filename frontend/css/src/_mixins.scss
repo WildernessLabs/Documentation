@@ -1,0 +1,20 @@
+// SASS Mixins
+// em conversion
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+// Scaling background images
+@mixin bg($url) {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url($url) center center no-repeat;
+  background-size: cover;
+}

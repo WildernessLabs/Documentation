@@ -1,0 +1,578 @@
+//
+// Developers Page Specific Styles
+//
+.developers-landing {
+  header .logo {
+    margin-left: 5%;
+  }
+}
+
+#developers-section {
+  margin: 0;
+  padding: 0 0 0 0;
+  color: $color-brown;
+  background: $color-column-grey;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    margin-bottom: 15px;
+  }
+  .subcategory h2 {
+    padding-bottom: 8px; 
+  }
+
+  p {
+    margin-bottom: 20px;
+    .highlighter-rouge {
+      font-size: 20px;
+    }
+  }
+
+  .banner.small {
+    padding-top:55px;
+    padding-bottom: 45px;
+    p{
+      font-size: 28px;
+    }
+    a {
+      position: relative;
+    }
+  }
+
+  .landing .banner.small {
+    padding-left: 3%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    h1 {
+      font-family: 'Wavehaus-66Book';
+    }
+    .cta {
+      background: #635444;
+      border: 2px solid #98A645;
+      border-radius: 10px;
+      font-family: 'MrsEavesOT-Roman';
+      font-size: 36px;
+      color: #98A645;
+      letter-spacing: 0;
+      text-transform: inherit;
+      padding: 3px 20px 0px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    p {
+      font-family: 'MrsEavesOT-Roman';
+      color: #10485E;
+      letter-spacing: 0;
+      font-size: 24px;
+    }
+  }
+  .landing nav.secondary ul {
+    padding-left: 5%;
+  }
+
+  .split-banners {
+    overflow: hidden;
+    background: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    h3 img {
+      float: none;
+      margin: 0;
+    }
+    .banner {
+      border-box: box-sizing;
+      h3, h3 a {
+        font-family: 'Wavehaus-66Book';
+        font-size: 36px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 125px;
+        li {
+          list-style-type: none;
+          // display: inline-block;
+          // width: 49%;
+          margin-bottom: 10px;
+          &.subpage {
+            padding: 0 0 0 10px;
+          }
+        }
+      }
+      p, a, li {
+        font-family: 'MrsEavesOT-Roman';
+        color: #E3F4FB;
+        letter-spacing: 0;
+        line-height: 20px;
+      }
+      a:hover {
+        color: #C9DB31;
+      }
+      &.image-right {
+        h3 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .guides {
+      background: #1A80AA;
+      a, li, h3 {
+        color: #E3F4FB;
+      }
+      a:hover {
+        color: #E1EB8B;
+        text-decoration: underline;
+      }
+      p {
+        color: #E1EB8B;
+      }
+    }
+
+    .foundation{
+      background: #EEF3BD;
+      text-align: center;
+      p, a, li {
+        color: #3D3530;
+      }
+
+      h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        img {
+          float: none;
+          width: 100%;
+        }
+      }
+      a {
+        width: 32%;
+        display: inline-block;
+        font-family: 'MrsEavesOT-Roman';
+        color: #1A80AA;
+        letter-spacing: 0;
+        line-height: 20px;
+        vertical-align: middle;
+        &:hover {
+          color: #B35E2C;
+          text-decoration: underline;
+        }
+      }
+
+    }
+
+
+    .tutorials {
+      background: #404040;
+      p, a, li, h3 {
+        color: #F8FAE4;
+        margin-right: 20px;
+      }
+    }
+    .netduino {
+      background: #524740;
+      p, a, li {
+        color: #F8FAE4;
+      }
+
+      ul {
+        height: 80px;
+      }
+    }
+  }
+  .links-banner {
+    height: 280px;
+    position: relative;
+    padding: 100px 0 0 0;
+    a {
+      position: relative;
+      font-family: 'MrsEavesOT-Bold';
+      color: #FDFDFD;
+      letter-spacing: 0;
+      text-align: center;
+      display: block;
+      text-transform: inherit;
+      &::before {
+        content: '->';
+        padding-right: 10px;
+        font-size: 44px;
+        top: -5px;
+        position: relative;
+      }
+    }
+  }
+}
+
+// Columns for Developers Page Layout
+// Secondary Column - Static Width Left hand Column
+// Primary Column - Flexible full width column
+#secondary-col {
+  padding-right: 0;
+}
+
+#primary-col {
+  padding: 0 5% 5% 5%;
+  background: $color-light;
+  .content {
+    margin: 0;
+    padding: 35px 0 0%;
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+  h1, h2, h3, h4, h5 {
+    &:not(:first-of-type) {
+      padding-top: 35px;
+    }
+  }
+
+  figure {
+    padding-bottom: 10px;
+    figcaption {
+      display: none;
+    }
+  }
+
+ a {
+   color: #23ABE3;
+   text-decoration: none;
+   &:hover {
+     text-decoration: underline;
+   }
+ }
+  /* =========================================
+     Tables
+     ========================================= */
+
+  table {
+    border: 2px solid #555555;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+  }
+
+  th, td {
+    padding: 1%;
+  }
+
+  th {
+    font-size: 22px;
+    text-align: left;
+    color: white;
+    background: #555555;
+    white-space: nowrap;
+  }
+
+  td {
+    border: 2px solid #555555;
+    font-size: 20px;
+    color: $color-dark;
+  }
+
+  tbody tr:nth-child(even) {
+     background-color: #eee;
+  }
+}
+
+.content-banner {
+  border: 2px solid $color-dark-border;
+  h2 {
+    background: #F9FBE7;
+    border-top: 2px solid $color-dark-border;
+    color: #28B4E7;
+    text-align: right;
+    margin: 0;
+    padding: 5px 5% 5px 0;
+  }
+  margin-bottom: 35px;
+}
+
+
+div.highlighter-rouge {
+  pre {
+    font-size: 15px;
+  }
+  div {
+    width: 100%
+  }
+}
+
+// end 320 media query
+$developers-page-gutter: 45px;
+
+@media (min-width: 320px) {
+  #primary-col {
+    width: 100%;
+  }
+
+  .developers {
+    .wide {
+      .content-block > figure {
+        width: 100%
+      }
+    }
+  }
+
+  #developers-section {
+    .links-banner a {
+        font-size: 40px;
+    }
+    .landing .banner.small {
+      .cta {
+        font-size: 30px;
+      }
+    }
+    .split-banners {
+      .banner {
+        height: auto;
+        font-size: 18px;
+        width: 100%;
+        padding: 25px 5% 25px 5%;
+      }
+      .image-right {
+
+        img {
+          float: none;
+          width: 95%;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        h3 img {
+          float: none;
+          margin: 0px;
+          width: auto;
+        }
+      }
+      p, li, a, li code {
+        font-size: 24px;
+      }
+
+
+      .foundation h3 {
+        display: inline-block;
+        text-align: center;
+        width: auto;
+      }
+
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+  .developers, #developers-section {
+    .split-banners {
+      .image-right {
+        img {
+          margin: 0px 0 15px 15px;
+          float: right;
+          width: 40%;
+          position: relative;
+          top: -55px;
+        }
+        h3 img {
+          position: static;
+        }
+      }
+      .banner {
+        width: 50%;
+        padding: 25px 2% 25px 3%;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+
+  // adds static spacing on the left and right for all elements on the developers page
+  // developers page has static columns unlike the rest of the site
+  .developers, #developers-section {
+    .links-banner a {
+        font-size: 48px;
+    }
+    nav.secondary ul, .banner.small, nav.subcategory h2, nav.subcategory ul {
+      padding-left: $developers-page-gutter;
+    }
+
+    nav.subcategory ul ul { padding-left: 3%; }
+
+    .banner.small {
+      padding-right: $developers-page-gutter;
+    }
+
+    header .logo {
+      margin-left: $developers-page-gutter;
+    }
+
+    .columns {
+      display: flex;
+    }
+
+    .landing {
+      .banner.small {
+        padding-right: 40%;
+      }
+    }
+    .split-banners {
+      p, li, a {
+        font-size: 20px;
+      }
+      .banner {
+        width: 50%;
+        padding: 25px 2% 25px 3%;
+      }
+      .foundation {
+        padding-left: 3%;
+        p {
+          padding: 0 20%;
+        }
+        h3, h3 img {
+          width: auto;
+          margin-bottom: 20px;
+        }
+      }
+      .guides {
+        min-height: 270px;
+      }
+      .netduino {
+        ul {
+          height: 120px;
+        }
+      }
+      .image-right {
+        height: 230px;
+        img {
+          margin: 0px 0 15px 15px;
+          float: right;
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  #secondary-col {
+    flex-shrink: 0;
+    flex-basis: 370px;
+    background: #eee;
+    vertical-align: top;
+  }
+  #primary-col {
+    width: auto;
+    border-left: 2px solid $color-dark-border;
+    flex: 1 1 370px;
+    min-width: 0;
+    .content {
+      padding: 35px 0 5% 0;
+    }
+  }
+} // end 992 media query
+
+@media (min-width: 1200px) {
+  .developers {
+    table {
+      width: 90%;
+    }
+  }
+  #developers-section {
+    .split-banners {
+      p, li, a {
+        font-size: 24px;
+      }
+      .image-right img {
+        margin: 0px 0px 25px 5px;
+        width: 35%;
+      }
+      .netduino {
+        ul {
+          height: 75px;
+        }
+      }
+    }
+  }
+}
+
+// wide screen only
+@media (min-width: 1680px) {
+  #primary-col {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .developers {
+    div.highlight {
+      margin: 0px 0;
+    }
+    .wide {
+      overflow: hidden;
+      ol, .highlighter-rouge {
+        overflow: hidden;
+      }
+      .content-block{
+        // .highlighter-rouge {
+        //   width: 48%;
+        // }
+        > p, > h1, > h2, > h3, > h4, > h5, > ul, > ol, > table {
+          float: left;
+          clear: left;
+          width: 48%;
+        }
+        > h1, > h2, > h3, > h4, > h5 {
+          clear: both;
+          margin-bottom: 15px;
+        }
+        div.highlighter-rouge, > figure,  img.floated, .content-banner {
+          float: right;
+          clear: right;
+          display: inline-block;
+          width: 48%;
+          padding-left: 1%;
+          padding-right: 1%;
+          margin-left: 20px;
+          margin-bottom: 10px;
+          position: relative;
+          overflow: hidden;
+          text-align: left;
+          img {
+            max-width: 100%;
+            width: auto;
+          }
+        }
+      }
+      .content-image {
+        width: 40%;
+      }
+    }
+  }
+
+  #developers-section {
+    .split-banners {
+      p, li, a {
+        font-size: 24px;
+      }
+
+    }
+  }
+
+  // styles for background underlay at wide breakpoints
+  #primary-col {
+    position: relative;
+
+    section.wide {
+      position: relative;
+      z-index: 2;
+    }
+
+    .background-underlay {
+      background: #1a80aa;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 50%;
+      height: 100%;
+    }
+  }
+}

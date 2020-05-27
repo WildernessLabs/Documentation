@@ -1,0 +1,50 @@
+
+// HTML Structure
+// Header
+//
+header {
+  z-index: 9999;
+  background: #1a1817;
+  opacity: 0.90;
+  &.container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    position: relative;
+    display: block;
+    margin: 0 0 0 5%;
+  }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 320px) {
+  header {
+    height: 80px;
+    .logo {
+      margin-top: 20px;
+      width: 225px;
+    }
+  }
+} // end 320 media query
+
+@media (min-width: 992px) {
+  header {
+    padding: 0 80px 0 80px;
+  }
+  header {
+    &.container-fluid {
+      padding-right: 0px;
+    }
+    height: 85px;
+    .logo {
+      margin-top: 20px;
+      width: 280px;
+      float: left;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+} // end 992 media query

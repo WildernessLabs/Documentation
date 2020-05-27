@@ -1,0 +1,1125 @@
+@import "variables";
+@import "fonts";
+@import "codepreview";
+@import "header";
+@import "nav";
+@import "footer";
+@import "developers";
+@import "carousel";
+
+// SASS Mixins
+// em conversion
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+// Scaling background images
+@mixin bg($url) {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url($url) center center no-repeat;
+  background-size: cover;
+}
+
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+body {
+  font-size: 16px;
+  background: #181615;
+  color: $color-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.hidden {
+  overflow: hidden;
+}
+
+// default header style
+h1 {
+  text-transform: uppercase;
+  sup {
+    font-size: em(9);
+    position: relative;
+    left: -7px;
+  }
+}
+
+// default link color
+a {
+ color: $color-brown;
+}
+
+// default body copy size
+p {
+  font-size: em(19);
+}
+
+.content {
+  a{
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.meadow {
+  a {
+    color: $color-light;
+    &:hover, &:focus {
+      color: $color-light;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Utility Classes */
+
+.green { color: #99a44c; }
+.gold { color: #c4b09c; }
+.fixed { position: fixed; }
+.bordered { border-bottom: 1px solid #af967b; }
+
+// CTA Links
+.cta {
+  text-transform: uppercase;
+  font-size: em(22);
+  &.arrow {
+    background: url('../../assets/images/cta-arrow.png') left 7px no-repeat;
+    background-size: 22px;
+    letter-spacing: 1px;
+    &.dark {
+      background: url('../../assets/images/cta-arrow-dark.png') left 5px no-repeat;
+      background-size: 24px;
+    }
+    padding: 0 0 0 35px;
+    font-weight: normal;
+  }
+  &.round {
+    color: $color-dark-grey;
+    border: 1px solid #353535;
+    border-radius: 20px;
+    padding: 4px 20px 2px 20px;
+    &:hover, &:focus {
+      color: $color-light;
+      background: #353535;
+      text-decoration: none;
+    }
+  }
+}
+
+main {
+  background: #fcfdfd;
+  section:first-child {
+    position: relative;
+  }
+
+  .image-wrapper {
+    img {
+      width: 100%;
+    }
+  }
+  .banner-wrapper {
+    position: relative;
+  }
+
+  .main-banner::before {
+    @include bg('../../assets/images/mainbanner.jpg');
+  }
+
+  // primary banner on homepage
+  .main-banner {
+    position: relative;
+    p {
+      font-size: em(25);
+      line-height: em(19);
+    }
+    h1 {
+      margin-bottom: 2%;
+    }
+    h2 {
+      line-height: em(17);
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1%;
+      font-size: em(20);
+    }
+    .scroll {
+      position: absolute;
+    }
+  }
+  .image-link {
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  // Content Section - Repeated Container
+  .content-section {
+    color: $color-dark;
+    background: #fcfdfd;
+    h1 {
+      color: $color-light-grey;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      &.large {
+        padding: 5% 0 5% 0;
+        text-transform: capitalize;
+        text-align: center;
+        background: #fcfdfd;
+        color: $color-dark;
+        background: #fcfdfd;
+        margin: 0;
+      }
+    }
+    .image-wrapper {
+      margin-bottom: 5%;
+    } // light class for dark backgrounds
+    .light {
+      color: $color-light;
+      h1, .cta {
+        color: $color-light;
+        border-color: $color-light;
+      }
+      .dark {
+        color: $color-dark;
+      }
+    }
+    .dark {
+      color: $color-dark;
+    } // Vertical CTA spacing in content
+    .cta.round {
+      display: inline-block;
+      margin-top: 2%;
+    } // Netduino Foundation Section
+    &.foundation {
+      background: url('../../assets/images/netduino-bg.jpg') bottom no-repeat;
+      h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #cbe8f5;
+        font-size: em(30);
+        font-weight: bold;
+      }
+      b {
+        color: #181615;
+        font-weight: normal;
+      }
+      .cta {
+        margin-top: 2%;
+        display: inline-block;
+        color: #0d3748;
+      }
+    } // Full Bleed Content Sections
+    &.full {
+      padding: 0;
+    } // Learning Section Styles
+    &.learning {
+      padding: 0;
+      .content-image, .content-wrapper {
+        position: relative;
+        z-index: 5;
+      }
+      .guide::before {
+        @include bg('../../assets/images/guide-bg.jpg');
+      }
+      .guide {
+        position: relative;
+        padding: 10%;
+        .cta.round {
+          margin-top: 10%;
+        }
+        h1 {
+          font-size: em(26);
+          margin-bottom: 10px;
+        }
+        .icon {
+          margin: 0;
+          width: auto;
+        }
+      }
+      .tutorials {
+        padding: 0;
+        background: #eee;
+        h1 {
+          color: $color-dark;
+          text-transform: none;
+          font-weight: bold;
+        }
+        img {
+          width: 100%;
+          display: block;
+          margin: 0;
+        }
+        .content-wrapper {
+          padding: 10%;
+        }
+      }
+    }
+  }
+  .projects {
+    .links {
+      padding: 5% 10% 5% 10%;
+      text-align: center;
+    }
+  }
+}
+
+
+.meadow {
+  text-align: center;
+  h1 {
+    text-transform: none;
+    letter-spacing: 3px;
+    font-size: em(80);
+    margin-bottom: 2%;
+    position: relative;
+    padding-bottom: 75px;
+    margin-bottom: 0;
+    sup {
+      font-size: em(5);
+      top: -30px;
+      right: -20px;
+    }
+    &::after {
+      content: "\2014";
+      position: absolute;
+      left: 40%;
+      bottom: 0%;
+    }
+  }
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  .container-fluid.banner {
+    margin: 0px;
+    .content-wrapper {
+      padding: 10%;
+    }
+  }
+  #intro {
+    position: relative;
+    padding-top: 85px;
+    padding-bottom: 10%;
+    text-align: left;
+    z-index: 1;
+    &::before {
+      @include bg('../../assets/images/meadow-intro-bg.jpg');
+      z-index: 2;
+    }
+    &::after {
+      @include bg('../../assets/svg/meadow-intro-overlay.svg');
+      z-index: 3;
+      background-position: left -25%;
+      opacity: 0.45;
+    }
+    h1 {
+      margin-bottom: 0;
+      &::after {
+        content: " ";
+      }
+    }
+  }
+  .plug-wrapper {
+    padding: 30% 0 0 0;
+    background-image: url('../../assets/images/meadow-plug-header.jpg');
+    background-size: 100%;
+  }
+  .plug-content-bg {
+    &::before {
+      @include bg('../../assets/images/meadow-plug-new-bg.jpg');
+    }
+    position: relative;
+  }
+  #plug {
+    padding: 0 0 2% 0;
+    h1 {
+      color: #635443;
+    }
+    p {
+      color: #b09679;
+    }
+  }
+  #professional {
+    &::before {
+      @include bg('../../assets/images/meadow-professional-bg.jpg');
+    }
+    position: relative;
+  }
+  #cloud {
+    position: relative;
+    z-index: 100;
+    &::before {
+      @include bg('../../assets/images/meadow-cloud-full-bg.png');
+    }
+  }
+  .cloud-overlay {
+    position: absolute;
+    margin-top: -25px;
+    text-align: center;
+    width: 65%;
+    margin-left: -32%;
+    left: 50%;
+  }
+  .cloud-overlay img {
+    width: 100%;
+  }
+  #production {
+    position: relative;
+    &::before {
+      @include bg('../../assets/images/meadow-production-bg.jpg');
+    }
+  }
+  #code {
+    position: relative;
+    color: #221f1d;
+    text-align: left;
+    background-size: 100% 60%;
+    h1 {
+      font-size: em(32);
+      padding-bottom: 1em;
+      &::after {
+        left: 0;
+      }
+    }
+    .code-wrapper, .image-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .content-wrapper {
+      background-color: rgba(197, 177, 155, 0.5);
+      position: relative;
+      bottom: 0;
+      padding: 0px;
+      width: 100%;
+      &.code-block {
+        padding: 0;
+        .code {
+          padding: 10%;
+          margin: 0px;
+        }
+        code {
+          padding: 0 0 10px 0;
+        }
+      }
+      .code-wrapper {
+        background-clip: padding-box;
+        border: 1px solid #cdbcaa;
+        border-top: none;
+      }
+    }
+    .image-wrapper {
+      padding: 0px;
+      img {
+        width: 100%;
+        border: 1px solid $color-dark;
+        border-bottom: none;
+      }
+    }
+    .overlay {
+      position: relative;
+      bottom: 0;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  #join {
+    position: relative;
+    background: #4a4b4a;
+    &::before {
+      @include bg('../../assets/images/meadow-join-bg.jpg');
+    }
+    h1 {
+      color: #eee;
+      padding-bottom: 0px;
+      &::after {
+        content: " ";
+      }
+    }
+    p {
+      color: #c5b19b;
+    }
+    .cta {
+      border: 1px solid #c5b19b;
+      border-radius: 8px;
+      display: inline-block;
+      padding: 7px 13px 5px 13px;
+    }
+  }
+  #code {
+    .overlay {
+      padding: 0;
+    }
+  }
+  #kickstarter {
+    z-index: 100;
+    overflow: hidden;
+    background: $color-light;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: -1px 4px 38px -3px rgba(0, 0, 0, 0.5);
+    .content-wrapper, .image-wrapper {
+      padding: 30px;
+    }
+    .image-wrapper {
+      margin: 0 auto;
+    }
+    .content-wrapper .green {
+      font-family: "Wavehaus-95SemiBold", helvetica;
+    }
+    .row {
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: $color-orange;
+      padding: 0 0 50px 0;
+    }
+    h2 {
+      padding-bottom: 10px;
+      width: 75%;
+      margin: 0 auto 15px;
+    }
+    p {
+      color: $color-dark;
+      padding: 0 20px 0 5px;
+      margin: 0px;
+    }
+
+  }
+  #compare {
+    background: #565656;
+    #comparison-table {
+      border-collapse: separate;
+      margin: 0 auto;
+      width: 80%;
+    }
+    h1 {
+      color: $color-light;
+    }
+    td, th {
+      font-family: "Wavehaus-95SemiBold", helvetica;
+    }
+    th.list-col {
+      font-family: 'FuturaNDCn-Medium', helvetica;
+      font-weight: normal;
+      letter-spacing: 2px;
+      text-align: left;
+      vertical-align: bottom;
+    }
+    tr {
+      td {
+        width: 150px;
+        &:nth-child(even) {
+          border-left: 2px solid $color-table-green;
+          border-right: 2px solid $color-table-green;
+        }
+        &:first-child {
+          width: 275px;
+          border: none;
+        }
+        &:nth-child(3) {
+          box-shadow: 5px 10px 38px -1px rgba(0, 0, 0, 0.32);
+        }
+      }
+      &:nth-child(odd) {
+        td.list-col {
+          background: #8d8d8d;
+        }
+      }
+      .list-col {
+        color: $color-light;
+      }
+      th {
+        border: 2px solid $color-table-green;
+        &:nth-child(2) {
+          border-top-left-radius: 5px;
+          vertical-align: bottom;
+        }
+        &:nth-child(3) {
+          border-left: 0px;
+          border-right: 0px;
+          border-bottom: 2px solid #565656;
+          background: $color-table-green;
+          color: $color-light;
+          padding-top: 10px;
+          box-shadow: 5px 10px 38px -1px rgba(0, 0, 0, 0.32);
+          vertical-align: top;
+          padding: 10px;
+        }
+        &:nth-child(4) {
+          border-top-right-radius: 5px;
+          vertical-align: bottom;
+        }
+        &.list-col {
+          border: none;
+        }
+        img {
+          width: 50%;
+          padding: 10px;
+        }
+      }
+    }
+    tbody {
+      td {
+        padding: 6px 0;
+        color: $color-table-green;
+        border-bottom: 2px dotted $color-table-green;
+      }
+      td.color-col {
+        background: $color-table-green;
+        color: $color-light;
+        border-bottom: 1px dotted #565656;
+      }
+      .last-col {
+        td {
+          padding-bottom: 20px;
+          border-bottom: 2px solid $color-table-green;
+          &.list-col {
+            border-bottom: 0px;
+          }
+          &:nth-child(2) {
+            border-bottom-left-radius: 5px;
+          }
+          &:nth-child(3) {
+            border-left: 0px;
+            border-right: 0px;
+            background: $color-table-green;
+            color: $color-light;
+            padding-top: 10px;
+          }
+          &:nth-child(4) {
+            border-bottom-right-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+  #product {
+    background: $color-orange;
+    h1 {
+      font-family: "Wavehaus-95SemiBold", helvetica;
+      span {
+        font-family: "Wavehaus-128Bold";
+      }
+    }
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 5%;
+      p, .image-wrapper {
+        margin: 0px 0px 5% 0;
+      }
+    }
+  }
+}
+
+/*---------- Developers Page - no Breakpoint ----------- */
+
+.overlay-open {
+  overflow: hidden;
+}
+
+.overlay-open {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.banner.small {
+  position: relative;
+  p, h1 {
+    position: relative;
+    color: $color-brown;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 67px;
+    line-height: 80px;
+  }
+  p {
+    font-family: Mrs Eaves OT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+  }
+  &::before {
+    @include bg('../../assets/images/developers-banner-bg.png');
+    background-position: left top;
+  }
+}
+
+.landing .banner.small {
+  &::before {
+    @include bg('../../assets/images/landing-developers-main-banner.png');
+    background-position: left top;
+  }
+}
+
+.landing .banner.small.api-banner {
+  &::before {
+    @include bg('../../assets/images/api-header-bg.png');
+    background-position: left top;
+  }
+}
+
+.landing .links-banner {
+  &::before {
+    @include bg('../../assets/images/landing-wood-bg.png');
+    background-position: left top;
+  }
+}
+
+.content{
+  img {
+    width: 100%;
+  }
+}
+
+
+// MEDIA QUERIES
+// Small devices (landscape phones, 320px and up)
+@media (min-width: 320px) {
+  // class used for when the navigation is open
+  .mobile {
+    display: block;
+  }
+  .nav-wrapper, .desktop {
+    display: none;
+  }
+  .overlay-open {
+    overflow: hidden;
+  }
+
+  main {
+    .main-banner {
+      padding: 150px 10% 10% 10%;
+      h1 {
+        font-size: em(35);
+      }
+      h2 {
+        font-size: em(48);
+      }
+    }
+    .content-section {
+      // breakpoint specific font treatments
+      h1 {
+        font-size: em(31);
+      }
+      h1.large {
+        font-size: em(40);
+      }
+      h2 {
+        font-size: em(42);
+      }
+      .cta.arrow {
+        font-size: em(20);
+        letter-spacing: 1px;
+      }
+      .cta.round {
+        font-size: em(16);
+      }
+      padding: 10% 10% 10% 10%;
+      h2, p {
+        margin-bottom: 15px;
+      }
+      img {
+        width: 80%;
+        min-width: 55px;
+        display: block;
+        margin: 0 auto;
+      }
+      h1 img {
+        width: 100%;
+        margin: 0;
+      }
+      &.foundation {
+        min-height: 550px;
+        h1 {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .meadow {
+    h1 {
+      font-size: em(40);
+      margin-bottom: 1%;
+      padding-bottom: 10%;
+      &::after {
+        left: 46%;
+        bottom: 0%;
+      }
+    }
+    p {
+      font-size: em(26);
+      line-height: 1.3em;
+    }
+    .content-section {
+      img {
+        width: 100%;
+      }
+    }
+    #intro::after {
+      background-size: 80% 80%;
+      background-position: center center;
+    }
+    #cloud {
+      padding-bottom: 10%;
+    }
+    #production {
+      padding-top: 15%;
+    }
+    #code {
+      .content-wrapper {
+        padding: 5% 5% 5% 5%;
+      }
+    }
+    .code-block {
+      code {
+        font-size: em(16);
+      }
+    }
+    #compare {
+      h1 {
+        font-size: em(35);
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+      }
+      th.list-col {
+        font-family: 'FuturaNDCn-Medium', helvetica;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-align: left;
+        padding-left: 5px;
+        vertical-align: bottom;
+        padding-bottom: 10px;
+      }
+      tr {
+        td {
+          font-size: em(13);
+          text-align: center;
+          padding: 5px;
+          &.list-col {
+            padding: 5px 0 5px 0;
+          }
+        }
+      }
+    }
+    #kickstarter {
+      p {
+        font-size: em(36);
+        .green {
+          font-size: em(12);
+        }
+      }
+      a
+      {
+          color: $color-dark;
+      }
+      .cta {
+          border: 1px solid #c5b19b;
+          border-radius: 8px;
+          display: inline-block;
+          padding: 7px 13px 5px 13px;
+      }
+    }
+  }
+
+  .banner.small {
+    padding: 35px $left-col-spacing-mobile 35px $left-col-spacing-mobile;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  main {
+    .main-banner {
+      padding: 15% 5% 5% 5%;
+      h1, h2, p {
+        width: 570px;
+      }
+      h1 {
+        font-size: em(35);
+      }
+      h2 {
+        font-size: 4.5em;
+      }
+    }
+    .content-section {
+      overflow: hidden;
+      padding: 5% 5% 5% 5%; // breakpoint specific font treatments
+      h1.large {
+        font-size: em(48);
+      }
+      img {
+        width: 100%;
+      }
+      &.left {
+        .row {
+          flex-flow: row-reverse wrap;
+        }
+      }
+      &.learning {
+        .guide {
+          padding: 5%;
+          .content-wrapper {
+            padding-right: 25px;
+            position: absolute;
+            bottom: 4%;
+          }
+        }
+        .tutorials .content-wrapper {
+          padding: 3% 5% 3% 5%;
+        }
+      }
+      &.foundation {
+        background-size: cover;
+        .content-wrapper {
+          max-width: 65%;
+        }
+        h1 {
+          width: 550px;
+        }
+      }
+    }
+    .projects .cta.arrow {
+      font-size: em(26);
+      letter-spacing: 1px;
+      padding: 0 0 0 30px;
+      background-size: 20px;
+      background-position: 0 8px;
+    }
+  }
+  .meadow {
+    h1 {
+      font-size: em(50);
+      margin-bottom: 2%;
+    }
+    #intro::after {
+      background-size: 60% 60%;
+      background-position: 90% 60%;
+    }
+    #intro h1 {
+      padding-top: 0;
+    }
+    #plug .content-wrapper {
+      padding-bottom: 5%;
+    }
+    #cloud {
+      padding-bottom: 25%;
+    }
+    #production {
+      padding-top: 10%;
+    }
+    .code-block {
+      code {
+        font-size: em(20);
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .mobile {
+    display: none;
+  }
+  .nav-wrapper, .desktop {
+    display: block;
+  }
+  .overlay-open {
+    overflow: hidden;
+    main, footer {
+      display: block;
+    }
+  }
+
+  main {
+    section.main-banner {
+      padding-top: 165px;
+    }
+    .main-banner {
+      min-height: 605px;
+      .cta {
+        font-family: 'FuturaNDCn-Medium', helvetica;
+      }
+    }
+    .content-section {
+      h1.large {
+        font-size: em(55);
+      }
+      &.foundation {
+        padding-bottom: 10%;
+        .content-wrapper {
+          max-width: 80%;
+        }
+      }
+    }
+
+  }
+
+  .meadow {
+    h1 {
+      font-size: em(80);
+      padding-bottom: 75px;
+      margin-bottom: 0;
+      sup {
+        font-size: em(5);
+        top: -30px;
+        right: -20px;
+      }
+      &::after {
+        left: 46%;
+        bottom: 0%;
+      }
+    }
+    p {
+      font-size: em(35);
+      line-height: 1.3em;
+    }
+    #intro {
+      h1 {
+        padding-bottom: 15px;
+      }
+    }
+    #join {
+      p {
+        padding: 15px 0 15px 0;
+      }
+    }
+    #code {
+      .overlay {
+        img {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+    .code-block {
+      code {
+        font-size: em(26);
+      }
+    }
+    #kickstarter {
+      position: absolute;
+      left: 50% - 40%;
+      bottom: -9%;
+      width: 80%;
+      padding: 35px;
+      text-align: left;
+      .image-wrapper, .content-wrapper {
+        float: left;
+        width: 49.9%;
+        padding: 0px;
+      }
+      h1 {
+        padding: 0 20px 15px 5px;
+        text-align: left;
+        display: inline-block;
+        font-size: em(32);
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 100%;
+        }
+      }
+      h2 {
+        margin: 0 0 5px 0;
+      }
+      p {
+        font-size: em(30);
+
+      }
+      a
+      {
+        color: $color-dark;
+      }
+      .cta {
+      border: 1px solid #c5b19b;
+      border-radius: 8px;
+      display: inline-block;
+      padding: 7px 13px 5px 13px;
+    }
+
+    }
+    #compare {
+      h1 {
+        font-size: em(60);
+        padding-bottom: 75px;
+        text-transform: capitalize;
+        max-width: 75%;
+        margin: 0 auto 20px;
+      }
+      th.list-col {
+        font-size: em(28);
+      }
+      tr {
+        td {
+          font-size: em(16);
+        }
+        td.list-col {
+          text-align: right;
+          padding-right: 25px;
+        }
+      }
+    }
+    .code-wrapper {
+      padding-bottom: 7%;
+    }
+  }
+
+  .banner.small {
+    padding: 70px $left-col-spacing 70px $left-col-spacing;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  main {
+    .main-banner {
+      padding-top: 20%;
+    }
+  }
+  .meadow {
+    #plug .content-wrapper {
+      padding-bottom: 5%;
+    }
+    #kickstarter {
+      h1 {
+        font-size: em(36);
+      }
+      p {
+        font-size: em(36);
+      }
+    }
+  } // developers section - breakpoint 992
+}

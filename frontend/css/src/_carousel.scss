@@ -1,0 +1,329 @@
+
+
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+main {
+  .content-slider {
+    box-shadow: -1px 4px 38px -3px rgba(0, 0, 0, 0.5);
+    .content {
+      background: #eee;
+      padding: 0;
+    }
+    p {
+      font-size: em(19);
+    } // Pagination for Image Slider
+    ul.slick-dots {
+      position: absolute;
+      padding: 0px;
+      bottom: 10px;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        border: 2px solid $color-light;
+        border-radius: 10px;
+        button {
+          border-color: $color-dark-grey;
+          font-size: 0px;
+          padding: 8px;
+          border: none;
+          background: transparent;
+          background-clip: padding-box;
+          color: $color-light;
+        }
+        &.slick-active {
+          background: #fcfdfd;
+        }
+      }
+    }
+    .cta.arrow {
+      text-align: center;
+      display: block;
+      background-color: $color-light;
+    } // Pagination for X of X copy
+    ul.paging {
+      list-style: none;
+      letter-spacing: -2px;
+      padding: 0;
+      li {
+        display: none;
+        &.slick-active {
+          display: block;
+        }
+      }
+      p {
+        font-size: 36px;
+      }
+      span {
+        font-size: 20px;
+        color: #999999;
+        position: relative;
+        top: -12px;
+        text-decoration: underline;
+        font-style: italic;
+      }
+    } // Copy Slider Container
+    .slick-slider {
+      // Images Carousel
+      &.images {
+        width: 100%;
+      } // Copy Carousel
+      &.copy {
+        background: #eee;
+        overflow: hidden;
+        padding: 5% 5% 5% 5%;
+        text-align: center;
+        h1 {
+          color: $color-dark;
+          text-transform: none;
+          line-height: em(22);
+          margin: 0 0 25px 0;
+        }
+        .slick-list {
+          width: 83%;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+        }
+        .slick-prev, .slick-next {
+          position: absolute;
+          z-index: 2;
+          background: url('../../assets/svg/slider-arrow.svg') left top no-repeat;
+          height: 90px;
+          width: 40px;
+          border: 0px;
+          display: block;
+          font-size: 0;
+          top: 48%;
+        }
+        .slick-prev {
+          left: 15px;
+        }
+        .slick-next {
+          right: 15px;
+          transform: rotate(180deg);
+          background-position: left 52px;
+        }
+        .cta {
+          margin: 25px 0 0 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+// Carousel on the Meadow Page
+
+.meadow {
+  .content-slider {
+    h1 {
+      margin: 0;
+      padding: 0 0 5% 0;
+      &::after {
+        content: " ";
+        margin-bottom: 0;
+      }
+    }
+    .copy {
+      padding: 10%;
+    }
+    .slick-slide .copy {
+      padding: 0;
+    }
+  }
+}
+
+// Mobile Carousel Styles
+@media (min-width: 320px) {
+  main {
+    .content-section {
+      .slick-slider .copy .slick-next {
+        top: 38%;
+      }
+    }
+    .content-slider {
+      h1 {
+        font-size: em(23);
+      }
+      .paging {
+        display: block;
+      }
+      ul.slick-dots {
+        left: 48%;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .content-slider {
+    h1 {
+      font-size: em(27);
+    }
+    &.copy {
+      padding-top: 10%;
+    }
+    ul.paging {
+      margin: 25px 0 25px 0;
+    }
+    ul.slick-dots {
+      left: 48%;
+    }
+    .slick-slider {
+      .slick-next, .slick-prev {
+        top: 50%;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  main {
+    .content-slider {
+      h1 {
+        font-size: em(30);
+      }
+      ul.paging {
+        margin: 40px 0 40px 0;
+      }
+      ul.slick-dots {
+        left: 48%;
+      }
+      .slick-slider {
+        &.copy {
+          h1 {
+            margin-bottom: 0px;
+          }
+        }
+        .slick-next, .slick-prev {
+          top: 52%;
+        }
+      }
+    }
+  }
+}

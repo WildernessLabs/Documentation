@@ -1,0 +1,335 @@
+#main-nav {
+  a {
+    color: $color-light;
+    &:hover, &:focus {
+      color: $color-light;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        font-size: em(16);
+        text-transform: uppercase;
+        display: block;
+        color: $color-light;
+      }
+    }
+  }
+}
+
+nav.secondary {
+  border-top: 10px #10485E solid;
+  border-bottom: 10px #1A80AA solid;
+  background: #14607F;
+  ul {
+    margin: 0;
+    overflow: hidden;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+  a {
+    padding: 10px 15px 3px 0px;
+    display: block;
+    font-family: "MrsEavesOT-Roman";
+    color: $color-light-blue;
+    font-size: 20px;
+    &:hover, &:focus {
+      color: #C9DB31;
+      text-decoration: none;
+    }
+    &[aria-current="true"] {
+      color: #C9DB31;
+    }
+  }
+}
+
+
+nav.subcategory {
+
+  h2, h2 a {
+    width: 100%;
+    background: $color-brown;
+    text-align: left;
+    line-height: normal;
+    color: $color-light;
+    font-family: 'Wavehaus-42Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 27px;
+    display: block;
+    padding-top: 3px;
+  }
+
+  ul {
+    padding-left: 20%;
+    li {
+      list-style-type: none;
+      font-size: 24px;
+      line-height: 22px;
+      padding: 6px 0 0 0;
+      a {
+        color: #555;
+        font-family: "MrsEavesOT-Bold";
+        &:hover, &:focus {
+          color: #23ABE3;
+          text-decoration: none;
+        }
+        &[aria-current="true"] {
+          color: #23ABE3;
+        }
+      }
+      ul {
+        padding-left: 3%;
+        padding-top: 0px;
+        font-weight: normal;
+        li {
+          font-weight: normal;
+          line-height: 23px;
+          a {
+            font-family: "MrsEavesOT-Roman";
+          }
+        }
+      }
+    } // end li
+  } // end ul
+}
+// Margin for when the navigation is not in an overlay (mobile)
+#secondary-col nav.subcategory {
+  margin: 35px 0 0 0;
+}
+
+// developers page specific
+
+
+// Small Devices, Mobile Phones
+@media (min-width: 320px) {
+
+  // class used for when the navigation is open
+
+
+  #nav-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    overflow: auto;
+    padding: 70px 0 0 0;
+    #close-modal {
+      left: 92%;
+      top: 20px;
+      display: block;
+      background: none;
+      position: absolute;
+      &:after {
+        content: 'X';
+        font-family: 'Arial';
+        font-size: em(20);
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .main-nav-transition #nav-overlay {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    background: #181615;
+    #close-modal {
+      color: #eee;
+    }
+  }
+  .overlay-open.main-nav-transition #nav-overlay {
+    opacity: 1;
+  }
+  .subcat-nav-transition #nav-overlay {
+    transition: left 0.5s ease-in-out;
+    left: -2000px;
+    background: #eee;
+    #close-modal {
+      color: #181615;
+    }
+  }
+  .overlay-open.subcat-nav-transition #nav-overlay {
+    left: 0;
+  }
+  #nav-overlay #main-nav {
+    position: static;
+    opacity: 1;
+    background: #181615;
+    left: 0;
+  }
+  #main-nav-trigger {
+    position: absolute;
+    right: 5%;
+    top: 27px;
+    width: 22px;
+    height: 22px;
+    background: url('../../assets/svg/hamburger-icon.svg');
+  }
+
+  #main-nav {
+    ul li {
+      border-top: 1px solid #666;
+      a {
+        font-size: em(21);
+        display: block;
+        padding: 15px 10px 7px 5%;
+        &:hover, &:focus {
+          text-decoration: none;
+          background: #333;
+        }
+      }
+    }
+  }
+
+  .overlay-open.main-nav-transition {
+    #nav-overlay {
+      background: #181615;
+    }
+  }
+  #nav-overlay nav.subcategory {
+    h2, ul {
+      padding-left: 10%;
+      ul {
+        padding-left: 3%;
+      }
+    }
+  }
+  .mobile-nav-trigger {
+    border: none;
+  }
+  .subcat-nav-trigger {
+    position: relative;
+    left: $left-col-spacing-mobile;
+    width: 22px;
+    height: 25px;
+    display: block;
+    background: left 4px url('../../assets/svg/hamburger-icon-blue.svg') no-repeat;
+    font-family: 'Wavehaus-66Book';
+    font-size: em(20);
+    padding: 0 0 0 30px;
+    margin: 5px 0 5px 0;
+    color: #23ABE3;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .overlay-open.subcat-nav-transition {
+    #nav-overlay {
+      background: #eee;
+    }
+  }
+  .secondary-nav-wrapper {
+    padding-top: 80px;
+  }
+  nav.secondary ul {
+    padding: 0 0 0 $left-col-spacing-mobile;
+  }
+} // end 320 media query
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+
+} // end 992 media query
+
+@media (min-width: 992px) {
+
+  .nav-wrapper {
+    display: block;
+    overflow: hidden;
+  }
+
+  #main-nav {
+    position: static;
+    opacity: 1;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    height: auto;
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        float: left;
+        border-left: 1px solid #000;
+        border-top: none;
+        margin: 0px;
+        padding: 0px;
+        a {
+          display: block;
+          height: 85px;
+          padding: 35px 12px 0 10px;
+          font-size: 1em;
+        }
+        &.util {
+          padding: 0;
+          border-right: 1px solid #181615;
+          text-align: center;
+          a {
+            &:first-child {
+              border-bottom: 1px solid #181615;
+            }
+            display: block;
+            padding: 13px 25px 0 25px;
+            height: 42px;
+          }
+          a:first-child {}
+        }
+      }
+    }
+  }
+  .secondary-nav-wrapper {
+    padding-top: 85px;
+  }
+
+  // developers section - breakpoint 992
+  nav.secondary {
+    ul {
+      width: 100%;
+      padding-left: $left-col-spacing;
+      white-space: nowrap;
+      li {
+        border-right: 1px solid $color-orange;
+        &:first-child {
+          border-left: 1px solid $color-orange;
+        }
+      }
+    }
+    a {
+      padding: 18px 8px 10px 8px;
+      font-size: 18px;
+    }
+  }
+} // end 992 media query
+
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  header {
+    nav ul li a {
+      font-size: em(16);
+    }
+  }
+  nav.secondary {
+    a {
+      padding: 18px 15px 10px 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+
+}

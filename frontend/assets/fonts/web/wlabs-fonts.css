@@ -1,0 +1,149 @@
+/*
+  Font Declarations
+*/
+
+@font-face {
+  font-family:"CourierPrime";
+  src: local("☺"),
+       url("courier/courier_prime.woff2") format("woff2"),
+       url("courier/courier_prime.woff") format("woff"),
+       url("courier/courier_prime.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"FuturaND-Book";
+  src: url("futura/FuturaND-Book.eot");
+  src: local("☺"),
+       url("futura/FuturaND-Book.woff2") format("woff2"),
+       url("futura/FuturaND-Book.woff") format("woff"),
+       url("futura/FuturaND-Book.ttf") format("truetype"),
+       url("futura/FuturaND-Book.svg#FuturaND-Book") format("svg"),
+       url("futura/FuturaND-Book.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Wavehaus-42Light";
+  src: url("wavehaus/Wavehaus-42Light.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-42Light.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-42Light.woff") format("woff"),
+       url("wavehaus/Wavehaus-42Light.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-42Light.svg#Wavehaus-42Light") format("svg"),
+       url("wavehaus/Wavehaus-42Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Wavehaus-66Book";
+  src: url("wavehaus/Wavehaus-66Book.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-66Book.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-66Book.woff") format("woff"),
+       url("wavehaus/Wavehaus-66Book.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-66Book.svg#Wavehaus-66Book") format("svg"),
+       url("wavehaus/Wavehaus-66Book.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Wavehaus-95SemiBold";
+  src: url("wavehaus/Wavehaus-95SemiBold.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-95SemiBold.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-95SemiBold.woff") format("woff"),
+       url("wavehaus/Wavehaus-95SemiBold.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-95SemiBold.svg#Wavehaus-95SemiBold") format("svg"),
+       url("wavehaus/Wavehaus-95SemiBold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family:"Wavehaus-128Bold";
+  src: url("wavehaus/Wavehaus-128Bold.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-128Bold.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-128Bold.woff") format("woff"),
+       url("wavehaus/Wavehaus-128Bold.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-128Bold.svg#Wavehaus-128Bold") format("svg"),
+       url("wavehaus/Wavehaus-128Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"MrsEavesOT-SmallCaps";
+  src: url("mrseaves/MrsEavesOT-SmallCaps.eot");
+  src: local("☺"),
+	   url("mrseaves/MrsEavesOT-SmallCaps.woff2") format("woff2"),
+       url("mrseaves/MrsEavesOT-SmallCaps.woff") format("woff"),
+       url("mrseaves/MrsEavesOT-SmallCaps.ttf") format("truetype"),
+       url("mrseaves/MrsEavesOT-SmallCaps.svg#MrsEavesOT-SmallCaps") format("svg"),
+       url("mrseaves/MrsEavesOT-SmallCaps.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-variant:normal;
+}
+
+@font-face {
+  font-family:"FuturaNDCn-Medium";
+  src: url("futura/FuturaNDCn-Medium.eot");
+  src: local("☺"),
+       url("futuracon/FuturaNDCn-Medium.woff2") format("woff2"),
+       url("futuracon/FuturaNDCn-Medium.woff") format("woff"),
+       url("futuracon/FuturaNDCn-Medium.ttf") format("truetype"),
+       url("futuracon/FuturaNDCn-Medium.svg#FuturaNDCn-Medium") format("svg"),
+       url("futuracon/FuturaNDCn-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"FuturaND-Medium";
+  src: url("futura/FuturaND-Medium.eot");
+  src: local("☺"),
+       url("futuracon/FuturaND-Medium.woff2") format("woff2"),
+       url("futuracon/FuturaND-Medium.woff") format("woff"),
+       url("futuracon/FuturaND-Medium.ttf") format("truetype"),
+       url("futuracon/FuturaND-Medium.svg#FuturaND-Medium") format("svg"),
+       url("futuracon/FuturaND-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family:"MrsEavesOT-Roman";
+  src: url("mrseaves/MrsEavesOT-Roman.eot");
+  src: local("☺"),
+	   url("mrseaves/MrsEavesOT-Roman.woff2") format("woff2"),
+       url("mrseaves/MrsEavesOT-Roman.woff") format("woff"),
+       url("mrseaves/MrsEavesOT-Roman.ttf") format("truetype"),
+       url("mrseaves/MrsEavesOT-Roman.svg#MrsEavesOT-Roman") format("svg"),
+       url("mrseaves/MrsEavesOT-Roman.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+
+@font-face {
+  font-family:"MrsEavesOT-Bold";
+  src: url("mrseaves/MrsEavesOT-Bold.eot");
+  src: local("☺"),
+	   url("mrseaves/MrsEavesOT-Bold.woff2") format("woff2"),
+       url("mrseaves/MrsEavesOT-Bold.woff") format("woff"),
+       url("mrseaves/MrsEavesOT-Bold.ttf") format("truetype"),
+       url("mrseaves/MrsEavesOT-Bold.svg#MrsEavesOT-Bold") format("svg"),
+       url("mrseaves/MrsEavesOT-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-variant-ligatures: discretionary-ligatures;
+}

@@ -1,0 +1,177 @@
+// Font Declarations
+p, li, a, button, label, input, h3 {
+  font-family: "MrsEavesOT-Roman", serif;
+}
+
+h1, h2, nav li a, footer li a {
+  font-family: "MrsEavesOT-SmallCaps", serif;
+}
+
+h1.large {
+  font-family: "MrsEavesOT-Bold", serif;
+  letter-spacing: 1px;
+}
+
+.main-banner {
+  h1 {
+    font-family: "FuturaNDCn-Medium", helvetica;
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-family: "MrsEavesOT-Bold", serif;
+    letter-spacing: 1px;
+  }
+  p {
+    font-family: "MrsEavesOT-Bold", serif;
+  }
+  .cta {
+    font-family: 'FuturaNDCn-Medium', helvetica;
+  }
+}
+
+.content-section {
+  h2 {
+    font-family: "Wavehaus-95SemiBold", helvetica;
+  }
+  h2.smallcaps {
+    font-family: "MrsEavesOT-SmallCaps", serif;
+  }
+  .cta {
+    font-family: 'FuturaNDCn-Medium', helvetica;
+  }
+  .tutorials h1 {
+    font-family: "MrsEavesOT-Bold", serif;
+  }
+}
+
+.content-slider .copy {
+  h1, ul.paging p {
+    font-family: "Wavehaus-95SemiBold", helvetica;
+  }
+  ul.paging p span {
+    font-family: "MrsEavesOT-Roman", serif;
+  }
+}
+
+.lig {
+  font-variant-ligatures: discretionary-ligatures;
+  letter-spacing: normal;
+}
+
+#code {
+  code {
+    font-family: "FuturaND-Medium", helvetica !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+}
+
+.meadow {
+  #code {
+    p {
+      font-family: "Wavehaus-95SemiBold";
+    }
+  }
+  #join {
+    .cta {
+      font-family: "MrsEavesOT-Roman";
+    }
+  }
+  .content-slider .copy {
+    h1 {
+      font-family: "MrsEavesOT-Italic";
+      color: $color-dark;
+      font-size: em(50);
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-family: "MrsEavesOT-SmallCaps";
+      color: $color-light-grey;
+      font-size: em(32);
+      letter-spacing: 1;
+      line-height: 1em;
+    }
+    p {
+      font-size: em(24);
+      color: $color-dark;
+      line-height: em(20);
+    }
+  }
+  #compare {
+    h1 {
+      font-family: "Wavehaus-95SemiBold", helvetica;
+    }
+  }
+}
+
+#developers-section {
+  h1, h1 a {
+    font-family: 'Wavehaus-42Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 60px;
+    /* identical to box height */
+    text-transform: none;
+  }
+  h2, h2 a {
+    font-family: 'Wavehaus-42Light';
+    font-style: normal;
+    font-weight: 300;
+    /* identical to box height */
+  }
+  h3, h3 a {
+    font-family: 'Wavehaus-66Book';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  h4, h4 a {
+    font-family: 'MrsEavesOT-Roman';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #14607F;
+  }
+  h5, h5 a {
+    font-family: 'MrsEavesOT-Roman';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+    /* identical to box height */
+    color: #14607F;
+  }
+  p, li {
+    font-family: 'MrsEavesOT-Roman';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+    color: #3D3530;
+  }
+  li code {
+    font-size: 20px;
+  }
+  .code {
+    font-family: 'CourierPrime', Courier;
+    color: #844936;
+  }
+}
+
+#primary-col {
+  h2, h2 a {
+    font-size: 38px;
+  }
+  th, td {
+    font-family: 'MrsEavesOT-Roman';
+  }
+}
+.meadow {
+  h1 {
+    font-family: "Wavehaus-128Bold";
+  }
+}
