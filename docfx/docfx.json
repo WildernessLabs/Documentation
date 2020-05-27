@@ -21,7 +21,9 @@
           ],
           "exclude": [
             "/Source/Meadow.Foundation.Core.Samples/**",
-            "/Source/Meadow.Foundation.Peripherals/**/Samples/**_Sample/**",
+            "/Source/Meadow.Foundation.Peripherals/FeatherWings**/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Sample/**_Sample/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Samples/**_Sample/**",            
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/**_Sample/**"
           ],
           "src": "../../Meadow.Foundation"

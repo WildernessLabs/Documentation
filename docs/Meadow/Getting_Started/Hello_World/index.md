@@ -133,6 +133,7 @@ using Meadow.Foundation.Leds;
 
 namespace HelloMeadow
 {
+    public class MeadowApp : App<F7Micro, MeadowApp>
     {
         RgbPwmLed onboardLed;
 

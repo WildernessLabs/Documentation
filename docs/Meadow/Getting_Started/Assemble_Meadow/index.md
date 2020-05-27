@@ -33,6 +33,10 @@ Now solder the blue female header pins to the Meadow board.
 
 ![Meadow header pins](./MeadowDev_HeaderPins.jpg)
 
+Check out the following video for instructions:
+
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/HpsYHgJSIUA" frameborder="3" allowfullscreen></iframe></p>
+
 ### Step 3 - Place breadboard and Meadow to the base board
 
 Meadow has battery connector on the right side of the device. For this reason, you have to place the breadboard on the left and Meadow on the ride side of the protoboard. Make sure the breadboard is in the right orientation, and the four holes on the wooden board are on the right side.

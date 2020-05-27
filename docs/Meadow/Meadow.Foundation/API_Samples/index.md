@@ -7,11 +7,54 @@ subtitle: Simple and intuitive API code samples wiring a small set of peripheral
 ### Controlling a Hitec Servo
 
 ```csharp
-Servo servo; = new Servo(
-    Device.CreatePwmPort(Device.Pins.D05), 
-    NamedServoConfigs.HiTecStandard
-);
-servo.RotateTo(90);
+var servo = new Servo(
+  Device.CreatePwmPort(
+    Device.Pins.D03), 
+  NamedServoConfigs.SG90);
+
+var button = new PushButton(
+  Device, Device.Pins.D04);
+button.Clicked += (s, e) => 
+{
+  servo.RotateTo(75);
+  Thread.Sleep(1000);
+  servo.RotateTo(0);
+};
+```
+
+### Joystick Sample
+
+```csharp
+var joystick = new AnalogJoystick(
+    Device,
+    Device.Pins.A01,
+    Device.Pins.A00,
+    null, true);
+joystick.StartUpdating();
+
+while (true) {
+  var position = 
+    await joystick.GetPosition();
+  TurnOnLeds(position);  
+}
+```
+
+### Soil Moisture/Led bar
+
+```csharp
+var ledBarGraph = new LedBarGraph(
+  arrayOfOutputPorts);
+var capacitive = new Capacitive(
+  Device.CreateAnalogInputPort(
+    Device.Pins.A00),
+  MINIMUM_VOLTAGE_CALIBRATION,
+  MAXIMUM_VOLTAGE_CALIBRATION);
+
+while (true) {
+    float moisture = capacitive.Read();
+    ledBarGraph.Percentage = moisture;                
+    Thread.Sleep(1000);
+}
 ```
 
 ### Read soil moisture sensor and graph it on a LED bar graph connected to an MCP23008 IO expander

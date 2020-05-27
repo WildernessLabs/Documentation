@@ -32,7 +32,7 @@ output.State = true;    // assert HIGH
 
 Reading the state of a Digital Input is done using an implementation of the `IDigitalInputPort` interface.  Using the static `Device` property of your application's entry class `App<D,A>` is the simplest way to create an instance.
 
-For example, if you wanted to be able to read the state of the D03 pin on the F7 Meadow, you could use the following code to create an instance of the IDigitalOutputPort with an initial state of `LOW`:
+For example, if you wanted to be able to read the state of the D03 pin on the F7 Meadow, you could use the following code to create an instance of an IDigitalInputPort:
 
 ```csharp
 var input = Device.CreateDigitalInputPort(
@@ -128,7 +128,7 @@ input.Changed += async (s, o) =>
 
 Interrupt debounce behavior currently (Beta 3.6) can be confusing.  The debounce is currently being done in the managed code of the `DigitalInputPort` and is therefore subject to the performance limitations of interpreted code execution.  A good example is this:  
 
-Assume you have a `DigitalInputInputPortt` with a debounce duration of 10ms.  Now assume you get two interrupts 10us (not ms) apart.  
+Assume you have a `DigitalInputPort` with a debounce duration of 10ms.  Now assume you get two interrupts 10us (not ms) apart.  
 
 On the surface, you'd expect your application to only receive one interrupt as the debounce duration is much larger than the time between interrupts, however it is very likely that your application will receive two interrupt events.
 
