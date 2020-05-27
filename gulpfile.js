@@ -72,7 +72,7 @@ gulp.task('scripts:dist', function () {
 });
 
 gulp.task('scripts:watch', function () {
-    gulp.watch(wwwroot + '/js/src/**/*.js', ['scripts']);
+    gulp.watch(wwwroot + '/js/src/**/*.js', ['scripts:dist']);
 });
 
 gulp.task('scripts:dist', function () {

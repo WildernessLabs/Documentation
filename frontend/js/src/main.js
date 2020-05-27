@@ -10,6 +10,11 @@
     var c = new ContentCarousel(e);
   });
 
+  const iframeVideo = $('p iframe');
+  iframeVideo.each(function (index, element) { 
+    $(this).parent().addClass('iframeVideo');
+  });
+
 })();
 
 // Displays an overlay based on an element on the page

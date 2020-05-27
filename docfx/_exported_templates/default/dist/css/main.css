@@ -990,8 +990,15 @@ div.highlighter-rouge pre {
 div.highlighter-rouge div {
   width: 100%; }
 
-.content-block p iframe {
-  width: 100%; }
+.content-block .iframeVideo {
+  position: relative;
+  padding-top: 66.66%; }
+  .content-block .iframeVideo iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
 
 @media (min-width: 320px) {
   #primary-col {

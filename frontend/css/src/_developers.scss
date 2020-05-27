@@ -311,15 +311,24 @@ div.highlighter-rouge {
     font-size: 15px;
   }
   div {
-    width: 100%
+    width: 100%;
   }
 }
 
 .content-block {
-  p iframe {
-    width: 100%
+  .iframeVideo { 
+    position: relative;
+    padding-top: 66.66%;
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
+
 // end 320 media query
 $developers-page-gutter: 45px;
 
