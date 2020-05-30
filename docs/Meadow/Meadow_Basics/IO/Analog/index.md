@@ -42,6 +42,14 @@ If your sensor regularly operates at a higher voltage range, for instance, if it
 
 For occasional voltage spikes that can be ignored, the input should be protected with a [Zener diode](/Hardware/Tutorials/Electronics/Part6/General_Diodes) and a [resistor](/Hardware/Tutorials/Electronics/Part4/Resistance/) as illustrated in this [tutorial](https://www.electroniclinic.com/input-overvoltage-protection-for-arduino-inputs-using-a-zener-diode/).
 
+### Analog Reference (`AREF`)
+
+The _analog reference_ (`AREF`) pin provides a reference voltage for the [_Analog to Digital Converter_ (ADC)](/Meadow/Meadow_Basics/IO/Analog/) to compare against. Typically, this should be supplied with `3.3V`, so as a convenience, the `AREF` pin is actually connected to the `3.3V` rail via `0Ω` resistor that is located next to the `D08` pin, just below the main MCU:
+
+![Image showing the location of the AREF 0Ω resistor, which is just below the F7 MCU, and on the right side, when the board is turned so that the USB connector is on top. The resistor is immediately to the left of the D08 header pin.](/Common_Files/F7_Micro_AREF_Resistor.svg)
+
+If you need to provide a different analog reference voltage, make sure to remove that resistor before hooking `AREF` to your voltage reference.
+
 ## Analog Output
 
 Analog output can be generated via the _Digital to Analog Converter_ (DAC) on the Meadow device. This feature is not currently exposed, and these docs will be updated when we ship it.
