@@ -34,7 +34,7 @@ Did you know that most wireless devices use one of just a handful wireless chips
 
 Designing custom circuits may be intimidating, but they don't have to be. Join Bryan as he walks through designing a custom Meadow wing circuit board from start to finish.
 
-### [Designing a Meadow Enclosure with Fusion 360](https://www.youtube.com/watch?v=T9IfF_1Y4z8&list=PLoP9Fu9zn7qYOCCRY8UyuNGH6m2hFUls8&index=8&t=0s) - Frank Kruger
+### [Designing an enclosure with OpenJSCAD](https://www.youtube.com/watch?v=T9IfF_1Y4z8&list=PLoP9Fu9zn7qYOCCRY8UyuNGH6m2hFUls8&index=8&t=0s) - Frank Kruger
 
 Did you know that you can do parametric CAD design with JavaScript? [OpenJSCAD](https://openjscad.org/) is a free, open-source CAD software that's great choice for folks that like to code. Join Frank Krueger as he builds a Meadow enclosure in it.
 
