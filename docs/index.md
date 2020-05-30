@@ -2,8 +2,10 @@
 layout: Home
 ---
 
-![](/DevCamp2020/Support_Files/Wilderness_Labs_Dev_Camp.svg)
+<div align="center">
+<image src="/DevCamp2020/Support_Files/Wilderness_Labs_Dev_Camp.svg"/>
+</div>
 
-### Join us, Friday, May 22nd, 2020!
+### Dev Camp 2020
 
-Come hang with us, virtually, for a day of live stream fun, hacking and building IoT with Meadow. Tickets are free, but you must register. [Click here more information.](/DevCamp2020)
+Our first Dev Camp was a huge success thanks to our community and speakers. In case you missed the fun, [check out the recorded sessions](/DevCamp2020).
