@@ -990,10 +990,11 @@ div.highlighter-rouge pre {
 div.highlighter-rouge div {
   width: 100%; }
 
-.content-block .iframeVideo {
+.content-block .iframeVideo span {
   position: relative;
+  display: block;
   padding-top: 56.25%; }
-  .content-block .iframeVideo iframe {
+  .content-block .iframeVideo span iframe {
     position: absolute;
     left: 0;
     top: 0;

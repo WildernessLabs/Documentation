@@ -316,8 +316,9 @@ div.highlighter-rouge {
 }
 
 .content-block {
-  .iframeVideo { 
+  .iframeVideo span { 
     position: relative;
+    display: block;
     padding-top: 56.25%; 
     iframe {
       position: absolute;

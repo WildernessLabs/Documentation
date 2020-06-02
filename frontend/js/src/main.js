@@ -13,6 +13,7 @@
   const iframeVideo = $('p iframe');
   iframeVideo.each(function (index, element) { 
     $(this).parent().addClass('iframeVideo');
+    $(this).wrap('<span></span>');
   });
 
 })();
