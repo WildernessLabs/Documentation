@@ -1,6 +1,6 @@
 Meadow on the Linux will typically appear as a serial device **/dev/ttyACM*** unless it's in BOOT mode.
 
-There a couple of Gotcha's which you should be aware off.  These depend on your distro.
+There a couple of Gotcha's which you should be aware of.  These depend on your distro.
 
 1)  You may not have user permission to access the serial device.
 2)  Port probing maybe in action (aka ModemManager).  This is the system trying to detect what you have plugged in. You don't want this interference.
@@ -19,3 +19,7 @@ Create a file:
     
     # 0483:df11 - STM32F4 Discovery in DFU mode (CN5)
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE:="0666"
+
+Reload udevd rules with
+
+    sudo udevadm control --reload
