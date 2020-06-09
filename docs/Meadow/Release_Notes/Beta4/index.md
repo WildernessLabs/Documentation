@@ -7,6 +7,14 @@ subtitle: Release Notes
 
 # Beta 4.0
 
+## Meadow.OS Improvements
+
+### Networking
+
+### Garbage Collection
+
+
+
 ## Meadow.Core Improvements
 
 ## `SerialPort`

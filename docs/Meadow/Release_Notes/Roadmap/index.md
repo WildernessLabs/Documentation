@@ -6,21 +6,18 @@ subtitle: Release Notes
 
 # Meadow V1.0 Roadmap
 
-The current release of Meadow is [Beta3](../Beta3/)
+The current release of Meadow is [Beta4](../Beta4/)
 
-## Current Release - Beta 3
+## Current Release - Beta 4
 
-[Beta 3 Release Notes](/Meadow/Release_Notes/Beta3/)
+[Beta 4 Release Notes](/Meadow/Release_Notes/Beta4/)
 
 ## Future
 
-### Beta 4/Release Candidate 1
-
-RC1 will see final hardware to kickstarter backers and the last of the major feature set released, including:
+### Beta 4 Coming Features
 
  * Meadow Board in-IDE Activation (turning on the Meadow Security stack)
  * In-IDE debugging of Meadow Apps
- * Network APIs
  * Bluetooth APIs
 
 Additionally, we're hoping to squeeze in some bonus features:
