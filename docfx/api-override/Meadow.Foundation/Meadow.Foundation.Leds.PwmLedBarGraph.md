@@ -11,7 +11,7 @@ remarks: *content
 
 An LED Bar Graph is packaged array of LEDs commonly used to indicate level or progress and commonly include 8 or 10 leds.
 
-The **PwmLedBarGraph** class allows you to control an led bar graph using GPIO.
+The **PwmLedBarGraph** class allows you to control an led bar graph using PWM ports.
 
 <img src="../../API_Assets/Meadow.Foundation.Leds.PwmLedBarGraph/img_LedBarGraph.jpg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
