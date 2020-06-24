@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-title: Standard Serial 
-subtitle: Serial communications over RS-232/UART.
+title: Serial/UART
+subtitle: Serial communications over UART/RS-232.
 ---
 
 Standard serial, typically referred to as RS-232 or UART (Universal Asynchronous Receiver Transmitter) is a moderate-speed, reliable, old-school, digital protocol used to communicate with a single device, using two wires:
