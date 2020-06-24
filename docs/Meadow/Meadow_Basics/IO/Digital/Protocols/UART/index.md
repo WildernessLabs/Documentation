@@ -253,11 +253,6 @@ Because the receive buffer is shared, and a single message might arrive in multi
 care must be taken that there is only one consumer of the buffer, and that any reads are done in a critical section (i.e., C#'s `lock(object) { ... }` syntax).
 
 
-#### Receive Buffer
-
-By default, the `SerialPort` is created with a `4,096` byte receive buffer, but that size can be set during port construction.
-
-
 ### Additional APIs
 
 There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](http://beta-developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.
