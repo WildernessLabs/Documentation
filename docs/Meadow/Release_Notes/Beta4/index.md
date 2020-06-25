@@ -61,7 +61,18 @@ For more info, check out the awesome [Serial Communications Guide](/Meadow/Meado
 
 To see the new `ISerialMessagePort` class at work, check out the [GPS thingamajiggy when complete].
 
-## `IFilterableObservable` Changes
+### `FilterableObserver` Changes
+
+We made some changes to the filterable observer:
+
+* **Renamed `FilterableObserver` to `FilterableChangeObserver`.** - We made this naming change because the 
+  `FilterableObserver`, as designed, was based on change notification and as such had `Old` and `New` 
+  values, along with built in comparison. However, it became clear that we should also have a non histrionic
+  version for cases where `Old` and `New` had no meaning, so we also:
+* **Created a new `FilterableObserver` class that doesn't have histrionics.** - Currently, the various 
+  Meadow.Core port classes used a standard `IObservable<out T>`, which was fine, but we wanted to extend
+  the built-in filtering mechanism [**TBD.**]
+
 
 ## Meadow.Foundation
 
