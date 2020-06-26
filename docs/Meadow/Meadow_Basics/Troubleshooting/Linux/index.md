@@ -1,12 +1,20 @@
-Meadow on the Linux will typically appear as a serial device **/dev/ttyACM*** unless it's in BOOT mode.
+---
+layout: Meadow
+title: Linux
+subtitle: Troubleshooting guide to detect Meadow on Linux
+---
 
-There a couple of Gotcha's which you should be aware of.  These depend on your distro.
+## Device not found
 
-1)  You may not have user permission to access the serial device.
-2)  Port probing maybe in action (aka ModemManager).  This is the system trying to detect what you have plugged in. You don't want this interference.
+Meadow on Linux will typically appear as a serial device **/dev/ttyACM*** unless it's in BOOT mode.
+
+There a couple of "gotcha's" which you should be aware of and may vary depending on your Linux distribution:
+
+1)  You may not have user permission to access the serial device
+2)  Port probing may be active (aka ModemManager) - this is the system trying to detect what you have plugged in and will block access
 
 
-The simplest way to overcome these issues, is to add new rules to udev.
+To overcome these issues, add new rules to udev.
 
 Create a file:
 
