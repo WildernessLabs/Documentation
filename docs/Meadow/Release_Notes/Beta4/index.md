@@ -77,6 +77,11 @@ We made some changes to the filterable observer:
   Meadow.Core port classes used a standard `IObservable<out T>`, which was fine, but we wanted to extend
   the built-in filtering mechanism [**TBD.**]
 
+### Meadow.Core Samples
+
+We completely re-did the old `Meadow_Samples` repo and renamed it to 
+[`Meadow.Core.Samples`](https://github.com/wildernesslabs/Meadow.Core.Samples). The samples are now much better
+organized and all updated to the latest `.csproj` format.
 
 ## Meadow.Foundation
 
