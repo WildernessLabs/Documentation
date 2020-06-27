@@ -22,6 +22,10 @@ highlights include:
 Yaaaasss! WiFi networking is up! After nearly two years of engineering, Networking 
 communications via WiFi are now available to Meadow apps. 
 
+### File System Up
+
+[you can now use the `System.IO` file system calls to work with the local file system]
+
 ### Application Crash
 
 The dreaded application crash that got introduced a few beta releases back that prevents
