@@ -85,6 +85,8 @@ organized and all updated to the latest `.csproj` format.
 
 ## Meadow.Foundation
 
+[12 new drivers!]
+
 ### GPS Drivers
 
 [TBD]
