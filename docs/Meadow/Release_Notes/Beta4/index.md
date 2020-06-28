@@ -96,3 +96,11 @@ organized and all updated to the latest `.csproj` format.
 As part of our work to add GPS drivers, we completely re-worked, upgraded, and modernized the 
 NMEA sentence parsing and decoding library. It now handles a wider array of sentence structures, 
 is more fault tolerant, has a better API and is easier to add new decoders to.
+
+## Other Stuff
+
+### Meadow EDA Parts
+
+We've posted schematic symbols, PCB footprints, and 3D files of the Meadow F7 board for use in your own custom
+circuit designs. You can find them in our [Meadow_EDA_Parts repo](https://github.com/WildernessLabs/Meadow_EDA_Parts).
+
