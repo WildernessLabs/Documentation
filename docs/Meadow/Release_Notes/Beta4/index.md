@@ -116,3 +116,4 @@ Check it out at our [3D Print Designs repo](https://github.com/WildernessLabs/3D
 We've posted schematic symbols, PCB footprints, and 3D files of the Meadow F7 board for use in your own custom
 circuit designs. You can find them in our [Meadow_EDA_Parts repo](https://github.com/WildernessLabs/Meadow_EDA_Parts).
 
+![](Kicad_f7_symbol.png)
