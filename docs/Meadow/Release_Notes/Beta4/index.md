@@ -99,7 +99,19 @@ is more fault tolerant, has a better API and is easier to add new decoders to.
 
 ## Other Stuff
 
-### Meadow EDA Parts
+### Parametric Enclosure
+
+Are you building a project and need an enclosure? We've created an easily modifiable enclosure template 
+in Fusion 360 that allows you to change variables like length/depth/height, as well as the position of 
+Meadow inside, and it'll automatically resize for you:
+
+![](Meadow_Parametric_Enclosure_Open+Closed_Photo.jpg)
+
+You can use it as is, or use it as the starting point for more complicated enclosures by adding features.
+
+Check it out at our [3D Print Designs repo](https://github.com/WildernessLabs/3D_Print_Designs).
+
+### Meadow EDA (Schematic and PCB Footprint) Parts
 
 We've posted schematic symbols, PCB footprints, and 3D files of the Meadow F7 board for use in your own custom
 circuit designs. You can find them in our [Meadow_EDA_Parts repo](https://github.com/WildernessLabs/Meadow_EDA_Parts).
