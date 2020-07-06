@@ -44,8 +44,11 @@ works far better now than it did before.
 * [#62 - Constant 10ms delay when calling Thread.Sleep()](https://github.com/WildernessLabs/Meadow_Issues/issues/62) - Fixed, timer resolution is now 1ms.
 * [#67 - RgbPwmLed.StartBlink() does not have accurate timings](https://github.com/WildernessLabs/Meadow_Issues/issues/67) - Fixed, related to timer resolution.
 * [#69 - Timer creep](https://github.com/WildernessLabs/Meadow_Issues/issues/69) - Fixed, also related to timer resolution
+* [#70 - Assertion at sgen-stw.c:69](https://github.com/WildernessLabs/Meadow_Issues/issues/70) - Fixed as part of the Garbage Collector work.
 * [#77 - PWM duration with TimeScale.MicroSecond off by 10µs](https://github.com/WildernessLabs/Meadow_Issues/issues/77) - Fixed, math error. :)
 * [#89 - All file system objects appear as files](https://github.com/WildernessLabs/Meadow_Issues/issues/89) - Fixed.
+* [#94 - Too many threads cause a crash](https://github.com/WildernessLabs/Meadow_Issues/issues/94) - Fixed! This was a real doozie. 
+  We did a major overhaul of the Garbage Collector for this release.
 
 
 ## Meadow.Core Improvements
@@ -96,6 +99,16 @@ organized and all updated to the latest `.csproj` format.
 As part of our work to add GPS drivers, we completely re-worked, upgraded, and modernized the 
 NMEA sentence parsing and decoding library. It now handles a wider array of sentence structures, 
 is more fault tolerant, has a better API and is easier to add new decoders to.
+
+## Deployment & Tooling
+
+### New Meadow Library Templates
+
+[adrian to add]
+
+### F# Meadow Templates
+
+[adrian to add]
 
 ## Other Stuff
 
