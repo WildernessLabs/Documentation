@@ -127,6 +127,7 @@ The following table lists all the accessible pins on the Meadow F7 Micro dev boa
 
 | Meadow Pin Name | MCU Pin Name | Digital Channel | Analog Channel | PWM Timer Channel | Interrupt Group |
 |-----------------|--------------|-----------------|----------------|-------------------|------------|
+| A00 | PA4 | PA4 | AC1_IN4 | | 4 |
 | A01 | PA5 |  PA5 | ADC1_IN5 | | 5 |
 | A02 | PA3 |  PA3 | ADC1_IN3 | | 3 |
 | A03 | PA7 |  PA7 | ADC1_IN7 | | 7 |
