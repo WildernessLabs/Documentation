@@ -6,7 +6,6 @@ subtitle: Guides and documentation for Meadow
 
 # Release Notes
 
- * [Beta 4](Beta4)
  * [Beta 3](Beta3)
  * [Beta 2](Beta2)
 
