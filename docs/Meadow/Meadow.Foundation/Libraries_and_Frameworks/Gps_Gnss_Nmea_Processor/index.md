@@ -1,10 +1,8 @@
 ---
 layout: Meadow
-title: GPS/GNSS NMEA Processor
+title: GPS/GNSS NMEA Sentence Processor Library
 subtitle: NMEA sentence decoder and processing engine for GPS and GNNS systems.
 ---
-
-## Intro
 
 The GPS/GNSS NMEA procesing library is a set of classes that makes parsing and decoding [NMEA Sentences](https://gpsd.gitlab.io/gpsd/NMEA.html) from Global Positioning System (GPS)/Global Naviation Satellite System (GNSS) receivers easy. 
 

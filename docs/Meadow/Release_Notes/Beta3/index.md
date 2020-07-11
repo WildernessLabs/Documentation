@@ -100,9 +100,9 @@ We did a major overhaul of the NMEA (GPS/GNSS) sentence processing library. In t
 re-worked, upgraded, and modernized it. It now handles a wider array of sentence structures, 
 is more fault tolerant, has a better API and is easier to add new decoders to.
 
-Check out the `SerialGPS_Listener` sample in Meadow.Foundation for an example of how to use it.
+Check out the [GPS/GNSS NMEA Sentence Processing Library guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/)
+for more information.
 
-[add link after merge]
 
 ### Deployment & Tooling
 
