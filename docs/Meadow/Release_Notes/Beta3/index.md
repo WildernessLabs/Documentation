@@ -57,16 +57,17 @@ We did a major overhaul of the UART/Serial Port in Meadow for b4.0. Big changes 
    
 For more info, check out the awesome [Serial Communications Guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
 
-To see the new `ISerialMessagePort` class at work, check out the [GPS thingamajiggy when complete].
+To see the new `ISerialMessagePort` class at work, check out the [Serial Message Sample]. **ADD LINK when published**
 
 #### `FilterableObserver` Changes
 
-We made some changes to the filterable observer:
+We renamed `FilterableObserver` to `FilterableChangeObserver`.
 
-* **Renamed `FilterableObserver` to `FilterableChangeObserver`.** - We made this naming change because the 
-  `FilterableObserver`, as designed, was based on change notification and as such had `Old` and `New` 
-  values, along with built in comparison. However, it became clear that we should also have a non histrionic
-  version for cases where `Old` and `New` had no meaning, so we also:
+We made this naming change because the `FilterableObserver`, as designed, was based on change 
+notification and as such had `Old` and `New`  values, along with built in comparison. However, 
+it became clear that we should also have a non histrionic version for cases where `Old` and `New` 
+had no meaning. In the next beta release we'll likely re-introduce a non-histrionic version of 
+`FilterableObserver`.
 
 #### Meadow.Core Samples
 
@@ -75,6 +76,8 @@ We completely re-did the old `Meadow_Samples` repo and renamed it to
 organized and all updated to the latest `.csproj` format.
 
 ### Meadow.Foundation
+
+Meadow.Foundation got a pile of new peripheral drivers, including:
 
 * [PwmLedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLedBarGraph.html)
 * [Sensors.Location.Gnss.NmeaParsing](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.html)
