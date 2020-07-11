@@ -22,7 +22,7 @@ $ brew install ruby
 Once you have Ruby, you'll need Jekyll and Bundler to build and host the site locally:
 
 ```
-$ gem install jekyll bundler
+$ sudo gem install jekyll bundler
 ```
 
 With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
