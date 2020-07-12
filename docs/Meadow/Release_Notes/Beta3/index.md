@@ -13,9 +13,19 @@ This is a huge release, and is a precursor to `b4.0` while we finish out the las
 
 ### Updating
 
-[Todo docs. One-touch upgrade in VS for Win. Manual steps for Mac]
+This release is cut from the `b4.0` work and requires an OS update as well as IDE extension updates. 
+If you're on Windows, it's easy, we've added a one-click upgrade to the extenion. However, on macOS 
+(and Linux) it's significantly more complicated. We recommend updating on a Windows machine in Visual 
+Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
 
-#### macOS Instructions
+#### Windows
+
+[Todo docs. One-touch upgrade in VS for Win. ]
+
+#### macOS/Linux Manual Instructions
+
+Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util 
+installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
 
 1. DFU Meadow.OS.bin:  
   `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`
