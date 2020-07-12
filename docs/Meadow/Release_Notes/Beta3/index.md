@@ -8,8 +8,20 @@ subtitle: Release Notes
 
 This is a huge release, and is a precursor to `b4.0` while we finish out the last of the network stack.
 
- * **Garbage Collector Tuning**
- * **Application Crash fix**
+Improvements and upgrades include:
+
+ * **Garbage Collector tuned up for our MCU.**
+ * **Application crasher fix.**
+ * **Tons of bug fixes.**
+ * **Serial/UART events fixed and a big overhaul with a new way to use serial.**
+ * **FilterableObserver changes.**
+ * **A cleaned up and expanded Meadow.Core sample repo.**
+ * **Piles of new Meadow.Foundation drivers.**
+ * **GPS/GNSS NMEA processor overhaul.**
+ * **Meadow library project template.**
+ * **F# Meadow templates.**
+ * **Parametric enclosure.**
+ * **Meadow EDA schematic and PCB footprint parts.**
 
 ### Updating
 
