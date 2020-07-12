@@ -26,7 +26,7 @@ Improvements and upgrades include:
 ### Updating
 
 This release is cut from the `b4.0` work and requires an OS update as well as IDE extension updates. 
-If you're on Windows, it's easy, we've added a one-click upgrade to the extenion. However, on macOS 
+If you're on Windows, it's easy, we've added a one-click upgrade to the extension. However, on macOS 
 (and Linux) it's significantly more complicated. We recommend updating on a Windows machine in Visual 
 Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
 
