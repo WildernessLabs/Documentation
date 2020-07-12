@@ -140,11 +140,19 @@ for more information.
 
 #### New Meadow Library Templates
 
-[adrian to add]
+We added a new Meadow library project template to both Visual Studio for Windows and Visual Studio 
+for Mac. Meadow library projets automatically have the essential Meadow package references and 
+SDK type all set:
+
+![](FSharp_Template.png)
 
 #### F# Meadow Templates
 
-[adrian to add]
+We've also released F# templates for both Meadow apps and library projects! 
+
+So if you <3 F#, now it's easy to start building Meadow apps with it:
+
+![](FSharp_MeadowApp.png)
 
 ### Other Stuff
 
