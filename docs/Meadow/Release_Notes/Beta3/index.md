@@ -15,6 +15,25 @@ This is a huge release, and is a precursor to `b4.0` while we finish out the las
 
 [Todo docs. One-touch upgrade in VS for Win. Manual steps for Mac]
 
+#### macOS Instructions
+
+1. DFU Meadow.OS.bin:  
+  `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`
+2. Reset F7 (press `RST` button).
+3. Disable mono (may need to run twice if you get an exception the first time):  
+  `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
+4. Erase flash:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
+   This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
+5. Reset F7.
+6. Upload new Mono Runtime:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
+   After "Download success," hit space again.
+7. Move the runtime into it's special home on the 2MB partition:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
+   After "Mono runtime successfully flashed," hit space to exit.
+8. Reset F7.
+
 ### Meadow.OS Improvements
 
 #### Application Crash
