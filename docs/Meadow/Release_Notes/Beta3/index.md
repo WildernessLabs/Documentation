@@ -12,7 +12,7 @@ Improvements and upgrades include:
 
  * **Garbage Collector tuned up for our MCU.**
  * **Application crasher fix.**
- * **Tons of bug fixes.**
+ * **Tons of bug fixes and driver improvements.**
  * **Serial/UART events fixed and a big overhaul with a new way to use serial.**
  * **FilterableObserver changes.**
  * **A cleaned up and expanded Meadow.Core sample repo.**
@@ -30,31 +30,28 @@ If you're on Windows, it's easy, we've added a one-click upgrade to the extensio
 (and Linux) it's significantly more complicated. We recommend updating on a Windows machine in Visual 
 Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
 
-#### Windows
-
-[Todo docs. One-touch upgrade in VS for Win. ]
-
 #### macOS/Linux Manual Instructions
 
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util 
 installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
 
-1. DFU Meadow.OS.bin:  
+#. Download and unzip the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
+#. DFU Meadow.OS.bin:  
   `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`
-2. Reset F7 (press `RST` button).
-3. Disable mono (may need to run twice if you get an exception the first time):  
+#. Reset F7 (press `RST` button).
+#. Disable mono (may need to run twice if you get an exception the first time):  
   `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
-4. Erase flash:  
+#. Erase flash:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
    This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
-5. Reset F7.
-6. Upload new Mono Runtime:  
+#. Reset F7.
+#. Upload new Mono Runtime:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
    After "Download success," hit space again.
-7. Move the runtime into it's special home on the 2MB partition:  
+#. Move the runtime into it's special home on the 2MB partition:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
    After "Mono runtime successfully flashed," hit space to exit.
-8. Reset F7.
+#. Reset F7.
 
 ### Meadow.OS Improvements
 
