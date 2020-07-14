@@ -4,14 +4,13 @@ title: Meadow OS Deployment
 subtitle: Flashing the Meadow with the latest OS via Device Firmware Upgrade (DFU).
 ---
 
+**NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 3.12.
+
 When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it. To do this, you'll need to:
 
  1. Download the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
  2. Put the device into Device Firmware Upgrade (DFU) mode.
  3. Upload the files to the device. 
-
-The following video walks you through all that using a Mac:
-<p><iframe width="640" height="360" src="https://www.youtube.com/embed/PXAC0cpgPmc" frameborder="3" allowfullscreen></iframe></p>
 
 Alternatively, you can follow this step by step guide for both macOS and Windows: 
 
@@ -62,6 +61,8 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 ## Step 3: Upload Meadow.OS
 
+**NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 3.12.
+
 The instructions are essentially the same on all supported platforms (Windows, macOS, Linux).
 
 On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. You can either:
@@ -76,7 +77,7 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 
 To flash Meadow to the board:
 
- 1. Unzip the Meadow.OS.zip package. It should contain a file named `Meadow.OS.bin`.
+ 1. Unzip the Meadow.OS.zip package. It should contain two files: `Meadow.OS.bin` and `Meadow.OS.Runtime.bin`.
  2. Open the Command Prompt (Windows) or Terminal (macOS/Linux).
  3. Navigate to the folder that contains the Meadow OS bin file.
  4. Enter `dfu-util --list` to see a list of dfu enabled devices:
@@ -100,7 +101,20 @@ To flash Meadow to the board:
    dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS.bin -s 0x08000000
    ```
    
-When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
+  7. When the flash is complete, press the reset (**RST**) button to reset Meadow and exit boot mode.
+  8. Disable mono (may need to run twice if you get an exception the first time):  
+    `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
+  9. Erase flash:  
+    `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
+    This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
+  10. Reset F7 - press the reset (**RST**) button.
+  11. Upload new Mono Runtime:  
+    `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
+    After "Download success," hit space again.
+  12. Move the runtime into it's special home on the 2MB partition:  
+    `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
+    After "Mono runtime successfully flashed," hit space to exit.
+  13. Reset F7 - press the reset (**RST**) button.
 
 Your board is now ready to have a Meadow application deployed to it!
 
