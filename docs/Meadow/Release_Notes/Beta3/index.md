@@ -58,17 +58,16 @@ installed, you can find instructions on how to install it [here](/Meadow/Getting
 
 ### Meadow.OS Improvements
 
-#### Application Crash
-
-The dreaded application crash that got introduced a few beta releases back that prevents
-Meadow applications from standing up for more than a few minutes has been fixed! [add 
-details when avaialble]
-
 #### Garbage Collector Tuning
 
 The Mono garbage collector that we use in Meadow.OS got a major tune-up, making it much 
 more suited for our architecture and use case. You should find that garbage collection 
 works far better now than it did before.
+
+#### Application Crash
+
+The dreaded application crash that got introduced a few beta releases back that prevents
+Meadow applications from standing up for more than a few minutes has been fixed! As well, with the garbage collector fixes, Meadow apps are now very unlikely to run out of memory. This is the most stable release of Meadow OS to date!
 
 #### Bug Fixes
 
@@ -124,13 +123,15 @@ Meadow.Foundation got a pile of new peripheral drivers, including:
 * [Displays.Led.FourDigitSevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.html)
 * [Sensors.Location.Gnss.NmeaParsing](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.html)
 * [FeatherWings.CharlieWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.CharlieWing.html)
+* [FeatherWings.DotstarWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.DotstarWing.html)
 * [FeatherWings.GPSWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.GPSWing.html)
-* [FeatherWings.LedMatrix8x16Wing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.html)
-* FeatherWings.Motorwing
+* [FeatherWings.LedMatrix8x16](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16.html)
+* [FeatherWings.MotorWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.MotorWing.html)
 * [FeatherWings.OLED128x32Wing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html)
-* FeatherWings.ServoWing
-* [ICs.IOExpanders.IS31FL3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.IS31FL3731.html)
+* [FeatherWings.ServoWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.ServoWing.html)
+* [ICs.IOExpanders.Is31fl3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Is31fl3731.html)
 * [ICs.IOExpanders.Pca9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9685.html)
+* [Leds.Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html)
 * [Motors.Stepper.A4988](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.A4988.html)
 * [Sensors.Atmospheric.Mpl3115a2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html)
 * [Sensors.Location.MediaTek.Mt3339](/docs/api/Meadow.Foundation/Sensors.Location.MediaTek.Mt3339.html)
