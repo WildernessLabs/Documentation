@@ -149,6 +149,9 @@ is more fault tolerant, has a better API and is easier to add new decoders to.
 Check out the [GPS/GNSS NMEA Sentence Processing Library guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/)
 for more information.
 
+#### PwmLed minor change
+
+We consolidated the logic and code convention across our LEDs drivers in Meadow.Foundation.Core, and when we did, we removed the method `public void StartBlink(uint onDuration = 200, uint offDuration = 200)` which was redundant and we kept `public void StartBlink(uint onDuration = 200, uint offDuration = 200, float highBrightness = 1f, float lowBrightness = 0f)` since its more flexible since you can also change the values of brightness.
 
 ### Deployment & Tooling
 
