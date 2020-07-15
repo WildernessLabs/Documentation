@@ -182,10 +182,10 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl362](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl362.html) | SPI low power, 3-axis MEMS accelerometer |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Adxl377](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl377.html) | Analog triple axis, +/-200g accelerometer |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html) | I2C 9-Axis absolute orientation sensor |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mhc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mhc5883.html) | I2C 9-Axis absolute orientation sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
+| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
+| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html) | I2C 9-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Pending-yellow" />      | [Hmc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883.html) | I2C 9-Axis absolute orientation sensor |
+| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | I2C three axis magnetometer |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector |
 
@@ -195,19 +195,12 @@ The peripherals are split into two groups; the first group is general, core peri
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ina260](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.Ina260.html) | Power sensor |
 
-#### Radio Sensors
-
-| Status | Driver | Description |
-|--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Nrf24L01](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Nrf24L01.html) | Radio sensor |
-
 #### Temperature Sensors
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Blocked-red" />         | [Ds18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.DS18B20.html) | Temperature sensor | 1-Wire bus |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html) | I2C temperature sensor | |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html) | I2C temperature sensor | |
+| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html) | I2C temperature sensor | |
+| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html) | I2C temperature sensor | |
 
 ### Servos
 
@@ -219,4 +212,4 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sx127x](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.Sx127x.html) | Tranceiver |
+| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Sx127x](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.SX127x.html) | Tranceiver |

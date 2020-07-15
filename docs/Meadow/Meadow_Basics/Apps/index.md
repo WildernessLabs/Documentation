@@ -83,7 +83,7 @@ class LEDApp : App<F7Micro, LEDApp>
     private IDigitalOutputPort blueLed;
     private IDigitalOutputPort greenLed;
 
-    public override void Run()
+    public LEDApp()
     {
         CreateOutputs();
         ShowLights();
