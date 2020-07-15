@@ -35,23 +35,23 @@ Studio if you have access to one, but the manual steps for macOS and Linux are p
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util 
 installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
 
-#. Download and unzip the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
-#. DFU Meadow.OS.bin:  
+1. Download and unzip the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
+2. DFU Meadow.OS.bin:  
   `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`
-#. Reset F7 (press `RST` button).
-#. Disable mono (may need to run twice if you get an exception the first time):  
+3. Reset F7 (press `RST` button).
+4. Disable mono (may need to run twice if you get an exception the first time):  
   `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
-#. Erase flash:  
+5. Erase flash:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
    This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
-#. Reset F7.
-#. Upload new Mono Runtime:  
+6. Reset F7.
+7. Upload new Mono Runtime:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
    After "Download success," hit space again.
-#. Move the runtime into it's special home on the 2MB partition:  
+8. Move the runtime into it's special home on the 2MB partition:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
    After "Mono runtime successfully flashed," hit space to exit.
-#. Reset F7.
+9. Reset F7.
 
 ### Meadow.OS Improvements
 

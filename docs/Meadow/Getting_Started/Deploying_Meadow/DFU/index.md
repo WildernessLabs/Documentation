@@ -101,20 +101,20 @@ To flash Meadow to the board:
    dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS.bin -s 0x08000000
    ```
    
-  7. When the flash is complete, press the reset (**RST**) button to reset Meadow and exit boot mode.
-  8. Disable mono (may need to run twice if you get an exception the first time):  
+ 7. When the flash is complete, press the reset (**RST**) button to reset Meadow and exit boot mode.
+ 8. Disable mono (may need to run twice if you get an exception the first time):  
     `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
-  9. Erase flash:  
+ 9. Erase flash:  
     `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
     This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
-  10. Reset F7 - press the reset (**RST**) button.
-  11. Upload new Mono Runtime:  
+ 10. Reset F7 - press the reset (**RST**) button.
+ 11. Upload new Mono Runtime:  
     `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
     After "Download success," hit space again.
-  12. Move the runtime into it's special home on the 2MB partition:  
+ 12. Move the runtime into it's special home on the 2MB partition:  
     `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
     After "Mono runtime successfully flashed," hit space to exit.
-  13. Reset F7 - press the reset (**RST**) button.
+ 13. Reset F7 - press the reset (**RST**) button.
 
 Your board is now ready to have a Meadow application deployed to it!
 
