@@ -13,7 +13,7 @@ We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 | Feature              | Tested Working      | Notes                             |
 |----------------------|---------------------|-----------------------------------|
 | **Basic Digital IO** | Yes | |
-| **Analog**           | Yes | Analog pins `A0` - `A3` working. |
+| **Analog**           | Yes | |
 | **PWM**              | Yes | |
 | **Serial (UART)**    | Yes | |
 | **I2C**              | Yes | |
@@ -26,14 +26,14 @@ We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| WiFi	| No| In progress. Planned Beta 4 |
-| Bluetooth | No | Working on co-proc. Not hooked to API. Planned for RC-1. |
+| WiFi	| Yes | |
+| Bluetooth | No | Planned b4.x |
 
 ## Other Features
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Debugging        | No                  | Planned for Beta 4.               |
+| Debugging        | No                  | Planned for Beta 4.x               |
 | Battery Charging  | Yes | |
 | Battery Voltage Level | No | Planed, Beta 4; Relies on Networking co-processor.
 | Power Management APIs | No | Planned for RC-1 |

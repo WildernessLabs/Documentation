@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Troubleshooting
-subtitle: Steps to getting your Meadow board working.
+subtitle: Steps to getting your Meadow board working
 ---
 
 ## USB Cables

@@ -4,6 +4,192 @@ title: Meadow Beta 3
 subtitle: Release Notes
 ---
 
+## Beta 3.12
+
+This is a huge release, and is a precursor to `b4.0` while we finish out the last of the network stack.
+
+Improvements and upgrades include:
+
+ * **Garbage Collector tuned up for our MCU.**
+ * **Application crasher fix.**
+ * **Tons of bug fixes and driver improvements.**
+ * **Serial/UART events fixed and a big overhaul with a new way to use serial.**
+ * **FilterableObserver changes.**
+ * **A cleaned up and expanded Meadow.Core sample repo.**
+ * **Piles of new Meadow.Foundation drivers.**
+ * **GPS/GNSS NMEA processor overhaul.**
+ * **Meadow library project template.**
+ * **F# Meadow templates.**
+ * **Parametric enclosure.**
+ * **Meadow EDA schematic and PCB footprint parts.**
+
+### Updating
+
+This release is cut from the `b4.0` work and requires an OS update as well as IDE extension updates. 
+If you're on Windows, it's easy, we've added a one-click upgrade to the extension. However, on macOS 
+(and Linux) it's significantly more complicated. We recommend updating on a Windows machine in Visual 
+Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
+
+#### macOS/Linux Manual Instructions
+
+Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util 
+installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
+
+1. Download and unzip the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
+2. DFU Meadow.OS.bin:  
+  `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`
+3. Reset F7 (press `RST` button).
+4. Disable mono (may need to run twice if you get an exception the first time):  
+  `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
+5. Erase flash:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
+   This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
+6. Reset F7.
+7. Upload new Mono Runtime:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
+   After "Download success," hit space again.
+8. Move the runtime into it's special home on the 2MB partition:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
+   After "Mono runtime successfully flashed," hit space to exit.
+9. Reset F7.
+
+### Meadow.OS Improvements
+
+#### Garbage Collector Tuning
+
+The Mono garbage collector that we use in Meadow.OS got a major tune-up, making it much 
+more suited for our architecture and use case. You should find that garbage collection 
+works far better now than it did before.
+
+#### Application Crash
+
+The dreaded application crash that got introduced a few beta releases back that prevents
+Meadow applications from standing up for more than a few minutes has been fixed! As well, with the garbage collector fixes, Meadow apps are now very unlikely to run out of memory. This is the most stable release of Meadow OS to date!
+
+#### Bug Fixes
+
+* [#37 - Threading and event callback lockup](https://github.com/WildernessLabs/Meadow_Issues/issues/37) - Fixed!
+* [#62 - Constant 10ms delay when calling Thread.Sleep()](https://github.com/WildernessLabs/Meadow_Issues/issues/62) - Fixed, timer resolution is now 1ms.
+* [#67 - RgbPwmLed.StartBlink() does not have accurate timings](https://github.com/WildernessLabs/Meadow_Issues/issues/67) - Fixed, related to timer resolution.
+* [#68 - Static class in its own namespace hangs in constructor](https://github.com/WildernessLabs/Meadow_Issues/issues/68) - Fixed. Constructor race condition.
+* [#69 - Timer creep](https://github.com/WildernessLabs/Meadow_Issues/issues/69) - Fixed, also related to timer resolution
+* [#70 - Assertion at sgen-stw.c:69](https://github.com/WildernessLabs/Meadow_Issues/issues/70) - Fixed as part of the Garbage Collector work.
+* [#77 - PWM duration with TimeScale.MicroSecond off by 10µs](https://github.com/WildernessLabs/Meadow_Issues/issues/77) - Fixed, math error. :)
+* [#89 - All file system objects appear as files](https://github.com/WildernessLabs/Meadow_Issues/issues/89) - Fixed.
+* [#94 - Too many threads cause a crash](https://github.com/WildernessLabs/Meadow_Issues/issues/94) - Fixed! This was a real doozie. 
+  We did a major overhaul of the Garbage Collector for this release.
+
+### Meadow.Core Improvements
+
+#### Serial/UART Communications
+
+We did a major overhaul of the UART/Serial Port in Meadow for b4.0. Big changes include:
+ * **Serial Port Events Fixed** - Serial port events now work, which enables more efficient 
+   communications, without the need for a polling thread.
+ * **New `ISerialMessagePort` class** - We fundamentally reworked the way legacy serial 
+   communications work, and created an `ISerialMessagePort` class that modernizes them. 
+   It's thread-safe and asynchronous by default, and massively simplifies communications
+   with serial devices by taking a _message_ approach. We recommend using this class 
+   instead of `ISerialPort` for serial communications from now on.
+   
+For more info, check out the awesome [Serial Communications Guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
+
+To see the new `ISerialMessagePort` class at work, check out the [Serial Message Sample]. **ADD LINK when published**
+
+#### `FilterableObserver` Changes
+
+We renamed `FilterableObserver` to `FilterableChangeObserver`.
+
+We made this naming change because the `FilterableObserver`, as designed, was based on change 
+notification and as such had `Old` and `New`  values, along with built in comparison. However, 
+it became clear that we should also have a non histrionic version for cases where `Old` and `New` 
+had no meaning. In the next beta release we'll likely re-introduce a non-histrionic version of 
+`FilterableObserver`.
+
+#### Meadow.Core Samples
+
+We completely re-did the old `Meadow_Samples` repo and renamed it to 
+[`Meadow.Core.Samples`](https://github.com/wildernesslabs/Meadow.Core.Samples). The samples are now much better
+organized and all updated to the latest `.csproj` format.
+
+### Meadow.Foundation
+
+Meadow.Foundation got a pile of new peripheral drivers, including:
+
+* [PwmLedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLedBarGraph.html)
+* [Displays.Led.FourDigitSevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.html)
+* [Sensors.Location.Gnss.NmeaParsing](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.html)
+* [FeatherWings.CharlieWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.CharlieWing.html)
+* [FeatherWings.DotstarWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.DotstarWing.html)
+* [FeatherWings.GPSWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.GPSWing.html)
+* [FeatherWings.LedMatrix8x16](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16.html)
+* [FeatherWings.MotorWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.MotorWing.html)
+* [FeatherWings.OLED128x32Wing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html)
+* [FeatherWings.ServoWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.ServoWing.html)
+* [ICs.IOExpanders.Is31fl3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Is31fl3731.html)
+* [ICs.IOExpanders.Pca9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9685.html)
+* [Leds.Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html)
+* [Motors.Stepper.A4988](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.A4988.html)
+* [Sensors.Atmospheric.Mpl3115a2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html)
+* [Sensors.Location.MediaTek.Mt3339](/docs/api/Meadow.Foundation/Sensors.Location.MediaTek.Mt3339.html)
+* [Sensors.Light.Max44009](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Max44009.html)
+* [Sensors.Light.Tsl2591](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tsl2591.html)
+* [Sensors.LoadCell.Hx711](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.LoadCell.Hx711.html)
+* [Sensors.Radio.Rfid.IDxxLA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.html)
+
+#### GPS/GNSS NMEA Processing
+
+We did a major overhaul of the NMEA (GPS/GNSS) sentence processing library. In the process we 
+re-worked, upgraded, and modernized it. It now handles a wider array of sentence structures, 
+is more fault tolerant, has a better API and is easier to add new decoders to.
+
+Check out the [GPS/GNSS NMEA Sentence Processing Library guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/)
+for more information.
+
+#### PwmLed minor change
+
+We consolidated the logic and code convention across our LEDs drivers in Meadow.Foundation.Core, and when we did, we removed the method `public void StartBlink(uint onDuration = 200, uint offDuration = 200)` which was redundant and we kept `public void StartBlink(uint onDuration = 200, uint offDuration = 200, float highBrightness = 1f, float lowBrightness = 0f)` since its more flexible since you can also change the values of brightness.
+
+### Deployment & Tooling
+
+#### New Meadow Library Templates
+
+We added a new Meadow library project template to both Visual Studio for Windows and Visual Studio 
+for Mac. Meadow library projets automatically have the essential Meadow package references and 
+SDK type all set:
+
+![](FSharp_Template.png)
+
+#### F# Meadow Templates
+
+We've also released F# templates for both Meadow apps and library projects! 
+
+So if you <3 F#, now it's easy to start building Meadow apps with it:
+
+![](FSharp_MeadowApp.png)
+
+### Other Stuff
+
+#### Parametric Enclosure
+
+Are you building a project and need an enclosure? We've created an easily modifiable enclosure template 
+in Fusion 360 that allows you to change variables like length/depth/height, as well as the position of 
+Meadow inside, and it'll automatically resize for you:
+
+![](Meadow_Parametric_Enclosure_Open+Closed_Photo.jpg)
+
+You can use it as is, or use it as the starting point for more complicated enclosures by adding features.
+
+Check it out at our [3D Print Designs repo](https://github.com/WildernessLabs/3D_Print_Designs).
+
+#### Meadow EDA (Schematic and PCB Footprint) Parts
+
+We've posted schematic symbols, PCB footprints, and 3D files of the Meadow F7 board for use in your own custom
+circuit designs. You can find them in our [Meadow_EDA_Parts repo](https://github.com/WildernessLabs/Meadow_EDA_Parts).
+
+![](Kicad_f7_symbol.png)
+
+
 ## Beta 3.11
 
 Beta 3.11 is a major release that brings a pile of stabilizations and fixes across Meadow.OS, Meadow.Core, and Meadow.Foundation.
@@ -159,14 +345,18 @@ You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Sta
 
 We enabled various low-level caching mechanisms available on the F7 chip and fixed some long-outstanding memory bugs that were preventing their use up until this point. With these fixes and optimizations, we're able to realize one to two magnitudes of performance increases across various aspects of execution. The most significant being in IO access, which saw an `8,600%` increase since `b3.6`. However, we also saw significant improvement in general execution, as well. The following charts were created from the [Meadow Performance Benchmarking application](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) readme data:
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2104450466&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2104450466&amp;format=interactive"
+style="width: -webkit-fill-available;"></iframe>
  
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=103861413&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=103861413&amp;format=interactive"
+style="width: -webkit-fill-available;"></iframe>
 
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2010951639&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=2010951639&amp;format=interactive"
+style="width: -webkit-fill-available;"></iframe>
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=867053354&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6LF3jduievLwj3H_JNeO_yFrX3NewR8bAijKCfVsKTOTRuyfdNzvpPdNN0MWrP5-eaAxaRVFu0rn3/pubchart?oid=867053354&amp;format=interactive"
+style="width: -webkit-fill-available;"></iframe>
 
 **Overall, since `b3.5`, IO writes have gotten `318x` faster. And since the last beta, general operation execution speed is `4-8x` faster.** 
 
