@@ -26,7 +26,7 @@ Join Adrian Stevens as he shows you how to get up and running with the Meadow. S
 
 Meadow.Foundation greatly simplifies the task of building connected things with Meadow, by providing a unified driver and library framework that includes drivers and abstractions for common peripherals such as sensors, displays, motors, and more. Join us to learn just how easy it can be to build with Meadow.Foundation.
 
-### Integrating Low-power Wireless Communications with Meadow - Bryn Lewis
+### [Integrating Low-power Wireless Communications with Meadow](https://www.youtube.com/watch?v=XUSvKtplin8&list=PLoP9Fu9zn7qYOCCRY8UyuNGH6m2hFUls8&index=11) - Bryn Lewis
 
 Did you know that most wireless devices use one of just a handful wireless chips and protocols? This means that with Meadow, you can connect to, and control, nearly all of them. In this talk, Bryn Lewis is going to walk through the taxonomy of common wirless protocols, frequencies, and the chips that operate them. Along the way, we'll look at [Nordic Semi nRF24](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24-series), [Semtech SX1231](https://www.semtech.com/products/wireless-rf/fsk-transceivers/sx1231), [HopeRF RFM69](https://www.hoperf.com/modules/rf_transceiver/RFM69HCW.html), [Semtech SX1276](https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1276), and [HopeRF RF95](https://www.hoperf.com/modules/lora/RFM95.html) integrations and what you can do with them!
 
