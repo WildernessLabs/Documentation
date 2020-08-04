@@ -94,7 +94,7 @@ We did a major overhaul of the UART/Serial Port in Meadow for b4.0. Big changes 
    
 For more info, check out the awesome [Serial Communications Guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
 
-To see the new `ISerialMessagePort` class at work, check out the [Serial Message Sample]. **ADD LINK when published**
+To see the new `ISerialMessagePort` class at work, check out the [`SerialMessagePort` Sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/master/Source/Meadow.Core.Samples/IO/SerialMessagePort).
 
 #### `FilterableObserver` Changes
 
