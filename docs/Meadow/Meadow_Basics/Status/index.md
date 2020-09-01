@@ -6,7 +6,7 @@ subtitle: Guides and documentation for Meadow
 
 # Meadow F7 Micro Beta Status
 
-We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
+We are currently in [Meadow Beta 4](/Meadow/Release_Notes/Beta4/).
 
 ## General IO Features
 
@@ -26,7 +26,7 @@ We are currently in [Meadow Beta 3](/Meadow/Release_Notes/Beta3/).
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| WiFi	| Yes | |
+| WiFi	| Yes | Basic `HttpClient` only, no SSL. |
 | Bluetooth | No | Planned b4.x |
 
 ## Other Features
