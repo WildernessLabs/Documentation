@@ -1,9 +1,13 @@
 ---
 layout: Meadow
 title: Networking
-subtitle: Meadow Basics
+subtitle: Network options and operation.
 ---
 
-# Networking
+[Both the Meadow F7 development board and SMT module have WiFi networking via the ESP32 co-processor]. [The Meadow F7 embedded module also adds ethernet capabilities.]
 
-Networking isn't fully implemented yet. Docs to come with working implementation.
+# WiFi
+
+
+
+# Ethernet 
