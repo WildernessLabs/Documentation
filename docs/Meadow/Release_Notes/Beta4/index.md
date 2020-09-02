@@ -69,7 +69,7 @@ deadlock to solve, but generally apps should stay alive for hours, days, or week
 * [#101 - SPI Bus speed property read is off by x1000](https://github.com/WildernessLabs/Meadow_Issues/issues/101) - Fixed.
 * [#98 - ISerialPort.Read does not remove bytes from the ReceiveBuffer anymore.](https://github.com/WildernessLabs/Meadow_Issues/issues/98) - Fixed. This was a regression 
   introduced by some of our `SerialPort` overhaul work in `b3.12`.
-* [#102 - ISerialMessagePort.preserveDelimiter=false leaves null bytes in message data](https://github.com/WildernessLabs/Meadow_Issues/issues/102) - [to be fixed]
+* [#102 - ISerialMessagePort.preserveDelimiter=false leaves null bytes in message data](https://github.com/WildernessLabs/Meadow_Issues/issues/102) - Fixed. 
 * [#XX - Title]() - status
 
 ## Meadow.CLI & Deployment Improvements
