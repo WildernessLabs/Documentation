@@ -28,23 +28,28 @@ Studio if you have access to one, but the manual steps for macOS and Linux are p
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util 
 installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
 
-1. Download and unzip the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
-2. DFU Meadow.OS.bin:  
-  `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`
-3. Reset F7 (press `RST` button).
-4. Disable mono (may need to run twice if you get an exception the first time):  
+1. DFU Meadow.OS.bin:  
+  `dfu-util -a 0 -S [serial] -D Meadow.OS.bin -s 0x08000000`  
+2. Reset F7
+3. Disable mono (may need to run twice if you get an exception the first time). 
   `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
-5. Erase flash:  
+4. Erase flash:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --EraseFlash --KeepAlive`  
    This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
-6. Reset F7.
-7. Upload new Mono Runtime:  
+5. Reset F7
+6. Upload new Mono Runtime  
   `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
    After "Download success," hit space again.
-8. Move the runtime into it's special home on the 2MB partition:  
+7. Move the runtime into it's special home on the 2MB partition   
   `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
    After "Mono runtime successfully flashed," hit space to exit.
-9. Reset F7. 
+8. Upload the ESP32 bootloader:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --Esp32WriteFile -f bootloader.bin --McuDestAddr 0x1000` 
+9. Upload the ESP32 partition table:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --Esp32WriteFile -f partition-table.bin --McuDestAddr 0x8000`
+10. Upload the ESP32 Meadow Comms application:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --Esp32WriteFile -f MeadowComms.bin --McuDestAddr 0x10000`
+11. Reset F7
  
 ## Meadow.OS Improvements
 
