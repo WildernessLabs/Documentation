@@ -57,11 +57,23 @@ installed, you can find instructions on how to install it [here](/Meadow/Getting
 
 Basic WiFi networking is up! You can scan for WiFi networks, connect to one, and do basic `HttpClient` tasks. `HttpServer` is unavailable, and SSL doesn't work yet.
 
+#### Networking Known Issues
+
+* **Slow** -
+* **Must Connect to WiFi before scanning** - 
+* **`HttpServer` not working** - 
+* **`5k` memory leak per `HttpClient.Request()` - [sockets don't have this. workaround is to reset coproc via `InitWiFiAdapter()`]
+* **Unreliable Reconnection** - 
+
 
 ### File System
 
-[you can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files]  
-[`FileInfo` and `DirectoryInfo` don't work]
+You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard
+flash device. For more infomation, see the [File System guide](/Meadow/Meadow_Basics/File_System).
+
+#### Known Issues
+
+[storage is non-persistent becuase non app files are deleted by the by the IDEs on deployment. This will be addressed in a future release.]
 
 
 ### Garbage Collector Improvements
