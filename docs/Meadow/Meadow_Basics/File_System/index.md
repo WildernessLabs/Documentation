@@ -4,8 +4,6 @@ title: File System
 subtitle: Working with files and directories in Meadow
 ---
 
-# Intro 
-
 Meadow.OS has nearly full support for file and directory manipulation via `System.IO` API calls. In addition, the Meadow F7 board has onboard non-volatile flash storage that, while primarily used for app deployment and storage, can also be used as for persistent storage, like a traditional hard drive.
 
 ## Beta Status
