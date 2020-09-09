@@ -6,6 +6,15 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 development board and SMT module have WiFi networking via the ESP32 co-processor. The Meadow F7 embedded SMT module also adds optional ethernet capabilities.
 
+## Current Limitations
+
+Beta 4.0 introduces the first version of our networking stack for Meadow and there are a few known limitations to be aware of when using:
+
+ * **SSL not supported** - Currently, only unencrypted traffic is supported via HTTP. We're working on TLS support.
+ * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support.
+ * **Network scans require a network connection** - Due to a limitation in the API, you must first connect to a WiFi network before attempting a scan.
+ * **`HttpClient` memory leak** - Each `HttpClient.Request` incurs a `~5k` memory leak on the ESP32 coprocessor, so after a number of requests it will no longer be functional. If requests become unresponsive, a call to `Device.InitWiFiAdapter()` will reset the ESP32 coprocessor and get things running again. Note that requests performed low-level socket calls do not incur this memory leak.
+
 # WiFi
 
 ## Initializing the `WiFiAdapter`
@@ -73,15 +82,25 @@ Once the network is connected, you can generally use the built-in .NET network m
 The following code illustrates making a request to a web page via the `HttpClient` class:
 
 ```csharp
-HttpClient client = new HttpClient();
-
-HttpResponseMessage response = await client.GetAsync(uri);
-
-response.EnsureSuccessStatusCode();
-string responseBody = await response.Content.ReadAsStringAsync();
-Console.WriteLine(responseBody);
+using (HttpClient client = new HttpClient()) {
+    HttpResponseMessage response = await client.GetAsync(uri);
+    response.EnsureSuccessStatusCode();
+    string responseBody = await response.Content.ReadAsStringAsync();
+    Console.WriteLine(responseBody);
+}
 ```
 
-## Socket Example
+### Posting
 
+You can also modify the request to `POST` data. For example, the following code posts a temperature reading to Adafruit.IO:
 
+```csharp
+using (HttpClient client = new HttpClient()) {
+    client.DefaultRequestHeaders.Add("X-AIO-Key", [APIO_KEY]);
+    client.Timeout = TimeSpan.FromMinutes(10);
+    string temperature = "23.70";
+    string data = "{\"value\":\"" + temperature + "\"}";
+    var content = new StringContent(data, Encoding.UTF8, "application/json");
+    var result = client.PostAsync(uri, content).Result;
+}
+```
