@@ -7,7 +7,7 @@ subtitle: Release Notes
 
 # b4.0
 
-W000t, b4.0 is here! 
+W000t, b4.0 is here! This is a major release with a pile of new features and improvements, including our first cut of WiFi networking support as well as file system support! All in, this release includes:
 
  * **Basic WiFi Networking**
  * **Basic File System**
