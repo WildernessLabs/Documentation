@@ -99,5 +99,22 @@ the Mono Virtual Machine is in its own isolated process.
 The upshot of this is that deployment should be more reliable and a crashing Meadow app shouldn't tear 
 down the host communications. 
 
-
 ## Meadow.Foundation
+
+Meadow.Foundation has new peripheral drivers to play with, including:
+
+* [Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html)
+* [Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html)
+* [Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html)
+
+#### Minor update on SG90 Servos
+
+We adjusted the frequency for the SG90 micro servos that comes in the hack kit, so when using the `NamedServoConfigs.SG90` enum, you will see the servos wont twitch when using `Rotate To(int degrees)` and have full 180 degree range;
+
+#### Updates on Graphics Library
+
+You can now draw semi-circles and arcs.
+
+#### CharacterDisplay now supports I2C
+
+If you have an LCD character display comes with an I2C backpack, you can now instantiate a CharacterDisplay object passing an II2cBus, reducing eight Digital IO pins to just two for I2C.
