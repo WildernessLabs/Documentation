@@ -56,15 +56,14 @@ installed, you can find instructions on how to install it [here](/Meadow/Getting
 
 ### Networking
 
-Basic WiFi networking is up! You can scan for WiFi networks, connect to one, and do basic `HttpClient` tasks. `HttpServer` is unavailable, and SSL doesn't work yet.
+Basic WiFi networking is up! Check out our [Networking guide](/Meadow/Meadow_Basics/Networking/) for more information!
 
 #### Networking Known Issues
 
-* **Slow** -
-* **Must Connect to WiFi before scanning** - 
-* **`HttpServer` not working** - 
-* **`5k` memory leak per `HttpClient.Request()` - [sockets don't have this. workaround is to reset coproc via `InitWiFiAdapter()`]
-* **Unreliable Reconnection** - 
+ * **SSL not supported** - Currently, only unencrypted traffic is supported via HTTP. We're working on TLS support.
+ * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support.
+ * **Network scans require a network connection** - Due to a limitation in the API, you must first connect to a WiFi network before attempting a scan.
+ * **`HttpClient` memory leak** - Each `HttpClient.Request` incurs a `~5k` memory leak on the ESP32 coprocessor, so after a number of requests it will no longer be functional. If requests become unresponsive, a call to `Device.InitWiFiAdapter()` will reset the ESP32 coprocessor and get things running again. Note that requests performed low-level socket calls do not incur this memory leak.
 
 
 ### File System
@@ -74,7 +73,7 @@ flash device. For more infomation, see the [File System guide](/Meadow/Meadow_Ba
 
 #### Known Issues
 
-[storage is non-persistent becuase non app files are deleted by the by the IDEs on deployment. This will be addressed in a future release.]
+* **Non-persistent during deployment** - Currently, during IDE deployment, all non app-related files are purged from flash. In a near future release, all files within a special app folder will be excluded from file purging. In the meantime, if you need to persist files between app deployment, you can use Meadow.CLI to manually deploy a new app.
 
 
 ### Garbage Collector Improvements
