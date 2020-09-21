@@ -68,8 +68,7 @@ Basic WiFi networking is up! Check out our [Networking guide](/Meadow/Meadow_Bas
 
 ### File System
 
-You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard
-flash device. For more infomation, see the [File System guide](/Meadow/Meadow_Basics/File_System).
+You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard flash device. For more infomation, see the [File System guide](/Meadow/Meadow_Basics/File_System).
 
 #### Known Issues
 
@@ -81,11 +80,11 @@ flash device. For more infomation, see the [File System guide](/Meadow/Meadow_Ba
 Our Garbage Collector work is almost done now; the Mono GC works in most use cases and has been tuned for the Meadow device. We still have an outstanding 
 deadlock to solve, but generally apps should stay alive for hours, days, or weeks, depending on memory allocation.
 
+
 ### Bug Fixes
 
 * [#101 - SPI Bus speed property read is off by x1000](https://github.com/WildernessLabs/Meadow_Issues/issues/101) - Fixed.
-* [#98 - ISerialPort.Read does not remove bytes from the ReceiveBuffer anymore.](https://github.com/WildernessLabs/Meadow_Issues/issues/98) - Fixed. This was a regression 
-  introduced by some of our `SerialPort` overhaul work in `b3.12`.
+* [#98 - ISerialPort.Read does not remove bytes from the ReceiveBuffer anymore.](https://github.com/WildernessLabs/Meadow_Issues/issues/98) - Fixed. This was a regression introduced by some of our `SerialPort` overhaul work in `b3.12`.
 * [#102 - ISerialMessagePort.preserveDelimiter=false leaves null bytes in message data](https://github.com/WildernessLabs/Meadow_Issues/issues/102) - Fixed. 
 
 ## Meadow.CLI & Deployment Improvements
@@ -112,7 +111,7 @@ We adjusted the frequency for the SG90 micro servos that comes in the hack kit, 
 
 #### Updates on Graphics Library
 
-You can now draw semi-circles and arcs.
+We also added and improved several APIs in the Graphics Library including the ability to draw quadrants and rounded rectangles.
 
 #### CharacterDisplay now supports I2C
 
