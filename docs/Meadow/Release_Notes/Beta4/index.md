@@ -80,6 +80,9 @@ You can now use the `System.IO` file system calls to do basic file system operat
 Our Garbage Collector work is almost done now; the Mono GC works in most use cases and has been tuned for the Meadow device. We still have an outstanding 
 deadlock to solve, but generally apps should stay alive for hours, days, or weeks, depending on memory allocation.
 
+### Other Known Issues
+
+Due to a configuration issue with UARTs that we're investigating, `D02` and `D05` are pulled `HIGH` on Meadow.OS startup. All other pins are pulled `LOW`.
 
 ### Bug Fixes
 
