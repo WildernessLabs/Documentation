@@ -24,6 +24,7 @@ Studio if you have access to one, but the manual steps for macOS and Linux are p
 1. Download/update [VS Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) extension.
 1. Connect the device in normal mode and click "Check Version".
 1. If you are on OS version 0.3.12 or later, you must first "Erase Flash".
+1. Click "Download Meadow OS".
 1. Next, reconnect the device in bootloader mode and then "Flash Device".
 
 #### Post-build
