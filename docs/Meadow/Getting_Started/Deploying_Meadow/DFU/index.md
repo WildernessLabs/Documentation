@@ -77,7 +77,7 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 
 To flash Meadow to the board:
 
- 1. Unzip the Meadow.OS.zip package. It should contain two files: `Meadow.OS.bin` and `Meadow.OS.Runtime.bin`.
+ 1. Unzip the Meadow.OS.zip package. It should contain several files and folders.
  2. Open the Command Prompt (Windows) or Terminal (macOS/Linux).
  3. Navigate to the folder that contains the Meadow OS bin file.
  4. Enter `dfu-util --list` to see a list of dfu enabled devices:
@@ -91,7 +91,6 @@ To flash Meadow to the board:
   [Zadig](https://zadig.akeo.ie/) to replace the default driver with a WinUSB driver. Refer to
   [Scott Hanselman's blog]( https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx)
   for more details.
-
 
  5. Select and copy the serial number of your Meadow board.
  6. Execute the following command, replacing `[DEVICE_SERIAL]` with the serial number you found in
@@ -115,6 +114,13 @@ To flash Meadow to the board:
     `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
     After "Mono runtime successfully flashed," hit space to exit.
  13. Reset F7 - press the reset (**RST**) button.
+ 14. Upload the ESP32 bootloader:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --Esp32WriteFile -f bootloader.bin --McuDestAddr 0x1000` 
+ 15. Upload the ESP32 partition table:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --Esp32WriteFile -f partition-table.bin --McuDestAddr 0x8000`
+ 16. Upload the ESP32 Meadow Comms application:  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --Esp32WriteFile -f MeadowComms.bin --McuDestAddr 0x10000`
+ 17. Reset F7
 
 Your board is now ready to have a Meadow application deployed to it!
 

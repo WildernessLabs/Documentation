@@ -4,7 +4,7 @@ title: Meadow OS Deployment
 subtitle: Flashing the Meadow with the Visual Studio Extension
 ---
 
-## Install MeadowOS
+## Install the Visual Studio Extension
 
 First, you need to install the latest **VS Tools for Meadow Extension** by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
@@ -12,9 +12,9 @@ First, you need to install the latest **VS Tools for Meadow Extension** by [down
 1. Click **Online** and search for `Meadow`.
 1. Install **VS Tools for Meadow** (version 0.6.0 or later), shut down all instances of Visual Studio, and restart.
 
-Next, let's install MeadowOS.
+## Install Meadow.OS
 
-*Important: If you previously installed MeadowOS with `dfu-util` and updated the STM32 BOOTLOADER driver from STTub30 to WinUSB through Zadig, you need to uninstall the WinUSB driver. See **Uninstall WinUSB Bootloader Driver** below.*
+**Important:** If you previously installed Meadow.OS with `dfu-util` and updated the STM32 BOOTLOADER driver from STTub30 to WinUSB through Zadig, you need to uninstall the WinUSB driver. See **Uninstall WinUSB Bootloader Driver** below.
 
 1. Open Visual Studio 2019 and select **Continue without code**.
 1. Open Meadow Device Explorer: View > Other Windows > Meadow (or Ctrl+Shift+M).  
