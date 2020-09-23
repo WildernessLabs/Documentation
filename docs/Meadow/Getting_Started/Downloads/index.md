@@ -15,6 +15,8 @@ subtitle: Guides and documentation for Meadow
   </tbody>
 </table>
 
+<p><a href="https://www.wildernesslabs.co/downloads?f=/Meadow_Beta/Meadow.Network_0.4.0.zip">Meadow.Network_0.4.0.zip</a></p>
+
 <script language="javascript">
     fetch('https://www.wildernesslabs.co/api/releases')
     .then(response => response.json())
