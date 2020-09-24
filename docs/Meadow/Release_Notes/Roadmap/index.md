@@ -14,15 +14,12 @@ The current release of Meadow is [Beta3](../Beta4/)
 
 ## Future
 
-### Beta 5 Coming Features
+### Beta 4.x Coming Features
 
  * Meadow Board in-IDE Activation (turning on the Meadow Security stack)
  * In-IDE debugging of Meadow Apps
  * Bluetooth APIs
  * SQLite support
-
-Additionally, we're hoping to squeeze in some bonus features:
-
  * Mono Linking and other optimizations
  * CAN support
 
