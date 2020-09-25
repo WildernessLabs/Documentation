@@ -42,6 +42,10 @@ A bug in msbuild is causing `System.Net.Http.dll` to not copy to the Output Dire
 
 ### macOS/Linux Manual Instructions
 
+First, go to the [Downloads page](http://developer.wildernesslabs.co/Meadow/Getting_Started/Downloads/) and download the Beta 4.0 Meadow.OS binaries, the Beta 4.0 CLI, and the Meadow network binaries.
+
+Unzip everything to a common folder, the instructions below assume the OS and network binaries are in the same folder and the CLI is in a `Meadow.CLI` subfolder relative to the OS binaries.
+
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util
 installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
 

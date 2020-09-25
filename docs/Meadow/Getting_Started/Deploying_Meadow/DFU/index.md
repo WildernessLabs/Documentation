@@ -4,15 +4,15 @@ title: Meadow OS Deployment
 subtitle: Flashing the Meadow with the latest OS via Device Firmware Upgrade (DFU).
 ---
 
-**NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 3.12.
+**NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 4.x.
 
 When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it. To do this, you'll need to:
 
- 1. Download the latest [Meadow.OS](http://wldrn.es/latestmeadowos) files.
+ 1. [Download the latest binaries](http://developer.wildernesslabs.co/Meadow/Getting_Started/Downloads/) including the OS, CLI and Network binaries.
  2. Put the device into Device Firmware Upgrade (DFU) mode.
  3. Upload the files to the device. 
 
-Alternatively, you can follow this step by step guide for both macOS and Windows: 
+You can follow this detailed step by step guide for both macOS and Windows: 
 
 ## Step 1: Install dfu-util
 
@@ -48,7 +48,7 @@ You can install dfu-util using the **apt** package manager.
    sudo apt-get install dfu-util
    ```
 
-## Step 2: Put the device into DFU Bootloader mode.
+## Step 3: Put the device into DFU Bootloader mode.
 
 To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
 
@@ -58,8 +58,13 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
+## Step 3: Download Meadow OS, CLI and network binaries 
 
-## Step 3: Upload Meadow.OS
+Go to the [Downloads page](http://developer.wildernesslabs.co/Meadow/Getting_Started/Downloads/) and download the Beta 4.0 Meadow.OS binaries, the Beta 4.0 CLI, and the Meadow network binaries.
+
+Unzip everything to a common folder - the instructions below assume the OS and network binaries are in the same folder and the CLI is in a `Meadow.CLI` sub-folder relative to the binaries.
+
+## Step 4: Upload Meadow.OS and network binaries
 
 **NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 3.12.
 
@@ -77,7 +82,7 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 
 To flash Meadow to the board:
 
- 1. Unzip the Meadow.OS.zip package. It should contain several files and folders.
+ 1. Unzip the Meadow.OS, network and CLI zips as stated in Step 3 above.
  2. Open the Command Prompt (Windows) or Terminal (macOS/Linux).
  3. Navigate to the folder that contains the Meadow OS bin file.
  4. Enter `dfu-util --list` to see a list of dfu enabled devices:
