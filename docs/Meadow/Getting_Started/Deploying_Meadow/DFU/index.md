@@ -66,7 +66,7 @@ Unzip everything to a common folder - the instructions below assume the OS and n
 
 ## Step 4: Upload Meadow.OS and network binaries
 
-**NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 3.12.
+**NOTE** Steps to update Meadow OS have changed! Please review the steps carefully before updating to beta 4.x.
 
 The instructions are essentially the same on all supported platforms (Windows, macOS, Linux).
 

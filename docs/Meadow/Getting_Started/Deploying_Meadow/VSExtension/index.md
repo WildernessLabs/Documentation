@@ -10,7 +10,7 @@ First, you need to install the latest **VS Tools for Meadow Extension** by [down
 
 1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
 1. Click **Online** and search for `Meadow`.
-1. Install **VS Tools for Meadow** (version 0.6.0 or later), shut down all instances of Visual Studio, and restart.
+1. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart.
 
 ## Install Meadow.OS
 
@@ -19,7 +19,9 @@ First, you need to install the latest **VS Tools for Meadow Extension** by [down
 1. Open Visual Studio 2019 and select **Continue without code**.
 1. Open Meadow Device Explorer: View > Other Windows > Meadow (or Ctrl+Shift+M).  
 ![Meadow Device Explorer](explorer.png){:standalone}
-1. Click **Download MeadowOS**.
+1. Click **Download Meadow.OS**.
+1. Connect the device in normal mode and click **Check Version**.
+1. If you are on OS version 0.3.12 or later, you must first **Erase Flash**.
 1. Connect your Meadow device in bootloader mode by connecting your device while holding down the **BOOT** button.
 1. Click **Flash Device**. This will take a couple minutes to complete.
 1. Choose the correct port in **Select Target Device Port** dropdown. *Hint: open Device Manager and expand Ports (COM & LPT), the correct Meadow device COM port is **USB Serial Device**.*
