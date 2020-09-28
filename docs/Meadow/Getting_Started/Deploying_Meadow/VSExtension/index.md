@@ -6,6 +6,10 @@ subtitle: Flashing the Meadow with the Visual Studio Extension
 
 ## Install the Visual Studio Extension
 
+**Important Note:** Due to a recently discovered bug in the Visual Studio for Windows updater, you must use the manual DFU-based installation documented [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/), in order to get WiFi networking to work in b4.0.
+
+<!--
+
 First, you need to install the latest **VS Tools for Meadow Extension** by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
 1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
@@ -37,5 +41,7 @@ First, you need to install the latest **VS Tools for Meadow Extension** by [down
 ![Driver Uninstall](driver_uninstall.png){:standalone}
 1. After uninstall is completed, the device will appear as **STM Device in DFU Mode** under Universal Serial Bus controllers.
 1. Reconnect the device in bootloader mode.
+
+-->
 
 ## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)
