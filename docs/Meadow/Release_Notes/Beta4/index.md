@@ -20,12 +20,18 @@ This release requires an OS update as well as IDE extension updates. We recommen
 Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
 
 ### Windows instructions
+ 
+**Note:** Due to a bug in the VS for Windows IDE Extension, you must update manually in order to get WiFi networking working.
+
+<!--
+### Windows instructions
 
 1. Download/update [VS Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) extension.
 1. Connect the device in normal mode and click "Check Version".
 1. If you are on OS version 0.3.12 or later, you must first "Erase Flash".
 1. Click "Download Meadow OS".
 1. Next, reconnect the device in bootloader mode and then "Flash Device".
+-->
 
 #### Post-build
 
@@ -40,7 +46,9 @@ A bug in msbuild is causing `System.Net.Http.dll` to not copy to the Output Dire
 </Project>
 ```
 
-### macOS/Linux Manual Instructions
+<!--### macOS/Linux Manual Instructions-->
+
+#### Manual Update Instructions
 
 First, go to the [Downloads page](http://developer.wildernesslabs.co/Meadow/Getting_Started/Downloads/) and download the Beta 4.0 Meadow.OS binaries, the Beta 4.0 CLI, and the Meadow network binaries.
 
