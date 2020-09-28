@@ -21,6 +21,11 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 | Project       | Image |
 |---------------|-------|
 | [Hello, LED: controlling the onboard RGB LED.](https://www.hackster.io/wilderness-labs/getting-started-w-meadow-by-controlling-the-onboard-rgb-led-ea6bc0) | ![](Gifs/Blinky.gif) |
+| [LedBar controlled with Rotaty Encoder.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/RotaryLedBar.gif) |
+| [EdgeASketch with RotaryEncoder and display.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/EdgeASketch.gif) |
+| [Image Gallery with buttons and display.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/GalleryViewer.jpg) |
+| [Expand IO Ports with an MCP23008.](https://www.hackster.io/wilderness-labs/expanding-io-ports-on-meadow-with-an-mcp23008-23a512) | ![](Gifs/McpLeds.gif) |
+| [LCD clock with onboard RTC chip.](https://www.hackster.io/wilderness-labs/build-a-clock-with-meadow-s-onboard-real-time-clock-chip-2b1f85) | ![](Gifs/Clock.gif) |
 | [Simone, a simple Simon with lights and sound.](https://www.hackster.io/wilderness-labs/build-your-own-simon-game-with-meadow-3701d5) | ![](Gifs/Simon.gif) |
 | [Soil Moisture Sensor display on an LED Bargraph.](https://www.hackster.io/wilderness-labs/soil-moisture-sensor-and-led-bar-graph-using-meadow-88c2c3) | ![](Gifs/MoistureMeter.gif) |
 | [Add up to 64 IO Ports using a Shift Register.](https://www.hackster.io/wilderness-labs/expanding-io-ports-of-a-meadow-with-a-74hc595-dde681) | ![](Gifs/Shift_Register.gif) |
