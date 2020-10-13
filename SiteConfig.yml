@@ -1,0 +1,25 @@
+# site basics
+title: Wilderness Labs Docs
+email: hello@wildernesslabs.co
+description: >-
+  Wilderness Labs documentation
+
+# razor templates
+templates_folder: Templates
+
+# main site folder
+areas:
+  - source_folder: /docs/Events
+    output_folder: /events
+  - source_folder: /docs/DevCamp2020
+    output_folder: /devcamp2020
+  - source_folder: /docs/HackKit
+    output_folder: /hackkit
+  - source_folder: /docs/Hardware
+    output_folder: /hardware
+  - source_folder: /docs/Meadow
+    output_folder: /meadow
+  - source_folder: /docs/Netduino
+    output_folder: /netduino
+  - source_folder: /docs/Samples
+    output_folder: /samples
