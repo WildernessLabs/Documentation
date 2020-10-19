@@ -4,6 +4,19 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.1
+
+This release focuses on stability and ease of use, and it comes with a couple of major improvements:
+
+* **Nugets are easier to consume.** - When you add a Nuget package to your project, the Meadow Visual Studio extension will now automatically resolve and include any necessary base class library (BCL) dlls. So for instance, when you add `System.Text.Json`, the extension will pull in the required dlls that it needs from our Meadow.Assemblies Nuget package and make sure they get deployed to the board. No more “Can’t find [x].dll” messages.
+* **Deployment is much more reliable.** - We also did a bunch of work on the extensions to integrate with the Meadow.CLI better. As a result, deployment is now not only more reliable, but we’ve reduced the random disconnects that were happening after an app was deployed, and VS was listening for application output.
+* **Flashing from VS for Windows works again.** - We were also able to fix the bug that we had in Visual Studio for Windows that prevented Meadow.OS from being flashed correctly. A number of customers were seeing an “unspecified network error,” after upgrading to b4.0, so we had to disable the automatic Meadow.OS upload and required manual flashing to upgrade. No more! Now you can easily upgrade Meadow.OS from Visual Studio again. Note that Mac users still have to flash manually, as that feature isn’t currently possible in VS4Mac.
+
+## Updating
+
+This release requires an OS update as well as IDE extension updates. We recommend updating on a Windows machine in Visual
+Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
+
 # b4.0
 
 W000t, b4.0 is here! This is a major release with a pile of new features and improvements, including our first cut of WiFi networking support as well as file system support! All in, this release includes:
