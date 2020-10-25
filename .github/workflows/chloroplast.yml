@@ -1,0 +1,51 @@
+name: Content Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
+          
+      - name: Add private GitHub registry to NuGet
+        run: dotnet nuget add source https://nuget.pkg.github.com/WildernessLabs/index.json --name "wildernesslabs" --username wildlingdev --password ${{ secrets.WILDLINGDEV_PAT }} --store-password-in-clear-text
+      
+      - name: Install Chloroplast
+        run: |
+          dotnet new tool-manifest
+          dotnet tool install Chloroplast.Tool
+        
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          cd $GITHUB_WORKSPACE
+          ls .
+          dotnet chloroplast
+          ls .
+          
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.1.3
+        with:
+          name: output
+          path: out/*
+          
+      - name: Publish to Web
+        if: github.ref == 'refs/heads/master'
+        uses: bacongobbler/azure-blob-storage-upload@v1.1.1
+        with:
+          source_dir: out
+          container_name: $web
+          connection_string: ${{ secrets.STORAGE_CONNECTION }}
+          sync: true
