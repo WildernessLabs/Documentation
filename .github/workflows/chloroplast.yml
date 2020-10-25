@@ -28,21 +28,14 @@ jobs:
           dotnet tool install Chloroplast.Tool
         
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Build with Chloroplast
         run: |
           cd $GITHUB_WORKSPACE
           ls .
           dotnet chloroplast
           ls .
-          
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.1.3
-        with:
-          name: output
-          path: out/*
-          
+
       - name: Publish to Web
-        if: github.ref == 'refs/heads/master'
         uses: bacongobbler/azure-blob-storage-upload@v1.1.1
         with:
           source_dir: out
