@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Audio.Mp3.Yx5300
 remarks: *content
 ---
 
-| Yx5300 |             |
+| Yx5300           |             |
 |------------------|-------------|
 | Status           | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300)  |
