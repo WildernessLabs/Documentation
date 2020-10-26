@@ -8,13 +8,13 @@ subtitle: Release Notes
 
 This release focuses on stability and ease of use, and it comes with a couple of major improvements:
 
-* **Expanded set of Meadow Base Class Libraries!** - Meadow is now shipping with a complete set of BCLs. This means you can now access libraries such as `System.Numerics`, `System.Transactions` and `System.Json`. This not only greatly extends the .NET API surface available to Meadow, but it also means that 3rd library compatibility is drastically improved now that Meadow includes many common dependancy libraries.
-* **Nugets are easier to consume.** - When you add a Nuget package to your project, the Meadow Visual Studio extension will now automatically resolve and include any necessary base class library (BCL) dlls. So for instance, when you add `System.Text.Json`, the extension will pull in the required dlls that it needs from our Meadow.Assemblies Nuget package and make sure they get deployed to the board. No more “Can’t find [x].dll” messages.
-* **Deployment is much more reliable.** - We also did a bunch of work on the extensions to better integrate with the Meadow.CLI. Deployment is now not only more reliable, but we’ve reduced the random disconnects that were happening after an app was deployed, and VS was listening for application output.
-* **Flashing from VS for Windows works again.** - We were also able to fix the bug that we had in Visual Studio for Windows that prevented Meadow.OS from being flashed correctly. A number of customers were seeing an “unspecified network error,” after upgrading to b4.0, so we had to disable the automatic Meadow.OS upload and required manual flashing to upgrade. No more! Now you can easily upgrade Meadow.OS from Visual Studio again. Note that Mac users still have to flash manually, as that feature isn’t currently possible in VS4Mac.
+* **Expanded set of Meadow Base Class Libraries!** Meadow is now shipping with a complete set of BCLs. This means you can now access libraries such as `System.Numerics`, `System.Transactions` and `System.Json`. This not only greatly extends the .NET API surface available to Meadow, but it also means that 3rd library compatibility is drastically improved now that Meadow includes many common dependancy libraries.
+* **Nugets are easier to consume.** When you add a Nuget package to your project, the Meadow Visual Studio extension will now automatically resolve and include any necessary base class library (BCL) dlls. So for instance, when you add `System.Text.Json`, the extension will pull in the required dlls that it needs from our Meadow.Assemblies Nuget package and make sure they get deployed to the board. No more “Can’t find [x].dll” messages.
+* **Deployment is much more reliable.** We also did a bunch of work on the extensions to better integrate with the Meadow.CLI. Deployment is now not only more reliable, but we’ve reduced the random disconnects that were happening after an app was deployed, and VS was listening for application output.
+* **Flashing from VS for Windows works again.** We were also able to fix the bug that we had in Visual Studio for Windows that prevented Meadow.OS from being flashed correctly. A number of customers were seeing an “unspecified network error,” after upgrading to b4.0, so we had to disable the automatic Meadow.OS upload and required manual flashing to upgrade. No more! Now you can easily upgrade Meadow.OS from Visual Studio again. Note that Mac users still have to flash manually, as that feature isn’t currently possible in VS4Mac.
 
 ## Meadow.Foundation
- 
+
 This release also includes a couple of new drivers:
 * `Analog.WaterLevel` is driver that represents common analog water level sensors to detect both the presense and depth of water.
 
