@@ -22,8 +22,7 @@ This release also includes a couple of new drivers:
 
 ## Updating
 
-This release requires an OS update as well as IDE extension updates. We recommend updating on a Windows machine in Visual
-Studio if you have access to one, but the manual steps for macOS and Linux are provided as well.
+This release only requires IDE extension and Meadow nuget updates. 
 
 # b4.0
 
