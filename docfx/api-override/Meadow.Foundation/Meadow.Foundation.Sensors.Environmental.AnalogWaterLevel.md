@@ -9,6 +9,10 @@ remarks: *content
 | Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Temperature)  |
 | NuGet package    | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /> |
 
+The analog water level sensor will output a voltage based on the amount of conductivity detected across the sensor area. Most sensors will jump to a signal of about ~1V as soon as the sensor area touches water and the voltage increases linearly as the depth increases. 
+
+Be careful to limit the water contact to only the the sensor area. Do not submerge the water level sensor.
+
 ### Code Example
 
 ```csharp
