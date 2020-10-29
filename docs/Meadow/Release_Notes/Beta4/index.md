@@ -18,7 +18,7 @@ This release focuses on stability and ease of use, and it comes with a couple of
 This release also includes a couple of new drivers:
 * `Analog.WaterLevel` is driver that represents common analog water level sensors to detect both the presense and depth of water.
 
-* `Audio.Mp3.Yx5300` is an MP3 player controlled over serial. It's now possible to add sound effects or music to your Meadow proejct.
+* `Audio.Mp3.Yx5300` is an MP3 player controlled over serial. It's now possible to add sound effects or music to your Meadow project.
 
 ## Updating
 
