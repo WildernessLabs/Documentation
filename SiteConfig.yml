@@ -7,6 +7,10 @@ description: >-
 # razor templates
 templates_folder: Templates
 
+files:
+  - source_file: /docs/index.md
+    output_folder: /index.html
+
 # main site folder
 areas:
   - source_folder: /docs/Events
