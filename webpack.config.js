@@ -70,6 +70,7 @@ module.exports = {
         contentBase: path.join(__dirname, '/out'),
         compress: true,
         port: 9000,
-        writeToDisk: true
+        writeToDisk: true,
+        open: true
     }
 }
