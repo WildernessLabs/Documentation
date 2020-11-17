@@ -1,15 +1,23 @@
-﻿<!DOCTYPE html>
+﻿@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.RenderedContent>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@Model.GetMeta("Title")</title>
+    <link rel="stylesheet" type="text/css" href="/build/assets/fonts/fonts.css">
     <link href="/build/styles/main.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <h1>Wilderness Labs</h1>
+    <header>
+        @await PartialAsync("docs/topmenu.md")
+    </header>
     <div class="maincontent">
-    @Raw(Model.Body)
+        @Raw(Model.Body)
     </div>
+    <footer>
+        <p>Wilderness Labs 2020</p>
+    </footer>
 </body>
 </html>

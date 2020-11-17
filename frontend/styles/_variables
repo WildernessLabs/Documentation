@@ -1,0 +1,21 @@
+$border-light: #fdf8ec;
+
+$color-brown: #524740;
+$color-orange: #EF7D3B;
+$color-blue: #23ABE3;
+$color-light-orange: #efe5dc;
+$color-off-white: #FFFEFB;
+$color-light-grey: #f9f5f1;
+$content-spacing: 20px;
+$color-grey: #e6e4ea;
+$color-beige: #eee5dd;
+
+$gutter-content: 4%;
+$gutter-screen: 8%;
+$gutter-top-main-nav: 94px;
+
+$nav-height: 90px;
+$nav-top-spacing: 94px+50px;
+
+$offset-left-nav: 20%;
+
