@@ -1,7 +1,21 @@
 
-@import '~svg-spritemap-webpack-plugin/iconmap.scss';
+@import '~svg-spritemap-webpack-plugin/iconmap.scss'
 
-.example
-    &-example
-        @include sprite('catalog-aws')
-    
+.icon 
+  display: inline-block
+
+.arrow
+    &-orange
+        @include sprite('orange-arrow')
+
+.logo-header
+    width: 43px
+    height: 23px
+    background: url('/assets/svgs/icons/logo-header.svg') left top no-repeat
+    background-size: contain
+
+.pencil
+    width: 18px
+    height: 18px
+    background: url('/assets/svgs/icons/pencil.svg') left top no-repeat
+    background-size: contain

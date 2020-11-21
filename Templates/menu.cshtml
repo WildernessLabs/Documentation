@@ -3,28 +3,44 @@
 @using Microsoft.Extensions.Configuration;
 @using Chloroplast.Core.Extensions;
 @{
-    string RenderNodes(IConfigurationSection section)
+    string RenderNodes(IConfigurationSection section, bool isInit)
     {
         var children = section.GetChildren();
         if (children.Any())
         {
-        <ul>
-            @foreach(var item in children)
-            {
-                <li>
-                    <a href="@item["path"]">@item["title"]</a>
-                    @if (item.ContainsKey("items"))
+        
+            @if(isInit){
+                <ul class="nav-accordion">
+                    @foreach(var item in children)
                     {
-                        @Raw(RenderNodes(item.GetSection("items")))
+                        <li>
+                            <a href="#" aria-expanded="false" class="trigger primary">@item["title"]</a>
+                            @if (item.ContainsKey("items"))
+                            {
+                                @Raw(RenderNodes(item.GetSection("items"), false))
+                            }
+                        </li>
                     }
-                </li>
+                </ul>
+            } else {
+                <ul>
+                    @foreach(var item in children)
+                    {
+                        <li>
+                            <a href="#" aria-expanded="false" class="trigger">@item["title"]</a>
+                            @if (item.ContainsKey("items"))
+                            {
+                                @Raw(RenderNodes(item.GetSection("items"), false))
+                            }
+                        </li>
+                    }
+                </ul>
             }
-        </ul>
         }
         return "";
     }
 }
 
 <section class="sidebar">
-    @RenderNodes(Model.Metadata.GetSection ("navTree"))
+    @RenderNodes(Model.Metadata.GetSection ("navTree"), true)
 </section>

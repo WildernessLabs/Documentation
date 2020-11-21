@@ -5,19 +5,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@Model.GetMeta("Title")</title>
-    <link rel="stylesheet" type="text/css" href="/build/assets/fonts/fonts.css">
+    <link href="/build/assets/fonts/fonts.css" rel="stylesheet" type="text/css">
     <link href="/build/styles/main.css" type="text/css" rel="stylesheet" />
+
 </head>
 <body>
-    <h1>Wilderness Labs</h1>
     <header>
-        @await PartialAsync("docs/topmenu.md")
+        <div class="nav-main-wrapper">
+            <h1>
+                <a href="/" class="logo-header">
+                    <span class="visually-hidden">Wilderness Labs</span>
+                </a>
+            </h1>
+            <nav class="nav-main" aria-label="Wilderness Labs Nav">
+                <ul>
+                    <li><a href="http://wildernesslabs.co/developers">Developers</a></li>
+                    <li><a href="http://wildernesslabs.co/enterprise">Enterprise</a></li>
+                    <li><a href="http://wildernesslabs.co/hardware">Hardware</a></li>
+                    <li><a href="https://store.wildernesslabs.co/">Shop</a></li>
+                    <li><a href="http://developer.wildernesslabs.co/">Docs</a></li>
+                    <li><a href="https://community.wildernesslabs.co/">Community</a></li>
+                    <li><a href="http://blog.wildernesslabs.co/">Blog</a></li>
+                    <li><a href="http://wildernesslabs.co/login">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-secondary-wrapper">
+            <nav class="nav-secondary" aria-label="Documentation Nav">
+                @await PartialAsync("docs/topmenu.md")
+            </nav>
+        </div>
     </header>
-    <div class="maincontent">
+    <main>
         @Raw(Model.Body)
-    </div>
+    </main>
     <footer>
-        <p>Wilderness Labs 2020</p>
+        <div class="footer-content">
+          <p>Don't see what you're looking for?</p>
+          <p>Ask a <a href="#">question</a>, or make a <a href="#">request</a></p>
+          <p class="brand">Wilderness Labs 2020</p>
+        </div>
     </footer>
+    <script src="/build/js/main.bundle.js"></script>
 </body>
 </html>

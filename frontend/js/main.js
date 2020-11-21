@@ -1,6 +1,7 @@
+import LeftNav from './modules/LeftNav';
+
 const main = () => {
-    console.log("Chloroplast Javascript Init");
-    console.log("Testing");
+    LeftNav();
 }
 
 main();

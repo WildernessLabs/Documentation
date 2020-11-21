@@ -1,0 +1,120 @@
+nav ul 
+    margin: 0
+    padding: 0
+    li 
+        list-style-type: none
+        display: inline-block
+    a
+        font-family: "Wavehaus-Book"
+        font-size: 18px
+        letter-spacing: 1px
+        color: #675130
+
+.nav-main-wrapper
+    display: flex
+    padding: 1.875em 0 1.875em 0
+    width: 924px
+    margin: 0 auto
+    .logo-header
+        display: block
+    .nav-main
+        ul
+            li
+                margin-left: 1.5em
+                
+
+.nav-secondary-wrapper
+    background: #FAF6F0
+    ul
+        li
+            margin-right: 1.9em
+            a
+              display: inline-block
+              padding: 1.188em 0.7em
+              &:hover, &:focus
+                background: #F88909
+                color: #fff
+
+
+.nav-accordion
+    a 
+        text-decoration: none
+        color: #675133
+        font-family: "Wavehaus-Book"
+
+    .primary
+        font-family: "Wavehaus-Book"
+        font-size: 18px
+        border-bottom: 0.5px solid #D7D3D0
+        height: 46px
+        padding: 0.8em 1.8em
+        line-height: 19px
+        display: block
+        
+    .has-submenu
+        position: relative
+        &::before
+            content: " ";
+            background: url('/assets/svgs/icons/orange-arrow.svg') no-repeat
+            width: 10px
+            height: 10px
+            position: absolute
+            right: 1.2em
+            top: 1em
+            transform: rotate(180deg)
+        &.active
+            &::before 
+                transform: rotate(0deg)
+                top: 1.2em
+
+    /* Tier 1 of Accordion */
+    li
+        list-style-type: none
+        /* Tier 2 Wrapper */
+        ul
+            border-bottom: none
+            padding: 0
+            overflow: hidden
+            
+            max-height: 0
+            opacity: 0
+            .has-submenu
+                padding-left: 1em
+                &::before
+                    left: 0
+                    top: 5px
+                    transform: rotate(90deg)
+                &.active::before
+                    top: 2px
+                    transform: rotate(180deg)
+
+            &.active 
+                display: block
+                border-bottom: 0.5px solid #D7D3D0
+                max-height: 10000px
+                opacity: 1
+                transition: max-height 0.6s ease, opacity 0.6s ease 0.3s
+                
+            
+            li
+                padding: 0.3em 1.8em 0
+                &:first-child
+                    margin-top: 10px
+                &:last-child
+                    margin-bottom: 10px
+                /* Tier 3 Wrapper */
+                ul 
+                    &.active 
+                        border-bottom: none
+                    li 
+                        &:first-child, &:last-child
+                            margin-top: 0
+                            margin-bottom: 0
+
+@keyframes slideDown
+    from 
+        max-height: 0;
+    
+    to 
+        max-height: 500px;
+    

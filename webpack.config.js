@@ -71,6 +71,7 @@ module.exports = {
         compress: true,
         port: 9000,
         writeToDisk: true,
-        open: true
+        open: true,
+        liveReload: true
     }
 }

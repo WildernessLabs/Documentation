@@ -1,8 +1,44 @@
 @import "reset.scss"
 @import "mixins.scss"
+@import "icons"
 @import "variables"
 @import "fonts"
+@import "nav"
+@import "content"
+@import "codepreview"
+@import "articlebar"
 @import '~svg-spritemap-webpack-plugin/iconmap.scss'
 
 body 
-    background: #ff9007
+    font-size: 16px
+    background: #fff 
+
+
+main 
+    display: flex
+
+
+.sidebar, .articlebar
+    width: 25%
+
+footer 
+  margin: 0 16.65%
+  padding: 3% 0
+  border-left: 1px solid #12BBF3
+  border-right: 1px solid #12BBF3
+  .footer-content
+    border-top: 5px solid #FF8E0D
+    padding: 3% 0
+    margin: 0 6%
+  p
+    font-family: "Wavehaus-Book"
+    font-size: 18px
+    margin-bottom: 1em
+    &.brand
+      padding-top: 2em
+      font-size: 13px
+
+  a 
+    color: #12BBF3
+    &:hover, &:focus
+        text-decoration: none

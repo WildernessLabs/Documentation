@@ -9,6 +9,8 @@ navTree:
   title: Hardware & Circuits
 - path: /hackkit
   title: Hack Kit Pro
+- path: /netduino
+  title: Netduino
 - path: /events
   title: Upcoming Events
 - path: /devcamp2020

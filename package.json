@@ -42,5 +42,8 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0",
     "write-file-webpack-plugin": "^4.5.1"
+  },
+  "dependencies": {
+    "metismenujs": "^1.2.1"
   }
 }

@@ -1,11 +1,36 @@
 ﻿@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.RenderedContent>
 @await PartialAsync("docs/Samples/menu.md")
 <section class="content">
-    <h2>Samples!</h2>
-    <h3>@Model.GetMeta("title")</h3>
+    <div class="content-banner">
+        <h2>Samples</h2>
+        <h3>@Model.GetMeta("title")</h3>
+    </div>
+        
     @if (@Model.HasMeta("subtitle"))
     {
         <h4>@Model.GetMeta("subtitle")</h4>
     }
-    @Raw(Model.Body)
+    <div class="content-body">
+        @Raw(Model.Body)
+    </div>
+</section>
+<section class="articlebar">
+  <div class="page-info">
+    <p>
+      <span class="visually-hidden">Last Edited</span>
+      <span>04/17/2020</span>
+      <a class="pencil icon" href="#"><span class="visually-hidden">Edit Article</a>
+  </div>
+  <div class="article-nav">
+    <h2>In this article</h2>
+    <ul>
+      <li><a class="active" href="#">Hardware</a></li>
+      <li><a href="#">Meadow TX</a></li>
+      <li><a href="#">Ground and Power</a></li>
+      <li><a href="#">UART/TLL vs RS-232</a></li>
+      <li><a href="#">Meadow Serial Ports</a></li>
+      <li><a href="#">Using the Meadow Serial API</a></li>
+      <li><a href="#">Suffix Delimited Messages</a></li>
+    </ul>
+  </div>
 </section>
