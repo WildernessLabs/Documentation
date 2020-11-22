@@ -14,7 +14,7 @@ This increases solution reliability by making sure that if the application fails
 To use the watchdog timer, you first enable it, passing the a countdown timeout (in milliseconds) which specifies how long you have to reset the countdown before the device is reset.
 
 Then, prior to the countdown elapsing, you must reset the countdown, to prevent the device from reseting.
-S
+
 ## Enabling the Watchdog Timer
 
 ```csharp
@@ -43,4 +43,3 @@ void StartPettingWatchdog(int pettingInterval)
 }
 ```
 
-# 
