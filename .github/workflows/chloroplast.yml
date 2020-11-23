@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
@@ -34,6 +35,16 @@ jobs:
           ls .
           dotnet chloroplast
           ls .
+
+      # Installs node dependencies required to build front end
+      - name: Install node dependencies
+        run: |
+          npm ci
+
+      # Build Chloroplast frontend
+      - name: Build Chloroplast frontend 
+        run: |
+          npm run build
 
       - name: Publish to Web
         uses: bacongobbler/azure-blob-storage-upload@v1.1.1
