@@ -68,9 +68,9 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [GPSWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.GPSWing.html) | Ultimate GPS featherwing |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [JoyWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.JoyWing.html) | A 2-axis joystick and 5 momentary buttons gamepad |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [LedMatrix8x16](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.html) | 8x16 LED matrix |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | MotorWing | Motor driver featherwing |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [MotorWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.MotorWing.html) | Motor driver featherwing |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Oled128x32](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html) | 128x32 OLED display |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | ServoWing | 8-Channel PWM |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ServoWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.ServoWing.html) | 8-Channel PWM |
 
 ### Integrated Circuits (ICs)
 
