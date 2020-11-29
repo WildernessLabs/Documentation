@@ -35,7 +35,6 @@ nav ul
                 background: #F88909
                 color: #fff
 
-
 .nav-accordion
     a 
         text-decoration: none
@@ -44,7 +43,7 @@ nav ul
 
     .primary
         font-family: "Wavehaus-Book"
-        font-size: 18px
+        font-size: 16px
         border-bottom: 0.5px solid #D7D3D0
         height: 46px
         padding: 0.8em 1.8em
@@ -74,10 +73,6 @@ nav ul
         ul
             border-bottom: none
             padding: 0
-            overflow: hidden
-            
-            max-height: 0
-            opacity: 0
             .has-submenu
                 padding-left: 1em
                 &::before
@@ -89,11 +84,7 @@ nav ul
                     transform: rotate(180deg)
 
             &.active 
-                display: block
                 border-bottom: 0.5px solid #D7D3D0
-                max-height: 10000px
-                opacity: 1
-                transition: max-height 0.6s ease, opacity 0.6s ease 0.3s
                 
             
             li
@@ -117,4 +108,3 @@ nav ul
     
     to 
         max-height: 500px;
-    

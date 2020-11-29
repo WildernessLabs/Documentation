@@ -1,0 +1,25 @@
+.accordion
+    li
+        /* Tier 2 Wrapper */
+        ul
+            overflow: hidden
+            max-height: 0
+            opacity: 0
+            .has-submenu
+                padding-left: 1em
+                border-left: 2px solid #000
+
+            &.active 
+                display: block
+                max-height: 1000px
+                opacity: 1
+                transition: max-height 0.6s ease, opacity 0.6s ease 0.3s
+            li
+                padding-left: 20px
+
+@keyframes slideDown
+    from 
+        max-height: 0;
+    
+    to 
+        max-height: 500px;
