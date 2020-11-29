@@ -1,8 +1,6 @@
-import Accordion from './Accordion'
-
 const LeftNav = () => {
 
-    Accordion('.nav-accordion');
+
     // setTimeout(() =>{
     //     console.log("Timeout");
     //     

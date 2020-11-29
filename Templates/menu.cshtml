@@ -14,7 +14,7 @@
                     @foreach(var item in children)
                     {
                         <li>
-                            <a href="#" aria-expanded="false" class="trigger primary">@item["title"]</a>
+                            <a aria-expanded="false" class="trigger primary">@item["title"]</a>
                             @if (item.ContainsKey("items"))
                             {
                                 @Raw(RenderNodes(item.GetSection("items"), false))
@@ -27,7 +27,7 @@
                     @foreach(var item in children)
                     {
                         <li>
-                            <a href="#" aria-expanded="false" class="trigger">@item["title"]</a>
+                            <a aria-expanded="false" class="trigger">@item["title"]</a>
                             @if (item.ContainsKey("items"))
                             {
                                 @Raw(RenderNodes(item.GetSection("items"), false))
