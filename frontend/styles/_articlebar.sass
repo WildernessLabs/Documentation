@@ -6,6 +6,7 @@
     &.fixed-element
       padding-top: 83px
       width: 16.6%
+  
   .page-info
     margin: 0 1em
     padding-bottom: 1.2em
@@ -39,6 +40,11 @@
       font-size: 16px
       color: #3c3424
       text-decoration: none
-      &.active, &:hover, &:focus
+      &.active-header-link
         background: #F6F7F7
         border-right: 3px solid #12BBF3
+      &:hover, &:focus
+        font-weight: bold
+
+  @include breakpoint(mobiletablet)
+    display: none

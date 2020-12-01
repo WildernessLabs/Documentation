@@ -27,13 +27,19 @@ nav ul
     background: #FAF6F0
     ul
         li
-            margin-right: 1.9em
+          margin-right: 1.9em
+          a
+            display: inline-block
+            padding: 1.188em 0.7em
+
+            &:hover, &:focus
+              background: #F88909
+              color: #fff
+          @include breakpoint(desktop-small)
+            margin-right: 0.5em
             a
-              display: inline-block
-              padding: 1.188em 0.7em
-              &:hover, &:focus
-                background: #F88909
-                color: #fff
+              font-size: 16px
+              padding: 1.188em 0.4em
 
 .nav-accordion
     &.fixed-element

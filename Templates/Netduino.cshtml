@@ -29,7 +29,7 @@
       <ul>
         @foreach(var header in @Model.Headers)
         {
-          <li><a href="#@header.Slug">@Raw(header.Value)</a></li>
+          <li><a data-level="@header.Level" href="#@header.Slug">@Raw(header.Value)</a></li>
         }
       </ul>
       }
