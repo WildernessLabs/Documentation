@@ -2,6 +2,7 @@ import { doesExist } from './Utils';
 import Accordion from './modules/Accordion';
 import ArticleNav from './modules/ArticleNav';
 import { SetFixed } from './modules/FixedNav';
+import { FixedNavigation, MobileNavigation } from './modules/Navigation'
 
 const main = () => {
 
@@ -13,6 +14,9 @@ const main = () => {
   SetFixed('.article_inner');
  
   ArticleNav();
+
+  MobileNavigation();
+  FixedNavigation();
 }
 
 main();

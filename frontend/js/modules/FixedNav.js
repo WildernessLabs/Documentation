@@ -1,11 +1,11 @@
 const SetFixed = (element) => {
 
   try {
-    const headerEl = document.querySelector('header');
+    const headerEl = document.querySelector('.nav-main-wrapper');
     const scrollTop =  headerEl.offsetHeight;
     const offsetTop = headerEl.offsetHeight;
     const footerOffset = document.querySelector('footer').offsetTop;
-
+    
     // set initial state of fixed element
     const el = document.querySelector(element);
     setFixedState(el);
@@ -33,7 +33,7 @@ const SetFixed = (element) => {
       } else if(scrollPosition < scrollTop) {
         elem.classList.remove('fixed-element', 'fixed-bottom');
         elem.classList.add('static-top');
-        elem.style.top = '0px';
+        elem.style.top = `${scrollTop}px`;
         elem.style.bottom = 'inherit';
 
       }

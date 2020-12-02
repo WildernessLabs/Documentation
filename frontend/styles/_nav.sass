@@ -11,35 +11,58 @@ nav ul
         color: #675130
 
 .nav-main-wrapper
+  padding: 1.875em 1em 1.875em
+  position: fixed
+  width: 100%
+  top: 0
+  background: #fff
+  
+  .nav-main-inside
     display: flex
-    padding: 1.875em 1em 1.875em
     width: 924px
     margin: 0 auto
-    .logo-header
-        display: block
-    .nav-main
-        ul
-            li
-                margin-left: 1.5em
+    @include breakpoint(mobile tablet)
+      margin: 0
+  .logo-header
+      display: block
+      position: relative
+      left: 5px
+  .nav-main
+    ul
+      li
+        margin-left: 1.5em
+    @include breakpoint(mobile tablet)
+      display: none
+  .hamburger 
+    position: absolute
+    right: 1em
+    top: 35px
+    border: none
+    z-index: 10
+    display: none
+    @include breakpoint(mobile tablet) 
+      display: block
                 
 
 .nav-secondary-wrapper
-    background: #FAF6F0
-    ul
-        li
-          margin-right: 1.9em
-          a
-            display: inline-block
-            padding: 1.188em 0.7em
+  background: #FAF6F0
+  margin-top: 87px
+  ul
+    padding-left: 1em
+    li
+      margin-right: 1.9em
+      a
+        display: inline-block
+        padding: 1.188em 0.7em
 
-            &:hover, &:focus
-              background: #F88909
-              color: #fff
-          @include breakpoint(desktop-small)
-            margin-right: 0.5em
-            a
-              font-size: 16px
-              padding: 1.188em 0.4em
+        &:hover, &:focus
+          background: #F88909
+          color: #fff
+      @include breakpoint(desktop-small)
+        margin-right: 0.5em
+        a
+          font-size: 16px
+          padding: 1.188em 0.4em
 
 .nav-accordion
     &.fixed-element
@@ -109,6 +132,38 @@ nav ul
                         &:first-child, &:last-child
                             margin-top: 0
                             margin-bottom: 0
+      
+#mobile__nav
+  position: fixed
+  width: 100%
+  height: 100%
+  background: #FF8E0D
+  z-index: 10001
+  opacity: 0
+  transition: opacity 1000ms
+  padding-top: $gutter-screen
+  .nav-main
+    padding: $gutter-screen
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    ul
+      li 
+        float: none
+        margin-bottom: $content-spacing/2
+        display: block
+        text-align: center
+        a 
+          color: #ffff
+          font-size: 32px
+  .close
+    position: absolute
+    z-index: 10000
+    right: 1em
+    top: 2em
+  &.open
+      opacity: 1
 
 
 .fixed-element 

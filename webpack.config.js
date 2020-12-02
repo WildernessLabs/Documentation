@@ -42,8 +42,6 @@ module.exports = {
             { from: 'frontend/assets', to: 'assets' }
         ]),
         new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
             filename: 'styles/main.css'
         }),
         new SVGSpritemapPlugin('./frontend/assets/svgs/icons/*.svg',{

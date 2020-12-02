@@ -1,7 +1,6 @@
 /* Media Query Configuration */
 $media_queries : (
     'mobile'    : "only screen and (max-width: 768px)",
-    'mobiletablet' : "only screen and (max-width: 1024px)",
     'tablet'    : "only screen and (min-width: 769px) and (max-width: 1024px)",
     'desktop-small'    : "only screen and (min-width: 769px) and (max-width: 1200px)",
     'desktop-large'    : "only screen and (min-width: 1200px)",
