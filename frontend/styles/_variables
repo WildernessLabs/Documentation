@@ -19,3 +19,6 @@ $nav-top-spacing: 94px+50px;
 
 $offset-left-nav: 20%;
 
+$min-side: 300px;
+$max-side: 500px;
+

@@ -20,8 +20,22 @@ main
     display: flex
 
 
-.sidebar, .articlebar
-    width: 25%
+.content
+  width: 60%
+  @include breakpoint(mobile tablet)
+    width: 70%
+
+.articlebar
+  width: 20%
+
+.sidebar 
+  width: 20%
+  min-width: $min-side
+  max-width: 350px
+
+.articlebar
+  @include breakpoint(mobile tablet)
+    display: none
 
 footer 
   margin: 0 16.65%

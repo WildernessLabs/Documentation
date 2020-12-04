@@ -1,7 +1,5 @@
 const ArticleNav = () => {
 
-    
-
     try {
 
       /* Setup Viewport Tracking of Page Headers */
@@ -53,7 +51,6 @@ const setActiveLink = (elem) => {
 }
 
 const removeActiveArticleLink = () => {
-  console.log("Remove All Links");
   var links = document.querySelectorAll('.active-header-link');
 
   [].forEach.call(links, function(el) {

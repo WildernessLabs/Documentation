@@ -12,187 +12,196 @@ prepre {
   margin: 0 0 2em 0;
 }
 
-divpre {
+div pre {
   margin: 25px 0;
 }
 
+pre {
+  border: 1px solid #12BBF3;
+  border-radius: 15px;
+  position: relative;
+}
 /* ===========================================
    Syntax Highlighting  
    =========================================== */
-.content {
-  pre {
-    background: #eee;
-    border-radius: 15px;
-    padding: 7px;
-  }
+/* PrismJS 1.22.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+aspnet+csharp */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
 
-  divpre {
-    border: 2px solid #ef7d3b;
-  }
-    pre .c {
-      color: #998;
-      font-style: italic; }
-    pre .err {
-      color: #a61717;
-      background-color: #e3d2d2; }
-    pre .k {
-      color: #1A80AA;
-      font-weight: bold; }
-    pre .o {
-      font-weight: bold; }
-    pre .cm {
-      color: #998;
-      font-style: italic; }
-    pre .cp {
-      color: #999;
-      font-weight: bold; }
-    pre .c1 {
-      color: #b35e2c;
-      font-style: italic; }
-    pre .cs {
-      color: #999;
-      font-weight: bold;
-      font-style: italic; }
-    pre .gd {
-      color: #000;
-      background-color: #fdd; }
-    pre .gd .x {
-      color: #000;
-      background-color: #faa; }
-    pre .ge {
-      font-style: italic; }
-    pre .gr {
-      color: #a00; }
-    pre .gh {
-      color: #999; }
-    pre .gi {
-      color: #000;
-      background-color: #dfd; }
-    pre .gi .x {
-      color: #000;
-      background-color: #afa; }
-    pre .go {
-      color: #888; }
-    pre .gp {
-      color: #555; }
-    pre .gs {
-      font-weight: bold; }
-    pre .gu {
-      color: #aaa; }
-    pre .gt {
-      color: #a00; }
-    pre .kc {
-      font-weight: bold; }
-    pre .kd {
-      font-weight: bold; }
-    pre .kp {
-      font-weight: bold; }
-    pre .kr {
-      font-weight: bold; }
-    pre .kt {
-      color: #458;
-      font-weight: bold; }
-    pre .m {
-      color: #099; }
-    pre .s {
-      color: #d14; }
-    pre .n {
-      color: #844936;
-    }
-    pre .na {
-      color: #008080; }
-    pre .nb {
-      color: #0086B3; }
-    pre .nc {
-      color: #737D45;
-      font-weight: bold; }
-    pre .no {
-      color: #008080; }
-    pre .ni {
-      color: #800080; }
-    pre .ne {
-      color: #900;
-      font-weight: bold; }
-    pre .nf {
-      font-weight: bold; }
-    pre .nn {
-      color: #555; }
-    pre .nt {
-      color: #000080; }
-    pre .nv {
-      color: #008080; }
-    pre .ow {
-      font-weight: bold; }
-    pre .w {
-      color: #bbb; }
-    pre .mf {
-      color: #099; }
-    pre .mh {
-      color: #099; }
-    pre .mi {
-      color: #099; }
-    pre .mo {
-      color: #099; }
-    pre .sb {
-      color: #d14; }
-    pre .sc {
-      color: #d14; }
-    pre .sd {
-      color: #d14; }
-    pre .s2 {
-      color: #d14; }
-    pre .se {
-      color: #d14; }
-    pre .sh {
-      color: #d14; }
-    pre .si {
-      color: #d14; }
-    pre .sx {
-      color: #d14; }
-    pre .sr {
-      color: #009926; }
-    pre .s1 {
-      color: #d14; }
-    pre .ss {
-      color: #990073; }
-    pre .bp {
-      color: #999; }
-    pre .vc {
-      color: #008080; }
-    pre .vg {
-      color: #008080; }
-    pre .vi {
-      color: #008080; }
-    pre .il {
-      color: #099; }
-  }
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: black;
+   background: none;
+   text-shadow: 0 1px white;
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   font-size: 1em;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+ 
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
+ 
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+ 
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+   text-shadow: none;
+   background: #b3d4fc;
+ }
+ 
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+   text-shadow: none;
+   background: #b3d4fc;
+ }
+ 
+ @media print {
+   code[class*="language-"],
+   pre[class*="language-"] {
+     text-shadow: none;
+   }
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 3em;
+   margin: .5em 0;
+   overflow: auto;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #F6F7F7;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em;
+   border-radius: .3em;
+   white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: slategray;
+ }
+ 
+ .token.punctuation {
+   color: #999;
+ }
+ 
+ .token.namespace {
+   opacity: .7;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.boolean,
+ .token.number,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+   color: #12BBF3;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+   color: #12BBF3;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string {
+   color: #9a6e3a;
+   /* This background color was intended by the author of this theme. */
+   background: hsla(0, 0%, 100%, .5);
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.keyword {
+   color: #12BBF3;
+ }
+ 
+ .token.function,
+ .token.class-name {
+   color: #FF8E0D;
+ }
+ 
+ .token.regex,
+ .token.important,
+ .token.variable {
+   color: #e90;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }
+ 
+ 
 
-  // CODE BLOCK
-  .code-block {
-    pre.code {
-      white-space: pre-wrap;
-      margin-left: 0;
-      background: #1e1e1e;
-      color: #86cbea;
-      font-family: 'FuturaND-Medium', helvetica;
-      overflow-x: hidden;
-    }
-    pre.code:before {
-      counter-reset: listing;
-    }
-    pre.code code {
-      counter-increment: listing;
-      text-align: left;
-      float: left;
-      clear: left;
-    }
-    pre.code code::before {
-      content: counter(listing) "\A0 \A0";
-      color: #9f9e9e;
-      display: inline-block;
-      float: left;
-      padding-left: auto;
-      margin-left: auto;
-      text-align: right;
-    }
+// CODE BLOCK
+.code-block {
+  pre.code {
+    white-space: pre-wrap;
+    margin-left: 0;
+    background: #1e1e1e;
+    color: #86cbea;
+    font-family: 'FuturaND-Medium', helvetica;
+    overflow-x: hidden;
   }
+  pre.code:before {
+    counter-reset: listing;
+  }
+  pre.code code {
+    counter-increment: listing;
+    text-align: left;
+    float: left;
+    clear: left;
+  }
+  pre.code code::before {
+    content: counter(listing) "\A0 \A0";
+    color: #9f9e9e;
+    display: inline-block;
+    float: left;
+    padding-left: auto;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+.copy-code-button {
+
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}

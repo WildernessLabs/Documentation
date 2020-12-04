@@ -1,4 +1,4 @@
-const SetFixed = (element) => {
+const SetFixed = (element, parent) => {
 
   try {
     const headerEl = document.querySelector('.nav-main-wrapper');
@@ -14,6 +14,12 @@ const SetFixed = (element) => {
       setFixedState(el);
     });
     
+    if(parent){
+      window.addEventListener('resize', (e) => {
+        matchWidth(el, parent);
+      });
+    }
+
     function setFixedState(elem){
 
       const scrollPosition = window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
@@ -26,10 +32,14 @@ const SetFixed = (element) => {
         if(isMaxHeight){
           elem.classList.add('max-height');
         }
+        
+        if(!elem.classList.contains('fixed-element')){
+          elem.classList.add('fixed-element');
+          elem.style.top = offsetTop;
 
-        elem.classList.add('fixed-element');
-        elem.style.top = offsetTop;
-
+          if(parent) matchWidth(elem, parent);
+        }
+        
       } else if(scrollPosition < scrollTop) {
         elem.classList.remove('fixed-element', 'fixed-bottom');
         elem.classList.add('static-top');
@@ -47,6 +57,16 @@ const SetFixed = (element) => {
     }
   } catch(error){
     console.log(`Element: ${element} does not exist, cannot set to fixed`);
+  }
+}
+
+const matchWidth = (el, par) => {
+  console.log(el);
+  if(el.classList.contains('fixed-element')){
+    const width = par.getBoundingClientRect().width
+    el.style.width = `${width}px`;
+  } else if(el.style.width != 'auto'){
+    el.style.width = 'auto';
   }
 }
 
