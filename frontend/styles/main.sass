@@ -12,33 +12,30 @@
 @import '~svg-spritemap-webpack-plugin/iconmap.scss'
 
 body 
-    font-size: 16px
-    background: #fff 
+  font-size: 16px
+  background: #fff 
 
 
 main 
-    display: flex
+  display: flex
+  // max-width: 100%
+  // oveflow: hidden
 
-
-.content
-  width: 60%
-  @include breakpoint(mobile tablet)
-    width: 70%
-
+.content 
+  flex: 1
+  
 .articlebar
-  width: 20%
+  flex: 0 0 20%
 
 .sidebar 
-  width: 20%
-  min-width: $min-side
-  max-width: 350px
+  flex: 0 0 20%
 
 .articlebar
   @include breakpoint(mobile tablet)
     display: none
 
 footer 
-  margin: 0 16.65%
+  margin: 0 20%
   padding: 3% 0
   border-left: 1px solid #12BBF3
   border-right: 1px solid #12BBF3

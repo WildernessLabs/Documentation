@@ -135,7 +135,8 @@ var setup = new BaseShifterLcdTransferProvider.ShifterSetup()
     D6 = ShifterPin.GP4,
     D7 = ShifterPin.GP3
 };
-var lcdBus = new Shifter74Hc595LcdTransferProvider(SPI.SPI_module.SPI1, Pins.GPIO_PIN_D3,                Shifter74Hc595LcdTransferProvider.BitOrder.MSBFirst, setup);
+var lcdBus = new Shifter74Hc595LcdTransferProvider(SPI.SPI_module.SPI1, Pins.GPIO_PIN_D3, 
+                                                    Shifter74Hc595LcdTransferProvider.BitOrder.MSBFirst, setup);
 ```
 The `ShifterSetup` class defines which lines of the shift register implement a particular function:
 

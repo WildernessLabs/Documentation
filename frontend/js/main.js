@@ -8,12 +8,12 @@ import { Codeblock } from './modules/Codeblock';
 const main = () => {
 
   // initialize navigation accordion if it exists
-  const nav_selector = '.nav-accordion'
-  Accordion(nav_selector);
-  SetFixed(nav_selector, document.querySelector('.sidebar'));
-  
+  Accordion('.nav-accordion');
+
+  // init fixed navigations
+  SetFixed('.nav-accordion', document.querySelector('.sidebar'));
   SetFixed('.article_inner', document.querySelector('.articlebar'));
- 
+  
   ArticleNav();
 
   MobileNavigation();

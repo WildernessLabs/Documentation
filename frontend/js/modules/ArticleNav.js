@@ -1,24 +1,41 @@
+const throttle = require('lodash.throttle');
+
 const ArticleNav = () => {
 
     try {
 
       /* Setup Viewport Tracking of Page Headers */
       const headerLinks = document.querySelectorAll('.content-body a[name]');
+      
+      const offsetTop = document.querySelector('.nav-main-wrapper').offsetHeight + 15;
+      // const offsetTop = headerEl;
 
       if (headerLinks.length > 0) {
-        for (const link of headerLinks) {
-            
-          window.addEventListener('scroll', (event) => {
-            // console.log(`${link.getAttribute('name')} active state: ${isActive(link)}`);
-            if(isInViewport(link) && !isActive(link)){
-              
+
+        window.addEventListener('scroll', throttle(() =>{
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+              console.log("We are at the bottom!!");
+
+              const links = document.querySelectorAll('.article-nav a')
+              const lastLink = links[links.length - 1];
               removeActiveArticleLink();
+              setActiveLink(lastLink);
               
-              const navLink = document.querySelector(`a[href='#${link.getAttribute('name')}']`);
-              setActiveLink(navLink);
+            } else {
+              for (const link of headerLinks) {
+                if(link.getBoundingClientRect().top < offsetTop && !isActive(link)){
+                  
+                  removeActiveArticleLink();
+                  
+                  const navLink = document.querySelector(`a[href='#${link.getAttribute('name')}']`);
+                  setActiveLink(navLink);
+                }
+              }
             }
-          }, false);
-        }
+            
+          }, 100)
+        );
+    
       }
 
       /* Setup Events for Article Links */

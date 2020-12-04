@@ -1,4 +1,5 @@
-﻿@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.RenderedContent>
+﻿@using System.Linq
+@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.RenderedContent>
 @await PartialAsync("docs/Netduino/menu.md")
 <section class="content">
     <div class="content-banner">
@@ -26,13 +27,57 @@
       @if (Model.Headers.Length > 0)
       {
       <h2>In this article</h2>
-      <ul>
+      
+        @{int lastLevel = 0};
+        @{var lastItem = Model.Headers.Last()};
+        @{var firstItem = Model.Headers.First()};
+
         @foreach(var header in @Model.Headers)
         {
-          <li><a data-level="@header.Level" href="#@header.Slug">@Raw(header.Value)</a></li>
+          bool goingDeeper = lastLevel < header.Level;
+			    bool goingHigher = lastLevel > header.Level;
+
+          if(header.Equals(firstItem)){
+            @:<ul>
+          }
+
+          // Render nested UL if we are moving down the header heirarchy 
+          if(goingDeeper && !header.Equals(firstItem)){
+            @:<li><ul>
+          } 
+
+          // close nested UL if we are moving up the header heirarchy
+          if(goingHigher && !header.Equals(firstItem)){
+            @:</ul></li>
+          }
+          
+           <li><a data-level="@header.Level" href="#@header.Slug">@Raw(header.Value)</a></li>
+          
+          if(header.Equals(lastItem)){
+            @:</ul>
+          }
+
+          @{lastLevel = header.Level};
         }
-      </ul>
       }
     </div>
   </div>
 </section>
+
+@* int[] levels = new [] {1,2,2,3,1,2};
+		int lastLevel = 0;
+		foreach(var level in levels)
+		{
+			bool goingDeeper = lastLevel < level;
+			bool goingHigher = lastLevel > level;
+			if (goingDeeper)
+			{
+				// start a new list <ol>
+			}
+			if (goingHigher)
+			{
+				// end current list </ol>
+			}
+			// render <li>...</li>
+			lastLevel = level;
+		} *@

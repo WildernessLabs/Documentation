@@ -45,15 +45,8 @@ const SetFixed = (element, parent) => {
         elem.classList.add('static-top');
         elem.style.top = `${scrollTop}px`;
         elem.style.bottom = 'inherit';
-
       }
 
-      // else if(elementOffset > footerOffset && !isMaxHeight){
-      //   // elem.classList.remove('fixed-element', 'static-top');
-      //   // elem.classList.add('fixed-bottom');
-      //   // elem.style.top = 'auto';
-      //   // elem.style.bottom = '0px';
-      // }
     }
   } catch(error){
     console.log(`Element: ${element} does not exist, cannot set to fixed`);
@@ -61,7 +54,6 @@ const SetFixed = (element, parent) => {
 }
 
 const matchWidth = (el, par) => {
-  console.log(el);
   if(el.classList.contains('fixed-element')){
     const width = par.getBoundingClientRect().width
     el.style.width = `${width}px`;

@@ -25,8 +25,9 @@ const Codeblock = () => {
         
       });
     }
+
   }catch(error){
-    console.log(`Element: ${el} does not exist, cannot init accordion`);
+    console.log(`Element: ${el} does not exist, cannot init`);
   }
 }
 
