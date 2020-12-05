@@ -21,6 +21,7 @@ pre {
   border-radius: 15px;
   position: relative;
 }
+
 /* ===========================================
    Syntax Highlighting  
    =========================================== */
@@ -78,7 +79,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  /* Code blocks */
  pre[class*="language-"] {
    padding: 3em;
-   margin: .5em 0;
+   margin: .5em 0 2em;
    overflow: auto;
  }
  
