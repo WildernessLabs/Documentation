@@ -16,16 +16,12 @@
     <ul>
         @foreach(var item in children)
         {
-          @* if (CurrentURL.Contains(item["path"])){
-            <li>
-              <a class="active" href="@item["path"]">@item["title"]</a>
-            </li>
-          } else { *@
-            <li>
-              <a href="@item["path"]">@item["title"]</a>
-            </li>
-          @* } *@
-      }
+          string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "";
+          <li class="@activeAttribute" >
+            <a href="@item["path"]">@item["title"]</a>
+          </li>
+         
+        }
     </ul>
     }
     return "";

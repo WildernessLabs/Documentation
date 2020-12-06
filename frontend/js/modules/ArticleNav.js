@@ -7,23 +7,23 @@ const ArticleNav = () => {
       /* Setup Viewport Tracking of Page Headers */
       const headerLinks = document.querySelectorAll('.content-body a[name]');
       
-      const offsetTop = document.querySelector('.nav-main-wrapper').offsetHeight + 15;
-      // const offsetTop = headerEl;
-
       if (headerLinks.length > 0) {
 
         window.addEventListener('scroll', throttle(() =>{
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-              console.log("We are at the bottom!!");
+          if (isAtBottom()) {
 
-              const links = document.querySelectorAll('.article-nav a')
-              const lastLink = links[links.length - 1];
-              removeActiveArticleLink();
-              setActiveLink(lastLink);
+            const links = document.querySelectorAll('.article-nav a')
+            const lastLink = links[links.length - 1];
+
+            removeActiveArticleLink();
+            setActiveLink(lastLink);
               
             } else {
+
+              const offsetTop = document.querySelector('.nav-main-wrapper').offsetHeight + 15;
+
               for (const link of headerLinks) {
-                if(link.getBoundingClientRect().top < offsetTop && !isActive(link)){
+                if(!isActive(link) && link.getBoundingClientRect().top < offsetTop){
                   
                   removeActiveArticleLink();
                   
@@ -32,10 +32,8 @@ const ArticleNav = () => {
                 }
               }
             }
-            
-          }, 100)
+          }, 10)
         );
-    
       }
 
       /* Setup Events for Article Links */
@@ -59,6 +57,10 @@ const ArticleNav = () => {
     }
 }
 
+const isAtBottom = () => {
+  return (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight
+}
+
 const isActive = (elem) => {
   return elem.classList.contains('active-header-link');
 }
@@ -74,15 +76,5 @@ const removeActiveArticleLink = () => {
       el.classList.remove('active-header-link');
   });
 }
-
-const isInViewport = function (elem) {
-  var bounding = elem.getBoundingClientRect();
-  return (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <= (window.innerHeight - 400 || document.documentElement.clientHeight - 400) &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
 
 export default ArticleNav

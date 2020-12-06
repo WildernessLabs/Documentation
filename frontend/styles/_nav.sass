@@ -1,3 +1,7 @@
+body.scrolled 
+  .nav-main-wrapper
+    border-bottom: 1px solid #12BBF3
+
 nav ul 
     margin: 0
     padding: 0
@@ -50,15 +54,22 @@ nav ul
   margin-top: 87px
   ul
     padding-left: 1em
+    display: flex
+    flex-wrap: wrap
+    margin: 0 
+    padding: 0
     li
-      margin-right: 1.9em
       a
-        display: inline-block
-        padding: 1.188em 0.7em
+        display: block
+        padding: 1.188em 1em
 
         &:hover, &:focus
           background: #F88909
           color: #fff
+      &.active
+        a
+          background: #F88909
+          color: #fff 
       @include breakpoint(desktop-small)
         margin-right: 0.5em
         a

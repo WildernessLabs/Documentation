@@ -9,7 +9,7 @@ const Accordion = (el) => {
 
         if(subMenu && subMenu.nodeName == 'UL'){
           trigger.classList.add('has-submenu'); //setup submenu class
-          subMenu.style.display = 'none';
+          subMenu.classList.contains('active') ? subMenu.style.display = 'block' : subMenu.style.display = 'none';
           
           // bind event listeners for expand/collapse
           trigger.addEventListener("click", (e) => {
