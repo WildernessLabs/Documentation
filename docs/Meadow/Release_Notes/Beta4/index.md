@@ -4,6 +4,55 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.2
+
+This is a big release with a ton of stability fixes, an overhaul of the CLI, and big new features for networking. Major changes and improvements include:
+
+ * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more streamlined and reliable Meadow.OS upload experience.
+ * **WiFi Enumeration Fix** - You can now enumerate WiFi networks without having to first connect to a Network.
+ * **Faster, More Reliable OS Startup** - Meadow.OS startup is more robust and can handle a mismatch between co-processor firmware or runtime version better.
+ * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
+ * **WiFi Memory Leak Fixed** - Network requests no longer leak memory.
+ * **Networking Server Methods** - `UdpClient`, `TcpListener` and `TcpClient` are all working now. Note that we're still working on `HttpListener`.
+ * **Meadow.OS Watchdog Timer** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
+ * **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
+ * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The Graphics Library available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `ITextDisplay`s).
+
+## Meadow.Foundation
+
+### `TextDisplayMenu` Library
+
+The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on an `ITextDisplay` or a graphics display via `GraphicsLibrary`. 
+
+The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including [time, temperature, and others. Additionally; you can easily create custom menu item types that allow users to edit their value via the inputs.] <- Adrian, not sure if these actually got ported, so please edit.
+
+### `GraphicsLibrary` Updates
+
+[performance and??]
+
+### New Drivers
+
+ * Audio.Mp3.Yx5300 (serial MP3 player)
+ * Sensors.Atmospheric.AdaFruitMPRLS (pressure sensor - no generic controller)
+ * Displays.Ssd1327 (greyscale OLED)
+ * Additional TFT SPI Display Drivers:
+   * Displays.Tft.HX8357d
+   * Displays.Tft.GC9A01
+   * Displays.Tft.ILI9481
+   * Displays.Tft.ILI9486
+   * Displays.Tft.ILI9488
+   * Displays.Tft.Rm68140
+   * Displays.Tft.ST7796
+
+## Bug Fixes
+
+### Bug Fixes
+
+- [#118 - Interrupt events not unhooking](https://github.com/WildernessLabs/Meadow_Issues/issues/118) - Fixed.
+- [#116 - System.Net.Sockets.SocketException (0x80004005): Access denied on creating Socket](System.Net.Sockets.SocketException (0x80004005): Access denied on creating Socket) - Fixed as part of the new network work.
+- [#109 - CLI Uplink percentages > 100%](https://github.com/WildernessLabs/Meadow_Issues/issues/109) - Fixed as part of the CLI overhaul.
+
+
 # b4.0.1
 
 This release focuses on stability and ease of use, and it comes with a couple of major improvements:
