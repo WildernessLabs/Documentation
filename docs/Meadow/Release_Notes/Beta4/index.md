@@ -22,16 +22,16 @@ This is a big release with a ton of stability fixes, an overhaul of the CLI, and
 
 ### `TextDisplayMenu` Library
 
-The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on an `ITextDisplay` or a graphics display via `GraphicsLibrary`. 
+The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on a `CharacterDisplay` or a graphics display via `GraphicsLibrary`. 
 
-The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including [time, temperature, and others. Additionally; you can easily create custom menu item types that allow users to edit their value via the inputs.] <- Adrian, not sure if these actually got ported, so please edit.
+The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including: time, temperature, and numbers. Additionally, you can easily create custom menu item types that allow users to edit their value via the inputs.
 
 ### `GraphicsLibrary` Updates
 
 We improved performance for all displays using `GraphicsLibrary` with additional performance for color Tft displays.
 
 `GraphicsLibrary` also includes several new and improved APIs including:
-- Support for 12bpp (RGB444) displays and buffers which reduces frame buffer memory usage
+- Support for 12bpp (RGB444) display buffers which reduces frame buffer memory
 - Center and right text alignment when calling `DrawText`
 - `InvertPixel` and `InvertRectangle` methods which are great for drawing cursors
 
