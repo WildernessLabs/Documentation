@@ -66,9 +66,8 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [CharlieWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.CharlieWing.html) | 15x7 LED matrix display |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [DotStarWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.DotstarWing.html) | 6x12 RGB LED matrix |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [DotStarWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.DotstarWing.html) | 6x12 RGB LED matrix |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [GPSWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.GPSWing.html) | Ultimate GPS featherwing |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [JoyWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.JoyWing.html) | A 2-axis joystick and 5 momentary buttons gamepad |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [LedMatrix8x16](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.html) | 8x16 LED matrix |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [MotorWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.MotorWing.html) | Motor driver featherwing |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Oled128x32](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html) | 128x32 OLED display |
@@ -137,11 +136,11 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | Notes |
 |--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Blocked-red" />         | [Gp2D12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Gp2D12.html) | Sonic distance sensor   | Needs AOT compilation |
-| <img src="https://img.shields.io/badge/Blocked-red" />         | [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | Sonic distance sensor   | Needs AOT compilation |
-| <img src="https://img.shields.io/badge/Blocked-red" />         | [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hysrf05.html) | Sonic distance sensor | Needs AOT compilation |
-| <img src="https://img.shields.io/badge/Blocked-red" />         | [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Sfsr02.html) | Sonic distance sensor   | Needs AOT compilation |
-| <img src="https://img.shields.io/badge/Blocked-red" />         | [Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" />           | [Gp2D12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Gp2D12.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" />           | [HCSR04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" />           | [HYSRF05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hysrf05.html) | Sonic distance sensor  | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Blocked-red" />           | [SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Sfsr02.html) | Sonic distance sensor   | Needs AOT compilation |
+| <img src="https://img.shields.io/badge/Working-brightgreen" />   | [Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html) | Sonic distance sensor  | Needs AOT compilation |
 
 #### Environmental Sensors
 
