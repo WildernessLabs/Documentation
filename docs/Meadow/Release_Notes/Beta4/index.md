@@ -37,20 +37,21 @@ We improved performance for all displays using `GraphicsLibrary` with additional
 
 ### New Drivers
 
- * Audio.Mp3.Yx5300 (serial MP3 player)
- * Sensors.Atmospheric.AdaFruitMPRLS (ported pressure sensor)
- * Sensors.Motion.Mag3110 (3-axis magnetometer)
- * Sensors.Temperature.AnalogWaterLevel
- * Displays.Ssd1327 (4bpp greyscale OLED)
+ * [Audio.Mp3.Yx5300 (serial MP3 player)](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html)
+ * [Sensors.Atmospheric.AdaFruitMPRLS (ported pressure sensor)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor.html)
+ * [Sensors.Motion.Mag3110 (3-axis magnetometer)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html)
+ * [Sensors.Environmental.AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html)
+ * [Displays.Ssd1327 (4bpp greyscale OLED)](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1327.html)
  
  * Additional TFT SPI Display Drivers:
-   * Displays.Tft.HX8357d
-   * Displays.Tft.GC9A01
-   * Displays.Tft.ILI9481
-   * Displays.Tft.ILI9486
-   * Displays.Tft.ILI9488
-   * Displays.Tft.Rm68140
-   * Displays.Tft.ST7796
+   * [Displays.Tft.HX8357b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Hx8357b.html)
+   * [Displays.Tft.HX8357d](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Hx8357d.html)
+   * [Displays.Tft.GC9A01](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Gc9a01.html)
+   * [Displays.Tft.ILI9481](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9481.html)
+   * [Displays.Tft.ILI9486](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9486.html)
+   * [Displays.Tft.ILI9488](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9488.html)
+   * [Displays.Tft.Rm68140](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Rm68140.html)
+   * [Displays.Tft.ST7796s](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7796s.html)
 
 ## Bug Fixes
 
