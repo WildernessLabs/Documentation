@@ -165,6 +165,8 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Si1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Si1145.html) | I2C infrared, ultraviolet, and ambient light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html) | Analog light sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Tsl2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tsl2561.html) | I2C infrared-compensated light sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tsl2591](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tsl2561.html) | I2C infrared-compensated light sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Veml7700](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Veml7700.html) | I2C High accuracy ambient light sensor |
 
 #### Soil Moisture Sensors
 
@@ -186,7 +188,8 @@ The peripherals are split into two groups; the first group is general, core peri
 | ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | I2C 9-Axis absolute orientation sensor |
 | ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html) | I2C 9-Axis absolute orientation sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Hmc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883.html) | I2C 9-Axis absolute orientation sensor |
-| ![Working Badge](https://img.shields.io/badge/Working-brightgreen") | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mag110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | Analog triple axis magnetometer |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | I2C 6-Axis absolute orientation sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | I2C three axis magnetometer |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR Rev B digital motion detector |
 
