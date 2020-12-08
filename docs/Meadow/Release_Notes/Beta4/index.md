@@ -10,13 +10,13 @@ This is a big release with a ton of stability fixes, an overhaul of the CLI, and
 
  * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more streamlined and reliable Meadow.OS upload experience.
  * **WiFi Enumeration Fix** - You can now enumerate WiFi networks without having to first connect to a Network.
- * **Faster, More Reliable OS Startup** - Meadow.OS startup is more robust and can handle a mismatch between co-processor firmware or runtime version better.
+ * **Faster, More Reliable OS Startup** - Meadow.OS startup is more robust and better handles a mismatch between co-processor firmware or runtime version.
  * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
  * **WiFi Memory Leak Fixed** - Network requests no longer leak memory.
  * **Networking Server Methods** - `UdpClient`, `TcpListener` and `TcpClient` are all working now. Note that we're still working on `HttpListener`.
  * **Meadow.OS Watchdog Timer** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
  * **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
- * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The Graphics Library available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `ITextDisplay`s).
+ * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The Graphics Library available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `CharacterDisplay`s).
 
 ## Meadow.Foundation
 
@@ -28,13 +28,21 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 ### `GraphicsLibrary` Updates
 
-[performance and??]
+We improved performance for all displays using `GraphicsLibrary` with additional performance for color Tft displays.
+
+`GraphicsLibrary` also includes several new and improved APIs including:
+- Support for 12bpp (RGB444) displays and buffers which reduces frame buffer memory usage
+- Center and right text alignment when calling `DrawText`
+- `InvertPixel` and `InvertRectangle` methods which are great for drawing cursors
 
 ### New Drivers
 
  * Audio.Mp3.Yx5300 (serial MP3 player)
- * Sensors.Atmospheric.AdaFruitMPRLS (pressure sensor - no generic controller)
- * Displays.Ssd1327 (greyscale OLED)
+ * Sensors.Atmospheric.AdaFruitMPRLS (ported pressure sensor)
+ * Sensors.Motion.Mag3110 (3-axis magnetometer)
+ * Sensors.Temperature.AnalogWaterLevel
+ * Displays.Ssd1327 (4bpp greyscale OLED)
+ 
  * Additional TFT SPI Display Drivers:
    * Displays.Tft.HX8357d
    * Displays.Tft.GC9A01
