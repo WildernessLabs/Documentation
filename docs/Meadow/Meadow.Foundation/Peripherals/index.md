@@ -20,11 +20,11 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [HBridgeMotor](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | Generic h-bridge motor controller |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Led](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | Simple LED |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [LedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | Segmented LED bar |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PiezoSpeaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | A piezo-electric speaker capable of generating tones via PWM |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PushButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | Momentary button |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) | Pulse-Width-Modulation powered LED |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PwmLedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLedBarGraph.html) | Pulse-Width-Modulation powered segmented LED bar |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Relay](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | Electrically isolated switch |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PiezoSpeaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | A piezo-electric speaker capable of generating tones via PWM |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [PushButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | Momentary button |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [RgbLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbLed.html) | Simple RGB LED |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [RgbPwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | Pulse-Width-Modulation powered RGB LED |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | A simple rotary encoder |
@@ -38,7 +38,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description | 
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html) | Serial MP3 player |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Yx5300](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html) | Serial MP3 player |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.Tea5767.html) | I2C FM radio module |
 
 ### Display and Graphics Drivers
@@ -86,10 +86,9 @@ The peripherals are split into two groups; the first group is general, core peri
 
 ### Leds
 
-| Status | Driver | Description | Notes |
-|--------|--------|-------------|-------|
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | A 2-axis joystick and 5 momentary buttons gamepad | Slow due interpret mode |
-
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | SPI Addressable LED strip |
 ### Motors
 
 | Status | Driver | Description | Notes |
@@ -119,7 +118,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html) | I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html) | I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.html) | Barometric sensor |
-| <img src="https://img.shields.io/badge/Pending-yellow" />      | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html) | Barometric sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" />   | [MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html) | Barometric sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ms5611](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Ms5611.html) | I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Sht31D.html) | I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx.html) | I2C temperature and humidity sensor |
