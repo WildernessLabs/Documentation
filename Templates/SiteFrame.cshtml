@@ -1,57 +1,60 @@
 ﻿@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.RenderedContent>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@Model.GetMeta("Title")</title>
-    <link href="/build/assets/fonts/fonts.css" rel="stylesheet" type="text/css">
-    <link href="/build/styles/main.css" type="text/css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@Model.GetMeta("Title")</title>
+  <link href="/build/assets/fonts/fonts.css" rel="stylesheet" type="text/css">
+  <link href="/build/styles/main.css" type="text/css" rel="stylesheet" />
 
 </head>
+
 <body>
-    <header>
-        <div class="nav-main-wrapper">
-            <div class="nav-main-inside">
-              <h1>
-                  <a href="/" class="logo-header">
-                      <span class="visually-hidden">Wilderness Labs</span>
-                  </a>
-              </h1>
-              <nav class="nav-main" aria-label="Wilderness Labs Nav">
-                  <ul>
-                      <li><a href="http://wildernesslabs.co/developers">Developers</a></li>
-                      <li><a href="http://wildernesslabs.co/enterprise">Enterprise</a></li>
-                      <li><a href="http://wildernesslabs.co/hardware">Hardware</a></li>
-                      <li><a href="https://store.wildernesslabs.co/">Shop</a></li>
-                      <li><a href="http://developer.wildernesslabs.co/">Docs</a></li>
-                      <li><a href="https://community.wildernesslabs.co/">Community</a></li>
-                      <li><a href="http://blog.wildernesslabs.co/">Blog</a></li>
-                      <li><a href="http://wildernesslabs.co/login">Sign In</a></li>
-                  </ul>
-              </nav>
-              <button id="mobile-trigger" class="icon hamburger">
-                <span class="visually-hidden">Open Navigation Menu</span>
-              </button>
-            </div>
-        </div>
-        <div class="nav-secondary-wrapper">
-            <nav class="nav-secondary" aria-label="Documentation Nav">
-                @await PartialAsync("docs/topmenu.md")
-            </nav>
-        </div>
-    </header>
-    <main>
-        @Raw(Model.Body)
-    </main>
-    <footer>
-        <div class="footer-content">
-          <p>Don't see what you're looking for?</p>
-          <p>Ask a <a href="#">question</a>, or make a <a href="#">request</a></p>
-          <p class="brand">Wilderness Labs 2020</p>
-        </div>
-    </footer>
-    <script src="/build/assets/libs/prism.js"></script>
-    <script src="/build/js/main.bundle.js"></script>
+  <header>
+    <div class="nav-main-wrapper">
+      <div class="nav-main-inside">
+        <h1>
+          <a href="/" class="logo-header">
+            <span class="visually-hidden">Wilderness Labs</span>
+          </a>
+        </h1>
+        <nav class="nav-main" aria-label="Wilderness Labs Nav">
+          <ul>
+            <li><a href="http://wildernesslabs.co/developers">Developers</a></li>
+            <li><a href="http://wildernesslabs.co/enterprise">Enterprise</a></li>
+            <li><a href="http://wildernesslabs.co/hardware">Hardware</a></li>
+            <li><a href="https://store.wildernesslabs.co/">Shop</a></li>
+            <li><a href="http://developer.wildernesslabs.co/">Docs</a></li>
+            <li><a href="https://community.wildernesslabs.co/">Community</a></li>
+            <li><a href="http://blog.wildernesslabs.co/">Blog</a></li>
+            <li><a href="http://wildernesslabs.co/login">Sign In</a></li>
+          </ul>
+        </nav>
+        <button id="mobile-trigger" class="icon hamburger">
+          <span class="visually-hidden">Open Navigation Menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-secondary-wrapper">
+      <nav class="nav-secondary" aria-label="Documentation Nav">
+        @await PartialAsync("docs/topmenu.md")
+      </nav>
+    </div>
+  </header>
+  <main>
+    @Raw(Model.Body)
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p>Don't see what you're looking for?</p>
+      <p>Ask a <a href="#">question</a>, or make a <a href="#">request</a></p>
+      <p class="brand">Wilderness Labs 2020</p>
+    </div>
+  </footer>
+  <script src="/build/assets/libs/prism.js"></script>
+  <script src="/build/js/main.bundle.js"></script>
 </body>
+
 </html>

@@ -3,16 +3,16 @@ body.scrolled
     border-bottom: 1px solid #12BBF3
 
 nav ul 
-    margin: 0
-    padding: 0
-    li 
-        list-style-type: none
-        display: inline-block
-    a
-        font-family: "Wavehaus-Book"
-        font-size: 18px
-        letter-spacing: 1px
-        color: #675130
+  margin: 0
+  padding: 0
+  li 
+    list-style-type: none
+    display: inline-block
+  a
+    font-family: "Wavehaus-Book"
+    font-size: 18px
+    letter-spacing: 1px
+    color: #675130
 
 .nav-main-wrapper
   padding: 1.875em 1em 1.875em
@@ -77,73 +77,92 @@ nav ul
           padding: 1.188em 0.4em
 
 .nav-accordion
-    &.fixed-element
-      width: 16.7%  
-    a 
-        text-decoration: none
-        color: #675133
-        font-family: "Wavehaus-Book"
+  &.fixed-element
+    width: 16.7%  
+  a 
+    text-decoration: none
+    color: #675133
+    font-family: "Wavehaus-Book"
+    border-left: 2px solid #EDEFF0
+    &:hover:not(.active), &.active:not(.has-submenu)
+      background: #EDEFF0
+      border-left: 2px solid #FF8E0D
+      color: #BE4D34
 
-    .primary
-        font-family: "Wavehaus-Book"
-        font-size: 16px
+  .primary
+    font-family: "Wavehaus-Book"
+    font-size: 17px
+    border-bottom: 0.5px solid #D7D3D0
+    height: 46px
+    padding: 0.8em 2.1em
+    line-height: 19px
+    display: block
+      
+  .has-submenu
+    position: relative
+    &::before
+      content: " ";
+      background: url('/assets/svgs/icons/orange-arrow.svg') no-repeat
+      width: 10px
+      height: 10px
+      position: absolute
+      right: 1.2em
+      top: 1em
+      transform: rotate(180deg)
+    &.active
+      &::before 
+        transform: rotate(0deg)
+        top: 1.2em
+
+  /* Tier 1 of Accordion */
+  $sublink-padding-vertical: 5px
+
+  li
+    list-style-type: none
+    a
+      padding: $sublink-padding-vertical 2.1em
+    /* Tier 2 Wrapper */
+    ul
+      border-bottom: none
+      &.active 
         border-bottom: 0.5px solid #D7D3D0
-        height: 46px
-        padding: 0.8em 1.8em
-        line-height: 19px
-        display: block
-        
-    .has-submenu
-        position: relative
-        &::before
-            content: " ";
-            background: url('/assets/svgs/icons/orange-arrow.svg') no-repeat
-            width: 10px
-            height: 10px
-            position: absolute
-            right: 1.2em
-            top: 1em
-            transform: rotate(180deg)
-        &.active
-            &::before 
-                transform: rotate(0deg)
-                top: 1.2em
+      li
+        // padding: 0.3em 1.8em 0
+        &:first-child
+          margin-top: 10px
+        &:last-child
+          margin-bottom: 10px
 
-    /* Tier 1 of Accordion */
-    li
-        list-style-type: none
-        /* Tier 2 Wrapper */
-        ul
+        /* Tier 3 Wrapper */
+        ul 
+          &.active 
             border-bottom: none
-            padding: 0
-            .has-submenu
-                padding-left: 1em
-                &::before
-                    left: 0
-                    top: 5px
-                    transform: rotate(90deg)
-                &.active::before
-                    top: 2px
-                    transform: rotate(180deg)
-
-            &.active 
-                border-bottom: 0.5px solid #D7D3D0
-                
-            
+          li 
+            &:first-child, &:last-child
+              margin-top: 0
+              margin-bottom: 0
+            a
+              padding: $sublink-padding-vertical 3.2em
             li
-                padding: 0.3em 1.8em 0
-                &:first-child
-                    margin-top: 10px
-                &:last-child
-                    margin-bottom: 10px
-                /* Tier 3 Wrapper */
-                ul 
-                    &.active 
-                        border-bottom: none
-                    li 
-                        &:first-child, &:last-child
-                            margin-top: 0
-                            margin-bottom: 0
+              a
+                padding: $sublink-padding-vertical 5em
+      a
+        display: block
+        &.has-submenu
+          &::before
+            display: inline-block
+            transform: rotate(90deg)
+            position: relative
+            left: 0
+            top: 0
+            margin-right: 8px
+          &.active::before
+            transform: rotate(180deg)
+            top: 0
+          &.active
+            font-family: "Wavehaus-Bold"
+\\
+
       
 #mobile__nav
   position: fixed

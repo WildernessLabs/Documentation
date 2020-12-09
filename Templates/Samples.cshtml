@@ -1,18 +1,18 @@
 ﻿@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.RenderedContent>
 @await PartialAsync("docs/Samples/menu.md")
 <section class="content">
-    <div class="content-banner">
-        <h2>Samples</h2>
-        <h3>@Model.GetMeta("title")</h3>
-    </div>
-        
-    @if (@Model.HasMeta("subtitle"))
-    {
-        <h4>@Model.GetMeta("subtitle")</h4>
-    }
-    <div class="content-body">
-        @Raw(Model.Body)
-    </div>
+  <div class="content-banner">
+    <h2>Samples</h2>
+    <h3>@Model.GetMeta("title")</h3>
+  </div>
+
+  @if (@Model.HasMeta("subtitle"))
+  {
+    <h4>@Model.GetMeta("subtitle")</h4>
+  }
+  <div class="content-body">
+    @Raw(Model.Body)
+  </div>
 </section>
 <section class="articlebar">
   <div class="article_inner">
@@ -25,13 +25,13 @@
     <div class="article-nav">
       @if (Model.Headers.Length > 0)
       {
-      <h2>In this article</h2>
-      <ul>
-        @foreach(var header in @Model.Headers)
-        {
-          <li><a data-level="@header.Level" href="#@header.Slug">@Raw(header.Value)</a></li>
-        }
-      </ul>
+        <h2>In this article</h2>
+        <ul>
+          @foreach (var header in @Model.Headers)
+          {
+            <li><a data-level="@header.Level" href="#@header.Slug">@Raw(header.Value)</a></li>
+          }
+        </ul>
       }
     </div>
   </div>

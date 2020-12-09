@@ -59,7 +59,7 @@ module.exports = {
             new OptimizeCSSAssetsPlugin({})
         ],
     },
-    output: {
+    output: { 
         path: path.resolve(__dirname, 'out/build'),
         publicPath: '/out/build',
         filename: 'js/[name].bundle.js',

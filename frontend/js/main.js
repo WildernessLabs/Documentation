@@ -1,4 +1,3 @@
-import { doesExist } from './Utils';
 import Accordion from './modules/Accordion';
 import ArticleNav from './modules/ArticleNav';
 import { SetFixed } from './modules/FixedNav';

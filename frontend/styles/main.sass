@@ -15,26 +15,24 @@ $min-nav-width: 270px
 $nav-width: 20%
 $max-nav-width: 400px
 
-body 
+body
   font-size: 16px
-  background: #fff 
+  background: #fff
 
-
-main 
+main
   display: flex
   // max-width: 100%
   // oveflow: hidden
 
-
 .content
   flex: 1
-  
+
 .articlebar
   flex: 0 0 $nav-width
   min-width: $min-nav-width
   max-width: $max-nav-width
 
-.sidebar 
+.sidebar
   flex: 0 0 $nav-width
   min-width: $min-nav-width
   max-width: $max-nav-width
@@ -43,13 +41,13 @@ main
   @include breakpoint(mobile tablet)
     display: none
 
-footer 
+footer
   margin: 0 clamp($min-nav-width, 20%, $max-nav-width)
   padding: 3% 0
   border-left: 1px solid #12BBF3
   border-right: 1px solid #12BBF3
   @include breakpoint(mobile tablet)
-     margin: 0 0 0 clamp($min-nav-width, 20%, $max-nav-width)
+    margin: 0 0 0 clamp($min-nav-width, 20%, $max-nav-width)
 
   .footer-content
     border-top: 5px solid #FF8E0D
@@ -63,7 +61,7 @@ footer
       padding-top: 2em
       font-size: 13px
 
-  a 
+  a
     color: #12BBF3
     &:hover, &:focus
-        text-decoration: none
+      text-decoration: none

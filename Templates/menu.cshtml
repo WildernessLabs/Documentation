@@ -3,34 +3,34 @@
 @using Microsoft.Extensions.Configuration;
 @using Chloroplast.Core.Extensions;
 @{
-    string RenderNodes(IConfigurationSection section, bool isInit, string activeState)
+  string RenderNodes(IConfigurationSection section, bool isInit, string activeState)
+  {
+    var children = section.GetChildren();
+    if (children.Any())
     {
-        var children = section.GetChildren();
-        if (children.Any())
-        {
-            
-            string listAttributes = isInit ? "nav-accordion accordion" : "";
-            string primaryAttribute = isInit ? "primary" : "";
-           
-            <ul class="@listAttributes @activeState">
-                @foreach(var item in children)
-                {
-                    string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "not-active"; 
 
-                    <li>
-                        <a aria-expanded="false" href="@item["path"]" class="trigger @primaryAttribute @activeAttribute">@item["title"]</a>
-                        @if (item.ContainsKey("items"))
-                        {
-                            @Raw(RenderNodes(item.GetSection("items"), false, activeAttribute))
-                        }
-                    </li>
-                }
-            </ul>
+      string listAttributes = isInit ? "nav-accordion accordion" : "";
+      string primaryAttribute = isInit ? "primary" : "";
+
+      <ul class="@listAttributes @activeState">
+        @foreach (var item in children)
+        {
+          string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "not-active";
+
+          <li>
+            <a aria-expanded="false" href="@item["path"]" class="trigger @primaryAttribute @activeAttribute">@item["title"]</a>
+            @if (item.ContainsKey("items"))
+            {
+              @Raw(RenderNodes(item.GetSection("items"), false, activeAttribute))
+            }
+            </li>
         }
-        return "";
+      </ul>
     }
+    return "";
+  }
 }
 
 <section class="sidebar">
-    @RenderNodes(Model.Metadata.GetSection ("navTree"), true, "")
+  @RenderNodes(Model.Metadata.GetSection ("navTree"), true, "")
 </section>

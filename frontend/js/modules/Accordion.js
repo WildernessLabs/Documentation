@@ -13,10 +13,12 @@ const Accordion = (el) => {
           
           // bind event listeners for expand/collapse
           trigger.addEventListener("click", (e) => {
+            e.preventDefault();
 
             // toggle active class of 'trigger' and 'ul' menu
             if(trigger.classList.contains('has-submenu')){
               if(!trigger.classList.contains('active')){
+
                 trigger.classList.add('active');
                 // setTimeout required to toggle display prop before class prop
                 // display required to remove elements from DOM when hidden
@@ -25,6 +27,10 @@ const Accordion = (el) => {
                     subMenu.classList.add('active');
                 }, 1);
                 
+                setTimeout(()=>{
+                  window.location.replace(e.target.href);
+                }, 500);
+
               } else {
                 trigger.classList.remove('active');
                 subMenu.classList.remove('active');

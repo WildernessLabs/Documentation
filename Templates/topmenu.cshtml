@@ -3,31 +3,29 @@
 @using Microsoft.Extensions.Configuration;
 @using Chloroplast.Core.Extensions;
 
-@{  
-  
-  
+@{
   string RenderNodes(IConfigurationSection section)
   {
     var children = section.GetChildren();
-    
+
 
     if (children.Any())
     {
-    <ul>
-        @foreach(var item in children)
+      <ul>
+        @foreach (var item in children)
         {
           string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "";
-          <li class="@activeAttribute" >
+
+          <li class="@activeAttribute">
             <a href="@item["path"]">@item["title"]</a>
           </li>
-         
         }
-    </ul>
+      </ul>
     }
     return "";
   }
 }
 
 <section class="topbar">
-    @RenderNodes(Model.Metadata.GetSection ("navTree"))
+  @RenderNodes(Model.Metadata.GetSection ("navTree"))
 </section>
