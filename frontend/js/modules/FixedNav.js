@@ -2,15 +2,18 @@ const SetFixed = (element, parent) => {
 
   try {
     const headerEl = document.querySelector('.nav-main-wrapper');
-    const scrollTop =  headerEl.offsetHeight;
-    const offsetTop = headerEl.offsetHeight;
+    const headerHeight =  headerEl.offsetHeight;
     const footerOffset = document.querySelector('footer').offsetTop;
-    
+
     // set initial state of fixed element
     const el = document.querySelector(element);
-    setFixedState(el);
+    setTimeout(()=>{
+      setFixedState(el);
+    }, 1);
+      
 
     window.addEventListener('scroll', (e) => {
+      console.log("Trigger Scroll Event", el);
       setFixedState(el);
     });
     
@@ -22,28 +25,33 @@ const SetFixed = (element, parent) => {
 
     function setFixedState(elem){
 
-      const scrollPosition = window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
+      const scrollPosition = window.scrollY || document.body.headerHeight || document.documentElement.headerHeight;
       const elementOffset = scrollPosition + elem.offsetHeight;
       const isMaxHeight = elem.offsetHeight >= window.innerHeight;
 
-      if(scrollPosition > scrollTop && elementOffset < footerOffset){
+      const elTop = elem.getBoundingClientRect().top;
+      const navSecondary = document.querySelector('.nav-secondary');
+      const navSecondaryBottom = navSecondary.getBoundingClientRect().bottom;
+
+      console.log(`Scroll Position: ${scrollPosition} Elem Top: ${elTop} Header Height: ${headerHeight}`);
+      if(elTop < headerHeight && elementOffset < footerOffset){
         elem.classList.remove('static-top', 'fixed-bottom');
-        
+
         if(isMaxHeight){
           elem.classList.add('max-height');
         }
         
         if(!elem.classList.contains('fixed-element')){
           elem.classList.add('fixed-element');
-          elem.style.top = offsetTop;
+          elem.style.top = `${headerHeight}px`;
 
           if(parent) matchWidth(elem, parent);
         }
         
-      } else if(scrollPosition < scrollTop) {
+      } else if(navSecondaryBottom > headerHeight) {
         elem.classList.remove('fixed-element', 'fixed-bottom');
         elem.classList.add('static-top');
-        elem.style.top = `${scrollTop}px`;
+        elem.style.top = `inherit`;
         elem.style.bottom = 'inherit';
       }
 
