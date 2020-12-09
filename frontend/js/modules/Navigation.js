@@ -29,6 +29,9 @@ const MobileNavigation = () => {
         
         // add class to transition in menu
         mobileNav.classList.add('open');
+        
+        toggleHeaderDisplay('none');
+        shouldContentScroll(false);
     });
 }
 
@@ -44,7 +47,23 @@ const createCloseButton = (el, nav, body) => {
     close.addEventListener('click', () => { 
         body.classList.remove('mobile__nav');
         body.removeChild(el);
+
+        toggleHeaderDisplay('block');
+        shouldContentScroll(true)
     });
+}
+
+const toggleHeaderDisplay = (val) => {
+  const header = document.getElementsByTagName("header")[0]
+
+  header.style.display = val;
+}
+
+const shouldContentScroll = (val) => {
+  const body = document.getElementsByTagName("body")[0]
+  const overflow = val ? 'auto' : 'hidden';
+
+  body.style.overflow = overflow;
 }
 
 const FixedNavigation = () => {

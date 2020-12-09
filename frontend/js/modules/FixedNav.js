@@ -7,13 +7,10 @@ const SetFixed = (element, parent) => {
 
     // set initial state of fixed element
     const el = document.querySelector(element);
-    setTimeout(()=>{
-      setFixedState(el);
-    }, 1);
+    setFixedState(el);
       
 
     window.addEventListener('scroll', (e) => {
-      console.log("Trigger Scroll Event", el);
       setFixedState(el);
     });
     
@@ -33,7 +30,6 @@ const SetFixed = (element, parent) => {
       const navSecondary = document.querySelector('.nav-secondary');
       const navSecondaryBottom = navSecondary.getBoundingClientRect().bottom;
 
-      console.log(`Scroll Position: ${scrollPosition} Elem Top: ${elTop} Header Height: ${headerHeight}`);
       if(elTop < headerHeight && elementOffset < footerOffset){
         elem.classList.remove('static-top', 'fixed-bottom');
 

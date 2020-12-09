@@ -41,6 +41,11 @@ const ArticleNav = () => {
       if (navLinks.length > 0) {
         for (const link of navLinks) {
           link.addEventListener('click', (e) => {
+            // e.preventDefault();
+
+            // const name = e.target.getAttribute('href').substring(1);
+            // document.querySelector(`a[name='${name}']`).scrollIntoView();
+
             removeActiveArticleLink();
             setActiveLink(e.target);
           });
