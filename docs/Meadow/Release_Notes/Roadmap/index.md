@@ -8,7 +8,7 @@ subtitle: Release Notes
 
 The current release of Meadow is [Beta4](../Beta4/)
 
-## Current Release - Beta 4
+## Current Release - Beta 4.2
 
 [Beta 4 Release Notes](/Meadow/Release_Notes/Beta4/)
 

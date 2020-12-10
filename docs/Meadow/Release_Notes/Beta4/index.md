@@ -4,6 +4,62 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.2
+
+This is a big release with a ton of stability fixes, an overhaul of the CLI, and big new features for networking. Major changes and improvements include:
+
+ * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more streamlined and reliable Meadow.OS upload experience.
+ * **WiFi Enumeration Fix** - You can now enumerate WiFi networks without having to first connect to a Network.
+ * **Faster, More Reliable OS Startup** - Meadow.OS startup is more robust and better handles a mismatch between co-processor firmware or runtime version.
+ * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
+ * **WiFi Memory Leak Fixed** - Network requests no longer leak memory.
+ * **Networking Server Methods** - `UdpClient`, `TcpListener` and `TcpClient` are all working now. Note that we're still working on `HttpListener`.
+ * **Meadow.OS Watchdog Timer** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
+ * **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
+ * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The Graphics Library available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `CharacterDisplay`s).
+
+## Meadow.Foundation
+
+### `TextDisplayMenu` Library
+
+The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on a `CharacterDisplay` or a graphics display via `GraphicsLibrary`. 
+
+The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including: time, temperature, and numbers. Additionally, you can easily create custom menu item types that allow users to edit their value via the inputs.
+
+### `GraphicsLibrary` Updates
+
+We improved performance for all displays using `GraphicsLibrary` with additional performance for color Tft displays.
+
+`GraphicsLibrary` also includes several new and improved APIs including:
+- Support for 12bpp (RGB444) display buffers which reduces frame buffer memory
+- Center and right text alignment when calling `DrawText`
+- `InvertPixel` and `InvertRectangle` methods which are great for drawing cursors
+
+### New Drivers
+
+ * [Audio.Mp3.Yx5300 (serial MP3 player)](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html)
+ * [Sensors.Atmospheric.AdaFruitMPRLS (ported pressure sensor)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor.html)
+ * [Sensors.Motion.Mag3110 (3-axis magnetometer)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html)
+ * [Sensors.Environmental.AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html)
+ * [Displays.Ssd1327 (4bpp greyscale OLED)](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1327.html)
+ 
+ * Additional TFT SPI Display Drivers:
+   * [Displays.Tft.HX8357b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Hx8357b.html)
+   * [Displays.Tft.HX8357d](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Hx8357d.html)
+   * [Displays.Tft.GC9A01](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Gc9a01.html)
+   * [Displays.Tft.ILI9481](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9481.html)
+   * [Displays.Tft.ILI9486](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9486.html)
+   * [Displays.Tft.ILI9488](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9488.html)
+   * [Displays.Tft.Rm68140](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Rm68140.html)
+   * [Displays.Tft.ST7796s](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7796s.html)
+
+## Bug Fixes
+
+- [#118 - Interrupt events not unhooking](https://github.com/WildernessLabs/Meadow_Issues/issues/118) - Fixed.
+- [#116 - System.Net.Sockets.SocketException (0x80004005): Access denied on creating Socket](System.Net.Sockets.SocketException (0x80004005): Access denied on creating Socket) - Fixed as part of the new network work.
+- [#109 - CLI Uplink percentages > 100%](https://github.com/WildernessLabs/Meadow_Issues/issues/109) - Fixed as part of the CLI overhaul.
+
+
 # b4.0.1
 
 This release focuses on stability and ease of use, and it comes with a couple of major improvements:
@@ -18,7 +74,7 @@ This release focuses on stability and ease of use, and it comes with a couple of
 This release also includes a couple of new drivers:
 * `Analog.WaterLevel` is driver that represents common analog water level sensors to detect both the presense and depth of water.
 
-* `Audio.Mp3.Yx5300` is an MP3 player controlled over serial. It's now possible to add sound effects or music to your Meadow proejct.
+* `Audio.Mp3.Yx5300` is an MP3 player controlled over serial. It's now possible to add sound effects or music to your Meadow project.
 
 ## Updating
 
