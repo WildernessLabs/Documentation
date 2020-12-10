@@ -8,7 +8,7 @@ subtitle: Release Notes
 
 This is a big release with a ton of stability fixes, an overhaul of the CLI, and big new features for networking. Major changes and improvements include:
 
- * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more streamlined and reliable Meadow.OS upload experience.
+ * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more unified and reliable Meadow.OS upload experience. [Check out the updated guide](/Meadow/Getting_Started/Deploying_Meadow/).
  * **WiFi Enumeration Fix** - You can now enumerate WiFi networks without having to first connect to a Network.
  * **Faster, More Reliable OS Startup** - Meadow.OS startup is more robust and better handles a mismatch between co-processor firmware or runtime version.
  * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
