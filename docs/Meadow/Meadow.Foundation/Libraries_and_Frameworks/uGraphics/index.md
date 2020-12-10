@@ -227,7 +227,7 @@ Executing this code would result in something similar to the following:
 
 ### JPEG Decoding
 
-Meadow.Foundation includes a JPEG decoder that enables JPEG images to be converted to bitmaps for use with the µGraphics Library. For example, the following code illustrates how to load a JPEG image from a resource and display it on screen:
+We recommend using the [`SimpleJpegDecoder` library](https://github.com/adrianstevens/SimpleJpegDecoder) to convert JPEG images into bitmaps for use with the µGraphics Library. For example, the following code illustrates how to load a JPEG image from a resource and display it on screen:
 
 ```csharp
 var jpgData = LoadResource("meadow.jpg");
