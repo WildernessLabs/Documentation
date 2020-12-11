@@ -36,26 +36,41 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
-## Step 3: Flash Meadow.OS and network binaries
+## Step 3: Flash Meadow.OS and Coprocessor Firmware
 
+1. Flash the main Meadow.OS:
 ```
 meadow --FlashOS
 ```
-Reconnect or reset the device to enter runtime mode.
 
-```
+2. Reset the device (push the RST button or disconnect and reconnect) and locate the serial port name that the Meadow is connecting on:
+
+    **Windows**
+   
+    On Windows, serial port name looks something like *COM5*. To locate, open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
+  
+    ![DeviceManagerPort](./ports.png){:standalone} 
+
+    **Mac**
+
+    Run the following from terminal:
+    
+    ```
+ls /dev/tty.usb*
+    ```
+    The port should be something like `/dev/tty.usbmodem01`.
+
+3. Once you've figured out the port name, run the following, replacing `[PORT]` with the serial port name:
+
+    ```
 meadow --MonoDisable -s [PORT]
-```
-On Windows, *PORT* looks something like *COM5*. In *Device Manager*, a Meadow device shows up as *USB Serial Device (COMXX)*
+    ```
 
-![DeviceManagerPort](./ports.png){:standalone}
+    **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
 
-On macOS, *PORT* looks something like */dev/tty.usbmodem01*.  
-Run `ls /dev/tty.usb*` to retrieve a list of devices.
+4. Install the Meadow.OS runtime, coprocessor firmware, and then re-enable mono:
 
-**NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
-
-```
+    ```
 meadow --MonoUpdateRt
 meadow --FlashEsp
 meadow --MonoEnable
