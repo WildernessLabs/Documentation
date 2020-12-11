@@ -43,7 +43,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 meadow --FlashOS
 ```
 
-2. Reset the device (push the RST button or disconnect and reconnect) and locate the serial port name that the Meadow is connecting on:
+2. Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
 
     **Windows**
    
@@ -60,7 +60,7 @@ ls /dev/tty.usb*
     ```
     The port should be something like `/dev/tty.usbmodem01`.
 
-3. Once you've figured out the port name, run the following, replacing `[PORT]` with the serial port name:
+3. Once you've identified out the port name, run the following, replacing `[PORT]` with the serial port name:
 
     ```
 meadow --MonoDisable -s [PORT]
