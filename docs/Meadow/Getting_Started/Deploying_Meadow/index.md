@@ -47,9 +47,11 @@ Reconnect or reset the device to enter runtime mode.
 meadow --MonoDisable -s [PORT]
 ```
 On Windows, *PORT* looks something like *COM5*. In *Device Manager*, a Meadow device shows up as *USB Serial Device (COMXX)*
+
 ![DeviceManagerPort](./ports.png){:standalone}
 
-On macOS, *PORT* looks something like */dev/tty.usbmodem01*. Run `ls /dev/tty.usb*` to retrieve a list of devices.
+On macOS, *PORT* looks something like */dev/tty.usbmodem01*.  
+Run `ls /dev/tty.usb*` to retrieve a list of devices.
 
 **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
 
