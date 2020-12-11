@@ -22,7 +22,7 @@ Currently, display drivers are available for [Serial LCD](/Library/Displays/Seri
 
 The following schematic illustrates a typical holistic configuration for driving the menu and includes a common four line LCD display that's driven directly from Netduino's digital GPIO pins, as well as a rotary encoder with push button:
 
-![](TextDisplayMenu_Board.png)
+![](SimpleMenu_Fritzing.png)
 
 The [Appliance Hacking Enclosure](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Enclosures/ApplianceControl) was specifically designed and 3D printed with the TextMenuDisplay in mind:
 
