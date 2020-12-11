@@ -63,6 +63,8 @@ var menuItems = new MenuItem[]
 
 To create a menu hierarchy from JSON, you'll need to define a root node that contains an array of menu items.  The following table enumerates the properties and associated usage:
 
+<!-- we should move this table up and make it for both the memory objects and JSON -->
+
 | Property  | Usage                                                                                  |
 |-----------|--------------------------------------------------------------------------------------- |
 | `text`    | Display text to the rendered. Include {value} to display the current value of the type |
@@ -145,7 +147,7 @@ For example, the following json code defines a hierarchical menu arranged in men
 ]
 ```
 
-## Adding the Menu JSON as a Resource 
+### Adding the Menu JSON as a Resource 
 
 To add the JSON file to the project as a resource:
 
@@ -183,6 +185,8 @@ byte[] LoadResource(string filename)
 ```
 
 # Handling Events
+
+<!-- Adrian; I see the command stuff, but do we still have edit/exit events? -->
 
 The menu raises events when a command is select, menu item is edited, and the menu is exited.
 
