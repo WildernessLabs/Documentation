@@ -36,29 +36,32 @@ The following schematic illustrates a typical configuration for driving the menu
 
 TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphicsLibrary`, which itself implements `ITextDisplay`
 
-## Instantiating the Menu
+## Defining the Menu
 
-To create the menu, first instantiate a `Menu` and pass in the `ITextDisplay` and either `MenuItem[]` or the JSON (see further down on how to load JSON):
+The menu data can be either be created programmatically in-memory or defined in JSON.
+
+### Defining a Menu Programmatically
+
+To create programmatically, create an array of `MenuItem` objects which represents a page of menu choices. Optionally, you can add sub-pages of items by adding them to the `SubItems` property.
+
+The following code illustrates creating a simple one page menu:
+
+<!-- need a multi-level example using objects -->
 
 ```csharp
-Menu menu = new Menu(display, menuData);
+var menuItems = new MenuItem[]
+{
+    new MenuItem("Frogger", command: "startFrogger"),
+    new MenuItem("Pong", command: "startPong"),
+    new MenuItem("Span4", command: "startSpan4"),
+    new MenuItem("Snake", command: "startSnake"),
+    new MenuItem("Tetraminos", command: "startTetraminos"),
+};
 ```
 
+### Defining a Menu in JSON
 
-
-# Using
-
-
-
-
-
-# Loading a Menu From JSON
-
-To create the menu from JSON, first define the menu contents in a JSON file, and then add it as a resource.
-
-## Sample Definition
-
-The root node must be a `menu` array of menu items.  The following table enumerates the properties and associated usage:
+To create a menu hierarchy from JSON, you'll need to define a root node that contains an array of menu items.  The following table enumerates the properties and associated usage:
 
 | Property  | Usage                                                                                  |
 |-----------|--------------------------------------------------------------------------------------- |
@@ -150,13 +153,17 @@ To add the JSON file to the project as a resource:
 2. Click `Resources` in the left pane
 3. Click `Add Resource` and choose the appropriate file.
 
-### Loading the JSON
+## Instantiating the Menu
 
-The following code illustrates loading a menu from a JSON file included as a resource:
+Once the menu hierarchy is created and the display is configured, the menu can be instantiated by passing the display and menu hierarchy:
 
 ```csharp
-var menuData = LoadResource("menu.json");
+// loading from an in-memory object graph:
+menu = new Menu(display, menuItems);
 
+// loading from JSON
+var menuData = LoadResource("menu.json");
+menu = new Menu(display, menuData);
 ...
 
 byte[] LoadResource(string filename)
@@ -174,8 +181,6 @@ byte[] LoadResource(string filename)
     }
 }
 ```
-
-Now, this resource can be accessed by `Resources.GetBytes(Resources.BinaryResources.[ResourceName])`.
 
 # Handling Events
 
