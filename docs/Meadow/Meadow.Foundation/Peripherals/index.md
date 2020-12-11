@@ -89,6 +89,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | SPI Addressable LED strip |
+
 ### Motors
 
 | Status | Driver | Description | Notes |
