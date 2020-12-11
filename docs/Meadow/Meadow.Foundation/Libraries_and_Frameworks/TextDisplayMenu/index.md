@@ -40,6 +40,17 @@ TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any 
 
 The menu data can be either be created programmatically in-memory or defined in JSON.
 
+The menu items support the following properties:
+
+| Object Property | JSON Property  | Usage    |
+|-----------------|----------------|----------|
+| `Text` | `text`    | Display text to the rendered. Include {value} to display the current value of the type |
+| `Command` | `command` | Command name to distinguish menu selection events. If command is set, it takes precedence over editable menu item. |
+| `ID` | `id`      | Unique identifier for the type.  Required for an editable menu item. |
+| `Type` | `type`    | Type of the input, ex: `Age`, `Time`. Required for an editable menu item. |
+| `SubItems` | `sub`     | Array of child menu items. |
+
+
 ### Defining a Menu Programmatically
 
 To create programmatically, create an array of `MenuItem` objects which represents a page of menu choices. Optionally, you can add sub-pages of items by adding them to the `SubItems` property.
@@ -62,16 +73,6 @@ var menuItems = new MenuItem[]
 ### Defining a Menu in JSON
 
 To create a menu hierarchy from JSON, you'll need to define a root node that contains an array of menu items.  The following table enumerates the properties and associated usage:
-
-<!-- we should move this table up and make it for both the memory objects and JSON -->
-
-| Property  | Usage                                                                                  |
-|-----------|--------------------------------------------------------------------------------------- |
-| `text`    | Display text to the rendered. Include {value} to display the current value of the type |
-| `command` | Command name to distinguish menu selection events. If command is set, it takes precedence over editable menu item. |
-| `id`      | Unique identifier for the type.  Required for an editable menu item. |
-| `type`    | Type of the input, ex: `Age`, `Time`. Required for an editable menu item. |
-| `sub`     | Array of child menu items. |
 
 For example, the following json code defines a hierarchical menu arranged in menu pages and items.
 
