@@ -42,6 +42,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ```
 meadow --FlashOS
 ```
+   When it's done, exit the CLI by pressing **ctrl+z**.
 
 2. Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
 
