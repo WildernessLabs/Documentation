@@ -47,7 +47,7 @@ You should generally reserve up to `400mA` of the power budget for onboard funct
 
 In addition to the overall power budget, the amount of power being delivered to peripherals via the IO pins must be considered. There is both an overall maximum that the MCU can drive, as well as a per pin maximum.
 
-[what are they?]
+**Note: we're waiting to hear back from ST on the maximum available power for the STM32F7 on the Meadow, but the STM32F4 has a `25mA` per IO maximum, and a total maximum of `120mA`. So the F7 should support at least that.**
 
 ##### Battery Charger Usage
 
