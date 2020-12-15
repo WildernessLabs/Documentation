@@ -3,6 +3,7 @@ import ArticleNav from './modules/ArticleNav';
 import { SetFixed } from './modules/FixedNav';
 import { FixedNavigation, MobileNavigation } from './modules/Navigation'
 import { Codeblock } from './modules/Codeblock';
+import { Darkmode } from './modules/Darkmode';
 
 const main = () => {
 
@@ -19,6 +20,7 @@ const main = () => {
   FixedNavigation();
 
   Codeblock();
+  Darkmode();
 }
 
 main();

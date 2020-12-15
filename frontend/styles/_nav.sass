@@ -19,7 +19,6 @@ nav ul
   position: fixed
   width: 100%
   top: 0
-  background: #fff
   z-index: 100000
   
   .nav-main-inside
@@ -47,10 +46,15 @@ nav ul
     display: none
     @include breakpoint(mobile tablet) 
       display: block
+  .darkmode 
+    position: absolute
+    right: 1em
+    top: 1.3em
+    @include breakpoint(mobile tablet)
+    right: 3.3em
                 
 
 .nav-secondary-wrapper
-  background: #FAF6F0
   margin-top: 87px
   ul
     padding-left: 1em
@@ -64,8 +68,7 @@ nav ul
         padding: 1.188em 1em
 
         &:hover, &:focus
-          background: #F88909
-          color: #fff
+          color: #F88909
       &.active
         a
           background: #F88909
@@ -81,13 +84,8 @@ nav ul
     width: 16.7%  
   a 
     text-decoration: none
-    color: #675133
     font-family: "Wavehaus-Book"
     border-left: 2px solid #EDEFF0
-    &:hover:not(.active), &.active:not(.has-submenu)
-      background: #EDEFF0
-      border-left: 2px solid #FF8E0D
-      color: #BE4D34
 
   .primary
     font-family: "Wavehaus-Book"
@@ -196,14 +194,3 @@ nav ul
   &.open
       opacity: 1
 
-
-.fixed-element 
-  position: fixed
-  top: 0px
-  &.max-height 
-    height: 100vh
-    overflow-y: auto
-
-.fixed-bottom 
-  position: absolute
-  bottom: 0px

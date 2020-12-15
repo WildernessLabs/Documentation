@@ -1,0 +1,91 @@
+.theme-light
+  .nav-main-wrapper
+    background: #fff
+    a 
+      color: #675130
+  .nav-secondary-wrapper
+    background: #FAF6F0
+    a
+      color: #675130
+  .nav-accordion
+    a 
+      color: #675130
+      border-left: 2px solid #20252A
+      &:hover:not(.active), &.active:not(.has-submenu)
+        background: #EDEFF0
+        border-left: 2px solid #FF8E0D
+        color: #BE4D34
+
+  //content
+  .content-body
+    h1, h2, h3, h4, h5, p, ul, ol
+      color: #3C3424
+
+    table
+      border: 1px solid #FF8E0D
+      thead
+        background-color: #F6F7F7
+        th
+          border-bottom: 1px solid #FF8E0D
+
+  .articlebar
+    color: #3c3424
+    a
+      color: #3c3424
+      &.active-header-link
+        background: #F6F7F7
+        border-right: 3px solid #12BBF3
+
+
+
+  
+.theme-dark
+  background: #20252A
+  // navigation
+  .nav-main-wrapper
+   background: #20252A
+   a 
+     color: #F6F7F7
+  .nav-secondary-wrapper
+    background: #2D3339
+    a
+      color: #F6F7F7
+  .nav-accordion
+    a 
+      color: #F6F7F7
+      border-left: 2px solid #20252A
+      &:hover:not(.active), &.active:not(.has-submenu)
+        background: #2D3339
+        border-left: 2px solid #FF8E0D
+        color: #FF8E0D
+
+  //content
+  .content-body
+    h1, h2, h3, h4, h5, p, ul, ol
+      color: #F6F7F7
+
+    table
+      border-color: #F6F7F7
+      color: #F6F7F7
+      thead
+        background-color: #2D3339
+        th
+          border-bottom: #F6F7F7
+
+  // articlebar
+  .articlebar
+    color: #F6F7F7
+    a
+      color: #F6F7F7
+      &.active-header-link
+        background: #2D3339
+        border-right: 3px solid #12BBF3
+
+  // code block
+  pre 
+    border-color: #F6F7F7;
+    background: #21292C
+  
+  code[class*="language-"],
+  pre[class*="language-"] 
+    color: #69782A

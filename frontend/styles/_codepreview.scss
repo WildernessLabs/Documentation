@@ -37,7 +37,6 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: black;
   background: none;
-  text-shadow: 0 1px white;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
   text-align: left;
@@ -172,38 +171,21 @@ pre[class*="language-"] {
   cursor: help;
 }
 
-// CODE BLOCK
-.code-block {
-  pre.code {
-    white-space: pre-wrap;
-    margin-left: 0;
-    background: #1e1e1e;
-    color: #86cbea;
-    font-family: "FuturaND-Medium", helvetica;
-    overflow-x: hidden;
-  }
-  pre.code:before {
-    counter-reset: listing;
-  }
-  pre.code code {
-    counter-increment: listing;
-    text-align: left;
-    float: left;
-    clear: left;
-  }
-  pre.code code::before {
-    content: counter(listing) "\A0 \A0";
-    color: #9f9e9e;
-    display: inline-block;
-    float: left;
-    padding-left: auto;
-    margin-left: auto;
-    text-align: right;
-  }
-}
-
 .copy-code-button {
   position: absolute;
   right: 1em;
   top: 1em;
+}
+
+.theme-dark {
+  pre {
+    border-color: #F6F7F7;
+    background: #21292C;
+    
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: #69782A;
+  }
 }

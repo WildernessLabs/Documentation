@@ -1,3 +1,4 @@
+@import '~svg-spritemap-webpack-plugin/iconmap.scss'
 @import "reset.scss"
 @import "mixins.scss"
 @import "icons"
@@ -9,7 +10,7 @@
 @import "content"
 @import "codepreview"
 @import "articlebar"
-@import '~svg-spritemap-webpack-plugin/iconmap.scss'
+@import "themes"
 
 $min-nav-width: 270px
 $nav-width: 20%
@@ -18,6 +19,7 @@ $max-nav-width: 400px
 body
   font-size: 16px
   background: #fff
+  transition: background 200ms
 
 main
   display: flex
@@ -40,6 +42,17 @@ main
 .articlebar
   @include breakpoint(mobile tablet)
     display: none
+
+.fixed-element 
+  position: fixed
+  top: 0px
+  &.max-height 
+    height: 100vh
+    overflow-y: auto
+
+.fixed-bottom 
+  position: absolute
+  bottom: 0px
 
 footer
   margin: 0 clamp($min-nav-width, 20%, $max-nav-width)

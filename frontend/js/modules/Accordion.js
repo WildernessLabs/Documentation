@@ -50,9 +50,4 @@ const Accordion = (el) => {
   }
 }
 
-const toggleClass = (el, add, remove) =>{
-    el.classList.remove(remove);
-    el.classList.add(add);
-}
-
 export default Accordion
