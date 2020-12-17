@@ -58,9 +58,7 @@ The project file should now look like this.
 
 ## Example: HelloMeadow
 
-Now lets create the Hello Meadow application. Therefore, we need the `Program.cs` which already exists and the `MeadowApp.cs` that needs to be created. The upcoming part will show the code of both classes and explain it.  
-
-{% include hello_world_app.md %}
+The code for the HelloMeadow application is at [Windows and MacOS guide](/Meadow/Getting_Started/Hello_World/Windows_MacOS).
 
 ## Building the project 
   
