@@ -48,7 +48,7 @@ nav ul
       display: block
   .darkmode 
     position: absolute
-    right: 1em
+    right: 1em 
     top: 1.3em
     @include breakpoint(mobile tablet)
     right: 3.3em
@@ -56,6 +56,8 @@ nav ul
 
 .nav-secondary-wrapper
   margin-top: 87px
+  @include breakpoint(mobile tablet)
+    display: none
   ul
     padding-left: 1em
     display: flex
@@ -69,6 +71,8 @@ nav ul
 
         &:hover, &:focus
           color: #F88909
+        @include breakpoint(page1440)
+          font-size: 1em
       &.active
         a
           background: #F88909
@@ -159,7 +163,6 @@ nav ul
             top: 0
           &.active
             font-family: "Wavehaus-Bold"
-\\
 
       
 #mobile__nav

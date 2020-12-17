@@ -17,6 +17,7 @@ const SetFixed = (element, parent) => {
     if(parent){
       window.addEventListener('resize', (e) => {
         matchWidth(el, parent);
+        setFixedState(el);
       });
     }
 
@@ -44,7 +45,7 @@ const SetFixed = (element, parent) => {
           if(parent) matchWidth(elem, parent);
         }
         
-      } else if(navSecondaryBottom > headerHeight) {
+      } else if(navSecondaryBottom > headerHeight || (isHidden(navSecondary) && window.scrollY == 0)) {
         elem.classList.remove('fixed-element', 'fixed-bottom');
         elem.classList.add('static-top');
         elem.style.top = `inherit`;
@@ -55,6 +56,9 @@ const SetFixed = (element, parent) => {
   } catch(error){
     console.log(`Element: ${element} does not exist, cannot set to fixed`);
   }
+}
+const isHidden = (el) => {
+  return (el.offsetParent === null)
 }
 
 const matchWidth = (el, par) => {

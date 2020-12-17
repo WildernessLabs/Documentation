@@ -8,11 +8,11 @@ const Codeblock = () => {
 
         // create copy button
         const copy = document.createElement('button');
-        copy.setAttribute('class', 'copy-code-button');
+        copy.setAttribute('class', 'icon copy copy-button');
 
         // create hidden text element
         const hiddenText = document.createElement('span');
-        // hiddenText.setAttribute('class', 'visually-hidden');
+        hiddenText.setAttribute('class', 'visually-hidden');
         hiddenText.innerHTML = 'Copy Code Example';
 
         // add elements to DOM
@@ -22,7 +22,6 @@ const Codeblock = () => {
         copy.addEventListener('click', (e)=> {
           copyCode(block);
         });
-        
       });
     }
 

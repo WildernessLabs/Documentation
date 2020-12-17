@@ -1,15 +1,17 @@
 const Darkmode = () => {
   try{
+    
+    const body = document.querySelector('body');
+  
+    const theme = localStorage.getItem('theme');
+    theme ? updateTheme(body, theme) : localStorage.setItem('theme', 'theme-light');
 
     const toggle = document.querySelector(`.dark-mode-toggle`);
-  
     toggle.addEventListener('click',(e) =>{
-
-      const body = document.querySelector('body');
-
+      
       body.classList.contains('theme-light') ?
-        toggleClass(body, 'theme-dark', 'theme-light') :
-        toggleClass(body, 'theme-light', 'theme-dark');
+        updateTheme(body, 'theme-dark') :
+        updateTheme(body, 'theme-light');
     });
 
   }catch(error){
@@ -18,9 +20,10 @@ const Darkmode = () => {
 }
 
 
-const toggleClass = (el, add, remove) =>{
-  el.classList.remove(remove);
-  el.classList.add(add);
+const updateTheme = (el, themeName) =>{
+  el.className = '';
+  el.classList.add(themeName);
+  localStorage.setItem('theme', themeName)
 }
 
 export { Darkmode }

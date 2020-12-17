@@ -25,6 +25,8 @@ main
   display: flex
   // max-width: 100%
   // oveflow: hidden
+  @include breakpoint(mobile tablet)
+    margin-top: 83px
 
 .content
   flex: 1
@@ -38,6 +40,8 @@ main
   flex: 0 0 $nav-width
   min-width: $min-nav-width
   max-width: $max-nav-width
+  @include breakpoint(mobile)
+    display: none
 
 .articlebar
   @include breakpoint(mobile tablet)
@@ -59,9 +63,10 @@ footer
   padding: 3% 0
   border-left: 1px solid #12BBF3
   border-right: 1px solid #12BBF3
-  @include breakpoint(mobile tablet)
+  @include breakpoint(tablet)
     margin: 0 0 0 clamp($min-nav-width, 20%, $max-nav-width)
-
+  @include breakpoint(mobile)
+    margin: 0
   .footer-content
     border-top: 5px solid #FF8E0D
     padding: 3% 0

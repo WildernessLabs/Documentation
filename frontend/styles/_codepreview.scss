@@ -171,21 +171,8 @@ pre[class*="language-"] {
   cursor: help;
 }
 
-.copy-code-button {
+.copy-button {
   position: absolute;
   right: 1em;
   top: 1em;
-}
-
-.theme-dark {
-  pre {
-    border-color: #F6F7F7;
-    background: #21292C;
-    
-  }
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    color: #69782A;
-  }
 }
