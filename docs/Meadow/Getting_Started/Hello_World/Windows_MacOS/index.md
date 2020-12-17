@@ -88,7 +88,7 @@ After a brief boot up wait, your device should start blinking the onboard LED in
 
 The Meadow app template has two files; `Program.cs` and `MeadowApp.cs`, let's take a quick look at them:
 
-{% include the_hello_world_app/index.md %}
+{% include hello_world_app.md %}
 
 ## Next
 

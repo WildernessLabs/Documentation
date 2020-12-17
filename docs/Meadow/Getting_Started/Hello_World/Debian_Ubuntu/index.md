@@ -60,7 +60,7 @@ The project file should now look like this.
 
 Now lets create the Hello Meadow application. Therefore, we need the `Program.cs` which already exists and the `MeadowApp.cs` that needs to be created. The upcoming part will show the code of both classes and explain it.  
 
-{% include the_hello_world_app/index.md %}
+{% include hello_world_app.md %}
 
 ## Building the project 
   
