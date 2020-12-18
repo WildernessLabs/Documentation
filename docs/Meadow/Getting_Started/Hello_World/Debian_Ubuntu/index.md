@@ -16,8 +16,8 @@ This guide shows you how to create a project and deploy the Hello Meadow applica
 
 2. The next step is to add the Meadow dependencies with the dotnet CLI command `dotnet add package`.  
     From nuget the dependencies [Meadow](https://www.nuget.org/packages/Meadow/) and [Meadow.Foundation](https://www.nuget.org/packages/Meadow.Foundation/) need to be added. The site provieds the commands that need to be executed to add the dependencies.  
-    After adding both dependencies the `HelloMeadow.csproj` should look like this (note that the version might be diffrent depending on the latest version available):
-    ```csharp
+    After adding both dependencies the `HelloMeadow.csproj` should look like this:
+    ```xml
     <Project Sdk="Microsoft.NET.Sdk">
 
         <PropertyGroup>
@@ -36,7 +36,7 @@ This guide shows you how to create a project and deploy the Hello Meadow applica
 
 3. Now that we have added the needed dependencies one more step is needed to be done to get a executable which runs on the Meadow. In the project file `HelloMeadow.csproj` the target framework needs to be changed from `net5.0` to `net4.8`.  
 The project file should now look like this. 
-    ```csharp
+    ```xml
     <Project Sdk="Microsoft.NET.Sdk">
 
         <PropertyGroup>
@@ -51,24 +51,26 @@ The project file should now look like this.
 
     </Project>
     ```
-    After changing the target framework we need to restore the dependencies and tools of a project. This is done with follwoing command:
+    After changing the target framework we need to restore the dependencies and tools of the project. This is done with following command:
     ```
     dotnet restore
     ```
 
 ## Example: HelloMeadow
 
-The code for the HelloMeadow application is at [Windows and MacOS guide](/Meadow/Getting_Started/Hello_World/Windows_MacOS).
+For the HelloMeadow application we need a file `Program.cs` and `MeadowApp.cs`. The `Program.cs` allready exists but you need to create the `MeadowApp.cs`. We are first going to take a look at the complete `Program` class followed by the `MeadowApp` class. Then we are going to discuss the details of both classes.
+
+{% include hello_meadow_code.md%}
 
 ## Building the project 
   
-Building the project is done with the `dotnet msbuild`. To build the HelloMeadow application execute following command:
+Building the project is done with `dotnet msbuild project_file`. To build the HelloMeadow application execute following command:
 
 ```
 dotnet msbuild HelloMeadow.csproj
 ```
 
-When the build run successfull you should now hava directory `/bin/debug/net4.8`.  
+When the build was successfull you should now have a directory `/bin/debug/net4.8` with all the files from the build.  
 
 ## Deploying the App to Meadow
 
@@ -80,13 +82,19 @@ From the build directory you now need to upload the following files to the Meado
 * Meadow.Foundation.dll
 * App.exe
 
-Note: You need to rename the HelloMeadow.exe to App.exe
+Note: You need to rename the `HelloMeadow.exe` to `App.exe`.
 
 Now the files need to be uploaded to the Meadow with the [Meadow CLI](Meadow/Meadow_Basics/Meadow_CLI/).
 
 The steps are:  
 1. Disabling mono
+   ```
+   meadow --MonoDisable
+   ```
 3. Transfer the files to the Meadow
+   ```
+   meadow --WriteFile -f [FileName]
+   ```
 4. Start mono again  
    Start mono with the command:
    ```
