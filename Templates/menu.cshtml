@@ -3,7 +3,7 @@
 @using Microsoft.Extensions.Configuration;
 @using Chloroplast.Core.Extensions;
 @{
-  string RenderNodes(IConfigurationSection section, bool isInit, string activeState)
+  string RenderSidenav(IConfigurationSection section, bool isInit, string activeState)
   {
     var children = section.GetChildren();
     if (children.Any())
@@ -21,7 +21,7 @@
             <a aria-expanded="false" href="@item["path"]" class="trigger @primaryAttribute @activeAttribute">@item["title"]</a>
             @if (item.ContainsKey("items"))
             {
-              @Raw(RenderNodes(item.GetSection("items"), false, activeAttribute))
+              @Raw(RenderSidenav(item.GetSection("items"), false, activeAttribute))
             }
             </li>
         }
@@ -29,8 +29,46 @@
     }
     return "";
   }
+
+  string RenderBreadcrumbs(IConfigurationSection section)
+    {
+      var children = section.GetChildren();
+
+      if (children.Any())
+      {
+        @foreach (var item in children)
+        {
+           @if (item.ContainsKey("items") && Model.Node.Slug.Contains(item["path"]))
+            {
+              <li><a aria-expanded="false" href="@item["path"]">@item["title"]</a></li>
+              @Raw(RenderBreadcrumbs(item.GetSection("items")))
+            }
+        }
+      }
+    return "";
+  }
+
+  string GetRootPage(IConfigurationSection section)
+    {
+      var children = section.GetChildren();
+
+      if (children.Any())
+      {
+        <a href="@children.First()["path"]">@children.First()["title"]</a>
+      }
+    return "";
+  }
 }
 
-<section class="sidebar">
-  @RenderNodes(Model.Metadata.GetSection ("navTree"), true, "")
+<section>
+  <ul class="breadcrumbs">
+    <li><a href="/">Home</a></li>
+    <li>@GetRootPage(Model.Metadata.GetSection("parent"))</li>
+    @RenderBreadcrumbs(Model.Metadata.GetSection("navTree"))
+  </ul>
 </section>
+
+<section class="sidebar">
+  @RenderSidenav(Model.Metadata.GetSection ("navTree"), true, "")
+</section>
+

@@ -6,6 +6,7 @@
 @import "fonts"
 
 @import "accordion"
+@import "breadcrumbs"
 @import "nav"
 @import "content"
 @import "codepreview"
@@ -19,7 +20,6 @@ $max-nav-width: 400px
 body
   font-size: 16px
   background: #fff
-  transition: background 200ms
 
 main
   display: flex
@@ -27,6 +27,8 @@ main
   // oveflow: hidden
   @include breakpoint(mobile tablet)
     margin-top: 83px
+  @include breakpoint(mobile)
+    display: block
 
 .content
   flex: 1
