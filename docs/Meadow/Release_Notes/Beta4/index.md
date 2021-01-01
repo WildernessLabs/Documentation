@@ -214,7 +214,6 @@ Meadow.Foundation has new peripheral drivers to play with, including:
 
 - [Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html)
 - [Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html)
-- [Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html)
 
 #### Minor update on SG90 Servos
 
