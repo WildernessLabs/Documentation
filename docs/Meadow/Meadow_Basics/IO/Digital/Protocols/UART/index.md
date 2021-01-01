@@ -255,4 +255,4 @@ care must be taken that there is only one consumer of the buffer, and that any r
 
 ### Additional APIs
 
-There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](http://beta-developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.
+There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.
