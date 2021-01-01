@@ -48,7 +48,7 @@ if (Device.WiFiAdapter.Connect("SSID", "Pass").ConnectionStatus != ConnectionSta
 
 ## Scanning for WiFi Networks
 
-You can also can for WiFI networks via the `Scan()` method on the `WiFiAdapter` and then access the network list via the `Networks` `ObservableCollection` property:
+You can also scan for WiFI networks via the `Scan()` method on the `WiFiAdapter` and then access the network list via the `Networks` `ObservableCollection` property:
 
 ```csharp
 protected void ScanForAccessPoints()
