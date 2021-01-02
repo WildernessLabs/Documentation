@@ -14,7 +14,7 @@ $gutter-content: 4%;
 $gutter-screen: 8%;
 $gutter-top-main-nav: 94px;
 
-$nav-height: 90px;
+$nav-height: 84px;
 $nav-top-spacing: 94px+50px;
 
 $offset-left-nav: 20%;

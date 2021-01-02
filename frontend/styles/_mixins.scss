@@ -1,11 +1,11 @@
 /* Media Query Configuration */
 $media_queries: (
   "mobile": "only screen and (max-width: 768px)",
-  "tablet": "only screen and (min-width: 769px) and (max-width: 1024px)",
+  "tablet": "only screen and (min-width: 769px) and (max-width: 1025px)",
   "desktop-small": "only screen and (min-width: 769px) and (max-width: 1200px)",
   "desktop-large": "only screen and (min-width: 1200px)",
   "desktop-xl": "only screen and (min-width: 1440px)",
-  "desktop": "only screen and (min-width: 992px)",
+  "desktop": "only screen and (min-width: 1025px)",
   "retina2":
     "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)",
   "retina3":

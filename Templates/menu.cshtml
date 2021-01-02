@@ -3,7 +3,7 @@
 @using Microsoft.Extensions.Configuration;
 @using Chloroplast.Core.Extensions;
 @{
-  string RenderSidenav(IConfigurationSection section, bool isInit, string activeState)
+  string RenderSidenav(IConfigurationSection section, IConfigurationSection parent, bool isInit, string activeState)
   {
     var children = section.GetChildren();
     if (children.Any())
@@ -13,6 +13,16 @@
       string primaryAttribute = isInit ? "primary" : "";
 
       <ul class="@listAttributes @activeState">
+
+        @if(isInit){
+          var par = parent.GetChildren();
+          <li class="nav-parent"> 
+            <button class="nav-toggle back"><span class="visually-hidden">Back</span></button>
+            <span>@par.First()["title"]</span>
+            @* <a href="@par.First()["path"]">@par.First()["title"]</a> *@
+          </li>
+        }
+
         @foreach (var item in children)
         {
           string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "not-active";
@@ -21,7 +31,7 @@
             <a aria-expanded="false" href="@item["path"]" class="trigger @primaryAttribute @activeAttribute">@item["title"]</a>
             @if (item.ContainsKey("items"))
             {
-              @Raw(RenderSidenav(item.GetSection("items"), false, activeAttribute))
+              @Raw(RenderSidenav(item.GetSection("items"), parent, false, activeAttribute))
             }
             </li>
         }
@@ -69,6 +79,6 @@
 </section>
 
 <section class="sidebar">
-  @RenderSidenav(Model.Metadata.GetSection ("navTree"), true, "")
+  @RenderSidenav(Model.Metadata.GetSection ("navTree"), Model.Metadata.GetSection("parent"), true, "")
 </section>
 

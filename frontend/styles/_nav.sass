@@ -23,14 +23,17 @@ nav ul
   
   .nav-main-inside
     display: flex
-    width: 924px
     margin: 0 auto
+    max-width: 924px
     @include breakpoint(mobile tablet)
       margin: 0
+      display: block
   .logo-header
       display: block
       position: relative
       left: 5px
+      @include breakpoint(mobile tablet)
+        margin: 0 auto
   .nav-main
     ul
       li
@@ -86,17 +89,30 @@ nav ul
 .nav-accordion
   &.fixed-element
     width: 16.7%  
-  a 
+  a, span
     text-decoration: none
     font-family: "Wavehaus-Book"
     border-left: 2px solid #EDEFF0
+  .nav-parent
+    background: #F88909
+    color: #fff
+    padding: 0.8em 1em;
+    span
+      background: #F88909
+      border: none
+      font-size: 17px
+      position: relative
+      top: 0.4em
+      left: 0.5em
+    @include breakpoint(desktop)
+      display: none
 
   .primary
     font-family: "Wavehaus-Book"
     font-size: 17px
     border-bottom: 0.5px solid #D7D3D0
     height: 46px
-    padding: 0.8em 2.1em
+    padding: 0.8em 1em
     line-height: 19px
     display: block
       
@@ -174,6 +190,7 @@ nav ul
   opacity: 0
   transition: opacity 1000ms
   padding-top: $gutter-screen
+  top: 0px
   .nav-main
     padding: $gutter-screen
     display: flex
@@ -197,3 +214,110 @@ nav ul
   &.open
       opacity: 1
 
+.mobile-secondary-trigger
+  position: relative
+  background: url('/assets/svgs/icons/orange-arrow.svg') no-repeat
+  width: 20px
+  height: 20px
+  transform: rotate(180deg)
+  background-size: contain
+  border: none
+  position: absolute
+  &.active
+    transform: rotate(0deg)
+    top: 2.1em
+  @include breakpoint(desktop)
+    display: none
+
+.mobile_sub_navigation
+  display: none
+  position: fixed
+  z-index: 999999
+  left: 0
+  top: $nav-height
+  width: 100%
+
+.display-subnav
+  @include breakpoint(mobile tablet)
+    .mobile_sub_navigation
+      display: block
+      
+.top-nav-buttons
+  padding: 1em
+  button:last-child
+    float: right
+
+.nav-toggle
+  width: 35px
+  height: 35px
+  border: none
+  &.back
+    background: url('/assets/svgs/icons/arrow-round-back.svg') center center no-repeat
+    background-size: contain
+  &.forward
+    background: url('/assets/svgs/icons/arrow-round-back-orange.svg') center center no-repeat
+    background-size: contain
+
+.nav-close
+  background: url('/assets/svgs/icons/x-circle.svg') center center no-repeat
+  width: 30px
+  height: 30px
+  border: none
+
+.subnavigation-wrapper
+  position: absolute
+  height: 100%
+  display: flex
+  align-items: flex-start
+  width: 100%
+  z-index: 999999
+  .topbar-wrapper, .nav-accordion
+    background: #fff
+    position: absolute
+    transition: all 500ms ease
+    left: -1000px
+  .nav-accordion
+    width: 100%
+    max-width: 450px
+    
+  .topbar-wrapper
+    width: 100%;
+    max-width: 450px;
+    ul 
+      list-style-type: none
+      margin: 0
+      padding: 0
+      li 
+        a
+          font-family: "Wavehaus-Book"
+          font-size: 18px
+          letter-spacing: 1px
+          color: #675130
+          text-decoration: none
+          padding: 0.5em 1em
+          display: block
+        &.active
+          a 
+            background: #FF8E0D
+            color: #fff
+  &.top-active
+    .topbar-wrapper
+      left: 0px
+    .nav-accordion
+      left: -1000px
+  &.sub-active
+    .topbar-wrapper
+      left: -1000px
+    .nav-accordion
+      left: 0px
+
+.mobile_nav_backdrop
+  background: rgba(60, 52, 36, .5)
+  position: fixed
+  z-index: 999998
+  width: 100%
+  height: 100%
+
+.no-subnav
+  .top-nav-buttons
+    display: none
