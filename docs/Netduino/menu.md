@@ -1,5 +1,8 @@
 ---
 template: menu
+parent:
+- path: /netduino
+  title: Netduino
 navTree:
 - path: /netduino/About
   title: About Netduino

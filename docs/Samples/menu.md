@@ -1,5 +1,8 @@
 ---
 template: menu
+parent:
+- path: /samples
+  title: Meadow Samples
 navTree:
 - path: /samples/Netduino
   title: Netduino Samples

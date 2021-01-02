@@ -1,5 +1,8 @@
 ---
 template: menu
+parent: 
+- path: /hardware
+  title: Hardware & Circuits
 navTree:
 - path: /hardware/Reference
   title: Hardware & Circuits Reference

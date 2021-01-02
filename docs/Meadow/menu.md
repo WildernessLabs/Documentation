@@ -1,5 +1,8 @@
 ---
 template: menu
+parent:
+- path: /meadow
+  title: Meadow Guides
 navTree:
 - path: /meadow/Getting_Started
   title: Get started with Meadow
