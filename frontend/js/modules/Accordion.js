@@ -1,18 +1,33 @@
 const Accordion = (el) => {
   try{
-    const accordion = document.querySelectorAll(el);
-    const triggers = document.querySelectorAll(`${el} .trigger`);
+    
+    if(el){
+      const triggers = el.querySelectorAll('.trigger');
 
-    if(accordion.length > 0){
       triggers.forEach((trigger) => {
+        
         const subMenu = trigger.nextElementSibling;
-
+        
         if(subMenu && subMenu.nodeName == 'UL'){
+
+          const triggerButton = document.createElement('button');
+          triggerButton.innerHTML = '<span class="visually-hidden">Toggle</span>';
+          triggerButton.classList.add('triggerButton');
+          trigger.appendChild(triggerButton);
+
           trigger.classList.add('has-submenu'); //setup submenu class
-          subMenu.classList.contains('active') ? subMenu.style.display = 'block' : subMenu.style.display = 'none';
+          
+          if(subMenu.classList.contains('active')){
+            subMenu.style.display = 'block';
+            trigger.setAttribute('aria-expanded', true);
+          } else {
+            subMenu.style.display = 'none';
+            trigger.setAttribute('aria-expanded', true);
+          }
+          // subMenu.classList.contains('active') ?  : 
           
           // bind event listeners for expand/collapse
-          trigger.addEventListener("click", (e) => {
+          triggerButton.addEventListener("click", (e) => {
             e.preventDefault();
 
             // toggle active class of 'trigger' and 'ul' menu
@@ -27,9 +42,9 @@ const Accordion = (el) => {
                     subMenu.classList.add('active');
                 }, 1);
                 
-                setTimeout(()=>{
-                  window.location.replace(e.target.href);
-                }, 500);
+                // setTimeout(()=>{
+                //   window.location.replace(e.target.href);
+                // }, 500);
 
               } else {
                 trigger.classList.remove('active');

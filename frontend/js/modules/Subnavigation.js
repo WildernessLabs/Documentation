@@ -1,3 +1,6 @@
+import Accordion from './Accordion';
+import { shouldContentScroll } from './Utils';
+
 const MobileSubNavigation = () => {
 
   const trigger = document.querySelector('.mobile-secondary-trigger');
@@ -13,7 +16,7 @@ const MobileSubNavigation = () => {
       const body = document.getElementsByTagName("body")[0]
       const header = document.getElementsByTagName("header")[0]
 
-      const subNavigation = document.querySelector('.nav-accordion');
+      const subNavigation = document.querySelector('.nav-accordion-wrapper');
 
       // create the mobile navigation container if it hasn't already been created
       const mobileNav = document.createElement('div');
@@ -50,9 +53,16 @@ const MobileSubNavigation = () => {
 
       // create copy of subnavigation
       if(subNavigation){
+
+        // const subNavigationWrapper = document.createElement('div');
+        // subNavigationWrapper.className = 'mobile-accordion-wrapper';
+
         const subNavigationCopy = subNavigation.cloneNode(true);
         subNavigationCopy.classList.remove('fixed-element');
         subNavigationCopy.style = "";
+
+        // subNavigationWrapper.appendChild(subNavigationCopy);
+
         wrapper.appendChild(subNavigationCopy);
       }
 
@@ -64,6 +74,11 @@ const MobileSubNavigation = () => {
       // add mobile navigation to the DOM
       mobileNav.classList.add(subNavigation ? 'with-subnav' : 'no-subnav');
       mobileNav.appendChild(wrapper);
+
+      // create accordion
+      setTimeout(()=>{
+        Accordion(document.querySelector(`.${mobileContainerName} .nav-accordion`));
+      });
       
       trigger.parentNode.insertBefore(mobileNav, trigger.nextSibling);
 
@@ -102,8 +117,20 @@ const toggleNav = () => {
 
   // toggle active state of header icon
   trigger.classList.contains('active') ? trigger.classList.remove('active') : trigger.classList.add('active');
-  body.classList.contains('display-subnav') ? body.classList.remove('display-subnav') : body.classList.add('display-subnav');
-  //body.classList.contains('display-subnav') ? toggleClass(document.querySelector('.subnavigation-wrapper'), 'sub-active', 'top-active') : null;
+  
+  // toggle visual state of nav
+  if(body.classList.contains('display-subnav')){
+    body.classList.remove('display-subnav');
+    shouldContentScroll(true);
+  } else {
+    body.classList.add('display-subnav');
+    shouldContentScroll(false);
+  }
+  
+  const subnavWrapper = document.querySelector('.subnavigation-wrapper');
+  if(subnavWrapper && body.classList.contains('display-subnav')){
+    toggleClass(subnavWrapper, 'sub-active', 'top-active');
+  }
 }
 
 const toggleClass = (el, add, remove) => {

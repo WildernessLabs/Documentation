@@ -72,7 +72,7 @@ nav ul
         display: block
         padding: 1.188em 1em
 
-        &:hover, &:focus
+        span:hover, &:focus
           color: #F88909
         @include breakpoint(page1440)
           font-size: 1em
@@ -86,51 +86,60 @@ nav ul
           font-size: 16px
           padding: 1.188em 0.4em
 
+.mobile-subnav-controls
+  background: #F88909
+  color: #fff
+  padding: 0.8em 1em;
+  span
+    background: #F88909
+    border: none
+    font-size: 17px
+    font-family: "Wavehaus-Book"
+    position: relative
+    top: 0.4em
+    left: 0.5em
+  @include breakpoint(desktop)
+    display: none
+    
 .nav-accordion
   &.fixed-element
     width: 16.7%  
   a, span
     text-decoration: none
     font-family: "Wavehaus-Book"
-    border-left: 2px solid #EDEFF0
-  .nav-parent
-    background: #F88909
-    color: #fff
-    padding: 0.8em 1em;
-    span
-      background: #F88909
-      border: none
-      font-size: 17px
-      position: relative
-      top: 0.4em
-      left: 0.5em
-    @include breakpoint(desktop)
-      display: none
+  a
+    cursor: default
+  a span
+    cursor: pointer
+    &:hover
+      text-decoration: underline
 
   .primary
     font-family: "Wavehaus-Book"
     font-size: 17px
     border-bottom: 0.5px solid #D7D3D0
-    height: 46px
     padding: 0.8em 1em
-    line-height: 19px
     display: block
       
   .has-submenu
     position: relative
-    &::before
-      content: " ";
-      background: url('/assets/svgs/icons/orange-arrow.svg') no-repeat
-      width: 10px
-      height: 10px
+    .triggerButton
+      background: url('/assets/svgs/icons/orange-arrow.svg') center center no-repeat
+      width: 40px
+      height: 100%
       position: absolute
-      right: 1.2em
-      top: 1em
+      right: 0
+      top: 0
       transform: rotate(180deg)
+      border: none
+      &:active
+        outline: none
+      &:hover, &:focus
+        background-color: #D7D3D0
     &.active
-      &::before 
+      .triggerButton
         transform: rotate(0deg)
-        top: 1.2em
+        top: 0
 
   /* Tier 1 of Accordion */
   $sublink-padding-vertical: 5px
@@ -139,6 +148,7 @@ nav ul
     list-style-type: none
     a
       padding: $sublink-padding-vertical 2.1em
+      cursor: a
     /* Tier 2 Wrapper */
     ul
       border-bottom: none
@@ -146,8 +156,8 @@ nav ul
         border-bottom: 0.5px solid #D7D3D0
       li
         // padding: 0.3em 1.8em 0
-        // &:first-child
-        //   margin-top: 10px
+        &:first-child
+          margin-top: 10px
         &:last-child
           margin-bottom: 10px
 
@@ -167,12 +177,11 @@ nav ul
       a
         display: block
         &.has-submenu
-          &::before
+          .triggerButton
             display: inline-block
             transform: rotate(90deg)
-            position: relative
-            left: 0
-            top: 0
+            width: 30px
+            height: 100%
             margin-right: 8px
           &.active::before
             transform: rotate(180deg)
@@ -181,7 +190,7 @@ nav ul
             font-family: "Wavehaus-Bold"
 
       
-#mobile__nav
+#mobile-header-nav
   position: fixed
   width: 100%
   height: 100%
@@ -271,15 +280,18 @@ nav ul
   align-items: flex-start
   width: 100%
   z-index: 999999
-  .topbar-wrapper, .nav-accordion
-    background: #fff
+
+  .topbar-wrapper, .nav-accordion-wrapper
     position: absolute
     transition: all 500ms ease
     left: -1000px
-  .nav-accordion
+  .nav-accordion-wrapper
     width: 100%
     max-width: 450px
-    
+  .nav-accordion
+    height: calc(100vh - #{$nav-height} - #{$mobile-controls-height})
+    overflow: auto
+
   .topbar-wrapper
     width: 100%;
     max-width: 450px;
@@ -294,21 +306,24 @@ nav ul
           letter-spacing: 1px
           color: #675130
           text-decoration: none
-          padding: 0.5em 1em
+          padding: 0.8em 1em
           display: block
+          &:hover, &:focus
+            background: #FF8E0D
+            color: #fff
         &.active
-          a 
+          a
             background: #FF8E0D
             color: #fff
   &.top-active
     .topbar-wrapper
       left: 0px
-    .nav-accordion
+    .nav-accordion-wrapper
       left: -1000px
   &.sub-active
     .topbar-wrapper
       left: -1000px
-    .nav-accordion
+    .nav-accordion-wrapper
       left: 0px
 
 .mobile_nav_backdrop

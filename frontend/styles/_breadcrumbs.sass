@@ -4,10 +4,9 @@ section
     list-style-type: none
     padding: 1em
     li 
-      margin-right: 1em
       a
         font-family: "Wavehaus-Book"
-        font-size: 18px
+        font-size: 16px
         letter-spacing: 1px
         color: #675130
         text-decoration: none
@@ -15,7 +14,8 @@ section
           text-decoration: none
         &::after
           content: ">"
-          padding-left: 1em
+          margin-left: 0.5em
+          margin-right: 0.5em
       &:last-child
         a::after
           content: ""
@@ -24,3 +24,4 @@ section
   section
     .breadcrumbs 
       display: flex
+      flex-wrap: wrap

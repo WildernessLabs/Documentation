@@ -1,3 +1,5 @@
+import { shouldContentScroll } from './Utils';
+
 const createCloseButton = (el, nav, body) => {
 
     const close = document.createElement('button');
@@ -8,7 +10,7 @@ const createCloseButton = (el, nav, body) => {
     el.insertBefore(close, nav);
 
     close.addEventListener('click', () => { 
-        body.classList.remove('mobile__nav');
+        body.classList.remove('mobile-header-nav');
         body.removeChild(el);
 
         toggleHeaderDisplay('block');
@@ -20,13 +22,6 @@ const toggleHeaderDisplay = (val) => {
   const header = document.getElementsByTagName("header")[0]
 
   header.style.display = val;
-}
-
-const shouldContentScroll = (val) => {
-  const body = document.getElementsByTagName("body")[0]
-  const overflow = val ? 'auto' : 'hidden';
-
-  body.style.overflow = overflow;
 }
 
 
@@ -55,12 +50,12 @@ const MobileNavigation = () => {
       const header = document.getElementsByTagName("header")[0]
 
       // create the mobile navigation container if it hasn't already been created
-      const mobileContainer = document.getElementById('mobile__nav');
+      const mobileContainer = document.getElementById('mobile-header-nav');
       const mobileNav = mobileContainer ? mobileContainer : document.createElement('div');
       
       // setup the mobile navigation because this is the first time creating it
       if(!mobileContainer){
-          mobileNav.id = 'mobile__nav';
+          mobileNav.id = 'mobile-header-nav';
           mobileNav.className = 'mobile content__section';
 
           const navigation = document.querySelector('.nav-main');

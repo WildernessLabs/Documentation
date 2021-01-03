@@ -16,6 +16,10 @@
         border-left: 2px solid #FF8E0D
         color: #BE4D34
 
+  .subnavigation-wrapper
+    .topbar-wrapper, .nav-accordion li
+      background: #fff
+
   //content
   .content-body
     h1, h2, h3, h4, h5, p, ul, ol
@@ -41,9 +45,6 @@
         background: #F6F7F7
         border-right: 3px solid #12BBF3
 
-
-
-  
 .theme-dark
   background: #20252A
   // navigation
@@ -59,10 +60,19 @@
     a 
       color: #F6F7F7
       border-left: 2px solid #20252A
-      &:hover:not(.active), &.active:not(.has-submenu)
-        background: #2D3339
-        border-left: 2px solid #FF8E0D
-        color: #FF8E0D
+      // span:hover:not(.active), &.active:not(.has-submenu)
+      //   background: #2D3339
+      //   border-left: 2px solid #FF8E0D
+      //   color: #FF8E0D
+
+  .subnavigation-wrapper
+    .topbar-wrapper, .nav-accordion li
+      background: #20252A
+      a 
+        color: #fff
+
+  .breadcrumbs li a 
+    color: #fff
 
   //content
   .content-body

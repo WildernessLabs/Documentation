@@ -12,23 +12,22 @@
       string listAttributes = isInit ? "nav-accordion accordion" : "";
       string primaryAttribute = isInit ? "primary" : "";
 
+      @if(isInit){
+        var par = parent.GetChildren();
+        <div class="mobile-subnav-controls"> 
+          <button class="nav-toggle back"><span class="visually-hidden">Back</span></button>
+          <span>@par.First()["title"]</span>
+          @* <a href="@par.First()["path"]">@par.First()["title"]</a> *@
+        </div>
+      }
       <ul class="@listAttributes @activeState">
-
-        @if(isInit){
-          var par = parent.GetChildren();
-          <li class="nav-parent"> 
-            <button class="nav-toggle back"><span class="visually-hidden">Back</span></button>
-            <span>@par.First()["title"]</span>
-            @* <a href="@par.First()["path"]">@par.First()["title"]</a> *@
-          </li>
-        }
 
         @foreach (var item in children)
         {
           string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "not-active";
 
           <li>
-            <a aria-expanded="false" href="@item["path"]" class="trigger @primaryAttribute @activeAttribute">@item["title"]</a>
+            <a aria-expanded="false" href="@item["path"]" class="trigger @primaryAttribute @activeAttribute"><span>@item["title"]</span></a>
             @if (item.ContainsKey("items"))
             {
               @Raw(RenderSidenav(item.GetSection("items"), parent, false, activeAttribute))
@@ -79,6 +78,8 @@
 </section>
 
 <section class="sidebar">
-  @RenderSidenav(Model.Metadata.GetSection ("navTree"), Model.Metadata.GetSection("parent"), true, "")
+  <div class="nav-accordion-wrapper">
+    @RenderSidenav(Model.Metadata.GetSection ("navTree"), Model.Metadata.GetSection("parent"), true, "")
+  </div>
 </section>
 
