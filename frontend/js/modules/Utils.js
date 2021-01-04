@@ -5,4 +5,8 @@ const shouldContentScroll = (val) => {
   body.style.overflow = overflow;
 }
 
-export { shouldContentScroll }
+const isValidEvent = (e) => {
+  return e.keyCode === 13 || e.type == 'click' ? true : false
+}
+
+export { shouldContentScroll, isValidEvent }

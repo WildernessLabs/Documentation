@@ -156,8 +156,8 @@ nav ul
         border-bottom: 0.5px solid #D7D3D0
       li
         // padding: 0.3em 1.8em 0
-        &:first-child
-          margin-top: 10px
+        // &:first-child
+        //   margin-top: 10px
         &:last-child
           margin-bottom: 10px
 
@@ -288,8 +288,12 @@ nav ul
   .nav-accordion-wrapper
     width: 100%
     max-width: 450px
+    display: flex
+    flex-direction: column
   .nav-accordion
-    height: calc(100vh - #{$nav-height} - #{$mobile-controls-height})
+    // height: calc(100vh - #{$nav-height} - #{$mobile-controls-height});
+    // height: calc((var(--vh, 1vh) * 100));
+    // height: 100px
     overflow: auto
 
   .topbar-wrapper

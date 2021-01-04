@@ -1,7 +1,6 @@
 const throttle = require('lodash.throttle');
 
 const ArticleNav = () => {
-
     try {
 
       /* Setup Viewport Tracking of Page Headers */

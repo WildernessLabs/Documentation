@@ -1,68 +1,90 @@
+import { isValidEvent } from './Utils';
+
 const Accordion = (el) => {
-  try{
-    
-    if(el){
-      const triggers = el.querySelectorAll('.trigger');
+ 
 
-      triggers.forEach((trigger) => {
+  if(el){
+    const triggers = el.querySelectorAll('.trigger');
+
+    triggers.forEach((trigger) => {
+      
+      const triggerSpan = trigger.querySelector('span');
+      const submenu = trigger.nextElementSibling; // reference to subtree, element directly following trigger is always the sub tree
+      
+      if(submenu && submenu.nodeName == 'UL'){
+
+        // SETUP MARKUP
+        // create trigger buttons if one doesn't exist already
+        let triggerButton = trigger.querySelector('.triggerButton') || createAccordionTrigger();
+        trigger.appendChild(triggerButton);
         
-        const subMenu = trigger.nextElementSibling;
+        // setup initial state of menus and buttons
+        trigger.classList.add('has-submenu'); //setup submenu class
         
-        if(subMenu && subMenu.nodeName == 'UL'){
+        if(submenu.classList.contains('active')){
+          submenu.style.display = 'block';
+          trigger.setAttribute('aria-expanded', true);
+        } else {
+          submenu.style.display = 'none';
+          trigger.setAttribute('aria-expanded', false);
+        }
 
-          const triggerButton = document.createElement('button');
-          triggerButton.innerHTML = '<span class="visually-hidden">Toggle</span>';
-          triggerButton.classList.add('triggerButton');
-          trigger.appendChild(triggerButton);
+        // BIND EVENTS
+        trigger.addEventListener('click', (e) => { e.preventDefault(); });
 
-          trigger.classList.add('has-submenu'); //setup submenu class
-          
-          if(subMenu.classList.contains('active')){
-            subMenu.style.display = 'block';
-            trigger.setAttribute('aria-expanded', true);
-          } else {
-            subMenu.style.display = 'none';
-            trigger.setAttribute('aria-expanded', true);
+        triggerSpan.addEventListener('click', (e) => { onTriggerLink(e); });
+        triggerSpan.addEventListener('keydown', (e) => { onTriggerLink(e); });
+
+        triggerButton.addEventListener('click', (e) => { onTriggerButton(e) }); // addEventListener
+        
+        function onTriggerLink(e){
+          if(isValidEvent(e)){
+            window.location.replace(trigger.href);
           }
-          // subMenu.classList.contains('active') ?  : 
-          
-          // bind event listeners for expand/collapse
-          triggerButton.addEventListener("click", (e) => {
-            e.preventDefault();
+        }
 
-            // toggle active class of 'trigger' and 'ul' menu
-            if(trigger.classList.contains('has-submenu')){
-              if(!trigger.classList.contains('active')){
+        function onTriggerButton(e){
+          e.preventDefault();
 
-                trigger.classList.add('active');
-                // setTimeout required to toggle display prop before class prop
-                // display required to remove elements from DOM when hidden
-                subMenu.style.display = 'block';
-                setTimeout(()=>{
-                    subMenu.classList.add('active');
-                }, 1);
-                
-                // setTimeout(()=>{
-                //   window.location.replace(e.target.href);
-                // }, 500);
+          const triggerClasses = trigger.classList;
+          const submenuClasses = submenu.classList;
 
-              } else {
-                trigger.classList.remove('active');
-                subMenu.classList.remove('active');
-                
-                setTimeout(()=>{
-                    subMenu.style.display = 'none';
-                }, 100);
-              }
+          // toggle active class of 'trigger' and 'ul' menu
+          if(triggerClasses.contains('has-submenu')){
+            
+            // set accordion tree to active
+            if(!triggerClasses.contains('active')){
+
+              triggerClasses.add('active');
+              // setTimeout required to toggle display prop before class prop
+              // display required to remove elements from DOM when hidden
+              submenu.style.display = 'block';
+              setTimeout(()=>{
+                submenuClasses.add('active');
+              }, 1);
+              
+
+            } else {
+              triggerClasses.remove('active');
+              submenuClasses.remove('active');
+              
+              setTimeout(()=>{
+                  submenu.style.display = 'none';
+              }, 100);
             }
-          }); // addEventListener
-          
-        } 
-      });
-    }
-  }catch(error){
-    console.log(`Element: ${el} does not exist, cannot init accordion`);
+          }
+        }
+      } 
+    });
   }
+}
+
+const createAccordionTrigger = () => {
+  const triggerButton = document.createElement('button');
+  triggerButton.innerHTML = '<span class="visually-hidden">Toggle</span>';
+  triggerButton.classList.add('triggerButton');
+
+  return triggerButton;
 }
 
 export default Accordion
