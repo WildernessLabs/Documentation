@@ -4,6 +4,27 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.3
+
+This release brings a big boost in performance. We've been working with debug OS builds up through b4.2. This release is a proper release build that will improve performance across theb board. For example, we're seeing a 6x improvement in SPI throughput!
+
+* **Meadow.OS Release build** * a non-debug build of NuttX seems to have a big performance impact - very noticable on SPI comms, liekly other things
+ * **Interrupt/PushButton Fix** * we *think* fixed interrupts and the `PushButton` once and for all!
+ * **CLI/Deployment Fixes** * We've streamlined and stabalized app deployments to Meadow, this should help both using the Meadow CLI and the Visual Studio extensions
+ * **VS4Mac Fixes** * The VS Mac extension experience is *much* better with the recent CLI improvements, this release a also improves Meadow detection when using USB hubs
+
+## Meadow Foundation Updates
+
+This release sees a much needed code repro cleanup and refactoring, improved comments, and some code consistency updates.
+
+It also includes some general improvements and bug fixes:
+- `TextDisplayMenu` multilevel menus can now be created programmatically as well as using Json
+- `µGraphics` stroke works with `DrawHorizonalLine` and `DrawVerticalLine`
+- `µGraphics` negative line length values now properly draw in the opposite direction
+- `TftSpi` fixed `ClearScreen` method
+- `Apa102` contructor cleanup - removed uneeded GPIO pin
+
+
 # b4.2
 
 This is a big release with a ton of stability fixes, an overhaul of the CLI, and big new features for networking. Major changes and improvements include:
