@@ -81,7 +81,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Ht16K33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16K33.html) | HT16K33 for digital output expansion |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [IS31FL3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.IS31FL3731.html) | IS31FL3731 for 144 single LEDs |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Mcp23x08](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.html) | MCP23008 for digital output expansion |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Pca9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.Pca9685.html) | Pca9685 for multiple PWM channels |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Pca9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9685.html) | Pca9685 for multiple PWM channels |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 74595 shift register for digital output expansion |
 
 ### Leds
@@ -89,6 +89,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | SPI Addressable LED strip |
+
 ### Motors
 
 | Status | Driver | Description | Notes |

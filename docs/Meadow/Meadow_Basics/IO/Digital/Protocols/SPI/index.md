@@ -28,9 +28,9 @@ In addition to the chip select, SPI requires two lines for bidirectional communi
 
 `MISO` stands for _Master-In, Slave-Out_, and is used to transmit data from the client peripherals to the master controller.
 
-### SCLK
+### SCK
 
-All the peripherals are on the same clock, which is set by the master controller and pulsed over the `SCLK` line, which stands for _Serial Clock_.
+All the peripherals are on the same clock, which is set by the master controller and pulsed over the `SCK` line, which stands for _Serial Clock_.
 
 ### CS
 

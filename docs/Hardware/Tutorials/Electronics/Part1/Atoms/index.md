@@ -45,7 +45,7 @@ Both protons and electrons have an attraction/repelling force, or "charge." Prot
 
 ## Ions
 
-Because protons and electrons have the same amount but opposite type of charge, the number of electrons in a balanced atom (in which the net electrical charge is zero), must be equal. So a hydrogen atom (atomic number of 1) should have one proton and electron. Iron, which an atomic number of 26, should naturally have 26 protons, and 26 neutrons.
+Because protons and electrons have the same amount but opposite type of charge, the number of electrons in a balanced atom (in which the net electrical charge is zero), must be equal. So a hydrogen atom (atomic number of 1) should have one proton and electron. Iron, which an atomic number of 26, should naturally have 26 protons, and 26 electrons.
 
 However, atoms can gain or lose electrons, causing them to have a net positive (if there are more protons) or net negative charge (if there are more electrons). These atoms are called [ions](https://en.wikipedia.org/wiki/Ion). And the process of becoming ionized is ionization.
 

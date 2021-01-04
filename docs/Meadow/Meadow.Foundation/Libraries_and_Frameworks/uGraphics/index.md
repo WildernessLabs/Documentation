@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-title: Meadow µGraphicsLibrary
-subtitle: Using the lightweight, MCU-optimized Meadow.Foundation µGraphicsLibrary with Meadow.
+title: Meadow.Foundation µGraphics Library
+subtitle: Using the lightweight, MCU-optimized Meadow.Foundation µGraphics 2D drawing library with Meadow.
 ---
 
 <!--
@@ -10,24 +10,26 @@ Doc Notes:
 
 -->
 
-The Meadow.Foundation µGraphics library is a lightweight drawing framework used to create off screen (in-memory) graphics using standard drawing methods as well as bitmap and JPEG images.
+The Meadow.Foundation µGraphics library is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on display devices. 
 
-Additionally, it implements `ITextDisplay`, so it can be used as an in memory canvas for use with the `TextDisplayMenu` library, enabling any graphics display to drive menus.
+µGraphics includes the ability to draw many different primitives such as lines, shapes, text (using bitmap fonts), as well as bitmap images.
 
-To use the graphics display you simply:
- 1. Initialize it with a display so it has size and bit depth information.
- 2. Draw or render your graphics to the context.
- 3. Call `Show()` to push the in-memory representation out to the display.
+Additionally, it implements `ITextDisplay`, so it enables any graphic display to be a canvas for use with the `TextDisplayMenu` library, easily enabling menus to be created and displayed on graphics displays.
+
+To use the graphics display you:
+ 1. Initialize it with a display.
+ 2. Draw your graphics to the canvas (in-memory display buffer).
+ 3. Call `Show()` to copy the canvas content to the display.
 
 # Initializing the Graphics Library
 
-The graphics library must be initialized with a display so that it knows how to size the drawing canvas and how to represent the color of each pixel. 
+In Meadow.Foundation, every display driver manages its own buffer, since each display has different requirements in terms of display size and color depth. 
 
-For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
+For this reason, an initialized display driver must be passed to the µGraphics instance during construction. For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
 
 ```csharp
 St7789 st7789;
-GraphicsLibrary graphics;
+GraphicsLibrary canvas;
 
 // our display needs mode3
 var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
@@ -40,16 +42,15 @@ display = new St7789
     chipSelectPin: null,
     dcPin: MeadowApp.Device.Pins.D01,
     resetPin: MeadowApp.Device.Pins.D00,
-    width: 240, height: 240
+    width: 240, height: 240, 
+    displayColorMode: St7789.DisplayColorMode.Format16bppRgb565
 );
 
 // create our graphics canvas that we'll draw onto 
-graphics = new GraphicsLibrary(display);
+canvas = new GraphicsLibrary(display);
 
-Console.WriteLine("Clear display");
-
-// finally, clear the display so it's ready for action
-graphics.Clear(true);
+// finally, clear any artifacts from the screen from boot up
+canvas.Clear(true);
 ```
 
 ## Setting Display Rotation
@@ -57,28 +58,32 @@ graphics.Clear(true);
 Note that you can also set the rotation of display, which allows you to match the physical orientation of the display in your project:
 
 ```csharp
-graphics.Rotation = GraphicsLibrary.RotationType._270Degrees;
+canvas.Rotation = GraphicsLibrary.RotationType._270Degrees;
 ```
 
-# Showing and Clearing
+# Canvas and Painter's Model
 
-Drawing happens in-memory on the graphics canvas and is then sent to the display. After initializing the display, it's a good idea to call `Clear()` on the graphics canvas to make sure the screen doesn't have any leftover artifacts from initialization:
+The µGraphics Library utilizes the _painter’s model_. That means that as you draw onto the drawing surface, each subsequent drawing operation is applied on top of the previous. For this reason, it's useful to think of an instantiated µGraphics class as _canvas_ that you'll draw to.
+
+Unlike layers in programs like photoshop, once you have drawn something, you can’t undraw it, or remove layers. If you want to build an application like that, you either need to store a list of your draw operations and then re-draw each of the ones that you want to apply.
+
+## Clearing the Canvas
+
+Drawing happens in-memory on the graphics canvas and is then sent to the display. After initializing the display, it's a good idea to call `Clear()` on the canvas to make sure the screen doesn't have any leftover artifacts from initialization:
 
 ```csharp
-graphics.Clear();
+canvas.Clear(updateDisplay: true);
 ```
+
+Passing `true` for the `updateDisplay` parameter copies the cleared canvas to the display immediately. If you pass `false` (or don't pass anything at all), the canvas in memory will be cleared but the screen itself will not be cleared immediately until `Show()` is called.
+
+## Copying the Canvas to the Display
 
 And after you've finished the drawing operations on the canvas, it can be pushed to the display via the `Show()` method:
 
 ```csharp
-graphics.Show();
+canvas.Show();
 ```
-
-# Drawing
-
-The µGraphics Library utilizes the _painter’s model_. That means that as you draw onto the drawing surface, each subsequent drawing operation is applied on top of the previous.
-
-Unlike layers in programs like photoshop, once you have drawn something, you can’t undraw it, or remove layers. If you want to build an application like that, you either need to store a list of your draw operations and then re-draw each of the ones that you want to apply.
 
 ## Coordinate System
 

@@ -47,7 +47,7 @@ You should generally reserve up to `400mA` of the power budget for onboard funct
 
 In addition to the overall power budget, the amount of power being delivered to peripherals via the IO pins must be considered. There is both an overall maximum that the MCU can drive, as well as a per pin maximum.
 
-[what are they?]
+On the Meadow F7, there is a `25mA` per IO maximum, and a total maximum of `120mA`.
 
 ##### Battery Charger Usage
 
