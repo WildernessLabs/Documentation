@@ -12,6 +12,13 @@ This is a minor release with a big performance boost! Up until now, our Meadow.O
 
 This release requires an OS update as well as IDE extension and Meadow Nuget updates (including the Meadow.CLI package).
 
+Note, to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+
 ## Features
 
 Major features and fixes include:
