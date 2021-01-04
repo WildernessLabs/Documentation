@@ -4,6 +4,39 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.3
+
+This is a minor release with a big performance boost! Up until now, our Meadow.OS builds have had lots of debug stuff turned on. We turned most of that off, which has increased performance across a number of features, with some features getting big performance boosts. For instance, SPI has a 6x throughput improvement, speeding up graphics display updates.
+
+## Updating
+
+This release requires an OS update as well as IDE extension and Meadow Nuget updates (including the Meadow.CLI package).
+
+## Features
+
+Major features and fixes include:
+
+ * **Meadow.OS Release build** - With performance upgrades across many features.
+ * **Interrupt & PushButton Fix** - We've done some more work around `DigitalInputPort` interrupts, and hopefully have the Meadow.Foundation `PushButton` fixed once and for all.
+ * **CLI/Deployment Fixes** - We've streamlined and stabilized app deployments to Meadow, which should help both using the Meadow CLI and the Visual Studio extensions
+ * **VS4Mac Fixes** - The VS Mac extension experience is *much* better with the recent CLI improvements, this release a also improves Meadow detection when using USB hubs
+
+## Meadow Foundation Updates
+
+This release sees a much needed code repro cleanup and refactoring, improved comments, and some code consistency updates.
+
+It also includes some general improvements and bug fixes:
+ * **`TextDisplayMenu`** -  multilevel menus can now be created programmatically as well as using Json
+ * **`µGraphics`** - Stroke works with `DrawHorizonalLine` and `DrawVerticalLine`
+ * **`µGraphics`** - Negative line length values now properly draw in the opposite direction
+ * **`TftSpi` fixed `ClearScreen` method** - Now works.
+ * **`Apa102` constructor cleanup** - Removed unneeded GPIO pin.
+
+
+## Bug Fixes
+
+- [#127 - MeadowOS.Reset fails](https://github.com/WildernessLabs/Meadow_Issues/issues/127) - This was a regression introduced while implementing the Watchdog timer. It should be working again.
+
 # b4.2
 
 This is a big release with a ton of stability fixes, an overhaul of the CLI, and big new features for networking. Major changes and improvements include:
