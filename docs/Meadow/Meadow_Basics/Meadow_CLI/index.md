@@ -37,7 +37,7 @@ Note: Meadow.CLI automatically caches the serial port name. Once you've sent a c
 Writes a file into the Meadow's flash file system.
 
 ```bash
-Meadow.CLI.exe --WriteFile -f [NameOfFile] --SerialPort [NameOfSerialPort]
+Meadow.CLI.exe --WriteFile file[,file,...] [targetFileName[,targetFileName,...]] --SerialPort [NameOfSerialPort]
 ```
 
 ### List files in flash file system
