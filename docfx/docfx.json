@@ -26,7 +26,8 @@
             "/Source/Meadow.Foundation.Peripherals/**/Datasheet/**",
             "/Source/Meadow.Foundation.Peripherals/**/Sample/**_Sample/**",
             "/Source/Meadow.Foundation.Peripherals/**/Samples/**_Sample/**",
-            "/Source/Meadow.Foundation.Peripherals/Transceivers.SX127x/**",            
+            "/Source/Meadow.Foundation.Peripherals/Transceivers.SX127x/**",
+            "/Source/Meadow.Foundation.Peripherals/Transceivers.Nrf24l01/**",            
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/bin/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/obj/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/Samples/**"
