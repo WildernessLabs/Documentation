@@ -47,4 +47,4 @@ For this, there are a number circuit simulators available, a couple very good on
  * **[iCircuit App](http://icircuitapp.com/)** - Commercial, yet affordable, high quality, easy to use circuit simulator available for iOS, macOS, Windows, and Android.
  * **[LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)** - A free circuit simulator for Windows and macOS.
 
-## [Next: Schematic Design](/Hardware/Design/PCB_Design_and_Assembly/Schematic_Design/)
+## [Next: PCB Design Tutorial](/Hardware/Design/PCB_Design_and_Assembly/PCB_Design_Tutorial/)
