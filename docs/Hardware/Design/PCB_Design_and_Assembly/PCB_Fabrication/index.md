@@ -1,5 +1,5 @@
 ---
 layout: Hardware
-title: Component Placement
+title: PCB Fabrication
 subtitle: yeah yeah yah!
 ---
