@@ -20,4 +20,4 @@ Along the way, we're going to cover the following:
    * Creating Custom Schematic Symbols & PCB Footrpints
  * PCB Layout/Design
 
-## [Next: Schematic Design](/Hardware/Design/PCB_Design_and_Assembly/PCB_Design_Tutorial/Schematic_Design)
+## [Next: Creating a Project](/Hardware/Design/PCB_Design_and_Assembly/PCB_Design_Tutorial/Project_Creation)
