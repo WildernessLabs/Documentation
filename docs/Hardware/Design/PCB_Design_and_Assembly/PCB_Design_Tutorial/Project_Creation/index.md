@@ -26,4 +26,4 @@ EasyEDA will then create a new empty project with a blank schematic drawing:
 
 ![title](Support_Files/NewProject_w_Blank_Schematic.png)
 
-## [Next: Adding Meadow](Add_Meadow)
+## [Next: Adding Meadow](/Hardware/Design/PCB_Design_and_Assembly/PCB_Design_Tutorial/Add_Meadow)

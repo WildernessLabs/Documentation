@@ -108,8 +108,18 @@ It's good practice to be specific with your power rail naming. With Meadow proje
 
 ![title](VCC_Rename.png)
 
-### No-Connects
+## Adding _No-Connect Flags_
 
+Unlike KiCAD, EasyEDA requires all connections to be connected or explicitly terminated, otherwise a _Design Rule Check_ (DRC) will fail.
 
+Since we already know that a number of leads on the Meadow won't be connected, we can use the **no connect flag** tool to mark them with a termination.
+
+The no-conect flag tool appears as an "X" in the **Wiring Tools** toolbar. 
 
 ![title](No_Connect_Flag_Tool.png)
+
+Unfortunately, there is no hotkey for this commonly used tool, so select it, and then add no-connects to the `RST`, `AREF`, `+VBAT`, and `EN_+3V3` pins on the Meadow:
+
+![title](Adding_NoConnects.png)
+
+## [Next: Searching for Components](/Hardware/Design/PCB_Design_and_Assembly/PCB_Design_Tutorial/Component_Search)
