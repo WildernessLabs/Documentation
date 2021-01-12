@@ -221,7 +221,7 @@ installed, you can find instructions on how to install it [here](/Meadow/Getting
 1. Disable mono (may need to run twice if you get an exception the first time).
    `mono ./Meadow.CLI/Meadow.CLI.exe -s /dev/tty.usbmodem01 --MonoDisable`
 1. Upload new Mono Runtime  
-   `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
+   `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile Meadow.OS.Runtime.bin --KeepAlive`  
     After "Download success," hit space again.
 1. Move the runtime into it's special home on the 2MB partition  
    `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
