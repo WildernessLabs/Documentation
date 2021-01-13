@@ -4,6 +4,39 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.4 
+
+This is another minor release with a handful of fixes and stabilizations:
+
+ * **Meadow.Foundation** - Project housekeeping and bug fixes.
+ * **`DigitalInputPort`** - Fixed strange behavior on interrupts when `GlitchFilter` and `Debounce` was set to `0`.
+ * **ESP32 Startup** - Fixed an issue where the device needed to be unplugged and replugged in to restart the ESP32.
+ 
+## Updating
+
+This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
+
+Note, to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Meadow.Foundation
+
+We did a housekeeping pass through the Meadow.Foundation project, cleaning up folders and projects, making naming consistent, etc.
+
+We also drafted some scripts to validate drivers and improve the publishing and documentation workflow moving forward.
+
+### Drivers
+
+ * **Adafruit Datalogger** - Integrated community contributions to update (thanks Bruce!).
+ * **MicroGraphics Library** - Minor updates and bug fixes.
+ * **Adafruit MPRLS Sensor** - This was previously finished, but wasn't published. We discovered it during housekeeping.
+ * **Yx5300 MP3 player** - Also previously finished but unpublished.
+ * **Analog Temperature Sensor** - Fixed `xM35` calibration/calculation and refactored/simplified the code.
+
+
 # b4.3
 
 This is a minor release with a big performance boost! Up until now, our Meadow.OS builds have had lots of debug stuff turned on. We turned most of that off, which has increased performance across a number of features, with some features getting big performance boosts. For instance, SPI has a 6x throughput improvement, speeding up graphics display updates.
