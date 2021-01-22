@@ -9,17 +9,17 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 ## Prerequisites
 
 ### Windows
-* Install [.NET CORE SDK](https://dotnet.microsoft.com/download)
+* Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 * Install Meadow.CLI: `dotnet tool install WildernessLabs.Meadow.CLI --global`
 * [Update USB driver for ST devices](/Meadow/Getting_Started/Update_USB_Driver/)
 
 ### macOS
-* Install [.NET CORE SDK](https://dotnet.microsoft.com/download)
+* Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 * Install Meadow.CLI: `dotnet tool install WildernessLabs.Meadow.CLI --global`
 * Install dfu-util: `brew install dfu-util`
 
 ### Linux (Debian, Ubuntu)
-* Install [.NET CORE SDK](https://dotnet.microsoft.com/download)
+* Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 * Install Meadow.CLI: `dotnet tool install WildernessLabs.Meadow.CLI --global`
 * Install dfu-util: `sudo apt-get install dfu-util`  
 * Install libusb : `sudo apt-get install libusb-1.0-0-dev`
