@@ -4,6 +4,66 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.5
+
+Ooooooooweeeee! This is a real star of a release, with some major new functionality and performance fixes. It's the culmination of a lot of work that has been percolating for a long time. Big things include:
+
+ * **SSL/TLS** - That's right, `Https://`, mi amigo(a)s! 
+ * **10x Network Performance** - We found some low-hanging fruit and were able to provide a network boost of typically 10x, and for some things, _much_ faster.
+ * **`HttpServer`** - We unblocked on `HttpListener` and `HttpServer`.
+ * **Build Linking** - You can now enable linking for a dramatic reduction in build file size.
+ * **Meadow.Foundation** - Some nice new features for drawing paths, API cleanups, and new drivers.
+ * **F# 5.0** - [TBD]
+
+## Updating
+
+This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
+
+Note, to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+## Network Fixes
+
+Network is the real shining gem of this release, with major new features and improvements across the board.
+
+### SSL/TLS/Https Support
+
+[first whack at it. basic stuff should work].
+
+### 10x Network Performance
+
+[details]
+
+### `HttpServer` and `HttpListener` Support
+
+[TBD]
+
+### API Cleanup
+
+[simplified connection]  
+[breaking API changes]
+
+### Network Known Issues
+
+* [SSL accept all certificated, no renegotiation]
+* [still hard to get at the IP address and other network info]
+
+## Meadow.CLI 
+
+[reconnection works]
+
+## Build Linking
+
+[yuuuuuge file size reduction. Hello, World has gone from [x]MB to [y]MB. Therm has gone from [z]MB to [aa]MB.
+
+[how to enable]
+
+## F# 5.0 Support
+
+[F# 5.0 broke us, but now, with the help of linking, and lots of banging on the IDE extensions, we're back up. So go get your functional on.]
+
 # b4.4 
 
 This is another minor release with a handful of fixes and stabilizations:
