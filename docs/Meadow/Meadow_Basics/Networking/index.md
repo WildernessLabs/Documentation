@@ -11,7 +11,7 @@ Both the Meadow F7 development board and SMT module have WiFi networking via the
 Beta 4.0 introduces the first version of our networking stack for Meadow and there are a few known limitations to be aware of when using:
 
  * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support. However, `UdpClient`, `TcpListener` and `TcpClient` are all working now.
- * **All SSL Certificates Accepted** - Currently, all certificates over TLS (https) are accepted without any validation.
+ * **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
 
 # WiFi
 
