@@ -51,8 +51,8 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Audio.Mp3.Yx5300](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html) | YX5300 serial MP3 player |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Audio.Radio.Tea5767](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.Tea5767.html) | TEA5767 I2C FM radio module |
 
-
 ## Displays
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.html) | SPI display controllers eInk / ePaper (IL0373, IL0376F, IL0398, IL3897, IL91874, ILI91874v3, SSD1608) |
