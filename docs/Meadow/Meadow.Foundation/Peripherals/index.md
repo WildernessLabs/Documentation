@@ -45,6 +45,7 @@ The peripherals are split into two groups; the first group is general, core peri
 External peripheral drivers can be added to Meadow projects individually and are distributed as nuget packages on [Nuget.org](www.nuget.org).
 
 ## Audio
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Audio.Mp3.Yx5300](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html) | YX5300 serial MP3 player |
@@ -69,6 +70,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Tm1637](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html) | TM1637 GPIO character display |
 
 ### Displays.ePaper
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL0373 | ePaper driver |
@@ -81,12 +83,14 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1681 | ePaper driver |
 
 ### Displays.Ssd1306
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | Ssd1306 | Ssd1306 driver |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | Ssd1309 | Ssd1306 driver |
 
 ### Displays.TftSpi
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | Gc9a01 | TftSpi driver |
@@ -107,6 +111,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 
 ## FeatherWings
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.CharlieWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.CharlieWing.html) | AdaFruit CharlieWing Matrix LED Featherwing |
@@ -119,8 +124,8 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.OLED128x32Wing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html) | AdaFruit OLED 128x32 monochrome display FeatherWing |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.ServoWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.ServoWing.html) | AdaFruit ServoWing servo controller FeatherWing |
 
-
 ## ICs
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.EEPROM.At24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html) | At24Cxx I2C EEPROMs (AT24C32 / AT24C64 / AT24C128 / AT24C256) |
@@ -130,35 +135,35 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.PCA9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.PCA9685.html) | PCA9685 I2C PWM expander |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | x74595 I2C shift register digital output expander |
 
-
 ## Leds
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Leds.Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | Apa102 SPI RGB LED driver |
 
-
 ## Light
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Light.Max44009](/docs/api/Meadow.Foundation/Meadow.Foundation.Light.Max44009.html) | Max44009 I2C ultraviolet and ambient light sensor |
 
-
 ## Motors
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.A4988](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.A4988.html) | A4988 digital input stepper motor controller |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.Uln2003](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003.html) | ULN2003 digital input stepper motor controller |
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Motors.Tb67h420ftg](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Tb67h420ftg.html) | Tb67h420ftg digital input motor controller |
 
-
 ## RTCs
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [RTCs.Ds1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds1307.html) | DS1307 I2C real time clock |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [RTCs.Ds323x](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x.html) | Ds323x I2C real time clock (DS3231) |
 
-
 ## Atmospheric
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.AdafruitMPRLS](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS.html) | Adafruit MPRLS I2C barometric pressure sensor with metal port connector |
@@ -177,21 +182,22 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx.html) | Si70xx I2C humidity and temperature sensors |
 
 ### Sensors.Atmospheric.Dhtxx
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | Dht10 | Dhtxx driver |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | Dht12 | Dhtxx driver |
 
-
 ## Camera
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Camera.ArducamMini](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.ArducamMini.html) | ArducamMini I2C + SPI high definition 2MP camera controller |
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Camera.Mlx90640](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Mlx90640.html) | Mlx90640 I2C far infrared thermal sensor array camera |
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Camera.Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html) | VC0706 serial VGA CMOS camera |
 
-
 ## Distance
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.GP2D12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.GP2D12.html) | Sharp GP2D12 analog distance sensor with integrated signal processing |
@@ -201,20 +207,20 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.SFSR02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.SFSR02.html) | SFSR02 digital ultrasonic distance sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Distance.Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html) | Vl53l0x I2C time of flight ranging distance sensor |
 
-
 ## Environmental
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ags01Db](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ags01Db.html) | Ags01Db I2C digital MEMS VOC gas sensor |
 
-
 ## Hid
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html) | Freescale Semiconductor MPR121 I2C capacitive keypad controller |
 
-
 ## Light
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Alspt19](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Alspt19.html) | ALS-PT19-315C analog light sensor |
@@ -227,28 +233,28 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Tsl2591](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tsl2591.html) | Tsl2591 I2C high dynamic range light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Veml7700](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Veml7700.html) | Veml7700 I2C high accuracy ambient light sensor |
 
-
 ## LoadCell
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.LoadCell.Hx711](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.LoadCell.Hx711.html) | Hx711 digital load cell amplifier |
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.LoadCell.Nau7802](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.LoadCell.Nau7802.html) | NAU7802 I2C 24-Bit dual channel analog to digital converter |
 
-
 ## Location
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Location.MediaTek.Mt3339](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.MediaTek.Mt3339.html) | MediaTek MT3339 serial GNSS / GPS controller |
 
-
 ## Moisture
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Moisture.Capacitive](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | Analog capacitive Soil moisture sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Moisture.Fc28](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Fc28.html) | FC28 analog soil moisture sensor |
 
-
 ## Motion
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Adxl335](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl335.html) | ADXL335 analog 3 axis accelerometer motion sensor |
@@ -264,41 +270,41 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | Mpu6050 I2C MEMS 3 axis gyroscope accelerometer motion sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR analog motion sensor |
 
-
 ## Power
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Power.Ina260](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.Ina260.html) | INA260 I2C current and power monitor |
 
-
 ## Radio
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Radio.Rfid.IDxxLA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.html) | IDxxLA Serial radio frequency ID readers |
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Radio.Rfid.Rc522](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.Rc522.html) | Rc522 I2C radio frequency ID reader |
 
-
 ## Sound
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Sound.Ky038](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Sound.Ky038.html) | KY-038 analog sound sensor |
 
-
 ## Temperature
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Temperature.DS18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.DS18B20.html) | DS18B20 1-Wire temperature sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html) | Lm75 I2C temperature sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html) | TMP102 I2C temperature sensor |
 
-
 ## Servo
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servo.html) | PWM generic servo controller |
 
-
 ## Transceivers
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Transceivers.Nrf24l01](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.Nrf24l01.html) | Nrf24l01 SPI radio transceiver |
