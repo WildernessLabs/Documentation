@@ -41,7 +41,9 @@ We cleaned up and simplified some of the Network connect APIs.
 ### Network Known Issues
 
 * **All SSL Certificates Accepted** - Right now, there is no SSL certificate validation or management. Meadow will accept all SSL certificates, so use at your own risk.
-* [still hard to get at the IP address and other network info]
+* IP Address, Subnet mask, MAC Address
+
+Several properties of the ESP32 WiFi connection are now available through the `WiFiAdapter` class.  Note that you must be connected to an access point before some of these properties are available.
 
 ## Meadow.CLI 
 
@@ -59,6 +61,11 @@ We've enabled build linking in the VS4Mac extension which strips out unused port
 
 * **TB67H420FTG Motor Driver** - First draft of a driver for Toshiba's TB67H420FTG high power motor driver. Basic H-Bridge functionality with overcurrent notifications work.
 
+* **TSL2591 Light Sensor** - Added Lux calculations along with properties for visible, infrared and full spectrum light readings.
+
+## Bug Fixes
+
+* Network adapter always returned success even when there was a problem.
 
 # b4.4 
 
