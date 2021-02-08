@@ -10,9 +10,8 @@ Ooooooooweeeee! This is a real star of a release, with some major new functional
 
  * **SSL/TLS** - That's right, `Https://`, mi amigo(a)s! 
  * **10x Network Performance** - We found some low-hanging fruit and were able to provide a network boost of typically 10x, and for some things, _much_ faster.
- * **Build Linking** - You can now enable linking for a dramatic reduction in build file size.
+ * **Build Linking** - Linking is now enabled on Mac for a dramatic reduction in build file size. VS Windows linking coming soon.
  * **Meadow.Foundation** - Some nice new features for drawing paths, API cleanups, and new drivers.
- * **F# 5.0** - [TBD]
 
 ## Updating
 
@@ -29,25 +28,24 @@ Network is the real shining gem of this release, with major new features and imp
 
 ### SSL/TLS/Https Support
 
-[first whack at it. basic stuff should work].
+This is the first whack at TLS/SSL support, and basic `https` requests should work. Note that all SSL certificates are accepted and none of the certificate management APIs have been wired up. 
 
 ### 10x Network Performance
 
-[details]
+On average, network performance has been increased by 10x, and for some stuff it's even faster. This should bring network operations into a generally acceptable performance range for most use cases. There is still much more optimization opportunities here that we'll be exploring in the future.
 
 ### API Cleanup
 
-[simplified connection]  
-[breaking API changes]
+We cleaned up and simplified some of the Network connect APIs.
 
 ### Network Known Issues
 
-* [SSL accept all certificated, no renegotiation]
+* **All SSL Certificates Accepted** - Right now, there is no SSL certificate validation or management. Meadow will accept all SSL certificates, so use at your own risk.
 * [still hard to get at the IP address and other network info]
 
 ## Meadow.CLI 
 
-[reconnection works]
+We fixed an issue in the Meadow.CLI where it would randomly disconnect. `--KeepAlive` should now work reliably.
 
 ## Build Linking
 
