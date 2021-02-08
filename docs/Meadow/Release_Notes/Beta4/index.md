@@ -49,23 +49,19 @@ Several properties of the ESP32 WiFi connection are now available through the `W
 
 We fixed an issue in the Meadow.CLI where it would randomly disconnect. `--KeepAlive` should now work reliably.
 
-## Build Linking on Mac
-
-We've enabled build linking in the VS4Mac extension which strips out unused portions of code from the compile binaries. The result is dramatically reduced deployed file sizes. Saving both room on flash, and making for faster deployments.
-
 ## Meadow.Foundation
 
 We've added some new capabilities to the `µGraphics` library. It now includes APIs to draw paths. And with it brings several new types: `GraphicsPath`, `Point`, `Rect`, and `Size`.
 
-Big improvements to the `PushButton` class. We've simplified the API and now made it easier to setup when using external pull up/down resistors.
+* **PushButton** - We've simplified the API and now made it easier to setup when using external pull up/down resistors.
 
-We've also made enhancements to several drivers other drivers including: `AnalogTemperature`, `Mcp230x8`, `Ds323x`, and `Tsl2591`. 
+* **TSL2591 Light Sensor** - Added Lux calculations along with properties for visible, infrared and full spectrum light readings.
+
+We've also made enhancements to several drivers other drivers including: `AnalogTemperature`, `Mcp230x8`, and `Ds323x`. 
 
 ### New Drivers
 
 * **TB67H420FTG Motor Driver** - First draft of a driver for Toshiba's TB67H420FTG high power motor driver. Basic H-Bridge functionality with overcurrent notifications work.
-
-* **TSL2591 Light Sensor** - Added Lux calculations along with properties for visible, infrared and full spectrum light readings.
 
 ## Bug Fixes
 
