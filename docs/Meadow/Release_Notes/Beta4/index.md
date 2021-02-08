@@ -10,7 +10,6 @@ Ooooooooweeeee! This is a real star of a release, with some major new functional
 
  * **SSL/TLS** - That's right, `Https://`, mi amigo(a)s! 
  * **10x Network Performance** - We found some low-hanging fruit and were able to provide a network boost of typically 10x, and for some things, _much_ faster.
- * **Build Linking** - Linking is now enabled on Mac for a dramatic reduction in build file size. VS Windows linking coming soon.
  * **Meadow.Foundation** - Some nice new features for drawing paths, API cleanups, and new drivers.
 
 ## Updating
