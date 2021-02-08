@@ -41,7 +41,7 @@ We cleaned up and simplified some of the Network connect APIs.
 ### Network Known Issues
 
 * **All SSL Certificates Accepted** - Right now, there is no SSL certificate validation or management. Meadow will accept all SSL certificates, so use at your own risk.
-* IP Address, Subnet mask, MAC Address
+* **IP Address, Subnet mask, MAC Address**
 
 Several properties of the ESP32 WiFi connection are now available through the `WiFiAdapter` class.  Note that you must be connected to an access point before some of these properties are available.
 
