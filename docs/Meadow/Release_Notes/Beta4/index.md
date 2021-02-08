@@ -4,6 +4,68 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.5
+
+Ooooooooweeeee! This is a real star of a release, with some major new functionality and performance fixes. It's the culmination of a lot of work that has been percolating for a long time. Big things include:
+
+ * **SSL/TLS** - That's right, `Https://`, mi amigo(a)s! 
+ * **10x Network Performance** - We found some low-hanging fruit and were able to provide a network boost of typically 10x, and for some things, _much_ faster.
+ * **Meadow.Foundation** - Some nice new features for drawing paths, API cleanups, and new drivers.
+
+## Updating
+
+This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
+
+Note, to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+## Network Fixes
+
+Network is the real shining gem of this release, with major new features and improvements across the board.
+
+### SSL/TLS/Https Support
+
+This is the first whack at TLS/SSL support, and basic `https` requests should work. Note that all SSL certificates are accepted and none of the certificate management APIs have been wired up. 
+
+### 10x Network Performance
+
+On average, network performance has been increased by 10x, and for some stuff it's even faster. This should bring network operations into a generally acceptable performance range for most use cases. There is still much more optimization opportunities here that we'll be exploring in the future.
+
+### API Cleanup
+
+We cleaned up and simplified some of the Network connect APIs.
+
+### Network Known Issues
+
+* **All SSL Certificates Accepted** - Right now, there is no SSL certificate validation or management. Meadow will accept all SSL certificates, so use at your own risk.
+* **IP Address, Subnet mask, MAC Address**
+
+Several properties of the ESP32 WiFi connection are now available through the `WiFiAdapter` class.  Note that you must be connected to an access point before some of these properties are available.
+
+## Meadow.CLI 
+
+We fixed an issue in the Meadow.CLI where it would randomly disconnect. `--KeepAlive` should now work reliably.
+
+## Meadow.Foundation
+
+We've added some new capabilities to the `µGraphics` library. It now includes APIs to draw paths. And with it brings several new types: `GraphicsPath`, `Point`, `Rect`, and `Size`.
+
+* **PushButton** - We've simplified the API and now made it easier to setup when using external pull up/down resistors.
+
+* **TSL2591 Light Sensor** - Added Lux calculations along with properties for visible, infrared and full spectrum light readings.
+
+We've also made enhancements to several drivers other drivers including: `AnalogTemperature`, `Mcp230x8`, and `Ds323x`. 
+
+### New Drivers
+
+* **TB67H420FTG Motor Driver** - First draft of a driver for Toshiba's TB67H420FTG high power motor driver. Basic H-Bridge functionality with overcurrent notifications work.
+
+## Bug Fixes
+
+* [Network adapter always returned success](https://github.com/WildernessLabs/Meadow_Issues/issues/123) even when there was a problem.
+
 # b4.4 
 
 This is another minor release with a handful of fixes and stabilizations:
