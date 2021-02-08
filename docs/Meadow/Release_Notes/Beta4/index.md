@@ -51,9 +51,14 @@ We fixed an issue in the Meadow.CLI where it would randomly disconnect. `--KeepA
 
 We've enabled build linking in the VS4Mac extension which strips out unused portions of code from the compile binaries. The result is dramatically reduced deployed file sizes. Saving both room on flash, and making for faster deployments.
 
-## F# 5.0 Support
+## Meadow.Foundation
 
-[F# 5.0 broke us, but now, with the help of linking, and lots of banging on the IDE extensions, we're back up. So go get your functional on.]
+[description]
+
+### New Drivers
+
+* **TB67H420FTG Motor Driver** - First draft of a driver for Toshiba's TB67H420FTG high power motor driver. Basic H-Bridge functionality with overcurrent notifications work.
+
 
 # b4.4 
 
