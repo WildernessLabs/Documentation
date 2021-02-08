@@ -69,7 +69,7 @@ We've also made enhancements to several drivers other drivers including: `Analog
 
 ## Bug Fixes
 
-* Network adapter always returned success even when there was a problem.
+* [Network adapter always returned success](https://github.com/WildernessLabs/Meadow_Issues/issues/123) even when there was a problem.
 
 # b4.4 
 
