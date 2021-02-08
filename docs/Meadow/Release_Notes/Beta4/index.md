@@ -55,7 +55,11 @@ We've enabled build linking in the VS4Mac extension which strips out unused port
 
 ## Meadow.Foundation
 
-[description]
+We've added some new capabilities to the `µGraphics` library. It now includes APIs to draw paths. And with it brings several new types: `GraphicsPath`, `Point`, `Rect`, and `Size`.
+
+Big improvements to the `PushButton` class. We've simplified the API and now made it easier to setup when using external pull up/down resistors.
+
+We've also made enhancements to several drivers other drivers including: `AnalogTemperature`, `Mcp230x8`, `Ds323x`, and `Tsl2591`. 
 
 ### New Drivers
 
