@@ -47,11 +47,9 @@ We cleaned up and simplified some of the Network connect APIs.
 
 We fixed an issue in the Meadow.CLI where it would randomly disconnect. `--KeepAlive` should now work reliably.
 
-## Build Linking
+## Build Linking on Mac
 
-[yuuuuuge file size reduction. Hello, World has gone from [x]MB to [y]MB. Therm has gone from [z]MB to [aa]MB.
-
-[how to enable]
+We've enabled build linking in the VS4Mac extension which strips out unused portions of code from the compile binaries. The result is dramatically reduced deployed file sizes. Saving both room on flash, and making for faster deployments.
 
 ## F# 5.0 Support
 
