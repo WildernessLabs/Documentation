@@ -6,11 +6,11 @@ subtitle: Multiline display menu framework for quick prototyping human interface
 
 # Intro
 
-The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on an `ITextDisplay` (or any graphical display via the [µGraphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/)) and can be driven using input devices such as buttons or rotary encoders. 
+The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on a display that implements `ITextDisplay` - any graphical display via the [µGraphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/)) or supported character display and can be driven using input devices such as buttons or rotary encoders. 
 
 ![](TextDisplayMenu.gif)
 
-The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including time, temperature, and others. Additionally; you can easily create custom menu item types that allow users to edit their value via the inputs.
+The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including time, temperature, and others. Additionally, you can quickly create custom menu item types that allow users to edit their value via the inputs.
 
 ## Sample Apps
 
@@ -20,7 +20,7 @@ For complete sample code, check out the [Meadow.Foundation Libraries and Framewo
 
 Generally, to use `TextDisplayMenu` you need to:
 
- * Configure an `ITextDisplay` or `µGraphicsLibray` to display the menu on.
+ * Configure an `ITextDisplay` or `µGraphicsLibray` to display the menu.
  * Define the menu items in JSON or programmatically using the `MenuItem`, `MenuPage`, etc. classes.
  * Instantiate a new `Menu` class, passing the display object, and  either the JSON or menu classes.
  * Wire up user inputs (such as buttons or a rotary encoder) to call `Next()`, `Previous()` and `Select()` on the menu for navigation.
@@ -44,11 +44,11 @@ The menu items support the following properties:
 
 | Object Property | JSON Property  | Usage    |
 |-----------------|----------------|----------|
-| `Text` | `text`    | Display text to the rendered. Include {value} to display the current value of the type |
+| `Text` | `text`    | Display text to be rendered. Include {value} to display the current value of the type |
 | `Command` | `command` | Command name to distinguish menu selection events. If command is set, it takes precedence over editable menu item. |
-| `ID` | `id`      | Unique identifier for the type.  Required for an editable menu item. |
+| `ID` | `id`      | Unique identifier for the type. Required for an editable menu item. |
 | `Type` | `type`    | Type of the input, ex: `Age`, `Time`. Required for an editable menu item. |
-| `SubItems` | `sub`     | Array of child menu items. |
+| `SubItems` | `sub`     | Array of child menu items for submenus. |
 
 
 ### Defining a Menu Programmatically
@@ -154,7 +154,7 @@ To add the JSON file to the project as a resource:
 
 1. Right-click the project and select Properties
 2. Click `Resources` in the left pane
-3. Click `Add Resource` and choose the appropriate file.
+3. Click `Add Resource` and choose the appropriate file
 
 ## Instantiating the Menu
 
