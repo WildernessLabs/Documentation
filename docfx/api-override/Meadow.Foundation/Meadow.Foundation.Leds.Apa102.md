@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Leds.Apa102
 remarks: *content
 ---
 
-| Pca9685       |             |
+| Apa102       |             |
 |---------------|-------------|
 | Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Peripherals/Leds.Apa102) |
@@ -57,3 +57,19 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
+
+### Wiring Example
+
+To wire a Apa102 to your Meadow board, connect the following:
+
+| Apa102 | Meadow Pin  |
+|--------|-------------|
+| GND    | GND         |
+| CI     | SCK         |
+| DI     | MOSI        |
+| VCC    | 5V          |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Leds.Apa102/Apa102_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
