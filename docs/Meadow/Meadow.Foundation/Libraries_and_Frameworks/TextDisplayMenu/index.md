@@ -6,7 +6,7 @@ subtitle: Multiline display menu framework for quick prototyping human interface
 
 # Intro
 
-The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on a display that implements `ITextDisplay` - any graphical display via the [µGraphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/)) or supported character display and can be driven using input devices such as buttons or rotary encoders. 
+The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on a display that implements `ITextDisplay` - any graphical display via the [µGraphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/)) or supported character display and can be driven using input devices such as buttons or rotary encoders.
 
 ![](TextDisplayMenu.gif)
 
@@ -16,7 +16,7 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Libraries_and_Frameworks/Samples)
 
-# Using
+## Using
 
 Generally, to use `TextDisplayMenu` you need to:
 
@@ -24,7 +24,7 @@ Generally, to use `TextDisplayMenu` you need to:
  * Define the menu items in JSON or programmatically using the `MenuItem`, `MenuPage`, etc. classes.
  * Instantiate a new `Menu` class, passing the display object, and  either the JSON or menu classes.
  * Wire up user inputs (such as buttons or a rotary encoder) to call `Next()`, `Previous()` and `Select()` on the menu for navigation.
- * Render the menu by calling `Enable()`
+ * Render the menu by calling `Enable()`.
 
 ## Circuit
 
@@ -60,7 +60,7 @@ The following code illustrates creating a simple one page menu:
 ```csharp
 var menuItems = new MenuItem[]
 {
-    new MenuItem("Frogger", command: "startFrogger"),
+    new MenuItem("FrogIt", command: "startFrogIt"),
     new MenuItem("Pong", command: "startPong"),
     new MenuItem("Span4", command: "startSpan4"),
     new MenuItem("Snake", command: "startSnake"),
@@ -283,9 +283,9 @@ namespace Meadow.Foundation.Displays.TextDisplayMenu.InputTypes
     {
         public Boolean()
         {
-            this._choices = new string[2];
-            _choices[0] = "True";
-            _choices[1] = "False";
+            choices = new string[2];
+            choices[0] = "True";
+            choices[1] = "False";
         }
     }
 }
