@@ -9,10 +9,6 @@ trigger:
 pool: WL-Linux
 
 steps:
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.5'
- 
 - script: |
     cd docs
     bundle install
