@@ -1,0 +1,128 @@
+#homepage
+  p, a, table th, table td
+    font-family: "Wavehaus-Book"
+  // .content-banner
+  //   .content
+
+  //   .content-panel
+  
+  .content-banner 
+    margin: 0
+    height: auto
+    background: none
+    &.primary
+      background: url('/assets/images/homepage/homepage-banner-desktop.png') center top no-repeat
+      background-size: cover
+      color: #000
+      @include breakpoint(mobile)
+        background: url('/assets/images/homepage/homepage-banner-mobile.svg') center bottom no-repeat
+        background-size: cover
+        padding-bottom: 150px
+      .content-left
+        width: 50%
+        padding: 4em 0
+        h2 
+          color: #0391C0
+        h2, p 
+          margin-bottom: 0.5em
+        a
+          background: #12BBF3
+          border-radius: 4px
+          color: #fff
+          padding: 8px 20px
+          text-decoration: none
+
+  .content-section
+    margin: 60px 0 100px 0
+    h2.content-primary
+      font-size: 2em
+      padding-bottom: 0.5em
+      margin-bottom: 0.5em
+      &.border
+        border-bottom: 3px solid #000
+    p.content-primary
+      margin-bottom: 40px
+
+    .cards
+      @include breakpoint(desktop)
+        display: flex
+        justify-content: space-between
+        &.triple
+          .card 
+            flex: 0 1 32%
+        &.double
+          .card 
+            width: 49%
+      @include breakpoint(mobile tablet)
+        .card 
+          margin-bottom: 5%
+
+      .card
+        ul
+          &.flat 
+            list-style-type: none
+          &.vertical
+            display: block
+          &.horizontal
+            display: flex
+            justify-content: space-between
+        .content 
+          padding-bottom: 0px
+          border: none
+
+        &.orange
+          border: 1px solid $color-orange
+          border-radius: 8px
+          h3 
+            padding: 6% 0 2% 6% 
+            margin: 0
+            border-top: 1px solid $color-orange
+          ul 
+            padding: 0 6% 6% 6%
+          @include breakpoint(tablet)
+            display: flex
+            h3
+              border-top: none
+            div
+              flex: 0 1 50%
+              &:last-child
+                border-left: 1px solid $color-orange
+
+        &.padded 
+          padding: 2%
+          h3
+            font-size: 2em
+            margin-bottom: 0.5em
+        &.blue
+          border: 3px solid $color-blue
+          border-radius: 8px
+          padding: 1.8em 1.5em
+          background: url('/assets/images/homepage/corner-bg.png') left top no-repeat
+          background-size: 100%
+          @include breakpoint(mobile tablet)
+            background-size: 50%
+        &.grey
+          background-color: $color-grey
+        &.light-grey
+          background-color: $color-brand-grey
+        &.edge-blue
+          border-left: 4px solid $color-blue
+    
+  .events
+    h3
+      font-size: 2em
+      margin: 0 auto;
+      text-align: center
+      margin-bottom: 1em
+      @include breakpoint(desktop)
+        max-width: 380px
+      @include breakpoint(mobile tablet)
+        text-align: left
+    table 
+      border: none
+      border-top: 1px solid $color-orange
+      border-bottom: 1px solid $color-orange
+      border-radius: 0px
+      font-family: "wav"
+      tr:nth-child(2n+1) 
+        background: $color-brand-grey

@@ -6,8 +6,10 @@ $color-blue: #23ABE3;
 $color-light-orange: #efe5dc;
 $color-off-white: #FFFEFB;
 $color-light-grey: #f9f5f1;
+$color-grey: #f7f7f7;
 $content-spacing: 20px;
 $color-grey: #e6e4ea;
+$color-brand-grey: #F6F7F7;
 $color-beige: #eee5dd;
 
 $gutter-content: 4%;

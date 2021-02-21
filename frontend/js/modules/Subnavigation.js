@@ -6,7 +6,7 @@ const MobileSubNavigation = () => {
   const trigger = document.querySelector('.mobile-secondary-trigger');
   const mobileContainer = document.querySelector(`.mobile_sub_navigation`);
   
-  if(trigger && !mobileContainer){
+  if(trigger && !mobileContainer){ 
     
     createDOM(trigger);
     bindEvents();
