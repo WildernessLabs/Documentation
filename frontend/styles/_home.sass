@@ -47,8 +47,20 @@
         border-radius: 10px
         color: #000
         margin: 0 auto
+        text-align: center
         h2, a
           text-align: center
+        a
+          border: 1px solid $color-orange
+          border-radius: 5px
+          color: $color-orange
+          text-decoration: none
+          padding: 0.5em
+          margin: 1em auto 0
+          display: inline-block
+          &:hover, &:focus
+            background-color: $color-orange
+            color: #fff
         @include breakpoint(desktop)
           max-width: 60%
           h2
