@@ -12,7 +12,7 @@ steps:
 - script: |
     cd docs
     bundle install
-    jekyll build
+    bundle exec jekyll build
   displayName: 'jekyll'
  
 - task: CopyFiles@2
