@@ -1,4 +1,5 @@
 #homepage
+  border-left: none
   p, a, table th, table td
     font-family: "Wavehaus-Book"
   // .content-banner
@@ -7,9 +8,13 @@
   //   .content-panel
   
   .content-banner 
-    margin: 0
+    margin: 0 0 5% 0 
     height: auto
     background: none
+    &.full 
+      padding: 0
+      img
+        width: 100%
     &.primary
       background: url('/assets/images/homepage/homepage-banner-desktop.png') center top no-repeat
       background-size: cover
@@ -31,6 +36,38 @@
           color: #fff
           padding: 8px 20px
           text-decoration: none
+    
+    &.projects
+      background: url('/assets/images/homepage/projects-banner.png') right top no-repeat
+      background-size: cover
+      
+      .content-panel
+        padding: 3%
+        background: #fff
+        border-radius: 10px
+        color: #000
+        margin: 0 auto
+        h2, a
+          text-align: center
+        @include breakpoint(desktop)
+          max-width: 60%
+          h2
+            font-size: 32px
+            line-height: 40px
+        @include breakpoint(tablet)
+          max-width: 96%
+          margin: 3% 0%
+          h2
+            font-size: 24px
+            line-height: 28px
+        @include breakpoint(mobile)
+          position: relative
+          max-width: 96%
+          margin: 10% 0%
+          h2
+            font-size: 24px
+            line-height: 28px
+    
 
   .content-section
     margin: 60px 0 100px 0
@@ -116,8 +153,7 @@
       margin-bottom: 1em
       @include breakpoint(desktop)
         max-width: 380px
-      @include breakpoint(mobile tablet)
-        text-align: left
+
     table 
       border: none
       border-top: 1px solid $color-orange
