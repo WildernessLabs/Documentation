@@ -46,12 +46,12 @@ public class InputObservableApp : App<F7Micro, InputObservableApp>
 
         // Note that the filter is an optional parameter. If you're
         // interested in all notifications, don't pass a filter/predicate.
-        _input.Subscribe(new FilterableObserver<DigitalInputPortEventArgs>(
-            e => {
-                Console.WriteLine($"Observer Observing the Observable, Observably speaking, Time: {e.Time.Millisecond}, Value: {e.Value}");
+        _input.Subscribe(new FilterableChangeObserver<DigitalInputPortEventArgs, DateTime>(
+            result => {
+                Console.WriteLine($"Observer Observing the Observable, Observably speaking, Time: {result.New.Time.Millisecond}, Value: {result.Value}");
             },
             f => {
-                return (f.Time - f.PreviousTime > new TimeSpan(0, 0, 0, 0, 1000));
+                return (f.Delta > new TimeSpan(0, 0, 0, 0, 1000));
             }));
     }
 }
@@ -62,7 +62,7 @@ A filter expression, or _predicate_, that tests for a particular condition is pa
 In the above code, it filters out events that occur less than a second after the last notification:
 
 ```csharp
-return (f.Time - f.PreviousTime > new TimeSpan(0, 0, 0, 0, 1000));
+return (f.Delta > new TimeSpan(0, 0, 0, 0, 1000));
 ```
 
 ### General Use
