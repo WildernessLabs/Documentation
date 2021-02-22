@@ -10,6 +10,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 module.exports = {
     mode : devMode ? 'development': 'production',
     entry: [
@@ -32,6 +34,15 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            // {
+            //   test: /\.*$/,
+            //   exclude: /node_modules/,
+            //   use: [
+            //     {
+            //       loader: path.resolve('loaders/lowercase-files.js'),
+            //     }
+            //   ]
+            // }
         ],
     },
     plugins: [
@@ -52,6 +63,7 @@ module.exports = {
                 filename: '~iconmap.scss'
             }
         }),
+        new CaseSensitivePathsPlugin()
     ],
     optimization: {
         minimizer: [

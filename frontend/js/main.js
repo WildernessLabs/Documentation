@@ -1,10 +1,10 @@
-import Accordion from './modules/Accordion';
-import ArticleNav from './modules/ArticleNav';
-import { SetFixed } from './modules/FixedNav';
-import { FixedNavigation, MobileNavigation  } from './modules/Navigation'
-import { MobileSubNavigation  } from './modules/Subnavigation'
-import { Codeblock } from './modules/Codeblock';
-import { Darkmode } from './modules/Darkmode';
+import Accordion from './modules/accordion';
+import ArticleNav from './modules/articlenav';
+import { SetFixed } from './modules/fixednav';
+import { FixedNavigation, MobileNavigation  } from './modules/navigation'
+import { MobileSubNavigation  } from './modules/subnavigation'
+import { Codeblock } from './modules/codeblock';
+import { Darkmode } from './modules/darkmode';
 
 const main = () => {
 

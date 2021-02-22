@@ -1,4 +1,4 @@
-import { shouldContentScroll } from './Utils';
+import { shouldContentScroll } from './utils';
 
 const createCloseButton = (el, nav, body) => {
 

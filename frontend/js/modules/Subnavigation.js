@@ -1,5 +1,5 @@
-import Accordion from './Accordion';
-import { shouldContentScroll, isValidEvent } from './Utils';
+import Accordion from './accordion';
+import { shouldContentScroll, isValidEvent } from './utils';
 
 const MobileSubNavigation = () => {
 

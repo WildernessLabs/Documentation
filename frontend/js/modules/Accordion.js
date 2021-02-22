@@ -1,4 +1,4 @@
-import { isValidEvent } from './Utils';
+import { isValidEvent } from './utils';
 
 const Accordion = (el) => {
  
