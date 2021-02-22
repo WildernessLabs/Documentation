@@ -55,15 +55,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'styles/main.css'
         }),
-        // new SVGSpritemapPlugin('./frontend/assets/svgs/icons/*.svg',{
-        //     output: {
-        //         filename: 'assets/svgs/icons/iconmap.svg'
-        //     },
-        //     styles: {
-        //         filename: '~iconmap.scss'
-        //     }
-        // }),
-        // new CaseSensitivePathsPlugin()
     ],
     optimization: {
         minimizer: [
