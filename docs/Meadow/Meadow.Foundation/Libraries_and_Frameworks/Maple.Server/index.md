@@ -146,11 +146,14 @@ Similarly, a form post field of `ID` can be accessed via the `Form` object:
 string id = base.FormFields["ID"];
 ```
 
-## Limitations
+## Limitations & Known Issues
 
 * [no SSL]
 * [limited routing]
 * [multithreading no worky on Meadow]
+* [advertising]
+
+[call for contributors]
 
 ## Sample Application
 
