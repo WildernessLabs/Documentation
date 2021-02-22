@@ -37,12 +37,16 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin({
-            // cleanStaleWebpackAssets: devMode ? false : true,
+            cleanStaleWebpackAssets: devMode ? false : true,
             cleanOnceBeforeBuildPatterns: ['out/build'],
         }),
-        new CopyWebpackPlugin([
-            { from: 'frontend/assets', to: 'assets' }
-        ]),
+        new CopyWebpackPlugin(
+          {
+            patterns: [
+              { from: 'frontend/assets', to: 'assets' },
+            ],
+          }
+        ),
         new MiniCssExtractPlugin({
             filename: 'styles/main.css'
         }),
