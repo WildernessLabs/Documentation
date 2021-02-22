@@ -21,9 +21,11 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 | Project       | Image |
 |---------------|-------|
 | [Hello, LED: controlling the onboard RGB LED.](https://www.hackster.io/wilderness-labs/getting-started-w-meadow-by-controlling-the-onboard-rgb-led-ea6bc0) | ![](Gifs/Blinky.gif) |
+| [Send Data From Meadow to an ASP .NET Server via WiFi](https://www.hackster.io/wilderness-labs/send-data-from-meadow-to-an-asp-net-server-via-wifi-60919d) | ![](Gifs/Clima.jpg) |
+| [Obstacle radar detector.](https://www.hackster.io/wilderness-labs/build-an-obstacle-radar-with-meadow-d9bf2e) | ![](Gifs/ObstacleRadar.gif) |
 | [Servo controlled by rotary encoder.](https://www.hackster.io/wilderness-labs/control-a-servo-with-a-rotary-encoder-using-meadow-47c003) | ![](Gifs/RotaryServo.gif) |
 | [LedBar controlled with Rotaty Encoder.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/RotaryLedBar.gif) |
-| [EdgeASketch with RotaryEncoder and display.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/EdgeASketch.gif) |
+| [EdgeASketch with RotaryEncoder and display.](https://www.hackster.io/wilderness-labs/make-an-edgeasketch-with-meadow-6955c3) | ![](Gifs/EdgeASketch.gif) |
 | [Image Gallery with buttons and display.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/GalleryViewer.jpg) |
 | [Expand IO Ports with an MCP23008.](https://www.hackster.io/wilderness-labs/expanding-io-ports-on-meadow-with-an-mcp23008-23a512) | ![](Gifs/McpLeds.gif) |
 | [LCD clock with onboard RTC chip.](https://www.hackster.io/wilderness-labs/build-a-clock-with-meadow-s-onboard-real-time-clock-chip-2b1f85) | ![](Gifs/Clock.gif) |

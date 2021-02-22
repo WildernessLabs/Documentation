@@ -62,6 +62,6 @@ Erasing the flash will remove all of the files deployed to the flash storage and
 
 Firstly, ensure that Mono has automatic execution of the application disabled (see `--MonoDisable`).
 
-Use the `--WriteFiles` command to deploy each of the required files to Meadow.
+Use the `--WriteFile` command to deploy each of the required files to Meadow.
 
 Follow this by checking that the files have been deployed using the `--ListFiles` option and if everything looks good then re-enable execution of the application using the `--MonoEnable` option.

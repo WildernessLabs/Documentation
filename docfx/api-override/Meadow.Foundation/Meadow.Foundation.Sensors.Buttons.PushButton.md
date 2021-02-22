@@ -14,30 +14,39 @@ The **PushButton** class represents a simple push button, such as a tactile mome
 ### Code Example
 
 ```csharp
-public class Program
+public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public static void Main()
+    public MeadowApp()
     {
-        var pushButton = new PushButton(
-            Device.Pins.D08, 
-            Meadow.Foundation.CircuitTerminationType.High
+        PushButton pushButton;
+
+        // Initialize by passing a IDigitalInputPort
+        //IDigitalInputPort digitalInputPort = Device.CreateDigitalInputPort(
+        //    Device.Pins.D08, 
+        //    InterruptMode.EdgeBoth, 
+        //    ResistorMode.PullUp, 20);
+        //pushButton = new PushButton(digitalInputPort);
+
+        // Initialize by sending Device and Pins
+        pushButton = new PushButton(
+            Device,
+            Device.Pins.D08,
+            ResistorMode.PullUp
         );
+
         pushButton.PressStarted += PushButtonPressStarted;
         pushButton.PressEnded += PushButtonPressEnded;
-
-        Thread.Sleep(Timeout.Infinite);
     }
 
-    private void PushButtonPressStarted(object sender, EventArgs e)
+    void PushButtonPressStarted(object sender, EventArgs e)
     {
-        Console.WriteLine("Press Started..."); 
+        Console.WriteLine("Press Started...");
     }
 
-    private void PushButtonPressEnded(object sender, EventArgs e)
+    void PushButtonPressEnded(object sender, EventArgs e)
     {
         Console.WriteLine("Press Ended...");
     }
-    
 }
 ```
 

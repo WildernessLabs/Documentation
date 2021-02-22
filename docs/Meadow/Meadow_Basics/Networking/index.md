@@ -10,10 +10,8 @@ Both the Meadow F7 development board and SMT module have WiFi networking via the
 
 Beta 4.0 introduces the first version of our networking stack for Meadow and there are a few known limitations to be aware of when using:
 
- * **SSL not supported** - Currently, only unencrypted traffic is supported via HTTP. We're working on TLS support.
- * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support.
- * **Network scans require a network connection** - Due to a limitation in the API, you must first connect to a WiFi network before attempting a scan.
- * **`HttpClient` memory leak** - Each `HttpClient.Request` incurs a `~5k` memory leak on the ESP32 coprocessor, so after a number of requests it will no longer be functional. If requests become unresponsive, a call to `Device.InitWiFiAdapter()` will reset the ESP32 coprocessor and get things running again. Note that requests performed low-level socket calls do not incur this memory leak.
+ * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support. However, `UdpClient`, `TcpListener` and `TcpClient` are all working now.
+ * **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
 
 # WiFi
 
@@ -49,9 +47,7 @@ if (Device.WiFiAdapter.Connect("SSID", "Pass").ConnectionStatus != ConnectionSta
 
 ## Scanning for WiFi Networks
 
-You can also can for WiFI networks, however, due to a temporary limitation in the current API, you must first be connected to a network.
-
-To scan, call the `Scan()` method on the `WiFiAdapter` and then access the network list via the `Networks` `ObservableCollection` property:
+You can also scan for WiFi networks via the `Scan()` method on the `WiFiAdapter` and then access the network list via the `Networks` `ObservableCollection` property:
 
 ```csharp
 protected void ScanForAccessPoints()
@@ -70,8 +66,6 @@ protected void ScanForAccessPoints()
     }
 }
 ```
-
-If you attempt to scan for networks without being first connected, an `Exception` will be thrown. In the future this requirement will be removed.
 
 # Performing Requests
 

@@ -46,7 +46,7 @@ installed, you can find instructions on how to install it [here](/Meadow/Getting
    This will take a few minutes. After it says "Bulk erase completed," hit space to exit.
 6. Reset F7.
 7. Upload new Mono Runtime:  
-  `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile -f Meadow.OS.Runtime.bin --KeepAlive`  
+  `mono ./Meadow.CLI/Meadow.CLI.exe --WriteFile Meadow.OS.Runtime.bin --KeepAlive`  
    After "Download success," hit space again.
 8. Move the runtime into it's special home on the 2MB partition:  
   `mono ./Meadow.CLI/Meadow.CLI.exe --MonoFlash --KeepAlive`  
