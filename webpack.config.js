@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+// const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
@@ -43,6 +43,7 @@ module.exports = {
             //     }
             //   ]
             // }
+            mrseavesot-roman
         ],
     },
     plugins: [
@@ -55,14 +56,14 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'styles/main.css'
         }),
-        new SVGSpritemapPlugin('./frontend/assets/svgs/icons/*.svg',{
-            output: {
-                filename: 'assets/svgs/icons/iconmap.svg'
-            },
-            styles: {
-                filename: '~iconmap.scss'
-            }
-        }),
+        // new SVGSpritemapPlugin('./frontend/assets/svgs/icons/*.svg',{
+        //     output: {
+        //         filename: 'assets/svgs/icons/iconmap.svg'
+        //     },
+        //     styles: {
+        //         filename: '~iconmap.scss'
+        //     }
+        // }),
         new CaseSensitivePathsPlugin()
     ],
     optimization: {
