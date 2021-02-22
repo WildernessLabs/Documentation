@@ -12,7 +12,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
-    mode : devMode ? 'development': 'production',
+    mode : process.env.NODE_ENV,
     entry: [
         path.resolve(__dirname, 'frontend/styles/main.sass'), 
         path.resolve(__dirname, 'frontend/js/main.js')
@@ -37,7 +37,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin({
-            cleanStaleWebpackAssets: devMode ? false : true,
+            // cleanStaleWebpackAssets: devMode ? false : true,
             cleanOnceBeforeBuildPatterns: ['out/build'],
         }),
         new CopyWebpackPlugin(
