@@ -235,9 +235,10 @@ The following table enumerates the built-in menu item types, and their associate
 
 | Type           | Description                                                |
 |----------------|------------------------------------------------------------|
-| `Age`          | An integer between `0` and `200`                           |
+| `Age`          | An integer value between `0` and `200`                     |
 | `Boolean`      | A list type including `True` and `False`                   |
-| `Numerical`    | An integer between `0` and `10`                            |
+| `Date`         | International date `YYYY:MM:DD`                            |
+| `Numerical`    | An integer value between `0` and `10`                      |
 | `OnOff`        | A list type including `On` and `Off`                       |
 | `Temperature`  | A integer value between `-100` and `200`                   |
 | `Time`         | 24 hour military time with `HH:MM`                         |
