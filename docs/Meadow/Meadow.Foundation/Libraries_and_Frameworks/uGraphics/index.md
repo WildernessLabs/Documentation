@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Meadow.Foundation µGraphics Library
+title: µGraphics Library
 subtitle: Using the lightweight, MCU-optimized Meadow.Foundation µGraphics 2D drawing library with Meadow.
 ---
 
