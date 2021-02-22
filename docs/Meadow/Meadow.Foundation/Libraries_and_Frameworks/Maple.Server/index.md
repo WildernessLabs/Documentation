@@ -152,6 +152,7 @@ string id = base.FormFields["ID"];
 * [limited routing]
 * [multithreading no worky on Meadow]
 * [advertising]
+* [500 errors]
 
 [call for contributors]
 
