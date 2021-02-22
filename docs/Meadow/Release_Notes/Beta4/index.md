@@ -4,6 +4,67 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.6
+
+This is another huge release with some awesome new network stack goodies as well as tasty other improvements, including:
+
+* **`HttpListener` Support** - You can now turn your Meadow into a web server with `HttpServer`.
+* **Maple Web Server** - Introducing Maple Server for Meadow; an ultra-lightweight RESTful Web API server.
+* **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
+* **Meadow.OS Startup Improvements** - [TBD]
+* **Meadow.Foundation Composite Sensor Pattern** - [TBD]
+
+## Updating
+
+This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
+
+Note, to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Network Updates
+
+### `HttpListener`, `HttpServer`, and Various Bug Fixes
+
+[stuff]
+
+## Meadow.OS Startup Improvements
+
+[tbd]
+
+## Introducing Maple Server for Meadow
+
+Maple server is an ultra-lightweight RESTful Web API server made specifically for Meadow that has native support for JSON. It enables easy remote interaction and control with Meadow over http.
+
+Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+
+And for a real world sample application, check out the [On-Air Sign project](https://github.com/wildernesslabs/OnAir_Sign) that uses Maple Server to show a message on an LED matrix display to make sure no one walks in on your meetings.
+
+## `TextDisplayMenu` Library
+
+The [`TextDisplayMenu`](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/) library is an extensible framework for quickly creating hierarchical, editable menus that can display on a `CharacterDisplay` or a graphics display via `GraphicsLibrary`. 
+
+![Animated image of a menu displayed on an LCD with a rotary encoder driving navigation.](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/TextDisplayMenu.gif)
+
+The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including: time, temperature, and numbers. Additionally, you can easily create custom menu item types that allow users to edit their value via the inputs.
+
+
+## Other Meadow.Foundation Improvements
+
+### Composite Sensor Pattern
+
+[tbd]
+
+### New Drivers
+
+[tbd]
+
+## Bug Fixes
+
+- [#XX - Title](https://github.com/WildernessLabs/Meadow_Issues/issues/###) - Description
+
 # b4.5
 
 Ooooooooweeeee! This is a real star of a release, with some major new functionality and performance fixes. It's the culmination of a lot of work that has been percolating for a long time. Big things include:
