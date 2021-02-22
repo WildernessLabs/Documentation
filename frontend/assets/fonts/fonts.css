@@ -44,13 +44,13 @@
 
 @font-face {
   font-family:"MrsEaves-Roman";
-  src: url("mrmrseaves/mrseavesot-roman.eot");
+  src: url("mrseaves/mrseavesot-roman.eot");
   src: local("☺"),
-	   url("mrmrseaves/mrseavesot-roman.woff2") format("woff2"),
-       url("mrmrseaves/mrseavesot-roman.woff") format("woff"),
-       url("mrmrseaves/mrseavesot-roman.ttf") format("truetype"),
-       url("mrmrseaves/mrseavesot-roman.svg#MrsEavesOT-Roman") format("svg"),
-       url("mrmrseaves/mrseavesot-roman.eot?#iefix") format("embedded-opentype");
+	   url("mrseaves/mrseavesot-roman.woff2") format("woff2"),
+       url("mrseaves/mrseavesot-roman.woff") format("woff"),
+       url("mrseaves/mrseavesot-roman.ttf") format("truetype"),
+       url("mrseaves/mrseavesot-roman.svg#MrsEavesOT-Roman") format("svg"),
+       url("mrseaves/mrseavesot-roman.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
   font-variant-ligatures: discretionary-ligatures;
