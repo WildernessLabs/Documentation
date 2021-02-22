@@ -63,7 +63,7 @@ module.exports = {
         //         filename: '~iconmap.scss'
         //     }
         // }),
-        new CaseSensitivePathsPlugin()
+        // new CaseSensitivePathsPlugin()
     ],
     optimization: {
         minimizer: [
