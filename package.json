@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Chloroplast Documentation",
   "main": "./src/js/main.js",
+  "sideEffects": false,
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",

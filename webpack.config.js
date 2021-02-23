@@ -56,6 +56,7 @@ module.exports = {
           new TerserJSPlugin({}), 
           new OptimizeCSSAssetsPlugin({})
         ],
+        sideEffects: false
     },
     output: { 
         path: path.resolve(__dirname, 'out/build'),
