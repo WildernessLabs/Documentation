@@ -170,16 +170,19 @@ nav ul
               margin-top: 0
               margin-bottom: 0
             a
-              padding: $sublink-padding-vertical 3.2em
+              padding: $sublink-padding-vertical 2em $sublink-padding-vertical 3em
             li
               a
-                padding: $sublink-padding-vertical 5em
-      a
+                padding: $sublink-padding-vertical 2em $sublink-padding-vertical 4em
+              li
+                a
+                  padding: $sublink-padding-vertical 2em $sublink-padding-vertical 5em
+      a       
         display: block
         &.has-submenu
           .triggerButton
             display: inline-block
-            transform: rotate(90deg)
+            transform: rotate(180deg)
             width: 30px
             height: 100%
             margin-right: 8px
