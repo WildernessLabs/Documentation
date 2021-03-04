@@ -13,7 +13,7 @@ const main = () => {
 
   // init a fixed sidebar
   const sidebar = document.querySelector('.sidebar');
-  sidebar && SetFixed('.nav-accordion', sidebar);
+  sidebar && SetFixed('.nav-accordion-wrapper', sidebar, true);
 
   const articleBar = document.querySelector('.articlebar');
   if(articleBar){

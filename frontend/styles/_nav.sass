@@ -100,7 +100,10 @@ nav ul
     left: 0.5em
   @include breakpoint(desktop)
     display: none
-    
+
+.nav-accordion-wrapper
+  overflow: auto
+  
 .nav-accordion
   &.fixed-element
     width: 16.7%  
@@ -120,7 +123,7 @@ nav ul
     border-bottom: 0.5px solid #D7D3D0
     padding: 0.8em 1em
     display: block
-      
+  
   .has-submenu
     position: relative
     .triggerButton
@@ -140,6 +143,11 @@ nav ul
       .triggerButton
         transform: rotate(0deg)
         top: 0
+  
+  a.active:not(.has-submenu)
+    background: $color-mid-grey
+    border-left: 2px solid $color-orange
+    color: $color-brand-red
 
   /* Tier 1 of Accordion */
   $sublink-padding-vertical: 5px

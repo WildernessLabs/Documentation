@@ -1,4 +1,4 @@
-const SetFixed = (element, parent) => {
+const SetFixed = (element, parent, fullHeight) => {
 
   try {
     const headerEl = document.querySelector('.nav-main-wrapper');
@@ -8,7 +8,6 @@ const SetFixed = (element, parent) => {
     // set initial state of fixed element
     const el = document.querySelector(element);
     setFixedState(el);
-      
 
     window.addEventListener('scroll', (e) => {
       setFixedState(el);
@@ -17,10 +16,17 @@ const SetFixed = (element, parent) => {
     if(parent){
       window.addEventListener('resize', (e) => {
         matchWidth(el, parent);
+        fullHeight == true && setHeightToScreen(el);
         setFixedState(el);
       });
     }
 
+    function setHeightToScreen(el){
+      const height = window.innerHeight - el.offsetTop;
+      console.log("Set Height", height);
+      el.style.height = `${height}px`;
+    }
+    
     function setFixedState(elem){
 
       const scrollPosition = window.scrollY || document.body.headerHeight || document.documentElement.headerHeight;
@@ -52,6 +58,7 @@ const SetFixed = (element, parent) => {
         elem.style.bottom = 'inherit';
       }
 
+      fullHeight == true && setHeightToScreen(el);
     }
   } catch(error){
     console.log(`Element: ${element} does not exist, cannot set to fixed`);

@@ -110,10 +110,7 @@ const setSubnavHeight = () => {
   const controls = document.querySelector('.mobile-subnav-controls');
   const header = document.querySelector('.nav-main-wrapper');
   const nav = document.querySelector('.nav-accordion-wrapper .nav-accordion');
-  console.log("Controls", controls.offsetHeight)
   nav.style.height = `${window.innerHeight - header.offsetHeight - controls.offsetHeight}px`;
-
-  console.log(nav.style.height);
 }
 
 const getSubnav = () => {

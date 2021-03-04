@@ -9,8 +9,10 @@ $color-light-grey: #f9f5f1;
 $color-grey: #f7f7f7;
 $content-spacing: 20px;
 $color-grey: #e6e4ea;
+$color-mid-grey: #EDEFF0;
 $color-brand-grey: #F6F7F7;
 $color-beige: #eee5dd;
+$color-brand-red: #BE4D34;
 
 $gutter-content: 4%;
 $gutter-screen: 8%;
