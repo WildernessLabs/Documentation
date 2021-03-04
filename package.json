@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
-    "watch:templates": "watch 'chloroplast build' ./Templates"
+    "watch:templates": "watch 'chloroplast build' ./Templates",
+    "watch:docs": "watch 'chloroplast build' ./docs"
   },
   "author": "Brandon Bilfield",
   "license": "ISC",
