@@ -9,7 +9,7 @@ import { Darkmode } from './modules/darkmode';
 const main = () => {
 
   // initialize navigation accordion if it exists
-  Accordion(document.querySelector('.sidebar .nav-accordion'));
+  Accordion(document.querySelector('.sidebar .nav-accordion'), true);
 
   // init a fixed sidebar
   const sidebar = document.querySelector('.sidebar');

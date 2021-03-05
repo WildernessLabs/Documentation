@@ -1,6 +1,6 @@
 import { isValidEvent } from './utils';
 
-const Accordion = (el) => {
+const Accordion = (el, shouldExpandTopLevel) => {
  
 
   if(el){
@@ -12,7 +12,7 @@ const Accordion = (el) => {
       const submenu = trigger.nextElementSibling; // reference to subtree, element directly following trigger is always the sub tree
       
       if(submenu && submenu.nodeName == 'UL'){
-
+        
         // SETUP MARKUP
         // create trigger buttons if one doesn't exist already
         let triggerButton = trigger.querySelector('.triggerButton') || createAccordionTrigger();
@@ -21,13 +21,15 @@ const Accordion = (el) => {
         // setup initial state of menus and buttons
         trigger.classList.add('has-submenu'); //setup submenu class
         
-        if(submenu.classList.contains('active')){
-          submenu.style.display = 'block';
-          trigger.setAttribute('aria-expanded', true);
-        } else {
-          submenu.style.display = 'none';
+        if(trigger.parentNode.parentNode == el && 
+          shouldExpandTopLevel &&
+          !submenu.classList.contains('active')) {
+            toggleActiveState();
+          }
+        
+        submenu.classList.contains('active') ?
+          trigger.setAttribute('aria-expanded', true) :
           trigger.setAttribute('aria-expanded', false);
-        }
 
         // BIND EVENTS
         trigger.addEventListener('click', (e) => { e.preventDefault(); });
@@ -45,32 +47,27 @@ const Accordion = (el) => {
 
         function onTriggerButton(e){
           e.preventDefault();
+          toggleActiveState();
+        }
 
-          const triggerClasses = trigger.classList;
-          const submenuClasses = submenu.classList;
-
+        function toggleActiveState(){
           // toggle active class of 'trigger' and 'ul' menu
-          if(triggerClasses.contains('has-submenu')){
+          if(trigger.classList.contains('has-submenu')){
             
             // set accordion tree to active
-            if(!triggerClasses.contains('active')){
+            if(!trigger.classList.contains('active')){
 
-              triggerClasses.add('active');
+              swapClasses(trigger, 'active', 'not-active');
+
               // setTimeout required to toggle display prop before class prop
               // display required to remove elements from DOM when hidden
-              submenu.style.display = 'block';
               setTimeout(()=>{
-                submenuClasses.add('active');
+                swapClasses(submenu, 'active', 'not-active');
               }, 1);
-              
-
+            
             } else {
-              triggerClasses.remove('active');
-              submenuClasses.remove('active');
-              
-              setTimeout(()=>{
-                  submenu.style.display = 'none';
-              }, 100);
+              swapClasses(trigger, 'not-active', 'active');
+              swapClasses(submenu, 'not-active', 'active');
             }
           }
         }
@@ -79,6 +76,10 @@ const Accordion = (el) => {
   }
 }
 
+const swapClasses = (el, add, remove) => {
+  el.classList.add(add);
+  el.classList.remove(remove);
+}
 const createAccordionTrigger = () => {
   const triggerButton = document.createElement('button');
   triggerButton.innerHTML = '<span class="visually-hidden">Toggle</span>';

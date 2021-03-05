@@ -1,4 +1,10 @@
 .accordion
+  a.trigger + ul 
+    display: block
+    
+  a.trigger.not-active + ul 
+    display: none
+
   li
     ul
       overflow: hidden
