@@ -21,11 +21,11 @@ const Accordion = (el, shouldExpandTopLevel) => {
         // setup initial state of menus and buttons
         trigger.classList.add('has-submenu'); //setup submenu class
         
-        if(trigger.parentNode.parentNode == el && 
-          shouldExpandTopLevel &&
-          !submenu.classList.contains('active')) {
-            toggleActiveState();
-          }
+        // if(trigger.parentNode.parentNode == el && 
+        //   shouldExpandTopLevel &&
+        //   !submenu.classList.contains('active')) {
+        //     toggleActiveState();
+        //   }
         
         submenu.classList.contains('active') ?
           trigger.setAttribute('aria-expanded', true) :
