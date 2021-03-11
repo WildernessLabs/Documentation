@@ -11,6 +11,8 @@ This is another huge release with some awesome new network stack goodies as well
 * **`HttpListener` Support** - You can now turn your Meadow into a web server with `HttpServer`.
 * **Maple Web Server** - Introducing Maple Server for Meadow; an ultra-lightweight RESTful Web API server.
 * **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
+* **Antenna Switching** - We've exposed an API to switch between the onboard and external antenna.
+* **Battery Voltage** - You can now read the battery voltage from Meadow.OS.
 * **Meadow.OS Startup Improvements** - [TBD]
 * **Meadow.Foundation Composite Sensor Pattern** - [TBD]
 
@@ -24,15 +26,37 @@ Note, to update the Meadow.CLI, run the following from a command line:
 dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
 
+## Meadow.OS 
+
+### Battery Level API
+
+The current battery charge level can be obtained via the `GetBatteryLevel()` API available on the `Device` class:
+
+```csharp
+float voltage = Device.GetBatteryLevel();
+```
+
+For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/OS/BatteryLevel) in the [Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples).
+
+### Startup Improvements
+
+[tbd]
+
 ## Network Updates
 
 ### `HttpListener`, `HttpServer`, and Various Bug Fixes
 
-[stuff]
+This is the start of this release. `HttpListener` is now operational, which among other things, enables `HttpServer` and, in general, running a web server on Meadow.
 
-## Meadow.OS Startup Improvements
+### Antenna Switching API
 
-[tbd]
+You can now switch between the onboard chip antenna and an external antenna hooked up to the µ.FL connector:
+
+```csharp
+Device.SetAntenna(AntennaType.External);
+```
+
+See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/Network/Antenna_Switching) for more information.
 
 ## Introducing Maple Server for Meadow
 
