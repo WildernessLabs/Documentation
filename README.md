@@ -5,44 +5,103 @@ Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are
 
 ## Running Locally
 
-This repo is also a Ruby site powered by jekyll (which is how it's hosted by GitHub Pages). You can run and browse this site locally, which is especially useful if you're contributing documentation, or you just want an offline experience.
+You can build and host the site locally for development, using our [Chloroplast](https://github.com/wildernesslabs/Chloroplast) tool.
 
+This is especially useful if you're contributing documentation, or you just want an offline experience.
+
+### Install Build and Host Pre-requisites
+
+#### 1. Install `Chloroplast` DotNET tool Nuget Package
+
+You can acquire chloroplast by installing it as either a local or global tool.
+
+##### a. Add the Wilderness Labs Package Registry
+
+Currently, Chloroplast is distributed only through the wilderness labs package registry. This means you'll need to add the authenticated nuget source as follows.
+
+First, you'll need to [generate a GitHub Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+
+Once you've done that, you can install the package registry locally:
+
+```bash
+dotnet nuget add source https://nuget.pkg.github.com/WildernessLabs/index.json --name “wildernesslabs” --username << your github username >> --password << a personal access token >>
+```
+
+##### b. (option 1) Install Chloroplast as a Global Tool
+
+If you install it as a global tool, you can invoke it with the tool name `chloroplast`.
+
+```bash
+dotnet tool install Chloroplast.Tool -g
+```
+
+##### b. (option 2) Install Chloroplast as a Local Tool
+
+Alternatively, you can install it as a local tool by first creating a local tool manifest in the project folder, as follows:
+
+```bash
+dotnet new tool-manifest
+dotnet tool install Chloroplast.Tool
+```
+
+If you install it as a local tool, you must prefix the tool name, so you can invoke it with `dotnet chloroplast`.
+
+#### 2. Install the Node Packages
+
+```bash
+npm install
+```
+
+### Build it!
+
+You'll need to build both the front-end stuff (built in Node), and  run chloroplast to build the content.
+
+#### 1. Build the Front-End
+
+```bash
+npm run build
+```
+
+##### Optional Start a Watcher for Front-End Build Changes
+
+If you're making changes to the front-end (styles, scripts, etc.,) you can run the front-end node watcher:
+
+```bash
+npm run dev
+```
+
+#### 2. Build (and Optionally Host) the Content w/Chloroplast
+
+Running `chloroplast` will automatically look in the `SiteConfig.yml` file and build the content out to the appropriate output folder. If you pass the `host` argument, it will also spin up an ASP.NET server to host it locally:
+
+```bash
+chloroplast host
+```
+
+##### Optionally, add a File Change Watcher
+
+If you're making content changes (docs, templates, nav), you'll want a file watcher that will listen for changes and automatically rebuild using chloroplast. To do that, open a _new_ terminal tab or instance and run:
+
+```bash
+npm run watch:docs
+```
+
+**Note** - In the future, file watching will be built into Chloroplast
+
+
+
+
+<!-- 
 To browse locally on OSX (Steps 1 and 2):
 
+not sure if you need this now someone should try on a fresh computer
 ### 1. [Install Homebrew](https://brew.sh/) (if not already installed)
-
-### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
-
-Open a terminal and navigate to the `Documentation/docs` folder and run:
-
-```
-$ brew install ruby
-```
-
-Once you have Ruby, you'll need Jekyll and Bundler to build and host the site locally:
-
-```
-$ sudo gem install jekyll bundler
-```
-
-With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
-(Change your terminal working folder to `Documentation/docs`)
-
-```
-$ bundle install
-```
 
 To browse locally on Windows (Steps 1 and 2):
 
 ### 1. [Install Chocolatey](https://chocolatey.org/install) (if not already installed)
 
 ### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
-
-Open a Powershell prompt and navigate to the `Documentation/docs` folder and run:
-
-```
-choco install ruby
-```
 
 Install MSYS2. Choose MSYS2 and MINGW development toolchain option
 
@@ -51,41 +110,7 @@ ridk install
 ```
 
 Once you have Ruby and MSYS2, you'll need Jekyll and Bundler to build and host the site locally (tip: you may need to restart your shell):
-
-```
-$ gem install jekyll bundler
-```
-
-With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
-(Change your Powershell working folder to `Documentation/docs`)
-
-```
-$ bundle install
-```
-
-### 3. Launch local server
-
-```
-bundle exec jekyll serve
-```
-The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
-
-Changes should automatically be picked up and displayed on the site.
-
-## Customizing the front end
-
-The three sites: Wildernesslabs.co, Docs, and Docfx share the same core front end code. Because of this, all front end modifications come from the [WildernessLabs Web Repository](https://github.com/WildernessLabs/WLabs_Web).
-
-To update the front end, setup a version of that repository and follow the instructions to make updates. Once you have that setup you can configure your watcher.
-
-1. Go into the `watch_config.json` file contained at root of the documentation repo. Update the path in that configuration to point to your WLabs_Web repo's dist directory
-2. Run the `watch.rb` task using the command below. This will watch the dist directory for any changes that are made and move them to the 'docs' and 'docsfx repo'
-
-```
-ruby watch.rb
-```
-
-3. In WLabs_Web repo run `gulp watch` and update any front end files or `gulp dist`
+-->
 
 
 ## [Contributing](Contributing)
