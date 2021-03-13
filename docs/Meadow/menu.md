@@ -5,7 +5,7 @@ parent:
   title: Meadow Guides
 navTree:
 - path: /meadow/Getting_Started
-  title: Get started with Meadow
+  title: Getting Started
   items:
   - path: /meadow/Getting_Started/Assemble_Meadow
     title: Assemble Meadow Board
@@ -82,7 +82,7 @@ navTree:
   - path: /meadow/Meadow.Foundation/Unified_GPIO_Arch
     title: Unified IO Architecture
 - path: /meadow/Release_Notes
-  title: Meadow V1.0 Roadmap
+  title: Release Notes
   items:
   - path: /meadow/Release_Notes/Beta4
     title: Meadow Beta 4
