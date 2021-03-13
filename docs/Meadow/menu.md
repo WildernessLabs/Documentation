@@ -69,18 +69,18 @@ navTree:
   - path: /meadow/Meadow.Foundation/Getting_Started
     title: Getting Started
   - path: /meadow/Meadow.Foundation/Peripherals
-    title: Meadow.Foundation Peripherals Library
+    title: Peripheral Drivers
   - path: /meadow/Meadow.Foundation/Libraries_and_Frameworks
-    title: Meadow.Foundation Libraries and Frameworks
+    title: Libraries and Frameworks
     items:
     - path: /meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor
-      title: GPS/GNSS NMEA Sentence Processor Library
+      title: GPS/GNSS NMEA Processor
     - path: /meadow/Meadow.Foundation/Libraries_and_Frameworks/Micro_GraphicsLibrary
-      title: Meadow Micro Graphics Library
+      title: µGraphics Library
   - path: /meadow/Meadow.Foundation/Working_with_Sensors
     title: Working with Sensors
   - path: /meadow/Meadow.Foundation/Unified_GPIO_Arch
-    title: Meadow.Foundation Unified IO Architecture
+    title: Unified IO Architecture
 - path: /meadow/Release_Notes
   title: Meadow V1.0 Roadmap
   items:
