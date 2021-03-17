@@ -36,6 +36,10 @@ For more information, see the [BatteryLevel application sample](https://github.c
 
 `HttpListener` is now operational, which among other things, enables `HttpServer` and, in general, running a web server on Meadow.
 
+### API Update (breaking change)
+
+The `Device.WiFiAdapter.Connect` has been updated to a `Task` returning `async` method. This is a breaking change and you'll now need to `await` calls to the `Connect` method.
+
 ### Antenna Switching API
 
 You can now switch between the onboard chip antenna and an external antenna hooked up to the µ.FL connector:
