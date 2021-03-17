@@ -78,7 +78,6 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 ### New Drivers
 
 * **MCP9808** - A high accuracy I2C temperature sensor, perfect for when you need accuracy greater than +/- 0.5 degrees
-* **Motors.Tb67h420ftg** - The TB67H420FTG is a brushed DC motor driver that has a dual H-Bridge motor driver built in, along with over current protection (and notification). With the ability to drive up to `50V` at `9A`, it's a very powerful driver. It can also be put into single H-Bridge mode in which two motors are driven in synch, or one motor is driven with both outputs, allowing twice the power.
 * **Sensors.Weather.WindVane** -  Driver for wind vanes that outputs variable voltage, based on the azimuth of the wind. 
 
 ## Bug Fixes
