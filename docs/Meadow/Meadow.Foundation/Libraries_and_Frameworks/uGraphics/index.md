@@ -292,6 +292,36 @@ graphics.DrawText(
     scaleFactor: GraphicsLibrary.ScaleFactor.X2);
 ```
 
+### Paths
+
+µGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GrapihcsPath` object and drawn using the `DrawPath` method.
+
+`GraphicsPath` uses the concepts of **verbs** to contol the path. It currently supports:
+* `Move` which sets the current position
+* `Line` which draws a line from the current position to a new position 
+* `Close` which closes the current path by adding a line from the last position to the first position
+
+```csharp
+var pathSin = new GraphicsPath();
+
+for (int i = 0; i < 48; i++)
+{
+    if(i == 0)
+    {
+        pathSin.MoveTo(0, 120 + (int)(Math.Sin(i * 10 * Math.PI / 180) * 100));
+        continue;
+    }
+
+    pathSin.LineTo(i * 5, 120 + (int)(Math.Sin(i * 10 * Math.PI / 180) * 100));
+}
+
+graphics.Clear();
+
+graphics.DrawPath(pathSin, Color.LawnGreen);
+
+graphics.Show();
+```
+
 ### Implementing a Render Lock
 
 When drawing to the canvas within a loop, it's a good practice to implement a render lock so that if a draw operation is already in progress, a render request isn't called in parallel to prevent the operations stacking up:

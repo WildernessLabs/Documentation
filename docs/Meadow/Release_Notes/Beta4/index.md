@@ -68,16 +68,24 @@ The [`TextDisplayMenu`](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextD
 
 The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including: time, temperature, and numbers. Additionally, you can easily create custom menu item types that allow users to edit their value via the inputs.
 
-
 ## Other Meadow.Foundation Improvements
+
+* **MicroGraphics** Gets two new fonts ideal for lower resolution displays: 4x6 & 6x8 pixels per character
+* **MicroGraphics** Also gets a couple handy helper APIs: `MeasureText` returns a `Size` in pixels of text for a given font, and `GraphicsPath` now has a `Bounds` property that returns the size of the path in pixels
+* **Apa102** driver now derrives from `DisplayBase` so it can be used with `GraphicsLibrary` to draw primitives and text when configured as a color pixel display
+* **TftSpi** color display drivers receive a performance optimization when clearing the screen, a small but noticable improvement
 
 ### New Drivers
 
-[tbd]
+* **MCP9808** a high accuracy I2C temperature sensor, perfect for when you need accuracy greater than +/- 0.5 degrees
 
 ## Bug Fixes
 
 - [#XX - Title](https://github.com/WildernessLabs/Meadow_Issues/issues/###) - Description
+
+- **Hx8357d** display driver in `TftSpi` - fixed a bug, will now renderer correctly (tested with an Adafruit 320x480 display)
+- **Adafruit 128x32 OLED FeatherWing** driver is fixed catching it up with the latest `PushButton` improvements
+- **AnalogTemperatureSensor** fixed a math bug, again returns correct temperatures 
 
 # b4.5
 
