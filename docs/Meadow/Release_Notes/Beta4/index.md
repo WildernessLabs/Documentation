@@ -81,9 +81,6 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 * **Sensors.Weather.WindVane** -  Driver for wind vanes that outputs variable voltage, based on the azimuth of the wind. 
 
 ## Bug Fixes
-
-- [#XX - Title](https://github.com/WildernessLabs/Meadow_Issues/issues/###) - Description
-
 - **Hx8357d** display driver in `TftSpi` - fixed a bug, will now renderer correctly (tested with an Adafruit 320x480 display)
 - **Adafruit 128x32 OLED FeatherWing** driver is fixed catching it up with the latest `PushButton` improvements
 - **AnalogTemperatureSensor** fixed a math bug, again returns correct temperatures 
