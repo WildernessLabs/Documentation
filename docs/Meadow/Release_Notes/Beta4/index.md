@@ -16,13 +16,7 @@ This is another huge release with some awesome new network stack goodies as well
 
 ## Updating
 
-This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
-
-Note, to update the Meadow.CLI, run the following from a command line:
-
-```bash
-dotnet tool update Wildernesslabs.Meadow.CLI --global
-```
+This is release requires an OS update, and nuget updates so make sure to pull the latest packages in your project after updating your Meadow board.
 
 ## Meadow.OS 
 
@@ -40,7 +34,7 @@ For more information, see the [BatteryLevel application sample](https://github.c
 
 ### `HttpListener`, `HttpServer`, and Various Bug Fixes
 
-This is the start of this release. `HttpListener` is now operational, which among other things, enables `HttpServer` and, in general, running a web server on Meadow.
+`HttpListener` is now operational, which among other things, enables `HttpServer` and, in general, running a web server on Meadow.
 
 ### Antenna Switching API
 
@@ -77,7 +71,7 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 ### New Drivers
 
-* **MCP9808** - A high accuracy I2C temperature sensor, perfect for when you need accuracy greater than +/- 0.5 degrees
+* **Sensors.Temperature.MCP9808** - A high accuracy I2C temperature sensor, perfect for when you need accuracy greater than +/- 0.5 degrees
 * **Sensors.Weather.WindVane** -  Driver for wind vanes that outputs variable voltage, based on the azimuth of the wind. 
 
 ## Bug Fixes
