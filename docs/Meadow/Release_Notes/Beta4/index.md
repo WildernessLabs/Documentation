@@ -4,6 +4,81 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.6
+
+This is another huge release with some awesome new network stack goodies as well as tasty other improvements, including:
+
+* **`HttpListener` Support** - You can now turn your Meadow into a web server with `HttpServer`.
+* **Maple Web Server** - Introducing Maple Server for Meadow; an ultra-lightweight RESTful Web API server.
+* **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
+* **Antenna Switching** - We've exposed an API to switch between the onboard and external antenna.
+* **Battery Voltage** - You can now read the battery voltage from Meadow.OS.
+
+## Updating
+
+This is release requires an OS update, and nuget updates so make sure to pull the latest packages in your project after updating your Meadow board.
+
+## Meadow.OS 
+
+### Battery Level API
+
+The current battery charge level can be obtained via the `GetBatteryLevel()` API available on the `Device` class:
+
+```csharp
+float voltage = Device.GetBatteryLevel();
+```
+
+For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/OS/BatteryLevel) in the [Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples).
+
+## Network Updates
+
+### `HttpListener`, `HttpServer`, and Various Bug Fixes
+
+`HttpListener` is now operational, which among other things, enables `HttpServer` and, in general, running a web server on Meadow.
+
+### Antenna Switching API
+
+You can now switch between the onboard chip antenna and an external antenna hooked up to the µ.FL connector:
+
+```csharp
+Device.SetAntenna(AntennaType.External);
+```
+
+See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/Network/Antenna_Switching) for more information.
+
+## Introducing Maple Server for Meadow
+
+Maple server is an ultra-lightweight RESTful Web API server made specifically for Meadow that has native support for JSON. It enables easy remote interaction and control with Meadow over http.
+
+Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+
+And for a real world sample application, check out the [On-Air Sign project](https://github.com/wildernesslabs/OnAir_Sign) that uses Maple Server to show a message on an LED matrix display to make sure no one walks in on your meetings.
+
+## `TextDisplayMenu` Library
+
+The [`TextDisplayMenu`](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/) library is an extensible framework for quickly creating hierarchical, editable menus that can display on a `CharacterDisplay` or a graphics display via `GraphicsLibrary`. 
+
+![Animated image of a menu displayed on an LCD with a rotary encoder driving navigation.](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/TextDisplayMenu.gif)
+
+The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including: time, temperature, and numbers. Additionally, you can easily create custom menu item types that allow users to edit their value via the inputs.
+
+## Other Meadow.Foundation Improvements
+
+* **MicroGraphics** Gets two new fonts ideal for lower resolution displays: 4x6 & 6x8 pixels per character
+* **MicroGraphics** Also gets a couple handy helper APIs: `MeasureText` returns a `Size` in pixels of text for a given font, and `GraphicsPath` now has a `Bounds` property that returns the size of the path in pixels
+* **Apa102** driver now derrives from `DisplayBase` so it can be used with `GraphicsLibrary` to draw primitives and text when configured as a color pixel display
+* **TftSpi** color display drivers receive a performance optimization when clearing the screen, a small but noticable improvement
+
+### New Drivers
+
+* **Sensors.Temperature.MCP9808** - A high accuracy I2C temperature sensor, perfect for when you need accuracy greater than +/- 0.5 degrees
+* **Sensors.Weather.WindVane** -  Driver for wind vanes that outputs variable voltage, based on the azimuth of the wind. 
+
+## Bug Fixes
+- **Hx8357d** display driver in `TftSpi` - fixed a bug, will now renderer correctly (tested with an Adafruit 320x480 display)
+- **Adafruit 128x32 OLED FeatherWing** driver is fixed catching it up with the latest `PushButton` improvements
+- **AnalogTemperatureSensor** fixed a math bug, again returns correct temperatures 
+
 # b4.5
 
 Ooooooooweeeee! This is a real star of a release, with some major new functionality and performance fixes. It's the culmination of a lot of work that has been percolating for a long time. Big things include:
