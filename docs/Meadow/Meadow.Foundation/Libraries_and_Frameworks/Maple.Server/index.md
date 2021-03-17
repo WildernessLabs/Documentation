@@ -148,14 +148,12 @@ string id = base.FormFields["ID"];
 
 ## Limitations & Known Issues
 
-* [no SSL]
-* [limited routing]
-* [multithreading no worky on Meadow]
-* [advertising]
-* [500 errors]
+Maple is an early, work-in-progress project. Current limitations include:
 
-[call for contributors]
+* **No SSL** - We don't yet support server-side SSL, so it's not available in Maple.
+* **Limited Routing** - Routing is extremely basic.
+* **Poor Server Errors** - Server errors are not output well.
 
 ## Sample Application
 
-[link to meadow.foundation sample source code]
+To see Maple Server in action, check out the [sample applications](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple/Samples).
