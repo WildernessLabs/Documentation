@@ -13,8 +13,6 @@ This is another huge release with some awesome new network stack goodies as well
 * **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
 * **Antenna Switching** - We've exposed an API to switch between the onboard and external antenna.
 * **Battery Voltage** - You can now read the battery voltage from Meadow.OS.
-* **Meadow.OS Startup Improvements** - [TBD]
-* **Meadow.Foundation Composite Sensor Pattern** - [TBD]
 
 ## Updating
 
@@ -37,10 +35,6 @@ float voltage = Device.GetBatteryLevel();
 ```
 
 For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/OS/BatteryLevel) in the [Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples).
-
-### Startup Improvements
-
-[tbd]
 
 ## Network Updates
 
@@ -76,10 +70,6 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 
 ## Other Meadow.Foundation Improvements
-
-### Composite Sensor Pattern
-
-[tbd]
 
 ### New Drivers
 
