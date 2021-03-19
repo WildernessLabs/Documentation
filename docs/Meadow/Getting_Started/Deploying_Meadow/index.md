@@ -113,7 +113,6 @@ meadow --FlashOS
     ```
     meadow --MonoUpdateRt
     meadow --FlashEsp
-    meadow --MonoEnable
     ```
  5. Unplug and replug Meadow to give it a full restart.
 
