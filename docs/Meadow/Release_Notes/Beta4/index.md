@@ -4,6 +4,16 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.6.1
+
+This is a tiny release that fixes what we broke in b4.6.
+
+Something went wrong with our b4.6 release build and we broke WiFi scanning and `System.Net.Socket` calls. Oops. Those are fixed now.
+
+## Updating
+
+This release only requires an OS/ESP update from b4.6.
+
 # b4.6
 
 This is another huge release with some awesome new network stack goodies as well as tasty other improvements, including:
@@ -13,6 +23,7 @@ This is another huge release with some awesome new network stack goodies as well
 * **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.
 * **Antenna Switching** - We've exposed an API to switch between the onboard and external antenna.
 * **Battery Voltage** - You can now read the battery voltage from Meadow.OS.
+* **Better Connection Errors** - Failed WiFi connections will now give more information.
 
 ## Updating
 
