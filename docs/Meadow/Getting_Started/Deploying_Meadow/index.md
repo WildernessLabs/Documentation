@@ -79,7 +79,7 @@ meadow --FlashOS
     Run the following from terminal:
     
     ```
-    ls /dev/tty.usb*
+ls /dev/tty.usb*
     ```
     The port should be something like `/dev/tty.usbmodem01`.
 
@@ -103,7 +103,7 @@ meadow --FlashOS
 3. Once you've identified out the port name, run the following, replacing `[PORT]` with the serial port name:
 
     ```
-    meadow --MonoDisable -s [PORT]
+meadow --MonoDisable -s [PORT]
     ```
 
     **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
