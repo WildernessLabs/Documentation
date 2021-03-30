@@ -26,7 +26,7 @@ Here are some awesome projects you can build with a Hack Kit Pro:
 | [Servo controlled by rotary encoder.](https://www.hackster.io/wilderness-labs/control-a-servo-with-a-rotary-encoder-using-meadow-47c003) | ![](Gifs/RotaryServo.gif) |
 | [LedBar controlled with Rotaty Encoder.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/RotaryLedBar.gif) |
 | [EdgeASketch with RotaryEncoder and display.](https://www.hackster.io/wilderness-labs/make-an-edgeasketch-with-meadow-6955c3) | ![](Gifs/EdgeASketch.gif) |
-| [Image Gallery with buttons and display.](https://www.hackster.io/wilderness-labs/control-a-ledbar-using-a-rotary-encoder-with-meadow-30efeb) | ![](Gifs/GalleryViewer.jpg) |
+| [Image Gallery with buttons and display.](https://www.hackster.io/wilderness-labs/make-an-image-gallery-with-an-st7789-display-and-meadow-a80f5c) | ![](Gifs/GalleryViewer.jpg) |
 | [Expand IO Ports with an MCP23008.](https://www.hackster.io/wilderness-labs/expanding-io-ports-on-meadow-with-an-mcp23008-23a512) | ![](Gifs/McpLeds.gif) |
 | [LCD clock with onboard RTC chip.](https://www.hackster.io/wilderness-labs/build-a-clock-with-meadow-s-onboard-real-time-clock-chip-2b1f85) | ![](Gifs/Clock.gif) |
 | [Simone, a simple Simon with lights and sound.](https://www.hackster.io/wilderness-labs/build-your-own-simon-game-with-meadow-3701d5) | ![](Gifs/Simon.gif) |
