@@ -4,6 +4,14 @@ title: Meadow Beta 4
 subtitle: Release Notes
 ---
 
+# b4.6.2
+
+This is another tiny release to address an issue when connecting to a WiFi network that resulted in a `CannotStartNetworkInterface` exception that was affecting a small percentage of boards.
+
+## Updating
+
+This release requires a Meadow.OS firmware update (follow steps [here](/Meadow/Getting_Started/Deploying_Meadow/)), no IDE or Meadow.CLI updates are necessary.
+
 # b4.6.1
 
 This is a tiny release that fixes what we broke in b4.6.
