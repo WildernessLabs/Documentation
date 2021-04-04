@@ -61,10 +61,6 @@ Nearly every digital pin on the Meadow F7 board supports PWM.
 #### Timer Groups
 
 Something to be aware when creating PWM ports on multiple pins is that PWM pins share _timer groups_, meaning they will run at the same frequency, but can have different duty cycles. With this in mind, when you want to create multiple PWM ports running on different frequencies, refer to the pinout diagram above and choose those that belong to a unique PWM timer group.
-<!-- TODO:
-[separated into timer groups, in which each pin frequency must be set on an integer multiple of each other]
--->
-
 
 ## APIs
 
