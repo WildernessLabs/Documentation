@@ -73,14 +73,14 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL0373 | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL0376F | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL0398 | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL3897 | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL91874 | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | IL91874V03 | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1608 | ePaper driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1681 | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0373](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il0373.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0376F](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il0376F.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0398](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il0398.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [IL3897](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il3897.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il91874.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il91874V03.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Ssd1608.html) | ePaper driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Ssd1681.html) | ePaper driver |
 
 ### Displays.Ssd130x
 
