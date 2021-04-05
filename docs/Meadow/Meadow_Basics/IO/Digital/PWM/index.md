@@ -58,10 +58,9 @@ Nearly every digital pin on the Meadow F7 board supports PWM.
 
 ![Illustration of the Meadow F7 Micro board with all pins labeled; the D00 through D15 pins support PWM](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
-<!-- TODO:
-[separated into timer groups, in which each pin frequency must be set on an integer multiple of each other]
--->
+#### Timer Groups
 
+Something to be aware when creating PWM ports on multiple pins is that PWM pins share _timer groups_, meaning they will run at the same frequency, but can have different duty cycles. With this in mind, when you want to create multiple PWM ports running on different frequencies, refer to the pinout diagram above and choose those that belong to a unique PWM timer group.
 
 ## APIs
 
