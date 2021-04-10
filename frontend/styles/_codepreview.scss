@@ -4,7 +4,15 @@
 
 code {
   color: #844936;
+  white-space: normal;
+  display: inline-block; 
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
 }
+
+p code {
+  padding: 0;
+}
+
 
 pre,
 prepre {
@@ -81,7 +89,7 @@ code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 3em;
+  padding: 1.7em;
   margin: 0.5em 0 2em;
   overflow: auto;
 }
@@ -138,8 +146,6 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
-  /* This background color was intended by the author of this theme. */
-  background: hsla(0, 0%, 100%, 0.5);
 }
 
 .token.atrule,

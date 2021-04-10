@@ -35,6 +35,11 @@
         background-color: #F6F7F7
         th
           border-bottom: 1px solid #FF8E0D
+      tbody
+        tr:not(:last-child) 
+          td 
+            border-bottom: 1px solid #DBDBDB
+            
 
   .content-banner
     background: url('/build/assets/images/content-banner-light2x.png') right top no-repeat
@@ -91,12 +96,18 @@
         color: #3C3424
 
     table
-      border-color: #F6F7F7
+      border: 1px solid #F6F7F7
       color: #F6F7F7
       thead
         background-color: #2D3339
         th
           border-bottom: #F6F7F7
+      tbody
+        tr:not(:last-child) 
+          td 
+            border-bottom: 1px solid #F6F7F7
+            
+
 
   .content-banner
     background: url('/build/assets/images/content-banner-dark2x.png') right top no-repeat
@@ -124,6 +135,8 @@
   footer
     color: #F6F7F7 
 
+  code 
+    color: #EB886E
   // code block
   pre 
     border-color: #F6F7F7;
@@ -131,4 +144,4 @@
   
   code[class*="language-"],
   pre[class*="language-"] 
-    color: #69782A
+    color: #B6C969

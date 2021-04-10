@@ -2,14 +2,12 @@
 @await PartialAsync("docs/Samples/menu.md")
 <section class="content">
   <div class="content-banner">
-    <h2>Samples</h2>
-    <h3>@Model.GetMeta("title")</h3>
+    <h2>@Model.GetMeta("title")</h2>
+    @if (@Model.HasMeta("subtitle"))
+    {
+      <h3>@Model.GetMeta("subtitle")</h3>
+    }
   </div>
-
-  @if (@Model.HasMeta("subtitle"))
-  {
-    <h4>@Model.GetMeta("subtitle")</h4>
-  }
   <div class="content-body">
     @Raw(Model.Body)
   </div>
