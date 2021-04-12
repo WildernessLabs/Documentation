@@ -14,6 +14,8 @@ If you'd like to purchase one, check out the [Wilderness Labs Store](https://sto
 
 If you haven't setup your development environment yet, and gone through Hello, LED, check out the [Meadow Getting Started guide](/Meadow/Getting_Started/) first.
 
-## [Hackster.io Project Inspiration](Projects/)
-
 ## [Contents](Contents/)
+
+## [Project Samples](Projects/)
+
+## [Hack Kit Blog Series](BlogSeries/)
