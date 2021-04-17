@@ -4,9 +4,19 @@
 
 code {
   color: #844936;
-  white-space: normal;
-  display: inline-block; 
   padding: 0.5rem 2.5rem 0.5rem 1rem;
+}
+
+// pre {
+//   overflow: hidden;
+// }
+code:not(code[class*="language-"]){
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: block;
+  padding-right: 100px;
 }
 
 p code {
@@ -89,7 +99,7 @@ code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 1.7em;
+  padding: 0.7em 1.5em 0.7em 0.7em;
   margin: 0.5em 0 2em;
   overflow: auto;
 }
@@ -180,5 +190,13 @@ pre[class*="language-"] {
 .copy-button {
   position: absolute;
   right: 1em;
-  top: 1em;
+  top: 0.5em;
+}
+
+code:not(code[class*="language-"]) + .copy-button {
+  width: 2em;
+  height: 1.3em;
+  right: 0.08em;
+  top: 0.55em;
+  background-position: 50%;
 }
