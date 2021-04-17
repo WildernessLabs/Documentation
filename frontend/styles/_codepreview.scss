@@ -99,7 +99,7 @@ code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 0.7em 1.5em 0.7em 0.7em;
+  padding: 1.2em 1.5em 1.2em 1.2em;
   margin: 0.5em 0 2em;
   overflow: auto;
 }
@@ -195,8 +195,8 @@ pre[class*="language-"] {
 
 code:not(code[class*="language-"]) + .copy-button {
   width: 2em;
-  height: 1.3em;
+  height: 1.1em;
   right: 0.08em;
-  top: 0.55em;
+  top: 0.7em;
   background-position: 50%;
 }
