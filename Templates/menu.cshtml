@@ -25,7 +25,8 @@
         @foreach (var item in children)
         {
           string activeAttribute = Model.Node.Slug.Contains(item["path"]) || isInit ? "active current" : "not-active";
-
+          activeAttribute = Model.Node.Slug.Equals(item["path"]) ? activeAttribute + " currentPage" : activeAttribute;
+          
           <li>
             <a aria-expanded="false" href="@item["path"]" tabindex="-1" class="trigger @primaryAttribute @activeAttribute"><span tabindex="0">@item["title"]</span></a>
             @if (item.ContainsKey("items"))
