@@ -7,10 +7,7 @@ code {
   padding: 0.5rem 2.5rem 0.5rem 1rem;
 }
 
-// pre {
-//   overflow: hidden;
-// }
-code:not(code[class*="language-"]){
+code {
   width: 100%;
   overflow: hidden;
   overflow-x: auto;
@@ -101,7 +98,6 @@ code[class*="language-"] ::selection {
 pre[class*="language-"] {
   padding: 1.2em 1.5em 1.2em 1.2em;
   margin: 0.5em 0 2em;
-  overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
@@ -190,7 +186,7 @@ pre[class*="language-"] {
 .copy-button {
   position: absolute;
   right: 1em;
-  top: 0.5em;
+  top: 1em;
 }
 
 code:not(code[class*="language-"]) + .copy-button {
