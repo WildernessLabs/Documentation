@@ -13,8 +13,8 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html) | A two axis analog joystick |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogWaterLevel.html) | Analog water level sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html) | Analog water level sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [DigitalTachometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer.html) | Hall Effect Linear Tachometer sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [DipSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.DipSwitch.html)  | A multi-pole dip switch |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [HBridgeMotor](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | Generic h-bridge motor controller |
@@ -63,10 +63,10 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Max7219](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html) | MAX7219 SPI LED driver |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Pcd8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html) | PCD8544 SPI monochrome display (Nokia 5110) |
 | <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Displays.SerialLcd](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SerialLcd.html) | Serial LCD charcter display |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Ssd130x](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd130x.html) | SSD1306 / SSD1309 SPI and I2C OLED monochrome displays |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Ssd130x](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.html) | SSD1306 / SSD1309 SPI and I2C OLED monochrome displays |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Ssd1327](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1327.html) | SSD1327 SPI OLED 4bpp greyscale display |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.St7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7565.html) | ST7565 SPI color display |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.html) | SPI Color TFT and OLED displays (GC9A01, HC8357B, HX8357D, ILI9163, ILI9341, ILI9481, ILI9488, RM68140, S6D02A1, SSD1331, SSD1351, ST7735, ST7789) |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.html) | SPI Color TFT and OLED displays (GC9A01, HC8357B, HX8357D, ILI9163, ILI9341, ILI9481, ILI9488, RM68140, S6D02A1, SSD1331, SSD1351, ST7735, ST7789) |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Tm1637](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html) | TM1637 digital character display |
 
 ### Displays.ePaper
@@ -117,9 +117,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.CharlieWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.CharlieWing.html) | AdaFruit CharlieWing Matrix LED FeatherWing |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.DotstarWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.DotstarWing.html) | AdaFruit DotstarWing LED FeatherWing |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.GPSWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.GPSWing.html) | AdaFruit GPSWing GPS FeatherWing |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [FeatherWings.JoyWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.JoyWing.html) | AdaFruit JoyWing joystick and button FeatherWing |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.LedMatrix8x16](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16.html) | AdaFruit HT16K33 8x16 Matrix LED FeatherWing |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [FeatherWings.MiniTft](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.MiniTft.html) | AdaFruit MiniTft color display FeatherWing |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [FeatherWings.JoyWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.JoyWing.html) | AdaFruit JoyWing joystick and button FeatherWing |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.LedMatrix8x16](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.html) | AdaFruit HT16K33 8x16 Matrix LED FeatherWing |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [FeatherWings.MiniTft](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html) | AdaFruit MiniTft color display FeatherWing |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.MotorWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.MotorWing.html) | AdaFruit MotorWing motor controller FeatherWing |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.OLED128x32Wing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.OLED128x32Wing.html) | AdaFruit OLED 128x32 monochrome display FeatherWing |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [FeatherWings.ServoWing](/docs/api/Meadow.Foundation/Meadow.Foundation.FeatherWings.ServoWing.html) | AdaFruit ServoWing servo controller FeatherWing |
@@ -130,9 +130,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.EEPROM.At24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html) | At24Cxx I2C EEPROMs (AT24C32 / AT24C64 / AT24C128 / AT24C256) |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Ht16K33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16K33.html) | HT16K33 I2C IO expander, led driver, and character display controller |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.IS31FL3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.IS31FL3731.html) | IS31FL3731 I2C matrix led driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Is31fl3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Is31fl3731.html) | IS31FL3731 I2C matrix led driver |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Mcp23x08](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.html) | Mcp23x08 I2C digital output expander |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.PCA9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.PCA9685.html) | PCA9685 I2C PWM expander |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Pca9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9685.html) | PCA9685 I2C PWM expander |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | x74595 I2C shift register digital output expander |
 
 ## Leds
@@ -140,12 +140,6 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Leds.Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | Apa102 SPI RGB LED driver |
-
-## Light
-
-| Status | Driver | Description |
-|--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Light.Max44009](/docs/api/Meadow.Foundation/Meadow.Foundation.Light.Max44009.html) | Max44009 I2C ultraviolet and ambient light sensor |
 
 ## Motors
 
@@ -166,17 +160,17 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.AdafruitMPRLS](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS.html) | Adafruit MPRLS I2C barometric pressure sensor with metal port connector |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.AdafruitMPRLS](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor.html) | Adafruit MPRLS I2C barometric pressure sensor with metal port connector |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Bme280](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280.html) | Bosch BME280 SPI and I2C absolute barometric pressure sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Bme680](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme680.html) | Bosch BME680 I2C humidity, barometric pressure, ambient temperature and gas (VOC) sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Bmp085](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp085.html) | Bosch BMP085 I2C barometric pressure sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Bmp180](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp180.html) | BMP180 I2C barometric pressure, temperature, and altitude sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Dhtxx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dhtxx.html) | DHTxx I2C temperature and humidity sensors (DHT10, DHT12) |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Atmospheric.GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTH02.html) | GroveTH02 I2C temperature and relative humidity sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Dhtxx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.html) | DHTxx I2C temperature and humidity sensors (DHT10, DHT12) |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Atmospheric.GroveTH02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.GroveTh02.html) | GroveTH02 I2C temperature and relative humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Hih6130](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Hih6130.html) | HIH6130 I2C temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d.html) | HTU21D(F) I2C temperature and humidity sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Atmospheric.MPL115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.MPL115A2.html) | MPL115A2 I2C barometric pressure and temperature sensor |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.MPL3115A2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.MPL3115A2.html) | MPL3115A2 I2C barometric pressure, temperature, and altitude sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Atmospheric.Mpl115a2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.html) | MPL115A2 I2C barometric pressure and temperature sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Mpl3115a2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.html) | MPL3115A2 I2C barometric pressure, temperature, and altitude sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Ms5611](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Ms5611.html) | MS5611 SPI and I2C altimeter and barometric pressure sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Sht31D](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Sht31D.html) | SHT31-D temperature and humidity sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Si70xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx.html) | Si70xx I2C humidity and temperature sensors |
@@ -185,8 +179,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | Dht10 | Dhtxx driver |
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | Dht12 | Dhtxx driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [DhtBase](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.DhtBase.html) | DhtBase driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Dht10](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht10.html) | Dht10 driver |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Dht12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht12.html) | Dht12 driver |
 
 ## Camera
 
@@ -226,12 +221,13 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Alspt19](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Alspt19.html) | ALS-PT19-315C analog light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Bh1745](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1745.html) | Bh1745 I2C luminance and color light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Bh1750](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1750.html) | Bh1750 I2C luminance and color light sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Light.SI1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | SI1145 I2C ultraviolet and ambient light sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Light.Tcs3472x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tcs3472x.html) | Tsc3472x I2C ambient light and color sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Light.SI1145](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.SI1145.html) | SI1145 I2C ultraviolet and ambient light sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Light.Tcs3472x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tcs3472x.html) | Tsc3472x I2C ambient light and color sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Temt6000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000.html) | Temt6000 analog ambient light sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Light.TSL2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | TSL2561 I2C luminosity and light sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Light.TSL2561](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.TSL2561.html) | TSL2561 I2C luminosity and light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Tsl2591](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tsl2591.html) | Tsl2591 I2C high dynamic range light sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Veml7700](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Veml7700.html) | Veml7700 I2C high accuracy ambient light sensor |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Light.Max44009](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Max44009.html) | Max44009 I2C ultraviolet and ambient light sensor |
 
 ## LoadCell
 
