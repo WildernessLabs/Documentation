@@ -46,7 +46,7 @@ body#home .content
     font-size: 20px
     margin-bottom: 0.5em
 
-  h2, h3, h4, h5, p, li
+  h2, h3, h4, h5, p
     overflow: visible
     code
       display: inline-block
@@ -57,11 +57,32 @@ body#home .content
       top: 3px
       font-size: 0.95em
   
-  p, li 
-    code 
+  p :not(pre) > code 
       top: 8px
       position: relative
+      width: auto
 
+  ol, ul 
+    code
+      display: inline-block
+      width: auto
+      margin: 0
+      padding: 0
+      position: relative
+      font-size: 0.95em
+      top: 8px
+      
+  pre
+    code 
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+      display: block;
+      padding: 0.5rem 2.5rem 0.5rem 1rem;
+      padding-right: 50px;
+      top: 0px
+      &:code:not(code[class*="language-"]) 
+        white-space: nowrap
   a
     color: #12BBF3
     &:hover, &:focus
