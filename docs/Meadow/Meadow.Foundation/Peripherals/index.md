@@ -240,7 +240,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Location.MediaTek.Mt3339](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.MediaTek.Mt3339.html) | MediaTek MT3339 serial GNSS / GPS controller |
+| <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Gnss.Mt3339](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Gnss.Mt3339.html) | MediaTek MT3339 serial GNSS / GPS controller |
 
 ## Moisture
 
