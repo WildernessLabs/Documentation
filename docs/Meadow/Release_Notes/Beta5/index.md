@@ -35,6 +35,7 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 ### Drivers
 
  - `IDCMotor` and `HBridgeMotor` - `Speed` has been deprecated. Please use the `Power` property.
+ - `MPL115A2` - Finished [wasn't finished before]
 
 ## Bug Fixes
 
