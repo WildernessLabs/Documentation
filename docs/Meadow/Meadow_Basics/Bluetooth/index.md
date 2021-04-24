@@ -1,4 +1,10 @@
-# Bluetooth Low Energy on Meadow Beta 5.0
+---
+layout: Meadow
+title: Bluetooth
+subtitle: Meadow b5.0 BLE Draft Implementation
+---
+
+# Intro
 
 The Beta 5 release of Meadow contains a small subset of BLE capabilities to help developers, customers and the community at large to both test aas well as provide feedback as to which BLE features are important to their projects and products. The BLE specification contains a very large number of potential features, from common to rarely used.  We've implemented a small subset to get started to allow early access and feedback so we can focus our resource efforts on what our users need.
 
@@ -51,7 +57,7 @@ To define your server's charcteristic graph, We create a `Definition` that conta
 
 Creating the definition would look like this:
 
-```
+```csharp
 var definition = new Definition(
     "MY MEADOW",
     new Service(
@@ -97,7 +103,7 @@ Let's look at what's happeing here.
 
 Once you have a definition, starting Bluetooth is as simple as this:
 
-```
+```csharp
 Device.InitBluetoothAdapter();
 Device.BluetoothAdapter.StartBluetoothStack(definition);
 ```
@@ -108,7 +114,7 @@ Interacting with the Bluetooth Characteristics will be done through your `Defini
 
 For example, with our example definition, we could set the boolean and integer Characteristics every two seconds with a loop like this:
 
-```
+```csharp
 bool state = false;
 int value = 0;
 
@@ -135,7 +141,7 @@ Your application can be notified when a Client sets a `Characteristic` value thr
 
 To continue our example, if we wanted to wire up all of the Characteristics (yes, in this example even the read-only ones that will never actually get written to) we could use the following:
 
-```
+```csharp
 foreach (var c in _definition.Services[0].Characteristics)
 {
     c.ValueSet += (c, d) =>
