@@ -36,6 +36,7 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
  - `IDCMotor` and `HBridgeMotor` - `Speed` has been deprecated. Please use the `Power` property.
  - `MPL115A2` - Finished [wasn't finished before]
+ - `AnalogTemperatureSensor` - Now events both the new and the old value. Previously the old value was being thrown away.
 
 ## Bug Fixes
 
