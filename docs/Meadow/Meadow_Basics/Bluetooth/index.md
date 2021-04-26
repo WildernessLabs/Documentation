@@ -8,7 +8,7 @@ subtitle: Meadow b5.0 BLE Draft Implementation
 
 ## Bluetooth Low-Energy (BLE) Beta Feature Set
 
-The b5.0 release of Meadow contains a draft subset of BLE features and while covering a large number of basic bluetooth use cases, it's by no means a complete BLE implementation. But rather a starting point from which additional features will be added. The BLE specification contains a very large number of potential features, from common to rarely used. As you the current implementation, please help us prioritize and curate what features get added next. If you have a use case that is not currently covered, please file an issue in the [Meadow_Issues GitHub repo](https://github.com/WildernessLabs/Meadow_Issues/issues) describing your use case and the features needed.
+The b5.0 release of Meadow contains a draft subset of BLE features and while covering a large number of basic bluetooth use cases, it's by no means a complete BLE implementation, but rather a starting point from which additional features will be added. The BLE specification contains a very large number of potential features, from common to rarely used. As you use and test the current implementation, please help us prioritize and curate what features get added next. If you have a use case that is not currently covered, please file an issue in the [Meadow_Issues GitHub repo](https://github.com/WildernessLabs/Meadow_Issues/issues) describing your use case and the features needed.
 
 ### Currently Available Features
 
@@ -50,9 +50,6 @@ There are several good BLE mobile client applications available from iOS and And
 
 BLE requires your meadow be updated to the latest b5.0 binaries.  This includes both a Meadow OS and new firmware for the ESP32.  See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow/) for more information.
 
-
-
-
 ## Defining a BLE Service Definition
 
 The Meadow BLE server must be initialized with a `Definition` tree which includes a graph of the following three things:
@@ -65,11 +62,7 @@ The Meadow BLE server must be initialized with a `Definition` tree which include
 
 When creating known services and characteristics with established UUIDs, some of the features of them (such as whether they can be written to) might be locked down. Meaning that if a known characteristic is read-only, the underlying library will not allow it to be written to.
 
-<!-- 
-TODO: we should link to a list of known stuff if we have one. There are a couple here, but they're incomplete: 
- * Known Services - https://github.com/xabre/xamarin-bluetooth-le/blob/master/Source/Plugin.BLE.Abstractions/KnownServices.cs
- * Known Characteristics - https://github.com/xabre/xamarin-bluetooth-le/blob/master/Source/Plugin.BLE.Abstractions/KnownCharacteristics.cs
--->
+For a full list of known IDs for services and characteristics, see the [Bluetooth Assigned Numbers documents](https://www.bluetooth.com/specifications/assigned-numbers/)
 
 ### Creating a BLE `Definition` Tree
 
@@ -124,7 +117,7 @@ Once you have a BLE tree definition you can start initialize the BLE server with
 
 ```csharp
 Device.InitCoprocessor();
-Device.BluetoothAdapter.StartBluetoothStack(definition);
+Device.BluetoothAdapter.StartBluetoothServer(definition);
 ```
 
 ## Setting Data for a Client to Read
@@ -143,7 +136,7 @@ while (true)
     definition.Services[0].Characteristics["My Number"].SetValue(value);
 
     // or even by the UUID:
-    _definition.Services[0].Characteristics["017e99d6-8a61-11eb-8dcd-0242ac1300aa"].SetValue(state);
+    definition.Services[0].Characteristics["017e99d6-8a61-11eb-8dcd-0242ac1300aa"].SetValue(state);
 
     value++;
     state = !state;
@@ -161,10 +154,8 @@ Your application can be notified when a Client sets a `Characteristic` value thr
 To continue our example, if we wanted to wire up all of the Characteristics (yes, in this example even the read-only ones that will never actually get written to) we could use the following:
 
 ```csharp
-foreach (var c in _definition.Services[0].Characteristics)
-{
-    c.ValueSet += (c, d) =>
-    {
+foreach (var characteristic in bleTreeDefinition.Services[0].Characteristics) {
+    characteristic.ValueSet += (c, d) => {
         Console.WriteLine($"HEY, I JUST GOT THIS BLE DATA for Characteristic '{c.Name}' of type {d.GetType().Name}: {d}");
     };
 }
