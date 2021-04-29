@@ -101,7 +101,7 @@ The _enable_ pin (`EN`) serves as a sort of power switch for the board. By defau
 
 To create a power switch for the development board, hook the `EN` pin to a switch that sinks to `GND` (`0V`) when in the `OFF` position, as shown in the following schematic:
 
-<!-- [schematic needed - TODO] -->
+![](/Common_Files/meadow_power_enable.png)
 
 ### `5V` Power Rail (`5V`)
 
