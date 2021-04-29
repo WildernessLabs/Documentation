@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+        <MdocVersion>5.8.2</MdocVersion>
+        <MeadowVersion>0.22.0</MeadowVersion>
+        <MeadowFoundationVersion>0.24.0</MeadowFoundationVersion>
+        <MeadowCliVersion>0.12.10</MeadowCliVersion>
+
+
+        <MdocPath>$(NuGetPackageRoot)mdoc\$(MdocVersion)\tools\mdoc.exe</MdocPath>
+        <MeadowPath>$(NuGetPackageRoot)meadow\$(MeadowVersion)\lib\net472\meadow.dll</MeadowPath>
+        <MeadowFoundationPath>$(NuGetPackageRoot)meadow.foundation\$(MeadowFoundationVersion)\lib\net472\Meadow.Foundation.dll</MeadowFoundationPath>
+
+        <OutEcmaXml>out/EcmaXml</OutEcmaXml>
+    </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="mdoc" Version="$(MdocVersion)" />
+    <PackageReference Include="Meadow" Version="$(MeadowVersion)" />
+    <PackageReference Include="Meadow.Foundation" Version="$(MeadowFoundationVersion)" />
+    <!--<PackageReference Include="Wildernesslabs.Meadow.CLI" Version="$(MeadowCliVersion)" />-->
+
+    <AssembliesToUpdate Include="$(MeadowPath) $(MeadowFoundationPath)" />
+  </ItemGroup>
+
+    <Target Name="mdocupdate" DependsOnTargets="restore">
+        <Message Text="Output At: $(OutEcmaXml)" Importance="high"/>
+        <Exec Command="$(MdocPath) update $(MeadowPath) -out $(OutEcmaXml)/Meadow --debug" />
+        <Exec Command="$(MdocPath) update $(MeadowFoundationPath) -out $(OutEcmaXml)/Meadow.Foundation -L $([System.IO.Path]::GetDirectoryName($(MeadowPath))) --debug" />
+      </Target>
+</Project>

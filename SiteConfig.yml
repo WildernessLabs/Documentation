@@ -27,3 +27,9 @@ areas:
     output_folder: /netduino
   - source_folder: /docs/Samples
     output_folder: /samples
+  - source_folder: /docs/EcmaXml/Meadow
+    output_folder: /api/Meadow
+    type: api
+  - source_folder: /docs/EcmaXml/Meadow.Foundation
+    output_folder: /api/Meadow.Foundation
+    type: api
