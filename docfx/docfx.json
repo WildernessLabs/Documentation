@@ -21,11 +21,6 @@
           ],
           "exclude": [
             "/Source/Meadow.Foundation.Core.Samples/**",
-            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ht16k33/**",
-            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Is31fl3731/**",
-            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08/**",
-            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pca9685/**",
-            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Tca9548a/**",
             "/Source/Meadow.Foundation.Peripherals/**/Driver/**/bin/**",
             "/Source/Meadow.Foundation.Peripherals/**/Driver/**/obj/**",
             "/Source/Meadow.Foundation.Peripherals/**/Datasheet/**",
