@@ -8,15 +8,13 @@ subtitle: Release Notes
 
 Beta 5.0 is here and it's awesome. This is a huge release for Meadow with major new features and big changes, including:
 
- * **Bluetooth APIs** - [first cut]
- * **Ahead-of-Time Compilation** - 
+ * **Bluetooth APIs** - 
  * **Configuration Files** - and file stuff.
+ * **.NET Standard 2.1/.NET Core 3.0 API Support** - 
  * **Unitization** - 
  * **`IIODevice` Rearchitecture** - 
  * **Meadow.Foundation** - stuff.
  * **VS Code Support** - 
- * **item** - stuff.
- * **item** - stuff.
 
 ## Updating
 
