@@ -15,7 +15,7 @@
     a 
       color: #675130
       border-left: 2px solid #fff
-      &:hover:not(.active), &.active:not(.has-submenu), &.currentPage
+      &:hover:not(.active), &.currentPage:not(ul)
         background: #EDEFF0
         border-left: 2px solid #FF8E0D
         color: #BE4D34
@@ -82,6 +82,10 @@
       //   background: #2D3339
       //   border-left: 2px solid #FF8E0D
       //   color: #FF8E0D
+      &:hover:not(.active), &.currentPage:not(ul)
+        background: #EDEFF0
+        border-left: 2px solid #FF8E0D
+        color: #BE4D34
 
   .subnavigation-wrapper
     .topbar-wrapper, .nav-accordion li
