@@ -14,6 +14,7 @@ Beta 5.0 is here and it's massive. This is a huge release for Meadow with major 
  * **F# Support Fix** - The new .NET Standard support along with the linker fixes our F# integration, so you can use F# to build Meadow apps again.
  * **`IIODevice` Rearchitecture** - `IIODevice` has been split out into a number of individual _controller_ interfaces such as `IAnalogInputController`, `IDigitalOutputController`, `II2cController`, etc. This great simplifies drivers that extend the [Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
  * **Unitization** - We've added strongly-typed units such as `Temperature`, `Mass`, etc., to all of our Meadow.Foundation drivers. No more ambiguous return values.
+ * **`IObservable`** - [Simplification, cleanup, and much more powerful pattern]
  * **Meadow.Foundation** - In addition to the units mentioned above, Meadow.Foundation's drivers underwent a massive audit, and this release includes the first half of a major effort to cleanup the existing drivers and make them more consistent and easy to use.
  * **VS Code Support** - Thanks to an enterprising community member, we now have initial support for building and deploying Meadow applications in VS Code!
 
@@ -32,7 +33,29 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
 ## Meadow.OS
 
+### Bluetooth Low-Energy (BLE) Support
+
+The b5.0 release of Meadow contains a draft subset of BLE features that cover a large number of basic bluetooth use cases and includes the following feature support:
+
+ - **User-Definable BLE Definition Tree** - You can create a BLE tree `Definition` of _services_ and _characteristics_ that contain primitive type values including; `int`, `double`, `string`, etc.
+- **BLE Server** - Start a bluetooth server on the Meadow and initialize it with your BLE definition tree.
+- **Accept Client Connections** - Connect to the server from a _client_ device application such as a mobile phone.
+- **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
+- **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in you BLE tree.
+
+For more information, see the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth/).
+
+### .NET Standard 2.1/.NET Core 3.0 API Support
+
+[lorem ipsum dolar whatever stuffs.]
+
+### F# Support
+
+[lorem ipsum dolar whatever stuffs.]
+
 ## Meadow.Core
+
+[lorem ipsum dolar whatever stuffs.]
 
 ### Unitization
 
@@ -92,6 +115,10 @@ Assert.That((t2 - t1) == new Temperature(9));
 Assert.That(t1 < t2);
 ```
 
+### `IIODevice` Rearchitecture
+
+[dolar silakjsd askdfj as dahfkdf awou]
+
 ### Meadow.Core Breaking Changes
 
  - **`DigitalInputPortEventArgs`** - Has been renamed to `DigitalInputPortChangeResult` and is now a struct, rather than a class.
@@ -124,6 +151,20 @@ Meadow.Foundation underwent a major set of upgrades and cleanup in this release.
  * `Hx711` and `Nau7802` - Now implements `IMassSensor`
  * `IWindVane` - Has been added for wind direction sensors.
  * Renamed `MagneticField3d`, `Acceleration3d` - And other "3d" properties and classes to `3D` (capitalized `D`).
+
+### Meadow.CLI and Tooling
+
+#### Linking
+
+[lorem ipsum dolar whatever stuffs.]
+
+#### `MonoDisable`
+
+[lorem ipsum dolar whatever stuffs.]
+
+#### VS Code Support
+
+[lorem ipsum dolar whatever stuffs.]
 
 ## Bug Fixes
 
