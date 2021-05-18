@@ -64,6 +64,7 @@ Enabling .NET Standard support and linking also solved this breaking change, so 
 In addition to Bluetooth, Meadow.Core got a number of major new features and a lot of cleanup and overhaul of existing features and APIs, including:
 
  * **Unitization**
+ * **`IResult<UNIT>` Introduction**
  * **`IIODevice` Rearchitecture**
  * **`IFilterableObservable` Simplification and Overhaul**
 
@@ -133,6 +134,26 @@ Additional changes around units to reduce ambiguity and unit conversion errors w
  * Replacement of `float frequency` arguments with `Frequency` unit.
  * Replacement of `int duration` arguments with `TimeSpan` object.
 
+### `IChangeResult<UNIT>` Introduction
+
+To help support the Units architecture, we've introduced a new class, `IChangeResult<UNIT>` that replaces the various `EventArgs`, `Conditions`, and `ChangeResult` types that were previously used to carry data during events and observable notifications:
+
+```csharp
+public interface IChangeResult<UNIT> where UNIT: struct
+{
+    UNIT New { get; set; }
+    UNIT? Old { get; set; }
+}
+```
+
+There is also an accompanying `ChangeResult<UNIT>` class that provides a concrete implementation for the interface. As opposed to `EventArgs`, which is defined as a `class`, `ChangeResult<UNIT>` is actually a struct, to help prevent allocations and Garbage Collector (GC) churn.
+
+Additionally, the `Old` property is now nullable, since on the first notification, there won't be a previous reading, and this provides the ability to use C# 8's nullable patterns to prevent the dreaded `Null Reference Error`:
+
+```csharp
+Console.WriteLine($"new: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
+```
+
 ### `IIODevice` Rearchitecture
 
 Previously, Meadow.Core had a catch-all `IIODevice` interface that described an IO device that could have every kind of IO imaginable, including analog, digital, SPI, Serial, I2C, etc. This meant that IO device drivers in Meadow.Foundation had to implement it in order to extend the [Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/).
@@ -157,17 +178,109 @@ Now, drivers for IO Expanders that provide these various features only need to i
  - **`IAnalogInputPort` and `AnalogInputPort`** - `StartSampling()` and `StopSampling()` have been renamed to `StartUpdating()` and `StopUpdating()`, respectively. 
  - **`IAnalogInputPort` and `AnalogInputPort`** - Now utilize a `Voltage` struct in place of `float` for voltage levels. 
 
-### `IFilterableObservable` Simplification and Overhaul
-
-[lorem ipsum dolar whatever stuffs.]
-
 ## Meadow.Foundation
 
 Meadow.Foundation underwent a major set of upgrades and cleanup in this release. We're still in progress with this so some sensors haven't gotten a cleanup yet, but some of the big things include:
 
- * Unitization
- * Nullability
- * 
+ * **Unitization**
+ * **Nullable Properties & Tuples**
+ * **`IFilterableObservable` Simplification**
+
+### Unitization
+
+In addition to adding units to Meadow.Core, we've updated all the sensors to return strongly typed Units.
+
+### Nullable Properties & Tuples
+
+Nearly all of the sensors and sensor interfaces now have C# 8 nullable properties for the data they sample. Consider the `ITemperatureSensor` interface, for instance:
+
+```csharp
+public interface ITemperatureSensor : ISensor
+{
+    Temperature? Temperature { get; }
+    event EventHandler<IChangeResult<Temperature>> TemperatureUpdated;
+}
+```
+
+#### Tuples on Composite Sensors
+
+Composite sensors (those that implement multiple sensor contracts like the BME280 which does temperature, humidity, and pressure) now implement both strongly named Tuples and individual properties for their constituent data parts. 
+
+For instance, the `Bme280` driver has the following properties:
+
+```csharp
+// individual:
+public Temperature? Temperature => Conditions.Temperature;
+public Pressure? Pressure => Conditions.Pressure;
+public RelativeHumidity? Humidity => Conditions.Humidity;
+// Tuple `Conditions`:
+public (Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure) Conditions;
+```
+
+The Tuple is also passed as the `UNIT` via the `IChangeResult<UNIT>` argument in events and notifications, so you can easily access all of the properties via friendly-named, nullable items in the Tuple:
+
+```csharp
+sensor.Updated += (object sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure)> e) => {
+    Console.WriteLine($"  Temperature: {e.New.Temperature?.Celsius:N2}C");
+    Console.WriteLine($"  Relative Humidity: {e.New.Humidity:N2}%");
+    Console.WriteLine($"  Pressure: {e.New.Pressure?.Millibar:N2}mbar ({e.New.Pressure?.Pascal:N2}Pa)");
+};
+```
+
+### `IFilterableObservable` Simplification and Overhaul
+
+The [filterable `IObservable` API](/Meadow/Meadow_Basics/Events_and_IObservable/) in Meadow is incredibly powerful and allows you to create modern, composable, architectures with powerful event filtering, but it had two drawbacks:
+
+ * Syntax, especially for driver development, was complex.
+ * Creating composite drivers required special `Conditions` classes that aggregated output.
+
+With b5.0, we took a scalpel to it and not only massively simplified it, but also made it _much_ more flexible and composable.
+
+#### Simplified Driver Definitions
+
+To understand the change, consider the `Bme280` driver class signature from the old betas:
+
+```csharp
+public class Bme280 :
+        FilterableChangeObservableBase<AtmosphericConditionChangeResult, AtmosphericConditions>,
+        IAtmosphericSensor, ITemperatureSensor, IHumiditySensor, IBarometricPressureSensor
+```
+
+Note that the `FilterableChangeObservableBase`, which provides nearly all the functionality to make a sensor observable, had two generic types; both the `ChangeResult`/`EventArgs` (`C`) that would be passed when the event occurred, AND the type of data (`T`) passed within that result. This had a big drawback in that not only was there redundant information in the generic signature, but we had to create special `Conditions` data containers/models for each potential combination of sensor output. In b5.0, this same driver signature gets much simpler and clearer:
+
+```csharp
+public partial class Bme280 :
+    FilterableChangeObservableBase<(Temperature?, RelativeHumidity?, Pressure?)>,
+    ITemperatureSensor, IHumiditySensor, IBarometricPressureSensor
+```
+
+Now, drivers are completely composable, and the only generic parameter needed is a tuple containing just the Unit types that returned. Note also that full C# nullability is also supported (and in-fact, built-in to all the updated sensor drivers). 
+
+#### Easier Consumption
+
+In addition to being easier to create drivers, we made some changes that made it much easier to consume the observables, as well. In b5.0, we added a `CreateObserver()` method which will automatically generate an observer with the appropriate types for you. For example, the following code illustrates creating an observer with an optional filter that only notifies if the temperature changes by at least `0.5°C` and `5%` humidity:
+
+```csharp
+sensor.Subscribe(Bme280.CreateObserver(
+    handler: result => {
+        Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+    },
+    filter: result => {
+        if (result.Old is { } old) { //c# 8 pattern match syntax. checks for !null and assigns var.
+            return (
+            (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5 // returns true if > 0.5°C change.
+            &&
+            (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05 // 5% humidity change
+            );
+        }
+        return false;
+    }
+    // if you want to always get notified, pass null for the filter:
+    //filter: null
+    )
+);
+```
+
 
 ### Other Changes and Driver Updates
 
