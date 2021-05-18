@@ -61,13 +61,17 @@ Enabling .NET Standard support and linking also solved this breaking change, so 
 
 ## Meadow.Core
 
-[lorem ipsum dolar whatever stuffs.]
+In addition to Bluetooth, Meadow.Core got a number of major new features and a lot of cleanup and overhaul of existing features and APIs, including:
+
+ * **Unitization**
+ * **`IIODevice` Rearchitecture**
+ * **`IFilterableObservable` Simplification and Overhaul**
 
 ### Unitization
 
-Though possibly overshadowed by Bluetooth support, Unitization is one of the biggest changes to the Meadow stack yet. 
+Unitization is one of the biggest changes to the Meadow stack yet. 
 
-#### Units
+#### Introducing Units
 
 In b5.0, we've added a number of unit types that describe a measure of something, including:
 
@@ -121,9 +125,31 @@ Assert.That((t2 - t1) == new Temperature(9));
 Assert.That(t1 < t2);
 ```
 
+#### Meadow.Core Support
+
+The largest impact of these units are in Meadow.Foundation, but Meadow.Core's `IAnalogInputPort` now utilizes the `Voltage` type to return analog readings, rather than just a `float`.
+
+Additional changes around units to reduce ambiguity and unit conversion errors will that didn't make it into this release will arrive in a future beta including:
+ * Replacement of `float frequency` arguments with `Frequency` unit.
+ * Replacement of `int duration` arguments with `TimeSpan` object.
+
 ### `IIODevice` Rearchitecture
 
-[dolar silakjsd askdfj as dahfkdf awou]
+Previously, Meadow.Core had a catch-all `IIODevice` interface that described an IO device that could have every kind of IO imaginable, including analog, digital, SPI, Serial, I2C, etc. This meant that IO device drivers in Meadow.Foundation had to implement it in order to extend the [Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/).
+
+In b5.0, that got split out into a number of `Meadow.Hardware` controller interfaces that describe discrete IO types, including:
+
+ * `IAnalogInputController`
+ * `IBiDirectionalController`
+ * `IDigitalInputController`
+ * `IDigitalOutputController`
+ * `II2cController`
+ * `IPwmOutputController`
+ * `ISerialOutputController`
+ * `ISerialMessageController`
+ * `ISpiController`
+
+Now, drivers for IO Expanders that provide these various features only need to implement the specific controller types they support, vastly reducing the amount of boilerplate code necessary to implement an IO expander.
 
 ### Meadow.Core Breaking Changes
 
@@ -133,6 +159,7 @@ Assert.That(t1 < t2);
 
 ### `IFilterableObservable` Simplification and Overhaul
 
+[lorem ipsum dolar whatever stuffs.]
 
 ## Meadow.Foundation
 
