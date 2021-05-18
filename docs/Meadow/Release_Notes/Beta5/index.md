@@ -47,11 +47,17 @@ For more information, see the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth/
 
 ### .NET Standard 2.1/.NET Core 3.0 API Support
 
-[lorem ipsum dolar whatever stuffs.]
+Though technically the Meadow runtime already supported .NET Standard 2.1/.NET Core 3.0, we weren't bundling the facade dlls (such as `NetStandard.dll`) into the `MeadowAssemblies` nuget package, so if you referenced a nuget or code that targeted those API surfaces, you'd get an error. 
 
-### F# Support
+We're now bundling all the requisite .NET Standard/.NET Core facade dlls and if they're referenced, they'll get deployed with your Meadow application.
 
-[lorem ipsum dolar whatever stuffs.]
+[TBD: Additionally, we've ported all of our projects to .NET Core project types, meaning you'll be able to reference .NET Standard/.NET Core project references directly.]
+
+### F# Support Fixed
+
+The release of F# 5 broke Meadow's support for F# because it included a number of .NET Standard facade dlls that we were not shipping (as well as a number of other dlls). 
+
+Enabling .NET Standard support and linking also solved this breaking change, so you can once again build and deploy F# projects on Meadow!
 
 ## Meadow.Core
 
