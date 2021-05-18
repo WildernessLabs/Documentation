@@ -130,13 +130,13 @@ Assert.That(t1 < t2);
 
 The largest impact of these units are in Meadow.Foundation, but Meadow.Core's `IAnalogInputPort` now utilizes the `Voltage` type to return analog readings, rather than just a `float`.
 
-Additional changes around units to reduce ambiguity and unit conversion errors will that didn't make it into this release will arrive in a future beta including:
+**Note:** This conversion is not fully complete; additional changes around units to reduce ambiguity and unit conversion errors that didn't make it into this release will arrive in a future beta including:
  * Replacement of `float frequency` arguments with `Frequency` unit.
  * Replacement of `int duration` arguments with `TimeSpan` object.
 
 ### `IChangeResult<UNIT>` Introduction
 
-To help support the Units architecture, we've introduced a new class, `IChangeResult<UNIT>` that replaces the various `EventArgs`, `Conditions`, and `ChangeResult` types that were previously used to carry data during events and observable notifications:
+To help support the _Units_ architecture, we've introduced a new class, `IChangeResult<UNIT>` that replaces the various `EventArgs`, `Conditions`, and `ChangeResult` types that were previously used to carry data during events and observable notifications:
 
 ```csharp
 public interface IChangeResult<UNIT> where UNIT: struct
@@ -204,26 +204,26 @@ public interface ITemperatureSensor : ISensor
 
 #### Tuples on Composite Sensors
 
-Composite sensors (those that implement multiple sensor contracts like the BME280 which does temperature, humidity, and pressure) now implement both strongly named Tuples and individual properties for their constituent data parts. 
+Composite sensors; those that implement multiple sensor contracts like the BME280 which does temperature, humidity, and pressure, now implement both strongly named Tuples and individual properties for their constituent data parts. 
 
 For instance, the `Bme280` driver has the following properties:
 
 ```csharp
+// Tuple `Conditions`:
+public (Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure) Conditions;
 // individual:
 public Temperature? Temperature => Conditions.Temperature;
 public Pressure? Pressure => Conditions.Pressure;
 public RelativeHumidity? Humidity => Conditions.Humidity;
-// Tuple `Conditions`:
-public (Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure) Conditions;
 ```
 
 The Tuple is also passed as the `UNIT` via the `IChangeResult<UNIT>` argument in events and notifications, so you can easily access all of the properties via friendly-named, nullable items in the Tuple:
 
 ```csharp
-sensor.Updated += (object sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure)> e) => {
-    Console.WriteLine($"  Temperature: {e.New.Temperature?.Celsius:N2}C");
-    Console.WriteLine($"  Relative Humidity: {e.New.Humidity:N2}%");
-    Console.WriteLine($"  Pressure: {e.New.Pressure?.Millibar:N2}mbar ({e.New.Pressure?.Pascal:N2}Pa)");
+sensor.Updated += (object sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure)> result) => {
+    Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+    Console.WriteLine($"  Relative Humidity: {result.New.Humidity:N2}%");
+    Console.WriteLine($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
 };
 ```
 
@@ -238,7 +238,7 @@ With b5.0, we took a scalpel to it and not only massively simplified it, but als
 
 #### Simplified Driver Definitions
 
-To understand the change, consider the `Bme280` driver class signature from the old betas:
+To understand the change, consider the `Bme280` driver class signature from the 4.x betas:
 
 ```csharp
 public class Bme280 :
@@ -246,7 +246,9 @@ public class Bme280 :
         IAtmosphericSensor, ITemperatureSensor, IHumiditySensor, IBarometricPressureSensor
 ```
 
-Note that the `FilterableChangeObservableBase`, which provides nearly all the functionality to make a sensor observable, had two generic types; both the `ChangeResult`/`EventArgs` (`C`) that would be passed when the event occurred, AND the type of data (`T`) passed within that result. This had a big drawback in that not only was there redundant information in the generic signature, but we had to create special `Conditions` data containers/models for each potential combination of sensor output. In b5.0, this same driver signature gets much simpler and clearer:
+Previously, the `FilterableChangeObservableBase`, had two generic types; both the `ChangeResult`/`EventArgs` (`C`) that would be passed when the event occurred, AND the type of data (`T`) passed within that result. This had a big drawback in that not only was there redundant information in the generic signature, but we had to create special `Conditions` data containers/models for each potential combination of sensor output. 
+
+In b5.0, this same driver signature gets much simpler and clearer:
 
 ```csharp
 public partial class Bme280 :
@@ -258,7 +260,7 @@ Now, drivers are completely composable, and the only generic parameter needed is
 
 #### Easier Consumption
 
-In addition to being easier to create drivers, we made some changes that made it much easier to consume the observables, as well. In b5.0, we added a `CreateObserver()` method which will automatically generate an observer with the appropriate types for you. For example, the following code illustrates creating an observer with an optional filter that only notifies if the temperature changes by at least `0.5°C` and `5%` humidity:
+We also made some changes that made it much easier to consume the observables. In b5.0, we added a `CreateObserver()` method which will automatically generate an observer with the appropriate types for you. For example, the following code illustrates creating an observer with an optional filter that only notifies if the temperature changes by at least `0.5°C` and `5%` humidity:
 
 ```csharp
 sensor.Subscribe(Bme280.CreateObserver(
@@ -270,7 +272,7 @@ sensor.Subscribe(Bme280.CreateObserver(
             return (
             (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5 // returns true if > 0.5°C change.
             &&
-            (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05 // 5% humidity change
+            (result.New.Humidity.Value - old.Humidity.Value).Abs().Percent > 0.05 // 5% humidity change
             );
         }
         return false;
@@ -287,32 +289,42 @@ sensor.Subscribe(Bme280.CreateObserver(
  * `AnalogJoystick` - This got a huge overhaul and is much faster now.
  * `IDCMotor` and `HBridgeMotor` - `Speed` has been deprecated. Please use the `Power` property.
  * `Ccs811` - Added a driver/support for this high quality Air Quality sensor.
- * `MPL115A2` - This driver is now finished.
- * `AnalogTemperatureSensor` - Now events both the new and the old value. Previously the old value was being thrown away.
+ * `Mpl115a2` - This driver is now finished.
+ * `AnalogTemperatureSensor` - Now events both the `New` and the `Old` value. Previously the old value was being thrown away.
  * `Si70xx` - Temperature is now correct.
  * `Htu21d` - Fixed. Was throwing an error on initializing before.
- * `Bme280` - Pressure reading fixed. Was off by a factor of 100k before.
+ * `Bme280` - Pressure reading fixed. Was off by a factor of `100k` before.
  * `RotaryEncoder` - Now implements the `IObservable` pattern.
  * `IMassSensor` - Has been added for load cell and similar sensors.
  * `Hx711` and `Nau7802` - Now implements `IMassSensor`
  * `IWindVane` - Has been added for wind direction sensors.
  * Renamed `MagneticField3d`, `Acceleration3d` - And other "3d" properties and classes to `3D` (capitalized `D`).
 
-### Meadow.CLI and Tooling
+### Meadow.CLI, Deployment, and Tooling
 
-#### Linking
+Meadow's deployment and tooling experience also got a big upgrade in b5.0.
 
-[lorem ipsum dolar whatever stuffs.]
+#### Meadow.CLI `MonoDisable` Fix
 
-#### `MonoDisable`
+Previously, after flashing the OS to the device, the `meadow --monodisable` command would often only work after hitting the `RST` button on the device twice to put it into _system mode_ because the between the newly flashed OS would be incompatible with the mono runtime as well as the firmware on the coprocessor causing a crash that would make it unresponsive. 
 
-[lorem ipsum dolar whatever stuffs.]
+With this release, we overhauled the way that Meadow.OS checks for compatibility of the various Meadow.OS, runtime, and coprocessor firmware components so that after flashing the OS, it will immediately detect a mismatch and not try to launch (and crash) the mono runtime.
 
-#### VS Code Support
+The upshot here is that new OS deployments will be much smoother, and in fact it unlocks scriptable, no-touch/single-command Meadow.OS deployments, which we hope to expose in a future release.
 
-[lorem ipsum dolar whatever stuffs.]
+#### Build Linking
 
-## Bug Fixes
+Beginning in this beta, we've enabled assembly linking on both macOS and Windows, via the Meadow.CLI and integrated it into both Visual Studio for Windows and Visual Studio for Mac.
+
+Linking takes the resulting binaries from the initial build process and removes unused classes, members, and other unneeded code that bloats the assemblies. This has the effect of both drastically reducing the size of the deployed app binaries, but also speeds up deployment.
+
+#### Beta VS Code Support
+
+Thanks to community member extraordinaire, Jonathan Dick, we have an initial beta version of support for building and deploying Meadow applications with VS Code. 
+
+For information on how to get started, check out the [VSCode Meadow Extension Github repo](https://github.com/wildernesslabs/VSCode_Meadow_Extension).
+
+## b5.0 Bug Fixes
 
  * [#108 - `System.IO.FileNotFoundException: Could not load file or assembly 'netstandard, Version=2.0.0.0`](https://github.com/WildernessLabs/Meadow_Issues/issues/108) - Fixed with the .NET Standard 2.1 Support.
  * [#120 - Unable to deploy F# application](https://github.com/WildernessLabs/Meadow_Issues/issues/120) - F# is game again!
