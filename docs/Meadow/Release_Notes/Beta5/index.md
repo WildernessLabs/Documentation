@@ -91,7 +91,7 @@ In b5.0, we've added a number of unit types that describe a measure of something
  * `Frequency`
  * `Illuminance`
  * `Length`
- * `MangeticField`
+ * `MagneticField`
  * `MagneticField3D`
  * `Mass`
  * `Power`
