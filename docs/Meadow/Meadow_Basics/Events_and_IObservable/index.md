@@ -6,7 +6,7 @@ subtitle: Standard and advanced notification subscription in Meadow.
 
 # Interrupts & Notifications
 
-Meadow has two complementary approaches to notifications when interrupts (changes) happen on inputs. The first is the classic .Net Eventing pattern, in which an `event` is raised on change, and the second is an `IObservable` pattern, which is a more powerful and flexible _reactive_-style approach.
+Meadow has two complementary approaches to notifications when interrupts (changes) happen on inputs. The first is the classic .NET Eventing pattern, in which an `event` is raised on change, and the second is an `IObservable` pattern, which is a more powerful and flexible _reactive_-style approach.
 
 ## Classic Events
 
