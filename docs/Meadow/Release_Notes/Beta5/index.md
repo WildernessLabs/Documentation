@@ -175,9 +175,10 @@ Now, drivers for IO Expanders that provide these various features only need to i
 ### Meadow.Core Breaking Changes
 
  - **`DigitalInputPortEventArgs`** - Has been renamed to `DigitalInputPortChangeResult` and is now a struct, rather than a class.
+ - **`IAnalogInputPort` and `AnalogInputPort`** - `Changed` has been renamed to `Updated`.
  - **`IAnalogInputPort` and `AnalogInputPort`** - `StartSampling()` and `StopSampling()` have been renamed to `StartUpdating()` and `StopUpdating()`, respectively. 
  - **`IAnalogInputPort` and `AnalogInputPort`** - Now utilize a `Voltage` struct in place of `float` for voltage levels. 
-
+ 
 ## Meadow.Foundation
 
 Meadow.Foundation underwent a major set of upgrades and cleanup in this release. We're still in progress with this so some sensors haven't gotten a cleanup yet, but some of the big things include:
