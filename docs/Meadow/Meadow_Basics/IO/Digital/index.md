@@ -191,19 +191,6 @@ input.Changed += async (s, o) =>
 };
 ```
 
-**IMPORTANT NOTE:**
-
-Interrupt debounce behavior currently (Beta 3.6) can be confusing.  The debounce is currently being done in the managed code of the `DigitalInputPort` and is therefore subject to the performance limitations of interpreted code execution.  A good example is this:  
-
-Assume you have a `DigitalInputPort` with a debounce duration of 10ms.  Now assume you get two interrupts 10us (not ms) apart.  
-
-On the surface, you'd expect your application to only receive one interrupt as the debounce duration is much larger than the time between interrupts, however it is very likely that your application will receive two interrupt events.
-
-The reason for this is that the underlying OS is detecting both interrupts and sending them upstream to the managed code, but the `DigitalInputPort` itself is executing the handling of those interrupts much slower, so its measurement between handling the events from the OS is actually greater than the 10ms debounce duration.
-
-We will be addressing this behavior in a future release, but for safety and sanity, applications should take this behavior into account.  We recommend a debounce of at least 50ms to minimize these unwanted interrupts.
-
-
 ## [Pulse-Width-Modulation PWM](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 Digital output ports can be used to generate a _Pulse-Width-Modulation_ (PWM) signal, which approximates an intermediate voltage between `LOW` or `HIGH` by switching between ON and OFF very quickly: 
