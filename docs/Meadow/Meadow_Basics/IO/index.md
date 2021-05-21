@@ -33,9 +33,11 @@ Additionally, the digital ports have built-in support for a host of different ty
 * **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)** (Inter Integrated Circuit)
 * **[SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)
 * **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial)
+
 <!--
 * **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** (Controller Area Network)
-* **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus) -->
+* **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus) 
+-->
 
 <!--
 | Protocol | Characteristics                                                |
@@ -79,9 +81,9 @@ When working with IO in Meadow, there are three different terms/concepts to be a
 * **[IPort](/docs/api/Meadow/Meadow.Hardware.IPort.html)** - Represents the underlying IO feature that allows communication, such as a `Meadow.Hardware.DigitalInputPort` which reads digital input signals on a particular pin.
 * **[IChannelInfo](/docs/api/Meadow/Meadow.Hardware.IChannelInfo.html)** - Describes the capabilities of a particular pin or port, for instance, whether or not a pin supports digital interrupts (a notification when the state changes).
 
-### IIODevice
+### `IIOController`
 
-A device that supports IO (such as the F7 Micro device itself, or an external IO Expander) is represented by an @"Meadow.Hardware.IIODevice", which exposes a collection of @"Meadow.Hardware.IPin" objects.
+A device that supports IO (such as the F7 Micro device itself, or an external IO Expander) is represented by an `IIOController`, which exposes a `Pins` collection of `IPin` objects.
 
 IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following Meadow [sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
 
@@ -112,11 +114,11 @@ Contains a Meadow.Hardware.PwmChannelInfochannel called: TIM8_CH1N.
 Contains a Meadow.Hardware.UartChannelInfochannel called: UART4_TX.
 ```
 
-With these [`IChannelInfo`](xref:Meadow.Hardware.IChannelInfo) objects, the IO is also self-documenting, and you can see what kind of ports are available from each pin without having to refer to the IO pinout diagram.
+With these `IChannelInfo` objects, the IO is also self-documenting, and you can see what kind of ports are available from each pin without having to refer to the IO pinout diagram.
 
 ### Creating Ports
 
-When interacting with peripherals, the actual control and interaction happens via @"Meadow.Hardware.IPort" objects, which are typically created via the device from one or more pins:
+When interacting with peripherals, the actual control and interaction happens via `IPort` objects, which are typically created via the device from one or more pins:
 
 ```csharp
 IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
