@@ -1,12 +1,10 @@
 ---
 layout: Meadow
 title: Input/Output (IO)
-subtitle: Meadow Basics
+subtitle: Understanding how to interact with hardware using the IO pins on Meadow.
 ---
 
-# Input/Output (IO)
-
-IO is a big part of what makes Meadow magical. Meadow boards expose a wide variety of ways to control and interact with external peripherals and hardware via _Input/Output_ (IO) ports.
+IO is a big part of what makes Meadow powerful. Meadow boards expose a wide variety of ways to control and interact with external peripherals and hardware via _Input/Output_ (IO) ports.
 
 ## Pins + Connectors
 
@@ -25,6 +23,8 @@ Digital and analog refer to the type of electrical signal used; either `HIGH`/`L
 Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO.
 
 Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. They can also be setup as input ports which can read signal inputs to know if they're `HIGH`, `LOW`, and can also raise notifications on change, via _interrupts_.
+
+For more information, see the [Digital IO guide](/Meadow/Meadow_Basics/IO/Digital/).
 
 #### Digital Communications Protocols
 
@@ -51,9 +51,13 @@ Additionally, the digital ports have built-in support for a host of different ty
 
 Additionally, digital output ports can be used to generate a _Pulse-Width-Modulation_ (PWM) signal, which approximates an intermediate voltage between `LOW` or `HIGH` by switching between ON and OFF very quickly. PWM signals are frequently used to control the brightness of LEDs, as well as serve as the control signal for precision motors such as servos and stepper motors.
 
+For more information, see the [PWM guide](/Meadow/Meadow_Basics/IO/Digital/PWM/).
+
 ### [Analog IO](/Meadow/Meadow_Basics/IO/Analog/)
 
 Analog ports can operate at a range of voltages between `0V` and `3.3V`, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal. For instance an analog temperature sensor that is able to detect temperatures from `0ºC` to `100ºC` might output a voltage of `1.6V` (halfway between `0V` and `3.3V`) for `50º`.
+
+For more information, see the [Analog IO guide](/Meadow/Meadow_Basics/IO/Analog/). 
 
 ### I/O Power Tolerance
 
@@ -62,7 +66,6 @@ Analog ports can operate at a range of voltages between `0V` and `3.3V`, which i
 Both the digital and analog I/O on the Meadow F7 board nominally operate at a range of `0V` to `3.3V`. However, when they are configured for _digital_ operation, they are `5V` _tolerant_; meaning that they can accept input voltages up to `5V`. When they are configured for _analog_ operation, they are only `3.3V` tolerant, and any input voltages higher than that, may burn out that I/O, and or damage the chip.
 
 For reading analog voltages higher than `3.3V`, see the [analog I/O guide](/Meadow/Meadow_Basics/IO/Analog/)
-
 
 ### F7 Micro IO Pinout
 
