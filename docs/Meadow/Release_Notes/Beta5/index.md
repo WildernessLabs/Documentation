@@ -174,7 +174,7 @@ Now, drivers for IO Expanders that provide these various features only need to i
 
 ### Meadow.Core Breaking Changes
 
- - **`DigitalInputPortEventArgs`** - Has been renamed to `DigitalInputPortChangeResult` and is now a struct, rather than a class.
+ - **`DigitalInputPortEventArgs`** - Has been renamed to `DigitalPortResult` and is now a struct, rather than a class.
  - **`IAnalogInputPort` and `AnalogInputPort`** - `Changed` has been renamed to `Updated`.
  - **`IAnalogInputPort` and `AnalogInputPort`** - `StartSampling()` and `StopSampling()` have been renamed to `StartUpdating()` and `StopUpdating()`, respectively. 
  - **`IAnalogInputPort` and `AnalogInputPort`** - Now utilize a `Voltage` struct in place of `float` for voltage levels. 
