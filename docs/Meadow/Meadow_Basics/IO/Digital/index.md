@@ -143,7 +143,7 @@ One thing to bear in mind when creating interrupts on multiple pins is that inpu
 
 ![Meadow pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
-
+<!--
 ## Timing
 
 **NOTE FROM THE WILDERNESS LABS TEAM:**
@@ -190,6 +190,7 @@ input.Changed += async (s, o) =>
     Console.WriteLine($"click");
 };
 ```
+-->
 
 ## [Pulse-Width-Modulation PWM](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
