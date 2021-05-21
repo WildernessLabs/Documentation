@@ -219,6 +219,6 @@ Digital IO also includes built-in support for a host of different types of commo
 * **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)** 
 * **[SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)
 * **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial) 
-* **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** 
-* **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus)
+<!-- * **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** -->
+<!-- * **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus) -->
 
