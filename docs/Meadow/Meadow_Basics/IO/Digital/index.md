@@ -1,24 +1,36 @@
 ---
 layout: Meadow
 title: Digital IO
-subtitle: Meadow Basics
+subtitle: Reading and writing digital voltage levels on the GPIO pins.
 ---
 
-# Digital IO
+Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO. GPIO ports can generally be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. Additionally, those values can be read, if their state is changed by an external source, when the ports are configured for input mode.
 
-Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO.
+## Samples
 
-Digital ports can be set to be `HIGH` (powered at `3.3V`), or `LOW` (grounded at `0V`) which correspond to digital `1` and `0`, respectively. 
+For sample Meadow applications that illustrate the usage of digial ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO).
+
 
 ## Digital Outputs
 
-Setting the state of a Digital Output is done using an implementation of the `IDigitalOutputPort` interface.  Using the static `Device` property of your application's entry class `App<D,A>` is the simplest way to create an instance.
-
-For example, if you wanted to be able to control the state of the D05 pin on the F7 Meadow, you could use the following code to create an instance of the IDigitalOutputPort with an initial state of `LOW`:
+_Setting_ the state of a _digital output_ is done using an implementation of the `IDigitalOutputPort` interface, available on any device that implements the `IDigitOutputController` interface, which provides a method called `CreateDigitalOutputPort`:
 
 ```csharp
-var output = Device.CreateDigitalOutputPort(
-    Device.Pins.D05, false);
+IDigitalOutputPort CreateDigitalOutputPort(
+    IPin pin, bool initialState = false,
+    OutputType initialOutputType = OutputType.PushPull);
+```
+
+* **`pin`** - The pin on the device of which to configure to be a digital output.
+* **`initialState`** - A boolean value representing the default state of the port after configuring. Typically this is set to `false`.
+* **`initialOutputType`** - By default this is set to `PushPull`. See the _Push-Pull vs. Open-Drain_ section below for more information.
+
+### Digital Output Port Example
+
+For example, if you wanted to be able to control the state of the `D05` pin on the Meadow board, you could use the following code to create an instance of the `IDigitalOutputPort` with an initial state of `LOW`:
+
+```csharp
+IDigitalOutputPort output = Device.CreateDigitalOutputPort(Device.Pins.D05, false);
 ```
 
 You could then assert a state on the pin to `LOW` or `HIGH` using one of the following:
@@ -28,28 +40,52 @@ output.State = false;   // assert LOW
 output.State = true;    // assert HIGH
 ```
 
+### _Push-Pull_ vs. _Open-Drain_
+
+A digital output pin on the Meadow can be set to either `OutputType.PushPull` or `OutputType.OpenDrain`, by default, `PushPull` is used.
+
+When in _Push-Pull_ mode the MCU can actively drive the pin either `HIGH` (`3.3V`) or `LOW` (`0V`), by utilizing two switches internally, requiring no external components.
+
+When in _Open-Drain_ mode, the MCU port utilizes only one switch internally, and can only actively drive the port `LOW`. So an external pull-up resistor connected to the `3V3` rail is required to be able to set a logical `HIGH` level. `OpenDrain` is provided largely as a legacy feature and is hardly used anymore.
+
 ## Digital Inputs
 
-Reading the state of a Digital Input is done using an implementation of the `IDigitalInputPort` interface.  Using the static `Device` property of your application's entry class `App<D,A>` is the simplest way to create an instance.
-
-For example, if you wanted to be able to read the state of the D03 pin on the F7 Meadow, you could use the following code to create an instance of an IDigitalInputPort:
+_Reading_ the state of a _digital input_ is done using an implementation of the `IDigitalInputPort` interface, available on any device that implements the `IDigitInputController` interface, which provides a method called `CreateDigitalOutputPort`:
 
 ```csharp
-var input = Device.CreateDigitalInputPort(
-    Device.Pins.D03);
+IDigitalInputPort CreateDigitalInputPort(
+    IPin pin,
+    InterruptMode interruptMode = InterruptMode.None,
+    ResistorMode resistorMode = ResistorMode.Disabled,
+    double debounceDuration = 0,
+    double glitchDuration = 0);
 ```
 
-Optional constructor parameters allow you to set the internal resistor mode, interrupt mode, debounce and glitch filter behavior.
+The three most important arguments are:
 
-To poll the state of the input, you read the `State` property:
+* **`pin`** - The pin on the device of which to configure to be a digital input.
+* **`interruptMode`** - Whether or not the port should be configured to raise interrupt notifications, and what kind of change should trigger an interrupt.
+* **`resistorMode`** - The `ResistorMode` specifying whether an external pull-up/pull-down resistor is used, or an internal pull-up/pull-down resistor should be configured for default state.
+
+We'll examine debounce and glitch filtering in a moment.
+
+### Digital Input Port Example
+
+For example, if you wanted to be able to read the state of the `D03` pin on the Meadow, you could use the following code to create an instance of an `IDigitalInputPort`:
 
 ```csharp
-var currentState = input.State;
+IDigitalInputPort input = Device.CreateDigitalInputPort(Device.Pins.D03);
+```
+
+Once the port is configured, you can read the current digital value via the `State` property:
+
+```csharp
+bool currentState = input.State;
 ```
 
 ### Interrupts
 
-Interrupts allow your application to be notified of the change of state of a Digital Input without having to poll the value. Enabling interrupts requires two things from your application: setting the `InterruptMode` of the `IDigitalInputPort` and then subscribing to notifications either via the `Changed` event, or using the `IObservable` pattern. 
+Interrupts allow your application to be notified of the change of state of a digital input without having to poll the value. Enabling interrupts requires two things from your application: setting the `InterruptMode` of the `IDigitalInputPort` and then subscribing to notifications either via the `Changed` event, or using the `IObservable` pattern. 
 
 #### Example
 
@@ -69,6 +105,37 @@ input.Changed += (s, e) =>
 ```
 
 For more information, check out the [Events and IObservable guide](/Meadow/Meadow_Basics/Events_and_IObservable/).
+
+
+#### Debounce and Glitch Filtering
+
+Signal _noise_ is spurious signal changes on a circuit that are induced either via normal mechanical imperfections, such as push buttons or switches, or sometimes through electromagnetic radiation. This noise can case unwanted level change notifications.
+
+This noise typically manifests itself as spikes in the signal.
+
+<!-- Really good use an illustration here. -->
+
+Noise can be filtered either with a hardware circuit known as a [_low-pass filter_](https://www.electronics-tutorials.ws/filter/filter_2.html), or in software with a _glitch filter_ and/or a _debounce filter_.
+
+Meadow.Core has built-in support for both glitch and debounce filters, and when you call `CreateDigitalInputPort()`, the last two parameters are:
+
+* **`debounceDuration`**
+* **`glitchDuration`**
+
+To understand these settings, it helps to understand what these filters are.
+
+##### Glitch Filter
+
+A glitch is a spurious change _before_ an intentional state change occurs. Because noise typically manifests itsef as spikes, the glitch filter specifies the minimum duration, in microseconds (µs), of an initial state change to persist before it's notified as an intentional state change, rather than a spurious one. 
+
+This filter can be used to ensure that noise doens't trigger an in interrupt. Set to `0` if no glitch filter is desired.
+
+##### Debounce Filter
+
+A _bounce_ gets it's name from mechanical switches (like the common push button/tactile switch), and happens _after_ an intentional state change, like the pushing of a button, in which an actual, mechanical _bounce_ might cause the signal to change momentarily. The _debounce filter_ then specifies the duration, in microseconds (µs), of the time to ignore state changes after a state change has occurred. 
+
+This filter can be used to prevent unwanted state changes due to noise. Set to `0` if no debounce filter is desired.
+
 
 #### Interrupt Groups
 
