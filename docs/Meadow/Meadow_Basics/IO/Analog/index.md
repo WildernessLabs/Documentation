@@ -4,8 +4,6 @@ title: Analog I/O
 subtitle: Reading and writing non-binary voltages via the Analog-to-Digital Converter (ADC), and Digital-to-Analog Converter (DAC).
 ---
 
-# Intro
-
 In modern digital electronics, we often deal with finite states of `HIGH` or `LOW`, which represent digital `1`/`0`, or `On`/`Off`, respectively. However, there are many sensors or other integrations that communicate not in binary, but in a range of voltages. For instance, a [TMP35 analog temp sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) might output `0V` when it's reading an ambient temperature of `0ºC`, `1.6V` @ `50ºC`, and `3.3V` @ `100ºC`.
 
 Analog ports are specifically design for this scenario, and are able to operate throughout a specified range of voltages, in both an input (reading) and output (writing) capacity. 
@@ -13,6 +11,10 @@ Analog ports are specifically design for this scenario, and are able to operate 
 On the Meadow F7 Micro, Analog signals are written or read with a 12-bit resolution, which means that the total range of voltage values are divided by `4,096` steps.
 
 Meadow has the capabilities to both read and write analog signals, but presently only the input/read functionality is exposed via API.
+
+## Samples
+
+For sample Meadow applications that illustrate the usage of analog ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO).
 
 ## Analog Input
 
