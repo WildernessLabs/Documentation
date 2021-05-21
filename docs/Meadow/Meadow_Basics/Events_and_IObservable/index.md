@@ -27,7 +27,7 @@ public class ButtonEventsApp : App<F7Micro, ButtonEventsApp>
 
 ## `IObservable`/Reactive Pattern
 
-However, for more advanced filtering we've exposed `System.IObservable` support, along with a [`FilterableObserver<T>`](/docs/api/Meadow/Meadow.FilterableObserver-1.html) that allows you to subscribe to an observable, with an optional predicate to filter on the events, as well as a handler shortcut. Consider the following code:
+However, for more advanced filtering we've exposed `System.IObservable` support, along with a `IObservable<IChangeResult<UNIT>>` that allows you to subscribe to an observable, with an optional predicate to filter on the events, as well as a handler shortcut. Consider the following code:
 
 ```csharp
 public class InputObservableApp : App<F7Micro, InputObservableApp>
@@ -57,9 +57,12 @@ public class InputObservableApp : App<F7Micro, InputObservableApp>
 }
 ```
 
-A filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableChangeObserver` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used.
+Ports in Meadow.Core and peripherals in Meadow.Foundation expose a static `CreateObserver()` convenience method for creating filterable observers that can listen for change notifications. That observer takes two arguments:
 
-In the above code, it filters out events that occur less than a second after the last notification:
+ * **`Action<IChangeResult<UNIT>> handler`** - The subscriber/handler that will be called when the notification is raised.
+ * **`Predicate<IChangeResult<UNIT>>? filter = null`** - An optional filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableChangeObserver` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used.
+
+Examining the filter predicate in the above code, it filters out events that occur less than a second after the last notification:
 
 ```csharp
 return (result.New.Time - old.Time) > TimeSpan.FromSeconds(1);
