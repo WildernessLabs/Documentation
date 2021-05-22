@@ -76,12 +76,12 @@ Unitization is one of the biggest changes to the Meadow stack yet.
 
 In b5.0, we've added a number of unit types that describe a measure of something, including:
 
- * `AbsoluteHuidity`
+ * `AbsoluteHumidity`
  * `Acceleration`
  * `Acceleration3D`
  * `Angle`
  * `AngularAcceleration`
- * `AngularAccleration3D`
+ * `AngularAcceleration3D`
  * `AngularVelocity`
  * `Azimuth`
  * `Concentration`
