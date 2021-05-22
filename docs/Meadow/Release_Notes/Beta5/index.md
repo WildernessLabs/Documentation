@@ -57,6 +57,9 @@ The release of F# 5 broke Meadow's support for F# because it included a number o
 
 Enabling .NET Standard support and linking also solved this breaking change, so you can once again build and deploy F# projects on Meadow!
 
+### Finalizers Enabled
+
+A small bug was keeping us from enabling the finalizer thread, causing memory and resource leaks in the .NET runtime. The bug is now fixed and finalizers are run.
 ## Meadow.Core
 
 In addition to Bluetooth, Meadow.Core got a number of major new features and a lot of cleanup and overhaul of existing features and APIs, including:
