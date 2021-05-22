@@ -330,5 +330,5 @@ For information on how to get started, check out the [VSCode Meadow Extension Gi
 
  * [#108 - `System.IO.FileNotFoundException: Could not load file or assembly 'netstandard, Version=2.0.0.0`](https://github.com/WildernessLabs/Meadow_Issues/issues/108) - Fixed with the .NET Standard 2.1 Support.
  * [#120 - Unable to deploy F# application](https://github.com/WildernessLabs/Meadow_Issues/issues/120) - F# is game again!
- * [#144 - Calls to `HttpListenerContext.Request.RemoteEndPoint` result in `NullReferenceException`](link) - Description
+ * [#144 - Calls to `HttpListenerContext.Request.RemoteEndPoint` result in `NullReferenceException`](https://github.com/WildernessLabs/Meadow_Issues/issues/144) - Now returns remote IP address.
  * [#146 - WiFi adapter initialized event misspelled](link) - Heh. Fixed. :D
