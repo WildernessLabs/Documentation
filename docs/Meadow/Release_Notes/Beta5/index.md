@@ -64,10 +64,19 @@ A small bug was keeping us from enabling the finalizer thread, causing memory an
 
 In addition to Bluetooth, Meadow.Core got a number of major new features and a lot of cleanup and overhaul of existing features and APIs, including:
 
+ * **Processor Temperature**
  * **Unitization**
  * **`IResult<UNIT>` Introduction**
  * **`IIODevice` Rearchitecture**
  * **`IFilterableObservable` Simplification and Overhaul**
+
+### Processor Temperature
+
+The temperature of the main processor is now available via `GetProcessorTemperature()`:
+
+```csharp
+Console.WriteLine($"Processor Temp: {Device.GetProcessorTemperature().Celsius:n2}C");
+```
 
 ### Unitization
 
