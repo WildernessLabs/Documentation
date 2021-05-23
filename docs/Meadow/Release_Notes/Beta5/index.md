@@ -64,19 +64,11 @@ A small bug was keeping us from enabling the finalizer thread, causing memory an
 
 In addition to Bluetooth, Meadow.Core got a number of major new features and a lot of cleanup and overhaul of existing features and APIs, including:
 
- * **Processor Temperature**
  * **Unitization**
  * **`IResult<UNIT>` Introduction**
  * **`IIODevice` Rearchitecture**
  * **`IFilterableObservable` Simplification and Overhaul**
-
-### Processor Temperature
-
-The temperature of the main processor is now available via `GetProcessorTemperature()`:
-
-```csharp
-Console.WriteLine($"Processor Temp: {Device.GetProcessorTemperature().Celsius:n2}C");
-```
+ * **Processor Temperature**
 
 ### Unitization
 
@@ -182,8 +174,17 @@ In b5.0, that got split out into a number of `Meadow.Hardware` controller interf
 
 Now, drivers for IO Expanders that provide these various features only need to implement the specific controller types they support, vastly reducing the amount of boilerplate code necessary to implement an IO expander.
 
+### Processor Temperature
+
+The temperature of the main processor is now available via `GetProcessorTemperature()`:
+
+```csharp
+Console.WriteLine($"Processor Temp: {Device.GetProcessorTemperature().Celsius:n2}C");
+```
+
 ### Meadow.Core Breaking Changes
 
+ - **`F7Micro.InitializeCoProcessor`** has been renamed to `InitializeCoprocessor`. Note casing change.
  - **`DigitalInputPortEventArgs`** - Has been renamed to `DigitalPortResult` and is now a struct, rather than a class.
  - **`IAnalogInputPort` and `AnalogInputPort`** - `Changed` has been renamed to `Updated`.
  - **`IAnalogInputPort` and `AnalogInputPort`** - `StartSampling()` and `StopSampling()` have been renamed to `StartUpdating()` and `StopUpdating()`, respectively. 
@@ -293,7 +294,6 @@ sensor.Subscribe(Bme280.CreateObserver(
     )
 );
 ```
-
 
 ### Other Changes and Driver Updates
 
