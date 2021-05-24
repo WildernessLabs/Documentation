@@ -309,6 +309,8 @@ sensor.Subscribe(Bme280.CreateObserver(
  * `Hx711` and `Nau7802` - Now implements `IMassSensor`
  * `IWindVane` - Has been added for wind direction sensors.
  * Renamed `MagneticField3d`, `Acceleration3d` - And other "3d" properties and classes to `3D` (capitalized `D`).
+ * `Yx5300` - [data2 is send in place of data1](https://github.com/WildernessLabs/Meadow.Foundation/issues/169) - fixed.
+ 
 
 ### Meadow.CLI, Deployment, and Tooling
 
@@ -322,11 +324,13 @@ With this release, we overhauled the way that Meadow.OS checks for compatibility
 
 The upshot here is that new OS deployments will be much smoother, and in fact it unlocks scriptable, no-touch/single-command Meadow.OS deployments, which we hope to expose in a future release.
 
+<!--
 #### Build Linking
 
 Beginning in this beta, we've enabled assembly linking on both macOS and Windows, via the Meadow.CLI and integrated it into both Visual Studio for Windows and Visual Studio for Mac.
 
 Linking takes the resulting binaries from the initial build process and removes unused classes, members, and other unneeded code that bloats the assemblies. This has the effect of both drastically reducing the size of the deployed app binaries, but also speeds up deployment.
+-->
 
 #### Beta VS Code Support
 
