@@ -10,7 +10,6 @@ Beta 5.0 is here and it's massive. This is a huge release for Meadow with major 
 
  * **Bluetooth v1.0** - That's right, BLE support is here. Check out the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth) for details.
  * **.NET Standard 2.1 API Support** - Meadow now fully supports the .NET Standard 2.1 API surface (equivalent to .NET Core 3.0), opening up a plethora of .NET code and Nuget packages for your use in Meadow applications.
- * **Linking** - Meadow applications now use the Mono Linker to strip out unused code which results in much smaller and faster app deployments.
  * **F# Support Fix** - The new .NET Standard support along with the linker fixes our F# integration, so you can use F# to build Meadow apps again.
  * **`IIODevice` Rearchitecture** - `IIODevice` has been split out into a number of individual _controller_ interfaces such as `IAnalogInputController`, `IDigitalOutputController`, `II2cController`, etc. This great simplifies drivers that extend the [Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
  * **Unitization** - We've added strongly-typed units such as `Temperature`, `Mass`, etc., to all of our Meadow.Foundation drivers. No more ambiguous return values.
@@ -55,7 +54,7 @@ We're now bundling all the requisite .NET Standard/.NET Core facade dlls and if 
 
 The release of F# 5 broke Meadow's support for F# because it included a number of .NET Standard facade dlls that we were not shipping (as well as a number of other dlls). 
 
-Enabling .NET Standard support and linking also solved this breaking change, so you can once again build and deploy F# projects on Meadow!
+Enabling .NET Standard support solved this breaking change, so you can once again build and deploy F# projects on Meadow!
 
 ### Finalizers Enabled
 
