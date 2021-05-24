@@ -26,8 +26,8 @@ We are currently in [Meadow Beta 4](/Meadow/Release_Notes/Beta4/).
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| WiFi	| Yes | Basic `HttpClient` only, no SSL. |
-| Bluetooth | No | Planned b4.x |
+| WiFi	| Yes | All SSL certificates accepted. No SSL certificate management yet. |
+| Bluetooth | Yes | New in b5.0 |
 
 ## Other Features
 
@@ -35,7 +35,7 @@ We are currently in [Meadow Beta 4](/Meadow/Release_Notes/Beta4/).
 |------------------|---------------------|-----------------------------------|
 | Debugging        | No                  | Planned for Beta 4.x               |
 | Battery Charging  | Yes | |
-| Battery Voltage Level | No | Planed, Beta 4; Relies on Networking co-processor.
+| Battery Voltage Level | Yes | |
 | Power Management APIs | No | Planned for RC-1 |
 
 ## [Next - Fundamentals of Meadow Apps](/Meadow/Meadow_Basics/Apps/)
