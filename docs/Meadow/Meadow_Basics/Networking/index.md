@@ -98,3 +98,9 @@ using (HttpClient client = new HttpClient()) {
     var result = client.PostAsync(uri, content).Result;
 }
 ```
+
+# Antenna
+
+Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
+
+For more information on getting the curent antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
