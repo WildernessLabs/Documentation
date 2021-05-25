@@ -321,6 +321,7 @@ sensor.Subscribe(Bme280.CreateObserver(
 
 Meadow's deployment and tooling experience also got a big upgrade in b5.0.
 
+<!--
 #### Meadow.CLI `MonoDisable` Fix
 
 Previously, after flashing the OS to the device, the `meadow --monodisable` command would often only work after hitting the `RST` button on the device twice to put it into _system mode_ because the between the newly flashed OS would be incompatible with the mono runtime as well as the firmware on the coprocessor causing a crash that would make it unresponsive. 
@@ -328,6 +329,8 @@ Previously, after flashing the OS to the device, the `meadow --monodisable` comm
 With this release, we overhauled the way that Meadow.OS checks for compatibility of the various Meadow.OS, runtime, and coprocessor firmware components so that after flashing the OS, it will immediately detect a mismatch and not try to launch (and crash) the mono runtime.
 
 The upshot here is that new OS deployments will be much smoother, and in fact it unlocks scriptable, no-touch/single-command Meadow.OS deployments, which we hope to expose in a future release.
+
+-->
 
 <!--
 #### Build Linking
