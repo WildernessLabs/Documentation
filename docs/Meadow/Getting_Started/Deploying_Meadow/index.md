@@ -64,7 +64,6 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ```
 meadow --FlashOS
 ```
-   When it's done, exit the CLI by pressing **ctrl+z**.
 
 2. Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
 
@@ -108,10 +107,11 @@ meadow --FlashOS
 
     **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
 
-4. Install the Meadow.OS runtime, coprocessor firmware, and then re-enable mono:
+4. Install the Meadow.OS runtime, and the ESP32 coprocessor firmware:
 
     ```
     meadow --MonoUpdateRt
+    meadow --MonoDisable
     meadow --FlashEsp
     ```
  5. Unplug and replug Meadow to give it a full restart.

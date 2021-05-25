@@ -41,20 +41,16 @@ Additionally, if automatic polling and notifications are used via the `StartSamp
 The simplest way to read a value from a sensor is to call `Read()`, which is an `async` call that will automatically oversample the sensor and return the value. It also saves the reading for later access on the appropriate property. For instance, the following code does a one-off read from an analog temperature sensor:
 
 ```csharp
-AnalogTemperature analogTemperature = new AnalogTemperature
-(
-    device: Device,
-    analogPin: Device.Pins.A00,
-    sensorType: AnalogTemperature.KnownSensorType.LM35
+AnalogTemperature analogTemperature = new AnalogTemperature (
+    Device, Device.Pins.A00, AnalogTemperature.KnownSensorType.LM35
 );
-
-var temp = await analogTemperature.Read();
+Temperature temperature = await analogTemperature.Read();
 ```
 
-Later on, that value can be accessed via the `Temperature` property:
+Later on, that value can also be accessed via the `Temperature` property:
 
 ```csharp
-Console.WriteLine($"Last read temp: {analogTemperature.Temperature}ºC");
+Console.WriteLine($"Last read temp: {analogTemperature.Temperature.Celsius}°C");
 ```
 
 ### Recommended Use
@@ -72,55 +68,45 @@ The event pattern provides a "firehose" model, in which an event is raised every
 To setup automatic polling with classical .NET events, you can subscribe to the `Updated` event and call `StartUpdating()`. For instance, the following sample code prints out the current temperature at a regular interval:
 
 ```csharp
-AnalogTemperature analogTemperature = new AnalogTemperature
-(
-    device: Device,
-    analogPin: Device.Pins.A00,
-    sensorType: AnalogTemperature.KnownSensorType.LM35
+AnalogTemperature analogTemperature = new AnalogTemperature (
+    Device, Device.Pins.A00, AnalogTemperature.KnownSensorType.LM35
 );
 
-analogTemperature.Updated += (s, e) => {
-	Console.WriteLine($"Temperature: {e.Conditions.Temperature)}";
-}
+analogTemperature.TemperatureUpdated += (s, result) => {
+    Console.WriteLine($"Temp Changed, temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
+};
 
 analogTemperature.StartUpdating();
 ```
 
 ### With FilterableObservable and IObservable
 
-For a more powerful and composeable approach, you can use the same [IObservable/Reactive pattern](/Meadow/Meadow_Basics/Events_and_IObservable/) that the underling ports use. For instance, the following code creates a `FilterableObservable` handler that subscribes to the changes from an analog temperature sensor, but automatically filters so that the application is only notified when the temperature changes by at least `1ºC`:
+For a more powerful and composeable approach, you can use the same [IObservable/Reactive pattern](/Meadow/Meadow_Basics/Events_and_IObservable/) that the underling ports use. For instance, the following code creates a `FilterableChangeObservable` handler that subscribes to the changes from an analog temperature sensor, but automatically filters so that the application is only notified when the temperature changes by at least `0.5°C`:
 
 ```csharp
-AnalogTemperature analogTemperature = new AnalogTemperature
-(
-    device: Device,
-    analogPin: Device.Pins.A00,
-    sensorType: AnalogTemperature.KnownSensorType.LM35
+AnalogTemperature analogTemperature = new AnalogTemperature (
+    Device, Device.Pins.A00, AnalogTemperature.KnownSensorType.LM35
 );
 
-analogTemperature.Subscribe(new FilterableObserver<AtmosphericConditionChangeResult>, AtmosphericConditions>(
-    h => {
-        Console.WriteLine($"Temp changed by a degree; new: {h.New.Temperature}, old: {h.Old.Temperature}");
+var consumer = AnalogTemperature.CreateObserver(
+    handler: result => {
+        Console.WriteLine($"Observer filter satisfied: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
     },
-    e => {
-        return (Math.Abs(e.Delta.Temperature) > 1);
+    // only notify if the change is greater than 0.5°C
+    filter: result => {
+        if (result.Old is { } old) { //c# 8 pattern match syntax. checks for !null and assigns var.
+            return (result.New - old).Abs().Celsius > 0.5; // returns true if > 0.5°C change.
+        } return false;
     }
-    ));
+    // if you want to always get notified, pass null for the filter:
+    //filter: null
+);
+analogTemperature.Subscribe(consumer);
 
 analogTemperature.StartUpdating();
 ```
 
-In the case above, a filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableObservable` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used. So for instance, you could get notified when the temperature changes by at least `3%` using the following predicate expression:
-
-```csharp
-return (Math.Abs(e.Delta.Temperature / e.Old.Temperature) > 0.03);
-```
-
-Or you could get notified if the temperature went _down_ by `1ºC`:
-
-```csharp
-return (e.Delta.Temperature <= -1);
-```
+In the case above, a filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableObservable` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used. 
 
 ### Advantage and Recommended Use
 
@@ -128,7 +114,7 @@ The advantage of this approach is that it will automatically poll the sensor in 
 
 Because there is also a `StopUpdating()` method, you can still manually spin up and spin down the polling thread for periods in which you know that the sensor readings are not needed.
 
-And with the `FilterableObservable`, you can create filters to only get notified when needed, rather than having to manually filter all events.
+And with the `FilterableChangeObservable`, you can create filters to only get notified when needed, rather than having to manually filter all events.
 
 # [Next - Unified GPIO](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
 
