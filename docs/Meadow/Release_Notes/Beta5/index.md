@@ -14,7 +14,7 @@ Beta 5.0 is here and it's massive. This is a huge release for Meadow with major 
  * **VB.NET Support** - We also added VB.NET support including templates in both Visual for Windows and Mac.
  * **`IIODevice` Rearchitecture** - `IIODevice` has been split out into a number of individual _controller_ interfaces such as `IAnalogInputController`, `IDigitalOutputController`, `II2cController`, etc. This great simplifies drivers that extend the [Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
  * **Unitization** - We've added strongly-typed units such as `Temperature`, `Mass`, etc., to all of our Meadow.Foundation drivers. No more ambiguous return values.
- * **`IObservable`** - [Simplification, cleanup, and much more powerful pattern]
+ * **`IObservable`** - Simplification, cleanup, and a much more powerful pattern.
  * **Meadow.Foundation** - In addition to the units mentioned above, Meadow.Foundation's drivers underwent a massive audit, and this release includes the first half of a major effort to cleanup the existing drivers and make them more consistent and easy to use.
  * **VS Code Support** - Thanks to an enterprising community member, we now have initial support for building and deploying Meadow applications in VS Code!
 
