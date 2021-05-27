@@ -8,7 +8,7 @@ The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with t
 
 The Meadow.CLI tool supports device and file management including file transfers, and MCU reset.
 
-To run Meadow.CLI on Windows, open a command window and run `Meadow.CLI.exe`. On macOS, call **mono Meadow.CLI.exe** to execute it via mono.
+To run Meadow.CLI on Windows, open a command window and run `meadow`. On macOS, call **mono meadow** to execute it via mono.
 
 You can download the Meadow.CLI executable from the [downloads page](/Meadow/Getting_Started/Downloads/).
 
@@ -26,7 +26,7 @@ On Mac and Linux, the serial port will show up in the **/dev** folder, generally
 ls /dev/tty.usb*
 ```
 
-Note: The serial port can be specified with either `--Serial Port [NameOfSerialPort]` or simply `-s [NameOfSerialPort]`.
+Note: The serial port can be specified with either `--SerialPort [NameOfSerialPort]` or simply `-s [NameOfSerialPort]`.
 
 Note: Meadow.CLI automatically caches the serial port name. Once you've sent a command using the `--SerialPort` parameter, you can omit in future calls.
 
@@ -37,7 +37,7 @@ Note: Meadow.CLI automatically caches the serial port name. Once you've sent a c
 Writes a file into the Meadow's flash file system.
 
 ```bash
-Meadow.CLI.exe --WriteFile file[,file,...] [targetFileName[,targetFileName,...]] --SerialPort [NameOfSerialPort]
+meadow --WriteFile file[,file,...] [targetFileName[,targetFileName,...]] --SerialPort [NameOfSerialPort]
 ```
 
 ### List files in flash file system
@@ -45,7 +45,7 @@ Meadow.CLI.exe --WriteFile file[,file,...] [targetFileName[,targetFileName,...]]
 Lists all the files in the flash file system.
 
 ```bash
-Meadow.CLI.exe --ListFiles --SerialPort [NameOfSerialPort]
+meadow --ListFiles --SerialPort [NameOfSerialPort]
 ```
 
 ### List files and CRC checksum in flash file system
@@ -53,7 +53,7 @@ Meadow.CLI.exe --ListFiles --SerialPort [NameOfSerialPort]
 The command lists the same files as `--ListFiles` but includes the CRC checksum. Because this command must separately read each file, this command takes longer to execute than `--ListFiles`
 
 ```bash
-Meadow.CLI.exe --ListFilesAndCrcs --SerialPort [NameOfSerialPort]
+meadow --ListFilesAndCrcs --SerialPort [NameOfSerialPort]
 ```
 
 ### Delete a File
@@ -61,7 +61,7 @@ Meadow.CLI.exe --ListFilesAndCrcs --SerialPort [NameOfSerialPort]
 Deletes one file from the flash file system.
 
 ```bash
-Meadow.CLI.exe --DeleteFile --TargetFileName [nameOfFile] --SerialPort [NameOfSerialPort]
+meadow --DeleteFile --TargetFileName [nameOfFile] --SerialPort [NameOfSerialPort]
 ```
 
 ### Get Meadow's device information
@@ -69,13 +69,13 @@ Meadow.CLI.exe --DeleteFile --TargetFileName [nameOfFile] --SerialPort [NameOfSe
 Requests the Meadows device information and including Meadow.OS version.
 
 ```bash
-Meadow.CLI.exe --GetDeviceInfo --SerialPort [NameOfSerialPort]
+meadow --GetDeviceInfo --SerialPort [NameOfSerialPort]
 ```
 
 ### Renew file system
 
 ```bash
-Meadow.CLI.exe --RenewFileSys --SerialPort [NameOfSerialPort]
+meadow --RenewFileSys --SerialPort [NameOfSerialPort]
 ```
 
 This command recreates the files system. After invalidating the current file system, this command restarts Meadow. Once restarted Meadow recreates a new, empty flash file system. This command makes the reformatting command `--EraseFlash` unnecessary, unless confidential information needs to be erased.
@@ -83,7 +83,7 @@ This command recreates the files system. After invalidating the current file sys
 ### Reformat the flash
 
 ```bash
-Meadow.CLI.exe --EraseFlash --SerialPort [NameOfSerialPort]
+meadow --EraseFlash --SerialPort [NameOfSerialPort]
 ```
 
 This operation takes just over 2 minutes to complete.  It is recommended that you leave your Meadow device connected to your computer for about 3-5 minutes following the execution of this command and then reset the board. The command completely erases the flash memory device and on restart, recreates the file system.
@@ -93,17 +93,17 @@ This operation takes just over 2 minutes to complete.  It is recommended that yo
 This command causes Meadow to be restarted from the Meadow.CLI.
 
 ```bash
-Meadow.CLI.exe --ResetMeadow --SerialPort [NameOfSerialPort]
+meadow --ResetMeadow --SerialPort [NameOfSerialPort]
 ```
 
 ### Stop/start the installed application from running automatically
 
 ```bash
-Meadow.CLI.exe --MonoDisable --SerialPort [NameOfSerialPort]
+meadow --MonoDisable --SerialPort [NameOfSerialPort]
 ```
 
 ```bash
-Meadow.CLI.exe --MonoEnable --SerialPort [NameOfSerialPort]
+meadow --MonoEnable --SerialPort [NameOfSerialPort]
 ```
 
 ### Read the mono run state
@@ -111,7 +111,7 @@ Meadow.CLI.exe --MonoEnable --SerialPort [NameOfSerialPort]
 Reports whether mono will run or not on restart.
 
 ```bash
-Meadow.CLI.exe --MonoRunState --SerialPort [NameOfSerialPort]
+meadow --MonoRunState --SerialPort [NameOfSerialPort]
 ```
 
 ## Running applications
