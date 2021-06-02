@@ -24,14 +24,14 @@ public class MeadowApp : App<F7Micro, MeadowApp>
         //IDigitalInputPort digitalInputPort = Device.CreateDigitalInputPort(
         //    Device.Pins.D08, 
         //    InterruptMode.EdgeBoth, 
-        //    ResistorMode.PullUp, 20);
+        //    ResistorMode.InternalPullUp, 20);
         //pushButton = new PushButton(digitalInputPort);
 
         // Initialize by sending Device and Pins
         pushButton = new PushButton(
             Device,
             Device.Pins.D08,
-            ResistorMode.PullUp
+            ResistorMode.InternalPullUp
         );
 
         pushButton.PressStarted += PushButtonPressStarted;

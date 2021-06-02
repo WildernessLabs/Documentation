@@ -32,9 +32,9 @@ public class MeadowApp : App<F7Micro, MeadowApp>
             joystick.StartUpdating();
         }
 
-        void JoystickUpdated(object sender, Meadow.Peripherals.Sensors.Hid.JoystickPositionChangeResult e)
+        void JoystickUpdated(object sender, ChangeResult<JoystickPosition> e)
         {
-            Console.WriteLine($"({e.New.HorizontalValue}, {e.New.VerticalValue})");
+            Console.WriteLine($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
         }
     }
 }

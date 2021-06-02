@@ -29,33 +29,40 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 {
     public MeadowApp ()
     {
-        var motorRight = new HBridgeMotor
-        (
-            a1Pin: Device.CreatePwmPort(Device.Pins.D02),
-            a2Pin: Device.CreatePwmPort(Device.Pins.D03),
-            enablePin: Device.CreateDigitalOutputPort(Device.Pins.D04)
-        );
+        protected HBridgeMotor motor1;
 
-        var motorLeft = new HBridgeMotor
-        (
-            a1Pin: Device.CreatePwmPort(Device.Pins.D07),
-            a2Pin: Device.CreatePwmPort(Device.Pins.D08),
-            enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
-        );
-
-        while (true)
+        public MeadowApp()
         {
-            motorLeft.Speed = 1f;
-            motorRight.Speed = 1f;
-            Thread.Sleep(1000);
+            Console.WriteLine("Initializing...");
 
-            motorLeft.Speed = 0f;
-            motorRight.Speed = 0f;
-            Thread.Sleep(500);
+            motor1 = new HBridgeMotor
+            (
+                a1Pin: Device.CreatePwmPort(Device.Pins.D07),
+                a2Pin: Device.CreatePwmPort(Device.Pins.D08),
+                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
+            );
+            
+            TestMotor();
+        }
 
-            motorLeft.Speed = -1f;
-            motorRight.Speed = -1f;
-            Thread.Sleep(1000);
+        protected void TestMotor()
+        {
+            Console.WriteLine("TestMotor...");
+
+            while (true)
+            {
+                // Motor Forwards
+                motor1.Power = 1f;
+                Thread.Sleep(1000);
+
+                // Motor Stops
+                motor1.Power = 0f;
+                Thread.Sleep(500);
+
+                // Motor Backwards
+                motor1.Power = -1f;
+                Thread.Sleep(1000);
+            }
         }
     }
 }
