@@ -4,12 +4,112 @@ title: Meadow Beta 5
 subtitle: Release Notes
 ---
 
+# b5.1
+
+This is another huge release, with big changes across the boards. Highlights include:
+
+ * **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
+ * **.NET Standard 2.1** - The entire Meadow stack has been upgraded to .NET Standard 2.1 (from 2.0 in b5.0).
+ * **Web Request Memory Leak Fixes** - We've fixed the big memory leak associated with web requests.
+ * **Meadow.CLI Rewrite** - Meadow.CLI has been completely rewritting from the ground up.
+ * **VS Code Templates** - The Meadow extension for VS Code now has Meadow App and Library templates.
+ * **I2C/SPI API Cleanup** - We did a major cleanup and upgrade on the I2C and SPI APIs.
+ * **File system** - Meadow now supports persistent file storage and has named directories.
+ * **Meadow.Core Project Refactor** - Meadow.Core has been split out into separate project for `Contracts`, `Units`, `Core`, and device specific nuget packages.
+ * **Meadow.Foundation Cleanup** - [Hopefully] `ISensor`/etc.
+ 
+**Note:** Just like the previous release, b5.1 has a number breaking changes.
+
+## Updating
+
+This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
+
+Note, to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Meadow.OS
+
+### Debugging
+
+Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI.
+
+### .NET Standard 2.1 Support
+
+This release continues our .NET Standard journey; upgrading from 2.0 to 2.1 AND upgrading ALL of the Meadow projects to .NET Standard 2.1 for better code compatibility and cross-platform support. 
+
+#### Upgrading Projects
+
+[need instructions for upgrading Meadow Apps and Libraries]
+
+
+### Web Request Memory Leak
+
+The memory leak that caused Meadow applications that made lots of web requests crash has been largely eliminated. We've now had Meadow applications successfully run over 100,000 web requests without failure!.
+
+### SSL/HTTPs Debug Spew
+
+We removed the debug spew that would get output when making SSL/HTTPs requests.
+
+## Meadow.Core
+
+### File System - TBD
+
+While Meadow has had a non-volatile file system and storage for a while, the IDEs would delete files during deployment, rending it not very useful.
+
+In b5.1, we've fixed that, so now files in special folders will persist during app deployment, and we've also added named directories to the `MeadowOS.FileSystem` class:
+
+```csharp
+CreateFile(MeadowOS.FileSystem.TempDirectory, "hello.txt");
+```
+
+[File System guide TBD - need to update]
+
+Check out the [*LINK TBD* FileSystem_Basics app sample in Meadow.Core.Samples]() to see it in action.
+
+### I2C/SPI API Updates
+
+We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn.
+
+[more info on the pattern - also need to document in the IO guides. Add a `ByteCommunications` guide.]
+
+### Meadow.Core Project Refactor
+
+[Meadow.Core has been split out into separate project for `Contracts`, `Units`, `Core`, and device specific nuget packages.]
+
+## Tooling
+
+### Meadow.CLI Rewrite
+
+The Meadow.CLI library and command line interface has been completely rewritten from the ground up. It's now async/await turtles all the way down, and is much more reliable, contains a pile of new features, including single command Meadow.OS deployment, and more. We also cleaned out the cobwebs of obsoleted no-longer supported commands that littered the old Meadow.CLI codebase.
+
+### VS Code Templates
+
+The Meadow VS Code extension now includes Meadow App and Library templates for C#, F#, and VB.NET for your coding pleasure.
+
+## Meadow.Foundation
+
+[cleanup, new `ISensor`, `IByteCommsSensor` stuff, etc.]
+
+## b5.0 Bug Fixes
+
+ * [#154 - Meadow Locks Up after 3915 Iterations](https://github.com/WildernessLabs/Meadow_Issues/issues/154) - Fixed.
+ * [#153 - HttpClient memory leak](https://github.com/WildernessLabs/Meadow_Issues/issues/153) - Fixed.
+ * [#number - name]() - Description.
+ 
+## Known Issues
+
+
+
+
 # b5.0
 
 Beta 5.0 is here and it's massive. This is a huge release for Meadow with major new features and big changes, highlights include:
 
  * **Bluetooth v1.0** - That's right, BLE support is here. Check out the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth) for details.
- * **.NET Standard 2.1 API Support** - Meadow now fully supports the .NET Standard 2.1 API surface (equivalent to .NET Core 3.0), opening up a plethora of .NET code and Nuget packages for your use in Meadow applications.
+ * **.NET Standard 2.0 API Support** - Meadow now fully supports the .NET Standard 2.0 API surface (equivalent to .NET Core 3.0), opening up a plethora of .NET code and Nuget packages for your use in Meadow applications.
  * **F# Support Fix** - The new .NET Standard support along with the linker fixes our F# integration, so you can use F# to build Meadow apps again.
  * **VB.NET Support** - We also added VB.NET support including templates in both Visual for Windows and Mac.
  * **`IIODevice` Rearchitecture** - `IIODevice` has been split out into a number of individual _controller_ interfaces such as `IAnalogInputController`, `IDigitalOutputController`, `II2cController`, etc. This great simplifies drivers that extend the [Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
@@ -45,9 +145,9 @@ The b5.0 release of Meadow contains a draft subset of BLE features that cover a 
 
 For more information, see the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth/).
 
-### .NET Standard 2.1/.NET Core 3.0 API Support
+### .NET Standard 2.0/.NET Core 3.0 API Support
 
-Though technically the Meadow runtime already supported .NET Standard 2.1, we weren't bundling the facade dlls (such as `NetStandard.dll`) into the `MeadowAssemblies` nuget package, so if you referenced a nuget or code that targeted those API surfaces, you'd get an error. 
+Though technically the Meadow runtime already supported .NET Standard 2.0, we weren't bundling the facade dlls (such as `NetStandard.dll`) into the `MeadowAssemblies` nuget package, so if you referenced a nuget or code that targeted those API surfaces, you'd get an error. 
 
 We're now bundling all the requisite .NET Standard/.NET Core facade dlls and if they're referenced, they'll get deployed with your Meadow application.
 
