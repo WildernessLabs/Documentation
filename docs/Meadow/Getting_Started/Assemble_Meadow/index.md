@@ -39,7 +39,7 @@ Check out the following video for instructions:
 
 ### Step 3 - Place breadboard and Meadow to the base board
 
-Meadow has battery connector on the right side of the device. For this reason, you have to place the breadboard on the left and Meadow on the ride side of the protoboard. Make sure the breadboard is in the right orientation, and the four holes on the wooden board are on the right side.
+Meadow has battery connector on the right side of the device. For this reason, you have to place the breadboard on the left and Meadow on the right side of the protoboard. Make sure the breadboard is in the right orientation, and the four holes on the wooden board are on the right side.
 
 ![Breadboard, Protoboard and Meadow](./MeadowDev_Places.jpg){:standalone}
 
