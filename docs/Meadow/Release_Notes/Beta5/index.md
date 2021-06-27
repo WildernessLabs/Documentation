@@ -98,7 +98,21 @@ The Meadow VS Code extension now includes Meadow App and Library templates for C
 
 ## Meadow.Foundation
 
-[cleanup, new `ISensor`, `IByteCommsSensor` stuff, etc.]
+We spent a lot of time on Meadow.Foundation this release. We've been going through every sensor from top to bottom, cleaning them up, making them consistent, and generally raising the code quality and organization.
+
+We're now about 95% through the cleanup and updates to get Meadow.Foundation to a v1.0 level of quality. 
+
+### New Sensor Base Classes
+
+Along the way, we created new sensor base classes that handle much of the boilerplate for sensors and were able to excise an absolutely _massive_ amount of repetitive code from the existing sensors, as well as make an easy upgrade from sensors that didn't conform to the `Read()`/`StartUpdating()`/`StopUpdating()` pattern. 
+
+New senor base classes and their inheritance chain include:
+
+ * **`ObservableBase<UNIT>`** - This is the very bottom of the inheritance chain and provides all the base functionality for the filterable observable pattern. This class is used by both sensors and other classes that need to notify `IObserver` subscribers.
+ * **`SensorBase<UNIT>`** - This is the base class that provides the bare minimum sensor functionality for sensors that manage their own read/update lifecycle. It's most often used by sensors that raise events based on an underlying port lifecycle. For instance, sensors like the `AnalogTemperature` sensor use this because the update lifecycle is provided by the underlying `AnalogInputPort`.
+ * **`SamplingSensorBase<UNIT> : SensorBase<Unit>`** - This is the most common base class to inherit from by sensors and adds the `StartUpdating` and `StartUpdating` methods. 
+ * **`ByteCommsSensor<UNIT> : SamplingSensorBase<UNIT>`** - This class is for I2C or SPI peripherals and adds the plumbing for the underlying `IByteCommunications` device such as an `ISpiPeripheral` or `II2cPeripheral`.
+
 
 ## b5.0 Bug Fixes
 
