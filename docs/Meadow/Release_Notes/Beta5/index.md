@@ -78,13 +78,13 @@ Check out the [*LINK TBD* FileSystem_Basics app sample in Meadow.Core.Samples]()
 
 ### I2C/SPI API Updates
 
-We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn.
-
-[more info on the pattern - also need to document in the IO guides. Add a `ByteCommunications` guide.]
+We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn. As part of that, we leaned into the new `Span<T>` class, so any of the calls to `Read()`/`Write()` that took `byte[] buffer` before now take take `Span<>`.
 
 ### Meadow.Core Project Refactor
 
-[Meadow.Core has been split out into separate project for `Contracts`, `Units`, `Core`, and device specific nuget packages.]
+This is more of an implementation detail right now, but we split the `Meadow.Core` project into separate packages for `Meadow.Contracts`, `Meadow.Units`, and `Meadow.Core`, as well as board specific packages like `Meadow.F7`. 
+
+This will allow us to extend Meadow to additional platforms in the future. Stay tuned for fun stuff here. ;)
 
 ## Tooling
 
