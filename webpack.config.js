@@ -43,12 +43,13 @@ module.exports = {
         new CopyWebpackPlugin(
           {
             patterns: [
-              { from: 'frontend/assets', to: 'assets' },
+              { from: 'frontend/assets', to: 'build/assets' },
+              { from: 'docs/Common_Files', to: 'Common_Files' },
             ],
           }
         ),
         new MiniCssExtractPlugin({
-            filename: 'styles/main.css'
+            filename: 'build/styles/main.css'
         }),
     ],
     optimization: {
@@ -58,9 +59,9 @@ module.exports = {
         ]
     },
     output: { 
-        path: path.resolve(__dirname, 'out/build'),
-        publicPath: '/out/build',
-        filename: 'js/[name].bundle.js',
+        path: path.resolve(__dirname, 'out'),
+        publicPath: '/out',
+        filename: 'build/js/[name].bundle.js',
     },
     devServer: {
         contentBase: path.join(__dirname, '/out'),
