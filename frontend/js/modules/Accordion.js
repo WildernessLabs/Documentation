@@ -31,9 +31,13 @@ const Accordion = (el, shouldExpandTopLevel) => {
           trigger.setAttribute('aria-expanded', true) :
           trigger.setAttribute('aria-expanded', false);
 
+        // 
+
+        
         location.href = "#";
         location.href = "#currentPage";
-
+        window.scrollTo(0,0)
+        
         // BIND EVENTS
         trigger.addEventListener('click', (e) => { e.preventDefault(); });
 
