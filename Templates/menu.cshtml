@@ -11,6 +11,7 @@
 
       string listAttributes = isInit ? "nav-accordion accordion" : "";
       string primaryAttribute = isInit ? "primary" : "";
+      int menuIndex = 0;
 
       @if(isInit){
         var par = parent.GetChildren();
@@ -24,16 +25,22 @@
 
         @foreach (var item in children)
         {
+          bool isCurrentPage = Model.Node.Slug.ToLower().Equals(item["path"].ToLower());
+
           string activeAttribute = Model.Node.Slug.Contains(item["path"]) || isInit ? "active current" : "not-active";
-          activeAttribute = Model.Node.Slug.Equals(item["path"]) ? activeAttribute + " currentPage" : activeAttribute;
+          activeAttribute = isCurrentPage ? activeAttribute + " currentPage" : activeAttribute;
           
+          string id = isCurrentPage ? "currentPage" : "page-id-"+menuIndex;
+
           <li>
-            <a aria-expanded="false" href="@item["path"]" tabindex="-1" class="trigger @primaryAttribute @activeAttribute"><span tabindex="0">@item["title"]</span></a>
+            <a aria-expanded="false" id="@id" href="@item["path"]" tabindex="-1" class="trigger @primaryAttribute @activeAttribute"><span tabindex="0">@item["title"]</span></a>
             @if (item.ContainsKey("items"))
             {
               @Raw(RenderSidenav(item.GetSection("items"), parent, false, activeAttribute))
             }
-            </li>
+          </li>
+
+          menuIndex++;
         }
       </ul>
     }

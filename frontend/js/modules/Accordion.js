@@ -31,6 +31,9 @@ const Accordion = (el, shouldExpandTopLevel) => {
           trigger.setAttribute('aria-expanded', true) :
           trigger.setAttribute('aria-expanded', false);
 
+        location.href = "#";
+        location.href = "#currentPage";
+
         // BIND EVENTS
         trigger.addEventListener('click', (e) => { e.preventDefault(); });
 
@@ -80,6 +83,7 @@ const swapClasses = (el, add, remove) => {
   el.classList.add(add);
   el.classList.remove(remove);
 }
+
 const createAccordionTrigger = () => {
   const triggerButton = document.createElement('button');
   triggerButton.innerHTML = '<span class="visually-hidden">Toggle</span>';
