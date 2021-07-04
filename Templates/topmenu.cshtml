@@ -1,0 +1,33 @@
+@using System.Linq;
+@using System.Collections.Generic;
+@using Microsoft.Extensions.Configuration;
+@using Chloroplast.Core.Extensions;
+
+@{
+  string RenderNodes(IConfigurationSection section)
+  {
+    var children = section.GetChildren();
+
+
+    if (children.Any())
+    {
+      <ul>
+        @foreach (var item in children)
+        {
+          string activeAttribute = Model.Node.Slug.Contains(item["path"]) ? "active" : "";
+
+          <li class="@activeAttribute">
+            <a href="@item["path"]">@item["title"]</a>
+          </li>
+        }
+      </ul>
+    }
+    return "";
+  }
+}
+
+<section class="topbar">
+  <div class="topbar-wrapper">
+    @RenderNodes(Model.Metadata.GetSection ("navTree"))
+  </div>
+</section>

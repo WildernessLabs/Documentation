@@ -1,0 +1,157 @@
+.theme-light
+
+  .logo-header
+    background: url('/build/assets/svgs/icons/logo-header.svg') left top no-repeat
+
+  .nav-main-wrapper
+    background: #fff
+    a 
+      color: #675130
+  .nav-secondary-wrapper
+    background: #FAF6F0
+    a
+      color: #675130
+  .nav-accordion
+    a 
+      color: #675130
+      border-left: 2px solid #fff
+      &:hover:not(.active), &.currentPage:not(ul)
+        background: #EDEFF0
+        border-left: 2px solid #FF8E0D
+        color: #BE4D34
+
+  .subnavigation-wrapper
+    .topbar-wrapper, .nav-accordion li
+      background: #fff
+
+  .copy-button 
+    background-color: #f6f7f7
+
+  //content
+  .content-body
+    h1, h2, h3, h4, h5, p, ul, ol
+      color: #3C3424
+
+    table
+      border: 1px solid #FF8E0D
+      thead
+        background-color: #F6F7F7
+        th
+          border-bottom: 1px solid #FF8E0D
+      tbody
+        tr:not(:last-child) 
+          td 
+            border-bottom: 1px solid #DBDBDB
+            
+
+  .content-banner
+    background: url('/build/assets/images/content-banner-light2x.png') right -10px no-repeat
+    background-size: cover
+    background-color: #F6F7F7
+
+  .articlebar
+    color: #3c3424
+    a
+      color: #3c3424
+      &.active-header-link
+        background: #F6F7F7
+        border-right: 3px solid #12BBF3
+
+.theme-dark
+  background: #20252A
+  // navigation
+  .logo-header
+    background: url('/build/assets/svgs/icons/logo-header-white.svg') left top no-repeat
+
+  .copy-button 
+      background-color: #21292C
+
+  .nav-main-wrapper
+   background: #20252A
+   a 
+     color: #F6F7F7
+  .nav-secondary-wrapper
+    background: #2D3339
+    a
+      color: #F6F7F7
+  .nav-accordion
+    a 
+      color: #F6F7F7
+      border-left: 2px solid #20252A
+      // span:hover:not(.active), &.active:not(.has-submenu)
+      //   background: #2D3339
+      //   border-left: 2px solid #FF8E0D
+      //   color: #FF8E0D
+      &:hover:not(.active), &.currentPage:not(ul)
+        background: #EDEFF0
+        border-left: 2px solid #FF8E0D
+        color: #BE4D34
+
+  .subnavigation-wrapper
+    .topbar-wrapper, .nav-accordion li
+      background: #20252A
+      a 
+        color: #fff
+
+  .breadcrumbs li a 
+    color: #fff
+
+  //content
+  .content-body
+    h1, h2, h3, h4, h5, p, ul, ol
+      color: #F6F7F7
+    
+    .grey, .light-grey
+      h1, h2, h3, h4, h5, p, ul, ol
+        color: #3C3424
+
+    table
+      border: 1px solid #F6F7F7
+      color: #F6F7F7
+      thead
+        background-color: #2D3339
+        th
+          border-bottom: #F6F7F7
+      tbody
+        tr:not(:last-child) 
+          td 
+            border-bottom: 1px solid #F6F7F7
+            
+
+
+  .content-banner
+    background: url('/build/assets/images/content-banner-dark2x.png') right -10px no-repeat
+    background-size: cover
+    background-color: #292E2E
+
+  // articlebar
+  .articlebar
+    color: #F6F7F7
+    a
+      color: #F6F7F7
+      &.active-header-link
+        background: #2D3339
+        border-right: 3px solid #12BBF3
+
+  //home
+  #homepage
+    .content-banner
+      &.primary
+        background: url('/build/assets/images/homepage/homepage-banner-image.png') 105% top no-repeat
+        background-size: contain
+        background-color: #152427
+        color: #fff
+
+  footer
+    color: #F6F7F7 
+
+  code 
+    color: #EB886E
+  // code block
+  pre 
+    border-color: #F6F7F7;
+    background: #21292C
+  
+  code[class*="language-"],
+  pre[class*="language-"] 
+    color: #B6C969

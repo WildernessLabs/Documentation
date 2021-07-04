@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="320px" viewBox="0 0 480 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>eye-outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-2091.000000, -228.000000)" stroke="#E6E4EA" stroke-width="32">
+            <g id="eye-outline" transform="translate(2107.000000, 244.000000)">
+                <path d="M223.66,0 C145.72,0 65.77,45.11 2.83,135.33 C-0.843866039,140.65415 -0.950415615,147.666691 2.56,153.1 C50.92,228.8 129.8,288 223.66,288 C316.5,288 397,228.62 445.45,152.75 C448.873991,147.429974 448.873991,140.600026 445.45,135.28 C396.89,60.28 315.8,0 223.66,0 Z" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle id="Oval" cx="224" cy="144" r="80"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

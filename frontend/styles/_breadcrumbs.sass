@@ -1,0 +1,27 @@
+section  
+  .breadcrumbs
+    display: none
+    list-style-type: none
+    padding: 1em
+    li 
+      a
+        font-family: "Wavehaus-Book"
+        font-size: 16px
+        letter-spacing: 1px
+        color: #675130
+        text-decoration: none
+        &:hover 
+          text-decoration: none
+        &::after
+          content: ">"
+          margin-left: 0.5em
+          margin-right: 0.5em
+      &:last-child
+        a::after
+          content: ""
+
+@include breakpoint(mobile tablet)
+  section
+    .breadcrumbs 
+      display: flex
+      flex-wrap: wrap

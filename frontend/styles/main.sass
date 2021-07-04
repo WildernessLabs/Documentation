@@ -1,0 +1,92 @@
+@import "reset.scss"
+@import "mixins.scss"
+@import "icons"
+@import "variables"
+@import "fonts"
+@import "accordion"
+@import "breadcrumbs"
+@import "nav"
+@import "content"
+@import "codepreview"
+@import "articlebar"
+@import "home"
+@import "themes"
+
+
+$min-nav-width: 270px
+$nav-width: 20%
+$max-nav-width: 400px
+
+body
+  font-size: 16px
+  background: #fff
+
+main
+  display: flex
+  // max-width: 100%
+  // oveflow: hidden
+  @include breakpoint(mobile tablet)
+    margin-top: 83px
+    display: block
+    
+
+.content
+  flex: 1
+
+.articlebar
+  flex: 0 0 $nav-width
+  min-width: $min-nav-width
+  max-width: $max-nav-width
+
+.sidebar
+  flex: 0 0 $nav-width
+  min-width: $min-nav-width
+  max-width: $max-nav-width
+  @include breakpoint(mobile tablet)
+    display: none
+
+.articlebar
+  @include breakpoint(mobile tablet)
+    display: none
+
+.fixed-element 
+  position: fixed
+  top: 0px
+  &.max-height 
+    height: 100vh
+    overflow-y: auto
+
+.fixed-bottom 
+  position: absolute
+  bottom: 0px
+
+footer
+  margin: 0 clamp($min-nav-width, 20%, $max-nav-width)
+  padding: 3% 0
+  border-left: 1px solid #12BBF3
+  border-right: 1px solid #12BBF3
+  // @include breakpoint(tablet)
+  //   margin: 0 0 0 clamp($min-nav-width, 20%, $max-nav-width)
+  @include breakpoint(mobile tablet)
+    margin: 0
+    border: none
+  .footer-content
+    border-top: 5px solid #FF8E0D
+    padding: 3% 0
+    margin: 0 6%
+  p
+    font-family: "Wavehaus-Book"
+    font-size: 18px
+    margin-bottom: 1em
+    &.brand
+      padding-top: 2em
+      font-size: 13px
+
+  a
+    color: #12BBF3
+    &:hover, &:focus
+      text-decoration: none
+
+body#home footer
+  margin: 0
+  border: none
