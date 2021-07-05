@@ -122,7 +122,7 @@ New senor base classes and their inheritance chain include:
  
 ## Known Issues
 
- * **`System.Text.Json` is broken** - Due to a bug with how `System.Text.Json` references `System.Memory.dll`, switching to .NET Standard 2.1 broke compatibility. As a workaround, please use `NewtonSoft.Json` for now. This will be fixed in the future.
+ * **`System.Text.Json` is broken** - Due to a bug with how `System.Text.Json` references `System.Memory.dll`, switching to .NET Standard 2.1 broke compatibility. As a workaround, please use `NewtonSoft.Json` for now. This will be fixed in the future. For more information, see [this DotNET Runtime issue](https://github.com/dotnet/runtime/issues/49211).
 
 
 # b5.0
