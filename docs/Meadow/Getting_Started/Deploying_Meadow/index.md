@@ -25,12 +25,12 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 * Install libusb : `sudo apt-get install libusb-1.0-0-dev`
 
 
-You can follow this detailed step by step guide for both macOS and Windows: 
+You can follow this detailed step by step guide for both macOS and Windows:
 
 ## Step 1: Download Meadow OS and network binaries
 
 ```
-meadow --Download
+meadow download os
 ```
 
 ## Step 2: Put the device into DFU Bootloader mode.
@@ -58,14 +58,18 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
     The format for the IDs is `idVendor:idProduct`.
 2. Now disconnect and reconnect the Meadow to make the rules take affect.
 
-## Step 3: Flash Meadow.OS and Coprocessor Firmware
+## Step 3 (Option 1): Flash Meadow.OS and Coprocessor Firmware from bootloader mode
 
 1. Flash the main Meadow.OS:
 ```
-meadow --FlashOS
+meadow flash os
 ```
 
-2. Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
+## Step 3 (Option 2): Flash Meadow.OS and Coprocessor Firmware from normal mode
+
+This will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
+
+1. Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
 
     **Windows**
    
@@ -99,22 +103,15 @@ meadow --FlashOS
         ```
         or similar. The port might change between reboots of the Meadow so make sure to check it after a reboot. If you can't detect which port the meadow belongs to run the command once with the Meadow disconnected and once with the Meadow connected to spot the difference.
 
-3. Once you've identified out the port name, run the following, replacing `[PORT]` with the serial port name:
+2. Once you've identified the port name, run the following, replacing `[PORT]` with the serial port name:
 
     ```
-    meadow --MonoDisable -s [PORT]
+    meadow flash os -s [PORT]
     ```
 
     **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
 
-4. Install the Meadow.OS runtime, and the ESP32 coprocessor firmware:
-
-    ```
-    meadow --MonoUpdateRt
-    meadow --MonoDisable
-    meadow --FlashEsp
-    ```
- 5. Unplug and replug Meadow to give it a full restart.
+3. Unplug and replug Meadow to give it a full restart.
 
 Your board is now ready to have a Meadow application deployed to it!
 

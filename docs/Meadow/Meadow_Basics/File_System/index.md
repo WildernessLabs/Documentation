@@ -4,36 +4,42 @@ title: File System
 subtitle: Working with files and directories in Meadow
 ---
 
-Meadow.OS has nearly full support for file and directory manipulation via `System.IO` API calls. In addition, the Meadow F7 board has onboard non-volatile flash storage that, while primarily used for app deployment and storage, can also be used as for persistent storage, like a traditional hard drive.
+Meadow.OS has full support for file and directory manipulation via `System.IO` API calls. In addition, the Meadow F7 board has onboard non-volatile flash storage that, while primarily used for app deployment and storage, can also be used as for persistent storage like a traditional hard drive.
 
-## Beta Status
+## Named Directories
 
-File system support is currently in beta and has several known issues that you should be aware of if attempting to use:
+There are a number of named directories available via the `MeadowOS.FileSystem` class that provide known, convenient lcoations to store files and data, each with a set of rules around the persistance of their contents during reboot, OS upgrade, etc. These named directories are:
 
-* **Non-persistent during deployment** - Currently, during IDE deployment, all non app-related files are purged from flash. In a near future release, all files within a special app folder will be excluded from file purging. In the meantime, if you need to persist files between app deployment, you can use Meadow.CLI to manually deploy a new app.
+ * **`UserFileSystemRoot`** - This returns `/meadow0`, which is the root directory of the flash storage on the Meadow device. This directory shouldn't be used directly, but is the root for other, more useful directories.
+ * **`DataDirectory`** - Gets the `Data` directory. Use this directory to store files that require permanent persistence, such as SQL data files, even through OS deployments and Over-the-Air (OtA) updates.
+ * **`DocumentsDirectory`** - Gets the `Documents` directory. Use this directory to store files that require permanent persistence, such as application document files, even through OS deployments and Over-the-Air (OtA) updates.
+ * **`CacheDirectory`** - Gets the `Cache` directory. Use this directory to store semi-transient files. The contents of this folder will be erased during application updates.
+ * **`TempDirectory`** - Gets the `Temp` directory. Use this directory to store transient files. This contens of this folder will be erased on device restart.
 
-## Flash Device Root 
+### Named Directory Example
 
-The onboard flash device is mounted as a `meadow0` drive, so all file manipulation needs to start from there. 
-
-For instance, to enumerate all the files within the root of the flash, you would execute the following:
-
-```csharp
-string appRootDir = "meadow0";
-string[] files = Directory.GetFiles(appRootDir);
-foreach (var file in files) {
-    Console.WriteLine($"File: {file}");
-}
-```
-
-Similarly, files should be created on this device. For instance, the following code example creates a simple text file called `hello.txt` in the root of the drive with some text in it:
+The named directories can be used with normal `System.IO` calls. For instance the following example code creates a "hello.txt" file in the `TempDirectory`:
 
 ```csharp
-try {
-    using (var fs = File.CreateText("/meadow0/hello.txt")) {
-        fs.WriteLine("Hello Meadow File!");
+// create a `hello.txt` file in the `/Temp` directory
+CreateFile(MeadowOS.FileSystem.TempDirectory, "hello.txt");
+
+private void CreateFile(string path, string filename)
+{
+    if (!Directory.Exists(path)) {
+        Directory.CreateDirectory(path);
     }
-} catch (Exception ex) {
-    Console.WriteLine(ex.Message);
+
+    try {
+        using (var fs = File.CreateText(Path.Combine(path,filename))) {
+            fs.WriteLine("Hello Meadow File!");
+        }
+    } catch (Exception ex) {
+        Console.WriteLine(ex.Message);
+    }
 }
 ```
+ 
+## Known Issues
+
+**NOTE: Non-persistent during deployment** - Currently, during IDE deployment, all non app-related files are purged from flash. In a near future release, all files within a special app folder will be excluded from file purging. In the meantime, if you need to persist files between app deployment, you can use Meadow.CLI to manually deploy a new app.
