@@ -103,7 +103,7 @@ This will only work if you have a newer version of Meadow OS installed. It is re
         ```
         or similar. The port might change between reboots of the Meadow so make sure to check it after a reboot. If you can't detect which port the meadow belongs to run the command once with the Meadow disconnected and once with the Meadow connected to spot the difference.
 
-2. Once you've identified out the port name, run the following, replacing `[PORT]` with the serial port name:
+2. Once you've identified the port name, run the following, replacing `[PORT]` with the serial port name:
 
     ```
     meadow flash os -s [PORT]
