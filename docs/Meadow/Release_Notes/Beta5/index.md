@@ -22,7 +22,7 @@ This is another huge release, with big changes across the boards. Highlights inc
 
  * **.NET Standard 2.1** - The entire Meadow stack has been upgraded to .NET Standard 2.1 (from 2.0 in b5.0).
  * **Web Request Memory Leak Fixes** - We've fixed the big memory leak associated with web requests.
- * **Meadow.CLI Rewrite** - Meadow.CLI has been completely rewritting from the ground up.
+ * **Meadow.CLI Rewrite** - Meadow.CLI has been completely rewritten from the ground up.
  * **VS Code Templates** - The Meadow extension for VS Code now has Meadow App and Library templates.
  * **I2C/SPI API Cleanup** - We did a major cleanup and upgrade on the I2C and SPI APIs.
  * **File system** - Meadow now supports persistent file storage and has named directories.
@@ -35,7 +35,7 @@ This is another huge release, with big changes across the boards. Highlights inc
 
 This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
 
-Note, to update the Meadow.CLI, run the following from a command line:
+Note: to update the Meadow.CLI, run the following from a command line:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -45,16 +45,15 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
 ### .NET Standard 2.1 Support
 
-This release continues our .NET Standard journey; upgrading from 2.0 to 2.1 AND upgrading ALL of the Meadow projects to .NET Standard 2.1 for better code compatibility and cross-platform support. 
+This release continues our .NET Standard journey; upgrading from 2.0 to 2.1 AND upgrading ALL of the Meadow projects to .NET Standard 2.1 for better code compatibility and cross-platform support.
 
 #### Upgrading Projects
 
-[need instructions for upgrading Meadow Apps and Libraries]
-
+Meadow app projects will need to be updated from .NET 4.7.2 to .NET Standard 2.1 and requires some minor updates to the .csproj file. [Checkout our blog post on updating Meadow projects for details](https://blog.wildernesslabs.co/update-meadow-app-from-net-framework-to-net-standard/).
 
 ### Web Request Memory Leak
 
-The memory leak that caused Meadow applications that made lots of web requests crash has been largely eliminated. We've now had Meadow applications successfully run over 100,000 web requests without failure!.
+The memory leak that caused Meadow applications that made lots of web requests crash has been largely eliminated. We've now had Meadow applications successfully run over 100,000 web requests without failure!
 
 ### SSL/HTTPs Debug Spew
 
@@ -62,7 +61,7 @@ We removed the debug spew that would get output when making SSL/HTTPs requests.
 
 ## Meadow.Core
 
-### File System - TBD
+### File System
 
 While Meadow has had a non-volatile file system and storage for a while, the IDEs would delete files during deployment, rending it not very useful.
 
@@ -72,9 +71,9 @@ In b5.1, we've fixed that, so now files in special folders will persist during a
 CreateFile(MeadowOS.FileSystem.TempDirectory, "hello.txt");
 ```
 
-[File System guide TBD - need to update]
+[File System guide](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/File_System/)
 
-Check out the [*LINK TBD* FileSystem_Basics app sample in Meadow.Core.Samples]() to see it in action.
+Check out the [FileSystem_Basics app sample in Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/OS/FileSystem_Basics) to see it in action.
 
 ### I2C/SPI API Updates
 
@@ -82,7 +81,7 @@ We've done a massive overhaul of the I2C and SPI APIs, making them not only cons
 
 ### Meadow.Core Project Refactor
 
-This is more of an implementation detail right now, but we split the `Meadow.Core` project into separate packages for `Meadow.Contracts`, `Meadow.Units`, and `Meadow.Core`, as well as board specific packages like `Meadow.F7`. 
+This is more of an implementation detail right now, but we split the `Meadow.Core` project into separate packages for `Meadow.Contracts`, `Meadow.Units`, and `Meadow.Core`, as well as board specific packages like `Meadow.F7`.
 
 This will allow us to extend Meadow to additional platforms in the future. Stay tuned for fun stuff here. ;)
 
@@ -100,11 +99,11 @@ The Meadow VS Code extension now includes Meadow App and Library templates for C
 
 We spent a lot of time on Meadow.Foundation this release. We've been going through every sensor from top to bottom, cleaning them up, making them consistent, and generally raising the code quality and organization.
 
-We're now about 95% through the cleanup and updates to get Meadow.Foundation to a v1.0 level of quality. 
+We're now about 95% through the cleanup and updates to get Meadow.Foundation to a v1.0 level of quality.
 
 ### New Sensor Base Classes
 
-Along the way, we created new sensor base classes that handle much of the boilerplate for sensors and were able to excise an absolutely _massive_ amount of repetitive code from the existing sensors, as well as make an easy upgrade from sensors that didn't conform to the `Read()`/`StartUpdating()`/`StopUpdating()` pattern. 
+Along the way, we created new sensor base classes that handle much of the boilerplate for sensors and were able to excise an absolutely _massive_ amount of repetitive code from the existing sensors, as well as make an easy upgrade from sensors that didn't conform to the `Read()`/`StartUpdating()`/`StopUpdating()` pattern.
 
 New senor base classes and their inheritance chain include:
 
