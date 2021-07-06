@@ -24,7 +24,7 @@ This is another huge release, with big changes across the boards. Highlights inc
  * **Web Request Memory Leak Fixes** - We've fixed the big memory leak associated with web requests.
  * **Meadow.CLI Rewrite** - Meadow.CLI has been completely rewritten from the ground up.
  * **VS Code Templates** - The Meadow extension for VS Code now has Meadow App and Library templates.
- * **I2C/SPI API Cleanup** - We did a major cleanup and upgrade on the I2C and SPI APIs.
+ * **I2C/SPI API Cleanup** - Much cleaner and more consistent APIs between I2C and SPI, with heavy use of `Span<byte>` to reduce allocations and GC churn.
  * **File system** - Meadow now supports persistent file storage and has named directories.
  * **Meadow.Core Project Refactor** - Meadow.Core has been split out into separate project for `Contracts`, `Units`, `Core`, and device specific nuget packages.
  * **Meadow.Foundation Cleanup** - Massive cleanup on Meadow.Foundation, making drivers more consistent and removing a lot of duplicate code.
