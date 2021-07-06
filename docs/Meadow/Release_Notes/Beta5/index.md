@@ -55,9 +55,9 @@ Meadow app projects will need to be updated from .NET 4.7.2 to .NET Standard 2.1
 
 The memory leak that caused Meadow applications that made lots of web requests crash has been largely eliminated. We've now had Meadow applications successfully run over 100,000 web requests without failure!
 
-### SSL/HTTPs Debug Spew
+### SSL/HTTPs Improvements
 
-We removed the debug spew that would get output when making SSL/HTTPs requests.
+We fixed the memory leak occuring after every HTTPS connection, reduced general memoery consumption per connection and removed the debug spew that would get output when making SSL/HTTPs requests.
 
 ## Meadow.Core
 
@@ -123,6 +123,8 @@ New senor base classes and their inheritance chain include:
 ## Known Issues
 
  * **`System.Text.Json` is broken** - Due to a bug with how `System.Text.Json` references `System.Memory.dll`, switching to .NET Standard 2.1 broke compatibility. As a workaround, please use `NewtonSoft.Json` for now. This will be fixed in the future. For more information, see [this DotNET Runtime issue](https://github.com/dotnet/runtime/issues/49211).
+
+* **Some other Nuget packages may also be broken** - Related to the above, other Nuget packages that target .NET Standard 2.0 (not 2.1) and, at the same time, use Nugets to bring in .NET Standard 2.1 capabilities (e.g. `System.Memory`, `System.Buffers`), may not work, producing runtime and build issues.
 
 
 # b5.0
@@ -479,4 +481,3 @@ For information on how to get started, check out the [VSCode Meadow Extension Gi
 
   * **Meadow.CLI `--DeleteFile` command not working** - The `--DeleteFile` command will throw an error and also say that the file was deleted successfully, but the file will not actually be deleted.
   * **Mono may re-enable after doing Meadow.CLI `--MonoUpdateRT` command** - When you're deploying Meadow.OS, mono may re-enable itself after the `--MonoUpdateRT` command. If you get an error when you run the `--FlashESP` command that says it can't upload because mono is enabled, re-run the `--MonoDisable` command.
-  * **SSL has debug spew** - When making SSL requests, Meadow will output numbers to the console. That's just debug information and will be fixed in an out-of-band release.
