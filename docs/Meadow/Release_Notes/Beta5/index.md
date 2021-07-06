@@ -27,7 +27,7 @@ This is another huge release, with big changes across the boards. Highlights inc
  * **I2C/SPI API Cleanup** - We did a major cleanup and upgrade on the I2C and SPI APIs.
  * **File system** - Meadow now supports persistent file storage and has named directories.
  * **Meadow.Core Project Refactor** - Meadow.Core has been split out into separate project for `Contracts`, `Units`, `Core`, and device specific nuget packages.
- * **Meadow.Foundation Cleanup** - [Hopefully] `ISensor`/etc.
+ * **Meadow.Foundation Cleanup** - Massive cleanup on Meadow.Foundation, making drivers more consistent and removing a lot of duplicate code.
  
 **Note:** Just like the previous release, b5.1 has a number breaking changes.
 
