@@ -120,6 +120,13 @@ Files can also be deleted:
 meadow file delete -f [Filename]
 ```
 
+As with file uploading, multiple files can be specified with multiple `-f` parameters:
+
+```bash
+meadow file delete -f [Filename1] -f [Filename2]
+```
+
+
 ### Get Meadow's device information
 
 To get information about the device, including OS version, execute the following:
