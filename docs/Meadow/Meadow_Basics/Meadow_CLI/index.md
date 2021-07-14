@@ -106,10 +106,10 @@ To write a file, or files, to the device execute the following, replacing [Filen
 meadow file write -f [Filename]
 ```
 
-To write multiple files, add them as a comma-separated list:
+Multiple files can be specified with multiple `-f` parameters:
 
 ```bash
-meadow file write -f [Filename1], [Filename2]
+meadow file write -f [Filename1] -f [Filename2]
 ```
 
 #### Deleta a File from the Device
