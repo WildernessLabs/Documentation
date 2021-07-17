@@ -113,7 +113,7 @@ New senor base classes and their inheritance chain include:
  * **`ByteCommsSensor<UNIT> : SamplingSensorBase<UNIT>`** - This class is for I2C or SPI peripherals and adds the plumbing for the underlying `IByteCommunications` device such as an `ISpiPeripheral` or `II2cPeripheral`.
 
 
-## b5.0 Bug Fixes
+## b5.1 Bug Fixes
 
  * [#154 - Meadow Locks Up after 3915 Iterations](https://github.com/WildernessLabs/Meadow_Issues/issues/154) - Fixed.
  * [#153 - HttpClient memory leak](https://github.com/WildernessLabs/Meadow_Issues/issues/153) - Fixed.
