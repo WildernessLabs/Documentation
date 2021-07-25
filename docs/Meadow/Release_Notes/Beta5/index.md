@@ -5,7 +5,7 @@ subtitle: Release Notes
 ---
 
 <!--
-# b5.2
+# b5.x
 
 * **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
  
@@ -15,6 +15,41 @@ subtitle: Release Notes
 
 Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI. 
 -->
+
+# b5.2
+
+This is a small release that mainly focuses on cleanup of Meadow.Foundation, and fixing Bluetooth (which we broke in b5.1):
+
+ * **BLE Fix** - We broke the bluetooth stack (among other small things) in b5.1 due to issues with our CI release pipeline. Most of the fixes we were able to ship out of band as Nuget updates, but BLE remained broken. This release fixes that.
+ * **Antenna Switch Fix** - We regressed switching between the onboard and external antenna. That's fixed in this release.
+ * **Meadow.Foundation Upgrades** - A number of API cleanups, optimizations, and the like.
+
+## Updating
+
+This is a full-stack release and will require an OS update, nuget updates, IDE extensions, and CLI updates.
+
+Note: to update the Meadow.CLI, run the following from a command line:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Meadow.Foundation
+
+ * **Modernized the `PiezoSpeaker` API** - Now uses `async` when playing a tone.
+ * **Added `PenColor` to µGraphics** - This new property makes it possible to retrieve the current pen color.
+ * **Minor drawing optimizations in uGraphics** - Faster drawing.
+ * **Maple Server Fixes**
+   * Client and Server now support HTTP `Post`.
+   * API Cleanups.
+   * Fixed JSON serialization by switching to `SimpleJson`
+
+## Bug Fixes
+
+ * [#160 - Meadow hangs on Device.BluetoothAdapter.StartBluetoothServer](https://github.com/WildernessLabs/Meadow_Issues/issues/160) - Fixed.
+ * [#125 - System.Net.HttpClient Hangs if Wi-Fi is not connected first](https://github.com/WildernessLabs/Meadow_Issues/issues/125) - Fixed. Will now throw an exception.
+
+
 
 # b5.1
 
