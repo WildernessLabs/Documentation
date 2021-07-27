@@ -12,7 +12,7 @@
         <MeadowPath>$(NuGetPackageRoot)meadow\$(MeadowVersion)\lib\net472\meadow.dll</MeadowPath>
         <MeadowFoundationPath>$(NuGetPackageRoot)meadow.foundation\$(MeadowFoundationVersion)\lib\net472\Meadow.Foundation.dll</MeadowFoundationPath>
 
-        <OutEcmaXml>out/EcmaXml</OutEcmaXml>
+        <OutEcmaXml>tmp/EcmaXml</OutEcmaXml>
     </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="mdoc" Version="$(MdocVersion)" />
