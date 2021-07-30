@@ -1,0 +1,13 @@
+@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.EcmaXmlContent<Chloroplast.Core.Loaders.EcmaXml.XType>>
+@* @await PartialAsync("Docs/menu.md") *@
+<section id="homepage" class="content">
+    <div class="content-body">
+      <div class="content-section">
+        <h2 class="border content-primary">Class @Model.Element.Name</h2>
+        @foreach(var member in Model.Element.Members)
+        {
+          <h3>@member.Name</h3>
+        }
+      </div>
+    </div>
+</section>
