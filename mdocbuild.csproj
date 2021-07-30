@@ -6,6 +6,8 @@
         <MeadowVersion>0.25.0</MeadowVersion>
         <MeadowFoundationVersion>0.27.0</MeadowFoundationVersion>
         <MeadowContractsVersion>0.24.0</MeadowContractsVersion>
+        <MeadowF7Version>0.24.7.1</MeadowF7Version>
+        <MeadowUnitsVersion>0.24.0</MeadowUnitsVersion>
         <MeadowCliVersion>0.12.10</MeadowCliVersion>
 
 
@@ -13,7 +15,8 @@
         <MeadowPath>$(NuGetPackageRoot)meadow\$(MeadowVersion)\lib\$(TargetFramework)\meadow.dll</MeadowPath>
         <MeadowContractsPath>$(NuGetPackageRoot)meadow.contracts\$(MeadowContractsVersion)\lib\$(TargetFramework)\meadow.contracts.dll</MeadowContractsPath>
         <MeadowFoundationPath>$(NuGetPackageRoot)meadow.foundation\$(MeadowFoundationVersion)\lib\$(TargetFramework)\Meadow.Foundation.dll</MeadowFoundationPath>
-
+        <MeadowF7Path>$(NuGetPackageRoot)meadow.f7\$(MeadowF7Version)\lib\$(TargetFramework)\Meadow.F7.dll</MeadowF7Path>
+        <MeadowUnitsPath>$(NuGetPackageRoot)meadow.units\$(MeadowUnitsVersion)\lib\$(TargetFramework)\Meadow.Units.dll</MeadowUnitsPath>
         <OutEcmaXml>tmp/EcmaXml</OutEcmaXml>
     </PropertyGroup>
   <ItemGroup>
@@ -21,13 +24,15 @@
     <PackageReference Include="Meadow" Version="$(MeadowVersion)" />
     <PackageReference Include="Meadow.Contracts" Version="$(MeadowContractsVersion)" />
     <PackageReference Include="Meadow.Foundation" Version="$(MeadowFoundationVersion)" />
+    <PackageReference Include="Meadow.F7" Version="$(MeadowF7Version)" />
+    <PackageReference Include="Meadow.Units" Version="$(MeadowUnitsVersion)" />
     <!--<PackageReference Include="Wildernesslabs.Meadow.CLI" Version="$(MeadowCliVersion)" />-->
 
   </ItemGroup>
 
     <Target Name="mdocupdate" DependsOnTargets="restore">
         <Message Text="Output At: $(OutEcmaXml)" Importance="high"/>
-        <Exec Command="$(MdocPath) update $(MeadowPath) $(MeadowContractsPath) -out $(OutEcmaXml)/Meadow --debug" />
+        <Exec Command="$(MdocPath) update $(MeadowPath) $(MeadowContractsPath) $(MeadowF7Path) $(MeadowUnitsPath) -out $(OutEcmaXml)/Meadow --debug" />
         <Exec Command="$(MdocPath) update $(MeadowFoundationPath) -out $(OutEcmaXml)/Meadow.Foundation -L $([System.IO.Path]::GetDirectoryName($(MeadowPath))) -L $([System.IO.Path]::GetDirectoryName($(MeadowContractsPath))) --debug" />
       </Target>
 </Project>
