@@ -4,9 +4,41 @@
     <div class="content-body">
       <div class="content-section">
         <h2 class="border content-primary">Class @Model.Element.Name</h2>
+
+        <ul>
+        @foreach(var sig in Model.Element.Signatures)
+        {
+          <li>@sig.Language: @sig.Value</li>
+        }
+        </ul>
+        <ul>
+          @foreach(var assembly in Model.Element.AssemblyInfos)
+          {
+            <li>@assembly.AssemblyName @assembly.AssemblyVersion</li>
+          }
+        </ul>
+        <ul>
+          <li>Base Type: @Model.Element?.Base?.BaseTypeName</li>
+
+        </ul>
+
+        <h3>Members</h3>
         @foreach(var member in Model.Element.Members)
         {
-          <h3>@member.Name</h3>
+          <h4>@member.Name</h4>
+          <ul>
+          @foreach(var sig in member.Signatures)
+          {
+            <li>@sig.Language: @sig.Value</li>
+          }
+          </ul>
+
+          <ul>
+            @foreach(var assembly in member.AssemblyInfos)
+            {
+              <li>@assembly.AssemblyName @assembly.AssemblyVersion</li>
+            }
+          </ul>
         }
       </div>
     </div>
