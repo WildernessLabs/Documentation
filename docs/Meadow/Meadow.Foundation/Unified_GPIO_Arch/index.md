@@ -4,7 +4,7 @@ title: Meadow.Foundation Unified IO Architecture
 subtitle: Extending Meadow IOs seamlessly with external IO expansion peripherals via the Unified IO pattern.
 ---
 
-Meadow.Foundation incorporates an architecture that was designed to extend peripheral support seamlessly across expansion peripherals such as I2C/SPI/etc. I/O expansion chips. For example, you can connect an MCP23x or 74x595 I/O expansion chip to a Meadow, and then drive a `Relay` via one of the pins on the expansion chip, just as if it were connected directly to the Netduino!
+Meadow.Foundation incorporates an architecture that was designed to extend peripheral support seamlessly across expansion peripherals such as I2C/SPI/etc. I/O expansion chips. For example, you can connect an MCP23x or 74x595 I/O expansion chip to a Meadow, and then drive a `Relay` via one of the pins on the expansion chip, just as if it were connected directly to the Meadow board!
 
 This is possible through the use of IO interfaces and base classes that define IO port contracts and provide base level implementation.
 
