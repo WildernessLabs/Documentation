@@ -25,9 +25,32 @@
         <ul>
           <li>Base Type: @Model.Element?.Base?.BaseTypeName</li>
           <li>Summary: @Model.Element?.Docs.Summary</li>
+
+          @if (Model.Element.TypeParameters.Any())
+          {
+            <li>Type Parameters
+              <ul>
+                @foreach(var p in Model.Element.TypeParameters)
+                {
+                  <li>@p.Name</li>
+                }
+              </ul>
+            </li>
+          }
+          @if (Model.Element.Parameters.Any())
+          {
+            <li>Parameter Definitions
+              <ul>
+                @foreach(var p in Model.Element.Parameters)
+                {
+                  <li>@p.Name: @p.Type</li>
+                }
+              </ul>
+            </li>
+          }
           @if(Model.Element.Docs.Params.Any())
           {
-          <li>Parameters:
+          <li>Parameter Docs:
             <ul>
             @foreach(var p in @Model.Element?.Docs?.Params)
             {
@@ -38,7 +61,7 @@
           }
           @if(Model.Element.Docs.TypeParams.Any())
           {
-          <li>Type Parameters:
+          <li>Type Parameter Docs:
             <ul>
             @foreach(var tp in @Model.Element?.Docs?.TypeParams)
             {
@@ -63,9 +86,31 @@
           </ul>
           <ul>
             <li>Summary: @member?.Docs.Summary</li>
+            @if (member.TypeParameters.Any())
+            {
+              <li>Type Parameters
+                <ul>
+                  @foreach(var p in member.TypeParameters)
+                  {
+                    <li>@p.Name</li>
+                  }
+                </ul>
+              </li>
+            }
+            @if (member.Parameters.Any())
+            {
+              <li>Parameter Definitions
+                <ul>
+                  @foreach(var p in member.Parameters)
+                  {
+                    <li>@p.Name: @p.Type</li>
+                  }
+                </ul>
+              </li>
+            }
             @if (member.Docs.Params.Any())
             {
-            <li>Parameters:
+            <li>Parameters Docs:
               <ul>
               @foreach(var p in @member.Docs.Params)
               {
