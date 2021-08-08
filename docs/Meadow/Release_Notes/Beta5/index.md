@@ -16,6 +16,12 @@ subtitle: Release Notes
 Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI. 
 -->
 
+# b5.3
+
+## Meadow.OS
+
+ * **Moved `SynchronizationContext` to Meadow.OS** - Previously, the `BeginInvokeOnMainThread()` method was executed on the current `Device` class, in this release we moved it to the `MeadowOS` class.
+
 # b5.2
 
 This is a small release that mainly focuses on cleanup of Meadow.Foundation, and fixing Bluetooth (which we broke in b5.1):
