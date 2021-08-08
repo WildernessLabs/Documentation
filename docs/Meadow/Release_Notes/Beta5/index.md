@@ -21,6 +21,7 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 ## Meadow.OS
 
  * **Moved `SynchronizationContext` to Meadow.OS** - Previously, the `BeginInvokeOnMainThread()` method was executed on the current `Device` class, in this release we moved it to the `MeadowOS` class.
+ * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
 
 # b5.2
 
