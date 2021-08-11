@@ -1,0 +1,149 @@
+@inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.EcmaXmlContent<Chloroplast.Core.Loaders.EcmaXml.XType>>
+@using System.Linq
+@* @await PartialAsync("Docs/menu.md") *@
+<section id="homepage" class="content">
+    <div class="content-body">
+      <div class="content-section">
+        <h2 class="border content-primary">Class @Model.Element.Name</h2>
+
+        <ul>
+        @foreach(var sig in Model.Element.Signatures)
+        {
+          <li>@sig.Language: @sig.Value</li>
+        }
+        </ul>
+        @if(Model.Element.AssemblyInfos.Any())
+        {
+          <div>Type Available In:</div>
+          <ul>
+            @foreach(var assembly in Model.Element.AssemblyInfos)
+            {
+              <li>@assembly.AssemblyName @string.Join(',', assembly.AssemblyVersion.ToArray())</li>
+            }
+          </ul>
+        }
+        <ul>
+          <li>Base Type: @Model.Element?.Base?.BaseTypeName</li>
+          <li>Summary: @Model.Element?.Docs.Summary</li>
+
+          @if (Model.Element.TypeParameters.Any())
+          {
+            <li>Type Parameters
+              <ul>
+                @foreach(var p in Model.Element.TypeParameters)
+                {
+                  <li>@p.Name</li>
+                }
+              </ul>
+            </li>
+          }
+          @if (Model.Element.Parameters.Any())
+          {
+            <li>Parameter Definitions
+              <ul>
+                @foreach(var p in Model.Element.Parameters)
+                {
+                  <li>@p.Name: @p.Type</li>
+                }
+              </ul>
+            </li>
+          }
+          @if(Model.Element.Docs.Params.Any())
+          {
+          <li>Parameter Docs:
+            <ul>
+            @foreach(var p in @Model.Element?.Docs?.Params)
+            {
+              <li>@p.Name: @p.Value</li>
+            }
+            </ul>
+          </li>
+          }
+          @if(Model.Element.Docs.TypeParams.Any())
+          {
+          <li>Type Parameter Docs:
+            <ul>
+            @foreach(var tp in @Model.Element?.Docs?.TypeParams)
+            {
+              <li>@tp.Name: @tp.Value</li>
+            }
+            </ul>
+          </li>
+          }
+          <li>Remarks: @Model.Element?.Docs.Remarks</li>
+          
+        </ul>
+
+        <h3>Members</h3>
+        @foreach(var member in Model.Element.Members)
+        {
+          <h4>@member.Name</h4>
+          <ul>
+          @foreach(var sig in member.Signatures)
+          {
+            <li>@sig.Language: @sig.Value</li>
+          }
+          </ul>
+          <ul>
+            <li>Summary: @member?.Docs.Summary</li>
+            @if (member.TypeParameters.Any())
+            {
+              <li>Type Parameters
+                <ul>
+                  @foreach(var p in member.TypeParameters)
+                  {
+                    <li>@p.Name</li>
+                  }
+                </ul>
+              </li>
+            }
+            @if (member.Parameters.Any())
+            {
+              <li>Parameter Definitions
+                <ul>
+                  @foreach(var p in member.Parameters)
+                  {
+                    <li>@p.Name: @p.Type</li>
+                  }
+                </ul>
+              </li>
+            }
+            @if (member.Docs.Params.Any())
+            {
+            <li>Parameters Docs:
+              <ul>
+              @foreach(var p in @member.Docs.Params)
+              {
+                <li>@p.Name: @p.Value</li>
+              }
+              </ul>
+            </li>
+            }
+            @if (member.Docs.TypeParams.Any())
+            {
+            <li>Type Parameters:
+              <ul>
+              @foreach(var tp in @member.Docs.TypeParams)
+              {
+                <li>@tp.Name: @tp.Value</li>
+              }
+              </ul>
+            </li>
+            }
+            <li>Remarks: @member.Docs.Remarks</li>
+          </ul>
+
+        @if(member.AssemblyInfos.Any())
+        {
+          <h5>Member Available In:</h5>
+          <ul>
+            @foreach(var assembly in member.AssemblyInfos)
+            {
+              <li>@assembly.AssemblyName @string.Join(',', assembly.AssemblyVersion.ToArray())</li>
+            }
+          </ul>
+        }
+        }
+      </div>
+    </div>
+</section>

@@ -22,7 +22,13 @@ jobs:
           
       - name: Add private GitHub registry to NuGet
         run: dotnet nuget add source https://nuget.pkg.github.com/WildernessLabs/index.json --name "wildernesslabs" --username wildlingdev --password ${{ secrets.WILDLINGDEV_PAT }} --store-password-in-clear-text
-      
+            
+      - name: Build APIs with mdoc
+        run: |
+          cd $GITHUB_WORKSPACE
+          dotnet restore mdocbuild.csproj
+          msbuild mdocbuild.csproj /t:mdocupdate
+
       - name: Install Chloroplast
         run: |
           dotnet new tool-manifest

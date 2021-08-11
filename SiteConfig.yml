@@ -13,6 +13,12 @@ files:
 
 # main site folder
 areas:
+  - source_folder: /tmp/EcmaXml/Meadow
+    output_folder: /api/Meadow
+    type: api
+  - source_folder: /tmp/EcmaXml/Meadow.Foundation
+    output_folder: /api/Meadow.Foundation
+    type: api
   - source_folder: /docs/Events
     output_folder: /events
   - source_folder: /docs/DevCamp2020
