@@ -22,6 +22,17 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 
  * **Moved `SynchronizationContext` to Meadow.OS** - Previously, the `BeginInvokeOnMainThread()` method was executed on the current `Device` class, in this release we moved it to the `MeadowOS` class.
  * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
+ * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
+
+ ## Bug Fixes
+
+* [#159 Device.GetDeviceInformation() throws an error](https://github.com/WildernessLabs/Meadow_Issues/issues/159)
+* [#141 HttpClient fails with 'No such host is known' when trying to POST to MSFT Oauth endpoint](https://github.com/WildernessLabs/Meadow_Issues/issues/141)
+* [#23 Add OS version to MeadowOS class](https://github.com/WildernessLabs/Meadow_Issues/issues/23)
+* [#121 --Download causes an exception when executed in the Firmware directory on Windows](https://github.com/WildernessLabs/Meadow_Issues/issues/121)
+* [#122 Cosmetic: Delete the firmware zip files after downloading](https://github.com/WildernessLabs/Meadow_Issues/issues/122)
+* [#128 Meadow_Performance_Benchmarks app won't run](https://github.com/WildernessLabs/Meadow_Issues/issues/128)
+* [#163 IByteCommunications has no WriteRegister method that takes a Span<byte>](https://github.com/WildernessLabs/Meadow_Issues/issues/163)
 
 # b5.2
 
