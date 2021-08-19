@@ -40,8 +40,9 @@ Device.WiFiAdapter
 Once the `WiFiAdapter` has been initialized, you can connect to a network by calling the `Connect` method and passing in the SSID (network name), and password:
 
 ```csharp
-if (Device.WiFiAdapter.Connect("SSID", "Pass").ConnectionStatus != ConnectionStatus.Success) {
-    throw new Exception("Cannot connect to network, applicaiton halted.");
+if (Device.WiFiAdapter.Connect("SSID", "Pass").Result.ConnectionStatus != ConnectionStatus.Success)
+{
+    throw new Exception("Cannot connect to network, application halted.");
 }
 ```
 
