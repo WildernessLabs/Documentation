@@ -77,20 +77,20 @@ public class MeadowApp : App<F7Micro, MeadowApp>
             Thread.Sleep(1000);
 
             Console.WriteLine("Turning them on using Percentage...");
-            while (percentage <= 1)
+            while (percentage < 1)
             {
-                percentage += 0.01f;
-                pwmLedBarGraph.Percentage = Math.Min(1.0f, percentage);
+                percentage += 0.01m;
+                pwmLedBarGraph.Percentage = (float) Math.Min(1.0m, percentage);
                 Thread.Sleep(100);
             }
 
             Thread.Sleep(1000);
 
             Console.WriteLine("Turning them off using Percentage...");
-            while (percentage >= 0)
+            while (percentage > 0)
             {
-                percentage -= 0.01f;
-                pwmLedBarGraph.Percentage = Math.Max(0.0f, percentage);
+                percentage -= 0.01m;
+                pwmLedBarGraph.Percentage = (float)Math.Max(0.0m, percentage);
                 Thread.Sleep(100);
             }
 
@@ -98,6 +98,13 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
             Console.WriteLine("Bar blinking on and off...");
             pwmLedBarGraph.StartBlink();
+            Thread.Sleep(3000);
+            pwmLedBarGraph.Stop();
+
+            Thread.Sleep(1000);
+
+            Console.WriteLine("Bar blinking with high and low brightness...");
+            pwmLedBarGraph.StartBlink(500, 500, 1f, 0.25f);
             Thread.Sleep(3000);
             pwmLedBarGraph.Stop();
 

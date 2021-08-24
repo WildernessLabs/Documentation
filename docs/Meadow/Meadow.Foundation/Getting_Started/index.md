@@ -56,4 +56,4 @@ That's it, and you're up and running using Meadow.Foundation!
 
 Next up, check out how to work with sensors; which comprise a huge portion of the Meadow.Foundation [peripheral library](/Meadow/Meadow.Foundation/Peripherals).
 
-## [Next - Working with Sensors](/Meadow/Meadow.Foundation/Working_w_Sensors)
+## [Next - Working with Sensors](/Meadow/Meadow.Foundation/Working_with_Sensors/)

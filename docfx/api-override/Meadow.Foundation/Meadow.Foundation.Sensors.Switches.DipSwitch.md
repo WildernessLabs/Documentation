@@ -17,22 +17,31 @@ remarks: *content
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
 {
-    public void App()
-    {
-        var dipSwitch = new DipSwitch(IDigitalPin[] {
-            Device.Pins.D05, Device.Pins.D06, 
-            Device.Pins.D07, Device.Pins.D08, 
-            Device.Pins.D09, Device.Pins.D10, 
-            Device.Pins.D11, Device.Pins.D12,  },
-            CircuitTerminationType.CommonGround);
+    protected DipSwitch dipSwitch;
 
-        dipSwitch.Changed += (object s, ArrayEventArgs e) =>
+    public MeadowApp()
+    {
+        Console.WriteLine("Initializing...");
+
+        IDigitalInputPort[] ports =
         {
-            Debug.Print("Switch " + e.ItemIndex + " changed to " 
-                + (((ISwitch)e.Item).IsOn ? "on" : "off"));
+            Device.CreateDigitalInputPort(Device.Pins.D06, InterruptMode.EdgeRising, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D07, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D08, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D09, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D10, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D11, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D12, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
+            Device.CreateDigitalInputPort(Device.Pins.D13, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown),
         };
 
-        Thread.Sleep(Timeout.Infinite);
+        dipSwitch = new DipSwitch(ports);
+        dipSwitch.Changed += (s,e) =>
+        {
+            Console.WriteLine("Switch " + e.ItemIndex + " changed to " + (((ISwitch)e.Item).IsOn ? "on" : "off"));
+        };
+
+        Console.WriteLine("DipSwitch...");
     }
 }
 ```

@@ -1,128 +1,136 @@
 ---
 layout: Meadow
 title: Meadow.CLI
-subtitle: Command Line Interface for Meadow
+subtitle: Command-Line-Interface for Meadow
 ---
 
-The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with the board and perform functions via a terminal window.
+The Meadow Command-Line-Interface (`Meadow.CLI`) provides a way to interact with the board and perform functions via a terminal/command-line window. 
 
-The Meadow.CLI tool supports device and file management including file transfers, and MCU reset.
+The Meadow.CLI tool supports deployment workflows as well as device and file management including file transfers, and MCU reset.
 
-To run Meadow.CLI on Windows, open a command window and run `Meadow.CLI.exe`. On macOS, call **mono Meadow.CLI.exe** to execute it via mono.
+In addition to being able to be used from a terminal window, the `Meadow.CLI.Core` library can also be used programmatically, within a .NET application. In fact, the IDE extensions use that directly. You can find the source [here](https://github.com/wildernesslabs/Meadow.CLI).
 
-You can download the Meadow.CLI executable from the [downloads page](/Meadow/Getting_Started/Downloads/).
+## Installation and Updating
 
-## Enumerating Options
-
-To see the options, run the application with the `--help` arg. Some options exist that are of little or no use to the C# developer. This have not been include in the following list.
-
-## Running Commands
-
-File and device commands require you to specify the serial port. You can determine the serial port name in Windows by viewing the Device Manager, under the **Ports (COM & LPT)** node.
-
-On Mac and Linux, the serial port will show up in the **/dev** folder, generally with the prefix **tty.usb**. You can likely find the serial port name by running the command:
+`Meadow.CLI` can be installed via the `dotnet` tool from a nuget package at the terminal:
 
 ```bash
-ls /dev/tty.usb*
+dotnet tool install WildernessLabs.Meadow.CLI --global
 ```
 
-Note: The serial port can be specified with either `--Serial Port [NameOfSerialPort]` or simply `-s [NameOfSerialPort]`.
-
-Note: Meadow.CLI automatically caches the serial port name. Once you've sent a command using the `--SerialPort` parameter, you can omit in future calls.
-
-## Useful commands
-
-### File transfers
-
-Writes a file into the Meadow's flash file system.
+To update, simply change the `install` keyword to `update`:
 
 ```bash
-Meadow.CLI.exe --WriteFile file[,file,...] [targetFileName[,targetFileName,...]] --SerialPort [NameOfSerialPort]
+dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
 
-### List files in flash file system
+## Executing Commands
 
-Lists all the files in the flash file system.
+Once installed, Meadow.CLI is accessble from a terminal prompt via the `meadow` command, and command arguments are passed via a fluent syntax, for instance, the following command will download the latest Meadow.OS:
 
 ```bash
-Meadow.CLI.exe --ListFiles --SerialPort [NameOfSerialPort]
+meadow download os
 ```
 
-### List files and CRC checksum in flash file system
+## Enumerating Commands & Help
 
-The command lists the same files as `--ListFiles` but includes the CRC checksum. Because this command must separately read each file, this command takes longer to execute than `--ListFiles`
+This guide covers a few of the most common commands, but there are many more to explore. For a complete list of commands, execute the following from a terminal window:
 
 ```bash
-Meadow.CLI.exe --ListFilesAndCrcs --SerialPort [NameOfSerialPort]
+meadow -h
 ```
 
-### Delete a File
-
-Deletes one file from the flash file system.
+Additionally, you can get additional help information for any given command by passing `-h` as option to that command. For instance, the following will provide guidance on the `listen` command:
 
 ```bash
-Meadow.CLI.exe --DeleteFile --TargetFileName [nameOfFile] --SerialPort [NameOfSerialPort]
+meadow listen -h
 ```
+
+## Working with Ports
+
+When a Meadow device is hooked up to a host computer, it exposes it communicates via a serial port (e.g. `COM3` on Windows or `UART3` on macOS/Linux) over USB. If you only have one Meadow device plugged in, Meadow.CLI will attempt to locate the port and send commands via that. However, if you have multiple devices, you may need to manually specify the port.
+
+To list serial ports, execute the following:
+
+```bash
+meadow list ports
+```
+
+You can then specify the port via the `-s` option when executing commands. For example, the following command will print application output on a specific port to the terminal:
+
+```bash
+meadow listen -s /dev/tty.usbmodem336F336D30361
+```
+
+You only need to specify the port once; all subsequent commands will remember the specified port.
+
+## Common Tasks
+
+### Download the Latest Meadow.OS and Flash to the Device
+
+To download the latest Meadow.OS, execute the following:
+
+```bash
+meadow download os
+```
+
+Once it's downloaded, it can be deployed to the device by executing the following:
+
+```bash
+meadow flash os
+```
+
+### Deploy a Meadow App
+
+To deploy an app to the device, execute the following, replacing [Path] with the path to your `app.exe`:
+
+```bash
+meadow deploy app -f [Path]/app.exe
+```
+
+### Working with Files
+
+#### Listing Files on the Device
+
+To get a list of all the files on the device, execute the following:
+
+```bash
+meadow file list
+```
+
+#### Writing a File to the Device
+
+To write a file, or files, to the device execute the following, replacing [Filename] with the full path of the file to write:
+
+```bash
+meadow file write -f [Filename]
+```
+
+Multiple files can be specified with multiple `-f` parameters:
+
+```bash
+meadow file write -f [Filename1] -f [Filename2]
+```
+
+#### Deleta a File from the Device
+
+Files can also be deleted:
+
+```bash
+meadow file delete -f [Filename]
+```
+
+As with file uploading, multiple files can be specified with multiple `-f` parameters:
+
+```bash
+meadow file delete -f [Filename1] -f [Filename2]
+```
+
 
 ### Get Meadow's device information
 
-Requests the Meadows device information and including Meadow.OS version.
+To get information about the device, including OS version, execute the following:
 
 ```bash
-Meadow.CLI.exe --GetDeviceInfo --SerialPort [NameOfSerialPort]
+meadow device info
 ```
-
-### Renew file system
-
-```bash
-Meadow.CLI.exe --RenewFileSys --SerialPort [NameOfSerialPort]
-```
-
-This command recreates the files system. After invalidating the current file system, this command restarts Meadow. Once restarted Meadow recreates a new, empty flash file system. This command makes the reformatting command `--EraseFlash` unnecessary, unless confidential information needs to be erased.
-
-### Reformat the flash
-
-```bash
-Meadow.CLI.exe --EraseFlash --SerialPort [NameOfSerialPort]
-```
-
-This operation takes just over 2 minutes to complete.  It is recommended that you leave your Meadow device connected to your computer for about 3-5 minutes following the execution of this command and then reset the board. The command completely erases the flash memory device and on restart, recreates the file system.
-
-### Restart Meadow
-
-This command causes Meadow to be restarted from the Meadow.CLI.
-
-```bash
-Meadow.CLI.exe --ResetMeadow --SerialPort [NameOfSerialPort]
-```
-
-### Stop/start the installed application from running automatically
-
-```bash
-Meadow.CLI.exe --MonoDisable --SerialPort [NameOfSerialPort]
-```
-
-```bash
-Meadow.CLI.exe --MonoEnable --SerialPort [NameOfSerialPort]
-```
-
-### Read the mono run state
-
-Reports whether mono will run or not on restart.
-
-```bash
-Meadow.CLI.exe --MonoRunState --SerialPort [NameOfSerialPort]
-```
-
-## Running applications
-
-You'll typically need at least the following six files installed to the Meadow flash to run a Meadow app:
-
-1. System.dll
-2. System.Core.dll
-3. mscorlib.dll
-4. Meadow.Core.dll
-5. Meadow.Foundation.dll
-6. App.exe (your app)
-
-It's a good idea to disable mono first, copy the files, and then enable mono.

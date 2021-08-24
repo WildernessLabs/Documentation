@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor
+uid: Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |------------------|-------------|
 | Status           | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/WIP/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS)  |
-| NuGet package    | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor.svg?label=Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor" style="width: auto; height: -webkit-fill-available;" /></a> |
+| NuGet package    | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS.svg?label=Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS" style="width: auto; height: -webkit-fill-available;" /></a> |
 
 ### Code Example
 

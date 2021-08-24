@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Meadow.Foundation µGraphics Library
+title: µGraphics Library
 subtitle: Using the lightweight, MCU-optimized Meadow.Foundation µGraphics 2D drawing library with Meadow.
 ---
 
@@ -10,9 +10,9 @@ Doc Notes:
 
 -->
 
-The Meadow.Foundation µGraphics library is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on display devices. 
+The Meadow.Foundation µGraphics library, formerly known as GraphicsLibrary, is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on pixel display devices. 
 
-µGraphics includes the ability to draw many different primitives such as lines, shapes, text (using bitmap fonts), as well as bitmap images.
+µGraphics includes the ability to draw many different primitives such as lines, shapes, text (using bitmap fonts), as well as bitmap images. Note - It can also be used to display Jpegs by using the open-source `SimpleJpegDecoder` nuget package.
 
 Additionally, it implements `ITextDisplay`, so it enables any graphic display to be a canvas for use with the `TextDisplayMenu` library, easily enabling menus to be created and displayed on graphics displays.
 
@@ -23,7 +23,7 @@ To use the graphics display you:
 
 # Initializing the Graphics Library
 
-In Meadow.Foundation, every display driver manages its own buffer, since each display has different requirements in terms of display size and color depth. 
+In Meadow.Foundation, every graphics display driver manages its own buffer, since each display has different requirements in terms of display size, color depth and byte order.
 
 For this reason, an initialized display driver must be passed to the µGraphics instance during construction. For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
 
@@ -32,7 +32,7 @@ St7789 st7789;
 GraphicsLibrary canvas;
 
 // our display needs mode3
-var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
+var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode3);
 
 // new up the actual display on the SPI bus
 display = new St7789
@@ -65,7 +65,7 @@ canvas.Rotation = GraphicsLibrary.RotationType._270Degrees;
 
 The µGraphics Library utilizes the _painter’s model_. That means that as you draw onto the drawing surface, each subsequent drawing operation is applied on top of the previous. For this reason, it's useful to think of an instantiated µGraphics class as _canvas_ that you'll draw to.
 
-Unlike layers in programs like photoshop, once you have drawn something, you can’t undraw it, or remove layers. If you want to build an application like that, you either need to store a list of your draw operations and then re-draw each of the ones that you want to apply.
+Unlike layers in programs like Photoshop, once you have drawn something, you can’t undraw it, or remove layers. If you want to build an application like that, you either need to store a list of your draw operations and then re-draw each of the ones that you want to apply.
 
 ## Clearing the Canvas
 
@@ -102,6 +102,7 @@ There are a number of drawing methods available for drawing of various primitive
  * Circle
  * Rectangle
  * RoundedRectangle
+ * Path
 
 For example, the following code renders a clock face using a number of the primitives mentioned above:
 
@@ -141,7 +142,7 @@ void DrawWatchFace()
         if (i % 5 == 0)
         {
             graphics.DrawText(hour > 9? x-10 : x-5, y-5, hour.ToString(), Color.Black);
-            if (hour == 12) hour = 1; else hour++;
+            if (hour == 12) { hour = 1; } else { hour++; }
         }
     }
 
@@ -260,7 +261,6 @@ for (int i = 0; i < jpg.Length; i += 3) {
 display.Show();
 ```
 
-
 ## Drawing Text
 
 For performance and typical IoT display size reasons, µGraphics supports drawing text using bitmap fonts which define glyphs by their pixels, rather than their curves (as is done in fonts such as TrueType or OpenType). Meadow.Foundation includes a number of bitmap fonts.
@@ -268,6 +268,18 @@ For performance and typical IoT display size reasons, µGraphics supports drawin
 ```csharp
 graphics.CurrentFont = new Font12x20();
 graphics.DrawText(x: 5, y: 5, "hello, Meadow!", Color.Black);
+```
+
+### Text alignment
+
+By default, text is left aligned with the x, y coordindates specifying the top left location of the rendered text. The vertical alignment of the text can be set at draw-time by setting the `alignment` parameter of `DrawText`. Horizontal Alignment can be set to `Left`, `Center`, or `Right`. 
+
+- `Left` will render text with x, y coordinates specifying the top-left localation of the rendered text
+- `Center` will render text with x, y coordinates specifying the top-middle localation of the rendered text
+- `Right` will render text with x, y coordinates specifying the top-right localation of the rendered text
+
+```csharp
+graphics.DrawText(x: 120, y: 0, $"Hello Meadow", alignment: GraphicsLibrary.TextAlignment.Center);
 ```
 
 ### Scale Factor
@@ -278,6 +290,36 @@ To increase the size of a bitmap font, a 'ScaleFactor` can be optionally passed:
 graphics.DrawText(
     x: 10, y: 10, text: text, color: Color.Black, 
     scaleFactor: GraphicsLibrary.ScaleFactor.X2);
+```
+
+### Paths
+
+µGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GrapihcsPath` object and drawn using the `DrawPath` method.
+
+`GraphicsPath` uses the concepts of **verbs** to contol the path. It currently supports:
+* `Move` which sets the current position
+* `Line` which draws a line from the current position to a new position 
+* `Close` which closes the current path by adding a line from the last position to the first position
+
+```csharp
+var pathSin = new GraphicsPath();
+
+for (int i = 0; i < 48; i++)
+{
+    if(i == 0)
+    {
+        pathSin.MoveTo(0, 120 + (int)(Math.Sin(i * 10 * Math.PI / 180) * 100));
+        continue;
+    }
+
+    pathSin.LineTo(i * 5, 120 + (int)(Math.Sin(i * 10 * Math.PI / 180) * 100));
+}
+
+graphics.Clear();
+
+graphics.DrawPath(pathSin, Color.LawnGreen);
+
+graphics.Show();
 ```
 
 ### Implementing a Render Lock
@@ -296,7 +338,8 @@ public class DisplayController
 protected void Render()
 {
     lock (renderLock) {   // if we're already rendering, bail out.
-        if (isRendering) {
+        if (isRendering) 
+        {
             Console.WriteLine("Already in a rendering loop, bailing out.");
             return;
         }

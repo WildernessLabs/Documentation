@@ -10,9 +10,8 @@ Both the Meadow F7 development board and SMT module have WiFi networking via the
 
 Beta 4.0 introduces the first version of our networking stack for Meadow and there are a few known limitations to be aware of when using:
 
- * **SSL not supported** - Currently, only unencrypted traffic is supported via HTTP. We're working on TLS support.
  * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support. However, `UdpClient`, `TcpListener` and `TcpClient` are all working now.
- * **Network Operations are Slow** - We have lots of low-hanging fruit to pick here, so expect significant network performance upgrades once `HttpSever` is finished.
+ * **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
 
 # WiFi
 
@@ -54,12 +53,12 @@ You can also scan for WiFi networks via the `Scan()` method on the `WiFiAdapter`
 protected void ScanForAccessPoints()
 {
     Console.WriteLine("Getting list of access points.");
-    Device.WiFiAdapter.Scan();
-    if (Device.WiFiAdapter.Networks.Count > 0) {
+    ObservableCollection<WifiNetwork> networks = Device.WiFiAdapter.Scan();
+    if (networks.Count > 0) {
         Console.WriteLine("|-------------------------------------------------------------|---------|");
         Console.WriteLine("|         Network Name             | RSSI |       BSSID       | Channel |");
         Console.WriteLine("|-------------------------------------------------------------|---------|");
-        foreach (WifiNetwork accessPoint in Device.WiFiAdapter.Networks) {
+        foreach (WifiNetwork accessPoint in networks) {
             Console.WriteLine($"| {accessPoint.Ssid,-32} | {accessPoint.SignalDbStrength,4} | {accessPoint.Bssid,17} |   {accessPoint.ChannelCenterFrequency,3}   |");
         }
     } else {
@@ -99,3 +98,9 @@ using (HttpClient client = new HttpClient()) {
     var result = client.PostAsync(uri, content).Result;
 }
 ```
+
+# Antenna
+
+Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
+
+For more information on getting the curent antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).

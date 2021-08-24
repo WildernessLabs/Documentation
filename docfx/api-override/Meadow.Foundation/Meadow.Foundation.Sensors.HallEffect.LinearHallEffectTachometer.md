@@ -17,6 +17,41 @@ Hall sensors are commonly used to time the speed of wheels and shafts, such as f
 
 The following example instantiates a LinearHallEffectTachometer object, and registers the RPMsChanged event handler, and it outputs the RPMs in the output console. To trigger the event of the sensor, you can place a magnet on a rotating object like a small motor, or even a fidget spinner, and make sure that the magnet passes very close to the sensor in every rotation so it picks up the electromagnetic field and it will start measuring RPMs.
 
+### Code Example
+
+The following example prints horizontal and vertical values ranging from -1 to 1, 0 being the center position:
+
+```csharp
+public class MeadowApp : App<F7Micro, MeadowApp>
+{
+    public MeadowApp()
+    {
+        LinearHallEffectTachometer hallSensor;
+
+        public MeadowApp()
+        {
+            Console.Write("Initializing...");
+
+            hallSensor = new LinearHallEffectTachometer(
+                inputPort: Device.CreateDigitalInputPort(Device.Pins.D02, Meadow.Hardware.InterruptMode.EdgeRising, Meadow.Hardware.ResistorMode.InternalPullUp, 0, 10),
+                type: CircuitTerminationType.CommonGround,
+                numberOfMagnets: 2,
+                rpmChangeNotificationThreshold: 1);
+            hallSensor.RPMsChanged += HallSensorRPMsChanged;
+
+            Console.WriteLine("done");
+        }
+
+        void HallSensorRPMsChanged(object sender, ChangeResult<float> e)
+        {
+            Console.WriteLine($"RPM: {e.New}");
+        }
+    }
+}
+```
+
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer.svg" 

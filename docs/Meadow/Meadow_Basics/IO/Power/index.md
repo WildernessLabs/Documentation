@@ -6,8 +6,6 @@ subtitle: Power administration on the F7 Micro Development board.
 
 ## Powering the Meadow F7 Micro
 
-**NOTE: This document is a work-in-progress**
-
 The Meadow F7 Micro development board is designed such that it can be powered by supplying the appropriate voltage to either the `USB` connector, or the `5V` or `3.3V` power rails. 
 
 ### Battery Charging Circuit
@@ -101,7 +99,7 @@ The _enable_ pin (`EN`) serves as a sort of power switch for the board. By defau
 
 To create a power switch for the development board, hook the `EN` pin to a switch that sinks to `GND` (`0V`) when in the `OFF` position, as shown in the following schematic:
 
-<!-- [schematic needed - TODO] -->
+![](/Common_Files/meadow_power_enable.png)
 
 ### `5V` Power Rail (`5V`)
 
