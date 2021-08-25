@@ -56,5 +56,8 @@ subtitle: Understanding PCB layers and how they affect designs.
 
 [use a calclator. TODO: link to a general calculator. and also to JLCPCB's impedance calculator for their stackup.]
 
+* [JLCPCB Stackups](https://cart.jlcpcb.com/impedance)
+* [JLCPCB Impedance Calculator](https://cart.jlcpcb.com/impedanceCalculation)
+
 [Usually when you do controlled impedance, the PCB fabricator will supply an impedance _Coupon_ along with the PCBs. An impedance coupon is a sample board of the same stackup that has traces that can be measured to make sure the board conforms to within the specifications.]
 
