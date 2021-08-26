@@ -24,6 +24,9 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
  * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
  * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
 
+### SQLite
+Placeholder 
+
 ## Meadow.Foundation
 
 * **uGraphics cleanup** - ToDo Adrian
