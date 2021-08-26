@@ -24,6 +24,19 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
  * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
  * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
 
+## Meadow.Foundation
+
+* **uGraphics cleanup** - ToDo Adrian
+* **Standardized I2C address properties** All I2C peripherals now have a standard `DEFAULT_ADDRESS` property.
+* **Samples Cleanup** We did a top to bottom review to make sure samples are well formed, well named, and written consistently to make it easier to start working with a new peripheral driver
+
+## Documentation 
+...add notes on updated code snippets
+
+## Tooling
+CLI Updates - stability fixes, etc.
+
+
  ## Bug Fixes
 
 * [#159 Device.GetDeviceInformation() throws an error](https://github.com/WildernessLabs/Meadow_Issues/issues/159)
@@ -33,6 +46,8 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 * [#122 Cosmetic: Delete the firmware zip files after downloading](https://github.com/WildernessLabs/Meadow_Issues/issues/122)
 * [#128 Meadow_Performance_Benchmarks app won't run](https://github.com/WildernessLabs/Meadow_Issues/issues/128)
 * [#163 IByteCommunications has no WriteRegister method that takes a Span<byte>](https://github.com/WildernessLabs/Meadow_Issues/issues/163)
+* [#184 uGraphics Canvas state doesn't store pen color](https://github.com/WildernessLabs/Meadow.Foundation/issues/184)
+* [#109 For HBridgeMotor pwmFrequency can be specified - but 1600 is always used anyway](https://github.com/WildernessLabs/Meadow.Foundation/issues/109)
 
 # b5.2
 
