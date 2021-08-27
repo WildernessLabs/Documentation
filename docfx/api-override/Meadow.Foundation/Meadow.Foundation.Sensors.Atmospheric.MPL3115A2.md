@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2
 remarks: *content
 ---
 
-| MPL3115A2     |             |
-|---------------|-------------|
-| Status        | Not working |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.MPL3115A2) |
-| NuGet package | Not published |
+| Mpl3115a2 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl3115a2) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2" /></a> |
 
 The **MPL3115A2** is a barometric pressure sensor capable of reading both temperature and temperature compensated pressure reading.  This sensor includes the following features:
 
@@ -126,3 +126,4 @@ MPL3115A2 configured for polling more data reads:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Barometric.MPL3115A2/MPL3115A2.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

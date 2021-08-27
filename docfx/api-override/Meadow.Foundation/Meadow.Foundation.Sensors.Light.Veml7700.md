@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Light.Veml7700
 remarks: *content
 ---
 
-| Veml          |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Veml7700) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Veml7700/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Veml7700.svg?label=Meadow.Foundation.Sensors.Light.Veml7700" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Veml7700 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Veml7700) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Veml7700/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Veml7700.svg?label=Meadow.Foundation.Sensors.Light.Veml7700" /></a> |
 
 The TEMT6000 is an I2C ambient light sensor.
 
@@ -60,3 +60,4 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Veml7700/Veml7700_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

@@ -3,11 +3,11 @@ uid: Meadow.Foundation.FeatherWings.DotstarWing
 remarks: *content
 ---
 
-| DotstarWing   |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Peripherals/FeatherWings.DotstarWing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.DotstarWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.DotstarWing.svg?label=Meadow.Foundation.FeatherWings.DotstarWing" style="width: auto; height: -webkit-fill-available;" /></a> |
+| DotstarWing | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.DotstarWing) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.DotstarWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.DotstarWing.svg?label=Meadow.Foundation.FeatherWings.DotstarWing" /></a> |
 
 ### Code Example
 
@@ -37,5 +37,6 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.DotstarWing/Samples/FeatherWings.DotstarWing_Sample)
+
 
 

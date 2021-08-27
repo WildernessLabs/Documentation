@@ -3,11 +3,11 @@ uid: Meadow.Foundation.FeatherWings.MotorWing
 remarks: *content
 ---
 
-| MotorWing     |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Peripherals/FeatherWings.MotorWing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.MotorWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.MotorWing.svg?label=Meadow.Foundation.FeatherWings.MotorWing" style="width: auto; height: -webkit-fill-available;" /></a> |
+| MotorWing | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.MotorWing) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.MotorWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.MotorWing.svg?label=Meadow.Foundation.FeatherWings.MotorWing" /></a> |
 
 ### Code Example
 
@@ -70,4 +70,5 @@ void Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.MotorWing/Samples/FeatherWings.MotorWing_Sample)
 
-`
+
+

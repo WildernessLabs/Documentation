@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Led.FourDigitSevenSegment
 remarks: *content
 ---
 
-| FourDigitSevenSegment |             |
-|-----------------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.FourDigitSevenSegment) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.svg?label=Meadow.Foundation.Displays.Led.FourDigitSevenSegment" style="width: auto; height: -webkit-fill-available;" /></a> |
+| FourDigitSevenSegment | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.FourDigitSevenSegment) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.svg?label=Meadow.Foundation.Displays.Led.FourDigitSevenSegment" /></a> |
 
 ### Code Example
 
@@ -65,3 +65,4 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/FourDigitSevenSegment_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

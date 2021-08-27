@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Ssd1327
 remarks: *content
 ---
 
-| Yx5300           |             |
-|------------------|-------------|
-| Status           | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/WIP/Source/Meadow.Foundation.Peripherals/Displays.Ssd1327)  |
-| NuGet package    | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd1327/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd1327.svg?label=Meadow.Foundation.Displays.Ssd1327" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Ssd1327 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1327) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd1327/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd1327.svg?label=Meadow.Foundation.Displays.Ssd1327" /></a> |
 
 ### Code Example
 
@@ -54,3 +54,4 @@ To wire a Ssd1327 to your Meadow board, connect the following:
 | RESET    | D00        |
 | DC       | D01        |
 | CS       | D02        |
+

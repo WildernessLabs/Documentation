@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Leds.Apa102
 remarks: *content
 ---
 
-| Apa102       |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Peripherals/Leds.Apa102) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Leds.Apa102/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Leds.Apa102.svg?label=Meadow.Foundation.Leds.Apa102" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Apa102 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Leds.Apa102) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Leds.Apa102/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Leds.Apa102.svg?label=Meadow.Foundation.Leds.Apa102" /></a> |
 
 ### Code Example
 
@@ -52,3 +52,4 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Leds.Apa102/Apa102_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

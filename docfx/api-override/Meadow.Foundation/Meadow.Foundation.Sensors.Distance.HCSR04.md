@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Distance.Hcsr04
 remarks: *content
 ---
 
-| HC-SR04       |             |
-|---------------|-------------|
-| Status        | Not working |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04) |
-| NuGet package | Not published |
+| Hcsr04 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Hcsr04/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Hcsr04.svg?label=Meadow.Foundation.Sensors.Distance.Hcsr04" /></a> |
 
 The **HC-SR04** ultrasonic sensor uses sonar to determine distance to an object (like bats). It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package.
 
@@ -54,3 +54,4 @@ The HC-SR04 sensor is available from Sparkfun:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

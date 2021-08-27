@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Sht31D
 remarks: *content
 ---
 
-| SHT31D        |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31D/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31D.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31D" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Sht31d | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31d" /></a> |
 
 The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
@@ -131,3 +131,4 @@ The `ADR` line is tied low giving and I2C address of 0x44.  This address line ca
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

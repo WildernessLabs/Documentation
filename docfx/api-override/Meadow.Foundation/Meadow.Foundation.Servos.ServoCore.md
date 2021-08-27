@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Servos.Servo
 remarks: *content
 ---
 
-| Servo         |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.Servo.Core) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servo.svg?label=Meadow.Foundation.Servo" style="width: auto; height: -webkit-fill-available;" /> |
+| ServoCore | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.ServoCore) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Servos.ServoCore/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servos.ServoCore.svg?label=Meadow.Foundation.Servos.ServoCore" /></a> |
 
 Servos are integrated packages that usually include a DC electric motor, torque-increasing gearing, and electronics to control the motor: 
 
@@ -91,41 +91,41 @@ Servo cable colors vary by manufacture, but they're always in the same order. Th
 | 2   | VCC     | Red           | Red or Brown    | Red       |
 | 3   | Control | White         | Yellow or White | Orange    |
 
-The following example shows how to control the movements of a servo:
+### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+protected Servo servo;
+
+public MeadowApp()
 {
-    readonly IPwmPort pwm;
-    readonly Servo servo;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp() 
+    servo = new Servo(Device.CreatePwmPort(Device.Pins.D02), NamedServoConfigs.SG90);
+
+    servo.RotateTo(new Angle(0, AU.Degrees));
+
+    while (true)
     {
-        pwm = Device.CreatePwmPort(Device.Pins.D12);
-
-        servo = new Servo(pwm, NamedServoConfigs.Ideal180Servo);
-
-        TestServo();
-    }
-
-    void TestServo()
-    {
-        while(true)
+        for (int i = 0; i <= servo.Config.MaximumAngle.Degrees; i++)
         {
-            if (servo.Angle <= servo.Config.MinimumAngle)
-            {
-                Console.WriteLine($"Rotating to {servo.Config.MaximumAngle}");
-                servo.RotateTo(servo.Config.MaximumAngle);
-            }
-            else
-            {
-                Console.WriteLine($"Rotating to {servo.Config.MinimumAngle}");
-                servo.RotateTo(servo.Config.MinimumAngle);
-            }
-            Thread.Sleep(4000);
+            servo.RotateTo(new Angle(i, AU.Degrees));
+            Console.WriteLine($"Rotating to {i}");
+            Thread.Sleep(40);
         }
+        Thread.Sleep(2000);
+        for (int i = 180; i >= servo.Config.MinimumAngle.Degrees; i--)
+        {
+            servo.RotateTo(new Angle(i, AU.Degrees));
+            Console.WriteLine($"Rotating to {i}");
+            Thread.Sleep(40);
+        }
+        Thread.Sleep(2000);
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.Servo.Core/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Servos.ServoCore/Samples/Servos.ServoCore_Sample)
+
+
+

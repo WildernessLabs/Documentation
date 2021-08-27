@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Environmental.Ags01Db
 remarks: *content
 ---
 
-| Ags01Db       |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Environmental.Ags01Db) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.Ags01Db/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Environmental.Ags01Db.svg?label=Meadow.Foundation.Sensors.Environmental.Ags01Db" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Ags01Db | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Ags01Db) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.Ags01Db/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Environmental.Ags01Db.svg?label=Meadow.Foundation.Sensors.Environmental.Ags01Db" /></a> |
 
 The AGS01DB is a MEMS VOC gas sensor that commuincates over I2C. 
 
@@ -68,3 +68,4 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Environmental.Ags01Db/Ags01Db_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.ePaper.Il3897
 remarks: *content
 ---
 
-| IL3897        |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" style="width: auto; height: -webkit-fill-available;" /></a> |
+| IL3897 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper.IL3897) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper.IL3897/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.IL3897.svg?label=Meadow.Foundation.Displays.ePaper.IL3897" /></a> |
 
 The **IL3897** is a dual-color display controller for ePaper displays. Data is sent to the controller via SPI and supports full screen updates only.
 
@@ -65,3 +65,4 @@ If your display does not include any of the above pins, they can be omitted. Pas
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL3897/ePaper_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

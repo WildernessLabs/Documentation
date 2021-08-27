@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Lcd.CharacterDisplay
 remarks: *content
 ---
 
-| CharacterDisplay |             |
-|------------------|-------------|
-| Status           | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code      | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.LCD.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" style="width: auto; height: -webkit-fill-available;" /></a> |
+| CharacterDisplay | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Lcd.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" /></a> |
 
 
 The **CharacterDisplay** class represents a multiline liquid crystal character display.
@@ -123,3 +123,4 @@ void TestCharacterDisplay()
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+

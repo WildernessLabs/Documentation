@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Light.Si1145
 remarks: *content
 ---
 
-| SI1145        |             |
-|---------------|-------------|
-| Status        | Not Working |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |
-| NuGet package | Not published |
+| Si1145 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Si1145/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Si1145.svg?label=Meadow.Foundation.Sensors.Light.Si1145" /></a> |
 
 The **SI1145** is a low power infrared, ultraviolet and ambient light sensor with an I2C interface.
 
@@ -81,3 +81,4 @@ protected async Task ReadConditions()
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
