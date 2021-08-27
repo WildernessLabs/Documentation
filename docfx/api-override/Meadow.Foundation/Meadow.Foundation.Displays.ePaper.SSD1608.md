@@ -15,6 +15,37 @@ The SSD1608 is paired with a wide range of two color ePaper display sizes and re
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
+### Code Example
+
+```csharp
+public MeadowApp()
+{
+    Console.WriteLine("Initialize ...");
+ 
+    var display = new Ssd1608(device: Device,
+        spiBus: Device.CreateSpiBus(),
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        busyPin: Device.Pins.D03,
+        width: 200,
+        height: 200);
+
+    var graphics = new GraphicsLibrary(display);
+
+   graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Black);
+
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(2, 2, "SSD1608", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
+
+    graphics.Show();
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper.SSD1608/Samples/Displays.ePaper.SSD1608_Sample)
+
 ### Wiring Example
 
  To control a SSD1608 from Meadow, connect the following:

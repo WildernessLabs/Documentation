@@ -14,37 +14,40 @@ The **SSD1331** is a display controller used to drive 16bpp (RGB565) color OLED 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+
+public MeadowApp()
 {
-    Ssd1331 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp ()
-    {
-        var spiBus = Device.CreateSpiBus();
+    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        display = new Ssd1331(
-            device: Device, 
-            spiBus: spiBus,
-            chipSelectPin: null,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            width: 128, height: 128);
+    Console.WriteLine("Create display driver instance");
 
-        graphics = new GraphicsLibrary(display);
+    var display = new St7796s
+    (
+        device: Device, 
+        spiBus: spiBus,
+        resetPin: Device.Pins.D00,
+SelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        width: 320, height: 480
+    );
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    graphics = new GraphicsLibrary(display);
+
+    graphics.CurrentFont = new Font8x8();
+    graphics.Clear();
+    graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
+    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);            
+    graphics.DrawText(5, 5, "Meadow F7");
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ssd1331/Samples/Displays.TftSpi.Ssd1331_Sample)
 
 ### Wiring Example
 

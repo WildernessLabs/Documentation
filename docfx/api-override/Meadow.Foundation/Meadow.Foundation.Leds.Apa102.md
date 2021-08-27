@@ -12,51 +12,30 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Apa102 apa102;
+int numberOfLeds = 8;
+float maxBrightness = 0.25f;
+
+public MeadowApp()
 {
-    Apa102 apa102;
+    Console.WriteLine("Initialize hardware...");
+    apa102 = new Apa102(Device.CreateSpiBus(48000), numberOfLeds, Apa102.PixelOrder.BGR);
 
-    public MeadowApp()
-    {
-        Initialize();
-        Run();
-    }
+    apa102.Clear();
 
-    void Initialize()
-    {
-        Console.WriteLine("Initialize hardware...");
-        ISpiBus spiBus = Device.CreateSpiBus();
+    apa102.SetLed(index: 0, color: Color.Red, brightness: 0.5f);
+    apa102.SetLed(index: 1, color: Color.Purple, brightness: 0.6f);
+    apa102.SetLed(index: 2, color: Color.Blue, brightness: 0.7f);
+    apa102.SetLed(index: 2, color: Color.Green, brightness: 0.8f);
+    apa102.SetLed(index: 2, color: Color.Yellow, brightness: 0.9f);
+    apa102.SetLed(index: 2, color: Color.Orange, brightness: 1.0f);
 
-        //Not used but is need to create the SPI Peripheral
-        IDigitalOutputPort spiPeriphChipSelect = Device.CreateDigitalOutputPort(Device.Pins.D04);
-        apa102 = new Apa102(spiBus, spiPeriphChipSelect, 10, Apa102.PixelOrder.BGR);
-    }
-
-    void Run()
-    {
-        Console.WriteLine("Run...");
-        apa102.Clear();
-        apa102.Show();
-
-        Thread.Sleep(2000);
-        apa102.SetLed(0, Color.Red, 0.5f);
-        apa102.SetLed(1, Color.White);
-        apa102.SetLed(2, Color.Blue);
-
-        Thread.Sleep(2000);
-        apa102.Show();
-
-        Thread.Sleep(2000);
-        apa102.AutoWrite = true;
-        apa102.SetLed(0, Color.Green);
-        apa102.SetLed(1, Color.Yellow);
-        apa102.SetLed(2, Color.Pink);
-
-        Thread.Sleep(5000);
-        apa102.Clear();
-    }
+    apa102.Show();
 }
+
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Leds.Apa102/Samples/Leds.Apa102_Sample)
 
 ### Wiring Example
 

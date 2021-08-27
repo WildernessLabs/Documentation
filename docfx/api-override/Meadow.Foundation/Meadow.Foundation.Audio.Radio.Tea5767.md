@@ -24,38 +24,30 @@ You can get a TEA5767 module (with antenna included) from the following supplier
 
 ### Code Example
 
-The following example shows how to initialize a TEA5767 radio and seek radio stations:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Tea5767 radio;
+    Console.WriteLine("Initializing...");
+    
+    var radio = new Tea5767(Device.CreateI2cBus());
 
-    public MeadowApp()
+    //scan through avaliable stations
+    for (int i = 0; i < 8; i++)
     {
-        radio = new Tea5767(Device.CreateI2cBus());
+        Thread.Sleep(1000);
 
-        Scan();
+        radio.SearchNextSilent();
+
+        Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
     }
 
-    void Scan() 
-    {
-        Console.WriteLine("TestTEA5767...");
-
-        for (int i = 0; i < 8; i++)
-        {
-            Thread.Sleep(1000);
-
-            radio.SearchNextSilent();
-
-            Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
-        }
-
-        radio.SelectFrequency(94.5f);
-    }
+    //set a known station
+    radio.SelectFrequency(94.5f);
 }
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.Tea5767_Sample)
 
 ### Wiring Example
 

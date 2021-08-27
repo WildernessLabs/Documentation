@@ -14,57 +14,52 @@ The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    protected Ds1307 ds1307;
+    Console.WriteLine("Initializing...");
 
-    public DS1307App()
+    var rtc = new Ds1307(Device.CreateI2cBus());
+
+    var dateTime = new DateTime();
+    var running = rtc.IsRunning;
+
+    Console.WriteLine($"{(running ? "is running" : "is not running")}");
+
+    if (!running)
     {
-        ds1307 = new Ds1307(Device.CreateI2cBus());
-
-        if (ds1307.IsRunning == false)
-        {
-            Console.WriteLine("Starting RTC...");
-            dSs1307.IsRunning = true;
-        }
-
-        while (true)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                var now = ds1307.GetTime();
-                Console.WriteLine($"Current time: {now.ToString("MM/dd/yy HH:mm:ss")}");
-                Thread.Sleep(1000);
-            }
-
-            var rand = new Random();
-
-            if (now.Year < 2019)
-            {
-                now = DateTime.Now;
-            }
-            else
-            {
-                now = now.AddSeconds(rand.Next(1, 30));
-            }
-
-            var data = new byte[56];
-            for (int i = 0; i < 56; i++)
-            {
-                data[i] = (byte)rand.Next(256);
-            }
-
-            Console.WriteLine($"Writing to RTC RAM   : {BitConverter.ToString(data)}");
-            ds1307.WriteRAM(0, data);
-            Console.Write($"Reading from RTC RAM : ");
-            data = ds1307.ReadRAM(0, 56);
-            Console.WriteLine(BitConverter.ToString(data));
-        }
+        Console.WriteLine(" Starting RTC...");
+        rtc.IsRunning = true;
     }
+  
+    dateTime = rtc.GetTime();
+    Console.WriteLine($" RTC current time is: {dateTime.ToString("MM/dd/yy HH:mm:ss")}");
+
+    Console.WriteLine($" Setting RTC to : {dateTime.ToString("MM/dd/yy HH:mm:ss")}");
+    dateTime = new DateTime(2030, 2, 15);
+    rtc.SetTime(dateTime);
+
+    dateTime = rtc.GetTime();
+    Console.WriteLine($" RTC current time is: {dateTime.ToString("MM/dd/yy HH:mm:ss")}");
+
+    Random rand = new Random();
+
+    var data = new byte[56];
+
+    for (int i = 0; i < 56; i++)
+    {
+        data[i] = (byte)rand.Next(256);
+    }
+
+    Console.WriteLine($" Writing to RTC RAM   : {BitConverter.ToString(data)}");
+    rtc.WriteRAM(0, data);
+    Console.Write($" Reading from RTC RAM : ");
+    data = rtc.ReadRAM(0, 56);
+    Console.WriteLine(BitConverter.ToString(data));
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS1307/Samples/)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307/Samples/RTCs.Ds1307_Sample)
 
 ### Circuit Example
 

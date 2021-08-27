@@ -14,35 +14,57 @@ The **SHT31D** is a temperature and humidity sensor with a built in I2C interfac
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Sht31d sensor;
+
+public MeadowApp()
 {
-    SHT31D sensor;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
+    sensor = new Sht31d(Device.CreateI2cBus());
+
+    var consumer = Sht31d.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result => 
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old) 
+            { 
+                return (
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
+                &&
+                (result.New.Humidity.Value.Percent - old.Humidity.Value.Percent) > 0.05
+                ); 
+            }
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
+
+    sensor.Updated += (sender, result) => 
     {
-        sensor = new SHT31D(Device.CreateI2cBus());
-        sensor.Updated += Sensor_Updated;
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Console.WriteLine($"  Relative Humidity: {result.New.Humidity:N2}%");
+    };
+    
+    ReadConditions().Wait();
 
-        sensor.StartUpdating();
-    }
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+}
 
-    void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
-    {
-        Console.WriteLine($"Temp: {e.New.Temperature}, Humidity: {e.New.Humidity}");
-    }
+async Task ReadConditions()
+{
+    var conditions = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
+    Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
 }
 
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Samples/) 
-
-## Purchasing
-
-The SHT31D temperature and humidity is available on a breakout board from Adafruit:
-
-* [SHT31D Temperature and Humidity Sensor](https://www.adafruit.com/product/2857)
-
-The SHT31D can operate in interrupt or polling mode.  The default mode is interrupt mode.
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d/Samples/Sensors.Atmospheric.Sht31d_Sample)
 
 #### Interrupt Mode
 

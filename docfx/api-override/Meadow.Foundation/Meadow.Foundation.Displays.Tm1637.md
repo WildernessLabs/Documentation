@@ -17,34 +17,28 @@ The **TM1637** is a led driver and keyboard scan interface. However, this chip i
 
 ### Code Example
 
-The following example shows how to initialize a TEA5767 and display an array of characters:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Tm1637 display;
+
+public MeadowApp()
 {
-    Tm1637 display;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp()
-    {
-        display = new Tm1637(Device, Device.Pins.D02, Device.Pins.D01);
-        display.Brightness = 7;
-        display.ScreenOn = true;
-        display.Clear();
+    display = new Tm1637(Device, Device.Pins.D02, Device.Pins.D01);
 
-        var chars = new Character[] 
-        { 
-            Character.A, 
-            Character.B, 
-            Character.C, 
-            Character.D 
-        };
+    display.Brightness = 7;
+    display.ScreenOn = true;
 
-        display.Show(chars);
-    }
+    display.Clear();
+
+    var chars = new Character[] { Character.A, Character.B, Character.C, Character.D };
+
+    display.Show(chars);
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637/Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637/Samples/Displays.Tm1637_Sample)
 
 ### Wiring Example
 

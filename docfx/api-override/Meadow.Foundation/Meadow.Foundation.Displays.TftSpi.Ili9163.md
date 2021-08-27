@@ -23,37 +23,41 @@ You can get ILI9163 displays from the following suppliers:
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+
+public MeadowApp()
 {
-    Ili9163 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp ()
-    {
-        var spiBus = Device.CreateSpiBus();
+    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        display = new Ili9163(
-            device: Device, 
-            spiBus: spiBus,
-            chipSelectPin: null,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            width: 128, height: 160);
+    Console.WriteLine("Create display driver instance");
 
-        graphics = new GraphicsLibrary(display);
+    var display = new Ili9163
+    (
+        device: Device, 
+        spiBus: spiBus,
+        resetPin: Device.Pins.D00,
+SelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        width: 128, height: 160
+    );
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    graphics = new GraphicsLibrary(display);
+
+    graphics.CurrentFont = new Font8x8();
+    graphics.Clear();
+    graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
+    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
+    graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
+    graphics.DrawText(5, 5, "Meadow F7");
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ili9163/Samples/Displays.TftSpi.Ili9163_Sample)
 
 ### Wiring Example
 

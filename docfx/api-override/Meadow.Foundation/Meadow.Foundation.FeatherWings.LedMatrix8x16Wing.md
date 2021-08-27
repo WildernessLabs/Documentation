@@ -12,61 +12,27 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+LedMatrix8x16Wing ledMatrixWing;
+GraphicsLibrary graphics;
+
+public MeadowApp()
 {
-    LedMatrix8x16Wing ledMatrixWing;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ..");
 
-    public MeadowApp()
-    {
-        Initialize();
+    ledMatrixWing = new LedMatrix8x16Wing(Device.CreateI2cBus());
+    ledMatrixWing.Clear();
 
-        PixelWalk();
+    graphics = new GraphicsLibrary(ledMatrixWing);
+    graphics.CurrentFont = new Font4x8();
 
-        FourCorners();
-       
-        Thread.Sleep(2000);
-
-        graphics.Rotation = GraphicsLibrary.RotationType._90Degrees;
-        graphics.Clear();
-        graphics.DrawText(0, 0, "M F7");
-        graphics.Show();
-    }
-
-    void Initialize()
-    {
-        Console.WriteLine("Initialize hardware...");
-
-        ledMatrixWing = new LedMatrix8x16Wing(Device.CreateI2cBus());
-        ledMatrixWing.Clear();
-   
-        graphics = new GraphicsLibrary(ledMatrixWing);
-        graphics.CurrentFont = new Font4x8();
-    }
-
-    void PixelWalk()
-    {
-        for (byte j = 0; j < 16; j++)
-        {
-            for (byte i = 0; i < 8; i++)
-            {
-                ledMatrixWing.Clear();
-                ledMatrixWing.DrawPixel(i, j);
-                ledMatrixWing.Show();
-                Thread.Sleep(50);
-            }
-        }
-    }
-
-    void FourCorners()
-    {
-        ledMatrixWing.Clear();
-        ledMatrixWing.DrawPixel(0, 0);
-        ledMatrixWing.DrawPixel(7, 0);
-        ledMatrixWing.DrawPixel(0, 7);
-        ledMatrixWing.DrawPixel(7, 7);
-        ledMatrixWing.Show();
-    }
+    graphics.Rotation = GraphicsLibrary.RotationType._90Degrees;
+    graphics.Clear();
+    graphics.DrawText(0, 0, "M F7");
+    graphics.Show();
 }
+
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.LedMatrix8x16Wing/Samples/FeatherWings.LedMatrix8x16Wing_Sample)
+
 

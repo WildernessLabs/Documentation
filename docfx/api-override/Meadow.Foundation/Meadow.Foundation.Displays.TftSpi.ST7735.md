@@ -16,37 +16,41 @@ The Meadow.Foundation ST7735 driver currently only supports 16bpp RGB565.
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    St7735 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp ()
-    {
-        var spiBus = Device.CreateSpiBus();
+    var spiBus = Device.CreateSpiBus(12000);
 
-        display = new St7735(
-            device: Device, 
-            spiBus: spiBus,
-            chipSelectPin: null,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            width: 128, height: 160);
+    //note - you may need to adjust the DisplayType for your specific St7735
+    var display = new St7735(
+        device: Device, 
+        spiBus: Device.CreateSpiBus(),
+      chipSelectPin: Device.Pins.D02,
+      dcPin: Device.Pins.D01,
+      resetPin: Device.Pins.D00,
+      width: 128, height: 160, St7735.DisplayType.ST7735R);
 
-        graphics = new GraphicsLibrary(display);
+    var graphics = new GraphicsLibrary(display);
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    graphics.Clear();
+
+    graphics.DrawCircle(60, 60, 20, Color.Purple);
+    graphics.DrawRectangle(10, 10, 30, 60, Color.Red);
+    graphics.DrawTriangle(20, 20, 10, 70, 60, 60, Color.Green);
+
+    graphics.DrawCircle(90, 60, 20, Color.Cyan, true);
+    graphics.DrawRectangle(100, 100, 30, 10, Color.Yellow, true);
+    graphics.DrawTriangle(120, 20, 110, 70, 160, 60, Color.Pink, true);
+
+    graphics.DrawLine(10, 120, 110, 130, Color.SlateGray);
+
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.ST7735/Samples/Displays.TftSpi.ST7735_Sample)
 
 ### Wiring Example
 

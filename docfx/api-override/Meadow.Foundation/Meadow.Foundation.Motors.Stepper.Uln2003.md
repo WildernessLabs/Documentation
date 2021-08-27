@@ -14,38 +14,34 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Uln2003 stepperController;
+    var stepperController = new Uln2003(
+        device: Device, 
+        pin1: Device.Pins.D01, 
+        pin2: Device.Pins.D02, 
+        pin3: Device.Pins.D03, 
+        pin4: Device.Pins.D04);
 
-    public MeadowApp()
+    stepperController.Step(1024);
+
+    for (int i = 0; i < 100; i++)
     {
-        stepperController = new Uln2003(
-                device: Device, 
-                pin1: Device.Pins.D01, 
-                pin2: Device.Pins.D02, 
-                pin3: Device.Pins.D03, 
-                pin4: Device.Pins.D04);
-
-        stepperController.Step(1024);
-
-        for (int i = 0; i < 100; i++)
-        {
-            Console.WriteLine($"Step forward {i}");
-            stepperController.Step(50);
-            Thread.Sleep(10);
-        }
-
-        for (int i = 0; i < 100; i++)
-        {
-            Console.WriteLine($"Step backwards {i}");
-            stepperController.Step(-50);
-            Thread.Sleep(10);
-        }
+        Console.WriteLine($"Step forward {i}");
+        stepperController.Step(50);
+        Thread.Sleep(10);
     }
+
+    for (int i = 0; i < 100; i++)
+    {
+        Console.WriteLine($"Step backwards {i}");
+        stepperController.Step(-50);
+        Thread.Sleep(10);
+    } 
 }
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Samples/) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Samples/Motors.Stepper.Uln2003_Sample)
 
 ### Wiring Example
 

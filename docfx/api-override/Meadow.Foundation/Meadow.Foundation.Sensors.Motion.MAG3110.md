@@ -13,32 +13,57 @@ The **MAG3110** is a three axis magnetometer with an I2C interface. The magnetom
 
 ### Code Example
 
-This library supports interrupts when the sensor completes a reading:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    public MeadowApp()
-    {
-        Console.WriteLine("MAG3110 Test Application");
-        Mag3110 mag3110 = new Mag3110(0x0e, 400, Pins.GPIO_PIN_D8);
-        mag3110.OnReadingComplete += mag3110_OnReadingComplete;
-        mag3110.InterruptsEnabled = true;
-        mag3110.Standby = false;
-        Thread.Sleep(Timeout.Infinite);
-    }
+Mag3110 sensor;
 
-    static void mag3110_OnReadingComplete(Mag3110.SensorReading sensorReading)
-    {
-        Console.WriteLine(
-            "Reading: x = " + sensorReading.X.ToString() + 
-            ", y = " + sensorReading.Y.ToString() + 
-            ", z = " + sensorReading.Z.ToString());
-    }
+public MeadowApp()
+{
+    Console.WriteLine("Initializing");
+
+    sensor = new Mag3110(Device.CreateI2cBus());
+
+    // classical .NET events can  be used
+    sensor.Updated += (sender, result) => {
+        Console.WriteLine($"Magnetic Field: [X:{result.New.MagneticField3D?.X.MicroTesla:N2}," +
+            $"Y:{result.New.MagneticField3D?.Y.MicroTesla:N2}," +
+            $"Z:{result.New.MagneticField3D?.Z.MicroTesla:N2} (MicroTeslas)]");
+
+        Console.WriteLine($"Temp: {result.New.Temperature?.Celsius:N2}C");
+    };
+
+    // Example that uses an IObersvable subscription to only be notified when the filter is satisfied
+    var consumer = Mag3110.CreateObserver(
+        handler: result => Console.WriteLine($"Observer: [x] changed by threshold; new [x]: X:{result.New.MagneticField3D?.X.MicroTesla:N2}, old: X:{result.Old?.MagneticField3D?.X.MicroTesla:N2}"),
+        // only notify if there's a greater than 1 micro tesla on the Y axis
+        filter: result => {
+            if (result.Old is { } old) { //c# 8 pattern match syntax. checks for !null and assigns var.
+                return ((result.New.MagneticField3D - old.MagneticField3D)?.Y > new MagneticField(1, MU.MicroTesla));
+            }
+            return false;
+        });
+    sensor.Subscribe(consumer);
+
+    //==== one-off read
+    ReadConditions().Wait();
+
+    // start updating
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
 }
+
+protected async Task ReadConditions()
+{
+    var result = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"Mangetic field: [X:{result.MagneticField3D?.X.MicroTesla:N2}," +
+        $"Y:{result.MagneticField3D?.Y.MicroTesla:N2}," +
+        $"Z:{result.MagneticField3D?.Z.MicroTesla:N2} (microteslas)]");
+
+    Console.WriteLine($"Temp: {result.Temperature?.Celsius:N2}C");
+}
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Samples/Sensors.Motion.Mag3110_Sample)
 
 ### Polling Mode
 

@@ -12,36 +12,29 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    AdafruitMPRLSSensor PressureSensor;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
-    {
-        Initialize();
-    }
+    var PressureSensor = new AdafruitMPRLS(Device.CreateI2cBus());
 
-    void Initialize()
-    {
-        PressureSensor = new AdafruitMPRLSSensor(Device.CreateI2cBus());
+    PressureSensor.StartUpdating(TimeSpan.FromSeconds(1));
 
-        PressureSensor.StartUpdating();
-
-        PressureSensor.Updated += PressureSensor_Updated;
-    }
-
-    void PressureSensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
-    {
-        Console.WriteLine($"new pressure PSI: {e.New.Pressure}, old pressure PSI: {e.Old.Pressure}");
-
-        Console.WriteLine($"pressure in hPA: {PressureSensor.CalculatedhPAMeasurement}");
-
-        Console.WriteLine($"raw sensor value: {PressureSensor.RawPSIMeasurement}");
-    }
+    PressureSensor.Updated += PressureSensor_Updated;
 }
+
+void PressureSensor_Updated(object sender, IChangeResult<(Pressure? Pressure, Pressure? RawPsiMeasurement)> result)
+{
+    Console.WriteLine($"New pressure PSI: {result.New.Pressure?.Psi}, Old pressure PSI: {result.Old?.Pressure?.Psi}");
+
+    Console.WriteLine($"Pressure in Pascal: {result.New.Pressure?.Pascal}");
+
+    Console.WriteLine($"Raw sensor value: {result.New.RawPsiMeasurement?.Psi}");
+}
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/WIP/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS/Samples/AdafruitMPRLSSensor_Sample) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS/Samples/Sensors.Atmospheric.AdafruitMPRLS_Sample)
 
 ### Wiring Example
 

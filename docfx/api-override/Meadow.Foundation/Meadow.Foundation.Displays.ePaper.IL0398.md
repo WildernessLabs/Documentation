@@ -15,6 +15,38 @@ The IL0398 is commonly paired with 4.2" 400x300 tri-color ePaper display.
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
+### Code Example
+
+```csharp
+public MeadowApp()
+{
+    Console.WriteLine("Initialize ...");
+ 
+    var display = new Il0398(device: Device,
+        spiBus: Device.CreateSpiBus(),
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        busyPin: Device.Pins.D03,
+        width: 300,
+        height: 400);
+
+    var graphics = new GraphicsLibrary(display);
+
+    //any color but black will show the ePaper alternate color 
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
+
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(2, 2, "IL0398", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
+
+    graphics.Show();
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper.IL0398/Samples/Displays.ePaper.IL0398_Sample)
+
 ### Wiring Example
 
  To control a IL0398 from Meadow, connect the following:

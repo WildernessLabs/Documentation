@@ -14,54 +14,52 @@ The BMP180 is a high-precision, low-power barometric pressure sensor. The BMP180
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Bmp180 sensor;
+
+public MeadowApp()
 {
-    Bmp180 bmp180;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
-    {
-        Console.WriteLine("Initializing...");
+    sensor = new Bmp180(Device.CreateI2cBus());
 
-        // configure our BME280 on the I2C Bus
-        var i2c = Device.CreateI2cBus();
-        bmp180 = new Bmp180(i2c);
-
-        // Example that uses an IObersvable subscription to only be notified
-        // when the temperature changes by at least a degree, and humidty by 5%.
-        // (blowing hot breath on the sensor should trigger)
-        bmp180.Subscribe(new FilterableObserver<AtmosphericConditionChangeResult, AtmosphericConditions>(
-            h => {
-                Console.WriteLine($"Temp and pressure changed by threshold; new temp: {h.New.Temperature}, old: {h.Old.Temperature}");
-            },
-            e => {
+    var consumer = Bmp180.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result => 
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old) 
+            { 
                 return (
-                    (Math.Abs(e.Delta.Temperature) > 1)
-                    &&
-                    (Math.Abs(e.Delta.Pressure) > 5)
-                    );
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5); 
             }
-            ));
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
 
-        // classical .NET events can also be used:
-        bmp180.Updated += (object sender, AtmosphericConditionChangeResult e) => {
-            Console.WriteLine($"Temperature: {e.New.Temperature}°C, Pressure: {e.New.Pressure}hPa");
-        };
-
-        // get an initial reading
-        ReadConditions().Wait();
-
-        // start updating continuously
-        bmp180.StartUpdating();
-    }
-
-    protected async Task ReadConditions()
+    sensor.Updated += (sender, result) => 
     {
-        var conditions = await bmp180.Read();
-        Console.WriteLine($"Temperature: {conditions.Temperature}°C, Pressure: {conditions.Pressure}hPa");
-    }
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Console.WriteLine($"  Pressure: {result.New.Pressure?.Bar:N2}bar");
+    };
+    
+    ReadConditions().Wait();
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
+
+async Task ReadConditions()
+{
+    var conditions = await sensor.Read();
+    Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
+}
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180/Samples/Sensors.Atmospheric.Bmp180_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180/Samples/Sensors.Atmospheric.Bmp180_Sample)
 
 ### Wiring Example
 

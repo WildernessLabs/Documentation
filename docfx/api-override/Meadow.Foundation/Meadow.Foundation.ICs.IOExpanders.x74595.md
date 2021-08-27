@@ -18,38 +18,49 @@ Note that when using this chip, care should be taken to ensure that the total ou
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+x74595 shiftRegister;
+
+public MeadowApp()
 {
-    x74595 shiftRegister;
+    Console.WriteLine("Initialize hardware...");
 
-    public MeadowApp()
+    shiftRegister = new x74595(Device, Device.CreateSpiBus(), Device.Pins.D00, 8);
+
+    shiftRegister.Clear(true);
+
+    Console.WriteLine("Set Pin 3 to high");
+    //turn on pin 3
+    shiftRegister.WriteToPin(shiftRegister.Pins.GP3, true);
+
+    Console.WriteLine("Set Pin 4 to high");
+
+    //get the port for Pin4
+    var port4 = shiftRegister.CreateDigitalOutputPort(shiftRegister.Pins.GP4, true, Meadow.Hardware.OutputType.OpenDrain);
+
+    Console.WriteLine("Toggle pin 4");
+
+    Thread.Sleep(1000);
+    port4.State = false;
+    Thread.Sleep(1000);
+    port4.State = true;
+    Thread.Sleep(1000);
+
+    Console.WriteLine("Raise all pins to high");
+    while (true)
     {
-        shiftRegister =new x74595(Device, Device.CreateSpiBus(), Device.Pins.D03, 8);
+        shiftRegister.Clear();
 
-        shiftRegister.Clear(true);
-
-        Console.WriteLine("Set Pin 3 to high");
-        shiftRegister.WriteToPin(shiftRegister.Pins.GP3, true);
-
-        TestX74595();
-    }
-
-    void TestX74595()
-    {
-        while (true)
+        foreach (var pin in shiftRegister.Pins.AllPins)
         {
-            shiftRegister.Clear();
-            foreach (var pin in shiftRegister.Pins.AllPins)
-            {
-                shiftRegister.WriteToPin(pin, true);
-                Thread.Sleep(50);
-            }
+            shiftRegister.WriteToPin(pin, true);
+            Thread.Sleep(50);
         }
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595/Samples/ICs.IOExpanders.x74595_Sample)
 
 ### Wiring Example
 

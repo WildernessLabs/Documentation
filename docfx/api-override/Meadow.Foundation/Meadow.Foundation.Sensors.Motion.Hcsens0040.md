@@ -14,33 +14,23 @@ The HCSENS0040 is a microwave motion detector commonly found on the RCWL-0516 bo
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Hcsens0040 sensor;
+
+public MeadowApp()
 {
-    Hcsens0040 sensor;
-    Led blueLed;
-
-    public MeadowApp()
-    {
-        sensor = new Hcsens0040(Device.CreateDigitalInputPort(Device.Pins.D05));
-        sensor.OnMotionDetected += ParallaxPirOnMotionStart;
-
-        blueLed = new Led(Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue));
-    }
-
-    //here's an example where it's ok to use async void
-    //the method signature is required to be void because of the event
-    async void ParallaxPirOnMotionStart(object sender)
-    {
-        Console.WriteLine($"Motion started {DateTime.Now}");
-        blueLed.IsOn = true;
-
-        await Task.Delay(2000);
-
-        blueLed.IsOn = false;
-    }
+    sensor = new Hcsens0040(Device.CreateDigitalInputPort(Device.Pins.D05));
+    sensor.OnMotionDetected += Sensor_OnMotionDetected;
 }
+
+private void Sensor_OnMotionDetected(object sender)
+{
+
+    Console.WriteLine($"Motion detected {DateTime.Now}");
+}
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Hcsens0040/Samples/Sensors.Motion.Hcsens0040_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Hcsens0040/Samples/Sensors.Motion.Hcsens0040_Sample)
 
 ### Wiring Example
 

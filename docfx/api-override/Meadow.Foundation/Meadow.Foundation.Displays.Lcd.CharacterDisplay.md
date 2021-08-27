@@ -18,39 +18,106 @@ The current driver implementation uses 4 or 8 GPIO pins. It's common to find con
 
 ### Code Example
 
-The following example shows how to print an incrementing counter every second on the LCD display:
-
 ```csharp
-class CharacterDisplayApp : App<F7Micro, CharacterDisplayApp>
+CharacterDisplay display;
+
+public MeadowApp()
 {
-    CharacterDisplay display;
+    //InitGpio();
+    //InitGpioWithPWM();
+    InitI2c();
 
-    public CharacterDisplayApp()
-    {
-        display = new CharacterDisplay(
-            Device,
-            pinRS: Device.Pins.D05,
-            pinE:  Device.Pins.D07,
-            pinD4: Device.Pins.D08,
-            pinD5: Device.Pins.D09,
-            pinD6: Device.Pins.D10,
-            pinD7: Device.Pins.D11,
-            rows: 2, columns: 16    // Adjust dimensions to fit your display
-            );
+    TestCharacterDisplay();
 
-        int count = 0;
-        display.WriteLine("CharacterDisplay", 0);
-
-        while (true)
-        {
-            display.WriteLine($"Count is : {count++}", 1);
-            System.Threading.Thread.Sleep(1000);
-        }
-    }
+    Console.WriteLine("Test complete");
 }
+
+void InitGpio() 
+{
+    Console.WriteLine("InitGpio...");
+    
+    display = new CharacterDisplay
+    (
+        device: Device,
+        pinRS: Device.Pins.D10,
+        pinE: Device.Pins.D09,
+        pinD4: Device.Pins.D08,
+        pinD5: Device.Pins.D07,
+        pinD6: Device.Pins.D06,
+        pinD7: Device.Pins.D05,
+        rows: 4, columns: 20
+    );
+}
+
+void InitGpioWithPWM()
+{
+    Console.WriteLine("InitGpioWithPWM...");
+
+    display = new CharacterDisplay
+    (
+        device: Device,
+        pinV0: Device.Pins.D11,
+        pinRS: Device.Pins.D10,
+        pinE:  Device.Pins.D09,
+        pinD4: Device.Pins.D08,
+        pinD5: Device.Pins.D07,
+        pinD6: Device.Pins.D06,
+        pinD7: Device.Pins.D05,
+        rows: 4, columns: 20
+    );
+}
+
+void InitI2c()
+{
+    Console.WriteLine("InitI2c...");
+
+    display = new CharacterDisplay
+    (
+        i2cBus: Device.CreateI2cBus(I2cBusSpeed.Standard),
+        address: I2cCharacterDisplay.DEFAULT_ADDRESS,
+        rows: 4, columns: 20
+    );
+}
+
+void TestCharacterDisplay() 
+{
+    Console.WriteLine("TestCharacterDisplay...");
+
+    display.WriteLine("Hello", 0);
+
+    display.WriteLine("Display", 1);
+
+    Thread.Sleep(1000);
+    display.WriteLine("Will delete in", 0);
+
+    int count = 5;
+    while(count > 0)
+    {
+        display.WriteLine($"{count--}", 1);
+        Thread.Sleep(500);
+    }
+
+    display.ClearLines();
+    Thread.Sleep(2000);
+
+    display.WriteLine("Cursor test", 0);
+
+    for (int i = 0; i < display.DisplayConfig.Width; i++)
+    {
+        display.SetCursorPosition((byte)i, 1);
+        display.Write("*");
+        Thread.Sleep(100);
+        display.SetCursorPosition((byte)i, 1);
+        display.Write(" ");
+    }
+
+    display.ClearLines();
+    display.WriteLine("Complete!", 0);
+}
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/Displays.Lcd.CharacterDisplay_Sample)
 
 ### Wiring Example
 

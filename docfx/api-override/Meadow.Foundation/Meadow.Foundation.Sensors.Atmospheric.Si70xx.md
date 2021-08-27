@@ -33,38 +33,57 @@ The Si7021 is available on a breakout board from the the following suppliers:
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Si70xx sensor;
+
+public MeadowApp()
 {
-    Si70xx si7021;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
+    sensor = new Si70xx(Device.CreateI2cBus());
+
+    var consumer = Si70xx.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result =>
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old) 
+            { 
+                return (
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
+                &&
+                (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05
+                ); 
+            }
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
+
+    sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine("Initializing...");
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:F1}C");
+        Console.WriteLine($"  Relative Humidity: {result.New.Humidity:F1}%");
+    };
 
-        // configure our SI7021 on the I2C Bus
-        var i2cBus = Device.CreateI2cBus();
+    ReadConditions().Wait();
 
-        si7021 = new Si70xx(i2cBus);
-
-        // get an initial reading
-        ReadConditions().Wait();
-
-        // start updating continuously
-        si7021.StartUpdating();
-    }
-
-    protected async Task ReadConditions()
-    {
-        var conditions = await si7021.Read();
-        Console.WriteLine("Initial Readings:");
-        Console.WriteLine($"  Temperature: {conditions.Temperature}ºC");
-        Console.WriteLine($"  Pressure: {conditions.Pressure}hPa");
-        Console.WriteLine($"  Relative Humidity: {conditions.Humidity}%");
-    }
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
+
+async Task ReadConditions()
+{
+    var result = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}C");
+    Console.WriteLine($"  Relative Humidity: {result.Humidity:F1}%");
+}
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Si70xx/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Si70xx/Samples/Sensors.Atmospheric.Si70xx_Sample)
 
 ### Wiring Example
 

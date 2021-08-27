@@ -16,51 +16,34 @@ The IL0373 is commonly paired with 1.54", 2.13" or 2.9" dual or tri-color ePaper
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Il0373 display;
+    Console.WriteLine("Initialize ...");
+ 
+    var display = new Il0373(device: Device, 
+        spiBus: Device.CreateSpiBus(),
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        busyPin: Device.Pins.D03,
+        width: 176,
+        height: 264);
 
-    public MeadowApp()
-    {
-        var spiBus = Device.CreateSpiBus();
+    var graphics = new GraphicsLibrary(display);
 
-        Console.WriteLine("Create display driver instance");
-        display = new Il0373(device: Device, spiBus: spiBus,
-            chipSelectPin: Device.Pins.D02,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            busyPin: Device.Pins.D03,
-            width: 102,
-            height: 212);
+    //any color but black will show the ePaper alternate color 
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
 
-        var graphics = new GraphicsLibrary(display);
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(2, 2, "IL0373", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
 
-        //any color but black will show the ePaper alternate color 
-        graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
-
-        graphics.CurrentFont = new Font8x12();
-        graphics.DrawText(2, 2, "IL0373");
-        graphics.DrawText(2, 20, "Meadow F7");
-
-        int ySpacing = 6;
-
-        for (int i = 0; i < 3; i++)
-        {
-            graphics.DrawLine(2, 70 + ySpacing * i, 22, 50 + ySpacing * i);
-            graphics.DrawLine(22, 50 + ySpacing * i, 42, 70 + ySpacing * i);
-            graphics.DrawLine(44, 70 + ySpacing * i, 64, 50 + ySpacing * i);
-            graphics.DrawLine(64, 50 + ySpacing * i, 84, 70 + ySpacing * i);
-            graphics.DrawLine(86, 70 + ySpacing * i, 106, 50 + ySpacing * i);
-            graphics.DrawLine(106, 50 + ySpacing * i, 126, 70 + ySpacing * i);
-        }
-
-        Console.WriteLine("Show");
-
-        graphics.Show();
-    }
+    graphics.Show();
 }
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper.IL0373/Samples/Displays.ePaper.IL0373_Sample)
 
 ### Wiring Example
 

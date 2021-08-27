@@ -18,67 +18,56 @@ You may find mutlicolor variants, however, the color is achieved by placing one 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+Ssd1309 display;
+
+public MeadowApp()
 {
-    GraphicsLibrary graphics;
-    Ssd1309 display;
+    CreateSpiDisplay();
+    //CreateI2CDisplay();
 
-    public MeadowApp()
-    {
-        CreateSpiDisplay();
-        //CreateI2CDisplay();
+    graphics = new GraphicsLibrary(display);
 
-        display.Clear(true);
+    graphics.Clear();
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
+    graphics.DrawRectangle(5, 14, 30, 10, true);
 
-        Console.WriteLine("Create Graphics Library");
-        TestDisplayGraphicsAPI();
-    }
-
-    void CreateSpiDisplay()
-    {
-        Console.WriteLine("Create Display with SPI...");
-
-        var config = new Meadow.Hardware.SpiClockConfiguration(12000, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
-
-        var bus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
-
-        display = new Ssd1309
-        (
-            device: Device,
-            spiBus: bus,
-            chipSelectPin: Device.Pins.D02,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00
-        );
-    }
-
-    void CreateI2CDisplay()
-    {
-        Console.WriteLine("Create Display with I2C...");
-
-        display = new Ssd1309
-        (
-            i2cBus: Device.CreateI2cBus(),
-            address: 60
-        );
-    }
-
-    void TestDisplayGraphicsAPI()
-    {
-        graphics = new GraphicsLibrary(display);
-
-        graphics.Clear();
-        graphics.CurrentFont = new Font12x16();
-        graphics.DrawText(0, 0, "MeadowB3.7");
-        graphics.DrawText(0, 24, "4-8x faster");
-        graphics.DrawText(0, 48, "86x IO perf");
-
-        graphics.Show();
-    }
+    graphics.Show();
 }
+
+void CreateSpiDisplay()
+{
+    Console.WriteLine("Create Display with SPI...");
+
+    var config = new Meadow.Hardware.SpiClockConfiguration(12000, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
+
+    var bus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
+
+    display = new Ssd1309
+    (
+        device: Device,
+        spiBus: bus,
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00
+    );
+}
+
+void CreateI2CDisplay()
+{
+    Console.WriteLine("Create Display with I2C...");
+
+    display = new Ssd1309
+    (
+        i2cBus: Device.CreateI2cBus(),
+        address: 60
+    );
+}
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd1306/Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x.Ssd1309/Samples/Displays.Ssd130x.Ssd1309_Sample)
 
 ### Wiring Example
 

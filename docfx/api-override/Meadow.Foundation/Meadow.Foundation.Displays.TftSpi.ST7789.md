@@ -26,38 +26,43 @@ You can get ST7789 displays from the following suppliers:
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+St7789 display;
+
+public MeadowApp()
 {
-    St7789 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp ()
-    {
-        var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode3);
-        var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
+    var config = new SpiClockConfiguration(48000, SpiClockConfiguration.Mode.Mode3);
+    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        display = new St7789(
-            device: Device, 
-            spiBus: spiBus,
-            chipSelectPin: null,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            width: 240, height: 240);
+    var display = new St7789(
+        device: Device,
+        spiBus: spiBus,
+        chipSelectPin: Device.Pins.D14,
+        dcPin: Device.Pins.D03,
+        resetPin: Device.Pins.D04,
+        width: 240, height: 240, displayColorMode: DisplayColorMode.Format12bppRgb444);
 
-        graphics = new GraphicsLibrary(display);
+    graphics = new GraphicsLibrary(display);
+    graphics.Rotation = GraphicsLibrary.RotationType._180Degrees;
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    graphics.Clear(true);
+
+    graphics.DrawRectangle(120, 0, 120, 220, Color.White, true);
+    graphics.DrawRectangle(0, 0, 120, 20, Color.Red, true);
+    graphics.DrawRectangle(0, 20, 120, 20, Color.Purple, true);
+    graphics.DrawRectangle(0, 40, 120, 20, Color.Blue, true);
+    graphics.DrawRectangle(0, 60, 120, 20, Color.Green, true);
+    graphics.DrawRectangle(0, 80, 120, 20, Color.Yellow, true);
+    graphics.DrawRectangle(0, 120, 120, 20, Color.Orange, true);
+
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.ST7789/Samples/Displays.TftSpi.ST7789_Sample)
 
 ### Circuit Example
 

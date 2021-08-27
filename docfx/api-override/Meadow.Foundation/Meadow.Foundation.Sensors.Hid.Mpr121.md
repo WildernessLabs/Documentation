@@ -14,39 +14,33 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Mpr121 sensor;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
-    {
-        sensor = new Mpr121(Device.CreateI2cBus(Meadow.Hardware.I2cBusSpeed.Standard), 90, 100);
-        sensor.ChannelStatusesChanged += SensorChannelStatusesChanged;
-    }
-
-    void SensorChannelStatusesChanged(object sender, ChannelStatusChangedEventArgs e)
-    {
-        string pads = string.Empty;
-
-        for(int i = 0; i < e.ChannelStatus.Count; i++)
-        {
-            if(e.ChannelStatus[(Mpr121.Channels)i] == true)
-            {
-                pads += i + ", ";
-            }
-        }
-
-        if (string.IsNullOrEmpty(pads))
-        {
-            Console.WriteLine("none");
-        }
-        else
-        {
-            Console.WriteLine(pads + "touched");
-        }
-    }
+    var sensor = new Mpr121(Device.CreateI2cBus(Meadow.Hardware.I2cBusSpeed.Standard), 90, 100);
+    sensor.ChannelStatusesChanged += Sensor_ChannelStatusesChanged;
 }
+
+private void Sensor_ChannelStatusesChanged(object sender, ChannelStatusChangedEventArgs e)
+{
+    string pads = string.Empty;
+
+    for(int i = 0; i < e.ChannelStatus.Count; i++)
+    {
+        if(e.ChannelStatus[(Mpr121.Channels)i] == true)
+        {
+            pads += i + ", ";
+        }
+    }
+
+    var msg = string.IsNullOrEmpty(pads) ? "none" : (pads + "touched");
+    Console.WriteLine(msg);
+}
+
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Hid.Mpr121/Samples/Sensors.Hid.Mpr121_Sample)
 
 ### Wiring Example
 

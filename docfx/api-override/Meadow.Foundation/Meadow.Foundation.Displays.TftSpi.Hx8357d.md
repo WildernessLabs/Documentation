@@ -12,38 +12,43 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+
+public MeadowApp()
 {
-    Hx8357d display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp ()
-    {
-        var config = new SpiClockConfiguration(6000, SpiClockConfiguration.Mode.Mode0);
-        var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
+    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        display = new Hx8357d(
-            device: Device, 
-            spiBus: spiBus,
-            resetPin: Device.Pins.D00,
-            dcPin: Device.Pins.D01,
-            chipSelectPin: Device.Pins.D02,
-            width: 320, height: 480);
+    Console.WriteLine("Create display driver instance");
 
-        graphics = new GraphicsLibrary(display);
+    var display = new Hx8357d(device: Device, spiBus: spiBus,
+        resetPin: Device.Pins.D00,
+        dcPin: Device.Pins.D01,
+        chipSelectPin: Device.Pins.D02,
+        width: 320, height: 480);
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    Console.WriteLine("Create graphics lib");
+
+    graphics = new GraphicsLibrary(display);
+
+    graphics.Clear();
+
+    graphics.DrawRectangle(120, 0, 120, 220, Color.White, true);
+    graphics.DrawRectangle(0, 0, 120, 20, Color.Red, true);
+    graphics.DrawRectangle(0, 20, 120, 20, Color.Purple, true);
+    graphics.DrawRectangle(0, 40, 120, 20, Color.Blue, true);
+    graphics.DrawRectangle(0, 60, 120, 20, Color.Green, true);
+    graphics.DrawRectangle(0, 80, 120, 20, Color.Yellow, true);
+    graphics.DrawRectangle(0, 120, 120, 20, Color.Orange, true);
+
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/WIP/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples/Displays.TftSpi.Hx8357d_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Hx8357d/Samples/Displays.TftSpi.Hx8357d_Sample)
 
 ### Circuit Example
 

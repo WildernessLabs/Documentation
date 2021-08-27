@@ -25,6 +25,55 @@ The MPL115A2 sensor is available on a breakout board from Adafruit
 
 The application below connects the MPL115A2 to two interrupt handlers.  These interrupt handlers (events) will display the `Temperature` and `Pressure` properties when the handlers are triggered.  The sensor is checked every 500 milliseconds.
 
+### Code Example
+
+```csharp
+Mpl115a2 sensor;
+
+public MeadowApp()
+{
+    Console.WriteLine("Initializing...");
+
+    sensor = new Mpl115a2(Device.CreateI2cBus());
+
+    var consumer = Mpl115a2.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result => 
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old) 
+            { 
+                return (
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5);
+            }
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
+
+    sensor.Updated += (sender, result) => {
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Console.WriteLine($"  Pressure: {result.New.Pressure?.Bar:N2}Bar");
+    };
+
+    ReadConditions().Wait();
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+}
+
+async Task ReadConditions()
+{
+    var conditions = await sensor.Read();
+    Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115a2/Samples/Sensors.Atmospheric.Mpl115a2_Sample)
+
 ### Wiring Example
 
 Connecting the MPL115A2 to Meadow requires four connections:

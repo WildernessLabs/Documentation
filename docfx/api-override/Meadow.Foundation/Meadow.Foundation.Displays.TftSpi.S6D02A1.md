@@ -16,37 +16,41 @@ The Meadow.Foundation S6D02A1 driver currently only supports 16bpp RGB565.
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+
+public MeadowApp()
 {
-    S6D02A1 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp ()
-    {
-        var spiBus = Device.CreateSpiBus();
+    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-        display = new S6D02A1(
-            device: Device, 
-            spiBus: spiBus,
-            chipSelectPin: null,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            width: 128, height: 160);
+    Console.WriteLine("Create display driver instance");
 
-        graphics = new GraphicsLibrary(display);
+    var display = new S6D02A1
+    (
+        device: Device, 
+        spiBus: spiBus,
+        resetPin: Device.Pins.D00,
+SelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        width: 128, height: 160
+    );
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    graphics = new GraphicsLibrary(display);
+
+    graphics.CurrentFont = new Font8x8();
+    graphics.Clear();
+    graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
+    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
+    graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
+    graphics.DrawText(5, 5, "Meadow F7");
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.S6D02A1/Samples/Displays.TftSpi.S6D02A1_Sample)
 
 ### Wiring Example
 

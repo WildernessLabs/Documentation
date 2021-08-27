@@ -20,54 +20,34 @@ These displays have excellent visibility in daylight, even without the backlight
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Pcd8544 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
-    {
-        Console.WriteLine("Initializing...");
+    var config = new Meadow.Hardware.SpiClockConfiguration(Pcd8544.DEFAULT_SPEED, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
 
-        var config = new Meadow.Hardware.SpiClockConfiguration(
-            Pcd8544.DEFAULT_SPEED, 
-            Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
+    var display = new Pcd8544
+    (
+        device: Device,
+        spiBus: Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config),
+        chipSelectPin: Device.Pins.D01,
+        dcPin: Device.Pins.D00,
+        resetPin: Device.Pins.D02
+    );
 
-        display = new Pcd8544
-        (
-            device: Device,
-            spiBus: Device.CreateSpiBus(
-                Device.Pins.SCK, 
-                Device.Pins.MOSI, 
-                Device.Pins.MISO, 
-                config),
-            chipSelectPin: Device.Pins.D01,
-            dcPin: Device.Pins.D00,
-            resetPin: Device.Pins.D02
-        );
+    var graphics = new GraphicsLibrary(display);
 
-        graphics = new GraphicsLibrary(display);
-        graphics.Rotation = GraphicsLibrary.RotationType._180Degrees;
+    graphics.Clear(true);
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(0, 0, "PCD8544");
+    graphics.DrawRectangle(5, 14, 30, 10, true);
 
-        TestPcd8544();
-    }
-
-    void TestPcd8544() 
-    {
-        Console.WriteLine("TestPcd8544...");
-
-        // Drawing with Display Graphics Library
-        graphics.Clear(true);
-        graphics.CurrentFont = new Font8x12();
-        graphics.DrawText(0, 0, "PCD8544");
-        graphics.DrawRectangle(5, 14, 30, 10, true);
-
-        graphics.Show();
-    }
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544/Samples/Displays.Pcd8544_Sample)
 
 ### Wiring Example
 

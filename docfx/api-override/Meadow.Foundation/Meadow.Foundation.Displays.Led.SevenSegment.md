@@ -29,48 +29,30 @@ You can get 7-segment displays from the following supplier(s):
 
 ### Code Example
 
-The following example shows how to initialize a SevenSegment display and iterates through all possible characters:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    public MeadowApp ()
-    {
-        var sevenSegment = new SevenSegment
-        (
-            portA: Device.CreateDigitalOutputPort(Device.Pins.D14),
-            portB: Device.CreateDigitalOutputPort(Device.Pins.D15),
-            portC: Device.CreateDigitalOutputPort(Device.Pins.D06),
-            portD: Device.CreateDigitalOutputPort(Device.Pins.D07),
-            portE: Device.CreateDigitalOutputPort(Device.Pins.D08),
-            portF: Device.CreateDigitalOutputPort(Device.Pins.D13),
-            portG: Device.CreateDigitalOutputPort(Device.Pins.D12),
-            portDecimal: Device.CreateDigitalOutputPort(Device.Pins.D05),
-            isCommonCathode: true
-        );
+    Console.WriteLine("Initializing...");
 
-        bool showDecimal = false;
+    var sevenSegment = new SevenSegment
+    (
+        portA: Device.CreateDigitalOutputPort(Device.Pins.D14),
+        portB: Device.CreateDigitalOutputPort(Device.Pins.D15),
+        portC: Device.CreateDigitalOutputPort(Device.Pins.D06),
+        portD: Device.CreateDigitalOutputPort(Device.Pins.D07),
+        portE: Device.CreateDigitalOutputPort(Device.Pins.D08),
+        portF: Device.CreateDigitalOutputPort(Device.Pins.D13),
+        portG: Device.CreateDigitalOutputPort(Device.Pins.D12),
+        portDecimal: Device.CreateDigitalOutputPort(Device.Pins.D05),
+        isCommonCathode: false
+    );
 
-        while (true)
-        {
-            foreach (CharacterType character in Enum.GetValues(typeof(CharacterType)))
-            {
-                if (character != CharacterType.count)
-                {
-                    Console.WriteLine("Character: {0}", character.ToString());
-                    sevenSegment.SetDisplay(character, showDecimal);
-                }
-                Thread.Sleep(1000);
-            }
-
-            showDecimal = !showDecimal;
-        }            
-    }
+    sevenSegment.SetDisplay(character: '1', showDecimal: true);
 }
 
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Samples/) 
 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Samples/Displays.Led.SevenSegment_Sample)
 
 ### Wiring Example
 

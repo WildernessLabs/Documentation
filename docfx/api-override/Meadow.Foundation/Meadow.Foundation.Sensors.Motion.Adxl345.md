@@ -25,29 +25,41 @@ The ADXL345 is available on a small breakout board:
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Adxl345 sensor;
+
+public MeadowApp()
 {
-    Adxl345 sensor;
+    Console.WriteLine("Initializing");
 
-    public MeadowApp()
+    sensor = new Adxl345(Device.CreateI2cBus());
+
+    // classical .NET events can also be used:
+    sensor.Updated += (sender, result) =>
     {
-        sensor = new Adxl345(Device.CreateI2cBus(), 83, 0);
+        Console.WriteLine($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
+            $"Y:{result.New.Y.MetersPerSecondSquared:N2}," +
+            $"Z:{result.New.Z.MetersPerSecondSquared:N2} (m/s^2)]");
+    };
 
-        sensor.SetPowerState(false, false, true, false, Adxl345.Frequency.EightHz);
+    //==== one-off read
+    ReadConditions().Wait();
 
-        while (true)
-        {
-            sensor.Update();
-
-            Console.WriteLine($"{sensor.X}, {sensor.Y}, {sensor.Z}");
-
-            Thread.Sleep(500);
-        } 
-    }
+    // start updating
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
 }
+
+protected async Task ReadConditions()
+{
+    var result = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"Accel: [X:{result.X.MetersPerSecondSquared:N2}," +
+        $"Y:{result.Y.MetersPerSecondSquared:N2}," +
+        $"Z:{result.Z.MetersPerSecondSquared:N2} (m/s^2)]");
+}
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl345/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl345/Samples/Sensors.Motion.Adxl345_Sample)
 
 ### Wiring Example
 

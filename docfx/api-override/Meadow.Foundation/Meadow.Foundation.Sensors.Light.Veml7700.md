@@ -14,33 +14,36 @@ The TEMT6000 is an I2C ambient light sensor.
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Veml7700 sensor;
+
+public MeadowApp()
 {
-    Veml7700 _veml;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
-    {
-        var bus = Device.CreateI2cBus();
-        using (_veml = new Veml7700(bus))
-        {
+    sensor = new Veml7700(Device.CreateI2cBus());
 
-            _veml.ChangeThreshold = 10;
-            _veml.LuxChanged += OnLightChanged;
+    // classical .NET events can also be used:
+    sensor.Updated += (sender, result) => {
+        Console.WriteLine($"Illuminance: {result.New.Lux:n3}Lux");
+    };
 
-            while (true)
-            {
-                Thread.Sleep(5000);
-            }
-        }
-    }
+    //==== one-off read
+    ReadConditions().Wait();
 
-    private void OnLightChanged(float previousValue, float newValue)
-    {
-        Console.WriteLine($"Light: {_veml.Lux} lux");
-    }
+    // start updating continuously
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
+
+protected async Task ReadConditions()
+{
+    var conditions = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Illuminance: {conditions.Lux:n3}Lux");
+}
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Veml7700/Samples/Sensors.Light.Veml7700_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Veml7700/Samples/Sensors.Light.Veml7700_Sample)
 
 ### Wiring Example
 

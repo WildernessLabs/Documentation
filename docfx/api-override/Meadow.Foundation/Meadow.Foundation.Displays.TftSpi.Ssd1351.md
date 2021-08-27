@@ -14,37 +14,50 @@ The **SSD1351** is a display controller used to drive 16bpp (RGB565) color OLED 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Ssd1351 display;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
+  
+    var spiBus = Device.CreateSpiBus(12000);
 
-    public MeadowApp ()
-    {
-        var spiBus = Device.CreateSpiBus();
+    var display = new Ssd1351(
+               device: Device, 
+               spiBus: spiBus,
+               chipSelectPin: Device.Pins.D02,
+               dcPin: Device.Pins.D01,
+               resetPin: Device.Pins.D00,
+               width: 128, height: 128); 
 
-        display = new Ssd1351(
-            device: Device, 
-            spiBus: spiBus,
-            chipSelectPin: null,
-            dcPin: Device.Pins.D01,
-            resetPin: Device.Pins.D00,
-            width: 96, height: 64);
+    var graphics = new GraphicsLibrary(display);
+    graphics.CurrentFont = new Font8x12();
 
-        graphics = new GraphicsLibrary(display);
+    graphics.Clear();
 
-        graphics.CurrentFont = new Font8x8();
-        graphics.Clear();
-        graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-        graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-        graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-        graphics.DrawText(5, 5, "Meadow F7 SPI");
-        graphics.Show();
-    }
+    graphics.DrawCircle(80, 80, 40, Meadow.Foundation.Color.Cyan, false);
+
+    int indent = 0;
+    int spacing = 10;
+    int y = indent;
+
+    graphics.DrawText(indent, y, "Meadow F7 (SSD1351)");
+
+    graphics.DrawText(indent, y += spacing, "Red", Meadow.Foundation.Color.Red);
+    graphics.DrawText(indent, y += spacing, "Purple", Meadow.Foundation.Color.Purple);
+    graphics.DrawText(indent, y += spacing, "BlueViolet", Meadow.Foundation.Color.BlueViolet);
+    graphics.DrawText(indent, y += spacing, "Blue", Meadow.Foundation.Color.Blue);
+    graphics.DrawText(indent, y += spacing, "Cyan", Meadow.Foundation.Color.Cyan);
+    graphics.DrawText(indent, y += spacing, "LawnGreen", Meadow.Foundation.Color.LawnGreen);
+    graphics.DrawText(indent, y += spacing, "GreenYellow", Meadow.Foundation.Color.GreenYellow);
+    graphics.DrawText(indent, y += spacing, "Yellow", Meadow.Foundation.Color.Yellow);
+    graphics.DrawText(indent, y += spacing, "Orange", Meadow.Foundation.Color.Orange);
+    graphics.DrawText(indent, y += spacing, "Brown", Meadow.Foundation.Color.Brown);
+
+    graphics.Show();
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ssd1351/Samples/Displays.TftSpi.Ssd1351_Sample)
 
 ### Wiring Example
 

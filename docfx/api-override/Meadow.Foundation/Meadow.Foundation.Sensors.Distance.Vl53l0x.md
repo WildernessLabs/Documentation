@@ -14,30 +14,35 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Vl53l0x sensor;
+
+public MeadowApp()
 {
-    Vl53l0x sensor;
+    Console.WriteLine("Initializing hardware...");
+    var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
+    sensor = new Vl53l0x(Device, i2cBus, 250);
 
-    public MeadowApp()
-    {
-        var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
-        sensor = new Vl53l0x(Device, i2cBus);
+    sensor.DistanceUpdated += Sensor_Updated;
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(250));
+}
 
-        sensor.Updated += SensorUpdated;
-        sensor.StartUpdating();
+private void Sensor_Updated(object sender, IChangeResult<Length> result)
+{
+    if (result.New == null) { return; }
+
+    if (result.New < new Length(0, LU.Millimeters))
+    { 
+        Console.WriteLine("out of range.");
     }
-
-    private void SensorUpdated(object sender, Meadow.Peripherals.Sensors.Distance.DistanceConditionChangeResult e)
+    else 
     {
-        if (e.New == null || e.New.Distance == null)
-        {
-            return;
-        }
-
-        Console.WriteLine($"{e.New.Distance.Value}mm");
+        Console.WriteLine($"{result.New.Millimeters}mm / {result.New.Inches:n3}\"");
     }
 }
+
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x/Samples/Sensors.Distance.Vl53l0x_Sample)
 
 ### Wiring Example
 

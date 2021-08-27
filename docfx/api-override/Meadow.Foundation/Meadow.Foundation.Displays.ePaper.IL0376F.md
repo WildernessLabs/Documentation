@@ -15,6 +15,38 @@ The IL0376F is most commonly paired with a a tri-color 1.54" 200x200 pixel displ
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
+### Code Example
+
+```csharp
+public MeadowApp()
+{
+    Console.WriteLine("Initialize ...");
+ 
+    var display = new Il0376F(device: Device,
+        spiBus: Device.CreateSpiBus(),
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        busyPin: Device.Pins.D03,
+        width: 200,
+        height: 200);
+
+    var graphics = new GraphicsLibrary(display);
+
+    //any color but black will show the ePaper alternate color 
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
+
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(2, 2, "IL0376F", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
+
+    graphics.Show();
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper.IL0376F/Samples/Displays.ePaper.IL0376F_Sample)
+
 ### Wiring Example
 
  To control a IL0376F from Meadow, connect the following:

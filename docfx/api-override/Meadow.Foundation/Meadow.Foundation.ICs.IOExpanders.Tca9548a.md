@@ -14,12 +14,32 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    //Code example here
+    Console.WriteLine("Initialize hardware...");
+
+    var i2cBus = Device.CreateI2cBus(I2cBusSpeed.Standard);
+    var tca9548a = new Tca9548a(i2cBus, 0x70);
+    var mcp0 = new Mcp23x08(tca9548a.Bus0);
+    var mcp1 = new Mcp23x08(tca9548a.Bus1);
+  
+    var bus0Port0 = mcp0.CreateDigitalOutputPort(mcp0.Pins.GP0);
+    var bus1Port0 = mcp1.CreateDigitalOutputPort(mcp1.Pins.GP0);
+
+    while (true)
+    {
+        bus0Port0.State = true;
+        bus1Port0.State = false;
+        Thread.Sleep(1000);
+        bus0Port0.State = false;
+        bus1Port0.State = true;
+        Thread.Sleep(1000);
+    }
 }
+
 ```
-[Sample projects available on GitHub [when its live]]() 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Tca9548a/Samples/ICs.IOExpanders.Tca9548a_Sample)
 
 ### Wiring Example
 

@@ -14,41 +14,35 @@ The **HT16K33** is an LED driver and key scanner. It can be used to drive up to 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+protected Ht16k33 ht16k33;
+
+public MeadowApp()
 {
-    HT16K33 ht16k33;
+    Console.WriteLine("Initialize...");
+    ht16k33 = new Ht16k33(Device.CreateI2cBus());
 
-    public MeadowApp()
+    int index = 0;
+    bool on = true;
+
+    while (true)
     {
-        ht16k33 = new HT16K33(Device.CreateI2cBus());
+        ht16k33.SetLed((byte)index, on);
+        ht16k33.UpdateDisplay();
+        index++;
 
-        TestHT16K33();
-    }
-
-    void TestHT16K33() 
-    {
-        int index = 0;
-        bool on = true;
-
-        while (true)
+        if (index >= 128)
         {
-            ht16k33.ToggleLed((byte)index, on);
-            ht16k33.UpdateDisplay();
-            index++;
-
-            if (index >= 128)
-            {
-                index = 0;
-                on = !on;
-            }
-
-            Thread.Sleep(100);
+            index = 0;
+            on = !on;
         }
+
+        Thread.Sleep(100);
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.HT16K33Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ht16k33/Samples/ICs.IOExpanders.Ht16k33_Sample)
 
 ### Wiring Example
 

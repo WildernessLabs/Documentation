@@ -12,51 +12,32 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+GraphicsLibrary graphics;
+
+public MeadowApp()
 {
-    OLED128x32Wing oledWing;
-    GraphicsLibrary graphics;
+    Console.WriteLine("Initializing ...");
+    var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
 
-    public MeadowApp()
-    {
-        Initialize();
-        UpdateDisplay("OLED Wing");
-    }
+    var oledWing = new OLED128x32Wing(i2cBus, Device, Device.Pins.D11, Device.Pins.D10, Device.Pins.D09);
 
-    void Initialize()
-    {
-        Console.WriteLine("Initialize hardware...");
-        var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
+    graphics = new GraphicsLibrary(oledWing.Display);
+    graphics.CurrentFont = new Font12x16();
 
-        oledWing = new OLED128x32Wing(i2cBus, Device, Device.Pins.D11, Device.Pins.D10, Device.Pins.D09);
-
-        graphics = new GraphicsLibrary(oledWing.Display);
-        graphics.CurrentFont = new Font12x16();
-
-        oledWing.ButtonA.Clicked += (sender, e) =>
-        {
-            Console.WriteLine("A");
-            UpdateDisplay("A pressed");
-        };
-
-        oledWing.ButtonB.Clicked += (sender, e) => 
-        {
-            Console.WriteLine("B");
-            UpdateDisplay("B pressed");
-        };
-
-        oledWing.ButtonC.Clicked += (sender, e) => {
-            Console.WriteLine("C");
-            UpdateDisplay("C pressed");
-        };
-    }
-
-    void UpdateDisplay(string message)
-    {
-        graphics.Clear();
-        graphics.DrawText(0, 8, message);
-        graphics.Show();
-    }
+    oledWing.ButtonA.Clicked += (sender, e) => UpdateDisplay("A pressed");
+    oledWing.ButtonB.Clicked += (sender, e) => UpdateDisplay("B pressed");
+    oledWing.ButtonC.Clicked += (sender, e) => UpdateDisplay("C pressed");
 }
+
+void UpdateDisplay(string message)
+{
+    graphics.Clear();
+    graphics.DrawText(0, 8, message);
+    graphics.Show();
+}
+
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.OLED128x32Wing/Samples/FeatherWings.OLED128x32Wing_Sample)
+
 

@@ -19,6 +19,39 @@ TMP102 sensors are available on a breakout board from the following suppliers:
 
 The TMP102 temperature sensor can operate in interrupt or polling mode.
 
+### Code Example
+
+```csharp
+Tmp102 tmp102;
+
+public MeadowApp()
+{
+    Console.WriteLine("Initializing...");
+
+    tmp102 = new Tmp102(Device.CreateI2cBus());
+
+    var consumer = Tmp102.CreateObserver(
+        handler: result =>
+        {
+            Console.WriteLine($"Temperature New Value { result.New.Celsius}C");
+            Console.WriteLine($"Temperature Old Value { result.Old?.Celsius}C");
+        },
+        filter: null
+    );
+    tmp102.Subscribe(consumer);
+
+    tmp102.TemperatureUpdated += (object sender, IChangeResult<Meadow.Units.Temperature> e) =>
+    {
+        Console.WriteLine($"Temperature Updated: {e.New.Celsius:N2}C");
+    };
+
+    tmp102.StartUpdating(TimeSpan.FromSeconds(1));
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Samples/Sensors.Temperature.Tmp102_Sample)
+
 ### Interrupt Mode
 
 The example below will check the temperature every second.  An interrupt will be raised if the difference in temperature between the last reported reading and the current reading is greater than + / - 0.1 &deg;C.

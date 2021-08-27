@@ -22,26 +22,36 @@ Size:L*W*H (mm)	        23.3*12.5*5.8
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Ags01Db ags10Db;
+
+public MeadowApp()
 {
-    Ags01Db sensor;
+    Console.WriteLine("Initialize ...");
+    ags10Db = new Ags01Db(Device.CreateI2cBus());
 
-    public MeadowApp()
-    {
-        sensor = new Ags01Db(Device.CreateI2cBus());
+    Console.WriteLine($"Version: v{ags10Db.GetVersion()}");
 
-        Console.WriteLine($"Version: v{sensor.GetVersion()}");
-
-        while (true)
+    var consumer = Ags01Db.CreateObserver(
+        handler: result =>
         {
-            Console.WriteLine($"VOC gas concentration: {sensor.GetConcentration()}ppm");
+            Console.WriteLine($"Concentration New Value { result.New.PartsPerMillion}ppm");
+            Console.WriteLine($"Concentration Old Value { result.Old?.PartsPerMillion}ppm");
+        },
+        filter: null
+    );
+    ags10Db.Subscribe(consumer);
 
-            Thread.Sleep(2000);
-        }
-    }
+    ags10Db.ConcentrationUpdated += (object sender, IChangeResult<Meadow.Units.Concentration> e) =>
+    {
+        Console.WriteLine($"Concentration Updated: {e.New.PartsPerMillion:N2}ppm");
+    };
+
+    ags10Db.StartUpdating(TimeSpan.FromSeconds(1));
 }
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Environmental.Ags01Db/Samples/Environmental.Ags01Db_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Ags01Db/Samples/Sensors.Environmental.Ags01Db_Sample)
 
 ### Wiring Example
 

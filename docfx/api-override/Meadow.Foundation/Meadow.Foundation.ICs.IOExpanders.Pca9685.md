@@ -12,32 +12,23 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Pca9685 pca9685;
+    Console.WriteLine("Initialize hardware...");
+    var i2CBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
 
-    public MeadowApp()
-    {
-        Initialize();
-        Run();
-    }
+    var pca9685 = new Pca9685(i2CBus, Pca9685.DEFAULT_ADDRESS, 50);
+    pca9685.Initialize();
 
-    void Initialize()
-    {
-        Console.WriteLine("Initialize hardware...");
-        var i2CBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
+      var port0 = pca9685.CreatePwmPort(0, 0.05f);
+    var port7 = pca9685.CreatePwmPort(7);
 
-        pca9685 = new Pca9685(i2CBus, 0x40, 50);
-        pca9685.Initialize();
-    }
-
-    public void Run()
-    {
-        var port0 = pca9685.CreatePwmPort(0, 0.05f);
-        var port7 = pca9685.CreatePwmPort(7);
-
-        port0.Start();
-        port7.Start();
-    }
+    port0.Start();
+    port7.Start();
 }
+
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pca9685/Samples/ICs.IOExpanders.Pca9685_Sample)
+
+`

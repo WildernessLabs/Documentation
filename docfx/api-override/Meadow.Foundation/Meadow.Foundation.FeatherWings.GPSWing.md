@@ -12,8 +12,72 @@ remarks: *content
 ### Code Example
 
 ```csharp
+GPSWing gps;
 
+public MeadowApp()
+{
+    Console.WriteLine("Initializing ...");
 
+    ISerialMessagePort serial = Device.CreateSerialMessagePort(
+        Device.SerialPortNames.Com4,
+        suffixDelimiter: Encoding.ASCII.GetBytes("\r\n"),
+        preserveDelimiter: true,
+        baudRate: 9600);
+
+    gps = new GPSWing(serial);
+
+    Subscribe();
+
+    gps.StartUpdating();
+}
+
+void Subscribe()
+{
+    gps.GgaReceived += (object sender, GnssPositionInfo location) => {
+        Console.WriteLine("*********************************************");
+        Console.WriteLine(location);
+        Console.WriteLine("*********************************************");
+    };
+
+    // GLL
+    gps.GllReceived += (object sender, GnssPositionInfo location) => {
+        Console.WriteLine("*********************************************");
+        Console.WriteLine(location);
+        Console.WriteLine("*********************************************");
+    };
+
+    // GSA
+    gps.GsaReceived += (object sender, ActiveSatellites activeSatellites) => {
+        Console.WriteLine("*********************************************");
+        Console.WriteLine(activeSatellites);
+        Console.WriteLine("*********************************************");
+    };
+
+    // RMC (recommended minimum)
+    gps.RmcReceived += (object sender, GnssPositionInfo positionCourseAndTime) => {
+        Console.WriteLine("*********************************************");
+        Console.WriteLine(positionCourseAndTime);
+        Console.WriteLine("*********************************************");
+
+    };
+
+    // VTG (course made good)
+    gps.VtgReceived += (object sender, CourseOverGround courseAndVelocity) => {
+        Console.WriteLine("*********************************************");
+        Console.WriteLine($"{courseAndVelocity}");
+        Console.WriteLine("*********************************************");
+    };
+
+    // GSV (satellites in view)
+    gps.GsvReceived += (object sender, SatellitesInView satellites) => {
+        Console.WriteLine("*********************************************");
+        Console.WriteLine($"{satellites}");
+        Console.WriteLine("*********************************************");
+    };
+}
 
 ```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.GPSWing/Samples/FeatherWings.GPSWing_Sample)
+
 

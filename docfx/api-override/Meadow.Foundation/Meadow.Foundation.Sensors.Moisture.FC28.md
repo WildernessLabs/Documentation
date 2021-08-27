@@ -58,6 +58,46 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.FC28/Samples/) 
 
+### Code Example
+
+```csharp
+Fc28 fc28;
+
+public MeadowApp()
+{
+    Console.WriteLine("Initializing...");
+
+    fc28 = new Fc28(
+        Device.CreateAnalogInputPort(Device.Pins.A01),
+        Device.CreateDigitalOutputPort(Device.Pins.D15),
+        minimumVoltageCalibration: new Voltage(3.24f, VU.Volts),
+        maximumVoltageCalibration: new Voltage(2.25f, VU.Volts)
+    );
+
+    var consumer = Fc28.CreateObserver(
+        handler: result => {
+            // the first time through, old will be null.
+            string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
+            Console.WriteLine($"Subscribed - " +
+                $"new: {result.New}, " +
+                $"old: {oldValue}");
+        },
+        filter: null
+    );
+    fc28.Subscribe(consumer);
+
+    fc28.HumidityUpdated += (object sender, IChangeResult<double> e) =>
+    {
+        Console.WriteLine($"Moisture Updated: {e.New}");
+    };
+
+    fc28.StartUpdating();
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Fc28/Samples/Sensors.Moisture.Fc28_Sample)
+
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.FC28/FC28.svg" 

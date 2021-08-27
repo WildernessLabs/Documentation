@@ -11,6 +11,22 @@ remarks: *content
 
 The Parallax PIR detects motion via infrared. It emits a high signal over the data pin when motion is detected. The pin returns to a low state when motion stops.
 
+### Code Example
+
+```csharp
+ParallaxPir parallaxPir;
+
+public MeadowApp()
+{
+    parallaxPir = new ParallaxPir(Device.CreateDigitalInputPort(Device.Pins.D05, InterruptMode.EdgeBoth, ResistorMode.Disabled));
+    parallaxPir.OnMotionStart += (sender)=> Console.WriteLine($"Motion start  {DateTime.Now}");
+    parallaxPir.OnMotionEnd += (sender) => Console.WriteLine($"Motion end  {DateTime.Now}");
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.ParallaxPir/Samples/Sensors.Motion.ParallaxPir_Sample)
+
 ####Purchasing
 
 The parallax PIR sensor is available from Parallax Inc:
