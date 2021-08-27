@@ -5,7 +5,7 @@ remarks: *content
 
 | Ds1307 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds1307/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds1307.svg?label=Meadow.Foundation.RTCs.Ds1307" /></a> |
 
@@ -76,5 +76,8 @@ The 32K pin outputs the 32,768 Hz clock signal from the module.  This signal is 
 
 <img src="../../API_Assets/Meadow.Foundation.RTCs.DS1307/DS1307_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 
 

@@ -5,7 +5,7 @@ remarks: *content
 
 | St7565 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.St7565) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.St7565/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.St7565.svg?label=Meadow.Foundation.Displays.St7565" /></a> |
 
@@ -60,4 +60,7 @@ public MeadowApp()
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.St7565/St7565_Frizzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

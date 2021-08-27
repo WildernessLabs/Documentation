@@ -5,7 +5,7 @@ remarks: *content
 
 | Mcp23x08 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Mcp23x08/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.svg?label=Meadow.Foundation.ICs.IOExpanders.Mcp23x08" /></a> |
 
@@ -58,4 +58,7 @@ In addition to the address pins, there are a number of other pins that must be c
 
 <img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Mcp23x08/Mcp23x08.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

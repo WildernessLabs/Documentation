@@ -5,7 +5,7 @@ remarks: *content
 
 | x74595 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.x74595/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.x74595.svg?label=Meadow.Foundation.ICs.IOExpanders.x74595" /></a> |
 
@@ -68,4 +68,7 @@ To wire a 74HCT595 to your Meadow board, connect the following:
 
 <img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

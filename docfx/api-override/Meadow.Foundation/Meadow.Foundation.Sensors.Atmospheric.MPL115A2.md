@@ -5,7 +5,7 @@ remarks: *content
 
 | Mpl115a2 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow"/> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115a2) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl115a2" /></a> |
 
@@ -84,4 +84,7 @@ Connecting the MPL115A2 to Meadow requires four connections:
 In this diagram, the shutdown (`SDWN`) and reset (`RST`) pins have been left floating.  Both of these pins are active low and can be tied to V<sub>cc</sub> in normal operation.
 
 Note that the Adafruit breakout board has `10K` pull-up resistors on the `SDA` and `SCK` lines.
+
+
+
 

@@ -5,7 +5,7 @@ remarks: *content
 
 | A4988 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.A4988) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Stepper.A4988/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Stepper.A4988.svg?label=Meadow.Foundation.Motors.Stepper.A4988" /></a> |
 

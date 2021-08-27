@@ -5,9 +5,9 @@ remarks: *content
 
 | Ili9486 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ili9486) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi.Ili9486/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.Ili9486.svg?label=Meadow.Foundation.Displays.TftSpi.Ili9486" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" /></a> |
 
 ### Code Example
 
@@ -66,4 +66,7 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9486/Ili9486_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

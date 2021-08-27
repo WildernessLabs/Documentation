@@ -5,9 +5,9 @@ remarks: *content
 
 | Ili9341 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ili9341) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi.Ili9341/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.Ili9341.svg?label=Meadow.Foundation.Displays.TftSpi.Ili9341" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" /></a> |
 
 The **ILI9341** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These displays are commonly found with a resolution of 320x240.
 
@@ -73,4 +73,7 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9341/Ili9341_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

@@ -5,7 +5,7 @@ remarks: *content
 
 | DS18B20 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow"/> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.DS18B20) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.DS18B20/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.DS18B20.svg?label=Meadow.Foundation.Sensors.Temperature.DS18B20" /></a> |
 
@@ -74,4 +74,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Temperature.DS18B20/DS18B20.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

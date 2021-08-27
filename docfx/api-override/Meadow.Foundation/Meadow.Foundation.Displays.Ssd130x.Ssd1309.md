@@ -5,9 +5,9 @@ remarks: *content
 
 | Ssd1309 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x.Ssd1309) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x.Ssd1309/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.Ssd1309.svg?label=Meadow.Foundation.Displays.Ssd130x.Ssd1309" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.svg?label=Meadow.Foundation.Displays.Ssd130x" /></a> |
 
 The **SSD1309** is a display controller used to control small, low resolution, single color OLED displays. OLED displays generate their own light - no backlight is included or required.
 
@@ -84,4 +84,7 @@ The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1309/SSD1309_Frizzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

@@ -5,9 +5,9 @@ remarks: *content
 
 | Adxl345 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl345) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Adxl345/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl345.svg?label=Meadow.Foundation.Sensors.Motion.Adxl345" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Adxl3xx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl3xx.svg?label=Meadow.Foundation.Sensors.Motion.Adxl3xx" /></a> |
 
 The **ADXL345** is a small, low power, triple axis acceleration sensor capable of measuring up to +/-16g with a resolution of 13-bits.
 
@@ -65,4 +65,7 @@ protected async Task ReadConditions()
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl345/Adxl345_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

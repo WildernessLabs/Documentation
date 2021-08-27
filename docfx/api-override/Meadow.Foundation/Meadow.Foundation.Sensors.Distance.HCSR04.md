@@ -5,7 +5,7 @@ remarks: *content
 
 | Hcsr04 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow"/> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Hcsr04/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Hcsr04.svg?label=Meadow.Foundation.Sensors.Distance.Hcsr04" /></a> |
 
@@ -54,4 +54,7 @@ The HC-SR04 sensor is available from Sparkfun:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

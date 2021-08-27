@@ -5,7 +5,7 @@ remarks: *content
 
 | Uln2003 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Stepper.Uln2003/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Stepper.Uln2003.svg?label=Meadow.Foundation.Motors.Stepper.Uln2003" /></a> |
 
@@ -60,4 +60,7 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Motors.Stepper.Uln2003/Uln2003_Fritzing.png" 
     style="width: 40%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

@@ -5,7 +5,7 @@ remarks: *content
 
 | ArducamMini | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow"/> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Camera.ArducamMini) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.ArducamMini/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.ArducamMini.svg?label=Meadow.Foundation.Sensors.Camera.ArducamMini" /></a> |
 
