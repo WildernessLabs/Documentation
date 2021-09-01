@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.Ssd1351
+uid: Meadow.Foundation.Displays.TftSpi.Ssd1351
 remarks: *content
 ---
 

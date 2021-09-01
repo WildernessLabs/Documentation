@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Ssd1306
+uid: Meadow.Foundation.Displays.Ssd130x.Ssd1306
 remarks: *content
 ---
 

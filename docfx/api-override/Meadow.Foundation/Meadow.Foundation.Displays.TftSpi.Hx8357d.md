@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.Hx8357d
+uid: Meadow.Foundation.Displays.TftSpi.Hx8357d
 remarks: *content
 ---
 

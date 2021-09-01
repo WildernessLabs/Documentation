@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Servos.Servo
+uid: Meadow.Foundation.Servos.ServoCore
 remarks: *content
 ---
 

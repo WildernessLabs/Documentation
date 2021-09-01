@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.Tft.Rm68140
+uid: Meadow.Foundation.Displays.TftSpi.Rm68140
 remarks: *content
 ---
 

@@ -41,7 +41,8 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Camera.ArducamMini/Samples/Sensors.Camera.ArducamMini_Sample)
 
-|### Code Example
+|
+### Code Example
 
 ```csharp
 public MeadowApp()
