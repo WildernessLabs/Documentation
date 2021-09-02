@@ -1,9 +1,9 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Il91874V3
+uid: Meadow.Foundation.Displays.ePaper.Il91874V03
 remarks: *content
 ---
 
-| IL91874V3     |             |
+| Il91874V03     |             |
 |---------------|-------------|
 | Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
@@ -15,11 +15,43 @@ The IL91874V3 is paired with a wide range of three color ePaper display sizes an
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
+### Code Example
+
+```csharp
+public MeadowApp()
+{
+    Console.WriteLine("Initialize ...");
+
+    var display = new Il91874V03(device: Device,
+        spiBus: Device.CreateSpiBus(),
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        busyPin: Device.Pins.D03,
+        width: 176,
+        height: 264);
+
+    var graphics = new GraphicsLibrary(display);
+
+    //any color but black will show the ePaper alternate color 
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
+
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(2, 2, "IL91874V03", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
+
+    graphics.Show();
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples/Displays.ePaper.IL91874V03_Sample)
+
 ### Wiring Example
 
  To control a IL91874V3 from Meadow, connect the following:
 
-| IL91874V3 | Meadow Pin |
+| Il91874V03 | Meadow Pin |
 |-----------|------------|
 | BUSY      | D15        |
 | RST       | D14        |
@@ -32,5 +64,5 @@ The IL91874V3 is paired with a wide range of three color ePaper display sizes an
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL91874V3/ePaper_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.Il91874V03/ePaper_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

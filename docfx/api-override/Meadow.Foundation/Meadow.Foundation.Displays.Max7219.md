@@ -67,5 +67,9 @@ void TestDigitalMode()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Max7219/Samples/Displays.Max7219_Sample)
 
+### Wiring Example
 
+To wire a Max7219 to your Meadow board, connect the following:
 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Max7219/Max7219_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

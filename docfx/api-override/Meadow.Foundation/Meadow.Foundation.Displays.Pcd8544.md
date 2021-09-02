@@ -64,7 +64,7 @@ public MeadowApp()
 | CE      | D01        |
 | RST     | D02        |
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

@@ -72,7 +72,7 @@ To wire a Common Cathode Seven Segment Display (like the 5161AS) to your Meadow 
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 
