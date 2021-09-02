@@ -25,7 +25,7 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
  * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
 
 ### SQLite
-Placeholder 
+* SQLite is now supported.  Use the Nuget package [`sqlite-net-static`](https://www.nuget.org/packages/sqlite-net-static).  Currently this package is marked as a beta, so you may need to use the "include prereleases" option. Usage is [documented on GitHub](https://github.com/praeclarum/sqlite-net)
 
 ## Meadow.Foundation
 
