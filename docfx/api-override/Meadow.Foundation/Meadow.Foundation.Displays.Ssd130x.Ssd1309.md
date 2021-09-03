@@ -82,7 +82,7 @@ void CreateI2CDisplay()
 
 The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C interface is as follows:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1309/SSD1309_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1309/SSD1309_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

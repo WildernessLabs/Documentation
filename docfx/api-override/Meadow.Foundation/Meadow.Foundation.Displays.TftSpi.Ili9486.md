@@ -48,7 +48,7 @@ SelectPin: Device.Pins.D02,
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ili9486/Samples/Displays.TftSpi.Ili9486_Sample)
 
-### Circuit Example
+### Wiring Example
 
  To wire a Ili9486 to your Meadow board, connect the following:
 

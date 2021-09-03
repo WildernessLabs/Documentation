@@ -48,7 +48,7 @@ SelectPin: Device.Pins.D02,
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Rm68140/Samples/Displays.TftSpi.Rm68140_Sample)
 
-### Circuit Example
+### Wiring Example
 
  To wire a Rm68140 to your Meadow board, connect the following:
 

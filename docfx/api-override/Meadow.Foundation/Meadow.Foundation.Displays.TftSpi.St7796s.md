@@ -47,7 +47,7 @@ SelectPin: Device.Pins.D02,
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.St7796s/Samples/Displays.TftSpi.St7796s_Sample)
 
-### Circuit Example
+### Wiring Example
 
  To wire a St7796s to your Meadow board, connect the following:
 

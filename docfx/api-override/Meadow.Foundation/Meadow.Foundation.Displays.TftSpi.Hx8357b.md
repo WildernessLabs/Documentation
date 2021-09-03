@@ -52,7 +52,7 @@ us: spiBus,
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Hx8357b/Samples/Displays.TftSpi.Hx8357b_Sample)
 
-### Circuit Example
+### Wiring Example
 
  To wire a Hx8357b to your Meadow board, connect the following:
 

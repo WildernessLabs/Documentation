@@ -58,7 +58,7 @@ public MeadowApp()
 | RST    | D01        |
 | CS     | D02        |
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.St7565/St7565_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.St7565/St7565_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

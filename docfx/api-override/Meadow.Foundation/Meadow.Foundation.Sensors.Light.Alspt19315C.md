@@ -68,7 +68,7 @@ The ALS-PT19 senors are available on breakout boards and as individual sensors:
 * [Sparkfun ALS-PT19 Sensor](https://www.proto-pic.co.uk/als-pt19-light-sensor.html)
 * [Sparkfun Weather Shield](https://www.proto-pic.co.uk/weather-shield.html)
 
-### Circuit Example
+### Wiring Example
 
 The ALS-PT19C is a simple analog device requiring only three connections:
 

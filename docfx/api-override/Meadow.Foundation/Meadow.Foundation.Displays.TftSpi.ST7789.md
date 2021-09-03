@@ -64,7 +64,7 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.ST7789/Samples/Displays.TftSpi.ST7789_Sample)
 
-### Circuit Example
+### Wiring Example
 
  To wire a ST7789 to your Meadow board, connect the following:
 

@@ -50,7 +50,7 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Hx8357d/Samples/Displays.TftSpi.Hx8357d_Sample)
 
-### Circuit Example
+### Wiring Example
 
  To wire a Hx8357d to your Meadow board, connect the following:
 

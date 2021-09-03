@@ -77,7 +77,7 @@ SelectPin: Device.Pins.D02,
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9163/Ili9163_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9163/Ili9163_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

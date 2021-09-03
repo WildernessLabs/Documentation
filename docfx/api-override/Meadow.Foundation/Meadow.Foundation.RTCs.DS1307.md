@@ -61,7 +61,7 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307/Samples/RTCs.Ds1307_Sample)
 
-### Circuit Example
+### Wiring Example
 
 The DS3231 real time clock module (see image below) requires only four (for simple timekeeping) or five (for alarms) connections
 
