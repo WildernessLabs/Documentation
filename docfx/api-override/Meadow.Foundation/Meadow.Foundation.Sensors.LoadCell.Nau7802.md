@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Nau7802) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.LoadCell.Nau7802/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.LoadCell.Nau7802.svg?label=Meadow.Foundation.Sensors.LoadCell.Nau7802" /></a> |
 
+### Code Example
+
 ```csharp
 private Nau7802 loadSensor;
 
@@ -54,5 +56,3 @@ public void GetAndDisplayCalibrationUnits(Nau7802 sensor)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Nau7802/Samples/Sensors.LoadCell.Nau7802_Sample)
-
-|

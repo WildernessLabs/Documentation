@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge.svg?label=Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge" /></a> |
 
+### Code Example
+
 ```csharp
 AnalogSolarGauge solarGauge;
 
@@ -49,5 +51,3 @@ async Task ReadSolarIntensityGauge()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge/Samples/Sensors.Light.AnalogSolarGauge_Sample)
-
-|

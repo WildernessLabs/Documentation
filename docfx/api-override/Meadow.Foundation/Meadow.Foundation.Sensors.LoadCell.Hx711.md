@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.LoadCell.Hx711/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.LoadCell.Hx711.svg?label=Meadow.Foundation.Sensors.LoadCell.Hx711" /></a> |
 
+### Code Example
+
 ```csharp
 Hx711 loadSensor;
 
@@ -55,5 +57,3 @@ public void GetAndDisplayCalibrationUnits(Hx711 sensor)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Samples/Sensors.LoadCell.Hx711_Sample)
-
-|

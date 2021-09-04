@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tcs3472x) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tcs3472x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tcs3472x.svg?label=Meadow.Foundation.Sensors.Light.Tcs3472x" /></a> |
 
+### Code Example
+
 ```csharp
 Tcs3472x sensor;
 RgbPwmLed rgbLed;
@@ -67,5 +69,3 @@ protected async Task ReadConditions()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tcs3472x/Samples/Sensors.Light.Tcs3472x_Sample)
-
-|

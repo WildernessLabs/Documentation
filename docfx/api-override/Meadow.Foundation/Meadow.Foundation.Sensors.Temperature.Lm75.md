@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Lm75) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.Lm75/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.Lm75.svg?label=Meadow.Foundation.Sensors.Temperature.Lm75" /></a> |
 
+### Code Example
+
 ```csharp
 Lm75 lm75;
 
@@ -41,5 +43,3 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Lm75/Samples/Sensors.Temperature.Lm75_Sample)
-
-|

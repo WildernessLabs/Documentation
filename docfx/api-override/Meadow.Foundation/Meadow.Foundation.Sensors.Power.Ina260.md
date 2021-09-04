@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Power.Ina260) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Power.Ina260/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Power.Ina260.svg?label=Meadow.Foundation.Sensors.Power.Ina260" /></a> |
 
+### Code Example
+
 ```csharp
 public MeadowApp()
 {
@@ -30,5 +32,3 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Power.Ina260/Samples/Sensors.Power.Ina260_Sample)
-
-|
