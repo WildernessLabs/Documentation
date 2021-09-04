@@ -30,4 +30,28 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Mb10x0/Samples/Sensors.Distance.Mb10x0_Sample)
 
-|
+|### Code Example
+
+```csharp
+Mb10x0 sensor;
+
+public MeadowApp()
+{
+    Console.WriteLine("Initialize hardware...");
+
+    sensor = new Mb10x0(Device, Device.SerialPortNames.Com4);
+
+    while (true)
+    {
+        sensor.ReadSerial();
+
+        Thread.Sleep(500);
+    }
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Mb10x0/Samples/Sensors.Distance.Mb10x0_Sample)
+
+
+
