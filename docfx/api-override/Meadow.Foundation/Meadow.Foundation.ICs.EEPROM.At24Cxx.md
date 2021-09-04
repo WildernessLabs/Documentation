@@ -66,7 +66,7 @@ To wire a At24Cxx to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx.svg" 
+<img src="../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

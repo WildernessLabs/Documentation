@@ -20,7 +20,8 @@ public MeadowApp()
 
     var spiBus = Device.CreateSpiBus();
 
-    var display = new Ssd1327(Device, spiBus, Device.Pins.D02, Device.Pins.D01, Device.Pins.D00);
+    var display = new Ssd1327(device: Device, spiBus: spiBus,  
+        chipSelectPin:  Device.Pins.D02, dcPin: Device.Pins.D01, resetPin: Device.Pins.D00);
 
     display.SetContrast(60);
 
@@ -59,3 +60,4 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1327/Ssd1327_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
