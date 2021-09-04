@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingAnemometer) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Weather.SwitchingAnemometer/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Weather.SwitchingAnemometer.svg?label=Meadow.Foundation.Sensors.Weather.SwitchingAnemometer" /></a> |
 
+### Code Example
+
 ```csharp
 RgbPwmLed onboardLed;
 SwitchingAnemometer anemometer;
