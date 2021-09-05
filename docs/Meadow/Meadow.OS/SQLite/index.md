@@ -4,6 +4,9 @@ title: SQLite
 subtitle: Using SQLite in Meadow.OS to create and manage local databases.
 ---
 
+![SQLite Logo - A feather with the logotype "SQLIte".](SQLite370.svg)
+
+
 [SQLite](https://www.sqlite.org/) is a portable, fast, ultra-lightweight and full-featured databse engine and format. And it's built into Meadow.OS as a fully-supported, first class feature.
 
 ## SQLite.NET Support
@@ -24,4 +27,8 @@ SQLite database are stored in the file system as a normal file, typically with a
 var databasePath = Path.Combine(MeadowOS.FileSystem.DataDirectory, "MySqliteDatabase.db");
 ```
 
-If using the SQLite.NET library, a database file doesn't need to explicitly created, the library will do it automatically if it doesn't exist. 
+If using the SQLite.NET library, a database file doesn't need to explicitly created, the library will do it automatically if it doesn't exist.
+
+## Creating Tables
+
+[tables are mapped to objects]
