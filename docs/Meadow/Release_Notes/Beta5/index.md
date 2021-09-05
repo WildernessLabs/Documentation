@@ -29,15 +29,14 @@ This is another big stabilization release which fixes more issues introduced in 
 
 ### SQLite
 
-Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device databases via SQLite. Additionally, we worked with Frank Krueger to get Meadow support built into his SQLite.NET ORM, which adds super easy and lightweight ORM access. Check out the new [SQLite guide](/Meadow/Meadow_Basics/Meadow.OS/SQLite/) for details.
+Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device databases via SQLite. Additionally, we worked with Frank Krueger to get Meadow support built into his SQLite.NET ORM, which adds super easy and lightweight ORM access. Check out the new [SQLite guide](/Meadow/Meadow.OS/SQLite/) for details.
 
 
 ### API Cleanup
 
  * **Moved `SynchronizationContext` to Meadow.OS** - Previously, the `BeginInvokeOnMainThread()` method was executed on the current `Device` class, in this release we moved it to the `MeadowOS` class.
  * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
- * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
-
+ 
 ## Meadow.Foundation
 
 * **uGraphics cleanup** - ToDo Adrian
@@ -214,7 +213,7 @@ New senor base classes and their inheritance chain include:
 
 Beta 5.0 is here and it's massive. This is a huge release for Meadow with major new features and big changes, highlights include:
 
- * **Bluetooth v1.0** - That's right, BLE support is here. Check out the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth) for details.
+ * **Bluetooth v1.0** - That's right, BLE support is here. Check out the [Bluetooth Guide](/Meadow/Meadow.OS/Bluetooth) for details.
  * **.NET Standard 2.0 API Support** - Meadow now fully supports the .NET Standard 2.0 API surface (equivalent to .NET Core 3.0), opening up a plethora of .NET code and Nuget packages for your use in Meadow applications.
  * **F# Support Fix** - The new .NET Standard support along with the linker fixes our F# integration, so you can use F# to build Meadow apps again.
  * **VB.NET Support** - We also added VB.NET support including templates in both Visual for Windows and Mac.
@@ -249,7 +248,7 @@ The b5.0 release of Meadow contains a draft subset of BLE features that cover a 
 - **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
 - **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in you BLE tree.
 
-For more information, see the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth/).
+For more information, see the [Bluetooth Guide](/Meadow/Meadow.OS/Bluetooth/).
 
 ### .NET Standard 2.0/.NET Core 3.0 API Support
 
