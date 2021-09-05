@@ -78,10 +78,23 @@ This call is data safe, if the table already exists, it won't modify it. Therefo
 
 There are a number of optional attributes that can be applied to the data model class in order to control how the tables and columns are created. Some of the common ones are as follows:
 
-[Table(Name)] - This class attribute specifies the name of the table. If not present, the class name will be used.
-[Column(name)] - This field attribute specifies the name of the column. If not present, the field name will be used.
-[PrimaryKey] - Specifies that the field will be used as an integer primary key. Note that composite keys are not supported.
-[AutoIncremet] - Causes the field to be created as an auto-incrementing column, meaning that each object inserted into the table will have a value incremented from the last inserted.
-[Ignore] - Causes the field to be ignored. If the data type should (or cannot) be stored in the database, this attribute is particularly useful.
-[Unique] - Ensures that the values in the database column are unique.
+ * `[Table(Name)]` - This class attribute specifies the name of the table. If not present, the class name will be used.
+ * `[Column(name)]` - This field attribute specifies the name of the column. If not present, the field name will be used.
+ * `[PrimaryKey]` - Specifies that the field will be used as an integer primary key. Note that composite keys are not supported.
+ * `[AutoIncremet]` - Causes the field to be created as an auto-incrementing column, meaning that each object inserted into the table will have a value incremented from the last inserted.
+ * `[Ignore]` - Causes the field to be ignored. If the data type should (or cannot) be stored in the database, this attribute is particularly useful.
+ * `[Unique]` - Ensures that the values in the database column are unique.
 
+## Adding Data
+
+```csharp
+Database.Insert(new SensorModel { Timestamp = DateTime.Now, Value = SensorValue });
+```
+
+## Updating Data
+
+
+## Retreiving Data
+
+
+## Deleting Data
