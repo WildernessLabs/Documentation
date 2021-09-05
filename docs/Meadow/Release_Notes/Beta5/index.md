@@ -18,14 +18,25 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 
 # b5.3
 
+This is another big stabilization release which fixes more issues introduced in b5.1/b5.2, and also adds SQLite support to Meadow! Big changes and fixes include:
+
+ * **SQLite Support** - SQLite is now built into Meadow.OS and Frank added support for Meadow in his SQLite.NET ORM.
+ * **Bluetooth Fixes** - There were some strange bugs introduced to bluetooth in b5.2, we fixed them.
+ * **Network Fixes** - There are a pile of Network stack fixes.
+
+
 ## Meadow.OS
+
+### SQLite
+
+Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device databases via SQLite. Additionally, we worked with Frank Krueger to get Meadow support built into his SQLite.NET ORM, which adds super easy and lightweight ORM access. Check out the new [SQLite guide](/Meadow/Meadow_Basics/Meadow.OS/SQLite/) for details.
+
+
+### API Cleanup
 
  * **Moved `SynchronizationContext` to Meadow.OS** - Previously, the `BeginInvokeOnMainThread()` method was executed on the current `Device` class, in this release we moved it to the `MeadowOS` class.
  * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
  * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
-
-### SQLite
-* SQLite is now supported.  Use the Nuget package [`sqlite-net-static`](https://www.nuget.org/packages/sqlite-net-static).  Currently this package is marked as a beta, so you may need to use the "include prereleases" option. Usage is [documented on GitHub](https://github.com/praeclarum/sqlite-net)
 
 ## Meadow.Foundation
 
