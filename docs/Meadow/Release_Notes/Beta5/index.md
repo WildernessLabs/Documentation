@@ -51,7 +51,7 @@ Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device datab
 CLI Updates - stability fixes, etc.
 
 
- ## Bug Fixes
+## Bug Fixes
 
 * [#159 Device.GetDeviceInformation() throws an error](https://github.com/WildernessLabs/Meadow_Issues/issues/159)
 * [#141 HttpClient fails with 'No such host is known' when trying to POST to MSFT Oauth endpoint](https://github.com/WildernessLabs/Meadow_Issues/issues/141)
@@ -59,7 +59,7 @@ CLI Updates - stability fixes, etc.
 * [#121 --Download causes an exception when executed in the Firmware directory on Windows](https://github.com/WildernessLabs/Meadow_Issues/issues/121)
 * [#122 Cosmetic: Delete the firmware zip files after downloading](https://github.com/WildernessLabs/Meadow_Issues/issues/122)
 * [#128 Meadow_Performance_Benchmarks app won't run](https://github.com/WildernessLabs/Meadow_Issues/issues/128)
-* [#163 IByteCommunications has no WriteRegister method that takes a Span<byte>](https://github.com/WildernessLabs/Meadow_Issues/issues/163)
+* [#163 IByteCommunications has no WriteRegister method that takes a `Span<byte>`](https://github.com/WildernessLabs/Meadow_Issues/issues/163)
 * [#184 uGraphics Canvas state doesn't store pen color](https://github.com/WildernessLabs/Meadow.Foundation/issues/184)
 * [#109 For HBridgeMotor pwmFrequency can be specified - but 1600 is always used anyway](https://github.com/WildernessLabs/Meadow.Foundation/issues/109)
 
