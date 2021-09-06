@@ -23,6 +23,7 @@ This is another big stabilization release which fixes more issues introduced in 
  * **SQLite Support** - SQLite is now built into Meadow.OS and Frank added support for Meadow in his SQLite.NET ORM.
  * **Bluetooth Fixes** - There were some strange bugs introduced to bluetooth in b5.2, we fixed them.
  * **Network Fixes** - There are a pile of Network stack fixes.
+ * **Azure Fix** - The auth bug that prevented integration with Azure is fixed.
 
 
 ## Meadow.OS
