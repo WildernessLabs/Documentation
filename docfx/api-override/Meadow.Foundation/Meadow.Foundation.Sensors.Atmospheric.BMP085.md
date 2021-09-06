@@ -74,7 +74,7 @@ To wire a BMP085 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BMP085/BMP085_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 
