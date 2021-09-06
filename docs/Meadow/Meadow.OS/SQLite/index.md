@@ -82,10 +82,30 @@ There are a number of optional attributes that can be applied to the data model 
  * `[Column(name)]` - This field attribute specifies the name of the column. If not present, the field name will be used.
  * `[PrimaryKey]` - Specifies that the field will be used as an integer primary key. Note that composite keys are not supported.
  * `[AutoIncremet]` - Causes the field to be created as an auto-incrementing column, meaning that each object inserted into the table will have a value incremented from the last inserted.
+ * `[MaxLength]` - Specifies the length of of a string column.
  * `[Ignore]` - Causes the field to be ignored. If the data type should (or cannot) be stored in the database, this attribute is particularly useful.
  * `[Unique]` - Ensures that the values in the database column are unique.
+ * `[Indexed]` - Creates an index on the column's value. Use this if the column is often looked up or searched on, as it will provide faster access.
+
+### Data Types
+
+The following table lists the .NET datatypes that are supported by SQLite.NET and their equivalent SQLite datatype:
+
+| .NET Datatype | SQLite Datatype |
+|---------------|-----------------|
+| `int`         | `Integer` or `bigint` SQLite types. |
+| `bool`        | `Integer` with the value `1` designated as `true` while all other values are `false`. |
+| `enum`        | `Integer` using the enum's value. |
+| `float` or `double` | `Float` |
+| `string`      | `Varchar` with a size specified by the `MaxLength` attribute. Length defaults to 140. |
+| `DateTime`    | `Datetime` subject to the SQLite precision. |
+| `byte[]`      | `Blob` |
+| `Guid`        | `Varchar(30)` |
+
 
 ## Adding Data
+
+Calling `Insert` on the database connection will add a new row to the database into the appropriate table based on the class information:
 
 ```csharp
 Database.Insert(new SensorModel { Timestamp = DateTime.Now, Value = SensorValue });
@@ -93,8 +113,44 @@ Database.Insert(new SensorModel { Timestamp = DateTime.Now, Value = SensorValue 
 
 ## Updating Data
 
+To update a record, first either retrieve or create a new object with a valid primary key, and then called `Update` on the database connection, passing an object. For example, the following code retreives the first record out of a table, doubles its value, and then saves it back to the database:
+
+```csharp
+// pull the first record out of the table
+SensorModel reading = Database.Table<SensorModel>().Take(1).First();
+// change the value
+reading.Value = reading.Value * 2;
+// update the data
+Database.Update(reading);
+```
 
 ## Retreiving Data
 
+There are a number of ways to retreive data from the database. 
+
+### Via Primary Key
+
+The simplest and fastest way to retrieve a record, is via the primary key, if known. For example, the following code will retrieve a `SensorModel` with a primary key ID of `1`.
+
+```csharp
+var sensorReading1 = Database.Get<SensorModel>(1);
+```
+
+### Via LINQ
+
+You can also use LINQ to create a query that will operate on a table. For example, the folowing code queries the `SensorModel`
+
+```csharp
+var readings = from rows in Database.Table<SensorModel>()
+               where rows.Value > 50
+               select rows;
+Console.WriteLine($"Found {readings.Count()} readings over 50: ");
+foreach (var reading in readings) {
+    Console.WriteLine($"ID: {reading.ID}, value: {reading.Value}");
+}
+```
 
 ## Deleting Data
+
+
+## Manually Executing SQL Statements
