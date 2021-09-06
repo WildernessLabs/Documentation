@@ -18,12 +18,14 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 
 # b5.3
 
-This is another big stabilization release which fixes more issues introduced in b5.1/b5.2, and also adds SQLite support to Meadow! Big changes and fixes include:
+Our most stable and complete relesae yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:
 
  * **SQLite Support** - SQLite is now built into Meadow.OS and Frank added support for Meadow in his SQLite.NET ORM.
  * **Bluetooth Fixes** - There were some strange bugs introduced to bluetooth in b5.2, we fixed them.
  * **Network Fixes** - There are a pile of Network stack fixes.
  * **Azure Fix** - The auth bug that prevented integration with Azure is fixed.
+ * **Meadow.Foundation Cleanup** - Lots of sample cleanup and some small API upgrades.
+ * **Docs** - We re-orged some of our Meadow.OS docs, and did a _huge_ update on Meadow.Foundation documentation.
 
 
 ## Meadow.OS
