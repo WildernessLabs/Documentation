@@ -152,7 +152,7 @@ foreach (var reading in readings) {
 
 ## Deleting Data
 
-[will delete a row with the ID of `1`]
+To delete data, call the `Delete` method and pass in the primary key value:
 
 ```csharp
 Database.Delete<SensorModel>(1);
@@ -160,7 +160,7 @@ Database.Delete<SensorModel>(1);
 
 ## Manually Executing SQL Statements
 
-[can also manually execute SQL statement]
+SQLite.NET can also be used to execute raw Transact-SQL (TSQL) statements. For example, the following code returns all records from the `SensorReadings` table for whom the sensor reading was greater than `50`:
 
 ```csharp
 var readings = Database.Query<SensorModel>("SELECT * FROM SensorReadings WHERE value > ?", 50);
