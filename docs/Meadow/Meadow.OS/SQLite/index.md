@@ -152,5 +152,20 @@ foreach (var reading in readings) {
 
 ## Deleting Data
 
+[will delete a row with the ID of `1`]
+
+```csharp
+Database.Delete<SensorModel>(1);
+```
 
 ## Manually Executing SQL Statements
+
+[can also manually execute SQL statement]
+
+```csharp
+var readings = Database.Query<SensorModel>("SELECT * FROM SensorReadings WHERE value > ?", 50);
+Console.WriteLine($"Found {readings.Count()} readings over 50: ");
+foreach (var reading in readings) {
+    Console.WriteLine($"ID: {reading.ID}, value: {reading.Value}");
+}
+```
