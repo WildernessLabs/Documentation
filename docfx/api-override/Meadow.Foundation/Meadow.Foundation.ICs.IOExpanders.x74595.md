@@ -66,7 +66,7 @@ public MeadowApp()
 
 To wire a 74HCT595 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg" 
+<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 
