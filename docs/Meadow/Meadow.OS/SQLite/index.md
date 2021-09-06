@@ -10,7 +10,7 @@ subtitle: Using SQLite in Meadow.OS to create and manage local databases.
 
 ## Using SQLite with SQLite.NET
 
-**[Run the Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/SQLite)**
+**[Explore the Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/SQLite)**
 
 Rather than low-level database interaction, we recommend using the lightweight SQLite.NET Object-Relational-Mapping (ORM) library to interact with SQLite databases on the device. It has an incredibly simple and powerful API that enables CRUD (Create, Read, Update, Delete) operations via objects, rather than SQL queries and raw data transforms.
 
