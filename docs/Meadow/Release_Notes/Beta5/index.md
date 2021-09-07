@@ -27,7 +27,7 @@ Our most stable and complete release yet. We spent a lot of effort fixing issues
  * **Meadow.Foundation Cleanup** - Lots of sample cleanup and some small API upgrades.
  * **Docs** - We re-orged some of our Meadow.OS docs, and did a _huge_ update on Meadow.Foundation documentation.
 
- ## Updating
+## Updating
 
 This release requires an OS update and nuget package updates. We released updates to the CLI out-of-band, make sure you have the latest verion installed by running: 
 
