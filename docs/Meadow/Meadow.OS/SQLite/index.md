@@ -169,3 +169,17 @@ foreach (var reading in readings) {
     Console.WriteLine($"ID: {reading.ID}, value: {reading.Value}");
 }
 ```
+
+## Threading Options
+
+SQLite can be configured to operate in one of three threading modes:
+ 
+ * **Serialized (Default)** - This is the default mode. SQLite can be safely used by multiple threads with no restriction.
+ * **Single-Threaded** - When set to single-threaded mode, all internal thread-safety mechanisms are disabled and SQLite is unsafe to use from more than a single thread at any given time.
+ * **Multi-Threaded** - When set to multi-threaded mode, SQLite can be safely used by multiple threads provided that no single database connection is used simultaneously in two or more threads.
+
+The threading mode can be set at runtime, but it should be configured during db setup, before doing any data access. To set, use the SQLite.NET `SQLite3.Config` API:
+
+```csharp
+SQLite.SQLite3.Config(SQLite3.ConfigOption.MultiThread);
+```
