@@ -39,5 +39,22 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.A4988/Samples/Motors.Stepper.A4988_Sample)
 
+### Wiring Example
 
+To wire a A4988 to your Meadow board, connect the following:
+
+| A4988     | Meadow Pin |
+|-----------|------------|
+| GND       | GND        |
+| VCC       | 5V         |
+| STEP      | D01        |
+| DIRECTION | D00        |
+| M1        | D04        |
+| M2        | D03        |
+| M3        | D02        |
+
+It should look like the following diagram:
+
+<img src="../../API_Assets/Meadow.Foundation.Motors.Stepper.A4988/A4988_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
