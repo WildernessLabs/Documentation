@@ -77,7 +77,7 @@ The HIH6130 requires only four connections between Meadow and the breakout board
 | SC           | SCK            | Blue       |
 | SD           | SDC            | White      |
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 
