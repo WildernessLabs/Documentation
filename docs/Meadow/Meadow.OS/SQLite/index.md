@@ -6,7 +6,7 @@ subtitle: Using SQLite in Meadow.OS to create and manage local databases.
 
 ![SQLite Logo - A feather with the logotype "SQLIte".](SQLite370.svg)
 
-[SQLite](https://www.sqlite.org/) is a portable, fast, ultra-lightweight and full-featured databse engine and format. And it's built into Meadow.OS as a first-class feature.
+[SQLite](https://www.sqlite.org/) is a portable, fast, ultra-lightweight and full-featured database engine and format. And it's built into Meadow.OS as a first-class feature.
 
 ## Using SQLite with SQLite.NET
 
