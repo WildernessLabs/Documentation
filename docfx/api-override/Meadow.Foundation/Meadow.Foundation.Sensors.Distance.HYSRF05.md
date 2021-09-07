@@ -44,7 +44,7 @@ private void HYSRF05_DistanceUpdated(object sender, IChangeResult<Meadow.Units.L
 
 The HY-SRF05 sensor has 5 pins, but you’ll only connect 4: power, ground, echo and trigger (out isn’t used).
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

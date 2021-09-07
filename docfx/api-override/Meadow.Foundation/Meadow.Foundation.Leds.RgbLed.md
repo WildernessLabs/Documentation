@@ -18,12 +18,12 @@ To connect these deds to Meadow, it is recommended to use an external resistor o
 
 ### Circuit of a common anode RGB LED
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonAnode.png" 
+<img src="../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonAnode_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 ### Circuit of a common cathode RGB LED
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonCathode.png" 
+<img src="../../API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonCathode_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 ### Code Example

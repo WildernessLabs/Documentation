@@ -98,7 +98,7 @@ protected async Task ReadMoisture()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.Capacitive/Capacitive.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.Capacitive/Capacitive_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

@@ -66,7 +66,7 @@ For just testing however, they can be powered via the `5V` rail on the Meadow as
 
 ### Testing Circuit
 
-![Servo connected to Meadow for testing](../../API_Assets/Meadow.Foundation.Servos.Servo/Servo.png)
+![Servo connected to Meadow for testing](../../API_Assets/Meadow.Foundation.Servos.Servo/Servo_Fritzing.png)
 
 ### External Power Circuit
 

@@ -106,7 +106,7 @@ In it's basic configuration the magnetometer requires four connections:
 | SD           | SDA            | Blue       |
 | D8           | INT1           | Orange     |
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.MAG3110/MAG3110.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.MAG3110/MAG3110_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

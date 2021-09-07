@@ -44,4 +44,4 @@ public class DisplayApp : App<F7Micro, DisplayApp>
 
 The Serial LCD requires only three connections; power, ground and serial data. The Tx pin on Meadow should be connected to the Rx pin on the serial backpack:
 
-![](../../API_Assets/Meadow.Foundation.Displays.SerialLcd/SerialLcd.svg)
+![](../../API_Assets/Meadow.Foundation.Displays.SerialLcd/SerialLcd_Fritzing.svg)

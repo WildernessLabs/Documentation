@@ -100,7 +100,7 @@ public MeadowApp()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.FC28/FC28.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Moisture.FC28/FC28_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 
