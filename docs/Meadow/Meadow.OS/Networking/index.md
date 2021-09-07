@@ -6,12 +6,16 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 development board and SMT module have WiFi networking via the ESP32 co-processor. The Meadow F7 embedded SMT module also adds optional ethernet capabilities.
 
-## Current Limitations
+## Current Beta Limitations
 
-Beta 4.0 introduces the first version of our networking stack for Meadow and there are a few known limitations to be aware of when using:
-
- * **`HttpServer` not available** - `HttpClient` has been tested and is fully supported, but we're still working on `HttpServer` support. However, `UdpClient`, `TcpListener` and `TcpClient` are all working now.
  * **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
+
+## Sample Apps
+
+For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
+ * **[Wifi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+ * **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+ * **[Antenna Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
 
 # WiFi
 
