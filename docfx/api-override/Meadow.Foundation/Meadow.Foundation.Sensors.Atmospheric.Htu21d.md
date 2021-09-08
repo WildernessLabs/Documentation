@@ -3,38 +3,68 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Htu21d
 remarks: *content
 ---
 
-| HTU21D        |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.HTU21D) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Htu21d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Htu21d" style="width: auto; height: -webkit-fill-available;" /> |
+| Htu21d | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu21d) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Htu21d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Htu21d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Htu21d" /></a> |
 
 The **HTU21D** is a low-cost, easy to use, highly accurate, digital humidity and temperature sensor controlled via the I2C bus.
 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Htu21d sensor;
+
+public MeadowApp()
 {
-    Htu21d sensor;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
+    sensor = new Htu21d(Device.CreateI2cBus());
+
+    var consumer = Htu21d.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result => 
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old) 
+            { 
+                return (
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
+                &&
+                (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05
+                );
+            }
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
+
+    sensor.Updated += (sender, result) =>
     {
-        sensor = new Htu21d(Device.CreateI2cBus(400));
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:F1}C");
+        Console.WriteLine($"  Relative Humidity: {result.New.Humidity?.Percent:F1}%");
+    };
 
-        sensor.Updated += Sensor_Updated;
+    ReadConditions().Wait();
 
-        sensor.StartUpdating(1000);
-    }
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+}
 
-    private void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
-    {
-        Console.WriteLine($"Temp: {e.New.Temperature}, Humidity: {e.New.Humidity}");
-    }
+async Task ReadConditions()
+{
+    var result = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}C");
+    Console.WriteLine($"  Relative Humidity: {result.Humidity:F1}%");
 }
 
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu21d/Samples/) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu21d/Samples/Sensors.Atmospheric.Htu21d_Sample)
 
 ### Wiring Example
 
@@ -51,3 +81,7 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Htu21d/Htu21d_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

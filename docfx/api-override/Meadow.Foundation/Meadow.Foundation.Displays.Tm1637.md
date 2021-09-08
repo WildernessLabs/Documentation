@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Tm1637
 remarks: *content
 ---
 
-| TM1637        |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Tm1637/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Tm1637.svg?label=Meadow.Foundation.Displays.Tm1637" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Tm1637 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Tm1637/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Tm1637.svg?label=Meadow.Foundation.Displays.Tm1637" /></a> |
 
 The **TM1637** is a led driver and keyboard scan interface. However, this chip is almost exclusively found pre-assembled with with 4 7-segment displays.
 
@@ -17,34 +17,28 @@ The **TM1637** is a led driver and keyboard scan interface. However, this chip i
 
 ### Code Example
 
-The following example shows how to initialize a TEA5767 and display an array of characters:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Tm1637 display;
+
+public MeadowApp()
 {
-    Tm1637 display;
+    Console.WriteLine("Initializing ...");
 
-    public MeadowApp()
-    {
-        display = new Tm1637(Device, Device.Pins.D02, Device.Pins.D01);
-        display.Brightness = 7;
-        display.ScreenOn = true;
-        display.Clear();
+    display = new Tm1637(Device, Device.Pins.D02, Device.Pins.D01);
 
-        var chars = new Character[] 
-        { 
-            Character.A, 
-            Character.B, 
-            Character.C, 
-            Character.D 
-        };
+    display.Brightness = 7;
+    display.ScreenOn = true;
 
-        display.Show(chars);
-    }
+    display.Clear();
+
+    var chars = new Character[] { Character.A, Character.B, Character.C, Character.D };
+
+    display.Show(chars);
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637/Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Tm1637/Samples/Displays.Tm1637_Sample)
 
 ### Wiring Example
 
@@ -59,3 +53,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

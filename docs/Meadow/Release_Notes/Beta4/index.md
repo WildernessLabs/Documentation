@@ -247,7 +247,7 @@ This is a big release with a ton of stability fixes, an overhaul of the CLI, and
  * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
  * **WiFi Memory Leak Fixed** - Network requests no longer leak memory.
  * **Networking Server Methods** - `UdpClient`, `TcpListener` and `TcpClient` are all working now. Note that we're still working on `HttpListener`.
- * **[Meadow.OS Watchdog Timer](/Meadow/Meadow_Basics/Meadow.OS/Watchdog/)** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
+ * **[Meadow.OS Watchdog Timer](/Meadow/Meadow.OS/Watchdog/)** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
  <!--* **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.-->
  * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The [Graphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/) available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `CharacterDisplay`s).
 
@@ -398,7 +398,7 @@ installed, you can find instructions on how to install it [here](/Meadow/Getting
 
 ### Networking
 
-Basic WiFi networking is up! Check out our [Networking guide](/Meadow/Meadow_Basics/Networking/) for more information!
+Basic WiFi networking is up! Check out our [Networking guide](/Meadow/Meadow.OS/Networking/) for more information!
 
 #### Networking Known Issues
 
@@ -409,7 +409,7 @@ Basic WiFi networking is up! Check out our [Networking guide](/Meadow/Meadow_Bas
 
 ### File System
 
-You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard flash device. For more infomation, see the [File System guide](/Meadow/Meadow_Basics/File_System).
+You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard flash device. For more infomation, see the [File System guide](/Meadow/Meadow.OS/File_System).
 
 #### Known Issues
 

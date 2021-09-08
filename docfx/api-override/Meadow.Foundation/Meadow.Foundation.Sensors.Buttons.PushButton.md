@@ -54,5 +54,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Buttons.PushButton/PushButton_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

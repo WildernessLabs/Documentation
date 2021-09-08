@@ -3,76 +3,68 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Hih6130
 remarks: *content
 ---
 
-| HIH6130       |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Hih6130/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Hih6130.svg?label=Meadow.Foundation.Sensors.Atmospheric.Hih6130" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Hih6130 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Hih6130/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Hih6130.svg?label=Meadow.Foundation.Sensors.Atmospheric.Hih6130" /></a> |
 
 The **HIH6130** sensor allows the reading of the relative humidity and temperature via I2C.
 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Hih6130 sensor;
+
+public MeadowApp()
 {
-    Hih6130 sensor;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
+    sensor = new Hih6130(Device.CreateI2cBus());
+
+    var consumer = Hih6130.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result => 
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old)
+            { 
+                return (
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
+                &&
+                (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05
+                );
+            }
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
+
+    sensor.Updated += (sender, result) => 
     {
-        sensor = new Hih6130(Device.CreateI2cBus());
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:F1}°C");
+        Console.WriteLine($"  Relative Humidity: {result.New.Humidity.Value:F1}%");
+    };
 
-        sensor.StartUpdating();
+    ReadConditions().Wait();
 
-        sensor.Updated += Sensor_Updated;
-    }
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+}
 
-    private void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
-    {
-        Console.WriteLine($"Humidity: {e.New.Humidity}, Temperature: {e.New.Temperature}");
-    }
+async Task ReadConditions()
+{
+    var result = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}°C");
+    Console.WriteLine($"  Relative Humidity: {result.Humidity:F1}%");
 }
 
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130/Samples/) 
-
-## Purchasing
-
-The HIH6130 sensor is available on a breakout board from Sparkfun.
-
-* [Sparkfun HIH6130 Breakout Board](https://www.sparkfun.com/products/11295)
-
-Example:
-
-```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-
-        Hih6130 sensor;
-
-        public MeadowApp()
-        {
-            Initialize();
-
-            sensor.StartUpdating();
-
-            sensor.Updated += Sensor_Updated;
-        }
-
-        private void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
-        {
-            Console.WriteLine($"Humidity: {e.New.Humidity}, Temperature: {e.New.Temperature}");
-        }
-
-        public void Initialize()
-        {
-            Console.WriteLine("Init...");
-
-            sensor = new Hih6130(Device.CreateI2cBus());
-        }
-    }
-```
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130/Samples/Sensors.Atmospheric.Hih6130_Sample)
 
 ### Wiring Example
 
@@ -85,5 +77,9 @@ The HIH6130 requires only four connections between Meadow and the breakout board
 | SC           | SCK            | Blue       |
 | SD           | SDC            | White      |
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

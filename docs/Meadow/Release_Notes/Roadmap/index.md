@@ -17,7 +17,6 @@ As we roll out these features, they'll be deleted from this list.
  * **Configuration Files** - The ability to ship device and application configuration files, in YAML, alongside the application code to provide automatic configuration of WiFi, device name, app settings, etc.
  * **Push Messaging** - The ability to send secure, reliable messages from the CLI and Meadow.Cloud to specific or groups of devices.
  * **Over-the-Air (OtA) Updates** - Reliably and securely update a Meadow with a new Firwmare/OS/Application build in the field touch-free.
- * **SQLite** - Native SQLite integration with .NET APIs similar to Xamarin and the ability to use libraries like SQLite.NET via SQLitePCL.Raw.
  * **SSL** - While we currently have client SSL working, we are working on client certificate validation, and also SSL Server functionality so you can run an SSL enabled web site or web API on the device.
  * **Final Meadow.Foundation Cleanup** - Meadow.Foundation is about 95% of the way to v1.0, but there are a few remaining drivers and bits to clean up for v1.0.
  * **Final Meadow.Core API Cleanup** - Meadow.Core is also nearly to v1.0, but there are few small remaining API clean ups to do to make it 100% internally consistent.

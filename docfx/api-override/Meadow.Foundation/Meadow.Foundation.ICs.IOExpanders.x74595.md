@@ -3,11 +3,11 @@ uid: Meadow.Foundation.ICs.IOExpanders.x74595
 remarks: *content
 ---
 
-| x74595        |               |
-|---------------|---------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" />   |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.x74595/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.x74595.svg?label=Meadow.Foundation.ICs.IOExpanders.x74595" style="width: auto; height: -webkit-fill-available;" /></a> |
+| x74595 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.x74595/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.x74595.svg?label=Meadow.Foundation.ICs.IOExpanders.x74595" /></a> |
 
 Shift registers offer the ability to increase the number of outputs on a microcontroller by using I2C or SPI interfaces. In the case of the 74xx595 series of shift registers, the SPI interface is used to output a series of bits that are then latched to the output pins of the chip.
 
@@ -18,42 +18,57 @@ Note that when using this chip, care should be taken to ensure that the total ou
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+x74595 shiftRegister;
+
+public MeadowApp()
 {
-    x74595 shiftRegister;
+    Console.WriteLine("Initialize hardware...");
 
-    public MeadowApp()
+    shiftRegister = new x74595(Device, Device.CreateSpiBus(), Device.Pins.D00, 8);
+
+    shiftRegister.Clear(true);
+
+    Console.WriteLine("Set Pin 3 to high");
+    //turn on pin 3
+    shiftRegister.WriteToPin(shiftRegister.Pins.GP3, true);
+
+    Console.WriteLine("Set Pin 4 to high");
+
+    //get the port for Pin4
+    var port4 = shiftRegister.CreateDigitalOutputPort(shiftRegister.Pins.GP4, true, Meadow.Hardware.OutputType.OpenDrain);
+
+    Console.WriteLine("Toggle pin 4");
+
+    Thread.Sleep(1000);
+    port4.State = false;
+    Thread.Sleep(1000);
+    port4.State = true;
+    Thread.Sleep(1000);
+
+    Console.WriteLine("Raise all pins to high");
+    while (true)
     {
-        shiftRegister =new x74595(Device, Device.CreateSpiBus(), Device.Pins.D03, 8);
+        shiftRegister.Clear();
 
-        shiftRegister.Clear(true);
-
-        Console.WriteLine("Set Pin 3 to high");
-        shiftRegister.WriteToPin(shiftRegister.Pins.GP3, true);
-
-        TestX74595();
-    }
-
-    void TestX74595()
-    {
-        while (true)
+        foreach (var pin in shiftRegister.Pins.AllPins)
         {
-            shiftRegister.Clear();
-            foreach (var pin in shiftRegister.Pins.AllPins)
-            {
-                shiftRegister.WriteToPin(pin, true);
-                Thread.Sleep(50);
-            }
+            shiftRegister.WriteToPin(pin, true);
+            Thread.Sleep(50);
         }
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595/Samples/ICs.IOExpanders.x74595_Sample)
 
 ### Wiring Example
 
 To wire a 74HCT595 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595.svg" 
+<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

@@ -102,5 +102,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton/RotaryEncoderWithButton.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton/RotaryEncoderWithButton_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

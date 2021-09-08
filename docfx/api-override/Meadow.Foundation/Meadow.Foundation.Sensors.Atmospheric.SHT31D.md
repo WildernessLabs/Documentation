@@ -3,46 +3,68 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Sht31D
 remarks: *content
 ---
 
-| SHT31D        |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31D/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31D.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31D" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Sht31d | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31D/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31D.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31D" /></a> |
 
 The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Sht31d sensor;
+
+public MeadowApp()
 {
-    SHT31D sensor;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
+    sensor = new Sht31d(Device.CreateI2cBus());
+
+    var consumer = Sht31d.CreateObserver(
+        handler: result => 
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+        },                
+        filter: result => 
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old) 
+            { 
+                return (
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
+                &&
+                (result.New.Humidity.Value.Percent - old.Humidity.Value.Percent) > 0.05
+                ); 
+            }
+            return false;
+        }
+    );
+    sensor.Subscribe(consumer);
+
+    sensor.Updated += (sender, result) => 
     {
-        sensor = new SHT31D(Device.CreateI2cBus());
-        sensor.Updated += Sensor_Updated;
+        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Console.WriteLine($"  Relative Humidity: {result.New.Humidity:N2}%");
+    };
+    
+    ReadConditions().Wait();
 
-        sensor.StartUpdating();
-    }
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+}
 
-    void Sensor_Updated(object sender, Meadow.Peripherals.Sensors.Atmospheric.AtmosphericConditionChangeResult e)
-    {
-        Console.WriteLine($"Temp: {e.New.Temperature}, Humidity: {e.New.Humidity}");
-    }
+async Task ReadConditions()
+{
+    var conditions = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
+    Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
 }
 
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Samples/) 
-
-## Purchasing
-
-The SHT31D temperature and humidity is available on a breakout board from Adafruit:
-
-* [SHT31D Temperature and Humidity Sensor](https://www.adafruit.com/product/2857)
-
-The SHT31D can operate in interrupt or polling mode.  The default mode is interrupt mode.
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d/Samples/Sensors.Atmospheric.Sht31d_Sample)
 
 #### Interrupt Mode
 
@@ -107,5 +129,9 @@ The SHT31D breakout board from Adafruit is supplied with pull-up resistors insta
 
 The `ADR` line is tied low giving and I2C address of 0x44.  This address line can also be tied high and in this case the I2C address is 0x45.
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+
