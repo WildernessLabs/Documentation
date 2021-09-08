@@ -21,15 +21,15 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 Our most stable and complete release yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:
 
  * **SQLite Support** - SQLite is now built into Meadow.OS and Frank added support for Meadow in his SQLite.NET ORM.
- * **Bluetooth Fixes** - There were some strange bugs introduced to bluetooth in b5.2, we fixed them.
+ * **Bluetooth Fixes** - There were some strange bugs introduced to Bluetooth in b5.2, we fixed them.
  * **Network Fixes** - There are a pile of Network stack fixes.
  * **Azure Fix** - The auth bug that prevented integration with Azure is fixed.
  * **Meadow.Foundation Cleanup** - Lots of sample cleanup and some small API upgrades.
- * **Docs** - We re-orged some of our Meadow.OS docs, and did a _huge_ update on Meadow.Foundation documentation.
+ * **Docs** - We re-organized some of our Meadow.OS docs and did a _huge_ update on Meadow.Foundation documentation.
 
 ## Updating
 
-This release requires an OS update and nuget package updates. We released updates to the CLI out-of-band, make sure you have the latest verion installed by running: 
+This release requires an OS update and nuget package updates. We released updates to the CLI out-of-band, make sure you have the latest version installed by running: 
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -54,10 +54,10 @@ Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device datab
 * **Samples Cleanup** We did a top to bottom review to make sure samples are well formed, well named, and written consistently to make it easier to start working with a new peripheral driver
 
 ## Documentation 
-Leveraging the work done to udpate the Meadow.Foundation samples, we built tooling to automatically update code snippets in the perihperals docs from the samples to make sure they're always up to date. Along with some other validation and cleanup, we updated over 90 docs!
+Leveraging the work done to update the Meadow.Foundation samples, we built tooling to automatically update code snippets in the peripherals docs from the samples to make sure they're always up to date. Along with some other validation and cleanup, we updated over 90 docs!
 
 ## Tooling
-The Meadow CLI received a few updates to imnprove stability and make it easier/more consistant to flash the latest version of Meadow OS to your board.
+The Meadow CLI received a few updates to improve stability and make it easier/more consistent to flash the latest version of Meadow OS to your board.
 
 ## Bug Fixes
 
@@ -76,7 +76,7 @@ The Meadow CLI received a few updates to imnprove stability and make it easier/m
 
 This is a small release that mainly focuses on cleanup of Meadow.Foundation, and fixing Bluetooth (which we broke in b5.1):
 
- * **BLE Fix** - We broke the bluetooth stack (among other small things) in b5.1 due to issues with our CI release pipeline. Most of the fixes we were able to ship out of band as Nuget updates, but BLE remained broken. This release fixes that.
+ * **BLE Fix** - We broke the Bluetooth stack (among other small things) in b5.1 due to issues with our CI release pipeline. Most of the fixes we were able to ship out of band as Nuget updates, but BLE remained broken. This release fixes that.
  * **Antenna Switch Fix** - We regressed switching between the onboard and external antenna. That's fixed in this release.
  * **Meadow.Foundation Upgrades** - A number of API cleanups, optimizations, and the like.
 
@@ -169,7 +169,7 @@ Check out the [FileSystem_Basics app sample in Meadow.Core.Samples](https://gith
 
 ### I2C/SPI API Updates
 
-We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn. As part of that, we leaned into the new `Span<T>` class, so any of the calls to `Read()`/`Write()` that took `byte[] buffer` before now take take `Span<>`.
+We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn. As part of that, we leaned into the new `Span<T>` class, so any of the calls to `Read()`/`Write()` that took `byte[] buffer` before now take `Span<>`.
 
 ### Meadow.Core Project Refactor
 
