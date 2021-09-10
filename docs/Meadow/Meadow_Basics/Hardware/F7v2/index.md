@@ -20,7 +20,7 @@ The F7v2 includes a number of upgrades from the previous v1 board, including:
 
  * **Upgraded Antenna** - We changed out the antenna with a new model that has about 10x better performance. In fact, we get better WiFi performance out of the board than our iPhones!
  * **64MB of Flash** - This is an upgrade from 32MB in v1. 2MB is reserved for the Over-the-Air updater, so 62MB is user accessible.
- * **Fully SMT-Compatible** - The F7v2 has hybrid castellated header/IO mounts that allow for use as both a through-hole (PTH) device, as well as a surface mount device (SMD/SMT).
+ * **Fully SMT-Compatible** - The F7v2 has hybrid castellated header/IO mounts that allow for use as both a through-hole (PTH) device, as well as a surface mount device (SMD/SMT). Additionally, there are no components on the underside, so it will solder flush without impediment.
  * **I2S Sound** - Though not exosed via APIs yet, we've added a full IO set for inter-integrated sound, which enables both I2S microphone input, and output.
  * **Low-power Timer Input** - Also not yet exposed in the Meadow.Core APIs, F7v2 includes a pin that has a low-power timer that can count pulses even while the board is asleep!
  * **Fixed Battery Voltage** - A bug in the design of v1.0 meant that the `3V3` rail could dip as low as `3.0V` when being powered by a battery via the integrated battery connector/charging cicrcuit. We changed the power components to make sure that the full `3.3V` is available.
