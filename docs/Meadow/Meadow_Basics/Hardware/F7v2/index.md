@@ -25,6 +25,7 @@ The F7v2 includes a number of upgrades from the previous v1 board, including:
  * **Low-power Timer Input** - Also not yet exposed in the Meadow.Core APIs, F7v2 includes a pin that has a low-power timer that can count pulses even while the board is asleep!
  * **Fixed Battery Voltage** - A bug in the design of v1.0 meant that the `3V3` rail could dip as low as `3.0V` when being powered by a battery via the integrated battery connector/charging cicrcuit. We changed the power components to make sure that the full `3.3V` is available.
  * **Better Buttons** - We also swapped out the buttons on the board with high-quality Wurth Elektrik buttons that have a greater surface area and a much nicer click.
+ * **Upgraded Silkscreen Design** - The new silk screen makes bus IO identification much easier.
  * **Open Source** - We'll be open-sourcing the design soon. This will allow folks to use it with other platform technologies, or build their own board.
 
 ### Additional Core-Compute Features
