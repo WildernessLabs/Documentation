@@ -6,9 +6,13 @@ subtitle: Version 2 of the Meadow F7 Board Series.
 
 Hello!
 
-Welcome to early access of the Meadow F7v2 board. The F7 is our flagship, workhorse secure IoT module and it comes in two flavors; a developer module, designed for prototyping and low-volume product runs, and a core-compute module for high-volume products:
+Welcome to early access of the Meadow F7v2 board. The F7 is our flagship, workhorse secure IoT module and it comes in two flavors; a developer module, designed for prototyping and low-volume product runs, and a _core-compute_ module for high-volume products:
 
 ![](/Common_Files/Meadow_F7v2_Modules.png)
+
+We couldn't be more happy with the board, it's not only best-in-class hardware, but is truly a work of art:
+
+![](F7v2_Dev_Medium_Cropped.jpg)
 
 ## V2 Upgrades
 
@@ -22,9 +26,13 @@ The F7v2 includes a number of upgrades from the previous v1 board, including:
  * **Fixed Battery Voltage** - A bug in the design of v1.0 meant that the `3V3` rail could dip as low as `3.0V` when being powered by a battery via the integrated battery connector/charging cicrcuit. We changed the power components to make sure that the full `3.3V` is available.
  * **Better Buttons** - We also swapped out the buttons on the board with high-quality Wurth Elektrik buttons that have a greater surface area and a much nicer click.
 
-We couldn't be more happy with the board, it's not only best-in-class hardware, but is truly a work of art:
+### Additional Core-Compute Features
 
-![](F7v2_Dev_Medium_Cropped.jpg)
+The core-compute module adds additional features not available in the developer form-factor:
+
+* **Ethernet** - The core-compute module contains an RMII interface for hooking up to an ethernet PHY, and Meadow.OS now has built-in ethernet support.
+* **SD-Card IO** - A high-speed SDMMC interface is also broken out, allowing full-speed SD-Card read/writes.
+* **Additional IO** - An additional I2C bus, SPI bus, and additional GPIO have been added.
 
 ## Developing with the F7v2
 
