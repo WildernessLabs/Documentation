@@ -1,0 +1,137 @@
+.content
+  border-left: 1px solid #12BBF3
+  border-right: 1px solid #12BBF3
+  min-width: 0
+  @include breakpoint(mobile tablet)
+    border: none
+
+body#home .content
+  padding-bottom: 0px
+
+.content-banner
+  background-size: cover
+  background-position: center
+  color: #fff
+  padding: 2% 9%
+  height: 147px
+  margin-bottom: 3em
+  h2, h3
+    width: 85%
+
+.content-body
+  padding: 0 6%
+
+  h1 
+    line-height: 1.2em
+    margin-bottom: 0.4em
+
+  h2
+    font-family: "Wavehaus-Bold"
+    font-size: 32px
+    line-height: 32px
+    margin-bottom: .2em
+      
+  h3
+    font-family: "Wavehaus-Bold"
+    font-size: 28px
+    margin-bottom: 0.2em
+
+  h4
+    font-family: "Wavehaus-Book"
+    font-size: 24px
+    margin-bottom: 0.2em
+
+  h5
+    font-family: "Wavehaus-Book"
+    font-size: 20px
+    margin-bottom: 0.2em
+
+  h2, h3, h4, h5, p
+    overflow: visible
+    code
+      display: inline-block
+      width: auto
+      margin: 0
+      padding: 0
+      position: relative
+      vertical-align: middle
+      font-size: 0.95em
+      top: -2.2px
+  
+  p:not(pre) > code, 
+      position: relative
+      width: auto
+
+  code 
+    white-space: break-spaces
+
+  ol, ul 
+    code
+      display: inline-block
+      width: auto
+      margin: 0
+      padding: 0
+      position: relative
+      font-size: 0.95em
+      vertical-align: middle
+      top: -2px
+      
+  pre
+    code 
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+      display: block;
+      padding: 0.5rem 2.5rem 0.5rem 1rem;
+      padding-right: 50px;
+      top: 0px
+      white-space: inherit
+      &:code:not(code[class*="language-"]) 
+        white-space: nowrap
+  a
+    color: #12BBF3
+    &:hover, &:focus
+      text-decoration: none
+    &[name]
+      scroll-margin: 100px
+
+  p, li
+    font-family: "MrsEaves-Roman"
+    letter-spacing: 0.5px
+    font-size: 22px
+    line-height: 27px
+    margin-bottom: 1.2em
+    img
+      border: 3px solid #12BBF3
+
+  ul, ol
+    margin-top: 2em;
+    margin-bottom: 2em
+    li 
+      margin-bottom: 0.5em
+    ul, ol
+      margin-bottom: 0
+
+  table
+    border-radius: 10px
+    border-spacing: 0
+    width: 100%
+    overflow: hidden
+    margin-bottom: 3em
+    td, th
+      font-family: "MrsEaves-Roman"
+      font-weight: normal
+      font-size: 20px
+
+    thead
+      border-collapse: collapse
+      th
+        padding: 8px 15px
+        text-align: left
+    tbody
+      tr
+        td
+          padding: 8px 13px 7px
+
+    pre
+      padding: 2em 2em

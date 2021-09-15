@@ -1,0 +1,28 @@
+.accordion
+  a.trigger + ul 
+    display: block
+    
+  a.trigger.not-active + ul 
+    display: none
+
+  li
+    ul
+      overflow: hidden
+      max-height: 0
+      opacity: 0
+
+      &.active
+        display: block
+        max-height: 1000px
+        opacity: 1
+        transition: max-height 0.6s ease, opacity 0.6s ease 0.3s
+        li
+          a.active
+            font-weight: bold
+
+@keyframes slideDown
+  from
+    max-height: 0
+
+  to
+    max-height: 500px
