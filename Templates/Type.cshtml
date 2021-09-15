@@ -1,10 +1,12 @@
 @inherits Chloroplast.Core.Rendering.ChloroplastTemplateBase<Chloroplast.Core.Rendering.EcmaXmlContent<Chloroplast.Core.Loaders.EcmaXml.XType>>
 @using System.Linq
 @await PartialAsync(Model.Node.MenuPath)
-<section id="homepage" class="content">
+<section class="content">
+    <div class="content-banner">
+        <h2 class="border content-primary">Class @Model.Element.Name</h2>
+    </div>
     <div class="content-body">
       <div class="content-section">
-        <h2 class="border content-primary">Class @Model.Element.Name</h2>
 
         <ul>
         @foreach(var sig in Model.Element.Signatures)
