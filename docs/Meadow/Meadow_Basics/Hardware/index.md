@@ -12,10 +12,10 @@ The Meadow F7 is provisioned with Meadow.OS which runs full .NET Standard v2.1 a
 
 ## Form-Factors
 
-The Meadow SoM is available in two models, based on two differing form factors: 
-Meadow F7v2 Dev Module - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
+The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two differing form factors: 
 
-Meadow F7v2 Core-Compute Module- A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilitie
+ * **Meadow F7v2 Micro Development Module** - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
+ * **Meadow F7v2 Core-Compute Module** -  A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilities.
 
 ![](/Common_Files/Meadow_F7v2_Modules.png)
 
