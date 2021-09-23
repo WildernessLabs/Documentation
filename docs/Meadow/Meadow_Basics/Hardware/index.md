@@ -34,8 +34,8 @@ The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two 
  * Espressif ESP32 (ESP-Pico-D4) Xtensa 32-bit dual-core LX6 up to 240MHz coprocessor.
    * 2.4GHz WiFi 802.11 b/g/n with WFA, WPA/WPA2 and WAPI
    * Bluetooth 4.2, 5.1
- * 64MB external, onboard QSPI RAM
- * 32MB external, onboard non-volatile Flash memory (~28MB available for user code)
+ * 32MB external, onboard QSPI RAM
+ * 64MB external, onboard non-volatile Flash memory (60MB available for user code)
  * 25 Mixed Signal IO ports (6/8x Analog, 12x PWM, 3x UART, I2C, SPI, CAN, 2x DAC)
  * On-board 2.4GHz ceramic chip antenna
  * U.FL external antenna connector
