@@ -4,11 +4,9 @@ title: Meadow Hardware
 subtitle: Meadow System-on-Modules (SoM) boards for prototype and production.
 ---
 
-[intro]
+The Meadow F7 is a workhorse Wi-Fi and Bluetooth enabled System-on-Module (SoM) microcontroller-based board designed for sophisticated IoT applications and is based on the STMicroelectronics STM32F7 microcontroller (MCU) with an Espressif ESP-32 coprocessor.
 
 ![](/Common_Files/F7v2_Dev_Medium_Cropped.jpg)
-
-The Meadow F7 is a workhorse Wi-Fi and Bluetooth enabled System-on-Module (SoM) microcontroller-based board designed for sophisticated IoT applications and is based on the STMicroelectronics STM32F7 microcontroller (MCU) with an Espressif ESP-32 coprocessor.
 
 The Meadow F7 is provisioned with Meadow.OS which runs full .NET Standard v2.1 applications and can be managed remotely via Meadow.Cloud with secure, over-the-air (OtA) updates, reliable push messaging, and device and application health monitoring over a Wi-Fi or ethernet (F7 Production model only) network.
 
