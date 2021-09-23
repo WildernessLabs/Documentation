@@ -4,25 +4,22 @@ title: Meadow F7v2
 subtitle: Version 2 of the Meadow F7 Board Series.
 ---
 
-Hello!
+The Meadow SoM is available in two models, based on two differing form factors: 
+Meadow F7v2 Dev Module - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
 
-Welcome to early access of the Meadow F7v2 board. The F7 is our flagship, workhorse secure IoT module and it comes in two flavors; a developer module, designed for prototyping and low-volume product runs, and a _core-compute_ module for high-volume products:
+Meadow F7v2 Core-Compute Module- A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilitie
 
 ![](/Common_Files/Meadow_F7v2_Modules.png)
-
-We couldn't be more happy with the board, it's not only best-in-class hardware, but is truly a work of art:
-
-![](F7v2_Dev_Medium_Cropped.jpg)
 
 ## V2 Upgrades
 
 The F7v2 includes a number of upgrades from the previous v1 board, including:
 
- * **Upgraded Antenna** - We changed out the antenna with a new model that has about 10x better performance. In fact, we get better WiFi performance out of the board than our iPhones!
- * **64MB of Flash** - This is an upgrade from 32MB in v1. 2MB is reserved for the Over-the-Air updater, so 62MB is user accessible.
+ * **64MB of Flash** - This is an upgrade from 32MB in v1, and with only 4MB or reserved system space, a whopping 60MB is now user accessible.
+ * **Upgraded Antenna** - We changed out the antenna with a new model that has 10x better performance. In fact, we get better WiFi performance out of the board than our iPhones!
  * **Fully SMT-Compatible** - The F7v2 has hybrid castellated header/IO mounts that allow for use as both a through-hole (PTH) device, as well as a surface mount device (SMD/SMT). Additionally, there are no components on the underside, so it will solder flush without impediment.
- * **I2S Sound** - Though not exosed via APIs yet, we've added a full IO set for inter-integrated sound, which enables both I2S microphone input, and output.
- * **Low-power Timer Input** - Also not yet exposed in the Meadow.Core APIs, F7v2 includes a pin that has a low-power timer that can count pulses even while the board is asleep!
+ * **I2S Sound** - Coming soon via Meadow.Core APIs, we’ve added a full set of hardware IO for inter-integrated sound, which enables both I2S microphone input, and sound output.
+ * **Low-power Timer Input** - Also available soon in software, F7v2 includes a pin that has a low-power timer that can count pulses even while the board is asleep!
  * **Fixed Battery Voltage** - A bug in the design of v1.0 meant that the `3V3` rail could dip as low as `3.0V` when being powered by a battery via the integrated battery connector/charging cicrcuit. We changed the power components to make sure that the full `3.3V` is available.
  * **Better Buttons** - We also swapped out the buttons on the board with high-quality Wurth Elektrik buttons that have a greater surface area and a much nicer click.
  * **Upgraded Silkscreen Design** - The new silk screen makes bus IO identification much easier.
@@ -65,10 +62,6 @@ Note that `MeadowApp` should be the name of your application class.
 
 ### Pinout
 
-Also note that the pinout of the device is _slightly_ different than what's list in the [IO guide](/Meadow/Meadow_Basics/IO/), so please refer to the following diagram for pinout information.
+Also note that the pinout of the device is _slightly_ different than the v1. Please refer to the following illustration for pinout information:
 
 ![](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
-
-That's it! If you have any questions, don't hesitate to reach out to us!
-
-
