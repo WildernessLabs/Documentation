@@ -141,7 +141,14 @@ This filter can be used to prevent unwanted state changes due to noise. Set to `
 
 One thing to bear in mind when creating interrupts on multiple pins is that input pins share _interrupt groups_, in which only one input within any given interrupt group can be enabled as an interrupt. So when choosing pins to use as interrupts, refer to the pinout diagram and make sure that for each interrupt you want to use, they're in a unique interrupt group:
 
-![Meadow pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+##### Meadow F7v2 Micro Pinout
+
+![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg){:standalone}
+
+##### Meadow F7v1 Micro Pinout
+
+![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+
 
 <!--
 ## Timing

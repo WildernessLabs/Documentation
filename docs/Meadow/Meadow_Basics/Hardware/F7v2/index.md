@@ -67,7 +67,7 @@ Note that `MeadowApp` should be the name of your application class.
 
 Also note that the pinout of the device is _slightly_ different than what's list in the [IO guide](/Meadow/Meadow_Basics/IO/), so please refer to the following diagram for pinout information.
 
-![](/Common_Files/Meadow_F7_Micro_v2_Pinout.svg)
+![](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 That's it! If you have any questions, don't hesitate to reach out to us!
 
