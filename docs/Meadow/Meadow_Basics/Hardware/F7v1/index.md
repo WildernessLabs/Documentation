@@ -10,7 +10,6 @@ The Meadow F7v1 was the inaugural Meadow F7 board that shipped as part of our Ki
 
 The Meadow F7v1 board is feature packed:
 
- * Fully Surface Mount Technology (SMT) compatible. Both modules can be used in SMD designs without the need for through-hole (PTH)  soldering.
  * STMicroelectronics STM32F7 32-bit ARM Cortex-M7 based core MCU at up to 216MHz
    * 2MB internal Flash memory
    * 412Kb internal RAM
