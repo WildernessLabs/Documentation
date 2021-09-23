@@ -4,10 +4,10 @@ title: Meadow F7v2
 subtitle: Version 2 of the Meadow F7 Board Series.
 ---
 
-The Meadow SoM is available in two models, based on two differing form factors: 
-Meadow F7v2 Dev Module - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
+The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two differing form factors: 
 
-Meadow F7v2 Core-Compute Module- A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilitie
+ * **Meadow F7v2 Micro Development Module** - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
+ * **Meadow F7v2 Core-Compute Module** -  A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilitie
 
 ![](/Common_Files/Meadow_F7v2_Modules.png)
 
