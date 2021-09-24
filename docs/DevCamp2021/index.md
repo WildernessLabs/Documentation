@@ -8,9 +8,9 @@ subtitle: Building Real IoT with .NET
 
 ## Announcing Wilderness Labs Dev Camp 2021!
 
-We're doing it again! Another awesome day of great Meadow content. This years theme is building production-grade enterprise IoT solutios.
+We're doing it again! Another awesome day of great Meadow content. This years theme is **building production-grade enterprise IoT solutions with Meadow**.
 
-Register now, and tune in on November 18th, 2021 for a full day of sessions and fun. 
+Register now, and tune in on **November 18th, 2021** for a full day of sessions and fun. 
 
 ## Register Now!
 
