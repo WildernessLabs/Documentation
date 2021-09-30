@@ -26,14 +26,14 @@ Register now, and tune in for a full day of sessions and fun.
 
 Are you building something with Meadow? We're going to put together a customer vignette montage, and want you to be in it! Big, small, fun, silly, serious, whatever; let us know about what your building, and we'll reach out to help you put together some quick clips for inclusion in the montage. 
 
-[TBD: Tell us about your project. (form link)]()
+[Tell us about your project!](https://docs.google.com/forms/d/e/1FAIpQLSeZNICTNKdrDq_U6ZbE6y-AOeSmT0ygp9DnBi6F4m0oK6FVlg/viewform)
 
 
 ## Submit a Session
 
 Have a session on hardware you're dying to give? Let us know. We'll be doing super fast-paced 10-15 minute talks and longer workshops.
 
-[TBD: Tell us your session idea. (form link)]()
+[TBD: Tell us your session idea!]()
 
 <!--
 
