@@ -10,7 +10,7 @@ subtitle: Building Real IoT with .NET
 
 Join us, on **November 18th, 2021**, for the second annual Dev Camp. It'll be an action packed day of talks, lightning sessions, and an afternoon of deep-dive workshops. This year we'll be focusing on **building real world, production-grade IoT solutions with Meadow**.
 
-Follow along with the [Clima](https://github.com/WildernessLabs/Clima) project as we walk through the building a real-world, solar-powered, custom embedded-IoT solution that tracks climate from a suite of sensors, saves data locally for access via bluetooth and a RESTful Web API, and also synchronizes that data to the cloud.
+Follow along as we explore the [Clima](https://github.com/WildernessLabs/Clima) project; a real-world, solar-powered, custom embedded-IoT solution that tracks climate from a suite of sensors, saves data locally for access via bluetooth and a RESTful Web API, and also synchronizes that data to the cloud.
 
 And don't miss the keynote where cofounder/CEO, Bryan Costanich, will talk about the state of the industry and the IoT revolution.
 
