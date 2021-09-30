@@ -33,7 +33,7 @@ Are you building something with Meadow? We're going to put together a customer v
 
 Have a session on hardware you're dying to give? Let us know. We'll be doing super fast-paced 10-15 minute talks and longer workshops.
 
-[TBD: Tell us your session idea!]()
+[Tell us your session idea!](https://docs.google.com/forms/d/e/1FAIpQLSe67kPhneIJ1w4ZI7aa2cuWUoh39n_6PdBsK6uWcKqGuha3qA/viewform)
 
 <!--
 
