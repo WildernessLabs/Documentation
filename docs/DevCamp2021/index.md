@@ -16,11 +16,9 @@ And don't miss the keynote where cofounder/CEO, Bryan Costanich, will talk about
 
 And best of all, **it's free and will stream worldwide to registered guests**!
 
-## Register Now!
+### [Register Now!](https://www.eventbrite.com/e/devcamp-2021-tickets-179344774047)
 
 Register now, and tune in for a full day of sessions and fun. 
-
-[TBD: register button]()
 
 ## Customer + Project Show & Tell
 
