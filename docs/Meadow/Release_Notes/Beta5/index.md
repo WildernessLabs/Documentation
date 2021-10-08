@@ -16,6 +16,35 @@ subtitle: Release Notes
 Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI. 
 -->
 
+# b5.4
+
+[intro]
+
+## Updating
+
+This release requires an OS update and nuget package updates. We released updates to the CLI out-of-band, make sure you have the latest version installed by running: 
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Meadow.OS
+
+## Meadow.Core
+
+### Added Full-Duplex Support to `IByteCommunications.Exchange()` and `SpiPeripheral`
+
+The `IByteCommunications.Exchange()` method now has an optional parameter of `DuplexType`:
+
+```csharp
+void Exchange(Span<byte> writeBuffer, Span<byte> readBuffer, DuplexType duplex = DuplexType.Half);
+```
+
+This enables protocols that support full-duplex communications (data received at the same time as it's sent) to be supported at the peripheral level, rather than having to use the bus class directly.
+
+Previously, if you wanted to do full-duplex communications, you needed to use the `SpiBus.Exchange()` method, which meant passing the chip select pin. This streamlines that workflow.
+
+
 # b5.3
 
 Our most stable and complete release yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:
