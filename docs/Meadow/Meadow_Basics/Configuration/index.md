@@ -1,21 +1,33 @@
 ---
 layout: Meadow
-title: Meadow Configuration
-subtitle: Meadow Configuration Files
+title: Configuration
+subtitle: Controlling settings at build-time for device and app information.
 ---
 
-# Meadow Configuration
+Meadow has a robust configuration framework that allows you to adjust settings at build-time and deploy them with an app.
+
+## OS/Device Configuration and Application Configuration
+
+There are generally two sets of configuration options:
+ 
+ * **OS & Device Configuration** - 
+ * **Application Configuration** - [Coming soon.]
+
+## Meadow.OS and Device Configuration
+
+[device name, OS settings, etc.]
+
 
 Meadow can be configured through two files:
 
-* `meadow.yaml` - General board and system configuration
+* `meadow.config.yaml` - General board and system configuration
 * `wifi.yaml` - Access point and password configuration
 
 Both of these files are optional and the default values (shown below) will be used if the particular file is missing from the file system.
 
-## `meadow.yaml`
+## `meadow.config.yaml`
 
-`meadow.yaml` can be used to set a number of options 
+`meadow.config.yaml` can be used to set a number of options 
 
 
 ```yaml
@@ -36,6 +48,8 @@ This is the name that will show on the network.
 
 Default value: MeadowF7
 
+<!-- think we should cut this.
+
 ### SpiSpeed
 
 This parameter is not normally used as the default settings combine high speed with reliability.  It can be used for boards working in electrically noisy environments to reduce the possibility of communication problems.
@@ -43,6 +57,7 @@ This parameter is not normally used as the default settings combine high speed w
 The value is the the frequency of the SPI communication in Hz.
 
 Default value: 8000000
+--->
 
 ### AutomaticallyStartNetwork
 
