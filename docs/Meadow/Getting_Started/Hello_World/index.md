@@ -17,11 +17,7 @@ You'll need Visual Studio 2019 for either Windows or Mac; [available here](https
 
 ## Windows
 
-You'll need to ensure the **.NET Framework 4.7.2 SDK and targeting pack** are installed. To verify, run the Visual Studio Installer and click More > Modify. Under **Individual Components**, check **.NET Framework 4.7.2 SDK** and **.NET Framework 4.7.2 targeting pack** and install.
-
-![VS2019 Installer](vs2019_install.png){:standalone}
-
-You'll also need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
+You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
  1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
  2. Click **Online** and search for `Meadow`.
@@ -51,7 +47,6 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  4. Select **Meadow Application** and press **Next**.
  5. Name your project `HelloMeadow` and choose project location.
  6. Press **Create**.
- 7. Right-click `HelloMeadow` project in Solution Explorer > Click `Manage Nuget Packages` > Update Meadow.Foundation package to latest version.
 
 ### macOS
 
@@ -60,11 +55,10 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  3. In the **Meadow** section, select *Meadow Application* and press **Next**.
  4. Name your project `HelloMeadow` and choose project location.
  5. Press **Create**.
- 6. Update Meadow.Foundation package to latest version.
 
 ## Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .Net application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 ### macOS
 
@@ -79,20 +73,13 @@ The Meadow application template is a simple application that will pulse the onbo
  3. Right-click project in Solution Explorer and choose **Deploy**.
  4. Wait 30-60 seconds for your application to start
 
-<!--
-After a brief boot up wait, your device should start blinking the onboard LED in a variety of colors:
-
-[image]
-
--->
-
 ## Understanding the `Hello, World` App
 
 The Meadow app template has two files; `Program.cs` and `MeadowApp.cs`, let's take a quick look at them:
 
 ### Program.cs
 
-If you've created a .Net console app before, the `Program` class should look familiar; it's very simple and only includes a `static void Main()` method that instantiates our Meadow app:
+If you've created a .NET console app before, the `Program` class should look familiar; it's very simple and only includes a `static void Main()` method that instantiates our Meadow app:
 
 ```csharp
 using Meadow;
