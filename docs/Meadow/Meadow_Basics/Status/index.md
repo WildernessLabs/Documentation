@@ -27,13 +27,13 @@ We are currently in [Meadow Beta 5](/Meadow/Release_Notes/Beta5/).
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
 | WiFi	| Yes | All SSL certificates accepted. No SSL certificate management yet. |
-| Bluetooth | Yes | New in b5.0 |
+| Bluetooth | Yes |  |
 
 ## Other Features
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Debugging        | No                  | Planned for Beta 4.x               |
+| Debugging        | Yes                 | New in b6.0               |
 | Battery Charging  | Yes | |
 | Battery Voltage Level | Yes | |
 | Power Management APIs | No | Planned for RC-1 |
