@@ -21,7 +21,7 @@ There are generally two sets of configuration options:
 Meadow can be configured through two files:
 
 * `meadow.config.yaml` - General board and system configuration
-* `wifi.yaml` - Access point and password configuration
+* `wifi.config.yaml` - Access point and password configuration
 
 Both of these files are optional and the default values (shown below) will be used if the particular file is missing from the file system.
 
@@ -99,8 +99,8 @@ Credentials:
     Password: SSIDPassword
 ```
 
-This file will be processed when after the `meadow.yaml` file.  The `Ssid` name will be set as the default access point to be used as the system starts.  The password will be used when connecting to the access point.
+This file will be processed when after the `meadow.config.yaml` file.  The `Ssid` name will be set as the default access point to be used as the system starts.  The password will be used when connecting to the access point.
 
-The `wifi.yaml` file will be deleted from flash storage after it has been processed as the information is considered sensitive.  This prevents the possibility of the file being read at a later point in time.
+The `wifi.config.yaml` file will be deleted from flash storage after it has been processed as the information is considered sensitive.  This prevents the possibility of the file being read at a later point in time.
 
 The contents of this file along with the `AutomaticallyStartNetwork` value in `meadow.yaml` can be used to automatically connect to an access point when the board starts.
