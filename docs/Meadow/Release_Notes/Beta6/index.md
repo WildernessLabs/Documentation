@@ -7,7 +7,8 @@ subtitle: Release Notes
 # b6.0
 
 * **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
-
+* **Device/OS Configuration** - Device and OS settings can now be configured at build time via yaml config files.
+* **.NET Standard 2.1 Fixes** - The last of the .NET Standard 2.1 deployment stuff is in, fixing `System.Text.Json`.
 
 ## Updating
 
@@ -23,12 +24,23 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
 Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI. 
 
+### Configuration
+
+It's now possible to have Meadow.OS automatically connect to a preferred WiFi network, get the time from NTP servers, and more, all via configuration settings defined at build time.
+
+You can also configure the name of the device, and more.
+
+For more information, check out the [Configuration guide](/Meadow/Meadow.OS/Configuration/).
+
+
 ### Network Time Protocol (NTP)
 
 The OS now uses NTP to maintain correct world time! It can be configured to poll multiple NTP servers.
 
 ### .NET Standard 2.1 Nuget fixes (System.Text.Json)
+
 A new deployment method for the .NET core libraries removes the build issues brought on by using a Nuget to distribute framework assemblies such as mscorlib.dll and netstandard.dll. In order to benefit from these improvements you must ensure that you have:
+
   * Update Meadow CLI to version 0.6
   * Remove all references to the `WildernessLabs.Meadow.Assemblies` nuget (primarily by updating to the latest `Meadow.Core`)
 

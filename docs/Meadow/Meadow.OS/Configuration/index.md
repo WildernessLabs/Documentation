@@ -89,9 +89,9 @@ Default value: 3
 
 ### Name
 
-## `wifi.yaml`
+## `wifi.config.yaml`
 
-The `wifi.yaml` file can be used to set the default access point and the password for that access point.  The `wifi.yaml` file should look something like this:
+The `wifi.config.yaml` file can be used to set the default access point and the password for that access point.  The `wifi.yaml` file should look something like this:
 
 ```yaml
 Credentials:
