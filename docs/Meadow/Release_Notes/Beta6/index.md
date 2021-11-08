@@ -73,12 +73,17 @@ We've added a several display buffer classes designed to manage data for specifi
 
 Why do we care? :) This has several benefits:
 
-1. All of the buffer logic was refactored into common classes so any display-specific optimizations are now common across similar display drivers (more performance!).
+* All of the buffer logic was refactored into common classes so any display-specific optimizations are now common across similar display drivers (more performance!).
 
-2. We spent time optimizing buffer writing logic for each class improving performance even more. Filled rectangles are at least 5x faster and full screen fills on color displays are 20x faster.
+* We spent time optimizing buffer writing logic for each class improving performance even more. Filled rectangles are at least 5x faster and full screen fills on color displays are 20x faster.
 
-3. We can now create buffers outside of display drivers - are you using jpegs? You can now quickly add all of that data to a 24bit buffer making it much easier to manage. Want to create and store sprites for game logic - that's now much easier.
+* We can now create buffers outside of display drivers - are you using jpegs? You can now quickly add all of that data to a 24bit buffer making it much easier to manage. Want to create and store sprites for game logic - that's now much easier.
 
+### Bug fixes 
 
-
-
+* [#200 Some Tea5765 APIs set to private](https://github.com/WildernessLabs/Meadow_Issues/issues/200)
+* [#199 MS5611 checks for wrong i2c address](https://github.com/WildernessLabs/Meadow_Issues/issues/199)
+* [#196 Update St7565 to use Memory<byte>](https://github.com/WildernessLabs/Meadow_Issues/issues/196)
+* [#194 FeatherWings.DotstarWing does not implement InvertPixel](https://github.com/WildernessLabs/Meadow_Issues/issues/194)
+* [#190 ADXL345 driver not working](https://github.com/WildernessLabs/Meadow_Issues/issues/190)
+* [#189 VEML7700 light sensor driver not working](https://github.com/WildernessLabs/Meadow_Issues/issues/189)
