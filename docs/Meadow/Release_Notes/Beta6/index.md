@@ -6,9 +6,15 @@ subtitle: Release Notes
 
 # b6.0
 
+This is a big new release with huge new features and lots of optimizations and improvements, including:
+
 * **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
 * **Device/OS Configuration** - Device and OS settings can now be configured at build time via yaml config files.
 * **.NET Standard 2.1 Fixes** - The last of the .NET Standard 2.1 deployment stuff is in, fixing `System.Text.Json`.
+* **Faster, More Reliable Networking** - There have been a number of big optimizations in the networing stack promising much more reliable networking.
+* **Improved Deployment** - App and OS deployment has undergone a massive update, offering a more reliable experience.
+* **Up to 20x Graphics Performance Improvements** - [Adrian]
+* **Meadow.Foundation Improvements** - [Adrian]
 
 ## Updating
 
