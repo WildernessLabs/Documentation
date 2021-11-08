@@ -8,17 +8,17 @@ subtitle: Release Notes
 
 This is a big new release with huge new features and lots of optimizations and improvements, including:
 
-* **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
+* **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Mac, AND VS Code (VS2019 coming very soon!!)
 * **Device/OS Configuration** - Device and OS settings can now be configured at build time via yaml config files.
 * **.NET Standard 2.1 Fixes** - The last of the .NET Standard 2.1 deployment stuff is in, fixing `System.Text.Json`.
-* **Faster, More Reliable Networking** - There have been a number of big optimizations in the networing stack promising much more reliable networking.
+* **Faster, More Reliable Networking** - There have been a number of big optimizations in the networking stack promising much more reliable networking.
 * **Improved Deployment** - App and OS deployment has undergone a massive update, offering a more reliable experience.
-* **Up to 20x Graphics Performance Improvements** - [Adrian]
-* **Meadow.Foundation Improvements** - [Adrian]
+* **Up to 20x Graphics Performance Improvements** - New graphics optimizations to improve drawing performance, especially for fills and rectangles.
+* **Meadow.Foundation Improvements** - Fixes, optimizations and stability improvements plus new buffer classes to manage in-memory graphics/sprites.
 
 ## Updating
 
-This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version CLI (v0.15.0) by running: 
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version CLI (v0.15.0) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -84,6 +84,12 @@ Why do we care? :) This has several benefits:
 * We spent time optimizing buffer writing logic for each class improving performance even more. Filled rectangles are at least 5x faster and full screen fills on color displays are 20x faster.
 
 * We can now create buffers outside of display drivers - are you using jpegs? You can now quickly add all of that data to a 24bit buffer making it much easier to manage. Want to create and store sprites for game logic - that's now much easier.
+
+### Maple web server
+
+* General API cleanup and modernization
+
+* Added support for parameter routing!
 
 ### Bug fixes 
 
