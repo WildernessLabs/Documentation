@@ -4,9 +4,7 @@ title: Meadow F7 Micro Beta Status
 subtitle: Current feature and beta status.
 ---
 
-# Meadow F7 Micro Beta Status
-
-We are currently in [Meadow Beta 5](/Meadow/Release_Notes/Beta5/).
+We are currently in [Meadow Beta 6](/Meadow/Release_Notes/Beta6/).
 
 ## General IO Features
 
