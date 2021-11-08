@@ -26,6 +26,7 @@ public MeadowApp()
     CreateSpiDisplay();
     //CreateI2CDisplay();
 
+    Console.WriteLine("Create canvas...");
     graphics = new GraphicsLibrary(display);
 
     graphics.Clear();
@@ -33,14 +34,16 @@ public MeadowApp()
     graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
     graphics.DrawRectangle(5, 14, 30, 10, true);
 
+    Console.WriteLine("Show...");
     graphics.Show();
+    Console.WriteLine("Show Complete");
 }
 
 void CreateSpiDisplay()
 {
     Console.WriteLine("Create Display with SPI...");
 
-    var config = new Meadow.Hardware.SpiClockConfiguration(12000, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
+    var config = new Meadow.Hardware.SpiClockConfiguration(6000, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
 
     var bus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 

@@ -20,8 +20,7 @@ public MeadowApp()
 
     var spiBus = Device.CreateSpiBus();
 
-    var display = new Ssd1327(device: Device, spiBus: spiBus,  
-        chipSelectPin:  Device.Pins.D02, dcPin: Device.Pins.D01, resetPin: Device.Pins.D00);
+    var display = new Ssd1327(Device, spiBus, Device.Pins.D02, Device.Pins.D01, Device.Pins.D00);
 
     display.SetContrast(60);
 
@@ -32,8 +31,8 @@ public MeadowApp()
 
     for(int i = 10; i > 0; i--)
     {   //interate across different brightnesses
-        graphics.DrawText(0, i * 12, "SSD1327", Color.FromRgb(i * 0.1, i * 0.1, i * 0.1));
-    }
+        graphics.DrawText(0, i * 11, "SSD1327", Color.FromRgb(i * 0.1, i * 0.1, i * 0.1));
+    } 
 
     graphics.Show();
 }

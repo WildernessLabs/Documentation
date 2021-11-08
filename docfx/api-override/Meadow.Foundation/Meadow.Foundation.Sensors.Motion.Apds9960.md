@@ -49,3 +49,4 @@ protected async Task ReadConditions()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Samples/Sensors.Motion.Apds9960_Sample)
+

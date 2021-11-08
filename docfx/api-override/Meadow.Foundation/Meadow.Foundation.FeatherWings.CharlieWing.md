@@ -21,7 +21,6 @@ public MeadowApp()
 
     charlieWing = new CharlieWing(Device.CreateI2cBus());
     charlieWing.Clear();
-    charlieWing.Brightness = 128;
 
     graphics = new GraphicsLibrary(charlieWing);
     graphics.CurrentFont = new Font4x8();
@@ -33,6 +32,4 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.CharlieWing/Samples/FeatherWings.CharlieWing_Sample)
-
-
 

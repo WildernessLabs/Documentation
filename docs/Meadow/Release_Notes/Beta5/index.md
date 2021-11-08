@@ -4,18 +4,6 @@ title: Meadow Beta 5
 subtitle: Release Notes
 ---
 
-<!--
-# b5.x
-
-* **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
- 
-## Meadow.OS
-
-### Debugging
-
-Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI. 
--->
-
 # b5.3
 
 Our most stable and complete release yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:

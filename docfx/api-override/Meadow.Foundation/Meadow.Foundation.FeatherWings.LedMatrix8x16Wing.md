@@ -25,7 +25,7 @@ public MeadowApp()
     graphics = new GraphicsLibrary(ledMatrixWing);
     graphics.CurrentFont = new Font4x8();
 
-    graphics.Rotation = GraphicsLibrary.RotationType._90Degrees;
+    graphics.Rotation = RotationType._90Degrees;
     graphics.Clear();
     graphics.DrawText(0, 0, "M F7");
     graphics.Show();
@@ -34,6 +34,4 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.LedMatrix8x16Wing/Samples/FeatherWings.LedMatrix8x16Wing_Sample)
-
-
 

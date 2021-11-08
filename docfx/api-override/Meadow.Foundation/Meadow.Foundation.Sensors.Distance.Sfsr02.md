@@ -40,5 +40,3 @@ private void SFSR02_DistanceUpdated(object sender, IChangeResult<Meadow.Units.Le
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Sfsr02/Samples/Sensors.Distance.Sfsr02_Sample)
 
-
-

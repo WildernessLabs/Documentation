@@ -13,8 +13,7 @@ As we roll out these features, they'll be deleted from this list.
  * **SMT Production Module** - Meant for high-volume device integration, the SMT production module provides the same core compute of the F7 developer module, in a smaller, SMT form factor. It removes USB and power, assuming those will be provided by a breakout board in the production device. It also adds additional ethernet and SD card support.
    * **Ethernet Support** - Dual-port ethernet for industrial daisy chaining.
    * **SD Card Support** - Integrated SD card support.
- * **Debugging** - Step-by-step debugging integration will be available in VS for Windows, VS for Mac, VS Code, and at the command line.
- * **Configuration Files** - The ability to ship device and application configuration files, in YAML, alongside the application code to provide automatic configuration of WiFi, device name, app settings, etc.
+ * **Configuration Files** - The ability to ship device and application configuration files, in YAML, alongside the application code to provide automatic configuration of WiFi, device name, app settings, etc. **NOTE:** Device configuration is available in b6.0, application configuration should be out soon.
  * **Push Messaging** - The ability to send secure, reliable messages from the CLI and Meadow.Cloud to specific or groups of devices.
  * **Over-the-Air (OtA) Updates** - Reliably and securely update a Meadow with a new Firwmare/OS/Application build in the field touch-free.
  * **SSL** - While we currently have client SSL working, we are working on client certificate validation, and also SSL Server functionality so you can run an SSL enabled web site or web API on the device.

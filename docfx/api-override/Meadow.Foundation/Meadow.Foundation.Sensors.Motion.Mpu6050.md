@@ -18,7 +18,7 @@ public MeadowApp()
 {
     Console.WriteLine("Initializing");
 
-    sensor = new Mpu6050(Device.CreateI2cBus(), Mpu6050.DEFAULT_ADDRESS);
+    sensor = new Mpu6050(Device.CreateI2cBus());
 
     // classical .NET events can also be used:
     sensor.Updated += (sender, result) => {
@@ -70,6 +70,4 @@ protected async Task ReadConditions()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050/Samples/Sensors.Motion.Mpu6050_Sample)
-
-
 

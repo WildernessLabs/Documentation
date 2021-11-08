@@ -43,4 +43,3 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Weather.WindVane/Samples/Sensors.Weather.WindVane_Sample)
 
-|

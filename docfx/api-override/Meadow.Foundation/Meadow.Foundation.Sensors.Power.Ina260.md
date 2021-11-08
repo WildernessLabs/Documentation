@@ -32,3 +32,4 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Power.Ina260/Samples/Sensors.Power.Ina260_Sample)
+

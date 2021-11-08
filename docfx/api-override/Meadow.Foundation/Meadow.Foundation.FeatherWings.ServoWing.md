@@ -49,5 +49,3 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.ServoWing/Samples/FeatherWings.ServoWing_Sample)
 
-
-
