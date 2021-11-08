@@ -6,6 +6,10 @@ subtitle: Controlling settings at build-time for device and app information.
 
 Meadow has a robust configuration framework that allows you to adjust settings at build-time and deploy them with an app.
 
+## Sample App
+
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+
 ## OS/Device Configuration and Application Configuration
 
 Meadow.OS support the following configuration sets:
