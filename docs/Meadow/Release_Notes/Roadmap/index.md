@@ -6,7 +6,7 @@ subtitle: Planned features and functionality for Meadow v1.0 and beyond.
 
 ## Meadow v1.0 Roadmap
 
-These are the high priority features that we're working on for v1.0, which we anticipate shipping in Q3 (Fall) of this year. These features will be rolled out in point-betas between now and v1.0.
+These are the high priority features that we're working on for v1.0. These features will be rolled out in point-betas between now and v1.0.
 
 As we roll out these features, they'll be deleted from this list.
 

@@ -95,7 +95,7 @@ Why do we care? :) This has several benefits:
 
 * [#200 Some Tea5765 APIs set to private](https://github.com/WildernessLabs/Meadow_Issues/issues/200)
 * [#199 MS5611 checks for wrong i2c address](https://github.com/WildernessLabs/Meadow_Issues/issues/199)
-* [#196 Update St7565 to use Memory<byte>](https://github.com/WildernessLabs/Meadow_Issues/issues/196)
+* [#196 Update St7565 to use `Memory<byte>`](https://github.com/WildernessLabs/Meadow_Issues/issues/196)
 * [#194 FeatherWings.DotstarWing does not implement InvertPixel](https://github.com/WildernessLabs/Meadow_Issues/issues/194)
 * [#190 ADXL345 driver not working](https://github.com/WildernessLabs/Meadow_Issues/issues/190)
 * [#189 VEML7700 light sensor driver not working](https://github.com/WildernessLabs/Meadow_Issues/issues/189)
