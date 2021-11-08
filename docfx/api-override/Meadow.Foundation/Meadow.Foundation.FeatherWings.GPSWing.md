@@ -80,5 +80,3 @@ void Subscribe()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.GPSWing/Samples/FeatherWings.GPSWing_Sample)
 
-
-

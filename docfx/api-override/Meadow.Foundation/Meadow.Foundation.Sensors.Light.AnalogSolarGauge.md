@@ -51,3 +51,4 @@ async Task ReadSolarIntensityGauge()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge/Samples/Sensors.Light.AnalogSolarGauge_Sample)
+

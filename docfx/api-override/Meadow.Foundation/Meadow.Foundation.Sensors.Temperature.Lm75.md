@@ -43,3 +43,4 @@ public MeadowApp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Lm75/Samples/Sensors.Temperature.Lm75_Sample)
+

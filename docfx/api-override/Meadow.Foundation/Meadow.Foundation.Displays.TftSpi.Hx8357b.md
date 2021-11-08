@@ -29,7 +29,7 @@ us: spiBus,
         resetPin: Device.Pins.D00,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
-        width: 320, height: 480, displayColorMode: DisplayColorMode.Format16bppRgb565);
+        width: 320, height: 480, displayColorMode: ColorType.Format16bppRgb565);
 
     Console.WriteLine("Create graphics lib");
 

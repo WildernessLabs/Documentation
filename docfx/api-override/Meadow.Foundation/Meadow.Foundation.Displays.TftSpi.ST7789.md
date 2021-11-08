@@ -39,13 +39,13 @@ public MeadowApp()
     var display = new St7789(
         device: Device,
         spiBus: spiBus,
-        chipSelectPin: Device.Pins.D14,
-        dcPin: Device.Pins.D03,
-        resetPin: Device.Pins.D04,
-        width: 240, height: 240, displayColorMode: DisplayColorMode.Format12bppRgb444);
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        width: 240, height: 240, displayColorMode: ColorType.Format16bppRgb565);
 
     graphics = new GraphicsLibrary(display);
-    graphics.Rotation = GraphicsLibrary.RotationType._180Degrees;
+    graphics.Rotation = RotationType._180Degrees;
 
     graphics.Clear(true);
 
@@ -55,7 +55,7 @@ public MeadowApp()
     graphics.DrawRectangle(0, 40, 120, 20, Color.Blue, true);
     graphics.DrawRectangle(0, 60, 120, 20, Color.Green, true);
     graphics.DrawRectangle(0, 80, 120, 20, Color.Yellow, true);
-    graphics.DrawRectangle(0, 120, 120, 20, Color.Orange, true);
+    graphics.DrawRectangle(0, 100, 120, 20, Color.Orange, true);
 
     graphics.Show();
 }

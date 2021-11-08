@@ -137,5 +137,3 @@ float Map(float value, float fromSource, float toSource, float fromTarget, float
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.ElectronicSpeedController/Samples/Motors.ElectronicSpeedController_Sample)
 
-
-

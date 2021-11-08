@@ -74,7 +74,7 @@ void InitI2c()
     display = new CharacterDisplay
     (
         i2cBus: Device.CreateI2cBus(I2cBusSpeed.Standard),
-        address: I2cCharacterDisplay.DEFAULT_ADDRESS,
+        address: (byte)I2cCharacterDisplay.Addresses.Default,
         rows: 4, columns: 20
     );
 }

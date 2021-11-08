@@ -63,4 +63,3 @@ private class RfidObserver : IObserver<byte[]>
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Radio.Rfid.IDxxLA/Samples/Sensors.Radio.Rfid.IDxxLA_Sample)
 
-|

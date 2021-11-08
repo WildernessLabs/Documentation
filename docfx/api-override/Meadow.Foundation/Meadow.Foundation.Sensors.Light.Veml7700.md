@@ -21,6 +21,15 @@ public MeadowApp()
     Console.WriteLine("Initializing...");
 
     sensor = new Veml7700(Device.CreateI2cBus());
+    sensor.DataSource = Veml7700.SensorTypes.Ambient;
+    sensor.RangeExceededHigh += (s, a) =>
+    {
+        Console.WriteLine("Too bright to measure.");
+    };
+    sensor.RangeExceededLow += (s, a) =>
+    {
+        Console.WriteLine("Too dim to measure.");
+    };
 
     // classical .NET events can also be used:
     sensor.Updated += (sender, result) => {

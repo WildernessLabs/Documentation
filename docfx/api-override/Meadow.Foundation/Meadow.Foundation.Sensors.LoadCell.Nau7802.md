@@ -56,3 +56,4 @@ public void GetAndDisplayCalibrationUnits(Nau7802 sensor)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Nau7802/Samples/Sensors.LoadCell.Nau7802_Sample)
+
