@@ -116,7 +116,6 @@ Examining the previous code, there are some important details:
 Once you have a BLE tree definition you can start initialize the BLE server with the following code:
 
 ```csharp
-Device.InitCoprocessor();
 Device.BluetoothAdapter.StartBluetoothServer(definition);
 ```
 
