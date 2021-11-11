@@ -8,7 +8,7 @@ subtitle: Release Notes
 
 This is a big new release with huge new features and lots of optimizations and improvements, including:
 
-* **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Mac, AND VS Code (VS2019 coming very soon!!)
+* **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows, Mac, AND VS Code.
 * **Device/OS Configuration** - Device and OS settings can now be configured at build time via yaml config files.
 * **.NET Standard 2.1 Fixes** - The last of the .NET Standard 2.1 deployment stuff is in, fixing `System.Text.Json`.
 * **Faster, More Reliable Networking** - There have been a number of big optimizations in the networking stack promising much more reliable networking.
