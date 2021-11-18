@@ -50,7 +50,6 @@ Starting at 1p PT:
 * Creating Custom PCBs I - Schematic Capture
 * Creating Custom PCBs II - PCB Layout
 * Creating Custom PCBs III - PCB Assembly
-* Meadow Azure Integration
 * Fireside chat + Q&A
 
 
