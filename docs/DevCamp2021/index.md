@@ -28,7 +28,7 @@ Catch us live on [Twitch](https://www.twitch.tv/wildernesslabs)!
 
 ### Morning Sessions
 
-Starting at 9a:
+Starting at 9a PT:
 
 * Keynote
 * Meadow: from Start to Awesome
@@ -43,8 +43,10 @@ Starting at 9a:
 
 ### Afternoon Sessions
 
+Starting at 1p PT:
+
 * Meadow.OS Internals
-* [REDACTED]
+* Meadow.Linux Deep Dive
 * Creating Custom PCBs I - Schematic Capture
 * Creating Custom PCBs II - PCB Layout
 * Creating Custom PCBs III - PCB Assembly
