@@ -8,7 +8,7 @@ subtitle: Building Real IoT with .NET
 
 # Thanks for an awesome Dev Camp 2021!
 
-Thanks to everyone who tuned in to our first Dev Camp! We had a blast putting this together and sharing all things Meadow. We're excited about the future because of the amazing support and the community that's grown around us. 
+Thanks to everyone who tuned in to our second annual Dev Camp! We had a blast putting this together and sharing all things Meadow. We're excited about the future because of the amazing support and the community that's grown around us. 
 
 ## Sessions
 
