@@ -6,52 +6,30 @@ subtitle: Building Real IoT with .NET
 
 ![](/Common_Files/Wilderness_Labs_Dev_Camp.svg)
 
-## Announcing Wilderness Labs Dev Camp 2021!
+# Thanks for an awesome Dev Camp 2021!
 
-Join us, on **Thursday, November 18th, 2021**, for the second annual Dev Camp. It'll be an action packed day of talks, lightning sessions, and an afternoon of deep-dive workshops. This year we'll be focusing on **building real world, production-grade IoT solutions with Meadow**.
+Thanks to everyone who tuned in to our first Dev Camp! We had a blast putting this together and sharing all things Meadow. We're excited about the future because of the amazing support and the community that's grown around us. 
 
-Follow along as we explore the [Clima](https://github.com/WildernessLabs/Clima) project; a real-world, solar-powered, custom embedded-IoT solution that tracks climate from a suite of sensors, saves data locally for access via bluetooth and a RESTful Web API, and also synchronizes that data to the cloud.
+## Sessions
 
-And don't miss the keynote where cofounder/CEO, Bryan Costanich, will talk about the state of the industry and the IoT revolution.
+In case you weren't able to attend or catch a particular session, we've got you covered. Watch all the sessions below!
 
-And best of all, **it's free and will stream worldwide to registered guests**!
+### Morning Sessions:
 
-### [Register Now!](https://www.eventbrite.com/e/devcamp-2021-tickets-179344774047)
+* [Keynote](https://www.youtube.com/watch?v=QZU97bphixs)
+* [Meadow: From start to awesome.](https://www.youtube.com/watch?v=ZT55lCM5L18)
+* [Introduction to Clima](https://www.youtube.com/watch?v=cEb6UXrt-nA)
+* [Meadow.Foundation](https://www.youtube.com/watch?v=6Hho4VAdV04)
+* [Introduction to Sensors](https://www.youtube.com/watch?v=ukgOWCP-Nho)
+* [SQLite](https://www.youtube.com/watch?v=N2qGq4du__M)
+* [Bluetooth Server](https://www.youtube.com/watch?v=IeqdUtv1Zws)
+* [Hosting RESTful APIs with Maple.Server](https://www.youtube.com/watch?v=XI4S6ts5h4g)
+* [Displays and µGraphics](https://www.youtube.com/watch?v=lY2C48BBGJI)
+* [Clima App Architecture](https://www.youtube.com/watch?v=hg95RovmBKE)
+* [Meadow.Linux Deep Dive](https://www.youtube.com/watch?v=zxTWs9fXGNQ)
 
-Register now, and tune in for a full day of sessions and fun. 
+### Afternoon Workshops
 
-### [Stream Link](https://www.twitch.tv/wildernesslabs)
-
-Catch us live on [Twitch](https://www.twitch.tv/wildernesslabs)!
-
-## Schedule of Sessions
-
-### Morning Sessions
-
-Starting at 9a PT:
-
-* Keynote
-* Meadow: from Start to Awesome
-* Clima from Prototype to Production
-* Meadow.Foundation
-* Working w Sensors
-* SQLite.NET
-* Bluetooth
-* Networking + Maple.Server
-* uGraphics + TextDisplayMenu
-* Meadow Application Architecture
-
-### Afternoon Sessions
-
-Starting at 1p PT:
-
-* Meadow.OS Internals
-* Meadow.Linux Deep Dive
-* Creating Custom PCBs I - Schematic Capture
-* Creating Custom PCBs II - PCB Layout
-* Creating Custom PCBs III - PCB Assembly
-* Fireside chat + Q&A
-
-
-Can't wait to see you there!  
-\- Wilderness Labs Team
+* [Creating Custom PCBs, Part I - Schematic Capture](https://www.youtube.com/watch?v=7G_xel6gnMs)
+* [Creating Custom PCBs, Part 2 - PCB Layout](https://www.youtube.com/watch?v=apVZykbD8no)
+* [Creating Custom PCBs, Part 3 - Practical PCB Assembly](https://www.youtube.com/watch?v=6sRQgr-drBA)
