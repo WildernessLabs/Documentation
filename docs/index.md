@@ -8,6 +8,4 @@ layout: Home
 
 ### Dev Camp 2021
 
-Join us Thursday, November 18th for our second annual [Dev Camp](/DevCamp2021)! 
-
-You can also find recorded sessions from DevCamp 2020 [here](/DevCamp2020).
+Thanks for joining us at our second annual dev camp! You can find all the recorded sessions [here](/DevCamp2021).
