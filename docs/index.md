@@ -21,7 +21,7 @@ layout: Home
 ## Past Events
 
 <div align="center">
-<image src="/DevCamp2020/Support_Files/Wilderness_Labs_Dev_Camp.svg"/>
+<a href="/DevCamp2021"><image src="/DevCamp2020/Support_Files/Wilderness_Labs_Dev_Camp.svg"/></a>
 </div>
 
 ### Dev Camp 2021
