@@ -68,6 +68,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ```
 meadow flash os
 ```
+    **NOTE: If you are on macOS you will need to run these commands within a `bash` shell, rather than the default `zsh` shell.**
 
 ## Step 3 (Option 2): Flash Meadow.OS and Coprocessor Firmware from normal mode
 
@@ -114,7 +115,6 @@ This will only work if you have a newer version of Meadow OS installed. It is re
     ```
 
     **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
-    **NOTE 2: If you are on macOS you will need to run this command withing a `bash` shell, rather than the default `zsh` shell.**
 
 3. Unplug and replug Meadow to give it a full restart.
 
