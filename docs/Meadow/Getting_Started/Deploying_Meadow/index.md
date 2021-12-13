@@ -114,6 +114,7 @@ This will only work if you have a newer version of Meadow OS installed. It is re
     ```
 
     **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
+    **NOTE 2: If you are on macOS you will need to run this command withing a `bash` shell, rather than the default `zsh` shell.**
 
 3. Unplug and replug Meadow to give it a full restart.
 
