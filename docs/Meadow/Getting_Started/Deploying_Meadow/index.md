@@ -8,26 +8,35 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 
 ## Prerequisites
 
-### Common
-* Install Meadow.CLI: `dotnet tool install WildernessLabs.Meadow.CLI --global`
-
-* Or update a previous version: `dotnet tool update WildernessLabs.Meadow.CLI --global`
-
 ### Windows
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 * [Update USB driver for ST devices](/Meadow/Getting_Started/Update_USB_Driver/)
 
 ### macOS
+* You will need to run the upcoming commands from within a `bash` shell, rather than the default `zsh` shell.
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 dow.CLI: `dotnet tool install WildernessLabs.Meadow.
-* Install dfu-util: `brew install dfu-util`
 
 ### Linux (Debian, Ubuntu)
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 dow.CLI: `dotnet tool install WildernessLabs.Meadow.
+
+
+### Common
+* Install Meadow.CLI: `dotnet tool install WildernessLabs.Meadow.CLI --global`
+
+* Or update a previous version: `dotnet tool update WildernessLabs.Meadow.CLI --global`
+
+
+### Windows
+* Install dfu-util: `meadow install dfu-util`
+
+### macOS
+* Install dfu-util: `brew install dfu-util`
+
+### Linux (Debian, Ubuntu)
 * Install dfu-util: `sudo apt-get install dfu-util`  
 * Install libusb : `sudo apt-get install libusb-1.0-0-dev`
-
 
 You can follow this detailed step by step guide for both macOS and Windows:
 
@@ -68,7 +77,6 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ```
 meadow flash os
 ```
-    **NOTE: If you are on macOS you will need to run these commands within a `bash` shell, rather than the default `zsh` shell.**
 
 ## Step 3 (Option 2): Flash Meadow.OS and Coprocessor Firmware from normal mode
 
