@@ -94,6 +94,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 * Go to the folder `/etc/udev/rules.d`
 * Create the file `50-meadow.rules`
 * Add the following to the file:
+
 ```
 SUBSYSTEM=="usb", ATTR{idProduct}=="df11", ATTR{idVendor}=="0483", MODE="0666", GROUP="user", TAG+="uaccess"
 ```
