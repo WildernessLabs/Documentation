@@ -93,14 +93,21 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 1. To be able to access the device a udev rule needs to be added.  
     + Go to the folder `/etc/udev/rules.d`
     + Create the file `50-meadow.rules`
-    + Add the following to the file  
-    ```
-    SUBSYSTEM=="usb", ATTR{idProduct}=="df11", ATTR{idVendor}=="0483", MODE="0666", GROUP="user", TAG+="uaccess"
-    ```
-    To verify the Product ID and Vendor ID execute the command `lsusb`. You should be able to find a entry similar to the following:
-    ```
-    Bus 001 Device 009: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
-    ```
+    + Add the following to the file:
+
+```
+SUBSYSTEM=="usb", ATTR{idProduct}=="df11", ATTR{idVendor}=="0483", MODE="0666", GROUP="user", TAG+="uaccess"
+```
+    To verify the Product ID and Vendor ID execute the command:
+
+```
+lsusb
+```
+    You should be able to find a entry similar to the following:
+
+```
+Bus 001 Device 009: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
+```
     The format for the IDs is `idVendor:idProduct`.
 2. Now disconnect and reconnect the Meadow to make the rules take affect.
 
@@ -128,36 +135,36 @@ This will only work if you have a newer version of Meadow OS installed. It is re
 
     Run the following from terminal:
     
-    ```
-    ls /dev/tty.usb*
-    ```
+```
+ls /dev/tty.usb*
+```
     The port should be something like `/dev/tty.usbmodem01`.
 
     **Linux (Debian, Ubuntu)** 
     1. To get acces to the port your user needs to be added to the group `dialout`.  
         This is done with the command:
 
-        ```
-        sudo adduser your_user dialout
-        ```
+```
+sudo adduser your_user dialout
+```
         Replace `your_user` with the user name. You need to **logout and login** again to make the changes affect.
     2. To find the Port where the Meadow is connected execute
 
-        ```
-        ls -l /dev
-        ```  
+```
+ls -l /dev
+```  
         look for
 
-        ```
-        ttyAMC0
-        ```
+```
+ttyAMC0
+```
         or similar. The port might change between reboots of the Meadow so make sure to check it after a reboot. If you can't detect which port the meadow belongs to run the command once with the Meadow disconnected and once with the Meadow connected to spot the difference.
 
 2. Once you've identified the port name, run the following, replacing `[PORT]` with the serial port name:
 
-    ```
-    meadow flash os -s [PORT]
-    ```
+```
+meadow flash os -s [PORT]
+```
 
     **NOTE: If the process hangs on *Opening port '[PORT]'...*, hit the RST button on the device.**
 
