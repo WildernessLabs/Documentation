@@ -136,15 +136,18 @@ This will only work if you have a newer version of Meadow OS installed. It is re
     **Linux (Debian, Ubuntu)** 
     1. To get acces to the port your user needs to be added to the group `dialout`.  
         This is done with the command:
+
         ```
         sudo adduser your_user dialout
         ```
         Replace `your_user` with the user name. You need to **logout and login** again to make the changes affect.
-    2. To find the Port where the Meadow is connected execute 
+    2. To find the Port where the Meadow is connected execute
+
         ```
         ls -l /dev
         ```  
-        look for 
+        look for
+
         ```
         ttyAMC0
         ```
