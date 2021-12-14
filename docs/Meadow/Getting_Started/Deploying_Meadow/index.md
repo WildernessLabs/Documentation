@@ -98,17 +98,17 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ```
 SUBSYSTEM=="usb", ATTR{idProduct}=="df11", ATTR{idVendor}=="0483", MODE="0666", GROUP="user", TAG+="uaccess"
 ```
-    To verify the Product ID and Vendor ID execute the command:
+    + To verify the Product ID and Vendor ID execute the command:
 
 ```
 lsusb
 ```
-    You should be able to find a entry similar to the following:
+    + You should be able to find a entry similar to the following:
 
 ```
 Bus 001 Device 009: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
 ```
-    The format for the IDs is `idVendor:idProduct`.
+    + The format for the IDs is `idVendor:idProduct`.
 2. Now disconnect and reconnect the Meadow to make the rules take affect.
 
 ## Step 3 (Option 1): Flash Meadow.OS and Coprocessor Firmware from bootloader mode
@@ -127,18 +127,18 @@ This will only work if you have a newer version of Meadow OS installed. It is re
 
     **Windows**
    
-    On Windows, serial port name looks something like *COM5*. To locate, open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
+    + On Windows, serial port name looks something like *COM5*. To locate, open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
   
     ![DeviceManagerPort](./ports.png){:standalone} 
 
     **Mac**
 
-    Run the following from terminal:
+    + Run the following from terminal:
     
 ```
 ls /dev/tty.usb*
 ```
-    The port should be something like `/dev/tty.usbmodem01`.
+    + The port should be something like `/dev/tty.usbmodem01`.
 
     **Linux (Debian, Ubuntu)** 
     1. To get acces to the port your user needs to be added to the group `dialout`.  
