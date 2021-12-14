@@ -91,23 +91,23 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **Linux (Debian, Ubuntu)** 
 1. To be able to access the device a udev rule needs to be added.  
-    + Go to the folder `/etc/udev/rules.d`
-    + Create the file `50-meadow.rules`
-    + Add the following to the file:
-    ```
-    SUBSYSTEM=="usb", ATTR{idProduct}=="df11", ATTR{idVendor}=="0483", MODE="0666", GROUP="user", TAG+="uaccess"
-    ```
-    + To verify the Product ID and Vendor ID execute the command:
+* Go to the folder `/etc/udev/rules.d`
+* Create the file `50-meadow.rules`
+* Add the following to the file:
+```
+SUBSYSTEM=="usb", ATTR{idProduct}=="df11", ATTR{idVendor}=="0483", MODE="0666", GROUP="user", TAG+="uaccess"
+```
+* To verify the Product ID and Vendor ID execute the command:
 
-    ```
-    lsusb
-    ```
-    + You should be able to find a entry similar to the following:
+```
+lsusb
+```
+* You should be able to find a entry similar to the following:
 
-    ```
-    Bus 001 Device 009: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
-    ```
-    + The format for the IDs is `idVendor:idProduct`.
+```
+Bus 001 Device 009: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
+```
+* The format for the IDs is `idVendor:idProduct`.
 2. Now disconnect and reconnect the Meadow to make the rules take affect.
 
 ## Step 3 (Option 1): Flash Meadow.OS and Coprocessor Firmware from bootloader mode
@@ -120,44 +120,44 @@ meadow flash os
 
 ## Step 3 (Option 2): Flash Meadow.OS and Coprocessor Firmware from normal mode
 
-This will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
+This following will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
 
-1. Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
+Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on:
 
-    **Windows**
-   
-    + On Windows, serial port name looks something like *COM5*. To locate, open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
-  
-    ![DeviceManagerPort](./ports.png){:standalone} 
+**Windows**
 
-    **Mac**
+* On Windows, serial port name looks something like *COM5*. To locate, open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
 
-    + Run the following from terminal:
-    
-    ```
-    ls /dev/tty.usb*
-    ```
-    + The port should be something like `/dev/tty.usbmodem01`.
+![DeviceManagerPort](./ports.png){:standalone} 
 
-    **Linux (Debian, Ubuntu)** 
-    1. To get acces to the port your user needs to be added to the group `dialout`.  
-        This is done with the command:
+**Mac**
 
-    ```
-    sudo adduser your_user dialout
-    ```
-    Replace `your_user` with the user name. You need to **logout and login** again to make the changes affect.
-    2. To find the Port where the Meadow is connected execute
+* Run the following from terminal:
 
-    ```
-    ls -l /dev
-    ```  
-    look for
+```
+ls /dev/tty.usb*
+```
+* The port should be something like `/dev/tty.usbmodem01`.
 
-    ```
-    ttyAMC0
-    ```
-    or similar. The port might change between reboots of the Meadow so make sure to check it after a reboot. If you can't detect which port the meadow belongs to run the command once with the Meadow disconnected and once with the Meadow connected to spot the difference.
+**Linux (Debian, Ubuntu)** 
+1. To get acces to the port your user needs to be added to the group `dialout`.  
+    This is done with the command:
+
+```
+sudo adduser your_user dialout
+```
+Replace `your_user` with the user name. You need to **logout and login** again to make the changes affect.
+2. To find the Port where the Meadow is connected execute
+
+```
+ls -l /dev
+```  
+look for
+
+```
+ttyAMC0
+```
+or similar. The port might change between reboots of the Meadow so make sure to check it after a reboot. If you can't detect which port the meadow belongs to run the command once with the Meadow disconnected and once with the Meadow connected to spot the difference.
 
 2. Once you've identified the port name, run the following, replacing `[PORT]` with the serial port name:
 
