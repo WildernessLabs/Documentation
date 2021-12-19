@@ -15,6 +15,10 @@ Alternatively, you can follow this step by step guide for both macOS and Windows
 
 You'll need Visual Studio 2019 for either Windows or Mac; [available here](https://visualstudio.microsoft.com/downloads/). You can use any edition including Enterprise, Professional, or the free Community edition.  
 
+**Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
+
+![Meadow extension for Visual Studio for macOS](Mobile.NET.png)
+
 ## Windows
 
 You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
@@ -35,7 +39,7 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  4. Select the **Meadow** IDE extension.
  5. Click **Install...**
 
-![Meadow extension for Visual Studio for macOS](meadow_extension.png){:standalone}
+![Meadow extension for Visual Studio for macOS](meadow_extension.png)
 
 ## Step 2: Create a new Meadow Project
 
