@@ -6,44 +6,30 @@ subtitle: Building Real IoT with .NET
 
 ![](/Common_Files/Wilderness_Labs_Dev_Camp.svg)
 
-## Announcing Wilderness Labs Dev Camp 2021!
+# Thanks for an awesome Dev Camp 2021!
 
-Join us, on **November 18th, 2021**, for the second annual Dev Camp. It'll be an action packed day of talks, lightning sessions, and an afternoon of deep-dive workshops. This year we'll be focusing on **building real world, production-grade IoT solutions with Meadow**.
+Thanks to everyone who tuned in to our second annual Dev Camp! We had a blast putting this together and sharing all things Meadow. We're excited about the future because of the amazing support and the community that's grown around us. 
 
-Follow along as we explore the [Clima](https://github.com/WildernessLabs/Clima) project; a real-world, solar-powered, custom embedded-IoT solution that tracks climate from a suite of sensors, saves data locally for access via bluetooth and a RESTful Web API, and also synchronizes that data to the cloud.
+## Sessions
 
-And don't miss the keynote where cofounder/CEO, Bryan Costanich, will talk about the state of the industry and the IoT revolution.
+In case you weren't able to attend or catch a particular session, we've got you covered. Watch all the sessions below!
 
-And best of all, **it's free and will stream worldwide to registered guests**!
+### Morning Sessions:
 
-### [Register Now!](https://www.eventbrite.com/e/devcamp-2021-tickets-179344774047)
+* [Keynote](https://www.youtube.com/watch?v=QZU97bphixs)
+* [Meadow: From start to awesome.](https://www.youtube.com/watch?v=ZT55lCM5L18)
+* [Introduction to Clima](https://www.youtube.com/watch?v=cEb6UXrt-nA)
+* [Meadow.Foundation](https://www.youtube.com/watch?v=6Hho4VAdV04)
+* [Introduction to Sensors](https://www.youtube.com/watch?v=ukgOWCP-Nho)
+* [SQLite](https://www.youtube.com/watch?v=N2qGq4du__M)
+* [Bluetooth Server](https://www.youtube.com/watch?v=IeqdUtv1Zws)
+* [Hosting RESTful APIs with Maple.Server](https://www.youtube.com/watch?v=XI4S6ts5h4g)
+* [Displays and µGraphics](https://www.youtube.com/watch?v=lY2C48BBGJI)
+* [Clima App Architecture](https://www.youtube.com/watch?v=hg95RovmBKE)
+* [Meadow.Linux Deep Dive](https://www.youtube.com/watch?v=zxTWs9fXGNQ)
 
-Register now, and tune in for a full day of sessions and fun. 
+### Afternoon Workshops
 
-## Customer + Project Show & Tell
-
-Are you building something with Meadow? We're going to put together a customer vignette montage, and want you to be in it! Big, small, fun, silly, serious, whatever; let us know about what your building, and we'll reach out to help you put together some quick clips for inclusion in the montage. 
-
-[Tell us about your project!](https://docs.google.com/forms/d/e/1FAIpQLSeZNICTNKdrDq_U6ZbE6y-AOeSmT0ygp9DnBi6F4m0oK6FVlg/viewform)
-
-
-## Submit a Session
-
-Have a session on hardware you're dying to give? Let us know. We'll be doing super fast-paced 10-15 minute talks and longer workshops.
-
-[Tell us your session idea!](https://docs.google.com/forms/d/e/1FAIpQLSe67kPhneIJ1w4ZI7aa2cuWUoh39n_6PdBsK6uWcKqGuha3qA/viewform)
-
-<!--
-
-## Follow along with a Hack Kit Pro
-
-
-
-![Wilderness Labs Hack Kit](/HackKit/Wilderness_Labs_Hack_Kit.svg){:standalone}
-
-If you're planning on attending, we highly recommend picking up a [Hack Kit Pro](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7-micro-development-board-w-hack-kit-pro)! Most of the hacks that we'll be covering are based on the components in it.
-
--->
-
-Can't wait to see you there!  
-\- Wilderness Labs Team
+* [Creating Custom PCBs, Part I - Schematic Capture](https://www.youtube.com/watch?v=7G_xel6gnMs)
+* [Creating Custom PCBs, Part 2 - PCB Layout](https://www.youtube.com/watch?v=apVZykbD8no)
+* [Creating Custom PCBs, Part 3 - Practical PCB Assembly](https://www.youtube.com/watch?v=6sRQgr-drBA)

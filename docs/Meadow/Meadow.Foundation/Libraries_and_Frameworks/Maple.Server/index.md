@@ -6,153 +6,125 @@ subtitle: Using the ultra-lightweight Maple web server.
 
 ![Maple](Maple_Banner.png)
 
-# Intro
+# Meadow Foundation Maple Web Server
 
-Maple is an ultra-lightweight RESTful web API Server, built specifically for Meadow. It provides an easy to extend architecture, and has integrated JSON support via `System.Text.Json`.
+The Maple Web Server is primarily intended to provide RESTful endpoints from a device.  It is modelled after ASP.NET Core and provides an easy to extend architecture with integrated JSON support via `System.Text.Json`.
 
-# Creating API Endpoints
+## Creating Web API Endpoints
 
-To use Maple, you create custom `IRequestHandler` classes which represent API endpoint controllers, similar to the way ASP.NET Core Web API works.
-
-Maple then uses reflection to find and register these endpoints at startup.
-
-For example, the following sample controller inherits from `RequestHandlerBase` and has two methods, `Hello()`, and `JsonSample` which are both available as `GET` methods at `http://[Meadow IP Address]/Hello`, and `http://[Meadow IP Address]/JsonSample`, respectively:
+A web API consists of one or more request handler classes that derive from RequestHandlerBase:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using Meadow.Foundation.Web.Maple.Server;
-using Meadow.Foundation.Web.Maple.Server.Routing;
+public class MyRequestHandler : RequestHandlerBase
+```
 
-namespace Maple.Server_BasicSample.RequestHandlers
+## Attribute Routing
+
+Maple determines API call routing based on Attribute routing of handler methods.
+
+Routing is supported to either absolute or relative paths.
+
+### Absolute Routing
+
+If your route begins with a forward slash (`/`) then it is considered an absolute route, and requests will be routed to the provided route regardless of the Handler class name.  
+
+For example, the following will respond to `GET` requests to `http://[meadow.address]/hello`
+
+```csharp
+public class MyRequestHandler : RequestHandlerBase
 {
-    public class HelloRequestHandler : RequestHandlerBase
-    {
-        [HttpGet]
-        public void Hello()
-        {
-            this.Context.Response.ContentType = ContentTypes.Application_Text;
-            this.Context.Response.StatusCode = 200;
-            this.Send("hello world").Wait();
-        }
-
-        [HttpGet]
-        public void JsonSample()
-        {
-            List<string> names = new List<string> {
-                "johnny",
-                "deedee",
-                "joey",
-                "tommy"
-            };
-
-            this.Context.Response.ContentType = ContentTypes.Application_Json;
-            this.Context.Response.StatusCode = 200;
-            this.Send(names).Wait();
-        }
-    }
+    [HttpGet("/hello")]
+    public OkObjectResult Hello()
+    { ... }
 }
 ```
 
-## Output is Based on the `ContentType`
+### Relative Routing
 
-In the preceding example, the two methods will return different types of content, based on what's set in the `Context.Response.ContentType` property. 
+If your route *does not* begin with a forward slash (`/`) then it is considered a relative route, and requests will be routed to the provided route prefixed with an appreviated `RequestHandler` prefix.  The route prefix is determined by using the class name and trimming off any "Requesthandler" suffix.
 
-The `Hello()` method sets it to `Application_Text`, and therefore, returns plain text to the caller. However, the `JsonSample()` method sets the `ContentType` to `Application_Json`, and so the `RequestHandlerBase` automatically serializes the `List<string> names` data to JSON and returns that.
 
-## Starting the Server
-
-In order for Maple to run, you must start the server before it will run. To start the server, instantiate a new `MapleServer` object, and call the `Start` method. For example, the following Meadow application will start the WiFi, connect to a network, and then start Maple server:
+For example, the following will respond to `GET` requests to `http://[meadow.address]/my/hello`
 
 ```csharp
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Meadow;
-using Meadow.Devices;
-using Meadow.Foundation.Web.Maple.Server;
-using Meadow.Gateway.WiFi;
-
-namespace Maple.Server_SimpleMeadowSample
+public class MyRequestHandler : RequestHandlerBase
 {
-    public class MeadowApp : App<F7Micro, MeadowApp>
-    {
-        MapleServer server;
-
-        public MeadowApp()
-        {
-            Initialize().Wait();
-            server.Start();
-        }
-
-        async Task Initialize()
-        {
-            Console.WriteLine("Initialize hardware...");
-
-            // initialize the wifi adpater
-            if (!Device.InitWiFiAdapter().Result) {
-                throw new Exception("Could not initialize the WiFi adapter.");
-            }
-
-            // connnect to the wifi network.
-            Console.WriteLine($"Connecting to WiFi Network {Secrets.WIFI_NAME}");
-            var connectionResult = await Device.WiFiAdapter.Connect(Secrets.WIFI_NAME, Secrets.WIFI_PASSWORD);
-            if (connectionResult.ConnectionStatus != ConnectionStatus.Success) {
-                throw new Exception($"Cannot connect to network: {connectionResult.ConnectionStatus}");
-            }
-            Console.WriteLine($"Connected. IP: {Device.WiFiAdapter.IpAddress}");
-
-            // create our maple web server
-            server = new MapleServer(
-                Device.WiFiAdapter.IpAddress,
-                processMode: RequestProcessMode.Parallel
-                );
-
-            Console.WriteLine("Finished initialization.");
-        }
-    }
+    [HttpGet("hello")]
+    public OkObjectResult Hello()
+    { ... }
 }
 ```
 
-# Query String and Form Post Parameters
-
-Maple parses query string and form post parameters during requests and makes them available via the `QueryString` or `FormFields` property, respectively. 
-
-For example to pass an `name` parameter to the `Hello` handler, append `?name=[value]` to the request:
+But the following will respond to `GET` requests to `http://[meadow.address]/webapi/hello`
 
 ```csharp
-http://[MeadowIP]/Hello?name=bryan
-```
-
-The `Hello()` method can then access the `name` parameter via:
-
-```csharp
-[HttpGet]
-public void Hello()
+public class WebAPI : RequestHandlerBase
 {
-    Console.WriteLine("GET::Hello");
-
-    string name = base.QueryString["name"] as string;
-
-    this.Context.Response.ContentType = ContentTypes.Application_Text;
-    this.Context.Response.StatusCode = 200;
-    this.Send($"hello, {name}").Wait();
+    [HttpGet("hello")]
+    public OkObjectResult Hello()
+    { ... }
 }
 ```
 
-Similarly, a form post field of `ID` can be accessed via the `Form` object:
+### Route Parameters
+
+> NOTE: Maple supports only a *single* parameter in a Route.
+
+Maple supports providing a handler method parameter through the route path.  Parameters are delineated by curly braces, and the parameter name in the route must exactly match the parameter name in the handler method signature.
+
+As an example, a `GET` to the path `http://[meadow.address]/orders/history/1234` would end up calling the following `GetOrderHistory` handler method with a parameter value of `1234`:
 
 ```csharp
-string id = base.FormFields["ID"];
+public class OrdersRequestHandler : RequestHandlerBase
+{
+	[HttpGet("history/{orderID}")]
+	public void GetOrderHistory(int orderID)
+	{
+	    Debug.WriteLine($"{paramName}");
+	}
+}
 ```
 
-## Limitations & Known Issues
+Supported parameter types are:
 
-Maple is an early, work-in-progress project. Current limitations include:
+- Numerics (byte, short, int, long, float, double)
+- bool
+- string
+- DateTime
+- Guid
 
-* **No SSL** - We don't yet support server-side SSL, so it's not available in Maple.
-* **Limited Routing** - Routing is extremely basic.
-* **Poor Server Errors** - Server errors are not output well.
+
+
+## Handler Caching
+
+By default Maple will create a new instance of an API handler for every request received.  If you want your application to reuse the same handler instance, which provides faster handler execution and decreases GC allocation, simply override the `IsResuable` base property and return `true`.
+
+```csharp
+public override bool IsReusable => true;
+
+```
+
+## Returning an `IActionResult`
+
+It is recommended that all Handler methods return an `IActionResult` implementation.  Extension methods are provided by Maple for common return objects including, but not limited to, `ActionResult`, `JsonResult`, `OkResult` and `NotFoundResult`.
+
+For example, the following will automatically serialize and return a JSON string array with the proper `content-type` and return code.
+
+```csharp
+[HttpGet("/JsonSample")]
+public IActionResult GetJsonList()
+{
+    var names = new List<string> {
+        "George",
+        "John",
+        "Thomas",
+        "Benjamin"
+    };
+
+    return new JsonResult(names);
+}
+
+```
 
 ## Sample Application
 

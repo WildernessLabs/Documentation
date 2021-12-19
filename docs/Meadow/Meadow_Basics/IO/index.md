@@ -138,35 +138,67 @@ The following table lists all the accessible pins on the Meadow F7 Micro dev boa
 
 | Meadow Pin Name | MCU Pin Name | Digital Channel | Analog Channel | PWM Timer Channel | Interrupt Group |
 |-----------------|--------------|-----------------|----------------|-------------------|------------|
-| A00 | PA4 | PA4 | AC1_IN4 | | 4 |
-| A01 | PA5 |  PA5 | ADC1_IN5 | | 5 |
-| A02 | PA3 |  PA3 | ADC1_IN3 | | 3 |
-| A03 | PA7 |  PA7 | ADC1_IN7 | | 7 |
-| A04 | PC0 |  PC0 | ADC1_IN10 | | 0 |
-| A05 | PC1 |  PC1 | ADC1_IN11 | | 1 |
-| SCK | PC10 |  PC10 |   | | |
-| MOSI | PB5 |  PB5 |   | | 5 |
-| MISO | PC11 |  PC11 |   | | 11 |
-| D00 | PI9 |  PI9 |   |  | 9 |
-| D01 | PH13 |  PH13 |   |  |  |
-| D02 | PC6 |  PC6 |   | 1 | 6 |
-| D03 | PB8 |  PB8 |   | 3 | 8 |
-| D04 | PB9 |  PB9 |   | 4 | 9 |
-| D05 | PC7 |  PC7 |   | 2 | 7 |
-| D06 | PB0 |  PB0 | ADC1_IN8 | 3 | 0 |
-| D07 | PB7 |  PB7 |   | 2 | 7 |
-| D08 | PB6 |  PB6 |   | 1 | 6 |
-| D09 | PB1 |  PB1 | ADC1_IN9 | 4 | 1 |
-| D10 | PH10 |  PH10 |   | 1 |  |
-| D11 | PC9 |  PC9 |   | 4 | 9 |
-| D12 | PB14 |  PB14 |   | 1 | 14 |
-| D13 | PB15 |  PB15 |   | 2 | 15 |
-| D14 | PG3 |  PG3 |   |   | 3 |
-| D15 | PE3 |  PE3 |   |   | 3 |
-| OnboardLedRed | PA2 |  PA2 |   | 3 | |
-| OnboardLedGreen | PA1 |  PA1 |   | 2 | |
-| OnboardLedBlue | PA0 |  PA0 |   | 1 | |
+| A00             | PA4  | PA4  | AC1_IN4   |   | 4  |
+| A01             | PA5  | PA5  | ADC1_IN5  |   | 5  |
+| A02             | PA3  | PA3  | ADC1_IN3  |   | 3  |
+| A03             | PA7  | PA7  | ADC1_IN7  |   | 7  |
+| A04             | PC0  | PC0  | ADC1_IN10 |   | 0  |
+| A05             | PC1  | PC1  | ADC1_IN11 |   | 1  |
+| SCK             | PC10 | PC10 |           |   |    |
+| MOSI            | PB5  | PB5  |           |   | 5  |
+| MISO            | PC11 | PC11 |           |   | 11 |
+| D00             | PI9  | PI9  |           |   | 9  |
+| D01             | PH13 | PH13 |           |   |    |
+| D02             | PC6  | PC6  |           | 1 | 6  |
+| D03             | PB8  | PB8  |           | 3 | 8  |
+| D04             | PB9  | PB9  |           | 4 | 9  |
+| D05             | PC7  | PC7  |           | 2 | 7  |
+| D06             | PB0  | PB0  | ADC1_IN8  | 3 | 0  |
+| D07             | PB7  | PB7  |           | 2 | 7  |
+| D08             | PB6  | PB6  |           | 1 | 6  |
+| D09             | PB1  | PB1  | ADC1_IN9  | 4 | 1  |
+| D10             | PH10 | PH10 |           | 1 |    |
+| D11             | PC9  | PC9  |           | 4 | 9  |
+| D12             | PB14 | PB14 |           | 1 | 14 |
+| D13             | PB15 | PB15 |           | 2 | 15 |
+| D14             | PG3  | PG3  |           |   | 3  |
+| D15             | PE3  | PE3  |           |   | 3  |
+| OnboardLedRed   | PA2  | PA2  |           | 3 |    |
+| OnboardLedGreen | PA1  | PA1  |           | 2 |    |
+| OnboardLedBlue  | PA0  | PA0  |           | 1 |    |
 
+#### Meadow F7v2 Micro Pinout Table
+
+| Meadow Pin Name | MCU Pin Name | Digital Channel | Analog Channel | PWM Timer Channel | Interrupt Group | 
+|-----------------|--------------|-----------------|----------------|-------------------|-----------------| 
+| A00             | PA4  | PA4  | ADC1_IN4  |   | 4  |
+| A01             | PA5  | PA5  | ADC1_IN5  |   | 5  |
+| A02             | PA3  | PA3  | ADC1_IN3  |   | 3  |
+| A03             | PB0  | PB0  | ADC1_IN8  |   | 0  |
+| A04             | PB1  | PB1  | ADC1_IN9  |   | 1  |
+| A05             | PC0  | PC0  | ADC1_IN10 |   | 0  |
+| SCK             | PC10 | PC10 |           |   | 10 |
+| COPI            | PB5  | PB5  |           |   | 5  |
+| CIPO            | PC11 | PC11 |           |   | 11 |
+| D00             | PI9  | PI9  |           |   | 9  |
+| D01             | PH13 | PH13 |           |   | 13 |
+| D02             | PH10 | PH10 |           | 1 | 10 |
+| D03             | PB8  | PB8  |           | 3 | 8  |
+| D04             | PB9  | PB9  |           | 4 | 9  |
+| D05             | PB4  | PB4  |           | 1 | 4  |
+| D06             | PB13 | PB13 |           | 1 | 13 |
+| D07             | PB7  | PB7  |           | 2 | 7  |
+| D08             | PB6  | PB6  |           | 1 | 6  |
+| D09             | PC6  | PC6  |           | 1 | 6  |
+| D10             | PC7  | PC7  |           | 2 | 7  |
+| D11             | PC9  | PC9  |           | 4 |    |
+| D12             | PB14 | PB14 |           | 1 | 14 |
+| D13             | PB15 | PB15 |           | 2 | 15 |
+| D14             | PB12 | PB12 |           |   | 12 |
+| D15             | PG12 | PB12 |           |   | 12 |
+| OnboardLedRed   | PA2  | PA2  |           | 3 | 2  |
+| OnboardLedGreen | PA1  | PA1  |           | 2 | 1  |
+| OnboardLedBlue  | PA0  | PA0  |           | 1 | 0  |
 
 ## Meadow.Foundation
 

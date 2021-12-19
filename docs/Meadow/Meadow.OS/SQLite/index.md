@@ -113,7 +113,7 @@ Database.Insert(new SensorModel { Timestamp = DateTime.Now, Value = SensorValue 
 
 ## Updating Data
 
-To update a record, first either retrieve or create a new object with a valid primary key, and then called `Update` on the database connection, passing an object. For example, the following code retreives the first record out of a table, doubles its value, and then saves it back to the database:
+To update a record, first either retrieve or create a new object with a valid primary key, and then called `Update` on the database connection, passing an object. For example, the following code retrieves the first record out of a table, doubles its value, and then saves it back to the database:
 
 ```csharp
 // pull the first record out of the table
@@ -124,9 +124,9 @@ reading.Value = reading.Value * 2;
 Database.Update(reading);
 ```
 
-## Retreiving Data
+## Retrieving Data
 
-There are a number of ways to retreive data from the database. 
+There are a number of ways to retrieve data from the database. 
 
 ### Via Primary Key
 
