@@ -4,6 +4,77 @@ title: Meadow Beta 6
 subtitle: Release Notes
 ---
 
+# b6.0.1
+
+This is a point release with a big focus on tooling features and stability along with a number of Meadow.Foundation stability fixes, performance improvements, and API consistency updates.
+
+* **VS2022 support** Meadow officially supports Visual Studio 2022! Open the Manage Extensions dialog in Visual Studio to install.
+* **Debugging stability** This version sees a big improvement in debugging stability and consistency, make your sure you have the latest VS extensions installed.
+* **MicroGraphics refactoring** We've spent a lot of time optimizing and refactoring our Meadow.Foundation APIs, this release sees some big changes (some breaking) that both simplifies and brings consistency to Meadow's graphics APIs.
+
+## Updating
+
+There is no OS change for this release so you do not need to flash your Meadow board, but do make sure you're running b6.0 if you haven't already updated.
+
+There are new  new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+Start by installing the latest version of the CLI (v0.15.1) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global --version 0.15.1
+```
+
+## Visual Studio Extensions
+
+The Visual Studio for Windows extension has been reworked and refactored. This was necessary to support Visual Studio 2022 on Windows but also gave us the opportunity to carefully review the code for stability and usability. Deploying and debugging on Windows 10 & 11 should be a lot more stable and consistent. And there's more goodness coming in future releases :)
+
+** Note - Visual Studio 2022 for Mac isn't supported - at the time of this release, the VS4Mac 2022 preview doesn't yet support external extensions.
+
+## Meadow.Core
+
+**Breaking Change** SPI Bus speed is now defined as a `Meadow.Units.Frequency` instead of an integer. To update, in most cases you'll replace your old int value with `new Meadow.Units.Frequency(value)`. 
+
+This also enabled Meadow.Foundation drivers to expose a `DefaultSpiBusSpeed` property (details below).
+
+## Meadow.Foundation
+
+This release brings a big list of stability fixes, API updates and performance improvements - see the Bug fixes below for the complete list.
+
+* **New BB Q10 Keyboard driver** Ever wanted a BlackBerry-style keyboard for your Meadow projects? You can now use [Solder Party's](www.solder.party) keyword with Meadow
+* **ePaper display performance** Full screen redrawing speed is 10-15% faster on most ePaper displays
+* **Renamed GraphicsLibrary to MicroGraphics - Breaking Change** We renamed the `GraphicsLibrary` class to `MicroGraphics` to bring the class inline with branding and documentation, all instances in your code will need to be renamed 
+* **DisplayBase to IGraphicsDisplay - Breaking Change** We deprecated `DisplayBase` and replaced it with `IGraphicsDisplay` - all graphics displays now implement this interface
+* **FontBase to IFont - Breaking Change** We deprecated `FontBase` and replaced it with `IFont` - all font classes now implement this interface
+* **Moved graphics enums out of GraphicsLibrary** this is API cleanup, several enums were nested in the `GraphicsLibrary` class, and have been moved directly into the `Meadow.Foundation.Graphics` including: `ColorType`, `ScaleFactor`, `TextAlignment`, and `BitmapMode`
+* **Samples updated to support Meadow V2** All Meadow.Foundation samples updated to run on the Meadow V2 boards by default, if you're using V1 boards change the `MeadowApp` class signature from `App<F7MicroV2, MeadowApp>` to `App<F7Micro, MeadowApp>` (remove the V2)
+* **SPI peripherals now have a default value** No more guessing on the appropriate SPI bus speed for peripherals, all SPI drivers now have a public `DefaultSpiBusSpeed` of type `Meadow.Units.Frequency`
+
+### Bug fixes 
+
+* [#82 Error flashing F7 OS from a non-english OS](https://github.com/WildernessLabs/Meadow.CLI/issues/82)
+* [#92 Conflicting use of the -v flag](https://github.com/WildernessLabs/Meadow.CLI/issues/92)
+* [#116 Better user-feedback when OS files aren't downloaded](https://github.com/WildernessLabs/Meadow.CLI/issues/116)
+* [#117 Feature request: Add a delete all command](https://github.com/WildernessLabs/Meadow.CLI/issues/117)
+* [#141 Add I2C defaults to all related drivers](https://github.com/WildernessLabs/Meadow.Foundation/issues/141)
+* [#191 Can't use font scaling with TextDisplayMenu](https://github.com/WildernessLabs/Meadow.Foundation/issues/191)
+* [#195 Sensor.Atmospheric.BME280 - never turns changes mode from Sleep to either Forced or Normal](https://github.com/WildernessLabs/Meadow.Foundation/issues/195)
+* [#209 Out of Bounds exception if graphicslibrary is used to draw off screen](https://github.com/WildernessLabs/Meadow.Foundation/issues/209)
+* [#211 Color WithBrightness always returns black](https://github.com/WildernessLabs/Meadow.Foundation/issues/211)
+* [#213 Not all display drivers respect IgnoreOutOfBoundsPixels](https://github.com/WildernessLabs/Meadow.Foundation/issues/213)
+* [#214 Not all display drivers implement DrawBuffer](https://github.com/WildernessLabs/Meadow.Foundation/issues/214)
+* [#215 Replace DisplayBase with IGraphicsDisplay](https://github.com/WildernessLabs/Meadow.Foundation/issues/215)
+* [#218 Replace FontBase with IFont](https://github.com/WildernessLabs/Meadow.Foundation/issues/218)
+* [#219 ePaper drivers set the dataCommandPort state set repeatedly when updating the display](https://github.com/WildernessLabs/Meadow.Foundation/issues/219)
+* [#220 Add consistent SPI defaults params to SPI drivers](https://github.com/WildernessLabs/Meadow.Foundation/issues/220)
+* [#221 Ili9341 can't pass null for reset pin](https://github.com/WildernessLabs/Meadow.Foundation/issues/221)
+* [#222 Bme280 missing ctor for SPI that takes an IPin](https://github.com/WildernessLabs/Meadow.Foundation/issues/222)
+* [#225 BME680 missing filterable observable support](https://github.com/WildernessLabs/Meadow.Foundation/issues/225)
+* [#226 Driver request: BBQ10Keyboard](https://github.com/WildernessLabs/Meadow.Foundation/issues/226)
+* [#228 Update Meadow.Foundation samples to V2 signature](https://github.com/WildernessLabs/Meadow.Foundation/issues/228)
+* [#229 Calling DisplayTest in the ST7789 sample crashes](https://github.com/WildernessLabs/Meadow.Foundation/issues/229)
+* [#233 Fix Max7219 default SPI speed](https://github.com/WildernessLabs/Meadow.Foundation/issues/233)
+* [#235 VL53L0X Sample appears to be out of date](https://github.com/WildernessLabs/Meadow.Foundation/issues/235)
+
 # b6.0
 
 This is a big new release with huge new features and lots of optimizations and improvements, including:
