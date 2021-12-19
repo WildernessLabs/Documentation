@@ -26,9 +26,9 @@ public MeadowApp()
     var display = new Hx8357b(
 evice: Device, 
 us: spiBus,
-        resetPin: Device.Pins.D00,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
         width: 320, height: 480, displayColorMode: ColorType.Format16bppRgb565)
     {
         IgnoreOutOfBoundsPixels = true

@@ -27,9 +27,9 @@ public MeadowApp()
     (
         device: Device, 
         spiBus: spiBus,
-        resetPin: Device.Pins.D00,
-SelectPin: Device.Pins.D02,
-        dcPin: Device.Pins.D01
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00
     )
     {
         IgnoreOutOfBoundsPixels = true

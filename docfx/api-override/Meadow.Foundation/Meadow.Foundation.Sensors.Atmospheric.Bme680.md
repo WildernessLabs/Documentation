@@ -18,8 +18,8 @@ public MeadowApp()
 {
     Console.WriteLine("Initializing...");
 
-    CreateSpiSensor();
-    //CreateI2CSensor();
+    //CreateSpiSensor();
+    CreateI2CSensor();
 
     Console.WriteLine("A");
 
