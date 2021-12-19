@@ -40,7 +40,7 @@ This also enabled Meadow.Foundation drivers to expose a `DefaultSpiBusSpeed` pro
 
 This release brings a big list of stability fixes, API updates and performance improvements - see the Bug fixes below for the complete list.
 
-* **New BB Q10 Keyboard driver** Ever wanted a BlackBerry-style keyboard for your Meadow projects? You can now use [Solder Party's](http://www.solder.party) keyword with Meadow
+* **New BB Q10 Keyboard driver** Ever wanted a BlackBerry-style keyboard for your Meadow projects? You can now use [Solder Party's](https://www.tindie.com/products/arturo182/keyboard-featherwing-qwerty-keyboard-26-lcd/) keyboard with Meadow
 * **ePaper display performance** Full screen redrawing speed is 10-15% faster on most ePaper displays
 * **Breaking Change: Renamed GraphicsLibrary to MicroGraphics** - We renamed the `GraphicsLibrary` class to `MicroGraphics` to bring the class inline with branding and documentation, all instances in your code will need to be renamed 
 * **Breaking Change: `DisplayBase` -> `IGraphicsDisplay`** - We deprecated `DisplayBase` and replaced it with `IGraphicsDisplay` - all graphics displays now implement this interface
