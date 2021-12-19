@@ -12,7 +12,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
@@ -21,7 +21,7 @@ public MeadowApp()
 
     var oledWing = new OLED128x32Wing(i2cBus, Device, Device.Pins.D11, Device.Pins.D10, Device.Pins.D09);
 
-    graphics = new GraphicsLibrary(oledWing.Display);
+    graphics = new MicroGraphics(oledWing.Display);
     graphics.CurrentFont = new Font12x16();
 
     oledWing.ButtonA.Clicked += (sender, e) => UpdateDisplay("A pressed");

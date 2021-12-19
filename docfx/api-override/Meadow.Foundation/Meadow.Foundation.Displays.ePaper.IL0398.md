@@ -31,7 +31,7 @@ public MeadowApp()
         width: 300,
         height: 400);
 
-    var graphics = new GraphicsLibrary(display);
+    var graphics = new MicroGraphics(display);
 
     //any color but black will show the ePaper alternate color 
     graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);

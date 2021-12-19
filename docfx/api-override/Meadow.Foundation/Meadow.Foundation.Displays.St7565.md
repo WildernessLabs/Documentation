@@ -12,7 +12,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
@@ -29,7 +29,7 @@ public MeadowApp()
         height: 64
     );
 
-    graphics = new GraphicsLibrary(sT7565);
+    graphics = new MicroGraphics(sT7565);
 
     graphics.CurrentFont = new Font8x8();
     graphics.Clear();

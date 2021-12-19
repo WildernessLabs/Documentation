@@ -16,13 +16,13 @@ The Meadow.Foundation S6D02A1 driver currently only supports 16bpp RGB565.
 ### Code Example
 
 ```csharp
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
     Console.WriteLine("Initializing ...");
 
-    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var config = new SpiClockConfiguration(new Frequency(12000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode0);
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
     Console.WriteLine("Create display driver instance");
@@ -35,9 +35,12 @@ public MeadowApp()
 SelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         width: 128, height: 160
-    );
+    )
+    {
+        IgnoreOutOfBoundsPixels = true
+    };
 
-    graphics = new GraphicsLibrary(display);
+    graphics = new MicroGraphics(display);
 
     graphics.CurrentFont = new Font8x8();
     graphics.Clear();

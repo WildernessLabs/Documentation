@@ -18,7 +18,7 @@ public MeadowApp()
 {
     Console.WriteLine("Initializing ...");
   
-    var spiBus = Device.CreateSpiBus(12000);
+    var spiBus = Device.CreateSpiBus(Ssd1351.DefaultSpiBusSpeed);
 
     var display = new Ssd1351(
                device: Device, 
@@ -26,9 +26,12 @@ public MeadowApp()
                chipSelectPin: Device.Pins.D02,
                dcPin: Device.Pins.D01,
                resetPin: Device.Pins.D00,
-               width: 128, height: 128); 
+               width: 128, height: 128)
+    {
+        IgnoreOutOfBoundsPixels = true
+    };
 
-    var graphics = new GraphicsLibrary(display);
+    var graphics = new MicroGraphics(display);
     graphics.CurrentFont = new Font8x12();
 
     graphics.Clear();

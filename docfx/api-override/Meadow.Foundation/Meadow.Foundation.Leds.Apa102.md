@@ -19,7 +19,7 @@ float maxBrightness = 0.25f;
 public MeadowApp()
 {
     Console.WriteLine("Initialize hardware...");
-    apa102 = new Apa102(Device.CreateSpiBus(48000), numberOfLeds, Apa102.PixelOrder.BGR);
+    apa102 = new Apa102(Device.CreateSpiBus(Apa102.DefaultSpiBusSpeed), numberOfLeds, Apa102.PixelOrder.BGR);
 
     apa102.Clear();
 

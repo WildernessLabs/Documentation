@@ -13,7 +13,7 @@ remarks: *content
 
 ```csharp
 CharlieWing charlieWing;
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
@@ -22,7 +22,7 @@ public MeadowApp()
     charlieWing = new CharlieWing(Device.CreateI2cBus());
     charlieWing.Clear();
 
-    graphics = new GraphicsLibrary(charlieWing);
+    graphics = new MicroGraphics(charlieWing);
     graphics.CurrentFont = new Font4x8();
 
     graphics.DrawText(0, 0, "F7");

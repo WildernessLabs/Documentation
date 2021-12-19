@@ -12,13 +12,13 @@ remarks: *content
 ### Code Example
 
 ```csharp
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
     Console.WriteLine("Initializing ...");
 
-    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var config = new SpiClockConfiguration(new Frequency(12000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode0);
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
     Console.WriteLine("Create display driver instance");
@@ -30,9 +30,12 @@ public MeadowApp()
         resetPin: Device.Pins.D00,
 SelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01
-    );
+    )
+    {
+        IgnoreOutOfBoundsPixels = true
+    };
 
-    graphics = new GraphicsLibrary(display);
+    graphics = new MicroGraphics(display);
 
     graphics.CurrentFont = new Font12x20();
     graphics.Clear();

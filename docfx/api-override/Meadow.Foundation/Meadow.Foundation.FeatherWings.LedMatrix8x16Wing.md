@@ -13,7 +13,7 @@ remarks: *content
 
 ```csharp
 LedMatrix8x16Wing ledMatrixWing;
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
@@ -22,7 +22,7 @@ public MeadowApp()
     ledMatrixWing = new LedMatrix8x16Wing(Device.CreateI2cBus());
     ledMatrixWing.Clear();
 
-    graphics = new GraphicsLibrary(ledMatrixWing);
+    graphics = new MicroGraphics(ledMatrixWing);
     graphics.CurrentFont = new Font4x8();
 
     graphics.Rotation = RotationType._90Degrees;
