@@ -28,11 +28,11 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global --version 0.15.1
 
 The Visual Studio for Windows extension has been reworked and refactored. This was necessary to support Visual Studio 2022 on Windows but also gave us the opportunity to carefully review the code for stability and usability. Deploying and debugging on Windows 10 & 11 should be a lot more stable and consistent. And there's more goodness coming in future releases :)
 
-** Note - Visual Studio 2022 for Mac isn't supported - at the time of this release, the VS4Mac 2022 preview doesn't yet support external extensions.
+**Note** - Visual Studio 2022 for Mac isn't supported - at the time of this release, the VS4Mac 2022 preview doesn't yet support external extensions.
 
 ## Meadow.Core
 
-**Breaking Change** SPI Bus speed is now defined as a `Meadow.Units.Frequency` instead of an integer. To update, in most cases you'll replace your old int value with `new Meadow.Units.Frequency(value)`. 
+**Note: Breaking Change** - SPI Bus speed is now defined as a `Meadow.Units.Frequency` instead of an integer. To update, in most cases you'll replace your old int value with `new Meadow.Units.Frequency(value)`. 
 
 This also enabled Meadow.Foundation drivers to expose a `DefaultSpiBusSpeed` property (details below).
 
@@ -40,16 +40,18 @@ This also enabled Meadow.Foundation drivers to expose a `DefaultSpiBusSpeed` pro
 
 This release brings a big list of stability fixes, API updates and performance improvements - see the Bug fixes below for the complete list.
 
-* **New BB Q10 Keyboard driver** Ever wanted a BlackBerry-style keyboard for your Meadow projects? You can now use [Solder Party's](www.solder.party) keyword with Meadow
+* **New BB Q10 Keyboard driver** Ever wanted a BlackBerry-style keyboard for your Meadow projects? You can now use [Solder Party's](http://www.solder.party) keyword with Meadow
 * **ePaper display performance** Full screen redrawing speed is 10-15% faster on most ePaper displays
-* **Renamed GraphicsLibrary to MicroGraphics - Breaking Change** We renamed the `GraphicsLibrary` class to `MicroGraphics` to bring the class inline with branding and documentation, all instances in your code will need to be renamed 
-* **DisplayBase to IGraphicsDisplay - Breaking Change** We deprecated `DisplayBase` and replaced it with `IGraphicsDisplay` - all graphics displays now implement this interface
-* **FontBase to IFont - Breaking Change** We deprecated `FontBase` and replaced it with `IFont` - all font classes now implement this interface
-* **Moved graphics enums out of GraphicsLibrary** this is API cleanup, several enums were nested in the `GraphicsLibrary` class, and have been moved directly into the `Meadow.Foundation.Graphics` including: `ColorType`, `ScaleFactor`, `TextAlignment`, and `BitmapMode`
-* **Samples updated to support Meadow V2** All Meadow.Foundation samples updated to run on the Meadow V2 boards by default, if you're using V1 boards change the `MeadowApp` class signature from `App<F7MicroV2, MeadowApp>` to `App<F7Micro, MeadowApp>` (remove the V2)
-* **SPI peripherals now have a default value** No more guessing on the appropriate SPI bus speed for peripherals, all SPI drivers now have a public `DefaultSpiBusSpeed` of type `Meadow.Units.Frequency`
+* **Breaking Change: Renamed GraphicsLibrary to MicroGraphics** - We renamed the `GraphicsLibrary` class to `MicroGraphics` to bring the class inline with branding and documentation, all instances in your code will need to be renamed 
+* **Breaking Change: `DisplayBase` -> `IGraphicsDisplay`** - We deprecated `DisplayBase` and replaced it with `IGraphicsDisplay` - all graphics displays now implement this interface
+* **Breaking Change: `FontBase` -> `IFont`** - We deprecated `FontBase` and replaced it with `IFont` - all font classes now implement this interface
+* **Moved graphics enums out of GraphicsLibrary** - This is API cleanup, several enums were nested in the `GraphicsLibrary` class, and have been moved directly into the `Meadow.Foundation.Graphics` including: `ColorType`, `ScaleFactor`, `TextAlignment`, and `BitmapMode`
+* **Samples updated to support Meadow V2** - All Meadow.Foundation samples updated to run on the Meadow V2 boards by default, if you're using V1 boards change the `MeadowApp` class signature from `App<F7MicroV2, MeadowApp>` to `App<F7Micro, MeadowApp>` (remove the `V2`)
+* **SPI peripherals now have a default value** - No more guessing on the appropriate SPI bus speed for peripherals, all SPI drivers now have a public `DefaultSpiBusSpeed` of type `Meadow.Units.Frequency`
 
 ### Bug fixes 
+
+Look at this enormous list of bug fixes! We're getting close to v1.0 Release Candidate, folks!
 
 * [#82 Error flashing F7 OS from a non-english OS](https://github.com/WildernessLabs/Meadow.CLI/issues/82)
 * [#92 Conflicting use of the -v flag](https://github.com/WildernessLabs/Meadow.CLI/issues/92)
