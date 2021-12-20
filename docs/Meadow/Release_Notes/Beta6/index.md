@@ -9,7 +9,7 @@ subtitle: Release Notes
 This is a point release with a big focus on tooling features and stability along with a number of Meadow.Foundation stability fixes, performance improvements, and API consistency updates.
 
 * **VS2022 support** Meadow officially supports Visual Studio 2022! Open the Manage Extensions dialog in Visual Studio to install.
-* **Debugging stability** This version sees a big improvement in debugging stability and consistency, make your sure you have the latest VS extensions installed.
+* **Debugging stability** This version sees a big improvement in debugging stability and consistency, make sure you have the latest VS extensions installed.
 * **MicroGraphics refactoring** We've spent a lot of time optimizing and refactoring our Meadow.Foundation APIs, this release sees some big changes (some breaking) that both simplifies and brings consistency to Meadow's graphics APIs.
 
 ## Updating
@@ -29,6 +29,12 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global --version 0.15.1
 The Visual Studio for Windows extension has been reworked and refactored. This was necessary to support Visual Studio 2022 on Windows but also gave us the opportunity to carefully review the code for stability and usability. Deploying and debugging on Windows 10 & 11 should be a lot more stable and consistent. And there's more goodness coming in future releases :)
 
 **Note** - Visual Studio 2022 for Mac isn't supported - at the time of this release, the VS4Mac 2022 preview doesn't yet support external extensions.
+
+**Known Issues** - This update for VS2019 and VS2022 extension, on Windows, are generally more stable than the previous one, but we are aware of certain situations, and on come machines, where the new version will stop deploying. If that happens you can try the following:
+1. Close your sln. Disable the extension, then re-enable it. Reload your sln and try deploying again. 
+2. In the worst case, you may have to uninstall and re-install the extension. 
+
+We are trying to track down why this happens, but if you happen to notice a consistently reproducible set of steps, we'd love to hear about it, as that will help us get a fix out for it more quickly. Thanks.
 
 ## Meadow.Core
 
