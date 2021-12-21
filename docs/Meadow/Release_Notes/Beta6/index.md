@@ -14,9 +14,9 @@ This is a point release with a big focus on tooling features and stability along
 
 ## Updating
 
-There is no OS change for this release so you do not need to flash your Meadow board, but do make sure you're running b6.0 if you haven't already updated.
+There is no OS change for this release so you do not need to flash your Meadow board, but make sure you're running b6.0 if you haven't already updated.
 
-There are new  new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+There are new nuget packages, a new Meadow CLI and new Visual Studio extensions.
 
 Start by installing the latest version of the CLI (v0.15.1) by running:
 
@@ -28,17 +28,22 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global --version 0.15.1
 
 The Visual Studio for Windows extension has been reworked and refactored. This was necessary to support Visual Studio 2022 on Windows but also gave us the opportunity to carefully review the code for stability and usability. Deploying and debugging on Windows 10 & 11 should be a lot more stable and consistent. And there's more goodness coming in future releases :)
 
-**Note** - Visual Studio 2022 for Mac isn't supported - at the time of this release, the VS4Mac 2022 preview doesn't yet support external extensions.
+**Note** - Visual Studio 2022 for Mac isn't supported - at the time of this release, the VS4Mac 2022 preview doesn't (yet) support extensions.
 
-**Known Issues** - This update for VS2019 and VS2022 extension, on Windows, are generally more stable than the previous one, but we are aware of certain situations, and on come machines, where the new version will stop deploying. If that happens you can try the following:
-1. Close your sln. Disable the extension, then re-enable it. Reload your sln and try deploying again. 
-2. In the worst case, you may have to uninstall and re-install the extension. 
+**Known Issues** - In rare occasions you may experience deployment failures. If the failures are consistent, you may need to disable/enable or re-install the Meadow extension.
 
-We are trying to track down why this happens, but if you happen to notice a consistently reproducible set of steps, we'd love to hear about it, as that will help us get a fix out for it more quickly. Thanks.
+We're working on the issue. If you experience the problem and can provide a consistently reproducible set of steps, [please file an issue](https://github.com/WildernessLabs/VS_Win_Meadow_Extension/issues). Thank you!
+
+## Meadow.CLI
+
+The CLI receives more stability improvements and two new commands:
+
+* **meadow use port** can be used to set a preferred serial port
+* **meadow file delete all** will remove all files from your Meadow device
 
 ## Meadow.Core
 
-**Note: Breaking Change** - SPI Bus speed is now defined as a `Meadow.Units.Frequency` instead of an integer. To update, in most cases you'll replace your old int value with `new Meadow.Units.Frequency(value)`. 
+**Note: Breaking Change** - SPI Bus speed is now defined as a `Meadow.Units.Frequency` instead of an integer. To update, in most cases you'll replace your old int value with `new Meadow.Units.Frequency(value)`.
 
 This also enabled Meadow.Foundation drivers to expose a `DefaultSpiBusSpeed` property (details below).
 
@@ -48,14 +53,14 @@ This release brings a big list of stability fixes, API updates and performance i
 
 * **New BB Q10 Keyboard driver** Ever wanted a BlackBerry-style keyboard for your Meadow projects? You can now use [Solder Party's](https://www.tindie.com/products/arturo182/keyboard-featherwing-qwerty-keyboard-26-lcd/) keyboard with Meadow
 * **ePaper display performance** Full screen redrawing speed is 10-15% faster on most ePaper displays
-* **Breaking Change: Renamed GraphicsLibrary to MicroGraphics** - We renamed the `GraphicsLibrary` class to `MicroGraphics` to bring the class inline with branding and documentation, all instances in your code will need to be renamed 
+* **Breaking Change: Renamed GraphicsLibrary to MicroGraphics** - We renamed the `GraphicsLibrary` class to `MicroGraphics` to bring the class inline with branding and documentation, all instances in your code will need to be renamed
 * **Breaking Change: `DisplayBase` -> `IGraphicsDisplay`** - We deprecated `DisplayBase` and replaced it with `IGraphicsDisplay` - all graphics displays now implement this interface
 * **Breaking Change: `FontBase` -> `IFont`** - We deprecated `FontBase` and replaced it with `IFont` - all font classes now implement this interface
 * **Moved graphics enums out of GraphicsLibrary** - This is API cleanup, several enums were nested in the `GraphicsLibrary` class, and have been moved directly into the `Meadow.Foundation.Graphics` including: `ColorType`, `ScaleFactor`, `TextAlignment`, and `BitmapMode`
 * **Samples updated to support Meadow V2** - All Meadow.Foundation samples updated to run on the Meadow V2 boards by default, if you're using V1 boards change the `MeadowApp` class signature from `App<F7MicroV2, MeadowApp>` to `App<F7Micro, MeadowApp>` (remove the `V2`)
 * **SPI peripherals now have a default value** - No more guessing on the appropriate SPI bus speed for peripherals, all SPI drivers now have a public `DefaultSpiBusSpeed` of type `Meadow.Units.Frequency`
 
-### Bug fixes 
+### Bug fixes
 
 Look at this enormous list of bug fixes! We're getting close to v1.0 Release Candidate, folks!
 
@@ -64,6 +69,7 @@ Look at this enormous list of bug fixes! We're getting close to v1.0 Release Can
 * [#116 Better user-feedback when OS files aren't downloaded](https://github.com/WildernessLabs/Meadow.CLI/issues/116)
 * [#117 Feature request: Add a delete all command](https://github.com/WildernessLabs/Meadow.CLI/issues/117)
 * [#141 Add I2C defaults to all related drivers](https://github.com/WildernessLabs/Meadow.Foundation/issues/141)
+* [#191 Switching Antennas throws an exception](https://github.com/WildernessLabs/Meadow_Issues/issues/191)
 * [#191 Can't use font scaling with TextDisplayMenu](https://github.com/WildernessLabs/Meadow.Foundation/issues/191)
 * [#195 Sensor.Atmospheric.BME280 - never turns changes mode from Sleep to either Forced or Normal](https://github.com/WildernessLabs/Meadow.Foundation/issues/195)
 * [#209 Out of Bounds exception if graphicslibrary is used to draw off screen](https://github.com/WildernessLabs/Meadow.Foundation/issues/209)
