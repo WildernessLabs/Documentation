@@ -37,8 +37,8 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [NMEA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.NmeaSentenceProcessor.html) | Generic GPS sentence decoder library |
-| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [GraphicsLibrary](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [Maple Server](/docs/api/Meadow.Foundation/Meadow.Foundation.Web.Maple.Server.html) | An ultra-lightweight RESTful web API Server, built specifically for Meadow |
+| <img src="https://img.shields.io/badge/Working-brightgreen" /> | [µGraphics](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.GraphicsLibrary.html) | General purpose graphics library |
 | <img src="https://img.shields.io/badge/Working-brightgreen" /> | [TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text Display Menu for graphics and character displays |
 
 ## External Peripherals
