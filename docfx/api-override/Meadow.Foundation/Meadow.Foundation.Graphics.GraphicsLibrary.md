@@ -1,10 +1,10 @@
 ---
-uid: Meadow.Foundation.Graphics.GraphicsLibrary
+uid: Meadow.Foundation.Graphics.MicroGraphics
 remarks: *content
 ---
 
-| GraphicsLibrary |             |
+| MicroGraphics   |             |
 |-----------------|-------------|
 | Status          | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code     | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Libraries_and_Frameworks/Displays.GraphicsLibrary) |
-| NuGet package   | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.GraphicsLibrary/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.GraphicsLibrary.svg?label=Meadow.Foundation.Graphics.GraphicsLibrary" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Source code     | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Graphics/MicroGraphics/Driver/Graphics.MicroGraphics) |
+| NuGet package   | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.MicroGraphics/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.MicroGraphics.svg?label=Meadow.Foundation.Graphics.MicroGraphics" style="width: auto; height: -webkit-fill-available;" /></a> |
