@@ -38,8 +38,8 @@ We're working on the issue. If you experience the problem and can provide a cons
 
 The CLI receives more stability improvements and two new commands:
 
-* **meadow use port** can be used to set a preferred serial port
-* **meadow file delete all** will remove all files from your Meadow device
+* **`meadow use port`** can be used to set a preferred serial port
+* **`meadow file delete all`** will remove all files from your Meadow device
 
 ## Meadow.Core
 
