@@ -13,7 +13,14 @@ Alternatively, you can follow this step by step guide for both macOS and Windows
 
 ## Step 1: Install Visual Studio Meadow Extensions
 
-You'll need Visual Studio 2019 for either Windows or Mac; [available here](https://visualstudio.microsoft.com/downloads/). You can use any edition including Enterprise, Professional, or the free Community edition.  
+## Prerequisites
+
+You'll need Visual Studio 2019 or 2022 for Windows or Visual Studio 8.10.xx for Mac; [available here](https://visualstudio.microsoft.com/downloads/).
+
+You can use any edition including Enterprise, Professional, or the free Community edition.
+
+On Windows you'll also need to make sure that you install the Mobile Framework when asked what Frameworks to install.
+This will allow you to debug your Meadow apps.
 
 **Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
 

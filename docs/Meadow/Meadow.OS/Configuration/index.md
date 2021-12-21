@@ -131,7 +131,7 @@ If set to true, NTP servers should be specified.
 
 ### `DnsServers`
 
-DNS server override, if not using the ones from DHCP.
+DNS server(s) to use for DNS queries.
 
 ## `wifi.config.yaml`
 
@@ -143,7 +143,7 @@ Credentials:
     Password: SSIDPassword
 ```
 
-This file will be processed when after the `meadow.config.yaml` file.  The `Ssid` name will be set as the default access point to be used as the system starts.  The password will be used when connecting to the access point.
+This file will be processed after the `meadow.config.yaml` file.  The `Ssid` name will be set as the default access point to be used as the system starts.  The password will be used when connecting to the access point.
 
 The `wifi.config.yaml` file will be deleted from flash storage after it has been processed and stored in secure storage on the ESP32 as the information is considered sensitive. This prevents the possibility of the file being read at a later point in time.
 

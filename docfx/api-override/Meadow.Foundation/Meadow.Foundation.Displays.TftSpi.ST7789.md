@@ -26,25 +26,28 @@ You can get ST7789 displays from the following suppliers:
 ### Code Example
 
 ```csharp
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 St7789 display;
 
 public MeadowApp()
 {
     Console.WriteLine("Initializing ...");
 
-    var config = new SpiClockConfiguration(48000, SpiClockConfiguration.Mode.Mode3);
+    var config = new SpiClockConfiguration(new Frequency(48000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode3);
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
     var display = new St7789(
         device: Device,
         spiBus: spiBus,
-        chipSelectPin: Device.Pins.D02,
-        dcPin: Device.Pins.D01,
-        resetPin: Device.Pins.D00,
-        width: 240, height: 240, displayColorMode: ColorType.Format16bppRgb565);
+        chipSelectPin: Device.Pins.D15,
+        dcPin: Device.Pins.D11,
+        resetPin: Device.Pins.D14,
+        width: 240, height: 240, displayColorMode: ColorType.Format16bppRgb565)
+    {
+        IgnoreOutOfBoundsPixels = true
+    };
 
-    graphics = new GraphicsLibrary(display);
+    graphics = new MicroGraphics(display);
     graphics.Rotation = RotationType._180Degrees;
 
     graphics.Clear(true);

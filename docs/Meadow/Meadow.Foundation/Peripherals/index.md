@@ -185,19 +185,19 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Camera.ArducamMini](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.ArducamMini.html) | ArducamMini I2C + SPI high definition 2MP camera controller |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Camera.Mlx90640](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Mlx90640.html) | Mlx90640 I2C far infrared thermal sensor array camera |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Camera.Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html) | VC0706 serial VGA CMOS camera |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Camera.ArducamMini](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.ArducamMini.html) | ArducamMini I2C + SPI high definition 2MP camera controller |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Camera.Mlx90640](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Mlx90640.html) | Mlx90640 I2C far infrared thermal sensor array camera |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Camera.Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706.html) | VC0706 serial VGA CMOS camera |
 
 ## Distance
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.Gp2d12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Gp2d12.html) | Sharp GP2D12 analog distance sensor with integrated signal processing |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.Hcsr04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | HCSR04 digital ultrasonic distance sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.Hysrf05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hysrf05.html) | HYSRF05 digital ultrasonic distance sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.Mb10x0](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Mb10x0.html) | MaxSonar MB10x0 serial ultrasonic distance sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.Sfsr02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Sfsr02.html) | SFSR02 digital ultrasonic distance sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Distance.Gp2d12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Gp2d12.html) | Sharp GP2D12 analog distance sensor with integrated signal processing |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Distance.Hcsr04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | HCSR04 digital ultrasonic distance sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Distance.Hysrf05](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hysrf05.html) | HYSRF05 digital ultrasonic distance sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Distance.Mb10x0](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Mb10x0.html) | MaxSonar MB10x0 serial ultrasonic distance sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Distance.Sfsr02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Sfsr02.html) | SFSR02 digital ultrasonic distance sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Distance.Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html) | Vl53l0x I2C time of flight ranging distance sensor |
 
 ## Environmental
@@ -216,6 +216,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Hid.Bbq10Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Bbq10Keyboard.html) | BB Q10 I2C Keyboard |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html) | Freescale Semiconductor MPR121 I2C capacitive keypad controller |
 
 ## Light
@@ -252,10 +253,10 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Adxl3xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl3xx.html) | ADXL3xx Analog and I2C 3-axis accelerometers (ADXL335, ADXL345, ADXL337, ADXL362, ADXL377) |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Motion.Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Apds9960.html) | APDS9960 I2C proximity, light, color and gesture sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Motion.Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Apds9960.html) | APDS9960 I2C proximity, light, color and gesture sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | Bosch BNO055 9 axis absolute orientation sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html) | HCSENS0040 digital microwave motion sensor |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Motion.Hmc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883.html) | Hmc5883 / Qmc5883 I2C digital compass |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Motion.Hmc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883.html) | Hmc5883 / Qmc5883 I2C digital compass |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | Freescale MAG3110 I2C 3 axis magnetometer |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Mpu6050](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050.html) | Mpu6050 I2C MEMS 3 axis gyroscope accelerometer motion sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.ParallaxPir](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir.html) | Parallax PIR analog motion sensor |
@@ -281,7 +282,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Radio.Rfid.IDxxLA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.html) | IDxxLA Serial radio frequency ID readers |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Radio.Rfid.Rc522](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.Rc522.html) | Rc522 I2C radio frequency ID reader |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Radio.Rfid.Rc522](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.Rc522.html) | Rc522 I2C radio frequency ID reader |
 
 ## Sound
 
@@ -293,7 +294,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Temperature.DS18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.DS18B20.html) | DS18B20 1-Wire temperature sensor |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Sensors.Temperature.Ds18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Ds18B20.html) | DS18B20 1-Wire temperature sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html) | Lm75 I2C temperature sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Mcp9808](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9808.html) | MCP9808 I2C temperature sensor |
 | <img src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html) | TMP102 I2C temperature sensor |
@@ -315,5 +316,5 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Transceivers.Nrf24l01](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.Nrf24l01.html) | Nrf24l01 SPI radio transceiver |
-| <img src="https://img.shields.io/badge/InProgress-yellow"/> | [Transceivers.SX127x](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.SX127x.html) | SX127x SPI LoRa transceiver |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Transceivers.Nrf24l01](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.Nrf24l01.html) | Nrf24l01 SPI radio transceiver |
+| <img src="https://img.shields.io/badge/InProgress-yellow"/>   | [Transceivers.SX127x](/docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.SX127x.html) | SX127x SPI LoRa transceiver |

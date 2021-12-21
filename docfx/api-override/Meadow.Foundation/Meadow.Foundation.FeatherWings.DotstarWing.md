@@ -13,7 +13,7 @@ remarks: *content
 
 ```csharp
 DotstarWing dotStarWing;
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 public MeadowApp()
 {
     Console.WriteLine("Initialize hardware...");
@@ -23,7 +23,7 @@ public MeadowApp()
 
     dotStarWing.Brightness = 0.1f;
 
-    graphics = new GraphicsLibrary(dotStarWing);
+    graphics = new MicroGraphics(dotStarWing);
     graphics.CurrentFont = new Font4x6();
 
     graphics.DrawRectangle(0, 0, 8, 4, Color.LawnGreen, true);

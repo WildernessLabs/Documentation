@@ -18,7 +18,7 @@ You may find mutlicolor variants, however, the color is achieved by placing one 
 ### Code Example
 
 ```csharp
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 Ssd1309 display;
 
 public MeadowApp()
@@ -27,7 +27,7 @@ public MeadowApp()
     //CreateI2CDisplay();
 
     Console.WriteLine("Create canvas...");
-    graphics = new GraphicsLibrary(display);
+    graphics = new MicroGraphics(display);
 
     graphics.Clear();
     graphics.CurrentFont = new Font8x12();
@@ -43,7 +43,7 @@ void CreateSpiDisplay()
 {
     Console.WriteLine("Create Display with SPI...");
 
-    var config = new Meadow.Hardware.SpiClockConfiguration(6000, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
+    var config = new Meadow.Hardware.SpiClockConfiguration(new Frequency(6000, Frequency.UnitType.Kilohertz), Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
 
     var bus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 

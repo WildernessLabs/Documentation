@@ -35,7 +35,7 @@ public MeadowApp()
         resetPin: Device.Pins.D02
     );
 
-    var graphics = new GraphicsLibrary(display);
+    var graphics = new MicroGraphics(display);
 
     graphics.Clear(true);
     graphics.CurrentFont = new Font8x12();

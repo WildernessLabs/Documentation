@@ -17,13 +17,13 @@ The Meadow.Foundation ILI9341 driver currently only supports 16bpp RGB565.
 
 ```csharp
 Ili9341 display;
-GraphicsLibrary graphics;
+MicroGraphics graphics;
 
 public MeadowApp()
 {
     Console.WriteLine("Initializing ...");
 
-    var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode0);
+    var config = new SpiClockConfiguration(new Frequency(12000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode0);
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
     Console.WriteLine("Create display driver instance");
@@ -36,9 +36,12 @@ public MeadowApp()
         dcPin: Device.Pins.D14,
         resetPin: Device.Pins.D15,
         width: 240, height: 320
-    );
+    )
+    {
+        IgnoreOutOfBoundsPixels = true
+    };
 
-    graphics = new GraphicsLibrary(display);
+    graphics = new MicroGraphics(display);
 			
 ics.CurrentFont = new Font12x16();
     graphics.Clear();
