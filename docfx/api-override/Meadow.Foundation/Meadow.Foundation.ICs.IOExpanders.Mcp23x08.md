@@ -3,11 +3,11 @@ uid: Meadow.Foundation.ICs.IOExpanders.Mcp23x08
 remarks: *content
 ---
 
-| Mcp23x08      |               |
-|---------------|---------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08) |
-| NuGet package |  <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Mcp23x08/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.svg?label=Meadow.Foundation.ICs.IOExpanders.Mcp23x08" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Mcp23x08 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Mcp23x08/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.svg?label=Meadow.Foundation.ICs.IOExpanders.Mcp23x08" /></a> |
 
 The **MCP23008** chip is an 8-bit (8 port) digital I/O expander chip that uses I2C to communicate. It can be used to add additional digital input and output ports to Meadow and can be combined with up to eight MCP23008 chips in total, providing 64 additional ports.
 
@@ -54,7 +54,97 @@ In addition to the address pins, there are a number of other pins that must be c
  * **INT** - The `INT` pin is for interrupt notifications, and is only necessary when using the GPIO pins in input mode and you want an event raised when the input value changes.
  * **VSS** and **VDD** - These go to ground and 3.3V power, respectively, and power the chip.
 
+### Code Example
+
+```csharp
+Mcp23x08 _mcp;
+public MeadowApp()
+{
+    TestOutputs();            
+}
+
+void TestOutputs() 
+{
+    InitializeOutputs();
+
+    while (true)
+    {
+        TestBulkDigitalOutputPortWrites(20);
+        TestDigitalOutputPorts(2);
+    }
+}
+
+void InitializeOutputs()
+{
+    IDigitalInputPort interruptPort =
+        Device.CreateDigitalInputPort(
+            Device.Pins.D00,
+            InterruptMode.EdgeRising);
+    // create a new mcp with all the address pins pulled low for
+    // an address of 0x20/32
+    _mcp = new Mcp23x08(Device.CreateI2cBus(), false, false, false, interruptPort);
+}
+
+void TestDigitalOutputPorts(int loopCount)
+{
+    var out00 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP0);
+    var out01 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP1);
+    var out02 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP2);
+    var out03 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP3);
+    var out04 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP4);
+    var out05 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP5);
+    var out06 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP6);
+    var out07 = _mcp.CreateDigitalOutputPort(_mcp.Pins.GP7);
+
+    var outs = new List<IDigitalOutputPort>() {
+        out00, out01, out02, out03, out04, out05, out06, out07
+    };
+
+    foreach (var outie in outs) {
+        outie.State = true;
+    }
+
+    for(int l = 0; l < loopCount; l++) {
+        // loop through all the outputs
+        for (int i = 0; i < outs.Count; i++) {
+            // turn them all off
+            foreach (var outie in outs) { outie.State = false; }
+
+            // turn on just one
+            outs[i].State = true;
+            Thread.Sleep(250);
+        }
+    }
+
+    // cleanup
+    for (int i = 0; i < outs.Count; i++) {
+        outs[i].Dispose();
+    }
+}
+
+void TestBulkDigitalOutputPortWrites(int loopCount)
+{
+    byte mask = 0x0;
+
+    for (int l = 0; l < loopCount; l++) {
+
+        for (int i = 0; i < 8; i++) {
+            _mcp.WriteToPorts(mask);
+            mask = (byte)(1 << i);
+            Thread.Sleep(5);
+        }
+    }
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08/Samples/ICs.IOExpanders.Mcp23x08_Sample)
+
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Mcp23x08/Mcp23x08.svg" 
+<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Mcp23x08/Mcp23x08_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

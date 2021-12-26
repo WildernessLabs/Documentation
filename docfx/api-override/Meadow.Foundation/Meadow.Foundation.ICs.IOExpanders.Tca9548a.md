@@ -3,23 +3,43 @@ uid: Meadow.Foundation.ICs.IOExpanders.Tca9548a
 remarks: *content
 ---
 
-| Pca9685       |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.PCA9685) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Tca9548a/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Tca9548a.svg?label=Meadow.Foundation.ICs.IOExpanders.Tca9548a" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Tca9548a | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Tca9548a) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Tca9548a/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Tca9548a.svg?label=Meadow.Foundation.ICs.IOExpanders.Tca9548a" /></a> |
 
 [Explanation of the peripheral]
 
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    //Code example here
+    Console.WriteLine("Initialize hardware...");
+
+    var i2cBus = Device.CreateI2cBus(I2cBusSpeed.Standard);
+    var tca9548a = new Tca9548a(i2cBus, 0x70);
+    var mcp0 = new Mcp23x08(tca9548a.Bus0);
+    var mcp1 = new Mcp23x08(tca9548a.Bus1);
+  
+    var bus0Port0 = mcp0.CreateDigitalOutputPort(mcp0.Pins.GP0);
+    var bus1Port0 = mcp1.CreateDigitalOutputPort(mcp1.Pins.GP0);
+
+    while (true)
+    {
+        bus0Port0.State = true;
+        bus1Port0.State = false;
+        Thread.Sleep(1000);
+        bus0Port0.State = false;
+        bus1Port0.State = true;
+        Thread.Sleep(1000);
+    }
 }
+
 ```
-[Sample projects available on GitHub [when its live]]() 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Tca9548a/Samples/ICs.IOExpanders.Tca9548a_Sample)
 
 ### Wiring Example
 
@@ -35,3 +55,8 @@ To wire a Tca9548a to your Meadow board, connect the following:
 It should look like the following diagram:
 
 ToDo: Fritzing diagram here
+
+
+
+
+

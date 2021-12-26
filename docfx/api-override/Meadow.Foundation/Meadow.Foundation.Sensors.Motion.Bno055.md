@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Motion.Bno055
 remarks: *content
 ---
 
-| BNO055        |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055) |
-| NuGet package | <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Bno055.svg?label=Meadow.Foundation.Sensors.Motion.Bno055" style="width: auto; height: -webkit-fill-available;" /> |
+| Bno055 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Bno055/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Bno055.svg?label=Meadow.Foundation.Sensors.Motion.Bno055" /></a> |
 
 **BNO055** is a 9-axis absolute orientation sensor. The three sensors (accelerometer, gyroscope and magnetometer) are measured with a 32-bit cortex M0 microcontroller. The BNO055 is controlled via I2C.
 
@@ -17,38 +17,112 @@ remarks: *content
 ### Code Example
 
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+Bno055 sensor;
+
+public MeadowApp()
 {
-    Bno055 sensor;
+    Console.WriteLine("Initializing");
 
-    public MeadowApp()
+    // create the sensor driver
+    sensor = new Bno055(Device.CreateI2cBus());
+
+    // classical .NET events can also be used:
+    sensor.Updated += (sender, result) =>
     {
-        InitHardware();
+        Console.WriteLine($"Accel: [X:{result.New.Acceleration3D?.X.MetersPerSecondSquared:N2}," +
+            $"Y:{result.New.Acceleration3D?.Y.MetersPerSecondSquared:N2}," +
+            $"Z:{result.New.Acceleration3D?.Z.MetersPerSecondSquared:N2} (m/s^2)]");
 
-        while (true)
+        Console.WriteLine($"Gyro: [X:{result.New.AngularVelocity3D?.X.DegreesPerSecond:N2}," +
+            $"Y:{result.New.AngularVelocity3D?.Y.DegreesPerSecond:N2}," +
+            $"Z:{result.New.AngularVelocity3D?.Z.DegreesPerSecond:N2} (degrees/s)]");
+
+        Console.WriteLine($"Compass: [X:{result.New.MagneticField3D?.X.Tesla:N2}," +
+            $"Y:{result.New.MagneticField3D?.Y.Tesla:N2}," +
+            $"Z:{result.New.MagneticField3D?.Z.Tesla:N2} (Tesla)]");
+
+        Console.WriteLine($"Gravity: [X:{result.New.GravityVector?.X.MetersPerSecondSquared:N2}," +
+            $"Y:{result.New.GravityVector?.Y.MetersPerSecondSquared:N2}," +
+            $"Z:{result.New.GravityVector?.Z.MetersPerSecondSquared:N2} (meters/s^2)]");
+
+        // TODO: what is the unit here. quaternion need to be unitized.
+        Console.WriteLine($"Quaternion orientation: [X:{result.New.QuaternionOrientation?.X:N2}," +
+            $"Y:{result.New.QuaternionOrientation?.Y:N2}," +
+            $"Z:{result.New.QuaternionOrientation?.Z:N2}]");
+
+        // TODO: what is the unit here. euler angles need to be unitized.
+        Console.WriteLine($"Euler orientation: [heading: {result.New.EulerOrientation?.Heading:N2}," +
+            $"Roll: {result.New.EulerOrientation?.Roll:N2}," +
+            $"Pitch: {result.New.EulerOrientation?.Pitch:N2}]");
+
+        Console.WriteLine($"Linear Accel: [X:{result.New.LinearAcceleration?.X.MetersPerSecondSquared:N2}," +
+            $"Y:{result.New.LinearAcceleration?.Y.MetersPerSecondSquared:N2}," +
+            $"Z:{result.New.LinearAcceleration?.Z.MetersPerSecondSquared:N2} (meters/s^2)]");
+
+        Console.WriteLine($"Temp: {result.New.Temperature?.Celsius:N2}C");
+    };
+
+    // Example that uses an IObersvable subscription to only be notified when the filter is satisfied
+    var consumer = Bno055.CreateObserver(
+        handler: result => Console.WriteLine($"Observer: [x] changed by threshold; new [x]: X:{result.New.Acceleration3D?.X.MetersPerSecondSquared:N2}, old: X:{result.Old?.Acceleration3D?.X.MetersPerSecondSquared:N2}"),
+        // only notify if there's a greater than 1 micro tesla on the Y axis
+        
+        filter: result =>
         {
-            sensor.Read();
+            if (result.Old is { } old)
+            { //c# 8 pattern match syntax. checks for !null and assigns var.
+                return ((result.New.Acceleration3D - old.Acceleration3D)?.Y > new Acceleration(1, AU.MetersPerSecondSquared));
+            }
+            return false;
+        });
+    sensor.Subscribe(consumer);
 
-            Console.WriteLine($"{sensor.Temperature}");
+    //==== one-off read
+    ReadConditions().Wait();
 
-            Thread.Sleep(1000);
-        }
-    }
+    // start updating
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+}
 
-    public void InitHardware()
-    {
-        sensor = new Bno055(Device.CreateI2cBus(), 0x28);
+protected async Task ReadConditions()
+{
+    var result = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"Accel: [X:{result.Acceleration3D?.X.MetersPerSecondSquared:N2}," +
+        $"Y:{result.Acceleration3D?.Y.MetersPerSecondSquared:N2}," +
+        $"Z:{result.Acceleration3D?.Z.MetersPerSecondSquared:N2} (m/s^2)]");
 
-        sensor.DisplayRegisters();
-        sensor.PowerMode = Bno055.PowerModes.Normal;
-        sensor.OperatingMode = Bno055.OperatingModes.ConfigurationMode;
-        sensor.OperatingMode = Bno055.OperatingModes.InertialMeasurementUnit;
-        sensor.DisplayRegisters();
-    }
+    Console.WriteLine($"Gyro: [X:{result.AngularVelocity3D?.X.DegreesPerSecond:N2}," +
+        $"Y:{result.AngularVelocity3D?.Y.DegreesPerSecond:N2}," +
+        $"Z:{result.AngularVelocity3D?.Z.DegreesPerSecond:N2} (degrees/s)]");
+
+    Console.WriteLine($"Compass: [X:{result.MagneticField3D?.X.Tesla:N2}," +
+        $"Y:{result.MagneticField3D?.Y.Tesla:N2}," +
+        $"Z:{result.MagneticField3D?.Z.Tesla:N2} (Tesla)]");
+
+    Console.WriteLine($"Gravity: [X:{result.GravityVector?.X.MetersPerSecondSquared:N2}," +
+        $"Y:{result.GravityVector?.Y.MetersPerSecondSquared:N2}," +
+        $"Z:{result.GravityVector?.Z.MetersPerSecondSquared:N2} (meters/s^2)]");
+
+    // TODO: what is the unit here. quaternion need to be unitized.
+    Console.WriteLine($"Quaternion orientation: [X:{result.QuaternionOrientation?.X:N2}," +
+        $"Y:{result.QuaternionOrientation?.Y:N2}," +
+        $"Z:{result.QuaternionOrientation?.Z:N2}]");
+
+    // TODO: what is the unit here. euler angles need to be unitized.
+    Console.WriteLine($"Euler orientation: [heading: {result.EulerOrientation?.Heading:N2}," +
+        $"Roll: {result.EulerOrientation?.Roll:N2}," +
+        $"Pitch: {result.EulerOrientation?.Pitch:N2}]");
+
+    Console.WriteLine($"Linear Accel: [X:{result.LinearAcceleration?.X.MetersPerSecondSquared:N2}," +
+        $"Y:{result.LinearAcceleration?.Y.MetersPerSecondSquared:N2}," +
+        $"Z:{result.LinearAcceleration?.Z.MetersPerSecondSquared:N2} (meters/s^2)]");
+
+    Console.WriteLine($"Temp: {result.Temperature?.Celsius:N2}C");
 }
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055/Samples/) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055/Samples/Sensors.Motion.Bno055_Sample)
 
 ### Wiring Example
 
@@ -56,3 +130,7 @@ The following diagram shows the BNO055 configured for bas
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Bno055/Bno055_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

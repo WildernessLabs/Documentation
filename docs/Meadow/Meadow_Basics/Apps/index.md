@@ -44,11 +44,18 @@ Currently, we don't enforce the use of `App`, but in a future build of Meadow, i
 
 The `App` declaration requires two generic parameters; `D`, and `A`, representing the device type and the application class type, respectively. For `D`, you'll need to pass a `Meadow.IDevice` that represents the board you're using, such as `F7Micro`. For `A`, you should pass the typename of your application class itself.
 
-For example, if your app class is called `LEDApp`, and you're using a Meadow F7 Micro board, your `LEDApp` declaration would look like the following:
+For example, if your app class is called `LEDApp`, and you're using a Meadow F7v2 Micro board, your `LEDApp` declaration would look like the following:
+
+```csharp
+public class LEDApp : App<F7MicroV2, LEDApp>
+```
+
+If you're using a v1 board, you'll use this signature:
 
 ```csharp
 public class LEDApp : App<F7Micro, LEDApp>
 ```
+
 
 ### `D` = Device
 

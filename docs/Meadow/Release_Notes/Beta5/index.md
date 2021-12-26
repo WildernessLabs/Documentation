@@ -4,27 +4,50 @@ title: Meadow Beta 5
 subtitle: Release Notes
 ---
 
-<!--
-# b5.x
-
-* **Debugging** - What what?! Yup; in-IDE debugging in Visual Studio for Windows and Mac, AND VS Code.
- 
-## Meadow.OS
-
-### Debugging
-
-Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps just like any other .NET app, with full support in Visual Studio for Windows, Mac, and even VS Code! You can even debug from the command line using the Mono Soft-Debugger (SDB) via Meadow.CLI. 
--->
-
 # b5.3
 
+Our most stable and complete release yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:
+
+ * **SQLite Support** - SQLite is now built into Meadow.OS and Frank added support for Meadow in his SQLite.NET ORM.
+ * **Bluetooth Fixes** - There were some strange bugs introduced to Bluetooth in b5.2, we fixed them.
+ * **Network Fixes** - There are a pile of Network stack fixes.
+ * **Azure Fix** - The auth bug that prevented integration with Azure is fixed.
+ * **Meadow.Foundation Cleanup** - Lots of sample cleanup and some small API upgrades.
+ * **Docs** - We re-organized some of our Meadow.OS docs and did a _huge_ update on Meadow.Foundation documentation.
+
+## Updating
+
+This release requires an OS update and nuget package updates. We released updates to the CLI out-of-band, make sure you have the latest version installed by running: 
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
 ## Meadow.OS
+
+### SQLite
+
+Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device databases via SQLite. Additionally, we worked with Frank Krueger to get Meadow support built into his SQLite.NET ORM, which adds super easy and lightweight ORM access. Check out the new [SQLite guide](/Meadow/Meadow.OS/SQLite/) for details.
+
+### API Cleanup
 
  * **Moved `SynchronizationContext` to Meadow.OS** - Previously, the `BeginInvokeOnMainThread()` method was executed on the current `Device` class, in this release we moved it to the `MeadowOS` class.
  * **`IWiFiAdapter.Scan()` returns an `IList<WiFiNetwork>` instead of an `ObservableCollection`** - The `ObservableCollection` was leftover from a previous API design and unnecessary.
- * **Configuration Files and API** - It is now possible to set a number of [configuration options through two files](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Configuration), `meadow.yaml` and `wifi.yaml`.  The options are also available through the configuration API.
 
- ## Bug Fixes
+## Meadow.Foundation
+
+* **uGraphics cleanup** - GraphicsLibrary now tracks pen color when saving and restoring state, and added support for `IgnoreOutOfBoundsPixels` for several displays
+* **Maple improvements** Maple server is continuing to evolve and now has basic route aliasing support
+* **Standardized I2C address properties** All I2C peripherals now have a standard `DEFAULT_ADDRESS` property
+* **Samples Cleanup** We did a top to bottom review to make sure samples are well formed, well named, and written consistently to make it easier to start working with a new peripheral driver
+
+## Documentation 
+Leveraging the work done to update the Meadow.Foundation samples, we built tooling to automatically update code snippets in the peripherals docs from the samples to make sure they're always up to date. Along with some other validation and cleanup, we updated over 90 docs!
+
+## Tooling
+The Meadow CLI received a few updates to improve stability and make it easier/more consistent to flash the latest version of Meadow OS to your board.
+
+## Bug Fixes
 
 * [#159 Device.GetDeviceInformation() throws an error](https://github.com/WildernessLabs/Meadow_Issues/issues/159)
 * [#141 HttpClient fails with 'No such host is known' when trying to POST to MSFT Oauth endpoint](https://github.com/WildernessLabs/Meadow_Issues/issues/141)
@@ -32,13 +55,16 @@ Long awaited, in-IDE, on-device debugging is here! Now you can debug Meadow apps
 * [#121 --Download causes an exception when executed in the Firmware directory on Windows](https://github.com/WildernessLabs/Meadow_Issues/issues/121)
 * [#122 Cosmetic: Delete the firmware zip files after downloading](https://github.com/WildernessLabs/Meadow_Issues/issues/122)
 * [#128 Meadow_Performance_Benchmarks app won't run](https://github.com/WildernessLabs/Meadow_Issues/issues/128)
-* [#163 IByteCommunications has no WriteRegister method that takes a Span<byte>](https://github.com/WildernessLabs/Meadow_Issues/issues/163)
+* [#163 IByteCommunications has no WriteRegister method that takes a `Span<byte>`](https://github.com/WildernessLabs/Meadow_Issues/issues/163)
+* [#184 uGraphics Canvas state doesn't store pen color](https://github.com/WildernessLabs/Meadow.Foundation/issues/184)
+* [#109 For HBridgeMotor pwmFrequency can be specified - but 1600 is always used anyway](https://github.com/WildernessLabs/Meadow.Foundation/issues/109)
+* [#188 https://github.com/WildernessLabs/Meadow.Foundation/issues/188](https://github.com/WildernessLabs/Meadow.Foundation/issues/188)
 
 # b5.2
 
 This is a small release that mainly focuses on cleanup of Meadow.Foundation, and fixing Bluetooth (which we broke in b5.1):
 
- * **BLE Fix** - We broke the bluetooth stack (among other small things) in b5.1 due to issues with our CI release pipeline. Most of the fixes we were able to ship out of band as Nuget updates, but BLE remained broken. This release fixes that.
+ * **BLE Fix** - We broke the Bluetooth stack (among other small things) in b5.1 due to issues with our CI release pipeline. Most of the fixes we were able to ship out of band as Nuget updates, but BLE remained broken. This release fixes that.
  * **Antenna Switch Fix** - We regressed switching between the onboard and external antenna. That's fixed in this release.
  * **Meadow.Foundation Upgrades** - A number of API cleanups, optimizations, and the like.
 
@@ -131,7 +157,7 @@ Check out the [FileSystem_Basics app sample in Meadow.Core.Samples](https://gith
 
 ### I2C/SPI API Updates
 
-We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn. As part of that, we leaned into the new `Span<T>` class, so any of the calls to `Read()`/`Write()` that took `byte[] buffer` before now take take `Span<>`.
+We've done a massive overhaul of the I2C and SPI APIs, making them not only consistent, but also enabling them to support peripheral communications without heap allocations to reduce garbage collection churn. As part of that, we leaned into the new `Span<T>` class, so any of the calls to `Read()`/`Write()` that took `byte[] buffer` before now take `Span<>`.
 
 ### Meadow.Core Project Refactor
 
@@ -185,7 +211,7 @@ New senor base classes and their inheritance chain include:
 
 Beta 5.0 is here and it's massive. This is a huge release for Meadow with major new features and big changes, highlights include:
 
- * **Bluetooth v1.0** - That's right, BLE support is here. Check out the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth) for details.
+ * **Bluetooth v1.0** - That's right, BLE support is here. Check out the [Bluetooth Guide](/Meadow/Meadow.OS/Bluetooth) for details.
  * **.NET Standard 2.0 API Support** - Meadow now fully supports the .NET Standard 2.0 API surface (equivalent to .NET Core 3.0), opening up a plethora of .NET code and Nuget packages for your use in Meadow applications.
  * **F# Support Fix** - The new .NET Standard support along with the linker fixes our F# integration, so you can use F# to build Meadow apps again.
  * **VB.NET Support** - We also added VB.NET support including templates in both Visual for Windows and Mac.
@@ -220,7 +246,7 @@ The b5.0 release of Meadow contains a draft subset of BLE features that cover a 
 - **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
 - **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in you BLE tree.
 
-For more information, see the [Bluetooth Guide](/Meadow/Meadow_Basics/Bluetooth/).
+For more information, see the [Bluetooth Guide](/Meadow/Meadow.OS/Bluetooth/).
 
 ### .NET Standard 2.0/.NET Core 3.0 API Support
 

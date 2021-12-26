@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Audio.Radio.Tea5767
 remarks: *content
 ---
 
-| TEA5767       |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Radio.TEA5767/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.Tea5767.svg?label=Meadow.Foundation.Audio.Radio.Tea5767" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Tea5767 | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Radio.Tea5767/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.Tea5767.svg?label=Meadow.Foundation.Audio.Radio.Tea5767" /></a> |
 
 The **TEA5767** FM module is based on the TEA5767GH which is a single-chip, electronically tuned, FM stereo radio for low-voltage applications with fully integrated Intermediate Frequency (IF) selectivity and demodulation. 
 
@@ -24,38 +24,30 @@ You can get a TEA5767 module (with antenna included) from the following supplier
 
 ### Code Example
 
-The following example shows how to initialize a TEA5767 radio and seek radio stations:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    Tea5767 radio;
+    Console.WriteLine("Initializing...");
+    
+    var radio = new Tea5767(Device.CreateI2cBus());
 
-    public MeadowApp()
+    //scan through avaliable stations
+    for (int i = 0; i < 8; i++)
     {
-        radio = new Tea5767(Device.CreateI2cBus());
+        Thread.Sleep(1000);
 
-        Scan();
+        radio.SearchNextSilent();
+
+        Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
     }
 
-    void Scan() 
-    {
-        Console.WriteLine("TestTEA5767...");
-
-        for (int i = 0; i < 8; i++)
-        {
-            Thread.Sleep(1000);
-
-            radio.SearchNextSilent();
-
-            Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
-        }
-
-        radio.SelectFrequency(94.5f);
-    }
+    //set a known station
+    radio.SelectFrequency(94.5f);
 }
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.TEA5767_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Samples/Audio.Radio.Tea5767_Sample)
 
 ### Wiring Example
 
@@ -70,5 +62,10 @@ To wire a TEA5767 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+
+

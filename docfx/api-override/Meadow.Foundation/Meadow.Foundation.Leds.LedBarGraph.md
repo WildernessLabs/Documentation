@@ -81,5 +81,5 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/LedBarGraph.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/LedBarGraph_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

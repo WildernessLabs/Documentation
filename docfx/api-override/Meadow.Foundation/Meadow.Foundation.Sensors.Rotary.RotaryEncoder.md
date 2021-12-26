@@ -89,5 +89,5 @@ Note, depending on your encoder, it may have a common/ground (gnd) or (-) leg in
 
 The a-phase pin may be labeled (A), (CLK) or other. If the Rotated event is indicating the wrong direction, simply switch the a-phase and b-phase pins.
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

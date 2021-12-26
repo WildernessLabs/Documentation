@@ -34,7 +34,7 @@ The following schematic illustrates a typical configuration for driving the menu
 
 ## Configuring the Display
 
-TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphicsLibrary`, which itself implements `ITextDisplay`.
+TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphics` library, which itself implements `ITextDisplay`.
 
 ## Defining the Menu
 

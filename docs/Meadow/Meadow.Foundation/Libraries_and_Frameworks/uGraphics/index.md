@@ -10,18 +10,19 @@ Doc Notes:
 
 -->
 
-The Meadow.Foundation µGraphics library, formerly known as GraphicsLibrary, is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on pixel display devices. 
+The Meadow.Foundation µGraphics library (MicroGraphics), formerly known as GraphicsLibrary, is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on pixel display devices.
 
 µGraphics includes the ability to draw many different primitives such as lines, shapes, text (using bitmap fonts), as well as bitmap images. Note - It can also be used to display Jpegs by using the open-source `SimpleJpegDecoder` nuget package.
 
 Additionally, it implements `ITextDisplay`, so it enables any graphic display to be a canvas for use with the `TextDisplayMenu` library, easily enabling menus to be created and displayed on graphics displays.
 
 To use the graphics display you:
+
  1. Initialize it with a display.
  2. Draw your graphics to the canvas (in-memory display buffer).
  3. Call `Show()` to copy the canvas content to the display.
 
-# Initializing the Graphics Library
+# Initializing the µGraphics Library
 
 In Meadow.Foundation, every graphics display driver manages its own buffer, since each display has different requirements in terms of display size, color depth and byte order.
 
@@ -29,12 +30,13 @@ For this reason, an initialized display driver must be passed to the µGraphics 
 
 ```csharp
 St7789 st7789;
-GraphicsLibrary canvas;
+MicroGraphics canvas;
 
-// our display needs mode3
-var config = new SpiClockConfiguration(12000, SpiClockConfiguration.Mode.Mode3);
+// this display needs mode3
+var config = new SpiClockConfiguration(new Meadow.Units.Frequency(12000, Meadow.Units.Frequency.UnitType.Kilohertz), 
+    SpiClockConfiguration.Mode.Mode3);
 
-// new up the actual display on the SPI bus
+// new up the display on the SPI bus
 display = new St7789
 (
     device: MeadowApp.Device,
@@ -47,7 +49,7 @@ display = new St7789
 );
 
 // create our graphics canvas that we'll draw onto 
-canvas = new GraphicsLibrary(display);
+canvas = new MicroGraphics(display);
 
 // finally, clear any artifacts from the screen from boot up
 canvas.Clear(true);
@@ -58,7 +60,7 @@ canvas.Clear(true);
 Note that you can also set the rotation of display, which allows you to match the physical orientation of the display in your project:
 
 ```csharp
-canvas.Rotation = GraphicsLibrary.RotationType._270Degrees;
+canvas.Rotation = RotationType._270Degrees;
 ```
 
 # Canvas and Painter's Model
@@ -87,7 +89,7 @@ canvas.Show();
 
 ## Coordinate System
 
-µGraphics uses a standard X/Y cartesian coordinate system for drawing and placing elements, with the origin (`0`,`0`) in the top left of the canvas. Increasing the X and Y coordinate moves right and down, respectively. 
+µGraphics uses a standard X/Y cartesian coordinate system for drawing and placing elements, with the origin (`0`,`0`) in the top left of the canvas. Increasing the X and Y coordinate moves right and down, respectively.
 
 <!-- TODO: need an illustration -->
 
@@ -96,13 +98,14 @@ Each integer point represents an actual pixel, there is no pixel density scaling
 ## Drawing Primitives
 
 There are a number of drawing methods available for drawing of various primitive including:
- * Pixel
- * Line
- * Triangle
- * Circle
- * Rectangle
- * RoundedRectangle
- * Path
+
+* Pixel
+* Line
+* Triangle
+* Circle
+* Rectangle
+* RoundedRectangle
+* Path
 
 For example, the following code renders a clock face using a number of the primitives mentioned above:
 
@@ -233,30 +236,18 @@ Executing this code would result in something similar to the following:
 
 ### JPEG Decoding
 
-We recommend using the [`SimpleJpegDecoder` library](https://github.com/adrianstevens/SimpleJpegDecoder) to convert JPEG images into bitmaps for use with the µGraphics Library. For example, the following code illustrates how to load a JPEG image from a resource and display it on screen:
+We recommend using the [`SimpleJpegDecoder` library](https://github.com/adrianstevens/SimpleJpegDecoder) to convert JPEG images into bitmaps for use with the µGraphics Library. For example, the following code illustrates how to load a JPEG image from a resource, store it in a `BufferRgb888` object, and display it on screen:
 
 ```csharp
 var jpgData = LoadResource("meadow.jpg");
 var decoder = new JpegDecoder();
 var jpg = decoder.DecodeJpeg(jpgData);
 
-int x = 0;
-int y = 0;
-byte r, g, b;
+var jpgImage = new BufferRgb888(decoder.Width, decoder.Height, jpg);
 
-for (int i = 0; i < jpg.Length; i += 3) {
-    r = jpg[i];
-    g = jpg[i + 1];
-    b = jpg[i + 2];
+...
 
-    graphics.DrawPixel(x + 55, y + 40, Color.FromRgb(r, g, b));
-
-    x++;
-    if (x % decoder.Width == 0) {
-        y++;
-        x = 0;
-    }
-}
+display.DrawBuffer(x, y, jpgImage);
 
 display.Show();
 ```
@@ -272,14 +263,14 @@ graphics.DrawText(x: 5, y: 5, "hello, Meadow!", Color.Black);
 
 ### Text alignment
 
-By default, text is left aligned with the x, y coordindates specifying the top left location of the rendered text. The vertical alignment of the text can be set at draw-time by setting the `alignment` parameter of `DrawText`. Horizontal Alignment can be set to `Left`, `Center`, or `Right`. 
+By default, text is left aligned with the x, y coordinates specifying the top left location of the rendered text. The vertical alignment of the text can be set at draw-time by setting the `alignment` parameter of `DrawText`. Horizontal Alignment can be set to `Left`, `Center`, or `Right`.
 
-- `Left` will render text with x, y coordinates specifying the top-left localation of the rendered text
-- `Center` will render text with x, y coordinates specifying the top-middle localation of the rendered text
-- `Right` will render text with x, y coordinates specifying the top-right localation of the rendered text
+* `Left` will render text with x, y coordinates specifying the top-left location of the rendered text
+* `Center` will render text with x, y coordinates specifying the top-middle location of the rendered text
+* `Right` will render text with x, y coordinates specifying the top-right location of the rendered text
 
 ```csharp
-graphics.DrawText(x: 120, y: 0, $"Hello Meadow", alignment: GraphicsLibrary.TextAlignment.Center);
+graphics.DrawText(x: 120, y: 0, $"Hello Meadow", alignment: TextAlignment.Center);
 ```
 
 ### Scale Factor
@@ -289,16 +280,17 @@ To increase the size of a bitmap font, a 'ScaleFactor` can be optionally passed:
 ```csharp
 graphics.DrawText(
     x: 10, y: 10, text: text, color: Color.Black, 
-    scaleFactor: GraphicsLibrary.ScaleFactor.X2);
+    scaleFactor: ScaleFactor.X2);
 ```
 
 ### Paths
 
-µGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GrapihcsPath` object and drawn using the `DrawPath` method.
+µGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GraphicsPath` object and drawn using the `DrawPath` method.
 
-`GraphicsPath` uses the concepts of **verbs** to contol the path. It currently supports:
+`GraphicsPath` uses the concepts of **verbs** to conrtol the path. It currently supports:
+
 * `Move` which sets the current position
-* `Line` which draws a line from the current position to a new position 
+* `Line` which draws a line from the current position to a new position
 * `Close` which closes the current path by adding a line from the last position to the first position
 
 ```csharp

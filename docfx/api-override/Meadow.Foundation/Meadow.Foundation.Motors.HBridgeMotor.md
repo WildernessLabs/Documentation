@@ -37,9 +37,9 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
             motor1 = new HBridgeMotor
             (
-                a1Pin: Device.CreatePwmPort(Device.Pins.D07),
-                a2Pin: Device.CreatePwmPort(Device.Pins.D08),
-                enablePin: Device.CreateDigitalOutputPort(Device.Pins.D09)
+                a1Port: Device.CreatePwmPort(Device.Pins.D07),
+                a2Port: Device.CreatePwmPort(Device.Pins.D08),
+                enablePort: Device.CreateDigitalOutputPort(Device.Pins.D09)
             );
             
             TestMotor();
@@ -86,5 +86,5 @@ Though h-bridge motor controllers come in various form factors, they typically s
 
 The following breadboard diagram illustrates connecting two motors to an h-bridge chip that uses a external power supply to drive the motors:
 
-<img src="../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridgeMotor.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridgeMotor_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

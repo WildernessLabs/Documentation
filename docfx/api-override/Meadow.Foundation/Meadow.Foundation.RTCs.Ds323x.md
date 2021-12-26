@@ -3,11 +3,11 @@ uid: Meadow.Foundation.RTCs.Ds323x
 remarks: *content
 ---
 
-| DS323x        |               |
-|---------------|---------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS323x) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds323x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds323x.svg?label=Meadow.Foundation.RTCs.Ds323x" style="width: auto; height: -webkit-fill-available;" /></a> |
+| Ds323x | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.Ds323x) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds323x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds323x.svg?label=Meadow.Foundation.RTCs.Ds323x" /></a> |
 
 The **DS323x** is a low-cost and accurate real-time clock with a temperature compensation crystal oscillator. This range of chips offers the following functionality:
 
@@ -19,44 +19,40 @@ The **DS323x** is a low-cost and accurate real-time clock with a temperature com
 
 ### Code Example
 
-The following application sets an alarm to trigger at when the current second is equal to 15.  The interrupt routine displays the time and then clears the interrupt flag:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+private Ds3231 sensor;
+
+public MeadowApp()
 {
-    Ds3231 sensor;
+    Console.WriteLine("Initialize hardware...");
 
-    public MeadowApp()
-    {
-        sensor = new Ds3231(Device, Device.CreateI2cBus(), null);
+    var sensor = new Ds3231(Device, Device.CreateI2cBus(), Device.Pins.D06);
+    sensor.OnAlarm1Raised += Sensor_OnAlarm1Raised;
 
-        sensor.CurrentDateTime = new DateTime(2020, 1, 1);
+    sensor.CurrentDateTime = new DateTime(2020, 1, 1);
 
-        Console.WriteLine("Read from sensor");
+    Console.WriteLine($"Current time: {sensor.CurrentDateTime}");
+    Console.WriteLine($"Temperature: {sensor.Temperature}");
 
-        Console.WriteLine($"Current time: {sensor.CurrentDateTime}");
-        Console.WriteLine($"Temperature: {sensor.Temperature}");
+    sensor.ClearInterrupt(Ds323x.Alarm.BothAlarmsRaised);
 
-        sensor.ClearInterrupt(Ds323x.Alarm.BothAlarmsRaised);
-        sensor.DisplayRegisters();
+    sensor.SetAlarm(Ds323x.Alarm.Alarm1Raised, 
+                    new DateTime(2020, 1, 1, 1, 0, 0),
+                    Ds323x.AlarmType.WhenSecondsMatch);
 
-        sensor.DisplayRegisters();
-        sensor.SetAlarm(Ds323x.Alarm.Alarm1Raised, new DateTime(2020, 1, 1, 1, 0, 0),
-                        Ds323x.AlarmType.WhenSecondsMatch);
-
-        sensor.OnAlarm1Raised += SensorOnAlarm1Raised;
-        sensor.DisplayRegisters();
-    }
-
-    void SensorOnAlarm1Raised(object sender)
-    {
-        var rtc = (Ds3231)sender;
-        Console.WriteLine("Alarm 1 has been activated: " + rtc.CurrentDateTime.ToString("dd MMM yyyy HH:mm:ss"));
-        rtc.ClearInterrupt(Ds323x.Alarm.Alarm1Raised);
-    }
+    sensor.DisplayRegisters();
 }
+
+private void Sensor_OnAlarm1Raised(object sender)
+{
+    var rtc = (Ds3231)sender;
+    Console.WriteLine("Alarm 1 has been activated: " + rtc.CurrentDateTime.ToString("dd MMM yyyy HH:mm:ss"));
+    rtc.ClearInterrupt(Ds323x.Alarm.Alarm1Raised);
+}
+
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.DS323x/Samples/RTCs.DS323x_Sample) 
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.Ds323x/Samples/RTCs.Ds323x_Sample)
 
 ### Wiring Example
 
@@ -78,3 +74,7 @@ It should look like the following diagram:
 The 32K pin outputs the 32,768 Hz clock signal from the module.  This signal is only available when power is supplied by V<sub>cc</sub>, it is not available when the module is on battery power.
 
 The orange wire is only required if the alarms are being used to interrupt the Meadow.
+
+
+
+

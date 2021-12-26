@@ -13,5 +13,5 @@ The **GroveTH02** is a multifunctional sensor that gives you temperature and rel
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.GroveTH02/GroveTH02.svg" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.GroveTH02/GroveTH02_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

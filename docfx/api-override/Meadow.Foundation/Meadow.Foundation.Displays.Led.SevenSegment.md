@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Displays.Led.SevenSegment
 remarks: *content
 ---
 
-| SevenSegment |         |
-|--------------|---------|
-| Status       | Working |
-| Source code  | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SevenSegment.svg?label=Meadow.Foundation.Displays.Led.SevenSegment" style="width: auto; height: -webkit-fill-available;" /></a> |
+| SevenSegment | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SevenSegment.svg?label=Meadow.Foundation.Displays.Led.SevenSegment" /></a> |
 
 A seven-segment display is a form of electronic display device used to show  decimal numbers. These displays are widely used in digital clocks, electronic meters, basic calculators, and other electronic devices that display numerical information.
 
@@ -29,48 +29,30 @@ You can get 7-segment displays from the following supplier(s):
 
 ### Code Example
 
-The following example shows how to initialize a SevenSegment display and iterates through all possible characters:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+public MeadowApp()
 {
-    public MeadowApp ()
-    {
-        var sevenSegment = new SevenSegment
-        (
-            portA: Device.CreateDigitalOutputPort(Device.Pins.D14),
-            portB: Device.CreateDigitalOutputPort(Device.Pins.D15),
-            portC: Device.CreateDigitalOutputPort(Device.Pins.D06),
-            portD: Device.CreateDigitalOutputPort(Device.Pins.D07),
-            portE: Device.CreateDigitalOutputPort(Device.Pins.D08),
-            portF: Device.CreateDigitalOutputPort(Device.Pins.D13),
-            portG: Device.CreateDigitalOutputPort(Device.Pins.D12),
-            portDecimal: Device.CreateDigitalOutputPort(Device.Pins.D05),
-            isCommonCathode: true
-        );
+    Console.WriteLine("Initializing...");
 
-        bool showDecimal = false;
+    var sevenSegment = new SevenSegment
+    (
+        portA: Device.CreateDigitalOutputPort(Device.Pins.D14),
+        portB: Device.CreateDigitalOutputPort(Device.Pins.D15),
+        portC: Device.CreateDigitalOutputPort(Device.Pins.D06),
+        portD: Device.CreateDigitalOutputPort(Device.Pins.D07),
+        portE: Device.CreateDigitalOutputPort(Device.Pins.D08),
+        portF: Device.CreateDigitalOutputPort(Device.Pins.D13),
+        portG: Device.CreateDigitalOutputPort(Device.Pins.D12),
+        portDecimal: Device.CreateDigitalOutputPort(Device.Pins.D05),
+        isCommonCathode: false
+    );
 
-        while (true)
-        {
-            foreach (CharacterType character in Enum.GetValues(typeof(CharacterType)))
-            {
-                if (character != CharacterType.count)
-                {
-                    Console.WriteLine("Character: {0}", character.ToString());
-                    sevenSegment.SetDisplay(character, showDecimal);
-                }
-                Thread.Sleep(1000);
-            }
-
-            showDecimal = !showDecimal;
-        }            
-    }
+    sevenSegment.SetDisplay(character: '1', showDecimal: true);
 }
 
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Samples/) 
 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Samples/Displays.Led.SevenSegment_Sample)
 
 ### Wiring Example
 
@@ -90,5 +72,9 @@ To wire a Common Cathode Seven Segment Display (like the 5161AS) to your Meadow 
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Frizzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+
