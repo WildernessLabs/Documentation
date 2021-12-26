@@ -34,7 +34,7 @@ There are also providers like [DFRobot](https://www.dfrobot.com/) and [Pololu](h
 
 Reasonable facsimiles of many of these modules can be found cheaper (and in bulk) from Asian (primarily Chinese) suppliers on [AliExpress](https://www.aliexpress.com/). 
 
-A word of caution, however; while we've had almost no issues with high-quality modules from AdaFruit, Sparkfun, or other reputable designer/suppliers, if you're buying in bulk from Chinese suppliers, make sure to first order a small quantity and test them first. They're typically of acceptable quality, but you can find the occasional low-quality part that will cause grief. Additionally, if you're shipping anywhere outside of China, the shipping costs will almost always exceed the price difference on low quantities.
+A word of caution, however; while we've had almost no issues with high-quality modules from Adafruit, Sparkfun, or other reputable designer/suppliers, if you're buying in bulk from Chinese suppliers, make sure to first order a small quantity and test them first. They're typically of acceptable quality, but you can find the occasional low-quality part that will cause grief. Additionally, if you're shipping anywhere outside of China, the shipping costs will almost always exceed the price difference on low quantities.
 
 ## Circuit Simulation
 

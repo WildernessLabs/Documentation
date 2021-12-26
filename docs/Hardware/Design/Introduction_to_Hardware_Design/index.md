@@ -4,7 +4,7 @@ title: Intro to Hardware Design
 subtitle: Designing and building professional hardware; from prototype to production.
 ---
 
-## A Practical Guide to the Practical Hardware Arts
+## A Practical Guide to the Hardware Arts
 
 Hardware design once occupied a very specialized niche in the engineering arts; but as the demand for IoT solutions has grown, along with the maturation of the hardware needed to support them, and of course the massive movement to work-from-home as a product of the COVID pandemic, increasingly, complex hardware is designed by regular engineers in labs and offices at home.
 
