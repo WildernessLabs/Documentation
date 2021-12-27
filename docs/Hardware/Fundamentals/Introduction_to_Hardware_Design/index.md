@@ -18,5 +18,5 @@ As such, there is a heavy focus on this guide on using DIY techniques to produce
 
 It's worth noting that this is an in-process, living guide, captured from our own learnings in the past few years, bringing the Meadow platform and hardware to life.
 
-## [Next: PCB Design + Assembly](/Hardware/Design/PCB_Design_and_Assembly)
+## [Next: Hardware/Product Design Lifecycle](/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/)
 
