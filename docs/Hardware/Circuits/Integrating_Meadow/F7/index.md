@@ -10,5 +10,5 @@ Docs on how to integrate a Meadow F7 into a hardware design.
 
 ## Board Specific Design Considerations
 
- * **[F7 Micro](/Hardware/Integrating_Meadow/F7/F7_Micro/)** - F7 Developer Module
- * **[F7 Core-Compute](/Hardware/Integrating_Meadow/F7/F7_Core-Compute/)** - F7 high-volume production module. Adds Ethernet, SD Card, and additional IO.
+ * **[F7 Micro](F7_Micro/)** - F7 Developer Module
+ * **[F7 Core-Compute](F7_Core-Compute/)** - F7 high-volume production module. Adds Ethernet, SD Card, and additional IO.
