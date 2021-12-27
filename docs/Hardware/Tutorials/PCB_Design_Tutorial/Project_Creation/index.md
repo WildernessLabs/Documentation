@@ -16,7 +16,7 @@ Before you can use it, you'll need to navigate to [EasyEDA.com](https://easyeda.
 
 From the toolbar, choose **File > New > Project**:
 
-![title](Support_Files/File%3ENew_Project.png)
+![title](Support_Files/File_New_Project.png)
 
 Name your project _Meadow Tracker Wing_, or similar:
 

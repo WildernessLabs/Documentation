@@ -11,8 +11,8 @@ PCB design is done almost exclusively with computer software today and is also k
 
 [take the images below and make a side by side (crop them):]
 
-![](Schematic_Design.png)
-![](PCB_Design.png)
+![](../../../Schematic_Design.png)
+![](../../../PCB_Design.png)
 
 Creating PCBs is a core skill of designing hardware, and although it can be intimidating when starting out, designing PCBs for most IoT solutions is a fairly simple process, and the modern PCB supply chain means you can churn a design and have a professionally printed board in your hands within a week or so.
 
@@ -25,7 +25,7 @@ In comparison to breadboard prototyping, PCBs _massively_ simplify routing. In f
 
 Because of the ease at which PCBs can be created, as well as their relative low cost, we often find ourselves skipping the breadboarding phase and churning a PCB.
 
-![](../Juego_PCB.jpg)
+![](../../../Juego_PCB.jpg)
 
 In the [PCB Fabrication Guide](/Hardware/Design/PCB_Design_and_Assembly/PCB_Fabrication) we'll cover how to take your PCB designs and turn them into PCBs.
 
