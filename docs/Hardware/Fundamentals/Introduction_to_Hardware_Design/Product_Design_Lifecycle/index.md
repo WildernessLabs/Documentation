@@ -31,7 +31,7 @@ Typically, once the basics of the hardware design are validated, a user design a
 
 Internally, we use [AutoDesk Fusion 360](https://www.autodesk.com/products/fusion-360/overview) which has a free version for non-commercial use, but there are also some great free and open-source alternatives, such as [OpenJSCAD](https://github.com/jscad/OpenJSCAD.org).
 
-## Production Optimization
+## Production Design & Optimization
 
 Once the major design challenges have been solved
 
