@@ -15,7 +15,7 @@ layout: Home
 ### February
 
 #### 2022.February.17th (Thursday) 19:00 UTC
- * **Meadow - A Modern IoT Hardware and Software Development Platform**
+* **Meadow - A Modern IoT Hardware and Software Development Platform**
 
 Meadow is a microcontroller and software ecosystem based upon .NET Standard 2.1.  In contrast to traditional embedded development systems, Meadow allows hardware development using modern languages (C#, and F#) with Visual Studio (Windows and Mac) and VS Code (Windows, Mac and Linux) with full access to the .NET framework.
 
@@ -33,7 +33,7 @@ Finally we will look at the road map and current plans to make the platform even
 
 ## Past Events
 
- ### 2021.December.10th [MS Dev Summit Warsaw - Enterprise IoT with .NET & Meadow](https://msdevsummit.com/)
+### 2021.December.10th [MS Dev Summit Warsaw - Enterprise IoT with .NET & Meadow](https://msdevsummit.com/)
  Join Microsoft Program Manager Adrian Stevens as he explores Meadow from the perspective of building real-world, enterprise-IoT solutions with Meadow.
 
 <div align="center">
