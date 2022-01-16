@@ -33,7 +33,7 @@ Finally we will look at the road map and current plans to make the platform even
 
 ## Past Events
 
- ### 2021.December.10th [MS Dev Summit Warsaw - Enterprise IoT with .NET & Meadow](https://msdevsummit.com/)
+### 2021.December.10th [MS Dev Summit Warsaw - Enterprise IoT with .NET & Meadow](https://msdevsummit.com/)
  Join Microsoft Program Manager Adrian Stevens as he explores Meadow from the perspective of building real-world, enterprise-IoT solutions with Meadow.
 
 <div align="center">
