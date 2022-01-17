@@ -6,8 +6,6 @@ subtitle: Building a practical Meadow Wing with GNSS and atmospheric sensors.
 
 The most effective way to learn PCB design is to actually design and build one. So that's what we'll do. In this multipart tutorial, we're going to design and build a PCB that is a partial version of [Clima](https://store.wildernesslabs.co/collections/frontpage/products/clima-weather-station-kit) that includes  BME280 to track temperature, humidity, and barometric pressure, and get its power from a solar power input. In the end, you'll come away with a general grasp of PCB design from start to finish.
 
-
-
 ## Process
 
 Along the way, we're going to cover the following:
@@ -32,7 +30,7 @@ PCB design is done almost exclusively with computer software today and is also k
 * Schematic Design (AKA _Schematic Capture)
 * PCB Layout
 
-[take the images below and make a side by side (crop them):]
+<!-- TODO: take the images below and make a side by side (crop them): -->
 
 ![](../../Schematic_Design.png)
 ![](../../PCB_Design.png)
