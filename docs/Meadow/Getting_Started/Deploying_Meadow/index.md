@@ -9,6 +9,7 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 ## Prerequisites
 
 ### Windows
+
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 * [Update USB driver for ST devices](/Meadow/Getting_Started/Update_USB_Driver/)
 * Install Meadow CLI:
@@ -49,8 +50,9 @@ dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
 
 
-### Windows
-* Install dfu-util:
+### Windows 
+
+* Install dfu-util (**Admin Console**):
 
 ```
 meadow install dfu-util
