@@ -27,13 +27,13 @@ This tutorial will take a hybrid approach, with most content in the form of a th
 
 PCB design is done almost exclusively with computer software today and is also known as Electronic Design Automation (EDA), and typically consists of two parts:
 
-* Schematic Design (AKA _Schematic Capture)
-* PCB Layout
-
 <!-- TODO: take the images below and make a side by side (crop them): -->
 
-![](../../Schematic_Design.png)
-![](../../PCB_Design.png)
+* **Schematic Design (AKA _Schematic Capture):**  
+  ![](../../Schematic_Design.png)
+* **PCB Layout:**  
+  ![](../../PCB_Design.png)  
+
 
 Creating PCBs is a core skill of designing hardware, and although it can be intimidating when starting out, designing PCBs for most IoT solutions is a fairly simple process, and the modern PCB supply chain means you can churn a design and have a professionally printed board in your hands within a week or so.
 
