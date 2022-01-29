@@ -9,6 +9,7 @@ Designing an IoT/hardware device is an iterative and interelated process that ty
 * **Hardware Prototyping**
 * **Industrial Design Prototyping**
 * **Production Design & Optimization**
+* **Certification**
 
 ## Hardware Prototyping
 
@@ -44,6 +45,9 @@ Once the major design challenges have been solved
 * **High-Volume Production** - 
 
 
+## Certification 
+
+[FCC/CE/UL/JP/etc.]
 
 ## [Next: Unit Production Scale](/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/)
 
