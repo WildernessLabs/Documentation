@@ -1,7 +1,7 @@
 ---
 layout: Hardware
 title: PCB Assembly
-subtitle: yeah yeah yah!
+subtitle: Placing and soldering hardware components on a PCB.
 ---
 
 ## Video Tutorial
