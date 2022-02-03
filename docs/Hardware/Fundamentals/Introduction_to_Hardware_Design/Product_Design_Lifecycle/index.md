@@ -8,6 +8,7 @@ Designing an IoT/hardware device is an iterative and interelated process that ty
 
 * **Hardware Prototyping**
 * **Industrial Design Prototyping**
+* **Early Product Validation**
 * **Production Design & Optimization**
 * **Certification**
 
@@ -32,22 +33,17 @@ Typically, once the basics of the hardware design are validated, a user design a
 
 Internally, we use [AutoDesk Fusion 360](https://www.autodesk.com/products/fusion-360/overview) which has a free version for non-commercial use, but there are also some great free and open-source alternatives, such as [OpenJSCAD](https://github.com/jscad/OpenJSCAD.org).
 
+## Early Product Validation
+
+Once you have a functional, beta product design, it's important to test it with early users. This can be done with internal users only, but if the product is intended to have a wide release, it can be useful to get feedback from external beta testers and/or early customers.
+
 ## Production Design & Optimization
 
-Once the major design challenges have been solved
-
-[optimize components]
-[production industrial design - injection molding, etc.]
-
-
-* **Low-Volume Production** - [validation of early product. integration of industrial design. initial optimization for production]
-
-* **High-Volume Production** - 
-
+Once the major design challenges have been solved and the product has been validated with users, the next step is typically to optimize for volume production. This may mean switching to smaller and optimized components on the PCB, and moving a prototype, 3D printed design to an injection or vacuum molded design for volume production.
 
 ## Certification 
 
-[FCC/CE/UL/JP/etc.]
+Going to market may also require that your product earn certain certifications such as an FCC or CE mark. If it plugs into mains electrical, it may need a Underwriters Labratory (UL) certification.
 
 ## [Next: Unit Production Scale](/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/)
 
