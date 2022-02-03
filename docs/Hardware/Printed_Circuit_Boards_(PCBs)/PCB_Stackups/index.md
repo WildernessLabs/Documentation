@@ -1,29 +1,44 @@
 ---
 layout: Hardware
-title: PCB Stackup
-subtitle: Understanding PCB layers and how they affect designs.
+title: PCB Stackups
+subtitle: Understanding how PCB layering affect designs.
 ---
 
-[the composition of layers on a PCB are called a stackup.]
+The simplest PCBs are 1 or 2 sided; that is, they have copper on one or both sides of a insulating substrate, usually fiberglass. This laminate, with copper on one or both sides is called _PCB Core_:
 
-[alternating insulation material and copper sheets]
+[Todo: Image or illustration of PCB Core]
 
-[almost always in even numbers of copper layers, e.g. 2, 4, 6 layers.]
+During PCB fabrication, _traces_ or electrical connections are etched into the copper. On 2 sided PCBs, metal-filled holes, or _vias_ tie traces together between the two outside copper layers.
 
-[because copper is usually on two sides of a substrate, known as a core, then is sandwiched between "prepreg."]
+[TODO: image of a two layer PCB with a via called out]
 
-[TODO ILLUSTRATION: stack up of core with copper and prepreg]
+## PCB Stackups
 
-[simple designs are front and back - 2 layer.]
+The composition of these layers, including the thickness of the insulating substrate and copper is called a _stackup_.
 
-[more complicated designs are often 4 or more layers. 4, 6, and 8 layer boards are fairly common.]
+Multilayer PCBs are created by sandwiching PCB Core and _Prepreg_ layers together. Prepreg layers are resin layers that are hardened but not fully cured. When they are pressed togehter between the PCB Core layers, they eventually cure into similar properties of the PCB Core.
 
-[The Meadow boards are generally 8 layers.]
+[TODO: illustration of PCB Core and Prepreg together]
 
+Because multi-layered PCBs are made by sandwiching these layers, they almost always consist of an even number of layers. 2 and 4-layer PCBs are the most common, but more sophisticated and complex designs will need more layers to be properly routed. For instance, our Meadow boards are usually 6 or 8 layers. 
 
-## Typical 2-Layer Stackup
+### Copper Weight
 
-[most common design for simple IoT solutions where a core-compute module handles all the complex routing and signals and the board connects additional sensors and such]
+The copper thickness is typically described in terms of **weight**. For instance, two common thicknesses for copper are `1oz` and `2oz`. A `1oz` copper thickness means that the weight of that copper spread evenly over a square foot is equaly to `1oz`, which works out to be `1.37mils` (thousanths of an inch), or `0.0347mm` thick. Generally, the thicker the copper is, the more current it can carry at any given trace width (because there's more copper for the electricity to travel through), but the further apart the traces must be.
+
+### Insulation Substrate Thickness
+
+The insulation layer in PCB Core and Prepreg have 
+
+[thickness and fiberweave - affect dialectric constant]
+
+[we'll explore below in controlled impedance.]
+
+## 2-Layer Boards
+
+Luckily, for most IoT solutions, the Meadow board handles the most design-intensive and complex routing. Therefore, when creating a PCB design that integrates a Meadow board with sensors and common peripherals, a 2 layer board is usually sufficient.
+
+### 2-Layer Stackup
 
 [signals and power on top]
 
@@ -37,16 +52,19 @@ subtitle: Understanding PCB layers and how they affect designs.
 
 [TODO: Show some PCB images of top and bottom of a 2-layer board with routing and planes.]
 
-## Typical 4-Layer Stackup
-
-[talk about what goes in each layer]
-
 
 ## Controlled Impedance
 
 [might need to control for a particular electrical characteristic called impedance. Datasheets will tell you if certain signals need to be controlled for this.]
 
 [DEFINE: impedance in the context of a PCB]
+
+
+## Typical 4-Layer Stackup
+
+[talk about what goes in each layer]
+
+
 
 ### Designing for a Specific Impedance
 
