@@ -19,34 +19,31 @@ For example code, see the following networking sample apps in the [Meadow.Core.S
 
 # WiFi
 
-## Initializing the `WiFiAdapter`
-
-In order to use wifi networking, you must first initialize the `WiFiAdpater` by calling `InitWiFiAdapter()` on the `F7Micro` device:
-
-```csharp
-Device.InitWiFiAdapter().Wait();
-```
-
-The intialization method can take 5 or more seconds, and is awaitable.
-
-Once initialized, the `WiFiAdapter` is available as a property on the `F7Micro` class and can be accessed via the `Device` property in your app class:
-
-```csharp
-// from within your app class:
-Device.WiFiAdapter
-
-// from other classes, where [MeadowApp] is the name of your app class:
-[MeadowApp].Device.WiFiAdapter
-```
-
 ## Connecting to a WiFi Network
 
-Once the `WiFiAdapter` has been initialized, you can connect to a network by calling the `Connect` method and passing in the SSID (network name), and password:
+To connect to a WiFi network, call the async function `Connect` passing in the SSID (network name), and password. It will return `Connection.Status` that we can use to verify if the connection was successful or something went wrong so we can handle any scenario.
 
 ```csharp
-if (Device.WiFiAdapter.Connect("SSID", "Pass").ConnectionStatus != ConnectionStatus.Success) {
-    throw new Exception("Cannot connect to network, applicaiton halted.");
+var connectionResult = await Device.WiFiAdapter.Connect("[SSID]", "[PASSWORD]");
+if (connectionResult.ConnectionStatus != ConnectionStatus.Success) 
+{
+    throw new Exception($"Cannot connect to network: {connectionResult.ConnectionStatus}");
 }
+else
+{
+    Console.WriteLine($"IP Address: {Device.WiFiAdapter.IpAddress}");
+    Console.WriteLine($"Subnet mask: {Device.WiFiAdapter.SubnetMask}");
+    Console.WriteLine($"Gateway: {Device.WiFiAdapter.Gateway}");
+}
+```
+
+Additionally, you can subscribe to the `WiFiConnected` event thats triggered whenever Meadow has joined the network.
+
+```csharp
+Device.WiFiAdapter.WiFiConnected += (s, e) => 
+{
+    Console.WriteLine($"Joined network with IP: {Device.WiFiAdapter.IpAddress}.");
+};
 ```
 
 ## Scanning for WiFi Networks
