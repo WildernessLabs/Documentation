@@ -55,9 +55,18 @@ Luckily, for most IoT solutions, the Meadow board handles the most design-intens
 
 ## Controlled Impedance
 
+Some signal traces need to control for a particular electrical characteristic called _impedance_. This is especially true for high speed signals such as ethernet or USB.
+
 [might need to control for a particular electrical characteristic called impedance. Datasheets will tell you if certain signals need to be controlled for this.]
 
-[DEFINE: impedance in the context of a PCB]
+[DEFINE: impedance in the context of a PCB stackup]
+
+### Common Impedance Values
+
+* **USB** - `90Ω` differential pair.
+* **Ethernet** - [differnet between MCU and PHY, and PHY and "Magnetics"]
+ * **MCU <-> PHY** - `50Ω` differential pair.
+ * **PHY <-> Magnetics** - `100Ω` differential pair.
 
 
 ## Typical 4-Layer Stackup
