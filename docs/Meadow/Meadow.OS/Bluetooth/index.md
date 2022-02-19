@@ -162,3 +162,36 @@ foreach (var characteristic in bleTreeDefinition.Services[0].Characteristics) {
 
 The incoming parameters are the `Characteristic` definition being set and a type-safe value.
 
+## Sample projects
+
+You can look through these samples to use Bluetooth on Meadow with a Xamarin.Forms companion app.
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="BleRgbLed.gif"/>
+        </td>
+        <td style="width:50%">
+            <h2><a href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3">Control an RGB LED via Bluetooth with Meadow and Xamarin</a></h2>
+            <p style="margin-top:10px">Check this project to get started controlling an RGB LED using Meadow's onboard Bluetooth capabilities with a Xamarin.Forms companion app.</p>
+        </td>
+    <tr>
+    <tr>
+        <td style="width:50%">
+            <img src="BleServo.gif"/>
+        </td>
+        <td style="width:50%">
+            <h2><a href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3">Control a Servo via Bluetooth with Meadow and Xamarin</a></h2>
+            <p style="margin-top:10px">Check this project to get started controlling an micro servo using Meadow's Bluetooth capability with a Xamarin.Forms companion app.</p>
+        </td>
+    <tr>
+    <tr>
+        <td style="width:50%">
+            <img src="BleRover.gif"/>
+        </td>
+        <td style="width:50%">
+            <h2><a href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3">Meadow Rover Part 2: Remote Control over Bluetooth</a></h2>
+            <p style="margin-top:10px">Control the Meadow Rover with Bluetooth using a Xamarin application on your mobile device.</p>
+        </td>
+    <tr>
+</table>
