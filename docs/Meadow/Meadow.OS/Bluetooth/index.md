@@ -185,7 +185,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3">Control a Servo via Bluetooth with Meadow and Xamarin</a>
+                <a style="font-size:25px;" href="https://www.hackster.io/wildernesslabs/control-a-servo-via-bluetooth-with-meadow-and-xamarin-57940a">Control a Servo via Bluetooth with Meadow and Xamarin</a>
                 <br/>
                 Check this project to learn how to control a micro servo using Meadow's Bluetooth capability with a Xamarin.Forms app.
             </p>
@@ -197,7 +197,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3">Meadow Rover Part 2: Remote Control over Bluetooth</a>
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/meadow-rover-part-2-remote-control-over-bluetooth-fe43f5">Meadow Rover Part 2: Remote Control over Bluetooth</a>
                 <br/>
                 Control the Meadow Rover with Bluetooth using a Xamarin application on your mobile device.
             </p>

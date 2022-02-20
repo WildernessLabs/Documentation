@@ -128,4 +128,43 @@ public IActionResult GetJsonList()
 
 ## Sample Application
 
-To see Maple Server in action, check out the [sample applications](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple/Samples).
+To see Maple Server in action, check out the [unit sample applications](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple/Samples) or some practical samples up on Hackster.
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="MapleRgbLed.gif"/>
+        </td>
+        <td style="width:50%; font-size:20px;">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/remotely-control-an-rgb-led-with-meadow-and-xamarin-w-rest-153a28">Control an RGB LED with Meadow and Xamarin using Maple!</a>
+                <br/>
+                Get familiar with Maple, a RESTful web server running on Meadow and control an RGB LED remotely with a Xamarin.Forms app!
+            </p>
+        </td>
+    <tr>
+    <tr>
+        <td style="width:50%">
+            <img src="MapleServo.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/remote-control-a-servo-with-meadow-and-xamarin-using-rest-063cb0">Remote Control a Servo with Meadow and Xamarin using Maple!</a>
+                <br/>
+                Get familiar with Maple, a RESTful web server running on Meadow and control a Servo remotely with a Xamarin.Forms app!
+            </p>
+        </td>
+    <tr>
+    <tr>
+        <td style="width:50%">
+            <img src="MapleSign.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-your-own-onair-sign-with-meadow-and-xamarin-ea0c9e">Make your own OnAir sign with Meadow and Xamarin using Maple</a>
+                <br/>
+                Turn your Meadow into a server with Maple, and use a Xamarin app to control it by sending client GET/POST with regular HttpClient in.NET.
+            </p>
+        </td>
+    <tr>
+</table>
