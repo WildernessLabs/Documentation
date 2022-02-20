@@ -142,7 +142,7 @@ To see Maple Server in action, check out the [unit sample applications](https://
                 Get familiar with Maple, a RESTful web server running on Meadow and control an RGB LED remotely with a Xamarin.Forms app!
             </p>
         </td>
-    <tr>
+    </tr>
     <tr>
         <td style="width:50%">
             <img src="MapleServo.gif"/>
@@ -154,7 +154,7 @@ To see Maple Server in action, check out the [unit sample applications](https://
                 Get familiar with Maple, a RESTful web server running on Meadow and control a Servo remotely with a Xamarin.Forms app!
             </p>
         </td>
-    <tr>
+    </tr>
     <tr>
         <td style="width:50%">
             <img src="MapleSign.gif"/>
@@ -166,5 +166,5 @@ To see Maple Server in action, check out the [unit sample applications](https://
                 Turn your Meadow into a server with Maple, and use a Xamarin app to control it by sending client GET/POST with regular HttpClient in.NET.
             </p>
         </td>
-    <tr>
+    </tr>
 </table>
