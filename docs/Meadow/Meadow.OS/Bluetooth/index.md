@@ -178,7 +178,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
                 Check this project to learn how to control an RGB LED using Meadow's Bluetooth capability with a Xamarin.Forms app.
             </p>
         </td>
-    <tr>
+    </tr>
     <tr>
         <td style="width:50%">
             <img src="BleServo.gif"/>
@@ -190,7 +190,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
                 Check this project to learn how to control a micro servo using Meadow's Bluetooth capability with a Xamarin.Forms app.
             </p>
         </td>
-    <tr>
+    </tr>
     <tr>
         <td style="width:50%">
             <img src="BleRover.gif"/>
@@ -202,5 +202,5 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
                 Control the Meadow Rover with Bluetooth using a Xamarin application on your mobile device.
             </p>
         </td>
-    <tr>
+    </tr>
 </table>
