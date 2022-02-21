@@ -310,7 +310,7 @@ To resolve, check that are the connections are securely in place and/or use a di
 
 ## Sample Apps
 
-For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Graphics/TextDisplayMenu/Samples)
+For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Graphics/TextDisplayMenu/Samples). Optionally, you can out check this project uploaded on Hackster.
 
 <table>
     <tr>
