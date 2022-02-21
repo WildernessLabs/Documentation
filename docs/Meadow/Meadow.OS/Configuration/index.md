@@ -6,10 +6,6 @@ subtitle: Controlling settings at build-time for device and app information.
 
 Meadow has a robust configuration framework that allows you to adjust settings at build-time and deploy them with an app.
 
-## Sample App
-
-For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
-
 ## OS/Device Configuration and Application Configuration
 
 Meadow.OS support the following configuration sets:
@@ -148,3 +144,8 @@ This file will be processed after the `meadow.config.yaml` file.  The `Ssid` nam
 The `wifi.config.yaml` file will be deleted from flash storage after it has been processed and stored in secure storage on the ESP32 as the information is considered sensitive. This prevents the possibility of the file being read at a later point in time.
 
 The contents of this file along with the `AutomaticallyStartNetwork` value in `meadow.config.yaml` can be used to automatically connect to an access point when the board starts.
+
+## Sample Apps
+
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+

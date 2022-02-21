@@ -33,7 +33,7 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
 <table>
     <tr>
         <td style="width:50%">
-            <img src="RtcClock.gif"/>
+            <img src="../../../Common_Files/Hackster/RtcClock.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -45,7 +45,7 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="RtcWifi.gif"/>
+            <img src="../../../Common_Files/Hackster/RtcWifi.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -57,7 +57,7 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="RtcChristmas.gif"/>
+            <img src="../../../Common_Files/Hackster/RtcChristmas.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">

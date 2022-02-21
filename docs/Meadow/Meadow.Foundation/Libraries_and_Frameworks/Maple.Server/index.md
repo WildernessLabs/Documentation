@@ -133,7 +133,7 @@ To see Maple Server in action, check out the [unit sample applications](https://
 <table>
     <tr>
         <td style="width:50%">
-            <img src="MapleRgbLed.gif"/>
+            <img src="../../../../Common_Files/Hackster/MapleRgbLed.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -145,7 +145,7 @@ To see Maple Server in action, check out the [unit sample applications](https://
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="MapleServo.gif"/>
+            <img src="../../../../Common_Files/Hackster/MapleServo.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -157,7 +157,7 @@ To see Maple Server in action, check out the [unit sample applications](https://
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="MapleSign.gif"/>
+            <img src="../../../../Common_Files/Hackster/MapleSign.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">

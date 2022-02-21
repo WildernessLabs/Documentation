@@ -355,7 +355,7 @@ You can check these MicroGraphics Samples on Hackster that you can try out yours
 <table>
     <tr>
         <td style="width:50%">
-            <img src="GraphicsClock.gif"/>
+            <img src="../../../../Common_Files/Hackster/GraphicsClock.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -367,7 +367,7 @@ You can check these MicroGraphics Samples on Hackster that you can try out yours
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="GraphicsTetris.gif"/>
+            <img src="../../../../Common_Files/Hackster/GraphicsTetris.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -379,7 +379,7 @@ You can check these MicroGraphics Samples on Hackster that you can try out yours
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="GraphicsMorse.gif"/>
+            <img src="../../../../Common_Files/Hackster/GraphicsMorse.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">

@@ -169,7 +169,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
 <table>
     <tr>
         <td style="width:50%">
-            <img src="BleRgbLed.gif"/>
+            <img src="../../../Common_Files/Hackster/BleRgbLed.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -181,7 +181,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="BleServo.gif"/>
+            <img src="../../../Common_Files/Hackster/BleServo.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -193,7 +193,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="BleRover.gif"/>
+            <img src="../../../Common_Files/Hackster/BleRover.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
