@@ -350,7 +350,7 @@ protected void Render()
 
 ## Sample Application
 
-To see Maple Server in action, check out the [unit sample applications](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple/Samples) or some practical samples up on Hackster.
+You can check these MicroGraphics Samples on Hackster that you can try out yourself.
 
 <table>
     <tr>

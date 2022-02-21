@@ -25,3 +25,46 @@ Once set, you can use DateTime.Now to retrieve the current local date and time.
 ```csharp
 DateTime clock = DateTime.Now;
 ```
+
+## Sample Application
+
+You can check these RTC Samples on Hackster that you can try out yourself. Notice that you can either set the time manually, or you can use a config file that will get and set your local date and time via Network Time Protocol at app startup.
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="RtcClock.gif"/>
+        </td>
+        <td style="width:50%; font-size:20px;">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-a-clock-with-meadow-s-onboard-real-time-clock-chip-2b1f85">Build a Clock with Meadow's Onboard Real Time Clock Chip</a>
+                <br/>
+                Build your own clock with an LCD display, a couple of Push Buttons and a Meadow F7 board and its onboard RTC, all using full.NET and C#.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="RtcWifi.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6">Build a WIFI Connected Clock Using Meadow</a>
+                <br/>
+                Build this nifty clock with Meadow getting the date and time from an NTP server via WIFI and room temperature with an LM35 Analog sensor.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="RtcChristmas.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/wifi-christmas-countdown-timer-w-an-lcd-display-and-meadow-e4cf9c">WIFI Christmas Countdown Timer w/ an LCD Display and Meadow</a>
+                <br/>
+                Use Meadow.Foundation to quickly and easily wire up a LCD screen and to make a Christmas countdown display.
+            </p>
+        </td>
+    </tr>
+</table>
