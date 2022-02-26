@@ -14,11 +14,30 @@ It is important to ensure that you have a USB cable capable of providing data tr
 
 ## Unpowered USB Hub
 
+If you're having issues communicating with Meadow that is connected via an unpowered USB-Hub, try connecting Meadow directly to a USB port in your machine to ensure the USB-Hub is the issue. 
+
+As there are a large variety USB-hubs out there, we cant guarantee Meadow will work properly for all of them.
+
 ## Windows Driver
 
 It is important to ensure that Windows computers have the correct driver installed.
 
 Scott Hanselman has written a good [blog post](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) about how to check this and ensure that the correct driver is installed.
+
+## Error when flashing Meadow (Windows)
+
+If you're getting the `Could not find a connected Meadow with the serial number #########`, the board might not have the write window drivers. To solve this, follow these steps:
+
+1. Open Device Manager
+1. Under USB Devices right click Meadow F7 Micro
+1. Uninstall Devices and click the check box.
+1. Unplug your Meadow
+1. Restart your PC
+1. Once PC is restarted, Plug in Meadow in Bootmode
+1. Run command "meadow flash os"
+1. Wait until the line: "Having trouble putting Meadow in DFU Mode, please press RST 1.utton on Meadow and press enter to try again" appears.
+1. Open Zadig and replace the driver.
+1. Wait for the flash to finish.
 
 ## Deploying from a Virtual Machine
 
@@ -40,28 +59,28 @@ A list of command can be found in the [Meadow CLI](http://developer.wildernessla
 
 ### Check Files Deployed to Meadow
 
-Use the `--ListFiles` option to verify that all of the required files have been deployed to Meadow.  The list of expected files can be found at the end of the [Meadow CLI](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) documentation page.
+Use the `meadow file list` command to verify that all of the required files have been deployed to Meadow.  The list of expected files can be found at the end of the [Meadow CLI](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) documentation page.
 
 As noted above, the main application assembly should be _App.exe_.
 
 ### Disable Application Execution
 
-Use the `--MonoDisable` command to stop Meadow from executing the deployed application.
+Use the `meadow mono disable` command to stop Meadow from executing the deployed application.
 
 Try to deploy your application using Visual Studio or Visual Studio for Mac.
 
 ### Delete Files
 
-Delete one or more required files (start with _App.exe_) and try to redeploy your application.
+Delete one or more required files (start with _App.exe_) using the `meadow file delete -f [Filename]` command and try to redeploy your application.
 
 ### Erase Flash
 
-Erasing the flash will remove all of the files deployed to the flash storage and recreate the file system.
+`meadow flash erase` command will remove all of the files deployed to the flash storage and recreate the file system. It is recommended that you first do a Mono Disable so we ensure a Meadow app is not running.
 
 ### Deploy Your Application Manually
 
-Firstly, ensure that Mono has automatic execution of the application disabled (see `--MonoDisable`).
+Firstly, ensure that Mono has automatic execution of the application disabled (see `meadow mono disable`).
 
-Use the `--WriteFile` command to deploy each of the required files to Meadow.
+Use the `meadow file write -f [Filename]` command to deploy each of the required files to Meadow.
 
-Follow this by checking that the files have been deployed using the `--ListFiles` option and if everything looks good then re-enable execution of the application using the `--MonoEnable` option.
+Follow this by checking that the files have been deployed using the `meadow file list` command and if everything looks good then re-enable execution of the application using the `meadow mono enable` command.
