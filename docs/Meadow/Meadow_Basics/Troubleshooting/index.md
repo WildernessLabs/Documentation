@@ -35,8 +35,8 @@ If you're getting the `Could not find a connected Meadow with the serial number 
 1. Restart your PC
 1. Once PC is restarted, Plug in Meadow in Bootmode
 1. Run command "meadow flash os"
-1. Wait until the line: "Having trouble putting Meadow in DFU Mode, please press RST 1.utton on Meadow and press enter to try again" appears.
-1. Open Zadig and replace the driver.
+1. Wait until the line: "Having trouble putting Meadow in DFU Mode, please press RST button on Meadow and press enter to try again" appears.
+1. Open [Zadig](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) and replace the driver.
 1. Wait for the flash to finish.
 
 ## Deploying from a Virtual Machine
