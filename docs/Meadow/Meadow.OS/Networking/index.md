@@ -109,3 +109,46 @@ For more information on getting the curent antenna information and switching, se
 # Creating RESTful Web APIs with Maple Server
 
 If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called [Maple Server](../../Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index.md) that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+
+# Sample projects
+
+You can look through these for usa samples in our [Meadow Core Samples](https://github.com/WildernessLabs/Meadow.Core.Samples) repo or refer to these practical projects available on [Hackster](https://www.hackster.io/WildernessLabs).
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
+        </td>
+        <td style="width:50%; font-size:20px;">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765">Weather Station Using Public Web Service Using Meadow</a>
+                <br/>
+                Learn how to connect your Meadow to your local network and get current weather conditions from a free public weather web service.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/RtcWifi.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6">Build a WIFI Connected Clock Using Meadow</a>
+                <br/>
+                Build this nifty clock with Meadow getting the date and time from an NTP server via WIFI and room temperature with an LM35 Analog sensor.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/WifiWeather.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839">Make a Meadow indoor/outdoor temperature/weather desk clock</a>
+                <br/>
+                Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
+            </p>
+        </td>
+    </tr>    
+</table>
