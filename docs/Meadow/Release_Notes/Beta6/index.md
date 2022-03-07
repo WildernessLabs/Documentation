@@ -52,6 +52,10 @@ The CLI has a few under-the-hood improvements for B6.2. It will now automaticall
 
 You can see the full list of improvements and fixes [here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/14)
 
+## Known Issues
+* Debugging will not automatically deploy your latest changes to your device. You'll need to right-click -> Deploy the project first and debug after.
+* Joining WIFI network at startup with Config files has been disabled due to a few logic dificulties, so you'll need to re-add the logic to join the network in code. You can still get date and time via NTP.
+
 # b6.0.1
 
 This is a point release with a big focus on tooling features and stability along with a number of Meadow.Foundation stability fixes, performance improvements, and API consistency updates.
