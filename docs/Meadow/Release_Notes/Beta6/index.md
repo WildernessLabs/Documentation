@@ -10,11 +10,11 @@ This is another milestone release for Meadow! The team has been pushing hard on 
 
 * **More open-source** We've open-sourced more of our API stack! [Meadow.Units](https://github.com/WildernessLabs/Meadow.Units) and [Meadow.Contracts](https://github.com/wildernesslabs/meadow.contracts) are now open-source - and this unlocks [Meadow.Linux](https://github.com/WildernessLabs/Meadow.Linux)! (still in early development)
 * **Network stability** WiFi stability improvements and general API cleanup
-* **More drivers**  We've continued to invest in Meadow.Foundation, releasing seven (7) new driver packages + a huge collection of fixes and improvements
+* **More drivers**  We've continued to invest in Meadow.Foundation, releasing eight (8) new driver packages + a huge collection of fixes and improvements
 
 ## Updating
 
-This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version of the CLI by running:
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version of the CLI (0.15.2) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -24,11 +24,6 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
 * **Network stability** The network stack received some much needed love and should be more durable. And expect even more improvements in the next release.
 * **Network APIs** We've also spent time cleaning up behavior and naming of the WiFi and network API surface
-
-## Visual Studio Extensions
-
-* **Better Meadow selection in Visual Studio on Windows** The Windows VS20xx extensions can now display a *Meadow Device List* on the main UI ribbon - no need to open a separate modal window! To enable - right-click on the ribbon (below the file menu) and check *Meadow Device List*.
-* **General stability** We're continuing to improve our tooling experience, this release adds several stability improvements and addresses some crashing bugs.
 
 ## Meadow.CLI
 
@@ -48,13 +43,16 @@ The CLI has a few under-the-hood improvements for B6.2. It will now automaticall
 * **New MMA7660FC driver** A low power 3-axis accelerometer with orientation and tap detection
 * **New HMC5883L driver** This 3-axis digital compass has been under construction for over year and we're excited to see it complete and released
 * **New Keyboard FeatherWing driver** The BBQ 10 Keyboard FeatherWing includes a Blackberry keyboard, an analog light sensor and a full color touch screen!
+* **New BME68x drivers** Meadow now supports I2C Bme680s and Bme688s - SPI support coming soon
 * **New AS1X15 ModBus drivers** Meadow now has ModBus support!!
 
 You can see the full list of improvements and fixes [here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/14)
 
 ## Known Issues
-* Debugging will not automatically deploy your latest changes to your device. You'll need to right-click -> Deploy the project first and debug after.
-* Joining WIFI network at startup with Config files has been disabled due to a few logic dificulties, so you'll need to re-add the logic to join the network in code. You can still get date and time via NTP.
+
+* When using Visual Studio - When debugging, the extension may not automatically deploy your latest changes to your device. The workaround is to deploy first and then debug.
+* Joining WiFi network at startup with Config files has been disabled due to a regression. If using config files, you'll need to update your code to connect to your WiFi network programmatically. You can still get date and time via NTP in code.
+* WiFi stability - although B6.2 has improved network stability, we're still seeing issues after 100+ network requests.
 
 # b6.0.1
 
