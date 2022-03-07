@@ -33,7 +33,7 @@ The CLI has a few under-the-hood improvements for B6.2. It will now automaticall
 
 * **More open-source** Two major components of the core API stack have been moved to open-source! [Meadow.Units](https://github.com/WildernessLabs/Meadow.Units) and [Meadow.Contracts](https://github.com/wildernesslabs/meadow.contracts)
 * **More unitization** We're continuing to review and improve our API surface - several APIs have been updated to use Meadow.Units instead of non-dimensional values for things like frequency and time. This brings some minor breaking changes - for example, when setting SPI speed.
-* **Pinout fixes** We discovered several pins were misconfigured on Meadow V2 boards - specifically D05, D06, D10 and D11. This should fix issues when using PWM.
+* **Pinout fixes** We discovered a couple of pins were misconfigured on Meadow V2 boards - specifically D10 and D11. This should fix issues when using PWM.
 
 ## Meadow.Foundation
 
@@ -51,8 +51,9 @@ You can see the full list of improvements and fixes [here](https://github.com/Wi
 ## Known Issues
 
 * When using Visual Studio - When debugging, the extension may not automatically deploy your latest changes to your device. The workaround is to deploy first and then debug.
-* Joining WiFi network at startup with Config files has been disabled due to a regression. If using config files, you'll need to update your code to connect to your WiFi network programmatically. You can still get date and time via NTP in code.
+* Joining WiFi network at startup with Config files has been disabled due to a regression. If using config files, you'll need to update your code to connect to your WiFi network programmatically. You can still get date and time via NTP with the meadow.config file.
 * WiFi stability - although B6.2 has improved network stability, we're still seeing issues after 100+ network requests.
+* Configuring D05 and D06 pins as PWM Ports are not working. You will get an exception when using D06 and D05 will not output any voltage.
 
 # b6.0.1
 
