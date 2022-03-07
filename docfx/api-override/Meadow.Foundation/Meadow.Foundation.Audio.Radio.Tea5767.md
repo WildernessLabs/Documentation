@@ -42,7 +42,7 @@ public MeadowApp()
     }
 
     //set a known station
-    radio.SelectFrequency(94.5f);
+    radio.SelectFrequency(new Meadow.Units.Frequency(94.5, Meadow.Units.Frequency.UnitType.Megahertz));
 }
 
 ```

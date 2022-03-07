@@ -24,7 +24,7 @@ public MeadowApp()
 {
     Console.WriteLine("Initialize...");
 
-    display = new Max7219(Device, Device.CreateSpiBus(), Device.Pins.D01, 1, Max7219.Max7219Type.Character);
+    display = new Max7219(Device, Device.CreateSpiBus(), Device.Pins.D01, 1, Max7219.Max7219Mode.Character);
 
     while (true)
     {
@@ -35,9 +35,9 @@ public MeadowApp()
 
 void TestCharacterMode()
 {
-    display.SetMode(Max7219.Max7219Type.Character);
+    display.SetMode(Max7219.Max7219Mode.Character);
     //show every supported character 
-    for (int i = 0; i < (int)Max7219.CharacterType.count; i++)
+    for (int i = 0; i < (int)Max7219.CharacterType.Count; i++)
     {
         for (int digit = 0; digit < 8; digit++)
         {
@@ -51,7 +51,7 @@ void TestDigitalMode()
 {
     Console.WriteLine("Digital test");
 
-    display.SetMode(Max7219.Max7219Type.Digital);
+    display.SetMode(Max7219.Max7219Mode.Digital);
     //control indivial LEDs - for 8x8 matrix configurations - use the Meadow graphics library
     for (byte i = 0; i < 64; i++)
     {

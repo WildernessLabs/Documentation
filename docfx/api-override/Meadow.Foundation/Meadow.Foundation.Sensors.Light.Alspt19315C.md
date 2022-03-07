@@ -21,7 +21,7 @@ public MeadowApp()
     Console.WriteLine("Initializing...");
 
     // configure our sensor
-    var sensor = new Alspt19315C(Device, Device.Pins.A03);
+    sensor = new Alspt19315C(Device, Device.Pins.A03);
 
     //==== IObservable Pattern with an optional notification filter.
     // Example that uses an IObersvable subscription to only be notified

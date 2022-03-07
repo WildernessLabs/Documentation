@@ -13,7 +13,7 @@ remarks: *content
 
 ```csharp
 Apa102 apa102;
-int numberOfLeds = 8;
+int numberOfLeds = 49;
 float maxBrightness = 0.25f;
 
 public MeadowApp()
@@ -26,9 +26,9 @@ public MeadowApp()
     apa102.SetLed(index: 0, color: Color.Red, brightness: 0.5f);
     apa102.SetLed(index: 1, color: Color.Purple, brightness: 0.6f);
     apa102.SetLed(index: 2, color: Color.Blue, brightness: 0.7f);
-    apa102.SetLed(index: 2, color: Color.Green, brightness: 0.8f);
-    apa102.SetLed(index: 2, color: Color.Yellow, brightness: 0.9f);
-    apa102.SetLed(index: 2, color: Color.Orange, brightness: 1.0f);
+    apa102.SetLed(index: 3, color: Color.Green, brightness: 0.8f);
+    apa102.SetLed(index: 4, color: Color.Yellow, brightness: 0.9f);
+    apa102.SetLed(index: 5, color: Color.Orange, brightness: 1.0f);
 
     apa102.Show();
 }

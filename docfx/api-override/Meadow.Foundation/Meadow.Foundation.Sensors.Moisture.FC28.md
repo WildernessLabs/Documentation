@@ -68,7 +68,7 @@ public MeadowApp()
     Console.WriteLine("Initializing...");
 
     fc28 = new Fc28(
-        Device.CreateAnalogInputPort(Device.Pins.A01),
+        Device.CreateAnalogInputPort(Device.Pins.A01, 5, TimeSpan.FromMilliseconds(40), new Voltage(3.3, Voltage.UnitType.Volts)),
         Device.CreateDigitalOutputPort(Device.Pins.D15),
         minimumVoltageCalibration: new Voltage(3.24f, VU.Volts),
         maximumVoltageCalibration: new Voltage(2.25f, VU.Volts)
