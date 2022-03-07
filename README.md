@@ -1,4 +1,4 @@
-# Documentation
+<img src="Design/banner.jpg" style="margin-bottom:10px" />
 
 Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are probably best viewed at the [developer.wildernesslabs.co](http://developer.wildernesslabs.co), but they should be readable here, as well. You'll also find all the source code to the [samples](samples/) here.
 

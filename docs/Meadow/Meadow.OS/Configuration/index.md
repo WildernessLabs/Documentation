@@ -6,10 +6,6 @@ subtitle: Controlling settings at build-time for device and app information.
 
 Meadow has a robust configuration framework that allows you to adjust settings at build-time and deploy them with an app.
 
-## Sample App
-
-For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
-
 ## OS/Device Configuration and Application Configuration
 
 Meadow.OS support the following configuration sets:
@@ -148,3 +144,46 @@ This file will be processed after the `meadow.config.yaml` file.  The `Ssid` nam
 The `wifi.config.yaml` file will be deleted from flash storage after it has been processed and stored in secure storage on the ESP32 as the information is considered sensitive. This prevents the possibility of the file being read at a later point in time.
 
 The contents of this file along with the `AutomaticallyStartNetwork` value in `meadow.config.yaml` can be used to automatically connect to an access point when the board starts.
+
+## Sample Apps
+
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
+        </td>
+        <td style="width:50%; font-size:20px;">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765">Weather Station Using Public Web Service Using Meadow</a>
+                <br/>
+                Learn how to connect your Meadow to your local network and get current weather conditions from a free public weather web service.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/RtcWifi.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6">Build a WIFI Connected Clock Using Meadow</a>
+                <br/>
+                Build this nifty clock with Meadow getting the date and time from an NTP server via WIFI and room temperature with an LM35 Analog sensor.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/WifiWeather.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839">Make a Meadow indoor/outdoor temperature/weather desk clock</a>
+                <br/>
+                Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
+            </p>
+        </td>
+    </tr>    
+</table>

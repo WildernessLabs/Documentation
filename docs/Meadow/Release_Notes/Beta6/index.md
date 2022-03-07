@@ -4,6 +4,57 @@ title: Meadow Beta 6
 subtitle: Release Notes
 ---
 
+# b6.2.0
+
+This is another milestone release for Meadow! The team has been pushing hard on stability improvements and new features - unfortunately those two things aren't always complimentary. We tried pushing this release more than once over the past few months and discovered regressions. We're really excited to deliver this version that unlocks new functionality and clears the path to v1.0!
+
+* **More open-source** We've open-sourced more of our API stack! [Meadow.Units](https://github.com/WildernessLabs/Meadow.Units) and [Meadow.Contracts](https://github.com/wildernesslabs/meadow.contracts) are now open-source - and this unlocks [Meadow.Linux](https://github.com/WildernessLabs/Meadow.Linux)! (still in early development)
+* **Network stability** WiFi stability improvements and general API cleanup
+* **More drivers**  We've continued to invest in Meadow.Foundation, releasing eight (8) new driver packages + a huge collection of fixes and improvements
+
+## Updating
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version of the CLI (0.15.2) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Meadow.OS
+
+* **Network stability** The network stack received some much needed love and should be more durable. And expect even more improvements in the next release.
+* **Network APIs** We've also spent time cleaning up behavior and naming of the WiFi and network API surface
+
+## Meadow.CLI
+
+The CLI has a few under-the-hood improvements for B6.2. It will now automatically erase the Meadow flash when updating from older versions of Meadow OS. This is to correct a partitioning bug introduced in B6.0.
+
+## Meadow.Core
+
+* **More open-source** Two major components of the core API stack have been moved to open-source! [Meadow.Units](https://github.com/WildernessLabs/Meadow.Units) and [Meadow.Contracts](https://github.com/wildernesslabs/meadow.contracts)
+* **More unitization** We're continuing to review and improve our API surface - several APIs have been updated to use Meadow.Units instead of non-dimensional values for things like frequency and time. This brings some minor breaking changes - for example, when setting SPI speed.
+* **Pinout fixes** We discovered a couple of pins were misconfigured on Meadow V2 boards - specifically D10 and D11. This should fix issues when using PWM.
+
+## Meadow.Foundation
+
+* **New MaxBotix drivers** We now support the MaxBotix series of distance sensors including I2C, analog and serial variants!
+* **New SwitchingRainGauge driver** This peripheral is commonly used with weather stations and we include one with [Clima!](https://www.github.com/wildernesslabs/Clima)
+* **New PCA9633 driver** An LED driver capable of driving up to 4 LEDs, commonly used for backlight and RGB applications
+* **New MMA7660FC driver** A low power 3-axis accelerometer with orientation and tap detection
+* **New HMC5883L driver** This 3-axis digital compass has been under construction for over year and we're excited to see it complete and released
+* **New Keyboard FeatherWing driver** The BBQ 10 Keyboard FeatherWing includes a Blackberry keyboard, an analog light sensor and a full color touch screen!
+* **New BME68x drivers** Meadow now supports I2C Bme680s and Bme688s - SPI support coming soon
+* **New AS1X15 ModBus drivers** Meadow now has ModBus support!!
+
+You can see the full list of improvements and fixes [here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/14)
+
+## Known Issues
+
+* When using Visual Studio - When debugging, the extension may not automatically deploy your latest changes to your device. The workaround is to deploy first and then debug.
+* Joining WiFi network at startup with Config files has been disabled due to a regression. If using config files, you'll need to update your code to connect to your WiFi network programmatically. You can still get date and time via NTP with the meadow.config file.
+* WiFi stability - although B6.2 has improved network stability, we're still seeing issues after 100+ network requests.
+* Configuring D05 and D06 pins as PWM Ports are not working. You will get an exception when using D06 and D05 will not output any voltage.
+
 # b6.0.1
 
 This is a point release with a big focus on tooling features and stability along with a number of Meadow.Foundation stability fixes, performance improvements, and API consistency updates.

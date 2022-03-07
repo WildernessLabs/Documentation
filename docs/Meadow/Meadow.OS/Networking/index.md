@@ -19,34 +19,31 @@ For example code, see the following networking sample apps in the [Meadow.Core.S
 
 # WiFi
 
-## Initializing the `WiFiAdapter`
-
-In order to use wifi networking, you must first initialize the `WiFiAdpater` by calling `InitWiFiAdapter()` on the `F7Micro` device:
-
-```csharp
-Device.InitWiFiAdapter().Wait();
-```
-
-The intialization method can take 5 or more seconds, and is awaitable.
-
-Once initialized, the `WiFiAdapter` is available as a property on the `F7Micro` class and can be accessed via the `Device` property in your app class:
-
-```csharp
-// from within your app class:
-Device.WiFiAdapter
-
-// from other classes, where [MeadowApp] is the name of your app class:
-[MeadowApp].Device.WiFiAdapter
-```
-
 ## Connecting to a WiFi Network
 
-Once the `WiFiAdapter` has been initialized, you can connect to a network by calling the `Connect` method and passing in the SSID (network name), and password:
+To connect to a WiFi network, call the async function `Connect` passing in the SSID (network name), and password. It will return `Connection.Status` that we can use to verify if the connection was successful or something went wrong so we can handle any scenario.
 
 ```csharp
-if (Device.WiFiAdapter.Connect("SSID", "Pass").ConnectionStatus != ConnectionStatus.Success) {
-    throw new Exception("Cannot connect to network, applicaiton halted.");
+var connectionResult = await Device.WiFiAdapter.Connect("[SSID]", "[PASSWORD]");
+if (connectionResult.ConnectionStatus != ConnectionStatus.Success) 
+{
+    throw new Exception($"Cannot connect to network: {connectionResult.ConnectionStatus}");
 }
+else
+{
+    Console.WriteLine($"IP Address: {Device.WiFiAdapter.IpAddress}");
+    Console.WriteLine($"Subnet mask: {Device.WiFiAdapter.SubnetMask}");
+    Console.WriteLine($"Gateway: {Device.WiFiAdapter.Gateway}");
+}
+```
+
+Additionally, you can subscribe to the `WiFiConnected` event thats triggered whenever Meadow has joined the network.
+
+```csharp
+Device.WiFiAdapter.WiFiConnected += (s, e) => 
+{
+    Console.WriteLine($"Joined network with IP: {Device.WiFiAdapter.IpAddress}.");
+};
 ```
 
 ## Scanning for WiFi Networks
@@ -111,4 +108,47 @@ For more information on getting the curent antenna information and switching, se
 
 # Creating RESTful Web APIs with Maple Server
 
-If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called Maple Server that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called [Maple Server](../../Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index.md) that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+
+# Sample projects
+
+You can look through these for usa samples in our [Meadow Core Samples](https://github.com/WildernessLabs/Meadow.Core.Samples) repo or refer to these practical projects available on [Hackster](https://www.hackster.io/WildernessLabs).
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
+        </td>
+        <td style="width:50%; font-size:20px;">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765">Weather Station Using Public Web Service Using Meadow</a>
+                <br/>
+                Learn how to connect your Meadow to your local network and get current weather conditions from a free public weather web service.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/RtcWifi.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6">Build a WIFI Connected Clock Using Meadow</a>
+                <br/>
+                Build this nifty clock with Meadow getting the date and time from an NTP server via WIFI and room temperature with an LM35 Analog sensor.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../Common_Files/Hackster/WifiWeather.gif"/>
+        </td>
+        <td style="width:50%">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839">Make a Meadow indoor/outdoor temperature/weather desk clock</a>
+                <br/>
+                Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
+            </p>
+        </td>
+    </tr>    
+</table>

@@ -20,8 +20,6 @@ The **DS323x** is a low-cost and accurate real-time clock with a temperature com
 ### Code Example
 
 ```csharp
-private Ds3231 sensor;
-
 public MeadowApp()
 {
     Console.WriteLine("Initialize hardware...");

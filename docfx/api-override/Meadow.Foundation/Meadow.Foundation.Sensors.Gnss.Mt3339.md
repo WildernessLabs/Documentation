@@ -18,7 +18,7 @@ public MeadowApp()
 {
     Console.WriteLine("Initializing ...");
 
-    var gps = new Mt3339(Device, Device.SerialPortNames.Com4);
+    gps = new Mt3339(Device, Device.SerialPortNames.Com4);
 
     Subscribe();
 

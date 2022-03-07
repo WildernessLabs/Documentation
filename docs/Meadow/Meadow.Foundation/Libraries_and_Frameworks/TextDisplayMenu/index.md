@@ -12,10 +12,6 @@ The `TextDisplayMenu` library is an extensible framework for quickly creating hi
 
 The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including time, temperature, and others. Additionally, you can quickly create custom menu item types that allow users to edit their value via the inputs.
 
-## Sample Apps
-
-For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Libraries_and_Frameworks/Samples)
-
 ## Using
 
 Generally, to use `TextDisplayMenu` you need to:
@@ -311,3 +307,22 @@ We experienced periodic problems with the display outputting nonsense data:
 ![](TextDisplayMenu_BadOutput.jpg)
 
 To resolve, check that are the connections are securely in place and/or use a different breadboard.
+
+## Sample Apps
+
+For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Graphics/TextDisplayMenu/Samples). Optionally, you can out check this project uploaded on Hackster.
+
+<table>
+    <tr>
+        <td style="width:50%">
+            <img src="../../../../Common_Files/Hackster/GraphicsMenu.gif"/>
+        </td>
+        <td style="width:50%; font-size:20px;">
+            <p style="font-size:22px;">
+                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-an-interactive-menu-with-textdisplaymenu-using-meadow-218884">Build an Interactive Menu with TextDisplayMenu Using Meadow</a>
+                <br/>
+                Learn how easy is to create interactive menus with editable values and submenus using TextDisplayMenu with a ST7789 display and push buttons
+            </p>
+        </td>
+    </tr>    
+</table>
