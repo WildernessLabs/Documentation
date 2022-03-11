@@ -22,8 +22,12 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
 ## Meadow.OS
 
-* **Network stability** The network stack received some much needed love and should be more durable. And expect even more improvements in the next release.
-* **Network APIs** We've also spent time cleaning up behavior and naming of the WiFi and network API surface
+* **Network stability** The network stack received some much needed love. NTP and DNS protocol implementation was improved, and support for POSIX socket options (via getsockopt()) is now implemented and available to .NET apps. Network stability will continue to be a focus for the next release.
+* **Network APIs** We've also spent time cleaning up behavior and naming of the WiFi and network API surface.
+
+* **.NET Standard support** - Added another missing two type forwarding assemblies to the OS. This fixes issues with using some .NET Standard 2.1 nugets on the Meadow, including some more System.Text.Json issues.
+
+The release also includes many less visible reliability improvements and adjustments on the file self-configuration system and Meadow/host communication.
 
 ## Meadow.CLI
 
