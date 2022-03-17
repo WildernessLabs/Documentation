@@ -6,7 +6,9 @@ subtitle: Release Notes
 
 # b6.3
 
-This is fast follow to beta 6.2 with some much anticipated network stability improvements. We tested well beyond 1 million http requests with no degradation in performance!
+This is fast follow to beta 6.2 with some much anticipated network stability improvements. We tested well beyond 3 million! HTTP requests with no degradation in performance! And this includes the Meadow Foundation Web Server - [Maple](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/).
+
+## Updating
 
 This update consists of OS binaries and a new CLI. There are no API changes or nuget updates. Expect to see another full stack update with the next release.
 
@@ -33,6 +35,12 @@ If you experience any stability or deployment issues you may need to erase the f
 ```bash
 meadow flash erase
 ```
+
+## Known Issues
+
+* **Visual Studio deployment** - When debugging, the extension may not automatically deploy your latest changes to your device. The workaround is to deploy first and then debug.
+* **WiFi startup** with Config files has been disabled due to a regression. If using config files, you'll need to update your code to connect to your WiFi network programmatically. You can still get date and time via NTP with the meadow.config file.
+* **D05 and D06 pins** as PWM Ports are not working. You will get an exception when using D06 and D05 will not output any voltage.
 
 # b6.2
 
