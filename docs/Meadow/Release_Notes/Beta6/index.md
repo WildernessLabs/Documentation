@@ -3,6 +3,20 @@ layout: Meadow
 title: Meadow Beta 6
 subtitle: Release Notes
 ---
+# b6.4
+
+## Removal of Deprecated Methods and Properties
+Many calls that were deprecated with an error in previous releases have been removed.  These were largely in the SPI and I2C bus implementations.
+
+## Rename/Deprecation of `F7Micro` and `F7MicroV2`
+
+`F7Micro` and `F7Microv2` class names have been deprecated and replaced with the more-appropriately named `F7FeatherV1` and `F7FeatherV2` classes. Backward support still exists and will give a deprecation error.  Future versions will escalate this to an error, so it is recommended you migrate your code.
+
+## Core Compute Module
+This release adds support for the new Meadow Core Compute module with new `IMeadowDevice` and `IPinout` implementations.  This support required refactoring of several base classes and interfaces.
+
+## Other Changes
+- Added `IPin GetPin(string name)` method to `IMeadowDevice` interface
 
 # b6.3
 
