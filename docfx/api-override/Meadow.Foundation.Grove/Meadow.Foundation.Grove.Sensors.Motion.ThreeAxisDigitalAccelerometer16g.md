@@ -1,0 +1,1 @@
+Meadow.Foundation.Grove.Sensors.Motion.ThreeAxisDigitalAccelerometer16g

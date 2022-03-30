@@ -1,0 +1,1 @@
+Meadow.Foundation.Grove.Sensors.Switches.MagneticSwitch
