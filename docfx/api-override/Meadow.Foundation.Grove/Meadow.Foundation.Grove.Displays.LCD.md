@@ -3,10 +3,10 @@ uid: Meadow.Foundation.Grove.Displays.LCD
 remarks: *content
 ---
 
-| FourDigitDisplay | |
+| LCD | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/FourDigitDisplay) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LCD) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Displays.LCD/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Displays.LCD.svg?label=Meadow.Foundation.Grove.Displays.LCD" /></a> |
 
 ### Code Example
@@ -19,11 +19,11 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/FourDigitDisplay)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LCD)
 
 ### Wiring Example
 
-| FourDigitDisplay | Meadow Pin |
+| LCD | Meadow Pin |
 |--------|------------|
 | GND    | GND        |
 | VCC    | 3.3V       |
