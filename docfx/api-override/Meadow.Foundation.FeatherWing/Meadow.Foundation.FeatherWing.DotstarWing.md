@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.FeatherWings.DotstarWing
+uid: Meadow.Foundation.FeatherWing.DotstarWing
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.DotstarWing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.DotstarWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.DotstarWing.svg?label=Meadow.Foundation.FeatherWings.DotstarWing" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.DotstarWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.DotstarWing.svg?label=Meadow.Foundation.FeatherWing.DotstarWing" /></a> |
 
 ### Code Example
 

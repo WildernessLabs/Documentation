@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.FeatherWings.GPSWing
+uid: Meadow.Foundation.FeatherWing.GPSWing
 remarks: *content
 ---
 
@@ -7,7 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.GPSWing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.GPSWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.GPSWing.svg?label=Meadow.Foundation.FeatherWings.GPSWing" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.GPSWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.GPSWing.svg?label=Meadow.Foundation.FeatherWing.GPSWing" /></a> |
 
 ### Code Example
 
