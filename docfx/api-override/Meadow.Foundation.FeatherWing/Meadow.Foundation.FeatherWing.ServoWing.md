@@ -6,7 +6,7 @@ remarks: *content
 | ServoWing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.ServoWing) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/ServoWing) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.ServoWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.ServoWing.svg?label=Meadow.Foundation.FeatherWing.ServoWing" /></a> |
 
 ### Code Example
@@ -47,5 +47,5 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.ServoWing/Samples/FeatherWings.ServoWing_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/ServoWing)
 

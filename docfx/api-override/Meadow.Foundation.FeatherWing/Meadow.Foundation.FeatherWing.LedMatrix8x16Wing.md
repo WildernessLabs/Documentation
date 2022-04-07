@@ -6,7 +6,7 @@ remarks: *content
 | LedMatrix8x16Wing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.LedMatrix8x16Wing) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/LedMatrix8x16Wing) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.LedMatrix8x16Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.LedMatrix8x16Wing.svg?label=Meadow.Foundation.FeatherWing.LedMatrix8x16Wing" /></a> |
 
 ### Code Example
@@ -33,5 +33,5 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.LedMatrix8x16Wing/Samples/FeatherWings.LedMatrix8x16Wing_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/LedMatrix8x16Wing)
 

@@ -6,7 +6,7 @@ remarks: *content
 | CharlieWing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.CharlieWing) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/CharlieWing) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.CharlieWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.CharlieWing.svg?label=Meadow.Foundation.FeatherWing.CharlieWing" /></a> |
 
 ### Code Example
@@ -31,5 +31,5 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/FeatherWings.CharlieWing/Samples/FeatherWings.CharlieWing_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/CharlieWing)
 
