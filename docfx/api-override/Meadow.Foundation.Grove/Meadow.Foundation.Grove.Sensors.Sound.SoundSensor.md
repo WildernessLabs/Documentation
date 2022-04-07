@@ -1,28 +1,28 @@
 ---
-uid: Meadow.Foundation.Grove.Sensors.Temperature.TemperatureSensor
+uid: Meadow.Foundation.Grove.Sensors.Sound.LoudnessSensor
 remarks: *content
 ---
 
-| TemperatureSensor | |
+| SoundSensor | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureSensor) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Temperature.TemperatureSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Temperature.TemperatureSensor.svg?label=Meadow.Foundation.Grove.Sensors.Temperature.TemperatureSensor" /></a> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/SoundSensor) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Sound.SoundSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Sound.SoundSensor.svg?label=Meadow.Foundation.Grove.Sensors.Sound.SoundSensor" /></a> |
 
 ### Code Example
 
 ```csharp
-TemperatureSensor sensor;
+SoundSensor sensor;
 
 public MeadowApp()
 {
     Console.WriteLine("Initializing...");
 
     // configure our sensor
-    sensor = new TemperatureSensor(Device, Device.Pins.A01);
+    sensor = new SoundSensor(Device, Device.Pins.A01);
 
     // Example that uses an IObservable subscription to only be notified when the voltage changes by at least 500mV
-    var consumer = TemperatureSensor.CreateObserver(
+    var consumer = SoundSensor.CreateObserver(
         handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
         // only notify if the change is greater than 0.5V
         filter: result => 
@@ -56,11 +56,11 @@ protected async Task Read()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureSensor)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/SoundSensor)
 
 ### Wiring Example
 
-| TemperatureSensor | Meadow Pin |
+| LoudnessSensor | Meadow Pin |
 |--------|------------|
 | GND    | GND        |
 | VCC    | 3.3V       |
