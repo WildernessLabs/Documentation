@@ -1,13 +1,13 @@
 ---
-uid: Meadow.Foundation.FeatherWing.KeyboardWing
+uid: Meadow.Foundation.FeatherWings.LedMatrix8x16Wing
 remarks: *content
 ---
 
-| KeyboardWing | |
+| LedMatrix8x16Wing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/KeyboardWing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.KeyboardWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.KeyboardWing.svg?label=Meadow.Foundation.FeatherWing.KeyboardWing" /></a> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/LedMatrix8x16Wing) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.svg?label=Meadow.Foundation.FeatherWings.LedMatrix8x16Wing" /></a> |
 
 ### Code Example
 
@@ -33,5 +33,5 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/KeyboardWing)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/LedMatrix8x16Wing)
 

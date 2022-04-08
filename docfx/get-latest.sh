@@ -7,6 +7,6 @@ cd ../Meadow.Foundation
 git pull
 cd ../Meadow.Foundation.Grove
 git pull
-cd ../Meadow.Foundation.FeatherWing
+cd ../Meadow.Foundation.FeatherWings
 git pull
 cd ../Meadow.Docs/docfx
