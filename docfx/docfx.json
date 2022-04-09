@@ -72,10 +72,10 @@
             "/Source/**/Driver/bin/**",
             "/Source/**/Driver/obj/**"
           ],
-          "src": "../../Meadow.Foundation.FeatherWing"
+          "src": "../../Meadow.Foundation.FeatherWings"
         }
       ],
-      "dest": "api/Meadow.Foundation.FeatherWing",
+      "dest": "api/Meadow.Foundation.FeatherWings",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }

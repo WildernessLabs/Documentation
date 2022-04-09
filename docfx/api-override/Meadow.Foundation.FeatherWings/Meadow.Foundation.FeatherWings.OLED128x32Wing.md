@@ -1,13 +1,13 @@
 ---
-uid: Meadow.Foundation.FeatherWing.OLED128x32Wing
+uid: Meadow.Foundation.FeatherWings.OLED128x32Wing
 remarks: *content
 ---
 
 | OLED128x32Wing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/OLED128x32Wing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWing.OLED128x32Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWing.OLED128x32Wing.svg?label=Meadow.Foundation.FeatherWing.OLED128x32Wing" /></a> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/OLED128x32Wing) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.OLED128x32Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.OLED128x32Wing.svg?label=Meadow.Foundation.FeatherWings.OLED128x32Wing" /></a> |
 
 ### Code Example
 
@@ -38,5 +38,5 @@ void UpdateDisplay(string message)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWing/tree/main/Source/OLED128x32Wing)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/OLED128x32Wing)
 
