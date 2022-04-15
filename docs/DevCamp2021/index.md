@@ -4,7 +4,7 @@ title: Wilderness Labs Dev Camp 2021
 subtitle: Building Real IoT with .NET
 ---
 
-![](/Common_Files/Wilderness_Labs_Dev_Camp.svg)
+![Wilderness Labs Dev Camp logo](/Common_Files/Wilderness_Labs_Dev_Camp.svg)
 
 # Thanks for an awesome Dev Camp 2021!
 

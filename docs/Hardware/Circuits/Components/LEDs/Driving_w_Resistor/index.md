@@ -12,7 +12,7 @@ To drive an LED with a resistor as the current limiting device in the circuit, w
 
 [Kirchoff's Voltage Law](https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff.27s_voltage_law_.28KVL.29) states that the sum of the voltages in any circuit loop (source -> load -> return/common) must be zero. Which means that if the source is `5V`, then the total load must drop `5V` to `0V`. Let's examine a typical single resistor circuit:
 
-![](LED_Resistor_Circuit.svg){:standalone}
+![Diagram showing a circuit with a source voltage (V S), resistor (R) and LED with voltage drop (V F) and current (I).](LED_Resistor_Circuit.svg){:standalone}
 
 So to calculate the resistance needed in this circuit to power the LED, we use Ohm's law, solved for resistance, but remove the voltage drop specified as the forward voltage (`F`<sub>`v`</sub>) from the source voltage (`V`<sub>`s`</sub>) for the LED we're using:
 
@@ -40,7 +40,7 @@ To aid in LED resistance calculation, [here is a fantastic online LED resistance
 
 Prototyping this with a Netduino would look something like this:
 
-![](LED_Circuit_bb.svg){:standalone}
+![Circuit diagram showing a Netduino board connected on a breadboard to an LED through a resistor to pin 9.](LED_Circuit_bb.svg){:standalone}
 
 The following code can then be used to make that LED blink by repeatedly turning it on and off:
 

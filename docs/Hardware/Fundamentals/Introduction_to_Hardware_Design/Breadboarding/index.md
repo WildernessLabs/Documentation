@@ -6,7 +6,7 @@ subtitle: Taking the first steps in hardware design with early breadboard protot
 
 While we usually bias towards spinning a custom PCB for anything of complexity, breadboarding is a great way to design, build, and validate parts of circuits.
 
-![](Breadboard_Prototype.jpg)
+![Photo of a Meadow board connected to a breadboard with a display and three buttons with resistors.](Breadboard_Prototype.jpg)
 
 ## Attacking the Problem; Break it Apart
 
@@ -18,7 +18,7 @@ Fortunately these days, you can find high-quality, breadboard-friendly, pre-made
 
 For instance, the picture below comes from on of our [Hackster Projects](https://www.hackster.io/wilderness-labs/make-a-basic-level-with-an-mpu6050-four-leds-and-meadow-53a883) and illustrates a breadboard version of a GY521 Gyroscopic sensor breakout:
 
-![](https://hackster.imgix.net/uploads/attachments/1025194/gif-191126_145108_zBZOkanNw3.gif)
+![Video of a Meadow board connected to a breadboard with a gyroscopic sensor that controls four LEDs, based on how the board is tilted.](https://hackster.imgix.net/uploads/attachments/1025194/gif-191126_145108_zBZOkanNw3.gif)
 
 These modules typically have all necessary support circuitry to support the particular peripheral already on the board, and they will typically have a header that is sized perfectly to fit into a breadboard.
 
@@ -40,7 +40,7 @@ A word of caution, however; while we've had almost no issues with high-quality m
 
 Another aspect of the early stage of hardware design is circuit simulation. This can be especially useful if you're spinning logic circuits that control or amplify power and you want to quickly test a design before you actually build it.
 
-![](/Hardware/Tutorials/Electronics/Part5/Circuit_Software/iCircuit.png)
+![Screenshot of an example circuit schematic diagramed in the iCircuit simulation software.](/Hardware/Tutorials/Electronics/Part5/Circuit_Software/iCircuit.png)
 
 For this, there are a number circuit simulators available, a couple very good ones are:
 
