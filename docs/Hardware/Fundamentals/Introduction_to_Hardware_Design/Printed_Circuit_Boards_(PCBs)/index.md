@@ -8,7 +8,7 @@ Printed Circuit Boards (PCBs) are the basis of all modern electronics. They prov
 
 <!-- todo: need a better PCB image -->
 
-![](../../../Juego_PCB.jpg)
+![Photo of a PCB shaped like a joystick with several component through-holes and surface-mount pads.](../../../Juego_PCB.jpg)
 
 PCBs can be created using either a rigid or flexible substrate. Rigid PCBs are most often built with alternating layers of fiberglass and etched copper, but aluminum is also sometimes used. Flexible circuits are often used when a circuit has to bend, such as when attaching a display to a rigid board.
 

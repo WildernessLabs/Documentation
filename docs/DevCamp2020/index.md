@@ -4,7 +4,7 @@ title: Wilderness Labs Dev Camp 2020
 subtitle: Building IoT with .NET
 ---
 
-![](Support_Files/Wilderness_Labs_Dev_Camp.svg)
+![Wilderness Labs Dev Camp logo](Support_Files/Wilderness_Labs_Dev_Camp.svg)
 
 # Dev Camp 2020
 

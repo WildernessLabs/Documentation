@@ -34,9 +34,9 @@ Additionally, the Keyestudio relay board above has a nice circuit that further i
 
 Unfortunately, this design is effectively undocumented, so when using them, make sure to wire them up as shown in the following schematic and breadboard diagrams:
 
-![](Keyes_Relay_schem.svg){:standalone}
+![Circuit diagram showing a Netduino connected to two five-volt relays.](Keyes_Relay_schem.svg){:standalone}
 
-![](Keyes_Relay_bb.svg){:standalone}
+![Circuit illustration showing a Netduino connected to a breadboard and five-volt relay with external relay power.](Keyes_Relay_bb.svg){:standalone}
 
 Note that this configuration requires the jumper to be removed from the header.
 
@@ -63,11 +63,11 @@ The throw end of the switch most commonly comes in a _normally closed_ (NC), or 
 
 The following schematic shows a simplified circuit diagram of how to use a relay to power LEDs. In this example, the current controlled by the relay is actually on the same circuit as the current that controls the relay for simplicity, but in a practical scenario, instead of LEDs, the relay might power an AC appliance circuit for a fan, heater, or similar:
 
-![](Relay_schematic.svg){:standalone}
+![Circuit diagram showing a Netduino board connected to a relay that controls two LEDs based on whether the relay is open or closed.](Relay_schematic.svg){:standalone}
 
 Note that the relay in this schematic actually represents a relay circuit such as one contained in the Keyes all in one relay board mentioned above. So a practical example might look like the following:
 
-![](Relay_Practical_OFF_small.jpg){:standalone}
+![Photo of a physical version of the above diagram, a Netduino board connected to a breadboard and two-channel relay.](Relay_Practical_OFF_small.jpg){:standalone}
 
 ### Controlling the Relay
 
