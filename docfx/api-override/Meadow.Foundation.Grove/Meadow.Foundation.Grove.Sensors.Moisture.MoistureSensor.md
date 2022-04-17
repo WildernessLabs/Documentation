@@ -5,7 +5,7 @@ remarks: *content
 
 | MoistureSensor | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen"/> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MoistureSensor) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor.svg?label=Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor" /></a> |
 
