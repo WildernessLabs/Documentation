@@ -43,6 +43,7 @@ There are several good BLE mobile client applications available from iOS and And
 
 * **Bluetooth LE plugin for Xamarin** - A dedicated mobile BLE client that makes cross-platform BLE easy. [Nuget](https://www.nuget.org/packages/Plugin.BLE/), [GitHub Site](https://github.com/xabre/xamarin-bluetooth-le)
 * **Shiny** - Cross-platform device services (including BLE) project. [Nuget](https://www.nuget.org/packages/Shiny.BluetoothLE/), [GitHub Site](https://github.com/shinyorg/shiny).
+* **32feet.NET** - A project to make personal area networking technologies such as Bluetooth, Infrared (IrDA) and more, easily accessible from .NET code. [Nuget](https://www.nuget.org/packages/InTheHand.BluetoothLE), [GitHub Site](https://github.com/inthehand/32feet).
 
 # Using Meadow's BLE Server 
 
