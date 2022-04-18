@@ -83,7 +83,7 @@ async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Si70xx/Samples/Sensors.Atmospheric.Si70xx_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Si70xx/Samples/Si70xx_Sample)
 
 ### Wiring Example
 

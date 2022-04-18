@@ -41,7 +41,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Samples/Audio.Mp3.Yx5300_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Samples/Yx5300_Sample)
 
 ### Wiring Example
 

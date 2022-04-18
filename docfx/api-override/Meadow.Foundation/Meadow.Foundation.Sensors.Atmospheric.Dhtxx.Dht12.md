@@ -64,7 +64,7 @@ async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Dhtxx.Dht12/Samples/Sensors.Atmospheric.Dhtxx.Dht12_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Dhtxx/Samples/Dht12_Sample)
 
 ### Wiring Example
 

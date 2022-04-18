@@ -122,7 +122,7 @@ protected async Task ReadConditions()
 }
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055/Samples/Sensors.Motion.Bno055_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055/Samples/Bno055_Sample)
 
 ### Wiring Example
 

@@ -38,7 +38,7 @@ async Task PlayTriad()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Speaker)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Speaker/Sample/Speaker_Sample)
 
 ### Wiring Example
 

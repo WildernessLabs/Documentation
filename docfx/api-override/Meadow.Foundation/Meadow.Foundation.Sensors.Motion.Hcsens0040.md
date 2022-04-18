@@ -30,7 +30,7 @@ private void Sensor_OnMotionDetected(object sender)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Hcsens0040/Samples/Sensors.Motion.Hcsens0040_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Hcsens0040/Samples/Hcsens0040_Sample)
 
 ### Wiring Example
 

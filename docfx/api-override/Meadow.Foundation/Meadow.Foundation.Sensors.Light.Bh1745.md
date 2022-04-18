@@ -74,7 +74,7 @@ protected async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1745/Samples/Sensors.Light.Bh1745_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1745/Samples/Bh1745_Sample)
 
 ### Wiring Example
 

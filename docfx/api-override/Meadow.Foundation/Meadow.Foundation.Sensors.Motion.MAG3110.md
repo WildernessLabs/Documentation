@@ -63,7 +63,7 @@ protected async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Samples/Sensors.Motion.Mag3110_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Samples/Mag3110_Sample)
 
 ### Polling Mode
 

@@ -40,7 +40,7 @@ private void Sensor_ChannelStatusesChanged(object sender, ChannelStatusChangedEv
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Hid.Mpr121/Samples/Sensors.Hid.Mpr121_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.Mpr121/Samples/Mpr121_Sample)
 
 ### Wiring Example
 

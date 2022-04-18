@@ -48,7 +48,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer1_5g)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer_1_5g/Sample/3-AxisDigitalAccelerometer1_5g_Sample)
 
 ### Wiring Example
 

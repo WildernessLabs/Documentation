@@ -70,7 +70,7 @@ void CreateI2CDisplay()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x.Ssd1309/Samples/Displays.Ssd130x.Ssd1309_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Samples/Ssd1309_Sample)
 
 ### Wiring Example
 

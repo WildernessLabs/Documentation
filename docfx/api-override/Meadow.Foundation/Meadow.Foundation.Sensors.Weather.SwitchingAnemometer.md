@@ -25,7 +25,6 @@ public MeadowApp()
         redPwmPin: Device.Pins.OnboardLedRed,
         greenPwmPin: Device.Pins.OnboardLedGreen,
         bluePwmPin: Device.Pins.OnboardLedBlue,
-        3.3f, 3.3f, 3.3f,
         Meadow.Peripherals.Leds.IRgbLed.CommonType.CommonAnode);
 
     //==== create the anemometer
@@ -69,5 +68,5 @@ void OutputWindSpeed(Speed windspeed)
 }
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingAnemometer/Samples/Sensors.Weather.SwitchingAnemometer_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingAnemometer/Samples/SwitchingAnemometer_Sample)
 

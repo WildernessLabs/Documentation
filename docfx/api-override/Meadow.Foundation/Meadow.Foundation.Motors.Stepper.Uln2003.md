@@ -41,7 +41,7 @@ public MeadowApp()
 }
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Samples/Motors.Stepper.Uln2003_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Samples/Uln2003_Sample)
 
 ### Wiring Example
 

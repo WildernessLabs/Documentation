@@ -50,7 +50,7 @@ private void Sensor_OnAlarm1Raised(object sender)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/RTCs.Ds323x/Samples/RTCs.Ds323x_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds323x/Samples/Ds323x_Sample)
 
 ### Wiring Example
 

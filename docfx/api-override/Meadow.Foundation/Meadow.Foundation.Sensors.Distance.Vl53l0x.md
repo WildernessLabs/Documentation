@@ -42,7 +42,7 @@ private void Sensor_Updated(object sender, IChangeResult<Length> result)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x/Samples/Sensors.Distance.Vl53l0x_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x/Samples/Vl53l0x_Sample)
 
 ### Wiring Example
 

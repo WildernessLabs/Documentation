@@ -56,7 +56,7 @@ protected async Task Read()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureSensor)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureSensor/Sample/TemperatureSensor_Sample)
 
 ### Wiring Example
 
