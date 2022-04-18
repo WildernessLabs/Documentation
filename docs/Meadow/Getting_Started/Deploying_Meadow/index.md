@@ -9,24 +9,30 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 ## Prerequisites
 
 ### Windows
+
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
 * [Update USB driver for ST devices](/Meadow/Getting_Started/Update_USB_Driver/)
+* Install Meadow CLI:
+
+```
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
 
 ### macOS
 * You will need to run the upcoming commands from within a `bash` shell, rather than the default `zsh` shell.
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
-* Install Meadow:
+* Install Meadow CLI:
 
 ```
-dotnet tool install WildernessLabs.Meadow
+dotnet tool install WildernessLabs.Meadow.CLI --global
 ```
 
 ### Linux (Debian, Ubuntu)
 * Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
-* Install Meadow:
+* Install Meadow.CLI:
 
 ```
-dotnet tool install WildernessLabs.Meadow
+dotnet tool install WildernessLabs.Meadow.CLI
 ```
 
 
@@ -44,8 +50,9 @@ dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
 
 
-### Windows
-* Install dfu-util:
+### Windows 
+
+* Install dfu-util (**Admin Console**):
 
 ```
 meadow install dfu-util

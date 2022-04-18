@@ -8,11 +8,16 @@ subtitle: Multiline display menu framework for quick prototyping human interface
 
 The `TextDisplayMenu` library is an extensible framework for quickly creating hierarchical, editable menus that can display on a display that implements `ITextDisplay` - any graphical display via the [µGraphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/)) or supported character display and can be driven using input devices such as buttons or rotary encoders.
 
-![](TextDisplayMenu.gif)
+![Video showing navigating a menu on a character display using a rotary encoder dial.](TextDisplayMenu.gif)
 
 The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including time, temperature, and others. Additionally, you can quickly create custom menu item types that allow users to edit their value via the inputs.
 
 ## Using
+
+Before using a `TextDisplayMenu` you need to:
+
+ * Search and install the Meadow.Foundation.Displays.TextDisplayMenu NuGet package.
+ * Search and install a driver NuGet package for your target display, such as Meadow.Foundation.Displays.TftSpi or Meadow.Foundation.Displays.Lcd.CharacterDisplay.
 
 Generally, to use `TextDisplayMenu` you need to:
 
@@ -26,7 +31,7 @@ Generally, to use `TextDisplayMenu` you need to:
 
 The following schematic illustrates a typical configuration for driving the menu and includes the ST7789 TFT LCD display found in the Hack Kit, as well as some simple push buttons:
 
-![](SimpleMenu_Fritzing.png)
+![Circuit diagram showing a TFT LCD display and three push buttons connected to a Meadow board: the display's SCL pin connected to Meadow's SCK, SDA to MOSI, RES to D00, DC to D01, and BLK to D02, then buttons connected to D03, D04, and D05.](SimpleMenu_Fritzing.png)
 
 ## Configuring the Display
 
@@ -304,7 +309,7 @@ To see working examples, check out the implementations for [`NumericBase`](https
 
 We experienced periodic problems with the display outputting nonsense data:
 
-![](TextDisplayMenu_BadOutput.jpg)
+![Photo of a character display showing nonsense data, a series of unexpected characters filling various parts of the display around expected menu text.](TextDisplayMenu_BadOutput.jpg)
 
 To resolve, check that are the connections are securely in place and/or use a different breadboard.
 
@@ -315,7 +320,7 @@ For complete sample code, check out the [Meadow.Foundation Libraries and Framewo
 <table>
     <tr>
         <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsMenu.gif"/>
+            <img alt="Video showing menu navigation of the TFT display via three buttons, as connected according to the circuit diagram on this page." src="../../../../Common_Files/Hackster/GraphicsMenu.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
