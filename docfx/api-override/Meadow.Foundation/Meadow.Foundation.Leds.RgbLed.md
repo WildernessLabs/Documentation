@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Leds.RgbLed
 remarks: *content
 ---
 
-| RgbLed      |             |
-|-------------|-------------|
-| Status      | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| RgbLed | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Leds) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" /></a> |
 
 **RgbLed** represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
 
@@ -28,36 +28,90 @@ To connect these deds to Meadow, it is recommended to use an external resistor o
 
 ### Code Example
 
-The following example code loops through all the colors possible with digital output ports only.
-
 ```csharp
-public class RgbLedApp : App<F7Micro, RgbLedApp>
-{
-    public RgbLedApp()
-    {
-        // create a new common cathode RgbLed (otherwise set IsCommonCathode = false)
-        var rgbLed = new RgbLed(
-            Device.CreateDigitalOutputPort(Device.Pins.D14),
-            Device.CreateDigitalOutputPort(Device.Pins.D13),
-            Device.CreateDigitalOutputPort(Device.Pins.D12));
+protected List<RgbLed> rgbLeds;
 
-        // alternate between blinking and pulsing the LED 
-        while (true)
+public MeadowApp()
+{
+    Console.WriteLine("Initializing...");
+
+    var onRgbLed = new RgbLed(
+        device: Device,
+        redPin: Device.Pins.OnboardLedRed,
+        greenPin: Device.Pins.OnboardLedGreen,
+        bluePin: Device.Pins.OnboardLedBlue);
+    onRgbLed.SetColor(RgbLed.Colors.Red);
+
+    rgbLeds = new List<RgbLed>
+    {
+        new RgbLed(
+            Device.CreateDigitalOutputPort(Device.Pins.D02),
+            Device.CreateDigitalOutputPort(Device.Pins.D03),
+            Device.CreateDigitalOutputPort(Device.Pins.D04)),
+        new RgbLed(
+            Device.CreateDigitalOutputPort(Device.Pins.D05),
+            Device.CreateDigitalOutputPort(Device.Pins.D06),
+            Device.CreateDigitalOutputPort(Device.Pins.D07)),
+        new RgbLed(
+            Device.CreateDigitalOutputPort(Device.Pins.D08),
+            Device.CreateDigitalOutputPort(Device.Pins.D09),
+            Device.CreateDigitalOutputPort(Device.Pins.D10)),
+        new RgbLed(
+            Device.CreateDigitalOutputPort(Device.Pins.D11),
+            Device.CreateDigitalOutputPort(Device.Pins.D12),
+            Device.CreateDigitalOutputPort(Device.Pins.D13))
+    };
+
+    onRgbLed.SetColor(RgbLed.Colors.Green);
+
+    TestRgbLeds();
+}
+
+protected void TestRgbLeds()
+{
+    Console.WriteLine("TestRgbLeds...");
+
+    while (true)
+    {
+        Console.WriteLine("Going through each color on each RGB LED...");
+        foreach (var rgbLed in rgbLeds)
         {
             for (int i = 0; i < (int)RgbLed.Colors.count; i++)
             {
                 rgbLed.SetColor((RgbLed.Colors)i);
                 Thread.Sleep(500);
             }
+        }
 
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Blinking through each color on each RGB LED...");
+        foreach (var rgbLed in rgbLeds)
+        {
             for (int i = 0; i < (int)RgbLed.Colors.count; i++)
             {
                 rgbLed.StartBlink((RgbLed.Colors)i);
                 Thread.Sleep(3000);
             }
         }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Blinking through each color on each RGB LED...");
+        foreach (var rgbLed in rgbLeds)
+        {
+            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
+            {
+                rgbLed.StartBlink((RgbLed.Colors)i, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+                Thread.Sleep(3000);
+            }
+        }
+
+        Thread.Sleep(1000);
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Leds.RgbLed_Sample)
+

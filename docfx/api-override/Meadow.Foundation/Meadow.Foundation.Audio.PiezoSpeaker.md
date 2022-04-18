@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Audio.PiezoSpeaker
 remarks: *content
 ---
 
-| PiezoSpeaker  |             |
-|---------------|-------------|
-| Status        | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Speakers) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| PiezoSpeaker | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Speakers) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" /></a> |
 
 The **PiezoSpeaker** class represents a piezoelectric speaker that can be used to generate tones across a range of frequencies. They typically perform well between 1-5kHz but may go as high as 100kHz. PiezoSpeaker Implements IToneGenerator.
 
@@ -18,39 +18,34 @@ The positive pin of the piezo speaker connects to a pulse width modulation (PWM)
 
 ### Code Example
 
-The following example shows how to initialize a PiezoSpeaker and play an A4 note for one second:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-{        
-    protected PiezoSpeaker piezoSpeaker;
+protected PiezoSpeaker piezoSpeaker;
 
-    public MeadowApp()
+public MeadowApp()
+{
+    Console.WriteLine("Initializing...");
+
+    piezoSpeaker = new PiezoSpeaker(Device.CreatePwmPort(Device.Pins.D05));
+
+    _ = PlayTriad();
+}
+
+async Task PlayTriad()
+{
+    for (int i = 0; i < 5; i++)
     {
-        Console.WriteLine("Initializing...");
+        Console.WriteLine("Playing A major triad starting at A4");
+        await piezoSpeaker.PlayTone(440, 500); //A
+        await piezoSpeaker.PlayTone(554.37f, 500); //C#
+        await piezoSpeaker.PlayTone(659.25f, 500); //E
 
-        piezoSpeaker = new PiezoSpeaker(Device.CreatePwmPort(Device.Pins.D10));
-
-        TestPiezoSpeaker();
-    }
-
-    protected void TestPiezoSpeaker()
-    {
-        Console.WriteLine("TestPiezoSpeaker...");
-
-        while (true)
-        {
-            Console.WriteLine("Playing A4 note!");
-            piezoSpeaker.PlayTone(440, 1000);
-            piezoSpeaker.StopTone();
-            Thread.Sleep(500);
-        }
+        await Task.Delay(2500);
     }
 }
 
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Audio.PiezoSpeaker_Sample)
 
 ### Wiring Example
 
