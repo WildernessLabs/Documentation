@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Motors.HBridgeMotor
 remarks: *content
 ---
 
-| HBridgeMotor |             |
-|--------------|-------------|
-| Status       | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code  | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Motors/) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| HBridgeMotor | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Motors) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" /></a> |
 
 An h-bridge motor controller enables a control signal to drive a much larger load in either polarity, allowing Meadow to drive DC motors in forward or reverse from an external power supply. Using pulse-width-modulation (PWM) as the control signal, provides forward or reverse control, and variable speeds in either direction.
 
@@ -22,53 +22,46 @@ It should also work with heavier duty [L298N](https://www.amazon.com/s/ref=nb_sb
 
 ### Code Example
 
-The following code creates an h-bridge controller with the PWM controllers on pins 3 and 5, and the enable pin on pin 4. It then sets the motor speed to 100% forward, stops the motor for half a second, and then sets the motor speed to 100% reverse.
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+protected HBridgeMotor motor1;
+
+public MeadowApp()
 {
-    public MeadowApp ()
+    Console.WriteLine("Initializing...");
+
+    motor1 = new HBridgeMotor
+    (
+        a1Port: Device.CreatePwmPort(Device.Pins.D07),
+        a2Port: Device.CreatePwmPort(Device.Pins.D08),
+        enablePort: Device.CreateDigitalOutputPort(Device.Pins.D09)
+    );
+    
+    TestMotor();
+}
+
+protected void TestMotor()
+{
+    Console.WriteLine("TestMotor...");
+
+    while (true)
     {
-        protected HBridgeMotor motor1;
+        // Motor Forwards
+        motor1.Power = 1f;
+        Thread.Sleep(1000);
 
-        public MeadowApp()
-        {
-            Console.WriteLine("Initializing...");
+        // Motor Stops
+        motor1.Power = 0f;
+        Thread.Sleep(500);
 
-            motor1 = new HBridgeMotor
-            (
-                a1Port: Device.CreatePwmPort(Device.Pins.D07),
-                a2Port: Device.CreatePwmPort(Device.Pins.D08),
-                enablePort: Device.CreateDigitalOutputPort(Device.Pins.D09)
-            );
-            
-            TestMotor();
-        }
-
-        protected void TestMotor()
-        {
-            Console.WriteLine("TestMotor...");
-
-            while (true)
-            {
-                // Motor Forwards
-                motor1.Power = 1f;
-                Thread.Sleep(1000);
-
-                // Motor Stops
-                motor1.Power = 0f;
-                Thread.Sleep(500);
-
-                // Motor Backwards
-                motor1.Power = -1f;
-                Thread.Sleep(1000);
-            }
-        }
+        // Motor Backwards
+        motor1.Power = -1f;
+        Thread.Sleep(1000);
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Motor.HBridgeMotor_Sample)
 
 ### Wiring Example
 
@@ -87,4 +80,3 @@ Though h-bridge motor controllers come in various form factors, they typically s
 The following breadboard diagram illustrates connecting two motors to an h-bridge chip that uses a external power supply to drive the motors:
 
 <img src="../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridgeMotor_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

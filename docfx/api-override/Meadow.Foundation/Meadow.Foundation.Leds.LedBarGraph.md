@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Leds.LedBarGraph
 remarks: *content
 ---
 
-| LedBarGraph |             |
-|-------------|-------------|
-| Status      | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| LedBarGraph | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Leds) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" /></a> |
 
 An LED Bar Graph is packaged array of LEDs commonly used to indicate level or progress and commonly include 8 or 10 leds.
 
@@ -20,66 +20,93 @@ Use the `SetLed` method to turn on or off LEDs individually, or assign a value o
 
 ### Code Example
 
-The following example shows how to use the property **Percentage** to slowly fill and empty a 10 LED battery level graph:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+LedBarGraph ledBarGraph;
+
+public MeadowApp()
 {
-    DigitalOutputPort _blueLED;
-    LedBarGraph _ledBarGraph;
+    Console.WriteLine("Initializing...");
 
-    public MeadowApp()
+    // Using an array of Pins 
+    IPin[] pins =
     {
-        _blueLED = new DigitalOutputPort(Device.Pins.OnboardLEDBlue, true);
+         Device.Pins.D11,
+         Device.Pins.D10,
+         Device.Pins.D09,
+         Device.Pins.D08,
+         Device.Pins.D07,
+         Device.Pins.D06,
+         Device.Pins.D05,
+         Device.Pins.D04,
+         Device.Pins.D03,
+         Device.Pins.D02
+    };
 
-        IDigitalOutputPort[] ports =
-        {
-            Device.CreateDigitalOutputPort(Device.Pins.D06),
-            Device.CreateDigitalOutputPort(Device.Pins.D07),
-            Device.CreateDigitalOutputPort(Device.Pins.D08),
-            Device.CreateDigitalOutputPort(Device.Pins.D09),
-            Device.CreateDigitalOutputPort(Device.Pins.D10),
-            Device.CreateDigitalOutputPort(Device.Pins.D11),
-            Device.CreateDigitalOutputPort(Device.Pins.D12),
-            Device.CreateDigitalOutputPort(Device.Pins.D13),
-            Device.CreateDigitalOutputPort(Device.Pins.D14),
-            Device.CreateDigitalOutputPort(Device.Pins.D15),
-        };
+    ledBarGraph = new LedBarGraph(Device, pins);
 
-        _ledBarGraph = new LedBarGraph(ports);
+    TestLedBarGraph();
+}
 
-        Run();
-    }
+protected void TestLedBarGraph()
+{
+    Console.WriteLine("TestLedBarGraph...");
 
-    void Run()
+    decimal percentage = 0;
+
+    while (true)
     {
-        while (true)
+        Console.WriteLine("Turning them on and off for 1 second using SetLed...");
+        for (int i = 0; i < ledBarGraph.Count; i++)
         {
-            float percentage = 0;
-
-            while (percentage < 1)
-            {
-                _ledBarGraph.Percentage = percentage;
-                percentage += 0.1f;
-                Thread.Sleep(200);                    
-            }
-
-            percentage = 1.0f;
-
-            while (percentage > 0)
-            {
-                _ledBarGraph.Percentage = percentage;
-                percentage -= 0.1f;
-                Thread.Sleep(200);                    
-            }
+            ledBarGraph.SetLed(i, true);
+            Thread.Sleep(1000);
+            ledBarGraph.SetLed(i, false);
         }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Turning them on using Percentage...");
+        while (percentage < 1)
+        {
+            percentage += 0.10m;
+            Console.WriteLine($"{percentage}");
+            ledBarGraph.Percentage = (float) Math.Min(1.0m, percentage);
+            Thread.Sleep(500);
+        }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Turning them off using Percentage...");
+        while (percentage > 0)
+        {
+            percentage -= 0.10m;
+            Console.WriteLine($"{percentage}");
+            ledBarGraph.Percentage = (float) Math.Max(0.0m, percentage);
+            Thread.Sleep(500);
+        }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Blinking for 3 seconds...");
+        ledBarGraph.StartBlink();
+        Thread.Sleep(3000);
+        ledBarGraph.Stop();
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Blinking for 3 seconds...");
+        ledBarGraph.StartBlink(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        Thread.Sleep(3000);
+        ledBarGraph.Stop();
+
+        Thread.Sleep(1000);
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Leds.LedBarGraph_Sample)
 
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/LedBarGraph_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
