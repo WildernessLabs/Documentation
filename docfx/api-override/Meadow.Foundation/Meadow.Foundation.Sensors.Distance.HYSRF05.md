@@ -38,7 +38,7 @@ private void HYSRF05_DistanceUpdated(object sender, IChangeResult<Meadow.Units.L
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hysrf05/Samples/Sensors.Distance.Hysrf05_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hysrf05/Samples/Hysrf05_Sample)
 
 ### Wiring Example
 

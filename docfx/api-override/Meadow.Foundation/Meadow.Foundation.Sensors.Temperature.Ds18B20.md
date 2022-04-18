@@ -6,7 +6,7 @@ remarks: *content
 | Ds18B20 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Ds18B20) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Ds18B20/Driver) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.Ds18B20/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.Ds18B20.svg?label=Meadow.Foundation.Sensors.Temperature.Ds18B20" /></a> |
 
 The **DS18B20** is a 1-Wire temperature sensor manufactured by Maxim.  The sensor can operate in 9, 10, 11 or 12 bit precision and has a range of -55&deg;C to 125 &deg;C.

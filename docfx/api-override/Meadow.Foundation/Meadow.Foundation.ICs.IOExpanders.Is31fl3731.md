@@ -38,7 +38,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Is31fl3731/Samples/ICs.IOExpanders.Is31fl3731_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Is31fl3731/Samples/Is31fl3731_Sample)
 
 ### Wiring Example
 

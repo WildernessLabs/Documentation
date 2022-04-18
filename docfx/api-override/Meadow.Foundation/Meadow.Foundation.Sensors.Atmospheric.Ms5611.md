@@ -55,7 +55,7 @@ void CreateSpiSensor()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ms5611/Samples/Sensors.Atmospheric.Ms5611_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ms5611/Samples/Ms5611_Sample)
 
 ### Wiring Example
 

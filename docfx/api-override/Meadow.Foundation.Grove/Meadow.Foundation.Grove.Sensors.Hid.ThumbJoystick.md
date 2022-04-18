@@ -49,7 +49,7 @@ void JoystickUpdated(object sender, IChangeResult<JoystickPosition> e)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/ThumbJoystick)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/ThumbJoystick/Sample/ThumbJoystick_Sample)
 
 ### Wiring Example
 

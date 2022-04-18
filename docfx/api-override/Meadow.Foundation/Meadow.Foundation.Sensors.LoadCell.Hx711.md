@@ -55,5 +55,5 @@ public void GetAndDisplayCalibrationUnits(Hx711 sensor)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Samples/Sensors.LoadCell.Hx711_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Samples/Hx711_Sample)
 

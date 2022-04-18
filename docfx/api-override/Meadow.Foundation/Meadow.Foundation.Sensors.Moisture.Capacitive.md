@@ -94,7 +94,7 @@ protected async Task ReadMoisture()
 }
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Capacitive/Samples/Sensors.Moisture.Capacitive_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Capacitive/Samples/Capacitive_Sample)
 
 ### Wiring Example
 

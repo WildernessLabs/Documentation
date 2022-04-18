@@ -55,7 +55,7 @@ protected async Task ReadTemp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Temt6000/Samples/Sensors.Light.Temt6000_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Temt6000/Samples/Temt6000_Sample)
 
 ### Wiring Example
 

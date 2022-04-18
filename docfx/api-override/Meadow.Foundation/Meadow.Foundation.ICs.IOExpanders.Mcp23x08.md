@@ -138,7 +138,7 @@ void TestBulkDigitalOutputPortWrites(int loopCount)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08/Samples/ICs.IOExpanders.Mcp23x08_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23x08/Samples/Mcp23x08_Sample)
 
 ### Wiring Example
 

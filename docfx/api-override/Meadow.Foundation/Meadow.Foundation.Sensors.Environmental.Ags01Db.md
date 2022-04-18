@@ -51,7 +51,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Ags01Db/Samples/Sensors.Environmental.Ags01Db_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Ags01Db/Samples/Ags01Db_Sample)
 
 ### Wiring Example
 

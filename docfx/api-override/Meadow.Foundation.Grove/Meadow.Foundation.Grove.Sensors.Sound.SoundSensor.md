@@ -56,7 +56,7 @@ protected async Task Read()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/SoundSensor)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/SoundSensor/Sample/SoundSensor_Sample)
 
 ### Wiring Example
 

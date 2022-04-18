@@ -53,7 +53,7 @@ async Task ReadLevel()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/WaterSensor)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/WaterSensor/Sample/WaterSensor_Sample)
 
 ### Wiring Example
 

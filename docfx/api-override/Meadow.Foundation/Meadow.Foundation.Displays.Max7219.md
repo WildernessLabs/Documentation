@@ -65,7 +65,7 @@ void TestDigitalMode()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Max7219/Samples/Displays.Max7219_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Max7219/Samples/Max7219_Sample)
 
 ### Wiring Example
 

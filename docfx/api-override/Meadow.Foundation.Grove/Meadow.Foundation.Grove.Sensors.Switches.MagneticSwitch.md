@@ -23,7 +23,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MagneticSwitch)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MagneticSwitch/Sample/MagneticSwitch_Sample)
 
 ### Wiring Example
 

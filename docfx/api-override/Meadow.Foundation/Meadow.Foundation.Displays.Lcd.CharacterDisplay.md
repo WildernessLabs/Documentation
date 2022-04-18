@@ -25,7 +25,8 @@ public MeadowApp()
 {
     //InitGpio();
     //InitGpioWithPWM();
-    InitI2c();
+    //InitI2c();
+    InitGrove();
 
     TestCharacterDisplay();
 
@@ -79,6 +80,19 @@ void InitI2c()
     );
 }
 
+void InitGrove()
+{
+    Console.WriteLine("InitGrove...");
+
+    display = new CharacterDisplay
+    (
+        i2cBus: Device.CreateI2cBus(I2cBusSpeed.Standard),
+        address: (byte)I2cCharacterDisplay.Addresses.Grove,
+        rows: 2, columns: 16,
+        isGroveDisplay: true
+    );
+}
+
 void TestCharacterDisplay() 
 {
     Console.WriteLine("TestCharacterDisplay...");
@@ -117,7 +131,7 @@ void TestCharacterDisplay()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/Displays.Lcd.CharacterDisplay_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/CharacterDisplay_Sample)
 
 ### Wiring Example
 

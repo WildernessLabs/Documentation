@@ -32,7 +32,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/4-DigitDisplay)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/4-DigitDisplay/Sample/4-DigitDisplay_Sample)
 
 ### Wiring Example
 

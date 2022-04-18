@@ -40,7 +40,7 @@ private void HCSR04_DistanceUpdated(object sender, IChangeResult<Meadow.Units.Le
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04/Samples/Sensors.Distance.Hcsr04_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04/Samples/Hcsr04_Sample)
 
 ### Purchasing
 

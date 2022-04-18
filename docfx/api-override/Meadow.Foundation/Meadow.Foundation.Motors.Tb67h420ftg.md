@@ -66,7 +66,7 @@ private void Button2_PressEnded(object sender, EventArgs e)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Tb67h420ftg/Samples/Motors.Tb67h420ftg_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Tb67h420ftg/Samples/Tb67h420ftg_Sample)
 
 ### Wiring Example
 

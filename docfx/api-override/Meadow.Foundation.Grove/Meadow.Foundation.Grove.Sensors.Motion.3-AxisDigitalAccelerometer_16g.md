@@ -35,7 +35,7 @@ remarks: *content
 
         ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer_16g)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer_16g/Sample/3-AxisDigitalAccelerometer_16g_Sample)
 
 ### Wiring Example
 

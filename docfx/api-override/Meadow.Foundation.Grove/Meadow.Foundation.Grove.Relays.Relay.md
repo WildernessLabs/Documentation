@@ -42,7 +42,7 @@ void TestRelay()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Relay)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Relay/Sample/Relay_Sample)
 
 ### Wiring Example
 

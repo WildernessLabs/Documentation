@@ -34,7 +34,7 @@ void PressureSensor_Updated(object sender, IChangeResult<(Pressure? Pressure, Pr
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS/Samples/Sensors.Atmospheric.AdafruitMPRLS_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS/Samples/AdafruitMPRLS_Sample)
 
 ### Wiring Example
 

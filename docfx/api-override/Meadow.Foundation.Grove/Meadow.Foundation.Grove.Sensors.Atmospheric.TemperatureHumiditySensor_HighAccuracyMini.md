@@ -47,7 +47,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureHumiditySensor_HighAccuracyMini)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureHumiditySensor_HighAccuracyMini/Sample/TemperatureHumiditySensor_HighAccuracyMini_Sample)
 
 ### Wiring Example
 

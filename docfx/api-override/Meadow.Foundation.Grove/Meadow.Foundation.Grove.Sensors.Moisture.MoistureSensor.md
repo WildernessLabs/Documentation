@@ -55,7 +55,7 @@ protected async Task ReadMoisture()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MoistureSensor)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MoistureSensor/Sample/MoistureSensor_Sample)
 
 ### Wiring Example
 

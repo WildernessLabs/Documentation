@@ -33,7 +33,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MiniPIRMotionSensor)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/MiniPIRMotionSensor/Sample/MiniPIRMotionSensor_Sample)
 
 ### Wiring Example
 

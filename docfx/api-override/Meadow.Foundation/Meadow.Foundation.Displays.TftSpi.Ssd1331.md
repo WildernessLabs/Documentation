@@ -48,7 +48,7 @@ SelectPin: Device.Pins.D02,
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.TftSpi.Ssd1331/Samples/Displays.TftSpi.Ssd1331_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples/Ssd1331_Sample)
 
 ### Wiring Example
 
