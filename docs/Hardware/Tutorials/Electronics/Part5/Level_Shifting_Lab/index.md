@@ -42,11 +42,11 @@ For this lab, we're going to use a [light sensor from the LilyPad project](https
 
 LilyPad is a wearables project that's designed to be able to sewn into garments and textiles. This design intention is represented in its form factor:
 
-![Image of LilyPad Light Sensor](LilyPad_Light_Sensor.jpg){:standalone}
+![Photo of a LilyPad 5V Luminosity Sensor circular PCB with outer solder and hole attachments for connecting to wearable projects.](LilyPad_Light_Sensor.jpg){:standalone}
 
 The connection points are rather large, however, and require some soldering to make them useful:
 
-![Photo of the finished LilyPad Sensor with wires soldered to it](Soldered_LilyPad_Sensor.jpg){:standalone}
+![Photo of the finished LilyPad Sensor with wires soldered to it.](Soldered_LilyPad_Sensor.jpg){:standalone}
 
 We'll walk through making these solder joints later in the lab.
 
@@ -66,8 +66,7 @@ However, I have a few of these sensors, and when I measured the output, I got co
 
 We'll solder 22 gauge single strand wire to the sensor so that we can easily connect it the breadboard. The breadboard jumper wires from before will work just fine. If you want to get breadboard compatible wire that you can size to your own liking, I recommend [this kit, which runs USD$21 on Amazon.com](http://amzn.to/2jHgUDv):
 
-
-![](22Ga_Wire_Kit.jpg){:standalone}
+![Photo of a 22-gauge wire kit: a cardboard box with several spools of wire in various colors, each poking through a dispensing hole in the box.](22Ga_Wire_Kit.jpg){:standalone}
 
 #### Soldering Iron
 
@@ -77,7 +76,7 @@ As with multimeters, there is a wide selection of soldering irons from very affo
 
 A decent soldering iron can be had for relatively cheap that will likely get you through this entire tutorial. For instance, this [Abnes model is USD$20 on Amazon](http://amzn.to/2jHdG2H), and there are many more like it:
 
-![](Abnes_Soldering_Iron.jpg){:standalone}
+![Photo of a soldering iron kit showing the soldering iron in a stand and several included iron tips and tools: desoldering pump, solder, tweezers, and wire strippers.](Abnes_Soldering_Iron.jpg){:standalone}
 
 It comes with a decent holder, some solder, and a few tools.
 
@@ -85,7 +84,7 @@ It comes with a decent holder, some solder, and a few tools.
 
 Soldering is very common task of electronics prototyping, and a good soldering station is really nice to have. For just under [USD$100, Hakko makes a very nice professional soldering station](http://amzn.to/2jFSQ3V), which includes an adjustable temperature soldering iron, a holder, and a nice tip cleaner:
 
-![Image of the Hakko Soldering Station](Hakko_Soldering_Station.jpg){:standalone}
+![Photo of a Hakko Soldering Station with a blue and yellow base with temp display and adjustment buttons as well as a holder with brass mesh tip cleaner.](Hakko_Soldering_Station.jpg){:standalone}
 
 Hakko also makes an extensive range of tips for various soldering needs that fit that soldering iron.
 
@@ -93,7 +92,7 @@ Hakko also makes an extensive range of tips for various soldering needs that fit
 
 Usually, before you use your new soldering iron for the first time, and from time to time when using it, you'll need to clean and "tin" the tip. When you dip the tip of a hot soldering iron into tip cleaner and tinner, it takes the black oxides off the tip and deposits a thin layer of tin which helps the solder to melt. Tip tinner and cleaner usually comes in a small metal container and runs USD$6-10. Make sure whatever tip tinner you get is lead-free. [Here is a suitable one from Thermaltronics on Amazon for $8](http://amzn.to/2AqLSaM):
 
-![](Tip_Tinner.jpg){:standalone}
+![Photo of a metal split can containing tip tinner.](Tip_Tinner.jpg){:standalone}
 
 #### Lead-free Solder
 
@@ -103,14 +102,13 @@ If your soldering iron doesn't come with solder, you'll need to pick some up. Ma
 
 "Helping Hands" is an adjustable item holder that can be really helpful when soldering. It's optional, but is a beneficial add on to your toolset. [This one can be had for USD$6 on Amazon](http://amzn.to/2BE78KF):
 
-![Image of Helping Hands adjustable holder for soldering](Helping_Hands.jpg){:standalone}
+![Photo of Helping Hands adjustable holder for soldering with two arms for clipping and a third arm with a magnifying glass.](Helping_Hands.jpg){:standalone}
 
 ## Luminosity Sensor and Analog Level Shifting Circuit
 
 Most complex circuits in use are actually lots of simpler circuits joined together to provide more complex behaviors. In fact, in this lab, we're going to join two very simple circuits; a 5V light sensor circuit, and a voltage divider to reduce the voltage output of the light sensor down to a 3.3V voltage domain:
 
-![](../Support_Files/Level_Shifting_Lab_Circuit.svg){:standalone}
-
+![Diagram of a circuit with a 5-volt source connected to a 5-volt light sensor before a pair of resistors for a voltage divider to bring the sensor signal down to 3.3 volts.](../Support_Files/Level_Shifting_Lab_Circuit.svg){:standalone}
 
 Before we build our circuit, however, we must first calculate the values of our resistors in the voltage divider, while making sure we account for the resistance of the ADC.
 
@@ -299,21 +297,21 @@ To clean and tin your iron do follow these steps:
  2. Turn your soldering iron to around 400ºC/750ºF (if it has a temperature adjustment), and wait for it to heat up.
  3. Lightly drag your tip across the tip tinner/cleaner:
 
-    ![](Tip_Tinning.jpg){:standalone}
+    ![Photo of a soldering iron tip pressing into a metal can of tip tinner.](Tip_Tinning.jpg){:standalone}
 
  4. Brush off the excess tin onto the wet sponge.
 
-    ![](Cleaning_on_Sponge.jpg){:standalone}
+    ![Photo of a soldering iron tip pressing into a wet sponge to remove excess solder.](Cleaning_on_Sponge.jpg){:standalone}
 
 When it's done, you should have a nice shiny coat of tin on the tip:
 
-![](Clean_Tinned_Tip.jpg){:standalone}
+![Photo of a cleaned soldering iron tip.](Clean_Tinned_Tip.jpg){:standalone}
 
 ### Step 2: Prepare Solder Joint Connection
 
 Next, prepare your solder joint connection by stripping off a bit of the plastic insulation from your jumper wire (if it's not already stripped), place it through the hole, and bend the wire over:
 
-![](Sensor_Ready_for_Soldering.jpg){:standalone}
+![Photo of a sensor PCB held in place by an clip with a stripped jumper wire wrapped around one of the holes to make a connection.](Sensor_Ready_for_Soldering.jpg){:standalone}
 
 If you have a "Helping Hands," clip it in place to hold it while you solder.
 
@@ -323,7 +321,7 @@ You can use whatever color of wire you want for the sensor output pad (`S`), but
 
 To solder the joint, place the hot (~400ºC/750ºF) iron tip on the metal pad to heat it up and count to 5 or so. Then, touch some solder to the tip to get it flowing, and move the solder around a bit until it flows into and fills the hole:
 
-![](Sensor_Solder_Sequence.jpg){:standalone}
+![Photo progression of soldering a sensor PCB: first holding the soldering iron to the wire connection, then applying solder to the heated joint, then the final sensor with three wires soldered in place.](Sensor_Solder_Sequence.jpg){:standalone}
 
 Repeat step 2 and 3 for the other two joints.
 
@@ -343,17 +341,17 @@ The printable breadboard overlay for this lab can be found [here](Level_Shifting
 
 Recall from the last lab that complex items and sub circuits are shown on schematics as a box with leads. In the case of the LilyPad sensor, it has three leads, 5V in is labeled `+`, ground/common is labeled `-`, and the analog sensor output signal comes from the `S` pin:
 
-![](Level_Shifting_Lab_schem.svg){:standalone}
+![Schematic showing the Netduino connected to the LilyPad sensor via voltage divider resistors.](Level_Shifting_Lab_schem.svg){:standalone}
 
 The breadboard layout for the schematic might look something like this:
 
-![](Level_Shifting_Lab_bb.svg){:standalone}
+![Diagram of finished project with a Netduino connected to LilyPad sensor and voltage divider in a breadboard. The 5 volt pin on Netduino connects to the right breadboard power rail where the LilyPad's positive terminal connects, with the sensor's ground terminal connected to that rail's ground. Two resistors on the breadboard drop the LilyPad's output signal to 3.3 volts before feeding back to the analog pin 2 on the Netduino.](Level_Shifting_Lab_bb.svg){:standalone}
 
 ### Step 1: Assemble the Divider Circuit
 
-Before we add the sensor, let's test just the divider circuit to see how well it's dividing `5V` down to a `3.3V` domain. To do this, first, assemble the circuit without the sensor in place, providing suppling `5V` directly to the divider, as illustrated in the diagram below: 
+Before we add the sensor, let's test just the divider circuit to see how well it's dividing `5V` down to a `3.3V` domain. To do this, first, assemble the circuit without the sensor in place, providing supplying `5V` directly to the divider, as illustrated in the diagram below: 
 
-![](Level_Shifting_Lab_Divider_Validation_bb.svg){:standalone}
+![Diagram of intermediate project step with a Netduino connected to a voltage divider on a breadboard. The 5 volt pin on Netduino connects to the right breadboard power rail, with the both breadboard ground rails connected to the Netduino's ground pin. To test the divider, two resistors on the breadboard connect to the 5-volt rail to drop it to 3.3 volts before feeding back to the analog pin 2 on the Netduino.](Level_Shifting_Lab_Divider_Validation_bb.svg){:standalone}
 
 Make sure that you're using the `5V` power pin, not the `3.3V`, and both ground rails are connected to `GND` on the Netduino.
 
