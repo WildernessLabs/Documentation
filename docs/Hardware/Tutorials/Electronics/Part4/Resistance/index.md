@@ -14,7 +14,7 @@ Resistors are probably the most commonly used component in circuits. In fact, re
 
 When prototyping, the most commonly used resistors are axial-lead resistors that have a wire coming out of each end and are [color coded](/Hardware/Reference/Components/Resistors/Reading) which specifies the amount of resistance that they have:
 
-![Picture of a few axial lead resistors](../Support_Files/Standard_Coaxial_Resistors.svg){:standalone}
+![Picture of a few axial lead resistors, each with a central cylinder and wires protruding from either end.](../Support_Files/Standard_Coaxial_Resistors.svg){:standalone}
 
 
 ### General Application of Resistance
