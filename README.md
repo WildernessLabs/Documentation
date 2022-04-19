@@ -44,7 +44,7 @@ Open a Powershell prompt and navigate to the `Documentation/docs` folder and run
 choco install ruby
 ```
 
-Install MSYS2. Choose MSYS2 and MINGW development toolchain option
+Install MSYS2. Choose MSYS2 and MINGW development toolchain option (tip: you may need to restart your shell):
 
 ```
 ridk install
