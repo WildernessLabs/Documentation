@@ -10,7 +10,7 @@ Electrical circuits get their name because they are actually closed loops. Charg
 
 In between the voltage source, and the return point, is almost always some sort of _load_, which is a thing that uses electricity to do work, and has some finite amount of resistance (which we'll learn about in part 3 of the tutorial):
 
-![](../Support_Files/Source_Load_Ground.svg){:standalone}
+![Illustration of a circuit showing a positive battery terminal as the source, the item doing work as the load, and the negative battery terminal as the ground or common.](../Support_Files/Source_Load_Ground.svg){:standalone}
 
 The return point is often termed the [_ground_](https://en.wikipedia.org/wiki/Ground_(electricity)), or _common_, which is short for _common return path_.
 
@@ -26,11 +26,11 @@ However, common refers to a return point that may not actually be connected to t
 
 In a circuit diagram, the symbol for ground is usually:
 
-![](/Common_Files/Circuit_Symbols/Ground.svg){:standalone}
+![Symbol for ground, similar to an inverted uppercase T with two additional parallel base lines that are increasingly smaller.](/Common_Files/Circuit_Symbols/Ground.svg){:standalone}
 
 And chassis ground is:
 
-![](/Common_Files/Circuit_Symbols/Chassis_Ground.svg){:standalone}
+![Symbol for chassis ground, similar to an inverted uppercase T with several rightward slanting lines from the left, middle, and right of the base.](/Common_Files/Circuit_Symbols/Chassis_Ground.svg){:standalone}
 
 
 ## [Next - Review](../Review)
