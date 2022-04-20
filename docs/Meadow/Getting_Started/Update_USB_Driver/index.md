@@ -10,7 +10,9 @@ In order to flash Meadow OS, *dfu-util* is recommended. However, the default Win
 1. In Zadig, click *Options* > *List All Devices*
 1. Select *STM32 BOOTLOADER* in the dropdown
 1. Click *Replace Driver*
-![Before](./zadig1.png){:standalone}
+
+    ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png){:standalone}
 
 1. After the installation is complete, driver should be *WinUSB*
-![Before](./zadig2.png){:standalone}
+
+    ![Zadig showing the replaced driver as WinUSB with a Reinstall Driver button.](./zadig2.png){:standalone}

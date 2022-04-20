@@ -8,7 +8,7 @@ subtitle: Electromotive Force (EMF) of electricity, defined by the volt.
 
 In order for a current to exist, charge carriers must be motivated to move. Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel:
 
-![](../Support_Files/Electricity_Doing_Work.svg){:standalone}
+![Illustration of a water town analogy for electrical source doing work: water in the tower flows through the pipe and passes over a water wheel.](../Support_Files/Electricity_Doing_Work.svg){:standalone}
 
 This pressure at the valve is known as _electromotive force (EMF)_ and is expressed as a difference between the top and bottom of the water path and represents a potential for work.
 
@@ -16,13 +16,13 @@ When water (or charge carriers) is flowing through the valve, the amount of forc
 
 Another way to think about voltage is to imagine that a battery provides an engine to lift charge carriers up to a particular energy level. For example, a standard AA cell has the power to lift charge carriers up to `1.5V`:
 
-![](../Support_Files/Battery_EMF.svg){:standalone}
+![Illustration of electromagnetic force of a battery: the battery "lifting" the charge carriers to a battery level of 1.5 volts and dropping them over to return to zero volts.](../Support_Files/Battery_EMF.svg){:standalone}
 
 ### Relative Voltage
 
 It's important to note that this force is relative; even if the water towers were at different altitudes, the pressure at the valve is still dependent on the _voltage drop_ from the top of the water to the ground.
 
-![](../Support_Files/Water_Tower_Relative_Voltages.svg){:standalone}
+![Illustration of two water towers at different elevations to represent relative voltage: the drop from water level to water valve being the same means the force differential of those two setups are equal.](../Support_Files/Water_Tower_Relative_Voltages.svg){:standalone}
 
 This means that current flowing from a `10V` source to `5V`, the potential difference is still only `5V`. The amount of force differential between those two points would be the same as `5V` flowing to `0V`.
 

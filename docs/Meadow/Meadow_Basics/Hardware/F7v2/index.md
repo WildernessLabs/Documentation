@@ -9,7 +9,7 @@ The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two 
  * **Meadow F7v2 Micro Development Module** - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
  * **Meadow F7v2 Core-Compute Module** -  A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilities.
 
-![](/Common_Files/Meadow_F7v2_Modules.png)
+![Rendering of the two F7v2 boards: left is the Meadow F7v2 Development Module with labeled pins for prototyping and development, right is the Core-Compute Module in a minimal rectangular footprint intended for surface mount use.](/Common_Files/Meadow_F7v2_Modules.png)
 
 ## V2 Upgrades
 
@@ -64,4 +64,4 @@ Note that `MeadowApp` should be the name of your application class.
 
 Also note that the pinout of the device is _slightly_ different than the v1. Please refer to the following illustration for pinout information:
 
-![](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
+![Diagram of the Meadow F7v2 Development board with pins numbered and labeled with available functionality as well as interrupt groupings marked.](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)

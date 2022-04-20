@@ -57,7 +57,7 @@ The battery charging circut is also connected to the `5V` rail via a diode. You 
 
 The board can be adequately powered by a solar panel that outputs a minimum of `500mA` at `6V`, but it's best to pair a solar panel with a battery in order to provide backup power when solar power is not available.
 
-![](/Common_Files/MeadowPower.svg)
+![Diagram of Meadow connected to a solar panel connected to ground and 5 volts and a 3.7-volt battery connected to the battery connector.](/Common_Files/MeadowPower.svg)
 
 ## Real-Time Clock (RTC)
 
@@ -65,7 +65,7 @@ The STM32F7 is equipped with a real-time clock (RTC), which, when set, will reta
 
 ## Hardware Pins
 
-![](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![Meadow F7 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
 ### Reset (`RST`)
 
@@ -81,7 +81,7 @@ The `3.3V` power rail is exposed via the `3V3` header pin.
 
 The _analog reference_ (`AREF`) pin provides a reference voltage for the [_Analog to Digital Converter_ (ADC)](/Meadow/Meadow_Basics/IO/Analog/) to compare against. Typically, this should be supplied with `3.3V`, so as a convenience, the `AREF` pin is actually connected to the `3.3V` rail via `0Ω` resistor that is located next to the `D08` pin, just below the main MCU:
 
-![Image showing the location of the AREF 0Ω resistor, which is just below the F7 MCU, and on the right side, when the board is turned so that the USB connector is on top. The resistor is immediately to the left of the D08 header pin.](/Common_Files/F7_Micro_AREF_Resistor.svg)
+![Photo showing the location of the AREF 0Ω resistor, which is just below the F7 MCU, and on the right side, when the board is turned so that the USB connector is on top. The resistor is immediately to the left of the D08 header pin.](/Common_Files/F7_Micro_AREF_Resistor.svg)
 
 If you need to provide a different analog reference voltage, make sure to remove that resistor before hooking `AREF` to your voltage reference.
 
@@ -99,7 +99,7 @@ The _enable_ pin (`EN`) serves as a sort of power switch for the board. By defau
 
 To create a power switch for the development board, hook the `EN` pin to a switch that sinks to `GND` (`0V`) when in the `OFF` position, as shown in the following schematic:
 
-![](/Common_Files/meadow_power_enable.png)
+![Diagram and schematic of connecting a switch to a Meadow between the ground pin and enable pin to operate as a power switch.](/Common_Files/meadow_power_enable.png)
 
 ### `5V` Power Rail (`5V`)
 

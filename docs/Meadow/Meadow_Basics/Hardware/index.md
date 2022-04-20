@@ -6,7 +6,7 @@ subtitle: Meadow System-on-Modules (SoM) boards for prototype and production.
 
 The Meadow F7 is a workhorse Wi-Fi and Bluetooth enabled System-on-Module (SoM) microcontroller-based board designed for sophisticated IoT applications and is based on the STMicroelectronics STM32F7 microcontroller (MCU) with an Espressif ESP-32 coprocessor.
 
-![](/Common_Files/F7v2_Dev_Medium_Cropped.jpg)
+![Photo of the Meadow F7 board.](/Common_Files/F7v2_Dev_Medium_Cropped.jpg)
 
 The Meadow F7 is provisioned with Meadow.OS which runs full .NET Standard v2.1 applications and can be managed remotely via Meadow.Cloud with secure, over-the-air (OtA) updates, reliable push messaging, and device and application health monitoring over a Wi-Fi or ethernet (F7 Production model only) network.
 
@@ -17,7 +17,7 @@ The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two 
  * **Meadow F7v2 Micro Development Module** - An Adafruit Feather specification compatible design, intended for development, prototyping, and low-volume (1,000 or less) production.
  * **Meadow F7v2 Core-Compute Module** -  A surface mount device (SMD) intended for high-volume and industrial production, the F7 Production also adds Ethernet and SD card capabilities.
 
-![](/Common_Files/Meadow_F7v2_Modules.png)
+![Rendering of the two F7v2 boards: left is the Meadow F7v2 Development Module with labeled pins for prototyping and development, right is the Core-Compute Module in a minimal rectangular footprint intended for surface mount use.](/Common_Files/Meadow_F7v2_Modules.png)
 
 ## F7v2 Features
 
@@ -45,8 +45,7 @@ The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two 
 
 The Meadow F7 Micro model has additional onboard features designed to make developing and prototyping easier.
 
-
-![](/Common_Files/Meadow_F7v2_Illustration.png)
+![Rendering of the top and bottom of the Meadow F7 Development Module showing all components on the top for surface mounting and the Meadow and Wilderness Labs logos screened on the bottom.](/Common_Files/Meadow_F7v2_Illustration.png)
 
  * Reset and Boot buttons
  * Onboard user-accessible RGB LED
@@ -60,14 +59,8 @@ The Meadow F7 Micro model has additional onboard features designed to make devel
 
 The Meadow F7 Core-Compute model is designed to be an easy upgrade path to production volume solution, or for when Ethernet and an external SD card interface is required.
 
-![](/Common_Files/Meadow_F7v2_Core-Compute_Illustration.png)
+![Rendering of the Meadow F7 Core-Compute module in a minimal rectangular footprint intended for surface mount use.](/Common_Files/Meadow_F7v2_Core-Compute_Illustration.png)
 
  * Ultra-small Surface Mount Device (SMD) form factor.
  * External SD Card interface
  * Dual-Port External Ethernet interface
-
-
-
-
-
-

@@ -24,7 +24,7 @@ This will allow you to debug your Meadow apps.
 
 **Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
 
-![Meadow extension for Visual Studio for macOS](Mobile.NET.png)
+![Screenshot of Visual Studio Installer showing the Mobile development with .NET payload selected under Desktop & Mobile install options.](Mobile.NET.png)
 
 ## Windows
 
@@ -46,7 +46,7 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
  4. Select the **Meadow** IDE extension.
  5. Click **Install...**
 
-![Meadow extension for Visual Studio for macOS](meadow_extension.png)
+![Visual Studio for Mac Extension Manager showing the Meadow extension in the Gallery search results.](meadow_extension.png)
 
 ## Step 2: Create a new Meadow Project
 
