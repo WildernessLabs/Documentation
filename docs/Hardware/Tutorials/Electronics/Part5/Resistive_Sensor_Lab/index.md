@@ -148,7 +148,7 @@ Using that formula, I created the following table of values:
 
 | Light Level Threshold | R1 Value  | Sensor Resistance (R2) | R2 & ADC Resistance | Total R | Vin   | Vout  |
 |-----------------------|-----------|------------------------|---------------------|---------|-------|-------|
-| Bright                | 4.7kΩ     | < 1kΩ                  | 0.9kΩ               | 5.6kΩ   | 3.3V  | 0.53V |
+| Bright                | 4.7kΩ     | < 1kΩ                  | 0.9kΩ               | 5.6kΩ   | 3.3V  | 0.53V |
 | Dark                  | 4.7kΩ     | > 75kΩ                 | 9.6kΩ               | 14.3kΩ  | 3.3V  | 2.2V  |
 
 
