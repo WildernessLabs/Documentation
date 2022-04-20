@@ -10,11 +10,11 @@ The "ideal" PID algorithm concisely describes the fundamental approach to PID, b
 
 In the standard form, instead of adding the PID corrections together, the integral and derivative corrections are defined by constants that are related to time of change and are computed and then their corrections are summed and that output is then scaled (multiplied) by the proportional error constant:
 
-![](https://wikimedia.org/api/rest_v1/media/math/render/svg/c0b2251a7c96240727206f07d267fca833627cc2)
+![Mathematical equation form of the standard PID algorithm.](https://wikimedia.org/api/rest_v1/media/math/render/svg/c0b2251a7c96240727206f07d267fca833627cc2)
 
 Again, a visual representation of this algorithm might be more enlightening:
 
-![](../Standard_PID_Block_Diagram.svg){:standalone}
+![Flow diagram showing inputs, reference and actual signals, connected to the first step, calculate error (reference minus actual), then connected to calculate ID corrections (integral and derivative corrections), then connected to sum corrections before multiplying by P and outputting a control signal.](../Standard_PID_Block_Diagram.svg){:standalone}
 
 ### Integral and Derivative Gain Components in Relation to Time
 

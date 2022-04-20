@@ -31,7 +31,7 @@ Resistor kits are available from a number of suppliers, most kits have a selecti
 
 SparkFun makes a [great one that runs about USD$8](https://www.sparkfun.com/products/10969) and has 500 of the most common resistors in 5% tolerance:
 
-![](../Support_Files/Tools_and_Components/SparkFun_Resistor_Kit.jpg){:standalone}
+![Pair of photos of a SparkFun-branded resistor kit, showing several strips of axial resistors grouped by value and taped together on the ends.](../Support_Files/Tools_and_Components/SparkFun_Resistor_Kit.jpg){:standalone}
 
 Joe Knows Electronics also makes [a great kit that contains 860, 1% tolerance resistors for ~USD$20](http://amzn.to/2iwbWtq), and is available on Amazon.com.
 
@@ -43,7 +43,7 @@ A [pack of 10 of them](http://amzn.to/2zUjcZt) runs ~USD$16 on Amazon.com.
 
 Breadboards simplify prototyping by creating connections without soldering. The following illustration is of a half size bread board with power rails (my favorite kind for prototyping), and an "xray" view on the right showing the copper traces that connect the _wells_ (holes):
 
-![](/Common_Files/Half_Size_+_Breadboards.svg){:standalone}
+![Illustration of a pair of bread boards, the left showing just the holes and the right showing how those holes are connected to each other within the board: outer power rails connect along the edge and the internal holes connect from outside to the central gutter.](/Common_Files/Half_Size_+_Breadboards.svg){:standalone}
 
 Each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, with the leads being separated. Additionally, many breadboards, such as the one pictured above, have power rails along the edges that are connected the whole way down. 
 
@@ -51,7 +51,7 @@ Each row of 5 pins (they're numbered in the illustration, and most good breadboa
 
 Usually, the positive (`+`) side of power rails are connected to the `3.3V` or `5V` pin on the Netduino, and the negative (`-`) side is connected to ground:
 
-![](../Breadboard_w_Power_bb.svg){:standalone}
+![Diagram of a Netdiuno connected to the positive and ground rails of a breadboard from the board's 3.3-volt and ground pins, and then the two side power rails are connected by a jumper to share voltage on both sides.](../Breadboard_w_Power_bb.svg){:standalone}
 
 This provides a very useful base for adding more complex circuits that share power and ground.
 
@@ -59,7 +59,7 @@ This provides a very useful base for adding more complex circuits that share pow
 
 Sometimes, when building circuits, they might require both `3.3V` and `5V` power, in which case, you can wire one power rail to the `3.3V` pin, and one to the `5V` pin, while they both share a ground connection:
 
-![](../Breadboard_w_3.3_and_5V_bb.svg){:standalone}
+![Diagram of a Netdiuno connected to a breadboard's left positive and ground rails to the boards 3.3-volt and ground pins, and the breadboard's right positive rail connected to the board's 5-volt pin, and a jumper between the two ground rails.](../Breadboard_w_3.3_and_5V_bb.svg){:standalone}
 
 ### Breadboard Jumper Wires
 
@@ -69,11 +69,11 @@ There are two main kinds of breadboard jumper wires; straight wires, and flexibl
 
 Straight wires are made from single strand wire and are usually sold in a kit which has a variety of pre-cut sizes and colors. They can be easily bent to fit whatever circuit routing necessary. A [140 piece kit](http://amzn.to/2B6aINg) like the one shown below can be had for ~USD$7 on Amazon.com:
 
-![](../Support_Files/Tools_and_Components/140pc_Fixed_Breadboard_Jumper_Kit.jpg){:standalone}
+![Photo of a 140-piece kit of straight jumper wires with 90-degree bends for various distances of breadboard spacing.](../Support_Files/Tools_and_Components/140pc_Fixed_Breadboard_Jumper_Kit.jpg){:standalone}
 
 And a [350 piece kit](http://amzn.to/2hEdsJ3) runs around USD$15:
 
-![](../Support_Files/Tools_and_Components/350pc_Fixed_Breadboard_Jumper_Kit.jpg){:standalone}
+![Photo of a 350-piece kit of straight jumper wires with 90-degree bends for various distances of breadboard spacing.](../Support_Files/Tools_and_Components/350pc_Fixed_Breadboard_Jumper_Kit.jpg){:standalone}
 
 I have both, and prefer the organization of the 350 piece kit, but the 140 piece kit is just fine.
 
@@ -81,7 +81,7 @@ I have both, and prefer the organization of the 350 piece kit, but the 140 piece
 
 Flexible jumper wires come in combinations of male to male, male to female, and female to female. They are made of multi stranded wires and so are very flexible, and are good for long connections. However, unlike the straight wires, they usually only come in two sizes, so they're not very practical for short connections; circuits built with only them can be very messy. They usually come in a ribbon that can be peeled apart, and a [pack of 80](http://amzn.to/2hFGuIq) run USD$6 on Amazon.com:
 
-![](../Support_Files/Tools_and_Components/80Pc_MaleMale_Flexible_Jumpers.jpg){:standalone}
+![Photo of two lengths of bundled flexible wires with pin connectors on the end which can be peeled apart in groups or individually.](../Support_Files/Tools_and_Components/80Pc_MaleMale_Flexible_Jumpers.jpg){:standalone}
 
 For most circuits, male to male are all that you'll need, but certain circuits later will require male to female wires. 
 
@@ -97,7 +97,7 @@ It's nice to have both straight and flexible wires, but for this lab, the straig
 
 We make a [Wilderness Labs hack kit](http://amzn.to/2iyFoPx) that comes with a nice half size breadboard, flexible jumper wires, and laser etched board to mount a Netduino and the included breadboard:
 
-![](../Support_Files/Tools_and_Components/WLabs_Hack_Kit.jpg){:standalone}
+![Photo of a Wilderness Labs hack kit showing a breadboard, branded wooden mounting board, several flexible wires with pin headers, and mounting hardware.](../Support_Files/Tools_and_Components/WLabs_Hack_Kit.jpg){:standalone}
 
 #### Multimeters
 
@@ -114,19 +114,19 @@ As a bonus feature, you might consider getting a multimeter that does _transisto
 
 [Here is a great, pocket-sized, starter multimeter from Amazon](https://www.amazon.com/gp/product/B072XH5SJ7/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B072XH5SJ7&linkCode=as2&tag=ilderneabs-20&linkId=a5c314e3ce625c8bee20f98f7e4827f3) that costs about USD$13 and will probably get you through all of this tutorial:
 
-![](../Support_Files/Tools_and_Components/Affordable_Digital_Mutlimeter.jpg){:standalone}
+![Photo of a pocket-sized starter multimeter from Amazon with a rear kick stand to sit vertically.](../Support_Files/Tools_and_Components/Affordable_Digital_Mutlimeter.jpg){:standalone}
 
 ##### Mid-level Multimeter
 
 For a midlevel multimeter, [this one](http://amzn.to/2hEjvNG) runs $37 and has a transistor tester, temperature sensor, and more:
 
-![](../Support_Files/Tools_and_Components/Proster_Multimeter.jpg){:standalone}
+![Photo of a mid-level multimeter with more mode options and function buttons as well as different probe options.](../Support_Files/Tools_and_Components/Proster_Multimeter.jpg){:standalone}
 
 #### Professional Multimeter
 
 For a professional level multimeter that will do pretty much everything you might want to do, [BK Precision 2707B](https://www.mouser.com/ProductDetail/BK-Precision/2707B/?qs=sGAEpiMZZMtHyRFzBQ9JV5QGausOCKjC) is a manual ranging model that has transistor testing, capacitance and diode testing, and more. At ~USD$95, they're an investment.
 
-![](../Support_Files/Tools_and_Components/BK_Precision_2707B_alt.jpg){:standalone}
+![Photo of a professional multimeter with even more mode options as well as transistor, capacitance, and diode testing.](../Support_Files/Tools_and_Components/BK_Precision_2707B_alt.jpg){:standalone}
 
 And while you manually have to set the range, they're actually much faster than auto-ranging models.
 
@@ -134,7 +134,7 @@ And while you manually have to set the range, they're actually much faster than 
 
 Resistor leads are pretty long, so I often trim them down a bit to put them in breadboards; it makes the circuits a lot cleaner. I suggest a wire cutter/stripper combo tool, so that you can also strip wire. Make sure to get one that handles the size of wires that are typically used for prototyping, usually between 20 and 30 gauge. [Klein tools makes a nice one](http://amzn.to/2hG0iLB) for ~USD$22:
 
-![](../Support_Files/Tools_and_Components/Wire_Stripper_Cutter.jpg){:standalone}
+![Photo of a pair of wire stripping/cutting pliers.](../Support_Files/Tools_and_Components/Wire_Stripper_Cutter.jpg){:standalone}
 
 
 ## Exercise 1 - Measuring Series Resistance
@@ -145,7 +145,7 @@ For our first exercise, we're going to measure two resistors in series. This wil
 
 Select two resistors of any value from your resistor kit. For mine, I grabbed a `330Ω` resistor, and a `1kΩ` resistor. Then, arrange them in series (end-to-end) on a breadboard. How you configure them is your choice, as long as their common legs are connected. The following illustration shows a breadboard with 3 different, yet valid configurations in which to place the resistors (note that configuration 3 requires a wire to connect the two resistors, because they have no common row connection):
 
-![](../Series_Resistance_Lab_bb.svg){:standalone}
+![Illustration of a breadboard showing ways to measure resistance of resistors positioned in different series orientations.](../Series_Resistance_Lab_bb.svg){:standalone}
 
 The green wires illustrate where we'll measure resistance with the probes.
 
@@ -153,15 +153,15 @@ The green wires illustrate where we'll measure resistance with the probes.
 
 To make lab component layouts easier, I've created printable breadboard overlays that you can attach to the top of your breadboard. These illustrate sample component layouts and also show the underlying copper traces, which add some clarity to the routing connections:
 
-![](../Resistor_Lab_BB_Printout_Combined.jpg){:standalone}
+![Photo of breadboards with component layout overlays to show the underlying copper traces.](../Resistor_Lab_BB_Printout_Combined.jpg){:standalone}
 
 The overlays can be pinned down as shown in the photos above by using some breakaway headers, which can easily be snapped to size with pliers. You can find a [pack of 10 of them for ~USD$6 on Amazon](http://amzn.to/2BCdFWf):
 
-![](../Breakaway_Headers.jpg){:standalone}
+![Photo of a set of several black breakaway headers.](../Support_Files/Tools_and_Components/Breakaway_Headers.jpg){:standalone}
 
 Or, for an even better deal, you can get a [pack of 40 in fancy colors for ~USD$9 on Amazon](http://amzn.to/2jzbD0B)!
 
-![](../Support_Files/Tools_and_Components/Colored_Breakaway_Headers.jpg){:standalone}
+![Photo of several sets of breakaway headers in various color options.](../Support_Files/Tools_and_Components/Colored_Breakaway_Headers.jpg){:standalone}
 
 The [layout overlays for this lab are here](../Resistor_Lab_BB_Overlay.pdf). Make sure that when you print them, they are printed at 100% scale, otherwise they may not fit.
 
@@ -172,13 +172,13 @@ Once the circuit is built, we need to measure the resistance from one end of the
 
 Plug the multimeter probes into the standard, low power ports on your multimeter, putting the black probe into the black socket, and the red probe into the red socket. Usually the black socket is labeled `COM`, for "common", and the red socket has a set of symbols indicating that it's meant for the measurement probe:
 
-![](Probe_Plugs.jpg){:standalone}
+![Photo of multimeter probes plugged in, black to COM socket and red to the V (volts) socket.](Probe_Plugs.jpg){:standalone}
 
 The other red sockets are usually for high power measurements, which we won't need.
 
 Next, put the multimeter in resistance measurement mode (usually an Ohm (`Ω`) symbol), and place the probes (it doesn't matter which is which for resistance measurement) directly into the wells where the resistor legs go in so that there is good connection, as shown below:
 
-![](Probe_Placement.jpg){:standalone}
+![Photo of multimeter hook probes around the legs of two resistors to measure resistance across them both.](Probe_Placement.jpg){:standalone}
 
 Notice that the multimeter might take a little time to stabilize on a reading. Auto-ranging multimeters can take longer than manual ranging multimeters, but even on manual ranging ones, the value might change as the probes are moved slightly, and the connection gets better or worse.
 
@@ -223,7 +223,7 @@ In this exercise we're going to build a parallel resistance circuit and measure 
 
 Just as before, choose two resistors from you resistor kit and place them in parallel wiring configuration so that they each share their legs. The following illustration shows two different sample configurations, as well as the probe test points:
 
-![](../Parallel_Resistance_Lab_bb.svg){:standalone}
+![Illustration of a breadboard showing ways to measure resistance of resistors positioned in different parallel orientations.](../Parallel_Resistance_Lab_bb.svg){:standalone}
 
 ### Step 2: Measure actual values and calculate expected values.
 

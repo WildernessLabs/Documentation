@@ -33,7 +33,7 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
 <table>
     <tr>
         <td style="width:50%">
-            <img src="../../../Common_Files/Hackster/RtcClock.gif"/>
+            <img alt="Video showing a Meadow connected to a multi-line character display showing text, Meadow RTC is now available in b3.9, followed by the date and then the current time with the seconds incrementing." src="../../../Common_Files/Hackster/RtcClock.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -45,7 +45,7 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="../../../Common_Files/Hackster/RtcWifi.gif"/>
+            <img alt="Video showing a vertical LED matrix showing the current date and then the current time when a button is pressed." src="../../../Common_Files/Hackster/RtcWifi.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -57,7 +57,7 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="../../../Common_Files/Hackster/RtcChristmas.gif"/>
+            <img alt="Video showing a Meadow connected to a multi-line character display showing the date, time, indoor and outdoor temperatures, and a weather description." src="../../../Common_Files/Hackster/RtcChristmas.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">

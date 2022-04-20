@@ -8,7 +8,7 @@ subtitle: Practice problems for single resistor circuits.
 
 Given the following circuit:
 
-![](../Support_Files/Resistance_Calc_Circuit.svg){:standalone}
+![Diagram of a resistance problem sample circuit showing a source voltage collected to a resistor with a voltmeter connected across the source and an ammeter connected in line with the return from the resistor.](../Support_Files/Resistance_Calc_Circuit.svg){:standalone}
 
 Which includes:
 

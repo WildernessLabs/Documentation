@@ -8,7 +8,7 @@ subtitle: Designing and building professional hardware; from prototype to produc
 
 Hardware design once occupied a very specialized niche in the engineering arts; but as the demand for IoT solutions has grown, along with the maturation of the hardware needed to support them, and of course the massive movement to work-from-home as a product of the COVID pandemic, increasingly, complex hardware is designed by regular engineers in labs and offices at home.
 
-![](Therm_Prototypes.svg)
+![Photo of two prototype smart thermostat boards: the left uses components on a breadboard, the right using components on a custom PCB.](Therm_Prototypes.svg)
 
 Hardware design and development can be an intimidating endeavor, especially when first starting out. However, the process of designing and producing hardware isn't terribly different than that of software, and with a little guidance, much of it can be done in a modestly equipped at-home office turned hardware lab.
 

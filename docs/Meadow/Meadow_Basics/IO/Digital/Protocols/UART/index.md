@@ -53,7 +53,7 @@ When using an RS-232 peripheral, the signal voltages must be level-shifted and i
 
 Additionally, [Sparkfun has an RS-232 to TTL Shifter breakout board](https://www.sparkfun.com/products/449) that not only converts RS-232 to TTL levels, but also includes an onboard RS-232 connector:
 
-![](SparkFun_RS232_Shifter.svg){:standalone}
+![Photo of a SparkFun RS232 to TTL converter board with a 9-pin RS-232 port.](SparkFun_RS232_Shifter.svg){:standalone}
 
 ## Meadow Serial Ports
 
