@@ -5,9 +5,9 @@ remarks: *content
 
 | LEDButton | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LEDButton) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Buttons.LEDButton/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Buttons.LEDButton.svg?label=Meadow.Foundation.Grove.Sensors.Buttons.LEDButton" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Buttons.LEDButton/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Buttons.LEDButton.svg?label=Meadow.Foundation.Grove.Sensors.Buttons.LEDButton" alt="NuGet Gallery for LEDButton" /></a> |
 
 ### Code Example
 

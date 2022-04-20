@@ -5,9 +5,9 @@ remarks: *content
 
 | LineFinder | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LineFinder) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Light.LineFinder/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Light.LineFinder.svg?label=Meadow.Foundation.Grove.Sensors.Light.LineFinder" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Light.LineFinder/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Light.LineFinder.svg?label=Meadow.Foundation.Grove.Sensors.Light.LineFinder" alt="NuGet Gallery for LineFinder" /></a> |
 
 ### Code Example
 

@@ -5,9 +5,9 @@ remarks: *content
 
 | Mag3110 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mag3110/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mag3110.svg?label=Meadow.Foundation.Sensors.Motion.Mag3110" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mag3110/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mag3110.svg?label=Meadow.Foundation.Sensors.Motion.Mag3110" alt="NuGet Gallery for Mag3110" /></a> |
 
 The **MAG3110** is a three axis magnetometer with an I2C interface. The magnetometer is capable of single and continuous readings.
 

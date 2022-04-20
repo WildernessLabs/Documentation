@@ -5,9 +5,9 @@ remarks: *content
 
 | Ht16k33 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ht16k33) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Ht16k33/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Ht16k33.svg?label=Meadow.Foundation.ICs.IOExpanders.Ht16k33" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ht16k33) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Ht16k33/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Ht16k33.svg?label=Meadow.Foundation.ICs.IOExpanders.Ht16k33" alt="NuGet Gallery for Ht16k33" /></a> |
 
 The **HT16K33** is an LED driver and key scanner. It can be used to drive up to 128 leds and is often found pre-assembled with 14-segment led displays. The HT16K33 is controlled via I2C.
 

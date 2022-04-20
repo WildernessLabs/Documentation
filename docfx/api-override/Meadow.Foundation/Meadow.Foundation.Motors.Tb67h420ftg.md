@@ -5,9 +5,9 @@ remarks: *content
 
 | Tb67h420ftg | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Motors.Tb67h420ftg) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Tb67h420ftg/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Tb67h420ftg.svg?label=Meadow.Foundation.Motors.Tb67h420ftg" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Tb67h420ftg) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Tb67h420ftg/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Tb67h420ftg.svg?label=Meadow.Foundation.Motors.Tb67h420ftg" alt="NuGet Gallery for Tb67h420ftg" /></a> |
 
 ### Code Example
 

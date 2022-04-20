@@ -5,9 +5,9 @@ remarks: *content
 
 | Tsl2591 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2591) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tsl2591/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tsl2591.svg?label=Meadow.Foundation.Sensors.Light.Tsl2591" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2591) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tsl2591/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tsl2591.svg?label=Meadow.Foundation.Sensors.Light.Tsl2591" alt="NuGet Gallery for Tsl2591" /></a> |
 
 ### Code Example
 

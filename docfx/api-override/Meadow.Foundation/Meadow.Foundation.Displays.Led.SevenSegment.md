@@ -5,9 +5,9 @@ remarks: *content
 
 | SevenSegment | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SevenSegment.svg?label=Meadow.Foundation.Displays.Led.SevenSegment" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SevenSegment.svg?label=Meadow.Foundation.Displays.Led.SevenSegment" alt="NuGet Gallery for SevenSegment" /></a> |
 
 A seven-segment display is a form of electronic display device used to show  decimal numbers. These displays are widely used in digital clocks, electronic meters, basic calculators, and other electronic devices that display numerical information.
 

@@ -5,9 +5,9 @@ remarks: *content
 
 | KeyboardWing | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/KeyboardWing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.KeyboardWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.KeyboardWing.svg?label=Meadow.Foundation.FeatherWings.KeyboardWing" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.KeyboardWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.KeyboardWing.svg?label=Meadow.Foundation.FeatherWings.KeyboardWing" alt="NuGet Gallery for KeyboardWing" /></a> |
 
 ### Code Example
 
