@@ -6,8 +6,8 @@ To search, use the filer on the hand navigation.
 
 ### Additional Meadow.Foundation API
 
-* **[Meadow.Foundation.FeatherWings](/docs/api/Meadow.Foundation.FeatherWings/)** - Beginning guide to working with Meadow.Foundation.
-* **[Meadow.Foundation.Grove](/docs/api/Meadow.Foundation.Grove/)** - Beginning guide to working with Meadow.Foundation.
+* **[Meadow.Foundation.FeatherWings](/api/Meadow.Foundation.FeatherWings/)** - Beginning guide to working with Meadow.Foundation.
+* **[Meadow.Foundation.Grove](/api/Meadow.Foundation.Grove/)** - Beginning guide to working with Meadow.Foundation.
 
 ### Other Documentation
 

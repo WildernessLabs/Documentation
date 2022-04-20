@@ -4,7 +4,7 @@
   homepage: /Netduino
 - name: Hardware + Circuits
   homepage: /Hardware
-- name: Electronics Tutorial
+- name: Electronics Tutorials
   homepage: /Hardware/Tutorials/Electronics
 - name: Meadow API
   homepage: /docs/api/Meadow/
