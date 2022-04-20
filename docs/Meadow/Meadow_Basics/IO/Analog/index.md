@@ -108,9 +108,9 @@ Finally, a small capacitor, typically `0.1µF`, can be used to "store" the volta
 
 #### Example Circuit
 
-For example, the following circuit illustrates these concepts in action. It's used as an analog solar intensity gauge that can read the current output of a solar panel (`6V_Solar`):
+For example, the following circuit illustrates these concepts in action. It uses as an analog solar intensity gauge that can read the current output of a solar panel (`6V_Solar`):
 
-![](AnalogInputCircuit.png)
+![Schematic showing a Meadow connected to a 6-volt solar panel on the 5-volt pin and a solar intensity value on analog pin 2 (A2) from a solar ADC input with voltage divider to provide the 3.3-volt source through a diode with a capacitor.](AnalogInputCircuit.png)
 
 Examining it, it has several important features:
 

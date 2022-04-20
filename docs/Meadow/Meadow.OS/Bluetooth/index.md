@@ -4,7 +4,7 @@ title: Bluetooth
 subtitle: Meadow b5.0 BLE Draft Implementation
 ---
 
-![](Bluetooth_Logo.svg)
+![Bluetooth logo](Bluetooth_Logo.svg)
 
 ## Bluetooth Low-Energy (BLE) Beta Feature Set
 
@@ -169,7 +169,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
 <table>
     <tr>
         <td style="width:50%">
-            <img src="../../../Common_Files/Hackster/BleRgbLed.gif"/>
+            <img alt="Video showing LED color selection from a phone app color slider and reflected on an RGB LED connected to a Meadow." src="../../../Common_Files/Hackster/BleRgbLed.gif"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -181,7 +181,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="../../../Common_Files/Hackster/BleServo.gif"/>
+            <img alt="Video showing servo rotation selection from a phone app slider and reflected on a servo connected to a Meadow." src="../../../Common_Files/Hackster/BleServo.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -193,7 +193,7 @@ You can look through these samples to use Bluetooth on Meadow with a Xamarin.For
     </tr>
     <tr>
         <td style="width:50%">
-            <img src="../../../Common_Files/Hackster/BleRover.gif"/>
+            <img alt="Video showing a remote controlled vehicle built with a Meadow and controlled by a phone app remote." src="../../../Common_Files/Hackster/BleRover.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">

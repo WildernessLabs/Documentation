@@ -92,7 +92,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
 
-![Primary USB port](./primary_usb.png){:standalone}
+![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png){:standalone}
 
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
@@ -136,7 +136,7 @@ Reset the device (push the RST button or disconnect and reconnect) and identify 
 
 * On Windows, serial port name looks something like *COM5*. To locate, open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
 
-![DeviceManagerPort](./ports.png){:standalone} 
+![Screenshot of Device Manager Ports section expanded showing the Meadow as USB Serial Device on port COM5.](./ports.png){:standalone} 
 
 **Mac**
 

@@ -15,23 +15,23 @@ Your kit should include:
  - 4 Screws
  - 8 Nuts
 
-![Meadow developer kit parts](./MeadowDev_Parts.jpg){:standalone}
+![Meadow developer kit parts: mounting protoboard, Meadow board with headers and mounting hardware, and small breadboard.](./MeadowDev_Parts.jpg){:standalone}
 
 ### Step 1 - Remove protective cover on the wooden base protoboard
 
 The Wilderness Labs prototype boards come with a protective skin cover to protect the surface from dents and scratches.
 
-![Protoboard with protective skin on](./MeadowDev_BaseStickerOn.jpg){:standalone}
+![Protoboard with protective skin on showing laser cutter burn marks on coating.](./MeadowDev_BaseStickerOn.jpg){:standalone}
 
 Peel the skin cover from the corners and remove the little bits in the logo and inside the letters. Your board should now look like this:
 
-![Protoboard with protective skin off](./MeadowDev_BaseStickerOff.jpg){:standalone}
+![Protoboard with protective skin off showing clean etched wood grain.](./MeadowDev_BaseStickerOff.jpg){:standalone}
 
 ### Step 2 - Solder Meadow header pins
 
 Now solder the blue female header pins to the Meadow board. 
 
-![Meadow header pins](./MeadowDev_HeaderPins.jpg){:standalone}
+![Photo of two Meadow boards, left showing raw header through-holes and one showing blue headers soldering through holes.](./MeadowDev_HeaderPins.jpg){:standalone}
 
 Check out the following video for instructions:
 
@@ -45,19 +45,19 @@ Meadow has battery connector on the right side of the device. For this reason, y
 
 Remove the plastic sticker cover under the breadboard and stick it to the protoboard as firm and straight as possible.
 
-![Protoboard and Meadow](./MeadowDev_Breadboard.jpg){:standalone}
+![Protoboard with breadboard mounted and Meadow adjacent with mounting hardware.](./MeadowDev_Breadboard.jpg){:standalone}
 
 Put each screw in the corners on the Meadow board with one nut so when placing it on the base it will sit flat and the soldered header pins wont get in contact with the base.
 
-![Meadow with screws and nuts](./MeadowDev_Screws.jpg){:standalone}
+![Meadow with mounting screws and nuts attached to board.](./MeadowDev_Screws.jpg){:standalone}
 
 Now you can finally fix Meadow through the protoboard and use the remaining 4 nuts to firmly hold them together.
 
-![Meadow developer kit](./MeadowDev_Final.jpg){:standalone}
+![Fully assembled Meadow developer kit with breadboard and Meadow board mounted.](./MeadowDev_Final.jpg){:standalone}
 
 Additionally, you could get metal or nylon fasteners so you screw them in the corners of the base board so it can sit flat on any surface.
 
-![Meadow with fasteners](./MeadowDev_Fasteners.jpg){:standalone}
+![Meadow developer kit with standoff fasteners attached to outer corners.](./MeadowDev_Fasteners.jpg){:standalone}
 
 Congratulations, your Meadow developer kit assembled and now you're ready to test the Meadow board on the next section. 
 
