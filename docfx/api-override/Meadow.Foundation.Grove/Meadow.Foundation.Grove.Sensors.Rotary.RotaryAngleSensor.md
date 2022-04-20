@@ -5,9 +5,9 @@ remarks: *content
 
 | RotaryAngleSensor | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/RotaryAngleSensor) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor.svg?label=Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor.svg?label=Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor" alt="NuGet Gallery for RotaryAngleSensor" /></a> |
 
 ### Code Example
 

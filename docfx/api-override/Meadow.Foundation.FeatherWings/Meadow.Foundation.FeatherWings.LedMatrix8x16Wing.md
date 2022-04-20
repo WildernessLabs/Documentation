@@ -5,9 +5,9 @@ remarks: *content
 
 | LedMatrix8x16Wing | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/LedMatrix8x16Wing) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.svg?label=Meadow.Foundation.FeatherWings.LedMatrix8x16Wing" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing.svg?label=Meadow.Foundation.FeatherWings.LedMatrix8x16Wing" alt="NuGet Gallery for LedMatrix8x16Wing" /></a> |
 
 ### Code Example
 

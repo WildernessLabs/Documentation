@@ -5,9 +5,9 @@ remarks: *content
 
 | Vl53l0x | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Vl53l0x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Vl53l0x.svg?label=Meadow.Foundation.Sensors.Distance.Vl53l0x" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Vl53l0x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Vl53l0x.svg?label=Meadow.Foundation.Sensors.Distance.Vl53l0x" alt="NuGet Gallery for Vl53l0x" /></a> |
                     <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Vl53l0x.svg?label=Meadow.Foundation.Sensors.Distance.Vl53l0x" 
                     style="width: auto; height: -webkit-fill-available;" /></a> |
 

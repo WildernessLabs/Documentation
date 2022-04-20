@@ -5,9 +5,9 @@ remarks: *content
 
 | IDxxLA | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Radio.Rfid.IDxxLA) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.svg?label=Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Radio.Rfid.IDxxLA) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.svg?label=Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA" alt="NuGet Gallery for IDxxLA" /></a> |
 
 ### Code Example
 

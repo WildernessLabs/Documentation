@@ -5,9 +5,9 @@ remarks: *content
 
 | Vc0706 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Vc0706) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Vc0706/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Vc0706.svg?label=Meadow.Foundation.Sensors.Camera.Vc0706" /></a> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Vc0706) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Vc0706/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Vc0706.svg?label=Meadow.Foundation.Sensors.Camera.Vc0706" alt="NuGet Gallery for Vc0706" /></a> |
 
 ```csharp
 Vc0706 camera;

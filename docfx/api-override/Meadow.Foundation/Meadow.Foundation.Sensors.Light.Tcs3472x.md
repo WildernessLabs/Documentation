@@ -5,9 +5,9 @@ remarks: *content
 
 | Tcs3472x | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tcs3472x) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tcs3472x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tcs3472x.svg?label=Meadow.Foundation.Sensors.Light.Tcs3472x" /></a> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tcs3472x) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tcs3472x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tcs3472x.svg?label=Meadow.Foundation.Sensors.Light.Tcs3472x" alt="NuGet Gallery for Tcs3472x" /></a> |
 
 ### Code Example
 

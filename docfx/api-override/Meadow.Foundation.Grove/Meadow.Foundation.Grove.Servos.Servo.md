@@ -5,9 +5,9 @@ remarks: *content
 
 | Servo | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Servo) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Servos.Servo/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Servos.Servo.svg?label=Meadow.Foundation.Grove.Servos.Servo" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Servos.Servo/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Servos.Servo.svg?label=Meadow.Foundation.Grove.Servos.Servo" alt="NuGet Gallery for Servo" /></a> |
 
 ### Code Example
 

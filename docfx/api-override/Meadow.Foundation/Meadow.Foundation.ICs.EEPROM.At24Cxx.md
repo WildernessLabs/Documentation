@@ -5,9 +5,9 @@ remarks: *content
 
 | At24Cxx | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.At24Cxx) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.EEPROM.At24Cxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.EEPROM.At24Cxx.svg?label=Meadow.Foundation.ICs.EEPROM.At24Cxx" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.At24Cxx) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.EEPROM.At24Cxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.EEPROM.At24Cxx.svg?label=Meadow.Foundation.ICs.EEPROM.At24Cxx" alt="NuGet Gallery for At24Cxx" /></a> |
 
 The **AT24Cxx** series of chips provide a mechanism for storing data that will survive a power outage or battery failure.  These EEPROMs are available in varying sizes and are accessible using the I2C interface.
 

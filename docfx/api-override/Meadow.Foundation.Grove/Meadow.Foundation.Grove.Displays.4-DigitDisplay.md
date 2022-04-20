@@ -5,9 +5,9 @@ remarks: *content
 
 | 4-DigitDisplay | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/4-DigitDisplay) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Displays.4-DigitDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Displays.4-DigitDisplay.svg?label=Meadow.Foundation.Grove.Displays.4-DigitDisplay" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Displays.4-DigitDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Displays.4-DigitDisplay.svg?label=Meadow.Foundation.Grove.Displays.4-DigitDisplay" alt="NuGet Gallery for 4-DigitDisplay" /></a> |
 
 ### Code Example
 
