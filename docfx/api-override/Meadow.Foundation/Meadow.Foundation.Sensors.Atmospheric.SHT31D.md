@@ -7,6 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31D/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31D.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31D" alt="NuGet Gallery for Sht31d" /></a> |
 
 The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
