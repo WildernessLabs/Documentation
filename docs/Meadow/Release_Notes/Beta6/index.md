@@ -65,26 +65,30 @@ This release adds support for the new Meadow Core Compute module with new `IMead
 
 ### Meadow.CLI
 
+[bunch of fixes]
+
 ### VS for Windows Extension
+
+[improved!]
 
 ### VS for Mac 2022 Extension
 
+[new!]
+
 ### VS for Mac 2019 Extension
 
-[TBD]
+[improved!]
 
 ## Known Issues
 
 ### Network
 
 * **Large Payloads** - [TBD - something about images >4k]
+* **MQTT** - [Use our MQTT.NET fork for now]
 
 ## Bug fixes
 
-
 * [#[num] Title](link)
-
-
 
 # b6.3
 
