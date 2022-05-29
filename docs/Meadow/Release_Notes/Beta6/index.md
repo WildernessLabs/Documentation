@@ -70,11 +70,11 @@ There are also several APIs that have been updated to take a `TimeSpan` to repre
 
 This release cleans up several interfaces in Meadow Contracts and adds a few new ones.
 
-* `ILed`, `IPwmLed` and `IButton` all have updates and add a few missing key properties
-* We've added an `ICamera` interface for camera peripherals
-* Analog joysticks - we replaced `JoystickPosition` with  `AnalogJoyStickPosition` and replace `IJoystickSensor` with `IAnalogJoystick`
-* Digital joysticks - added a new `IDigitalJoystick` interface to represent 4 or 8 way digital joysticks
-* Analog triggers - added a new `IAnalogTrigger` interface for analog triggers common on game console controllers
+* **`ILed`, `IPwmLed` and `IButton`** - Have updates and add a few missing key properties
+* **`ICamera`** - We've added an interface for camera peripherals
+* **Analog Joysticks** - We replaced `JoystickPosition` with `AnalogJoyStickPosition` and replace `IJoystickSensor` with `IAnalogJoystick`
+* **Digital Joysticks** - Added a new `IDigitalJoystick` interface to represent 4 or 8 way digital joysticks
+* **Analog Triggers** - Added a new `IAnalogTrigger` interface for analog triggers common on game console controllers
 
 #### Removal of Deprecated Methods and Properties
 
