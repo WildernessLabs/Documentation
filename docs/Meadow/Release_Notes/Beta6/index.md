@@ -8,14 +8,17 @@ subtitle: Release Notes
 
 This is a **huge** release and includes a TON of stability fixes and changes. With it we are _very_ close to Release-Candidate status.
 
+* WiFi / Network stability improvements!
+* Meadow supports Grove! - we've released drivers for 33 Seeed Studio Grove peripherals - see [Meadow.Foundation.Grove](https://github.com/wildernesslabs/meadow.foundation.grove)
+* Meadow supports MikroBus! - we've released drivers for 5 MikroBus peripherals - see [https://github.com/wildernesslabs/meadow.foundation.MikroBus)
+
 ## Updating
 
-This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. 
-
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
 
 ### Meadow.CLI
 
-Start by making sure you have the latest version of the CLI (0.15.2) by running:
+Start by making sure you have the latest version of the CLI (0.19.2) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -45,6 +48,35 @@ meadow flash erase
 
 ### Meadow.Core
 
+We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core Compute module which gave us an opportunity to review and rethink, and standardize some of our existing APIs.
+
+#### Battery Info
+
+We're continuing progress on the power APIs. This release we've added a new `BatteryInfo` class to Meadow.Contracts.
+
+#### Async Network APIs
+
+We've modernized some of our WiFi and network APIs by replacing blocking calls with `async` methods. `Device.WiFiAdapter.Scan()` is now awaitable.
+
+#### Unitization
+
+The release continues to update APIs to use unitized values instead of ints/floats/doubles. The I2C APIs now take a `Meadow.Units.Frequency` to set bus speed.
+
+There are also several APIs that have been updated to take a `TimeSpan` to represent a delay or duration.
+
+#### Improved peripheral interfaces
+
+This release cleans up several interfaces in Meadow Contracts and adds a few new ones.
+
+* `ILed`, `IPwmLed` and `IButton` all have updates and add a few missing key properties
+* We've added an `ICamera` interface for camera peripherals
+* Analog joysticks - we replaced `JoystickPosition` with  `AnalogJoyStickPosition` and replace `IJoystickSensor` with `IAnalogJoystick`
+* Digital joysticks - added a new `IDigitalJoystick` interface to represent 4 or 8 way digital joysticks
+* Analog triggers - added a new `IAnalogTrigger` interface for analog triggers common on game console controllers
+
+
+
+This release includes several interface additions and improvements in Meadow.Core.Contracts
 
 #### Removal of Deprecated Methods and Properties
 Many calls that were deprecated with an error in previous releases have been removed.  These were largely in the SPI and I2C bus implementations.
