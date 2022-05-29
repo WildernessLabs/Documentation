@@ -100,11 +100,14 @@ This is includes additions to Meadow.Foundation as well as two new driver collec
 
 #### New Meadow.Foundation drivers
 
-* `AS5013` I2C hall-sensor 2D mini joystick
-* `DS3502` I2C digital potentiometer (community request)
-* `HTU31D` I2C humidity and temperature sensor
-* `SHT4x` series of I2C humidity and temperature sensors
-* `VC0706` serial camera driver is complete!
+* `AS5013` - I2C hall-sensor 2D mini joystick
+* `DS3502` - I2C digital potentiometer (community request)
+* `HTU31D` - I2C humidity and temperature sensor
+* `SHT4x` - Series of I2C humidity and temperature sensors
+* `VC0706` - Serial camera driver is complete!
+
+New repos can be found here:
+
 * [Meadow.Foundation.Grove Repo](https://github.com/wildernesslabs/meadow.foundation.grove)
 * [Meadow.Foundation.mikroBUS Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
 * [Meadow.Foundation.FeatherWings Repo](https://github.com/wildernesslabs/meadow.foundation.Featherwings)
