@@ -96,7 +96,7 @@ This release adds support for the new Meadow Core Compute module with new `IMead
 
 Meadow Foundation continues to see new drivers and API improvements.
 
-This is includes additions to Meadow.Foundation as well as two new driver collections supporting Seeed Studio Grove peripherals and Mikroelectronika mikroBUS.
+This is includes additions to Meadow.Foundation as well as two new driver collections supporting [Seeed Studio Grove](https://wiki.seeedstudio.com/Grove_System/) peripherals and [Mikroelectronika mikroBUS](https://www.mikroe.com/mikrobus). We've also moved the FeatherWing drivers into their own repo.
 
 #### New Meadow.Foundation drivers
 
@@ -105,9 +105,9 @@ This is includes additions to Meadow.Foundation as well as two new driver collec
 * `HTU31D` I2C humidity and temperature sensor
 * `SHT4x` series of I2C humidity and temperature sensors
 * `VC0706` serial camera driver is complete!
-
-- [Meadow.Foundation.Grove Repo](https://github.com/wildernesslabs/meadow.foundation.grove)
-- [Meadow.Foundation.MikroBus Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
+* [Meadow.Foundation.Grove Repo](https://github.com/wildernesslabs/meadow.foundation.grove)
+* [Meadow.Foundation.mikroBUS Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
+* [Meadow.Foundation.FeatherWings Repo](https://github.com/wildernesslabs/meadow.foundation.Featherwings)
 
 ## Tooling
 
