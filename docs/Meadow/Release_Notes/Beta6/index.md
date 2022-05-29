@@ -6,11 +6,13 @@ subtitle: Release Notes
 
 # b6.4
 
-This is a **huge** release and includes a TON of stability fixes and changes. With it we are _very_ close to Release-Candidate status.
+This is a **huge** release and includes a TON of stability fixes and changes. With it we are _very_ close to Release-Candidate status. This release includes fixes across the entire stack, including:
 
-* WiFi / Network stability improvements!
-* Meadow supports Grove! - we've released drivers for 33 Seeed Studio Grove peripherals - see [Meadow.Foundation.Grove](https://github.com/wildernesslabs/meadow.foundation.grove)
-* Meadow supports MikroBus! - we've released drivers for 5 MikroBus peripherals - see [https://github.com/wildernesslabs/meadow.foundation.MikroBus)
+* **WiFi/Network Stability** - We've spent time fixing up issues on Azure IoT Hub integrations and MQTT.
+* **Meadow.Core** - Lots of cleanup and final v1.0 fixes/deprecations/etc.
+* **Tooling Improvements** - We've fixed a ton of papercuts in Meadow.CLI and smoothed out the IDE experience in our Visual Studio extensions. We've added Visual Studio for Mac 2022 support!
+* **Seeed Studio Grove Drivers** - We've published 33 Seeed Studio Grove peripheral drivers! 
+* **mikroBus Drivers** - We've released drivers for 5 mikroBUS peripherals with more coming. 
 
 ## Updating
 
@@ -103,6 +105,9 @@ This is includes additions to Meadow.Foundation as well as two new driver collec
 * `HTU31D` I2C humidity and temperature sensor
 * `SHT4x` series of I2C humidity and temperature sensors
 * `VC0706` serial camera driver is complete!
+
+- [Meadow.Foundation.Grove Repo](https://github.com/wildernesslabs/meadow.foundation.grove)
+- [Meadow.Foundation.MikroBus Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
 
 ## Tooling
 
