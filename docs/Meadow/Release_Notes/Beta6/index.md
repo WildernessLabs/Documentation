@@ -71,7 +71,11 @@ This release adds support for the new Meadow Core Compute module with new `IMead
 
 [improved!]
 
+[add screen shot of new dropdown stuff]
+
 ### VS for Mac 2022 Extension
+
+[Need screen shot!]
 
 W00t! We have a new extension for VS for Mac 2022. Everything but debugging works. Actually, debugging worked perfectly until the final VS release, and then it broke. Sooo... we're working with the VS team to figure out what happened. Likely we'll release an update out of band.
 
