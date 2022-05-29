@@ -11,8 +11,8 @@ This is a **huge** release and includes a TON of stability fixes and changes. Wi
 * **WiFi/Network Stability** - We've spent time fixing up issues on Azure IoT Hub integrations and MQTT.
 * **Meadow.Core** - Lots of cleanup and final v1.0 fixes/deprecations/etc.
 * **Tooling Improvements** - We've fixed a ton of papercuts in Meadow.CLI and smoothed out the IDE experience in our Visual Studio extensions. We've added Visual Studio for Mac 2022 support!
-* **Seeed Studio Grove Drivers** - We've published 33 Seeed Studio Grove peripheral drivers! 
-* **mikroBus Drivers** - We've released drivers for 5 mikroBUS peripherals with more coming. 
+* **Seeed Studio Grove Drivers** - We've published 33 Seeed Studio Grove peripheral drivers!
+* **mikroBus Drivers** - We've released drivers for 5 mikroBUS peripherals with more coming.
 
 ## Updating
 
@@ -48,13 +48,17 @@ meadow flash erase
 
 ## Meadow.OS
 
+We've made a number of stability and functionality improvements in MeadowOS to enable support for the Core Compute Module, better Power APIs, improved network APIs, etc. Most of this improvements enable features in the **Meadow.Core** section below.
+
+One improvement of note - Meadow will now detect the executing hardware at runtime and throws an exception if the hardware in the `MeadowApp` signature doesn't match.
+
 ### Meadow.Core
 
 We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core Compute module which gave us an opportunity to review and rethink, and standardize some of our existing APIs.
 
 #### Battery Info
 
-We're continuing progress on the power APIs. This release we've added a new `BatteryInfo` class to Meadow.Contracts.
+We're continuing progress on the power APIs. This release we've added a new `BatteryInfo` struct to Meadow.Contracts enabling the Battery API to return battery percentage, max voltage, etc.
 
 #### Async Network APIs
 
@@ -91,6 +95,7 @@ This release adds support for the new Meadow Core Compute module with new `IMead
 #### Other Changes
 
 * Added `IPin GetPin(string name)` method to `IMeadowDevice` interface
+* Fixed a bug where instantiating a PWM port would reset existing GPIO ports and cause an `InterruptGroupInUseException`
 
 ### Meadow.Foundation
 
@@ -104,6 +109,7 @@ This is includes additions to Meadow.Foundation as well as two new driver collec
 * `DS3502` - I2C digital potentiometer (community request)
 * `HTU31D` - I2C humidity and temperature sensor
 * `SHT4x` - Series of I2C humidity and temperature sensors
+* `WiiExtensionControllers` I2C Nintendo Wii extension controller driver
 * `VC0706` - Serial camera driver is complete!
 
 New repos can be found here:
