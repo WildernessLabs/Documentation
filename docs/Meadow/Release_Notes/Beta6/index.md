@@ -74,24 +74,25 @@ This release cleans up several interfaces in Meadow Contracts and adds a few new
 * Digital joysticks - added a new `IDigitalJoystick` interface to represent 4 or 8 way digital joysticks
 * Analog triggers - added a new `IAnalogTrigger` interface for analog triggers common on game console controllers
 
-
-
-This release includes several interface additions and improvements in Meadow.Core.Contracts
-
 #### Removal of Deprecated Methods and Properties
-Many calls that were deprecated with an error in previous releases have been removed.  These were largely in the SPI and I2C bus implementations.
+
+Many calls that were deprecated with a warning in previous releases have been removed. These were largely in the SPI and I2C bus implementations.
 
 #### Rename/Deprecation of `F7Micro` and `F7MicroV2`
 
 `F7Micro` and `F7Microv2` class names have been deprecated and replaced with the more-appropriately named `F7FeatherV1` and `F7FeatherV2` classes. Backward support still exists and will give a deprecation error.  Future versions will escalate this to an error, so it is recommended you migrate your code.
 
 #### Support for Core Compute Module
+
 This release adds support for the new Meadow Core Compute module with new `IMeadowDevice` and `IPinout` implementations.  This support required refactoring of several base classes and interfaces.
 
 #### Other Changes
-- Added `IPin GetPin(string name)` method to `IMeadowDevice` interface
+
+* Added `IPin GetPin(string name)` method to `IMeadowDevice` interface
 
 ### Meadow.Foundation
+
+Meadow Foundation contei
 
 ## Tooling
 
