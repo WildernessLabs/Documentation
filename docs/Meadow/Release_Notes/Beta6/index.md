@@ -143,7 +143,7 @@ W00t! We have a new extension for VS for Mac 2022. Everything but debugging work
 
 ## Bug fixes
 
-* [#[num] Title](link)
+* [#117 Getting local IP address fails](https://github.com/WildernessLabs/Meadow_Issues/issues/117) - Fixed.
 
 # b6.3
 
