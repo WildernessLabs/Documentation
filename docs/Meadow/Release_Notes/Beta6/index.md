@@ -10,10 +10,35 @@ This is a **huge** release and includes a TON of stability fixes and changes. Wi
 
 ## Updating
 
-This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version of the CLI (0.15.2) by running:
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. 
+
+
+### Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.15.2) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+### Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+If you experience any stability or deployment issues you may need to erase the flash on Meadow and then re-install the latest OS:
+
+```bash
+meadow flash erase
 ```
 
 ## Meadow.OS
