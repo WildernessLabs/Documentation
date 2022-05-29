@@ -3,20 +3,63 @@ layout: Meadow
 title: Meadow Beta 6
 subtitle: Release Notes
 ---
+
 # b6.4
 
-## Removal of Deprecated Methods and Properties
+This is a **huge** release and includes a TON of stability fixes and changes. With it we are _very_ close to Release-Candidate status.
+
+## Updating
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions. Start by making sure you have the latest version of the CLI (0.15.2) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+## Meadow.OS
+
+### Meadow.Core
+
+
+#### Removal of Deprecated Methods and Properties
 Many calls that were deprecated with an error in previous releases have been removed.  These were largely in the SPI and I2C bus implementations.
 
-## Rename/Deprecation of `F7Micro` and `F7MicroV2`
+#### Rename/Deprecation of `F7Micro` and `F7MicroV2`
 
 `F7Micro` and `F7Microv2` class names have been deprecated and replaced with the more-appropriately named `F7FeatherV1` and `F7FeatherV2` classes. Backward support still exists and will give a deprecation error.  Future versions will escalate this to an error, so it is recommended you migrate your code.
 
-## Core Compute Module
+#### Support for Core Compute Module
 This release adds support for the new Meadow Core Compute module with new `IMeadowDevice` and `IPinout` implementations.  This support required refactoring of several base classes and interfaces.
 
-## Other Changes
+#### Other Changes
 - Added `IPin GetPin(string name)` method to `IMeadowDevice` interface
+
+### Meadow.Foundation
+
+## Tooling
+
+### Meadow.CLI
+
+### VS for Windows Extension
+
+### VS for Mac 2022 Extension
+
+### VS for Mac 2019 Extension
+
+[TBD]
+
+## Known Issues
+
+### Network
+
+* **Large Payloads** - [TBD - something about images >4k]
+
+## Bug fixes
+
+
+* [#[num] Title](link)
+
+
 
 # b6.3
 
