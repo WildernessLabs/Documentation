@@ -66,20 +66,3 @@ protected async Task ReadMoisture()
 | RX     | D01        |
 | TX     | D00        |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

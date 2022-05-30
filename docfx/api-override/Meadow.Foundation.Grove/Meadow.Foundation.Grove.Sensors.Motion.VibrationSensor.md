@@ -37,18 +37,3 @@ public MeadowApp()
 | RX     | D01        |
 | TX     | D00        |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
