@@ -66,18 +66,3 @@ protected async Task Read()
 | RX     | D01        |
 | TX     | D00        |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

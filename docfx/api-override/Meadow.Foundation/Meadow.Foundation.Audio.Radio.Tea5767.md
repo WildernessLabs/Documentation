@@ -65,8 +65,3 @@ It should look like the following diagram:
 
 <img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
-

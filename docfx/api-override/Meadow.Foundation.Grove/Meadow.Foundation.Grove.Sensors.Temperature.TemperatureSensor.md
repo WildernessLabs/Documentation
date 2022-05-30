@@ -66,19 +66,3 @@ protected async Task Read()
 | VCC    | 3.3V       |
 | RX     | D01        |
 | TX     | D00        |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

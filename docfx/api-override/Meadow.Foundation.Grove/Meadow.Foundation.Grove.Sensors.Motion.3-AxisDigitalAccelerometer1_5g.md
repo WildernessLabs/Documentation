@@ -60,4 +60,3 @@ To wire a Yx5300 to your Meadow board, connect the following:
 | VCC    | 3.3V       |
 | RX     | D01        |
 | TX     | D00        |
-

@@ -65,7 +65,3 @@ If your display does not include any of the above pins, they can be omitted. Pas
 
 <img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.Il0373/ePaper_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
