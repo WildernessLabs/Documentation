@@ -118,34 +118,12 @@ New repos can be found here:
 * [Meadow.Foundation.mikroBUS Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
 * [Meadow.Foundation.FeatherWings Repo](https://github.com/wildernesslabs/meadow.foundation.Featherwings)
 
-## Tooling
-
-### Meadow.CLI
-
-[bunch of fixes]
-
-### VS for Windows Extension
-
-[improved!]
-
-[add screen shot of new dropdown stuff]
-
-### VS for Mac 2022 Extension
-
-[Need screen shot!]
-
-W00t! We have a new extension for VS for Mac 2022. Everything but debugging works. Actually, debugging worked perfectly until the final VS release, and then it broke. Sooo... we're working with the VS team to figure out what happened. Likely we'll release an update out of band.
-
-### VS for Mac 2019 Extension
-
-[improved!]
-
 ## Known Issues
 
 ### Network
 
-* **Large Payloads** - [TBD - something about images >4k]
-* **MQTT** - [Use our MQTT.NET fork for now]
+* **Large Payloads** - Meadow is limited to 4k payloads when POSTing data to a REST endpoint
+* **MQTT** - Some customization is required in the MQTT nuget package - Wilderness Labs will be publishing a custom MQTT package for Meadow very soon
 
 ## Bug fixes
 
