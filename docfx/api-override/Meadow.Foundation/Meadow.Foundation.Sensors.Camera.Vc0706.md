@@ -67,7 +67,6 @@ public MeadowApp()
 ```csharp
 readonly Vc0706 camera;
 
-//Uses SimpleJpegDecoder package for jpeg decoding
 public MeadowApp()
 {
     Console.WriteLine("Initialize hardware...");
@@ -93,7 +92,7 @@ async Task TakePicture()
     using var jpegStream = await camera.GetPhotoStream();
 
     var jpeg = new JpegImage(jpegStream);
-    Console.WriteLine($"{jpeg.Width}, {jpeg.Height}");
+    Console.WriteLine($"Image decoded - width:{jpeg.Width}, height:{jpeg.Height}");
 }
 
 ```
