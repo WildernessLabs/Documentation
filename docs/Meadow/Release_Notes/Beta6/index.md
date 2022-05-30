@@ -4,6 +4,153 @@ title: Meadow Beta 6
 subtitle: Release Notes
 ---
 
+# b6.4
+
+This is a **huge** release and includes a TON of stability fixes and changes. With it we are _very_ close to Release-Candidate status. This release includes fixes across the entire stack, including:
+
+* **WiFi/Network Stability** - We've spent time fixing up issues on Azure IoT Hub integrations and MQTT.
+* **Meadow.Core** - Lots of cleanup and final v1.0 fixes/deprecations/etc.
+* **Tooling Improvements** - We've fixed a ton of papercuts in Meadow.CLI and smoothed out the IDE experience in our Visual Studio extensions. We've added Visual Studio for Mac 2022 support!
+* **Seeed Studio Grove Drivers** - We've published 33 Seeed Studio Grove peripheral drivers!
+* **mikroBus Drivers** - We've released drivers for 5 mikroBUS peripherals with more coming.
+
+## Updating
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+### Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.19.2) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+### Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+If you experience any stability or deployment issues you may need to erase the flash on Meadow and then re-install the latest OS:
+
+```bash
+meadow flash erase
+```
+
+## Meadow.OS
+
+We've made a number of stability and functionality improvements in MeadowOS to enable support for the Core Compute Module, better Power APIs, improved network APIs, etc. Most of this improvements enable features in the **Meadow.Core** section below.
+
+One improvement of note - Meadow will now detect the executing hardware at runtime and throws an exception if the hardware in the `MeadowApp` signature doesn't match.
+
+### Meadow.Core
+
+We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core Compute module which gave us an opportunity to review and rethink, and standardize some of our existing APIs.
+
+#### Battery Info
+
+We're continuing progress on the power APIs. This release we've added a new `BatteryInfo` struct to Meadow.Contracts enabling the Battery API to return battery percentage, max voltage, etc.
+
+#### Async Network APIs
+
+We've modernized some of our WiFi and network APIs by replacing blocking calls with `async` methods. `Device.WiFiAdapter.Scan()` is now awaitable.
+
+#### Unitization
+
+The release continues to update APIs to use unitized values instead of ints/floats/doubles. The I2C APIs now take a `Meadow.Units.Frequency` to set bus speed.
+
+There are also several APIs that have been updated to take a `TimeSpan` to represent a delay or duration.
+
+#### Improved peripheral interfaces
+
+This release cleans up several interfaces in Meadow Contracts and adds a few new ones.
+
+* **`ILed`, `IPwmLed` and `IButton`** - Have updates and add a few missing key properties
+* **`ICamera`** - We've added an interface for camera peripherals
+* **Analog Joysticks** - We replaced `JoystickPosition` with `AnalogJoyStickPosition` and replace `IJoystickSensor` with `IAnalogJoystick`
+* **Digital Joysticks** - Added a new `IDigitalJoystick` interface to represent 4 or 8 way digital joysticks
+* **Analog Triggers** - Added a new `IAnalogTrigger` interface for analog triggers common on game console controllers
+
+#### Removal of Deprecated Methods and Properties
+
+Many calls that were deprecated with a warning in previous releases have been removed. These were largely in the SPI and I2C bus implementations.
+
+#### Rename/Deprecation of `F7Micro` and `F7MicroV2`
+
+`F7Micro` and `F7Microv2` class names have been deprecated and replaced with the more-appropriately named `F7FeatherV1` and `F7FeatherV2` classes. Backward support still exists and will give a deprecation error.  Future versions will escalate this to an error, so it is recommended you migrate your code.
+
+#### Support for the Core Compute Module
+
+This release adds support for the new Meadow Core Compute module with new `IMeadowDevice` and `IPinout` implementations. This support required refactoring of several base classes and interfaces.
+
+#### Other Changes
+
+* Added `IPin GetPin(string name)` method to `IMeadowDevice` interface
+* Fixed a bug where instantiating a PWM port would reset existing GPIO ports and cause an `InterruptGroupInUseException`
+
+### Meadow.Foundation
+
+Meadow Foundation continues to see new drivers and API improvements.
+
+This is includes additions to Meadow.Foundation as well as two new driver collections supporting [Seeed Studio Grove](https://wiki.seeedstudio.com/Grove_System/) peripherals and [Mikroelectronika mikroBUS](https://www.mikroe.com/mikrobus). We've also moved the FeatherWing drivers into their own repo.
+
+#### New Meadow.Foundation drivers
+
+* `AS5013` - I2C hall-sensor 2D mini joystick
+* `DS3502` - I2C digital potentiometer (community request)
+* `HTU31D` - I2C humidity and temperature sensor
+* `SHT4x` - Series of I2C humidity and temperature sensors
+* `WiiExtensionControllers` I2C Nintendo Wii extension controller driver
+* `VC0706` - Serial camera driver is complete!
+
+New repos can be found here:
+
+* [Meadow.Foundation.Grove Repo](https://github.com/wildernesslabs/meadow.foundation.grove)
+* [Meadow.Foundation.mikroBUS Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
+* [Meadow.Foundation.FeatherWings Repo](https://github.com/wildernesslabs/meadow.foundation.Featherwings)
+
+## Tooling
+
+### Meadow.CLI
+
+[bunch of fixes]
+
+### VS for Windows Extension
+
+[improved!]
+
+[add screen shot of new dropdown stuff]
+
+### VS for Mac 2022 Extension
+
+[Need screen shot!]
+
+W00t! We have a new extension for VS for Mac 2022. Everything but debugging works. Actually, debugging worked perfectly until the final VS release, and then it broke. Sooo... we're working with the VS team to figure out what happened. Likely we'll release an update out of band.
+
+### VS for Mac 2019 Extension
+
+[improved!]
+
+## Known Issues
+
+### Network
+
+* **Large Payloads** - [TBD - something about images >4k]
+* **MQTT** - [Use our MQTT.NET fork for now]
+
+## Bug fixes
+
+* [#117 Getting local IP address fails](https://github.com/WildernessLabs/Meadow_Issues/issues/117) - Fixed.
+
 # b6.3
 
 This is fast follow to beta 6.2 with some much anticipated network stability improvements. We tested well beyond 3 million! HTTP requests with no degradation in performance! And this includes the Meadow Foundation Web Server - [Maple](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/).

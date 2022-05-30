@@ -5,9 +5,9 @@ remarks: *content
 
 | CharacterDisplay | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Lcd.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Lcd.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" alt="NuGet Gallery for CharacterDisplay" /></a> |
 
 
 The **CharacterDisplay** class represents a multiline liquid crystal character display.
@@ -25,7 +25,8 @@ public MeadowApp()
 {
     //InitGpio();
     //InitGpioWithPWM();
-    InitI2c();
+    //InitI2c();
+    InitGrove();
 
     TestCharacterDisplay();
 
@@ -79,6 +80,19 @@ void InitI2c()
     );
 }
 
+void InitGrove()
+{
+    Console.WriteLine("InitGrove...");
+
+    display = new CharacterDisplay
+    (
+        i2cBus: Device.CreateI2cBus(I2cBusSpeed.Standard),
+        address: (byte)I2cCharacterDisplay.Addresses.Grove,
+        rows: 2, columns: 16,
+        isGroveDisplay: true
+    );
+}
+
 void TestCharacterDisplay() 
 {
     Console.WriteLine("TestCharacterDisplay...");
@@ -117,7 +131,7 @@ void TestCharacterDisplay()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/Displays.Lcd.CharacterDisplay_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay/Samples/CharacterDisplay_Sample)
 
 ### Wiring Example
 

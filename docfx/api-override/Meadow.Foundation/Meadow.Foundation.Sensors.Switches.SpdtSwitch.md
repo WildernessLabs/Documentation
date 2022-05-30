@@ -3,11 +3,12 @@ uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
 remarks: *content
 ---
 
-| SpdtSwitch  |             |
-|-------------|-------------|
-| Status      | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Sensors/Switches)  |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| SpdtSwitch | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Sensors/Switches) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for SpdtSwitch" /></a> |
 
 **SpdtSwitch** represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that closes a circuit to either ground/common or high depending on position.
 
@@ -40,7 +41,28 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
 
+### Code Example
+
+```csharp
+protected SpdtSwitch spdtSwitch;
+
+public MeadowApp()
+{
+    Console.WriteLine("Initializing...");
+
+    spdtSwitch = new SpdtSwitch(Device.CreateDigitalInputPort(Device.Pins.D15, InterruptMode.EdgeBoth, ResistorMode.InternalPullDown));
+    spdtSwitch.Changed += (s, e) =>
+    {
+        Console.WriteLine(spdtSwitch.IsOn ? "Switch is on" : "Switch is off");
+    };
+
+    Console.WriteLine("SpdtSwitch ready...");
+}
+
+```
+
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Sensors.Switches.SpdtSwitch_Sample)
+
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SpdtSwitch_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

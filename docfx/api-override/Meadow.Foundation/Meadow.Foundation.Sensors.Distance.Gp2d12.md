@@ -5,9 +5,10 @@ remarks: *content
 
 | Gp2d12 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Gp2d12/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Gp2d12.svg?label=Meadow.Foundation.Sensors.Distance.Gp2d12" /></a> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Gp2d12/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Gp2d12.svg?label=Meadow.Foundation.Sensors.Distance.Gp2d12" alt="NuGet Gallery for Gp2d12" /></a> |
 
 ```csharp
 Gp2d12 sensor;
@@ -99,5 +100,5 @@ protected async Task ReadSensor()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12/Samples/Sensors.Distance.Gp2d12_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12/Samples/Gp2d12_Sample)
 

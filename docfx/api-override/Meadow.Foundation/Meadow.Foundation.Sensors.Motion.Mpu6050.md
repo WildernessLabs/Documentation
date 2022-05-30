@@ -5,9 +5,10 @@ remarks: *content
 
 | Mpu6050 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mpu6050/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mpu6050.svg?label=Meadow.Foundation.Sensors.Motion.Mpu6050" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mpu6050/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mpu6050.svg?label=Meadow.Foundation.Sensors.Motion.Mpu6050" alt="NuGet Gallery for Mpu6050" /></a> |
 
 ### Code Example
 
@@ -33,7 +34,7 @@ public MeadowApp()
         Console.WriteLine($"Temp: {result.New.Temperature?.Celsius:N2}C");
     };
 
-    // Example that uses an IObersvable subscription to only be notified when the filter is satisfied
+    // Example that uses an IObservable subscription to only be notified when the filter is satisfied
     var consumer = Mpu6050.CreateObserver(
         handler: result => Console.WriteLine($"Observer: [x] changed by threshold; new [x]: X:{result.New.Acceleration3D?.X:N2}, old: X:{result.Old?.Acceleration3D?.X:N2}"),
         // only notify if there's a greater than 1G change in the Z direction
@@ -69,5 +70,5 @@ protected async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050/Samples/Sensors.Motion.Mpu6050_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050/Samples/Mpu6050_Sample)
 

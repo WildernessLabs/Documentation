@@ -5,9 +5,10 @@ remarks: *content
 
 | Si1145 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Si1145/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Si1145.svg?label=Meadow.Foundation.Sensors.Light.Si1145" /></a> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Si1145/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Si1145.svg?label=Meadow.Foundation.Sensors.Light.Si1145" alt="NuGet Gallery for Si1145" /></a> |
 
 The **SI1145** is a low power infrared, ultraviolet and ambient light sensor with an I2C interface.
 
@@ -35,7 +36,7 @@ public MeadowApp()
 
     sensor = new Si1145(Device.CreateI2cBus());
 
-    // Example that uses an IObersvable subscription to only be notified when the filter is satisfied
+    // Example that uses an IObservable subscription to only be notified when the filter is satisfied
     var consumer = Si1145.CreateObserver(
         handler: result => Console.WriteLine($"Observer: filter satisifed: {result.New.VisibleLight?.Lux:N2}Lux, old: {result.Old?.VisibleLight?.Lux:N2}Lux"),
    
@@ -75,7 +76,7 @@ protected async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Samples/Sensors.Light.Si1145_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Samples/Si1145_Sample)
 
 ### Wiring Example
 

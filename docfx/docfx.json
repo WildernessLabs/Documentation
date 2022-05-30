@@ -21,23 +21,61 @@
           ],
           "exclude": [
             "/Source/Meadow.Foundation.Core.Samples/**",
-            "/Source/Meadow.Foundation.Peripherals/**/Driver/**/bin/**",
-            "/Source/Meadow.Foundation.Peripherals/**/Driver/**/obj/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Driver/bin/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Driver/obj/**",
             "/Source/Meadow.Foundation.Peripherals/**/Datasheet/**",
-            "/Source/Meadow.Foundation.Peripherals/**/Sample/**_Sample/**",
-            "/Source/Meadow.Foundation.Peripherals/**/Samples/**_Sample/**",
-            "/Source/Meadow.Foundation.Peripherals/FeatherWings.**/**",
-            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/**/Driver/**/bin/**",
-            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/**/Driver/**/obj/**",
-            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/**/Samples/**",
-            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/**/bin/**",
-            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/**/obj/**",
-            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Samples/**"
+            "/Source/Meadow.Foundation.Peripherals/**/Sample/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Samples/**",
+            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Tca9548A/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/bin/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/obj/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Sample/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Samples/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Tests/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Utilities/**"
           ],
           "src": "../../Meadow.Foundation"
         }
       ],
       "dest": "api/Meadow.Foundation",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/**/Sample/**",
+            "/Source/**/Samples/**",
+            "/Source/**/Driver/bin/**",
+            "/Source/**/Driver/obj/**"
+          ],
+          "src": "../../Meadow.Foundation.Grove"
+        }
+      ],
+      "dest": "api/Meadow.Foundation.Grove",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/**/Sample/**",
+            "/Source/**/Samples/**",
+            "/Source/**/Driver/bin/**",
+            "/Source/**/Driver/obj/**"
+          ],
+          "src": "../../Meadow.Foundation.FeatherWings"
+        }
+      ],
+      "dest": "api/Meadow.Foundation.FeatherWings",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -48,7 +86,9 @@
         "files": [
           "api/**.yml",
           "api/Meadow/index.md",
-          "api/Meadow.Foundation/index.md"
+          "api/Meadow.Foundation/index.md",
+          "api/Meadow.Foundation.FeatherWings/index.md",
+          "api/Meadow.Foundation.Grove/index.md"
         ]
       },
       {

@@ -3,11 +3,12 @@ uid: Meadow.Foundation.Leds.PwmLed
 remarks: *content
 ---
 
-| PwmLed      |             |
-|-------------|-------------|
-| Status      | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core/Leds/)  |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| PwmLed | |
+|--------|--------|
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Leds) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for PwmLed" /></a> |
 
 **PwmLed* represents an LED whose voltage (and brightness) is controlled by the duty-cycle of a PWM signal. It can be used both with Leds that have been current limited with in-series resistors, or Leds without resistors.
 
@@ -19,35 +20,105 @@ To use with an LED that has a resistor in series, pass `0.0` or `TypicalForwardV
 
 ### Code Example
 
-The following example alternates between blinking and pulsing an LED:
-
 ```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
+PwmLedBarGraph pwmLedBarGraph;
+
+public MeadowApp()
 {
-    public MeadowApp()
+    Console.WriteLine("Initializing...");
+
+    // Using an array of Pins that support PWM (D02 - D13)
+    IPin[] pins =
     {
-        // create a new PwmLed on pin 8
-        var pwmLed = new PwmLed(
-            Device.CreatePwmPort(Device.Pins.D08),
-            TypicalForwardVoltage.Green
-        );
+         Device.Pins.D11,
+         Device.Pins.D10,
+         Device.Pins.D09,
+         Device.Pins.D08,
+         Device.Pins.D07,
+         Device.Pins.D06,
+         Device.Pins.D05,
+         Device.Pins.D04,
+         Device.Pins.D03,
+         Device.Pins.D02
+    };
+    pwmLedBarGraph = new PwmLedBarGraph(Device, pins, new Voltage(3.3));
 
-        // alternate between blinking and pulsing the LED 
-        while (true)
+    TestPwmLedBarGraph();
+}
+
+protected void TestPwmLedBarGraph()
+{
+    Console.WriteLine("TestLedBarGraph...");
+
+    decimal percentage = 0;
+
+    while (true)
+    {
+        Console.WriteLine("Turning them on using SetLed...");
+        for (int i = 0; i < pwmLedBarGraph.Count; i++)
         {
-            pwmLed.StartBlink();
-            Thread.Sleep(5000); // 5 seconds
-
-            pwmLed.StartPulse(lowBrightness: 0.2F);
-            Thread.Sleep(10000); // 10 seconds
+            pwmLedBarGraph.SetLed(i, true);
+            Thread.Sleep(300);
         }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Turning them off using SetLed...");
+        for (int i = pwmLedBarGraph.Count - 1; i >= 0; i--)
+        {
+            pwmLedBarGraph.SetLed(i, false);
+            Thread.Sleep(300);
+        }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Turning them on using Percentage...");
+        while (percentage < 1)
+        {
+            percentage += 0.01m;
+            pwmLedBarGraph.Percentage = (float) Math.Min(1.0m, percentage);
+            Thread.Sleep(100);
+        }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Turning them off using Percentage...");
+        while (percentage > 0)
+        {
+            percentage -= 0.01m;
+            pwmLedBarGraph.Percentage = (float)Math.Max(0.0m, percentage);
+            Thread.Sleep(100);
+        }
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Bar blinking on and off...");
+        pwmLedBarGraph.StartBlink();
+        Thread.Sleep(3000);
+        pwmLedBarGraph.Stop();
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Bar blinking with high and low brightness...");
+        pwmLedBarGraph.StartBlink(TimeSpan.FromMilliseconds(500), TimeSpan.FromMilliseconds(500), 1f, 0.25f);
+        Thread.Sleep(3000);
+        pwmLedBarGraph.Stop();
+
+        Thread.Sleep(1000);
+
+        Console.WriteLine("Bar pulsing...");
+        pwmLedBarGraph.StartPulse();
+        Thread.Sleep(3000);
+        pwmLedBarGraph.Stop();
+
+        Thread.Sleep(1000);
     }
 }
+
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Core.Samples) 
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Leds.PwmLedBarGraph_Sample)
 
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
