@@ -7,7 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalCompass) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass.cs/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass.cs.svg?label=Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass.cs" alt="NuGet Gallery for 3-AxisDigitalCompass" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass.svg?label=Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass" alt="NuGet Gallery for 3-AxisDigitalCompass" /></a> |
 
 ### Code Example
 

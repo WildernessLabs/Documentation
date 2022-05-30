@@ -12,28 +12,26 @@ remarks: *content
 ### Code Example
 
 ```csharp
-"
+public MeadowApp()
+{
+    Console.WriteLine("Initializing");
 
-        public MeadowApp()
-        {
-            Console.WriteLine("Initializing");
+    var sensor = new ThreeAxisDigitalAccelerometer16g(Device.CreateI2cBus());
+    sensor.SetPowerState(false, false, true, false, ThreeAxisDigitalAccelerometer16g.Frequencies.TwoHz);
 
-            var sensor = new ThreeAxisDigitalAccelerometer16g(Device.CreateI2cBus());
-            sensor.SetPowerState(false, false, true, false, ThreeAxisDigitalAccelerometer16g.Frequencies.TwoHz);
+    // classical .NET events can also be used:
+    sensor.Updated += (sender, result) =>
+    {
+        Console.WriteLine($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
+            $"Y:{result.New.Y.MetersPerSecondSquared:N2}," +
+            $"Z:{result.New.Z.MetersPerSecondSquared:N2} (m/s^2)]");
+    };
 
-            // classical .NET events can also be used:
-            sensor.Updated += (sender, result) =>
-            {
-                Console.WriteLine($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
-                    $"Y:{result.New.Y.MetersPerSecondSquared:N2}," +
-                    $"Z:{result.New.Z.MetersPerSecondSquared:N2} (m/s^2)]");
-            };
+    // start updating
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+}
 
-            // start updating
-            sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
-        }
-
-        ```
+```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer_16g/Sample/3-AxisDigitalAccelerometer_16g_Sample)
 

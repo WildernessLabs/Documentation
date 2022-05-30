@@ -33,5 +33,5 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/LedMatrix8x16Wing)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/LedMatrix8x16Wing/Samples/LedMatrix8x16Wing_Sample)
 

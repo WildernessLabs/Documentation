@@ -36,12 +36,12 @@ void Initialize()
     joystick = new ThumbJoystick(
         Device.CreateAnalogInputPort(Device.Pins.A01, 1, TimeSpan.FromMilliseconds(10), new Voltage(3.3)),
         Device.CreateAnalogInputPort(Device.Pins.A02, 1, TimeSpan.FromMilliseconds(10), new Voltage(3.3)),
-        null, false);
+        null);
 
     Console.WriteLine("Hardware initialization complete.");
 }
 
-void JoystickUpdated(object sender, IChangeResult<JoystickPosition> e)
+private void JoystickUpdated(object sender, IChangeResult<AnalogJoystickPosition> e)
 {
     Console.WriteLine($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
     Console.WriteLine($"Digital position: {joystick.DigitalPosition}");
