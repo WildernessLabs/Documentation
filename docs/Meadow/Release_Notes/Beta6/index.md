@@ -10,7 +10,7 @@ This is a **huge** release and includes a TON of stability fixes and changes. Wi
 
 * **WiFi/Network Stability** - We've spent time fixing up issues on Azure IoT Hub integrations and MQTT.
 * **Meadow.Core** - Lots of cleanup and final v1.0 fixes/deprecations/etc.
-* **Tooling Improvements** - We've fixed a ton of papercuts in Meadow.CLI and smoothed out the IDE experience in our Visual Studio extensions. We've added Visual Studio for Mac 2022 support!
+* **Tooling Improvements** - We've fixed a number of papercuts in Meadow.CLI and smoothed out the IDE experience in our Visual Studio extensions. And we've added Visual Studio for Mac 2022 support!
 * **Seeed Studio Grove Drivers** - We've published 33 Seeed Studio Grove peripheral drivers!
 * **mikroBus Drivers** - We've released drivers for 5 mikroBUS peripherals with more coming.
 
@@ -20,7 +20,7 @@ This is a full stack release requiring an OS update, new nuget packages, a new M
 
 ### Meadow.CLI
 
-Start by making sure you have the latest version of the CLI (0.19.2) by running:
+Start by making sure you have the latest version of the CLI (0.19.3) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -48,13 +48,13 @@ meadow flash erase
 
 ## Meadow.OS
 
-We've made a number of stability and functionality improvements in MeadowOS to enable support for the Core Compute Module, better Power APIs, improved network APIs, etc. Most of this improvements enable features in the **Meadow.Core** section below.
+We've made a number of stability and functionality improvements in MeadowOS to enable support for the Core Compute Module, better Power APIs, improved network APIs, etc. Most of these improvements enable features in the **Meadow.Core** section below.
 
 One improvement of note - Meadow will now detect the executing hardware at runtime and throws an exception if the hardware in the `MeadowApp` signature doesn't match.
 
 ### Meadow.Core
 
-We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core Compute module which gave us an opportunity to review and rethink, and standardize some of our existing APIs.
+We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core Compute module which gave us an opportunity to review, rethink, and standardize some of our existing APIs.
 
 #### Battery Info
 
@@ -101,7 +101,7 @@ This release adds support for the new Meadow Core Compute module with new `IMead
 
 Meadow Foundation continues to see new drivers and API improvements.
 
-This is includes additions to Meadow.Foundation as well as two new driver collections supporting [Seeed Studio Grove](https://wiki.seeedstudio.com/Grove_System/) peripherals and [Mikroelectronika mikroBUS](https://www.mikroe.com/mikrobus). We've also moved the FeatherWing drivers into their own repo.
+This includes additions to Meadow.Foundation as well as two new driver collections supporting [Seeed Studio Grove](https://wiki.seeedstudio.com/Grove_System/) peripherals and [Mikroelectronika mikroBUS](https://www.mikroe.com/mikrobus). We've also moved the FeatherWing drivers into their own repo.
 
 #### New Meadow.Foundation drivers
 
@@ -117,6 +117,17 @@ New repos can be found here:
 * [Meadow.Foundation.Grove Repo](https://github.com/wildernesslabs/meadow.foundation.grove)
 * [Meadow.Foundation.mikroBUS Repo](https://github.com/wildernesslabs/meadow.foundation.MikroBus)
 * [Meadow.Foundation.FeatherWings Repo](https://github.com/wildernesslabs/meadow.foundation.Featherwings)
+
+### Meadow.CLI
+
+* **.NET 6.0 support!** - This enables support for M1/M2 Apple Macs 
+* **version params** - Several commands now accept a `--version` (`-v`) param allowing you to specify which OS version you want to flash to Meadow 
+* **Improved error handling** - This includes fixing a silent failure when attempting to install dfu-util on Windows
+* **Improved error messages** - The CLI is now properly handling several unhandled exceptions and error messages have been updated for clarity
+
+### Visual Studio extensions
+* **Port selector in Windows** - The Meadow extensions for Visual Studio 2019 and 2022 now have a Meadow port selector widget on the toolbar - this greatly streamlines selecting the Meadow COM port
+* **Visual Studio for Mac 2022** - Now that VS for Mac 2022 has "gone gold" and enabled extensions we're now able to support the latest Mac IDE
 
 ## Known Issues
 
