@@ -18,9 +18,9 @@ Usually, electrons jump from negatively charged atoms to positively charged loca
 
 This movement of electrons and holes is what we call _electrical current_.
 
-Hole flow was first observed and measured in the 1740s by [Benjamin Franklin](https://en.wikipedia.org/wiki/Benjamin_Franklin), who also named the charges as positive and negative.
+Hole flow was first observed and measured in the 1740s by [Benjamin Franklin](https://en.wikipedia.org/wiki/Benjamin_Franklin), who also named the charges as positive and negative. Benjamin Franklin's work kickstarted the practical use of electricity, and a big part of electrical theory and electrical engineering were based on it. 
 
-Benjamin Franklin's work kickstarted the practical use of electricity, and a big part of electrical theory and electrical engineering were based on it. Diagrams like the following that use the hole-flow convention are a bit misleading because they imply electrons flowing from a positive charge to a negative charge:
+Many diagrams like the following use the hole-flow convention. These diagrams are a bit misleading because they imply electrons flowing from a positive charge to a negative charge:
 
 <!-- MarkT: are all 3 arrows on the image necessary? -->
 ![Illustration of hole flow showing a circuit of a battery and light bulb with electrons flowing from the positive battery terminal, lighting the lightbulb, and returning to the negative battery terminal.](../Support_Files/Hole_Flow.svg){:standalone}
