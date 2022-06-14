@@ -196,6 +196,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status indicator: Working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Dht12](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Dht12.html) | Dht12 driver |
 
 ### Sensors.Atmospheric.Htux1d
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status indicator: Working" src="https://img.shields.io/badge/Working-brightgreen"/> | Htu21d | Htu21d driver |
@@ -244,6 +245,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status indicator: Working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.WiiExtensionControllers](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiExtensionControllers.html) | Nintendo Wii I2C extension controllers (nunchuck, classic controller, snes classic controller, nes classic controller) |
 
 ### Sensors.Hid.WiiExtensionControllers
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status indicator: Working" src="https://img.shields.io/badge/Working-brightgreen"/> | NesClassicController | NesClassicController driver |
