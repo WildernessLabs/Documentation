@@ -8,7 +8,7 @@ subtitle: Electrical quantity, defined in quantity of Amperes.
 
 One of the simplest (though not actually the official) definitions of an [ampere (amp)](https://en.wikipedia.org/wiki/Ampere) is `1` [_coulomb_](https://en.wikipedia.org/wiki/Coulomb) of charge carriers passing through a given location per second. 
 
-One coulomb is equal to `6.242 x10^18` (`6,242,000,000,000,000,000,000`) charge carriers. A fantastically large number, but given the relative size of electrons, one can imagine that number of charges moving on a relatively modest wire. Consider household wiring, which is typically `14` or `12` gauge, and rated at carrying `10` or `15 amps` (at `120 volts`), respectively.
+One coulomb is equal to `6.242 x10^18` (`6,242,000,000,000,000,000`) charge carriers. A fantastically large number, but given the relative size of electrons, one can imagine that number of charges moving on a relatively modest wire. Consider household wiring, which is typically `14` or `12` gauge, and rated at carrying `10` or `15 amps` (at `120 volts`), respectively.
 
 ### Amperage == Current
 
@@ -26,7 +26,7 @@ To get an idea of the amount of work that can be done with that number of electr
 
 ##### Amp Hours (Ah)
 
-When describing the quantity of charge either available, or used, _amp hours_ (Ah), are used. An amp hour is an hour's worth of amps, or `3,600 coulombs` (since there are `3,600` seconds in an hour).
+When describing the quantity of charge either available or used, _amp hours_ (Ah), are used. An amp hour is an hour's worth of amps, or `3,600 coulombs` (since there are `3,600` seconds in an hour).
 
 In our water tower analogy, the quantity of water flowing over our water wheel at any given second is measured in amps, and the quantity of water stored in the water tower (battery), is described in amp hours.
 

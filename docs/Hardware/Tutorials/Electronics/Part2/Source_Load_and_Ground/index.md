@@ -8,7 +8,7 @@ subtitle: The fundamental components of a circuit.
 
 Electrical circuits get their name because they are actually closed loops. Charge carriers flow from a positive voltage _source_ to a return point and are propelled by the electromagnetic force differential between those two points.
 
-In between the voltage source, and the return point, is almost always some sort of _load_, which is a thing that uses electricity to do work, and has some finite amount of resistance (which we'll learn about in part 3 of the tutorial):
+In between the voltage source and the return point, is almost always some sort of _load_, which is a thing that uses electricity to do work, and has some finite amount of resistance (which we'll learn about in part 3 of the tutorial):
 
 ![Illustration of a circuit showing a positive battery terminal as the source, the item doing work as the load, and the negative battery terminal as the ground or common.](../Support_Files/Source_Load_Ground.svg){:standalone}
 

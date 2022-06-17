@@ -8,7 +8,7 @@ subtitle: Electromotive Force (EMF) of electricity, defined by the volt.
 
 In order for a current to exist, charge carriers must be motivated to move. Returning to our water tower analogy, gravity acting on the difference in height of the top water to the bottom, generates a potential force that can be exploited to move water and turn the water wheel:
 
-![Illustration of a water town analogy for electrical source doing work: water in the tower flows through the pipe and passes over a water wheel.](../Support_Files/Electricity_Doing_Work.svg){:standalone}
+![Illustration of a water tower analogy for electrical source doing work: water in the tower flows through the pipe and passes over a water wheel.](../Support_Files/Electricity_Doing_Work.svg){:standalone}
 
 This pressure at the valve is known as _electromotive force (EMF)_ and is expressed as a difference between the top and bottom of the water path and represents a potential for work.
 
