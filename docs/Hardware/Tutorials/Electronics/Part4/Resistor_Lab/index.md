@@ -15,7 +15,7 @@ To do this lab, you'll need the following components and tools:
 | Item                                    | Approximate Cost (USD) |
 |-----------------------------------------|------------------------|
 | 1/4 Watt resistor kit                   | $8 - $20               |
-| Half size breadboard with power rails   | $16 for 10 pieces      |
+| Half-size breadboard with power rails   | $16 for 10 pieces      |
 | Breadboard jumper wires                 | $7 - $15               |
 | Multimeter                              | $10 - $40              |
 | Wire cutter (optional)                  | $10 - $25              |
@@ -43,7 +43,7 @@ A [pack of 10 of them](http://amzn.to/2zUjcZt) runs ~USD$16 on Amazon.com.
 
 Breadboards simplify prototyping by creating connections without soldering. The following illustration is of a half size bread board with power rails (my favorite kind for prototyping), and an "xray" view on the right showing the copper traces that connect the _wells_ (holes):
 
-![Illustration of a pair of bread boards, the left showing just the holes and the right showing how those holes are connected to each other within the board: outer power rails connect along the edge and the internal holes connect from outside to the central gutter.](/Common_Files/Half_Size_+_Breadboards.svg){:standalone}
+![Illustration of a pair of breadboards, the left showing just the holes and the right showing how those holes are connected to each other within the board: outer power rails connect along the edge and the internal holes connect from outside to the central gutter.](/Common_Files/Half_Size_+_Breadboards.svg){:standalone}
 
 Each row of 5 pins (they're numbered in the illustration, and most good breadboards also have numbering) are connected, and the well or division down the middle of the board divides the two sides, so components can be placed across it, with the leads being separated. Additionally, many breadboards, such as the one pictured above, have power rails along the edges that are connected the whole way down. 
 
@@ -67,7 +67,7 @@ There are two main kinds of breadboard jumper wires; straight wires, and flexibl
 
 #### Straight Wires
 
-Straight wires are made from single strand wire and are usually sold in a kit which has a variety of pre-cut sizes and colors. They can be easily bent to fit whatever circuit routing necessary. A [140 piece kit](http://amzn.to/2B6aINg) like the one shown below can be had for ~USD$7 on Amazon.com:
+Straight wires are made from single strand wire and are usually sold in a kit which has a variety of pre-cut sizes and colors. They can be easily bent to fit whatever circuit routing is necessary. A [140 piece kit](http://amzn.to/2B6aINg) like the one shown below can be had for ~USD$7 on Amazon.com:
 
 ![Photo of a 140-piece kit of straight jumper wires with 90-degree bends for various distances of breadboard spacing.](../Support_Files/Tools_and_Components/140pc_Fixed_Breadboard_Jumper_Kit.jpg){:standalone}
 
@@ -79,7 +79,7 @@ I have both, and prefer the organization of the 350 piece kit, but the 140 piece
 
 #### Flexible wires
 
-Flexible jumper wires come in combinations of male to male, male to female, and female to female. They are made of multi stranded wires and so are very flexible, and are good for long connections. However, unlike the straight wires, they usually only come in two sizes, so they're not very practical for short connections; circuits built with only them can be very messy. They usually come in a ribbon that can be peeled apart, and a [pack of 80](http://amzn.to/2hFGuIq) run USD$6 on Amazon.com:
+Flexible jumper wires come in combinations of male to male, male to female, and female to female. They are made of multi-stranded wires and so are very flexible, and are good for long connections. However, unlike the straight wires, they usually only come in two sizes, so they're not very practical for short connections; circuits built with only them can be very messy. They usually come in a ribbon that can be peeled apart, and a [pack of 80](http://amzn.to/2hFGuIq) run USD$6 on Amazon.com:
 
 ![Photo of two lengths of bundled flexible wires with pin connectors on the end which can be peeled apart in groups or individually.](../Support_Files/Tools_and_Components/80Pc_MaleMale_Flexible_Jumpers.jpg){:standalone}
 
@@ -87,7 +87,7 @@ For most circuits, male to male are all that you'll need, but certain circuits l
 
 ##### Other Wires
 
-You can also make your own breadboard jumper wires. I don't recommend it, the pre-cut wires are so cheap and easy to use, but if you do, make sure to purchase 22 gauge, insulated, single strand wire.  Single stranded wire will push into the breadboard wells without bending too much.
+You can also make your own breadboard jumper wires. I don't recommend it, the pre-cut wires are so cheap and easy to use, but if you do, make sure to purchase 22 gauge, insulated, single-strand wire.  Single-strand wire will push into the breadboard wells without bending too much.
 
 ##### Lab Requirement
 
@@ -104,8 +104,8 @@ We make a [Wilderness Labs hack kit](http://amzn.to/2iyFoPx) that comes with a n
 In this lab, we'll use a multimeter to measure resistance of different resistor combinations.
 A multimeter is a must-have tool for hardware developers. A decent multimeter doesn't cost very much, usually less than USD$20, but when purchasing one, I recommend finding one with the following features:
 
-* **Auto-Ranging** - An auto-ranging multimeter simplifies reading values by not requiring you to set the approximate range of reading. So if when reading resistance, it's just one setting, without having to know the amount of resistance that's being measured.
-* **Small** - There's little need for a multimeter to be large, and pocket sized multimeters are much easier to carry around.
+* **Auto-Ranging** - An auto-ranging multimeter simplifies reading values by not requiring you to set the approximate range of reading. So when reading resistance, it's just one setting, without having to know the amount of resistance that's being measured.
+* **Small** - There's little need for a multimeter to be large, and pocket-sized multimeters are much easier to carry around.
 * **Digital** - Analog (those with a physical gauge) multimeters are nice because they can more effectively show change, but I find that digital multimeters (those with an LCD screen) are much easier to read and use.
 
 As a bonus feature, you might consider getting a multimeter that does _transistor testing_. We'll cover transistors in more detail later, but a transistor tester will identify the legs (pins) on a transistor and also tell you if it's functional.
@@ -170,7 +170,7 @@ The [layout overlays for this lab are here](../Resistor_Lab_BB_Overlay.pdf). Mak
 
 Once the circuit is built, we need to measure the resistance from one end of the resistor series to the other.
 
-Plug the multimeter probes into the standard, low power ports on your multimeter, putting the black probe into the black socket, and the red probe into the red socket. Usually the black socket is labeled `COM`, for "common", and the red socket has a set of symbols indicating that it's meant for the measurement probe:
+Plug the multimeter probes into the standard, low-power ports on your multimeter, putting the black probe into the black socket, and the red probe into the red socket. Usually the black socket is labeled `COM`, for "common", and the red socket has a set of symbols indicating that it's meant for the measurement probe:
 
 ![Photo of multimeter probes plugged in, black to COM socket and red to the V (volts) socket.](Probe_Plugs.jpg){:standalone}
 

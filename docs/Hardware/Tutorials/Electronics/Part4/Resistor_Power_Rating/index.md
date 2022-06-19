@@ -6,17 +6,17 @@ subtitle: Understanding and calculating safe resistor current loads.
 
 ## Power Rating
 
-In addition to amount of resistance, resistors have another other important characteristic that describe them: _power rating_.
+In addition to amount of resistance, resistors have another important characteristic that describes them: _power rating_.
 
 When power flows through a resistor, some of the energy is converted into heat. The amount of heat a resistor can safely dissipate is characterized by its power rating, and is specified in wattage.
 
-Most common resistors have a power rating between `1/8 watt` (`0.125W`), and `1 watt`. Resistors with higher power ratings are usually referred to as _power resistors_, and used specifically to dissipate power.
+Most common resistors have a power rating between `1/8 watt` (`0.125W`) and `1 watt`. Resistors with higher power ratings are usually referred to as _power resistors_, and used specifically to dissipate power.
 
 <!-- TODO: get some power resistor images in here -->
 
 ## Power Calculation when only Voltage or Amperage and Resistance is Known
 
-On the last page, we learned how to calculate the amount of power (in wattage) passes through a resistor circuit by first using Ohm's law to calculate both voltage and amperage, and then calculate the power from that. However, we can use a couple of power calculation laws to calculate power if we only know amperage and resistance, or voltage and resistance.
+On the last page, we learned how to calculate the amount of power (in wattage) that passes through a resistor circuit by first using Ohm's law to calculate both voltage and amperage, and then calculate the power from that. However, we can use a couple of power calculation laws to calculate power if we only know amperage and resistance, or voltage and resistance.
 
 ### Power Calculation when Amperage and Resistance is Known
 
@@ -97,7 +97,7 @@ The nearest power rating to `0.2` would usually be a `1/4 watt`.
 P = 5^2 / 100Ω = 0.25W = 1/4 watt.
 ```
 
-We can test this by doing the long hand, as well. First, let's use Ohm's law to solve for current/amperage:
+We can test this by doing the long-hand calculation. First, let's use Ohm's law to solve for current/amperage:
 
 ```
 Given:

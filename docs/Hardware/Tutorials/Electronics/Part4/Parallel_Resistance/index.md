@@ -10,7 +10,7 @@ When arranging resistors (or resistances) in parallel, as in the following diagr
 
 ![Diagram of a circuit showing a source voltage and three resistors connected in parallel, labeled R1, R2, and R3.](../Support_Files/Resistors_in_Parallel.svg){:standalone}
 
-Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there is three resistor valves that let water through:
+Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there are three resistor valves that let water through:
 
 ![Illustration of water as an analogy for parallel resistance: a single source pipe branching to three pipes, each with a flow-limiting valve (resistors).](../Support_Files/Parallel_Resistance.svg){:standalone}
 

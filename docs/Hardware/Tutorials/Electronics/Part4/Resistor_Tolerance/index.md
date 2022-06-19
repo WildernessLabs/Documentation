@@ -6,15 +6,15 @@ subtitle: Resistor manufacturing precision and common resistor values.
 
 ## Resistor Manufacturing Variance 
 
-Resistors are mass produced components that have slight variances from one to another. These variances effect how much resistance they actually have, which can vary up to a certain amount from their stated resistance. For this reason, resistors have a _tolerance_ rating which represents the percent error that the actual resistance can deviate from the stated resistance.
+Resistors are mass-produced components that have slight variances from one to another. These variances affect how much resistance they actually have, which can vary up to a certain amount from their stated resistance. For this reason, resistors have a _tolerance_ rating which represents the percent error that the actual resistance can deviate from the stated resistance.
 
-For example, a `570Ω` resistor with a `10%` tolerance can have an actual resistance ± `57Ω`, since `570 * .10 = 57`. Most common resistors have a tolerance of `5%` or `10%`, but some resistors can have a tolerance precision as low as `0.1%`, or as high as `20%`. Resistors with a tolerance lower than `2%` are called precision resistors and are usually more expensive than resistors with higher tolerances.
+For example, a `570Ω` resistor with a `10%` tolerance can have an actual resistance ± `57Ω`, since `570 * .10 = 57`. Most common resistors have a tolerance of `5%` or `10%`, but some resistors can have a tolerance as low as `0.1%`, or as high as `20%`. Resistors with a tolerance lower than `2%` are called precision resistors and are usually more expensive than resistors with higher tolerances.
 
 The tolerance needed depends on the circuit being designed. We'll explore which kinds of circuits need which tolerances later, when we start looking at various circuit designs.
 
 ## Preferred Values
 
-Resistors common in values from `1Ω` to many _mega_ (million) `Ω` values. Because of the wide range of values that resistors could possibly come in, and the fact that due to tolerances, most stated resistor values would realistically have overlapping actual values, they come in what is known as [_preferred values_](https://en.wikipedia.org/wiki/Preferred_number#E-series). 
+Resistors come in values from `1Ω` to many _mega_ (million) `Ω` values. Because of the wide range of values that resistors could possibly come in, and the fact that due to tolerances, most stated resistor values would realistically have overlapping actual values, they come in what is known as [_preferred values_](https://en.wikipedia.org/wiki/Preferred_number#E-series). 
 
 For example, for resistors with a tolerance of `20%`, which are known as _E6_ series resistors, come in magnitudes of the following preferred set of 6 values:
 
