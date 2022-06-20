@@ -10,7 +10,7 @@ This is a practical, hands-on tutorial on electronic circuits that focuses on mo
 
 ### [Lab Requirements](Prologue/Requirements)
 
-The tutorial is full of practical, real world labs which build a number of different circuits and designs, which require a few tools and components to build. On the [Lab Requirements](Prologue/Requirements) page, you can find a list of items needed to complete the labs. Especially with the tools, there are a number of options to choose from, which will depend on how much you intend to use them, and your budget. Each lab builds on the tools and components in previous labs, so I've listed them in the order that you'll need them. Before purchasing of the tools and components on that page, make sure to read the labs in which the tools used, because I discuss various options as well as their costs.
+The tutorial is full of practical, real world labs which build a number of different circuits and designs, which require a few tools and components to build. On the [Lab Requirements](Prologue/Requirements) page, you can find a list of items needed to complete the labs. Especially with the tools, there are a number of options to choose from, which will depend on how much you intend to use them, and your budget. Each lab builds on the tools and components in previous labs, so I've listed them in the order that you'll need them. Before purchasing any of the tools and components on that page, make sure to read the labs in which the tools are used, because I discuss various options as well as their costs.
 
 ### [Chapter 1 - Physics of Electricity](Part1/Atoms)
 
@@ -26,7 +26,7 @@ Chapter 2 builds on the physical fundamentals and explores the ability of electr
 
 ### [Chapter 3 - Current Types; AC & DC](Part3/Current_Types)
 
-Chapter 3 introduces the two fundamental current types, direct current (DC), and alternating current. It explores the difference between the two, and what they're used for.
+Chapter 3 introduces the two fundamental current types, direct current (DC), and alternating current (AC). It explores the difference between the two, and what they're used for.
 
 ![](Part3/Support_Files/AC_DC.svg){:standalone}
 
