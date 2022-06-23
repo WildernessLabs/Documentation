@@ -4,7 +4,7 @@ title: Meadow F7 Micro Beta Status
 subtitle: Current feature and beta status.
 ---
 
-We are currently in [Meadow Beta 6](/Meadow/Release_Notes/Beta6/).
+We are currently in [Meadow Release-Canditate 1.0](/Meadow/Release_Notes/Release-Candidates/).
 
 ## General IO Features
 
@@ -31,7 +31,8 @@ We are currently in [Meadow Beta 6](/Meadow/Release_Notes/Beta6/).
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Debugging        | Yes                 | New in b6.0               |
+| Debugging        | Yes                 |                |
 | Battery Charging  | Yes | |
 | Battery Voltage Level | Yes | |
-| Power Management APIs | No | Planned for RC-1 |
+| Power Management APIs | Yes | New in RC-1 |
+| Over-the-Air (OtA) Updates | Yes | New in RC-1 |
