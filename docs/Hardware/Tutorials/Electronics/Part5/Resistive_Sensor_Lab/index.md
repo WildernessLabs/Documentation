@@ -6,7 +6,7 @@ subtitle: Building a voltage divider circuit to read a resistive sensor with Net
 
 ## Lab Overview
 
-In this lab we're going to build a simple and practical circuit to read a resistive sensor. Our sensor will be a photoresistor which will measure the amount of light available, but the steps and process are the same no matter what kind of resistive sensor is used.
+In this lab, we're going to build a simple and practical circuit to read a resistive sensor. Our sensor will be a photoresistor which will measure the amount of light available, but the steps and process are the same no matter what kind of resistive sensor is used.
 
 ### Requirements
 
@@ -42,19 +42,19 @@ There are several major component supply websites that serve the majority of the
 
 #### Datasheets
 
-Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use. Datasheets are usually easy to find; simply searching on Google for the part number + "datasheet" will often turn up a PDF datasheet.
+Components usually have a [_datasheet_](http://www.mouser.com/ds/2/737/photocells-932884.pdf) that describes their characteristics and they will often give sample circuits that describe how to wire them up. When building circuits, a lot of time is actually spent looking at datasheets to understand the behavior of various components and how to connect them together. Manufacturers want people to use their components, so it's in their best interest to provide good documentation and schematics to make them easier to use. Datasheets are usually easy to find; searching on Google for the part number + "datasheet" will often turn up a PDF datasheet.
 
 In the case of my photoresistor, I found it in a pile of components, so I'm not sure if it conforms to the values in the above datasheet, since I'm not sure it's the same component. That's not a problem, however, with a simple resistive sensor like this because I can just measure the resistance with a multimeter under varying conditions to determine its characteristics. 
 
 ## Resistive Sensors
 
-There is a class of sensors, called resistive sensors, that have a variable resistance based on various input such as light or heat. [Photoresistors](https://www.wikipedia.com/en/Photoresistor), for instance, provide less resistance the more light that they receive. Similarly, [thermistors](https://en.wikipedia.org/wiki/Thermistor) change their resistance (either more resistance or less resistance, depending on the type), as their temperature changes.
+There is a class of sensors, called resistive sensors, that have a variable resistance based on various inputs such as light or heat. [Photoresistors](https://www.wikipedia.com/en/Photoresistor), for instance, provide less resistance the more light that they receive. Similarly, [thermistors](https://en.wikipedia.org/wiki/Thermistor) change their resistance (either more resistance or less resistance, depending on the type), as their temperature changes.
 
 Resistance can't be measured directly with a Netduino, but voltage can be measured by the Analog to Digital Converter (ADC) via the analog input pins. By placing a resistive sensor in a voltage divider with another resistor of known value, we can measure the voltage output and use Ohm's law to calculate the resistance of the resistive sensor. 
 
 The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
 
-![Diagram of a voltage in passing through resistor R1 to voltage out and continuing to a resistive sensor R2 before connecting to ground.](../Support_Files/Resistive_Sensor_Circuit.svg){:standalone}
+![Diagram of a voltage passing through resistor R1 to voltage out and continuing to a resistive sensor R2 before connecting to ground.](../Support_Files/Resistive_Sensor_Circuit.svg){:standalone}
 
 ## Exercise 1 - Reading a Resistive Sensor
 
@@ -65,7 +65,7 @@ To measure the resistance of a photoresistor, set the multimeter to its resistan
 
 ![Photo of using a multimeter to measure resistance of a photoresistor mounted in a breadboard.](Photoresistor_Measuring.jpg){:standalone}
 
-If using a breadboard, make sure each leg of the photoresistor is on opposite sides of the center well (or on different rows), so the legs aren't connected.
+If using a breadboard, make sure the legs of the photoresistor are on opposite sides of the center well (or on different rows), so the legs aren't connected.
 
 I measured the resistance of my photoresistor in varying light conditions and came up with the following ranges:
 
@@ -75,9 +75,9 @@ I measured the resistance of my photoresistor in varying light conditions and ca
 | Room Light     | ~1kΩ - ~75kΩ           |
 | Darkness       | >= 75kΩ (up to 350kΩ+) |
 
-This photoresistor is very good at detecting very little light, in fact, from the table above, most of its range is in the relative darkness. However, for my purposes, "mostly" dark is good enough, so I can ignore anything above `75kΩ`.
+This photoresistor is very good at detecting very little light, in fact, from the table above, most of its range is in the relative darkness. For my purposes, "mostly" dark is good enough, so I can ignore anything above `75kΩ`.
 
-I live in the Pacific Northwest and on a November day, sunlight is a commodity that is hard to find, so to simulate sunlight, I shone the LED from my phone on the sensor from a few inches away.
+I live in the Pacific Northwest and on a November day, sunlight is a commodity that is hard to find. To simulate sunlight, I shone the LED from my phone on the sensor from a few inches away.
 
 The datasheet for the Adafruit photoresistor gave a range of `200kΩ - 10kΩ`, so I'm glad I measured mine.
 
@@ -91,7 +91,7 @@ Using a multimeter in resistance measuring mode, measure your photoresistor unde
 
 ### Step 2: Calculate the fixed resistor (`R1`) value.
 
-Netduino has an onboard Analog to Digital Converter (ADC) that reads voltage values from `0V` - `3.3V` in 1,024 steps, which means it will give a value from `0` to `1023` that represents the voltage. For the best resolution therefore, we want the total resistance when it's very bright to be near the ADC max of `3.3V`. And when it's low, it should be near `0V`. This ensures that we are using the biggest range possible.
+Netduino has an onboard Analog to Digital Converter (ADC) that reads voltage values from `0V` - `3.3V` in 1,024 steps, which means it will give a value from `0` to `1023` that represents the voltage. For the best resolution, we want the total resistance when it's very bright to be near the ADC max of `3.3V`. And when it's low, it should be near `0V`. This ensures that we are using the biggest range possible.
 
 #### Calculating the High and Low Resistance Values of the Bottom Half of the Voltage Divider
 
@@ -154,7 +154,7 @@ Using that formula, I created the following table of values:
 
 The circuit therefore would look something like this:
 
-![Diagram of a 3-volt source passing through a 4.7 kiloohm resistor to where the voltage is 0.53 to 2.2 volts, then through a 1-to-30 kiliohm resistive sensor to ground.](../Support_Files/Photoresistor_Circuit.svg){:standalone}
+![Diagram of a 3-volt source passing through a 4.7 kiloohm resistor to where the voltage is 0.53 to 2.2 volts, then through a 1-to-30 kiloohm resistive sensor to ground.](../Support_Files/Photoresistor_Circuit.svg){:standalone}
 
 My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.53V` and `2.2V`, which provides a good resolution for reading the value.
 
@@ -299,7 +299,7 @@ In a later part of this tutorial, we'll examine reading analog signals and digit
 
 When I run this application, I mostly get the results that I expect, but the output has quite a bit of variance within any given light condition. This has to do with the way the ADC does the actual sampling. In a later part of the tutorial, we're going to examine some circuit modifications to deal with this to smooth out the readings, but we can actually clean some of this up using code, as well. 
 
-The technique that we'll use is called _oversampling_, which just means that for every reading we take, we'll average it with the last few readings to smooth out the value. The following method is a general function that examines an existing sample set and calculates a new average, given a new sample value. Note that the `sampleSet` parameter is passed by reference, so that it can update the sample set with the new value to keep the sample set current:
+The technique that we'll use is called _oversampling_, which just means that for every reading we take, we'll average it with the last few readings to smooth out the value. The following method is a general function that examines an existing sample set and calculates a new average, given a new sample value.
 
 ```csharp
 public static int AverageAndStore(ref int[] sampleSet, int newValue)

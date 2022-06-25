@@ -56,6 +56,6 @@ And the PCB editor looks like the following:
 
 ## Others
 
-There are countless other schematic and PCB design programs, both free and professional, some are even online. The higher-end professional programs do a lot more, but they run a minimum of USD$10,000/year or even USD$50,000/year and more, depending on the features. I've also used most of them, and while they may do things that the free and prosumer software I listed above don't, I've yet to find one that has a user-friendly UX. Most of the other free and low-cost schematic and PCB design software is not very good, or is uses very proprietary file formats.
+There are countless other schematic and PCB design programs, both free and professional, some are even online. The higher-end professional programs do a lot more, but they run a minimum of USD$10,000/year or even USD$50,000/year and more, depending on the features. I've used most of them, and while they may do things that the free and prosumer software I listed above don't, I've yet to find one that has a user-friendly UX. Most of the other free and low-cost schematic and PCB design software is not very good, or uses proprietary file formats.
 
 ## [Next - Review](../Review)
