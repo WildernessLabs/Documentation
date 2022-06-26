@@ -302,7 +302,7 @@ When I run this application, I mostly get the results that I expect, but the out
 The technique that we'll use is called _oversampling_, which just means that for every reading we take, we'll average it with the last few readings to smooth out the value. The following method is a general function that examines an existing sample set and calculates a new average, given a new sample value.
 
 ```csharp
-public static int AverageAndStore(ref int[] sampleSet, int newValue)
+public static int AverageAndStore(int[] sampleSet, int newValue)
 {
     int sum = 0;
     int average = 0;
@@ -362,7 +362,7 @@ namespace Photoresistor_Lab
                 ambientLight = photoresistor.Read();
 
                 // average (oversample) the last two readings
-                averageAmbientLight = AverageAndStore(ref previousSamples, ambientLight);
+                averageAmbientLight = AverageAndStore(previousSamples, ambientLight);
 
                 // convert the digital value back to voltage
                 // sensorVoltage = AnalogValueToVoltage(ambientLight);
@@ -401,7 +401,7 @@ namespace Photoresistor_Lab
         /// <returns>The and store.</returns>
         /// <param name="sampleSet">existing sample set.</param>
         /// <param name="newValue">New value.</param>
-        public static int AverageAndStore(ref int[] sampleSet, int newValue)
+        public static int AverageAndStore(int[] sampleSet, int newValue)
         {
             int sum = 0;
             int average = 0;
