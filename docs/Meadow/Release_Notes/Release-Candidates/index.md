@@ -12,7 +12,7 @@ subtitle: Release Notes
 * **JiT** - [stuff]
 * **Power & Sleep APIs** - [stuff]
 * **New App Lifecycle** - [stuff]
-* **Faster WiFi Connection** - [stuff]
+* **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times.  Average connection times should now be in the rage3-5 seconds.
 
 ## Updating
 
