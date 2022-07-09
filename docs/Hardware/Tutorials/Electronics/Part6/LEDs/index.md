@@ -6,23 +6,25 @@ subtitle: Light Emitting Diodes.
 
 ## Overview
 
-LEDs come in a variety of packages and combinations. Many packages have an arrangement of multiple LEDs in one, such as bar graphs and _7 segment_ displays that are often used to show levels or digit characters, respectively:
+LEDs come in a variety of packages and combinations. Many packages have an arrangement of multiple LEDs in one, such as bar graphs and _7 segment_ displays that are often used to show levels or digit characters.
 
+<!-- MarkT: commented out, this is a broken link 
 ![](/Hardware/Reference/Components/LEDs/SomeLEDs.jpg){:standalone}
+-->
 
-However, no matter what they look like, they're all basically the same to use, and there are only two practical circuit concerns; first, making sure the _polarity_ is correct, and second, limiting the current through them so they don't burn out.
+Regardless of what they look like, they're all basically the same to use. There are only two practical circuit concerns: making sure the _polarity_ is correct and limiting the current through them so they don't burn out.
 
 The circuit symbol for an LED is a diode with arrows coming out of it, signifying the photon emission:
 
-![LED symbol which is a diode with two arrows coming out, indicating photon emission](../Support_Files/LED.svg){:standalone}
+![LED symbol which is a diode with two arrows coming out, indicating photon emission.](../Support_Files/LED.svg){:standalone}
 
 ### Physics
 
 As electrons move into the holes in the P-Type lattice from the N-Type, they move from a higher energy orbit/state, known as the _conductance band_, to a lower energy orbit/state. When that transition happens, they lose energy. However, as the [first law of thermodynamics](https://en.wikipedia.org/wiki/First_law_of_thermodynamics) states; energy cannot be destroyed or created, only converted; so that energy is released in the form of photons (light particles):
 
-![](../Support_Files/Photon_Emission.svg){:standalone}
+![Diagram of an electron moving from a higher-energy state to a lower-energy state and causing a photon to be released from the lattice.](../Support_Files/Photon_Emission.svg){:standalone}
 
-In silicon, the electron orbital drop is very small, so the light released is also low energy, and the photon escapes at a low frequency of vibration. Since the color of light depends on its frequency, the light emitted is in the infrared spectrum, which is just below the frequency energies of the visible light spectrum.
+In silicon, the electron orbital drop is very small, so the light released is low energy and the photon escapes at a low frequency of vibration. Since the color of light depends on its frequency, the light emitted is in the infrared spectrum, which is just below the frequency energies of the visible light spectrum.
 
 Most diodes are designed in such a way that the P-N junction is hidden inside its casing, so these emissions are not visible. LEDs, however, are constructed in such a way that light can escape through them, and the materials used also have a much higher electron orbital energy drop when they combine with the holes.
 
@@ -30,13 +32,13 @@ Most diodes are designed in such a way that the P-N junction is hidden inside it
 
 Typical through-hole LEDs have a flat spot on the cathode side, and a longer anode leg, signifying how to wire them up with the correct polarity:
 
-![](../Support_Files/LED_Components.svg){:standalone}
+![Diagram of the internal and external components of an LED. The external case has a flat spot to indicate which of the two legs is the cathode.](../Support_Files/LED_Components.svg){:standalone}
 
 ### LED Colors
 
 Because LEDs have a higher electron orbital energy transition than most diodes, the photons released are at higher energy/frequency, usually in the visible light spectrum (note that the energy/frequency is higher to the left, and lower to the right in the following image):
 
-![](../Support_Files/Linear_visible_spectrum.svg){:standalone}
+![Diagram of the visible light spectrum and the colors associated with different frequency.](../Support_Files/Linear_visible_spectrum.svg){:standalone}
 
 What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. The voltage drop therefore generally increases with the light frequency:
 
@@ -50,7 +52,7 @@ What's interesting about this, is that in order to change the color of light emi
 
 White LEDs are usually a blue LED with a coating that turns the light white, however, some higher-end white LEDs actually have red, green, and blue LEDs in them which light in unison to create white.
 
-Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>, requiring them to be driven by a special circuit that increases the voltage if there is only `3.3V` available, as in the case with the digital output on Meadow and Netduino. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing them.
+Powering blue LEDs can be tricky on `3.3V` because many of them have more than a `3.3V`<sub>`f`</sub>. These LEDs need to be driven by a special circuit that increases the voltage if there is only `3.3V` available, as in the case with the digital output on Meadow and Netduino. However, it's much easier just to use blue LEDs with a smaller voltage drop. There are many that have as low as `2.65V`<sub>`f`</sub>. So if you're using `3.3V` to power your LEDs, make sure that you check the voltage drop on them when purchasing.
 
 #### Red, Green, Blue (RGB) LEDs
 
@@ -62,13 +64,13 @@ Through-hole RGB LEDs will have a "common" leg that's longer than the rest, whic
 
 ## Using LEDs in Circuits
 
-Single LED circuits are typically fairly simple, requiring only a DC power source, and typically, a resistor to restrict current flow:
+Single LED circuits are typically fairly simple, requiring only a DC power source and a resistor to restrict current flow:
 
-![](../Support_Files/LED_Circuit_Simplified.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to an LED, and finally to the negative terminal of the source.](../Support_Files/LED_Circuit_Simplified.svg){:standalone}
 
-RGB LEDs are only slightly more complex, and come in two flavors, depending on whether they're common cathode or common anode:
+RGB LEDs are only slightly more complex. They come in two flavors, depending on whether they're common cathode or common anode:
 
-![](../Support_Files/RGB_LED_Wiring.svg){:standalone}
+![Diagram of the two types of RGB LEDs showing how each type would be connected to a voltage source.](../Support_Files/RGB_LED_Wiring.svg){:standalone}
 
 ### Controlling Current
 
@@ -76,9 +78,11 @@ If you plug in an LED to a `3.3V` voltage source without reducing the voltage (a
 
 #### Non-Ohmic Devices
 
-This failure illuminates an interesting behavior of P-N junctions that warrant further explanation.
+This failure illuminates an interesting behavior of P-N junctions that warrants further explanation.
 
-LEDs (actually, all P-N junctions) are referred to as _non-ohmic_ devices. Non-ohmic is a bit of a misnomer, because it implies that that they don't abide by Ohm's law; and this is a common source of confusion. To understand what this really means, we need to revisit Ohm's law. Ohm's law states that the amount of current than can pass through a device is a proportional function of how much force (voltage) is pushing against resistance:
+LEDs (actually, all P-N junctions) are referred to as _non-ohmic_ devices. Non-ohmic is a bit of a misnomer, because it implies that that they don't abide by Ohm's law; and this is a common source of confusion. 
+
+To understand what this really means, we need to revisit Ohm's law. Ohm's law states that the amount of current than can pass through a device is a proportional function of how much force (voltage) is pushing against resistance:
 
 ```
 Current = Force / Resistance
@@ -87,17 +91,17 @@ I = V / R
 
 This means that as we increase the voltage (amount of force), as long as the resistance stays the same, the amount of current allowed to flow is proportional:
 
-![illustration of a linear 45º line](../Support_Files/Ohms_Law_Behavior_Graph.svg){:standalone}
+![Graph of voltage on the x-axis against current on the y-axis. The relationship is a 45º line beginning at the origin and moving up and to the right.](../Support_Files/Ohms_Law_Behavior_Graph.svg){:standalone}
 
 However, recall that with a P-N junction, as the voltage increases, the resistance actually goes down, which means that more current is allowed to flow. Recall the same scenario with a P-N junction looks like this:
 
-![](../Support_Files/Diode_Forward_Behavior.svg){:standalone}
+![Graph of voltage on the x-axis against current on the y-axis for a P-N junction. The current remains near zero initially as voltage increases, then rises rapidly over a very small increase in voltage.](../Support_Files/Diode_Forward_Behavior.svg){:standalone}
 
 Once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduces the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick with LEDs then is to supply just enough voltage to light them up.
 
 #### Options for Limiting Current
 
-There are two common ways to control the voltage, either with a resistor, or by driving it with a _PWM_ signal.
+There are two common ways to control the voltage, either with a resistor or by driving it with a _PWM_ signal.
 
 Using a resistor is the simplest way, but has the limitation of setting it at a fixed brightness when `ON`. A PWM signal is also reasonably simple, but is usually generated inside a microcontroller and controlled by software, rather than generated by an external circuit. The advantage of a PWM signal is that you have dynamic control of the voltage, allowing you to gently "pulse" the LED on and off.
 
@@ -120,7 +124,7 @@ This means that the overall voltage available to the LED is actually reduced by 
 R = (Vs - Fv) / I
 ```
 
-![](../Support_Files/Single_LED_Circuit.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to an LED, and finally to the negative terminal of the source.](../Support_Files/Single_LED_Circuit.svg){:standalone}
 
 ##### Example
 
@@ -138,13 +142,13 @@ However, in practice, we typically use a much larger resistor value because at t
 
 It's technically possible to use a single resistor with LEDs in parallel:
 
-![](../Support_Files/LED_Parallel_Circuit.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to three LEDs wired in parallel, and finally to the negative terminal of the source.](../Support_Files/LED_Parallel_Circuit.svg){:standalone}
 
 However, in practice, it's nearly impossible, because the voltage drop of LEDs are almost never perfectly balanced, which causes only one of them to conduct, pass too much current and fail, thus starting a cascade of failing LEDs.
 
 Instead, the best practice is to use a resistor for each LED:
 
-![](../Support_Files/LED_Parallel_Circuit_Practical.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to three sub-circuits wired in parallel and then to the negative terminal of the source. Each sub-circuit consists of a resistor and an LED connected in series.](../Support_Files/LED_Parallel_Circuit_Practical.svg){:standalone}
 
 In this case, each resistor is calculated as individual LED circuits.
 
