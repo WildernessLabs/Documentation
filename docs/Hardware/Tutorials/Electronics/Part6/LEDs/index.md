@@ -156,29 +156,29 @@ If you need to calculate the total current draw, simply add the current from eac
 
 #### Understanding the Failure
 
-To understand the failure of parallel LEDs with a single resistor, imagine the circuit as a deep river gorge that has three dams. Each of these dams has a little different voltage height, due slight variations during manufacture:
+To understand the failure of parallel LEDs with a single resistor, imagine the circuit as a deep river gorge that has  dam blocking the flow of water. The dam is divided into three segments and each segment is a different height. The segments of the dam represent the LEDs. The varying segment heights indicate that each LED has a little different voltage height due slight variations during manufacture:
 
-![front view illustration of the dams](../Support_Files/Dam_w_Varying_Heights.svg){:standalone}
+![Illustration of the front view of a dam with three segments of different heights.](../Support_Files/Dam_w_Varying_Heights.svg){:standalone}
 
-When the river "turns on," behind the dams, the river will rise until it reaches the top of the first dam, and when it does, it'll start to flow over it:
+When the river "turns on," behind the dam, the river will rise until it reaches the top of the shortest segment, and when it does, it'll start to flow over that segment:
 
-![Front view of water flowing over the first dam.](../Support_Files/Dam_w_Single_LED.svg){:standalone}
+![Illustration of the front view of a three-segment dam with water flowing over the shortest segment.](../Support_Files/Dam_w_Single_LED.svg){:standalone}
 
-However, as soon as that dam starts to let water flow, it actually gets lower, which means _more_ current is allowed to flow, current that was intended to spill over the other dams.
+However, as soon as that segment starts to let water flow, imagine that the height of that segment of the dam actually gets lower, which means _more_ current is allowed to flow, current that was intended to spill over the other dams.
 
-![](../Support_Files/Dam_w_Avalanche_Breakdown.svg){:standalone}
+![Illustration of the front view of a three-segment dam where the shortest segment of the dam has lowered thus letting the water flow through that segment almost unimpeded.](../Support_Files/Dam_w_Avalanche_Breakdown.svg){:standalone}
 
-Finally, with ALL the current that was intended to be distributed across three dams, it will fail and for a brief moment, let a lot of current through, before the infrastructure completely gives out (diode breaks), and closes off that river:
+Finally, with ALL the current that was intended to be distributed across three dams flowing through that segment, the segment will fail and for a brief moment, let a lot of current through, before the infrastructure completely gives out (diode breaks), and closes off that river:
 
-![illustration of the left river closed off](../Support_files/Dam_w_Diode_Failure.svg){:standalone}
+![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_files/Dam_w_Diode_Failure.svg){:standalone}
 
-Then the process repeats itself for the remaining dams.
+Then the process repeats itself for the remaining segments of the dam.
 
 ### LEDs in Series
 
 LEDs can be placed in series, as in the following configuration:
 
-![](../Support_Files/LED_Series_Circuit.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected first to a resistor, then to three LEDs all wired in series, and finally to the negative terminal of the source.](../Support_Files/LED_Series_Circuit.svg){:standalone}
 
 However, there are two important considerations in this particular configuration.
 
@@ -198,9 +198,9 @@ R = (Vs - (Vf1 + Vfn...)) / I
 
 Consider the following series LED circuit:
 
-![](../Support_Files/LED_Series_Circuit_Example.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor and two LEDs all wired in series, then to the negative terminal of the source.](../Support_Files/LED_Series_Circuit_Example.svg){:standalone}
 
-The first thing to consider here is the voltage requirement; the circuit contains two LEDs, one green LED with a `V`<sub>`f`</sub> of `2V`, and a blue LED with a `V`<sub>`f`</sub> of `3V`, for a total of `5V` voltage drop. That means that we'll likely need at least somewhere near `7.5V` to power the LEDs; something that would be impossible to power directly form a `3.3V` output from a Meadow or Netduino board. In this case, we'd need to power from an external power supply and switch via a transistor (which we'll cover in the next chapter). Instead it would probably be simpler just to wire them in parallel.
+The first thing to consider here is the voltage requirement; the circuit contains two LEDs, one green LED with a `V`<sub>`f`</sub> of `2V`, and a blue LED with a `V`<sub>`f`</sub> of `3V`, for a total of `5V` voltage drop. That means that we'll likely need at least somewhere near `7.5V` to power the LEDs; something that would be impossible to power directly from a `3.3V` output from a Meadow or Netduino board. In this case, we'd need to power from an external power supply and switch via a transistor (which we'll cover in the next chapter). Instead it would probably be simpler just to wire them in parallel.
 
 However, if we did have an adequate voltage source, the resistance needed is easy to solve for:
 
@@ -217,29 +217,27 @@ In this case, we'd need at least `200Ω` resistor to keep them within their curr
 
 ### Online LED Resistance Calculator
 
-While [iCircuit](http://icircuitapp.com/) is my go to tool for circuit simulation and calculation, for one-off LED resistor calculations, there's a fantastic [LED resistor calculator at OhmsLawCalculator.com](http://www.ohmslawcalculator.com/led-resistor-calculator).
+While [iCircuit](http://icircuitapp.com/) is my go-to tool for circuit simulation and calculation, for one-off LED resistor calculations, there's a fantastic [LED resistor calculator at OhmsLawCalculator.com](http://www.ohmslawcalculator.com/led-resistor-calculator).
 
 ### Reducing Current with a PWM Signal
 
-In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit, or use a Pulse-Width-Modulation (PWM) signal:
+In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit or use a Pulse-Width-Modulation (PWM) signal:
 
-![PWM 50% Duty Cycle](../Support_Files/PWM_50p_DutyCycle.svg){:standalone}
+![Illustration of a PWM 50% Duty Cycle. The voltage is a square wave alternating equally between 0 and 3.3 volts with an average of 1.6 volts.](../Support_Files/PWM_50p_DutyCycle.svg){:standalone}
 
-PWM is a way of controlling voltage digitally to emulate an analog signal, in which instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V`; by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
+PWM is a way of controlling voltage digitally to emulate an analog signal. Instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V`; by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
 
 A PWM signal generated by Meadow is a _square_ wave and the two key parameters available to control it are the _frequency_ and the _duty cycle_.
 
-In the above diagram, the time where the signal is high is the same as the time where the signal is low.  The percentage of time the signal is on (`HIGH`) is called the duty cycle. In the above illustration the signal is high 50% of each cycle and therefore the duty cycle is 50%. Consequently, the average voltage of the signal is 50% of `3.3V`, or `1.6V`.
+In the above diagram, the time where the signal is high is the same as the time where the signal is low. The percentage of time the signal is on (`HIGH`) is called the duty cycle. In the above illustration the signal is high 50% of each cycle and therefore the duty cycle is 50%. Consequently, the average voltage of the signal is 50% of `3.3V`, or `1.6V`.
 
 To lower the voltage, we typically reduce the duty cycle (amount of time `ON`):
 
-![50% and 25% Duty Cycle](../Support_Files/PWM_25p_DutyCycle.svg){:standalone}
-
-In the above diagram, the frequency is the same in both cases; note how the rising edges of the signal are aligned to the same point in time.  However, the lower signal is high for only 25% of the time compared to 50% for the upper trace.
+![Illustration of a PWM 25% Duty Cycle. The voltage is a square wave alternating between 0 and 3.3 volts. The signal is high 25% of the time which yields an average of 0.8 volts.](../Support_Files/PWM_25p_DutyCycle.svg){:standalone}
 
 #### Frequency and Flicker
 
-Because a PWM signal is actually a pulse, at lower frequencies, it can cause a noticeable flicker. Humans start to perceive a flicker around `60Hz` (60 cycles per second) or lower, so it's best to make sure the frequency is above that. Fortunately, this isn't typically an issue, since modern microcontrollers (like the ones that power Meadow and Netduino) are capable of driving PWM signals at many thousands of hertz (Hz).
+Because a PWM signal is actually a pulse, at lower frequencies it can cause a noticeable flicker. Humans start to perceive a flicker at around `60Hz` (60 cycles per second) or lower, so it's best to make sure the frequency is above that. Fortunately, this isn't typically an issue, since modern microcontrollers (like the ones that power Meadow and Netduino) are capable of driving PWM signals at many thousands of hertz (Hz).
 
 Incidentally, pigeons notice flicker around `100hz`, so if you're designing circuits for pigeons, you'll need to make sure that your PWM frequency is `100Hz` or higher. 🤣
 
