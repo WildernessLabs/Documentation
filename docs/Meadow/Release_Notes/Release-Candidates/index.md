@@ -6,13 +6,21 @@ subtitle: Release Notes
 
 # RC-1
 
-[woot! first release candidate:]
+We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with way more features and fixes in it than we expected.
 
-* **OtA Updates** - [stuff]
-* **JiT** - [stuff]
-* **Power & Sleep APIs** - [stuff]
-* **New App Lifecycle** - [stuff]
-* **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times.  Average connection times should now be in the rage3-5 seconds.
+* **OtA Updates** - Meadow.OS and Meadow applications can now be updated Over-the-Air via Meadow.Cloud!
+* **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first class feature.
+* **Just-in-Time (JiT) Compilation** - Meadow applications can now optionally implement JiT compilation at startup, providing faster execution and performance.
+* **Power & Sleep APIs** - Meadow.OS has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
+* **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
+* **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
+* **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
+* **Faster Meadow.OS** - We removed an errant 10 second wait time on startup.
+* **Deployment/Debugging Stability** - We’ve fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
+* **Network Improvements** - We’ve spent a lot of cycles on advanced web socket features that weren’t implemented yet that unlock a number of important service connectivity use cases.
+* **Configuration Files** - [app config working, network config added back in and supports per-NIC config]
+* **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced web-sockets, and more.
+* **Core-Compute Module Ethernet Support** - [Ethernet now works.]
 
 ## Updating
 
