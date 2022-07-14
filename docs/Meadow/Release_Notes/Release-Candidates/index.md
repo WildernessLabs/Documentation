@@ -15,7 +15,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
-* **Faster Meadow.OS** - We removed an errant 10 second wait time on startup.
+* **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
 * **Deployment/Debugging Stability** - We’ve fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
 * **Network Improvements** - We’ve spent a lot of cycles on advanced web socket features that weren’t implemented yet that unlock a number of important service connectivity use cases.
 * **Configuration Files** - [app config working, network config added back in and supports per-NIC config]
