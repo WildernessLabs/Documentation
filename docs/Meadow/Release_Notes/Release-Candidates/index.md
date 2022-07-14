@@ -6,7 +6,7 @@ subtitle: Release Notes
 
 # RC-1
 
-We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with way more features and fixes in it than we expected.
+We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
 
 * **OtA Updates** - Meadow.OS and Meadow applications can now be updated Over-the-Air via Meadow.Cloud!
 * **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first class feature.
