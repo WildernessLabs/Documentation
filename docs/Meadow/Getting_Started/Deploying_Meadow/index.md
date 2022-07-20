@@ -13,6 +13,8 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 
 ## Windows
 
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+
 ### Install .NET SDK
 Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0)
 
@@ -29,27 +31,28 @@ To update Meadow CLI, if already installed, execute the following command in you
 dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
 
-### Update USB driver for ST devices
-In order to flash Meadow OS, dfu-util is recommended. However, the default Windows USB driver for ST devices is not compatible with dfu-util, so it needs to be replaced. For more in-depth information on this, check out [Scott Hanselman’s post](https://www.hanselman.com/blog/how-to-fix-dfuutil-stm-winusb-zadig-bootloaders-and-other-firmware-flashing-issues-on-windows).
-
-1. Download and run [Zadig](https://zadig.akeo.ie/)
-2. Connect a Meadow device in bootloader mode (see [below](#put-the-device-into-dfu-bootloader-mode) )
-3. In Zadig, click Options > List All Devices
-4. Select STM32 BOOTLOADER in the dropdown
-5. Click Replace Driver
-
-![image](https://user-images.githubusercontent.com/139274/170355786-1f80737b-82a9-4787-8728-d03f3832ae0c.png)
-
-6. After the installation is complete, driver should be _WinUSB_
-
-![image](https://user-images.githubusercontent.com/139274/170355989-849b841f-a0ff-471a-92a2-c2eebe791d64.png)
-
 ### Install dfu-util
 From a console with admin rights, execute following command:
 
 ```
 meadow install dfu-util
 ```
+
+### Update USB driver for ST devices
+
+In order to flash Meadow OS, *dfu-util* is recommended. However, the default Windows USB driver for ST devices is not compatible with *dfu-util*, so it needs to be replaced. For more in-depth information on this, check out [Scott Hanselman's post](https://www.hanselman.com/blog/how-to-fix-dfuutil-stm-winusb-zadig-bootloaders-and-other-firmware-flashing-issues-on-windows). 
+
+1. Download and run [Zadig](https://zadig.akeo.ie/)
+1. Connect a Meadow device in bootloader mode
+1. In Zadig, click *Options* > *List All Devices*
+1. Select *STM32 BOOTLOADER* in the dropdown
+1. Click *Replace Driver*
+
+    ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png){:standalone}
+
+1. After the installation is complete, driver should be *WinUSB*
+
+    ![Zadig showing the replaced driver as WinUSB with a Reinstall Driver button.](./zadig2.png){:standalone}
 
 ### Download Meadow OS and network binaries
 Execute the following command in your console:
@@ -68,7 +71,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
 
 ### Flash Meadow.OS and Coprocessor Firmware
-Now you have two options, please try the option 1 first:
+Now you have two options, please try option 1 first:
 
 #### Option 1 (from bootloader mode) 
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your console:
@@ -85,7 +88,7 @@ Reset the device (push the RST button or disconnect and reconnect) and identify 
 
 ![Screenshot of Device Manager Ports section expanded showing the Meadow as USB Serial Device on port COM5.](./ports.png)
 
-Once you’ve identified the port name, run the following command in your console replacing [PORT] with the serial port name:
+Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```
 meadow flash os -s [PORT]
@@ -97,10 +100,13 @@ Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
 ## macOS
-Please note: You will need to run the upcoming commands from within a **bash shell**, rather than the default zsh shell.
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+
+Please note: You will need to run the upcoming commands from within a **`bash` shell**, rather than the default `zsh` shell.
 
 ### Install .NET SDK
-Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0)
+Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your terminal:
@@ -159,7 +165,7 @@ ls /dev/tty.usb*
 ```
 
 The port should be something like `/dev/tty.usbmodem01`.
-Once you’ve identified the port name, run the following command in your console replacing [PORT] with the serial port name:
+Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```
 meadow flash os -s [PORT]
@@ -171,6 +177,9 @@ Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
 ## Linux (Debian, Ubuntu)
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+
 Please note: Linux may require `sudo` to access USB devices.
 
 ### Install .NET SDK
@@ -257,14 +266,14 @@ meadow flash os
 This following will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
 Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on.
 
-To get acces to the port your user needs to be added to the group `dialout`.  
+To get access to the port your user needs to be added to the group `dialout`.  
 This is done with the command:
 
 ```
-sudo adduser your_user dialout
+sudo adduser {your_user} dialout
 ```
 
-Replace `your_user` with the user name. You need to **logout and login** again to make the changes affect.
+Replace `{your_user}` with the user name. You need to **logout and login** again to make the changes affect.
 
 To find the Port where the Meadow is connected execute the following command in your terminal:
 
@@ -280,7 +289,7 @@ ttyAMC0
 
 or similar. The port might change between reboots of the Meadow so make sure to check it after a reboot. If you can't detect which port the meadow belongs to run the command once with the Meadow disconnected and once with the Meadow connected to spot the difference.
 
-Once you’ve identified the port name, run the following command in your console replacing [PORT] with the serial port name:
+Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```
 meadow flash os -s [PORT]
