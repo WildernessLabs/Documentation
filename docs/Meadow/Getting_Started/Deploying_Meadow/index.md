@@ -16,7 +16,8 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
 
 ### Install .NET SDK
-Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0)
+
+Download and install the latest [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your console:
@@ -106,7 +107,10 @@ Your board is now ready to have a Meadow application deployed to it!
 Please note: You will need to run the upcoming commands from within a **`bash` shell**, rather than the default `zsh` shell.
 
 ### Install .NET SDK
-Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0).
+
+Download and install the latest [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) for your Mac's processor architecture.
+
+If you are working on an ARM-based Mac (M1, M1 Pro, or M2 CPUs), install the ARM64 release. If you are on an Intel-based Mac, install the x64 release.
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your terminal:
@@ -183,7 +187,8 @@ Your board is now ready to have a Meadow application deployed to it!
 Please note: Linux may require `sudo` to access USB devices.
 
 ### Install .NET SDK
-Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0)
+
+Download and install the latest [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your terminal:
