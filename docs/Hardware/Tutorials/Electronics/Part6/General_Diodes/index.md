@@ -8,9 +8,9 @@ subtitle: Common diodes and their uses.
 
 As we examined in the last section, a diode is basically just a P-N junction with leads attached to either side. The anode (`A`) is the lead attached to the P-type side, the cathode (`K`) is attached to the N-type side, and the preferential, or forward bias is when electrons flow from cathode to anode (which means anode is hooked to the positive voltage source):
 
-![](../Support_Files/Diode_Forward_Bias.svg){:standalone}
+![Diagram of a diode connected to a voltage source. The anode is connected to the positive side of a voltage source and the cathode to the negative side.](../Support_Files/Diode_Forward_Bias.svg){:standalone}
 
-The symbol is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line which represents the junction:
+The symbol for a diode is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line which represents the junction:
 
 ![Diode symbol with a triangle pointing in the direction of current flow butting up against a line.](../Support_Files/Diode.svg){:standalone }
 
@@ -20,13 +20,13 @@ The [Wikipedia diode entry](https://en.wikipedia.org/wiki/Diode) lists almost 20
 
 ### Polarity
 
-To differentiate which end of a diode is the anode, and which is the cathode, they usually have a marking on end denoting the **cathode**. The following photo shows four different diodes, each with their cathode mark on the right:
+To differentiate which end of a diode is the anode and which is the cathode, they usually have a marking on the end denoting the **cathode**. The following photo shows four different diodes, each with their cathode mark on the right:
 
-![](../Support_Files/Diodes_Cropped.jpg){:standalone}
+![Photo of four diodes showing a colored band on each diode indicating the cathode side.](../Support_Files/Diodes_Cropped.jpg){:standalone}
 
 Recall that positive charge carriers (holes) flow preferentially from anode to cathode, so the diodes above are in the same orientation as the circuit symbol below:
 
-![Diode Symbol illustration with Cathode and Anode marked](../Support_Files/Diode_Polarity.svg){:standalone}
+![Illustration of a diode with the anode indicated by a plus sign and the cathode indicated by a minus sign.](../Support_Files/Diode_Polarity.svg){:standalone}
 
 ### Diode Characteristics
 
@@ -35,7 +35,7 @@ Depending on how they're constructed, a diode can have some interesting behavior
  * **Forward Voltage (`V`<sub>`f`</sub>)** - This is the amount of voltage drop, or the amount of voltage needed to enable current flow.
  * **Maximum Forward Current (`I`<sub>`f(max)`</sub>)** - This is the maximum amount of current that the diode can safely conduct when forward-biased without breaking.
  * **Peak Inverse Voltage (PIV) or _maximum reverse voltage_ (`V`<sub>`R(max)`</sub>)** - This is the maximum amount of voltage that can be applied in reverse bias without an avalanche breakdown.
- * **Total Power Dissipation (`P`<sub>`D(max)`</sub>)** - A diode has some resistance, so some power is lost in the form of heat. As such, a diode usually has a maximum amount of power that it can safely conduct without overheating. Total power dissipation is based on the voltage of the junction potential, and the current: `P`<sub>`D`</sub> = `V`<sub>`f`</sub> * `I`.
+ * **Total Power Dissipation (`P`<sub>`D(max)`</sub>)** - A diode has some resistance, so some power is lost in the form of heat. As such, a diode usually has a maximum amount of power that it can safely conduct without overheating. Total power dissipation is based on the voltage of the junction potential and the current: `P`<sub>`D`</sub> = `V`<sub>`f`</sub> * `I`.
  * **Reverse Recovery Time (`Trr`)** - This is how quickly a diode can go from `OFF` to `ON`. It's generally only important in fast-switching circuits.
 
 ## Common General Diodes
@@ -64,35 +64,35 @@ Because diodes control the direction of current, they're often used to protect c
 
 #### Flywheel Diodes
 
-Flywheel diodes provide circuit protected from collapsing magnetic fields created by de-powering electric motors and other coils by feeding excess current back into the coil. We'll use a flywheel diode in a later chapter to safely control a relay.
+Flywheel diodes protect circuits from collapsing magnetic fields created by de-powering electric motors and other coils by feeding excess current back into the coil. We'll use a flywheel diode in a later chapter to safely control a relay.
 
 #### Voltage Clamping
 
 Voltage clamping refers to clipping a signal to a maximum/minimum value to prevent it from going outside a particular range, or shifting an entire AC signal wave above or below `0V`.
 
-![](../Support_Files/Voltage_Clamping.svg){:standalone}
+![Diagram of two graphs that illustrate how a diode restricts output voltage to a reduced range.](../Support_Files/Voltage_Clamping.svg){:standalone}
 
 #### Rectifiers
 
 Alternating Current (AC) electrical signals can be converted into Direct Current (DC) through a clever arrangement of diodes known as a _rectifier_:
 
-![](../Support_Files/Rectification_Circuit.svg){:standalone}
+![Diagram of four diodes arranged in square pattern to form a rectifier.](../Support_Files/Rectification_Circuit.svg){:standalone}
 
 The above circuit will transform a two-phase AC wave form into positive and ground voltages:
 
-![illustration of waveform in and out](../Support_Files/Rectification_Transform.svg){:standalone}
+![Illustration of how a rectifier changes a two-phase AC wave that varies between -110v to +110v into a wave that varies between 0v and +110v.](../Support_Files/Rectification_Transform.svg){:standalone}
 
 With some additional components, the DC wave output above can be transformed into a smooth, level DC signal.
 
-Rectifiers are used as the first stage in converting household mains AC current into DC current for use in electronics in nearly all AC power adapters. For example, the USB wall adapter that you plug your phone into to charge converts AC to DC using a rectifier. In fact, nearly every electronic device around you that plugs into the wall use a rectifier circuit.
+Rectifiers are used as the first stage in converting household mains AC current into DC current for use in electronics in nearly all AC power adapters. For example, the USB wall adapter that you use to charge your phone converts AC to DC using a rectifier. In fact, nearly every electronic device around you that plugs into the wall contains a rectifier circuit.
 
 ### Schottky Barrier Diodes
 
-Typically just called _Schottky diodes_, instead of a P-type semiconductor, it just a piece of metal against the N-type. This results in a much lower voltage drop, and also fast switching speeds.
+_Schottky diodes_ use a piece of metal against the N-type side instead of a P-type semiconductor. This results in a much lower voltage drop and fast switching speeds.
 
 The circuit symbol for a Schottky diode looks similar to the diode symbol, except that the perpendicular line looks similar to an `S`.
 
-![](../Support_Files/Schottky_Diode.svg){:standalone}
+![Illustration of the Schottky diode symbol.](../Support_Files/Schottky_Diode.svg){:standalone}
 
 Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also makes them ideal for use in simple circuit logic.
 
@@ -106,7 +106,7 @@ These logic circuits can be arranged to provide operations such as `AND` and `OR
 
 Consider the following circuits:
 
-![](../Support_Files/Logical_AND_OR_Gates.svg){:standalone}
+![Illustration of Shottky diodes used to form logical gates.](../Support_Files/Logical_AND_OR_Gates.svg){:standalone}
 
 ##### OR Gate Truth Table
 
@@ -142,21 +142,21 @@ In this way, low `V`<sub>`f`</sub> Schottky diodes can be used to determine if c
 
 ### Zener Diodes
 
-Zener diodes have a known, precise breakdown voltage, which make them very useful for providing a _reference voltage_.
+Zener diodes have a known, precise breakdown voltage, which makes them very useful for providing a _reference voltage_.
 
 #### Voltage Reference
 
 Sometimes, a circuit needs a reference signal at a precise voltage. By utilizing the breakdown voltage of a reverse-biased Zener in a circuit, its `V`<sub>`f`</sub> back-pressure can provide that voltage reference. Consider the following circuit:
 
-![](../Support_Files/Zener_Voltage_Reference_Circuit.svg){:standalone}
+![Illustration of a circuit utilizing a Zener diode to provide a 5V voltage from a 9V source.](../Support_Files/Zener_Voltage_Reference_Circuit.svg){:standalone}
 
-In the case of the circuit above, a Zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Since the voltage drop acts like a dam, no matter how much voltage is applied, `5V` of back pressure will always be present:
+In the circuit above, a Zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Since the voltage drop acts like a dam, no matter how much voltage is applied, `5V` of back pressure will always be present:
 
-![](../Support_Files/Voltage_Reference.svg){:standalone}
+![Illustration of the analogy of a Zener diode acting like a dam for water flow.](../Support_Files/Voltage_Reference.svg){:standalone}
 
 As long as the current is limited, in this case with a resistor, it will stay within that precise operating band. Recall the diode behavior chart from before, specifically the breakdown behavior:
 
-![zoomed in version of the diode breakdown curve](../Support_Files/Diode_Reverse_Behavior.svg){:standalone}
+![Illustration of the diode breakdown curve.](../Support_Files/Diode_Reverse_Behavior.svg){:standalone}
 
 While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same.
 
