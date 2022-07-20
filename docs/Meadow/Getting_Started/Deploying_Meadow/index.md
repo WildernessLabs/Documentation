@@ -122,6 +122,9 @@ dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
 
 ### Install dfu-util
+
+To install `dfu-util`, we'll be using **Homebrew**. If you don't have it yet, [install Homebrew](https://brew.sh/) first.
+
 Execute the following command in your terminal:
 
 ```
