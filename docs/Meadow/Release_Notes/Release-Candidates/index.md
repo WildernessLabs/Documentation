@@ -54,7 +54,18 @@ If you experience any stability or deployment issues you may need to erase the f
 meadow flash erase
 ```
 
-## Meadow.OS
+## Meadow.OS JIT
+
+To enable JIT in your Meadow application
+
+* Add a Meadow config file - add a text file named `meadow.config.yaml`
+* Ensure file is set to a Build configuration of *none* and is always copied to the Output Directory
+* Enable JIT in the config file - add 
+```
+MonoControl:
+    Options: --jit
+```
+* Deploy your app!
 
 [new stuff, improvements]
 
