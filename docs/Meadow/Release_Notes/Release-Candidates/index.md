@@ -69,6 +69,23 @@ MonoControl:
 
 [new stuff, improvements]
 
+## Project template changes 
+
+to update a project:
+* Open your csproj
+* Change `OutputType` from `Exe` to `Library`
+* Open MeadowApp.cs
+* Remove `MeadowApp` from generic - i.e. `public class MeadowApp : App<F7FeatherV2>`
+* Delete Program.cs - it's no longer needed :)
+* Override lifecycle methods `Run` and `Init` in MeadowApp (technically not required .... but please do for anything public-facing)
+
+Also - we moved the `CommonType` enum out from the `Leds` class.
+
+If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to 
+`CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`
+
+
+
 ## Meadow.Core
 
 [new stuff, improvements]
