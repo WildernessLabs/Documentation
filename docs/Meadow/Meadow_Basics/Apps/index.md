@@ -64,12 +64,6 @@ public class MeadowApp : App<F7FeatherV2>
 {
     RgbPwmLed onboardLed;
 
-    public override Task Run()
-    {
-        CycleColors(TimeSpan.FromMilliseconds(1000));
-        return base.Run();
-    }
-    
     public override Task Initialize()
     {
         Console.WriteLine("Initialize hardware...");
@@ -81,6 +75,12 @@ public class MeadowApp : App<F7FeatherV2>
             CommonType.CommonAnode);
 
         return base.Initialize();
+    }
+
+    public override Task Run()
+    {
+        CycleColors(TimeSpan.FromMilliseconds(1000));
+        return base.Run();
     }
 
     void CycleColors(TimeSpan duration)

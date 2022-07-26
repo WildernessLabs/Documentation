@@ -31,7 +31,7 @@ Visual Studio has stopped debugging
 1. Remove the **Program.cs** file from your project.
     With the new lifecycle, this extra file isn't required anymore.
 1. Going forward, the preferred way of initializing and running your Meadow app is done using overridden `Run` and `Initialize` methods.
-    The prior system of constructor and calls to an initialization method will continue working for now.
+    (The prior system of constructor and calls to an initialization method will continue working for now.
     1. Override the `Run` and `Initialize` methods of `App`.
 
         ```csharp
