@@ -59,7 +59,7 @@ var name = Resolver.App.InstalledName;
 Here is a complete example of an application that cycles through several colors on the onboard LED:
 
 ```csharp
-// Change F7MicroV2 to F7Micro for V1.x boards
+// Change F7FeatherV2 to F7FeatherV1 for V1.x boards
 public class MeadowApp : App<F7FeatherV2>
 {
     RgbPwmLed onboardLed;
