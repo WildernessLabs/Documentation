@@ -87,62 +87,38 @@ The Meadow application template is a simple application that will pulse the onbo
 
 ## Understanding the `Hello, World` App
 
-The Meadow app template has two files; `Program.cs` and `MeadowApp.cs`, let's take a quick look at them:
-
-### Program.cs
-
-If you've created a .NET console app before, the `Program` class should look familiar; it's very simple and only includes a `static void Main()` method that instantiates our Meadow app:
-
-```csharp
-using Meadow;
-using System.Threading;
-
-namespace HelloMeadow
-{
-    class Program
-    {
-        static IApp app;
-        public static void Main(string[] args)
-        {
-            if (args.Length > 0 && args[0] == "--exitOnDebug") return;
-
-            // instantiate and run new meadow app
-            app = new MeadowApp();
-
-            Thread.Sleep(Timeout.Infinite);
-        }
-    }
-}
-
-```
-
-This pattern allows us to have an App instance, in which all things Meadow are done.
+The Meadow app template has one file: `MeadowApp.cs`. Let's take a quick look at that file.
 
 ### MeadowApp.cs
+
+Meadow will automatically scan for a class that implements `IApp` and launch it for you.
 
 Let's take a brief look at the MeadowApp class:
 
 ```csharp
-using System;
-using System.Threading;
 using Meadow;
 using Meadow.Devices;
 using Meadow.Foundation;
 using Meadow.Foundation.Leds;
+using Meadow.Peripherals.Leds;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace HelloMeadow
 {
-    public class MeadowApp : App<F7Micro, MeadowApp>
+    // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
+    public class MeadowApp : App<F7FeatherV2>
     {
         RgbPwmLed onboardLed;
 
-        public MeadowApp()
+        public override Task Run()
         {
-            Initialize();
-            CycleColors(1000);
+            CycleColors(TimeSpan.FromMilliseconds(1000));
+            return base.Run();
         }
-
-        void Initialize()
+        
+        public override Task Initialize()
         {
             Console.WriteLine("Initialize hardware...");
 
@@ -150,11 +126,12 @@ namespace HelloMeadow
                 redPwmPin: Device.Pins.OnboardLedRed,
                 greenPwmPin: Device.Pins.OnboardLedGreen,
                 bluePwmPin: Device.Pins.OnboardLedBlue,
-                3.3f, 3.3f, 3.3f,
-                Meadow.Peripherals.Leds.IRgbLed.CommonType.CommonAnode);
+                CommonType.CommonAnode);
+
+            return base.Initialize();
         }
 
-        void CycleColors(int duration)
+        void CycleColors(TimeSpan duration)
         {
             Console.WriteLine("Cycle colors...");
 
@@ -175,14 +152,14 @@ namespace HelloMeadow
             }
         }
 
-        void ShowColorPulse(Color color, int duration = 1000)
+        void ShowColorPulse(Color color, TimeSpan duration)
         {
-            onboardLed.StartPulse(color, (uint)(duration / 2));
+            onboardLed.StartPulse(color, (duration / 2));
             Thread.Sleep(duration);
             onboardLed.Stop();
         }
 
-        void ShowColor(Color color, int duration = 1000)
+        void ShowColor(Color color, TimeSpan duration)
         {
             Console.WriteLine($"Color: {color}");
             onboardLed.SetColor(color);
@@ -191,65 +168,65 @@ namespace HelloMeadow
         }
     }
 }
-
 ```
 
 ### Meadow Namespaces
 
-Let's break this down into pieces, first; the Meadow namespaces:
+Let's break down parts of this class into pieces, first; the Meadow namespaces:
 
 ```csharp
 using Meadow;
 using Meadow.Devices;
 using Meadow.Foundation;
 using Meadow.Foundation.Leds;
+using Meadow.Peripherals.Leds;
 ```
 
 These are the typical minimum set of namespaces in a Meadow app class and provide the following functionality:
 
- * `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
- * `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Micro Dev board, or the F7 Micro embeddable board.
- * `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
+* `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
+* `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Micro Dev board, or the F7 Micro embeddable board.
+* `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
+* `Meadow.Foundation.Leds` - Provided with the Meadow.Foundation library. Used to simplify use of RGB LEDs in this sample.
+* `Meadow.Peripherals.Leds` - Provided with the Meadow.Contracts library. Used to access LED type enumeration.
 
 ### MeadowApp Class Definition
 
-Notice that the `HelloMeadow` application class inherits from `App`, and has two generic arguments, in this case `F7Micro`, and `HelloMeadow`:
+Notice that the `HelloMeadow` application class inherits from `App`, and has one generic arguments, in this case `F7FeatherV2`:
 
 ```csharp
-public class HelloMeadow : App<F7Micro, HelloMeadow>
+public class HelloMeadow : App<F7FeatherV2>
 ```
 
-All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.App-2.html) base class. Under the hood, `App` registers itself with the Meadow.OS. It also provides hooks for getting notified during system events, such as the board being put to sleep.
+All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.App-2.html) base class. Under the hood, Meadow.OS will look for a class in your code inheriting from `IApp`, such as the `App` implementation, and launches the app automatically. It also provides hooks for getting notified during system events, such as the board being put to sleep.
 
-`App` requires two parameters; first, the current device definition, and second, the type definition of your custom `IApp` class. These are passed to provide a strongly-typed reference to the current device, as well as the current instance of the application from anywhere in the app.
+`App` requires one parameter: the current device definition. This is passed in to provide a strongly-typed reference to the current device.
 
-The device class defines properties and capabilities of the current device such as the pins, via the `Device` property on the `App` base class, and allows you to access them using autocomplete, via the specific device type:
+The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](/docs/api/Meadow/Meadow.Resolver.html) class, allowing you to access them using autocomplete, via the specific device type:
 
 ```csharp
 Device.Pins.OnboardLedRed
 ```
 
 ```csharp
-public MeadowApp()
+public override Task Run()
 {
-    Initialize();
-    CycleColors(1000);
+    CycleColors(TimeSpan.FromMilliseconds(1000));
+    return base.Run();
 }
 ```
 
-This MeadowApp() call calls an initialization method, described below, and also a new method called CycleColors with a duration of 1000ms.
+From your app, Meadow.OS will call the `Initialize()` method, described below, for any setup code. Meadow will then call the `Run()` method which calls the `CycleColors` method with a duration of 1000 milliseconds.
 
 ### Controlling the Onboard LED via Ports
 
-<!-- TODO: convert to Meadow.Foundation and explain that. -->
-
-Direct access to hardware Input/Output (IO) is generally available via _ports_ and _buses_. In this case, we create a `IDigitalOutputPort` for each color component (red, green, and blue) of the onboard LED:
+Direct access to hardware Input/Output (IO) is generally available via _ports_ and _buses_. In this case, Meadow.Foundation is doing that work for us and we are accessing an `RgbPwmLed` from the pins we tell it to use. In this case, we use Meadow's on-board pulse-width modulated LED light with three sub-component LEDs that are red, green, and blue:
 
 ```csharp
 RgbPwmLed onboardLed;
 ...
 
-void Initialize()
+public override Task Initialize()
 {
     Console.WriteLine("Initialize hardware...");
 
@@ -257,13 +234,13 @@ void Initialize()
         redPwmPin: Device.Pins.OnboardLedRed,
         greenPwmPin: Device.Pins.OnboardLedGreen,
         bluePwmPin: Device.Pins.OnboardLedBlue,
-        3.3f, 3.3f, 3.3f,
-        Meadow.Peripherals.Leds.IRgbLed.CommonType.CommonAnode);
+        CommonType.CommonAnode);
+
+    return base.Initialize();
 }
 ```
 
-The `Initialize` call writes to the console for informational purposes, useful when debugging and watching your app start. Then ports are created from the device itself, and the `Pins` property provides named pins that map to the pins available on the particular device specified above in the `App` definition.
-
+The `Initialize` call writes to the console for informational purposes, useful when debugging and watching your app start. Then RGB LED is then created from the device itself, using the named `Pins` connected to the on-board LED available on the particular device specified above in the `App` definition.
 
 #### Digital Output
 
@@ -271,7 +248,7 @@ To pulse the color of the light emitted via the onboard LED, we can utilize the 
 
 
 ```csharp
-void CycleColors(int duration)
+void CycleColors(TimeSpan duration)
 {
     Console.WriteLine("Cycle colors...");
 
@@ -292,18 +269,17 @@ void CycleColors(int duration)
     }
 }
 
-void ShowColorPulse(Color color, int duration = 1000)
+void ShowColorPulse(Color color, TimeSpan duration)
 {
-    onboardLed.StartPulse(color, (uint)(duration / 2));
+    onboardLed.StartPulse(color, (duration / 2));
     Thread.Sleep(duration);
     onboardLed.Stop();
 }
-
 ```
 
 ## Next
 
 Now that you understand the basics of a Meadow application, we recommend learning about the following topics:
 
- * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
- * [Meadow.Foundation](/Meadow/Meadow.Foundation/)
+* [Hardware I/O](/Meadow/Meadow_Basics/IO/)
+* [Meadow.Foundation](/Meadow/Meadow.Foundation/)
