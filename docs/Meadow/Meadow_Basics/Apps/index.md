@@ -110,14 +110,6 @@ public class MeadowApp : App<F7FeatherV2>
         Thread.Sleep(duration);
         onboardLed.Stop();
     }
-
-    void ShowColor(Color color, TimeSpan duration)
-    {
-        Console.WriteLine($"Color: {color}");
-        onboardLed.SetColor(color);
-        Thread.Sleep(duration);
-        onboardLed.Stop();
-    }
 }
 ```
 

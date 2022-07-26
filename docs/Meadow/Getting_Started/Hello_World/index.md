@@ -157,14 +157,6 @@ namespace HelloMeadow
             Thread.Sleep(duration);
             onboardLed.Stop();
         }
-
-        void ShowColor(Color color, TimeSpan duration)
-        {
-            Console.WriteLine($"Color: {color}");
-            onboardLed.SetColor(color);
-            Thread.Sleep(duration);
-            onboardLed.Stop();
-        }
     }
 }
 ```
