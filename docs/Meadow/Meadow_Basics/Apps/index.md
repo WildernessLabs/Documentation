@@ -42,7 +42,7 @@ var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
 
 ### Accessing your running App, Device, or Log
 
-If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`]() class.
+If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`](/docs/api/Meadow/Meadow.Resolver.html) class.
 
 ```csharp
 MyApp myApp = Resolver.App;
