@@ -112,12 +112,6 @@ namespace HelloMeadow
     {
         RgbPwmLed onboardLed;
 
-        public override Task Run()
-        {
-            CycleColors(TimeSpan.FromMilliseconds(1000));
-            return base.Run();
-        }
-        
         public override Task Initialize()
         {
             Console.WriteLine("Initialize hardware...");
@@ -127,8 +121,13 @@ namespace HelloMeadow
                 greenPwmPin: Device.Pins.OnboardLedGreen,
                 bluePwmPin: Device.Pins.OnboardLedBlue,
                 CommonType.CommonAnode);
-
             return base.Initialize();
+        }
+
+        public override Task Run()
+        {
+            CycleColors(TimeSpan.FromMilliseconds(1000));
+            return base.Run();
         }
 
         void CycleColors(TimeSpan duration)
