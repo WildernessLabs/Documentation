@@ -202,7 +202,7 @@ All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.Ap
 
 `App` requires one parameter: the current device definition. This is passed in to provide a strongly-typed reference to the current device.
 
-The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](/docs/api/Meadow/Meadow.Resolver.html) class, allowing you to access them using autocomplete, via the specific device type:
+The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](/docs/api/Meadow.Contracts/Meadow.Resolver.html) class, allowing you to access them using autocomplete, via the specific device type:
 
 ```csharp
 Device.Pins.OnboardLedRed
