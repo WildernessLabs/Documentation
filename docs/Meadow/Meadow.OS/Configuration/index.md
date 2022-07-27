@@ -147,9 +147,9 @@ The contents of this file along with the `AutomaticallyStartNetwork` value in `m
 
 ## Application Configuration
 
-Either an `appconfig.yaml` or `appconfig.json` file can be used to set application configuration settings. The names are case sensitive. You can you one or the other, or both. If both application configuration files are used, the values in `appconfig.yaml` are applied first and then any values in `appconfig.json` are applied next.
+Either an `app.config.yaml` or `app.config.json` file can be used to set application configuration settings. The names are case sensitive. You can you one or the other, or both. If both application configuration files are used, the values in `app.config.yaml` are applied first and then any values in `app.config.json` are applied next.
 
-<!-- Confirm appconfig.* case sensitivity -->
+<!-- Confirm app.config.* case sensitivity -->
 <!-- Confirm behavior of dual config -->
 
 Custom developer-provided application settings can also be included.
