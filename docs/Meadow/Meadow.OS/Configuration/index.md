@@ -9,10 +9,10 @@ Meadow has a robust configuration framework that allows you to adjust settings a
 ## OS/Device Configuration and Application Configuration
 
 Meadow.OS support the following configuration sets:
- 
- * **OS & Device Configuration** - Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
- * **WiFi Network Credentials** - Specified in the `wifi.config.yaml`. Specifies WiFi access point and password configuration.
- * **Application Configuration** - Specified in `app.config.yaml` or `app.config.json`. Specifies application settings for logging and reboot configuration, but also for custom developer application settings.
+
+* **OS & Device Configuration** - Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
+* **WiFi Network Credentials** - Specified in the `wifi.config.yaml`. Specifies WiFi access point and password configuration.
+* **Application Configuration** - Specified in `app.config.yaml` or `app.config.json`. Includes application settings for logging and reboot configuration. Also used for custom developer application settings.
 
 These files are optional and the default values (shown below) will be used if the particular file is missing from the file system.
 
@@ -250,5 +250,5 @@ For an example of configuration in use, see the [Config Files sample App](https:
                 Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
             </p>
         </td>
-    </tr>    
+    </tr>
 </table>
