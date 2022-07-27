@@ -12,7 +12,7 @@ Meadow.OS support the following configuration sets:
  
  * **OS & Device Configuration** - Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
  * **WiFi Network Credentials** - Specified in the `wifi.config.yaml`. Specifies WiFi access point and password configuration.
- * **Application Configuration** - Specified in `app.config.yaml`. This functionality is coming soon.
+ * **Application Configuration** - Specified in `app.config.yaml` or `app.config.json`. Specifies application settings for logging and reboot configuration, but also for custom developer application settings.
 
 These files are optional and the default values (shown below) will be used if the particular file is missing from the file system.
 
@@ -144,6 +144,71 @@ This file will be processed after the `meadow.config.yaml` file.  The `Ssid` nam
 The `wifi.config.yaml` file will be deleted from flash storage after it has been processed and stored in secure storage on the ESP32 as the information is considered sensitive. This prevents the possibility of the file being read at a later point in time.
 
 The contents of this file along with the `AutomaticallyStartNetwork` value in `meadow.config.yaml` can be used to automatically connect to an access point when the board starts.
+
+## Application Configuration
+
+Either an `appconfig.yaml` or `appconfig.json` file can be used to set application configuration settings. The names are case sensitive. You can you one or the other, or both. If both application configuration files are used, the values in `appconfig.yaml` are applied first and then any values in `appconfig.json` are applied next.
+
+<!-- Confirm appconfig.* case sensitivity -->
+<!-- Confirm behavior of dual config -->
+
+Custom developer-provided application settings can also be included.
+
+### Lifecycle - Automatic Reboot
+
+If you need Meadow to relaunch your app should it fail, the `Lifecycle` settings allow you to configure that behavior.
+
+First, set `ResetOnAppFailure` to true. Then, you can optionally configure a delay, in seconds, before restart using the `AppFailureRestartDelaySeconds` setting.
+
+For example, to configure Meadow to reboot your application, should it fail, after a 60-second delay, here is the configuration in YAML.
+
+```yml
+Lifecycle:
+    ResetOnAppFailure: true
+    AppFailureRestartDelaySeconds: 60
+```
+
+And here is the same configuration in JSON.
+
+<!-- TODO: This was an unconfirmed guess for the JSON structure. -->
+```json
+{
+    "Lifecycle": {
+        "ResetOnAppFailure": true,
+        "AppFailureRestartDelaySeconds": 60
+    }
+}
+```
+
+### Logging
+
+Logging configuration allows you to customize the level of data your Meadow application will log to its output channel.
+
+The log level default aligns with the .NET options: Trace, Debug, Information, Warning, and Error.
+
+<!-- TODO: Confirm Default is required, and what that means, exactly? -->
+
+```yml
+Logging:
+  LogLevel:
+    Default: "Trace"
+```
+
+```json
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Trace"
+        }
+    }
+}
+```
+
+<!-- TODO: Confirm configuration structure and options -->
+
+### Custom Developer Application Settings
+
+<!-- TODO -->
 
 ## Sample Apps
 
