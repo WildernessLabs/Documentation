@@ -15,7 +15,7 @@ Alternatively, you can follow this step by step guide for both macOS and Windows
 
 ## Prerequisites
 
-You'll need Visual Studio 2019 or 2022 for Windows or Visual Studio 8.10.xx for Mac; [available here](https://visualstudio.microsoft.com/downloads/).
+You'll need [Visual Studio 2019 or 2022 for Windows or Visual Studio 8.10.xx or 2022 for Mac](https://visualstudio.microsoft.com/downloads/).
 
 You can use any edition including Enterprise, Professional, or the free Community edition.
 
@@ -163,7 +163,7 @@ namespace HelloMeadow
 
 ### Meadow Namespaces
 
-Let's break down parts of this class into pieces, first; the Meadow namespaces:
+Let's break down parts of this class into pieces. First, the Meadow namespaces:
 
 ```csharp
 using Meadow;
