@@ -1,14 +1,14 @@
 ---
 layout: Meadow
 title: Meadow application lifecycle update
-subtitle: Meadow Basics  #TODO
+subtitle: Meadow.OS release candidate required migration updates
 ---
 
-If you are updating prior Meadow applications to the new lifecycle, there are some code updates required.
+If you are updating Meadow.OS beta applications to the new Meadow.OS release candidate application lifecycle, there are some required code updates.
 
 ## Does this apply to me?
 
-After updating your Meadow board to the latest Meadow OS, you will need to update your project to run with the latest application lifecycle if you are seeing the following error message in the Meadow output log.
+After updating your Meadow board to the latest Meadow.OS, you will need to update your project to run with the latest application lifecycle if you are seeing the following error message in the Meadow output log.
 
 ```console
 ...
