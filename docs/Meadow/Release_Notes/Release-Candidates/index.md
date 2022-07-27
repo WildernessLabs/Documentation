@@ -16,8 +16,8 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
-* **Deployment/Debugging Stability** - We’ve fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
-* **Network Improvements** - We’ve spent a lot of cycles on advanced web socket features that weren’t implemented yet that unlock a number of important service connectivity use cases.
+* **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
+* **Network Improvements** - We've spent a lot of cycles on advanced web socket features that weren't implemented yet that unlock a number of important service connectivity use cases.
 * **Configuration Files** - [app config working, network config added back in and supports per-NIC config]
 * **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced web-sockets, and more.
 * **Core-Compute Module Ethernet Support** - [Ethernet now works.]
@@ -69,22 +69,16 @@ MonoControl:
 
 [new stuff, improvements]
 
-## Project template changes 
+## Project template changes
 
-to update a project:
-* Open your csproj
-* Change `OutputType` from `Exe` to `Library`
-* Open MeadowApp.cs
-* Remove `MeadowApp` from generic - i.e. `public class MeadowApp : App<F7FeatherV2>`
-* Delete Program.cs - it's no longer needed :)
-* Override lifecycle methods `Run` and `Init` in MeadowApp (technically not required .... but please do for anything public-facing)
+With the greatly simplified boilerplate code needed to create a Meadow application, the project templates have been updated with the new lifecycle methods as well.
 
-Also - we moved the `CommonType` enum out from the `Leds` class.
+If you're moving from a Meadow.OS Beta app to a Meadow.OS Release Candidate app, you'll need to make a few updates. For details on the required project changes, check out the [Lifecycle Update guide](/Meadow/Meadow_Basics/Apps/Lifecycle_Update/).
+
+We've also moved the `CommonType` enum out from the `Leds` class.
 
 If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to 
-`CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`
-
-
+`CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`.
 
 ## Meadow.Core
 
