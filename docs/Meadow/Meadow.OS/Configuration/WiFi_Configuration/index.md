@@ -1,36 +1,24 @@
 ---
 layout: Meadow
-title: Configuration
-subtitle: Controlling settings at build-time for device and app information.
+title: Wi-Fi Configuration
+subtitle: Configure Wi-Fi settings at build-time to connect Meadow to a specific access point.
 ---
 
-Meadow has a robust configuration framework allowing you to adjust settings at build-time and deploy them with your app.
+The `wifi.config.yaml` file can be used to set the default Wi-Fi access point and the password for that access point. The `wifi.config.yaml` file should look similar to this:
 
-## OS/Device Configuration and Application Configuration
+```yaml
+Credentials:
+    Ssid: YourSSID
+    Password: SSIDPassword
+```
 
-Meadow.OS supports three configuration sets that are placed in three different files:
+This file will be processed after the [`meadow.config.yaml` file](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration). Remember to set **Copy to Output Directory** to `Copy always` in the properties pane of any configuration files.
 
-* **OS & Device Configuration**: `meadow.config.yaml`
-* **WiFi Network Credentials**: `wifi.config.yaml`
-* **Application settings configuration**: `app.config.yaml` or `app.config.json`
+The `Ssid` name will be set as the default access point to be used as the system starts. The password will be used when connecting to the access point.
 
-These files are optional and, where applicable, default values will be used if the particular file is not found in the Meadow file system.
+The `wifi.config.yaml` file will be deleted from flash storage after it has been processed and stored in secure storage on the ESP32 as the information is considered sensitive. This prevents the possibility of the file being read at a later point in time.
 
-## Must Set `Copy to Output Directory` Build Action
-
-In order to make sure your configuration files are deployed to the device, select the file in the **Solution Explorer** and make sure to set **Copy to Output Directory** to `Copy always` in the properties pane.
-
-### [OS & Device Configuration](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)
-
-Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
-
-### [Wi-Fi Configuration](/Meadow/Meadow.OS/Configuration/WiFi_Configuration)
-
-Specified in the `wifi.config.yaml`. Specifies WiFi access point and password configuration.
-
-### [Application Settings Configuration](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration)
-
-Specified in `app.config.yaml` or `app.config.json`. Includes application settings for logging and reboot configuration. Also used for custom developer application settings.
+The contents of this file along with the `AutomaticallyStartNetwork` value in `meadow.config.yaml` can be used to automatically connect to an access point when the board starts.
 
 ## Sample Apps
 
