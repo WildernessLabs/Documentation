@@ -16,13 +16,13 @@ Remember to set **Copy to Output Directory** to `Copy always` in the properties 
 
 If you need Meadow to relaunch your app should it fail, the `Lifecycle` settings allow you to configure that behavior.
 
-First, set `ResetOnAppFailure` to true. Then, you can optionally configure a delay, in seconds, before restart using the `AppFailureRestartDelaySeconds` setting.
+First, set `RestartOnAppFailure` to true. Then, you can optionally configure a delay, in seconds, before restart using the `AppFailureRestartDelaySeconds` setting.
 
 For example, to configure Meadow to wait 15 seconds after a failure before rebooting your application, here is the configuration in YAML.
 
 ```yml
 Lifecycle:
-    ResetOnAppFailure: true
+    RestartOnAppFailure: true
     AppFailureRestartDelaySeconds: 15
 ```
 
@@ -31,7 +31,7 @@ And here is the same configuration in JSON.
 ```json
 {
     "Lifecycle": {
-        "ResetOnAppFailure": true,
+        "RestartOnAppFailure": true,
         "AppFailureRestartDelaySeconds": 15
     }
 }
