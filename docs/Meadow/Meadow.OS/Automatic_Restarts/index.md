@@ -14,7 +14,7 @@ These settings are added to a YAML or JSON configuration file. Learn more about 
 
 ```yml
 Lifecycle:
-    ResetOnAppFailure: true
+    RestartOnAppFailure: true
     AppFailureRestartDelaySeconds: 15
 ```
 
