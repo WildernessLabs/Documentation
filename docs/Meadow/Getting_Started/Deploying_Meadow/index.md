@@ -104,8 +104,6 @@ Your board is now ready to have a Meadow application deployed to it!
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
 
-Please note: You will need to run the upcoming commands from within a **`bash` shell**, rather than the default `zsh` shell.
-
 ### Install .NET SDK
 Download and install [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0).
 
@@ -133,10 +131,19 @@ brew install dfu-util
 ```
 
 ### Download Meadow OS and network binaries
+
 Execute the following command in your terminal:
 
 ```console
 meadow download os
+```
+
+**NOTE: If the `meadow` command returns an error: command not found:**
+
+If your terminal cannot find the `meadow` command, it means the .NET SDK didn't add the global tool installation location to your shell's `PATH` variable. Run the following command to add that location to your `PATH` variable so your terminal knows where to find the `meadow` command. Then run the OS download command from above one more time.
+
+```console
+export PATH="$PATH:$HOME/.dotnet/tools"
 ```
 
 ### Put the device into DFU Bootloader mode.
