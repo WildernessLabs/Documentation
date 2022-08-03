@@ -54,6 +54,10 @@ Therefore, any public members are also available without having to cast. For ins
 var name = Resolver.App.InstalledName;
 ```
 
+## Configure Meadow, wi-fi, and application settings
+
+Several aspects of your Meadow hardware and application execution are handled by configuration files that you can deploy with your app. Learn more about these configuration files and options from the [Meadow Configuration details](/Meadow/Meadow.OS/Configuration).
+
 ## Sample Meadow Application
 
 Here is a complete example of an application that cycles through several colors on the onboard LED:
