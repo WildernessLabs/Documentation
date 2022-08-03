@@ -10,27 +10,17 @@ Meadow has a robust configuration framework allowing you to adjust settings at b
 
 Meadow.OS supports three configuration sets that are placed in three different files:
 
-* **OS & Device Configuration**: `meadow.config.yaml`
-* **WiFi Network Credentials**: `wifi.config.yaml`
-* **Application settings configuration**: `app.config.yaml` or `app.config.json`
+* **[OS & Device Configuration](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)**: Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
+
+* **[Wi-Fi Configuration](/Meadow/Meadow.OS/Configuration/WiFi_Configuration)**: Specified in the `wifi.config.yaml`. Wi-Fi access point and password configuration for connecting to a known network.
+
+* **[Application Settings Configuration](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration)**: Specified in either `app.config.yaml` or `app.config.json`. Includes application settings for logging and reboot configuration. These files are used for custom developer application settings.
 
 These files are optional and, where applicable, default values will be used if the particular file is not found in the Meadow file system.
 
 ## Must Set `Copy to Output Directory` Build Action
 
 In order to make sure your configuration files are deployed to the device, select the file in the **Solution Explorer** and make sure to set **Copy to Output Directory** to `Copy always` in the properties pane.
-
-### [OS & Device Configuration](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)
-
-Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
-
-### [Wi-Fi Configuration](/Meadow/Meadow.OS/Configuration/WiFi_Configuration)
-
-Specified in the `wifi.config.yaml`. Specifies WiFi access point and password configuration.
-
-### [Application Settings Configuration](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration)
-
-Specified in `app.config.yaml` or `app.config.json`. Includes application settings for logging and reboot configuration. Also used for custom developer application settings.
 
 ## Sample Apps
 
