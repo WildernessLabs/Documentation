@@ -27,7 +27,7 @@ For an example of configuration in use, see the [Config Files sample App](https:
 <table>
     <tr>
         <td style="width:50%">
-            <img alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon." src="../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
+            <img alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon." src="../../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
         </td>
         <td style="width:50%; font-size:20px;">
             <p style="font-size:22px;">
@@ -39,7 +39,7 @@ For an example of configuration in use, see the [Config Files sample App](https:
     </tr>
     <tr>
         <td style="width:50%">
-            <img alt="Video showing a vertical LED matrix showing the current date and then the current time when a button is pressed." src="../../../Common_Files/Hackster/RtcWifi.gif"/>
+            <img alt="Video showing a vertical LED matrix showing the current date and then the current time when a button is pressed." src="../../../../Common_Files/Hackster/RtcWifi.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
@@ -51,7 +51,7 @@ For an example of configuration in use, see the [Config Files sample App](https:
     </tr>
     <tr>
         <td style="width:50%">
-            <img alt="Video showing a Meadow connected to a multi-line character display showing the date, time, indoor and outdoor temperatures, and a weather description." src="../../../Common_Files/Hackster/WifiWeather.gif"/>
+            <img alt="Video showing a Meadow connected to a multi-line character display showing the date, time, indoor and outdoor temperatures, and a weather description." src="../../../../Common_Files/Hackster/WifiWeather.gif"/>
         </td>
         <td style="width:50%">
             <p style="font-size:22px;">
