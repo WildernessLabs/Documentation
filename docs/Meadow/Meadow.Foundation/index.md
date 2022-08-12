@@ -12,41 +12,36 @@ It's completely [open source](https://github.com/WildernessLabs/Meadow.Foundatio
 
 ## Hello, World Example
 
-With Meadow.Foundation, you can use drivers and hardware abstractions directly, for example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.:
+With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
 
 ```csharp
-using System.Threading;
 using Meadow;
 using Meadow.Devices;
+using Meadow.Foundation;
 using Meadow.Foundation.Leds;
+...
 
-class HelloBlinky
+public class MeadowApp : App<F7FeatherV2>
 {
-    public static void Main(string[] args) 
+    PwmLed pwmLed;
+
+    public override Task Initialize()
     {
-        if (args.Length > 0 && args[0] == "--exitOnDebug") return;
-
-        // instantiate and run new meadow app
-        new MeadowApp();
-
-        Thread.Sleep(Timeout.Infinite);
+        pwmLed = new PwmLed(
+            Device,
+            Device.Pins.OnboardLedGreen,
+            TypicalForwardVoltage.Green);
+        return base.Initialize();
     }
-}
 
-public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    public MeadowApp()
+    public override Task Run()
     {
-        var pwmLed = new PwmLed(
-                    Device,
-                    Device.Pins.OnboardLedGreen,
-                    TypicalForwardVoltage.Green);
-
         // blink the LED
         pwmLed.StartBlink();
 
         // keep the app running
         Thread.Sleep(Timeout.Infinite);
+        return base.Run();
     }
 }
 ```

@@ -6,122 +6,115 @@ subtitle: Meadow Basics
 
 # Meadow Applications
 
-Meadow projects are based on .NET framework console applications. You'll likely notice some similarities as you build Meadow applications. To create a new Meadow application, you'll create a new Meadow application and in `static void Main`, launch a [`Meadow.IApp`](xref:Meadow.IApp):
-
-```csharp
-using System.Threading;
-using Meadow;
-
-namespace HelloLED
-{
-    class MainClass
-    {
-        static IApp app;
-
-        static void Main(string[] args)
-        {
-            // instantiate new meadow app
-            app = new LEDApp();
-            Thread.Sleep(Timeout.Infinite);
-        }
-    }
-}
-```
+Meadow projects are built as .NET framework class libraries, but the code is executed like an application on the Meadow hardware.
 
 ## Meadow Package
 
 When you create a new Meadow application, the `Meadow` core package should be automatically added. It can be manually installed via NuGet:
 
-```bash
+```console
 > nuget install Meadow
 ```
 
 ## `App` Class
 
-The main Meadow application class should inherit @"Meadow.App", which provides a way for Meadow OS to notify the application of system events, such as going to sleep or waking up.
+The main Meadow application class should inherit [Meadow.App](/docs/api/Meadow/Meadow.App-1.html), which provides a way for Meadow OS to notify the application of system events, such as going to sleep or waking up. Meadow will scan your application assembly for a class that implements `IApp` and launch that automatically.
 
-Currently, we don't enforce the use of `App`, but in a future build of Meadow, it'll scan your Meadow application assembly for a class that implements `IApp` and launch that automatically. So, it's a good practice to use this pattern now.
-
-The `App` declaration requires two generic parameters; `D`, and `A`, representing the device type and the application class type, respectively. For `D`, you'll need to pass a `Meadow.IDevice` that represents the board you're using, such as `F7Micro`. For `A`, you should pass the typename of your application class itself.
-
-For example, if your app class is called `LEDApp`, and you're using a Meadow F7v2 Micro board, your `LEDApp` declaration would look like the following:
+The `App` declaration requires a generic parameters, `D`, representing the device type. For `D`, you'll need to pass a `Meadow.IDevice` that represents the board you're using. For example, if your app class is called `LEDApp`, and you're using a Meadow Feather v2 board, your `LEDApp` declaration would look like the following:
 
 ```csharp
-public class LEDApp : App<F7MicroV2, LEDApp>
+public class LEDApp : App<F7FeatherV2>
 ```
 
-If you're using a v1 board, you'll use this signature:
+If you're using a Feather v1 board, you'll use this signature:
 
 ```csharp
-public class LEDApp : App<F7Micro, LEDApp>
+public class LEDApp : App<F7FeatherV1>
 ```
-
 
 ### `D` = Device
 
-Specifying the `D` parameter sets the current device so that it can be accessed via the [Device](xref:Meadow.App.Device) property of the `IApp`:
+Specifying the `D` parameter sets the current device so that it can be accessed via the [`Device`](/docs/api/Meadow/Meadow.Devices.IMeadowDevice.html) property of the `IApp`:
 
 ```csharp
 var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
 ```
 
-### `A` = App
+### Accessing your running App, Device, or Log
 
-Specifying the `A` type parameter in `App` allows the app class instance to be available via the `Current` property and strongly typed:
+If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`](/docs/api/Meadow.Contracts/Meadow.Resolver.html) class.
 
 ```csharp
-MyApp myApp = MyApp.Current;
+MyApp myApp = Resolver.App;
 ```
 
 Therefore, any public members are also available without having to cast. For instance, if your app class had a property called `InstalledName`, it could be accessed as follows:
 
 ```csharp
-var name = MyApp.Current.InstalledName;
+var name = Resolver.App.InstalledName;
 ```
+
+## Configure Meadow, wi-fi, and application settings
+
+Several aspects of your Meadow hardware and application execution are handled by configuration files that you can deploy with your app. Learn more about these configuration files and options from the [Meadow Configuration details](/Meadow/Meadow.OS/Configuration).
 
 ## Sample Meadow Application
 
-Here is a complete example of an application that cycles through some colors on the onboard LED:
+Here is a complete example of an application that cycles through several colors on the onboard LED:
 
 ```csharp
-class LEDApp : App<F7Micro, LEDApp>
+// Change F7FeatherV2 to F7FeatherV1 for V1.x boards
+public class MeadowApp : App<F7FeatherV2>
 {
-    private IDigitalOutputPort redLed;
-    private IDigitalOutputPort blueLed;
-    private IDigitalOutputPort greenLed;
+    RgbPwmLed onboardLed;
 
-    public LEDApp()
+    public override Task Initialize()
     {
-        CreateOutputs();
-        ShowLights();
+        Console.WriteLine("Initialize hardware...");
+
+        onboardLed = new RgbPwmLed(device: Device,
+            redPwmPin: Device.Pins.OnboardLedRed,
+            greenPwmPin: Device.Pins.OnboardLedGreen,
+            bluePwmPin: Device.Pins.OnboardLedBlue,
+            CommonType.CommonAnode);
+
+        return base.Initialize();
     }
 
-    public void CreateOutputs()
+    public override Task Run()
     {
-        redLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
-        blueLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedBlue);
-        greenLed = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedGreen);
+        CycleColors(TimeSpan.FromMilliseconds(1000));
+        return base.Run();
     }
 
-    public void ShowLights()
+    void CycleColors(TimeSpan duration)
     {
-        var state = false;
+        Console.WriteLine("Cycle colors...");
 
-        while(true)
+        while (true)
         {
-            state = !state;
-
-            Console.WriteLine($"State: {state}");
-
-            redLed.State = state;
-            Thread.Sleep(200);
-            greenLed.State = state;
-            Thread.Sleep(200);
-            blueLed.State = state;
-            Thread.Sleep(200);
+            ShowColorPulse(Color.Blue, duration);
+            ShowColorPulse(Color.Cyan, duration);
+            ShowColorPulse(Color.Green, duration);
+            ShowColorPulse(Color.GreenYellow, duration);
+            ShowColorPulse(Color.Yellow, duration);
+            ShowColorPulse(Color.Orange, duration);
+            ShowColorPulse(Color.OrangeRed, duration);
+            ShowColorPulse(Color.Red, duration);
+            ShowColorPulse(Color.MediumVioletRed, duration);
+            ShowColorPulse(Color.Purple, duration);
+            ShowColorPulse(Color.Magenta, duration);
+            ShowColorPulse(Color.Pink, duration);
         }
+    }
+
+    void ShowColorPulse(Color color, TimeSpan duration)
+    {
+        onboardLed.StartPulse(color, (duration / 2));
+        Thread.Sleep(duration);
+        onboardLed.Stop();
     }
 }
 ```
 
-# [Next - Input/Output](/Meadow/Meadow_Basics/IO/)
+## [Next - Input/Output](/Meadow/Meadow_Basics/IO/)

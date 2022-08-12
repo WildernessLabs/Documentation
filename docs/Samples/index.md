@@ -3,8 +3,7 @@ layout: Samples
 title: Meadow Samples
 ---
 
-The following samples can be found in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/). 
-
+The following samples can be found in the [Wilderness Labs Netduino Samples repo](https://github.com/WildernessLabs/Netduino_Samples). 
 
 * **[Blinky](Netduino/Blinky)** - The quintessential Netduino `Hello, world.` app.
 * **[Onboard Button + LED](Netduino/OnboardButtonAndLed)** - Using the onboard button to light the onboard LED.
@@ -22,11 +21,13 @@ The following samples can be found in the [WildernessLabs Documentation repo](ht
 * **[16x2 LCD](Netduino/LCDMicroLiquidCrystal/)** - Write information to a 16x2 LCD using SPI.
 * **[Read DS3234 Using SPI](Netduino/ReadDS3234)** - Read the current date / time from a DS3234 RTC using SPI.
 
-
 #### Contributing
 
-All samples in the [WildernessLabs Documentation repo](https://github.com/WildernessLabs/Documentation/Samples/Netduino/) are distributed under the Apache 2 license. If you have a cool sample that you'd like to document and share, please submit a pull request! We love quality contributions.
+These Wilderness Labs samples are distributed under the Apache 2 license. If you have a cool sample that you'd like to document and share, please submit a pull request! We love quality contributions.
 
+* [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
+* [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
+* [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
 
 ### Additional NETMF Samples
 
