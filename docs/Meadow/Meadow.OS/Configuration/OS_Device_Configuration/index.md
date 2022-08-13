@@ -19,8 +19,12 @@ Device:
     Name: MeadowF7V2_ConfigSample
 
 #===============================================================================
-# Control how the ESP coprocessor will start and operate.
 
+# Control how the .NET runtime executes your Meadow application, optionally enabling just-in-time (JIT) compilation instead of interpretation mode.
+MonoControl:
+  Options: --jit
+
+# Control how the ESP coprocessor will start and operate.
 Coprocessor:
 
     # Should the ESP32 automatically attempt to connect to an access point at startup?
@@ -64,6 +68,15 @@ This is the name that will show on the network.
 
 Default value: MeadowF7
 
+### JIT compilation mode
+
+This parameter determines if the .NET runtime executes your Meadow application via just-in-time (JIT) compilation or the default interpretation mode. This feature is enabled for RC1 and will eventually be enabled by default for later versions as JIT complication is typically significantly faster.
+
+```yaml
+MonoControl:
+  Options: --jit
+```
+
 <!-- think we should cut this.
 
 ### SpiSpeed
@@ -77,7 +90,7 @@ Default value: 8000000
 
 ### `AutomaticallyStartNetwork`
 
-This parameter determines if the system will automatically attempt to connect to an access point as the board starts. This requires a default access point to be configured (see the description of the `wifi.yaml` file below).
+This parameter determines if the system will automatically attempt to connect to an access point as the board starts. This requires a default access point [configured in a separate `wifi.config.yaml` file](/Meadow/Meadow.OS/Configuration/WiFi_Configuration).
 
 Valid values are:
 
