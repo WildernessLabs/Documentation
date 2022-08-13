@@ -56,15 +56,17 @@ meadow flash erase
 
 ## Meadow.OS JIT
 
-To enable JIT in your Meadow application
+To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)
 
 * Add a Meadow config file - add a text file named `meadow.config.yaml`
 * Ensure file is set to a Build configuration of *none* and is always copied to the Output Directory
-* Enable JIT in the config file - add 
-```
-MonoControl:
-    Options: --jit
-```
+* Enable JIT in the `meadow.config.yaml` file - add the following YAML
+
+    ```yaml
+    MonoControl:
+        Options: --jit
+    ```
+
 * Deploy your app!
 
 [new stuff, improvements]
