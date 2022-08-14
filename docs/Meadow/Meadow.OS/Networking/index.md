@@ -4,18 +4,19 @@ title: Networking
 subtitle: Network options and operation.
 ---
 
-Both the Meadow F7 development board and SMT module have WiFi networking via the ESP32 co-processor. The Meadow F7 embedded SMT module also adds optional ethernet capabilities.
+Both the Meadow F7 Micro development board and Core Compute Module have WiFi networking via the ESP32 co-processor. The Meadow Core Compute Module also adds optional ethernet capabilities.
 
 ## Current Beta Limitations
 
- * **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
+* **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
 
 ## Sample Apps
 
 For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
- * **[Wifi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
- * **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
- * **[Antenna Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+
+* **[Wifi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+* **[Antenna Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
 
 # WiFi
 
@@ -25,7 +26,7 @@ To connect to a WiFi network, call the async function `Connect` passing in the S
 
 ```csharp
 var connectionResult = await Device.WiFiAdapter.Connect("[SSID]", "[PASSWORD]");
-if (connectionResult.ConnectionStatus != ConnectionStatus.Success) 
+if (connectionResult.ConnectionStatus != ConnectionStatus.Success)
 {
     throw new Exception($"Cannot connect to network: {connectionResult.ConnectionStatus}");
 }
@@ -40,7 +41,7 @@ else
 Additionally, you can subscribe to the `WiFiConnected` event thats triggered whenever Meadow has joined the network.
 
 ```csharp
-Device.WiFiAdapter.WiFiConnected += (s, e) => 
+Device.WiFiAdapter.WiFiConnected += (s, e) =>
 {
     Console.WriteLine($"Joined network with IP: {Device.WiFiAdapter.IpAddress}.");
 };
@@ -70,7 +71,7 @@ protected void ScanForAccessPoints()
 
 # Performing Requests
 
-Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not availble in this beta.
+Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not available in this beta.
 
 ## `HttpClient.Request()` Example
 
@@ -104,7 +105,7 @@ using (HttpClient client = new HttpClient()) {
 
 Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
 
-For more information on getting the curent antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
+For more information on getting the current antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
 
 # Creating RESTful Web APIs with Maple Server
 
@@ -150,5 +151,5 @@ You can look through these for usa samples in our [Meadow Core Samples](https://
                 Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
             </p>
         </td>
-    </tr>    
+    </tr>
 </table>
