@@ -6,7 +6,7 @@ subtitle: Troubleshooting guide for macOS-specific issues
 
 ## `libusb` not found on ARM Macs
 
-While updating the Meadow.OS on an ARM Mac (M1, M1 Pro, M2, etc.), you may encounter an error after it successfully flashes the OS and tries to continue after rebooting the Meadow board.
+While updating the Meadow.OS on an ARM Mac (M1, M1 Pro, M2, etc.), you may encounter an `libusb` error.
 
 > An exception occurred while switching device to DFU Mode. Exception: System.DllNotFoundException: libusb-1.0 library not found.
 
