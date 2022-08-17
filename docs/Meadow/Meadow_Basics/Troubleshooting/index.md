@@ -26,7 +26,7 @@ Scott Hanselman has written a good [blog post](https://www.hanselman.com/blog/Ho
 
 ## Error when flashing Meadow (Windows)
 
-If you're getting the `Could not find a connected Meadow with the serial number #########`, the board might not have the write window drivers. To solve this, follow these steps:
+If you're getting the `Could not find a connected Meadow with the serial number #########`, the board might not have the correct Window drivers. To solve this, follow these steps:
 
 1. Open Device Manager
 1. Under USB Devices right click Meadow F7 Micro
@@ -38,6 +38,20 @@ If you're getting the `Could not find a connected Meadow with the serial number 
 1. Wait until the line: "Having trouble putting Meadow in DFU Mode, please press RST button on Meadow and press enter to try again" appears.
 1. Open [Zadig](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) and replace the driver.
 1. Wait for the flash to finish.
+
+## Error while updating Meadow after successful DFU Meadow.OS install
+
+While updating the Meadow.OS, you may encounter an error after successfully flashing the OS when your Meadow is rebooted.
+
+```console
+Meadow.CLI.Core.Exceptions.DeviceNotFoundException: Could not find a connected Meadow with the serial number
+```
+
+This means that something during the reboot didn't work correctly. You can work around this by doing another Meadow OS flash but skipping the DFU portion that worked previously.
+
+```console
+meadow flash os -d
+```
 
 ## Deploying from a Virtual Machine
 
