@@ -123,11 +123,11 @@ To update Meadow CLI, if already installed, execute the following command in you
 dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
 
-If you are working on an ARM-based Mac (M1, M1 Pro, M2 CPU), you will also need to explicitly add the x64 version of `libusb` and add some additional locations to your `PATH` variable that aren't added by default.
+If you are working on an ARM-based Mac (M1, M1 Pro, M2 CPU), you will also need to explicitly add the x64 version of `libusb` and add an additional location to your `PATH` variable that aren't added by default on those systems.
 
 ```console
 arch -x86_64 brew install libusb
-export PATH=$HOME/Meadow.CLI/Meadow.CLI/bin/Debug/:/usr/local/share/dotnet/x64/:$PATH
+export PATH=/usr/local/share/dotnet/x64/:$PATH
 ```
 
 ### Install dfu-util
