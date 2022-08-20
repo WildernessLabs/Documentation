@@ -8,11 +8,11 @@ subtitle: Release Notes
 
 We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
 
-## Meadow.Cloud:
+**Meadow.Cloud**
 * **OtA Updates** - Meadow.OS and Meadow applications can now be updated Over-the-Air via Meadow.Cloud!
 * **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first class feature.
 
-## Meadow.OS
+**Meadow.OS**
 * **Power & Sleep APIs** - Meadow.OS has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
@@ -23,7 +23,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced web-sockets, and more.
 * **Core-Compute Module Ethernet Support** - [Ethernet now works.]
 
-## Tooling
+**Tooling**
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
 * **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
 
