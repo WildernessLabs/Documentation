@@ -19,9 +19,9 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
 * **Just-in-Time (JIT) Compilation** - Meadow applications can now optionally implement JIT compilation at startup, providing faster execution and performance.
 * **Network Improvements** - We've spent a lot of cycles on advanced web socket features that weren't implemented yet that unlock a number of important service connectivity use cases.
-* **Configuration Files** - [app config working, network config added back in and supports per-NIC config]
+* **Configuration Files** - Meadow now has robust support for compile-time configuration via YAML or JSON files.
 * **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced web-sockets, and more.
-* **Core-Compute Module Ethernet Support** - [Ethernet now works.]
+* **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
 
 **Tooling**
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
@@ -141,7 +141,11 @@ Meadow apps now have sophisticated support for a number of configuration files a
 
 Check out the [Configuration Guide](/Meadow/Meadow.OS/Configuration/) for more information.
 
-## Meadow.Core
+## Meadow.Core [Tacke - needz yer help]
+
+### API and Stability Fixes
+
+[]
 
 [dispose pattern]
 
