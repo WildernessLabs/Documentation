@@ -27,11 +27,11 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
 * **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
 
-## Updating
+## Updating to RC-1
 
 This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
 
-### Meadow.CLI
+### Updating Meadow.CLI
 
 Start by making sure you have the latest version of the CLI (0.19.3) by running:
 
@@ -39,7 +39,7 @@ Start by making sure you have the latest version of the CLI (0.19.3) by running:
 dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
 
-### Meadow.OS
+### Updating Meadow.OS
 
 Download the latest os:
 
@@ -52,6 +52,14 @@ And update by putting your Meadow device in boot loader mode and running:
 ```bash
 meadow flash os
 ```
+
+**NOTE:** - After flashing Meadow.OS, if the runtime upload does not complete with an error of `cannot connect to Meadow`, push the `RST` button on your Meadow device and then execute:
+
+```bash
+meadow flash os -d
+```
+
+This skips the initial (already completed) Meadow.OS upload and retries the runtime upload. We're not sure what's causing this issue, but it's under investigation.
 
 If you experience any stability or deployment issues you may need to erase the flash on Meadow and then re-install the latest OS:
 
