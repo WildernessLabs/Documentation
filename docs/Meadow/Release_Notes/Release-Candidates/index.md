@@ -129,7 +129,15 @@ If you've previously used `CommonType` with a fully qualified name - i.e. `Meado
 
 [new stuff, improvements]
 
-### Bug Fixes
+### Linking Enabled by Default
+
+With RC-1, app code is linked by default. Linking (AKA "Tree-Shaking") walks the code tree and removes unused functions. This drastically reduces the amount of deployed code (`Hello, World` goes from `~26MB` to `5MB`) and has a number of massive benefits, including:
+
+* **Faster Deployments** - App deployment is much faster, due to less code being uploaded.
+* **More Available Storage** - Less uploaded code means more room on non-volatile storage (flash).
+* **Faster App Startup and More Available Memory** - Less code means less code loaded into memory, reducing app startup and more avaialble memory for allocations.
+
+## RC-1 Bug Fixes
 
 * [Interrupts : long delay before first signal #74](https://github.com/WildernessLabs/Meadow_Issues/issues/74) - JiT has all but eliminated this. There's still a delay on first interrupt, but it's much less noticeable now. With JIT enabled, it's between 10 and 20ms..
 * [Performance issue when toggling pin #91](https://github.com/WildernessLabs/Meadow_Issues/issues/91) - JIT (the current iteration) has brought that down to roughly 0.11ms per pulse (an order of magnitude improvement).
