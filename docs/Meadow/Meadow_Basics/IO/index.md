@@ -177,7 +177,7 @@ The following table lists all the accessible pins on the Meadow F7 Micro dev boa
 | A03             | PB0  | PB0  | ADC1_IN8  |   | 0  |
 | A04             | PB1  | PB1  | ADC1_IN9  |   | 1  |
 | A05             | PC0  | PC0  | ADC1_IN10 |   | 0  |
-| SCK             | PC10 | PC10 |           |   | 10 |
+| SCK             | PC10 | PC10 |           |   |    |
 | COPI            | PB5  | PB5  |           |   | 5  |
 | CIPO            | PC11 | PC11 |           |   | 11 |
 | D00             | PI9  | PI9  |           |   | 9  |
