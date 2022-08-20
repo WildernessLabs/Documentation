@@ -26,6 +26,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 **Tooling**
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
 * **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
+* **App Template Updates** - We've updated the Meadow App templates to support the new app lifecycle.
 
 ## Updating to RC-1
 
@@ -118,15 +119,27 @@ To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_De
 
 ### Networking Stack
 
-[faster WiFi connnection]
+#### Faster WiFi Connection
+
+WiFi connection time has been reduced by 90%. Meadow should now connect to WiFi in 3 seconds or less.
 
 #### Stabilization
 
+We've invested a huge amount of effort in this release resolving customer reported networking issues (thank you for filing [issues](https://github.com/WildernessLabs/Meadow_Issues/issues) with repros!) that exercised advanced socket features.
+
+This release fixes a number of issues around web request stability as well as cloud integrations with Azure IoT, Google Cloud, and more.
+
 #### Core-Compute Ethernet Support
+
+Ethernet is now avaialable for use on the Core-Compute module.
 
 ### Configuration Files
 
-[]
+We did a major overhaul to app, network, and OS build-time configuration support. We also re-enabled the WiFi configuration which was disabled in the last release due to a crasher bug. 
+
+Meadow apps now have sophisticated support for a number of configuration files and formats (both YAML and JSON).
+
+Check out the [Configuration Guide](/Meadow/Meadow.OS/Configuration/) for more information.
 
 ## Meadow.Core
 
