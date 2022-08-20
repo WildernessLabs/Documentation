@@ -85,6 +85,16 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 
 ## Meadow.OS
 
+### Faster OS and App Startup
+
+There was a *cough* leftover 10 second startup delay from debugging Meadow.OS startup and initialization code that we removed. Additionally, linking (see below) also greatly improved app startup speed. The net effect of these improvements has seen a dramatic increase in OS and App startup speed.
+
+### Meadow.OS and .NET Stability [!!Alexis - need your help here!!]
+
+We've fixed a very low-level *internal call* (iCall) method that had a bad value, causing edge-case .NET runtime stability issues. This saw random stability improvements across the board.
+
+We also did a lot of work around the .NET Runtime -> Meadow.OS glue that fixed up a number of stability issues.
+
 ### Just-in-Time (JiT) Compilation
 
 Meadow.OS now has JiT compilation support, which compiles code on startup to low-level assembly language, rather than executing .NET Intermediate-Language (IL) in a virtual machine as interpreted instructions. This provides around a maginitude of performance improvement across the board, with some code instructions seeing even more improvements. Check out the [Meadow Benchmarks Sample](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) for specific performance improvement benchmarks.
@@ -106,6 +116,18 @@ To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_De
 
 * Deploy your app!
 
+### Networking Stack
+
+[faster WiFi connnection]
+
+#### Stabilization
+
+#### Core-Compute Ethernet Support
+
+### Configuration Files
+
+[]
+
 ## Meadow.Core
 
 [dispose pattern]
@@ -120,6 +142,10 @@ For more information check out the following docs:
 
 * **[Lifecycle Update](Lifecycle_Update)** - Instructions for updating apps from previous betas to the new app pattern.
 * **[Meadow Apps](/Meadow/Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifeycle events.
+
+### Power & Sleep APIs
+
+[content TBD]
 
 ## Meadow.Foundation
 
@@ -147,7 +173,6 @@ With RC-1, app code is linked by default. Linking (AKA "Tree-Shaking") walks the
 ### Project Template Changes
 
 With the greatly simplified boilerplate code needed to create a Meadow application, the project templates have been updated with the new lifecycle methods.
-
 
 ## RC-1 Bug Fixes
 
