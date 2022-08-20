@@ -56,10 +56,17 @@ meadow flash erase
 
 ## Meadow.Cloud
 
+With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, including two core features:
+
+* **MQTT** - [difference between this and push-messaging]
+* **Push-Messaging** - Each Meadow device is now individually addressable and you can push messages containing arbitrary data to them.
+* **Over-the-Air (OtA) Updates** - You can now push App and OS updates remotely to devices. 
+
 ### Push-Messaging
 
 ### Over-the-Air Updates
 
+[available via Meadow.CLI right now. Web UI in the future.]
 
 ## Meadow.OS Just-in-Time (JiT) Compilation
 
@@ -81,8 +88,6 @@ To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_De
     ```
 
 * Deploy your app!
-
-[new stuff, improvements]
 
 ## Project template changes
 
