@@ -54,7 +54,20 @@ If you experience any stability or deployment issues you may need to erase the f
 meadow flash erase
 ```
 
-## Meadow.OS JIT
+## Meadow.Cloud
+
+### Push-Messaging
+
+### Over-the-Air Updates
+
+
+## Meadow.OS Just-in-Time (JiT) Compilation
+
+Meadow.OS now has JiT compilation support, which compiles code on startup to low-level assembly language, rather than executing .NET Intermediate-Language (IL) in a virtual machine as interpreted instructions. This provides around a maginitude of performance improvement across the board, with some code instructions seeing even more improvements. Check out the [Meadow Benchmarks Sample](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) for specific performance improvement benchmarks.
+
+### Enabling
+
+While we've thoroughly tested JiT with all samples, there may still be edge cases where unexpected behavior is seen, so JiT is off by default. A later release will make it on by default.
 
 To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)
 
