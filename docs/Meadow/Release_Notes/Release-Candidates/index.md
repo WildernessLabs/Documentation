@@ -92,7 +92,7 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 
 ### Faster OS and App Startup
 
-There was a *cough* leftover 10 second startup delay from debugging Meadow.OS startup and initialization code that we removed. Additionally, linking (see below) also greatly improved app startup speed. The net effect of these improvements has seen a dramatic increase in OS and App startup speed.
+There was a leftover 10 second startup delay from debugging Meadow.OS startup and initialization code that we removed. Additionally, linking (see below) also greatly improved app startup speed. The net effect of these improvements has seen a dramatic increase in OS and App startup speed.
 
 ### Meadow.OS and .NET Stability [!!Alexis - need your help here!!]
 
