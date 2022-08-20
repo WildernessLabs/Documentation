@@ -12,7 +12,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **OtA Updates** - Meadow.OS and Meadow applications can now be updated Over-the-Air via Meadow.Cloud!
 * **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first class feature.
 
-**Meadow.OS**
+**Meadow.OS + Meadow.Core**
 * **Power & Sleep APIs** - Meadow.OS has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
@@ -108,24 +108,31 @@ To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_De
 
 ## Meadow.Core
 
-[new stuff, improvements]
+[dispose pattern]
 
-### Project Template Changes
+### New Meadow App Lifecycle
 
-With the greatly simplified boilerplate code needed to create a Meadow application, the project templates have been updated with the new lifecycle methods as well.
+Meadow applications now have a prescriptive lifecycle that greatly simplifies the amount of boilerplate code necessary to create an app, including removal of the `static void main()` launch method. There are also a number of new lifecycle events overridable in the `App` class that provide an easy way to hook into the new lifecycle features such as the **Power & Sleep APIs**, as well as **OtA updates**.
 
-If you're moving from a Meadow.OS Beta app to a Meadow.OS Release Candidate app, you'll need to make a few updates. For details on the required project changes, check out the [Lifecycle Update guide](/Meadow/Meadow_Basics/Apps/Lifecycle_Update/).
+If you're moving from a Meadow.OS Beta app to a Meadow.OS Release Candidate app, you'll need to make a few updates.
 
-We've also moved the `CommonType` enum out from the `Leds` class.
+For more information check out the following docs:
 
-If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to 
-`CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`.
+* **[Lifecycle Update](Lifecycle_Update)** - Instructions for updating apps from previous betas to the new app pattern.
+* **[Meadow Apps](/Meadow/Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifeycle events.
 
 ## Meadow.Foundation
 
 [new stuff, improvements]
 
-## Tooling
+### `CommonType` Moved [!!content needs help!!]
+
+The `CommonType` enum has moved from the `Leds` class.
+
+If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to 
+`CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`.
+
+## Tooling (Meadow.CLI, IDE Extensions, and Templates)
 
 [new stuff, improvements]
 
@@ -136,6 +143,11 @@ With RC-1, app code is linked by default. Linking (AKA "Tree-Shaking") walks the
 * **Faster Deployments** - App deployment is much faster, due to less code being uploaded.
 * **More Available Storage** - Less uploaded code means more room on non-volatile storage (flash).
 * **Faster App Startup and More Available Memory** - Less code means less code loaded into memory, reducing app startup and more avaialble memory for allocations.
+
+### Project Template Changes
+
+With the greatly simplified boilerplate code needed to create a Meadow application, the project templates have been updated with the new lifecycle methods.
+
 
 ## RC-1 Bug Fixes
 
