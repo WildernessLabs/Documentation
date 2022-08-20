@@ -110,7 +110,7 @@ While we've thoroughly tested JiT with all samples, there may still be edge case
 
 To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)
 
-* **Add a Meadow config file** - add a text file named `meadow.config.yaml`
+1. **Add a Meadow config file** - add a text file named `meadow.config.yaml`
 * **Configure Build Action** - Ensure file is set to a Build configuration of *none* and is always copied to the Output Directory
 * **Enable JiT in Config** - Enable JIT in the `meadow.config.yaml` file - add the following YAML
 
