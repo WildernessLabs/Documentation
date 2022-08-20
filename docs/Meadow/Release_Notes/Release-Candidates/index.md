@@ -119,7 +119,7 @@ To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_De
         Options: --jit
     ```
 
-* Deploy your app!
+* **Deploy** - Deploy your app using the IDE extension or Meadow.CLI as you normally would, at startup, Meadow.OS will compile your app for all the speed!
 
 ### Networking Stack
 
