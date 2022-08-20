@@ -59,7 +59,9 @@ If you experience any stability or deployment issues you may need to erase the f
 meadow flash erase
 ```
 
-## Meadow.Cloud
+## Release Details
+
+### Meadow.Cloud
 
 With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, including two core features:
 
@@ -67,17 +69,19 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 * **Push-Messaging** - Each Meadow device is now individually addressable and you can push messages containing arbitrary data to them.
 * **Over-the-Air (OtA) Updates** - You can now push App and OS updates remotely to devices. 
 
-### Push-Messaging
+#### Push-Messaging
 
-### Over-the-Air Updates
+#### Over-the-Air Updates
 
 [available via Meadow.CLI right now. Web UI in the future.]
 
-## Meadow.OS Just-in-Time (JiT) Compilation
+## Meadow.OS
+
+### Just-in-Time (JiT) Compilation
 
 Meadow.OS now has JiT compilation support, which compiles code on startup to low-level assembly language, rather than executing .NET Intermediate-Language (IL) in a virtual machine as interpreted instructions. This provides around a maginitude of performance improvement across the board, with some code instructions seeing even more improvements. Check out the [Meadow Benchmarks Sample](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) for specific performance improvement benchmarks.
 
-### Enabling
+#### Enabling JiT
 
 While we've thoroughly tested JiT with all samples, there may still be edge cases where unexpected behavior is seen, so JiT is off by default. A later release will make it on by default.
 
@@ -94,7 +98,11 @@ To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_De
 
 * Deploy your app!
 
-## Project template changes
+## Meadow.Core
+
+[new stuff, improvements]
+
+### Project Template Changes
 
 With the greatly simplified boilerplate code needed to create a Meadow application, the project templates have been updated with the new lifecycle methods as well.
 
@@ -105,10 +113,6 @@ We've also moved the `CommonType` enum out from the `Leds` class.
 If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to 
 `CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`.
 
-## Meadow.Core
-
-[new stuff, improvements]
-
 ## Meadow.Foundation
 
 [new stuff, improvements]
@@ -117,7 +121,7 @@ If you've previously used `CommonType` with a fully qualified name - i.e. `Meado
 
 [new stuff, improvements]
 
-## Bug Fixes
+### Bug Fixes
 
 * [Interrupts : long delay before first signal #74](https://github.com/WildernessLabs/Meadow_Issues/issues/74) - JiT has all but eliminated this. There's still a delay on first interrupt, but it's much less noticeable now. With JIT enabled, it's between 10 and 20ms..
 * [Performance issue when toggling pin #91](https://github.com/WildernessLabs/Meadow_Issues/issues/91) - JIT (the current iteration) has brought that down to roughly 0.11ms per pulse (an order of magnitude improvement).
