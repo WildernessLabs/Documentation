@@ -145,13 +145,23 @@ Meadow apps now have sophisticated support for a number of configuration files a
 
 Check out the [Configuration Guide](/Meadow/Meadow.OS/Configuration/) for more information.
 
-## Meadow.Core [Tacke - needz yer help]
+## Meadow.Core
+
+Since breaking APIs after release is never a good thing, we're driving hard toward a solid, future-proof Core API.  The largest change here is in the application lifecycle.  With the addition of Over-the Air (OtA) updating capability, Meadow needs to be able to do controlled shutdown and startup of the application.  These changes require updating existing applications, and those changes are outlined below.
 
 ### API and Stability Fixes
 
-[]
+#### Serial Ports
 
-[dispose pattern]
+We've exposed public setters for `Parity`, `DataBits` and `StopBits` so they don't have to be set only during construction.
+
+#### More Unitized
+
+An underlying philosophy on Meadow is that to improve code clarity and reduce bugs, data should always carry units with it and all methods should use units where applicable. PWMs have been reworked to use `Frequency` units and `DigitalInputPorts` have been changed to use `TimeSpan` for both `GlitchDuration` and `DebounceDuration`
+
+#### Disposable Objects
+
+While it's common for many applications to allocate and use a `Port` for its lifetime, it's not required.  We've implemented the `IDisposable` pattern in the lower levels of many of the `Port` classes to free up pin allocations when the consuming port has been Disposed.
 
 ### New Meadow App Lifecycle
 
@@ -164,9 +174,33 @@ For more information check out the following docs:
 * **[Lifecycle Update](Lifecycle_Update)** - Instructions for updating apps from previous betas to the new app pattern.
 * **[Meadow Apps](/Meadow/Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifeycle events.
 
+### Service Resolver
+
+`Meadow.Core` now contains a static service resolver called `Resolver` that can be used to create, store, retrieve and even do dependency injection of class instances.  The `Resolver` is the new mechanism for retrieving the existing `IApp` or `IMeadowDevice` in your application instead of static instances in the `Application`.
+
+### Logging
+
+The `Resolver` also contains an instance of a simple `Logger`.  This `Logger` supports the same methods as the larger .NET logging interface and provides the ability to add log providers to allow your application to log to things like files, databases or REST endpoints.  The default instance logs to the `Console`.
+
+### Application Configuration
+
+`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`.  These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Setting_configuration) for more information.
+
+### Network APIs
+
+A unified API for getting access to the devices `INetworkAdapters` has been introduced and the old mechanisms for interacting with the WiFi adapter have been deprecated. See the updates in the [Networking Guide](/Meadow/Meadow.OS/Networking) for more information.
+
 ### Power & Sleep APIs
 
 [content TBD]
+
+### Serial Ports
+
+We've exposed public setters for `Parity`, `DataBits` and `StopBits` so they don't have to be set only during construction.
+
+### Counters
+
+We've added support for a `Counter` class on the device to count interrupt edges or pulses.
 
 ## Meadow.Foundation
 
