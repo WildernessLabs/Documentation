@@ -1,9 +1,9 @@
 ---
-uid: Meadow.Foundation.Sensors.Atmospheric.Bme680
+uid: Meadow.Foundation.Sensors.Atmospheric.Bme688
 remarks: *content
 ---
 
-| Bme680 | |
+| Bme688 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme68x) |
@@ -13,7 +13,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-Bme680 sensor;
+Bme688 sensor;
 
 public MeadowApp()
 {
@@ -24,7 +24,7 @@ public MeadowApp()
 
     Console.WriteLine("A");
 
-    var consumer = Bme680.CreateObserver(
+    var consumer = Bme688.CreateObserver(
         handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
@@ -66,18 +66,18 @@ public MeadowApp()
 
 void CreateSpiSensor()
 {
-    Console.WriteLine("Create BME680 sensor with SPI...");
+    Console.WriteLine("Create Bme688 sensor with SPI...");
 
     var spiBus = Device.CreateSpiBus();
-    sensor = new Bme680(spiBus, Device.CreateDigitalOutputPort(Device.Pins.D14));
+    sensor = new Bme688(spiBus, Device.CreateDigitalOutputPort(Device.Pins.D14));
 }
 
 void CreateI2CSensor()
 {
-    Console.WriteLine("Create BME680 sensor with I2C...");
+    Console.WriteLine("Create Bme688 sensor with I2C...");
 
     var i2c = Device.CreateI2cBus();
-    sensor = new Bme680(i2c, (byte)Bme680.Addresses.Default); // SDA pulled up
+    sensor = new Bme688(i2c, (byte)Bme688.Addresses.Default); // SDA pulled up
 
 }
 
@@ -92,11 +92,11 @@ async Task ReadConditions()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme680/Samples/Sensors.Atmospheric.Bme680_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme688/Samples/Sensors.Atmospheric.Bme688_Sample)
 
 ### Wiring Example
 
-To wire a Bme680 to your Meadow board, connect the following:
+To wire a Bme688 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme680/Bme680_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme688/Bme688_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
