@@ -1,14 +1,14 @@
 ---
-uid: Meadow.Foundation.Displays.TftSpi.Rm68140
+uid: Meadow.Foundation.Displays.Ili9481
 remarks: *content
 ---
 
-| Rm68140 | |
+| Ili9481 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Rm68140" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Ili9481" /></a> |
 
 ### Code Example
 
@@ -24,7 +24,7 @@ public MeadowApp()
 
     Console.WriteLine("Create display driver instance");
 
-    var display = new Rm68140
+    var display = new Ili9481
     (
         device: Device, 
         spiBus: spiBus,
@@ -50,25 +50,25 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples/Rm68140_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples/Ili9481_Sample)
 
 ### Wiring Example
 
- To wire a Rm68140 to your Meadow board, connect the following:
+ To wire a Ili9481 to your Meadow board, connect the following:
 
-| Rm68140 | Meadow Pin |
-|---------|------------|
-| GND     | GND        |
-| VCC     | 3V3        |
-| SCL     | SCK        |
-| SDA     | MOSI       |
-| CS      | D02        |
-| DC      | D01        |
-| RESET   | D00        |
+| Ili9481 | Meadow Pin |
+|--------|------------|
+| GND    | GND        |
+| VCC    | 3V3        |
+| SCL    | SCK        |
+| SDA    | MOSI       |
+| CS     | D02        |
+| DC     | D01        |
+| RESET  | D00        |
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Rm68140/Rm68140_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9481/Ili9481_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

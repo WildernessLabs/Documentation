@@ -1,18 +1,14 @@
 ---
-uid: Meadow.Foundation.Displays.TftSpi.S6D02A1
+uid: Meadow.Foundation.Displays.Ili9488
 remarks: *content
 ---
 
-| S6D02A1 | |
+| Ili9488 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for S6D02A1" /></a> |
-
-The **S6D02A1** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These displays are commonly found with a resolution of 128x160.
-
-The Meadow.Foundation S6D02A1 driver currently only supports 16bpp RGB565.
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Ili9488" /></a> |
 
 ### Code Example
 
@@ -28,14 +24,14 @@ public MeadowApp()
 
     Console.WriteLine("Create display driver instance");
 
-    var display = new S6D02A1
+    var display = new Ili9488
     (
         device: Device, 
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,
-        width: 128, height: 160
+        width: 320, height: 480
     )
     {
         IgnoreOutOfBoundsPixels = true
@@ -54,27 +50,25 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples/S6D02A1_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Samples/Ili9488_Sample)
 
 ### Wiring Example
 
- To wire a S6D02A1 to your Meadow board, connect the following:
+ To wire a Ili9488 to your Meadow board, connect the following:
 
-| S6D02A1 | Meadow Pin |
+| Ili9488 | Meadow Pin |
 |---------|------------|
-| LED-    | 3V3        |
-| LED+    | GND        |
-| MOSI    | MOSI       |
-| SCK     | SCK        |
-| RESET   | D15        |
-| A0      | D14        |
-| CS      | D13        |
-| VCC     | 3V3        |
 | GND     | GND        |
+| VCC     | 3V3        |
+| SCL     | SCK        |
+| SDA     | MOSI       |
+| CS      | D02        |
+| DC      | D01        |
+| RESET   | D00        |
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.S6D02A1/S6D02A1_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ili9488/Ili9488_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 
