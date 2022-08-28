@@ -6,7 +6,7 @@ remarks: *content
 | Nxp74HC4067 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.AnalogMux/Driver) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.AnalogMux) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.AnalogMux/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Mcp23018Meadow.Foundation.ICs.IOExpanders.AnalogMux/" target="_blank"><img src="https://img.shields.io/nuget/v/Mcp23018Meadow.Foundation.ICs.IOExpanders.AnalogMux.svg?label=Mcp23018Meadow.Foundation.ICs.IOExpanders.AnalogMux" alt="NuGet Gallery for AnalogMux" /></a> |
 
