@@ -22,7 +22,7 @@ The contents of this file along with the `AutomaticallyStartNetwork` value in `m
 
 ## Sample Apps
 
-For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/develop/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
 
 <table>
     <tr>
