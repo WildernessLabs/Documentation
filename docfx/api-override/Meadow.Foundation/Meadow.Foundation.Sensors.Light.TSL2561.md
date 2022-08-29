@@ -6,7 +6,7 @@ remarks: *content
 | TSL2561       |             |
 |---------------|-------------|
 | Status        | Not tested  |
-| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2561) |
+| Source code   | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2561) |
 | NuGet package | Not published |
 
 The **TSL2561** is alight sensor that is compensated for the presence of infrared light. This compensation allows for the reading to be closer to that experienced by the human eye.
@@ -15,7 +15,7 @@ An interrupt pin allows the sensor to generate an interrupt if the sensor readin
 
 The sensor is controlled and data read over the I2C bus.
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2561/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2561/Samples/) 
 
 ## Purchasing
 

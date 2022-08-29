@@ -37,7 +37,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
     }
 }
 ```
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Dhtxx/Samples/Sensors.Atmospheric.Dht12_Sample) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Dhtxx/Samples/Sensors.Atmospheric.Dht12_Sample) 
 
 ### Wiring Example
 

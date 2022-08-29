@@ -14,7 +14,7 @@ The **Ssd1681** is a two-color display controller for ePaper displays. Data is s
 
 The Ssd1681 is paired with a wide range of two color ePaper display sizes and resolutions.
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
 ### Code Example
 

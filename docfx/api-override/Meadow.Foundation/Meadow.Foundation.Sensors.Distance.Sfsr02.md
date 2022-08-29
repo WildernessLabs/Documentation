@@ -11,7 +11,7 @@ remarks: *content
 
 The **SF-SR02** ultrasonic sensor uses sonar to determine distance to an object (like bats). It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package.
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Sfsr02/Samples/)### Code Example
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Sfsr02/Samples/)### Code Example
 
 ```csharp
 Sfsr02 sFSR02;

@@ -93,7 +93,7 @@ When working with IO in Meadow, there are three different terms/concepts to be a
 
 A device that supports IO (such as the F7 Micro device itself, or an external IO Expander) is represented by an `IIOController`, which exposes a `Pins` collection of `IPin` objects.
 
-IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following Meadow [sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
+IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following Meadow [sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/main/main/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
 
 ```csharp
 foreach(var pin in Device.Pins.AllPins) {

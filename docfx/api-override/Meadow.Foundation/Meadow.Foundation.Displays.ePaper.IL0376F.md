@@ -14,7 +14,7 @@ The **IL0376F** is a tri-color display controller for ePaper displays. Data is s
 
 The IL0376F is most commonly paired with a a tri-color 1.54" 200x200 pixel display.
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
 ### Code Example
 

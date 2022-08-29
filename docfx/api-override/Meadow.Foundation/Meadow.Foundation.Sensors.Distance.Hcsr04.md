@@ -49,7 +49,7 @@ The HC-SR04 sensor is available from Sparkfun:
 
 * [Ultrasonic Sensor - HC-SR04](https://www.sparkfun.com/products/13959)
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04/Samples/) 
 
 ### Wiring Example
 

@@ -94,9 +94,10 @@ void Run(bool showTempArrayAsAsciiArt)
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Samples/Sensors.Camera.Mlx90640_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Samples/Sensors.Camera.Mlx90640_Sample)
 
-|### Code Example
+|
+### Code Example
 
 ```csharp
 Mlx90640 sensor;
