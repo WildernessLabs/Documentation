@@ -4,65 +4,81 @@ title: Networking
 subtitle: Network options and operation.
 ---
 
-Both the Meadow F7 development board and SMT module have WiFi networking via the ESP32 co-processor. The Meadow F7 embedded SMT module also adds optional ethernet capabilities.
+Both the Meadow F7 Micro development board and Core Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core Compute Module also adds optional ethernet capabilities.
 
 ## Current Beta Limitations
 
- * **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation.
+* **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation, even expired or misconfigured certificates.
 
 ## Sample Apps
 
 For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
- * **[Wifi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
- * **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
- * **[Antenna Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+
+* **[Wifi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+* **[Antenna Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
 
 # WiFi
 
-## Connecting to a WiFi Network
+## Connecting to a Wi-Fi Network
 
-To connect to a WiFi network, call the async function `Connect` passing in the SSID (network name), and password. It will return `Connection.Status` that we can use to verify if the connection was successful or something went wrong so we can handle any scenario.
+To connect to a Wi-Fi network, call the async function `Connect`, passing in the network name (SSID) and password. It will return a `Connection.Status` to verify if the connection was successful or if something went wrong, and allowing you to handle those situations.
+
+There are also additional `Connect` methods that take parameters for cancellation or timeout durations, as well as a reconnect setting.
 
 ```csharp
-var connectionResult = await Device.WiFiAdapter.Connect("[SSID]", "[PASSWORD]");
-if (connectionResult.ConnectionStatus != ConnectionStatus.Success) 
+var wifi = Device.NetworkAdapters.Primary<IWiFiNetworkAdapter>();
+var connectionResult = await wifi.Connect("[SSID]", "[PASSWORD]");
+if (connectionResult.ConnectionStatus != ConnectionStatus.Success)
 {
     throw new Exception($"Cannot connect to network: {connectionResult.ConnectionStatus}");
 }
 else
 {
-    Console.WriteLine($"IP Address: {Device.WiFiAdapter.IpAddress}");
-    Console.WriteLine($"Subnet mask: {Device.WiFiAdapter.SubnetMask}");
-    Console.WriteLine($"Gateway: {Device.WiFiAdapter.Gateway}");
+    Console.WriteLine($"IP Address: {wifi.IpAddress}");
+    Console.WriteLine($"Subnet mask: {wifi.SubnetMask}");
+    Console.WriteLine($"Gateway: {wifi.Gateway}");
 }
 ```
 
-Additionally, you can subscribe to the `WiFiConnected` event thats triggered whenever Meadow has joined the network.
+Additionally, you can subscribe to the `NetworkConnected` event thats triggered whenever Meadow has joined the network. You can retrieve the connection properties either from the event arguments or the connected network adapter in this event handler.
 
 ```csharp
-Device.WiFiAdapter.WiFiConnected += (s, e) => 
+var wifi = Device.NetworkAdapters.Primary<IWiFiNetworkAdapter>();
+wifi.NetworkConnected += (networkAdapter, networkConnectionEventArgs) =>
 {
-    Console.WriteLine($"Joined network with IP: {Device.WiFiAdapter.IpAddress}.");
+    Console.WriteLine("Joined network");
+    Console.WriteLine($"IP Address: {networkAdapter.IpAddress}.");
+    Console.WriteLine($"Subnet mask: {networkAdapter.SubnetMask}");
+    Console.WriteLine($"Gateway: {networkAdapter.Gateway}");
 };
 ```
 
 ## Scanning for WiFi Networks
 
-You can also scan for WiFi networks via the `Scan()` method on the `WiFiAdapter` and then access the network list via the `Networks` `ObservableCollection` property:
+You can also scan for WiFi networks via the `Scan()` method on the `IWiFiNetworkAdapter`. This method will return a list of the discovered networks.
+
+There are also additional `Connect` methods that take parameters for cancellation or timeout durations.
 
 ```csharp
-protected void ScanForAccessPoints()
+async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 {
     Console.WriteLine("Getting list of access points.");
-    ObservableCollection<WifiNetwork> networks = Device.WiFiAdapter.Scan();
-    if (networks.Count > 0) {
+    var networks = await wifi.Scan();
+
+    if(networks.Count > 0)
+    {
         Console.WriteLine("|-------------------------------------------------------------|---------|");
         Console.WriteLine("|         Network Name             | RSSI |       BSSID       | Channel |");
         Console.WriteLine("|-------------------------------------------------------------|---------|");
-        foreach (WifiNetwork accessPoint in networks) {
+
+        foreach (WifiNetwork accessPoint in networks)
+        {
             Console.WriteLine($"| {accessPoint.Ssid,-32} | {accessPoint.SignalDbStrength,4} | {accessPoint.Bssid,17} |   {accessPoint.ChannelCenterFrequency,3}   |");
         }
-    } else {
+    }
+    else
+    {
         Console.WriteLine($"No access points detected.");
     }
 }
@@ -70,9 +86,9 @@ protected void ScanForAccessPoints()
 
 # Performing Requests
 
-Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not availble in this beta.
+Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not available in this release candidate.
 
-## `HttpClient.Request()` Example
+## HTTP Get Request Example
 
 The following code illustrates making a request to a web page via the `HttpClient` class:
 
@@ -85,9 +101,9 @@ using (HttpClient client = new HttpClient()) {
 }
 ```
 
-### Posting
+### HTTP Post Request Example
 
-You can also modify the request to `POST` data. For example, the following code posts a temperature reading to Adafruit.IO:
+You can also modify the request to `POST` data. For example, the following code posts a temperature reading to the Adafruit IO data platform:
 
 ```csharp
 using (HttpClient client = new HttpClient()) {
@@ -104,7 +120,7 @@ using (HttpClient client = new HttpClient()) {
 
 Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
 
-For more information on getting the curent antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
+For more information on getting the current antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
 
 # Creating RESTful Web APIs with Maple Server
 
@@ -150,5 +166,5 @@ You can look through these for usa samples in our [Meadow Core Samples](https://
                 Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
             </p>
         </td>
-    </tr>    
+    </tr>
 </table>
