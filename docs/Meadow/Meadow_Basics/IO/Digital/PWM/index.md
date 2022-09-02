@@ -54,11 +54,11 @@ PWM signals can be generated via hardware (on the microcontroller) as well as vi
 
 Nearly every digital pin on the Meadow F7 board supports PWM.
 
-#### Meadow F7v2 Micro Pinout
+#### Meadow F7v2 Feather Pinout
 
 ![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg){:standalone}
 
-#### Meadow F7v1 Micro Pinout
+#### Meadow F7v1 Feather Pinout
 
 ![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
