@@ -6,9 +6,9 @@ remarks: *content
 | Ssd1306 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.svg?label=Meadow.Foundation.Displays.Ssd130x" alt="NuGet Gallery for Ssd130x" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.svg?label=Meadow.Foundation.Displays.Ssd130x" alt="NuGet Gallery for Meadow.Foundation.Displays.Ssd130x" /></a> |
 
 The **SSD1306** is a display controller used to control small, low resolution, single color OLED displays. OLED displays generate their own light - no backlight is included or required.
 
@@ -31,19 +31,14 @@ Board are also available from [Adafruit](www.adafruit.com).
 MicroGraphics graphics;
 Ssd1306 display;
 
-public MeadowApp()
+public override Task Initialize()
 {
     //CreateSpiDisplay();
     CreateI2CDisplay();
 
     graphics = new MicroGraphics(display);
 
-    graphics.Clear();
-    graphics.CurrentFont = new Font8x12();
-    graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
-    graphics.DrawRectangle(5, 14, 30, 10, true);
-
-    graphics.Show();
+    return base.Initialize();
 }
 
 void CreateSpiDisplay()
@@ -71,6 +66,18 @@ void CreateI2CDisplay()
         address: 60,
         displayType: Ssd1306.DisplayType.OLED128x32
     );
+}
+
+public override Task Run()
+{
+    graphics.Clear();
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
+    graphics.DrawRectangle(5, 14, 30, 10, true);
+
+    graphics.Show();
+
+    return base.Run();
 }
 
 ```

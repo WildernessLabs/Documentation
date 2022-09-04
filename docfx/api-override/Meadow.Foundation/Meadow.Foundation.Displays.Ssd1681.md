@@ -1,14 +1,14 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Ssd1681
+uid: Meadow.Foundation.Displays.Ssd1681
 remarks: *content
 ---
 
 | SSD1681 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Datasheets) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for ePaper" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for Meadow.Foundation.Displays.ePaper" /></a> |
 
 The **Ssd1681** is a two-color display controller for ePaper displays. Data is sent to the controller via SPI and supports full screen updates only.
 
@@ -19,7 +19,9 @@ The Ssd1681 is paired with a wide range of two color ePaper display sizes and re
 ### Code Example
 
 ```csharp
-public MeadowApp()
+MicroGraphics graphics;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initialize ...");
  
@@ -32,15 +34,22 @@ public MeadowApp()
         width: 200,
         height: 200);
 
-    var graphics = new MicroGraphics(display);
+    graphics = new MicroGraphics(display);
 
-   graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Black);
+    return base.Initialize();
+}
+
+public override Task Run()
+{
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Black);
 
     graphics.CurrentFont = new Font8x12();
     graphics.DrawText(2, 2, "SSD1681", Meadow.Foundation.Color.Black);
     graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
 
     graphics.Show();
+
+    return base.Run();
 }
 
 ```

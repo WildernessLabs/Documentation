@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmp180/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bmp180.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bmp180" alt="NuGet Gallery for Bmp180" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmp180/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bmp180.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bmp180" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bmp180" /></a> |
 
 The BMP180 is a high-precision, low-power barometric pressure sensor. The BMP180 offers a measuring range of 300 to 1100 hPa with an absolute accuracy of down to 0.03 hPa. It's based on piezo-resistive technology for EMC robustness, high accuracy and linearity as well as long term stability. It is designed to be connected directly to a micro-controller via the I2C bus.
 
@@ -17,45 +17,45 @@ The BMP180 is a high-precision, low-power barometric pressure sensor. The BMP180
 ```csharp
 Bmp180 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     sensor = new Bmp180(Device.CreateI2cBus());
 
     var consumer = Bmp180.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
-        },                
-        filter: result => 
+        },
+        filter: result =>
         {
             //c# 8 pattern match syntax. checks for !null and assigns var.
-            if (result.Old is { } old) 
-            { 
+            if (result.Old is { } old)
+            {
                 return (
-                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5); 
+                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5);
             }
             return false;
         }
     );
     sensor.Subscribe(consumer);
 
-    sensor.Updated += (sender, result) => 
+    sensor.Updated += (sender, result) =>
     {
         Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
         Console.WriteLine($"  Pressure: {result.New.Pressure?.Bar:N2}bar");
     };
-    
-    ReadConditions().Wait();
 
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var conditions = await sensor.Read();
     Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

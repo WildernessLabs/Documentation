@@ -8,16 +8,17 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge.svg?label=Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge" alt="NuGet Gallery for AnalogSolarGauge" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge.svg?label=Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge" /></a> |
 
 ### Code Example
 
 ```csharp
 AnalogSolarGauge solarGauge;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
+
     solarGauge = new AnalogSolarGauge(Device, Device.Pins.A02, updateInterval: TimeSpan.FromSeconds(1));
 
     //==== classic .NET Event
@@ -35,20 +36,17 @@ public MeadowApp()
         });
     solarGauge.Subscribe(observer);
 
-    Console.WriteLine("Hardware initialized.");
-
-    // do a one-off read
-    ReadSolarIntensityGauge().Wait();
-
-    // start updating
-    solarGauge.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadSolarIntensityGauge()
+public override async Task Run()
 {
     var result = await solarGauge.Read();
     Console.WriteLine($"Solar Intensity: {result * 100:n2}%");
+
+    solarGauge.StartUpdating(TimeSpan.FromSeconds(1));
 }
+
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge/Samples/AnalogSolarGauge_Sample)

@@ -6,16 +6,16 @@ remarks: *content
 | Ili9486 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for TftSpi" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Meadow.Foundation.Displays.TftSpi" /></a> |
 
 ### Code Example
 
 ```csharp
 MicroGraphics graphics;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
 
@@ -32,20 +32,29 @@ public MeadowApp()
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,
         width: 320, height: 480
-    )
+    );
+
+    graphics = new MicroGraphics(display)
     {
-        IgnoreOutOfBoundsPixels = true
+        IgnoreOutOfBoundsPixels = true,
+        CurrentFont = new Font8x8()
     };
+    
+    return base.Initialize();
+}
 
-    graphics = new MicroGraphics(display);
-
-    graphics.CurrentFont = new Font8x8();
+public override Task Run()
+{
     graphics.Clear();
+
     graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
     graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
     graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
     graphics.DrawText(5, 5, "Meadow F7");
+
     graphics.Show();
+
+    return base.Run();
 }
 
 ```

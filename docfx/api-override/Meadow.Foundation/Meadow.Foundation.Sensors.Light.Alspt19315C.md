@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Alspt19315C) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Alspt19315C/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Alspt19315C/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Alspt19315C.svg?label=Meadow.Foundation.Sensors.Light.Alspt19315C" alt="NuGet Gallery for Alspt19315C" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Alspt19315C/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Alspt19315C.svg?label=Meadow.Foundation.Sensors.Light.Alspt19315C" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.Alspt19315C" /></a> |
 
 The **ALS-PT19-315C** is a low cost analog ambient light sensor, consisting of phototransistor in a miniature SMD.
 
@@ -17,16 +17,14 @@ The **ALS-PT19-315C** is a low cost analog ambient light sensor, consisting of p
 ```csharp
 Alspt19315C sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     // configure our sensor
     sensor = new Alspt19315C(Device, Device.Pins.A03);
 
-    //==== IObservable Pattern with an optional notification filter.
-    // Example that uses an IObservable subscription to only be notified
-    // when the voltage changes by at least 0.5V
+    //==== IObservable Pattern with an optional notification filter
     var consumer = Alspt19315C.CreateObserver(
         handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Volts:N2}V, old: {result.Old?.Volts:N2}V"),
   
@@ -45,18 +43,17 @@ public MeadowApp()
         Console.WriteLine($"Voltage Changed, new: {result.New.Volts:N2}V, old: {result.Old?.Volts:N2}V");
     };
 
-    //==== One-off reading use case/pattern
-    ReadTemp().Wait();
-
-    // Spin up the sampling thread so that events are raised and IObservable notifications are sent.
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadTemp()
+public override async Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine($"Initial temp: {result.Volts:N2}V");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
 }
+
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Alspt19315C/Samples/Alspt19315C_Sample)

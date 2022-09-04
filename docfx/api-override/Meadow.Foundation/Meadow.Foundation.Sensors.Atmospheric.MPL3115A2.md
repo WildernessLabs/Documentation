@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl3115a2) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl3115a2/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2" alt="NuGet Gallery for Mpl3115a2" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2" /></a> |
 
 The **MPL3115A2** is a barometric pressure sensor capable of reading both temperature and temperature compensated pressure reading.  This sensor includes the following features:
 
@@ -30,16 +30,16 @@ The MPL3115A2 is available on breakout boards and a weather shield:
 ### Code Example
 
 ```csharp
-readonly Mpl3115a2 sensor;
+Mpl3115a2 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     sensor = new Mpl3115a2(Device.CreateI2cBus());
 
     var consumer = Mpl3115a2.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
@@ -61,15 +61,15 @@ public MeadowApp()
         Console.WriteLine($"  Pressure: {result.New.Pressure?.Bar:N2}bar");
     };
 
-    ReadConditions().Wait();
-
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var conditions = await sensor.Read();
     Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

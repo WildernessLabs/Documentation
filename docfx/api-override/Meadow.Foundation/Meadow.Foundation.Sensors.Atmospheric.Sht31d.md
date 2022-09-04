@@ -6,9 +6,9 @@ remarks: *content
 | Sht31d | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31d" alt="NuGet Gallery for Sht31d" /></a> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31D/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31D.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31D" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Sht31D" /></a> |
 
 The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
@@ -17,55 +17,55 @@ The **SHT31D** is a temperature and humidity sensor with a built in I2C interfac
 ```csharp
 Sht31d sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     sensor = new Sht31d(Device.CreateI2cBus());
 
     var consumer = Sht31d.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
-        },                
-        filter: result => 
+        },
+        filter: result =>
         {
             //c# 8 pattern match syntax. checks for !null and assigns var.
-            if (result.Old is { } old) 
-            { 
+            if (result.Old is { } old)
+            {
                 return (
                 (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
                 &&
                 (result.New.Humidity.Value.Percent - old.Humidity.Value.Percent) > 0.05
-                ); 
+                );
             }
             return false;
         }
     );
     sensor.Subscribe(consumer);
 
-    sensor.Updated += (sender, result) => 
+    sensor.Updated += (sender, result) =>
     {
         Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
         Console.WriteLine($"  Relative Humidity: {result.New.Humidity:N2}%");
     };
-    
-    ReadConditions().Wait();
 
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var conditions = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
     Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31d/Samples/Sht31d_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Samples/Sht31d_Sample)
 
 #### Interrupt Mode
 

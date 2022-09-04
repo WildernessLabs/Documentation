@@ -6,35 +6,42 @@ remarks: *content
 | Ssd1351 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for TftSpi" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Meadow.Foundation.Displays.TftSpi" /></a> |
 
 The **SSD1351** is a display controller used to drive 16bpp (RGB565) color OLED displays over SPI. These displays are commonly found with a resolution of 128x128.
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+MicroGraphics graphics;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
-  
+
     var spiBus = Device.CreateSpiBus(Ssd1351.DefaultSpiBusSpeed);
 
     var display = new Ssd1351(
-               device: Device, 
-               spiBus: spiBus,
-               chipSelectPin: Device.Pins.D02,
-               dcPin: Device.Pins.D01,
-               resetPin: Device.Pins.D00,
-               width: 128, height: 128)
+        device: Device,
+        spiBus: spiBus,
+        chipSelectPin: Device.Pins.D02,
+        dcPin: Device.Pins.D01,
+        resetPin: Device.Pins.D00,
+        width: 128, height: 128);
+
+    graphics = new MicroGraphics(display)
     {
+        CurrentFont = new Font8x12(),
         IgnoreOutOfBoundsPixels = true
     };
 
-    var graphics = new MicroGraphics(display);
-    graphics.CurrentFont = new Font8x12();
+    return base.Initialize();
+}
 
+public override Task Run()
+{
     graphics.Clear();
 
     graphics.DrawCircle(80, 80, 40, Meadow.Foundation.Color.Cyan, false);
@@ -57,6 +64,8 @@ public MeadowApp()
     graphics.DrawText(indent, y += spacing, "Brown", Meadow.Foundation.Color.Brown);
 
     graphics.Show();
+
+    return base.Run();
 }
 
 ```

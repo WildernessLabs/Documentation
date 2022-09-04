@@ -6,16 +6,16 @@ remarks: *content
 | Hx8357b | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for TftSpi" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Meadow.Foundation.Displays.TftSpi" /></a> |
 
 ### Code Example
 
 ```csharp
 MicroGraphics graphics;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
 
@@ -25,20 +25,21 @@ public MeadowApp()
     Console.WriteLine("Create display driver instance");
 
     var display = new Hx8357b(
-evice: Device, 
-us: spiBus,
+        device: Device,
+        spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,
-        width: 320, height: 480, displayColorMode: ColorType.Format16bppRgb565)
-    {
-        IgnoreOutOfBoundsPixels = true
-    };
-
-    Console.WriteLine("Create graphics lib");
+        width: 320, height: 480, colorMode: ColorType.Format16bppRgb565);
 
     graphics = new MicroGraphics(display);
+    graphics.IgnoreOutOfBoundsPixels = true;
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     graphics.Clear();
 
     graphics.DrawRectangle(120, 0, 120, 220, Color.White, true);
@@ -50,6 +51,8 @@ us: spiBus,
     graphics.DrawRectangle(0, 120, 120, 20, Color.Orange, true);
 
     graphics.Show();
+
+    return base.Run();
 }
 
 ```

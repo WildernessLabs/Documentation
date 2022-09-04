@@ -6,16 +6,16 @@ remarks: *content
 | Hx8357d | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for TftSpi" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Meadow.Foundation.Displays.TftSpi" /></a> |
 
 ### Code Example
 
 ```csharp
 MicroGraphics graphics;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
 
@@ -28,15 +28,18 @@ public MeadowApp()
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,
-        width: 320, height: 480)
-    {
-        IgnoreOutOfBoundsPixels = true
-    };
+        width: 320, height: 480);
 
     Console.WriteLine("Create graphics lib");
 
     graphics = new MicroGraphics(display);
+    graphics.IgnoreOutOfBoundsPixels = true;
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     graphics.Clear();
 
     graphics.DrawRectangle(120, 0, 120, 220, Color.White, true);
@@ -48,6 +51,8 @@ public MeadowApp()
     graphics.DrawRectangle(0, 120, 120, 20, Color.Orange, true);
 
     graphics.Show();
+
+    return base.Run();
 }
 
 ```

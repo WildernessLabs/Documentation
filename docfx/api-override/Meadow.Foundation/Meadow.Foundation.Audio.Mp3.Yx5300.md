@@ -8,36 +8,39 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Mp3.Yx5300/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Mp3.Yx5300.svg?label=Meadow.Foundation.Audio.Mp3.Yx5300" alt="NuGet Gallery for Yx5300" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Mp3.Yx5300/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Mp3.Yx5300.svg?label=Meadow.Foundation.Audio.Mp3.Yx5300" alt="NuGet Gallery for Meadow.Foundation.Audio.Mp3.Yx5300" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+Yx5300 mp3Player;
+
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
-    var mp3Player = new Yx5300(Device, Device.SerialPortNames.Com4);
+    mp3Player = new Yx5300(Device, Device.SerialPortNames.Com4);
 
-    //using an async task - this code would likely go in an async method
-    Task.Run(async () =>
-    {
-        mp3Player.SetVolume(15);
+    return Task.CompletedTask;
+}
 
-        var status = await mp3Player.GetStatus();
-        Console.WriteLine($"Status: {status}");
+public override async Task Run()
+{
+    mp3Player.SetVolume(15);
 
-        var count = await mp3Player.GetNumberOfTracksInFolder(0);
-        Console.WriteLine($"Number of tracks: {count}");
+    var status = await mp3Player.GetStatus();
+    Console.WriteLine($"Status: {status}");
 
-        mp3Player.Play();
+    var count = await mp3Player.GetNumberOfTracksInFolder(0);
+    Console.WriteLine($"Number of tracks: {count}");
 
-        await Task.Delay(5000); //leave playing for 5 seconds
+    mp3Player.Play();
 
-        mp3Player.Next();
+    await Task.Delay(5000); //leave playing for 5 seconds
 
-        await Task.Delay(5000); //leave playing for 5 seconds
-    });
+    mp3Player.Next();
+
+    await Task.Delay(5000); //leave playing for 5 seconds
 }
 
 ```

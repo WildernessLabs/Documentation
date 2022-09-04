@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Mlx90640/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Mlx90640.svg?label=Meadow.Foundation.Sensors.Camera.Mlx90640" alt="NuGet Gallery for Mlx90640" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Mlx90640/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Mlx90640.svg?label=Meadow.Foundation.Sensors.Camera.Mlx90640" alt="NuGet Gallery for Meadow.Foundation.Sensors.Camera.Mlx90640" /></a> |
 
 ```csharp
 Mlx90640 sensor;
@@ -102,19 +102,20 @@ void Run(bool showTempArrayAsAsciiArt)
 ```csharp
 Mlx90640 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.Fast);
     sensor = new Mlx90640(i2cBus);
-  
-    //View sensor data as temperature values
-    Run(showTempArrayAsAsciiArt: false);
+
+    return Task.CompletedTask;
 }
 
-void Run(bool showTempArrayAsAsciiArt)
+public override Task Run()
 {
+    bool showTempArrayAsAsciiArt = false;
+
     Console.WriteLine("Run sample...");
 
     float[] frame;
@@ -122,7 +123,7 @@ void Run(bool showTempArrayAsAsciiArt)
     Console.WriteLine($"Serial #:{sensor.SerialNumber}");
 
     sensor.SetMode(Mlx90640.Mode.Chess);
-    Console.WriteLine($"Current Mode: {sensor.GetMode()}");  
+    Console.WriteLine($"Current Mode: {sensor.GetMode()}");
 
     sensor.SetResolution(Mlx90640.Resolution.EighteenBit);
     Console.WriteLine($"Current resolution: {sensor.GetResolution()}");
@@ -177,7 +178,9 @@ void Run(bool showTempArrayAsAsciiArt)
 
             Console.WriteLine();
         }
-   }
+    }
+
+    return Task.CompletedTask;
 }
 
 ```

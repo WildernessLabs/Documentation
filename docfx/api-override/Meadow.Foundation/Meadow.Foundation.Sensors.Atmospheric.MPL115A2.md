@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115A2) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115A2/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl115a2" alt="NuGet Gallery for Mpl115a2" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl115a2" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Mpl115a2" /></a> |
 
 The **MPL115A2** is a low cost device for reading barometric pressure.
 
@@ -31,14 +31,14 @@ The application below connects the MPL115A2 to two interrupt handlers.  These in
 ```csharp
 Mpl115a2 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     sensor = new Mpl115a2(Device.CreateI2cBus());
 
     var consumer = Mpl115a2.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
@@ -60,15 +60,15 @@ public MeadowApp()
         Console.WriteLine($"  Pressure: {result.New.Pressure?.Bar:N2}Bar");
     };
 
-    ReadConditions().Wait();
-
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var conditions = await sensor.Read();
     Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

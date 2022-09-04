@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Bno055/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Bno055/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Bno055.svg?label=Meadow.Foundation.Sensors.Motion.Bno055" alt="NuGet Gallery for Bno055" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Bno055/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Bno055.svg?label=Meadow.Foundation.Sensors.Motion.Bno055" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Bno055" /></a> |
 
 **BNO055** is a 9-axis absolute orientation sensor. The three sensors (accelerometer, gyroscope and magnetometer) are measured with a 32-bit cortex M0 microcontroller. The BNO055 is controlled via I2C.
 
@@ -20,9 +20,9 @@ remarks: *content
 ```csharp
 Bno055 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Console.WriteLine("Initialize...");
 
     // create the sensor driver
     sensor = new Bno055(Device.CreateI2cBus());
@@ -46,12 +46,10 @@ public MeadowApp()
             $"Y:{result.New.GravityVector?.Y.MetersPerSecondSquared:N2}," +
             $"Z:{result.New.GravityVector?.Z.MetersPerSecondSquared:N2} (meters/s^2)]");
 
-        // TODO: what is the unit here. quaternion need to be unitized.
         Console.WriteLine($"Quaternion orientation: [X:{result.New.QuaternionOrientation?.X:N2}," +
             $"Y:{result.New.QuaternionOrientation?.Y:N2}," +
             $"Z:{result.New.QuaternionOrientation?.Z:N2}]");
 
-        // TODO: what is the unit here. euler angles need to be unitized.
         Console.WriteLine($"Euler orientation: [heading: {result.New.EulerOrientation?.Heading:N2}," +
             $"Roll: {result.New.EulerOrientation?.Roll:N2}," +
             $"Pitch: {result.New.EulerOrientation?.Pitch:N2}]");
@@ -78,10 +76,13 @@ public MeadowApp()
         });
     sensor.Subscribe(consumer);
 
-    //==== one-off read
-    ReadConditions().Wait();
+    return Task.CompletedTask;
+}
 
-    // start updating
+public async override Task Run()
+{ 
+    await ReadConditions();
+
     sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
 }
 
@@ -105,12 +106,10 @@ protected async Task ReadConditions()
         $"Y:{result.GravityVector?.Y.MetersPerSecondSquared:N2}," +
         $"Z:{result.GravityVector?.Z.MetersPerSecondSquared:N2} (meters/s^2)]");
 
-    // TODO: what is the unit here. quaternion need to be unitized.
     Console.WriteLine($"Quaternion orientation: [X:{result.QuaternionOrientation?.X:N2}," +
         $"Y:{result.QuaternionOrientation?.Y:N2}," +
         $"Z:{result.QuaternionOrientation?.Z:N2}]");
 
-    // TODO: what is the unit here. euler angles need to be unitized.
     Console.WriteLine($"Euler orientation: [heading: {result.EulerOrientation?.Heading:N2}," +
         $"Roll: {result.EulerOrientation?.Roll:N2}," +
         $"Pitch: {result.EulerOrientation?.Pitch:N2}]");

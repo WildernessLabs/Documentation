@@ -8,16 +8,16 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.WindVane) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.WindVane/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Weather.WindVane/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Weather.WindVane.svg?label=Meadow.Foundation.Sensors.Weather.WindVane" alt="NuGet Gallery for WindVane" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Weather.WindVane/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Weather.WindVane.svg?label=Meadow.Foundation.Sensors.Weather.WindVane" alt="NuGet Gallery for Meadow.Foundation.Sensors.Weather.WindVane" /></a> |
 
 ### Code Example
 
 ```csharp
 WindVane windVane;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     // initialize the wind vane driver
     windVane = new WindVane(Device, Device.Pins.A00);
@@ -32,8 +32,13 @@ public MeadowApp()
     );
     windVane.Subscribe(observer);
 
+    return Task.CompletedTask;
+}
+
+public override async Task Run()
+{
     // get initial reading, just to test the API
-    Azimuth azi = windVane.Read().Result;
+    Azimuth azi = await windVane.Read();
     Console.WriteLine($"Initial azimuth: {azi.Compass16PointCardinalName}");
 
     // start updating

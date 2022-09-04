@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tcs3472x) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tcs3472x/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tcs3472x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tcs3472x.svg?label=Meadow.Foundation.Sensors.Light.Tcs3472x" alt="NuGet Gallery for Tcs3472x" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Tcs3472x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Tcs3472x.svg?label=Meadow.Foundation.Sensors.Light.Tcs3472x" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.Tcs3472x" /></a> |
 
 ### Code Example
 
@@ -16,13 +16,13 @@ remarks: *content
 Tcs3472x sensor;
 RgbPwmLed rgbLed;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     sensor = new Tcs3472x(Device.CreateI2cBus());
 
-    // instantiate our onboard LED that we'll show the color with
+    // instantiate our onboard LED
     rgbLed = new RgbPwmLed(
         Device,
         Device.Pins.OnboardLedRed,
@@ -46,25 +46,24 @@ public MeadowApp()
 
     // classical .NET events can also be used:
     sensor.Updated += (sender, result) => {
-        Console.WriteLine($"  Ambient Light: {result.New.AmbientLight?.Lux:N2}Lux");
-        Console.WriteLine($"  Color: {result.New.Color}");
+        Console.WriteLine($" Ambient Light: {result.New.AmbientLight?.Lux:N2}Lux");
+        Console.WriteLine($" Color: {result.New.Color}");
         if (result.New.Color is { } color) { rgbLed.SetColor(color); }
     };
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating continuously
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public override async Task Run()
 {
-    var result = await sensor.Read();
+    var (AmbientLight, Color, Valid) = await sensor.Read();
+
     Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  Visible Light: {result.AmbientLight?.Lux:N2}Lux");
-    Console.WriteLine($"  Color: {result.Color}");
-    if (result.Color is { } color) { rgbLed.SetColor(color); }
+    Console.WriteLine($" Visible Light: {AmbientLight?.Lux:N2}Lux");
+    Console.WriteLine($" Color: {Color}");
+    if (Color is { } color) { rgbLed.SetColor(color); }
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

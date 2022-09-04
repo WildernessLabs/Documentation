@@ -1,58 +1,66 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Il0398
+uid: Meadow.Foundation.Displays.Il3897
 remarks: *content
 ---
 
-| IL0398 | |
+| IL3897 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Datasheets) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for ePaper" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for Meadow.Foundation.Displays.ePaper" /></a> |
 
-The **IL0398** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and supports partial screen updates.
+The **IL3897** is a dual-color display controller for ePaper displays. Data is sent to the controller via SPI and supports full screen updates only.
 
-The IL0398 is commonly paired with 4.2" 400x300 tri-color ePaper display.
+The IL3897 is commonly paired with a 2.13" two color ePaper display.
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+MicroGraphics graphics;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initialize ...");
  
-    var display = new Il0398(device: Device,
+    var display = new Il3897(device: Device,
         spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,
         busyPin: Device.Pins.D03,
-        width: 300,
-        height: 400);
+        width: 122,
+        height: 250);
 
-    var graphics = new MicroGraphics(display);
+    graphics = new MicroGraphics(display);
 
-    //any color but black will show the ePaper alternate color 
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
     graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
 
     graphics.CurrentFont = new Font8x12();
-    graphics.DrawText(2, 2, "IL0398", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 2, "IL0373", Meadow.Foundation.Color.Black);
     graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
 
     graphics.Show();
+
+    return Task.CompletedTask;
 }
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples/IL0398_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples/IL3897_Sample)
 
 ### Wiring Example
 
- To control a IL0398 from Meadow, connect the following:
+ To control a IL3897 from Meadow, connect the following:
 
-| IL0398  | Meadow Pin |
+| IL3897  | Meadow Pin |
 |---------|------------|
 | BUSY    | D15        |
 | RST     | D14        |
@@ -65,6 +73,9 @@ public MeadowApp()
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL0398/ePaper_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL3897/ePaper_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
 

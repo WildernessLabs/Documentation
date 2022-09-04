@@ -1,14 +1,14 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Il0373
+uid: Meadow.Foundation.Displays.Il0373
 remarks: *content
 ---
 
 | IL0373 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Datasheets) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for ePaper" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for Meadow.Foundation.Displays.ePaper" /></a> |
 
 The **IL0373** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and supports partial screen updates.
 
@@ -17,29 +17,38 @@ The IL0373 is commonly paired with 1.54", 2.13" or 2.9" dual or tri-color ePaper
 ### Code Example
 
 ```csharp
-public MeadowApp()
+MicroGraphics graphics;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initialize ...");
  
     var display = new Il0373(device: Device, 
         spiBus: Device.CreateSpiBus(),
-        chipSelectPin: Device.Pins.D02,
-        dcPin: Device.Pins.D01,
-        resetPin: Device.Pins.D00,
-        busyPin: Device.Pins.D03,
-        width: 176,
-        height: 264);
+        chipSelectPin: Device.Pins.D03,
+        dcPin: Device.Pins.D02,
+        resetPin: Device.Pins.D01,
+        busyPin: Device.Pins.D00,
+        width: 400,
+        height: 300);
 
-    var graphics = new MicroGraphics(display);
+    graphics = new MicroGraphics(display);
 
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
     //any color but black will show the ePaper alternate color 
-    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Black, false);
 
-    graphics.CurrentFont = new Font8x12();
+    graphics.CurrentFont = new Font12x16();
     graphics.DrawText(2, 2, "IL0373", Meadow.Foundation.Color.Black);
-    graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 30, "Meadow F7", Meadow.Foundation.Color.Black);
 
     graphics.Show();
+
+    return Task.CompletedTask;
 }
 
 ```

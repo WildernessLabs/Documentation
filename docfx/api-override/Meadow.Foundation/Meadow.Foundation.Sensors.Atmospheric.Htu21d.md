@@ -6,9 +6,9 @@ remarks: *content
 | Htu21d | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu2xd) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu2xd/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Htu2xd/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Htux1d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Htux1d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Htux1d" alt="NuGet Gallery for Htu21d" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Htux1d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Htux1d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Htux1d" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Htux1d" /></a> |
 
 The **HTU21D** is a low-cost, easy to use, highly accurate, digital humidity and temperature sensor controlled via the I2C bus.
 
@@ -17,7 +17,7 @@ The **HTU21D** is a low-cost, easy to use, highly accurate, digital humidity and
 ```csharp
 Htu21d sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -50,17 +50,17 @@ public MeadowApp()
         Console.WriteLine($"  Relative Humidity: {result.New.Humidity?.Percent:F1}%");
     };
 
-    ReadConditions().Wait();
-
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}C");
     Console.WriteLine($"  Relative Humidity: {result.Humidity:F1}%");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

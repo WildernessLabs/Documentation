@@ -8,19 +8,26 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds1307/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds1307.svg?label=Meadow.Foundation.RTCs.Ds1307" alt="NuGet Gallery for Ds1307" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds1307/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds1307.svg?label=Meadow.Foundation.RTCs.Ds1307" alt="NuGet Gallery for Meadow.Foundation.RTCs.Ds1307" /></a> |
 
 The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+Ds1307 rtc;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
-    var rtc = new Ds1307(Device.CreateI2cBus());
+    rtc = new Ds1307(Device.CreateI2cBus());
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     var dateTime = new DateTime();
     var running = rtc.IsRunning;
 
@@ -31,7 +38,7 @@ public MeadowApp()
         Console.WriteLine(" Starting RTC...");
         rtc.IsRunning = true;
     }
-  
+
     dateTime = rtc.GetTime();
     Console.WriteLine($" RTC current time is: {dateTime.ToString("MM/dd/yy HH:mm:ss")}");
 
@@ -42,7 +49,7 @@ public MeadowApp()
     dateTime = rtc.GetTime();
     Console.WriteLine($" RTC current time is: {dateTime.ToString("MM/dd/yy HH:mm:ss")}");
 
-    Random rand = new Random();
+    var rand = new Random();
 
     var data = new byte[56];
 
@@ -56,6 +63,8 @@ public MeadowApp()
     Console.Write($" Reading from RTC RAM : ");
     data = rtc.ReadRAM(0, 56);
     Console.WriteLine(BitConverter.ToString(data));
+
+    return base.Run();
 }
 
 ```

@@ -6,9 +6,9 @@ remarks: *content
 | ST7789 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for TftSpi" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.TftSpi/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.TftSpi.svg?label=Meadow.Foundation.Displays.TftSpi" alt="NuGet Gallery for Meadow.Foundation.Displays.TftSpi" /></a> |
 
 The **ST7789** is a display controller used to drive color displays over SPI using 12, 16 or 18 bbp. These displays require a backlight. These are typically paired with high pixel density displays, the most common being a 1.5" 240x240 display.
 
@@ -30,7 +30,7 @@ You can get ST7789 displays from the following suppliers:
 MicroGraphics graphics;
 St7789 display;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
 
@@ -40,17 +40,25 @@ public MeadowApp()
     display = new St7789(
         device: Device,
         spiBus: spiBus,
-        chipSelectPin: Device.Pins.D15,
-        dcPin: Device.Pins.D11,
-        resetPin: Device.Pins.D14,
-        width: 240, height: 240, displayColorMode: ColorType.Format16bppRgb565)
+        chipSelectPin: Device.Pins.A03,
+        dcPin: Device.Pins.A04,
+        resetPin: Device.Pins.A05,
+        width: 240, height: 240, colorMode: ColorType.Format16bppRgb565);
+
+    display.Clear(Color.AliceBlue);
+    display.Show();
+
+    graphics = new MicroGraphics(display)
     {
+        Rotation = RotationType._90Degrees,
         IgnoreOutOfBoundsPixels = true
     };
 
-    graphics = new MicroGraphics(display);
-    graphics.Rotation = RotationType._180Degrees;
+    return base.Initialize();
+}
 
+public override Task Run()
+{
     graphics.Clear(true);
 
     graphics.DrawRectangle(120, 0, 120, 220, Color.White, true);
@@ -63,7 +71,9 @@ public MeadowApp()
 
     graphics.Show();
 
-    BufferRotationTest();
+    DisplayTest();
+
+    return base.Run();
 }
 
 ```

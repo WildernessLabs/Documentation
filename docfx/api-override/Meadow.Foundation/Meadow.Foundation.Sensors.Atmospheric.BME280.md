@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bme280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bme280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bme280" alt="NuGet Gallery for Bme280" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bme280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bme280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bme280" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bme280" /></a> |
 
 The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
 
@@ -26,7 +26,7 @@ The BME280 can operating in polling and interrupt mode.  By default, this sensor
 ```csharp
 Bme280 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -34,15 +34,15 @@ public MeadowApp()
     CreateI2CSensor();
 
     var consumer = Bme280.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
-        },                
-        filter: result => 
+        },
+        filter: result =>
         {
             //c# 8 pattern match syntax. checks for !null and assigns var.
-            if (result.Old is { } old) 
-            { 
+            if (result.Old is { } old)
+            {
                 return (
                 (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
                 &&
@@ -60,7 +60,16 @@ public MeadowApp()
         Console.WriteLine($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
     };
 
-    ReadConditions().Wait();
+    return Task.CompletedTask;
+}
+
+public override async Task Run()
+{
+    var conditions = await sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
+    Console.WriteLine($"  Pressure: {conditions.Pressure?.Bar:N2}hPa");
+    Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
@@ -80,15 +89,6 @@ void CreateI2CSensor()
     var i2c = Device.CreateI2cBus();
     sensor = new Bme280(i2c, (byte)Bme280.Addresses.Default); // SDA pulled up
     
-}
-
-async Task ReadConditions()
-{
-    var conditions = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
-    Console.WriteLine($"  Pressure: {conditions.Pressure?.Bar:N2}hPa");
-    Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
 }
 
 ```

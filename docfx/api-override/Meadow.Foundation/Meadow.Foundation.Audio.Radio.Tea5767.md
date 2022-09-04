@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Radio.Tea5767/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Radio.Tea5767/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.Tea5767.svg?label=Meadow.Foundation.Audio.Radio.Tea5767" alt="NuGet Gallery for Tea5767" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Audio.Radio.Tea5767/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Audio.Radio.Tea5767.svg?label=Meadow.Foundation.Audio.Radio.Tea5767" alt="NuGet Gallery for Meadow.Foundation.Audio.Radio.Tea5767" /></a> |
 
 The **TEA5767** FM module is based on the TEA5767GH which is a single-chip, electronically tuned, FM stereo radio for low-voltage applications with fully integrated Intermediate Frequency (IF) selectivity and demodulation. 
 
@@ -26,16 +26,23 @@ You can get a TEA5767 module (with antenna included) from the following supplier
 ### Code Example
 
 ```csharp
-public MeadowApp()
+Tea5767 radio;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
     
-    var radio = new Tea5767(Device.CreateI2cBus());
+    radio = new Tea5767(Device.CreateI2cBus());
 
+    return Task.CompletedTask;
+}
+
+public async override Task Run()
+{
     //scan through avaliable stations
     for (int i = 0; i < 8; i++)
     {
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         radio.SearchNextSilent();
 
@@ -43,7 +50,7 @@ public MeadowApp()
     }
 
     //set a known station
-    radio.SelectFrequency(new Meadow.Units.Frequency(94.5, Meadow.Units.Frequency.UnitType.Megahertz));
+    radio.SelectFrequency(new Frequency(94.5, Frequency.UnitType.Megahertz));
 }
 
 ```
