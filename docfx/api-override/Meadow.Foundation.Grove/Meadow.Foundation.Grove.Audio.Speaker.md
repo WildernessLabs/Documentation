@@ -6,7 +6,7 @@ remarks: *content
 | Speaker | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Speaker) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Speaker/Driver) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Audio.Speaker/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Audio.Speaker.svg?label=Meadow.Foundation.Grove.Audio.Speaker" alt="NuGet Gallery for Meadow.Foundation.Grove.Audio.Speaker" /></a> |
 
 ### Code Example

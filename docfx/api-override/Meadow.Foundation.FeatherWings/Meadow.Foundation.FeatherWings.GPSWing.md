@@ -6,7 +6,7 @@ remarks: *content
 | GPSWing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/GPSWing) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/GPSWing/Driver) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.GPSWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.GPSWing.svg?label=Meadow.Foundation.FeatherWings.GPSWing" alt="NuGet Gallery for Meadow.Foundation.FeatherWings.GPSWing" /></a> |
 
 ### Code Example

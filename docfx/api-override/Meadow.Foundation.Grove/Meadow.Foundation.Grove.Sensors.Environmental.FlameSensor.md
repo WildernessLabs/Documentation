@@ -6,7 +6,7 @@ remarks: *content
 | FlameSensor | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/FlameSensor) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/FlameSensor/Driver) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Environmental.FlameSensor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Environmental.FlameSensor.svg?label=Meadow.Foundation.Grove.Sensors.Environmental.FlameSensor" alt="NuGet Gallery for Meadow.Foundation.Grove.Sensors.Environmental.FlameSensor" /></a> |
 
 ### Code Example

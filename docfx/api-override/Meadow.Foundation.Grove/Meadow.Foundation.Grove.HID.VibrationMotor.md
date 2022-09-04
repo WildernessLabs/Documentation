@@ -6,7 +6,7 @@ remarks: *content
 | VibrationMotor | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/VibrationMotor) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/VibrationMotor/Driver) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.HID.VibrationMotor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.HID.VibrationMotor.svg?label=Meadow.Foundation.Grove.HID.VibrationMotor" alt="NuGet Gallery for Meadow.Foundation.Grove.HID.VibrationMotor" /></a> |
 
 ### Code Example

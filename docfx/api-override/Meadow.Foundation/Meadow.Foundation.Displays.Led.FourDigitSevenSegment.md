@@ -6,7 +6,7 @@ remarks: *content
 | FourDigitSevenSegment | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.FourDigitSevenSegment) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.FourDigitSevenSegment/Driver) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.svg?label=Meadow.Foundation.Displays.Led.FourDigitSevenSegment" alt="NuGet Gallery for Meadow.Foundation.Displays.Led.FourDigitSevenSegment" /></a> |
 
 ### Code Example
