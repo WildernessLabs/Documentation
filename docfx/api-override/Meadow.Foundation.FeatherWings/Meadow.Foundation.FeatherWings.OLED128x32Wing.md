@@ -6,7 +6,7 @@ remarks: *content
 | OLED128x32Wing | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/OLED128x32Wing/Driver) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/OLED128x32Wing) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/OLED128x32Wing/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.OLED128x32Wing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.OLED128x32Wing.svg?label=Meadow.Foundation.FeatherWings.OLED128x32Wing" alt="NuGet Gallery for Meadow.Foundation.FeatherWings.OLED128x32Wing" /></a> |
 

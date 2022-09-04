@@ -6,7 +6,7 @@ remarks: *content
 | 3-AxisDigitalAccelerometer1_5g | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer1_5g/Driver) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer1_5g) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g.svg?label=Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g" alt="NuGet Gallery for Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g" /></a> |
 
 ### Code Example

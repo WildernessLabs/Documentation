@@ -6,7 +6,7 @@ remarks: *content
 | LEDSocket | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LEDSocket/Driver) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LEDSocket) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Leds.LEDSocket/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Leds.LEDSocket.svg?label=Meadow.Foundation.Grove.Leds.LEDSocket" alt="NuGet Gallery for Meadow.Foundation.Grove.Leds.LEDSocket" /></a> |
 
 ### Code Example
