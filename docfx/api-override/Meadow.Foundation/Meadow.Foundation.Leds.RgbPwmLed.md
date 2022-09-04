@@ -22,14 +22,7 @@ To use with an LED that has a resistor in series, pass `0.0` or `TypicalForwardV
 ```csharp
 RgbPwmLed onboardLed;
 
-public MeadowApp()
-{
-    ConfigurePeripherals();
-    TestColors();
-    RunColors();
-}
-
-public void ConfigurePeripherals()
+public override Task Initialize()
 {
     Console.WriteLine("Creating peripherals...");
     this.onboardLed = new RgbPwmLed(
@@ -38,6 +31,17 @@ public void ConfigurePeripherals()
         Device.Pins.OnboardLedGreen,
         Device.Pins.OnboardLedBlue,
         commonType: CommonType.CommonAnode);
+
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
+    TestColors();
+
+    RunColors();
+
+    return Task.CompletedTask;
 }
 
 public void TestColors()

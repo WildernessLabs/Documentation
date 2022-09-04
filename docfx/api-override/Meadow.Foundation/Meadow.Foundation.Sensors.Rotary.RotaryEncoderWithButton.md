@@ -32,7 +32,7 @@ For this reason, rotary encoders are particularly useful in connected things, in
 protected int value = 0;
 protected RotaryEncoderWithButton rotaryEncoder;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing Hardware...");
 
@@ -68,6 +68,8 @@ public MeadowApp()
     rotaryEncoder.PressStarted += (s, e) => Console.WriteLine("Press started");
      
     Console.WriteLine("Hardware initialization complete.");
+
+    return Task.CompletedTask;
 }
 
 private void RotaryEncoder_Rotated(object sender, RotaryChangeResult e)

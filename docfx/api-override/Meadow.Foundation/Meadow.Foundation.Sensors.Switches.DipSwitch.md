@@ -53,7 +53,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 ```csharp
 protected DipSwitch dipSwitch;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -69,6 +69,8 @@ public MeadowApp()
     };
 
     Console.WriteLine("DipSwitch...");
+
+    return Task.CompletedTask;
 }
 
 ```

@@ -28,7 +28,7 @@ This driver should work with any sensor of this type.
 ```csharp
 AnalogTemperature analogTemperature;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -66,6 +66,8 @@ public MeadowApp()
 
     // Spin up the sampling thread so that events are raised and IObservable notifications are sent.
     analogTemperature.StartUpdating(TimeSpan.FromMilliseconds(1000));
+
+    return Task.CompletedTask;
 }
 
 protected async Task ReadTemp()

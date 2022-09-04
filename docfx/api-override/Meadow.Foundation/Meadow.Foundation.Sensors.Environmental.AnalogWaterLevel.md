@@ -18,7 +18,7 @@ Be careful to limit the water contact to only the the sensor area. Do not submer
 ```csharp
 AnalogWaterLevel analogWaterLevel;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -45,6 +45,8 @@ public MeadowApp()
 
     // Spin up the sampling thread so that events are raised and IObservable notifications are sent.
     analogWaterLevel.StartUpdating(TimeSpan.FromSeconds(5));
+
+    return Task.CompletedTask;
 }
 
 protected async Task ReadLevel()
