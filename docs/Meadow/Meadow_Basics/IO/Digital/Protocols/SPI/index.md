@@ -38,9 +38,9 @@ Note: SPI supports shared `CS` lines in a _daisy-chain_ configuration, but it's 
 
 ## Meadow SPI Pins
 
-The SPI pins on the F7 Micro are labeled `SCK`, `MOSI` (`COPI`), and `MISO` (`CIPO`) and can be found between `A05` and `D00`:
+The SPI pins on the F7 Feather are labeled `SCK`, `MOSI` (`COPI`), and `MISO` (`CIPO`) and can be found between `A05` and `D00`:
 
-![Illustration of a Meadow F7 Micro board with two peripherals (Chip Select 1 and Chip Select 2) connected via SPI using the SCK, MOSI, and MISO pins as well as D00 and D01 pins for chip select](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Illustration of a Meadow F7 Feather board with two peripherals (Chip Select 1 and Chip Select 2) connected via SPI using the SCK, MOSI, and MISO pins as well as D00 and D01 pins for chip select](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
 Any pin that supports digital output can be used as a chip select line.
 
@@ -76,5 +76,3 @@ These methods are also available via the SPI bus, but require the chip select po
 ```csharp
 spiBus.WriteByte(spiPeriph.ChipSelect, 0x01);
 ```
-
-

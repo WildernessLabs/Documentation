@@ -48,13 +48,13 @@ meadow flash erase
 
 ## Meadow.OS
 
-We've made a number of stability and functionality improvements in MeadowOS to enable support for the Core Compute Module, better Power APIs, improved network APIs, etc. Most of these improvements enable features in the **Meadow.Core** section below.
+We've made a number of stability and functionality improvements in MeadowOS to enable support for the Core-Compute Module, better Power APIs, improved network APIs, etc. Most of these improvements enable features in the **Meadow.Core** section below.
 
 One improvement of note - Meadow will now detect the executing hardware at runtime and throws an exception if the hardware in the `MeadowApp` signature doesn't match.
 
 ### Meadow.Core
 
-We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core Compute module which gave us an opportunity to review, rethink, and standardize some of our existing APIs.
+We're continuing to standardize and improve our API surface. And this release includes several improvements. We've also added support for the Meadow Core-Compute module which gave us an opportunity to review, rethink, and standardize some of our existing APIs.
 
 #### Battery Info
 
@@ -88,9 +88,9 @@ Many calls that were deprecated with a warning in previous releases have been re
 
 `F7Micro` and `F7Microv2` class names have been deprecated and replaced with the more-appropriately named `F7FeatherV1` and `F7FeatherV2` classes. Backward support still exists and will give a deprecation error.  Future versions will escalate this to an error, so it is recommended you migrate your code.
 
-#### Support for the Core Compute Module
+#### Support for the Core-Compute Module
 
-This release adds support for the new Meadow Core Compute module with new `IMeadowDevice` and `IPinout` implementations. This support required refactoring of several base classes and interfaces.
+This release adds support for the new Meadow Core-Compute module with new `IMeadowDevice` and `IPinout` implementations. This support required refactoring of several base classes and interfaces.
 
 #### Other Changes
 

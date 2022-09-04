@@ -14,7 +14,7 @@ It is important to ensure that you have a USB cable capable of providing data tr
 
 ## Unpowered USB Hub
 
-If you're having issues communicating with Meadow that is connected via an unpowered USB-Hub, try connecting Meadow directly to a USB port in your machine to ensure the USB-Hub is the issue. 
+If you're having issues communicating with Meadow that is connected via an unpowered USB-Hub, try connecting Meadow directly to a USB port in your machine to ensure the USB-Hub is the issue.
 
 As there are a large variety USB-hubs out there, we cant guarantee Meadow will work properly for all of them.
 
@@ -28,13 +28,13 @@ Scott Hanselman has written a good [blog post](https://www.hanselman.com/blog/Ho
 
 If you're getting the `Could not find a connected Meadow with the serial number #########`, the board might not have the correct Window drivers. To solve this, follow these steps:
 
-1. Open Device Manager
-1. Under USB Devices right click Meadow F7 Micro
+1. Open Device Manager.
+1. Under USB Devices right click Meadow F7 Micro.
 1. Uninstall Devices and click the check box.
-1. Unplug your Meadow
-1. Restart your PC
-1. Once PC is restarted, Plug in Meadow in Bootmode
-1. Run command "meadow flash os"
+1. Unplug your Meadow.
+1. Restart your PC.
+1. Once PC is restarted, plug in Meadow in bootloader mode.
+1. Run command `meadow flash os`.
 1. Wait until the line: "Having trouble putting Meadow in DFU Mode, please press RST button on Meadow and press enter to try again" appears.
 1. Open [Zadig](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) and replace the driver.
 1. Wait for the flash to finish.

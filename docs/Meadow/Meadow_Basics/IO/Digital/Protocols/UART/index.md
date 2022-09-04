@@ -6,13 +6,13 @@ subtitle: Serial communications over UART/RS-232.
 
 Standard serial, typically referred to as RS-232 or UART (Universal Asynchronous Receiver Transmitter) is a moderate-speed, reliable, old-school, digital protocol used to communicate with a single device, using two wires:
 
-![](Serial(UART)_Circuit.svg){:standalone}
+![Illustration showing a Meadow board connected to for UART serial on COM4, with a receive line on pin D00 and a transmit line on pin D01.](Serial(UART)_Circuit.svg){:standalone}
 
-Depending on the hardware involved, serial can be used in extremely noisy industrial environments, over long distances; up to 60 meters (200 feet). 
+Depending on the hardware involved, serial can be used in extremely noisy industrial environments, over long distances; up to 60 meters (200 feet).
 
 ## Hardware
 
-Standard serial uses two lines for communication; a transmit (`TX`) line for sending messages to the peripheral, and a receive (`RX`) for listening to messages sent from the peripheral. 
+Standard serial uses two lines for communication; a transmit (`TX`) line for sending messages to the peripheral, and a receive (`RX`) for listening to messages sent from the peripheral.
 
 ### Meadow TX => Peripheral RX, Meadow RX => Peripheral TX
 
@@ -24,18 +24,17 @@ In addition to `TX` and `RX`, serial devices will also have ground and power pin
 
 If the device is powered by an external power supply, you must make sure the external power's ground is connected to the Meadow `GND` so that their voltages are the same.
 
-
 ### UART/TTL vs RS-232
 
-The RS-232 specification is a complete specification that includes hardware designs, electrical characteristics, and protocol specifications. 
+The RS-232 specification is a complete specification that includes hardware designs, electrical characteristics, and protocol specifications.
 
 However, within that specification are generally two different flavors that describe the electrical characteristics of the protocol; UART/TTL & RS-232.
 
 Serial has been around for a long time; before USB, it used to be a standard way for computers to talk to various peripherals such as keyboards and mice and connected to the serial port on a computer via an RS-232 cable with a connector like this:
 
-![](RS232_Cable.svg){:standalone}
+![Photo of the end of an RS232 cable showing the trapezoidal plug shape and nine pins, four on the narrower side and five on the wider side.](RS232_Cable.svg){:standalone}
 
-And many industrial peripherals that use standard serial communications still use RS-232 connectors. 
+And many industrial peripherals that use standard serial communications still use RS-232 connectors.
 
 #### Voltage Difference
 
@@ -51,25 +50,25 @@ Fortunately, many modern serial peripherals operate on TTL voltage levels. Howev
 
 When using an RS-232 peripheral, the signal voltages must be level-shifted and inverted (high voltage in RS-232 signifies `0`, whereas low-voltage at TTL signifies `0`) in order to communicate. Fortunately there are low cost ICs (Integrated Circuits) that do this, such as the MAX232 chip.
 
-Additionally, [Sparkfun has an RS-232 to TTL Shifter breakout board](https://www.sparkfun.com/products/449) that not only converts RS-232 to TTL levels, but also includes an onboard RS-232 connector:
+Additionally, [SparkFun has an RS-232 to TTL Shifter breakout board](https://www.sparkfun.com/products/449) that not only converts RS-232 to TTL levels, but also includes an onboard RS-232 connector:
 
 ![Photo of a SparkFun RS232 to TTL converter board with a 9-pin RS-232 port.](SparkFun_RS232_Shifter.svg){:standalone}
 
 ## Meadow Serial Ports
 
-The Meadow F7 Micro has two exposed serial ports, named `COM4` and `COM1` with the following pinout:
+The Meadow F7 Feather has two exposed serial ports, named `COM4` and `COM1` with the following pinout:
 
- * **COM4** - `D00` = `RX`, `D01` = `TX`
- * **COM1** - `D13` = `RX`, `D12` = `TX`
+* **COM4** - `D00` = `RX`, `D01` = `TX`
+* **COM1** - `D13` = `RX`, `D12` = `TX`
 
-![Illustration of a Meadow F7 Micro board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
 # Using the Meadow Serial API
 
 Because serial is a legacy technology, working with it can be a little tricky. In fact, because of this, we have two serial port classes that you can use for serial communications:
 
- * **`ISerialMessagePort`** - This is a modern, asynchronous take on serial communications that is thread-safe and asynchronous in nature. This is the recommended way to use serial on Meadow for nearly all use cases.
- * **`ISerialPort`** - For legacy uses, this works like traditional serial ports, it's not thread-safe, and care must be taken to make sure that the communications buffer is used appropriately if there are multiple subscribers to its events.
+* **`ISerialMessagePort`** - This is a modern, asynchronous take on serial communications that is thread-safe and asynchronous in nature. This is the recommended way to use serial on Meadow for nearly all use cases.
+* **`ISerialPort`** - For legacy uses, this works like traditional serial ports, it's not thread-safe, and care must be taken to make sure that the communications buffer is used appropriately if there are multiple subscribers to its events.
 
 For both classes, creating, opening, and writing to the underlying serial port is effectively the same, but the `ISerialMessagePort` handles reads in an asynchronous fashion, and bundles them into _messages_ that can provide a much easier way of reading data coming in. In contrast, the class `ISerialPort` class must be manually read from when data comes in.
 
@@ -82,13 +81,11 @@ For both classes, creating, opening, and writing to the underlying serial port i
 
 The `ISerialMessagePort` is configured in its constructor to operate in either of those two modes.
 
-
 ### Suffix Delimited Messages
 
-Often times, serial peripherals send varying length messages that are terminated by a sequence. For instance, GPS recievers send NMEA sentences of 
-indeterminate length, but each sentence ends with the "newline" suffix of carriage-return and line-feed characters (`\r\n`) as in the following:
+Often times, serial peripherals send varying length messages that are terminated by a sequence. For instance, GPS receivers send NMEA sentences of indeterminate length, but each sentence ends with the "newline" suffix of carriage-return and line-feed characters (`\r\n`) as in the following:
 
-```
+```console
 $GPGSA,A,1,,,,,,,,,,,,,,,*1E
 $GPRMC,000049.799,V,,,,,0.00,0.00,060180,,,N*48
 $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
@@ -105,8 +102,7 @@ ISerialMessagePort CreateSerialMessagePort(SerialPortName portName, byte[] suffi
     StopBits stopBits = StopBits.One, int readBufferSize = 4096);
 ```
 
-For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Micro) that defines `\r\n` as its suffix delimiter, we 
-can use the following code:
+For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `\r\n` as its suffix delimiter, we can use the following code:
 
 ```csharp
 Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 
@@ -117,7 +113,7 @@ Device.CreateSerialMessagePort(Device.SerialPortNames.Com4,
 
 Sometimes, serial peripherals will send fixed-length messages that have a common prefix as in the following:
 
-```
+```console
 $0480880
 $0420029
 $2083992
@@ -134,8 +130,7 @@ ISerialMessagePort CreateSerialMessagePort(SerialPortName portName, byte[] prefi
 
 ```
 
-For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Micro) that defines `$` as its prefix delimiter, and has
-a 6 byte message length, we can use the following code:
+For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `$` as its prefix delimiter, and has a 6 byte message length, we can use the following code:
 
 ```csharp
 Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 
@@ -180,8 +175,7 @@ serialPort.Write(buffer);
 
 ### Encoding and Decoding Serial Port Messages
 
-Note that serial ports deal in `byte` arrays, rather than strings or characters, so any strings need to be converted to bytes. Typically, you'll want
-to use `Encoding.UTF8` or `Encoding.ASCII` encoding. 
+Note that serial ports deal in `byte` arrays, rather than strings or characters, so any strings need to be converted to bytes. Typically, you'll want to use `Encoding.UTF8` or `Encoding.ASCII` encoding.
 
 To turn a string into a `byte[]`, you can use the following call:
 
@@ -191,25 +185,13 @@ Encoding.UTF8.GetBytes("\r\n")
 
 ## Reading from a Serial Port
 
-`ISerialPort` and `ISerialMessage` port diverge greatly in their behavior in regards to reading from them. Serial is a legacy protocol technology 
-in which data comes in asynchronously and unlike messages in SPI or I2C, there is no standard message protocol. Typically, in legacy serial port 
-implementations the consumer is expected to either continuously poll the serial port buffer and pull off new data bytes, or wait for a serial
-data received event notification, and then pull bytes off the receive buffer.
+`ISerialPort` and `ISerialMessage` port diverge greatly in their behavior in regards to reading from them. Serial is a legacy protocol technology in which data comes in asynchronously and unlike messages in SPI or I2C, there is no standard message protocol. Typically, in legacy serial port implementations the consumer is expected to either continuously poll the serial port buffer and pull off new data bytes, or wait for a serial data received event notification, and then pull bytes off the receive buffer.
 
-Both of these approaches have massive drawbacks. Polling a serial port is processor intensive, as it relies on a loop that constantly checks for 
-new data. Waiting for an event to read from the buffer is more efficient, but both methods can be extremely problematic when actualy reading from 
-the buffer. The issue is that a serial port has a single receive buffer, and reading from that buffer removes the data from it. If multiple actors
-are reading from the buffer, then the each actor might only get fragments of the intended data, rendering the data invalid. Additionally, because
-messages are indeterminate in their termination, when the data received event comes in, the entire message data may not have arrived, so a data
-consumer would need to either continuously poll for more data until it can be determined that all the data has come in, or use advanced threading
-techniques to resume the reading thread when additional data has come in.
+Both of these approaches have massive drawbacks. Polling a serial port is processor intensive, as it relies on a loop that constantly checks for new data. Waiting for an event to read from the buffer is more efficient, but both methods can be extremely problematic when actually reading from the buffer. The issue is that a serial port has a single receive buffer, and reading from that buffer removes the data from it. If multiple actors are reading from the buffer, then the each actor might only get fragments of the intended data, rendering the data invalid. Additionally, because messages are indeterminate in their termination, when the data received event comes in, the entire message data may not have arrived, so a data consumer would need to either continuously poll for more data until it can be determined that all the data has come in, or use advanced threading techniques to resume the reading thread when additional data has come in.
 
 ### Reading Messages via `ISerialMessagePort`
 
-It is for this reason that we created the `ISerialMessagePort`, which handles all of the underlying concurrency issues on the receive buffer 
-and takes an asynchronous approach to serial messages. Simply define your message type during construction and then listen for incoming message 
-notifications. In this way, multiple consumers can listen for new data without concurrency issues, and all reading is handled efficiently, under
-the hood.
+It is for this reason that we created the `ISerialMessagePort`, which handles all of the underlying concurrency issues on the receive buffer and takes an asynchronous approach to serial messages. Simply define your message type during construction and then listen for incoming message notifications. In this way, multiple consumers can listen for new data without concurrency issues, and all reading is handled efficiently, under the hood.
 
 #### `MessageReceived` Event
 
@@ -232,7 +214,7 @@ void SerialPort_MessageReceived(object sender, SerialMessageData e)
 
 ## Reading from the Receive Buffer via `ClassicSerialPort`
 
-When data from the peripheral is received, it's placed in an internal [circular recieve buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read. 
+When data from the peripheral is received, it's placed in an internal [circular receive buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read.
 
 For example, the following code will read 7 bytes from the buffer:
 
@@ -249,9 +231,7 @@ As data is received by the serial port, a [`DataReceived` event](/docs/api/Meado
 
 ### `Read()` Warning
 
-Because the receive buffer is shared, and a single message might arrive in multiple chunks, each chunk associated with a `DataReceived` event, 
-care must be taken that there is only one consumer of the buffer, and that any reads are done in a critical section (i.e., C#'s `lock(object) { ... }` syntax).
-
+Because the receive buffer is shared, and a single message might arrive in multiple chunks, each chunk associated with a `DataReceived` event, care must be taken that there is only one consumer of the buffer, and that any reads are done in a critical section (i.e., C#'s `lock(object) { ... }` syntax).
 
 ### Additional APIs
 

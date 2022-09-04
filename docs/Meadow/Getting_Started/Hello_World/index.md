@@ -9,7 +9,7 @@ Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deployi
 The video below shows you how to create and deploy your first Meadow app on a Mac:
 <p><iframe width="640" height="360" src="https://www.youtube.com/embed/wkekz5I7ycE" frameborder="3" allowfullscreen></iframe></p>
 
-Alternatively, you can follow this step by step guide for both macOS and Windows: 
+Alternatively, you can follow this step by step guide for both macOS and Windows:
 
 ## Step 1: Install Visual Studio Meadow Extensions
 
@@ -63,7 +63,7 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
  1. Open Visual Studio.
  2. Create a new Project: **File** -> **New Solution..**.
- 3. In the **Meadow** section, select *Meadow Application* and press **Next**.
+ 3. In the **Meadow** section, select _Meadow Application_ and press **Next**.
  4. Name your project `HelloMeadow` and choose project location.
  5. Press **Create**.
 
@@ -80,7 +80,7 @@ The Meadow application template is a simple application that will pulse the onbo
 ### Windows
 
  1. Connect your Meadow device to your development machine
- 2. Right-click anywhere in the toolbar area and you'll see *Meadow Device List* in the dropdown. Click on it and it will be added to your toolbar.
+ 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar.
  3. Select the Meadow device COM port that correspond to your board in the Meadow Device List toolbar dropdown
  4. Right-click project in Solution Explorer and choose **Deploy**.
  5. Wait 30-60 seconds for your application to start
@@ -176,7 +176,7 @@ using Meadow.Peripherals.Leds;
 These are the typical minimum set of namespaces in a Meadow app class and provide the following functionality:
 
 * `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
-* `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Micro Dev board, or the F7 Micro embeddable board.
+* `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Feather V1 and V2 dev boards, or the F7v2 Core-Compute module.
 * `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
 * `Meadow.Foundation.Leds` - Provided with the Meadow.Foundation library. Used to simplify use of RGB LEDs in this sample.
 * `Meadow.Peripherals.Leds` - Provided with the Meadow.Contracts library. Used to access LED type enumeration.
@@ -236,7 +236,6 @@ The `Initialize` call writes to the console for informational purposes, useful w
 #### Digital Output
 
 To pulse the color of the light emitted via the onboard LED, we can utilize the built in `StartPulse()` method of the `RgbPwmLed` class, this is done in the ShowColorPulse method, which takes a color and duration. All of this is tied together with the CycleColors call which will simply cycle through a variety of colors:
-
 
 ```csharp
 void CycleColors(TimeSpan duration)

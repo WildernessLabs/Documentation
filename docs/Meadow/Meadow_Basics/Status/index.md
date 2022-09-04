@@ -1,10 +1,10 @@
 ---
 layout: Meadow
-title: Meadow F7 Micro Beta Status
+title: Meadow F7 Feather Beta Status
 subtitle: Current feature and beta status.
 ---
 
-We are currently in [Meadow Release-Canditate 1.0](/Meadow/Release_Notes/Release-Candidates/).
+We are currently in [Meadow Release-Candidate 1.0](/Meadow/Release_Notes/Release-Candidates/).
 
 ## General IO Features
 
@@ -19,12 +19,11 @@ We are currently in [Meadow Release-Canditate 1.0](/Meadow/Release_Notes/Release
 | **CAN**              | No | Planned, v1.0 |
 | **DAC**              | No | Not implemented. Post-RTW |
 
-
 ## Communications
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| WiFi	| Yes | All SSL certificates accepted. No SSL certificate management yet. |
+| Wi-Fi | Yes | All SSL certificates accepted. No SSL certificate management yet. |
 | Bluetooth | Yes |  |
 
 ## Other Features
@@ -32,7 +31,7 @@ We are currently in [Meadow Release-Canditate 1.0](/Meadow/Release_Notes/Release
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
 | Debugging        | Yes                 |                |
-| Battery Charging  | Yes | |
+| Battery Charging | Yes | |
 | Battery Voltage Level | Yes | |
 | Power Management APIs | Yes | New in RC-1 |
 | Over-the-Air (OtA) Updates | Yes | New in RC-1 |

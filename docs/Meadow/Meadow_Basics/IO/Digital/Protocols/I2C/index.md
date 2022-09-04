@@ -6,7 +6,7 @@ subtitle: Introduction to the Inter-Integrated Circuit (IIC/I2C) protocol.
 
 [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C), pronounced, "eye-squared-sea", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground):
 
-![Illustration of a Meadow F7 Micro board with two peripherals (addresses 0x40 and 0x72) connected to I2C via pin D07 as the data line and D08 as the clock line along with 3.3V pull-up resistors on both lines](I2C_Circuit.svg){:standalone}
+![Illustration of a Meadow F7 Feather board with two peripherals (addresses 0x40 and 0x72) connected to I2C via pin D07 as the data line and D08 as the clock line along with 3.3V pull-up resistors on both lines](I2C_Circuit.svg){:standalone}
 
 ## Hardware
 
@@ -20,11 +20,11 @@ The clock signal determines the rate at which data can be transferred, however, 
 
 Additionally, adding more devices to the bus can also limit the maximum speed.
 
-The I2C `CLK` pin can be found on the Meadow F7 Micro labeled `D08`.
+The I2C `CLK` pin can be found on the Meadow F7 Feather labeled `D08`.
 
 ### Data Signal (`DAT`)
 
-The data signal wire carries the actual messages and can be found on the F7 Micro pin labeled `D07`.
+The data signal wire carries the actual messages and can be found on the F7 Feather pin labeled `D07`.
 
 ## Master + Client Messaging
 
@@ -81,4 +81,3 @@ These methods are also available via the I2C bus, but require the address of the
 ```csharp
 i2cBus.WriteByte(i2cPeripheral.Address, 0x01);
 ```
-

@@ -1,12 +1,12 @@
 ---
 layout: Meadow
 title: Power IO
-subtitle: Power administration on the F7 Micro Development board.
+subtitle: Power administration on the F7 Feather Development board.
 ---
 
-## Powering the Meadow F7 Micro
+## Powering the Meadow F7 Feather
 
-The Meadow F7 Micro development board is designed such that it can be powered by supplying the appropriate voltage to either the `USB` connector, or the `5V` or `3.3V` power rails. 
+The Meadow F7 Feather development board is designed such that it can be powered by supplying the appropriate voltage to either the `USB` connector, or the `5V` or `3.3V` power rails.
 
 ### Battery Charging Circuit
 
@@ -20,13 +20,13 @@ If you supply voltage only to the `3.3V` power rail, the board will operate as e
 
 ### Power Budget
 
-When powered by either `USB` connector or the `5V` rail, the amount of combined `3.3V` current available onboard (including the `3V3` power rail, MCUs, and IO peripherals) is limited, and is known as the _power budget_. 
+When powered by either `USB` connector or the `5V` rail, the amount of combined `3.3V` current available onboard (including the `3V3` power rail, MCUs, and IO peripherals) is limited, and is known as the _power budget_.
 
 When powered via the `USB` connector, the budget is limited only by the `3.3V` power regulator, which is good for `800mA` of output. However, on revision `1.c` of the board, when power input comes from the `5V` rail, it's limited by a diode that has a `500mA` maximum power throughput. Therefore, the onboard `3.3V` power budget is as follows:
 
 | Revision | Power Input | Budget  |
 |----------|-------------|---------|
-| `1.c`    | `USB`       | `800mA` | 
+| `1.c`    | `USB`       | `800mA` |
 | `1.c`    | `5V`        | `500mA` |
 | `1.d`    | `USB`       | `800mA` |
 | `1.d`    | `5V`        | `800mA` |
@@ -49,9 +49,9 @@ On the Meadow F7, there is a `25mA` per IO maximum, and a total maximum of `120m
 
 ##### Battery Charger Usage
 
-The battery charging circuit is hooked directly to the `USB` power rail. When powering Meadow via USB and charging a battery, the battery charging circut will pull up to `200mA`. This means you should subtract `200mA` from your USB power budget. For example, if you're powering Meadow with a USB power supply that can deliver `0.75A` at `5V`, you should subtract `200mA` from the USB power budget. The Meadow board will have `550mA` avaliable.
+The battery charging circuit is hooked directly to the `USB` power rail. When powering Meadow via USB and charging a battery, the battery charging circuit will pull up to `200mA`. This means you should subtract `200mA` from your USB power budget. For example, if you're powering Meadow with a USB power supply that can deliver `0.75A` at `5V`, you should subtract `200mA` from the USB power budget. The Meadow board will have `550mA` available.
 
-The battery charging circut is also connected to the `5V` rail via a diode. You can charge a battery when powering Meadow via the `5V` rail. However, this will cause up to `200mA` to flow through the `5V` rail reducing your `5V` power budget. This is important because Meadow has a current limit on the `5V` rail, `500mA` for `1.c` boards and `800mA` for `1.d` boards. You'll only be able to safely use and additional `300mA` for `1.c` boards and `600mA` for `1.d` boards regardless of the avalaible current of the external power supply.
+The battery charging circuit is also connected to the `5V` rail via a diode. You can charge a battery when powering Meadow via the `5V` rail. However, this will cause up to `200mA` to flow through the `5V` rail reducing your `5V` power budget. This is important because Meadow has a current limit on the `5V` rail, `500mA` for `1.c` boards and `800mA` for `1.d` boards. You'll only be able to safely use and additional `300mA` for `1.c` boards and `600mA` for `1.d` boards regardless of the available current of the external power supply.
 
 ## Solar + Battery Power
 
@@ -75,7 +75,7 @@ Note that as long as the board still has power, the RTC will continue to keep ti
 
 ### `3.3V` Power Rail (`3V3`)
 
-The `3.3V` power rail is exposed via the `3V3` header pin. 
+The `3.3V` power rail is exposed via the `3V3` header pin.
 
 ### Analog Reference (`AREF`)
 
@@ -109,5 +109,4 @@ The `5V` power rail is exposed via the `5V` header pin.
 ## Adding Power to External Peripherals
 
 [because of the limits on how much power the board can drive, it may be necessary to provide external power to certain peripherals, such as motors, relays, and other high power devices]
-
 -->
