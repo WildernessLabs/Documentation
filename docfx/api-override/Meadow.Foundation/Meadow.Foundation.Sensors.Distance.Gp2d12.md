@@ -53,9 +53,10 @@ protected async Task ReadSensor()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12/Samples/Sensors.Distance.Gp2d12_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Gp2d12/Samples/Sensors.Distance.Gp2d12_Sample)
 
-|### Code Example
+|
+### Code Example
 
 ```csharp
 Gp2d12 sensor;

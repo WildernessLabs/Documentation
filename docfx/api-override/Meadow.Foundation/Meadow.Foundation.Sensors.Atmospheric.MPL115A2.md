@@ -16,7 +16,7 @@ The **MPL115A2** is a low cost device for reading barometric pressure.
 * Resolution: 1.5 hPa
 * Range: 100-1150 hPa up to 10Km
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115A2/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115A2/Samples/) 
 
 ## Purchasing
 

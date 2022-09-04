@@ -17,7 +17,7 @@ The **MPL3115A2** is a barometric pressure sensor capable of reading both temper
 * Altitude and pressure measurements
 * Temperature sensor
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl3115A2/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl3115A2/Samples/) 
 
 ## Purchasing
 

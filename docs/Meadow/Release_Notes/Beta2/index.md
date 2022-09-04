@@ -18,7 +18,7 @@ To use it, your application must target .NET 4.7.2.
 
 One of the big things we’ve been working on is a major rewrite of how IO is handled between the underlying OS and Mono (the managed runtime) where we’ve been able to simplify a lot of the underpinning there and make it much more efficient. 
 
-Along the way, we’ve also done a lot of thinking and reworking of the API. Specifically, we’ve added two new features. The first, is that the IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following [Meadow sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
+Along the way, we’ve also done a lot of thinking and reworking of the API. Specifically, we’ve added two new features. The first, is that the IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following [Meadow sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/main/Source/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
 
 ```csharp
 foreach(var pin in Device.Pins.AllPins) {
@@ -156,5 +156,5 @@ We'll be releasing additional Meadow.Foundation updates out-of-band from the bet
 * [`AnalogInputPort`](https://github.com/WildernessLabs/Meadow_Issues/issues/7) readings are not correct.
 * [Internal PullUp and PullDown resistors are not working in `DigitalInputPort`](https://github.com/WildernessLabs/Meadow_Issues/issues/6) - Workaround is to use an external `10k` resistor as illustrated [here](http://developer.wildernesslabs.co/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/)
 * `GlitchFilterCycleCount` is not implemented in `DigitalInputPort`. This is coming soon.
-* [Tasks Behave Strangely](https://github.com/WildernessLabs/Meadow_Issues/issues/2) - Workaround is to use `Thread`, as seen in the [Basic_Threading](https://github.com/WildernessLabs/Meadow_Samples/blob/master/Source/MeadowSamples/Basic_Threading/ThreadingApp.cs) sample app.
+* [Tasks Behave Strangely](https://github.com/WildernessLabs/Meadow_Issues/issues/2) - Workaround is to use `Thread`, as seen in the [Basic_Threading](https://github.com/WildernessLabs/Meadow_Samples/blob/main/Source/MeadowSamples/Basic_Threading/ThreadingApp.cs) sample app.
 * [`Debug.Write` calls don't output to the console](https://github.com/WildernessLabs/Meadow_Issues/issues/3) - Workaround is to use `Console.Write` calls.

@@ -40,7 +40,7 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Camera.ArducamMini/Samples/Sensors.Camera.ArducamMini_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.ArducamMini/Samples/Sensors.Camera.ArducamMini_Sample)
 
 |
 ### Code Example
