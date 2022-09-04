@@ -7,18 +7,23 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LineFinder) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Light.LineFinder/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Light.LineFinder.svg?label=Meadow.Foundation.Grove.Sensors.Light.LineFinder" alt="NuGet Gallery for LineFinder" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Light.LineFinder/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Light.LineFinder.svg?label=Meadow.Foundation.Grove.Sensors.Light.LineFinder" alt="NuGet Gallery for Meadow.Foundation.Grove.Sensors.Light.LineFinder" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     var lineFinder = new LineFinder(Device, Device.Pins.D13);
 
-    lineFinder.ColorChanged += (s, e) => Console.WriteLine($"line color: {e}");
+    lineFinder.ColorChanged += (s, e) =>
+    {
+        Console.WriteLine($"line color: {e}");
+    };
+
+    return Task.CompletedTask;
 }
 
 ```

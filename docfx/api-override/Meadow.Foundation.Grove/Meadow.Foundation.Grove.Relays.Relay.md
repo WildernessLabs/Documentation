@@ -7,26 +7,24 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Relay) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Relays.Relay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Relays.Relay.svg?label=Meadow.Foundation.Grove.Relays.Relay" alt="NuGet Gallery for Relay" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Relays.Relay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Relays.Relay.svg?label=Meadow.Foundation.Grove.Relays.Relay" alt="NuGet Gallery for Meadow.Foundation.Grove.Relays.Relay" /></a> |
 
 ### Code Example
 
 ```csharp
 Relay relay;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     relay = new Relay(Device, Device.Pins.D13);
 
-    TestRelay();
+    return Task.CompletedTask;
 }
 
-void TestRelay()
+public override async Task Run()
 {
-    Console.WriteLine("TestRelay...");
-
     var state = false;
 
     while (true)
@@ -36,7 +34,7 @@ void TestRelay()
         Console.WriteLine($"- State: {state}");
         relay.IsOn = state;
 
-        Thread.Sleep(500);
+        await Task.Delay(500);
     }
 }
 

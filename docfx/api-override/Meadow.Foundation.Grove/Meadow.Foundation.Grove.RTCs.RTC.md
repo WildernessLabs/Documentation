@@ -7,19 +7,24 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/RTC) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.RTCs.RTC/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.RTCs.RTC.svg?label=Meadow.Foundation.Grove.RTCs.RTC" alt="NuGet Gallery for RTC" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.RTCs.RTC/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.RTCs.RTC.svg?label=Meadow.Foundation.Grove.RTCs.RTC" alt="NuGet Gallery for Meadow.Foundation.Grove.RTCs.RTC" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+RTC rtc;
+
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
-    var rtc = new RTC(Device.CreateI2cBus());
+    rtc = new RTC(Device.CreateI2cBus());
 
-    Console.WriteLine("rtc created");
+    return Task.CompletedTask;
+}
 
+public override Task Run()
+{
     var running = rtc.IsRunning;
 
     Console.WriteLine($"{(running ? "is running" : "is not running")}");
@@ -40,7 +45,7 @@ public MeadowApp()
     dateTime = rtc.GetTime();
     Console.WriteLine($" RTC current time is: {dateTime:MM/dd/yy HH:mm:ss}");
 
-    Random rand = new Random();
+    var rand = new Random();
 
     var data = new byte[56];
 
@@ -54,6 +59,8 @@ public MeadowApp()
     Console.Write($" Reading from RTC RAM : ");
     data = rtc.ReadRAM(0, 56);
     Console.WriteLine(BitConverter.ToString(data));
+
+    return Task.CompletedTask;
 }
 
 ```

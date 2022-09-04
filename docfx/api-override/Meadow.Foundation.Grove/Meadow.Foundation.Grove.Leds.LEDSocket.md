@@ -7,20 +7,27 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LEDSocket) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Leds.LEDSocket/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Leds.LEDSocket.svg?label=Meadow.Foundation.Grove.Leds.LEDSocket" alt="NuGet Gallery for LEDSocket" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Leds.LEDSocket/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Leds.LEDSocket.svg?label=Meadow.Foundation.Grove.Leds.LEDSocket" alt="NuGet Gallery for Meadow.Foundation.Grove.Leds.LEDSocket" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+LEDSocket led;
+
+public override Task Initialize()
 {
-    
+    Console.WriteLine("Initialize...");
 
-    Console.WriteLine("Initialize hardware...");
+    led = new LEDSocket(Device, Device.Pins.D13);
 
-    LEDSocket led = new LEDSocket(Device, Device.Pins.D13);
+    return Task.CompletedTask;
+}
 
+public override Task Run()
+{
     led.StartBlink();
+
+    return Task.CompletedTask;
 }
 
 ```

@@ -7,16 +7,18 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/TemperatureHumiditySensor_HighAccuracyMini) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini.svg?label=Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini" alt="NuGet Gallery for TemperatureHumiditySensor_HighAccuracyMini" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini.svg?label=Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini" alt="NuGet Gallery for Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
-{
-    Console.WriteLine("Initialize hardware...");
+TemperatureHumiditySensor_HighAccuracyMini sensor;
 
-    var sensor = new TemperatureHumiditySensor_HighAccuracyMini(Device.CreateI2cBus());
+public override Task Initialize()
+{
+    Console.WriteLine("Initialize...");
+
+    sensor = new TemperatureHumiditySensor_HighAccuracyMini(Device.CreateI2cBus());
 
     var consumer = TemperatureHumiditySensor_HighAccuracyMini.CreateObserver(
         handler: result =>
@@ -42,7 +44,14 @@ public MeadowApp()
         Console.WriteLine($"  Relative Humidity: {result.New.Humidity?.Percent:N2}%");
     };
 
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
+
+    return Task.CompletedTask;
 }
 
 ```
