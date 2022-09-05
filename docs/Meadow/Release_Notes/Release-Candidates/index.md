@@ -23,8 +23,14 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced web-sockets, and more.
 * **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
 
+**Meadow.Foundation**
+* **MicroGraphics** - We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added a 8x16 font!
+* **ePaper driver updates** - We've updated APIs and added new drivers including **10** new WaveShare-specific ePaper drivers.
+* **IO Expanders** - This release includes the long awaited updates to the **MCP23008** with working interrupts! It also includes 7 other MCP expanders and we released drivers for the AS1115 and the SerialWombat!
+* **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
+
 **Tooling**
-* **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is now typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
+* **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
 * **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
 * **App Template Updates** - We've updated the Meadow App templates to support the new app lifecycle.
 
@@ -139,7 +145,7 @@ Ethernet is now avaialable for use on the Core-Compute module.
 
 ### Configuration Files
 
-We did a major overhaul to app, network, and OS build-time configuration support. We also re-enabled the WiFi configuration which was disabled in the last release due to a crasher bug. 
+We did a major overhaul to app, network, and OS build-time configuration support. We also re-enabled the WiFi configuration which was disabled in the last release due to a crasher bug.
 
 Meadow apps now have sophisticated support for a number of configuration files and formats (both YAML and JSON).
 
@@ -147,7 +153,7 @@ Check out the [Configuration Guide](/Meadow/Meadow.OS/Configuration/) for more i
 
 ## Meadow.Core
 
-Since breaking APIs after release is never a good thing, we're driving hard toward a solid, future-proof Core API.  The largest change here is in the application lifecycle.  With the addition of Over-the Air (OtA) updating capability, Meadow needs to be able to do controlled shutdown and startup of the application.  These changes require updating existing applications, and those changes are outlined below.
+Since breaking APIs after release is never a good thing, we're driving hard toward a solid, future-proof Core API. The largest change here is in the application lifecycle. With the addition of Over-the Air (OtA) updating capability, Meadow needs to be able to do controlled shutdown and startup of the application. These changes require updating existing applications, and those changes are outlined below.
 
 ### API and Stability Fixes
 
@@ -161,7 +167,7 @@ An underlying philosophy on Meadow is that to improve code clarity and reduce bu
 
 #### Disposable Objects
 
-While it's common for many applications to allocate and use a `Port` for its lifetime, it's not required.  We've implemented the `IDisposable` pattern in the lower levels of many of the `Port` classes to free up pin allocations when the consuming port has been Disposed.
+While it's common for many applications to allocate and use a `Port` for its lifetime, it's not required. We've implemented the `IDisposable` pattern in the lower levels of many of the `Port` classes to free up pin allocations when the consuming port has been Disposed.
 
 ### New Meadow App Lifecycle
 
@@ -176,15 +182,15 @@ For more information check out the following docs:
 
 ### Service Resolver
 
-`Meadow.Core` now contains a static service resolver called `Resolver` that can be used to create, store, retrieve and even do dependency injection of class instances.  The `Resolver` is the new mechanism for retrieving the existing `IApp` or `IMeadowDevice` in your application instead of static instances in the `Application`.
+`Meadow.Core` now contains a static service resolver called `Resolver` that can be used to create, store, retrieve and even do dependency injection of class instances. The `Resolver` is the new mechanism for retrieving the existing `IApp` or `IMeadowDevice` in your application instead of static instances in the `Application`.
 
 ### Logging
 
-The `Resolver` also contains an instance of a simple `Logger`.  This `Logger` supports the same methods as the larger .NET logging interface and provides the ability to add log providers to allow your application to log to things like files, databases or REST endpoints.  The default instance logs to the `Console`.
+The `Resolver` also contains an instance of a simple `Logger`. This `Logger` supports the same methods as the larger .NET logging interface and provides the ability to add log providers to allow your application to log to things like files, databases or REST endpoints. The default instance logs to the `Console`.
 
 ### Application Configuration
 
-`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`.  These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Setting_configuration) for more information.
+`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Setting_configuration) for more information.
 
 ### Network APIs
 
@@ -204,14 +210,31 @@ We've added support for a `Counter` class on the device to count interrupt edges
 
 ## Meadow.Foundation
 
-[new stuff, improvements]
+This release includes new drivers, improved APIs, improved performance, and bug fixes. You can see the full is of fixes, improvements and new [drivers here](https://github.com/WildernessLabs/Meadow.Foundation/issues?q=is%3Aissue+milestone%3ARC1+is%3Aclosed).
 
-### `CommonType` Moved [!!content needs help!!]
+### New drivers
 
-The `CommonType` enum has moved from the `Leds` class.
+* **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
+* **MCP23xxx** - This release includes a complete rewrite of the MCP23008 driver and adds the MCP23S08, MCP23009, MCP23S09, MCP23017, MCP23S17 MCP23018, MCP23S18.
+* **UC8151C** - We've added another ePaper controller commonly used by WaveShare.
+* **WaveShare ePaper drivers** - We've added 10 WaveShare-specific drivers that make it easy to use WaveShare displays without hunting for drivers controller names.
+* **SerialWomabat** - We've added support for the popular PIC powered Serial Wombat IO expander.
+* **AS1115** - This is a commonly used commodity priced IO expander and LED driver.
+* **Altair 8800 Click board** - This special edition Click board includes 16 buttons and a 8x8 LED matrix.
 
-If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to 
-`CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`.
+### MicroGraphics
+
+We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added a 8x16 font!
+
+#### `CommonType` Moved
+
+The `CommonType` enum has moved out of the `Leds` class.
+
+If you've previously used `CommonType` with a fully qualified name - i.e. `Meadow.Peripherals.Leds.CommonType.CommonAnode`, update it to `CommonType.CommonAnode` and add `using Meadow.Foundation.Leds`.
+
+#### `displayColorMode` display driver parameter renamed to `colorMode`
+
+This parameter has been renamed for simplicity and consistency. Will only impact code that explicitly assigns the ctor parameter by name.
 
 ## Tooling (Meadow.CLI, IDE Extensions, and Templates)
 
@@ -223,7 +246,7 @@ With RC-1, app code is linked by default. Linking (AKA "Tree-Shaking") walks the
 
 * **Faster Deployments** - App deployment is much faster, due to less code being uploaded.
 * **More Available Storage** - Less uploaded code means more room on non-volatile storage (flash).
-* **Faster App Startup and More Available Memory** - Less code means less code loaded into memory, reducing app startup and more avaialble memory for allocations.
+* **Faster App Startup and More Available Memory** - Less code means less code loaded into memory, reducing app startup and more available memory for allocations.
 
 ### Project Template Changes
 
@@ -235,12 +258,23 @@ With the greatly simplified boilerplate code needed to create a Meadow applicati
 * [Performance issue when toggling pin #91](https://github.com/WildernessLabs/Meadow_Issues/issues/91) - JIT (the current iteration) has brought that down to roughly 0.11ms per pulse (an order of magnitude improvement).
 * [Better app exit messaging #131](https://github.com/WildernessLabs/Meadow_Issues/issues/131) - Fixed as part of the new App Lifecycle.
 * [SerialPort.Read method throw an exception when count is greater than available chars in circular buffer #166](https://github.com/WildernessLabs/Meadow_Issues/issues/166) - Fixed.
-* [PushButton with port ctor fails #193](https://github.com/WildernessLabs/Meadow_Issues/issues/193) - Fixed.
 * [Interrupt/PushButton oddities on v2 #195](https://github.com/WildernessLabs/Meadow_Issues/issues/195) - Fixed.
 * [WiFi Scan() should be async #199](https://github.com/WildernessLabs/Meadow_Issues/issues/199) - Network events and APIs have undergone a major overhaul, making things `async` by default.
+* [Interrupts from MCP23008 don't work as expected #121](https://github.com/WildernessLabs/Meadow.Foundation/issues/121) - Fixed.
+* [MCP23x08 Driver bugs #127](https://github.com/WildernessLabs/Meadow_Issues/issues/127) - Fixed.
 * [Device crash after a while with HTTP requests #211](https://github.com/WildernessLabs/Meadow_Issues/issues/211) - Major network stack work in this release exercised and fixed a lot of underlying web socket corner cases.
 * [extension of the Meadow.Utilities.BitHelpers #214](https://github.com/WildernessLabs/Meadow_Issues/issues/214) - 16-bit helpers have been added per customer request.
-* [PushButton LongPress not working properly #217](https://github.com/WildernessLabs/Meadow_Issues/issues/217) - Default time duration for long-press added.
+* [PCA9685 isn't unitized #265](https://github.com/WildernessLabs/Meadow.Foundation/issues/165) - Fixed.
+* [PwmLed StartPulse doesn't work with durations over 1s #346](https://github.com/WildernessLabs/Meadow.Foundation/issues/346) - Fixed.
+* [PwmLed started with a port overrides incoming frequency #349](https://github.com/WildernessLabs/Meadow.Foundation/issues/349) - Fixed.
+* [Unitize duration for PiezoSpeaker #352](https://github.com/WildernessLabs/Meadow.Foundation/issues/352) - Fixed.
+* [Ms5611 driver seems incomplete #360](https://github.com/WildernessLabs/Meadow.Foundation/issues/360) - Fixed.
+* [TextDisplayMenu cannot have sub-menu of 1 item #381](https://github.com/WildernessLabs/Meadow.Foundation/issues/381) - Fixed.
+* [ILI9488 driver should be 24bpp only #389](https://github.com/WildernessLabs/Meadow.Foundation/issues/389) - Fixed.
+* [BufferRgb888 and 8888 fill method doesn't work #390](https://github.com/WildernessLabs/Meadow.Foundation/issues/390) - Fixed.
+* [bufferRgb888 and 8888 missing InvertPixel implementation #391](https://github.com/WildernessLabs/Meadow.Foundation/issues/391) - Fixed.
+* [PushButton LongPress not working properly #408](https://github.com/WildernessLabs/Meadow.Foundation/issues/408) - Default time duration for long-press added.
+* [PushButton with port ctor fails #422](https://github.com/WildernessLabs/Meadow.Foundation/issues/422) - Fixed.
 
 ## Known Issues
 
