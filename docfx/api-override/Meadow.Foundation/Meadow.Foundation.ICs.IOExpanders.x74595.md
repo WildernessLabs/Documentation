@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.x74595/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.x74595/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.x74595.svg?label=Meadow.Foundation.ICs.IOExpanders.x74595" alt="NuGet Gallery for x74595" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.x74595/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.x74595.svg?label=Meadow.Foundation.ICs.IOExpanders.x74595" alt="NuGet Gallery for Meadow.Foundation.ICs.IOExpanders.x74595" /></a> |
 
 Shift registers offer the ability to increase the number of outputs on a microcontroller by using I2C or SPI interfaces. In the case of the 74xx595 series of shift registers, the SPI interface is used to output a series of bits that are then latched to the output pins of the chip.
 
@@ -21,12 +21,17 @@ Note that when using this chip, care should be taken to ensure that the total ou
 ```csharp
 x74595 shiftRegister;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     shiftRegister = new x74595(Device, Device.CreateSpiBus(), Device.Pins.D00, 8);
 
+    return base.Initialize();
+}
+
+public override async Task Run()
+{
     shiftRegister.Clear(true);
 
     Console.WriteLine("Set Pin 3 to high");
@@ -40,11 +45,11 @@ public MeadowApp()
 
     Console.WriteLine("Toggle pin 4");
 
-    Thread.Sleep(1000);
+    await Task.Delay(1000);
     port4.State = false;
-    Thread.Sleep(1000);
+    await Task.Delay(1000);
     port4.State = true;
-    Thread.Sleep(1000);
+    await Task.Delay(1000);
 
     Console.WriteLine("Raise all pins to high");
     while (true)
@@ -54,7 +59,7 @@ public MeadowApp()
         foreach (var pin in shiftRegister.Pins.AllPins)
         {
             shiftRegister.WriteToPin(pin, true);
-            Thread.Sleep(50);
+            await Task.Delay(50);
         }
     }
 }

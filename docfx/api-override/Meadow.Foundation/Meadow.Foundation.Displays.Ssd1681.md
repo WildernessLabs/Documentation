@@ -1,29 +1,31 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Il0376F
+uid: Meadow.Foundation.Displays.Ssd1681
 remarks: *content
 ---
 
-| IL0376F | |
+| SSD1681 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Datasheets) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for ePaper" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for Meadow.Foundation.Displays.ePaper" /></a> |
 
-The **IL0376F** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and only supports full screen updates.
+The **Ssd1681** is a two-color display controller for ePaper displays. Data is sent to the controller via SPI and supports full screen updates only.
 
-The IL0376F is most commonly paired with a a tri-color 1.54" 200x200 pixel display.
+The Ssd1681 is paired with a wide range of two color ePaper display sizes and resolutions.
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples)
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+MicroGraphics graphics;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initialize ...");
  
-    var display = new Il0376F(device: Device,
+    var display = new Ssd1681(device: Device,
         spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
@@ -32,27 +34,33 @@ public MeadowApp()
         width: 200,
         height: 200);
 
-    var graphics = new MicroGraphics(display);
+    graphics = new MicroGraphics(display);
 
-    //any color but black will show the ePaper alternate color 
-    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
+    return base.Initialize();
+}
+
+public override Task Run()
+{
+    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Black);
 
     graphics.CurrentFont = new Font8x12();
-    graphics.DrawText(2, 2, "IL0376F", Meadow.Foundation.Color.Black);
+    graphics.DrawText(2, 2, "SSD1681", Meadow.Foundation.Color.Black);
     graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
 
     graphics.Show();
+
+    return base.Run();
 }
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples/IL0376F_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Samples/SSD1681_Sample)
 
 ### Wiring Example
 
- To control a IL0376F from Meadow, connect the following:
+ To control a Ssd1681 from Meadow, connect the following:
 
-| IL0376F | Meadow Pin |
+| Ssd1681 | Meadow Pin |
 |---------|------------|
 | BUSY    | D15        |
 | RST     | D14        |
@@ -65,9 +73,6 @@ public MeadowApp()
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL0373/ePaper_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.Ssd1681/ePaper_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
 

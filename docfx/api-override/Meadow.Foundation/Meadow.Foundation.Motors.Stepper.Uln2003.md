@@ -8,22 +8,29 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Stepper.Uln2003/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Stepper.Uln2003.svg?label=Meadow.Foundation.Motors.Stepper.Uln2003" alt="NuGet Gallery for Uln2003" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Stepper.Uln2003/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Stepper.Uln2003.svg?label=Meadow.Foundation.Motors.Stepper.Uln2003" alt="NuGet Gallery for Meadow.Foundation.Motors.Stepper.Uln2003" /></a> |
 
 **ULN2003** is a high voltage, high current Darlington array containing seven open collector Darlington pairs. The ULN2003 is often packaged on board used to control stepper motors.
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+Uln2003 stepperController;
+
+public override Task Initialize()
 {
-    var stepperController = new Uln2003(
-        device: Device, 
-        pin1: Device.Pins.D01, 
-        pin2: Device.Pins.D02, 
-        pin3: Device.Pins.D03, 
+    stepperController = new Uln2003(
+        device: Device,
+        pin1: Device.Pins.D01,
+        pin2: Device.Pins.D02,
+        pin3: Device.Pins.D03,
         pin4: Device.Pins.D04);
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     stepperController.Step(1024);
 
     for (int i = 0; i < 100; i++)
@@ -38,8 +45,11 @@ public MeadowApp()
         Console.WriteLine($"Step backwards {i}");
         stepperController.Step(-50);
         Thread.Sleep(10);
-    } 
+    }
+
+    return base.Run();
 }
+
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Stepper.Uln2003/Samples/Uln2003_Sample)

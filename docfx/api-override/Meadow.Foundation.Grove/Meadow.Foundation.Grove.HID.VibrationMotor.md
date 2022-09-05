@@ -7,26 +7,33 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/VibrationMotor) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.HID.VibrationMotor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.HID.VibrationMotor.svg?label=Meadow.Foundation.Grove.HID.VibrationMotor" alt="NuGet Gallery for VibrationMotor" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.HID.VibrationMotor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.HID.VibrationMotor.svg?label=Meadow.Foundation.Grove.HID.VibrationMotor" alt="NuGet Gallery for Meadow.Foundation.Grove.HID.VibrationMotor" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+VibrationMotor vibrationMotor;
+
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
-    var vibrationMotor = new VibrationMotor(Device, Device.Pins.D13);
+    vibrationMotor = new VibrationMotor(Device, Device.Pins.D13);
 
-    for(int i = 0; i < 5; i++)
+    return Task.CompletedTask;
+}
+
+public override async Task Run()
+{
+    for (int i = 0; i < 5; i++)
     {
         Console.WriteLine("Motor on");
         vibrationMotor.IsVibrating = true;
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         Console.WriteLine("Motor off");
         vibrationMotor.IsVibrating = false;
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
     }
 }
 

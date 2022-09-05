@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.svg?label=Meadow.Foundation.Displays.Ssd130x" alt="NuGet Gallery for Ssd130x" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.svg?label=Meadow.Foundation.Displays.Ssd130x" alt="NuGet Gallery for Meadow.Foundation.Displays.Ssd130x" /></a> |
 
 The **SSD1309** is a display controller used to control small, low resolution, single color OLED displays. OLED displays generate their own light - no backlight is included or required.
 
@@ -22,7 +22,7 @@ You may find mutlicolor variants, however, the color is achieved by placing one 
 MicroGraphics graphics;
 Ssd1309 display;
 
-public MeadowApp()
+public override Task Initialize()
 {
     CreateSpiDisplay();
     //CreateI2CDisplay();
@@ -30,14 +30,7 @@ public MeadowApp()
     Console.WriteLine("Create canvas...");
     graphics = new MicroGraphics(display);
 
-    graphics.Clear();
-    graphics.CurrentFont = new Font8x12();
-    graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
-    graphics.DrawRectangle(5, 14, 30, 10, true);
-
-    Console.WriteLine("Show...");
-    graphics.Show();
-    Console.WriteLine("Show Complete");
+    return base.Initialize();
 }
 
 void CreateSpiDisplay()
@@ -67,6 +60,20 @@ void CreateI2CDisplay()
         i2cBus: Device.CreateI2cBus(),
         address: 60
     );
+}
+
+public override Task Run()
+{
+    graphics.Clear();
+    graphics.CurrentFont = new Font8x12();
+    graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
+    graphics.DrawRectangle(5, 14, 30, 10, true);
+
+    Console.WriteLine("Show...");
+    graphics.Show();
+    Console.WriteLine("Show Complete");
+
+    return base.Run();
 }
 
 ```

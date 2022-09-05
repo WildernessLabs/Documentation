@@ -8,16 +8,16 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Hmc5883) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Hmc5883/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Hmc5883/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Hmc5883.svg?label=Meadow.Foundation.Sensors.Motion.Hmc5883" alt="NuGet Gallery for Hmc5883" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Hmc5883/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Hmc5883.svg?label=Meadow.Foundation.Sensors.Motion.Hmc5883" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Hmc5883" /></a> |
 
 ### Code Example
 
 ```csharp
 Hmc5883 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Console.WriteLine("Initialize...");
 
     sensor = new Hmc5883(Device.CreateI2cBus());
 
@@ -44,14 +44,10 @@ public MeadowApp()
 
     sensor.Subscribe(consumer);
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public async override Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
@@ -60,6 +56,8 @@ protected async Task ReadConditions()
         $"Z:{result.Z:N2}]");
 
     Console.WriteLine($"Heading: [{Hmc5883.DirectionToHeading(result).DecimalDegrees:N2}] degrees");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
 }
 
 ```

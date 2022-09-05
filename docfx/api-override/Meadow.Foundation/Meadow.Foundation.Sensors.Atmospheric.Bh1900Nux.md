@@ -8,29 +8,51 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bh1900Nux) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bh1900Nux/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux" alt="NuGet Gallery for Bh1900Nux" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bh1900Nux" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+private Bh1900Nux _sensor;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
-    var PressureSensor = new AdafruitMPRLS(Device.CreateI2cBus());
+    _sensor = new Bh1900Nux(Device.CreateI2cBus(), Bh1900Nux.Address.Default);
 
-    PressureSensor.StartUpdating(TimeSpan.FromSeconds(1));
+    var consumer = Bh1900Nux.CreateObserver(
+        handler: result =>
+        {
+            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
+        },
+        filter: result =>
+        {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
+            if (result.Old is { } old)
+            {
+                return (result.New - old).Abs().Celsius > 0.5;
+            }
+            return false;
+        }
+    );
+    _sensor.Subscribe(consumer);
 
-    PressureSensor.Updated += PressureSensor_Updated;
+    _sensor.Updated += (sender, result) =>
+    {
+        Console.WriteLine($"  Temperature: {result.New.Celsius:N2}C");
+    };
+   
+    return Task.CompletedTask;
 }
 
-void PressureSensor_Updated(object sender, IChangeResult<(Pressure? Pressure, Pressure? RawPsiMeasurement)> result)
+public async override Task Run()
 {
-    Console.WriteLine($"New pressure PSI: {result.New.Pressure?.Psi}, Old pressure PSI: {result.Old?.Pressure?.Psi}");
+    var conditions = await _sensor.Read();
+    Console.WriteLine("Initial Readings:");
+    Console.WriteLine($"  Temperature: {conditions.Celsius:N2}C");
 
-    Console.WriteLine($"Pressure in Pascal: {result.New.Pressure?.Pascal}");
-
-    Console.WriteLine($"Raw sensor value: {result.New.RawPsiMeasurement?.Psi}");
+    _sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

@@ -8,20 +8,20 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/KeyboardWing) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/KeyboardWing/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.KeyboardWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.KeyboardWing.svg?label=Meadow.Foundation.FeatherWings.KeyboardWing" alt="NuGet Gallery for KeyboardWing" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.KeyboardWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.KeyboardWing.svg?label=Meadow.Foundation.FeatherWings.KeyboardWing" alt="NuGet Gallery for Meadow.Foundation.FeatherWings.KeyboardWing" /></a> |
 
 ### Code Example
 
 ```csharp
-MicroGraphics graphics;
-
 KeyboardWing keyboardWing;
+MicroGraphics graphics;
 
 string lastKeyPress;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
+
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
     var spiBus = Device.CreateSpiBus(new Meadow.Units.Frequency(48000, Meadow.Units.Frequency.UnitType.Kilohertz));
 
@@ -34,10 +34,8 @@ public MeadowApp()
         displayDcPin: Device.Pins.D12,
         lightSensorPin: Device.Pins.A05);
 
-    keyboardWing.LightSensor.StartUpdating(new TimeSpan(0, 0, 30));
-
     keyboardWing.TouchScreen.Rotation = RotationType._90Degrees;
-        
+
     graphics = new MicroGraphics(keyboardWing.Display)
     {
         Rotation = RotationType._90Degrees,
@@ -46,12 +44,21 @@ public MeadowApp()
 
     keyboardWing.Keyboard.OnKeyEvent += Keyboard_OnKeyEvent;
 
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
     graphics.Clear(true);
+
+    keyboardWing.LightSensor.StartUpdating(new TimeSpan(0, 0, 30));
+
+    return Task.CompletedTask;
 }
 
 private void Keyboard_OnKeyEvent(object sender, Meadow.Foundation.Sensors.Hid.BBQ10Keyboard.KeyEvent e)
 {
-    if(e.KeyState == Meadow.Foundation.Sensors.Hid.BBQ10Keyboard.KeyState.StatePress)
+    if (e.KeyState == BBQ10Keyboard.KeyState.StatePress)
     {
         Console.WriteLine($"OnKeyEvent ASCII value: {(byte)e.AsciiValue}");
 
@@ -69,12 +76,14 @@ private void Keyboard_OnKeyEvent(object sender, Meadow.Foundation.Sensors.Hid.BB
             _  => e.AsciiValue.ToString()
         };
     }
+
     UpdateDisplay();
 }
 
 void UpdateDisplay()
 {
     graphics.Clear();
+
     graphics.DrawText(0, 0, $"Last pressed: {lastKeyPress}");
     graphics.DrawText(0, 16, $"Luminance: {keyboardWing.LightSensor.Illuminance.Value.Lux}");
 

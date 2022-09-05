@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl3xx) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl3xx/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Adxl3xx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl3xx.svg?label=Meadow.Foundation.Sensors.Motion.Adxl3xx" alt="NuGet Gallery for Adxl362" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Adxl3xx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl3xx.svg?label=Meadow.Foundation.Sensors.Motion.Adxl3xx" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Adxl3xx" /></a> |
 
 **ADXL362** is an ultra-low power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. 
 
@@ -27,9 +27,9 @@ The ADXL362 is available on a small breakout board:
 ```csharp
 Adxl362 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Console.WriteLine("Initialize...");
 
     // create the sensor driver
     sensor = new Adxl362(Device, Device.CreateSpiBus(), Device.Pins.D00);
@@ -53,16 +53,14 @@ public MeadowApp()
             return false;
         });
     sensor.Subscribe(consumer);
-    //==== get the device id
-    Console.WriteLine($"Device ID: {sensor.DeviceID}");
-    //==== one-off read
-    ReadConditions().Wait();
-    // start updating
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
+
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public async override Task Run()
 {
+    Console.WriteLine($"Device ID: {sensor.DeviceID}");
+
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"Accel: [X:{result.Acceleration3D?.X.MetersPerSecondSquared:N2}," +
@@ -70,6 +68,8 @@ protected async Task ReadConditions()
         $"Z:{result.Acceleration3D?.Z.MetersPerSecondSquared:N2} (m/s^2)]");
 
     Console.WriteLine($"Temp: {result.Temperature?.Celsius:N2}C");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
 }
 
 ```

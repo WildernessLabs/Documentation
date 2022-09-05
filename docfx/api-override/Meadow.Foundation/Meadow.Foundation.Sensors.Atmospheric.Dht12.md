@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Dhtxx) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Dhtxx/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Dhtxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Dhtxx.svg?label=Meadow.Foundation.Sensors.Atmospheric.Dhtxx" alt="NuGet Gallery for Dhtxx" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Dhtxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Dhtxx.svg?label=Meadow.Foundation.Sensors.Atmospheric.Dhtxx" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Dhtxx" /></a> |
 
 The DHT12 is a low-cost humidity and temperature sensor that communicates over the I2C bus. It measures humidity from 20 to 95% with an accuracy of +/- 5% relative humidity with a resolution of 0.1%. Temperature range is from -20 to 60 degrees celcius with an accuracy of +/- 0.5 degrees and a resolution of 0.1.
 
@@ -17,14 +17,14 @@ The DHT12 is a low-cost humidity and temperature sensor that communicates over t
 ```csharp
 Dht12 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     sensor = new Dht12(Device.CreateI2cBus());
 
     var consumer = Dht12.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
@@ -44,23 +44,23 @@ public MeadowApp()
     );
     sensor.Subscribe(consumer);
 
-    sensor.Updated += (object sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity)> e) => 
+    sensor.Updated += (object sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity)> e) =>
     {
         Console.WriteLine($"  Temperature: {e.New.Temperature?.Celsius:N2}C");
         Console.WriteLine($"  Relative Humidity: {e.New.Humidity:N2}%");
     };
 
-    ReadConditions().Wait();
-
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var conditions = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
     Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

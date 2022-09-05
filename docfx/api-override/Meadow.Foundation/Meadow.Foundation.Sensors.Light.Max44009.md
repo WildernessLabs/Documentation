@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Max44009) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Max44009/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Max44009/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Max44009.svg?label=Meadow.Foundation.Sensors.Light.Max44009" alt="NuGet Gallery for Max44009" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Max44009/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Max44009.svg?label=Meadow.Foundation.Sensors.Light.Max44009" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.Max44009" /></a> |
 
 The Max44009 is an analog ambient light sensor.
 
@@ -17,9 +17,9 @@ The Max44009 is an analog ambient light sensor.
 ```csharp
 Max44009 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     sensor = new Max44009(Device.CreateI2cBus());
 
@@ -31,7 +31,7 @@ public MeadowApp()
         filter: result => {
             if (result.Old is { } old) { //c# 8 pattern match syntax. checks for !null and assigns var.
                 // returns true if > 100lux change
-                return ((result.New - old).Abs().Lux > 100);
+                return (result.New - old).Abs().Lux > 100;
             }
             return false;
         });
@@ -39,22 +39,18 @@ public MeadowApp()
     sensor.Subscribe(consumer);
 
     // classical .NET events can also be used:
-    sensor.Updated += (sender, result) => {
-        Console.WriteLine($"Light: {result.New.Lux:N2}Lux");
-    };
+    sensor.Updated += (sender, result) => Console.WriteLine($"Light: {result.New.Lux:N2}Lux");
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating continuously
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public override async Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"   Light: {result.Lux:N2}Lux");
+    Console.WriteLine($" Light: {result.Lux:N2}Lux");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

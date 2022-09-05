@@ -47,7 +47,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 ```csharp
 protected SpstSwitch spstSwitch;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -59,6 +59,8 @@ public MeadowApp()
     };
 
     Console.WriteLine("SpstSwitch ready...");
+
+    return Task.CompletedTask;
 }
 
 ```

@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Displays.ePaper.Il91874V03
+uid: Meadow.Foundation.Displays.Il91874V03
 remarks: *content
 ---
 
@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Datasheets) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for ePaper" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaper.svg?label=Meadow.Foundation.Displays.ePaper" alt="NuGet Gallery for Meadow.Foundation.Displays.ePaper" /></a> |
 
 The **IL91874V3** is a tri-color display controller for ePaper displays. Data is sent to the controller via SPI and supports partial screen updates.
 
@@ -19,7 +19,9 @@ The IL91874V3 is paired with a wide range of three color ePaper display sizes an
 ### Code Example
 
 ```csharp
-public MeadowApp()
+MicroGraphics graphics;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initialize ...");
  
@@ -34,7 +36,11 @@ public MeadowApp()
 
     var graphics = new MicroGraphics(display);
 
-    //any color but black will show the ePaper alternate color 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
 
     graphics.CurrentFont = new Font8x12();
@@ -42,6 +48,8 @@ public MeadowApp()
     graphics.DrawText(2, 20, "Meadow F7", Meadow.Foundation.Color.Black);
 
     graphics.Show();
+
+    return Task.CompletedTask;
 }
 
 ```

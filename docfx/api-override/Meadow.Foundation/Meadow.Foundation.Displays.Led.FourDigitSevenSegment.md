@@ -7,14 +7,14 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.FourDigitSevenSegment) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.svg?label=Meadow.Foundation.Displays.Led.FourDigitSevenSegment" alt="NuGet Gallery for FourDigitSevenSegment" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.svg?label=Meadow.Foundation.Displays.Led.FourDigitSevenSegment" alt="NuGet Gallery for Meadow.Foundation.Displays.Led.FourDigitSevenSegment" /></a> |
 
 ### Code Example
 
 ```csharp
 FourDigitSevenSegment sevenSegment;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.Write("Initializing...");
 
@@ -35,7 +35,14 @@ public MeadowApp()
         isCommonCathode: true
     );
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     sevenSegment.SetDisplay("1234");
+
+    return base.Run();
 }
 
 ```

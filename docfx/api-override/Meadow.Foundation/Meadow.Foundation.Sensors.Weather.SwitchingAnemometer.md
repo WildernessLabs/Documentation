@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingAnemometer) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingAnemometer/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Weather.SwitchingAnemometer/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Weather.SwitchingAnemometer.svg?label=Meadow.Foundation.Sensors.Weather.SwitchingAnemometer" alt="NuGet Gallery for SwitchingAnemometer" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Weather.SwitchingAnemometer/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Weather.SwitchingAnemometer.svg?label=Meadow.Foundation.Sensors.Weather.SwitchingAnemometer" alt="NuGet Gallery for Meadow.Foundation.Sensors.Weather.SwitchingAnemometer" /></a> |
 
 ### Code Example
 
@@ -16,17 +16,16 @@ remarks: *content
 RgbPwmLed onboardLed;
 SwitchingAnemometer anemometer;
 
-public MeadowApp()
+public override Task Initialize()
 {
-
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     //==== onboard LED
     onboardLed = new RgbPwmLed(device: Device,
         redPwmPin: Device.Pins.OnboardLedRed,
         greenPwmPin: Device.Pins.OnboardLedGreen,
         bluePwmPin: Device.Pins.OnboardLedBlue,
-        Meadow.Peripherals.Leds.IRgbLed.CommonType.CommonAnode);
+        CommonType.CommonAnode);
 
     //==== create the anemometer
     anemometer = new SwitchingAnemometer(Device, Device.Pins.A01);
@@ -47,10 +46,16 @@ public MeadowApp()
         );
     anemometer.Subscribe(observer);
 
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
     // start raising updates
     anemometer.StartUpdating();
-
     Console.WriteLine("Hardware initialized.");
+    
+    return Task.CompletedTask;
 }
 
 /// <summary>

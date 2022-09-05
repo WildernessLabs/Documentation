@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/CharlieWing) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/CharlieWing/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.CharlieWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.CharlieWing.svg?label=Meadow.Foundation.FeatherWings.CharlieWing" alt="NuGet Gallery for CharlieWing" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.CharlieWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.CharlieWing.svg?label=Meadow.Foundation.FeatherWings.CharlieWing" alt="NuGet Gallery for Meadow.Foundation.FeatherWings.CharlieWing" /></a> |
 
 ### Code Example
 
@@ -16,18 +16,29 @@ remarks: *content
 CharlieWing charlieWing;
 MicroGraphics graphics;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Console.WriteLine("Initialize...");
 
     charlieWing = new CharlieWing(Device.CreateI2cBus());
-    charlieWing.Clear();
 
-    graphics = new MicroGraphics(charlieWing);
-    graphics.CurrentFont = new Font4x8();
+    graphics = new MicroGraphics(charlieWing) 
+    {
+        CurrentFont = new Font4x8()
+    };
+
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
+    graphics.Clear();
 
     graphics.DrawText(0, 0, "F7");
+
     graphics.Show();
+
+    return Task.CompletedTask;
 }
 
 ```

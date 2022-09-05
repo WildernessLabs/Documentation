@@ -18,19 +18,17 @@ A relay is an electrically operated or electromechanical switch composed of an e
 ```csharp
 protected Relay relay;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     relay = new Relay(Device.CreateDigitalOutputPort(Device.Pins.D02));
 
-    TestRelay();
+    return Task.CompletedTask;
 }
 
-protected void TestRelay()
+public override Task Run()
 {
-    Console.WriteLine("TestRelay...");
-
     var state = false;
 
     while (true)

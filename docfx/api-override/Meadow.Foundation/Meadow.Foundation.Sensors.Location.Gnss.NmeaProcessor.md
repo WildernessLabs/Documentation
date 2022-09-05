@@ -7,7 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Sensors.Location.Gnss.NmeaProcessor) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor.svg?label=Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor" alt="NuGet Gallery for NmeaProcessor" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor.svg?label=Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor" alt="NuGet Gallery for Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor" /></a> |
 
 ```csharp
 List<string> sentences;
@@ -135,24 +135,23 @@ List<string> GetSampleNmeaSentences()
 List<string> sentences;
 NmeaSentenceProcessor nmeaProcessor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Initialize();
-}
-
-void Initialize()
-{
-    Console.WriteLine("Initialize");
-    this.sentences = GetSampleNmeaSentences();
+    Console.WriteLine("Initialize...");
+    
+    sentences = GetSampleNmeaSentences();
 
     InitDecoders();
 
-    foreach (string sentence in sentences) {
+    foreach (string sentence in sentences) 
+    {
         Console.WriteLine($"About to process:{sentence}");
         nmeaProcessor.ProcessNmeaMessage(sentence);
     }
 
     Console.WriteLine("Made it through all sentences");
+
+    return Task.CompletedTask;
 }
 
 void InitDecoders()
@@ -217,7 +216,6 @@ void InitDecoders()
         Console.WriteLine($"{satellites}");
         Console.WriteLine("*********************************************");
     };
-
 }
 
 List<string> GetSampleNmeaSentences()

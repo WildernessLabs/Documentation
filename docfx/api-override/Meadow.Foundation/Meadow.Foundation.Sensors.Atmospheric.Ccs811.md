@@ -8,14 +8,14 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Ccs811/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Ccs811.svg?label=Meadow.Foundation.Sensors.Atmospheric.Ccs811" alt="NuGet Gallery for Ccs811" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Ccs811/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Ccs811.svg?label=Meadow.Foundation.Sensors.Atmospheric.Ccs811" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Ccs811" /></a> |
 
 ### Code Example
 
 ```csharp
 Ccs811 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -23,17 +23,17 @@ public MeadowApp()
     sensor = new Ccs811(i2c);
 
     var consumer = Ccs811.CreateObserver(
-        handler: result => 
+        handler: result =>
         {
             Console.WriteLine($"Observer triggered:");
             Console.WriteLine($"   new CO2: {result.New.Co2?.PartsPerMillion:N1}ppm, old: {result.Old?.Co2?.PartsPerMillion:N1}ppm.");
             Console.WriteLine($"   new VOC: {result.New.Voc?.PartsPerBillion:N1}ppb, old: {result.Old?.Voc?.PartsPerBillion:N1}ppb.");
         },
-        filter: result => 
+        filter: result =>
         {
             //c# 8 pattern match syntax. checks for !null and assigns var.
-            if (result.Old is { } old) 
-            { 
+            if (result.Old is { } old)
+            {
                 return (
                 (result.New.Co2.Value - old.Co2.Value).Abs().PartsPerMillion > 1000 // 1000ppm
                   &&
@@ -41,26 +41,26 @@ public MeadowApp()
                 );
             }
             return false;
-        }                
+        }
     );
     sensor.Subscribe(consumer);
 
-    sensor.Updated += (sender, result) => 
+    sensor.Updated += (sender, result) =>
     {
         Console.WriteLine($"CO2: {result.New.Co2.Value.PartsPerMillion:n1}ppm, VOC: {result.New.Voc.Value.PartsPerBillion:n1}ppb");
     };
 
-    ReadConditions().Wait();
-
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-async Task ReadConditions()
+public override async Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  CO2: {result.Co2.Value.PartsPerMillion:n1}ppm");
     Console.WriteLine($"  VOC: {result.Voc.Value.PartsPerBillion:n1}ppb");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

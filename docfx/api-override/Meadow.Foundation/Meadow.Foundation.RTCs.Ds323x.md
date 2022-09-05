@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds323x) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds323x/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds323x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds323x.svg?label=Meadow.Foundation.RTCs.Ds323x" alt="NuGet Gallery for Ds323x" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds323x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds323x.svg?label=Meadow.Foundation.RTCs.Ds323x" alt="NuGet Gallery for Meadow.Foundation.RTCs.Ds323x" /></a> |
 
 The **DS323x** is a low-cost and accurate real-time clock with a temperature compensation crystal oscillator. This range of chips offers the following functionality:
 
@@ -21,13 +21,20 @@ The **DS323x** is a low-cost and accurate real-time clock with a temperature com
 ### Code Example
 
 ```csharp
-public MeadowApp()
-{
-    Console.WriteLine("Initialize hardware...");
+Ds3231 sensor;
 
-    var sensor = new Ds3231(Device, Device.CreateI2cBus(), Device.Pins.D06);
+public override Task Initialize()
+{
+    Console.WriteLine("Initialize...");
+
+    sensor = new Ds3231(Device, Device.CreateI2cBus(), Device.Pins.D06);
     sensor.OnAlarm1Raised += Sensor_OnAlarm1Raised;
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     sensor.CurrentDateTime = new DateTime(2020, 1, 1);
 
     Console.WriteLine($"Current time: {sensor.CurrentDateTime}");
@@ -35,11 +42,13 @@ public MeadowApp()
 
     sensor.ClearInterrupt(Ds323x.Alarm.BothAlarmsRaised);
 
-    sensor.SetAlarm(Ds323x.Alarm.Alarm1Raised, 
-                    new DateTime(2020, 1, 1, 1, 0, 0),
-                    Ds323x.AlarmType.WhenSecondsMatch);
+    sensor.SetAlarm(Ds323x.Alarm.Alarm1Raised,
+        new DateTime(2020, 1, 1, 1, 0, 0),
+        Ds323x.AlarmType.WhenSecondsMatch);
 
     sensor.DisplayRegisters();
+
+    return base.Run();
 }
 
 private void Sensor_OnAlarm1Raised(object sender)

@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl3xx) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl3xx/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Adxl3xx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl3xx.svg?label=Meadow.Foundation.Sensors.Motion.Adxl3xx" alt="NuGet Gallery for Adxl337" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Adxl3xx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Adxl3xx.svg?label=Meadow.Foundation.Sensors.Motion.Adxl3xx" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Adxl3xx" /></a> |
 
 The **ADXL337** is a low power accelerometer capable of measuring +/- 3g of acceleration along three axes. The ADXL337 is controlled via I2C.
 
@@ -17,9 +17,9 @@ The **ADXL337** is a low power accelerometer capable of measuring +/- 3g of acce
 ```csharp
 Adxl337 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Console.WriteLine("Initialize...");
 
     // create the sensor driver
     sensor = new Adxl337(Device, Device.Pins.A00, Device.Pins.A01, Device.Pins.A02, null);
@@ -43,22 +43,19 @@ public MeadowApp()
         });
     sensor.Subscribe(consumer);
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public async override Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"Accel: [X:{result.X.MetersPerSecondSquared:N2}," +
         $"Y:{result.Y.MetersPerSecondSquared:N2}," +
         $"Z:{result.Z.MetersPerSecondSquared:N2} (m/s^2)]");
-}
 
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+}
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl3xx/Samples/Adxl337_Sample)

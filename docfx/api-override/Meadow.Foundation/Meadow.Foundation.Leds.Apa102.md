@@ -8,20 +8,25 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Leds.Apa102) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Leds.Apa102/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Leds.Apa102/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Leds.Apa102.svg?label=Meadow.Foundation.Leds.Apa102" alt="NuGet Gallery for Apa102" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Leds.Apa102/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Leds.Apa102.svg?label=Meadow.Foundation.Leds.Apa102" alt="NuGet Gallery for Meadow.Foundation.Leds.Apa102" /></a> |
 
 ### Code Example
 
 ```csharp
 Apa102 apa102;
-int numberOfLeds = 49;
+int numberOfLeds = 256;
 float maxBrightness = 0.25f;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
     apa102 = new Apa102(Device.CreateSpiBus(Apa102.DefaultSpiBusSpeed), numberOfLeds, Apa102.PixelOrder.BGR);
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     apa102.Clear();
 
     apa102.SetLed(index: 0, color: Color.Red, brightness: 0.5f);
@@ -32,6 +37,10 @@ public MeadowApp()
     apa102.SetLed(index: 5, color: Color.Orange, brightness: 1.0f);
 
     apa102.Show();
+
+    Apa102Tests();
+
+    return Task.CompletedTask;
 }
 
 ```

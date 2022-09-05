@@ -8,16 +8,16 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Mcp9808) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Mcp9808/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.Mcp9808/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.Mcp9808.svg?label=Meadow.Foundation.Sensors.Temperature.Mcp9808" alt="NuGet Gallery for Mcp9808" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.Mcp9808/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.Mcp9808.svg?label=Meadow.Foundation.Sensors.Temperature.Mcp9808" alt="NuGet Gallery for Meadow.Foundation.Sensors.Temperature.Mcp9808" /></a> |
 
 ### Code Example
 
 ```csharp
 Mcp9808 mcp9808;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     mcp9808 = new Mcp9808(Device.CreateI2cBus());
 
@@ -35,6 +35,15 @@ public MeadowApp()
     {
         Console.WriteLine($"Temperature Updated: {e.New.Celsius:N2}C");
     };
+
+    return Task.CompletedTask;
+}
+
+public override async Task Run()
+{
+    var temp = await mcp9808.Read();
+
+    Console.WriteLine($"Temperature New Value {temp.Celsius}C");
 
     mcp9808.StartUpdating(TimeSpan.FromSeconds(1));
 }

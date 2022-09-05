@@ -8,20 +8,28 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.AdafruitMPRLS/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS.svg?label=Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS" alt="NuGet Gallery for AdafruitMPRLS" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS.svg?label=Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+AdafruitMPRLS sensor;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
-    var PressureSensor = new AdafruitMPRLS(Device.CreateI2cBus());
+    sensor = new AdafruitMPRLS(Device.CreateI2cBus());
+    sensor.Updated += PressureSensor_Updated;
 
-    PressureSensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
+}
 
-    PressureSensor.Updated += PressureSensor_Updated;
+public override Task Run()
+{
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+
+    return Task.CompletedTask;
 }
 
 void PressureSensor_Updated(object sender, IChangeResult<(Pressure? Pressure, Pressure? RawPsiMeasurement)> result)
