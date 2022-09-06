@@ -82,7 +82,7 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 
 * **MQTT** - [difference between this and push-messaging]
 * **Push-Messaging** - Each Meadow device is now individually addressable and you can push messages containing arbitrary data to them.
-* **Over-the-Air (OtA) Updates** - You can now push App and OS updates remotely to devices. 
+* **Over-the-Air (OtA) Updates** - You can now push App and OS updates remotely to devices.
 
 #### Push-Messaging
 
@@ -108,7 +108,7 @@ We also did a lot of work around the .NET Runtime -> Meadow.OS glue that fixed u
 
 ### Just-in-Time (JiT) Compilation
 
-Meadow.OS now has JiT compilation support, which compiles code on startup to low-level assembly language, rather than executing .NET Intermediate-Language (IL) in a virtual machine as interpreted instructions. This provides around a maginitude of performance improvement across the board, with some code instructions seeing even more improvements. Check out the [Meadow Benchmarks Sample](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) for specific performance improvement benchmarks.
+Meadow.OS now has JiT compilation support, which compiles code on startup to low-level assembly language, rather than executing .NET Intermediate-Language (IL) in a virtual machine as interpreted instructions. This provides around a magnitude of performance improvement across the board, with some code instructions seeing even more improvements. Check out the [Meadow Benchmarks Sample](https://github.com/WildernessLabs/Meadow_Performance_Benchmarks) for specific performance improvement benchmarks.
 
 #### Enabling JiT
 
@@ -141,7 +141,7 @@ This release fixes a number of issues around web request stability as well as cl
 
 #### Core-Compute Ethernet Support
 
-Ethernet is now avaialable for use on the Core-Compute module.
+Ethernet is now available for use on the Core-Compute module.
 
 ### Configuration Files
 
@@ -178,7 +178,7 @@ If you're moving from a Meadow.OS Beta app to a Meadow.OS Release Candidate app,
 For more information check out the following docs:
 
 * **[Lifecycle Update](Lifecycle_Update)** - Instructions for updating apps from previous betas to the new app pattern.
-* **[Meadow Apps](/Meadow/Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifeycle events.
+* **[Meadow Apps](/Meadow/Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifecycle events.
 
 ### Service Resolver
 
