@@ -25,7 +25,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 
 **Meadow.Foundation**
 * **MicroGraphics** - We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added a 8x16 font!
-* **ePaper driver updates** - We've updated APIs and added new drivers including **10** new WaveShare-specific ePaper drivers.
+* **ePaper driver updates** - We've updated APIs and added new drivers including **12** new WaveShare ePaper drivers.
 * **IO Expanders** - This release includes the long awaited updates to the **MCP23008** with working interrupts! It also includes 7 other MCP expanders and we released drivers for the AS1115 and the SerialWombat!
 * **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
 
@@ -216,9 +216,10 @@ This release includes new drivers, improved APIs, improved performance, and bug 
 
 * **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
 * **MCP23xxx** - This release includes a complete rewrite of the MCP23008 driver and adds the MCP23S08, MCP23009, MCP23S09, MCP23017, MCP23S17 MCP23018, MCP23S18.
-* **UC8151C** - We've added another ePaper controller commonly used by WaveShare.
-* **WaveShare ePaper drivers** - We've added 10 WaveShare-specific drivers that make it easy to use WaveShare displays without hunting for drivers controller names.
-* **SerialWomabat** - We've added support for the popular PIC powered Serial Wombat IO expander.
+* **UC8151C** - An ePaper controller driver commonly used by WaveShare.
+* **SSD1680** - Another ePaper driver used in a variety of displays including Adafruit.
+* **WaveShare ePaper drivers** - We've added 12 WaveShare-specific drivers that make it easy to use WaveShare displays without hunting for drivers controller names.
+* **SerialWombat** - We've added support for the popular PIC powered Serial Wombat IO expander.
 * **AS1115** - This is a commonly used commodity priced IO expander and LED driver.
 * **Altair 8800 Click board** - This special edition Click board includes 16 buttons and a 8x8 LED matrix.
 
