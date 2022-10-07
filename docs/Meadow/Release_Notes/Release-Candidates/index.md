@@ -13,15 +13,18 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first class feature.
 
 **Meadow.OS + Meadow.Core**
-* **Power & Sleep APIs** - Meadow.OS has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
-* **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
+* **Power & Sleep APIs** - Meadow.OS now supports Sleep and Wake operations for the device, and has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
+* **Just-in-Time (JIT) Compilation** - Meadow applications can now optionally implement JIT compilation at startup, providing faster execution and performance.
+* **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle
+* **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities.
+* **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
-* **Just-in-Time (JIT) Compilation** - Meadow applications can now optionally implement JIT compilation at startup, providing faster execution and performance.
+* **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
 * **Network Improvements** - We've spent a lot of cycles on advanced web socket features that weren't implemented yet that unlock a number of important service connectivity use cases.
 * **Configuration Files** - Meadow now has robust support for compile-time configuration via YAML or JSON files.
-* **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced web-sockets, and more.
-* **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
+* **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced socket operation, and more.
+
 
 **Meadow.Foundation**
 * **MicroGraphics** - We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added a 8x16 font!
@@ -30,7 +33,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
 
 **Tooling**
-* **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage, faster startup, and faster deployment.
+* **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage and results in faster startup and faster deployment.
 * **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
 * **App Template Updates** - We've updated the Meadow App templates to support the new app lifecycle.
 
@@ -100,9 +103,8 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 
 There was a leftover 10 second startup delay from debugging Meadow.OS startup and initialization code that we removed. Additionally, linking (see below) also greatly improved app startup speed. The net effect of these improvements has seen a dramatic increase in OS and App startup speed.
 
-### Meadow.OS and .NET Stability [!!Alexis - need your help here!!]
-
-We've fixed a very low-level *internal call* (iCall) method that had a bad value, causing edge-case .NET runtime stability issues. This saw random stability improvements across the board.
+### Meadow.OS and .NET Stability
+We've fixed a bad value in a bespoke ARM-Thumb2 assembly-code trampoline, causing edge-case .NET runtime stability issues when runtime internal calls (icalls) are used (e.g. for file and network I/O). The fix delivered dispersed stability improvements across the board.
 
 We also did a lot of work around the .NET Runtime -> Meadow.OS glue that fixed up a number of stability issues.
 
@@ -171,7 +173,7 @@ While it's common for many applications to allocate and use a `Port` for its lif
 
 ### New Meadow App Lifecycle
 
-Meadow applications now have a prescriptive lifecycle that greatly simplifies the amount of boilerplate code necessary to create an app, including removal of the `static void main()` launch method. There are also a number of new lifecycle events overridable in the `App` class that provide an easy way to hook into the new lifecycle features such as the **Power & Sleep APIs**, as well as **OtA updates**.
+Meadow applications now have a prescriptive lifecycle that greatly simplifies the amount of boilerplate code necessary to create an app, including removal of the `static void Main()` launch method. There are also a number of new lifecycle events overridable in the `App` class that provide an easy way to hook into the new lifecycle features such as the **Power & Sleep APIs**, as well as **OtA updates**.
 
 If you're moving from a Meadow.OS Beta app to a Meadow.OS Release Candidate app, you'll need to make a few updates.
 
