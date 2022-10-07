@@ -14,9 +14,9 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 
 **Meadow.OS + Meadow.Core**
 * **Power & Sleep APIs** - Meadow.OS now supports Sleep and Wake operations for the device, and has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
-* **Just-in-Time (JIT) Compilation** - Meadow applications can now optionally implement JIT compilation at startup, providing faster execution and performance.
+* **Just-in-Time (JIT) Compilation** - Meadow applications can now enable JIT execution, providing a ~5x-10x performance boost on CPU-bound code.
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle
-* **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities.
+* **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities, reducing total Meadow power consumption considerably.
 * **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
