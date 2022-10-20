@@ -87,15 +87,9 @@ The `OnShutdown` method is called before the Meadow is shut down, offering an op
 
 ### `OnError`
 
-* `void OnError(Exception e, out bool recovered)`
+* `void OnError(Exception e)`
 
-The `OnError` method is called when your application causes an unhandled exception. You will have a chance to inspect and, optionally, handle this error. If you resolve the error, you can set the `recovered` output parameter to `true`.
-
-### `OnRecovery`
-
-* `void OnRecovery(Exception e)`
-
-The `OnRecovery` method is called after you application recovers from a previously unhandled exception.
+The `OnError` method is called when your application causes an unhandled exception, but before it stops running your app or triggers any [automatic error recovery](../../../Meadow.OS/Automatic_Restarts). You will have a chance to inspect and, optionally, handle this error.
 
 ### `OnUpdate`
 
