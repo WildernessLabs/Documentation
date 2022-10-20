@@ -16,7 +16,7 @@ The sleep and resume events are handled by the platform operating system where y
 
 * `Device.PlatformOS.BeforeSleep += () => {...};`
 
-The `BeforeSleep` event is called prior to your application sleeping via the [`Device.PlatformOS.Sleep(...)` method](../Sleep/), allowing you a chance to resolve anything before the Meadow device enters a power-saving sleeping mode.
+The `BeforeSleep` event is called prior to your application sleeping via the [`Device.PlatformOS.Sleep(...)` method](../Sleep), allowing you a chance to resolve anything before the Meadow device enters a power-saving sleeping mode.
 
 ```csharp
 Device.PlatformOS.BeforeSleep += () =>
@@ -31,7 +31,7 @@ Device.PlatformOS.BeforeSleep += () =>
 
 * `Device.PlatformOS.AfterWake += () => {...};`
 
-The `AfterWake` event is called when your application resumes execution after sleeping via the [`Device.PlatformOS.Sleep(...)` method](../Sleep/), allowing you a chance to restore anything before the Meadow device starts executing your code again.
+The `AfterWake` event is called when your application resumes execution after sleeping via the [`Device.PlatformOS.Sleep(...)` method](../Sleep), allowing you a chance to restore anything before the Meadow device starts executing your code again.
 
 ```csharp
 Device.PlatformOS.AfterWake += () =>
@@ -65,7 +65,7 @@ For the `App` methods, the default implementations are often empty, but if your 
 
 * `Task Initialize()`
 
-The `Initialize` method is called once when Meadow is first booted. It is also called once when Meadow is restarted either via reset or [automatic error recovery](../../../Meadow.OS/Automatic_Restarts/).
+The `Initialize` method is called once when Meadow is first booted. It is also called once when Meadow is restarted either via reset or [automatic error recovery](../../../Meadow.OS/Automatic_Restarts).
 
 ### `Run`
 

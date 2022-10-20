@@ -15,7 +15,7 @@ Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));
 
 If you provide a `DateTime`, Meadow will sleep until that time.
 
-In order for this to work properly, you must [set the current date](../../Meadow.OS/RTC/) via the `Device.SetClock` method.
+In order for this to work properly, you must [set the current date](../../Meadow.OS/RTC) via the `Device.SetClock` method.
 
 ```csharp
 Device.SetClock(new DateTime(2022, 10, 19, 21, 58, 27));
@@ -26,7 +26,7 @@ Device.PlatformOS.Sleep(DateTime.Now.AddDays(1));
 
 ## Sleep-related events
 
-Additionally, you can respond to the sleep state changes in [application lifecycle events](../Lifecycle_Events/), specifically `BeforeSleep` and `AfterWake`. `BeforeSleep` is called right before your application goes into sleep mode. And `AfterWake` is called right after Meadow resumes from sleep but before your code resumes.
+Additionally, you can respond to the sleep state changes in [application lifecycle events](../Lifecycle_Events), specifically `BeforeSleep` and `AfterWake`. `BeforeSleep` is called right before your application goes into sleep mode. And `AfterWake` is called right after Meadow resumes from sleep but before your code resumes.
 
 These are exposed as events on the `Device.PlatformOS` object and can have event handlers added to them like any standard .NET event.
 
