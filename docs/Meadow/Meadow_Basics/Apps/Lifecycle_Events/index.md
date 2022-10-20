@@ -14,7 +14,7 @@ The sleep and resume events are handled by the platform operating system where y
 
 ### `BeforeSleep`
 
-* `Device.PlatformOS.BeforeSleep += () => {...}`
+* `Device.PlatformOS.BeforeSleep += () => {...};`
 
 The `BeforeSleep` event is called prior to your application sleeping via the [`Device.PlatformOS.Sleep(...)` method](../Sleep/), allowing you a chance to resolve anything before the Meadow device enters a power-saving sleeping mode.
 
@@ -29,7 +29,7 @@ Device.PlatformOS.BeforeSleep += () =>
 
 ### `AfterWake`
 
-* `Device.PlatformOS.AfterWake += () => {...}`
+* `Device.PlatformOS.AfterWake += () => {...};`
 
 The `AfterWake` event is called when your application resumes execution after sleeping via the [`Device.PlatformOS.Sleep(...)` method](../Sleep/), allowing you a chance to restore anything before the Meadow device starts executing your code again.
 
