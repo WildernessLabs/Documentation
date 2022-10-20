@@ -77,7 +77,7 @@ The `Run` method is called once after your app's `Initialize` method.
 
 * `void OnReset()`
 
-<!-- The `OnReset` method is called ... -->
+The `OnReset` method is called after Meadow restarts, either manually via `Device.PlatformOS.Reset()` or via [automatic error recovery](../../../Meadow.OS/Automatic_Restarts).
 
 ### `OnShutdown`
 
@@ -95,12 +95,16 @@ The `OnError` method is called when your application causes an unhandled excepti
 
 * `void OnRecovery(Exception e)`
 
-<!-- The `OnRecovery` method is called after you application recovers from a previously unhandled exception. -->
+The `OnRecovery` method is called after you application recovers from a previously unhandled exception.
 
 ### `OnUpdate`
 
 * `void OnUpdate(Version newVersion, out bool approveUpdate)`
 
+The `OnUpdate` method is called when Meadow is going to attempt an over-the-air (OTA) app update.
+
 ### `OnUpdateComplete`
 
 * `void OnUpdateComplete(Version oldVersion, out bool rollbackUpdate)`
+
+The `OnUpdateComplete` method is called after Meadow has completed an over-the-air (OTA) app update.
