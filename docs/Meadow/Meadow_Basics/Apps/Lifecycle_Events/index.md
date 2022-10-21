@@ -91,7 +91,8 @@ The `OnShutdown` method is called before the Meadow is shut down, offering an op
 
 The `OnError` method is called when your application causes an unhandled exception, but before it stops running your app or triggers any [automatic error recovery](../../../Meadow.OS/Automatic_Restarts). You will have a chance to inspect and, optionally, handle this error.
 
-### `OnUpdate`
+<!-- Update system is still being developed. -->
+<!-- ### `OnUpdate`
 
 * `void OnUpdate(Version newVersion, out bool approveUpdate)`
 
@@ -101,4 +102,4 @@ The `OnUpdate` method is called when Meadow is going to attempt an over-the-air 
 
 * `void OnUpdateComplete(Version oldVersion, out bool rollbackUpdate)`
 
-The `OnUpdateComplete` method is called after Meadow has completed an over-the-air (OTA) app update.
+The `OnUpdateComplete` method is called after Meadow has completed an over-the-air (OTA) app update. -->
