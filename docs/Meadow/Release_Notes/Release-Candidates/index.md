@@ -93,7 +93,7 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 
 #### Over-the-Air Updates
 
-[content TBD]
+`Meadow.Core` now has an OtA Update Service baked in.  It is disabled by default, but you will see the configured Meadow Cloud server address output during boot.  OtA is not currently enabled because we are having intermittent failures with making an MQTT connection and we want to get that hardened before making the feature generally available.  Access to the `UpdateService` will be available in the `Resolver`.
 
 [available via Meadow.CLI right now. Web UI in the future.]
 
@@ -198,9 +198,29 @@ The `Resolver` also contains an instance of a simple `Logger`. This `Logger` sup
 
 A unified API for getting access to the devices `INetworkAdapters` has been introduced and the old mechanisms for interacting with the WiFi adapter have been deprecated. See the updates in the [Networking Guide](/Meadow/Meadow.OS/Networking) for more information.
 
-### Power & Sleep APIs
+### Sleep API
 
-[content TBD]
+Sleep APIs
+
+The `Sleep` API has been implemented and moved to `PlatformOS`.
+
+To put your Meadow into a low-power Sleep state, use the following call:
+
+```
+Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));
+```
+
+> Known Issue: When waking from Sleep, if your application attempts to write to the `Console` within less than approximately 3 seconds, the underlying serial connection will not be available and the application will halt.  For this reason, we recommend adding a `Thread.Sleep(3000);` immediately after any call to `Sleep()` or at the top of any `Device.PlatformOS.AfterWake` handler.
+
+### Reset API
+
+The `Reset` API has been moved to `PlatformOS`.
+
+To reset your meadow, use the following call:
+
+```
+Device.PlatformOS.Reset();
+```
 
 ### Serial Ports
 
