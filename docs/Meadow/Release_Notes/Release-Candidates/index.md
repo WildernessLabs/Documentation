@@ -282,6 +282,7 @@ With the greatly simplified boilerplate code needed to create a Meadow applicati
 ## Known Issues
 * If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
 * There is some extra logging code that shows how many bytes are being sent and received between the Meadow and Visual Studio, so we can track down a buffer overflow bug. This extra logging will be removed in RC2.
+* Occationally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
 
 ### Meadow.OS Deploy, App Deploy/Debug Workflow
 
