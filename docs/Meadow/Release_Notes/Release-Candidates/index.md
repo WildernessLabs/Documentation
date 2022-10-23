@@ -278,6 +278,7 @@ With the greatly simplified boilerplate code needed to create a Meadow applicati
 * [bufferRgb888 and 8888 missing InvertPixel implementation #391](https://github.com/WildernessLabs/Meadow.Foundation/issues/391) - Fixed.
 * [PushButton LongPress not working properly #408](https://github.com/WildernessLabs/Meadow.Foundation/issues/408) - Default time duration for long-press added.
 * [PushButton with port ctor fails #422](https://github.com/WildernessLabs/Meadow.Foundation/issues/422) - Fixed.
+* [Buffer Overflow occuring on certain projects, that locked up Visual Studio ](https://github.com/WildernessLabs/Meadow_Issues/issues/212) - Fixed
 
 ## Known Issues
 * If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
