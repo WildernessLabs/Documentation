@@ -94,7 +94,7 @@ We did a major overhaul of the UART/Serial Port in Meadow for b4.0. Big changes 
    
 For more info, check out the awesome [Serial Communications Guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
 
-To see the new `ISerialMessagePort` class at work, check out the [`SerialMessagePort` Sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/master/Source/Meadow.Core.Samples/IO/SerialMessagePort).
+To see the new `ISerialMessagePort` class at work, check out the [`SerialMessagePort` Sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO/SerialMessagePort).
 
 #### `FilterableObserver` Changes
 
@@ -295,7 +295,7 @@ As long as the board is continuously powered, the clock will retain its time. Ch
 
 ### Meadow.Foundation
 
-We've added a new driver for the Veml7700 light sensor and improved the performance of the Max7219 driver. You can find an example of the Max7219 in action in the [Meadow Samples GitHub repo](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/Meadow.Foundation/Tetris).
+We've added a new driver for the Veml7700 light sensor and improved the performance of the Max7219 driver. You can find an example of the Max7219 in action in the [Meadow Samples GitHub repo](https://github.com/WildernessLabs/Meadow_Samples/tree/main/Source/MeadowSamples/Meadow.Foundation/Tetris).
 
 ## Beta 3.8 
 

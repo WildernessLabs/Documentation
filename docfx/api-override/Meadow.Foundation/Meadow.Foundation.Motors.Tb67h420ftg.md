@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Tb67h420ftg) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.Tb67h420ftg/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Tb67h420ftg/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Tb67h420ftg.svg?label=Meadow.Foundation.Motors.Tb67h420ftg" alt="NuGet Gallery for Tb67h420ftg" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Tb67h420ftg/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Tb67h420ftg.svg?label=Meadow.Foundation.Motors.Tb67h420ftg" alt="NuGet Gallery for Meadow.Foundation.Motors.Tb67h420ftg" /></a> |
 
 ### Code Example
 
@@ -18,12 +18,12 @@ Tb67h420ftg motorDriver;
 PushButton button1;
 PushButton button2;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
-    button1 = new PushButton(Device, Device.Pins.D12, Meadow.Hardware.ResistorMode.InternalPullDown);
-    button2 =  new PushButton(Device, Device.Pins.D13, Meadow.Hardware.ResistorMode.InternalPullDown);
+    button1 = new PushButton(Device, Device.Pins.D12, ResistorMode.InternalPullDown);
+    button2 =  new PushButton(Device, Device.Pins.D13, ResistorMode.InternalPullDown);
 
     button1.PressStarted += Button1_PressStarted;
     button1.PressEnded += Button1_PressEnded;
@@ -41,6 +41,8 @@ public MeadowApp()
     motorDriver.Motor2.MotorCalibrationMultiplier = 0.5f;
 
     Console.WriteLine("Initialization complete.");
+
+    return base.Initialize();
 }
 
 private void Button1_PressStarted(object sender, EventArgs e)

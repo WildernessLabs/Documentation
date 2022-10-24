@@ -12,7 +12,7 @@ Physical things we interact with in the world are made of molecules, which are t
 
 ![Illustration showing a glass of water made up of molecules of water, each molecule being made up of atoms: one oxygen atom and two hydrogen atoms.](../Support_Files/Water_Molecules.svg){:standalone}
 
-Most molecules are very small, atoms are very, very small. To give an idea of the size of an atom; a cup of water has about 6.022 x 10<sup>24</sup> water molecules. Water's chemical symbol is H<sub>2</sub>0, meaning that it is a molecule made of Hydrogen (x2) atoms, and one Oxygen atom. Therefore there are three times as many atoms as molecules in a glass of water, or 18.066 x 10<sup>24</sup> or 18,066,000,000,000,000,000,000,000 atoms.
+Most molecules are very small, atoms are very, very small. To give an idea of the size of an atom; a cup of water has about 6.022 x 10<sup>24</sup> water molecules. Water's chemical symbol is H<sub>2</sub>O, meaning that it is a molecule made of Hydrogen (x2) atoms, and one Oxygen atom. Therefore, there are three times as many atoms as molecules in a glass of water, or 18.066 x 10<sup>24</sup> or 18,066,000,000,000,000,000,000,000 atoms.
 
 ### Protons, Neutrons, and Electrons
 
@@ -22,7 +22,7 @@ Protons and neutrons are incredibly dense and make up the core, or _nucleus_ of 
 
 ![Illustration of an atom showing a center nucleus and orbiting electrons.](../Support_Files/Atom.svg){:standalone}
 
-Atoms are classified on the [periodic table](http://www.ptable.com/) by the number of protons they posess, which is also their _atomic number_. So for example, hydrogen has (1) proton, so therefore its atomic number is 1. Helium has 2 protons, so its atomic number is 2, lead has 82, and so forth.
+Atoms are classified on the [periodic table](http://www.ptable.com/) by the number of protons they possess, which is also their _atomic number_. So, for example, hydrogen has (1) proton, so therefore its atomic number is 1. Helium has 2 protons, so its atomic number is 2, lead has 82, and so forth.
 
 <!--
 
@@ -39,30 +39,30 @@ All elements may have different isotopes. For example, the element carbon can  h
 
 ## Electrical Charge
 
-Both protons and electrons have an attraction/repelling force, or "charge." Protons and electrons have the same amount of charge from a quantity standpoint, but they are qualitatively different, in that protons and electrons exert opposite forces, which cause them to attract each other, while electrons will repel each other. Similarly, two protons will also repel each other. The amount of charge a proton or electron has is known as a [_unit electrical charge_](https://en.wikipedia.org/wiki/Elementary_charge#Quantization), often denoted as _e_, and was once thought to be the smallest amount of electrical charge possible (we now know that [quarks](https://en.wikipedia.org/wiki/Quark), have an even smaller electrical charge).
+Both protons and electrons have an attraction/repelling force, or "charge." Protons and electrons have the same amount of charge from a quantity standpoint, but they are qualitatively different, in that protons and electrons exert opposite forces, which cause them to attract each other. Two electrons will repel each other; similarly, two protons will also repel each other. The amount of charge a proton or electron has is known as a [_unit electrical charge_](https://en.wikipedia.org/wiki/Elementary_charge#Quantization), often denoted as _e_, and was once thought to be the smallest amount of electrical charge possible (we now know that [quarks](https://en.wikipedia.org/wiki/Quark) have an even smaller electrical charge).
 
-**Protons are said to have a "positive charge,"** Neutrons have no charge (neutral), and **electrons have a "negative charge."**. However, the terms negative and positive in this context have no intrinsic meaning, instead, their naming has been chosen arbitrarily, in that they could have just as easily been called _up_ and _down_ charges, or protons could have been said to be negative and eletrons positive. The important part here is that they are opposites.
+**Protons are said to have a "positive charge,"** neutrons have no charge (neutral), and **electrons have a "negative charge."** However, the terms positive and negative in this context have no intrinsic meaning, instead, their naming has been chosen arbitrarily, in that they could have just as easily been called _up_ and _down_ charges, or protons could have been said to be negative and electrons positive. The important part here is that they are opposites.
 
 ## Ions
 
 Because protons and electrons have the same amount but opposite type of charge, the number of electrons in a balanced atom (in which the net electrical charge is zero), must be equal. So a hydrogen atom (atomic number of 1) should have one proton and electron. Iron, which an atomic number of 26, should naturally have 26 protons, and 26 electrons.
 
-However, atoms can gain or lose electrons, causing them to have a net positive (if there are more protons) or net negative charge (if there are more electrons). These atoms are called [ions](https://en.wikipedia.org/wiki/Ion). And the process of becoming ionized is ionization.
+However, atoms can gain or lose electrons, causing them to have a net positive charge (if there are more protons) or net negative charge (if there are more electrons). These atoms are called [_ions_](https://en.wikipedia.org/wiki/Ion). The process of becoming _ionized_ is _ionization_.
 
 ## Conductors
 
-Atoms often combine together to form molecules or in a repeating lattice to form crystals and metal, by sharing electrons:
+Atoms often combine together by sharing electrons to form molecules or in a repeating lattice to form crystals and metal:
 
 ![Illustration showing two atoms sharing an orbiting electron with a path of the electron moving easily between the two atoms.](../Support_Files/Atoms_Sharing_an_Electron.svg){:standalone}
 
-In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_, or _conductive_.
+In some materials, such as silver or copper, electrons move easily between atoms. Materials that readily share electrons like this are said to be _conductors_ or _conductive_.
 
 ## Insulators
 
 <!-- make a note about electron shells here? insulators exist when the valence shell is full? -->
 
-Materials that don't readily let electrons flow are said to be _insulators_. Materials such as glass and wood, are good insulators.
+Materials that don't readily let electrons flow are said to be _insulators_. Materials such as glass and wood are good insulators.
 
-Metal oxides (metal that have oxygen atoms bound to them) often insulate, even though the same metal without oxygen will conduct. Gasses usually make good insulators, too, because the atoms are too far apart to exchange electrons.
+Metal oxides (metals that have oxygen atoms bound to them) often insulate, even though the same metal without oxygen will conduct. Gasses usually make good insulators because the atoms are too far apart to exchange electrons.
 
 ## [Next - Electrical Current](../Electrical_Current)

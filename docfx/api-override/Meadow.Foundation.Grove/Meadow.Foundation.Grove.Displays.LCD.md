@@ -7,22 +7,29 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/LCD) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Displays.LCD/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Displays.LCD.svg?label=Meadow.Foundation.Grove.Displays.LCD" alt="NuGet Gallery for LCD" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Displays.LCD/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Displays.LCD.svg?label=Meadow.Foundation.Grove.Displays.LCD" alt="NuGet Gallery for Meadow.Foundation.Grove.Displays.LCD" /></a> |
 
 ### Code Example
 
 ```csharp
-public MeadowApp()
+LCD display;
+
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     var display = new LCD(Device.CreateI2cBus());
 
+    return Task.CompletedTask;
+}
+
+public override async Task Run()
+{
     display.Write("Hello Grove");
 
-    Thread.Sleep(2000);
+    await Task.Delay(2000);
 
-    for(byte i = 0; i < 16; i++)
+    for (byte i = 0; i < 16; i++)
     {
         display.SetCursorPosition(i, 0);
         display.Write("1");

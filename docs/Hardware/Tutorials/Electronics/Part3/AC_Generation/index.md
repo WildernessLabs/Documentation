@@ -8,13 +8,13 @@ subtitle: How alternating current is created.
 
 Alternating current gets its waveform by the way that it's generated.
 
-AC current has historically been created by electrical generators, which, in its simplest form, consist of a central turning [_rotor_](https://en.wikipedia.org/wiki/Rotor_(electric)) and an enclosing [_stator_](https://en.wikipedia.org/wiki/Stator). Generators have powerful magnets in them which induce a current into wires as they move relative to each other:
+AC current has historically been created by electrical generators, which, in their simplest form, consist of a central turning [_rotor_](https://en.wikipedia.org/wiki/Rotor_(electric)) and an enclosing [_stator_](https://en.wikipedia.org/wiki/Stator). Generators have powerful magnets in them which induce a current into wires as they move relative to each other:
 
 ![Illustration of a generator: a magnet spinning within a wire coil that induces an alternating current.](../Support_Files/Alternator.svg){:standalone}
 
 [Illustration Credit: Egmason - Own work, CC BY 3.0](https://commons.wikimedia.org/w/index.php?curid=10250453)
 
-As the rotor turns, the wire coils get closer to the magnetic, and then farther away; causing an alternating voltage to be induced as the electrons are moved back and forth in the wires. As such, alternating current looks like a sine wave when the voltage is mapped over time, because the induction is actually a function of a circle:
+As the rotor turns, the wire coils get closer to the magnetic and then farther away; causing an alternating voltage to be induced as the electrons are moved back and forth in the wires. As such, alternating current looks like a sine wave when the voltage is mapped over time, because the induction is actually a function of a circle:
 
 ![Animation showing the relation of the voltage to the functions of a circle, showing up-down oscillations of cosine and sine of a spot moving along the circumference of the circle.](../Support_Files/Circle_cos_sin.gif){:standalone}
 

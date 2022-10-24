@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Servos.ServoCore) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Servos.ServoCore/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Servos.ServoCore/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servos.ServoCore.svg?label=Meadow.Foundation.Servos.ServoCore" alt="NuGet Gallery for ServoCore" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Servos.ServoCore/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servos.ServoCore.svg?label=Meadow.Foundation.Servos.ServoCore" alt="NuGet Gallery for Meadow.Foundation.Servos.ServoCore" /></a> |
 
 Servos are integrated packages that usually include a DC electric motor, torque-increasing gearing, and electronics to control the motor: 
 
@@ -97,30 +97,35 @@ Servo cable colors vary by manufacture, but they're always in the same order. Th
 ```csharp
 protected Servo servo;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
-    servo = new Servo(Device.CreatePwmPort(Device.Pins.D02), NamedServoConfigs.SG90);
+    servo = new Servo(Device, Device.Pins.D02, NamedServoConfigs.SG90);
 
-    servo.RotateTo(new Angle(0, AU.Degrees));
+    return Task.CompletedTask;
+}
+
+public async override Task Run()
+{ 
+    await servo.RotateTo(new Angle(0, AU.Degrees));
 
     while (true)
     {
         for (int i = 0; i <= servo.Config.MaximumAngle.Degrees; i++)
         {
-            servo.RotateTo(new Angle(i, AU.Degrees));
+            await servo.RotateTo(new Angle(i, AU.Degrees));
             Console.WriteLine($"Rotating to {i}");
-            Thread.Sleep(40);
         }
-        Thread.Sleep(2000);
+
+        await Task.Delay(2000);
+
         for (int i = 180; i >= servo.Config.MinimumAngle.Degrees; i--)
         {
-            servo.RotateTo(new Angle(i, AU.Degrees));
+            await servo.RotateTo(new Angle(i, AU.Degrees));
             Console.WriteLine($"Rotating to {i}");
-            Thread.Sleep(40);
         }
-        Thread.Sleep(2000);
+        await Task.Delay(2000);
     }
 }
 

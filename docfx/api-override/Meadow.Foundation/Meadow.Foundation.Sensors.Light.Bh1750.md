@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1750) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Bh1750/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Bh1750/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Bh1750.svg?label=Meadow.Foundation.Sensors.Light.Bh1750" alt="NuGet Gallery for Bh1750" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Bh1750/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Bh1750.svg?label=Meadow.Foundation.Sensors.Light.Bh1750" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.Bh1750" /></a> |
 
 The BH1750 is a light intensity sensor that communicates over I2C. 
 
@@ -17,9 +17,9 @@ The BH1750 is a light intensity sensor that communicates over I2C.
 ```csharp
 Bh1750 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     var i2c = Device.CreateI2cBus();
     sensor = new Bh1750(
@@ -42,22 +42,19 @@ public MeadowApp()
         });
     sensor.Subscribe(consumer);
 
-    //==== Events
     // classical .NET events can also be used:
     sensor.Updated += (sender, result) => Console.WriteLine($"Light: {result.New.Lux:N2}Lux");
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating continuously
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public override async Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"   Light: {result.Lux:N2}Lux");
+    Console.WriteLine($" Light: {result.Lux:N2}Lux");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

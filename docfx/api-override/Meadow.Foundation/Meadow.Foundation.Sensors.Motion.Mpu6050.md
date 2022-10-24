@@ -8,16 +8,16 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mpu6050/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mpu6050/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mpu6050.svg?label=Meadow.Foundation.Sensors.Motion.Mpu6050" alt="NuGet Gallery for Mpu6050" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mpu6050/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mpu6050.svg?label=Meadow.Foundation.Sensors.Motion.Mpu6050" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Mpu6050" /></a> |
 
 ### Code Example
 
 ```csharp
 Mpu6050 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Console.WriteLine("Initialize...");
 
     sensor = new Mpu6050(Device.CreateI2cBus());
 
@@ -46,17 +46,14 @@ public MeadowApp()
         });
     sensor.Subscribe(consumer);
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public async override Task Run()
 {
+    //==== one-off read
     var result = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
+
     Console.WriteLine($"Accel: [X:{result.Acceleration3D?.X.MetersPerSecondSquared:N2}," +
         $"Y:{result.Acceleration3D?.Y.MetersPerSecondSquared:N2}," +
         $"Z:{result.Acceleration3D?.Z.MetersPerSecondSquared:N2} (m/s^2)]");
@@ -66,6 +63,8 @@ protected async Task ReadConditions()
         $"Z:{result.AngularVelocity3D?.Z.DegreesPerSecond:N2} (dps)]");
 
     Console.WriteLine($"Temp: {result.Temperature?.Celsius:N2}C");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
 }
 
 ```

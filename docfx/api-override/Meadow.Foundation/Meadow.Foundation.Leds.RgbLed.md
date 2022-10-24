@@ -7,8 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Leds) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for RgbLed" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for Meadow.Foundation" /></a> |
 
 **RgbLed** represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
 
@@ -32,7 +31,7 @@ To connect these deds to Meadow, it is recommended to use an external resistor o
 ```csharp
 protected List<RgbLed> rgbLeds;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -41,7 +40,7 @@ public MeadowApp()
         redPin: Device.Pins.OnboardLedRed,
         greenPin: Device.Pins.OnboardLedGreen,
         bluePin: Device.Pins.OnboardLedBlue);
-    onRgbLed.SetColor(RgbLed.Colors.Red);
+    onRgbLed.SetColor(RgbLedColors.Red);
 
     rgbLeds = new List<RgbLed>
     {
@@ -63,12 +62,12 @@ public MeadowApp()
             Device.CreateDigitalOutputPort(Device.Pins.D13))
     };
 
-    onRgbLed.SetColor(RgbLed.Colors.Green);
+    onRgbLed.SetColor(RgbLedColors.Green);
 
-    TestRgbLeds();
+    return Task.CompletedTask;
 }
 
-protected void TestRgbLeds()
+public override async Task Run()
 {
     Console.WriteLine("TestRgbLeds...");
 
@@ -77,38 +76,38 @@ protected void TestRgbLeds()
         Console.WriteLine("Going through each color on each RGB LED...");
         foreach (var rgbLed in rgbLeds)
         {
-            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
+            for (int i = 0; i < (int)RgbLedColors.count; i++)
             {
-                rgbLed.SetColor((RgbLed.Colors)i);
-                Thread.Sleep(500);
+                rgbLed.SetColor((RgbLedColors)i);
+                await Task.Delay(500);
             }
         }
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         Console.WriteLine("Blinking through each color on each RGB LED...");
         foreach (var rgbLed in rgbLeds)
         {
-            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
+            for (int i = 0; i < (int)RgbLedColors.count; i++)
             {
-                rgbLed.StartBlink((RgbLed.Colors)i);
-                Thread.Sleep(3000);
+                rgbLed.StartBlink((RgbLedColors)i);
+                await Task.Delay(3000);
             }
         }
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         Console.WriteLine("Blinking through each color on each RGB LED...");
         foreach (var rgbLed in rgbLeds)
         {
-            for (int i = 0; i < (int)RgbLed.Colors.count; i++)
+            for (int i = 0; i < (int)RgbLedColors.count; i++)
             {
-                rgbLed.StartBlink((RgbLed.Colors)i, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
-                Thread.Sleep(3000);
+                rgbLed.StartBlink((RgbLedColors)i, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+                await Task.Delay(3000);
             }
         }
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
     }
 }
 

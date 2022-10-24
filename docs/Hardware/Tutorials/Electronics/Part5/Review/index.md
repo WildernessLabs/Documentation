@@ -17,8 +17,8 @@ This was a big chapter of the tutorial. Along the way, we learned about Kirchhof
  * Netduino can measure a voltage signal from `0V` to `3.3V` using the onboard Analog to Digital Converter (ADC) and reports that voltage as a digital value from `0` to `1023`.
  * Complex circuits can be understood by considering them as collection of smaller circuits and analyzing the smaller sub-circuits.
  * Datasheets are published for nearly every component and contain important information about how they work, how they should be wired up, etc.
- * Soldering is the process of melting solder to make permanently connections.
- * There are lots of different software applications to help design and analyze circuits. Some of the most common and accessible apps are Fritzing, iCircuit, Eagle CAD and KiCad.
+ * Soldering is the process of melting solder to make permanent connections.
+ * There are many software applications to help design and analyze circuits. Some of the most common and accessible apps are Fritzing, iCircuit, Eagle CAD, and KiCad.
 
 
 ## [Part 6: Semiconductors, Part 1](../../Part6/Semiconductors/)

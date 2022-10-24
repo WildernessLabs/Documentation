@@ -8,7 +8,7 @@ subtitle: The sum of voltage drops is equal to the voltage source.
 
 In part 4, we learned from Ohm's law that resistance reduces the amount of current that flows through a circuit, but it turns out, voltage is also reduced.
 
-In fact, _Kirchhoff's voltage law_ states that the sum of all voltage drops around a circuit loop is equal to the sum of all voltage sources. In other words, if we had a circuit loop as in following illustration, with a `5V` voltage source, the total drop in voltage across all the resistors would be `5V`:
+_Kirchhoff's voltage law_ states that the sum of all voltage drops around a circuit loop is equal to the sum of all voltage sources. In other words, if we had a circuit loop as in following illustration, with a `5V` voltage source, the total drop in voltage across all the resistors would be `5V`:
 
 ![Diagram of a circuit with a voltage source connected to a series of resistors, starting at point A before resistor R1 with voltage drop V1, then to point B before resistor R2 with voltage drop V2, then to point C before resistor R3 with voltage drop V3, before returning to the voltage negative terminal.](../Support_Files/Kirchhoffs_Voltage_Law.svg){:standalone}
 
@@ -83,7 +83,7 @@ Since we know that resistors in series are additive, if we want to know the volt
 
 Note that the sigma (`∑`) symbol means mathematical sum, and `R...Rn` means `R` through `Rn`.  
 
-Simplifying circuits like this, by combining resistances, is a common way to analyze circuits because it makes them more practical to deal with. In fact, when dealing with circuits, we often simplify them into single values that describe their overall resistance, and _capacitance_, which we'll explore later. By simplifying circuits, we can more effectively design complex systems that incorporate multiple circuits into a larger design.
+Simplifying circuits by combining resistances is a common way to analyze circuits because it makes them more practical to deal with. In fact, when dealing with circuits, we often simplify them into single values that describe their overall resistance and _capacitance_, which we'll explore later. By simplifying circuits, we can more effectively design complex systems that incorporate multiple circuits into a larger design.
 
 Using the same numbers from before, calculate the forward voltage (voltage drop) at `B`:
 
@@ -103,7 +103,7 @@ V (at point B) = 5V - 4.5 = 0.5V
 
 ### Voltage Drop (Vf) of R2 is Vout
 
-By definition, `0.5V` is ALSO the voltage drop from `B` to `C`.  This becomes a little clearer if we simplify the circuit diagram even further:
+By definition, `0.5V` is also the voltage drop from `B` to `C`.  This becomes a little clearer if we simplify the circuit diagram even further:
 
 ![Diagram of a circuit with a voltage source connected to two resistors in series where the voltage drop across the second resistor is labeled.](../Support_Files/Voltage_Divider_Network_2.svg){:standalone}
 

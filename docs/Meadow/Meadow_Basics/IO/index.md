@@ -57,7 +57,7 @@ For more information, see the [PWM guide](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 Analog ports can operate at a range of voltages between `0V` and `3.3V`, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal. For instance an analog temperature sensor that is able to detect temperatures from `0ºC` to `100ºC` might output a voltage of `1.6V` (halfway between `0V` and `3.3V`) for `50º`.
 
-For more information, see the [Analog IO guide](/Meadow/Meadow_Basics/IO/Analog/). 
+For more information, see the [Analog IO guide](/Meadow/Meadow_Basics/IO/Analog/).
 
 ### I/O Power Tolerance
 
@@ -67,15 +67,15 @@ Both the digital and analog I/O on the Meadow F7 board nominally operate at a ra
 
 For reading analog voltages higher than `3.3V`, see the [analog I/O guide](/Meadow/Meadow_Basics/IO/Analog/)
 
-### F7 Micro IO Pinout
+### F7 Feather IO Pinout
 
-GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 Micro, and many of these pins are actually overloaded to support multiple functions, as shown in the below illustrations.
+GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 Feather, and many of these pins are actually overloaded to support multiple functions, as shown in the below illustrations.
 
-#### Meadow F7v2 Micro Pinout
+#### Meadow F7v2 Feather Pinout
 
 ![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg){:standalone}
 
-#### Meadow F7v1 Micro Pinout
+#### Meadow F7v1 Feather Pinout
 
 ![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
@@ -91,9 +91,9 @@ When working with IO in Meadow, there are three different terms/concepts to be a
 
 ### `IIOController`
 
-A device that supports IO (such as the F7 Micro device itself, or an external IO Expander) is represented by an `IIOController`, which exposes a `Pins` collection of `IPin` objects.
+A device that supports IO (such as the F7 Feather device itself, or an external IO Expander) is represented by an `IIOController`, which exposes a `Pins` collection of `IPin` objects.
 
-IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following Meadow [sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/master/Source/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
+IO Devices are self describing with a mapping of `Device` > `Pins` > `Channels`. For instance, the following Meadow [sample code](https://github.com/WildernessLabs/Meadow_Samples/tree/main/main/MeadowSamples/GpioInterrogation) enumerates all the pins and what type of IO is possible for each pin:
 
 ```csharp
 foreach(var pin in Device.Pins.AllPins) {
@@ -132,9 +132,9 @@ When interacting with peripherals, the actual control and interaction happens vi
 IDigitalOutputPort redLED = Device.CreateDigitalOutputPort(Device.Pins.OnboardLedRed);
 ```
 
-#### Meadow F7 Micro Pinout Table
+#### Meadow F7 Feather Pinout Table
 
-The following table lists all the accessible pins on the Meadow F7 Micro dev board and their functions:
+The following table lists all the accessible pins on the Meadow F7 Feather dev board and their functions:
 
 | Meadow Pin Name | MCU Pin Name | Digital Channel | Analog Channel | PWM Timer Channel | Interrupt Group |
 |-----------------|--------------|-----------------|----------------|-------------------|------------|
@@ -167,22 +167,22 @@ The following table lists all the accessible pins on the Meadow F7 Micro dev boa
 | OnboardLedGreen | PA1  | PA1  |           | 2 |    |
 | OnboardLedBlue  | PA0  | PA0  |           | 1 |    |
 
-#### Meadow F7v2 Micro Pinout Table
+#### Meadow F7v2 Feather Pinout Table
 
-| Meadow Pin Name | MCU Pin Name | Digital Channel | Analog Channel | PWM Timer Channel | Interrupt Group | 
-|-----------------|--------------|-----------------|----------------|-------------------|-----------------| 
+| Meadow Pin Name | MCU Pin Name | Digital Channel | Analog Channel | PWM Timer Channel | Interrupt Group |
+|-----------------|--------------|-----------------|----------------|-------------------|-----------------|
 | A00             | PA4  | PA4  | ADC1_IN4  |   | 4  |
 | A01             | PA5  | PA5  | ADC1_IN5  |   | 5  |
 | A02             | PA3  | PA3  | ADC1_IN3  |   | 3  |
 | A03             | PB0  | PB0  | ADC1_IN8  |   | 0  |
 | A04             | PB1  | PB1  | ADC1_IN9  |   | 1  |
 | A05             | PC0  | PC0  | ADC1_IN10 |   | 0  |
-| SCK             | PC10 | PC10 |           |   | 10 |
+| SCK             | PC10 | PC10 |           |   |    |
 | COPI            | PB5  | PB5  |           |   | 5  |
 | CIPO            | PC11 | PC11 |           |   | 11 |
 | D00             | PI9  | PI9  |           |   | 9  |
 | D01             | PH13 | PH13 |           |   | 13 |
-| D02             | PH10 | PH10 |           | 1 | 10 |
+| D02             | PH10 | PH10 |           | 1 |    |
 | D03             | PB8  | PB8  |           | 3 | 8  |
 | D04             | PB9  | PB9  |           | 4 | 9  |
 | D05             | PB4  | PB4  |           | 1 | 4  |
@@ -194,8 +194,8 @@ The following table lists all the accessible pins on the Meadow F7 Micro dev boa
 | D11             | PC9  | PC9  |           | 4 |    |
 | D12             | PB14 | PB14 |           | 1 | 14 |
 | D13             | PB15 | PB15 |           | 2 | 15 |
-| D14             | PB12 | PB12 |           |   | 12 |
-| D15             | PG12 | PB12 |           |   | 12 |
+| D14             | PB12 | PB12 |           |   |    |
+| D15             | PG12 | PB12 |           |   |    |
 | OnboardLedRed   | PA2  | PA2  |           | 3 | 2  |
 | OnboardLedGreen | PA1  | PA1  |           | 2 | 1  |
 | OnboardLedBlue  | PA0  | PA0  |           | 1 | 0  |

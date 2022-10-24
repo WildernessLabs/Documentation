@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.At24Cxx) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.At24Cxx/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.EEPROM.At24Cxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.EEPROM.At24Cxx.svg?label=Meadow.Foundation.ICs.EEPROM.At24Cxx" alt="NuGet Gallery for At24Cxx" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.EEPROM.At24Cxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.EEPROM.At24Cxx.svg?label=Meadow.Foundation.ICs.EEPROM.At24Cxx" alt="NuGet Gallery for Meadow.Foundation.ICs.EEPROM.At24Cxx" /></a> |
 
 The **AT24Cxx** series of chips provide a mechanism for storing data that will survive a power outage or battery failure.  These EEPROMs are available in varying sizes and are accessible using the I2C interface.
 
@@ -19,14 +19,21 @@ The **AT24Cxx** series of chips provide a mechanism for storing data that will s
 ### Code Example
 
 ```csharp
-public MeadowApp()
+At24Cxx eeprom;
+
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     //256kbit = 256*1024 bits = 262144 bits = 262144 / 8 bytes = 32768 bytes
     //if you're using the ZS-042 board, it has an AT24C32 and uses the default value of 8192
-    var eeprom = new At24Cxx(i2cBus: Device.CreateI2cBus(), memorySize: 32768);
+    eeprom = new At24Cxx(i2cBus: Device.CreateI2cBus(), memorySize: 32768);
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     Console.WriteLine("Write to eeprom");
     eeprom.Write(0, new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
 
@@ -48,6 +55,8 @@ public MeadowApp()
         Thread.Sleep(50);
         Console.WriteLine("Byte: " + index + ", Value: " + memory[index]);
     }
+
+    return base.Run();
 }
 
 ```

@@ -8,36 +8,43 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.St7565) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.St7565/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.St7565/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.St7565.svg?label=Meadow.Foundation.Displays.St7565" alt="NuGet Gallery for St7565" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.St7565/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.St7565.svg?label=Meadow.Foundation.Displays.St7565" alt="NuGet Gallery for Meadow.Foundation.Displays.St7565" /></a> |
 
 ### Code Example
 
 ```csharp
 MicroGraphics graphics;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     var sT7565 = new St7565
     (
-        device: Device, 
+        device: Device,
         spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D00,
         resetPin: Device.Pins.D01,
-        width: 128, 
+        width: 128,
         height: 64
     );
 
     graphics = new MicroGraphics(sT7565);
-
     graphics.CurrentFont = new Font8x8();
+
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     graphics.Clear();
     graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, true);            
+    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, true);
     graphics.DrawText(5, 5, "ST7565");
     graphics.Show();
+
+    return base.Run();
 }
 
 ```

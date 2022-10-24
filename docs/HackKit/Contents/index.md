@@ -4,7 +4,7 @@ title: Hack Kit Pro Contents
 subtitle: Here we list all the components included in the Hack Kit Pro
 ---
 
-### F7 Micro Dev Kit
+### F7 Feather Dev Kit
 
 | Item                   | QTY | Description | |
 |------------------------|:---:|-------------|-|
@@ -36,7 +36,6 @@ subtitle: Here we list all the components included in the Hack Kit Pro
 | USB Breakout | 1 | Used to expose the `5V` and `GND` pins of a USB adapter so that it can be used as an external power supply to drive motors, and such. | ![Photo of a USB breakout board, converting from a USB A male plug to the four USB pins.](Images/usbBreakout.jpg) |
 | SPDT Switch | 2 | Small two-position switch. | ![Photo of two three-pin, two-position switches.](Images/switches.jpg) |
 
-
 ### ICs
 
 | Item                   | QTY | Description | |
@@ -44,7 +43,6 @@ subtitle: Here we list all the components included in the Hack Kit Pro
 | [74595 Shift Register](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 2 | 8-port digital output expander chip. Adds 8 additional `DigitalOutputPort`s to a Meadow. Can be chained up to 8 for 64 total additional outputs. | ![Photo of two 74595 shift registers.](Images/74HC595.jpg) |
 | [MCP23008 IO Expander](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.html) | 2 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. | ![Photo of two MCP23008 IO expanders.](Images/MCP23008.jpg) |
 | [H-Bridge Motor Controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | 1 | SN754410. Provides digital control for two motors using an external power source, controlled via PWM. | ![Photo of an SN7544IO H-Bridge motor controller.](Images/HBridgeMotor.jpg) |
-
 
 ### LEDs
 

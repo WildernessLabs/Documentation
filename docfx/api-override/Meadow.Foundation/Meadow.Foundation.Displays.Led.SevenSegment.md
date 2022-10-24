@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.SevenSegment/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SevenSegment.svg?label=Meadow.Foundation.Displays.Led.SevenSegment" alt="NuGet Gallery for SevenSegment" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SevenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SevenSegment.svg?label=Meadow.Foundation.Displays.Led.SevenSegment" alt="NuGet Gallery for Meadow.Foundation.Displays.Led.SevenSegment" /></a> |
 
 A seven-segment display is a form of electronic display device used to show  decimal numbers. These displays are widely used in digital clocks, electronic meters, basic calculators, and other electronic devices that display numerical information.
 
@@ -31,11 +31,13 @@ You can get 7-segment displays from the following supplier(s):
 ### Code Example
 
 ```csharp
-public MeadowApp()
+SevenSegment sevenSegment;
+
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
-    var sevenSegment = new SevenSegment
+    sevenSegment = new SevenSegment
     (
         portA: Device.CreateDigitalOutputPort(Device.Pins.D14),
         portB: Device.CreateDigitalOutputPort(Device.Pins.D15),
@@ -48,7 +50,14 @@ public MeadowApp()
         isCommonCathode: false
     );
 
+    return base.Initialize();
+}
+
+public override Task Run()
+{
     sevenSegment.SetDisplay(character: '1', showDecimal: true);
+
+    return base.Run();
 }
 
 ```

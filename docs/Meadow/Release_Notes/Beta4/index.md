@@ -47,7 +47,7 @@ The current battery charge level can be obtained via the `GetBatteryLevel()` API
 float voltage = Device.GetBatteryLevel();
 ```
 
-For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/OS/BatteryLevel) in the [Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples).
+For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/OS/BatteryLevel) in the [Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples).
 
 ## Network Updates
 
@@ -67,7 +67,7 @@ You can now switch between the onboard chip antenna and an external antenna hook
 Device.SetAntenna(AntennaType.External);
 ```
 
-See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/Develop/Source/Meadow.Core.Samples/Network/Antenna_Switching) for more information.
+See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/Network/Antenna_Switching) for more information.
 
 ## Introducing Maple Server for Meadow
 
@@ -247,7 +247,7 @@ This is a big release with a ton of stability fixes, an overhaul of the CLI, and
  * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
  * **WiFi Memory Leak Fixed** - Network requests no longer leak memory.
  * **Networking Server Methods** - `UdpClient`, `TcpListener` and `TcpClient` are all working now. Note that we're still working on `HttpListener`.
- * **[Meadow.OS Watchdog Timer](/Meadow/Meadow.OS/Watchdog/)** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
+ * **[Meadow.OS Watchdog Timer](/Meadow/Meadow.OS/Automatic_Restarts/)** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
  <!--* **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.-->
  * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The [Graphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/) available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `CharacterDisplay`s).
 

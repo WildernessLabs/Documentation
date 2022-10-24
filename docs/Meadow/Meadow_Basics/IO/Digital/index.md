@@ -10,7 +10,6 @@ Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO. GPIO
 
 For sample Meadow applications that illustrate the usage of digial ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO).
 
-
 ## Digital Outputs
 
 _Setting_ the state of a _digital output_ is done using an implementation of the `IDigitalOutputPort` interface, available on any device that implements the `IDigitOutputController` interface, which provides a method called `CreateDigitalOutputPort`:
@@ -85,7 +84,7 @@ bool currentState = input.State;
 
 ### Interrupts
 
-Interrupts allow your application to be notified of the change of state of a digital input without having to poll the value. Enabling interrupts requires two things from your application: setting the `InterruptMode` of the `IDigitalInputPort` and then subscribing to notifications either via the `Changed` event, or using the `IObservable` pattern. 
+Interrupts allow your application to be notified of the change of state of a digital input without having to poll the value. Enabling interrupts requires two things from your application: setting the `InterruptMode` of the `IDigitalInputPort` and then subscribing to notifications either via the `Changed` event, or using the `IObservable` pattern.
 
 #### Example
 
@@ -106,7 +105,6 @@ input.Changed += (s, e) =>
 
 For more information, check out the [Events and IObservable guide](/Meadow/Meadow_Basics/Events_and_IObservable/).
 
-
 #### Debounce and Glitch Filtering
 
 Signal _noise_ is spurious signal changes on a circuit that are induced either via normal mechanical imperfections, such as push buttons or switches, or sometimes through electromagnetic radiation. This noise can case unwanted level change notifications.
@@ -126,29 +124,27 @@ To understand these settings, it helps to understand what these filters are.
 
 ##### Glitch Filter
 
-A glitch is a spurious change _before_ an intentional state change occurs. Because noise typically manifests itsef as spikes, the glitch filter specifies the minimum duration, in microseconds (µs), of an initial state change to persist before it's notified as an intentional state change, rather than a spurious one. 
+A glitch is a spurious change _before_ an intentional state change occurs. Because noise typically manifests itself as spikes, the glitch filter specifies the minimum duration, in microseconds (µs), of an initial state change to persist before it's notified as an intentional state change, rather than a spurious one.
 
-This filter can be used to ensure that noise doens't trigger an in interrupt. Set to `0` if no glitch filter is desired.
+This filter can be used to ensure that noise doesn't trigger an in interrupt. Set to `0` if no glitch filter is desired.
 
 ##### Debounce Filter
 
-A _bounce_ gets it's name from mechanical switches (like the common push button/tactile switch), and happens _after_ an intentional state change, like the pushing of a button, in which an actual, mechanical _bounce_ might cause the signal to change momentarily. The _debounce filter_ then specifies the duration, in microseconds (µs), of the time to ignore state changes after a state change has occurred. 
+A _bounce_ gets it's name from mechanical switches (like the common push button/tactile switch), and happens _after_ an intentional state change, like the pushing of a button, in which an actual, mechanical _bounce_ might cause the signal to change momentarily. The _debounce filter_ then specifies the duration, in microseconds (µs), of the time to ignore state changes after a state change has occurred.
 
 This filter can be used to prevent unwanted state changes due to noise. Set to `0` if no debounce filter is desired.
-
 
 #### Interrupt Groups
 
 One thing to bear in mind when creating interrupts on multiple pins is that input pins share _interrupt groups_, in which only one input within any given interrupt group can be enabled as an interrupt. So when choosing pins to use as interrupts, refer to the pinout diagram and make sure that for each interrupt you want to use, they're in a unique interrupt group:
 
-##### Meadow F7v2 Micro Pinout
+##### Meadow F7v2 Feather Pinout
 
 ![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg){:standalone}
 
-##### Meadow F7v1 Micro Pinout
+##### Meadow F7v1 Feather Pinout
 
 ![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
-
 
 <!--
 ## Timing
@@ -211,9 +207,8 @@ PWM signals are frequently used to control the brightness of LEDs, as well as se
 
 Digital IO also includes built-in support for a host of different types of common digital [communication protocols](/Meadow/Meadow_Basics/IO/Digital/Protocols/) including:
 
-* **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)** 
+* **[I2C](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C)**
 * **[SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI)** (Serial Peripheral Interface)
-* **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial) 
+* **[UART](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART)** (Serial)
 <!-- * **[CAN](/Meadow/Meadow_Basics/IO/Digital/Protocols/CAN)** -->
 <!-- * **[I2S](/Meadow/Meadow_Basics/IO/Digital/Protocols/I2S)** (Integrated Inter-IC Sound Bus) -->
-

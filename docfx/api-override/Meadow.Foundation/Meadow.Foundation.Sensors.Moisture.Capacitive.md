@@ -7,7 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Capacitive) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Moisture.Capacitive/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Moisture.Capacitive.svg?label=Meadow.Foundation.Sensors.Moisture.Capacitive" alt="NuGet Gallery for Capacitive" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Moisture.Capacitive/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Moisture.Capacitive.svg?label=Meadow.Foundation.Sensors.Moisture.Capacitive" alt="NuGet Gallery for Meadow.Foundation.Sensors.Moisture.Capacitive" /></a> |
 
 Capacitive Soil Moisture sensor is a simple breakout for measuring the moisture in soil and similar materials. This sensor measures moisture levels by capacitive sensing, rather then resistive sensing like other types of moisture sensor such as the FC-28.
 
@@ -43,16 +43,16 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Capacitive/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Capacitive/Samples/) 
 
 ### Code Example
 
 ```csharp
 Capacitive capacitive;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     capacitive = new Capacitive(
         analogPort: Device.CreateAnalogInputPort(Device.Pins.A00, 5, TimeSpan.FromMilliseconds(40), new Voltage(3.3, Voltage.UnitType.Volts)),
@@ -63,7 +63,6 @@ public MeadowApp()
     // Example that uses an IObservable subscription to only be notified when the humidity changes by filter defined.
     var consumer = Capacitive.CreateObserver(
         handler: result => {
-            // the first time through, old will be null.
             string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
             Console.WriteLine($"Subscribed - " +
                 $"new: {result.New}, " +
@@ -75,22 +74,20 @@ public MeadowApp()
 
     // classical .NET events can also be used:
     capacitive.HumidityUpdated += (sender, result) =>
-    {   // the first time through, old will be null.
+    {   
         string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
         Console.WriteLine($"Updated - New: {result.New}, Old: {oldValue}");
     };
 
-    // Get an initial reading.
-    ReadMoisture().Wait();
-
-    // Spin up the sampling thread so that events are raised and IObservable notifications are sent.
-    capacitive.StartUpdating(TimeSpan.FromSeconds(5));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadMoisture()
+public async override Task Run()
 {
     var moisture = await capacitive.Read();
-    Console.WriteLine($"Moisture New Value { moisture }");            
+    Console.WriteLine($"Moisture New Value {moisture}");
+
+    capacitive.StartUpdating(TimeSpan.FromSeconds(3));
 }
 ```
 

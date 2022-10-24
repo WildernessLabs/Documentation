@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Vl53l0x/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Vl53l0x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Vl53l0x.svg?label=Meadow.Foundation.Sensors.Distance.Vl53l0x" alt="NuGet Gallery for Vl53l0x" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Vl53l0x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Vl53l0x.svg?label=Meadow.Foundation.Sensors.Distance.Vl53l0x" alt="NuGet Gallery for Meadow.Foundation.Sensors.Distance.Vl53l0x" /></a> |
                     <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Vl53l0x.svg?label=Meadow.Foundation.Sensors.Distance.Vl53l0x" 
                     style="width: auto; height: -webkit-fill-available;" /></a> |
 
@@ -17,14 +17,23 @@ remarks: *content
 ```csharp
 Vl53l0x sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing hardware...");
+
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
     sensor = new Vl53l0x(Device, i2cBus, (byte)Vl53l0x.Addresses.Default);
 
     sensor.DistanceUpdated += Sensor_Updated;
+
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
     sensor.StartUpdating(TimeSpan.FromMilliseconds(250));
+
+    return Task.CompletedTask;
 }
 
 private void Sensor_Updated(object sender, IChangeResult<Length> result)

@@ -7,8 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Motors) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for HBridgeMotor" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for Meadow.Foundation" /></a> |
 
 An h-bridge motor controller enables a control signal to drive a much larger load in either polarity, allowing Meadow to drive DC motors in forward or reverse from an external power supply. Using pulse-width-modulation (PWM) as the control signal, provides forward or reverse control, and variable speeds in either direction.
 
@@ -26,21 +25,21 @@ It should also work with heavier duty [L298N](https://www.amazon.com/s/ref=nb_sb
 ```csharp
 protected HBridgeMotor motor1;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
     motor1 = new HBridgeMotor
     (
-        a1Port: Device.CreatePwmPort(Device.Pins.D07),
-        a2Port: Device.CreatePwmPort(Device.Pins.D08),
+        a1Port: Device.CreatePwmPort(Device.Pins.D07, new Frequency(100, Frequency.UnitType.Hertz)),
+        a2Port: Device.CreatePwmPort(Device.Pins.D08, new Frequency(100, Frequency.UnitType.Hertz)),
         enablePort: Device.CreateDigitalOutputPort(Device.Pins.D09)
     );
-    
-    TestMotor();
+
+    return Task.CompletedTask;
 }
 
-protected void TestMotor()
+public override async Task Run()
 {
     Console.WriteLine("TestMotor...");
 
@@ -48,15 +47,15 @@ protected void TestMotor()
     {
         // Motor Forwards
         motor1.Power = 1f;
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         // Motor Stops
         motor1.Power = 0f;
-        Thread.Sleep(500);
+        await Task.Delay(500);
 
         // Motor Backwards
         motor1.Power = -1f;
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
     }
 }
 

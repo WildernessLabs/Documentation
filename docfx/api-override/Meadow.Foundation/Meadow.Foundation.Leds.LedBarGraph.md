@@ -7,8 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Leds) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Audio.Mp3.Yx5300/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for LedBarGraph" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for Meadow.Foundation" /></a> |
 
 An LED Bar Graph is packaged array of LEDs commonly used to indicate level or progress and commonly include 8 or 10 leds.
 
@@ -24,7 +23,7 @@ Use the `SetLed` method to turn on or off LEDs individually, or assign a value o
 ```csharp
 LedBarGraph ledBarGraph;
 
-public MeadowApp()
+public override Task Initialize()
 {
     Console.WriteLine("Initializing...");
 
@@ -45,62 +44,86 @@ public MeadowApp()
 
     ledBarGraph = new LedBarGraph(Device, pins);
 
-    TestLedBarGraph();
+    return Task.CompletedTask;
 }
 
-protected void TestLedBarGraph()
+public override async Task Run()
 {
     Console.WriteLine("TestLedBarGraph...");
 
-    decimal percentage = 0;
+    float percentage = 0;
 
     while (true)
     {
-        Console.WriteLine("Turning them on and off for 1 second using SetLed...");
+        Console.WriteLine("Turning them on and off for 200ms using SetLed...");
         for (int i = 0; i < ledBarGraph.Count; i++)
         {
             ledBarGraph.SetLed(i, true);
-            Thread.Sleep(1000);
+            await Task.Delay(100);
             ledBarGraph.SetLed(i, false);
         }
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         Console.WriteLine("Turning them on using Percentage...");
         while (percentage < 1)
         {
-            percentage += 0.10m;
+            percentage += 0.10f;
             Console.WriteLine($"{percentage}");
-            ledBarGraph.Percentage = (float) Math.Min(1.0m, percentage);
-            Thread.Sleep(500);
+            ledBarGraph.Percentage = Math.Min(1.0f, percentage);
+            await Task.Delay(100);
         }
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
         Console.WriteLine("Turning them off using Percentage...");
         while (percentage > 0)
         {
-            percentage -= 0.10m;
+            percentage -= 0.10f;
             Console.WriteLine($"{percentage}");
-            ledBarGraph.Percentage = (float) Math.Max(0.0m, percentage);
-            Thread.Sleep(500);
+            ledBarGraph.Percentage = Math.Max(0.0f, percentage);
+            await Task.Delay(100);
         }
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
-        Console.WriteLine("Blinking for 3 seconds...");
+        Console.WriteLine("Charging animation...");
+        while (percentage < 1)
+        {
+            percentage += 0.10f;
+            Console.WriteLine($"{percentage}");
+            ledBarGraph.Percentage = Math.Min(1.0f, percentage);
+            ledBarGraph.StartBlink(ledBarGraph.GetTopLedForPercentage());
+            await Task.Delay(2000);
+        }
+
+        await Task.Delay(1000);
+
+        Console.WriteLine("Discharging animation...");
+        while (percentage > 0)
+        {
+            percentage -= 0.10f;
+            Console.WriteLine($"{percentage}");
+            ledBarGraph.Percentage = Math.Max(0.0f, percentage);
+            ledBarGraph.StartBlink(ledBarGraph.GetTopLedForPercentage());
+            await Task.Delay(2000);
+        }
+
+        await Task.Delay(1000);
+
+        Console.WriteLine("Blinking for 5 seconds at 500ms on/off...");
         ledBarGraph.StartBlink();
-        Thread.Sleep(3000);
+        await Task.Delay(5000);
         ledBarGraph.Stop();
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
 
-        Console.WriteLine("Blinking for 3 seconds...");
-        ledBarGraph.StartBlink(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
-        Thread.Sleep(3000);
+        Console.WriteLine("Blinking for 5 seconds at 200ms on/off...");
+        ledBarGraph.StartBlink(TimeSpan.FromMilliseconds(200), TimeSpan.FromMilliseconds(200));
+        await Task.Delay(5000);
         ledBarGraph.Stop();
 
-        Thread.Sleep(1000);
+        await Task.Delay(1000);
     }
 }
 

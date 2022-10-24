@@ -22,7 +22,7 @@ The final formulation; `Vout = Vs * (R2 / (R1 + R2))`, is usually how the voltag
 
 ![Diagram of a circuit with a voltage source connected to two resistors in series. The voltage drop across the second resistor is shown as voltage out equal to voltage source times the value of R2 divided by the sum of R1 and R2.](../Support_Files/Voltage_Divider_Equation.svg){:standalone}
 
-This is, presumably, because it more intuitively represents the solution to the problem. Namely; that the output voltage is a product of the division ratio. So for example, if we had `5V` input, and we needed to divide such that we got `3V` output, then we need to multiply `5` by `3 / 5`:
+This is, presumably, because it more intuitively represents the solution to the problem. Namely, that the output voltage is a product of the division ratio. For example, if we had `5V` input and we needed to divide such that we got `3V` output, then we need to multiply `5` by `3 / 5`:
 
 ```
 Given:

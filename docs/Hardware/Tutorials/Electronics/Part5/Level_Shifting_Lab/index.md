@@ -40,11 +40,11 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 For this lab, we're going to use a [light sensor from the LilyPad project](https://www.sparkfun.com/products/8464) that operates on a 5V voltage domain. 
 
-LilyPad is a wearables project that's designed to be able to sewn into garments and textiles. This design intention is represented in its form factor:
+LilyPad is a wearables project that's designed to be sewn into garments and textiles. This design intention is represented in its form factor:
 
 ![Photo of a LilyPad 5V Luminosity Sensor circular PCB with outer solder and hole attachments for connecting to wearable projects.](LilyPad_Light_Sensor.jpg){:standalone}
 
-The connection points are rather large, however, and require some soldering to make them useful:
+The connection points are rather large, and require some soldering to make them useful:
 
 ![Photo of the finished LilyPad Sensor with wires soldered to it.](Soldered_LilyPad_Sensor.jpg){:standalone}
 
@@ -60,7 +60,7 @@ According to the [SparkFun](https://www.sparkfun.com/products/8464) page, the se
 | Room Light   | `1V - 2V`           |
 | Darkness     | < `1V`              |
 
-However, I have a few of these sensors, and when I measured the output, I got considerably different readings from the published spec. I also got pretty different readings from several of the sensors. So after soldering the wires onto the sensor, you'll want to measure your sensor output to get a sense of what to expect. 
+However, I have a few of these sensors, and when I measured the output, I got considerably different readings from the published spec. I also got very different readings from several of the sensors. After soldering the wires onto the sensor, you'll want to measure your sensor output to get an idea of what to expect. 
 
 #### 22 Gauge Single Strand Wire
 
@@ -70,7 +70,7 @@ We'll solder 22 gauge single strand wire to the sensor so that we can easily con
 
 #### Soldering Iron
 
-As with multimeters, there is a wide selection of soldering irons from very affordable hobbyist models to more expensive professional models.
+There is a wide selection of soldering irons from very affordable hobbyist models to more expensive professional models.
 
 #### Affordable Soldering Iron
 
@@ -96,28 +96,28 @@ Usually, before you use your new soldering iron for the first time, and from tim
 
 #### Lead-free Solder
 
-If your soldering iron doesn't come with solder, you'll need to pick some up. Make sure it's lead-free, rosin-core, and is small enough in diameter to be useful for electronics soldering (plumbing solder is too thick to be useful for electronics work). I recommend 1mm thickness or less for most modern electronic soldering. Lead is toxic even in small amounts, so nearly all electronics these days are produced with lead-free materials. Rosin-core means that in the center of the solder is a small bead of rosin which reduces (changes oxides into their metal state) metal oxides and makes the solder joints much cleaner. [This 0.8mm rosin-core, lead-free solder is a good choice for the soldering we'll do and is USD$10 on Amazon](http://amzn.to/2j8oSGe).
+If your soldering iron doesn't come with solder, you'll need to pick some up. Make sure it's lead-free, rosin-core, and is small enough in diameter to be useful for electronics soldering (plumbing solder is too thick to be useful for electronics work). I recommend 1mm thickness or less for most modern electronic soldering. Lead is toxic even in small amounts, so nearly all electronics these days are produced with lead-free materials. Rosin-core means that in the center of the solder is a small bead of rosin which reduces metal oxides (changes oxides into their metal state) and makes the solder joints much cleaner. [This 0.8mm rosin-core, lead-free solder is a good choice for the soldering we'll do and is USD$10 on Amazon](http://amzn.to/2j8oSGe).
 
 #### Helping Hands
 
-"Helping Hands" is an adjustable item holder that can be really helpful when soldering. It's optional, but is a beneficial add on to your toolset. [This one can be had for USD$6 on Amazon](http://amzn.to/2BE78KF):
+"Helping Hands" is an adjustable item holder that can be really helpful when soldering. It's optional, but is a beneficial add-on to your toolset. [This one can be had for USD$6 on Amazon](http://amzn.to/2BE78KF):
 
 ![Photo of Helping Hands adjustable holder for soldering with two arms for clipping and a third arm with a magnifying glass.](Helping_Hands.jpg){:standalone}
 
 ## Luminosity Sensor and Analog Level Shifting Circuit
 
-Most complex circuits in use are actually lots of simpler circuits joined together to provide more complex behaviors. In fact, in this lab, we're going to join two very simple circuits; a 5V light sensor circuit, and a voltage divider to reduce the voltage output of the light sensor down to a 3.3V voltage domain:
+Most complex circuits are actually lots of simpler circuits joined together to provide more complex behaviors. In this lab, we're going to join two very simple circuits: a 5V light sensor circuit and a voltage divider to reduce the voltage output of the light sensor down to a 3.3V voltage domain:
 
 ![Diagram of a circuit with a 5-volt source connected to a 5-volt light sensor before a pair of resistors for a voltage divider to bring the sensor signal down to 3.3 volts.](../Support_Files/Level_Shifting_Lab_Circuit.svg){:standalone}
 
-Before we build our circuit, however, we must first calculate the values of our resistors in the voltage divider, while making sure we account for the resistance of the ADC.
+Before we build our circuit, we must first calculate the values of our resistors in the voltage divider, while making sure we account for the resistance of the ADC.
 
 ## Calculating Voltage Division with a Third Leg
 
 In order to calculate a level-shifting voltage divider, we need to do three things:
 
 1. Calculate maximum R1 resistance based on how much power the sub-circuit on `Vout` requires.
-2. Calculate the total resistance of bottom half of the divider.
+2. Calculate the total resistance of the bottom half of the divider.
 3. Subtract the ADC resistance from the bottom half of the divider to get the R2 value.
 
 ### Step 1: Calculate maximum R1 resistance, based on ADC power requirements.
@@ -187,7 +187,7 @@ R2 = (11,000 * 3.3) / (5 - 3.3)
 R2 = (36,300) / (1.7) = 21,353Ω
 ```
 
-Double checking our work, to verify those resistor values work to satisfy the division:
+Double checking our work, to verify those resistor values satisfy the division:
 
 ```
 Given:
@@ -214,7 +214,7 @@ Therefore:
 Total G - ADC G = 0.000047 - 0.000091 = -0.000044
 ```
 
-But wait, that's weird, how can it be a negative amount of resistance? If we look back at our earlier calculations in step 2, we determined that we needed a little more than `21kΩ` of resistance to make division ratio work. However, the ADC only provides `11kΩ` of resistance, and since it's in _parallel_ with R2, there's no way to _add_ resistance; recall that in a parallel resistance circuit, each resistor allows more power through the circuit, which is why we add their conductances up to calculate total resistance. So the total resistance in a parallel resistor circuit will always be less than the smallest resistor.
+But wait, that's weird, how can it be a negative amount of resistance? If we look back at our earlier calculations in step 2, we determined that we needed a little more than `21kΩ` of resistance to make division ratio work. However, the ADC only provides `11kΩ` of resistance, and since it's in _parallel_ with R2, there's no way to _add_ resistance; recall that in a parallel resistance circuit, each resistor allows more power through the circuit, which is why we sum their conductances to calculate total resistance. So the total resistance in a parallel resistor circuit will always be less than the smallest resistor.
 
 #### Increasing the Power
 
@@ -224,7 +224,7 @@ To solve this, we need to lower the resistance of the top half of the voltage di
 Given:
 NewR1 = OldR1 / 10
 
-NewR1 = 11kΩ / 10 = 1.1kΩ ~= 1kΩ   //the closest common resistor
+NewR1 = 11kΩ / 10 = 1.1kΩ ~= 1kΩ   // the closest common resistor
 ```
 
 Redo step 2 to calculate the bottom half of the divider:
@@ -285,7 +285,7 @@ Now that we've got all that out of the way, let's actually build and test the ci
 
 ## Exercise 1 - Soldering the Sensor
 
-Soldering is similar to welding; it's the process of melting and depositing metal onto to make an electrical connection, known as a solder joint. Soldering is an invaluable skill when building circuits because it's a common task. 
+Soldering is similar to welding; it's the process of melting and depositing metal to make an electrical connection, known as a solder joint. Soldering is an invaluable skill when building circuits because it's a common task. 
 
 ### Step 1: Clean and Tin your Soldering Iron
 
@@ -315,7 +315,7 @@ Next, prepare your solder joint connection by stripping off a bit of the plastic
 
 If you have a "Helping Hands," clip it in place to hold it while you solder.
 
-You can use whatever color of wire you want for the sensor output pad (`S`), but it's generally a good idea to use black or blue for the negative (`-`), and red for the positive (`+`) pad.
+You can use whatever color of wire you want for the sensor output pad (`S`), but it's generally a good idea to use black or blue for the negative (`-`) and red for the positive (`+`) pad.
 
 ### Step 3: Solder the Joints
 
@@ -331,7 +331,7 @@ Finally, do a quick inspection of the solder joints; make sure the wires don't m
 
 ## Exercise 2 - Building and Testing the Circuit
 
-Now that the sensor has wires soldered to it, we can use it to build the actual level shifting circuit.
+Now that the sensor has wires soldered to it, we can use it to build the actual level-shifting circuit.
 
 ### Breadboard Overlay
 
@@ -349,7 +349,7 @@ The breadboard layout for the schematic might look something like this:
 
 ### Step 1: Assemble the Divider Circuit
 
-Before we add the sensor, let's test just the divider circuit to see how well it's dividing `5V` down to a `3.3V` domain. To do this, first, assemble the circuit without the sensor in place, providing supplying `5V` directly to the divider, as illustrated in the diagram below: 
+Before we add the sensor, let's test just the divider circuit to see how well it's dividing `5V` down to a `3.3V` domain. To do this, first, assemble the circuit without the sensor in place, supplying `5V` directly to the divider, as illustrated in the diagram below: 
 
 ![Diagram of intermediate project step with a Netduino connected to a voltage divider on a breadboard. The 5 volt pin on Netduino connects to the right breadboard power rail, with the both breadboard ground rails connected to the Netduino's ground pin. To test the divider, two resistors on the breadboard connect to the 5-volt rail to drop it to 3.3 volts before feeding back to the analog pin 2 on the Netduino.](Level_Shifting_Lab_Divider_Validation_bb.svg){:standalone}
 
@@ -357,7 +357,7 @@ Make sure that you're using the `5V` power pin, not the `3.3V`, and both ground 
 
 ### Step 2: Deploy the App and Test the Circuit
 
-The level shifting lab app can be found [here, in the Netduino_Samples repo](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/LilyPad_5V_Sensor_Level_Shifting). Download it, and deploy it to your Netduino. The `main.cs` code is pasted below for reference. Note that it's almost identical to the **Photoresistor_Lab** app from the last lab. The only thing that's changed is the light/dark threshold values and the conditional has been reversed because the LilyPad sensor supplies more voltage the brighter it is, as opposed to the photoresistor circuit, which supplied less voltage the brighter it got:
+The level-shifting lab app can be found [here, in the Netduino_Samples repo](https://github.com/WildernessLabs/Netduino_Samples/tree/master/Electronics_Tutorial/LilyPad_5V_Sensor_Level_Shifting). Download it, and deploy it to your Netduino. The `main.cs` code is pasted below for reference. Note that it's almost identical to the **Photoresistor_Lab** app from the last lab. The only thing that's changed is the light/dark threshold values and the conditional has been reversed because the LilyPad sensor supplies more voltage the brighter it is, as opposed to the photoresistor circuit, which supplied less voltage the brighter it got:
 
 ```csharp
 using System;
@@ -473,7 +473,7 @@ Light Level = Raw: 1023, Average: 1023, Voltage: 3.29999995
 
 Now that we know our voltage divider circuit is working, we can drop in the sensor, and measure its output. I mentioned in the first part of this lab that when I measured the output of the light sensor, I got something considerably different than the published specs. 
 
-The following table has the measured sensor voltage output that I measured from the sensor, as well as the calculated output after level shifting to a 3.3V voltage domain, so that I can validate my level shifted results:
+The following table has the voltage output that I measured from the sensor, as well as the calculated output after level shifting to a 3.3V voltage domain, so that I can validate my level shifted results:
 
 | Luminance    | 5V Voltage Output   | Level Shifted to 3.3V (output multiplied by 3.3 / 5) |
 | ------------ | ------------------- | ---------------------------------------- |
@@ -481,9 +481,9 @@ The following table has the measured sensor voltage output that I measured from 
 | Room Light   | ~`230mV`            | ~`138mV`                                 |
 | Darkness     | < `0.005mV`         | < `0.003mV`                              |
 
-To measure your sensor output, plug the sensor into the circuit as shown breadboard circuit above, except leave the sensor output (`S`) leg out of the breadboard. Then, using a multimeter in voltmeter mode, place the negative (black) lead on the same ground circuit as the sensor, and then positive (red) measurement lead on the sensor output (`S`) leg on the sensor.
+To measure your sensor output, plug the sensor into the circuit as shown in the breadboard circuit above, except leave the sensor output (`S`) leg out of the breadboard. Then, using a multimeter in voltmeter mode, place the negative (black) lead on the same ground circuit as the sensor, and then positive (red) measurement lead on the sensor output (`S`) leg on the sensor.
 
-Measure the sensor output in bright light (shine a flashlight or your cellphone's LED on it), room light, and then in darkness (cover the sensor with your finger, or turn the lights off in the room). Then calculate the expected outputs and write everything down:
+Measure the sensor output three ways: in bright light (shine a flashlight or your cellphone's LED on it), room light, and then in darkness (cover the sensor with your finger, or turn the lights off in the room). Then calculate the expected outputs and write everything down:
 
  * **Bright voltage output** = ?
  * **Bright level-shifted voltage output (`brightValue * 0.66`)** = ?
@@ -492,7 +492,7 @@ Measure the sensor output in bright light (shine a flashlight or your cellphone'
  * **Dark voltage output** = ?
  * **Dark level-shifted voltage output (`darkValue * 0.66`)** = ?
 
-Once you've calculated those values, modify the `lightThresholdVoltage` and `darkThresholdVoltage` to be your bright level shifted voltage and dark level shifted voltage, respectively. You might want to lower your `lightThresholdVoltage`, and increase your `darkThresholdVoltage` 5-10%, to provide a little operating margin.
+Once you've calculated those values, modify the `lightThresholdVoltage` and `darkThresholdVoltage` to be your bright level-shifted voltage and dark level-shifted voltage, respectively. You might want to lower your `lightThresholdVoltage` and increase your `darkThresholdVoltage` 5-10% to provide a little operating margin.
 
 #### Run the Application
 

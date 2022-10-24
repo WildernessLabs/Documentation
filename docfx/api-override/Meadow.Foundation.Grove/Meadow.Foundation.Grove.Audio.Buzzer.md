@@ -7,23 +7,23 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Buzzer) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Audio.Buzzer/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Audio.Buzzer.svg?label=Meadow.Foundation.Grove.Audio.Buzzer" alt="NuGet Gallery for Buzzer" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Audio.Buzzer/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Audio.Buzzer.svg?label=Meadow.Foundation.Grove.Audio.Buzzer" alt="NuGet Gallery for Meadow.Foundation.Grove.Audio.Buzzer" /></a> |
 
 ### Code Example
 
 ```csharp
-readonly Buzzer buzzer;
+Buzzer buzzer;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
-    buzzer = new Buzzer(Device.CreatePwmPort(Device.Pins.D13));
+    buzzer = new Buzzer(Device, Device.Pins.D13);
 
-    _ = PlayTriad();
+    return Task.CompletedTask;
 }
 
-async Task PlayTriad()
+public override async Task Run()
 {
     for (int i = 0; i < 5; i++)
     {
@@ -31,7 +31,7 @@ async Task PlayTriad()
         await buzzer.PlayTone(440, 500); //A
         await buzzer.PlayTone(554.37f, 500); //C#
         await buzzer.PlayTone(659.25f, 500); //E
-        
+
         await Task.Delay(2500);
     }
 }
@@ -47,4 +47,3 @@ async Task PlayTriad()
 | GND    | GND        |
 | VCC    | 3.3V       |
 | RX     | D01        |
-| TX     | D00        |

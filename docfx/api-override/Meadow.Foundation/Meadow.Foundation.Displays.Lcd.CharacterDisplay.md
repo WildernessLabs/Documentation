@@ -7,7 +7,7 @@ remarks: *content
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Lcd.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" alt="NuGet Gallery for CharacterDisplay" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Lcd.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" alt="NuGet Gallery for Meadow.Foundation.Displays.Lcd.CharacterDisplay" /></a> |
 
 
 The **CharacterDisplay** class represents a multiline liquid crystal character display.
@@ -21,16 +21,14 @@ The current driver implementation uses 4 or 8 GPIO pins. It's common to find con
 ```csharp
 CharacterDisplay display;
 
-public MeadowApp()
+public override Task Initialize()
 {
     //InitGpio();
     //InitGpioWithPWM();
     //InitI2c();
     InitGrove();
 
-    TestCharacterDisplay();
-
-    Console.WriteLine("Test complete");
+    return base.Initialize();
 }
 
 void InitGpio() 
@@ -127,6 +125,15 @@ void TestCharacterDisplay()
 
     display.ClearLines();
     display.WriteLine("Complete!", 0);
+}
+
+public override Task Run()
+{
+    TestCharacterDisplay();
+
+    Console.WriteLine("Test complete");
+
+    return base.Run();
 }
 
 ```

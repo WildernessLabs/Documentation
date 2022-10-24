@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Temt6000) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Temt6000/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Temt6000/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Temt6000.svg?label=Meadow.Foundation.Sensors.Light.Temt6000" alt="NuGet Gallery for Temt6000" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Temt6000/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Temt6000.svg?label=Meadow.Foundation.Sensors.Light.Temt6000" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.Temt6000" /></a> |
 
 The TEMT6000 is an analog ambient light sensor.
 
@@ -17,9 +17,9 @@ The TEMT6000 is an analog ambient light sensor.
 ```csharp
 Temt6000 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     // configure our sensor
     sensor = new Temt6000(Device, Device.Pins.A03);
@@ -42,16 +42,15 @@ public MeadowApp()
         Console.WriteLine($"Voltage Changed, new: {result.New.Volts:N2}V, old: {result.Old?.Volts:N2}V");
     };
 
-    //==== One-off reading use case/pattern
-    ReadTemp().Wait();
-
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadTemp()
+public override async Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine($"Initial temp: {result.Volts:N2}V");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
 }
 
 ```

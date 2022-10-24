@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Si1145/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Si1145.svg?label=Meadow.Foundation.Sensors.Light.Si1145" alt="NuGet Gallery for Si1145" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.Si1145/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.Si1145.svg?label=Meadow.Foundation.Sensors.Light.Si1145" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.Si1145" /></a> |
 
 The **SI1145** is a low power infrared, ultraviolet and ambient light sensor with an I2C interface.
 
@@ -17,7 +17,7 @@ The **SI1145** is a low power infrared, ultraviolet and ambient light sensor wit
 * Independent LED drivers
 * I2C interface up to 3.4 MBps
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Si1145/Samples/) 
 
 ## Purchasing
 
@@ -30,9 +30,9 @@ The following application reads the sensor output Infrared, Ultraviolet and Visi
 ```csharp
 Si1145 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     sensor = new Si1145(Device.CreateI2cBus());
 
@@ -53,25 +53,24 @@ public MeadowApp()
 
     // classical .NET events can also be used:
     sensor.Updated += (sender, result) => {
-        Console.WriteLine($"  Visible Light: {result.New.VisibleLight?.Lux:N2}Lux");
-        Console.WriteLine($"  Infrared Light: {result.New.Infrared?.Lux:N2}Lux");
-        Console.WriteLine($"  UV Index: {result.New.UltravioletIndex:N2}Lux");
+        Console.WriteLine($" Visible Light: {result.New.VisibleLight?.Lux:N2}Lux");
+        Console.WriteLine($" Infrared Light: {result.New.Infrared?.Lux:N2}Lux");
+        Console.WriteLine($" UV Index: {result.New.UltravioletIndex:N2}Lux");
     };
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating continuously
-    sensor.StartUpdating(TimeSpan.FromSeconds(1));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public override async Task Run()
 {
-    var result = await sensor.Read();
+    var (VisibleLight, UltravioletIndex, Infrared) = await sensor.Read();
+
     Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  Visible Light: {result.VisibleLight?.Lux:N2}Lux");
-    Console.WriteLine($"  Infrared Light: {result.Infrared?.Lux:N2}Lux");
-    Console.WriteLine($"  UV Index: {result.UltravioletIndex:N2}Lux");
+    Console.WriteLine($" Visible Light: {VisibleLight?.Lux:N2}Lux");
+    Console.WriteLine($" Infrared Light: {Infrared?.Lux:N2}Lux");
+    Console.WriteLine($" UV Index: {UltravioletIndex:N2}Lux");
+
+    sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
 ```

@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.Tmp102/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.Tmp102.svg?label=Meadow.Foundation.Sensors.Temperature.Tmp102" alt="NuGet Gallery for Tmp102" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Temperature.Tmp102/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Temperature.Tmp102.svg?label=Meadow.Foundation.Sensors.Temperature.Tmp102" alt="NuGet Gallery for Meadow.Foundation.Sensors.Temperature.Tmp102" /></a> |
 
 The **TMP102** is a temperature sensor capable of reading the current temperature with an accuracy of 0.5C over the range of -25C to 85C with a total range of -40C to 125C.
 
@@ -25,9 +25,9 @@ The TMP102 temperature sensor can operate in interrupt or polling mode.
 ```csharp
 Tmp102 tmp102;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Console.WriteLine("Initialize...");
 
     tmp102 = new Tmp102(Device.CreateI2cBus());
 
@@ -45,6 +45,14 @@ public MeadowApp()
     {
         Console.WriteLine($"Temperature Updated: {e.New.Celsius:N2}C");
     };
+
+    return Task.CompletedTask;
+}
+
+public override async Task Run()
+{
+    var temp = await tmp102.Read();
+    Console.WriteLine($"Current temperature: {temp.Celsius} C");
 
     tmp102.StartUpdating(TimeSpan.FromSeconds(1));
 }
@@ -101,7 +109,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 }
 ```
 
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Samples/) 
+[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Samples/) 
 
 ### Wiring Example
 

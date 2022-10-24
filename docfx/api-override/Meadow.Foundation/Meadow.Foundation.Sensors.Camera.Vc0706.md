@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Vc0706) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Vc0706/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Vc0706/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Vc0706.svg?label=Meadow.Foundation.Sensors.Camera.Vc0706" alt="NuGet Gallery for Vc0706" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Vc0706/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Vc0706.svg?label=Meadow.Foundation.Sensors.Camera.Vc0706" alt="NuGet Gallery for Meadow.Foundation.Sensors.Camera.Vc0706" /></a> |
 
 ```csharp
 Vc0706 camera;
@@ -59,28 +59,33 @@ public MeadowApp()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Vc0706/Samples/Sensors.Camera.Vc0706_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Vc0706/Samples/Sensors.Camera.Vc0706_Sample)
 
 |
 ### Code Example
 
 ```csharp
-readonly Vc0706 camera;
+Vc0706 camera;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initialize hardware...");
+    Console.WriteLine("Initialize...");
 
     camera = new Vc0706(Device, Device.SerialPortNames.Com4, 38400);
 
-    Console.WriteLine("Set resolution");
+    return Task.CompletedTask;
+}
 
+public override Task Run()
+{
     if (!camera.SetCaptureResolution(Vc0706.ImageResolution._160x120))
     {
         Console.WriteLine("Set resolution failed");
     }
 
     _ = TakePicture();
+
+    return Task.CompletedTask;
 }
 
 async Task TakePicture()

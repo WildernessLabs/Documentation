@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mag3110/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mag3110.svg?label=Meadow.Foundation.Sensors.Motion.Mag3110" alt="NuGet Gallery for Mag3110" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Mag3110/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Mag3110.svg?label=Meadow.Foundation.Sensors.Motion.Mag3110" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Mag3110" /></a> |
 
 The **MAG3110** is a three axis magnetometer with an I2C interface. The magnetometer is capable of single and continuous readings.
 
@@ -17,9 +17,9 @@ The **MAG3110** is a three axis magnetometer with an I2C interface. The magnetom
 ```csharp
 Mag3110 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Console.WriteLine("Initialize...");
 
     sensor = new Mag3110(Device.CreateI2cBus());
 
@@ -44,14 +44,10 @@ public MeadowApp()
         });
     sensor.Subscribe(consumer);
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public async override Task Run()
 {
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
@@ -60,6 +56,8 @@ protected async Task ReadConditions()
         $"Z:{result.MagneticField3D?.Z.MicroTesla:N2} (microteslas)]");
 
     Console.WriteLine($"Temp: {result.Temperature?.Celsius:N2}C");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
 }
 
 ```

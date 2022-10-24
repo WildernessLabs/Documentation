@@ -4,7 +4,7 @@ title: WiFi/Bluetooth Antenna
 subtitle: Understanding and switching between the onboard and external antenna options.
 ---
 
-Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio. Additionally, there is an antenna switch for switching between the two; by default, the chip antenna is selected, and you must use the Meadow.OS device API to switch to the external antenna.
+Both the Meadow F7 Feather development board and Core-Compute Module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio. Additionally, there is a software antenna switch for toggling between the two antenna; by default, the chip antenna is selected, and you must use the Meadow.OS device API to switch to the external antenna.
 
 ## Determining the Currently Selected Antenna
 
