@@ -191,7 +191,26 @@ A unified API for getting access to the devices `INetworkAdapters` has been intr
 
 ### Power & Sleep APIs
 
-[content TBD]
+### Sleep API
+
+The `Sleep` API has been implemented and moved to `PlatformOS`.
+
+To put your Meadow into a low-power Sleep state, use the following call:
+
+```
+Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));
+```
+
+> Known Issue: When waking from Sleep, if your application attempts to write to the `Console` within less than approximately 3 seconds, the underlying serial connection will not be available and the application will halt.  For this reason, we recommend adding a `Thread.Sleep(3000);` immediately after any call to `Sleep()` or at the top of any `Device.PlatformOS.AfterWake` handler.
+### Reset API
+
+The `Reset` API has been moved to `PlatformOS`.
+
+To reset your meadow, use the following call:
+
+```
+Device.PlatformOS.Reset();
+```
 
 ### Serial Ports
 
