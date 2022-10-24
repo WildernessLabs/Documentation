@@ -27,10 +27,10 @@ public override Task Initialize()
  
     var display = new Il91874(device: Device,
         spiBus: Device.CreateSpiBus(),
-        chipSelectPin: Device.Pins.D02,
-        dcPin: Device.Pins.D01,
-        resetPin: Device.Pins.D00,
-        busyPin: Device.Pins.D03,
+        chipSelectPin: Device.Pins.A04,
+        dcPin: Device.Pins.A03,
+        resetPin: Device.Pins.A02,
+        busyPin: Device.Pins.A01,
         width: 176,
         height: 264);
 
@@ -41,16 +41,22 @@ public override Task Initialize()
 
 public override Task Run()
 {
-    //any color but black will show the ePaper alternate color 
-    graphics.DrawRectangle(1, 1, 126, 32, Meadow.Foundation.Color.Red, false);
+    Console.WriteLine("Run ...");
 
-    graphics.CurrentFont = new Font8x12();
-    graphics.DrawText(2, 2, "IL91874", Meadow.Foundation.Color.Black);
-    graphics.DrawText(2, 20, "Hello, Honeybees!", Meadow.Foundation.Color.Black);
+    graphics.Clear();
+
+    graphics.DrawRectangle(10, 40, 120, 60, Color.Black, true);
+    graphics.DrawRectangle(20, 80, 120, 90, Color.Red, true);
+
+    graphics.CurrentFont = new Font12x16();
+    graphics.DrawText(2, 20, "Meadow F7", Color.Black);
+    graphics.DrawText(30, 50, "Color", Color.Red);
+    graphics.DrawText(50, 90, "Black", Color.Black);
+    graphics.DrawText(50, 120, "White", Color.White);
 
     graphics.Show();
 
-    return Task.CompletedTask;
+    return base.Run();
 }
 
 ```
