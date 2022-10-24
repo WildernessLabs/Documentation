@@ -13,7 +13,6 @@ The peripherals are split into two groups; the first group is general, core peri
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html) | A two axis analog joystick |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | AnalogTemperature | AnalogTemperature driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogTemperature](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) | Analog temperature sensor (TMP35 / TMP36 / TMP37 / LM35) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html) | Analog water level sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [DigitalTachometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer.html) | Hall Effect Linear Tachometer sensor |
@@ -103,11 +102,12 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il91874.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il91874V03.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Ssd1608.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1680 | SSD1680 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1680 | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Ssd1681.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | UC8151C | UC8151C driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | UC8151C | ePaper driver |
 
 ### Displays.ePaperWaveShare
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd1in54 | Epd1in54 driver |
@@ -168,14 +168,15 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Tca9548a](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Tca9548a.html) | TCA9548A I2C IO expander |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | x74595 I2C shift register digital output expander |
 
-
 ### ICs.ADC.Ads1x15
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Ads1015 | Ads1015 driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Ads1115 | Ads1115 driver |
 
 ### ICs.IOExpanders.AnalogMux
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Hp4067 | Hp4067 driver |
@@ -183,6 +184,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Nxp74HC4067 | Nxp74HC4067 driver |
 
 ### ICs.IOExpanders.Mcp23xxx
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23008 | Mcp23008 driver |
@@ -241,6 +243,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Atmospheric.Th02](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Th02.html) | Th02 I2C Relative Humidity and temperature sensor |
 
 ### Sensors.Atmospheric.Bme68x
+
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Bme680 | Bme680 driver |
