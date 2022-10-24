@@ -251,7 +251,9 @@ This parameter has been renamed for simplicity and consistency. Will only impact
 
 ## Tooling (Meadow.CLI, IDE Extensions, and Templates)
 
-[new stuff, improvements]
+* **Fixes and Stability** - We've been reviewing the tooling code line-by-line and this release delivers dozens of fixes and optimizations. You should see better stability, consistency, and performance with both the Meadow CLI and the Visual Studio extensions.
+* **Application Templates** - We've also updated the Meadow application templates to reflect the new and improved Meadow lifecycle APIs.
+* **Just-in-time compilation** - JiT is enabled by default when creating new applications in Visual Studio.(JiT can be disabled by editing *meadow.config.yaml* in your Meadow project).
 
 ### Linking Enabled by Default
 
