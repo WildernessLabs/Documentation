@@ -15,7 +15,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 **Meadow.OS + Meadow.Core**
 * **Power & Sleep APIs** - Meadow.OS now supports Sleep and Wake operations for the device, and has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
 * **Just-in-Time (JIT) Compilation** - Meadow applications can now enable JIT execution, providing a ~5x-10x performance boost on CPU-bound code.
-* **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle
+* **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities, reducing total Meadow power consumption considerably.
 * **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
 * **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
@@ -27,7 +27,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 
 
 **Meadow.Foundation**
-* **MicroGraphics** - We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added a 8x16 font!
+* **MicroGraphics** - We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added an 8x16 font!
 * **ePaper driver updates** - We've updated APIs and added new drivers including **12** new WaveShare ePaper drivers.
 * **IO Expanders** - This release includes the long awaited updates to the **MCP23008** with working interrupts! It also includes 7 other MCP expanders and we released drivers for the AS1115 and the SerialWombat!
 * **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
@@ -43,7 +43,7 @@ This is a full stack release requiring an OS update, new nuget packages, a new M
 
 ### Updating Meadow.CLI
 
-Start by making sure you have the latest version of the CLI (0.19.3) by running:
+Start by making sure you have the latest version of the CLI (0.19.14) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
@@ -83,19 +83,10 @@ meadow flash erase
 
 With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, including two core features:
 
-* **MQTT** - [difference between this and push-messaging]
-* **Push-Messaging** - Each Meadow device is now individually addressable and you can push messages containing arbitrary data to them.
-* **Over-the-Air (OtA) Updates** - You can now push App and OS updates remotely to devices.
+* **MQTT Push-Messaging** - Each Meadow device is now individually addressable and you can push messages containing arbitrary data to them.
+* **Over-the-Air (OtA) Updates** - You can now push App updates remotely to devices.
 
-#### Push-Messaging
-
-[content TBD]
-
-#### Over-the-Air Updates
-
-[content TBD]
-
-[available via Meadow.CLI right now. Web UI in the future.]
+OtA is available via Meadow.CLI right now. Web UI in the future.
 
 ## Meadow.OS
 
