@@ -301,6 +301,7 @@ As part of the stability and performance work, we've invested significant time o
 * If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
 * There is some extra logging code that shows how many bytes are being sent and received between the Meadow and Visual Studio, so we can track down a buffer overflow bug. This extra logging will be removed in RC2.
 * Occationally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
+* [Windows Extensions] Due to an MS API change auto-deploy when debugging does not currently work. WORK AROUND: To debug on Windows deploy your app 1st, then hit the Debug button to step through your deployed code etc. We are working on a fix for this issue for RC2. Appologies for the inconvenience.
 
 ### Meadow.OS Deploy, App Deploy/Debug Workflow
 
