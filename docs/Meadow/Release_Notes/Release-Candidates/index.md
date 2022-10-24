@@ -10,11 +10,11 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 
 **Meadow.Cloud**
 * **OtA Updates** - Meadow.OS and Meadow applications can now be updated Over-the-Air via Meadow.Cloud!
-* **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first class feature.
+* **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first-class feature.
 
 **Meadow.OS + Meadow.Core**
 * **Power & Sleep APIs** - Meadow.OS now supports Sleep and Wake operations for the device, and has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
-* **Just-in-Time (JIT) Compilation** - Meadow applications can now enable JIT execution, providing a ~5x-10x performance boost on CPU-bound code.
+* **Just-in-Time (JIT) Compilation** - Meadow applications can now enable JIT execution, providing a ~5x-10x performance boost for app execution.
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities, reducing total Meadow power consumption considerably.
 * **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
@@ -86,7 +86,7 @@ With Meadow.OS v1.0 RC-1, we've also launched the first beta of Meadow.Cloud, in
 * **MQTT Push-Messaging** - Each Meadow device is now individually addressable and you can push messages containing arbitrary data to them.
 * **Over-the-Air (OtA) Updates** - You can now push App updates remotely to devices.
 
-OtA is available via Meadow.CLI right now. Web UI in the future.
+Users interested in the beta can sign up using [this form](https://docs.google.com/forms/d/e/1FAIpQLSdeTF36um4sr_dc20Q8ie7bo-ZWu2DE4-sl9GhQI9vcE3We-g/viewform). Meadow Cloud OtA is available via Meadow.CLI right now, with a Web UI coming in the future.
 
 ## Meadow.OS
 
@@ -95,7 +95,7 @@ OtA is available via Meadow.CLI right now. Web UI in the future.
 There was a leftover 10 second startup delay from debugging Meadow.OS startup and initialization code that we removed. Additionally, linking (see below) also greatly improved app startup speed. The net effect of these improvements has seen a dramatic increase in OS and App startup speed.
 
 ### Meadow.OS and .NET Stability
-We've fixed a bad value in a bespoke ARM-Thumb2 assembly-code trampoline, causing edge-case .NET runtime stability issues when runtime internal calls (icalls) are used (e.g. for file and network I/O). The fix delivered dispersed stability improvements across the board.
+We've fixed several issues with the Mono runtime's execution on Meadow, including a bad value in a bespoke ARM-Thumb2 assembly-code trampoline that caused .NET runtime stability issues when using runtime internal calls from .NET code (e.g. in file and network I/O).
 
 We also did a lot of work around the .NET Runtime -> Meadow.OS glue that fixed up a number of stability issues.
 
