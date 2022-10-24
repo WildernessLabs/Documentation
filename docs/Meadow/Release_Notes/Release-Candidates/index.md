@@ -95,6 +95,7 @@ Users interested in the beta can sign up using [this form](https://docs.google.c
 There was a leftover 10 second startup delay from debugging Meadow.OS startup and initialization code that we removed. Additionally, linking (see below) also greatly improved app startup speed. The net effect of these improvements has seen a dramatic increase in OS and App startup speed.
 
 ### Meadow.OS and .NET Stability
+
 We've fixed several issues with the Mono runtime's execution on Meadow, including a bad value in a bespoke ARM-Thumb2 assembly-code trampoline that caused .NET runtime stability issues when using runtime internal calls from .NET code (e.g. in file and network I/O).
 
 We also did a lot of work around the .NET Runtime -> Meadow.OS glue that fixed up a number of stability issues.
@@ -197,9 +198,7 @@ The `Sleep` API has been implemented and moved to `PlatformOS`.
 
 To put your Meadow into a low-power Sleep state, use the following call:
 
-```
-Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));
-```
+`Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));`
 
 **Known Issue**: When waking from Sleep, if your application attempts to write to the `Console` within less than approximately 3 seconds, the underlying serial connection will not be available and the application will halt.  For this reason, we recommend adding a `Thread.Sleep(3000);` immediately after any call to `Sleep()` or at the top of any `Device.PlatformOS.AfterWake` handler.
 
@@ -209,9 +208,7 @@ The `Reset` API has been moved to `PlatformOS`.
 
 To reset your meadow, use the following call:
 
-```
-Device.PlatformOS.Reset();
-```
+`Device.PlatformOS.Reset();`
 
 ### Serial Ports
 
@@ -252,7 +249,8 @@ This parameter has been renamed for simplicity and consistency. Will only impact
 
 ## Tooling (Meadow.CLI, IDE Extensions, and Templates)
 
-* **Fixes and Stability** - We've been reviewing the tooling code line-by-line and this release delivers dozens of fixes and optimizations. You should see better stability, consistency, and performance with both the Meadow CLI and the Visual Studio extensions.
+We've been reviewing the tooling code line-by-line and this release delivers dozens of fixes and optimizations. You should see better stability, consistency, and performance with both the Meadow CLI and the Visual Studio extensions.
+
 * **Application Templates** - We've also updated the Meadow application templates to reflect the new and improved Meadow lifecycle APIs.
 * **Just-in-time compilation** - JiT is enabled by default when creating new applications in Visual Studio.(JiT can be disabled by editing *meadow.config.yaml* in your Meadow project).
 
@@ -267,6 +265,12 @@ With RC-1, app code is linked by default. Linking (AKA "Tree-Shaking") walks the
 ### Project Template Changes
 
 With the greatly simplified boilerplate code needed to create a Meadow application, the project templates have been updated with the new lifecycle methods.
+
+**Just-in-time compilation** - JiT is enabled by default when creating new applications in Visual Studio. (JiT can be disabled by editing *meadow.config.yaml* in your Meadow project).
+
+### Debugging Stability
+
+As part of the stability and performance work, we've invested significant time on debugging. Debugging should be more consistent and more stable across Visual Studio on Windows, Visual Studio for Mac and Visual Studio Code.
 
 ## RC-1 Bug Fixes
 
