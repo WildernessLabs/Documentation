@@ -22,6 +22,7 @@ Device:
 
 # Control how the .NET runtime executes your Meadow application, optionally enabling just-in-time (JIT) compilation instead of interpretation mode.
 MonoControl:
+  # Options to pass to Mono via the command line.
   Options: --jit
 
 # Control how the ESP coprocessor will start and operate.
@@ -75,6 +76,18 @@ This parameter determines if the .NET runtime executes your Meadow application v
 ```yaml
 MonoControl:
   Options: --jit
+```
+
+### Mono debug compilation
+
+In order to see line numbers in any runtime exceptions, pass the `--debug` parameter to the Mono command line.
+
+NOTE: This setting should not be used in production Meadow apps. While debug compilation will provide line numbers, it will slow execution of your app.
+
+```yaml
+MonoControl:
+  # Options to pass to Mono via the command line.
+  Options: --debug --jit
 ```
 
 <!-- think we should cut this.
