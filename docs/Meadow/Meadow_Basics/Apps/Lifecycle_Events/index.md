@@ -96,10 +96,10 @@ The `OnError` method is called when your application causes an unhandled excepti
 
 * `void OnUpdate(Version newVersion, out bool approveUpdate)`
 
-The `OnUpdate` method is called when Meadow is going to attempt an over-the-air (OTA) app update.
+The `OnUpdate` method is called when Meadow is going to attempt an over-the-air (OtA) app update.
 
 ### `OnUpdateComplete`
 
 * `void OnUpdateComplete(Version oldVersion, out bool rollbackUpdate)`
 
-The `OnUpdateComplete` method is called after Meadow has completed an over-the-air (OTA) app update. -->
+The `OnUpdateComplete` method is called after Meadow has completed an over-the-air (OtA) app update. -->
