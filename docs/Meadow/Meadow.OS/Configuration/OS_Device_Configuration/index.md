@@ -80,14 +80,31 @@ MonoControl:
 
 ### Mono debug compilation
 
-In order to see line numbers in any runtime exceptions, pass the `--debug` parameter to the Mono command line.
+In order to see source filenames and line numbers in the stack trace of any runtime exceptions, you can pass the `--debug` parameter to the Mono command line. This won't currently change what is logged by Meadow for unhandled exceptions, but you will be able to find source code line numbers when debugging or specifically logging an exception's `StackTrace` property.
 
-NOTE: This setting should not be used in production Meadow apps. While debug compilation will provide line numbers, it will slow execution of your app.
+This setting can be combined with `--jit` and other Mono options.
+
+NOTE: This setting can have a performance impact in Meadow apps and should be avoided in production apps.
 
 ```yaml
 MonoControl:
   # Options to pass to Mono via the command line.
   Options: --debug --jit
+```
+
+With that in place, your exceptions will now show the source file location and line numbers in the stack trace of caught exceptions.
+
+```csharp
+try
+{
+    throw new NotImplementedException();
+}
+catch (Exception e)
+{
+    Console.WriteLine($"{e.StackTrace}");
+    // Example output without `--debug`: "[2022-10-26 22:42:32] Meadow StdOut:   at MeadowApplication.MeadowApp.Run () <0xc0df53f8 + 0x00014> in <596be8f53b23457caad22184d2aaf984>:0"
+    // Example output with `--debug`: [2022-10-27 07:57:05] Meadow StdOut:   at MeadowApplication20221026RC1.MeadowApp.Run () [0x0000d] in C:\...\MeadowApplication\MeadowApp.cs:23 
+}
 ```
 
 <!-- think we should cut this.
