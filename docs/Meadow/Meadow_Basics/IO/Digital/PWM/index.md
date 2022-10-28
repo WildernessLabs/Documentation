@@ -73,7 +73,7 @@ Something to be aware when creating PWM ports on multiple pins is that PWM pins 
 Hardware PWM signals are controlled via an [`IPwmPort`](/docs/api/Meadow/Meadow.Hardware.IPwmPort.html), which is created via an `IPwmController`:
 
 ```csharp
-IPwmPort pwm = Device.CreatePwmPort(Device.Pins.D07, 100, 0.5f);
+IPwmPort pwm = Device.CreatePwmPort(Device.Pins.D07, new Frequency(100, Frequency.UnitType.Hertz), 0.5f);
 pwm.Start();
 ```
 
