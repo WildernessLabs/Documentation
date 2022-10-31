@@ -6,10 +6,6 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-## Current Beta Limitations
-
-* **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation, even expired or misconfigured certificates.
-
 ## Sample Apps
 
 For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
