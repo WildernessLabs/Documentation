@@ -23,7 +23,7 @@ We are currently in [Meadow Release-Candidate 1.0](/Meadow/Release_Notes/Release
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Wi-Fi | Yes | All SSL certificates accepted. No SSL certificate management yet. |
+| Wi-Fi | Yes | SSL certificates validated. No SSL certificate management yet. |
 | Bluetooth | Yes |  |
 
 ## Other Features
