@@ -44,7 +44,7 @@ This repo is also a Ruby site powered by jekyll (which is how it's hosted by Git
     choco install ruby
     ```
 
-1. Install MSYS2. Then, choose MSYS2 and MINGW development toolchain option (tip: you may need to restart your shell):
+1. Install MSYS2 using Ruby Installer 2 (`ridk`). Then, choose MSYS2 and MINGW development toolchain option (tip: you may need to restart your shell):
 
     ```
     ridk install
