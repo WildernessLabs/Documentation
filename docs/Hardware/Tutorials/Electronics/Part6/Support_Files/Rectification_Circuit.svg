@@ -45,13 +45,13 @@
                     <path d="M44,7.10542736e-15 L44,26" id="Path-4-Copy" stroke="#3D3530" stroke-width="3"></path>
                     <path d="M0,13 L24.5,13" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
                 </g>
-                <g id="Diode-Copy-3" transform="translate(34.000000, 82.000000) rotate(-315.000000) translate(-34.000000, -82.000000) translate(-1.000000, 69.000000)">
+                <g id="Diode-Copy-3" transform="translate(34.000000, 82.000000) rotate(-135.000000) translate(-34.000000, -82.000000) translate(-1.000000, 69.000000)">
                     <polygon id="Path-2" fill="#3D3530" points="24.5 0 44 13 24.5 26"></polygon>
                     <path d="M44,13 L70,13" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
                     <path d="M44,7.10542736e-15 L44,26" id="Path-4-Copy" stroke="#3D3530" stroke-width="3"></path>
                     <path d="M0,13 L24.5,13" id="Path-3" stroke="#3D3530" stroke-width="3"></path>
                 </g>
-                <g id="Diode-Copy-2" transform="translate(82.000000, 82.000000) rotate(-225.000000) translate(-82.000000, -82.000000) translate(47.000000, 69.000000)">
+                <g id="Diode-Copy-2" transform="translate(82.000000, 82.000000) rotate(-45.000000) translate(-82.000000, -82.000000) translate(47.000000, 69.000000)">
                     <polygon id="Path-2" fill="#3D3530" points="24.5 0 44 13 24.5 26"></polygon>
                     <path d="M44,13 L70,13" id="Path-2-Copy" stroke="#3D3530" stroke-width="3"></path>
                     <path d="M44,7.10542736e-15 L44,26" id="Path-4-Copy" stroke="#3D3530" stroke-width="3"></path>
