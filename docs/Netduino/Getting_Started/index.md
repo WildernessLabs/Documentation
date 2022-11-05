@@ -139,6 +139,8 @@ Looping3
 
 Netduino.Foundation makes creating Netduino applications easier by providing a huge library of hardware peripheral drivers and a handcrafted API to use them. Check it out at [Netduino.Foundation](http://netduino.foundation).
 
+<br/>
+
 | Project       | Image |
 |---------------|-------|
 | [Polyphonic Netduino Music Player](https://www.hackster.io/wilderness-labs/polyphonic-netduino-music-player-3b3843) | ![Polyphonic Netduino Music Player](https://hackster.imgix.net/uploads/attachments/1025810/_zKUy2mjkvR.blob?auto=compress%2Cformat&w=350&h=262.5&fit=min&dpr=1.25) |
