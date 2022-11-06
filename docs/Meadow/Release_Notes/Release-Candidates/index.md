@@ -4,6 +4,20 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
+# RC-2
+
+## Updating to RC-2
+
+## Release Details
+
+### Meadow.Cloud
+
+### Meadow OS
+
+### Meadow.Foundation
+
+### Meadow Tools
+
 # RC-1
 
 We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
