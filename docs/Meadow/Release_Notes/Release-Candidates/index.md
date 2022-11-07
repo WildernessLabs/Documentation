@@ -14,9 +14,17 @@ subtitle: Release Notes
 
 ### Meadow OS
 
+### Meadow.Core
+
+#### Start / Stop WiFi Interface
+
+The methods `StartWiFiInterface` and `StopWiFiInterface` methods and associated events have been removed.  The interfaces will now start and stop as required.
+
 ### Meadow.Foundation
 
 ### Meadow Tools
+
+## RC-1 Bug Fixes
 
 # RC-1
 
