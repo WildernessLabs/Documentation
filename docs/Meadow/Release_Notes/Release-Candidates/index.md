@@ -14,6 +14,21 @@ subtitle: Release Notes
 
 ### Meadow OS
 
+**Static IP Addesses**
+
+Static IP addresses are now supported for the WiFi connection.  The simplest way to do this is through the `meadow.config.yaml` file.  Adding something like the following to the config file will set the IP address information for the WiFi connection.
+
+```yaml
+Network:
+    WiFi:
+        Default: true
+        IPAddress: 192.168.1.10
+        NetMask: 255.255.255.0
+        Gateway: 192.168.1.254
+```
+
+It is essential to add `IPAddress`, `NetMask` and `Gateway` entries.  If one or more is missing then the system will fall back to using DHCP.
+
 ### Meadow.Core
 
 #### Start / Stop WiFi Interface
@@ -25,6 +40,9 @@ The methods `StartWiFiInterface` and `StopWiFiInterface` methods and associated 
 ### Meadow Tools
 
 ## RC-1 Bug Fixes
+
+* [Wi-Fi NetworkConnected and NetworkDisconnected fired twice per connect/disconnect](https://github.com/WildernessLabs/Meadow_Issues/issues/220)
+* Connecting to an access point with no password now works.
 
 # RC-1
 
