@@ -80,7 +80,7 @@ The Meadow application template is a simple application that will pulse the onbo
 ### Windows
 
  1. Connect your Meadow device to your development machine
- 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar.
+ 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar. (Alternatively, you can show the list from the **View** > **Toolbars** > **Meadow Device List** menu entry.)
  3. Select the Meadow device COM port that correspond to your board in the Meadow Device List toolbar dropdown
  4. Right-click project in Solution Explorer and choose **Deploy**.
  5. Wait 30-60 seconds for your application to start
