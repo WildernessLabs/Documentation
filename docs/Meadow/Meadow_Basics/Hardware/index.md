@@ -15,7 +15,7 @@ The Meadow F7 is provisioned with Meadow.OS which runs full .NET Standard v2.1 a
 * [F7v2 Feather and Core-Compute Module Datasheet](Wilderness_Labs_Meadow_F7v2_Datasheet.pdf)
 * [F7v2 Hardware Designs GitHub Repo](https://github.com/WildernessLabs/Meadow_Hardware_Designs)
 * [Meadow EDA Symbols and Footprints Github Repo](https://github.com/WildernessLabs/Meadow_EDA_Parts)
-* [Meadow Core-Compute Developer Module Repo](https://github.com/WildernessLabs/Meadow.Core-Compute.DevBoards)
+* [Meadow Core-Compute Developer Module Repo](https://github.com/WildernessLabs/Meadow.Core-Compute.DevBreakouts)
 * [Meadow Hardware Add-on Module Designs GitHub Repo](https://github.com/WildernessLabs/Hardware_Addon_Modules)
 
 ## Form-Factors
