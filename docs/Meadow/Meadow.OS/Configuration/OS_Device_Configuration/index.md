@@ -29,7 +29,7 @@ MonoControl:
 Coprocessor:
 
     # Should the ESP32 automatically attempt to connect to an access point at startup?
-    # If set to true, wifi.yaml credentials must be stored in the device.
+    # If set to true, wifi.config.yaml credentials must be stored in the device.
 
     AutomaticallyStartNetwork: true
 
