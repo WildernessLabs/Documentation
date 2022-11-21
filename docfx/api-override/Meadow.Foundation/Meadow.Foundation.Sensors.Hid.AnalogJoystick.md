@@ -12,7 +12,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-AnalogJoystick joystick;
+AnalogJoystick? joystick;
 
 public override Task Initialize()
 {
@@ -25,10 +25,13 @@ public override Task Initialize()
     _ = joystick?.SetCenterPosition(); //fire and forget
 
     //==== Classic Events
-    joystick.Updated += JoystickUpdated;
+    if (joystick != null)
+    {
+        joystick.Updated += JoystickUpdated;
+    }
 
     //==== IObservable
-    joystick.StartUpdating(TimeSpan.FromMilliseconds(20));
+    joystick?.StartUpdating(TimeSpan.FromMilliseconds(20));
 
     return Task.CompletedTask;
 }
@@ -36,7 +39,7 @@ public override Task Initialize()
 void JoystickUpdated(object sender, IChangeResult<AnalogJoystickPosition> e)
 {
     Console.WriteLine($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
-    Console.WriteLine($"Digital position: {joystick.DigitalPosition}");
+    Console.WriteLine($"Digital position: {joystick?.DigitalPosition}");
 }
 
 ```

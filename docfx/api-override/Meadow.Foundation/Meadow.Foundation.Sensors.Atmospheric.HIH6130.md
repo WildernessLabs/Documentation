@@ -15,7 +15,7 @@ The **HIH6130** sensor allows the reading of the relative humidity and temperatu
 ### Code Example
 
 ```csharp
-Hih6130 sensor;
+Hih6130? sensor;
 
 public override Task Initialize()
 {
@@ -55,6 +55,8 @@ public override Task Initialize()
 
 public override async Task Run()
 {
+    if(sensor == null) { return; }
+
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}°C");

@@ -38,8 +38,6 @@ public override Task Run()
         hCSR04.MeasureDistance();
         Thread.Sleep(2000);
     }
-
-    return Task.CompletedTask;
 }
 
 private void HCSR04_DistanceUpdated(object sender, IChangeResult<Meadow.Units.Length> e)

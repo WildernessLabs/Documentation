@@ -5,7 +5,7 @@ remarks: *content
 
 | Mlx90640 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Mlx90640/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Camera.Mlx90640.svg?label=Meadow.Foundation.Sensors.Camera.Mlx90640" alt="NuGet Gallery for Meadow.Foundation.Sensors.Camera.Mlx90640" /></a> |
@@ -128,7 +128,7 @@ public override Task Run()
     sensor.SetResolution(Mlx90640.Resolution.EighteenBit);
     Console.WriteLine($"Current resolution: {sensor.GetResolution()}");
 
-    sensor.SetRefreshRate(Mlx90640.RefreshRate.TwoHZ);
+    sensor.SetRefreshRate(Mlx90640.RefreshRate._2hz);
     Console.WriteLine($"Current frame rate: {sensor.GetRefreshRate()}");
 
     Console.WriteLine($"Broken Pixels: {sensor.Config.BrokenPixels.Count}");
@@ -179,8 +179,6 @@ public override Task Run()
             Console.WriteLine();
         }
     }
-
-    return Task.CompletedTask;
 }
 
 ```

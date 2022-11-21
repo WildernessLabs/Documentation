@@ -15,7 +15,7 @@ The **HTU21D** is a low-cost, easy to use, highly accurate, digital humidity and
 ### Code Example
 
 ```csharp
-Htu21d sensor;
+Htu21d? sensor;
 
 public override Task Initialize()
 {
@@ -55,6 +55,8 @@ public override Task Initialize()
 
 public override async Task Run()
 {
+    if (sensor == null) { return; }
+
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}C");

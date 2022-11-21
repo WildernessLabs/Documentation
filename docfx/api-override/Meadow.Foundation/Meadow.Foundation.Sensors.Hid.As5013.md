@@ -19,7 +19,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initializing ...");
 
-    var joystick = new As5013(Device.CreateI2cBus());
+    joystick = new As5013(Device.CreateI2cBus());
 
     joystick.Updated += As5013_Updated;
 

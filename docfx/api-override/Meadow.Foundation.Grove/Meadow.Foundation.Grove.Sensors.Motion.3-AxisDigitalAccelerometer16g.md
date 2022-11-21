@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initializing");
 
-    var sensor = new ThreeAxisDigitalAccelerometer16g(Device.CreateI2cBus());
+    sensor = new ThreeAxisDigitalAccelerometer16g(Device.CreateI2cBus());
     sensor.SetPowerState(false, false, true, false, ThreeAxisDigitalAccelerometer16g.Frequencies.TwoHz);
 
     sensor.Updated += (sender, result) =>
