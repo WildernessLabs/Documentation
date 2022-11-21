@@ -44,6 +44,15 @@ The methods `StartWiFiInterface` and `StopWiFiInterface` methods and associated 
 * [Wi-Fi NetworkConnected and NetworkDisconnected fired twice per connect/disconnect](https://github.com/WildernessLabs/Meadow_Issues/issues/220)
 * Connecting to an access point with no password now works.
 
+# RC-1.1 (RC1 Hotfix Release 1)
+
+We're happy to announce an amendment release to RC1, providing an out-of-band critical fix for the *AMQP* protocol and therefore for connecting to *Azure Iot Hubs* and other cloud services. To get started on connecting your Meadow to the cloud, check out [our sample!](https://github.com/WildernessLabs/Meadow.Project.Samples/tree/main/Source/Azure/AzureIoTHub)
+
+In addition, this release includes:
+
+    * A Meadow Debugging connection fix for the latest versions of Visual Studio
+    * [all yours Adrian]
+
 # RC-1
 
 We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
@@ -64,6 +73,8 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **Network Improvements** - We've spent a lot of cycles on advanced web socket features that weren't implemented yet that unlock a number of important service connectivity use cases.
 * **Configuration Files** - Meadow now has robust support for compile-time configuration via YAML or JSON files.
 * **Improved Meadow.OS Stability** - Some deep assembly-level instruction calls have been fixed up, providing stability around long-running processes, advanced socket operation, and more.
+* **System.IO.Compression** - Meadow apps can now zip and unzip files and streams!
+* **Memory Usage Decrease** - The .NET runtime was configured to reduce its memory use for internal data structures.
 
 
 **Meadow.Foundation**
