@@ -51,7 +51,8 @@ We're happy to announce an amendment release to RC1, providing an out-of-band cr
 In addition, this release includes:
 
     * A Meadow Debugging connection fix for the latest versions of Visual Studio
-    * [all yours Adrian]
+    * `Device.GetBatteryInfo().Voltage` now properly works on `FeatherV2` devices
+    * [all yours Adrian]    
 
 # RC-1
 
