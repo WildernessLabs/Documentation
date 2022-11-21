@@ -4,65 +4,61 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
-# RC-2
-
-## Updating to RC-2
-
-## Release Details
-
-### Meadow.Cloud
-
-### Meadow OS
-
-**Static IP Addesses**
-
-Static IP addresses are now supported for the WiFi connection.  The simplest way to do this is through the `meadow.config.yaml` file.  Adding something like the following to the config file will set the IP address information for the WiFi connection.
-
-```yaml
-Network:
-    WiFi:
-        Default: true
-        IPAddress: 192.168.1.10
-        NetMask: 255.255.255.0
-        Gateway: 192.168.1.254
-```
-
-It is essential to add `IPAddress`, `NetMask` and `Gateway` entries.  If one or more is missing then the system will fall back to using DHCP.
-
-### Meadow.Core
-
-#### Start / Stop WiFi Interface
-
-The methods `StartWiFiInterface` and `StopWiFiInterface` methods and associated events have been removed.  The interfaces will now start and stop as required.
-
-### Meadow.Foundation
-
-### Meadow Tools
-
-## RC-1 Bug Fixes
-
-* [Wi-Fi NetworkConnected and NetworkDisconnected fired twice per connect/disconnect](https://github.com/WildernessLabs/Meadow_Issues/issues/220)
-* Connecting to an access point with no password now works.
-
+ RC-1.1
 # RC-1.1 (RC1 Hotfix Release 1)
 
 We're happy to announce an amendment release to RC1, providing an out-of-band critical fix for the *AMQP* protocol and therefore for connecting to *Azure Iot Hubs* and other cloud services. To get started on connecting your Meadow to the cloud, check out [our sample!](https://github.com/WildernessLabs/Meadow.Project.Samples/tree/main/Source/Azure/AzureIoTHub)
 
 In addition, this release includes:
 
-    * A Meadow Debugging connection fix for the latest versions of Visual Studio
-    * `Device.GetBatteryInfo().Voltage` now properly works on `FeatherV2` devices
-    * [all yours Adrian]    
+### Meadow.OS + Meadow.Core
+
+* **Debugging fix** - A Meadow Debugging connection fix for the latest versions of Visual Studio
+* **Battery voltage API** - `Device.GetBatteryInfo().Voltage` now properly works on `FeatherV2` devices
+* **Sensor abstractions** - A new `ISamplingSensor` abstraction makes it easier to swap sensor hardware with minimal code changes
+
+### Meadow.Foundation
+
+* **New GPS driver** - The NEO-M8 GPS module is now supported over serial
+* **New Air quality sensor** - The SCD40/41 air quality sensor is now supported
+* **MicroGraphics vertical text alignment** - It's now possible to align text both horizontally and vertically with MicroGraphic
+
+This release also includes several Meadow.Foundation bug fixes - [details are here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/19)
+
+## Updating to RC-1.1
+
+This release includes an OS update, and new Meadow nuget packages. The CLI and extensions are unchanged.
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+Update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+If you experience any stability or deployment issues you may need to erase the flash on Meadow and then re-install the latest OS:
+
+```bash
+meadow flash erase
+```
 
 # RC-1
 
 We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
 
 **Meadow.Cloud**
+
 * **OtA Updates** - Meadow.OS and Meadow applications can now be updated Over-the-Air via Meadow.Cloud!
 * **Push Messaging** - Meadow.OS now supports push-messaging from Meadow.Cloud as well as MQTT as a first-class feature.
-
 **Meadow.OS + Meadow.Core**
+
 * **Power & Sleep APIs** - Meadow.OS now supports Sleep and Wake operations for the device, and has a new set of APIs that expose the ability ability to put the device to sleep and then wake up on schedule.
 * **Just-in-Time (JIT) Compilation** - Meadow applications can now enable JIT execution, providing a ~5x-10x performance boost for app execution.
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
@@ -77,14 +73,15 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **System.IO.Compression** - Meadow apps can now zip and unzip files and streams!
 * **Memory Usage Decrease** - The .NET runtime was configured to reduce its memory use for internal data structures.
 
-
 **Meadow.Foundation**
+
 * **MicroGraphics** - We've optimized the APIs, combined with JiT and you'll see a 10x improvement in drawing speed. We've also cleaned up APIs and added an 8x16 font!
 * **ePaper driver updates** - We've updated APIs and added new drivers including **12** new WaveShare ePaper drivers.
 * **IO Expanders** - This release includes the long awaited updates to the **MCP23008** with working interrupts! It also includes 7 other MCP expanders and we released drivers for the AS1115 and the SerialWombat!
 * **BMI270** - We've added a driver for this top-of-the line motion sensor which is included on the Project Lab board!
 
 **Tooling**
+
 * **App Linking** - Meadow apps are now linked at deploy time, which removes unused code. Deployment size with linking is typically reduced by 2/3rds. The result is a massive reduction of space on flash, RAM usage and results in faster startup and faster deployment.
 * **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
 * **App Template Updates** - We've updated the Meadow App templates to support the new app lifecycle.
