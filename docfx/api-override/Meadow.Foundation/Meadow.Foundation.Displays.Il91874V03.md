@@ -34,7 +34,7 @@ public override Task Initialize()
         width: 176,
         height: 264);
 
-    var graphics = new MicroGraphics(display);
+    graphics = new MicroGraphics(display);
 
     return base.Initialize();
 }

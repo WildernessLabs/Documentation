@@ -17,8 +17,8 @@ The Meadow.Foundation ILI9341 driver currently only supports 16bpp RGB565.
 ### Code Example
 
 ```csharp
-Ili9341 display;
 MicroGraphics graphics;
+Ili9341 display;
 
 public override Task Initialize()
 {
@@ -29,7 +29,7 @@ public override Task Initialize()
 
     Console.WriteLine("Create display driver instance");
 
-    var display = new Ili9341
+    display = new Ili9341
     (
         device: Device,
         spiBus: spiBus,
