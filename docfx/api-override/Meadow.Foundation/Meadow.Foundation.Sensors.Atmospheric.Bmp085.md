@@ -15,7 +15,7 @@ The **BMP085** is a high-precision, low-power barometric pressure sensor. The BM
 ### Code Example
 
 ```csharp
-Bmp085 sensor;
+Bmp085? sensor;
 
 public override Task Initialize()
 {
@@ -52,6 +52,8 @@ public override Task Initialize()
 
 public override async Task Run()
 {
+    if(sensor == null) { return; }
+
     var conditions = await sensor.Read();
     Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
 

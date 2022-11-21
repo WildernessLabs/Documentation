@@ -88,7 +88,6 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    //==== rotary encoder
     rotary = new RotaryEncoderWithButton(Device, Device.Pins.D07, Device.Pins.D08, Device.Pins.D06);
     rotary.Rotated += RotaryRotated;
     rotary.Clicked += (s, e) => {
@@ -96,7 +95,6 @@ public override Task Initialize()
         esc.Arm();
     }; ;
 
-    //==== Electronic Speed Controller
     esc = new ElectronicSpeedController(Device, Device.Pins.D02, frequency);
 
     Console.WriteLine("Hardware initialized.");

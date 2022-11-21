@@ -34,7 +34,7 @@ The Si7021 is available on a breakout board from the the following suppliers:
 ### Code Example
 
 ```csharp
-Si70xx sensor;
+Si70xx? sensor;
 
 public override Task Initialize()
 {
@@ -74,6 +74,8 @@ public override Task Initialize()
 
 public override async Task Run()
 {
+    if(sensor == null) { return; }
+
     var result = await sensor.Read();
     Console.WriteLine("Initial Readings:");
     Console.WriteLine($"  Temperature: {result.Temperature?.Celsius:F1}C");

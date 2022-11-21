@@ -55,7 +55,7 @@ public override Task Initialize()
     Console.WriteLine("Initialize...");
 
     capacitive = new Capacitive(
-        analogPort: Device.CreateAnalogInputPort(Device.Pins.A00, 5, TimeSpan.FromMilliseconds(40), new Voltage(3.3, Voltage.UnitType.Volts)),
+        analogInputPort: Device.CreateAnalogInputPort(Device.Pins.A00, 5, TimeSpan.FromMilliseconds(40), new Voltage(3.3, Voltage.UnitType.Volts)),
         minimumVoltageCalibration: new Voltage(2.84f),
         maximumVoltageCalibration: new Voltage(1.63f)
     );

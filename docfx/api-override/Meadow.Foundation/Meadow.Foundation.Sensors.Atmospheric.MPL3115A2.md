@@ -30,7 +30,7 @@ The MPL3115A2 is available on breakout boards and a weather shield:
 ### Code Example
 
 ```csharp
-Mpl3115a2 sensor;
+Mpl3115a2? sensor;
 
 public override Task Initialize()
 {
@@ -66,6 +66,8 @@ public override Task Initialize()
 
 public override async Task Run()
 {
+    if(sensor == null) { return; }
+
     var conditions = await sensor.Read();
     Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
 

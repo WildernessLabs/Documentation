@@ -19,8 +19,9 @@ public override Task Initialize()
 {
     IDigitalInputPort interruptPort = Device.CreateDigitalInputPort(Device.Pins.D00, InterruptMode.EdgeRising);
     IDigitalOutputPort chipSelectPort = Device.CreateDigitalOutputPort(Device.Pins.D01);
+    IDigitalOutputPort resetPort = Device.CreateDigitalOutputPort(Device.Pins.D02);
 
-    mcp = new Mcp23s08(Device.CreateSpiBus(), chipSelectPort, interruptPort);
+    mcp = new Mcp23s08(Device.CreateSpiBus(), chipSelectPort, interruptPort, resetPort);
 
     return base.Initialize();
 }
