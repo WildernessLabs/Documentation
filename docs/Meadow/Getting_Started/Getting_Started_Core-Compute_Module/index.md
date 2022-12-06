@@ -10,11 +10,42 @@ Getting started with the [Meadow Core-Compute module](https://store.wildernessla
 
 If you are working with a bare Meadow Core-Compute module without the development kit, you will likely want to connect the castellated pins to peripherals to be able to move beyond logging or code-only projects. For production builds, the Core-Compute board on its own doesn't include an onboard LED to interact with.
 
-1. Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
-1. Use the Meadow.CLI to [deploy Meadow.OS to your board](/Meadow/Getting_Started/Deploying_Meadow/), booting the Core-Compute module into bootloader mode when you first connect it to your development machine.
-1. Deploy your first Meadow application. You can start from a [Hello, Meadow](/Meadow/Getting_Started/Hello_World/) application, but you will need to connect external components or peripherals to recreate the experience of the onboard RGB LED. You will see logging output without any additional components.
+1. **Install Visual Studio** - Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+1. **Deploy Meadow.OS** - Use the Meadow.CLI to [deploy Meadow.OS to your board](/Meadow/Getting_Started/Deploying_Meadow/), booting the Core-Compute module into bootloader mode when you first connect it to your development machine.
+1. **Deploy Hello, World** - Verify everything is setup by deploying your first Meadow application. You can start working from the Feather [Hello, Meadow](/Meadow/Getting_Started/Hello_World/) application, but you will need to connect external components or peripherals to recreate the experience of the onboard RGB LED. You can still see logging output without any additional components.
 
-    For a simple example, on the Core-Compute Development Kit, you could bridge an LED between the ground pin and pin **D15** and toggle it.
+```csharp
+using Meadow;
+using Meadow.Devices;
+using Meadow.Foundation.Leds;
+using System;
+using System.Threading.Tasks;
+
+namespace HelloMeadow
+{
+    // Change F7FeatherV2 or F7FeatherV1 for Feather boards
+    public class MeadowApp : App<F7CoreComputeV2>
+    {
+        public override Task Run()
+        {
+            Console.WriteLine("Run...");
+
+            return base.Run();
+        }
+
+        public async override Task Initialize()
+        {
+            Console.WriteLine("Initialize...");
+
+            await base.Initialize();
+        }
+    }
+}
+```
+
+You should see the console output generated from the Meadow showing up in the Meadow output pane within Visual Studio.
+
+For an example with some visual flare, you could connect an LED's anode leg to the Meadow ground (GND) pin and its cathode leg to pin **D14**. Then, within your app's `Run` method, you can start blinking it using the `Led` class in [Meadow.Foundation](..\Meadow.Foundation\Getting_Started\).
 
 ```csharp
 using Meadow;
@@ -43,7 +74,7 @@ namespace HelloMeadow
         {
             Console.WriteLine("Initialize...");
 
-            led = new Led(Device.CreateDigitalOutputPort(Device.Pins.D15));
+            led = new Led(Device.CreateDigitalOutputPort(Device.Pins.D14));
 
             await base.Initialize();
         }
@@ -70,3 +101,5 @@ With the Core-Compute Development Kit, you can also explore the additional onboa
 <!-- * [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/) -->
 * SD Card storage (coming soon)
 * [Networking](/Meadow/Meadow.OS/Networking/), accessible either via the Core-Compute Dual Ethernet add-on or wireless
+
+And to learn more about the development kit board design and fabrication, or look over the board schematics, check out the [Meadow.Core-Compute.DevBreakouts repo](https://github.com/WildernessLabs/Meadow.Core-Compute.DevBreakouts).
