@@ -16,40 +16,40 @@ If you are working with a bare Meadow Core-Compute module without the developmen
 
     For a simple example, on the Core-Compute Development Kit, you could bridge an LED between the ground pin and pin **D15** and toggle it.
 
-    ```csharp
-    using Meadow;
-    using Meadow.Devices;
-    using Meadow.Foundation.Leds;
-    using System;
-    using System.Threading.Tasks;
+```csharp
+using Meadow;
+using Meadow.Devices;
+using Meadow.Foundation.Leds;
+using System;
+using System.Threading.Tasks;
 
-    namespace HelloMeadow
+namespace HelloMeadow
+{
+    // Change F7FeatherV2 or F7FeatherV1 for Feather boards
+    public class MeadowApp : App<F7CoreComputeV2>
     {
-        // Change F7FeatherV2 or F7FeatherV1 for Feather boards
-        public class MeadowApp : App<F7CoreComputeV2>
+        Led led;
+
+        public override Task Run()
         {
-            Led led;
+            Console.WriteLine("Run...");
 
-            public override Task Run()
-            {
-                Console.WriteLine("Run...");
+            led.StartBlink(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(0.5));
 
-                led.StartBlink(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(0.5));
+            return base.Run();
+        }
 
-                return base.Run();
-            }
+        public async override Task Initialize()
+        {
+            Console.WriteLine("Initialize...");
 
-            public async override Task Initialize()
-            {
-                Console.WriteLine("Initialize...");
+            led = new Led(Device.CreateDigitalOutputPort(Device.Pins.D15));
 
-                led = new Led(Device.CreateDigitalOutputPort(Device.Pins.D15));
-
-                await base.Initialize();
-            }
+            await base.Initialize();
         }
     }
-    ```
+}
+```
 
 ## Core-Compute pin details
 
