@@ -6,6 +6,8 @@ subtitle: "To get up and running with Meadow Core-Compute, follow these steps:"
 
 Getting started with the [Meadow Core-Compute module](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-module) is similar to getting started with a [Meadow Feather board](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7-feather), especially if you are working with the [Core-Compute Development Kit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board) which offers breakout headers that mimic the Feather headers.
 
+![Overhead view of the Core-Compute Development Kit with a Core-Compute module, USB-C boot, reset, power; SD card; and dual ethernet add-on boards included as well as breakout headers mimicking the Feather Meadow board.](Core-ComputeModuleDevKit_1024x1024.jpg)
+
 If you are working with a bare Meadow Core-Compute module without the development kit, you will likely want to connect the castellated pins to peripherals to be able to move beyond logging or code-only projects. For production builds, the Core-Compute board on its own doesn't include an onboard LED to interact with.
 
 1. Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
