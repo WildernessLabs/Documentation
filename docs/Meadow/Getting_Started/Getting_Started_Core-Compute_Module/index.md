@@ -63,7 +63,8 @@ Now that you understand the basics of a Meadow application, we recommend learnin
 * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
 * [Meadow.Foundation](/Meadow/Meadow.Foundation/)
 
-<!-- With the Core-Compute Development Kit, you can also explore the additional onboard peripherals, depending on your kit's configuration:
+With the Core-Compute Development Kit, you can also explore the additional onboard peripherals, depending on your kit's configuration:
 
-* [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/)
-* [Networking](/Meadow/Meadow.OS/Networking/), accessible either via the Core-Compute Dual Ethernet add-on or wireless -->
+<!-- * [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/) -->
+* SD Card storage (coming soon)
+* [Networking](/Meadow/Meadow.OS/Networking/), accessible either via the Core-Compute Dual Ethernet add-on or wireless
