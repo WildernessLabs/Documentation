@@ -4,7 +4,132 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
- RC-1.1
+
+# RC-2
+
+We're so excited to release the 2nd Meadow v1.0 Release-Candidate!!! This is another big release with a pile of fixes and features.
+
+**Meadow.OS**
+
+//ToDo Alexis
+//ToDo Mark
+
+**Meadow.Cloud**
+
+//ToDo Brian Kim
+
+**Meadow.Foundation**
+
+//ToDo Adrian
+
+* **MicroGraphics** - Minor perf improvements and maturing API
+* **Gas sensors drivers** -
+
+**Tooling**
+
+//ToDo Dominique
+
+* **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
+
+
+## Updating to RC-2
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+### Updating Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.92.0) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+**NOTE:** - After flashing Meadow.OS, if the runtime upload does not complete with an error of `cannot connect to Meadow`, push the `RST` button on your Meadow device and then execute:
+
+```bash
+meadow flash os -d
+```
+
+This skips the initial (already completed) Meadow.OS upload and retries the runtime upload. We're not sure what's causing this issue, but it's under investigation.
+
+If you experience any stability or deployment issues you may need to erase the flash on Meadow and then re-install the latest OS:
+
+```bash
+meadow flash erase
+```
+
+## Release Details
+
+### Meadow.Cloud
+
+//ToDo Brian Kim
+
+## Meadow.OS
+
+//ToDo Alexis
+
+### Networking Stack
+
+//ToDo Mark
+
+#### Stabilization
+
+#### Core-Compute Ethernet Support
+
+## Meadow.Core
+
+//ToDo Chris
+
+### Network APIs
+
+### Power & Sleep APIs
+
+## Meadow.Foundation
+
+//ToDo Adrian
+
+This release includes new drivers, improved APIs, improved performance, and bug fixes. You can see the full is of fixes, improvements and new [drivers here](https://github.com/WildernessLabs/Meadow.Foundation/issues?q=is%3Aissue+milestone%3ARC1+is%3Aclosed).
+
+### New drivers
+
+### MicroGraphics
+
+## Tooling (Meadow.CLI, IDE Extensions, and Templates)
+
+//ToDo Dominique (Extensions)
+
+//ToDo Adrian (CL)
+
+## RC-1 Bug Fixes
+
+## Known Issues
+
+//ToDo Dominique, Alexis, Chris, Mark
+
+* If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
+* There is some extra logging code that shows how many bytes are being sent and received between the Meadow and Visual Studio, so we can track down a buffer overflow bug. This extra logging will be removed in RC2.
+* Occationally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
+* [Windows Extensions] Due to an MS API change auto-deploy when debugging does not currently work. WORK AROUND: To debug on Windows deploy your app 1st, then hit the Debug button to step through your deployed code etc. We are working on a fix for this issue for RC2. Appologies for the inconvenience.
+
+### Meadow.OS Deploy, App Deploy/Debug Workflow
+
+This release has been a long journey that added our final v1.0 features, and did final polishes to our APIs, however, the OS Deploy, App Deploy/Debug cycles still have some hiccups that we'll spend time stabilizing for RC-2/v1.0.
+
+
 # RC-1.1 (RC1 Hotfix Release 1)
 
 We're happy to announce an amendment release to RC1, providing an out-of-band critical fix for the *AMQP* protocol and therefore for connecting to *Azure Iot Hubs* and other cloud services. To get started on connecting your Meadow to the cloud, check out [our sample!](https://github.com/WildernessLabs/Meadow.Project.Samples/tree/main/Source/Azure/AzureIoTHub)
