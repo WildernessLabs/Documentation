@@ -122,7 +122,7 @@ This release includes new drivers, improved APIs, improved performance, and bug 
 
 * If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
 * There is some extra logging code that shows how many bytes are being sent and received between the Meadow and Visual Studio, so we can track down a buffer overflow bug. This extra logging will be removed in RC2.
-* Occationally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
+* Occasionally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
 * [Windows Extensions] Due to an MS API change auto-deploy when debugging does not currently work. WORK AROUND: To debug on Windows deploy your app 1st, then hit the Debug button to step through your deployed code etc. We are working on a fix for this issue for RC2. Appologies for the inconvenience.
 
 ### Meadow.OS Deploy, App Deploy/Debug Workflow
@@ -176,6 +176,22 @@ TLS library has been updated.
 #### Improved Low Power Support
 
 The delay between the OS waking and calls to `Console.WriteLine` is no longer necessary.
+
+#### Static IP Address Support for WiFi
+
+The system now supports setting a static IP address for the WiFi connection.  The address can be set through the [`meadow.config.yaml` file](../../Meadow.OS/Configuration/OS_Device_Configuration/index.md) by adding the following to the config file:
+
+```yaml
+Network:
+    WiFi:
+        Default: true
+        #
+        #   DHCP will be used if the IP address information is omitted.
+        #
+        IPAddress: 192.168.1.10
+        NetMask: 255.255.255.0
+        Gateway: 192.168.1.254
+```
 
 ### Meadow.Foundation
 
