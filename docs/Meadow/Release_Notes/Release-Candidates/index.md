@@ -141,6 +141,41 @@ In addition, this release includes:
 * **Debugging fix** - A Meadow Debugging connection fix for the latest versions of Visual Studio
 * **Battery voltage API** - `Device.GetBatteryInfo().Voltage` now properly works on `FeatherV2` devices
 * **Sensor abstractions** - A new `ISamplingSensor` abstraction makes it easier to swap sensor hardware with minimal code changes
+* Fixed [**Device.Connect never returns**](https://github.com/WildernessLabs/Meadow_Issues/issues/207)
+
+#### JIT
+
+JIT is now turned on by default giving existing applications a performance boost by default.
+
+Interpreted mode can be re-enabled by adding the following to the application `meadow.config.yaml` file:
+
+```yaml
+MonoControl:
+    Options: --interp
+```
+
+#### SD Card Support
+
+SD cards are now supported on the Core Compute Module.
+
+#### Network Credentials Enhancements
+
+Two new methods have been added to work with the data in the [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file:
+
+* `ConnectToDefaultAccessPoint`
+* `ClearStoredAccessPointInformation`
+
+`ConnectToDefaultAccessPoint` will us the SSID and password information previously loaded from the `wifi.config.yaml` an attempt to connect to the specified access point.
+
+`ClearStoredAccessPointInformation` can be used to remove the stored credentials from non volatile memory.
+
+#### TLS Update
+
+TLS library has been updated.
+
+#### Improved Low Power Support
+
+The delay between the OS waking and calls to `Console.WriteLine` is no longer necessary.
 
 ### Meadow.Foundation
 
