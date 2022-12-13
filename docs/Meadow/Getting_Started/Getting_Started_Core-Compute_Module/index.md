@@ -98,8 +98,7 @@ Now that you understand the basics of a Meadow application, we recommend learnin
 
 With the Core-Compute Development Kit, you can also explore the additional onboard peripherals, depending on your kit's configuration:
 
-<!-- * [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/) -->
-* SD Card storage (coming soon)
+* [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/)
 * [Networking](/Meadow/Meadow.OS/Networking/), accessible either via the Core-Compute Dual Ethernet add-on or wireless
 
 And to learn more about the development kit board design and fabrication, or look over the board schematics, check out the [Meadow.Core-Compute.DevBreakouts repo](https://github.com/WildernessLabs/Meadow.Core-Compute.DevBreakouts).
