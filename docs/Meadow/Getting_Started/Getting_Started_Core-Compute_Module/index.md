@@ -84,7 +84,7 @@ namespace HelloMeadow
 
 ## Core-Compute pin details
 
-When using the Core-Compute module within the Core-Compute Development Kit, some pins available via the Feather pin breakout headers have extra considerations. are reserved for use by other components on the development kit.
+When using the Core-Compute module within the Core-Compute Development Kit, some pins available via the Feather pin breakout headers have extra considerations.
 
 * **Pin D15 reserved**: Digital pin 15 on the Core-Compute module is reserved for SD card use.
 * **Pin D16 available via D15 Feather header**: Since pin D15 is reserved for SD card use, on the Core-Compute Development Kit, pin **D16** from the Core-Compute module is made available through the Feather breakout header at the **D15** pin location. The pin available at that location is accessible from the `Device.Pins.D16` property, despite the label for Feather pinout consistency.
