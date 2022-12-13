@@ -21,9 +21,12 @@ On the Core-Compute Development Kit, the SD card will be the only external stora
 With the SD card storage identified, you can then write a file to the card using any approach you prefer. For example, you can write strings to a simple text file.
 
 ```csharp
-using (var file = File.CreateText(Path.Combine(sdCardStorage.Directory.FullName, "hello_meadow.txt")))
+if (sdCardStorage != null)
 {
-    file.Write("Hello, Meadow!");
+    using (var file = File.CreateText(Path.Combine(sdCardStorage.Directory.FullName, "hello_meadow.txt")))
+    {
+        file.Write("Hello, Meadow!");
+    }
 }
 ```
 
