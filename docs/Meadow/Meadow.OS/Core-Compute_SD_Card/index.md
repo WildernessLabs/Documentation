@@ -8,6 +8,18 @@ The Meadow Core-Compute Development Kit includes an SD card add-on, and one can 
 
 There is an event subscription system to monitor for external storage events in your Meadow app. And, from there, file operations can be done with the `System.IO` API as described in the [File System docs](/Meadow/Meadow.OS/File_System/).
 
+## Enable SD card hardware support
+
+Before writing or reading from an SD card, we need to tell the Meadow OS that we have SD card hardware available on our project build. To do this, you will need to set the **Device** > **SdStorageSupported** configuration value to `true` in the **meadow.config.yaml** file for your project.
+
+```yaml
+Device:
+    # Enable if your Meadow build is using SD card hardware.
+    SdStorageSupported: true
+```
+
+For more information about this setting, read the details in the [OS & Device Configuration](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/) documentation.
+
 ## Check for external storage devices
 
 If your Meadow device might have external storage at some point while your app is running, you can find it by iterating over your device's external storage items.
