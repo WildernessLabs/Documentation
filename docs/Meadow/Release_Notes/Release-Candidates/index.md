@@ -7,30 +7,17 @@ subtitle: Release Notes
 
 # RC-2
 
-We're so excited to release the 2nd Meadow v1.0 Release-Candidate!!! This is another big release with a pile of fixes and features.
+We're so excited to release the 2nd Meadow v1.0 Release-Candidate! This is another big release with a pile of fixes and features.
 
 **Meadow.OS**
 
 //ToDo Alexis
 //ToDo Mark
 
-**Meadow.Cloud**
-
-//ToDo Brian Kim
-
 **Meadow.Foundation**
 
-//ToDo Adrian
-
 * **MicroGraphics** - Minor perf improvements and maturing API
-* **Gas sensors drivers** -
-
-**Tooling**
-
-//ToDo Dominique
-
-* **Deployment/Debugging Stability** - We've fixed lots of paper cuts in the IDE extensions and added a number of new features that massively improve the day to day development experience with Meadow.
-
+* **Gas sensors drivers** - Two new gas sensor drivers to read CO2 levels and air quality
 
 ## Updating to RC-2
 
@@ -74,10 +61,6 @@ meadow flash erase
 
 ## Release Details
 
-### Meadow.Cloud
-
-//ToDo Brian Kim
-
 ## Meadow.OS
 
 //ToDo Alexis
@@ -100,8 +83,6 @@ meadow flash erase
 
 ## Meadow.Foundation
 
-//ToDo Adrian
-
 This release includes new drivers, improved APIs, improved performance, and bug fixes. You can see the full is of fixes, improvements and new [drivers here](https://github.com/WildernessLabs/Meadow.Foundation/issues?q=is%3Aissue+milestone%3ARC1+is%3Aclosed).
 
 ### New drivers
@@ -112,7 +93,7 @@ This release includes new drivers, improved APIs, improved performance, and bug 
 
 //ToDo Dominique (Extensions)
 
-//ToDo Adrian (CL)
+//ToDo Adrian (CLI)
 
 ## RC-1 Bug Fixes
 
