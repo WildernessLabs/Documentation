@@ -10,6 +10,14 @@ The Meadow F7 is a workhorse Wi-Fi and Bluetooth enabled System-on-Module (SoM) 
 
 The Meadow F7 is provisioned with Meadow.OS which runs full .NET Standard v2.1 applications and can be managed remotely via Meadow.Cloud with secure, over-the-air (OtA) updates, reliable push messaging, and device and application health monitoring over a Wi-Fi or ethernet (F7 Production model only) network.
 
+## Hardware Resources
+
+* [F7v2 Feather and Core-Compute Module Datasheet](Wilderness_Labs_Meadow_F7v2_Datasheet.pdf)
+* [F7v2 Hardware Designs GitHub Repo](https://github.com/WildernessLabs/Meadow_Hardware_Designs)
+* [Meadow EDA Symbols and Footprints Github Repo](https://github.com/WildernessLabs/Meadow_EDA_Parts)
+* [Meadow Core-Compute Developer Module Repo](https://github.com/WildernessLabs/Meadow.Core-Compute.DevBreakouts)
+* [Meadow Hardware Add-on Module Designs GitHub Repo](https://github.com/WildernessLabs/Hardware_Addon_Modules)
+
 ## Form-Factors
 
 The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two differing form factors:

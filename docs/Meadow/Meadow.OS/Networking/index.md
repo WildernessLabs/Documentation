@@ -6,10 +6,6 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-## Current Beta Limitations
-
-* **All SSL Certificates Accepted** - SSL connections are supported, but currently, all certificates over TLS (https) are accepted without any validation, even expired or misconfigured certificates.
-
 ## Sample Apps
 
 For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
@@ -87,6 +83,8 @@ async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 # Performing Requests
 
 Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not available in this release candidate.
+
+Note: SSL validation can sometimes fail due to Meadow's clock being too far from the current time. This can be resolved by either [configuring Meadow to aqcuire the network time at startup](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/), or by [setting the clock manually](/Meadow/Meadow.OS/RTC/) at runtime.
 
 ## HTTP Get Request Example
 
