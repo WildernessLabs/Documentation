@@ -22,9 +22,14 @@ MonoControl:
     Options: --interp
 ```
 
-#### SD Card Support
+#### SD Card Support (CCM)
 
-SD cards are now supported on the Core Compute Module.
+SD cards are now supported on the Core Compute Module.  The SD card interface can be enabled in the `meadow.config.yaml` file:
+
+```yaml
+Device:
+    SdStorageSupported: true
+```
 
 #### Network Credentials Enhancements
 
