@@ -11,8 +11,60 @@ We're so excited to release the 2nd Meadow v1.0 Release-Candidate! This is anoth
 
 **Meadow.OS**
 
-//ToDo Alexis
-//ToDo Mark
+#### JIT
+
+JIT is now turned on by default giving existing applications a performance boost.
+
+Interpreted mode can be re-enabled by adding the following to the application `meadow.config.yaml` file:
+
+```yaml
+MonoControl:
+    Options: --interp
+```
+
+#### SD Card Support (CCM)
+
+SD cards are now supported on the Core Compute Module.  The SD card interface can be enabled in the `meadow.config.yaml` file:
+
+```yaml
+Device:
+    SdStorageSupported: true
+```
+
+#### Network Credentials Enhancements
+
+Two new methods have been added to work with the data in the [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file:
+
+* `ConnectToDefaultAccessPoint`
+* `ClearStoredAccessPointInformation`
+
+`ConnectToDefaultAccessPoint` will us the SSID and password information previously loaded from the `wifi.config.yaml` an attempt to connect to the specified access point.
+
+`ClearStoredAccessPointInformation` can be used to remove the stored credentials from non volatile memory.
+
+#### TLS Update
+
+TLS library has been updated.
+
+#### Improved Low Power Support
+
+The delay between the OS waking and calls to `Console.WriteLine` is no longer necessary.
+
+#### Static IP Address Support for WiFi
+
+The system now supports setting a static IP address for the WiFi connection.  The address can be set through the [`meadow.config.yaml` file](../../Meadow.OS/Configuration/OS_Device_Configuration/index.md) by adding the following to the config file:
+
+```yaml
+Network:
+    WiFi:
+        Default: true
+        #
+        #   DHCP will be used if the IP address information is omitted.
+        #
+        IPAddress: 192.168.1.10
+        NetMask: 255.255.255.0
+        Gateway: 192.168.1.254
+```
 
 **Meadow.Foundation**
 
@@ -64,10 +116,6 @@ meadow flash erase
 ## Meadow.OS
 
 //ToDo Alexis
-
-### Networking Stack
-
-//ToDo Mark
 
 #### Stabilization
 
@@ -124,55 +172,6 @@ In addition, this release includes:
 * **Sensor abstractions** - A new `ISamplingSensor` abstraction makes it easier to swap sensor hardware with minimal code changes
 * Fixed [**Device.Connect never returns**](https://github.com/WildernessLabs/Meadow_Issues/issues/207)
 
-#### JIT
-
-JIT is now turned on by default giving existing applications a performance boost by default.
-
-Interpreted mode can be re-enabled by adding the following to the application `meadow.config.yaml` file:
-
-```yaml
-MonoControl:
-    Options: --interp
-```
-
-#### SD Card Support
-
-SD cards are now supported on the Core Compute Module.
-
-#### Network Credentials Enhancements
-
-Two new methods have been added to work with the data in the [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file:
-
-* `ConnectToDefaultAccessPoint`
-* `ClearStoredAccessPointInformation`
-
-`ConnectToDefaultAccessPoint` will us the SSID and password information previously loaded from the `wifi.config.yaml` an attempt to connect to the specified access point.
-
-`ClearStoredAccessPointInformation` can be used to remove the stored credentials from non volatile memory.
-
-#### TLS Update
-
-TLS library has been updated.
-
-#### Improved Low Power Support
-
-The delay between the OS waking and calls to `Console.WriteLine` is no longer necessary.
-
-#### Static IP Address Support for WiFi
-
-The system now supports setting a static IP address for the WiFi connection.  The address can be set through the [`meadow.config.yaml` file](../../Meadow.OS/Configuration/OS_Device_Configuration/index.md) by adding the following to the config file:
-
-```yaml
-Network:
-    WiFi:
-        Default: true
-        #
-        #   DHCP will be used if the IP address information is omitted.
-        #
-        IPAddress: 192.168.1.10
-        NetMask: 255.255.255.0
-        Gateway: 192.168.1.254
-```
 
 ### Meadow.Foundation
 
