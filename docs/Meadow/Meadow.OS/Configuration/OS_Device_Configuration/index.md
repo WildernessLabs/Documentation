@@ -17,7 +17,8 @@ Consider the following sample config file:
 Device:
     # Name of the device on the network.
     Name: MeadowF7V2_ConfigSample
-
+    # Is SD card hardware present on this hardware build (e.g., Core-Compute module with SD add-on)? Optional; default value is `false`.
+    SdStorageSupported: false
 #===============================================================================
 
 # Control how the .NET runtime executes your Meadow application, optionally enabling just-in-time (JIT) compilation instead of interpretation mode.
@@ -68,6 +69,23 @@ The `Device` section contains configurable properties for the system in general.
 This is the name that will show on the network.
 
 Default value: MeadowF7
+
+```yaml
+Device:
+    Name: MeadowF7V2_ConfigSample
+```
+
+### Device `SdStorageSupported`
+
+Used to indicate whether SD card hardware is present where this project is deployed to ensure that SD card support is configured in the Meadow OS. Set this value to true if you are working on a Meadow hardware configuration using SD card hardware. For example, on the Core-Compute module with the SD card add-on, set this configuration to `true` if you are writing or reading from an SD card.
+
+Default value: false
+
+```yaml
+Device:
+    # Enable if your Meadow build is using SD card hardware.
+    SdStorageSupported: true
+```
 
 ### JIT compilation mode
 

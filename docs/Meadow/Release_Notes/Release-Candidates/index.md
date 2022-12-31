@@ -4,7 +4,124 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
- RC-1.1
+
+# RC-2
+
+We're so excited to release the 2nd Meadow v1.0 Release-Candidate! This is another milestone release with new features and more performance improvements. To mark the occasion, we're continuing our goal of contributing to the .NET open-source community by open-sourcing Meadow.Core! This means the entire stack that sits above the .NET runtime is now open and [available on GitHub](http://www.github.com/wildernesslabs/Meadow.Core).
+
+This release includes: 
+* **SD Card Support** - APIs are now avaiable to use the SD card reader with the Meadow Core Compute Module
+* **Static IP Address Support** - Meadow now supports setting a static IP address for the WiFi connection
+* **Network Credentials Enhancements** - New methods have been added to work with data in [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file
+
+
+## Updating to RC-2
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+### Updating Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.92.0) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+**NOTE:** - After flashing Meadow.OS, if the runtime upload does not complete with an error of `cannot connect to Meadow`, push the `RST` button on your Meadow device and then execute:
+
+```bash
+meadow flash os -d
+```
+
+This skips the initial (already completed) Meadow.OS upload and retries the runtime upload. We're not sure what's causing this issue, but it's under investigation.
+
+If you experience any stability or deployment issues you may need to erase the flash on Meadow and then re-install the latest OS:
+
+```bash
+meadow flash erase
+```
+
+## Release Details
+
+**Meadow.OS**
+
+#### JIT
+
+JIT is now turned on by default giving existing applications a performance boost.
+
+Interpreted mode can be re-enabled by adding the following to the application `meadow.config.yaml` file:
+
+```yaml
+MonoControl:
+    Options: --interp
+```
+
+#### SD Card Support (CCM)
+
+SD cards are now supported on the Core Compute Module.  The SD card interface can be enabled in the `meadow.config.yaml` file:
+
+```yaml
+Device:
+    SdStorageSupported: true
+```
+
+#### Network Credentials Enhancements
+
+Two new methods have been added to work with the data in the [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file:
+
+* `ConnectToDefaultAccessPoint`
+* `ClearStoredAccessPointInformation`
+
+`ConnectToDefaultAccessPoint` will us the SSID and password information previously loaded from the `wifi.config.yaml` an attempt to connect to the specified access point.
+
+`ClearStoredAccessPointInformation` can be used to remove the stored credentials from non volatile memory.
+
+#### TLS Update
+
+TLS library has been updated.
+
+#### Improved Low Power Support
+
+The delay between the OS waking and calls to `Console.WriteLine` is no longer necessary.
+
+#### Static IP Address Support for WiFi
+
+The system now supports setting a static IP address for the WiFi connection. The address can be set through the [`meadow.config.yaml` file](../../Meadow.OS/Configuration/OS_Device_Configuration/index.md) by adding the following to the config file:
+
+```yaml
+Network:
+    WiFi:
+        Default: true
+        #
+        #   DHCP will be used if the IP address information is omitted.
+        #
+        IPAddress: 192.168.1.10
+        NetMask: 255.255.255.0
+        Gateway: 192.168.1.254
+```
+
+**Meadow.Foundation**
+
+* **New Air quality sensor** - The ENS160 air quality sensor is now supported
+
+This release also includes several Meadow.Foundation bug fixes - [details are here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/18?closed=1)
+
+
+
 # RC-1.1 (RC1 Hotfix Release 1)
 
 We're happy to announce an amendment release to RC1, providing an out-of-band critical fix for the *AMQP* protocol and therefore for connecting to *Azure Iot Hubs* and other cloud services. To get started on connecting your Meadow to the cloud, check out [our sample!](https://github.com/WildernessLabs/Meadow.Project.Samples/tree/main/Source/Azure/AzureIoTHub)
@@ -16,6 +133,7 @@ In addition, this release includes:
 * **Debugging fix** - A Meadow Debugging connection fix for the latest versions of Visual Studio
 * **Battery voltage API** - `Device.GetBatteryInfo().Voltage` now properly works on `FeatherV2` devices
 * **Sensor abstractions** - A new `ISamplingSensor` abstraction makes it easier to swap sensor hardware with minimal code changes
+* Fixed [**Device.Connect never returns**](https://github.com/WildernessLabs/Meadow_Issues/issues/207)
 
 ### Meadow.Foundation
 

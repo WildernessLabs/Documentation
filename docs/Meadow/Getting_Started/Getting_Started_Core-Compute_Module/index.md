@@ -84,7 +84,7 @@ namespace HelloMeadow
 
 ## Core-Compute pin details
 
-When using the Core-Compute module within the Core-Compute Development Kit, some pins available via the Feather pin breakout headers have extra considerations. are reserved for use by other components on the development kit.
+When using the Core-Compute module within the Core-Compute Development Kit, some pins available via the Feather pin breakout headers have extra considerations.
 
 * **Pin D15 reserved**: Digital pin 15 on the Core-Compute module is reserved for SD card use.
 * **Pin D16 available via D15 Feather header**: Since pin D15 is reserved for SD card use, on the Core-Compute Development Kit, pin **D16** from the Core-Compute module is made available through the Feather breakout header at the **D15** pin location. The pin available at that location is accessible from the `Device.Pins.D16` property, despite the label for Feather pinout consistency.
@@ -98,8 +98,7 @@ Now that you understand the basics of a Meadow application, we recommend learnin
 
 With the Core-Compute Development Kit, you can also explore the additional onboard peripherals, depending on your kit's configuration:
 
-<!-- * [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/) -->
-* SD Card storage (coming soon)
+* [SD Card storage](/Meadow/Meadow.OS/Core-Compute_SD_Card/)
 * [Networking](/Meadow/Meadow.OS/Networking/), accessible either via the Core-Compute Dual Ethernet add-on or wireless
 
 And to learn more about the development kit board design and fabrication, or look over the board schematics, check out the [Meadow.Core-Compute.DevBreakouts repo](https://github.com/WildernessLabs/Meadow.Core-Compute.DevBreakouts).
