@@ -95,15 +95,15 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0373](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il0373.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0376F](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il0376F.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0398](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il0398.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL3897](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il3897.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il91874.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Il91874V03.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Ssd1608.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0373](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il0373.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0376F](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il0376F.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0398](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il0398.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL3897](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il3897.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874V03.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1608.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1680 | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaper.Ssd1681.html) | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1681.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | UC8151C | ePaper driver |
 
 ### Displays.ePaperWaveShare
