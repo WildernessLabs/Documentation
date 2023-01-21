@@ -305,7 +305,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.As5013](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.As5013.html) | I2C Hall sensor IC for smart navigation |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Bbq10Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Bbq10Keyboard.html) | BB Q10 I2C Keyboard |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.BBQ10Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.BBQ10Keyboard.html) | BB Q10 I2C Keyboard |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html) | Freescale Semiconductor MPR121 I2C capacitive keypad controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Tsc2004](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Tsc2004.html) | Tsc2004 I2C capacitive touch screen |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.WiiExtensionControllers](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiExtensionControllers.html) | Nintendo Wii I2C extension controllers (nunchuck, classic controller, snes classic controller, nes classic controller) |
