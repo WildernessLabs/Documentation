@@ -134,21 +134,21 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gc9a01](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Gc9a01.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Hx8357b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Hx8357b.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Hx8357d](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Hx8357d.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9163](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ili9163.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9341](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ili9341.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9481](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ili9481.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9486](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ili9486.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9488](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ili9488.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Rm68140](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Rm68140.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [S6D02A1](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.S6D02A1.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1331](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ssd1331.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1351](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.Ssd1351.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [St7735](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.St7735.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [St7789](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.St7789.html) | TftSpi driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [St7796s](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpi.St7796s.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gc9a01](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Gc9a01.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Hx8357b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Hx8357b.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Hx8357d](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Hx8357d.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9163](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ili9163.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9341](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ili9341.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9481](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ili9481.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9486](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ili9486.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ili9488](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ili9488.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Rm68140](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Rm68140.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [S6D02A1](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.S6D02A1.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1331](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1331.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1351](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1351.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [St7735](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7735.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [St7789](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7789.html) | TftSpi driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [St7796s](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7796s.html) | TftSpi driver |
 
 ## ICs
 
