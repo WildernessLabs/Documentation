@@ -47,7 +47,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.MicroGraphics](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.MicroGraphics.html) | Lightweight integer accurate 2d graphics drawing system designed for embedded systems |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.MicroGraphics](/docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.MicroGraphics.html) | Lightweight integer accurate 2d graphics drawing system designed for embedded systems |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.TextDisplayMenu](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.html) | Text based stack navigation and editor for pixel and character displays |
 
 ## Location
