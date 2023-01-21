@@ -384,7 +384,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Radio.Rfid.IDxxLA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.html) | IDxxLA Serial radio frequency ID readers |
-| <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Radio.Rfid.Rc522](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.Rc522.html) | Rc522 I2C radio frequency ID reader |
+| <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Rfid.Rc522](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rfid.Rc522.html) | Rc522 I2C radio frequency ID reader |
 
 ## Sound
 
