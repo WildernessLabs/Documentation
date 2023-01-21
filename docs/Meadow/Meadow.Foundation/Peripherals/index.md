@@ -65,7 +65,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 ## External Peripherals
 
-External peripheral drivers can be added to Meadow projects individually and are distributed as nuget packages on [Nuget.org](www.nuget.org).
+External peripheral drivers can be added to Meadow projects individually and are distributed as nuget packages on [Nuget.org](https://www.nuget.org/).
 
 ## Audio
 
