@@ -54,7 +54,7 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Location.Gnss.NmeaProcessor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor.html) | GNSS NMEA parsing library |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Location.Gnss.NmeaProcessor](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/) | GNSS NMEA parsing library |
 
 ## External Peripherals
 
