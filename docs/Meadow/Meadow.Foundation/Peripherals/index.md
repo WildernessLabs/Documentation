@@ -378,7 +378,6 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Radio.Rfid.IDxxLA](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA.html) | IDxxLA Serial radio frequency ID readers |
-| <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Rfid.Rc522](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rfid.Rc522.html) | Rc522 I2C radio frequency ID reader |
 
 ## Sound
 
@@ -390,7 +389,6 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Temperature.Ds18B20](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Ds18B20.html) | DS18B20 1-Wire temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html) | Lm75 I2C temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Mcp9808](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9808.html) | MCP9808 I2C temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Thermistor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Thermistor.html) | Thermistor temperature sensor |
