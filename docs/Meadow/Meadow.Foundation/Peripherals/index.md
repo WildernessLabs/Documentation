@@ -56,13 +56,6 @@ The peripherals are split into two groups; the first group is general, core peri
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Location.Gnss.NmeaProcessor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor.html) | GNSS NMEA parsing library |
 
-## Web
-
-| Status | Driver | Description |
-|--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Web.Maple.Client](/docs/api/Meadow.Foundation/Meadow.Foundation.Web.Maple.Client.html) | Maple is an ultra-lightweight RESTful web API Server, built specifically for Meadow. It provides an easy to extend architecture, and has integrated JSON support via System.Text.Json. |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Web.Maple.Server](/docs/api/Meadow.Foundation/Meadow.Foundation.Web.Maple.Server.html) | Maple is an ultra-lightweight RESTful web API Server, built specifically for Meadow. It provides an easy to extend architecture, and has integrated JSON support via System.Text.Json. |
-
 ## External Peripherals
 
 External peripheral drivers can be added to Meadow projects individually and are distributed as nuget packages on [Nuget.org](https://www.nuget.org/).
