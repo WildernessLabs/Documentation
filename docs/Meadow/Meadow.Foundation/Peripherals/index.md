@@ -308,17 +308,17 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.BBQ10Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.BBQ10Keyboard.html) | BB Q10 I2C Keyboard |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html) | Freescale Semiconductor MPR121 I2C capacitive keypad controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Tsc2004](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Tsc2004.html) | Tsc2004 I2C capacitive touch screen |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.WiiExtensionControllers](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiExtensionControllers.html) | Nintendo Wii I2C extension controllers (nunchuck, classic controller, snes classic controller, nes classic controller) |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.WiiExtensionControllers](#Sensors.Hid.WiiExtensionControllers) | Nintendo Wii I2C extension controllers (nunchuck, classic controller, snes classic controller, nes classic controller) |
 
 ### Sensors.Hid.WiiExtensionControllers
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | NesClassicController | NesClassicController driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | SnesClassicController | SnesClassicController driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | WiiClassicController | WiiClassicController driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | WiiClassicControllerPro | WiiClassicControllerPro driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | WiiNunchuck | WiiNunchuck driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [NesClassicController](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.NesClassicController.html) | NesClassicController driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SnesClassicController](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.SnesClassicController.html) | SnesClassicController driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [WiiClassicController](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiClassicController.html) | WiiClassicController driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [WiiClassicControllerPro](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiClassicControllerPro.html) | WiiClassicControllerPro driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [WiiNunchuck](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiNunchuck.html) | WiiNunchuck driver |
 
 ## Light
 
