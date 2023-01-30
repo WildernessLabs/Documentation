@@ -278,14 +278,15 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ags01Db](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ags01Db.html) | Ags01Db I2C digital MEMS VOC gas sensor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.SCD4x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.SCD4x.html) | SCD4x I2C C02, temperature, and relative humidity sensor (SCD40, SCD41) |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.SCD4x](#Sensors.Environmental.SCD4x) | SCD4x I2C C02, temperature, and relative humidity sensor (SCD40, SCD41) |
 
 
 ### Sensors.Environmental.SCD4x
+
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Scd40 | Scd40 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Scd41 | Scd41 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd40](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.SCD40.html) | Scd40 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd41](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.SCD41.html) | Scd41 driver |
 
 ## Gnss
 
