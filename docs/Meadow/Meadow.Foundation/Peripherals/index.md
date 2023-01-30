@@ -353,7 +353,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Adxl3xx](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl3xx.html) | ADXL3xx Analog and I2C 3-axis accelerometers (ADXL335, ADXL345, ADXL337, ADXL362, ADXL377) |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Adxl3xx](#Sensors.Motion.Adxl3xx) | ADXL3xx Analog and I2C 3-axis accelerometers (ADXL335, ADXL345, ADXL337, ADXL362, ADXL377) |
 | <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Motion.Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Apds9960.html) | APDS9960 I2C proximity, light, color and gesture sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bmi270](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bmi270.html) | BMI270 I2C 6-axis accelerometer and motion sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | Bosch BNO055 I2C 9 axis absolute orientation sensor |
