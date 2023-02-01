@@ -4,8 +4,11 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
+# RC-2.1 (v0.9.4.0)
 
-# RC-2
+
+
+# RC-2 (v0.9.2.5)
 
 We're so excited to release the 2nd Meadow v1.0 Release-Candidate! This is another milestone release with new features and more performance improvements. To mark the occasion, we're continuing our goal of contributing to the .NET open-source community by open-sourcing Meadow.Core! This means the entire stack that sits above the .NET runtime is now open and [available on GitHub](http://www.github.com/wildernesslabs/Meadow.Core).
 
@@ -122,7 +125,7 @@ This release also includes several Meadow.Foundation bug fixes - [details are he
 
 
 
-# RC-1.1 (RC1 Hotfix Release 1)
+# RC-1.1 (v0.9.0.4)
 
 We're happy to announce an amendment release to RC1, providing an out-of-band critical fix for the *AMQP* protocol and therefore for connecting to *Azure Iot Hubs* and other cloud services. To get started on connecting your Meadow to the cloud, check out [our sample!](https://github.com/WildernessLabs/Meadow.Project.Samples/tree/main/Source/Azure/AzureIoTHub)
 
@@ -167,7 +170,7 @@ If you experience any stability or deployment issues you may need to erase the f
 meadow flash erase
 ```
 
-# RC-1
+# RC-1 (v0.9.0.4)
 
 We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
 
