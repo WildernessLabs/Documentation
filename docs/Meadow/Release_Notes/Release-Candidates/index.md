@@ -10,8 +10,8 @@ We're following up the release of Meadow RC2 with a point release that addresses
 
 This release includes:
 
-* **SQLite stability** - Big stability improvements when using SQLite in more complex applications
-* **System stability** - Fixed an edge-case MPU configuration bug that caused application crashes in very specific instances
+* **System stability** - Fixed an edge-case MPU configuration bug that caused seemingly random application hangs.
+* **Increased capacity for open files** This is particularly useful for complex apps/apps that use SQLite
 * **GitGub repo organization** - We've made it easier to view and contribute to Meadow by adding Meadow.Linux to the Meadow.Core repo
 
 ## Updating to RC-2.1
