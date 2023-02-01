@@ -11,7 +11,7 @@ We're following up the release of Meadow RC2 with a point release that addresses
 This release includes:
 
 * **SQLite stability** - Big stability improvements when using SQLite in more complex applications
-* **REST stability** - We've also improved REST stability in resource intensive apps
+* **System stability** - Fixed an edge-case MPU configuration bug that caused application crashes in very specific instances
 * **GitGub repo organization** - We've made it easier to view and contribute to Meadow by adding Meadow.Linux to the Meadow.Core repo
 
 ## Updating to RC-2.1
