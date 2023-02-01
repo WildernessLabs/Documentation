@@ -107,7 +107,8 @@
           "api/Meadow/index.md",
           "api/Meadow.Foundation/index.md",
           "api/Meadow.Foundation.FeatherWings/index.md",
-          "api/Meadow.Foundation.Grove/index.md"
+          "api/Meadow.Foundation.Grove/index.md",
+          "api/Meadow.Foundation.mikroBUS/index.md"
         ]
       },
       {
