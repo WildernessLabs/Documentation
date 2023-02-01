@@ -29,7 +29,7 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [RgbPwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed.html) | Pulse-Width-Modulation powered RGB LED |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | A simple rotary encoder |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [RotaryEncoderWithButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) | A rotary encoder that includes a push button |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | StandardPidController | StandardPidController driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [StandardPidController](/docs/api/Meadow.Foundation/Meadow.Foundation.Controllers.Pid.StandardPidController.html) | StandardPidController driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [SpdtSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpdtSwitch.html) | A simple single-pole, dual-throw (SPDT) switch |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [SpstSwitch](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpstSwitch.html) | A simple single-pole, single-throw (SPST) switch |
 
@@ -96,26 +96,26 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874V03.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1608.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | SSD1680 | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1680](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1680.html) | ePaper driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1681.html) | ePaper driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | UC8151C | ePaper driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [UC8151C](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Uc8151c.html) | ePaper driver |
 
 ### Displays.ePaperWaveShare
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd1in54 | Epd1in54 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd1in54b | Epd1in54b driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd1in54c | Epd1in54c driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd2in13 | Epd2in13 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd2in13b | Epd2in13b driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd2in13b_V4 | Epd2in13b_V4 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd2in7b | Epd2in7b driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd2in9 | Epd2in9 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd2in9b | Epd2in9b driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd4in2 | Epd4in2 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd4in2bc | Epd4in2bc driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Epd4in2bV2 | Epd4in2bV2 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd1in54](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd1in54.html) | Epd1in54 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd1in54b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd1in54b.html) | Epd1in54b driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd1in54c](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd1in54c.html) | Epd1in54c driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd2in13](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in13.html) | Epd2in13 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd2in13b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in13b.html) | Epd2in13b driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd2in13b_V4](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in13_V4.html) | Epd2in13b_V4 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd2in7b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in7b.html) | Epd2in7b driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd2in9](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in9.html) | Epd2in9 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd2in9b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in9b.html) | Epd2in9b driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2.html) | Epd4in2 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2bc](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2bc.html) | Epd4in2bc driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2bV2](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2bV2.html) | Epd4in2bV2 driver |
 
 ### Displays.Ssd130x
 
@@ -151,7 +151,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.ADC.Ads1x15](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1x15.html) | TI ADS1x15 I2C analog to digital converters (ADS1015 / ADS1115) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.EEPROM.At24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html) | At24Cxx I2C EEPROMs (AT24C32 / AT24C64 / AT24C128 / AT24C256) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.FanControllers.Emc2101](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.FanControllers.Emc2101.html) | Emc2101 I2C fan controller and temperature monitor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.AnalogMux](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.AnalogMux.html) | Library for various analog multiplexers |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.AnalogMuxBase](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.AnalogInputMultiplexerBase.html) | Library for various analog multiplexers |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.As1115](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.As1115.html) | AS1115 I2C IO expander, led driver, character display controller and keyscan |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Ds3502](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ds3502.html) | Ds3502 I2C digital potentiometer |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Ht16k33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16k33.html) | HT16K33 I2C IO expander, led driver, and character display controller |
@@ -166,29 +166,29 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Ads1015 | Ads1015 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Ads1115 | Ads1115 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ads1015](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1015.html) | Ads1015 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ads1115](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1115.html) | Ads1115 driver |
 
 ### ICs.IOExpanders.AnalogMux
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Hp4067 | Hp4067 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Nxp74HC4051 | Nxp74HC4051 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Nxp74HC4067 | Nxp74HC4067 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Hp4067](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Hp4067.html) | Hp4067 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Nxp74HC4051](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Nxp74HC4051.html) | Nxp74HC4051 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Nxp74HC4067](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Nxp74HC4067.html) | Nxp74HC4067 driver |
 
 ### ICs.IOExpanders.Mcp23xxx
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23008 | Mcp23008 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23009 | Mcp23009 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23017 | Mcp23017 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23018 | Mcp23018 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23s08 | Mcp23s08 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23s09 | Mcp23s09 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23s17 | Mcp23s17 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Mcp23s18 | Mcp23s18 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23008](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23008.html) | Mcp23008 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23009](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23009.html) | Mcp23009 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23017](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23017.html) | Mcp23017 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23018](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23018.html) | Mcp23018 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23s08](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23s08.html) | Mcp23s08 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23s09](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23s09.html) | Mcp23s09 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23s17](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23s17.html) | Mcp23s17 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp23s18](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23s18.html) | Mcp23s18 driver |
 
 ## Leds
 
@@ -240,8 +240,8 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Bme680 | Bme680 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | Bme688 | Bme688 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Bme680](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme680.html) | Bme680 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Bme688](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme688.html) | Bme688 driver |
 
 ### Sensors.Atmospheric.Dhtxx
 
@@ -285,8 +285,8 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd40](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.SCD40.html) | Scd40 driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd41](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.SCD41.html) | Scd41 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd40](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd40.html) | Scd40 driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd41](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd41.html) | Scd41 driver |
 
 ## Gnss
 
@@ -349,7 +349,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Adxl3xx](#Sensors.Motion.Adxl3xx) | ADXL3xx Analog and I2C 3-axis accelerometers (ADXL335, ADXL345, ADXL337, ADXL362, ADXL377) |
 | <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Motion.Apds9960](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Apds9960.html) | APDS9960 I2C proximity, light, color and gesture sensor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bmi270](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bmi270.html) | BMI270 I2C 6-axis accelerometer and motion sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bmi270](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Accelerometers.Bmi270.html) | BMI270 I2C 6-axis accelerometer and motion sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | Bosch BNO055 I2C 9 axis absolute orientation sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html) | HCSENS0040 digital microwave motion sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Hmc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883.html) | Hmc5883 / Qmc5883 I2C digital compass |
@@ -407,7 +407,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Servos.ServoCore](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.ServoCore.html) | PWM generic servo controller |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Servos.Servo](/docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo.html) | PWM generic servo controller |
 
 ## Seeed Studio Grove
 
@@ -415,7 +415,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Audio.Buzzer](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Audio.Buzzer.html) | Grove PWM Buzzer |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Audio.Speaker](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Audio.Speaker.html) | Grove PWM Speaker |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.4DigitDisplay](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.4DigitDisplay.html) | Grove GPIO 4 digit display |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.4DigitDisplay](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.FourDigitDisplay.html) | Grove GPIO 4 digit display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.LCD](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.LCD.html) | Grove I2C LCD display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.HID.VibrationMotor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.HID.VibrationMotor.html) | Grove GPIO vibration motor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Leds.LEDSocket](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Leds.LEDSocket.html) | Grove GPIO led |
@@ -431,9 +431,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Light.LightSensor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Light.LightSensor.html) | Grove light sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Light.LineFinder](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Light.LineFinder.html) | Grove line finder sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Moisture.MoistureSensor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor.html) | Grove analog moisture sensor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.3-AxisDigitalAccelerometer_16g](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer_16g.html) | Grove I2C 3-Axis digital accelerometer |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g.html) | Grove I2C 3-Axis digital accelerometer |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.3-AxisDigitalCompass](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass.html) | Grove I2C 3-axis digital compass |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.ThreeAxisDigitalAccelerometer_16g](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.ThreeAxisDigitalAccelerometer16g.html) | Grove I2C 3-Axis digital accelerometer |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.ThreeAxisDigitalAccelerometer1_5g](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.ThreeAxisDigitalAccelerometer1_5g.html) | Grove I2C 3-Axis digital accelerometer |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.ThreeAxisDigitalCompass](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.ThreeAxisDigitalCompass.html) | Grove I2C 3-axis digital compass |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.MiniPIRMotionSensor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor.html) | Grove GPIO MiniPIRMotionSensor (Parallax PIR) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.PIRMotionSensor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.PIRMotionSensor.html) | Grove GPIO PIRMotionSensor (Parallax PIR) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Motion.VibrationSensor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.VibrationSensor.html) | Grove GPIO vibration sensor |
@@ -463,9 +463,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Displays.C16x9](/docs/api/Meadow.Foundation/Meadow.Foundation.mikroBUS.Displays.C16x9.html) | MikroElectronika I2C 16x9 Click LED board |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Displays.C8x8](/docs/api/Meadow.Foundation/Meadow.Foundation.mikroBUS.Displays.C8x8.html) | MikroElectronika SPI 8x8 Click LED board |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Atmospheric.CTempHum15](/docs/api/Meadow.Foundation/Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15.html) | MikroElectronika I2C Temp and Hum 15 temperature and humidity click board |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Buttons.C8800Retro](/docs/api/Meadow.Foundation/Meadow.Foundation.mikroBUS.Sensors.Buttons.C8800Retro.html) | MikroElectronika Altair 8800 I2C led driver and keyscan MikroBus retro click board |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Buttons.CButton](/docs/api/Meadow.Foundation/Meadow.Foundation.mikroBUS.Sensors.Buttons.CButton.html) | MikroElectronika PWM GPIO Led Button MikroBus click board |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Hid.CJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.mikroBUS.Sensors.Hid.CJoystick.html) | MikroElectronika I2C Joystick MikroBus click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Displays.C16x9](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C16x9.html) | MikroElectronika I2C 16x9 Click LED board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Displays.C8x8](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C8x8.html) | MikroElectronika SPI 8x8 Click LED board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Atmospheric.CTempHum15](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15.html) | MikroElectronika I2C Temp and Hum 15 temperature and humidity click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Displays.C8800Retro](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C8800Retro.html) | MikroElectronika Altair 8800 I2C led driver and keyscan MikroBus retro click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Buttons.CButton](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Buttons.CButton.html) | MikroElectronika PWM GPIO Led Button MikroBus click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Hid.CJoystick](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Hid.CJoystick.html) | MikroElectronika I2C Joystick MikroBus click board |
