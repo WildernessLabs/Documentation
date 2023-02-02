@@ -19,14 +19,14 @@ Bmp180 sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     sensor = new Bmp180(Device.CreateI2cBus());
 
     var consumer = Bmp180.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
         filter: result =>
         {
@@ -43,8 +43,8 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-        Console.WriteLine($"  Pressure: {result.New.Pressure?.Bar:N2}bar");
+        Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Bar:N2}bar");
     };
 
     return Task.CompletedTask;
@@ -53,7 +53,7 @@ public override Task Initialize()
 public override async Task Run()
 {
     var conditions = await sensor.Read();
-    Console.WriteLine($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
+    Resolver.Log.Info($"Temperature: {conditions.Temperature?.Celsius}°C, Pressure: {conditions.Pressure?.Pascal}Pa");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }

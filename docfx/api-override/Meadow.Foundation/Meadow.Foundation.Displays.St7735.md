@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.St7735
 remarks: *content
 ---
 
-| ST7735 | |
+| St7735 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
@@ -21,7 +21,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing ...");
 
     var spiBus = Device.CreateSpiBus(St7735.DefaultSpiBusSpeed);
 

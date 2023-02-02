@@ -23,7 +23,7 @@ x74595 shiftRegister;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     shiftRegister = new x74595(Device, Device.CreateSpiBus(), Device.Pins.D00, 8);
 
@@ -34,16 +34,16 @@ public override async Task Run()
 {
     shiftRegister.Clear(true);
 
-    Console.WriteLine("Set Pin 3 to high");
+    Resolver.Log.Info("Set Pin 3 to high");
     //turn on pin 3
     shiftRegister.WriteToPin(shiftRegister.Pins.GP3, true);
 
-    Console.WriteLine("Set Pin 4 to high");
+    Resolver.Log.Info("Set Pin 4 to high");
 
     //get the port for Pin4
     var port4 = shiftRegister.CreateDigitalOutputPort(shiftRegister.Pins.GP4, true, Meadow.Hardware.OutputType.OpenDrain);
 
-    Console.WriteLine("Toggle pin 4");
+    Resolver.Log.Info("Toggle pin 4");
 
     await Task.Delay(1000);
     port4.State = false;
@@ -51,7 +51,7 @@ public override async Task Run()
     port4.State = true;
     await Task.Delay(1000);
 
-    Console.WriteLine("Raise all pins to high");
+    Resolver.Log.Info("Raise all pins to high");
     while (true)
     {
         shiftRegister.Clear();

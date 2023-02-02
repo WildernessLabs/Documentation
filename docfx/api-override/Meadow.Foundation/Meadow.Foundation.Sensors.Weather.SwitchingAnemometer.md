@@ -18,7 +18,7 @@ SwitchingAnemometer anemometer;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     //==== onboard LED
     onboardLed = new RgbPwmLed(device: Device,
@@ -33,14 +33,14 @@ public override Task Initialize()
     //==== classic events example
     anemometer.WindSpeedUpdated += (sender, result) =>
     {
-        Console.WriteLine($"new speed: {result.New.KilometersPerHour:n1}kmh, old: {result.Old?.KilometersPerHour:n1}kmh");
+        Resolver.Log.Info($"new speed: {result.New.KilometersPerHour:n1}kmh, old: {result.Old?.KilometersPerHour:n1}kmh");
         OutputWindSpeed(result.New);
     };
 
     //==== IObservable example
     var observer = SwitchingAnemometer.CreateObserver(
         handler: result => {
-            Console.WriteLine($"new speed (from observer): {result.New.KilometersPerHour:n1}kmh, old: {result.Old?.KilometersPerHour:n1}kmh");
+            Resolver.Log.Info($"new speed (from observer): {result.New.KilometersPerHour:n1}kmh, old: {result.Old?.KilometersPerHour:n1}kmh");
         },
         null
         );
@@ -53,7 +53,7 @@ public override Task Run()
 {
     // start raising updates
     anemometer.StartUpdating();
-    Console.WriteLine("Hardware initialized.");
+    Resolver.Log.Info("Hardware initialized.");
     
     return Task.CompletedTask;
 }

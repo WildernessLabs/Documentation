@@ -17,7 +17,7 @@ Bme680? sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     //CreateSpiSensor();
     CreateI2CSensor();
@@ -28,7 +28,7 @@ public override Task Initialize()
     var consumer = Bme680.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
         filter: result =>
         {
@@ -51,12 +51,12 @@ public override Task Initialize()
     {
         sensor.Updated += (sender, result) =>
         {
-            Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-            Console.WriteLine($"  Relative Humidity: {result.New.Humidity:N2}%");
-            Console.WriteLine($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+            Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity:N2}%");
+            Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
             if (sensor.GasConversionIsEnabled)
             {
-                Console.WriteLine($"  Gas Resistance: {result.New.GasResistance:N0}Ohms");
+                Resolver.Log.Info($"  Gas Resistance: {result.New.GasResistance:N0}Ohms");
             }
         };
     }
@@ -81,7 +81,7 @@ void EnableGasHeater()
 
 void CreateSpiSensor()
 {
-    Console.WriteLine("Create BME680 sensor with SPI...");
+    Resolver.Log.Info("Create BME680 sensor with SPI...");
 
     var spiBus = Device.CreateSpiBus();
     sensor = new Bme680(spiBus, Device.CreateDigitalOutputPort(Device.Pins.D14));
@@ -89,7 +89,7 @@ void CreateSpiSensor()
 
 void CreateI2CSensor()
 {
-    Console.WriteLine("Create BME680 sensor with I2C...");
+    Resolver.Log.Info("Create BME680 sensor with I2C...");
 
     var i2c = Device.CreateI2cBus();
     sensor = new Bme680(i2c, (byte)Bme688.Addresses.Address_0x76);
@@ -101,11 +101,11 @@ async Task ReadConditions()
 
     var (Temperature, Humidity, Pressure, Resistance) = await sensor.Read();
 
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  Temperature: {Temperature?.Celsius:N2}C");
-    Console.WriteLine($"  Pressure: {Pressure?.Hectopascal:N2}hPa");
-    Console.WriteLine($"  Relative Humidity: {Humidity?.Percent:N2}%");
-    Console.WriteLine($"  Gas Resistance: {Resistance?.Ohms:N0}Ohms");
+    Resolver.Log.Info("Initial Readings:");
+    Resolver.Log.Info($"  Temperature: {Temperature?.Celsius:N2}C");
+    Resolver.Log.Info($"  Pressure: {Pressure?.Hectopascal:N2}hPa");
+    Resolver.Log.Info($"  Relative Humidity: {Humidity?.Percent:N2}%");
+    Resolver.Log.Info($"  Gas Resistance: {Resistance?.Ohms:N0}Ohms");
 }
 
 ```

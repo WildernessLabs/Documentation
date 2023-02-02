@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.Il0398
 remarks: *content
 ---
 
-| IL0398 | |
+| Il0398 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
@@ -24,7 +24,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize ...");
+    Resolver.Log.Info("Initialize ...");
  
     display = new Il0398(device: Device,
         spiBus: Device.CreateSpiBus(),
@@ -43,7 +43,7 @@ public override Task Initialize()
 
 public override Task Run()
 {
-    Console.WriteLine("Run");
+    Resolver.Log.Info("Run");
 
     for (int i = 0; i < 100; i++)
     {
@@ -61,7 +61,7 @@ public override Task Run()
 
     graphics.Show();
 
-    Console.WriteLine("Run complete");
+    Resolver.Log.Info("Run complete");
 
     return Task.CompletedTask;
 }

@@ -18,7 +18,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
     as1115 = new As1115(Device, Device.CreateI2cBus(), Device.Pins.D03);
 
     //general key scan events - will raise for all buttons
@@ -36,17 +36,17 @@ public override Task Initialize()
 
 private void Button1_LongClicked(object sender, EventArgs e)
 {
-    Console.WriteLine("Button 1 long press");
+    Resolver.Log.Info("Button 1 long press");
 }
 
 private void Button1_Clicked(object sender, EventArgs e)
 {
-    Console.WriteLine("Button 1 clicked");
+    Resolver.Log.Info("Button 1 clicked");
 }
 
 private void KeyScanPressStarted(object sender, KeyScanEventArgs e)
 {
-    Console.WriteLine($"{e.Button} pressed");
+    Resolver.Log.Info($"{e.Button} pressed");
 }
 
 public override Task Run()

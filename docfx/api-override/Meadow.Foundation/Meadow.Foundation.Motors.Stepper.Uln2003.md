@@ -35,14 +35,14 @@ public override Task Run()
 
     for (int i = 0; i < 100; i++)
     {
-        Console.WriteLine($"Step forward {i}");
+        Resolver.Log.Info($"Step forward {i}");
         stepperController.Step(50);
         Thread.Sleep(10);
     }
 
     for (int i = 0; i < 100; i++)
     {
-        Console.WriteLine($"Step backwards {i}");
+        Resolver.Log.Info($"Step backwards {i}");
         stepperController.Step(-50);
         Thread.Sleep(10);
     }

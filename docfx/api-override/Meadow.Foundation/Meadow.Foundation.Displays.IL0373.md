@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.Il0373
 remarks: *content
 ---
 
-| IL0373 | |
+| Il0373 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
@@ -21,7 +21,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize ...");
+    Resolver.Log.Info("Initialize ...");
  
     var display = new Il0373(device: Device, 
         spiBus: Device.CreateSpiBus(),

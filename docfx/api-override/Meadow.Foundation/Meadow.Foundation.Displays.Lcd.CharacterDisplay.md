@@ -33,7 +33,7 @@ public override Task Initialize()
 
 void InitGpio() 
 {
-    Console.WriteLine("InitGpio...");
+    Resolver.Log.Info("InitGpio...");
     
     display = new CharacterDisplay
     (
@@ -50,7 +50,7 @@ void InitGpio()
 
 void InitGpioWithPWM()
 {
-    Console.WriteLine("InitGpioWithPWM...");
+    Resolver.Log.Info("InitGpioWithPWM...");
 
     display = new CharacterDisplay
     (
@@ -68,7 +68,7 @@ void InitGpioWithPWM()
 
 void InitI2c()
 {
-    Console.WriteLine("InitI2c...");
+    Resolver.Log.Info("InitI2c...");
 
     display = new CharacterDisplay
     (
@@ -80,7 +80,7 @@ void InitI2c()
 
 void InitGrove()
 {
-    Console.WriteLine("InitGrove...");
+    Resolver.Log.Info("InitGrove...");
 
     display = new CharacterDisplay
     (
@@ -93,7 +93,7 @@ void InitGrove()
 
 void TestCharacterDisplay() 
 {
-    Console.WriteLine("TestCharacterDisplay...");
+    Resolver.Log.Info("TestCharacterDisplay...");
 
     display.WriteLine("Hello", 0);
 
@@ -131,7 +131,7 @@ public override Task Run()
 {
     TestCharacterDisplay();
 
-    Console.WriteLine("Test complete");
+    Resolver.Log.Info("Test complete");
 
     return base.Run();
 }

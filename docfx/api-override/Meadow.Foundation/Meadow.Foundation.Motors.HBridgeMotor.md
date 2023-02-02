@@ -27,7 +27,7 @@ protected HBridgeMotor motor1;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     motor1 = new HBridgeMotor
     (
@@ -41,7 +41,7 @@ public override Task Initialize()
 
 public override async Task Run()
 {
-    Console.WriteLine("TestMotor...");
+    Resolver.Log.Info("TestMotor...");
 
     while (true)
     {

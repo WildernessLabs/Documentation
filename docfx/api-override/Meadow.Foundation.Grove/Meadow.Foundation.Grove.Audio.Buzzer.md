@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    buzzer = new Buzzer(Device, Device.Pins.D13, new Frequency(440));
+    buzzer = new Buzzer(Device, Device.Pins.D13);
 
     return Task.CompletedTask;
 }

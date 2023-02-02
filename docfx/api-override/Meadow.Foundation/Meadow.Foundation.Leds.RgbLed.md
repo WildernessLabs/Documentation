@@ -33,7 +33,7 @@ protected List<RgbLed> rgbLeds;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     var onRgbLed = new RgbLed(
         device: Device,
@@ -69,11 +69,11 @@ public override Task Initialize()
 
 public override async Task Run()
 {
-    Console.WriteLine("TestRgbLeds...");
+    Resolver.Log.Info("TestRgbLeds...");
 
     while (true)
     {
-        Console.WriteLine("Going through each color on each RGB LED...");
+        Resolver.Log.Info("Going through each color on each RGB LED...");
         foreach (var rgbLed in rgbLeds)
         {
             for (int i = 0; i < (int)RgbLedColors.count; i++)
@@ -85,7 +85,7 @@ public override async Task Run()
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Blinking through each color on each RGB LED...");
+        Resolver.Log.Info("Blinking through each color on each RGB LED...");
         foreach (var rgbLed in rgbLeds)
         {
             for (int i = 0; i < (int)RgbLedColors.count; i++)
@@ -97,7 +97,7 @@ public override async Task Run()
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Blinking through each color on each RGB LED...");
+        Resolver.Log.Info("Blinking through each color on each RGB LED...");
         foreach (var rgbLed in rgbLeds)
         {
             for (int i = 0; i < (int)RgbLedColors.count; i++)

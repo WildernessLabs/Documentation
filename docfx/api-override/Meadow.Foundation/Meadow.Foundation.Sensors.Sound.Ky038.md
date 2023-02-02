@@ -16,7 +16,7 @@ Ky038 sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     sensor = new Ky038(Device, Device.Pins.A00, Device.Pins.D10);
 

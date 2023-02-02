@@ -17,15 +17,15 @@ Lm75 lm75;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     lm75 = new Lm75(Device.CreateI2cBus());
 
     var consumer = Lm75.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Temperature New Value { result.New.Celsius}C");
-            Console.WriteLine($"Temperature Old Value { result.Old?.Celsius}C");
+            Resolver.Log.Info($"Temperature New Value { result.New.Celsius}C");
+            Resolver.Log.Info($"Temperature Old Value { result.Old?.Celsius}C");
               },
         filter: null
     );
@@ -33,7 +33,7 @@ public override Task Initialize()
 
     lm75.TemperatureUpdated += (object sender, IChangeResult<Meadow.Units.Temperature> e) =>
     {
-        Console.WriteLine($"Temperature Updated: {e.New.Celsius:n2}C");
+        Resolver.Log.Info($"Temperature Updated: {e.New.Celsius:n2}C");
     };
     return Task.CompletedTask;
 }
@@ -41,7 +41,7 @@ public override Task Initialize()
 public override async Task Run()
 {
     var temp = await lm75.Read();
-    Console.WriteLine($"Temperature New Value {temp.Celsius}C");
+    Resolver.Log.Info($"Temperature New Value {temp.Celsius}C");
 
     lm75.StartUpdating();
 }

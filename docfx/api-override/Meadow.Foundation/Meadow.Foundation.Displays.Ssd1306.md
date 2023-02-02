@@ -43,7 +43,7 @@ public override Task Initialize()
 
 void CreateSpiDisplay()
 {
-    Console.WriteLine("Create Display with SPI...");
+    Resolver.Log.Info("Create Display with SPI...");
 
     display = new Ssd1306
     (
@@ -58,7 +58,7 @@ void CreateSpiDisplay()
 
 void CreateI2CDisplay()
 {
-    Console.WriteLine("Create Display with I2C...");
+    Resolver.Log.Info("Create Display with I2C...");
 
     display = new Ssd1306
     (
