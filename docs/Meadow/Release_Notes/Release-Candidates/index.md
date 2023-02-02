@@ -57,7 +57,7 @@ This is a full stack release requiring an OS update, new nuget packages, a new M
 
 ### Updating Meadow.CLI
 
-Start by making sure you have the latest version of the CLI (0.92.0) by running:
+Start by making sure you have the latest version of the CLI (0.90.4) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
