@@ -94,16 +94,16 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0373](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.IL0373.html) | IL0373 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0376F](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.IL0376F.html) | IL0376F display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL0398](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.IL0398.html) | IL0398 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL3897](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.IL3897.html) | IL3897 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.IL91874.html) | IL91874 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [IL91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.IL91874V03.html) | IL91874V03 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1608.html) | SSD1608 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1680](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1680.html) | SSD1680 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [SSD1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.SSD1681.html) | SSD1681 display driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [UC8151C](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.UC8151C.html) | UC8151C display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Il0373](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il0373.html) | Il0373 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Il0376F](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il0376F.html) | Il0376F display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Il0398](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il0398.html) | Il0398 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Il3897](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il3897.html) | Il3897 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Il91874](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874.html) | Il91874 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Il91874V03](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874V03.html) | Il91874V03 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1608](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1608.html) | Ssd1608 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1680](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1680.html) | Ssd1680 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ssd1681](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1681.html) | Ssd1681 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Uc8151c](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Uc8151c.html) | Uc8151c display driver |
 
 #### Displays.ePaperWaveShare
 
