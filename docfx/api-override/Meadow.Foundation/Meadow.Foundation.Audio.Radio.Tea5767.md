@@ -30,7 +30,7 @@ Tea5767 radio;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
     
     radio = new Tea5767(Device.CreateI2cBus());
 
@@ -46,7 +46,7 @@ public async override Task Run()
 
         radio.SearchNextSilent();
 
-        Console.WriteLine($"Current frequency: {radio.GetFrequency()}");
+        Resolver.Log.Info($"Current frequency: {radio.GetFrequency()}");
     }
 
     //set a known station

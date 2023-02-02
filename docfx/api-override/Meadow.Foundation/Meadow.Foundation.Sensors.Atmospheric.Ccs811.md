@@ -17,7 +17,7 @@ Ccs811 sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     var i2c = Device.CreateI2cBus(Meadow.Hardware.I2cBusSpeed.Fast);
     sensor = new Ccs811(i2c);
@@ -25,9 +25,9 @@ public override Task Initialize()
     var consumer = Ccs811.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer triggered:");
-            Console.WriteLine($"   new CO2: {result.New.Co2?.PartsPerMillion:N1}ppm, old: {result.Old?.Co2?.PartsPerMillion:N1}ppm.");
-            Console.WriteLine($"   new VOC: {result.New.Voc?.PartsPerBillion:N1}ppb, old: {result.Old?.Voc?.PartsPerBillion:N1}ppb.");
+            Resolver.Log.Info($"Observer triggered:");
+            Resolver.Log.Info($"   new CO2: {result.New.Co2?.PartsPerMillion:N1}ppm, old: {result.Old?.Co2?.PartsPerMillion:N1}ppm.");
+            Resolver.Log.Info($"   new VOC: {result.New.Voc?.PartsPerBillion:N1}ppb, old: {result.Old?.Voc?.PartsPerBillion:N1}ppb.");
         },
         filter: result =>
         {
@@ -47,7 +47,7 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine($"CO2: {result.New.Co2.Value.PartsPerMillion:n1}ppm, VOC: {result.New.Voc.Value.PartsPerBillion:n1}ppb");
+        Resolver.Log.Info($"CO2: {result.New.Co2.Value.PartsPerMillion:n1}ppm, VOC: {result.New.Voc.Value.PartsPerBillion:n1}ppb");
     };
 
     return Task.CompletedTask;
@@ -56,9 +56,9 @@ public override Task Initialize()
 public override async Task Run()
 {
     var result = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  CO2: {result.Co2.Value.PartsPerMillion:n1}ppm");
-    Console.WriteLine($"  VOC: {result.Voc.Value.PartsPerBillion:n1}ppb");
+    Resolver.Log.Info("Initial Readings:");
+    Resolver.Log.Info($"  CO2: {result.Co2.Value.PartsPerMillion:n1}ppm");
+    Resolver.Log.Info($"  VOC: {result.Voc.Value.PartsPerBillion:n1}ppb");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }

@@ -17,7 +17,7 @@ protected Ds3502 ds3502;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     ds3502 = new Ds3502(Device.CreateI2cBus(Ds3502.DefaultBusSpeed));
 
@@ -29,7 +29,7 @@ public override Task Run()
     for (byte i = 0; i < 127; i++)
     {
         ds3502.SetWiper(i);
-        Console.WriteLine($"wiper {ds3502.GetWiper()}");
+        Resolver.Log.Info($"wiper {ds3502.GetWiper()}");
 
         Thread.Sleep(1000);
     }

@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.Ssd1681
 remarks: *content
 ---
 
-| SSD1681 | |
+| Ssd1681 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper) |
@@ -23,7 +23,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize ...");
+    Resolver.Log.Info("Initialize ...");
  
     var display = new Ssd1681(device: Device,
         spiBus: Device.CreateSpiBus(),
@@ -41,7 +41,7 @@ public override Task Initialize()
 
 public override Task Run()
 {
-    Console.WriteLine("Run ...");
+    Resolver.Log.Info("Run ...");
 
     graphics.Clear();
 

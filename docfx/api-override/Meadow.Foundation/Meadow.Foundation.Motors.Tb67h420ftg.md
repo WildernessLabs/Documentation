@@ -20,7 +20,7 @@ PushButton button2;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     button1 = new PushButton(Device, Device.Pins.D12, ResistorMode.InternalPullDown);
     button2 =  new PushButton(Device, Device.Pins.D13, ResistorMode.InternalPullDown);
@@ -40,30 +40,30 @@ public override Task Initialize()
     motorDriver.Motor1.MotorCalibrationMultiplier = 0.5f;
     motorDriver.Motor2.MotorCalibrationMultiplier = 0.5f;
 
-    Console.WriteLine("Initialization complete.");
+    Resolver.Log.Info("Initialization complete.");
 
     return base.Initialize();
 }
 
 private void Button1_PressStarted(object sender, EventArgs e)
 {
-    Console.WriteLine("Motor 1 start.");
+    Resolver.Log.Info("Motor 1 start.");
     motorDriver.Motor1.Power = 1f;
 }
 private void Button1_PressEnded(object sender, EventArgs e)
 {
-    Console.WriteLine("Motor 1 stop.");
+    Resolver.Log.Info("Motor 1 stop.");
     motorDriver.Motor1.Power = 0f;
 }
 
 private void Button2_PressStarted(object sender, EventArgs e)
 {
-    Console.WriteLine("Motor 2 start.");
+    Resolver.Log.Info("Motor 2 start.");
     motorDriver.Motor2.Power = 0.5f;
 }
 private void Button2_PressEnded(object sender, EventArgs e)
 {
-    Console.WriteLine("Motor 2 stop.");
+    Resolver.Log.Info("Motor 2 stop.");
     motorDriver.Motor2.Power = 0f;
 }
 

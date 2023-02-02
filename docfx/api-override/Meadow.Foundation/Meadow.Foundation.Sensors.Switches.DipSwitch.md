@@ -55,7 +55,7 @@ protected DipSwitch dipSwitch;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     IDigitalInputPort[] ports =
     {
@@ -65,10 +65,10 @@ public override Task Initialize()
     dipSwitch = new DipSwitch(ports);
     dipSwitch.Changed += (s,e) =>
     {
-        Console.WriteLine("Switch " + e.ItemIndex + " changed to " + (((ISwitch)e.Item).IsOn ? "on" : "off"));
+        Resolver.Log.Info("Switch " + e.ItemIndex + " changed to " + (((ISwitch)e.Item).IsOn ? "on" : "off"));
     };
 
-    Console.WriteLine("DipSwitch...");
+    Resolver.Log.Info("DipSwitch...");
 
     return Task.CompletedTask;
 }

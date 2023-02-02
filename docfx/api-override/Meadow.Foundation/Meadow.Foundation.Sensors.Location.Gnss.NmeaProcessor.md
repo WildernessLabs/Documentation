@@ -137,7 +137,7 @@ NmeaSentenceProcessor nmeaProcessor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
     
     sentences = GetSampleNmeaSentences();
 
@@ -145,57 +145,57 @@ public override Task Initialize()
 
     foreach (string sentence in sentences) 
     {
-        Console.WriteLine($"About to process:{sentence}");
+        Resolver.Log.Info($"About to process:{sentence}");
         nmeaProcessor.ProcessNmeaMessage(sentence);
     }
 
-    Console.WriteLine("Made it through all sentences");
+    Resolver.Log.Info("Made it through all sentences");
 
     return Task.CompletedTask;
 }
 
 void InitDecoders()
 {
-    Console.WriteLine("Create NMEA");
+    Resolver.Log.Info("Create NMEA");
     nmeaProcessor = new NmeaSentenceProcessor();
 
-    Console.WriteLine("Add decoders");
+    Resolver.Log.Info("Add decoders");
 
     // GGA
     var ggaDecoder = new GgaDecoder();
-    Console.WriteLine("Created GGA");
+    Resolver.Log.Info("Created GGA");
     nmeaProcessor.RegisterDecoder(ggaDecoder);
     ggaDecoder.PositionReceived += (object sender, GnssPositionInfo location) => {
-        Console.WriteLine("*********************************************");
-        Console.WriteLine(location);
-        Console.WriteLine("*********************************************");
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info(location.ToString());
+        Resolver.Log.Info("*********************************************");
     };
 
     // GLL
     var gllDecoder = new GllDecoder();
     nmeaProcessor.RegisterDecoder(gllDecoder);
     gllDecoder.GeographicLatitudeLongitudeReceived += (object sender, GnssPositionInfo location) => {
-        Console.WriteLine("*********************************************");
-        Console.WriteLine(location);
-        Console.WriteLine("*********************************************");
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info(location.ToString());
+        Resolver.Log.Info("*********************************************");
     };
 
     // GSA
     var gsaDecoder = new GsaDecoder();
     nmeaProcessor.RegisterDecoder(gsaDecoder);
     gsaDecoder.ActiveSatellitesReceived += (object sender, ActiveSatellites activeSatellites) => {
-        Console.WriteLine("*********************************************");
-        Console.WriteLine(activeSatellites);
-        Console.WriteLine("*********************************************");
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info(activeSatellites.ToString());
+        Resolver.Log.Info("*********************************************");
     };
 
     // RMC (recommended minimum)
     var rmcDecoder = new RmcDecoder();
     nmeaProcessor.RegisterDecoder(rmcDecoder);
     rmcDecoder.PositionCourseAndTimeReceived += (object sender, GnssPositionInfo positionCourseAndTime) => {
-        Console.WriteLine("*********************************************");
-        Console.WriteLine(positionCourseAndTime);
-        Console.WriteLine("*********************************************");
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info(positionCourseAndTime.ToString());
+        Resolver.Log.Info("*********************************************");
 
     };
 
@@ -203,18 +203,18 @@ void InitDecoders()
     var vtgDecoder = new VtgDecoder();
     nmeaProcessor.RegisterDecoder(vtgDecoder);
     vtgDecoder.CourseAndVelocityReceived += (object sender, CourseOverGround courseAndVelocity) => {
-        Console.WriteLine("*********************************************");
-        Console.WriteLine($"{courseAndVelocity}");
-        Console.WriteLine("*********************************************");
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info($"{courseAndVelocity}");
+        Resolver.Log.Info("*********************************************");
     };
 
     // GSV (satellites in view)
     var gsvDecoder = new GsvDecoder();
     nmeaProcessor.RegisterDecoder(gsvDecoder);
     gsvDecoder.SatellitesInViewReceived += (object sender, SatellitesInView satellites) => {
-        Console.WriteLine("*********************************************");
-        Console.WriteLine($"{satellites}");
-        Console.WriteLine("*********************************************");
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info($"{satellites}");
+        Resolver.Log.Info("*********************************************");
     };
 }
 

@@ -19,14 +19,14 @@ Dht12? sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     sensor = new Dht12(Device.CreateI2cBus());
 
     var consumer = Dht12.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
         filter: result =>
         {
@@ -46,8 +46,8 @@ public override Task Initialize()
 
     sensor.Updated += (object sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity)> e) =>
     {
-        Console.WriteLine($"  Temperature: {e.New.Temperature?.Celsius:N2}C");
-        Console.WriteLine($"  Relative Humidity: {e.New.Humidity:N2}%");
+        Resolver.Log.Info($"  Temperature: {e.New.Temperature?.Celsius:N2}C");
+        Resolver.Log.Info($"  Relative Humidity: {e.New.Humidity:N2}%");
     };
 
     return Task.CompletedTask;
@@ -58,9 +58,9 @@ public override async Task Run()
     if(sensor == null) { return; }
 
     var conditions = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
-    Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
+    Resolver.Log.Info("Initial Readings:");
+    Resolver.Log.Info($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
+    Resolver.Log.Info($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }

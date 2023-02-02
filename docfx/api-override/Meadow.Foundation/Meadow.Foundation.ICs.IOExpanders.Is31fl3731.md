@@ -17,7 +17,7 @@ Is31fl3731 iS31FL3731;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
     iS31FL3731 = new Is31fl3731(Device.CreateI2cBus());
     iS31FL3731.Initialize();
 

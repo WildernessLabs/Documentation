@@ -23,7 +23,7 @@ protected PiezoSpeaker piezoSpeaker;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     piezoSpeaker = new PiezoSpeaker(Device.CreatePwmPort(Device.Pins.D05, new Frequency(100, Frequency.UnitType.Hertz)));
 
@@ -34,7 +34,7 @@ public override async Task Run()
 {
     for (int i = 0; i < 5; i++)
     {
-        Console.WriteLine("Playing A major triad starting at A4");
+        Resolver.Log.Info("Playing A major triad starting at A4");
         await piezoSpeaker.PlayTone(new Frequency(440, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //A
         await piezoSpeaker.PlayTone(new Frequency(554.37f, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //C#
         await piezoSpeaker.PlayTone(new Frequency(659.25f, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //E

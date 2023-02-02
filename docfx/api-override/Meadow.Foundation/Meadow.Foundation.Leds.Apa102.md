@@ -19,7 +19,7 @@ float maxBrightness = 0.25f;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
     apa102 = new Apa102(Device.CreateSpiBus(Apa102.DefaultSpiBusSpeed), numberOfLeds, Apa102.PixelOrder.BGR);
 
     return base.Initialize();

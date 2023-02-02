@@ -20,7 +20,7 @@ public double CalibrationWeight { get; set; } = 1.6; // TODO: enter the known-we
 
 public override async Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     loadSensor = new Hx711(Device, Device.Pins.D04, Device.Pins.D03);
 
@@ -37,7 +37,7 @@ public override async Task Initialize()
         loadSensor.Tare();
     }
 
-    loadSensor.MassUpdated += (sender, values) => Console.WriteLine($"Mass is now returned {values.New.Grams:N2}g");
+    loadSensor.MassUpdated += (sender, values) => Resolver.Log.Info($"Mass is now returned {values.New.Grams:N2}g");
 }
 
 public override Task Run()
@@ -49,14 +49,14 @@ public override Task Run()
 
 public void GetAndDisplayCalibrationUnits(Hx711 sensor)
 {   // first notify the user we're starting
-    Console.WriteLine($"Beginning Calibration. First we'll tare (set a zero).");
-    Console.WriteLine($"Make sure scale bed is clear. Next step in 5 seconds...");
+    Resolver.Log.Info($"Beginning Calibration. First we'll tare (set a zero).");
+    Resolver.Log.Info($"Make sure scale bed is clear. Next step in 5 seconds...");
     Thread.Sleep(5000);
     sensor.Tare();
-    Console.WriteLine($"Place a known weight on the scale. Next step in 5 seconds...");
+    Resolver.Log.Info($"Place a known weight on the scale. Next step in 5 seconds...");
     Thread.Sleep(5000);
     var factor = sensor.CalculateCalibrationFactor();
-    Console.WriteLine($"Your scale's Calibration Factor is: {factor}.  Enter this into the code for future use.");
+    Resolver.Log.Info($"Your scale's Calibration Factor is: {factor}.  Enter this into the code for future use.");
 }
 
 ```

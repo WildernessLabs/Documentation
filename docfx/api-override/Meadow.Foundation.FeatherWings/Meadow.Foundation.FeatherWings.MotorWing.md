@@ -20,7 +20,7 @@ public override Task Initialize()
     Console.WriteLine("Initializing ...");
 
     var i2CBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
-    motorWing = new MotorWing(i2CBus, 0x61);
+    motorWing = new MotorWing(i2CBus, new Frequency(100, Frequency.UnitType.Hertz), 0x61);
     motorWing.Initialize();
 
     return Task.CompletedTask;

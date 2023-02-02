@@ -86,18 +86,18 @@ RotaryEncoderWithButton rotary;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     rotary = new RotaryEncoderWithButton(Device, Device.Pins.D07, Device.Pins.D08, Device.Pins.D06);
     rotary.Rotated += RotaryRotated;
     rotary.Clicked += (s, e) => {
-        Console.WriteLine($"Arming the device.");
+        Resolver.Log.Info($"Arming the device.");
         esc.Arm();
     }; ;
 
     esc = new ElectronicSpeedController(Device, Device.Pins.D02, frequency);
 
-    Console.WriteLine("Hardware initialized.");
+    Resolver.Log.Info("Hardware initialized.");
 
     return base.Initialize();
 }
@@ -107,7 +107,7 @@ private void RotaryRotated(object sender, RotaryChangeResult e)
     esc.Power += (e.New == RotationDirection.Clockwise) ? powerIncrement : -powerIncrement;
     DisplayPowerOnLed(esc.Power);
 
-    Console.WriteLine($"New Power: {esc.Power * (float)100:n0}%");
+    Resolver.Log.Info($"New Power: {esc.Power * (float)100:n0}%");
 }
 
 /// <summary>

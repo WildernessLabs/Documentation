@@ -25,7 +25,7 @@ PwmLedBarGraph pwmLedBarGraph;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     // Using an array of Pins that support PWM (D02 - D13)
     IPin[] pins =
@@ -49,13 +49,13 @@ public override Task Initialize()
 
 public override async Task Run()
 {
-    Console.WriteLine("TestLedBarGraph...");
+    Resolver.Log.Info("TestLedBarGraph...");
 
     float percentage = 0;
 
     while (true)
     {
-        Console.WriteLine("Turning them on and off for 200ms using SetLed...");
+        Resolver.Log.Info("Turning them on and off for 200ms using SetLed...");
         for (int i = 0; i < pwmLedBarGraph.Count; i++)
         {
             pwmLedBarGraph.SetLed(i, true);
@@ -65,7 +65,7 @@ public override async Task Run()
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Turning them on using Percentage...");
+        Resolver.Log.Info("Turning them on using Percentage...");
         while (percentage < 1)
         {
             percentage += 0.01f;
@@ -75,7 +75,7 @@ public override async Task Run()
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Turning them off using Percentage...");
+        Resolver.Log.Info("Turning them off using Percentage...");
         while (percentage > 0)
         {
             percentage -= 0.01f;
@@ -85,21 +85,21 @@ public override async Task Run()
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Blinking for 5 seconds at 500ms on/off...");
+        Resolver.Log.Info("Blinking for 5 seconds at 500ms on/off...");
         pwmLedBarGraph.StartBlink();
         await Task.Delay(5000);
         pwmLedBarGraph.Stop();
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Bar blinking with high and low brightness for 5 seconds...");
+        Resolver.Log.Info("Bar blinking with high and low brightness for 5 seconds...");
         pwmLedBarGraph.StartBlink(TimeSpan.FromMilliseconds(200), TimeSpan.FromMilliseconds(200), 0.75f, 0.25f);
         await Task.Delay(5000);
         pwmLedBarGraph.Stop();
 
         await Task.Delay(1000);
 
-        Console.WriteLine("Bar pulsing for 5 seconds...");
+        Resolver.Log.Info("Bar pulsing for 5 seconds...");
         pwmLedBarGraph.StartPulse();
         await Task.Delay(5000);
         pwmLedBarGraph.Stop();
