@@ -78,6 +78,25 @@
       "dest": "api/Meadow.Foundation.FeatherWings",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/**/Sample/**",
+            "/Source/**/Samples/**",
+            "/Source/**/Driver/bin/**",
+            "/Source/**/Driver/obj/**"
+          ],
+          "src": "../../Meadow.Foundation.mikroBUS"
+        }
+      ],
+      "dest": "api/Meadow.Foundation.mikroBUS",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {
@@ -88,7 +107,8 @@
           "api/Meadow/index.md",
           "api/Meadow.Foundation/index.md",
           "api/Meadow.Foundation.FeatherWings/index.md",
-          "api/Meadow.Foundation.Grove/index.md"
+          "api/Meadow.Foundation.Grove/index.md",
+          "api/Meadow.Foundation.mikroBUS/index.md"
         ]
       },
       {

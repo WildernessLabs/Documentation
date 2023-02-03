@@ -8,7 +8,7 @@ remarks: *content
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31D/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31D.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31D" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Sht31D" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31d" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Sht31d" /></a> |
 
 The **SHT31D** is a temperature and humidity sensor with a built in I2C interface. The sensor has a typical accuracy of +/- 2% relative humidity and +/- 0.3C.
 
@@ -19,14 +19,14 @@ Sht31d sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     sensor = new Sht31d(Device.CreateI2cBus());
 
     var consumer = Sht31d.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
         filter: result =>
         {
@@ -46,8 +46,8 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-        Console.WriteLine($"  Relative Humidity: {result.New.Humidity:N2}%");
+        Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity:N2}%");
     };
 
     return Task.CompletedTask;
@@ -56,9 +56,9 @@ public override Task Initialize()
 public override async Task Run()
 {
     var conditions = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
-    Console.WriteLine($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
+    Resolver.Log.Info("Initial Readings:");
+    Resolver.Log.Info($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
+    Resolver.Log.Info($"  Relative Humidity: {conditions.Humidity?.Percent:N2}%");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }

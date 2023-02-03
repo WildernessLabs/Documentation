@@ -30,7 +30,7 @@ AnalogTemperature analogTemperature;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     // configure our AnalogTemperature sensor
     analogTemperature = new AnalogTemperature (
@@ -41,7 +41,7 @@ public override Task Initialize()
 
     //==== IObservable Pattern with an optional notification filter.
     var consumer = AnalogTemperature.CreateObserver(
-        handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C"),
+        handler: result => Resolver.Log.Info($"Observer filter satisfied: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C"),
 
         // only notify if the change is greater than 0.5°C
         filter: result => {
@@ -58,7 +58,7 @@ public override Task Initialize()
 
     // classical .NET events can also be used:
     analogTemperature.TemperatureUpdated += (sender, result) => {
-        Console.WriteLine($"Temp Changed, temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
+        Resolver.Log.Info($"Temp Changed, temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
     };
 
     //==== One-off reading use case/pattern
@@ -73,7 +73,7 @@ public override Task Initialize()
 protected async Task ReadTemp()
 {
     var temperature = await analogTemperature.Read();
-    Console.WriteLine($"Initial temp: {temperature.Celsius:N2}C");
+    Resolver.Log.Info($"Initial temp: {temperature.Celsius:N2}C");
 }
 
 ```

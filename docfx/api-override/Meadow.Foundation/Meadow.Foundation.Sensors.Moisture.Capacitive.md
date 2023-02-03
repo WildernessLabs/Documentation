@@ -52,19 +52,21 @@ Capacitive capacitive;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     capacitive = new Capacitive(
-        analogInputPort: Device.CreateAnalogInputPort(Device.Pins.A00, 5, TimeSpan.FromMilliseconds(40), new Voltage(3.3, Voltage.UnitType.Volts)),
+        Device,
+        Device.Pins.A00,
         minimumVoltageCalibration: new Voltage(2.84f),
         maximumVoltageCalibration: new Voltage(1.63f)
     );
 
     // Example that uses an IObservable subscription to only be notified when the humidity changes by filter defined.
     var consumer = Capacitive.CreateObserver(
-        handler: result => {
+        handler: result =>
+        {
             string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
-            Console.WriteLine($"Subscribed - " +
+            Resolver.Log.Info($"Subscribed - " +
                 $"new: {result.New}, " +
                 $"old: {oldValue}");
         },
@@ -76,19 +78,23 @@ public override Task Initialize()
     capacitive.HumidityUpdated += (sender, result) =>
     {   
         string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
-        Console.WriteLine($"Updated - New: {result.New}, Old: {oldValue}");
+        Resolver.Log.Info($"Updated - New: {result.New}, Old: {oldValue}");
     };
+
+    //==== One-off reading use case/pattern
+    ReadSensor().Wait();
+
+    capacitive.StartUpdating(TimeSpan.FromMilliseconds(1000));
 
     return Task.CompletedTask;
 }
 
-public async override Task Run()
+protected async Task ReadSensor()
 {
-    var moisture = await capacitive.Read();
-    Console.WriteLine($"Moisture New Value {moisture}");
-
-    capacitive.StartUpdating(TimeSpan.FromSeconds(3));
+    var humidity = await capacitive.Read();
+    Resolver.Log.Info($"Initial humidity: {humidity:N2}C");
 }
+
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Moisture.Capacitive/Samples/Capacitive_Sample)

@@ -16,7 +16,7 @@ FourDigitSevenSegment sevenSegment;
 
 public override Task Initialize()
 {
-    Console.Write("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     sevenSegment = new FourDigitSevenSegment
     (

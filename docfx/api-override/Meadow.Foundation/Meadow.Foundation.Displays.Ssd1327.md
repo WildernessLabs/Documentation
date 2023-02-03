@@ -17,7 +17,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize display...");
+    Resolver.Log.Info("Initialize display...");
 
     var spiBus = Device.CreateSpiBus();
 

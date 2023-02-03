@@ -19,7 +19,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing ...");
 
     var spiBus = Device.CreateSpiBus(Ssd1351.DefaultSpiBusSpeed);
 

@@ -17,12 +17,12 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing ...");
 
     var config = new SpiClockConfiguration(new Frequency(12000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode0);
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
-    Console.WriteLine("Create display driver instance");
+    Resolver.Log.Info("Create display driver instance");
 
     var display = new Hx8357d(device: Device, spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
@@ -30,7 +30,7 @@ public override Task Initialize()
         resetPin: Device.Pins.D00,
         width: 320, height: 480);
 
-    Console.WriteLine("Create graphics lib");
+    Resolver.Log.Info("Create graphics lib");
 
     graphics = new MicroGraphics(display);
     graphics.IgnoreOutOfBoundsPixels = true;

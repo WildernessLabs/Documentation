@@ -4,16 +4,52 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
+# RC-2.1 (v0.9.4.0)
 
-# RC-2
+We're following up the release of Meadow RC2 with a point release that addresses a couple of key issues and includes some API improvements and fixes throughout the entire stack.
 
-We're so excited to release the 2nd Meadow v1.0 Release-Candidate! This is another milestone release with new features and more performance improvements. To mark the occasion, we're continuing our goal of contributing to the .NET open-source community by open-sourcing Meadow.Core! This means the entire stack that sits above the .NET runtime is now open and [available on GitHub](http://www.github.com/wildernesslabs/Meadow.Core).
+This release includes:
 
-This release includes: 
-* **SD Card Support** - APIs are now avaiable to use the SD card reader with the Meadow Core Compute Module
+* **System stability** - Fixed an edge-case MPU configuration bug that caused seemingly random application hangs.
+* **Increased capacity for open files** This is particularly useful for complex apps/apps that use SQLite
+* **GitGub repo organization** - We've made it easier to view and contribute to Meadow by adding Meadow.Linux to the Meadow.Core repo
+
+## Updating to RC-2.1
+
+This is a full stack release requiring an OS update, and new nuget packages. Meadow CLI and the extensions are unchanged.
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+## Release Details
+
+**Meadow.Foundation**
+
+* **New Magnetometer sensor** - The MMC5603 magnetometer is now supported
+* **Added GNSS 10 Click Mikrobus driver** - The click board uses the Neo M8 GNSS module
+* **Improved peripheral abstraction** - We've reworked the interfaces and base classes supporting the Meadow.Foundation peripherals making it easier to write Meadow apps that are abstracted from specific hardware
+* **Bug fixes and cleanup** - You can see the issues we've [addressed here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/20)
+
+# RC-2 (v0.9.2.5)
+
+We're excited to release the 2nd Meadow v1.0 Release-Candidate! This is another milestone release with new features and more performance improvements. To mark the occasion, we're continuing our goal of contributing to the .NET open-source community by open-sourcing Meadow.Core! This means the entire stack that sits above the .NET runtime is now open and [available on GitHub](http://www.github.com/wildernesslabs/Meadow.Core).
+
+This release includes:
+
+* **SD Card Support** - APIs are now available to use the SD card reader with the Meadow Core-Compute Module
 * **Static IP Address Support** - Meadow now supports setting a static IP address for the WiFi connection
 * **Network Credentials Enhancements** - New methods have been added to work with data in [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file
-
 
 ## Updating to RC-2
 
@@ -121,8 +157,7 @@ Network:
 This release also includes several Meadow.Foundation bug fixes - [details are here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/18?closed=1)
 
 
-
-# RC-1.1 (RC1 Hotfix Release 1)
+# RC-1.1 (v0.9.0.4)
 
 We're happy to announce an amendment release to RC1, providing an out-of-band critical fix for the *AMQP* protocol and therefore for connecting to *Azure Iot Hubs* and other cloud services. To get started on connecting your Meadow to the cloud, check out [our sample!](https://github.com/WildernessLabs/Meadow.Project.Samples/tree/main/Source/Azure/AzureIoTHub)
 
@@ -167,7 +202,7 @@ If you experience any stability or deployment issues you may need to erase the f
 meadow flash erase
 ```
 
-# RC-1
+# RC-1 (v0.9.0.4)
 
 We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! This is a MASSIVE release with a pile of fixes and way more features than we expected.
 

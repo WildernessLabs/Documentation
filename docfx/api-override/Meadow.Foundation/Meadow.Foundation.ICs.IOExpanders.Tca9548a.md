@@ -20,7 +20,7 @@ IDigitalOutputPort bus1Port0;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.Standard);
     var tca9548a = new Tca9548a(i2cBus, 0x70);

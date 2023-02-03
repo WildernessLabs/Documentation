@@ -35,7 +35,7 @@ SevenSegment sevenSegment;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     sevenSegment = new SevenSegment
     (

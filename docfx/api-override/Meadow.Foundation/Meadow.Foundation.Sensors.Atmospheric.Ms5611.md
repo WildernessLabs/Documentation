@@ -19,14 +19,14 @@ Ms5611 sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing...");
+    Resolver.Log.Info("Initializing...");
 
     sensor = new Ms5611(Device.CreateI2cBus());
 
     var consumer = Ms5611.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
         filter: result =>
         {
@@ -45,8 +45,8 @@ public override Task Initialize()
     sensor.Subscribe(consumer);
 
     sensor.Updated += (sender, result) => {
-        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-        Console.WriteLine($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+        Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
     };
 
     return Task.CompletedTask;
@@ -55,9 +55,9 @@ public override Task Initialize()
 public async override Task Run()
 {
     var conditions = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($" Temperature: {conditions.Temperature?.Celsius:N2}C");
-    Console.WriteLine($" Pressure: {conditions.Pressure?.Bar:N2}hPa");
+    Resolver.Log.Info("Initial Readings:");
+    Resolver.Log.Info($" Temperature: {conditions.Temperature?.Celsius:N2}C");
+    Resolver.Log.Info($" Pressure: {conditions.Pressure?.Bar:N2}hPa");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }

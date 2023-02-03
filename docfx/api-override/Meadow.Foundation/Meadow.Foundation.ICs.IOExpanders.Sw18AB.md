@@ -17,7 +17,7 @@ private IDigitalOutputPort digitalOutputPort;
 private IDigitalInputPort digitalInputPort;
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     try
     {
@@ -27,7 +27,7 @@ public override Task Initialize()
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"error: {ex.Message}");
+        Resolver.Log.Error($"error: {ex.Message}");
     }
 
     return Task.CompletedTask;

@@ -17,7 +17,7 @@ remarks: *content
 ```csharp
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     var sensor = new Mpr121(Device.CreateI2cBus(Meadow.Hardware.I2cBusSpeed.Standard), 90, 100);
     sensor.ChannelStatusesChanged += Sensor_ChannelStatusesChanged;
@@ -38,7 +38,7 @@ private void Sensor_ChannelStatusesChanged(object sender, ChannelStatusChangedEv
     }
 
     var msg = string.IsNullOrEmpty(pads) ? "none" : (pads + "touched");
-    Console.WriteLine(msg);
+    Resolver.Log.Info(msg);
 }
 
 ```

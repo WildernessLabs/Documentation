@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Displays.St7789
 remarks: *content
 ---
 
-| ST7789 | |
+| St7789 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi) |
@@ -32,7 +32,7 @@ St7789 display;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing ...");
 
     var config = new SpiClockConfiguration(new Frequency(48000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode3);
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
@@ -43,7 +43,7 @@ public override Task Initialize()
         chipSelectPin: Device.Pins.A03,
         dcPin: Device.Pins.A04,
         resetPin: Device.Pins.A05,
-        width: 240, height: 240, colorMode: ColorType.Format16bppRgb565);
+        width: 240, height: 240, colorMode: ColorMode.Format16bppRgb565);
 
     display.Clear(Color.AliceBlue);
     display.Show();

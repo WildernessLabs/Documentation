@@ -27,15 +27,15 @@ Tmp102 tmp102;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     tmp102 = new Tmp102(Device.CreateI2cBus());
 
     var consumer = Tmp102.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Temperature New Value { result.New.Celsius}C");
-            Console.WriteLine($"Temperature Old Value { result.Old?.Celsius}C");
+            Resolver.Log.Info($"Temperature New Value { result.New.Celsius}C");
+            Resolver.Log.Info($"Temperature Old Value { result.Old?.Celsius}C");
         },
         filter: null
     );
@@ -43,7 +43,7 @@ public override Task Initialize()
 
     tmp102.TemperatureUpdated += (object sender, IChangeResult<Meadow.Units.Temperature> e) =>
     {
-        Console.WriteLine($"Temperature Updated: {e.New.Celsius:N2}C");
+        Resolver.Log.Info($"Temperature Updated: {e.New.Celsius:N2}C");
     };
 
     return Task.CompletedTask;
@@ -52,7 +52,7 @@ public override Task Initialize()
 public override async Task Run()
 {
     var temp = await tmp102.Read();
-    Console.WriteLine($"Current temperature: {temp.Celsius} C");
+    Resolver.Log.Info($"Current temperature: {temp.Celsius} C");
 
     tmp102.StartUpdating(TimeSpan.FromSeconds(1));
 }

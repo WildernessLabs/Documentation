@@ -17,9 +17,9 @@ Tsc2004 touchScreen;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
-    var i2cBus = Device.CreateI2cBus(I2cBusSpeed.Fast, 0);
+    var i2cBus = Device.CreateI2cBus(I2cBusSpeed.Fast);
 
     touchScreen = new Tsc2004(i2cBus)
     {
@@ -46,7 +46,7 @@ public override Task Run()
             if (touchScreen.IsTouched())
             {
                 pt = touchScreen.GetPoint();
-                Console.WriteLine($"Location: X:{pt.X}, Y:{pt.Y}, Z:{pt.Z}");
+                Resolver.Log.Info($"Location: X:{pt.X}, Y:{pt.Y}, Z:{pt.Z}");
             }
 
             Thread.Sleep(0);
