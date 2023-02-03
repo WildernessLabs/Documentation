@@ -47,7 +47,7 @@ We're excited to release the 2nd Meadow v1.0 Release-Candidate! This is another 
 
 This release includes:
 
-* **SD Card Support** - APIs are now available to use the SD card reader with the Meadow Core Compute Module
+* **SD Card Support** - APIs are now available to use the SD card reader with the Meadow Core-Compute Module
 * **Static IP Address Support** - Meadow now supports setting a static IP address for the WiFi connection
 * **Network Credentials Enhancements** - New methods have been added to work with data in [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file
 
