@@ -281,6 +281,18 @@ If any of the component versions do not match the release notes then either try 
 
 This is normally an operating system deployment failure or corruption on the STM32.  It is necessary to redeploy the OS (and possibly the runtime and coprocessor firmware) in order to resolve this issue.
 
+One other scenario to eliminate is a case where one of the OS or the runtime do not flash correctly.  In this case we need to use a slightly different approach.  The first step is to put an older operating system on the board.  Doing this will cause an issue with the OS and Mono version step.  In this case the OS will refuse to start Mono and we can then start the recovery process.
+
+Using the definitions of `target`, `current` and `fallback` from above, the recovery steps are as follows:
+
+Restart the board in DFU mode and deploy the `fallback` operating system.  You only need to deploy the OS itself, the runtime can be left as is.  This can be done using `meadow flash os -k -e -v a.b.c.d` or using the `dfu-util` method below.
+
+Now attempt to deploy the OS as normal using the command `meadow flash os`.
+
+If this still fails then revert to the `fallback` OS again and clear the flash on the board with the command `meadow flash erase`.  Note that doing this will clear the entire flash including the deployed application.  Now try to deploy the `target` OS once more with `meadow flash os`.
+
+
+
 ## Onboard LED is Green or Flashing Red
 
 This indicates that the system is having problems progressing past the bootloader part of the boot sequence.  This can be resolved by attempting to flash OS once more.
