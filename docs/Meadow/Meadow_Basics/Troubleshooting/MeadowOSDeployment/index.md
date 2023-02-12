@@ -46,7 +46,7 @@ In a correctly configured system the LED should progress through the following s
 
 ## Check OS Version
 
-The first thing to check is if the Meadow board can communicate with the computer over USB.  Checking the oS version number is the simplest way to do this.  Executing the command `meadow device info` should yield output similar to the following:
+The first thing to check is if the Meadow board can communicate with the computer over USB.  Checking the OS version number is the simplest way to do this.  Executing the command `meadow device info` should yield output similar to the following:
 
 ```
 Meadow by Wilderness Labs
