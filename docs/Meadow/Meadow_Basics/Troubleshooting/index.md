@@ -98,3 +98,7 @@ Firstly, ensure that Mono has automatic execution of the application disabled (s
 Use the `meadow file write -f [Filename]` command to deploy each of the required files to Meadow.
 
 Follow this by checking that the files have been deployed using the `meadow file list` command and if everything looks good then re-enable execution of the application using the `meadow mono enable` command.
+
+### Advanced OS Deployment Troubleshooting
+
+An [Advanced OS Deployment Troubleshooting Guide](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/) is also available should the above steps not resolve your issue.
