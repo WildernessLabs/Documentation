@@ -85,7 +85,7 @@ meadow flash os
 To deploy an app to the device, execute the following, replacing [Path] with the path to your `app.exe`:
 
 ```bash
-meadow deploy app -f [Path]/app.exe
+meadow app deploy -f [Path]/app.exe
 ```
 
 ### Working with Files
