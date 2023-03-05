@@ -112,7 +112,7 @@ Multiple files can be specified with multiple `-f` parameters:
 meadow file write -f [Filename1] -f [Filename2]
 ```
 
-#### Deleta a File from the Device
+#### Delete a File from the Device
 
 Files can also be deleted:
 
@@ -124,6 +124,12 @@ As with file uploading, multiple files can be specified with multiple `-f` param
 
 ```bash
 meadow file delete -f [Filename1] -f [Filename2]
+```
+
+All of the files on the file system can be deleted without reformatting the flash:
+
+```bash
+meadow file delete all
 ```
 
 

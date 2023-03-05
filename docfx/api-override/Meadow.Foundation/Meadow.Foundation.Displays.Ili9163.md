@@ -37,7 +37,6 @@ public override Task Initialize()
 
     var display = new Ili9163
     (
-        device: Device,
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,

@@ -31,13 +31,12 @@ public override Task Initialize()
     return base.Initialize();
 }
 
-void InitGpio() 
+void InitGpio()
 {
     Resolver.Log.Info("InitGpio...");
-    
+
     display = new CharacterDisplay
     (
-        device: Device,
         pinRS: Device.Pins.D10,
         pinE: Device.Pins.D09,
         pinD4: Device.Pins.D08,
@@ -54,10 +53,9 @@ void InitGpioWithPWM()
 
     display = new CharacterDisplay
     (
-        device: Device,
         pinV0: Device.Pins.D11,
         pinRS: Device.Pins.D10,
-        pinE:  Device.Pins.D09,
+        pinE: Device.Pins.D09,
         pinD4: Device.Pins.D08,
         pinD5: Device.Pins.D07,
         pinD6: Device.Pins.D06,
@@ -91,7 +89,7 @@ void InitGrove()
     );
 }
 
-void TestCharacterDisplay() 
+void TestCharacterDisplay()
 {
     Resolver.Log.Info("TestCharacterDisplay...");
 
@@ -103,7 +101,7 @@ void TestCharacterDisplay()
     display.WriteLine("Will delete in", 0);
 
     int count = 5;
-    while(count > 0)
+    while (count > 0)
     {
         display.WriteLine($"{count--}", 1);
         Thread.Sleep(500);

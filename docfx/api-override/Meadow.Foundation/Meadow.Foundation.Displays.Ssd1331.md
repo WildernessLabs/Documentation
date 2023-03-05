@@ -29,7 +29,6 @@ public override Task Initialize()
 
     var display = new St7796s
     (
-        device: Device,
         spiBus: spiBus,
         resetPin: Device.Pins.D00,
         chipSelectPin: Device.Pins.D02,

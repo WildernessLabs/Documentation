@@ -4,14 +4,44 @@ title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
 
+
+# RC-2.2 (v0.9.4.0)
+
+Here's another update with API improvements and new drivers! This is a nugets-only release, meaning you don't need to flash a new OS but that doesn't mean it's a small release.
+
+RC-2.2 includes:
+* **Meadow Desktop Support** - it's now possible build Meadow apps on a desktop! This release includes preliminary support with more coming soon
+* **New Pin Controller API pattern** - We've overhalled the way Meadow creates ports from pins. This both simplifies using peripheral drivers and makes Meadow far more flexible when using IO expanders.
+* **Improved MicroGraphics APIs** - We added a new circular arc API to draw angles as well a top-to-bottom API cleanup
+* **New Drivers** - We've added three new drivers for Meadow Desktop incuding a display driver for Windows Forms, a display driver for Gtk and a keyboard driver! We've also added support for the GNSS 5 mikro click board.
+
+## Updating to RC-2.1
+
+You just need to grab the latest Meadow nugets (verion 0.95.0). 
+
+## Pin Controller pattern
+
+Meadow.Foundation drivers no longer require passing in the Meadow Device when using constructor overloads the accept Meadow pins. This means existing applications will need to be udpated. This just requires removing the `Device` parameter when instantiating drivers. 
+
+For example:
+
+**RC2-1** (old)
+`var myLed = new Led(Device, Device.Pins.D02);`
+
+**RC2-2** (new!)
+`var myLed = new Led(Device.Pins.D02);`
+
+Under the hood, Meadow pins are now aware of their parent controller. This means a pin for your Meadow F7 knows about the Meadow F7 device which is why the `Device` parameter is no longer needed. This also brings a big improvement when using IO expanders such as the MC23xxx family of digital IO expanders. It's now possible to pass in pins from different controllers to the same peripheral. This is useful for complex peripheral devices that have multiple IO pins. 
+
+
 # RC-2.1 (v0.9.4.0)
 
 We're following up the release of Meadow RC2 with a point release that addresses a couple of key issues and includes some API improvements and fixes throughout the entire stack.
 
 This release includes:
 
-* **System stability** - Fixed an edge-case MPU configuration bug that caused seemingly random application hangs.
-* **Increased capacity for open files** This is particularly useful for complex apps/apps that use SQLite
+* **System stability** - Fixed an edge-case MPU configuration bug that caused seemingly random application hangs when accessing the file system. As .NET execution can load assemblies at any time, this bug could cause hangs even for applications not directly using the file system.
+* **Increased capacity for open files** - This is particularly useful for complex apps/apps that use SQLite
 * **GitGub repo organization** - We've made it easier to view and contribute to Meadow by adding Meadow.Linux to the Meadow.Core repo
 
 ## Updating to RC-2.1

@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    flameSensor = new FlameSensor(Device, Device.Pins.D13);
+    flameSensor = new FlameSensor(Device.Pins.D13);
 
     flameSensor.FlameDetected += (s, e) =>
     {

@@ -31,7 +31,6 @@ public override Task Initialize()
 
     display = new Ili9341
     (
-        device: Device,
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D13,
         dcPin: Device.Pins.D14,

@@ -27,7 +27,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    sensor = new Ds3231(Device, Device.CreateI2cBus(), Device.Pins.D06);
+    sensor = new Ds3231(Device.CreateI2cBus(), Device.Pins.D06);
     sensor.OnAlarm1Raised += Sensor_OnAlarm1Raised;
 
     return base.Initialize();

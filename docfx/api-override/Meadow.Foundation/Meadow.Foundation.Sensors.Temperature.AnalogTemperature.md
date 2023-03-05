@@ -34,7 +34,6 @@ public override Task Initialize()
 
     // configure our AnalogTemperature sensor
     analogTemperature = new AnalogTemperature (
-        device: Device,
         analogPin: Device.Pins.A03,
         sensorType: AnalogTemperature.KnownSensorType.LM35
     );

@@ -24,8 +24,8 @@ MicroGraphics graphics;
 public override Task Initialize()
 {
     Resolver.Log.Info("Initialize ...");
- 
-    var display = new Il91874(device: Device,
+
+    var display = new Il91874(
         spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.A04,
         dcPin: Device.Pins.A03,

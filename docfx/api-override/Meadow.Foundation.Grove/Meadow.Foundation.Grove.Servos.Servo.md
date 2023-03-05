@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    servo = new Servo(Device, Device.Pins.D13);
+    servo = new Servo(Device.Pins.D13);
 
     return Task.CompletedTask;
 }

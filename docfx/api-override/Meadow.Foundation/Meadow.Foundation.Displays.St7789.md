@@ -38,7 +38,6 @@ public override Task Initialize()
     var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
     display = new St7789(
-        device: Device,
         spiBus: spiBus,
         chipSelectPin: Device.Pins.A03,
         dcPin: Device.Pins.A04,

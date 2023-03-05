@@ -47,7 +47,6 @@ void CreateSpiDisplay()
 
     display = new Ssd1306
     (
-        device: Device,
         spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,

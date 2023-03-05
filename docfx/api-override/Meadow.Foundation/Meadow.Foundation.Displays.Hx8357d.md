@@ -24,7 +24,7 @@ public override Task Initialize()
 
     Resolver.Log.Info("Create display driver instance");
 
-    var display = new Hx8357d(device: Device, spiBus: spiBus,
+    var display = new Hx8357d(spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,

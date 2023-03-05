@@ -27,7 +27,6 @@ public override Task Initialize()
 
     var display = new Ssd1331
     (
-        device: Device,
         spiBus: spiBus,
         resetPin: Device.Pins.D00,
         chipSelectPin: Device.Pins.D02,

@@ -25,7 +25,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    display = new Max7219(Device, Device.CreateSpiBus(), Device.Pins.D01, 1, Max7219.Max7219Mode.Character);
+    display = new Max7219(Device.CreateSpiBus(), Device.Pins.D01, 1, Max7219.Max7219Mode.Character);
 
     return base.Initialize();
 }
