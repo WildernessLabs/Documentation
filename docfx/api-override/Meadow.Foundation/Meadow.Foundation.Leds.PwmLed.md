@@ -41,7 +41,7 @@ public override Task Initialize()
          Device.Pins.D02
     };
 
-    pwmLedBarGraph = new PwmLedBarGraph(Device, pins, new Voltage(2.2));
+    pwmLedBarGraph = new PwmLedBarGraph(pins, new Voltage(2.2));
 
     return Task.CompletedTask;
 }

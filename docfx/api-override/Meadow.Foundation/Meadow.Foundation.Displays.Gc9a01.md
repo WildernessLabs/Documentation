@@ -26,7 +26,6 @@ public override Task Initialize()
 
     var display = new Gc9a01
     (
-        device: Device,
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,

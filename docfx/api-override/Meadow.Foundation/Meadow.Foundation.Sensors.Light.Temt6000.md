@@ -22,7 +22,7 @@ public override Task Initialize()
     Resolver.Log.Info("Initialize...");
 
     // configure our sensor
-    sensor = new Temt6000(Device, Device.Pins.A03);
+    sensor = new Temt6000(Device.Pins.A03);
 
     // Example that uses an IObservable subscription to only be notified when the voltage changes by at least 0.5V
     var consumer = Temt6000.CreateObserver(

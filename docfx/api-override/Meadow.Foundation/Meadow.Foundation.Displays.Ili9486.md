@@ -26,7 +26,6 @@ public override Task Initialize()
 
     var display = new Ili9486
     (
-        device: Device, 
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
@@ -39,7 +38,7 @@ public override Task Initialize()
         IgnoreOutOfBoundsPixels = true,
         CurrentFont = new Font8x8()
     };
-    
+
     return base.Initialize();
 }
 

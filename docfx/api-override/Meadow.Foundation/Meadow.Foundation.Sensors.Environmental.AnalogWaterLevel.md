@@ -24,7 +24,6 @@ public override Task Initialize()
 
     // configure our AnalogWaterLevel sensor
     analogWaterLevel = new AnalogWaterLevel(
-        device: Device,
         analogPin: Device.Pins.A00
     );
 

@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    relay = new Relay(Device, Device.Pins.D13);
+    relay = new Relay(Device.Pins.D13);
 
     return Task.CompletedTask;
 }

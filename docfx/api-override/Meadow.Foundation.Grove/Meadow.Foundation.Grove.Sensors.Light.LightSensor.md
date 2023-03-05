@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    sensor = new LightSensor(Device, Device.Pins.A01);
+    sensor = new LightSensor(Device.Pins.A01);
 
     var consumer = LightSensor.CreateObserver(
         handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
