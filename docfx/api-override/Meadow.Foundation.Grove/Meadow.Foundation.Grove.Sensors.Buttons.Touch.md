@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    touch = new Touch(Device, Device.Pins.D04);
+    touch = new Touch(Device.Pins.D04);
     touch.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
 
     touch.Clicked += (s, e) =>

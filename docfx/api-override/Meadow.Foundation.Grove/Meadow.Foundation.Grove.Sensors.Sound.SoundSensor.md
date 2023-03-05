@@ -19,7 +19,7 @@ public override Task Initialize()
     Console.WriteLine("Initialize...");
 
     // configure our sensor
-    sensor = new SoundSensor(Device, Device.Pins.A01);
+    sensor = new SoundSensor(Device.Pins.A01);
 
     var consumer = SoundSensor.CreateObserver(
         handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),

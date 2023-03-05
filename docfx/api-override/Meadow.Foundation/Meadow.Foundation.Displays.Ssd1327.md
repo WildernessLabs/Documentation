@@ -21,7 +21,7 @@ public override Task Initialize()
 
     var spiBus = Device.CreateSpiBus();
 
-    var display = new Ssd1327(Device, spiBus, Device.Pins.D02, Device.Pins.D01, Device.Pins.D00);
+    var display = new Ssd1327(spiBus, Device.Pins.D02, Device.Pins.D01, Device.Pins.D00);
 
     display.SetContrast(60);
 

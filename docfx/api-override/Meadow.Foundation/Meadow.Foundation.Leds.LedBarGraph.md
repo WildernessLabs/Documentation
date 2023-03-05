@@ -42,7 +42,7 @@ public override Task Initialize()
          Device.Pins.D02
     };
 
-    ledBarGraph = new LedBarGraph(Device, pins);
+    ledBarGraph = new LedBarGraph(pins);
 
     return Task.CompletedTask;
 }

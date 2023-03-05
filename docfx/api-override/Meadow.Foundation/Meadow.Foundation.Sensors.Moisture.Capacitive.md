@@ -55,7 +55,6 @@ public override Task Initialize()
     Resolver.Log.Info("Initialize...");
 
     capacitive = new Capacitive(
-        Device,
         Device.Pins.A00,
         minimumVoltageCalibration: new Voltage(2.84f),
         maximumVoltageCalibration: new Voltage(1.63f)
@@ -76,7 +75,7 @@ public override Task Initialize()
 
     // classical .NET events can also be used:
     capacitive.HumidityUpdated += (sender, result) =>
-    {   
+    {
         string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
         Resolver.Log.Info($"Updated - New: {result.New}, Old: {oldValue}");
     };

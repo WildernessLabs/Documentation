@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    groveSwitch = new SwitchP(Device, Device.Pins.D13);
+    groveSwitch = new SwitchP(Device.Pins.D13);
 
     groveSwitch.Changed += (s, e) =>
     {

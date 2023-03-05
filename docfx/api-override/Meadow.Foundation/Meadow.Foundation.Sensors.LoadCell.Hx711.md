@@ -22,7 +22,7 @@ public override async Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    loadSensor = new Hx711(Device, Device.Pins.D04, Device.Pins.D03);
+    loadSensor = new Hx711(Device.Pins.D04, Device.Pins.D03);
 
     if (CalibrationFactor == 0)
     {

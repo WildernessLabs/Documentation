@@ -22,8 +22,7 @@ public override Task Initialize()
     Resolver.Log.Info($"Hello HC-SR04 sample");
 
     hCSR04 = new Hcsr04(
-        device: Device, 
-        triggerPin: Device.Pins.D05, 
+        triggerPin: Device.Pins.D05,
         echoPin: Device.Pins.D06);
     hCSR04.DistanceUpdated += HCSR04_DistanceUpdated;
 

@@ -30,7 +30,6 @@ public override Task Initialize()
 
     var display = new S6D02A1
     (
-        device: Device,
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,

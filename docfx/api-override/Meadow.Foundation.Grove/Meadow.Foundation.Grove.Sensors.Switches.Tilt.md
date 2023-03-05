@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Console.WriteLine("Initialize...");
 
-    tiltSwitch = new Tilt(Device, Device.Pins.D13);
+    tiltSwitch = new Tilt(Device.Pins.D13);
 
     tiltSwitch.Changed += (s, e) =>
     {

@@ -24,7 +24,6 @@ public override Task Initialize()
     var spiBus = Device.CreateSpiBus(Ssd1351.DefaultSpiBusSpeed);
 
     var display = new Ssd1351(
-        device: Device,
         spiBus: spiBus,
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,

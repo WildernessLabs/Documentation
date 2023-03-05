@@ -18,11 +18,10 @@ A4988 a4988;
 public override Task Initialize()
 {
     a4988 = new A4988(
-        device: Device, 
         step: Device.Pins.D01,
-        direction: Device.Pins.D00, 
-        ms1Pin: Device.Pins.D04, 
-        ms2Pin: Device.Pins.D03, 
+        direction: Device.Pins.D00,
+        ms1Pin: Device.Pins.D04,
+        ms2Pin: Device.Pins.D03,
         ms3Pin: Device.Pins.D02);
 
     return base.Initialize();

@@ -21,7 +21,7 @@ public override Task Initialize()
     Console.WriteLine("Initializing ...");
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
 
-    oledWing = new OLED128x32Wing(i2cBus, Device, Device.Pins.D11, Device.Pins.D10, Device.Pins.D09);
+    oledWing = new OLED128x32Wing(i2cBus, Device.Pins.D11, Device.Pins.D10, Device.Pins.D09);
 
     graphics = new MicroGraphics(oledWing.Display);
     graphics.CurrentFont = new Font12x16();

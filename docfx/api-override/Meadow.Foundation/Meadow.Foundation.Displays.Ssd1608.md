@@ -25,8 +25,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    var display = new Ssd1608(device: Device,
-        spiBus: Device.CreateSpiBus(),
+    var display = new Ssd1608(spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.D02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00,

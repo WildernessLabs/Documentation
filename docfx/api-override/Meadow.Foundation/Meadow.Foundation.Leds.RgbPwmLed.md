@@ -27,7 +27,6 @@ public override Task Initialize()
     Resolver.Log.Info("Creating peripherals...");
     
     onboardLed = new RgbPwmLed(
-        Device,
         Device.Pins.OnboardLedRed,
         Device.Pins.OnboardLedGreen,
         Device.Pins.OnboardLedBlue,
