@@ -7,7 +7,7 @@ subtitle: Release Notes
 
 # RC-2.2 (v0.9.4.0)
 
-Here's another update with API improvements and new drivers! This is a nugets-only release, meaning you don't need to flash a new OS but that doesn't mean it's a small release.
+Here's another update with API improvements and new drivers! This release includes nugets and Visual Studio extensions - you don't need to flash a new OS - but that doesn't mean it's a small release.
 
 RC-2.2 includes:
 * **Meadow Desktop Support** - it's now possible build Meadow apps on a desktop! This release includes preliminary support with more coming soon
@@ -17,7 +17,7 @@ RC-2.2 includes:
 
 ## Updating to RC-2.1
 
-You just need to grab the latest Meadow nugets (verion 0.95.0). 
+You just need to grab the latest Meadow nugets (verion 0.95.0) and install the latest Visual Studio extension(s) (version 0.9.5.0). There's no new CLI for this release.
 
 ## Pin Controller pattern
 
