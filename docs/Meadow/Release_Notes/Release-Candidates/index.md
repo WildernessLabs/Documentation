@@ -3,7 +3,43 @@ layout: Meadow
 title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
+# RC-3 (v0.9.6.0)
 
+Our next release candidate is here! This release improves system and app reliability, adds Meadow Cloud devices provisioning, and fixes several issues with Over-The-Air (OTA) updates for Meadow.OS on the way to 1.0.
+
+RC3 includes:
+* **Async I/O stability** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads.
+* **Meadow Cloud Device Provisioning** - A new Meadow CLI command, `meadow cloud provision device`, associates a Meadow device connected on USB with a Meadow Cloud account enabling for future secure remote connections.
+
+## Updating to RC-3
+
+This release requires an OS update and new Meadow CLI and new Visual Studio extensions.
+
+### Updating Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.90.4) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+## Release Details
+
+[FILL IN]
 
 # RC-2.2 (v0.9.4.0)
 
