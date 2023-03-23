@@ -10,6 +10,7 @@ Our next release candidate is here! This release improves system and app reliabi
 RC3 includes:
 * **Async I/O stability** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads.
 * **Meadow Cloud Device Provisioning** - A new Meadow CLI command, `meadow cloud provision device`, associates a Meadow device connected on USB with a Meadow Cloud account enabling for future secure remote connections.
+* **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a cleaner separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windwos.
 
 ## Updating to RC-3
 
