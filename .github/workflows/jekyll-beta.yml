@@ -58,14 +58,23 @@ jobs:
 #         # Automatically uploads an artifact from the './_site' directory by default
 #         uses: actions/upload-pages-artifact@v1
 
-  # Deployment job
-#   deploy:
-#     environment:
-#       name: github-pages
-#       url: ${{ steps.deployment.outputs.page_url }}
-#     runs-on: ubuntu-latest
-#     needs: build
-#     steps:
-#       - name: Deploy to GitHub Pages
-#         id: deployment
-#         uses: actions/deploy-pages@v1
+ # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v3
+      with:
+        name: site  
+    - name: S3 Sync
+      uses: ItsKarma/aws-cli@v1.70.0
+      with:
+        args: aws s3 sync site s3://beta-developer.wildernesslabs.co
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: "us-east-1"
