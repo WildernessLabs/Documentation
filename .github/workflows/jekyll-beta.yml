@@ -69,12 +69,10 @@ jobs:
     - name: Download artifact from build job
       uses: actions/download-artifact@v3
       with:
-        name: site  
-    - name: S3 Sync
-      uses: ItsKarma/aws-cli@v1.70.0
-      with:
-        args: aws s3 sync site s3://beta-developer.wildernesslabs.co
+        name: site
+    - uses: chrislennon/action-aws-cli@v1.1
+      # All commands after this point have access to the AWS CLI
+    - run: aws s3 sync site s3://beta-developer.wildernesslabs.co
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_DEFAULT_REGION: "us-east-1"
