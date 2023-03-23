@@ -8,9 +8,10 @@ subtitle: Release Notes
 Our next release candidate is here! This release improves system and app reliability, adds Meadow Cloud devices provisioning, and fixes several issues with Over-The-Air (OTA) updates for Meadow.OS on the way to 1.0.
 
 RC3 includes:
-* **Async I/O stability** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads.
+* **Async I/O Stability** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads.
 * **Meadow Cloud Device Provisioning** - A new Meadow CLI command, `meadow cloud provision device`, associates a Meadow device connected on USB with a Meadow Cloud account enabling for future secure remote connections.
-* **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a cleaner separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windwos.
+* **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a cleaner separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windows.
+* **HCOM Protocol Version Change** - The HCOM protocol version has been bumped from 6 to 7. It is recommened that you flash to the latest OS version (`v0.9.6.x` at time of writing) to pick up this change.
 
 ## Updating to RC-3
 
@@ -18,7 +19,7 @@ This release requires an OS update and new Meadow CLI and new Visual Studio exte
 
 ### Updating Meadow.CLI
 
-Start by making sure you have the latest version of the CLI (0.90.4) by running:
+Start by making sure you have the latest version of the CLI (0.96.x) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
