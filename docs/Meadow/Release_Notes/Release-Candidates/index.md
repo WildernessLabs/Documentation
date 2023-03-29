@@ -10,7 +10,7 @@ Our next release candidate is here! This release improves system and app reliabi
 RC3 includes:
 * **Async I/O Stability** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads.
 * **Meadow Cloud Device Provisioning** - A new Meadow CLI command, `meadow device provision`, associates a Meadow device connected on USB with a Meadow Cloud account enabling for future secure remote connections.
-* **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a cleaner separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windows.
+* **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windows. So the respective outputs should be a little cleaner too.
 * **HCOM Protocol Version Change** - The HCOM protocol version has been bumped from 6 to 7. It is recommened that you flash to the latest OS version (`v0.9.6.x` at time of writing) to pick up this change.
 
 ## Updating to RC-3
@@ -38,6 +38,20 @@ And update by putting your Meadow device in boot loader mode and running:
 ```bash
 meadow flash os
 ```
+
+## Known Issues
+* **Meadow.CLI Mx (MacOS silicon) Support** - We have a workaround for those developers who have installed the CLI, but the basics work, like 
+```bash
+meadow list ports
+``` 
+but you get an error similar to `libusb-1.0 library not found.` when you try 
+```bash
+meadow flash os
+``` 
+or similar. The workaround is to download the latet binary files from https://github.com/WildernessLabs/Meadow.CLI/releases. Unzip them to safe location. Open a command line prompt at that location. This will then allow you to `flash` etc with the following command line.
+```bash
+dotnet meadow.dll flash os
+``` 
 
 ## Release Details
 
