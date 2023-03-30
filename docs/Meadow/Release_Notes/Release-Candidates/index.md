@@ -8,9 +8,10 @@ subtitle: Release Notes
 Our next release candidate is here! This release improves system and app reliability, adds Meadow Cloud devices provisioning, and fixes several issues with Over-The-Air (OTA) updates for Meadow.OS on the way to 1.0.
 
 RC3 includes:
-* **Async I/O Stability** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads.
-* **Meadow Cloud Device Provisioning** - A new Meadow CLI command, `meadow device provision`, associates a Meadow device connected on USB with a Meadow Cloud account enabling for future secure remote connections.
+* **Async I/O and Threadpool Stability Improvements** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads. The threadpool has also been bound to a small number of threads (four).
+* **Meadow Cloud Device Authentication** - We have added device provisioning and secure authentication for the Over-The-Air (OTA) update service.
 * **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windows. So the respective outputs should be a little cleaner too.
+* **Ethernet Stability Improvements** - A critical fix in ethernet setup has dramatically improved the stability of Ethernet connections.
 * **HCOM Protocol Version Change** - The HCOM protocol version has been bumped from 6 to 7. It is recommened that you flash to the latest OS version (`v0.9.6.x` at time of writing) to pick up this change.
 
 ## Updating to RC-3
