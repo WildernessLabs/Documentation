@@ -13,8 +13,8 @@ RC3 includes:
 * **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windows. So the respective outputs should be a little cleaner too.
 * **Ethernet Stability Improvements** - A critical fix in ethernet setup has dramatically improved the stability of Ethernet connections.
 * **HCOM Protocol Version Change** - The HCOM protocol version has been bumped from 6 to 7. It is recommened that you flash to the latest OS version (`v0.9.6.x` at time of writing) to pick up this change.
-
-## Updating to RC-3
+* **meadow.config.yaml Format Change** - The config format for network interface has changed in this release; users must update their existing apps if they have including custom network configuration.
+## Updating to RC-3 a
 
 This release requires an OS update and new Meadow CLI and new Visual Studio extensions.
 
@@ -54,9 +54,28 @@ or similar. The workaround is to download the latet binary files from https://gi
 dotnet meadow.dll flash os
 ``` 
 
-## Release Details
+## meadow.config.yaml Format Change
 
-[FILL IN]
+If you are using the `Network` section of `meadow.config.yaml` to configure network access, you will now have to match this example's format instead:
+
+```
+Network:
+    Interfaces:
+        - Name: Ethernet
+          UseDHCP: false
+          IPAddress: 192.168.1.60
+          NetMask: 255.255.255.0
+          Gateway: 192.168.1.254
+        - Name: WiFi
+          UseDHCP: true
+          IPAddress: 192.168.1.10
+          NetMask: 255.255.255.0
+          Gateway: 192.168.1.254
+    #
+    #   Which interface should be used?
+    #
+    DefaultInterface: WiFi
+ ```
 
 # RC-2.2 (v0.9.4.0)
 
