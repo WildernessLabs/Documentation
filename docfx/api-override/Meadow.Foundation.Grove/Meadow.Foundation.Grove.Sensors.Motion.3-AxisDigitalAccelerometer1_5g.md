@@ -56,4 +56,3 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/3-AxisDigitalAccelerometer1_5g/Sample/3-AxisDigitalAccelerometer1_5g_Sample)
 
-

@@ -62,7 +62,7 @@ public override async Task Run()
 
 async Task ReadConditions()
 {
-    if(sensor == null) { return; }
+    if (sensor == null) { return; }
 
     var result = await sensor.Read();
     Resolver.Log.Info("Initial Readings:");

@@ -43,4 +43,3 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/C8x8/Sample/C8x8_Sample)
 
-

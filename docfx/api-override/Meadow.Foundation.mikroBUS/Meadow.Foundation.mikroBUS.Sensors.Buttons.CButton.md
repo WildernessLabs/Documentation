@@ -31,4 +31,3 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CButton/Sample/CButton_Sample)
 
-
