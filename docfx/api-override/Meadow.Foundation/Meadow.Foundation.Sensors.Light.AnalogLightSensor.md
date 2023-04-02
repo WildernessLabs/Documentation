@@ -61,4 +61,3 @@ protected async Task ReadIlluminance()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Sensors.Light.AnalogLightSensor_Sample)
 
-

@@ -13,19 +13,11 @@ remarks: *content
 ### Code Example
 
 ```csharp
-RgbPwmLed onboardLed;
 SwitchingAnemometer anemometer;
 
 public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
-
-    //==== onboard LED
-    onboardLed = new RgbPwmLed(
-        redPwmPin: Device.Pins.OnboardLedRed,
-        greenPwmPin: Device.Pins.OnboardLedGreen,
-        bluePwmPin: Device.Pins.OnboardLedBlue,
-        CommonType.CommonAnode);
 
     //==== create the anemometer
     anemometer = new SwitchingAnemometer(Device.Pins.A01);
@@ -71,7 +63,6 @@ void OutputWindSpeed(Speed windspeed)
     int b = (int)windspeed.KilometersPerHour.Map(0f, 10f, 255f, 0f);
 
     var wspeedColor = Color.FromRgb(r, 0, b);
-    onboardLed.SetColor(wspeedColor);
 }
 ```
 

@@ -38,8 +38,8 @@ public override Task Initialize()
 public override Task Run()
 {
     graphics.Clear();
-    graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, true);
+    graphics.DrawTriangle(10, 10, 50, 50, 10, 50, false);
+    graphics.DrawRectangle(20, 15, 40, 20, true);
     graphics.DrawText(5, 5, "ST7565");
     graphics.Show();
 

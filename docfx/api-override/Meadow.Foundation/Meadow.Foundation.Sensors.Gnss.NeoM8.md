@@ -25,7 +25,7 @@ public override Task Initialize()
     //gps = new NeoM8(Device.CreateI2cBus());
 
     //Serial
-    gps = new NeoM8(Device, Device.PlatformOS.GetSerialPortName("COM1"), Device.Pins.D09, Device.Pins.D11);
+    gps = new NeoM8(Device, Device.PlatformOS.GetSerialPortName("COM4"), Device.Pins.D09, Device.Pins.D11);
 
     gps.GgaReceived += (object sender, GnssPositionInfo location) =>
     {
@@ -83,5 +83,4 @@ public override Task Run()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Gnss.NeoM8/Samples/NeoM8_Sample)
-
 
