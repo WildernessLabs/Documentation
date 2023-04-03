@@ -50,4 +50,3 @@ private void Joystick_Updated(object sender, IChangeResult<Meadow.Peripherals.Se
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CJoystick/Sample/CJoystick_Sample)
 
-

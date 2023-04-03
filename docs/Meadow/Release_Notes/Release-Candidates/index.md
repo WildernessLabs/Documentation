@@ -3,7 +3,88 @@ layout: Meadow
 title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
+# RC-3 (v0.9.6.3)
 
+Our next release candidate is here! This release improves system and app reliability, adds Meadow Cloud devices provisioning, and fixes several issues with Over-The-Air (OTA) updates for Meadow.OS on the way to 1.0.
+
+RC3 includes:
+
+* **Async I/O and Threadpool Stability Improvements** - We landed a critical fix regarding thread scheduling during the App runtime. Very frequently, the app would hang, usually when attempting asynchronous I/O over multiple threads. The threadpool has also been bound to a small number of threads (four).
+* **Meadow Cloud Device Authentication** - We have added device provisioning and secure authentication for the Over-The-Air (OTA) update service.
+* **File Transfer Progress Bars in Mac and Windows IDEs** - We now have a slighter nicer UX during file transfers, which includes progress bars for each file transfer. There is now also a separation between messages generated on the Host side and the Meadow device side. As such they now appear in separate output windows. So the respective outputs should be a little cleaner too.
+* **Ethernet Stability Improvements** - A critical fix in ethernet setup has dramatically improved the stability of Ethernet connections.
+* **HCOM Protocol Version Change** - The Meadow HCOM communication protocol version has been bumped from 6 to 7. This improves communication between Meadow and your development environment, and it means that you'll need to update Meadow OS, Meadow CLI and the Visual Studio extension(s) at the same time.
+* **meadow.config.yaml Format Change** - The config format for network interface has changed in this release; users must update their existing apps if they have including custom network configuration.
+* **Improved displays and graphics support** - This release includes additional drawing optimizations in **MicroGraphics** along with two new OLED display drivers
+
+## Updating to RC-3
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+### Updating Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.96.x) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
+## Known Issues
+
+**Meadow.CLI Mx (MacOS silicon) Support** - We have a workaround for those developers who have installed the CLI, but the basics work, like 
+
+```bash
+meadow list ports
+```
+
+but you get an error similar to `libusb-1.0 library not found.` when you try:
+
+```bash
+meadow flash os
+```
+
+or similar. The workaround is to download the latest binary files [here](https://github.com/WildernessLabs/Meadow.CLI/releases). Unzip them to safe location. Open a command line prompt at that location. This will then allow you to `flash` etc with the following command line.
+
+```bash
+dotnet meadow.dll flash os
+```
+
+## meadow.config.yaml Format Change
+
+If you are using the `Network` section of `meadow.config.yaml` to configure network access, you will now have to match this example's format instead:
+
+```
+Network:
+    Interfaces:
+        - Name: Ethernet
+          UseDHCP: false
+          IPAddress: 192.168.1.60
+          NetMask: 255.255.255.0
+          Gateway: 192.168.1.254
+        - Name: WiFi
+          UseDHCP: true
+          IPAddress: 192.168.1.10
+          NetMask: 255.255.255.0
+          Gateway: 192.168.1.254
+    #
+    #   Which interface should be used?
+    #
+    DefaultInterface: WiFi
+ ```
 
 # RC-2.2 (v0.9.4.0)
 

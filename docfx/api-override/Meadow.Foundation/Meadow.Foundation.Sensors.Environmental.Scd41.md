@@ -64,4 +64,3 @@ public override Task Initialize()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Scd4x/Samples/Scd41_Sample)
 
-

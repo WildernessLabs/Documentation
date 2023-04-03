@@ -18,8 +18,8 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing...");
 
-    var i2cBus = Device.CreateI2cBus(Meadow.Hardware.I2cBusSpeed.Standard);
-      
+    var i2cBus = Device.CreateI2cBus();
+
     sensor = new Scd40(i2cBus);
     var serialNum = sensor.GetSerialNumber();
     Resolver.Log.Info($"Serial: {BitConverter.ToString(serialNum)}");
@@ -63,5 +63,4 @@ public override Task Initialize()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Scd4x/Samples/Scd40_Sample)
-
 

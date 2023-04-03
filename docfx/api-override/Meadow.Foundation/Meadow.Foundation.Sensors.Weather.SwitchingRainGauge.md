@@ -19,7 +19,7 @@ public override Task Initialize()
     Resolver.Log.Info("Initialize...");
 
     // initialize the rain gauge driver
-    rainGauge = new SwitchingRainGauge(Device.Pins.D15);
+    rainGauge = new SwitchingRainGauge(Device.Pins.D16);
 
     //==== Classic event example:
     rainGauge.Updated += (sender, result) => Resolver.Log.Info($"Updated event {result.New.Millimeters}mm");
@@ -36,16 +36,15 @@ public override Task Initialize()
 
 public override async Task Run()
 {
+    // start the sensor
+    rainGauge.StartUpdating();
+
     // get initial reading, just to test the API - should be 0
     Length rainFall = await rainGauge.Read();
     Resolver.Log.Info($"Initial depth: {rainFall.Millimeters}mm");
-
-    // start the sensor
-    rainGauge.StartUpdating();
 }
 
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingRainGauge/Samples/SwitchingRainGauge_Sample)
-
 
