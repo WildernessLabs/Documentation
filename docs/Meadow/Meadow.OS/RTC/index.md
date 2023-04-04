@@ -11,7 +11,7 @@ The STM32F7 is equipped with a real-time clock (RTC), which, when set, will reta
 To use Meadow's RTC module, simply set the time with the *SetClock* method:
 
 ```csharp
-Device.SetClock(new DateTime(
+Device.PlatformOS.SetClock(new DateTime(
     year: 2021, 
     month: 04, 
     day: 05, 
