@@ -15,10 +15,10 @@ Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));
 
 If you provide a `DateTime`, Meadow will sleep until that time.
 
-In order for this to work properly, you must [set the current date](../../Meadow.OS/RTC) via the `Device.SetClock` method.
+In order for this to work properly, you must [set the current date](../../Meadow.OS/RTC) via the `Device.PlatformOS.SetClock` method.
 
 ```csharp
-Device.SetClock(new DateTime(2022, 10, 19, 21, 58, 27));
+Device.PlatformOS.SetClock(new DateTime(2022, 10, 19, 21, 58, 27));
 ...
 // Put Meadow to sleep until this time tomorrow.
 Device.PlatformOS.Sleep(DateTime.Now.AddDays(1));
