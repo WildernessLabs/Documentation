@@ -23,17 +23,14 @@ To connect to a Wi-Fi network, call the async function `Connect`, passing in the
 There are also additional `Connect` methods that take parameters for cancellation or timeout durations, as well as a reconnect setting.
 
 ```csharp
-var wifi = Device.NetworkAdapters.Primary<IWiFiNetworkAdapter>();
-var connectionResult = await wifi.Connect("[SSID]", "[PASSWORD]");
-if (connectionResult.ConnectionStatus != ConnectionStatus.Success)
+try
 {
-    throw new Exception($"Cannot connect to network: {connectionResult.ConnectionStatus}");
+    var wifi = Device.NetworkAdapters.Primary<IWiFiNetworkAdapter>();
+    await wifi.Connect("[SSID]", "[PASSWORD]", TimeSpan.FromSeconds(45));
 }
-else
+catch (Exception ex)
 {
-    Console.WriteLine($"IP Address: {wifi.IpAddress}");
-    Console.WriteLine($"Subnet mask: {wifi.SubnetMask}");
-    Console.WriteLine($"Gateway: {wifi.Gateway}");
+    Resolver.Log.Error($"Failed to Connect: {ex.Message}");
 }
 ```
 
