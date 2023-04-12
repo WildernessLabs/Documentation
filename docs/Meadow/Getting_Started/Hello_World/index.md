@@ -162,7 +162,7 @@ To create new Meadow projects for development, debugging, and deploying in Visua
 1. Choose **Run** > **Start Debugging**. (Your code will automatically be built first.)
 1. From the list of debugging providers, choose `Meadow`.
 1. If prompted, select the serial port for your Meadow board.
-1. Wait 30-60 seconds for your application to start. You can watch the Output panel and see your app deploy.
+1. Wait 30-60 seconds for your application to start.
 
 ### Visual Studio Code troubleshooting
 
