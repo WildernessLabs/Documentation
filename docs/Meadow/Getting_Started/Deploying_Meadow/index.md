@@ -11,7 +11,7 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 2. [macOS](#macos)
 3. [Linux (Debian, Ubuntu)](#linux-debian-ubuntu)
 
-## Windows
+## **Windows**
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
 
@@ -39,14 +39,26 @@ From a console with admin rights, execute following command:
 meadow install dfu-util
 ```
 
-### Update USB driver for ST devices
+### Ensure Meadow drivers are correct before deploying Meadow.OS
 
-In order to flash Meadow OS, *dfu-util* is recommended. However, the default Windows USB driver for ST devices is not compatible with *dfu-util*, so it needs to be replaced. For more in-depth information on this, check out [Scott Hanselman's post](https://www.hanselman.com/blog/how-to-fix-dfuutil-stm-winusb-zadig-bootloaders-and-other-firmware-flashing-issues-on-windows). 
+Before flashing a Meadow board, open the Device Manager and check:
+- When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
+- When connecting it normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
+
+![Meadow drivers shown in Bootloader and regular mode](./meadow_driver_state.png){:standalone}
+
+If the board is in this state you can skip the next step and move on to the [Download Meadow OS and network binaries](#download-meadow-os-and-network-binaries).
+
+If Meadow shows as **Meadow F7 Micro (COMX)** in regular mode, right-click on it and select **Uninstall Device**, and make sure to select *Attempt to remove the driver for this device* like so:
+
+![Uninstall wrong Meadow Driver](./meadow_uninstall.png){:standalone}
+
+Now to flash Meadow OS, *dfu-util* is recommended. However, the default Windows USB driver for ST devices is not compatible with *dfu-util*, so it needs to be replaced. For more in-depth information on this, check out [Scott Hanselman's post](https://www.hanselman.com/blog/how-to-fix-dfuutil-stm-winusb-zadig-bootloaders-and-other-firmware-flashing-issues-on-windows). Follow these steps:
 
 1. Download and run [Zadig](https://zadig.akeo.ie/)
-1. Connect a Meadow device in bootloader mode
+1. Connect the Meadow device holding the BOOT button pressed to power it on in **Bootloader mode**. 
 1. In Zadig, click *Options* > *List All Devices*
-1. Select *STM32 BOOTLOADER* in the dropdown
+1. Select **STM32 BOOTLOADER** in the dropdown
 1. Click *Replace Driver*
 
     ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png){:standalone}
@@ -72,32 +84,15 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 ![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
 
 ### Flash Meadow.OS and Coprocessor Firmware
-Now you have two options, please try option 1 first:
 
-#### Option 1 (from bootloader mode) 
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your console:
 
 ```console
 meadow flash os
 ```
 
-#### Option 2 (from normal mode)
-This following will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
-Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on.
+When the flashing process has completed with no errors, disconnect and reconnect the Meadow board to give it a full restart.
 
-* Open *Device Manager*; the Meadow device should show up as *USB Serial Device [COMXX]*:  
-
-![Screenshot of Device Manager Ports section expanded showing the Meadow as USB Serial Device on port COM5.](./ports.png)
-
-Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
-
-```console
-meadow flash os -s [PORT]
-```
-
-**NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
-
-Unplug and reconnect the Meadow board to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
 ## macOS
