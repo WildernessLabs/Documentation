@@ -1,0 +1,66 @@
+name: Documentation.DocFx
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  docfx:
+    runs-on: windows-latest
+    name: Run DocFx
+
+    steps:
+    - name: Checkout Documentation side-by-side
+      uses: actions/checkout@v3
+      with:
+        path: main
+    
+    - name: Checkout Meadow.Foundation side-by-side
+      uses: actions/checkout@v3
+      with:
+        repository: WildernessLabs/Meadow.Foundation
+        path: Meadow.Foundation
+        ref: main
+
+    - name: Checkout Meadow side-by-side
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.CI_ACCESS_TOKEN }}
+        repository: WildernessLabs/Meadow
+        path: Meadow
+        ref: main
+
+    - name: Setup .NET Core SDK 6.0.x & 7.0.x
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          6.0.x
+          7.0.x
+
+    - name: Setup Nuget
+      uses: Nuget/setup-nuget@v1.0.5
+
+    - name: Setup Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install Docfx globally
+      run: |
+        dotnet tool install -g docfx
+
+    - name: Run DocFx
+      run: |
+        cd main
+        docfx docfx/docfx.json
+    
+    - name: Concatenate ALL the things
+      run: |
+        cd main
+        (cat .\docs\api\Meadow\toc.html) | % { $_ -replace ">Meadow.Peripherals.", ">" } > .\docs\api\Meadow\toc.html
+        (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
+        (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
+        cd ../docs
+        bundle install
