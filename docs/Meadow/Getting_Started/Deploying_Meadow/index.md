@@ -11,7 +11,7 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 2. [macOS](#macos)
 3. [Linux (Debian, Ubuntu)](#linux-debian-ubuntu)
 
-## **Windows**
+## Windows
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
 
@@ -39,7 +39,7 @@ From a console with admin rights, execute following command:
 meadow install dfu-util
 ```
 
-### Ensure Meadow drivers are correct before deploying Meadow.OS
+### Install Meadow USB drivers
 
 Before flashing a Meadow board, open the Device Manager and check:
 - When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
