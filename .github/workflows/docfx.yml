@@ -53,12 +53,12 @@ jobs:
 
     - name: Run DocFx
       run: |
-        cd main
-        docfx docfx/docfx.json
+        cd main\docfx
+        docfx docfx.json
     
     - name: Concatenate ALL the things
       run: |
-        cd main
+        cd main\docfx
         (cat .\docs\api\Meadow\toc.html) | % { $_ -replace ">Meadow.Peripherals.", ">" } > .\docs\api\Meadow\toc.html
         (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
         (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
