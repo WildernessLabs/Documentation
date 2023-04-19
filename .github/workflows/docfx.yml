@@ -23,6 +23,13 @@ jobs:
         repository: WildernessLabs/Meadow.Contracts
         path: Meadow.Contracts
         ref: main
+
+    - name: Checkout Meadow.Units side-by-side
+      uses: actions/checkout@v3
+      with:
+        repository: WildernessLabs/Meadow.Units
+        path: Meadow.Units
+        ref: main
     
     - name: Checkout Meadow.Foundation side-by-side
       uses: actions/checkout@v3
