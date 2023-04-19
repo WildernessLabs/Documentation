@@ -17,6 +17,20 @@ jobs:
       with:
         path: main
 
+    - name: Checkout Meadow.Units side-by-side
+      uses: actions/checkout@v3
+      with:
+        repository: WildernessLabs/Meadow.Units
+        path: Meadow.Units
+        ref: main
+
+    - name: Checkout Meadow.Logging side-by-side
+      uses: actions/checkout@v3
+      with:
+        repository: WildernessLabs/Meadow.Logging
+        path: Meadow.Logging
+        ref: main
+
     - name: Checkout Meadow.Contracts side-by-side
       uses: actions/checkout@v3
       with:
@@ -24,12 +38,7 @@ jobs:
         path: Meadow.Contracts
         ref: main
 
-    - name: Checkout Meadow.Units side-by-side
-      uses: actions/checkout@v3
-      with:
-        repository: WildernessLabs/Meadow.Units
-        path: Meadow.Units
-        ref: main
+    
     
     - name: Checkout Meadow.Foundation side-by-side
       uses: actions/checkout@v3
