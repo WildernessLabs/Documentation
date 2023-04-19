@@ -16,6 +16,13 @@ jobs:
       uses: actions/checkout@v3
       with:
         path: main
+
+    - name: Checkout Meadow.Contracts side-by-side
+      uses: actions/checkout@v3
+      with:
+        repository: WildernessLabs/Meadow.Contracts
+        path: Meadow.Contracts
+        ref: main
     
     - name: Checkout Meadow.Foundation side-by-side
       uses: actions/checkout@v3
