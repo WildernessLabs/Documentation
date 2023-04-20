@@ -4,6 +4,21 @@ title: Troubleshooting
 subtitle: Steps to getting your Meadow board working
 ---
 
+## Contents
+* [Have you tried other USB Cables?](#usb-cables)
+* [Are you using unpowered USB Hubs?](#unpowered-usb-hub)
+* [`Meadow F7 Micro` listed in Device Manager (Windows)](#error-when-flashing-meadow-windows)
+* [Error while updating Meadow after successful DFU Meadow.OS install](#error-while-updating-meadow-after-successful-dfu-meadowos-install)
+* [Are you working with Meadow from a Virtual Machine?](#deploying-from-a-virtual-machine)
+* [My Application does not run](#my-application-does-not-run)
+* [Diagnosing Issues Using Meadow CLI](#diagnosing-issues-using-meadow-cli)
+    * [Check Files Deployed to Meadow](#check-files-deployed-to-meadow)
+    * [Disable Application Execution](#disable-application-execution)
+    * [Delete Files](#delete-files)
+    * [Erase Flash](#erase-flash)
+    * [Deploy Your Application Manually](#deploy-your-application-manually)
+    * [Advanced OS Deployment Troubleshooting](#advanced-os-deployment-troubleshooting)
+
 ## USB Cables
 
 It is important to remember that not all USB cables are created equal.  When programming, Meadow uses a USB cable supplying both power and data.  It is important to use a good quality USB cable to connect your Meadow device to your computer.
@@ -18,18 +33,12 @@ If you're having issues communicating with Meadow that is connected via an unpow
 
 As there are a large variety USB-hubs out there, we cant guarantee Meadow will work properly for all of them.
 
-## Windows Driver
-
-It is important to ensure that Windows computers have the correct driver installed.
-
-Scott Hanselman has written a good [blog post](https://www.hanselman.com/blog/HowToFixDfuutilSTMWinUSBZadigBootloadersAndOtherFirmwareFlashingIssuesOnWindows.aspx) about how to check this and ensure that the correct driver is installed.
-
 ## Error when flashing Meadow (Windows)
 
 If you're getting the `Could not find a connected Meadow with the serial number #########`, the board might not have the correct Window drivers. To solve this, follow these steps:
 
 1. Open Device Manager.
-1. Under USB Devices right click Meadow F7 Micro.
+1. Under USB Devices right click `Meadow F7 Micro`.
 1. Uninstall Devices and click the check box.
 1. Unplug your Meadow.
 1. Restart your PC.
@@ -59,11 +68,11 @@ Some users have reported issues deploying to Meadow using a development environm
 
 At the moment we do not have a solution with this and would welcome any contribution / assistance with this problem.
 
-## My Application.exe Does Not Run
+## My Application does not run
 
-At the moment, the default application executed by Meadow is _App.exe_.
+At the moment, the default application executed by Meadow is _App.dll_.
 
-If your application does not execute, please check your project settings and if necessary change your assembly name to _App.exe_ and redeploy your application.
+If your application does not execute, please check your project settings and if necessary change your assembly name to _App.dll_ and redeploy your application.
 
 ## Diagnosing Issues Using Meadow CLI
 
