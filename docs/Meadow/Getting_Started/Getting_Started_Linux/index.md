@@ -85,6 +85,8 @@ For simplicity, we'll use a seaparate development machine and then deploy the ap
     cd MeadowLinuxSampleApp
     ```
 
+    This will ensure the Meadow app has the project settings that will work within Meadow.Linux.
+
 1. Add the Meadow.Linux NuGet reference to your project.
 
     ```bash
@@ -94,14 +96,76 @@ For simplicity, we'll use a seaparate development machine and then deploy the ap
 1. Replace the contents of the `Program.cs` file in your project with the following.
 
     ```csharp
+    using Meadow;
+    using Meadow.Devices;
+    using Meadow.Pinouts;
 
-    // TODO:
+    public class MeadowApp : App<Linux<RaspberryPi>>
+    {
+        static async Task Main(string[] args)
+        {
+            await MeadowOS.Start(args);
+        }
 
+        public override Task Initialize()
+        {
+            Resolver.Log.Info("Initialize...");
+
+            return base.Initialize();
+        }
+
+        public override Task Run()
+        {
+            Resolver.Log.Info("Run...");
+
+            Resolver.Log.Info("Hello, Meadow.Linux!");
+
+            return base.Run();
+        }
+    }
     ```
-1. TODO:
-1. Develop your app on your development machine
-1. Deploy your app to the remote Linux device
-1. Build and run your app on the remote Linux device
+
+    This is a simple Meadow.Linux app that will output some messages to the console at various stages of the Meadow app.
+
+1. Build the app for your development machine.
+
+    For example, to build the app in Release mode for a Linux device running on an ARM processor, such as a Raspberry Pi, you can use the following `dotnet publish` command that targets the `linux-arm` runtime.
+
+    ```bash
+    dotnet publish --runtime linux-arm --configuration Release
+    ```
+
+1. Deploy the resulting Linux ARM app build output to your Meadow.Linux device.
+
+    You can use the `scp` command to copy the app build output to your Meadow.Linux device, changing the username and host (`pi@raspberry`) to match your account and device. You can also adjust the target destination, currently set to `MeadowLinuxSampleApp` in the user's home directory.
+
+    ```bash
+    scp -r 'bin/Release/net7.0/linux-arm/publish/' pi@raspberry:~/MeadowLinuxSampleApp/
+    ```
+
+    You will be asked for your password for the user on your remote device, though that can be avoided by setting up trusted SSH keys.
+
+1. Run the app on your remote Meadow.Linux device.
+
+    This can be done directly on the device or over an SSH connection. For the Raspberry Pi example over SSH, you can connnect and run your deployed app with the following commands.
+
+    ```bash
+    ssh pi@raspberry
+    cd MeadowLinuxSampleApp
+    dotnet MeadowLinuxSampleApp.dll
+    ```
+
+    At the end of the Meadow app launch output, you should see the following output from your app.
+
+    ```bash
+    Initialize...
+    Run...
+    Hello, Meadow.Linux!
+    ```
+
+You have a Meadow.Linux app running on your target device. You can now continue developing on your development machine and deploying the resulting changes to your Meadow.Linux device.
+
+On many Linux devices, you can also develop directly on the device and build your app there using the .NET SDK.
 
 ## Adapt a Meadow app for Meadow.Linux
 
@@ -109,17 +173,43 @@ You can also modify an existing Meadow app to run on Meadow.Linux by adjusting t
 
 For example, here are the changes to make the MeadowApp class work on Meadow.Linux, configured for a Raspberry Pi.
 
-```csharp
-public class MeadowApp : App<Linux<RaspberryPi>>
-{
+1. Configure the project type to be an executable by changing the project output type to a .NET 7 executable in the project file.
+
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk">
+        <PropertyGroup>
+            <OutputType>Exe</OutputType>
+            <TargetFramework>net7.0</TargetFramework>
+            <ImplicitUsings>enable</ImplicitUsings>
+            <Nullable>enable</Nullable>
+        </PropertyGroup>
+
+        ...
+    </Project>
+    ```
+
+1.  Within the Meadow app's class file, change the `App` type to align with your target Meadow.Linux device, such as `App<Linux<RaspberryPi>>` for a Raspberry Pi. This requires an additional `using` statement for the `Meadow.Pinouts` namespace.
+
+    ```csharp
+    using Meadow.Pinouts;
+    ...
+
+    public class MeadowApp : App<Linux<RaspberryPi>>
+    {
+        ...
+    }
+    ```
+
+1. Within the `MeadowApp` class, or whatever your app's class name is, add a new `Main` method to give the app a target to launch when the app is run.
+
+    ```csharp
     public static async Task Main(string[] args)
     {
         await MeadowOS.Start(args);
     }
+    ```
 
-    ...
-}
-```
+Your Meadow app should now be able to run on Meadow.Linux, calling into the usual `Initialize` and `Run` methods of your app.
 
 ## Next steps
 
