@@ -6,6 +6,10 @@ layout: Home
 
 ## Upcoming Events
 
+### May 18-19, 2023
+
+**[Wilderness Labs DevCamp 2023](https://www.eventbrite.com/e/devcamp-2023-virtual-tickets-597113842577)** - We’re excited to announce that we’re hosting our first ever, in-person, DevCamp in Seattle on May 18th/19th, 2023. Join us to be the first to hear some awesome Meadow news. Registration is free. Day 1 will be an in-person portion and is invite-only. Day 2 will be virtual and open to everyone!
+
 ## Past Events
 
 ### 2022.February.17th
