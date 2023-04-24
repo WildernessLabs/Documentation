@@ -14,12 +14,14 @@ Here are the currently tested platforms and OS versions for Meadow.Linux, along 
 
 | Hardware | Distro | Meadow.Core Version tested |
 | :---: | :---: | :---: |
-| Raspberry Pi 4 | Raspberry Pi OS (bullseye) | Beta 6.2 |
+| Raspberry Pi 4 | Raspberry Pi OS (bullseye) | RC-3 |
 | Raspberry Pi Zero 2 W | Raspberry Pi OS (bullseye) | Beta 6.2 |
 | Jetson Nano | Ubuntu 20.04 | Beta 6.2 |
-| Jetson Xavier AGX | Ubuntu 18.04 | RC-2 |
-| KRTKL Snickerdoodle Black | Ubuntu 20.04 | RC-1 |
-| AMD64 Ubuntu 20.04 under WSL2  | Ubuntu 20.04 | RC-1 |
+| Jetson AGX Xavier | Ubuntu 18.04 | RC-2 |
+| krtkl snickerdoodle black | Ubuntu 20.04 | RC-1 |
+| Windows Subsystem for Linux 2 (WSL2) | Ubuntu 20.04 | RC-3 |
+
+You can also find any supported boards in the [Meadow.Linux implementation pinouts](https://github.com/WildernessLabs/Meadow.Core/tree/develop/source/implementations/linux/Meadow.Linux/Hardware/Pinouts). Each class represents the configuration for a specific board.
 
 ## Prerequisites
 
