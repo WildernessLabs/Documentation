@@ -3,6 +3,24 @@ layout: Meadow
 title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
+# RC-3.1 (v0.9.8.x)
+
+We have a new release candidate, a minor update from RC-3! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
+
+### Updating Meadow.OS
+
+Download the latest os:
+
+```bash
+meadow download os
+```
+
+And update by putting your Meadow device in boot loader mode and running:
+
+```bash
+meadow flash os
+```
+
 # RC-3 (v0.9.6.3)
 
 Our next release candidate is here! This release improves system and app reliability, adds Meadow Cloud devices provisioning, and fixes several issues with Over-The-Air (OTA) updates for Meadow.OS on the way to 1.0.
