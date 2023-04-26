@@ -4,8 +4,6 @@ title: Get started with Meadow.Linux
 subtitle: "To get up and running with Meadow.Linux, follow these steps:"
 ---
 
-TODO: Add to TOC
-
 Meadow.Linux offers an environment for developing Meadow code that can run on Linux distributions where .NET is available, including Raspberry Pi computers and NVIDIA Jetson development boards where you can access general-purpose input/output (GPIO) pins. Developing with Meadow.Linux requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.
 
 ## Supported Meadow.Linux platforms
