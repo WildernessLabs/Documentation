@@ -7,6 +7,17 @@ subtitle: Release Notes
 
 We have a new release candidate, a minor update from RC-3! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
 
+## Updating to RC-3.1
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+### Updating Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.98.x) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+
 ### Updating Meadow.OS
 
 Download the latest os:
