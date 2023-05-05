@@ -22,7 +22,7 @@ RC-3.1 includes:
 * Platform configuration now supports reserving pins to prevent Core from initializing them and preventing applications from accessing them
 * Bug fixes and improvements to OtA Updating
 * Bug fixes and improvements to the full `Meadow.Linux` stack
-
+* Added `ParticleDensity` to `Meadow.Units`
 
 ## Updating to RC-3.1
 
