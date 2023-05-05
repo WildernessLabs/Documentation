@@ -94,6 +94,15 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 
 ![Visual Studio for Mac Extension Manager showing the Meadow extension in the Gallery search results.](meadow_extension.png)
 
+#### Known issue when updating the Meadow Extension on MacOS
+Occasionally, when updating the extension, or if you install the extension manually from file, Visual Studio for Mac will end up with a corrupt extensions database and you may have more than 1 Meadow extension installed. The extension will not work correctly if this happens.
+
+To fix this do the following:
+1. Shut down Visual Studio for Mac.
+2. Within Finder go to `~/Library/Caches/VisualStudio/8.0/` for VS2019 and `~/Library/Caches/VisualStudio/17.0/` for VS2022 (use `Command+Shift+G` to get a path entry both that you can paste this path into).
+3. you should see a `addin-db-*` directory. Delete it.
+4. Restart Visual Studio for Mac. It will then recreate the addin-db-* directory from scratch. VS will take a little longer to start-up.
+
 ### Step 2: Create a new Meadow Project
 
 1. Open Visual Studio.
