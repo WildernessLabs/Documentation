@@ -52,7 +52,20 @@ meadow flash os
 
 ## Meadow.Foundation
 
+* We updated all our LED drivers to be more thread safe and prevent memory leaks on long running application, and because of this we made a few API adjustments:
+    * All LED drivers - LED method `Stop()` has been renamed to `StopAnimation()` so its self-explanatory to stop any blinking/pulsing animations running on any LED.
+    * For RGB LED drivers (`RgbLed` and `RgbPwmLed`) - `SetColor()` is independent of any running animations, so you can change the color of the LED without having to call `StartBlink()` or `StartPulse()`. If you want a steady color, you need to call `StopAnimation()` first.
+    * For PWM LED drivers (`PwmLed`, `RgbPwmLed` and `PwmLedBarGraph`) - `StartBlink()` and `StartPulse()` can now be called multiple times and it will no longer run multiple animations at once, it will stop whatever animation is doing before switching animations.
+    * For All LED drivers - `StopAnimation()`, `StartBlink()` and `StartPulse()` are now awaitable Tasks to better manage threading for these peripherals.
+    * For LED bar graphs (`LedBarGraph` and `PwmLedBarGraph`) - We removed the setter for the `Percentage` property to set the percentage on the bar graph, use awaitable Task `SetPercentage(float value)` instead.
 
+## Meadow Samples
+
+As usual, all our samples repos and API docs have been updated to latest API changes:
+* [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
+* [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
+* [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
+* [API Documentation](../../../../docfx/index.md)
 
 # RC-3 (v0.9.6.3)
 
