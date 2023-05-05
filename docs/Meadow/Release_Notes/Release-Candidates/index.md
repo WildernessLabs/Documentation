@@ -7,6 +7,17 @@ subtitle: Release Notes
 
 We have a new release candidate, with some minor updates from RC-3 in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
 
+RC3 includes:
+
+* **Meadow CLI** - This release should now work on both MacOS Mx (Apple Silicon) devices as well as non Mx devices.
+
+* **Visual Studio Code** - Output is now colour coded between IDE and Meadow. IDE specific messages appear as white, while messages from Meadow appear as blue. Project templates have been updated.
+
+* **Visual Studio for Windows** - Project templates have been updated.
+
+* **Visual Studio for MacOS** -  Project templates have been updated.
+
+
 ## Updating to RC-3.1
 
 This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
@@ -17,6 +28,7 @@ Start by making sure you have the latest version of the CLI (0.98.x) by running:
 
 ```bash
 dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
 
 ### Updating Meadow.OS
 
