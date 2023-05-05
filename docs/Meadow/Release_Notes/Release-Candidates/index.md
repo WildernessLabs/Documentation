@@ -3,7 +3,7 @@ layout: Meadow
 title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
-# RC-3.1 (v0.9.8.x)
+# RC-3.1 (OS v0.9.8.1, ESP v.0.9.8.0)
 
 We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
 
@@ -394,7 +394,8 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities, reducing total Meadow power consumption considerably.
 * **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
-* **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
+* **Faster WiFi Connection** - We have made changes to the event model on the 
+32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
 * **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
 * **Network Improvements** - We've spent a lot of cycles on advanced web socket features that weren't implemented yet that unlock a number of important service connectivity use cases.
