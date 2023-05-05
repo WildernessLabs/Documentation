@@ -5,26 +5,7 @@ subtitle: Release Notes
 ---
 # RC-3.1 (OS v0.9.8.1, ESP v.0.9.8.0)
 
-We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
-
-RC-3.1 includes:
-
-* **.NET Dynamic Method Fix** - A fix in Mono should now enable execution of .NET code generated at run-time.
-
-* **Meadow CLI** - This release should now work on both MacOS Mx (Apple Silicon) devices as well as non Mx devices.
-
-* **Visual Studio Code** - Output is now colour coded between IDE and Meadow. IDE specific messages appear as white, while messages from Meadow appear as blue. Project templates have been updated.
-
-* **Visual Studio for Windows** - Project templates have been updated.
-
-* **Visual Studio for MacOS** -  Project templates have been updated.
-
-* `MeadowOS.Start()` modified to accept an `IApp` parameter to allow platfomrs to do App creation manually
-* Added `WSL2` Platform to `Meadow.Linux`
-* Platform configuration now supports reserving pins to prevent Core from initializing them and preventing applications from accessing them
-* Bug fixes and improvements to OtA Updating
-* Bug fixes and improvements to the full `Meadow.Linux` stack
-* Added `ParticleDensity` to `Meadow.Units`
+We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and includes improvements to the Meadow.Foundation peripheral library.
 
 ## Updating to RC-3.1
 
@@ -52,14 +33,32 @@ And update by putting your Meadow device in boot loader mode and running:
 meadow flash os
 ```
 
+## Meadow Tooling
+
+* **.NET Dynamic Method Fix** - A fix in Mono should now enable execution of .NET code generated at run-time
+* **Meadow CLI** - This release should now work on MacOS Apple processors (M1/M2) as well as Intel processors
+* **Visual Studio Code** - Output is now color coded between IDE (white) and Meadow (blue)
+* **Visual Studio for Windows** - Project templates have been updated
+* **Visual Studio for MacOS** -  Project templates have been updated
+
+## Meadow.Core
+
+* `MeadowOS.Start()` modified to accept an `IApp` parameter to allow platforms to do App creation manually
+* Added `WSL2` Platform to `Meadow.Linux`
+* Platform configuration now supports reserving pins to prevent Core from initializing them and preventing applications from accessing them
+* Bug fixes and improvements to OtA Updating
+* Bug fixes and improvements to the full `Meadow.Linux` stack
+* Added `ParticleDensity` to `Meadow.Units`
+
 ## Meadow.Foundation
 
-* We updated all our LED drivers to be more thread safe and prevent memory leaks on long running application, and because of this we made a few API adjustments:
-    * All LED drivers - LED method `Stop()` has been renamed to `StopAnimation()` so its self-explanatory to stop any blinking/pulsing animations running on any LED.
-    * For RGB LED drivers (`RgbLed` and `RgbPwmLed`) - `SetColor()` is independent of any running animations, so you can change the color of the LED without having to call `StartBlink()` or `StartPulse()`. If you want a steady color, you need to call `StopAnimation()` first.
-    * For PWM LED drivers (`PwmLed`, `RgbPwmLed` and `PwmLedBarGraph`) - `StartBlink()` and `StartPulse()` can now be called multiple times and it will no longer run multiple animations at once, it will stop whatever animation is doing before switching animations.
-    * For All LED drivers - `StopAnimation()`, `StartBlink()` and `StartPulse()` are now awaitable Tasks to better manage threading for these peripherals.
-    * For LED bar graphs (`LedBarGraph` and `PwmLedBarGraph`) - We removed the setter for the `Percentage` property to set the percentage on the bar graph, use awaitable Task `SetPercentage(float value)` instead.
+We updated all our LED drivers to be more thread safe and prevent memory leaks on long running application, and because of this we made a few API adjustments:
+
+* **All LED drivers** - LED method `Stop()` has been renamed to `StopAnimation()` so its self-explanatory to stop any blinking/pulsing animations running on any LED
+* For RGB LED drivers (`RgbLed` and `RgbPwmLed`) - `SetColor()` is independent of any running animations, so you can change the color of the LED without having to call `StartBlink()` or `StartPulse()`. If you want a steady color, you need to call `StopAnimation()` first
+* For PWM LED drivers (`PwmLed`, `RgbPwmLed` and `PwmLedBarGraph`) - `StartBlink()` and `StartPulse()` can now be called multiple times and it will no longer run multiple animations at once, it will stop whatever animation is doing before switching animations
+* For All LED drivers - `StopAnimation()`, `StartBlink()` and `StartPulse()` are now awaitable Tasks to better manage threading for these peripherals
+* For LED bar graphs (`LedBarGraph` and `PwmLedBarGraph`) - We removed the setter for the `Percentage` property to set the percentage on the bar graph, use awaitable Task `SetPercentage(float value)` instead
 
 ## Meadow Samples
 
