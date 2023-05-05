@@ -7,7 +7,7 @@ subtitle: Release Notes
 
 We have a new release candidate, with some minor updates from RC-3 in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
 
-RC3 includes:
+RC-3.1 includes:
 
 * **Meadow CLI** - This release should now work on both MacOS Mx (Apple Silicon) devices as well as non Mx devices.
 
@@ -16,6 +16,12 @@ RC3 includes:
 * **Visual Studio for Windows** - Project templates have been updated.
 
 * **Visual Studio for MacOS** -  Project templates have been updated.
+
+* `MeadowOS.Start()` modified to accept an `IApp` parameter to allow platfomrs to do App creation manually
+* Added `WSL2` Platform to `Meadow.Linux`
+* Platform configuration now supports reserving pins to prevent Core from initializing them and preventing applications from accessing them
+* Bug fixes and improvements to OtA Updating
+* Bug fixes and improvements to the full `Meadow.Linux` stack
 
 
 ## Updating to RC-3.1
