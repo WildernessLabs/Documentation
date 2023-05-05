@@ -59,6 +59,14 @@ meadow flash os
     * For All LED drivers - `StopAnimation()`, `StartBlink()` and `StartPulse()` are now awaitable Tasks to better manage threading for these peripherals.
     * For LED bar graphs (`LedBarGraph` and `PwmLedBarGraph`) - We removed the setter for the `Percentage` property to set the percentage on the bar graph, use awaitable Task `SetPercentage(float value)` instead.
 
+## Meadow Samples
+
+As usual, all our samples repos and API docs have been updated to latest API changes:
+* [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
+* [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
+* [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
+* [API Documentation](../../../../docfx/index.md)
+
 # RC-3 (v0.9.6.3)
 
 Our next release candidate is here! This release improves system and app reliability, adds Meadow Cloud devices provisioning, and fixes several issues with Over-The-Air (OTA) updates for Meadow.OS on the way to 1.0.
