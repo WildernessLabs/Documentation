@@ -5,9 +5,11 @@ subtitle: Release Notes
 ---
 # RC-3.1 (v0.9.8.x)
 
-We have a new release candidate, with some minor updates from RC-3 in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
+We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
 
 RC-3.1 includes:
+
+* **.NET Dynamic Method Fix** - A fix in Mono should now enable execution of .NET code generated at run-time.
 
 * **Meadow CLI** - This release should now work on both MacOS Mx (Apple Silicon) devices as well as non Mx devices.
 
