@@ -52,13 +52,30 @@ meadow flash os
 
 ## Meadow.Foundation
 
-We updated all our LED drivers to be more thread safe and prevent memory leaks on long running application, and because of this we made a few API adjustments:
+Meadow.Foundation updates for RC3-1 include new drivers, improved APIs and improved performance.
 
-* **All LED drivers** - LED method `Stop()` has been renamed to `StopAnimation()` so its self-explanatory to stop any blinking/pulsing animations running on any LED
+* **SPI drivers auto set bus speed and mode** - every SPI driver now automatically sets the correct SPI and mode when writing to the bus allowing devices with different bus requirements to work in the same project
+* **TftSpi drawing performance** - improvements of over 50%
+* **Bus communications APIS** - under the hood we cleaned up the API names and abstractions while adding support for dynamic SPI bus settings
+* **New Audio Library** - added MicroAudio, a light weight music and sound effects API that works with piezo speakers
+* **New MCP960x thermocouple driver**
+* **New LIS2MDL magnetometer driver**
+* **New LSN303AGR magnetometer driver**
+* **New NEXT particle sensor driver**
+* **New PMSA003I particle sensor driver**
+* **New SH1107 OLED display driver**
+* **New 14 and 16 segment display drivers**
+* **New ANO Navigation Encoder driver**
+
+We've also updated all our LED drivers to be more thread safe and prevent memory leaks on long running application, and because of this we made a few API adjustments:
+
+* LED method `Stop()` has been renamed to `StopAnimation()` so its self-explanatory to stop any blinking/pulsing animations running on any LED
 * For RGB LED drivers (`RgbLed` and `RgbPwmLed`) - `SetColor()` is independent of any running animations, so you can change the color of the LED without having to call `StartBlink()` or `StartPulse()`. If you want a steady color, you need to call `StopAnimation()` first
 * For PWM LED drivers (`PwmLed`, `RgbPwmLed` and `PwmLedBarGraph`) - `StartBlink()` and `StartPulse()` can now be called multiple times and it will no longer run multiple animations at once, it will stop whatever animation is doing before switching animations
 * For All LED drivers - `StopAnimation()`, `StartBlink()` and `StartPulse()` are now awaitable Tasks to better manage threading for these peripherals
 * For LED bar graphs (`LedBarGraph` and `PwmLedBarGraph`) - We removed the setter for the `Percentage` property to set the percentage on the bar graph, use awaitable Task `SetPercentage(float value)` instead
+
+You can see the complete list of [additions and fixes here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/22).
 
 ## Meadow Samples
 
