@@ -34,8 +34,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing ...");
 
-    var config = new SpiClockConfiguration(new Frequency(48000, Frequency.UnitType.Kilohertz), SpiClockConfiguration.Mode.Mode3);
-    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
+    var spiBus = Device.CreateSpiBus();
 
     display = new St7789(
         spiBus: spiBus,

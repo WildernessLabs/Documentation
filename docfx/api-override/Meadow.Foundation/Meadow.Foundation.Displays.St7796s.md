@@ -19,9 +19,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing ...");
 
-    var config = new SpiClockConfiguration(new Meadow.Units.Frequency(12000, Meadow.Units.Frequency.UnitType.Kilohertz)
-        , SpiClockConfiguration.Mode.Mode0);
-    var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
+    var spiBus = Device.CreateSpiBus();
 
     Resolver.Log.Info("Create display driver instance");
 

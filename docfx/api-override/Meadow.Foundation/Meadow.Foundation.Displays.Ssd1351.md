@@ -21,7 +21,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing ...");
 
-    var spiBus = Device.CreateSpiBus(Ssd1351.DefaultSpiBusSpeed);
+    var spiBus = Device.CreateSpiBus();
 
     var display = new Ssd1351(
         spiBus: spiBus,

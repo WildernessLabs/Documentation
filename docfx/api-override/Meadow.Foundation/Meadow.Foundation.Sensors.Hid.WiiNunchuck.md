@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    nunchuck = new WiiNunchuck(Device.CreateI2cBus(WiiNunchuck.DefaultSpeed));
+    nunchuck = new WiiNunchuck(Device.CreateI2cBus(WiiNunchuck.DefaultI2cSpeed));
 
     nunchuck.GetIdentification();
 
