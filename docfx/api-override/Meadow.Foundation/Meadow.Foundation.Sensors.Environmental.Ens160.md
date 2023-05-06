@@ -19,10 +19,10 @@ public override Task Initialize()
     Resolver.Log.Info("Initializing...");
 
     var i2cBus = Device.CreateI2cBus(Meadow.Hardware.I2cBusSpeed.Standard);
-      
+
     sensor = new Ens160(i2cBus, (byte)Ens160.Addresses.Address_0x53);
 
-    
+
     var consumer = Ens160.CreateObserver(
         handler: result =>
         {
@@ -48,7 +48,7 @@ public override Task Initialize()
             Resolver.Log.Info($"  CO2 Concentration: {result.New.CO2Concentration?.PartsPerMillion:N0}ppm");
             Resolver.Log.Info($"  Ethanol Concentraion: {result.New.EthanolConcentration?.PartsPerBillion:N0}ppb");
             Resolver.Log.Info($"  TVOC Concentraion: {result.New.TVOCConcentration?.PartsPerBillion:N0}ppb");
-            Resolver.Log.Info($"  AQI: {sensor.GetAirQualityIndex()}");    
+            Resolver.Log.Info($"  AQI: {sensor.GetAirQualityIndex()}");
         };
     }
 

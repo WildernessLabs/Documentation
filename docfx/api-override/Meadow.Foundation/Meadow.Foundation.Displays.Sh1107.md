@@ -1,9 +1,9 @@
 ---
-uid: Meadow.Foundation.Displays.Sh1106
+uid: Meadow.Foundation.Displays.Sh1107
 remarks: *content
 ---
 
-| Sh1106 | |
+| Sh1107 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Sh110x) |
@@ -18,17 +18,19 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing...");
 
-    var sh1106 = new Sh1106
+    var sh1107 = new Sh1107
     (
-        spiBus: Device.CreateSpiBus(),
-        chipSelectPin: Device.Pins.D02,
-        dcPin: Device.Pins.D01,
-        resetPin: Device.Pins.D00
+        i2cBus: Device.CreateI2cBus(),
+        address: (byte)Addresses.Address_0x3C,
+        width: 128,
+        height: 128
     );
 
-    graphics = new MicroGraphics(sh1106);
-    graphics.CurrentFont = new Font8x8();
-    graphics.Rotation = RotationType._180Degrees;
+    graphics = new MicroGraphics(sh1107)
+    {
+        CurrentFont = new Font12x16(),
+        Rotation = RotationType._180Degrees
+    };
 
     return base.Initialize();
 }
@@ -36,10 +38,10 @@ public override Task Initialize()
 public override Task Run()
 {
     graphics.Clear();
-    graphics.DrawRectangle(0, 0, 128, 64, false);
+    graphics.DrawRectangle(0, 0, graphics.Width, graphics.Height, false);
     graphics.DrawTriangle(10, 10, 50, 50, 10, 50, false);
     graphics.DrawRectangle(20, 15, 40, 20, true);
-    graphics.DrawText(5, 5, "SH1106");
+    graphics.DrawText(5, 5, "SH1107");
     graphics.Show();
 
     return base.Run();
@@ -47,5 +49,5 @@ public override Task Run()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Sh110x/Samples/Sh1106_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Sh110x/Samples/Sh1107_Sample)
 

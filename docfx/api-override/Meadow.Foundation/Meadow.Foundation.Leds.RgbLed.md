@@ -35,12 +35,6 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing...");
 
-    var onRgbLed = new RgbLed(
-        redPin: Device.Pins.OnboardLedRed,
-        greenPin: Device.Pins.OnboardLedGreen,
-        bluePin: Device.Pins.OnboardLedBlue);
-    onRgbLed.SetColor(RgbLedColors.Red);
-
     rgbLeds = new List<RgbLed>
     {
         new RgbLed(
@@ -60,8 +54,6 @@ public override Task Initialize()
             Device.CreateDigitalOutputPort(Device.Pins.D12),
             Device.CreateDigitalOutputPort(Device.Pins.D13))
     };
-
-    onRgbLed.SetColor(RgbLedColors.Green);
 
     return Task.CompletedTask;
 }
@@ -84,25 +76,29 @@ public override async Task Run()
 
         await Task.Delay(1000);
 
-        Resolver.Log.Info("Blinking through each color on each RGB LED...");
+        Resolver.Log.Info("Blinking through each color on each RGB LED (on 500ms / off 500ms)...");
         foreach (var rgbLed in rgbLeds)
         {
             for (int i = 0; i < (int)RgbLedColors.count; i++)
             {
-                rgbLed.StartBlink((RgbLedColors)i);
+                await rgbLed.StartBlink((RgbLedColors)i);
                 await Task.Delay(3000);
+                await rgbLed.StopAnimation();
+                rgbLed.IsOn = false;
             }
         }
 
         await Task.Delay(1000);
 
-        Resolver.Log.Info("Blinking through each color on each RGB LED...");
+        Resolver.Log.Info("Blinking through each color on each RGB LED (on 1s / off 1s)...");
         foreach (var rgbLed in rgbLeds)
         {
             for (int i = 0; i < (int)RgbLedColors.count; i++)
             {
-                rgbLed.StartBlink((RgbLedColors)i, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+                await rgbLed.StartBlink((RgbLedColors)i, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
                 await Task.Delay(3000);
+                await rgbLed.StopAnimation();
+                rgbLed.IsOn = false;
             }
         }
 
