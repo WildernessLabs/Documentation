@@ -19,14 +19,12 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    //==== create the anemometer
     anemometer = new SwitchingAnemometer(Device.Pins.A01);
 
     //==== classic events example
     anemometer.WindSpeedUpdated += (sender, result) =>
     {
         Resolver.Log.Info($"new speed: {result.New.KilometersPerHour:n1}kmh, old: {result.Old?.KilometersPerHour:n1}kmh");
-        OutputWindSpeed(result.New);
     };
 
     //==== IObservable example
@@ -51,19 +49,6 @@ public override Task Run()
     return Task.CompletedTask;
 }
 
-/// <summary>
-/// Displays the windspeed on the onboard LED as full red @ >= `10km/h`,
-/// blue @ `0km/h`, and a proportional mix, in between those speeds.
-/// </summary>
-/// <param name="windspeed"></param>
-void OutputWindSpeed(Speed windspeed)
-{
-    // `0.0` - `10kmh`
-    int r = (int)windspeed.KilometersPerHour.Map(0f, 10f, 0f, 255f);
-    int b = (int)windspeed.KilometersPerHour.Map(0f, 10f, 255f, 0f);
-
-    var wspeedColor = Color.FromRgb(r, 0, b);
-}
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Weather.SwitchingAnemometer/Samples/SwitchingAnemometer_Sample)

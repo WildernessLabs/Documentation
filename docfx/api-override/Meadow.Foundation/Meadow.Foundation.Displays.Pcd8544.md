@@ -27,11 +27,9 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing...");
 
-    var config = new Meadow.Hardware.SpiClockConfiguration(Pcd8544.DEFAULT_SPEED, Meadow.Hardware.SpiClockConfiguration.Mode.Mode0);
-
     var display = new Pcd8544
     (
-        spiBus: Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config),
+        spiBus: Device.CreateSpiBus(),
         chipSelectPin: Device.Pins.D01,
         dcPin: Device.Pins.D00,
         resetPin: Device.Pins.D02

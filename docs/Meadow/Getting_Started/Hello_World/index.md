@@ -9,83 +9,215 @@ Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deployi
 The video below shows you how to create and deploy your first Meadow app on a Mac:
 <p><iframe width="640" height="360" src="https://www.youtube.com/embed/wkekz5I7ycE" frameborder="3" allowfullscreen></iframe></p>
 
-Alternatively, you can follow this step by step guide for both macOS and Windows:
+Alternatively, you can follow this step by step guide for Visual Studio on both macOS and Windows or Visual Studio Code on macOs, Windows, or Linux.
 
-## Step 1: Install Visual Studio Meadow Extensions
+## Go to the instructions for your development system and IDE
 
-## Prerequisites
+1. [Visual Studio 2022 or 2019 on Windows](#visual-studio-windows)
+2. [Visual Studio 2022 or 2019 on macOS](#visual-studio-macos)
+3. [Visual Studio Code on macOS, Windows, or Linux (Debian, Ubuntu)](#visual-studio-code)
 
-You'll need [Visual Studio 2019 or 2022 for Windows or Visual Studio 8.10.xx or 2022 for Mac](https://visualstudio.microsoft.com/downloads/).
+## Visual Studio 2022 or 2019 on Windows<a name="visual-studio-windows"></a>
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
+
+### Step 1: Install Visual Studio Meadow Extension
+
+#### Prerequisites
+
+You'll need [Visual Studio 2019 or 2022 for Windows](https://visualstudio.microsoft.com/downloads/).
 
 You can use any edition including Enterprise, Professional, or the free Community edition.
-
-On Windows you'll also need to make sure that you install the Mobile Framework when asked what Frameworks to install.
-This will allow you to debug your Meadow apps.
 
 **Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
 
 ![Screenshot of Visual Studio Installer showing the Mobile development with .NET payload selected under Desktop & Mobile install options.](Mobile.NET.png)
 
-## Windows
+#### Install the Meadow Extension
 
 You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
- 1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
- 2. Click **Online** and search for `Meadow`.
- 3. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart.
+1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
+2. Click **Online** and search for `Meadow`.
+3. Install **VS Tools for Meadow**, shut down all instances of Visual Studio, and restart.
 
-### macOS
+### Step 2: Create a new Meadow Project
 
-Install the latest version of Visual Studio for Mac.
+1. Open Visual Studio 2019.
+2. Click **Create a new project**.
+3. Search for `Meadow` (make sure to clear all filters).
+4. Select **Meadow Application** and press **Next**.
+5. Name your project `HelloMeadow` and choose project location.
+6. Press **Create**.
 
-You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
-
- 1. On the menu go to **Visual Studio** -> **Extensions**.
- 2. Click the **Gallery** tab.
- 3. Search for `Meadow`.
- 4. Select the **Meadow** IDE extension.
- 5. Click **Install...**
-
-![Visual Studio for Mac Extension Manager showing the Meadow extension in the Gallery search results.](meadow_extension.png)
-
-## Step 2: Create a new Meadow Project
-
-### Windows
-
- 1. Open Visual Studio 2019.
- 2. Click **Create a new project**.
- 3. Search for `Meadow` (make sure to clear all filters).
- 4. Select **Meadow Application** and press **Next**.
- 5. Name your project `HelloMeadow` and choose project location.
- 6. Press **Create**.
-
-### macOS
-
- 1. Open Visual Studio.
- 2. Create a new Project: **File** -> **New Solution..**.
- 3. In the **Meadow** section, select _Meadow Application_ and press **Next**.
- 4. Name your project `HelloMeadow` and choose project location.
- 5. Press **Create**.
-
-## Step 3: Deploy your Application
+### Step 3: Deploy your Application
 
 The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
-### macOS
+1. Connect your Meadow device to your development machine
+2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar. (Alternatively, you can show the list from the **View** > **Toolbars** > **Meadow Device List** menu entry.)
+3. Select the Meadow device COM port that correspond to your board in the Meadow Device List toolbar dropdown
+4. Right-click project in Solution Explorer and choose **Deploy**.
+5. Wait 30-60 seconds for your application to start
 
- 1. Connect your Meadow device to your development machine
- 2. Press the **Play** button in Visual Studio to compile and deploy your application
- 3. Wait 30-60 seconds for your application to start
+### Understanding the `Hello, World` App
 
-### Windows
+Your "Hello, World" app should be running on your Meadow device.
 
- 1. Connect your Meadow device to your development machine
- 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar. (Alternatively, you can show the list from the **View** > **Toolbars** > **Meadow Device List** menu entry.)
- 3. Select the Meadow device COM port that correspond to your board in the Meadow Device List toolbar dropdown
- 4. Right-click project in Solution Explorer and choose **Deploy**.
- 5. Wait 30-60 seconds for your application to start
+* [Continue below to the details of the "Hello, World" Meadow application you just created and deployed.](#hello-world)
 
-## Understanding the `Hello, World` App
+## Visual Studio 2022 or 2019 on macOS<a name="visual-studio-macos"></a>
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
+
+### Step 1: Install Visual Studio Meadow Extension
+
+#### Prerequisites
+
+You'll need [Visual Studio 8.10.xx or 2022 for Mac](https://visualstudio.microsoft.com/downloads/).
+
+You can use any edition including Enterprise, Professional, or the free Community edition.
+
+**Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
+
+![Screenshot of Visual Studio Installer showing the Mobile development with .NET payload selected under Desktop & Mobile install options.](Mobile.NET.png)
+
+#### Install the Meadow Extension
+
+You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
+
+1. On the menu go to **Visual Studio** -> **Extensions**.
+2. Click the **Gallery** tab.
+3. Search for `Meadow`.
+4. Select the **Meadow** IDE extension.
+5. Click **Install...**
+
+![Visual Studio for Mac Extension Manager showing the Meadow extension in the Gallery search results.](meadow_extension.png)
+
+#### Known issue when updating the Meadow Extension on MacOS
+Occasionally, when updating the extension, or if you install the extension manually from file, Visual Studio for Mac will end up with a corrupt extensions database and you may have more than 1 Meadow extension installed. The extension will not work correctly if this happens.
+
+To fix this do the following:
+1. Shut down Visual Studio for Mac.
+2. Within Finder go to `~/Library/Caches/VisualStudio/8.0/` for VS2019 and `~/Library/Caches/VisualStudio/17.0/` for VS2022 (use `Command+Shift+G` to get a path entry both that you can paste this path into).
+3. you should see a `addin-db-*` directory. Delete it.
+4. Restart Visual Studio for Mac. It will then recreate the addin-db-* directory from scratch. VS will take a little longer to start-up.
+
+### Step 2: Create a new Meadow Project
+
+1. Open Visual Studio.
+2. Create a new Project: **File** -> **New Solution..**.
+3. In the **Meadow** section, select _Meadow Application_ and press **Next**.
+4. Name your project `HelloMeadow` and choose project location.
+5. Press **Create**.
+
+### Step 3: Deploy your Application
+
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+
+1. Connect your Meadow device to your development machine
+2. Press the **Play** button in Visual Studio to compile and deploy your application
+3. Wait 30-60 seconds for your application to start
+
+### Understanding the `Hello, World` App
+
+Your "Hello, World" app should be running on your Meadow device.
+
+* [Continue below to the details of the "Hello, World" Meadow application you just created and deployed.](#hello-world)
+
+## Visual Studio Code on macOS, Windows, or Linux (Debian, Ubuntu)<a name="visual-studio-code"></a>
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+
+### Step 1: Install Visual Studio Meadow Extension
+
+#### Prerequisites
+
+You'll need [Visual Studio Code](https://code.visualstudio.com/Download). Visual Studio Code is available for macOS, Windows, and Linux with several CPU architectures supported across those platforms.
+
+#### Install the Meadow Extension
+
+You'll also need to install the [Meadow extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow). This extension works across all supported platforms.
+
+1. Switch to the Extensions icon in the Visual Studio Code Activity Bar on the left. (Alternatively, you can select the **View** > **Extensions** menu item.)
+3. Search for `Meadow` in the **Extensions: Marketplace** search bar.
+4. Select the [**Meadow** extension](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow).
+5. Select **Install** from the Meadow extension details.
+
+### Step 2: Create a new Meadow Project
+
+To create new Meadow projects for development, debugging, and deploying in Visual Studio Code, you will create a project using the command line.
+
+1. Open a command line terminal on your desired platform. You can also open Visual Studio Code and open the Terminal panel it offers.
+1. Within the terminal, navigate to the desired location where you want to create the new Meadow project, such as `MeadowApp1`.
+1. If you haven't previously, run the following `dotnet new install` command to install the available Meadow templates onto your system.
+
+    ```bash
+    dotnet new install WildernessLabs.Meadow.Template
+    ```
+
+1. Run `dotnet new Meadow` to create an initial Meadow "Hello, World" app.
+
+    Alternatively, you can also directly specify the folder where your new project will be created by appending the `--output` parameter to your command.
+
+    ```bash
+    dotnet new Meadow --output MeadowApp1
+    ```
+
+### Step 3: Deploy your Application
+
+1. Open your new Meadow app folder in Visual Studio Code.
+1. Ensure your Meadow board is plugged in and up-to-date.
+1. Choose **Run** > **Start Debugging**. (Your code will automatically be built first.)
+1. From the list of debugging providers, choose `Meadow`.
+1. If prompted, select the serial port for your Meadow board.
+1. Wait 30-60 seconds for your application to start.
+
+### Visual Studio Code troubleshooting
+
+#### Change your target Meadow device
+
+After selecting the device deployment target the first time, the selected serial port value will be used for future deployments. If you want to change which device is targeted for deployment, select the **Select Device** status item in the bottom status bar or run the **Meadow: Select Device** command. This will open the prompt to select a different connected Meadow device.
+
+![Visual Studio Code status bar showing the Meadow device selection details.](vscode-device-target-status.png)
+
+#### Specify a .NET Version
+
+Depending on your system configuration and installed .NET versions. You may need to add a `global.json` file to your project's directory to tell it to use .NET 6.0:
+
+```
+"sdk": {
+    "version": "6.0.101",
+    "allowPrerelease": false,
+    "rollForward": "latestMinor"
+}
+```
+
+#### Maintain your debug configuration
+
+Optionally, you can also create a `launch.json` file to keep your debug configuration, instead of always running it dynamically. Select the Debug icon from the Visual Studio Code Activity Bar on the left, and use the button to create a launch.json file. Choose `Meadow` again from the list, and the default launch settings will be created for you.
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Deploy",
+      "type": "meadow",
+      "request": "launch",
+      "preLaunchTask": "meadow: Build"
+    }
+  ]
+}
+```
+
+### Understanding the `Hello, World` App
+
+Your "Hello, World" app should be running on your Meadow device.
+
+* [Continue below to the details of the "Hello, World" Meadow application you just created and deployed.](#hello-world)
+
+## Understanding the `Hello, World` App<a name="hello-world"></a>
 
 The Meadow app template has one file: `MeadowApp.cs`. Let's take a quick look at that file.
 
