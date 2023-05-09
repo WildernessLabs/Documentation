@@ -21,22 +21,22 @@ First, you need to register your device on Meadow.Cloud.
 
 By default, OtA is not enabled. Follow the steps to enable OtA in your application.  
 
-* In `app.config.yaml`, add the following:
+1. In `app.config.yaml`, add the following:
 
     ```yaml
     Update:
       Enabled: true
     ```
 
-* (Optional) To see more detailed output, enable trace logging by adding the following lines in `app.config.yaml`:
+    * (Optional) To see more detailed output, enable trace logging by adding the following lines in `app.config.yaml`:
 
-    ```yaml
-    Logging:
-      LogLevel:
-          Default: "Trace"
-    ```
+        ```yaml
+        Logging:
+          LogLevel:
+              Default: "Trace"
+        ```
 
-* Next, add event handlers for downloading and applying the updates.
+1. Next, add event handlers for downloading and applying the updates.
 
     ```csharp
     using Meadow.Update;
