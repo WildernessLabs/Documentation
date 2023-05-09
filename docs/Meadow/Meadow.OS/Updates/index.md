@@ -37,6 +37,8 @@ Logging:
 * Next, add event handlers for downloading and applying the updates.
 
 ```
+using Meadow.Update;
+...
 public override async Task Run()
 {
     var svc = Resolver.Services.Get<IUpdateService>() as Meadow.Update.UpdateService;
