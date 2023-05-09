@@ -17,7 +17,7 @@ First, you need to register your device on Meadow.Cloud.
 
 ## Enable Update Service in Meadow.Core
 
-By default, OtA is not enable. Follow the steps to enable OtA in your application.  
+By default, OtA is not enabled. Follow the steps to enable OtA in your application.  
 
 * In `app.config.yaml`, add the following:
 
@@ -34,10 +34,10 @@ Logging:
     Default: "Trace"
 ```
 
-* Next, add event handlers for downloading and applying the updates. This can be added in `public override async Task Run()`:
+* Next, add event handlers for downloading and applying the updates.
 
 ```
-public class MeadowApp : App<F7FeatherV2>
+public override async Task Run()
 {
     var svc = Resolver.Services.Get<IUpdateService>() as Meadow.Update.UpdateService;
     svc.ClearUpdates(); // uncomment to clear persisted info
@@ -66,7 +66,7 @@ public class MeadowApp : App<F7FeatherV2>
     };
 
     ...
-    
+
 }
 ```
 This code adds event handers to download the new package, `updateService.RetrieveUpdate(info);`. and send the new file(s) to the bootloader, `updateService.ApplyUpdate(info);`
