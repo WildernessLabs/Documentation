@@ -59,6 +59,25 @@ Logging:
 }
 ```
 
+### Enable Meadow.Cloud Over-the-Air (OtA) updates
+
+To allow over-the-air (OtA) updates to your Meadow application, add the following configuration to your application's `app.config.yaml` or `app.config.json` file.
+
+```yaml
+Update:
+  Enabled: true
+```
+
+```json
+{
+    "Update": {
+        "Enabled": true
+    }
+}
+```
+
+You can learn more about enabling and responding to OtA updates in your Meadow application from the [Over-the-Air Updates documentation](/Meadow/Meadow.OS/Updates/).
+
 ### Custom Developer Application Settings
 
 You can also configure custom application settings that can then be retrieved at runtime through a strongly-typed system.
