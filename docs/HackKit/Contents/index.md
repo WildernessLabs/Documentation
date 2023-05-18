@@ -25,7 +25,7 @@ subtitle: Here we list all the components included in the Hack Kit Pro
 | [Distance Sensor (HC-SR04)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | 1 | Sonar-based distance sensor good for up to 1 meter. | ![Photo of a distance sensor.](Images/distanceSensor.jpg) |
 | [Moisture Sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive.html) | 1 | Capacitive soil moisture sensor with digital output. | ![Photo of a moisture sensor.](Images/soilMoisture.jpg) |
 | [4x20 LCD Character Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | 1 | LCD character display that's 4 lines tall and 20 characters wide. Can be used with TextMenuDisplay to display text menus. | ![Photo of a four-by-twenty LCD character display.](Images/characterDisplay.jpg) |
-| [ST7789 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. | ![Photo of a 240-by-240 pixel color LCD display.](Images/ST7789.jpg) |
+| [ST7789 Color LCD Display](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7789.html) | 1 | 1.3", 16bbp color, 240x240 pixel, graphic display. | ![Photo of a 240-by-240 pixel color LCD display.](Images/ST7789.jpg) |
 | Resistor Kit | 1 | ~300 resistors of varying resistance. | ![Photo of several end-taped bundles of resistors.](Images/resistors.jpg) |
 | Capacitor Kit | 1 | Various value capacitors for general digital circuit usage. | ![Photo of a pile of capacitors.](Images/capacitors.jpg) |
 | Single-row Breakaway Headers | 4 | | ![Photo of four rows of breakaway header pins.](Images/headers.jpg) |
@@ -41,7 +41,7 @@ subtitle: Here we list all the components included in the Hack Kit Pro
 | Item                   | QTY | Description | |
 |------------------------|:---:|-------------|-|
 | [74595 Shift Register](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | 2 | 8-port digital output expander chip. Adds 8 additional `DigitalOutputPort`s to a Meadow. Can be chained up to 8 for 64 total additional outputs. | ![Photo of two 74595 shift registers.](Images/74HC595.jpg) |
-| [MCP23008 IO Expander](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23x08.html) | 2 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. | ![Photo of two MCP23008 IO expanders.](Images/MCP23008.jpg) |
+| [MCP23008 IO Expander](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp23008.html) | 2 | 8-port digital IO expander chip that connects via SPI. Adds 8 additional digital ports that can be used as output or input with changed notification support. | ![Photo of two MCP23008 IO expanders.](Images/MCP23008.jpg) |
 | [H-Bridge Motor Controller](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.HBridgeMotor.html) | 1 | SN754410. Provides digital control for two motors using an external power source, controlled via PWM. | ![Photo of an SN7544IO H-Bridge motor controller.](Images/HBridgeMotor.jpg) |
 
 ### LEDs
