@@ -22,7 +22,7 @@ public override Task Initialize()
     Resolver.Log.Info("Initializing hardware...");
 
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
-    sensor = new Vl53l0x(i2cBus, (byte)Vl53l0x.Addresses.Default);
+    sensor = new Vl53l0x(i2cBus);
 
     sensor.DistanceUpdated += Sensor_Updated;
 
@@ -41,10 +41,10 @@ private void Sensor_Updated(object sender, IChangeResult<Length> result)
     if (result.New == null) { return; }
 
     if (result.New < new Length(0, LU.Millimeters))
-    { 
+    {
         Resolver.Log.Info("out of range.");
     }
-    else 
+    else
     {
         Resolver.Log.Info($"{result.New.Millimeters}mm / {result.New.Inches:n3}\"");
     }

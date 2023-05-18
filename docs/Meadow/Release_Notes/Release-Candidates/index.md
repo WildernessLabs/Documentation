@@ -3,9 +3,21 @@ layout: Meadow
 title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---
-# RC-3.1 (v0.9.8.x)
+# RC-3.1 (OS v0.9.8.1, ESP v.0.9.8.0)
 
-We have a new release candidate, a minor update from RC-3! This release resolves several issues with applying OTA updates via Meadow Cloud, and [summarize SDK/Tools changes]
+We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and includes improvements to the Meadow.Foundation peripheral library.
+
+## Updating to RC-3.1
+
+This is a full stack release requiring an OS update, new nuget packages, a new Meadow CLI and new Visual Studio extensions.
+
+### Updating Meadow.CLI
+
+Start by making sure you have the latest version of the CLI (0.98.x) by running:
+
+```bash
+dotnet tool update Wildernesslabs.Meadow.CLI --global
+```
 
 ### Updating Meadow.OS
 
@@ -20,6 +32,58 @@ And update by putting your Meadow device in boot loader mode and running:
 ```bash
 meadow flash os
 ```
+
+## Meadow Tooling
+
+* **.NET Dynamic Method Fix** - A fix in Mono should now enable execution of .NET code generated at run-time
+* **Meadow CLI** - This release should now work on MacOS Apple processors (M1/M2) as well as Intel processors
+* **Visual Studio Code** - Output is now color coded between IDE (white) and Meadow (blue)
+* **Visual Studio for Windows** - Project templates have been updated
+* **Visual Studio for MacOS** -  Project templates have been updated
+
+## Meadow.Core
+
+* `MeadowOS.Start()` modified to accept an `IApp` parameter to allow platforms to do App creation manually
+* Added `WSL2` Platform to `Meadow.Linux`
+* Platform configuration now supports reserving pins to prevent Core from initializing them and preventing applications from accessing them
+* Bug fixes and improvements to OtA Updating
+* Bug fixes and improvements to the full `Meadow.Linux` stack
+* Added `ParticleDensity` to `Meadow.Units`
+
+## Meadow.Foundation
+
+Meadow.Foundation updates for RC3-1 include new drivers, improved APIs and improved performance.
+
+* **SPI drivers auto set bus speed and mode** - every SPI driver now automatically sets the correct SPI and mode when writing to the bus allowing devices with different bus requirements to work in the same project
+* **TftSpi drawing performance** - improvements of over 50%
+* **Bus communications APIS** - under the hood we cleaned up the API names and abstractions while adding support for dynamic SPI bus settings
+* **New Audio Library** - added MicroAudio, a light weight music and sound effects API that works with piezo speakers
+* **New MCP960x thermocouple driver**
+* **New LIS2MDL magnetometer driver**
+* **New LSN303AGR magnetometer driver**
+* **New NEXT particle sensor driver**
+* **New PMSA003I particle sensor driver**
+* **New SH1107 OLED display driver**
+* **New 14 and 16 segment display drivers**
+* **New ANO Navigation Encoder driver**
+
+We've also updated all our LED drivers to be more thread safe and prevent memory leaks on long running application, and because of this we made a few API adjustments:
+
+* LED method `Stop()` has been renamed to `StopAnimation()` so its self-explanatory to stop any blinking/pulsing animations running on any LED
+* For RGB LED drivers (`RgbLed` and `RgbPwmLed`) - `SetColor()` is independent of any running animations, so you can change the color of the LED without having to call `StartBlink()` or `StartPulse()`. If you want a steady color, you need to call `StopAnimation()` first
+* For PWM LED drivers (`PwmLed`, `RgbPwmLed` and `PwmLedBarGraph`) - `StartBlink()` and `StartPulse()` can now be called multiple times and it will no longer run multiple animations at once, it will stop whatever animation is doing before switching animations
+* For All LED drivers - `StopAnimation()`, `StartBlink()` and `StartPulse()` are now awaitable Tasks to better manage threading for these peripherals
+* For LED bar graphs (`LedBarGraph` and `PwmLedBarGraph`) - We removed the setter for the `Percentage` property to set the percentage on the bar graph, use awaitable Task `SetPercentage(float value)` instead
+
+You can see the complete list of [additions and fixes here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/22).
+
+## Meadow Samples
+
+As usual, all our samples repos and API docs have been updated to latest API changes:
+* [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
+* [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
+* [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
+* [API Documentation](../../../../docfx/index.md)
 
 # RC-3 (v0.9.6.3)
 
@@ -346,7 +410,8 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities, reducing total Meadow power consumption considerably.
 * **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
-* **Faster WiFi Connection** - We have made changes to the event model on the ESP32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
+* **Faster WiFi Connection** - We have made changes to the event model on the 
+32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
 * **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
 * **Network Improvements** - We've spent a lot of cycles on advanced web socket features that weren't implemented yet that unlock a number of important service connectivity use cases.

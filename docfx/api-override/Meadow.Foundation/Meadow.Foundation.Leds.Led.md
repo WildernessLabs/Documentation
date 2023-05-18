@@ -53,9 +53,9 @@ public override async Task Run()
         Resolver.Log.Info("Turning them on and off for 200ms using SetLed...");
         for (int i = 0; i < ledBarGraph.Count; i++)
         {
-            ledBarGraph.SetLed(i, true);
+            await ledBarGraph.SetLed(i, true);
             await Task.Delay(100);
-            ledBarGraph.SetLed(i, false);
+            await ledBarGraph.SetLed(i, false);
         }
 
         await Task.Delay(1000);
@@ -64,8 +64,7 @@ public override async Task Run()
         while (percentage < 1)
         {
             percentage += 0.10f;
-            Resolver.Log.Info($"{percentage}");
-            ledBarGraph.Percentage = Math.Min(1.0f, percentage);
+            await ledBarGraph.SetPercentage(Math.Min(1.0f, percentage));
             await Task.Delay(100);
         }
 
@@ -75,8 +74,7 @@ public override async Task Run()
         while (percentage > 0)
         {
             percentage -= 0.10f;
-            Resolver.Log.Info($"{percentage}");
-            ledBarGraph.Percentage = Math.Max(0.0f, percentage);
+            await ledBarGraph.SetPercentage(Math.Max(0.0f, percentage));
             await Task.Delay(100);
         }
 
@@ -86,9 +84,8 @@ public override async Task Run()
         while (percentage < 1)
         {
             percentage += 0.10f;
-            Resolver.Log.Info($"{percentage}");
-            ledBarGraph.Percentage = Math.Min(1.0f, percentage);
-            ledBarGraph.StartBlink(ledBarGraph.GetTopLedForPercentage());
+            await ledBarGraph.SetPercentage(Math.Min(1.0f, percentage));
+            await ledBarGraph.StartBlink(ledBarGraph.GetTopLedForPercentage());
             await Task.Delay(2000);
         }
 
@@ -98,25 +95,24 @@ public override async Task Run()
         while (percentage > 0)
         {
             percentage -= 0.10f;
-            Resolver.Log.Info($"{percentage}");
-            ledBarGraph.Percentage = Math.Max(0.0f, percentage);
-            ledBarGraph.StartBlink(ledBarGraph.GetTopLedForPercentage());
+            await ledBarGraph.SetPercentage(Math.Max(0.0f, percentage));
+            await ledBarGraph.StartBlink(ledBarGraph.GetTopLedForPercentage());
             await Task.Delay(2000);
         }
 
         await Task.Delay(1000);
 
         Resolver.Log.Info("Blinking for 5 seconds at 500ms on/off...");
-        ledBarGraph.StartBlink();
+        await ledBarGraph.StartBlink();
         await Task.Delay(5000);
-        ledBarGraph.Stop();
+        await ledBarGraph.StopAnimation();
 
         await Task.Delay(1000);
 
         Resolver.Log.Info("Blinking for 5 seconds at 200ms on/off...");
-        ledBarGraph.StartBlink(TimeSpan.FromMilliseconds(200), TimeSpan.FromMilliseconds(200));
+        await ledBarGraph.StartBlink(TimeSpan.FromMilliseconds(200), TimeSpan.FromMilliseconds(200));
         await Task.Delay(5000);
-        ledBarGraph.Stop();
+        await ledBarGraph.StopAnimation();
 
         await Task.Delay(1000);
     }

@@ -6,6 +6,10 @@ layout: Home
 
 ## Upcoming Events
 
+### May 18-19, 2023
+
+**[Wilderness Labs DevCamp 2023](https://www.eventbrite.com/e/devcamp-2023-virtual-tickets-597113842577)** - We’re excited to announce that we’re hosting our first ever, in-person, DevCamp in Seattle on May 18th/19th, 2023. Join us to be the first to hear some awesome Meadow news. Registration is free. Day 1 will be an in-person portion and is invite-only. Day 2 will be virtual and open to everyone!
+
 ## Past Events
 
 ### 2022.February.17th
@@ -15,8 +19,9 @@ layout: Home
 **[NDC London - .NET on Tiny IoT Meadow Boards](https://ndclondon.com/agenda/net-on-tiny-iot-meadow-boards-03vn/0by4vc453ac)** - Join Clifford Agius as he talks about how Meadow powers his _Handy_ project; an open-source initiative to provide high-quality DIY prosthetic limbs to folks without the opportunity to afford them on their own.
  
 
- ### 2021.December.10th [MS Dev Summit Warsaw - Enterprise IoT with .NET & Meadow](https://msdevsummit.com/)
- Join Microsoft Program Manager Adrian Stevens as he explores Meadow from the perspective of building real-world, enterprise-IoT solutions with Meadow.
+### 2021.December.10th
+
+**[MS Dev Summit Warsaw - Enterprise IoT with .NET & Meadow](https://msdevsummit.com/)** - Join Microsoft Program Manager Adrian Stevens as he explores Meadow from the perspective of building real-world, enterprise-IoT solutions with Meadow.
 
 <div align="center">
 <a href="/DevCamp2021"><image src="/DevCamp2020/Support_Files/Wilderness_Labs_Dev_Camp.svg"/></a>

@@ -18,7 +18,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    var i2cBus = Device.CreateI2cBus(WiiClassicControllerPro.DefaultSpeed);
+    var i2cBus = Device.CreateI2cBus(WiiClassicControllerPro.DefaultI2cSpeed);
 
     classicControllerPro = new WiiClassicControllerPro(i2cBus: i2cBus, 
                                                  useHighResolutionMode: true);
