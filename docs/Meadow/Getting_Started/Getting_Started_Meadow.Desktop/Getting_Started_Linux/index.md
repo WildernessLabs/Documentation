@@ -42,6 +42,14 @@ To get started with Meadow.Linux, you will need to install the following prerequ
     sudo chmod +x ./dotnet-install.sh
     ./dotnet-install.sh --channel 7.0
     ```
+    
+    After .NET is installed, you can add it to your user PATH to be able to call it easily.
+    
+    ```bash
+    echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
+    echo 'export PATH=$PATH:$HOME/.dotnet' >> ~/.bashrc
+    source ~/.bashrc
+    ```
 
 * If your board supports GPIO, SPI, or I2C, and you want to use it with your Meadow apps, you may need to manually enable these features on your Linux machine.
 
