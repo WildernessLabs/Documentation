@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to beta site
+name: "[Testing] Deploy Jekyll site to beta site"
 
 on:
   # Runs on pushes targeting the default branch
