@@ -1,0 +1,132 @@
+name: Deploy Jekyll site to beta site
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["develop"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Build job
+  build:
+    # We believe there is a dependency on Windows due to a WinForms element somewhere in Meadow that DocFX hits. Ideally, it wouldn't be a requirement, though.
+    #runs-on: ubuntu-latest
+    runs-on: windows-latest
+    
+    steps:
+      # Check out this content repo.
+      - name: Checkout Documentation side-by-side
+        uses: actions/checkout@v3
+        with:
+          path: src
+      # Clone all the Meadow dependencies adjacent for DocFX build use.
+      - name: Checkout Meadow.Units side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Units
+          path: Meadow.Units
+          ref: develop
+      - name: Checkout Meadow.Logging side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Logging
+          path: Meadow.Logging
+          ref: develop
+      - name: Checkout Meadow.Contracts side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Contracts
+          path: Meadow.Contracts
+          ref: develop
+      - name: Checkout Meadow.Foundation side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Foundation
+          path: Meadow.Foundation
+          ref: develop
+      - name: Checkout Meadow.Core side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Core
+          path: Meadow.Core
+          ref: develop
+      - name: Checkout Meadow side-by-side
+        uses: actions/checkout@v3
+        with:
+          # Private repo requires token access; rest are public repos.
+          token: ${{ secrets.CI_ACCESS_TOKEN }}
+          repository: WildernessLabs/Meadow
+          path: Meadow
+          ref: develop
+      # Clone more Meadow-related repos for API docs generation (via DocFX).
+      - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
+        uses: actions/checkout@v3
+        with:
+          # Private repo requires token access; rest are public repos.
+          repository: WildernessLabs/Meadow.Foundation.Grove
+          path: Meadow.Foundation.Grove
+          ref: develop
+      - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
+        uses: actions/checkout@v3
+        with:
+          # Private repo requires token access; rest are public repos.
+          repository: WildernessLabs/Meadow.Foundation.FeatherWings
+          path: Meadow.Foundation.FeatherWings
+          ref: develop
+      - name: Checkout Meadow.Foundation.mikroBUS into DocFX-expected Source location
+        uses: actions/checkout@v3
+        with:
+          # Private repo requires token access; rest are public repos.
+          repository: WildernessLabs/Meadow.Foundation.mikroBUS
+          path: Meadow.Foundation.mikroBUS
+          ref: develop
+
+      - name: Setup .NET Core SDK 6.0.x & 7.0.x
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            7.0.x
+
+      - name: Setup NuGet
+        uses: Nuget/setup-nuget@v1.0.5
+
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install DocFX globally
+        run: |
+          dotnet tool install --global docfx
+
+      - name: Run DocFX
+        run: |
+          cd src/docfx
+          docfx docfx.json
+
+      - name: Clean up some generated DocFX TOC output
+        run: |
+          cd src/docfx
+          (cat .\docs\api\Meadow\toc.html) | % { $_ -replace ">Meadow.Peripherals.", ">" } > .\docs\api\Meadow\toc.html
+          (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
+          (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
+
+      # Set up Ruby dependency for Jekyll
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Build with Jekyll
+        run: |
+          cd docs
+          bundle install
+          bundle exec jekyll build
+      - name: Merge DocFX content with Jekyll content
+        run: |
+          cp src/docfx/docs src/docs/_site -r
