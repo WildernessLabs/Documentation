@@ -42,6 +42,12 @@ jobs:
           repository: WildernessLabs/Meadow.Contracts
           path: Meadow.Contracts
           ref: develop
+      - name: Checkout Meadow.Modbus side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Modbus
+          path: Meadow.Modbus
+          ref: develop
       - name: Checkout Meadow.Foundation side-by-side
         uses: actions/checkout@v3
         with:
