@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: src
+          
       # Clone all the Meadow dependencies adjacent for DocFX build use.
       - name: Checkout Meadow.Units side-by-side
         uses: actions/checkout@v3
@@ -30,36 +31,42 @@ jobs:
           repository: WildernessLabs/Meadow.Units
           path: Meadow.Units
           ref: develop
+          
       - name: Checkout Meadow.Logging side-by-side
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Logging
           path: Meadow.Logging
           ref: develop
+          
       - name: Checkout Meadow.Contracts side-by-side
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Contracts
           path: Meadow.Contracts
           ref: develop
+          
       - name: Checkout Meadow.Modbus side-by-side
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Modbus
           path: Meadow.Modbus
           ref: develop
+          
       - name: Checkout Meadow.Foundation side-by-side
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation
           path: Meadow.Foundation
           ref: develop
+          
       - name: Checkout Meadow.Core side-by-side
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Core
           path: Meadow.Core
           ref: develop
+          
       - name: Checkout Meadow side-by-side
         uses: actions/checkout@v3
         with:
@@ -68,6 +75,7 @@ jobs:
           repository: WildernessLabs/Meadow
           path: Meadow
           ref: main # TODO: Is there a `develop`-like branch here?
+          
       # Clone more Meadow-related repos for API docs generation (via DocFX).
       - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
         uses: actions/checkout@v3
@@ -76,6 +84,7 @@ jobs:
           repository: WildernessLabs/Meadow.Foundation.Grove
           path: Meadow.Foundation.Grove
           ref: develop
+          
       - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
@@ -83,6 +92,7 @@ jobs:
           repository: WildernessLabs/Meadow.Foundation.FeatherWings
           path: Meadow.Foundation.FeatherWings
           ref: develop
+          
       - name: Checkout Meadow.Foundation.mikroBUS into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
@@ -122,19 +132,19 @@ jobs:
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
 
       # Set up Ruby dependency for Jekyll
-      #- name: Checkout
-      #  uses: actions/checkout@v3
       - name: Setup Ruby
         uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+          
       - name: Build with Jekyll
         run: |
           cd src/docs
           bundle install
           bundle exec jekyll build
+          
       - name: Merge DocFX content with Jekyll content
         run: |
           cp src/docfx/docs src/docs/_site -r
