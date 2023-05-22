@@ -1,4 +1,4 @@
-name: "[Testing] Deploy Jekyll site to beta site"
+name: "[Testing] Build Jekyll+DocFX site for beta site"
 
 on:
   # Runs on pushes targeting the default branch
@@ -61,7 +61,7 @@ jobs:
           token: ${{ secrets.CI_ACCESS_TOKEN }}
           repository: WildernessLabs/Meadow
           path: Meadow
-          ref: develop
+          ref: main # TODO: Is there a `develop`-like branch here?
       # Clone more Meadow-related repos for API docs generation (via DocFX).
       - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
         uses: actions/checkout@v3
