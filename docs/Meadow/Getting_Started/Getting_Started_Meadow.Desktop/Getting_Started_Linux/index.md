@@ -6,6 +6,10 @@ subtitle: "To get up and running with Meadow.Linux, follow these steps:"
 
 Meadow.Linux offers an environment for developing Meadow code that can run on Linux distributions where .NET is available, including Raspberry Pi computers and NVIDIA Jetson development boards where you can access general-purpose input/output (GPIO) pins. Developing with Meadow.Linux requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.
 
+Running Meadow applications on Linux can provide a very convenient development loop for prototyping and testing your Meadow applications, quickly iterating and seeing the result of code changes even using the same components you would use on a Meadow Feather or Core-Compute module.
+
+You can also quickly prototype graphics using an emulated IDisplay object that renders to a window on your Linux machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intesive workloads requiring much more processing power.
+
 ## Supported Meadow.Linux platforms
 
 Here are the currently tested platforms and OS versions for Meadow.Linux, along with the version of Meadow.Core that was last used to test them.
@@ -37,6 +41,14 @@ To get started with Meadow.Linux, you will need to install the following prerequ
     wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
     sudo chmod +x ./dotnet-install.sh
     ./dotnet-install.sh --channel 7.0
+    ```
+    
+    After .NET is installed, you can add it to your user PATH to be able to call it easily.
+    
+    ```bash
+    echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
+    echo 'export PATH=$PATH:$HOME/.dotnet' >> ~/.bashrc
+    source ~/.bashrc
     ```
 
 * If your board supports GPIO, SPI, or I2C, and you want to use it with your Meadow apps, you may need to manually enable these features on your Linux machine.
