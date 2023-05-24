@@ -150,8 +150,8 @@ jobs:
           cp src/docfx/docs src/docs/_site -r
 
       - if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop' }}
-        name: Sync site to beta-developer.wildernesslabs.co
-        uses: jakejarvis/s3-sync-action
+        name: Sync site to beta site
+        uses: jakejarvis/s3-sync-action@master
         # TODO with:
         # TODO  args: --delete
         # TODO env:
