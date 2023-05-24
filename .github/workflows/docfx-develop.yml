@@ -148,3 +148,11 @@ jobs:
       - name: Merge DocFX content with Jekyll content
         run: |
           cp src/docfx/docs src/docs/_site -r
+
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop' }}
+        name: Sync site to beta-developer.wildernesslabs.co
+        uses: jakejarvis/s3-sync-action
+        # TODO with:
+        # TODO  args: --delete
+        # TODO env:
+        # TODO  AWS_S3_ENDPOINT: "s3://beta-developer.wildernesslabs.co"
