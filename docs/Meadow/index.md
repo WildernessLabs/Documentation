@@ -36,7 +36,7 @@ Finally, check out [Meadow.Foundation](/Meadow/Meadow.Foundation) to learn how i
  * [Unified GPIO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch)
  * [Meadow.Foundation Libraries and Frameworks](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)
 
- ## Issues and Support
+## Issues and Support
 
 Meadow issues can be filed at the Wilderness Labs [Meadow_Issues](https://github.com/WildernessLabs/Meadow_Issues) repo.
 
