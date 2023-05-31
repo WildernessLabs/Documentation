@@ -5,7 +5,9 @@ subtitle: Release Notes
 ---
 # v1.0 
 
-Meadow.OS 1.0 is here! This version (OS v1.0.0.0, ESP v.1.0.0.0) is mostly a promotion of our Release Candidate 3.1 with minor fixes and adjustments in preparation for our first major non-beta release. For more information about recent work on Meadow.OS, please have a look at our [Release Candidate Release Notes](/Meadow/Release_Notes/Release-Candidates/).
+The culmination of six years of work and 1.5MM lines of code, the Meadow v1.0 release includes all of the features found in the previous RC-3.1 release and adds final touches for OtA updates reliability and security.
+
+For more information about recent work on Meadow.OS, please have a look at our [Release Candidate Release Notes](/Meadow/Release_Notes/Release-Candidates/).
 
 ## Updating to v1.0
 

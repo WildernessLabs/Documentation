@@ -4,13 +4,7 @@ title: Meadow Guides
 subtitle: Guides and documentation for Meadow devices and applications.
 ---
 
-# Welcome!!
-
-Pardon our dust! Meadow is still in beta! :)
-
-Meadow OS issues can be filed at the Wilderness Labs [Meadow_Issues](https://github.com/WildernessLabs/Meadow_Issues) repo.
-
-Also, make sure to join the [Wilderness Labs Slack](http://slackinvite.wildernesslabs.co) to chat with us!
+# Welcome
 
 ## Getting Started
 
@@ -41,3 +35,9 @@ Finally, check out [Meadow.Foundation](/Meadow/Meadow.Foundation) to learn how i
  * [Meadow.Foundation Peripheral Library](/Meadow/Meadow.Foundation/Peripherals)
  * [Unified GPIO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch)
  * [Meadow.Foundation Libraries and Frameworks](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)
+
+ ## Issues and Support
+
+Meadow issues can be filed at the Wilderness Labs [Meadow_Issues](https://github.com/WildernessLabs/Meadow_Issues) repo.
+
+Also, make sure to join the [Wilderness Labs Slack](http://slackinvite.wildernesslabs.co) to chat with us!
