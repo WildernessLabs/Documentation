@@ -1,10 +1,10 @@
 ---
 layout: Meadow
-title: Meadow F7 Feather Beta Status
-subtitle: Current feature and beta status.
+title: Meadow F7 Status
+subtitle: Current feature and version status.
 ---
 
-We are currently in [Meadow Release-Candidate 1.0](/Meadow/Release_Notes/Release-Candidates/).
+We are currently in [Meadow v1.0](/Meadow/Release_Notes/1.0/).
 
 ## General IO Features
 
@@ -12,19 +12,20 @@ We are currently in [Meadow Release-Candidate 1.0](/Meadow/Release_Notes/Release
 |----------------------|---------------------|-----------------------------------|
 | **Basic Digital IO** | Yes | |
 | **Analog**           | Yes | |
-| **PWM**              | Yes | |
+| **PWM**              | Yes | Pins D5, D6 not working |
 | **Serial (UART)**    | Yes | |
 | **I2C**              | Yes | |
 | **SPI**              | Yes | |
-| **CAN**              | No | Planned, v1.0 |
+| **CAN**              | No | Planned, Post-v1.0 |
 | **DAC**              | No | Not implemented. Post-RTW |
 
 ## Communications
 
 | Feature          | Tested Working      | Notes                             |
 |------------------|---------------------|-----------------------------------|
-| Wi-Fi | Yes | SSL certificates validated. No SSL certificate management yet. |
+| Wi-Fi | Yes | |
 | Bluetooth | Yes |  |
+| Cellular | Yes |  |
 
 ## Other Features
 
@@ -33,5 +34,5 @@ We are currently in [Meadow Release-Candidate 1.0](/Meadow/Release_Notes/Release
 | Debugging        | Yes                 |                |
 | Battery Charging | Yes | |
 | Battery Voltage Level | Yes | |
-| Power Management APIs | Yes | New in RC-1 |
-| Over-the-Air (OtA) Updates | Yes | New in RC-1 |
+| Power Management APIs | Yes | |
+| Over-the-Air (OtA) Updates | Yes | |
