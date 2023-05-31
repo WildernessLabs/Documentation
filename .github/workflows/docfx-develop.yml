@@ -149,6 +149,16 @@ jobs:
         run: |
           cp src/docfx/docs src/docs/_site -r
 
+      - name: Compress final docs site for artifact use
+        run: |
+          zip -r docs-site-with-api.zip src/docs/_site
+
+      - name: Upload site artifacts for internal testing/verification
+        uses: actions/upload-artifact@v2
+        with:
+          name: Docs site build with API
+          path: 'docs-site-with-api.zip'
+
       - if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop' }}
         name: Sync site to beta site
         uses: jakejarvis/s3-sync-action@master
