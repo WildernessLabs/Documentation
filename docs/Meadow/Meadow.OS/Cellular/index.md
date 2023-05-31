@@ -4,15 +4,13 @@ title: Cellular
 subtitle: Connect Meadow to LTE/4G cellular signals
 ---
 
-#
-#   Cellular
+##  Cellular
 
-The beta cellular network for Meadow plataform has compatibility with the **BG770A Cell Wing** with the **F7 Feather v2**, and supports **Cat-M1** and **Nb-IoT** network modes.
+The beta cellular network for Meadow platform has compatibility with the **BG770A Cell Wing** using the **F7 Feather v2**, and supports **Cat-M1** and **Nb-IoT** network modes.
 
-#
-#   Network configuration
+## Network configuration
 
-To enable the cellular network interface, there should be created a **cell.config.yaml**, where the cell settings will be defined. Also, the cell interface should be set on the **meadow.config.yaml**, and some pins used by the cell module should be reserved.
+To enable the cellular network interface, create a **cell.config.yaml** file, where the cell settings will be defined. Also, the cell interface should be set on the **meadow.config.yaml**, and some pins used by the cell module should be reserved.
 
 Then, to configure your network you just need to follow these three steps:
 
@@ -43,13 +41,11 @@ Device:
     ReservedPins: I9;H13;C7
 ```
 
-#
-#   Hardware configuration
+## Hardware configuration
 
 To use the **BG770A Cell Wing with the F7 Feather v2**, you just need to attach them, and connect an *LTE* antenna to the cell module.
 
-#
-#  Testing
+## Testing
 
-To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like that:
+To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like this:
 `Connection established successfully! IP address '100.69.106.222'.`
