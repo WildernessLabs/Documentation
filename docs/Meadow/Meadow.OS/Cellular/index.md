@@ -6,7 +6,7 @@ subtitle: Connect Meadow to LTE/4G cellular signals
 
 ##  Cellular
 
-The beta cellular network for Meadow platform has compatibility with the **BG770A Cell Wing** using the **F7 Feather v2**, and supports **Cat-M1** and **Nb-IoT** network modes.
+The beta cellular network for Meadow platform is compatible with the **BG770A Cell Wing** using the **F7 Feather v2**, and supports **Cat-M1** and **Nb-IoT** network modes.
 
 ## Network configuration
 
@@ -34,7 +34,7 @@ Network:
     DefaultInterface: BG770A
 ```
 
-3 - Reserve the pins **I9**, **H13** and **C7**, which are used by the setup **BG770A** with **F7 Feather v2**:
+3 - Reserve the pins **I9**, **H13** and **C7**, which are used to turn on the **BG770A Cell Wing** and to exchange data with the **F7 Feather v2**:
 
 ```yaml
 Device:
