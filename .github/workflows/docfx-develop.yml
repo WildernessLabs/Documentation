@@ -66,6 +66,13 @@ jobs:
           repository: WildernessLabs/Meadow.Core
           path: Meadow.Core
           ref: develop
+
+      - name: Checkout MQTTnet side-by-side
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/MQTTnet
+          path: MQTTnet
+          ref: develop
           
       - name: Checkout Meadow side-by-side
         uses: actions/checkout@v3
