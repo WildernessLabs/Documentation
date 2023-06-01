@@ -29,7 +29,7 @@ Download the latest version of Meadow.OS:
 meadow download os
 ```
 
-Update by putting your Meadow device in boot loader mode and run:
+Update by putting your Meadow device in boot loader mode and running:
 
 ```bash
 meadow flash os
