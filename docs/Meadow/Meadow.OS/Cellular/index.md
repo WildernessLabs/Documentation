@@ -16,11 +16,13 @@ The following table describes the network operation modes that each module suppo
 |--------------------------|------------------------|--------|-------------|
 | Quectel BG770A Cell Wing | ✔                  | ✔  | -        |
 | Quectel BG95-M3          | ✔                  | ✔  | ✔       |
-| Quectel M95              | -                   | -   | -       |
+| Quectel M95              | -                   | -   | ✔       |
 
 ## Network configuration
 
-To enable the cellular network interface, create a **cell.config.yaml** file, where the cell settings will be defined. Also, the cell interface should be set on the **meadow.config.yaml**, and some pins used by the cell module should be reserved.
+Using Cellular Meadow, you don't need to understand the complexities of AT commands or invest time studying module datasheets to enable the cellular network interface.
+
+You only need to create a **cell.config.yaml** file, where the cell settings will be defined, define the cell interface on the **meadow.config.yaml**, and reserve some pins used by the cell module.
 
 Then, to configure your network you just need to follow these three steps:
 
@@ -36,7 +38,7 @@ Settings:
     Mode: Cat-M1 # Network mode (Cat-M1, Nb-IoT or GSM)
 ```
 
-***Notes**: It's recommended to define the carrier operator code, since it avoids the module network automatic selection, making the connection generally more reliable.*
+***Notes**: It's recommended to define the carrier operator code, since it avoids the module network automatic selection, making the connection generally more reliable with the **Cat-M1** (**LTE-M** or **eMTC**) or **NB-IoT** modes.*
 
 2 - Select `Cell` as `DefaultInterface` in the **meadow.config.yaml**, if you don't have this *yaml* file in your device, you should create and flash it to the device:
 
@@ -56,9 +58,16 @@ Device:
 
 ## Hardware configuration
 
-To use the **BG770A Cell Wing with the F7 Feather v2**, you just need to attach them, connect an *LTE* antenna and insert a M2M SIM card to the cell module.
+### BG770A Cell Wing
+To use the **BG770A Cell Wing with the F7 Feather v2**, you just need to attach them, connect an *LTE* antenna and insert a **M2M** SIM card to the cell module.
 
-***Notes**: It's necessary a **M2M** (Machine-to-Machine) SIM card to enable the **Cat-M1** (**LTE-M** or **eMTC**) or **NB-IoT** network modes, which is usually different than the ordinary models, that are used in cellphones. However, for **GSM/GRPS 2G** connection it's generally possible to use a standard SIM card.*
+### BG95-M3
+To use this module you will need to connect the **F7 Feather v2** `D00` and `D01` pins to the `TX` and `RX` module pins, respectively, to establish the data communication between then, and the **F7 Feather v2** `D10` pin to the `EN` **BG95-M3** pin, to turn on the module.
+
+### M95
+To use this module you will need to connect the **F7 Feather v2** `D00` and `D01` pins to the `TX` and `RX` module pins, respectively, to establish the data communication between then, and the **F7 Feather v2** `D10` pin to the `PWK` **M95** pin, to turn on the module.
+
+***Notes**: It's necessary a **M2M** (Machine-to-Machine) SIM card to enable the **Cat-M1** (**LTE-M** or **eMTC**) or **NB-IoT** network modes, which is different than the ordinary models, that are usually used in cellphones. However, for **GSM/GRPS 2G** connection it's generally possible to use a standard SIM card.*
 
 ## Testing
 
