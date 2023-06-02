@@ -1,4 +1,4 @@
-name: "[Testing] Build Jekyll+DocFX site for beta site"
+name: "[Testing] Build generated API docs pages for beta site"
 
 on:
   # Runs on pushes targeting the default branch
@@ -81,13 +81,12 @@ jobs:
           token: ${{ secrets.CI_ACCESS_TOKEN }}
           repository: WildernessLabs/Meadow
           path: Meadow
-          ref: main # TODO: Is there a `develop`-like branch here?
+          ref: main # No develop branch on Meadow [yet]
           
       # Clone more Meadow-related repos for API docs generation (via DocFX).
       - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
-          # Private repo requires token access; rest are public repos.
           repository: WildernessLabs/Meadow.Foundation.Grove
           path: Meadow.Foundation.Grove
           ref: develop
@@ -95,7 +94,6 @@ jobs:
       - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
-          # Private repo requires token access; rest are public repos.
           repository: WildernessLabs/Meadow.Foundation.FeatherWings
           path: Meadow.Foundation.FeatherWings
           ref: develop
@@ -103,7 +101,6 @@ jobs:
       - name: Checkout Meadow.Foundation.mikroBUS into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
-          # Private repo requires token access; rest are public repos.
           repository: WildernessLabs/Meadow.Foundation.mikroBUS
           path: Meadow.Foundation.mikroBUS
           ref: develop
@@ -138,38 +135,14 @@ jobs:
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
 
-      # Set up Ruby dependency for Jekyll
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
-        with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-          
-      - name: Build with Jekyll
-        run: |
-          cd src/docs
-          bundle install
-          bundle exec jekyll build
-          
-      - name: Merge DocFX content with Jekyll content
-        run: |
-          cp src/docfx/docs src/docs/_site -r
-
-      - name: Compress final docs site for artifact use
-        run: |
-          zip -r docs-site-with-api.zip src/docs/_site
-
-      - name: Upload site artifacts for internal testing/verification
-        uses: actions/upload-artifact@v2
-        with:
-          name: Docs site build with API
-          path: 'docs-site-with-api.zip'
-
       - if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop' }}
         name: Sync site to beta site
-        uses: jakejarvis/s3-sync-action@master
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        env:
+          AWS_S3_BUCKET: 'beta-developer.wildernesslabs.co'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: src/docfx/docs
+          DEST_DIR: docs/api-test
         # TODO with:
         # TODO  args: --delete
-        # TODO env:
-        # TODO  AWS_S3_ENDPOINT: "s3://beta-developer.wildernesslabs.co"
