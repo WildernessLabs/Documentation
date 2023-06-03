@@ -3,6 +3,29 @@ layout: Meadow
 title: Meadow v1.0
 subtitle: Release Notes
 ---
+
+# v1.0.2
+
+## OS
+* Minor OtA enhancements
+
+## Meadow.Core
+* `ISerialPort` now follows the Meadow controller pattern
+* Minor improvements to interrupt handling
+* `UpdateService` catches exceptions while unzipping MPAKs and raises an event
+
+## Meadow.Foundation
+* `TftSpi` - Fixed rotation bug for the ST7789 display
+
+## Meadow.Cloud
+* Ability to manage collections and publish to specific collections
+
+## Meadow.CLI
+* Meadow.Cloud compatibility changes for creating packages and listing collections
+
+## Meadow.Linux
+* Added support for processor temperature
+
 # v1.0 
 
 The culmination of six years of work and 1.5MM lines of code, the Meadow v1.0 release includes all of the features found in the previous RC-3.1 release and adds final touches for OtA updates reliability and security.
@@ -29,7 +52,7 @@ Download the latest version of Meadow.OS:
 meadow download os
 ```
 
-Update by putting your Meadow device in boot loader mode and run:
+Update by putting your Meadow device in boot loader mode and running:
 
 ```bash
 meadow flash os

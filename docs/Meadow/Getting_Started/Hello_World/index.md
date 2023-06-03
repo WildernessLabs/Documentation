@@ -29,7 +29,7 @@ You'll need [Visual Studio 2019 or 2022 for Windows](https://visualstudio.micros
 
 You can use any edition including Enterprise, Professional, or the free Community edition.
 
-**Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
+**Important**: Make sure to include the **.NET Multi-platform App UI development** component (or **Mobile Development with .NET** in older versions of Visual Studio) when installing Visual Studio.
 
 ![Screenshot of Visual Studio Installer showing the Mobile development with .NET payload selected under Desktop & Mobile install options.](Mobile.NET.png)
 
@@ -78,7 +78,7 @@ You'll need [Visual Studio 8.10.xx or 2022 for Mac](https://visualstudio.microso
 
 You can use any edition including Enterprise, Professional, or the free Community edition.
 
-**Important**: Make sure to include the **Mobile Development with .NET** component when installing Visual Studio.
+**Important**: Make sure to include the **.NET Multi-platform App UI development** component (or **Mobile Development with .NET** in older versions of Visual Studio) when installing Visual Studio.
 
 ![Screenshot of Visual Studio Installer showing the Mobile development with .NET payload selected under Desktop & Mobile install options.](Mobile.NET.png)
 
