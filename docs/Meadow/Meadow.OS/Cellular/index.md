@@ -13,7 +13,7 @@ The beta cellular network for Meadow platform is compatible with the **Quectel B
 The following table describes the network operation modes that each module support:
 
 | Modules / Network Modes   | Cat-M1 (LTE-M or eMTC) | NB-IoT | GSM/GRPS 2G |
-|--------------------------|------------------------|--------|-------------|
+|--------------------------|:----------------------:|:------:|:-----------:|
 | Quectel BG770A Cell Wing | ✔                  | ✔  | -        |
 | Quectel BG95-M3          | ✔                  | ✔  | ✔       |
 | Quectel M95              | -                   | -   | ✔       |
@@ -58,6 +58,30 @@ Device:
 
 ## Hardware configuration
 
+Antenna is important part, you must choose it according to the **operation frequency of the network**, if you do not use it in the modem you will not have access to the cellular network.
+
+Below are the recommended antennas for each device.
+
+**Quectel BG770A Cell Wing** 
+
+    Type: Rubber ducky or Dome Antennas
+    Connector: SMA Plug
+    Power: 2 dBi (Minimal)
+  
+**Quectel BG95-M3**
+
+    Antennel: Rubber ducky or Dome Antennas
+    Connector: SMA Plug
+    Power: 2 dBi (Minimal)
+            
+**Quectel M95**  
+
+    Antennel: Rubber ducky 
+    Connector: SMA Plug
+    Power: 1 dBi (Minimal)
+
+**Notes**:  If your location has a very weak signal, we strongly suggest change for an antenna with great power.
+
 ### BG770A Cell Wing
 To use the **BG770A Cell Wing with the F7 Feather v2**, you just need to attach them, connect an *LTE* antenna and insert a **M2M** SIM card to the cell module.
 
@@ -65,7 +89,13 @@ To use the **BG770A Cell Wing with the F7 Feather v2**, you just need to attach 
 To use this module you will need to connect the **F7 Feather v2** `D00` and `D01` pins to the `TX` and `RX` module pins, respectively, to establish the data communication between then, and the **F7 Feather v2** `D10` pin to the `EN` **BG95-M3** pin, to turn on the module.
 
 ### M95
-To use this module you will need to connect the **F7 Feather v2** `D00` and `D01` pins to the `TX` and `RX` module pins, respectively, to establish the data communication between then, and the **F7 Feather v2** `D10` pin to the `PWK` **M95** pin, to turn on the module.
+To use this module you will need to connect the **F7 Feather v2** `D00` and `D01` pins to the `TX` and `RX` module pins, respectively, to establish the data communication between then, and the **F7 Feather v2** `D10` pin to the `PWK` **M95** pin, to turn on the module. 
+
+One of the ways to check if the module is working is the indication LEDs on board.
+    
+- `Yellow LED` : it is used to indicate the device status, signalizes that the internal module initialization is finished and ready to work.
+
+- `Red LED` : it is used to indicate the network status, if this led no blink maybe the device is unpowered
 
 ***Notes**: It's necessary a **M2M** (Machine-to-Machine) SIM card to enable the **Cat-M1** (**LTE-M** or **eMTC**) or **NB-IoT** network modes, which is different than the ordinary models, that are usually used in cellphones. However, for **GSM/GRPS 2G** connection it's generally possible to use a standard SIM card.*
 
