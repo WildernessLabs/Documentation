@@ -58,7 +58,7 @@ Device:
 
 ## Hardware configuration
 
-Antenna is important part, you must choose it according to the **operation frequency of the network**, if you do not use it in the modem you will not have access to the cellular network.
+The antenna is an essential component that plays a crucial role in establishing a reliable connection. It is important to select an antenna that matches the operational frequency of your network. Without utilizing an antenna in your modem, you will be unable to access the cellular network
 
 Below are the recommended antennas for each device.
 
