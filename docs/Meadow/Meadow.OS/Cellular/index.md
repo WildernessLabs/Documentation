@@ -63,6 +63,12 @@ To set up the hardware, the easiest way is to use our **BG770A Cell Wing** by at
 ### Quectel BG770A - Meadow Cell Wing
 To utilize the **BG770A Cell Wing** with the **Meadow F7v2 Feather**, simply attach them, connect an LTE antenna (Rubber ducky or Dome) to the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
+<div style="text-align: center;">
+  <img src="images/cell_wing.jpeg" alt="Quectel BG770A/Meadow Cell Wing setup" width="40%" />
+</div>
+
+<p align="center" style="font-size: smaller;">Quectel BG770A/Meadow Cell Wing with Meadow F7v2 Feather setup</p>
+
 ### Quectel BG95-M3 - NimbeLink Skywire click board
 To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to suply and turn on the cell module. Finally, connect an antenna to the click board.
 
@@ -75,6 +81,12 @@ Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `EN` **Ni
 #### Attaching an antenna
 Finally, connect an LTE antenna (Rubber ducky or Dome) with the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
+<div style="text-align: center;">
+  <img src="images/BG95.jpeg" alt="Quectel BG95-M3/NimbeLink Skywire click board setup" width="40%" />
+</div>
+
+<p align="center" style="font-size: smaller;">Quectel BG95-M3 click board with Meadow F7v2 Feather setup</p>
+
 ### Quectel M95 - GSM2 click board
 To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to suply and turn on the cell module. Finally, connect an antenna to the click board.
 
@@ -86,6 +98,12 @@ Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Q
 
 #### Attaching an antenna
 Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
+
+<div style="text-align: center;">
+  <img src="images/m95.jpeg" alt="Quectel M95 - GSM2 click board setup" width="40%" />
+</div>
+
+<p align="center" style="font-size: smaller;">Quectel M95/GSM2 click board with Meadow F7v2 Feather setup using an external energy supply connected to the 5V and GND pins</p>
 
 > **Notes**: To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
 
