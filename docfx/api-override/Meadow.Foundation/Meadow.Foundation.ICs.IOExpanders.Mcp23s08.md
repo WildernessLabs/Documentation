@@ -13,13 +13,13 @@ remarks: *content
 ### Code Example
 
 ```csharp
-Mcp23s08 mcp;
+private Mcp23s08 mcp;
 
 public override Task Initialize()
 {
-    IDigitalInputPort interruptPort = Device.CreateDigitalInputPort(Device.Pins.D00, InterruptMode.EdgeRising);
-    IDigitalOutputPort chipSelectPort = Device.CreateDigitalOutputPort(Device.Pins.D01);
-    IDigitalOutputPort resetPort = Device.CreateDigitalOutputPort(Device.Pins.D02);
+    var interruptPort = Device.CreateDigitalInterruptPort(Device.Pins.D00, InterruptMode.EdgeRising);
+    var chipSelectPort = Device.CreateDigitalOutputPort(Device.Pins.D01);
+    var resetPort = Device.CreateDigitalOutputPort(Device.Pins.D02);
 
     mcp = new Mcp23s08(Device.CreateSpiBus(), chipSelectPort, interruptPort, resetPort);
 
@@ -35,7 +35,7 @@ public override Task Run()
     }
 }
 
-void TestDigitalOutputPorts(int loopCount)
+private void TestDigitalOutputPorts(int loopCount)
 {
     var out00 = mcp.CreateDigitalOutputPort(mcp.Pins.GP0);
     var out01 = mcp.CreateDigitalOutputPort(mcp.Pins.GP1);
@@ -46,7 +46,7 @@ void TestDigitalOutputPorts(int loopCount)
     var out06 = mcp.CreateDigitalOutputPort(mcp.Pins.GP6);
     var out07 = mcp.CreateDigitalOutputPort(mcp.Pins.GP7);
 
-    var outputPorts = new List<IDigitalOutputPort>() 
+    var outputPorts = new List<IDigitalOutputPort>()
     {
         out00, out01, out02, out03, out04, out05, out06, out07
     };
@@ -56,15 +56,15 @@ void TestDigitalOutputPorts(int loopCount)
         outputPort.State = true;
     }
 
-    for(int l = 0; l < loopCount; l++) 
+    for (int l = 0; l < loopCount; l++)
     {
         // loop through all the outputs
-        for (int i = 0; i < outputPorts.Count; i++) 
+        for (int i = 0; i < outputPorts.Count; i++)
         {
             // turn them all off
-            foreach (var outputPort in outputPorts) 
+            foreach (var outputPort in outputPorts)
             {
-                outputPort.State = false; 
+                outputPort.State = false;
             }
 
             // turn on just one
@@ -74,19 +74,19 @@ void TestDigitalOutputPorts(int loopCount)
     }
 
     // cleanup
-    for (int i = 0; i < outputPorts.Count; i++) 
+    for (int i = 0; i < outputPorts.Count; i++)
     {
         outputPorts[i].Dispose();
     }
 }
 
-void TestBulkDigitalOutputPortWrites(int loopCount)
+private void TestBulkDigitalOutputPortWrites(int loopCount)
 {
     byte mask = 0x0;
 
-    for (int l = 0; l < loopCount; l++) 
+    for (int l = 0; l < loopCount; l++)
     {
-        for (int i = 0; i < 8; i++) 
+        for (int i = 0; i < 8; i++)
         {
             mcp.WriteToPorts(mask);
             mask = (byte)(1 << i);

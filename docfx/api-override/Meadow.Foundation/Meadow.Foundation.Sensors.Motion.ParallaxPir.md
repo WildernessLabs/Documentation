@@ -15,15 +15,15 @@ The Parallax PIR detects motion via infrared. It emits a high signal over the da
 ### Code Example
 
 ```csharp
-ParallaxPir parallaxPir;
+private ParallaxPir parallaxPir;
 
 public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
-    
-    parallaxPir = new ParallaxPir(Device.CreateDigitalInputPort(Device.Pins.D05, InterruptMode.EdgeBoth, ResistorMode.Disabled));
 
-    parallaxPir.OnMotionStart += (sender)=> Resolver.Log.Info($"Motion start  {DateTime.Now}");
+    parallaxPir = new ParallaxPir(Device.CreateDigitalInterruptPort(Device.Pins.D05, InterruptMode.EdgeBoth, ResistorMode.Disabled));
+
+    parallaxPir.OnMotionStart += (sender) => Resolver.Log.Info($"Motion start  {DateTime.Now}");
     parallaxPir.OnMotionEnd += (sender) => Resolver.Log.Info($"Motion end  {DateTime.Now}");
 
     return Task.CompletedTask;
