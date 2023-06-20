@@ -15,13 +15,13 @@ The HCSENS0040 is a microwave motion detector commonly found on the RCWL-0516 bo
 ### Code Example
 
 ```csharp
-Hcsens0040 sensor;
+private Hcsens0040 sensor;
 
 public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    sensor = new Hcsens0040(Device.CreateDigitalInputPort(Device.Pins.D05));
+    sensor = new Hcsens0040(Device.CreateDigitalInterruptPort(Device.Pins.D05, Meadow.Hardware.InterruptMode.EdgeBoth));
     sensor.OnMotionDetected += Sensor_OnMotionDetected;
 
     return Task.CompletedTask;

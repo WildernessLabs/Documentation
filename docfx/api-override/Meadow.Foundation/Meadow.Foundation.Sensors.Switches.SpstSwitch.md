@@ -51,8 +51,8 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing...");
 
-    spstSwitch = new SpstSwitch(Device.CreateDigitalInputPort(Device.Pins.D02, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown));
-    spstSwitch.Changed += (s,e) => 
+    spstSwitch = new SpstSwitch(Device.CreateDigitalInterruptPort(Device.Pins.D02, InterruptMode.EdgeFalling, ResistorMode.InternalPullDown));
+    spstSwitch.Changed += (s, e) =>
     {
         Resolver.Log.Info("Switch Changed");
         Resolver.Log.Info($"Switch on: {spstSwitch.IsOn}");
