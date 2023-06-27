@@ -135,7 +135,7 @@ jobs:
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
 
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop' }}
+      - if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop') || (github.ref == 'refs/heads/dominique-Fix440') }}
         name: Sync site to beta site
         uses: jakejarvis/s3-sync-action@v0.5.1
         env:
