@@ -9,7 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Uc1609c) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Uc1609c/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Uc1609c/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Uc1609c.svg?label=Meadow.Foundation.Displays.Uc1609c" alt="NuGet Gallery for Meadow.Foundation.Displays.Uc1609c" /></a> |
-### Code Example
+
+### Code Example
 
 ```csharp
 MicroGraphics graphics;
