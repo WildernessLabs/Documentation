@@ -23,10 +23,12 @@ The peripherals are split into two groups; the first group is general, core peri
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Relay](/docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay.html) | Relay meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [PiezoSpeaker](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker.html) | PiezoSpeaker meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [StandardPidController](/docs/api/Meadow.Foundation/Meadow.Foundation.Controllers.Pid.StandardPidController.html) | StandardPidController meadow driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [PollingPushButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PollingPushButton.html) | PollingPushButton meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [PushButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton.html) | PushButton meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html) | AnalogWaterLevel meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [DigitalTachometer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.HallEffect.DigitalTachometer.html) | DigitalTachometer meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html) | AnalogJoystick meadow driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [DigitalJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.DigitalJoystick.html) | DigitalJoystick meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [AnalogLightSensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.AnalogLightSensor.html) | AnalogLightSensor meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [RotaryEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoder.html) | RotaryEncoder meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [RotaryEncoderWithButton](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton.html) | RotaryEncoderWithButton meadow driver |
@@ -84,7 +86,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Gtk](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Gtk.html) | Gtk display driver for Meadow |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Lcd.CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | Digital and I2C LCD character displays |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.FourDigitSevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.html) | Digital Four digit seven segment displays |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SevenSegment.html) | Ditigal Seven segment displays |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.FourteenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourteenSegment.html) | Digital Fourteen (14) segment display |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.SevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SevenSegment.html) | Digital Seven (7) segment display |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.SixteenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SixteenSegment.html) | Digital Sixteen (16) segment display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Max7219](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219.html) | MAX7219 SPI LED driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Pcd8544](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544.html) | PCD8544 SPI monochrome display (Nokia 5110) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Sh1106](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Sh1106.html) | Sh1106 SPI monochrome OLED display |
@@ -93,8 +97,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.St7565](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7565.html) | ST7565 SPI monochrome OLED display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpiBase.html) | SPI Color TFT and OLED displays (GC9A01, HC8357B, HX8357D, ILI9163, ILI9341, ILI9481, ILI9488, RM68140, S6D02A1, SSD1331, SSD1351, ST7735, ST7789) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Tm1637](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html) | TM1637 digital character display |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Uc1609c](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Uc1609c.html) | Uc1609c SPI monochrome OLED display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.WinForms](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.WinForms.html) | Windows Forms display driver for Meadow |
-| <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Displays.WinUI](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.WinUI.html) |  |
+
 
 #### Displays.ePaper
 
@@ -128,6 +133,13 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2bc](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2bc.html) | Epd4in2bc display driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2bV2](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2bV2.html) | Epd4in2bV2 display driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd5in65f](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd5in65f.html) | Epd5in65f display driver |
+
+#### Displays.Sh1106
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sh1106](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Sh1106.html) | Sh1106 display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sh1107](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Sh1107.html) | Sh1107 display driver |
 
 #### Displays.Ssd130x
 
@@ -173,7 +185,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Pca9685](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9685.html) | PCA9685 I2C PWM expander |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.SerialWombat](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Sw18AB.html) | SerialWombat I2C IO expander for GPIO, PWM, servos, etc. |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Tca9548a](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Tca9548a.html) | TCA9548A I2C IO expander |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | x74595 I2C shift register digital output expander |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.x74595](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595.html) | x74595 SPI shift register digital output expander |
 
 #### ICs.ADC.Ads1x15
 
@@ -209,6 +221,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Leds.Apa102](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102.html) | Apa102 SPI RGB LED driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Leds.Pca9633](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Pca9633.html) | Pca9633 I2C RGB LED driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Leds.Ws2812](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Ws2812.html) | WS2812 SPI RGB LED driver |
 
 ### Motors
 
@@ -290,6 +303,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ags01Db](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ags01Db.html) | Ags01Db I2C digital MEMS VOC gas sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ens160](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ens160.html) | ENS160 I2C C02, Ethanol and AQI sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.MiniPID2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.MiniPID2.html) | MiniPID2 analog photoionisation (PID) VOC sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.NextPm](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.NextPm.html) | TERA Sensor NextPM serial particulate matter sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Pmsa300i](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Pmsa300i.html) | PMSA300I I2C particulate matter AQI sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Scd4x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd4xBase.html) | SCD4x I2C C02, temperature, and relative humidity sensor (SCD40, SCD41) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Y4000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Y4000.html) | Y4000 Sonde RS485 Modbus water quality sensor |
 
@@ -312,9 +328,10 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.ANONavigationEncoder](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.ANONavigationEncoder.html) | GPIO ANO Directional Navigation and Scroll Wheel Rotary Encoder |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.As5013](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.As5013.html) | I2C Hall sensor IC for smart navigation |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.BBQ10Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.BBQ10Keyboard.html) | BB Q10 I2C Keyboard |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Keyboard.html) | Driver for standard 108-key keyboard |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Keyboard](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Keyboard.html) | Standard 108-key PC keyboard |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html) | Freescale Semiconductor MPR121 I2C capacitive keypad controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.Tsc2004](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Tsc2004.html) | Tsc2004 I2C capacitive touch screen |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Hid.WiiExtensionControllers](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiExtensionControllerBase.html) | Nintendo Wii I2C extension controllers (nunchuck, classic controller, snes classic controller, nes classic controller) |
@@ -367,6 +384,8 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Bno055](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055.html) | Bosch BNO055 I2C 9 axis absolute orientation sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Hcsens0040](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040.html) | HCSENS0040 digital microwave motion sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Hmc5883](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883.html) | Hmc5883 / Qmc5883 I2C digital compass |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Lis2Mdl](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lis2Mdl.html) | LIS2MDL I2C 3-axis magnetometer |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Lsm303agr](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lsm303agr.html) | Lsm303agr I2C 6-axis accelerometer and magnetometer |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Mag3110](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html) | Freescale MAG3110 I2C 3 axis magnetometer |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Mma7660fc](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mma7660fc.html) | Mma7660fc I2C 3-axis accelerometer |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Motion.Mmc5603](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mmc5603.html) | MMC5603 I2C 3 axis digital magnetometer |
@@ -406,9 +425,17 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75.html) | Lm75 I2C temperature sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Mcp960x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp960xBase.html) | Mcp960x I2C thermocouple temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Mcp9808](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9808.html) | MCP9808 I2C temperature sensor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Thermistor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Thermistor.html) | Thermistor temperature sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Thermistor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Thermistor.html) | Thermistor analog temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102.html) | TMP102 I2C temperature sensor |
+
+#### Sensors.Temperature.Mcp960x
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp9600](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9600.html) | Mcp9600 temperature driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp9601](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9601.html) | Mcp9601 temperature driver |
 
 ### Weather
 
@@ -432,6 +459,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Audio.Speaker](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Audio.Speaker.html) | Grove PWM Speaker |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.4DigitDisplay](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.FourDigitDisplay.html) | Grove GPIO 4 digit display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.LCD](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.LCD.html) | Grove I2C LCD display |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.OLEDDisplay112](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.OLEDDisplay112.html) | Grove I2C OLED 1.12" display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.HID.VibrationMotor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.HID.VibrationMotor.html) | Grove GPIO vibration motor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Leds.LEDSocket](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Leds.LEDSocket.html) | Grove GPIO led |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Relays.Relay](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Relays.Relay.html) | Grove Relay driver |
