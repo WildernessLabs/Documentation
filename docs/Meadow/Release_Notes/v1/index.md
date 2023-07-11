@@ -22,7 +22,7 @@ subtitle: Release Notes
 * New driver: microBUS AC Current current sensor driver
 * New driver: microBUS LEM current sensor driver
 * New driver: Pca9671 IO expander driver
-* Minor fixes and enhancements - details here: v1.1.0 Milestone (github.com)
+* Minor fixes and enhancements - [details here: v1.1.0 Milestone (github.com)](https://github.com/WildernessLabs/Meadow.Foundation/milestone/26)
 
 ## Meadow.Cloud
 * Multi-org support and ability to invite users
