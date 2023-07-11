@@ -1,8 +1,38 @@
 ---
 layout: Meadow
-title: Meadow v1.0
+title: Meadow v1
 subtitle: Release Notes
 ---
+
+# v1.1
+
+## OS
+* Added support for the BG95 (LTE-M) and M95 (GSM) cellular modules
+* Improved reliability of cell networking
+* Resolved issue where using a static IP address and Wi-fi auto-connect together would not work as expected
+
+## Meadow.Core
+* Added Meadow.LogProviders library, which includes Console, File and UDP logging
+* Bug fix in F7 internal resistors (resistors inverted)
+
+## Meadow.Foundation
+* New driver: NeoPixel driver
+* New driver: Mcp3xxx family of analog to digital converters
+* New driver: Current Transducer
+* New driver: microBUS AC Current current sensor driver
+* New driver: microBUS LEM current sensor driver
+* New driver: Pca9671 IO expander driver
+* Minor fixes and enhancements - [details here: v1.1.0 Milestone (github.com)](https://github.com/WildernessLabs/Meadow.Foundation/milestone/26)
+
+## Meadow.Cloud
+* Multi-org support and ability to invite users
+
+## Meadow.CLI
+* Added support for `app.build.yaml` to allow NoLink per-assembly
+* Fix for `meadow list ports` command on Linux and therefore VSCode
+
+## Meadow.Linux
+* n/a
 
 # v1.0.2
 
