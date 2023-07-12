@@ -82,7 +82,7 @@ Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `EN` **Ni
 Finally, connect an LTE antenna (Rubber ducky or Dome) with the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
 <div style="text-align: center;">
-  <img src="images/BG95.jpeg" alt="Quectel BG95-M3/NimbeLink Skywire click board setup" width="40%" />
+  <img src="images/bg95.jpeg" alt="Quectel BG95-M3/NimbeLink Skywire click board setup" width="40%" />
 </div>
 
 <p align="center" style="font-size: smaller;">Quectel BG95-M3 click board with Meadow F7v2 Feather setup</p>
