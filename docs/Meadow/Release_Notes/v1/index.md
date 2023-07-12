@@ -7,7 +7,7 @@ subtitle: Release Notes
 # v1.1
 
 ## OS
-* Added support for the BG95 (LTE-M) and M95 (GSM) cellular modules
+* Added support for the BG95 (LTE-M) and M95 (GSM) cellular modules, [view documentation](http://developer.wildernesslabs.co/Meadow/Meadow.OS/Cellular/).
 * Improved reliability of cell networking
 * Resolved issue where using a static IP address and Wi-fi auto-connect together would not work as expected
 
