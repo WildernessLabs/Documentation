@@ -20,6 +20,7 @@
             "/**.csproj"
           ],
           "exclude": [
+            "/Source/Meadow.Foundation.Peripherals/Displays.WinForms/**",
             "/Source/Meadow.Foundation.Core.Samples/**",
             "/Source/Meadow.Foundation.Peripherals/**/Driver/bin/**",
             "/Source/Meadow.Foundation.Peripherals/**/Driver/obj/**",
@@ -34,10 +35,7 @@
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Tests/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Utilities/**"
           ],
-          "src": "../../Meadow.Foundation",
-          "properties": {
-            "EnableWindowsTargeting": "true"
-          }
+          "src": "../../Meadow.Foundation"
         }
       ],
       "dest": "api/Meadow.Foundation",
