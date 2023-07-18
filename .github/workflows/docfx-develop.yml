@@ -17,6 +17,11 @@ jobs:
     runs-on: windows-latest
     
     steps:
+      - name: Debug output
+        run: |
+          echo "${GITHUB_REF}" >> $GITHUB_OUTPUT
+          gh run cancel ${{ github.run_id }}
+
       # Check out this content repo.
       - name: Checkout Documentation side-by-side
         uses: actions/checkout@v3
