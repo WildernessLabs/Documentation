@@ -34,7 +34,10 @@
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Tests/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Utilities/**"
           ],
-          "src": "../../Meadow.Foundation"
+          "src": "../../Meadow.Foundation",
+          "properties": {
+            "EnableWindowsTargeting": "true"
+          }
         }
       ],
       "dest": "api/Meadow.Foundation",
