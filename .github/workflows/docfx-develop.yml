@@ -130,9 +130,9 @@ jobs:
       - name: Clean up some generated DocFX TOC output
         run: |
           cd src/docfx
-          (cat .\docs\api\Meadow\toc.html) | % { $_ -replace ">Meadow.Peripherals.", ">" } > .\docs\api\Meadow\toc.html
-          (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
-          (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
+          cat ./docs/api/Meadow/toc.html | sed 's/>Meadow\.Peripherals\./>/g' > ./docs/api/Meadow/toc.html
+          cat ./docs/api/Meadow.Foundation/toc.html | sed 's/>Meadow\.Foundation\./>/g' > ./docs/api/Meadow.Foundation/toc.html
+          cat ./docs/api/Meadow.Foundation/toc.html | sed 's/>\/a>/>\ Meadow.Foundation<\/a>/g' > ./docs/api/Meadow.Foundation/toc.html
 
       # TODO: Reinstate this condition.
       # if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop') }}
