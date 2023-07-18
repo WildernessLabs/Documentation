@@ -13,8 +13,8 @@ jobs:
   # Build job
   build:
     # We believe there is a dependency on Windows due to a WinForms element somewhere in Meadow that DocFX hits. Ideally, it wouldn't be a requirement, though.
-    #runs-on: ubuntu-latest
-    runs-on: windows-latest
+    #runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       # Check out this content repo.
@@ -134,6 +134,7 @@ jobs:
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">Meadow.Foundation.", ">" } > .\docs\api\Meadow.Foundation\toc.html
           (cat .\docs\api\Meadow.Foundation\toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation</a>" } > .\docs\api\Meadow.Foundation\toc.html
 
+      # TODO: Reinstate this condition.
       # if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop') }}
       - name: Sync site to beta site
         uses: jakejarvis/s3-sync-action@v0.5.1
