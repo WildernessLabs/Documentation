@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Debug output
         run: |
-          echo "${GITHUB_REF}" >> $GITHUB_OUTPUT
+          echo "${GITHUB_REF}"
 
       # Check out this content repo.
       - name: Checkout Documentation side-by-side
