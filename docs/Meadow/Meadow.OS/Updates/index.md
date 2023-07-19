@@ -84,7 +84,7 @@ An .mpak file is a bundle that includes application and OS files. We'll use the 
 
 * Deploy the OtA-enabled application to a device. (Currently, the linker only runs during a deployment. This step can be skipped [once this gets fixed](https://github.com/WildernessLabs/Meadow.CLI/issues/287).)
 * Run `meadow package create -a your_app_folder/bin/Debug/netstandard2.1/postlink_bin -v 0.9.8.1`. This creates a .mpak file with the contents of your application and binaries for the OS version specified.
-* To upload your newly created .mpak to Meadow.Cloud, run `meadow package upload -p your_package_id`. Visit [https://www.meadowcloud.co/packages](https://www.meadowcloud.co/packages) to verify your package was successfully uploaded.
+* To upload your newly created .mpak to Meadow.Cloud, run `meadow package upload -p [path to .mpak file]`. Visit [https://www.meadowcloud.co/packages](https://www.meadowcloud.co/packages) to verify your package was successfully uploaded.
 
 ## Publish
 
