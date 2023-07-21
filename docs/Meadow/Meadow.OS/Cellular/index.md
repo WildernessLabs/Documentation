@@ -36,6 +36,8 @@ Settings:
     Password: virtu # APN password (optional)
     Operator: 72410 # Carrier numeric operator code (optional)
     Mode: CATM1 # Network mode (CATM1, NBIOT or GSM) (optional)
+    Interface: ttyS1 # Serial interface (UART1 (COM1) = ttyS0, UART4 (COM4) = ttyS1, UART6 = ttyS3) (optional)
+    TurnOnPin: D10 # Pin used to turn on the Cell module (optional)
 ```
 
 > **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. However, if you encounter any connectivity issues, it is advisable to manually configure these settings.
@@ -54,7 +56,7 @@ Device:
     ReservedPins: I9;H13;C7
 ```
 
-> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively.
+> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the correspondent ones, according to the pinout denifition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A03` MCU pin.
 
 ## Hardware configuration
 
@@ -63,9 +65,7 @@ To set up the hardware, the easiest way is to use our **BG770A Cell Wing** by at
 ### Quectel BG770A - Meadow Cell Wing
 To utilize the **BG770A Cell Wing** with the **Meadow F7v2 Feather**, simply attach them, connect an LTE antenna (Rubber ducky or Dome) to the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
-<div style="text-align: center;">
-  <img src="images/cell_wing.jpeg" alt="Quectel BG770A/Meadow Cell Wing setup" width="40%" />
-</div>
+![Quectel BG770A/Meadow Cell Wing setup](images/cell_wing.jpeg){: .center-image :standalone}
 
 <p align="center" style="font-size: smaller;">Quectel BG770A/Meadow Cell Wing with Meadow F7v2 Feather setup</p>
 
@@ -81,9 +81,7 @@ Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `EN` **Ni
 #### Attaching an antenna
 Finally, connect an LTE antenna (Rubber ducky or Dome) with the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
-<div style="text-align: center;">
-  <img src="images/bg95.jpeg" alt="Quectel BG95-M3/NimbeLink Skywire click board setup" width="40%" />
-</div>
+![Quectel BG95-M3/NimbeLink Skywire click board setup](images/bg95.jpeg){: .center-image :standalone}
 
 <p align="center" style="font-size: smaller;">Quectel BG95-M3 click board with Meadow F7v2 Feather setup</p>
 
@@ -99,9 +97,7 @@ Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Q
 #### Attaching an antenna
 Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
 
-<div style="text-align: center;">
-  <img src="images/m95.jpeg" alt="Quectel M95 - GSM2 click board setup" width="40%" />
-</div>
+![Quectel M95 - GSM2 Click Board Setup](images/m95.jpeg){: .center-image :standalone}
 
 <p align="center" style="font-size: smaller;">Quectel M95/GSM2 click board with Meadow F7v2 Feather setup using an external energy supply connected to the 5V and GND pins</p>
 
@@ -111,3 +107,22 @@ Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with a
 
 To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like this:
 `Connection established successfully! IP address '100.69.106.222'.`
+
+#### Handling Cell connection using a .NET application
+
+You can check the Cell connection status by accessing the `IsConnected` property present in the Cell Network Adapter, as in the following example:
+
+```Csharp
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+var poolTime = 1000;
+
+while(true) 
+{
+  while(cell.IsConnected)
+  {
+      Console.WriteLine("Cell is connected!");
+  }
+  Console.WriteLine("Cell is not connected");
+  await Task.Delay(poolTime);
+}
+```
