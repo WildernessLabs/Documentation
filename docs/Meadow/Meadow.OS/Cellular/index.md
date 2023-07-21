@@ -36,7 +36,7 @@ Settings:
     Password: virtu # APN password (optional)
     Operator: 72410 # Carrier numeric operator code (optional)
     Mode: CATM1 # Network mode (CATM1, NBIOT or GSM) (optional)
-    Interface: ttyS1 # Serial interface (UART1 (COM1) = ttyS0, UART4 (COM4) = ttyS1, UART6 = ttyS3) (optional)
+    Interface: /dev/ttyS1 # Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) (optional)
     TurnOnPin: D10 # Pin used to turn on the Cell module (optional)
 ```
 
@@ -79,7 +79,7 @@ To use this module you will need to connect the **Meadow F7v2 Feather** `D00` an
 Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
 #### Attaching an antenna
-Finally, connect an LTE antenna (Rubber ducky or Dome) with the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
+Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
 ![Quectel BG95-M3/NimbeLink Skywire click board setup](images/bg95.jpeg){: .center-image :standalone}
 
