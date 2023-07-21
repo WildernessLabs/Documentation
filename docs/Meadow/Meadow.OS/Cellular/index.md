@@ -56,7 +56,7 @@ Device:
     ReservedPins: I9;H13;C7
 ```
 
-> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the correspondent ones, according to the pinout denifition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A03` MCU pin.
+> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the corresponding ones, according to the pinout denifition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A03` MCU pin.
 
 ## Hardware configuration
 
@@ -114,15 +114,13 @@ You can check the Cell connection status by accessing the `IsConnected` property
 
 ```Csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
-var poolTime = 1000;
 
-while(true) 
+if (cell.IsConnected)
 {
-  while(cell.IsConnected)
-  {
-      Console.WriteLine("Cell is connected!");
-  }
-  Console.WriteLine("Cell is not connected");
-  await Task.Delay(poolTime);
+    Console.WriteLine("Cell is connected!");
+}
+else
+{
+    Console.WriteLine("Cell isn't connected");
 }
 ```
