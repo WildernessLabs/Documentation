@@ -2,6 +2,11 @@
 
 Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are probably best viewed at the [developer.wildernesslabs.co](http://developer.wildernesslabs.co), but they should be readable here, as well. You'll also find all the source code to the [samples](samples/) here.
 
+## Build Status
+
+[![Build site for beta site](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-develop.yml/badge.svg)](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-develop.yml)
+
+[![Build site for release site](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-main.yml/badge.svg)](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-main.yml)
 
 ## Running Locally
 

@@ -20,6 +20,7 @@
             "/**.csproj"
           ],
           "exclude": [
+            "/Source/Meadow.Foundation.Peripherals/Displays.WinForms/**",
             "/Source/Meadow.Foundation.Core.Samples/**",
             "/Source/Meadow.Foundation.Peripherals/**/Driver/bin/**",
             "/Source/Meadow.Foundation.Peripherals/**/Driver/obj/**",
