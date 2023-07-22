@@ -113,11 +113,6 @@ jobs:
       - name: Setup NuGet
         uses: Nuget/setup-nuget@v1.0.5
 
-      - name: Setup Node.js 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
       - name: Install DocFX globally
         run: |
           dotnet tool install --global docfx
