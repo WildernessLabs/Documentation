@@ -124,15 +124,15 @@ jobs:
 
       - name: Clean up some generated DocFX TOC output
         run: |
-          cd src/docfx
-          cat ./docs/api/Meadow/toc.html | sed 's/>Meadow\.Peripherals\./>/g' > ./docs/api/Meadow/toc.html
-          cat ./docs/api/Meadow.Foundation/toc.html | sed 's/>Meadow\.Foundation\./>/g' > ./docs/api/Meadow.Foundation/toc.html
-          cat ./docs/api/Meadow.Foundation/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation<\/a>/g' > ./docs/api/Meadow.Foundation/toc.html
-          cat ./docs/api/Meadow.Foundation.Grove/toc.html | sed 's/>Meadow\.Foundation\.Grove\./>/g' > ./docs/api/Meadow.Foundation.Grove/toc.html
-          cat ./docs/api/Meadow.Foundation.Grove/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation\.Grove<\/a>/g' > ./docs/api/Meadow.Foundation.Grove/toc.html
-          cat ./docs/api/Meadow.Foundation.FeatherWings/toc.html | sed 's/>Meadow\.Foundation\.FeatherWings\./>/g' > ./docs/api/Meadow.Foundation.FeatherWings/toc.html
-          cat ./docs/api/Meadow.Foundation.FeatherWings/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation\.FeatherWings<\/a>/g' > ./docs/api/Meadow.Foundation.FeatherWings/toc.html
-          cat ./docs/api/Meadow.Foundation.mikroBUS/toc.html | sed 's/>Meadow\.Foundation\.mikroBUS\./>/g' > ./docs/api/Meadow.Foundation.mikroBUS/toc.html
+          cd src/docfx \
+          cat ./docs/api/Meadow/toc.html | sed 's/>Meadow\.Peripherals\./>/g' > ./docs/api/Meadow/toc.html \
+          cat ./docs/api/Meadow.Foundation/toc.html | sed 's/>Meadow\.Foundation\./>/g' > ./docs/api/Meadow.Foundation/toc.html \
+          cat ./docs/api/Meadow.Foundation/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation<\/a>/g' > ./docs/api/Meadow.Foundation/toc.html \
+          cat ./docs/api/Meadow.Foundation.Grove/toc.html | sed 's/>Meadow\.Foundation\.Grove\./>/g' > ./docs/api/Meadow.Foundation.Grove/toc.html \
+          cat ./docs/api/Meadow.Foundation.Grove/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation\.Grove<\/a>/g' > ./docs/api/Meadow.Foundation.Grove/toc.html \
+          cat ./docs/api/Meadow.Foundation.FeatherWings/toc.html | sed 's/>Meadow\.Foundation\.FeatherWings\./>/g' > ./docs/api/Meadow.Foundation.FeatherWings/toc.html \
+          cat ./docs/api/Meadow.Foundation.FeatherWings/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation\.FeatherWings<\/a>/g' > ./docs/api/Meadow.Foundation.FeatherWings/toc.html \
+          cat ./docs/api/Meadow.Foundation.mikroBUS/toc.html | sed 's/>Meadow\.Foundation\.mikroBUS\./>/g' > ./docs/api/Meadow.Foundation.mikroBUS/toc.html \
           cat ./docs/api/Meadow.Foundation.mikroBUS/toc.html | sed 's/>\/a>/>\ Meadow\.Foundation\.mikroBUS<\/a>/g' > ./docs/api/Meadow.Foundation.mikroBUS/toc.html
 
       # TODO: Reinstate this condition.
