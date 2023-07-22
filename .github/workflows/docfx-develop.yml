@@ -1,13 +1,13 @@
 name: "[Testing] Build generated API docs pages for beta site"
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
+  # Current: Only allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
+  # Future: Set up to run on pushes or PRs targeting the default branch.
+  # push:
+  #   branches: [ "develop" ]
+  # pull_request:
+  #   branches: [ "develop" ]
 
 jobs:
   # Build job
@@ -133,15 +133,20 @@ jobs:
           (cat ./docs/api/Meadow.Foundation.FeatherWings/toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation.FeatherWings</a>" } > ./docs/api/Meadow.Foundation.FeatherWings/toc.html
           (cat ./docs/api/Meadow.Foundation.mikroBUS/toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation.mikroBUS</a>" } > ./docs/api/Meadow.Foundation.mikroBUS/toc.html
 
-      # TODO: Reinstate this condition.
-      # if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop') }}
-      - name: Sync site to beta site
+      - if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop') }}
+        # Manual trigger only since the changing content of the API docs might be entirely dictated by other code repos.
+        # We may also want to manually trigger for structural/template docs changes in this repo, though.
+        # Future option might be to trigger this API docs Action on updates to those code repos _and_ only on updates to relevant template files in this repo.
+        name: Sync site to beta site on manual trigger
         uses: jakejarvis/s3-sync-action@v0.5.1
         env:
           AWS_S3_BUCKET: 'beta-developer.wildernesslabs.co'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: src/docfx/docs
-          DEST_DIR: docs/api-test
-        # TODO with:
-        # TODO  args: --delete
+          DEST_DIR: docs
+        # This requires more research and testing. We want a way to ensure files that are not part of this deployment get removed from the site (e.g., files that were moved or deleted).
+        # This `with...args` is not well documented in the Action for when you deploy to a sub-folder, nor on AWS S3 docs (https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html).
+        # It may be too aggressive when we are now deploying regular docs and API docs separately.
+        # with:
+        #   args: --delete
