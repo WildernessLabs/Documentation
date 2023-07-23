@@ -1,4 +1,4 @@
-name: "[Testing] Build generated API docs pages for beta site"
+name: "Build and publish generated API docs to beta site"
 
 on:
   # Current: Only allows you to run this workflow manually from the Actions tab
