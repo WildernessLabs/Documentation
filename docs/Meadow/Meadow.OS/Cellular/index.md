@@ -112,7 +112,7 @@ To check if you established a connection, you can use the `meadow listen` CLI co
 
 You can check the Cell connection status by accessing the `IsConnected` property present in the Cell Network Adapter, as in the following example:
 
-```Csharp
+```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
 
 if (cell.IsConnected)
