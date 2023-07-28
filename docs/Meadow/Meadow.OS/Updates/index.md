@@ -1,12 +1,14 @@
 ---
 layout: Meadow
-title: Over-the-Air Updates
-subtitle: Getting setup with OtA on Meadow and Meadow.Cloud
+title: Over-the-Air (OtA) Updates
+subtitle: Getting setup with OtA on Meadow.Cloud
 ---
 
 # Overview
 
-Over-the-Air (OtA) updates are finally here! This is our first full stack feature, from bootloader to Meadow.Cloud. To get OtA working you need to first provision your device. Then, you need to package an application that enables the _Update Service_ and upload it to Meadow.Cloud. Finally, you can publish your package to be received by your devices.
+Meadow.Cloud provides secure, Over-the-Air (OtA) updates, which enable you to push a new version of a Meadow application to a device in the field over the network.
+
+To get OtA setup you need to first provision your device. Then, you need to package an application that enables the _Update Service_ and upload it to Meadow.Cloud. Finally, you can publish your package to be received by your devices.
 
 ## Provision Device
 
@@ -82,7 +84,7 @@ An .mpak file is a bundle that includes application and OS files. We'll use the 
 
 * Deploy the OtA-enabled application to a device. (Currently, the linker only runs during a deployment. This step can be skipped [once this gets fixed](https://github.com/WildernessLabs/Meadow.CLI/issues/287).)
 * Run `meadow package create -a your_app_folder/bin/Debug/netstandard2.1/postlink_bin -v 0.9.8.1`. This creates a .mpak file with the contents of your application and binaries for the OS version specified.
-* To upload your newly created .mpak to Meadow.Cloud, run `meadow package upload -p your_package_id`. Visit [https://www.meadowcloud.co/packages](https://www.meadowcloud.co/packages) to verify your package was successfully uploaded.
+* To upload your newly created .mpak to Meadow.Cloud, run `meadow package upload -p [path to .mpak file]`. Visit [https://www.meadowcloud.co/packages](https://www.meadowcloud.co/packages) to verify your package was successfully uploaded.
 
 ## Publish
 

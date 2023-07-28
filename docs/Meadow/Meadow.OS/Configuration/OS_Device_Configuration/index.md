@@ -47,7 +47,7 @@ Network:
     GetNetworkTimeAtStartup: true
 
     # Time synchronization period in seconds.
-    NtpRefreshPeriod: 600
+    NtpRefreshPeriodSeconds: 3600
 
     # Name of the NTP servers.
     NtpServers:
@@ -87,27 +87,27 @@ Device:
     SdStorageSupported: true
 ```
 
-### JIT compilation mode
+### Interpreted mode
 
-This parameter determines if the .NET runtime executes your Meadow application via just-in-time (JIT) compilation or the default interpretation mode. This feature is enabled for RC1 and will eventually be enabled by default for later versions as JIT complication is typically significantly faster.
+The default mode for executing a deployed application is to use JIT (Just In Time) compilation.  Applications can also be interpreted although this method is slower than using JIT.  It is not normally recommended to use this option.
 
 ```yaml
 MonoControl:
-  Options: --jit
+  Options: --interp
 ```
 
 ### Mono debug compilation
 
 In order to see source filenames and line numbers in the stack trace of any runtime exceptions, you can pass the `--debug` parameter to the Mono command line. This won't currently change what is logged by Meadow for unhandled exceptions, but you will be able to find source code line numbers when debugging or specifically logging an exception's `StackTrace` property.
 
-This setting can be combined with `--jit` and other Mono options.
+This setting can be combined with `--interp` and other Mono options.
 
 NOTE: This setting can have a performance impact in Meadow apps and should be avoided in production apps.
 
 ```yaml
 MonoControl:
   # Options to pass to Mono via the command line.
-  Options: --debug --jit
+  Options: --debug --interp
 ```
 
 With that in place, your exceptions will now show the source file location and line numbers in the stack trace of caught exceptions.
@@ -169,6 +169,10 @@ Default value: 3
 Whether or not the Meadow should attempt to request the latest network time from an Network Time Protocol (NTP) server.
 
 If set to true, NTP servers should be specified.
+
+### `NtpRefreshPeriodSeconds`
+
+Number of seconds between network time refreshes.
 
 ### `DnsServers`
 
