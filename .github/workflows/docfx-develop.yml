@@ -18,10 +18,11 @@ jobs:
     
     steps:
       # Check out this content repo.
-      - name: Checkout Documentation side-by-side
+      - name: Checkout beta Documentation side-by-side
         uses: actions/checkout@v3
         with:
           path: src
+          ref: develop # <-- required to deploy beta docs
           
       # Clone all the Meadow dependencies adjacent for DocFX build use.
       - name: Checkout Meadow.Units side-by-side
@@ -133,7 +134,7 @@ jobs:
           (cat ./docs/api/Meadow.Foundation.FeatherWings/toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation.FeatherWings</a>" } > ./docs/api/Meadow.Foundation.FeatherWings/toc.html
           (cat ./docs/api/Meadow.Foundation.mikroBUS/toc.html) | % { $_ -replace ">/a>", ">Meadow.Foundation.mikroBUS</a>" } > ./docs/api/Meadow.Foundation.mikroBUS/toc.html
 
-      - if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop') }}
+      - if: ${{ (github.event_name == 'workflow_dispatch') }}
         # Manual trigger only since the changing content of the API docs might be entirely dictated by other code repos.
         # We may also want to manually trigger for structural/template docs changes in this repo, though.
         # Future option might be to trigger this API docs Action on updates to those code repos _and_ only on updates to relevant template files in this repo.
