@@ -1,4 +1,4 @@
-name: "Build and publish generated API docs to beta site"
+name: "[beta] Build and publish API docs"
 
 on:
   # Current: Only allows you to run this workflow manually from the Actions tab
@@ -12,7 +12,8 @@ on:
 jobs:
   # Build job
   build:
-    # We believe there is a dependency on Windows due to a WinForms element somewhere in Meadow that DocFX hits. Ideally, it wouldn't be a requirement, though.
+    # There is a project that requires Windows, but has been excluded because the AWS deployment part requires Ubunto.
+    # The Meadow.Foundation.Peripherals/Displays.WinForms project requires Windows `dotnet` to build successfully via DocFX.
     #runs-on: windows-latest
     runs-on: ubuntu-latest
     
