@@ -12,7 +12,7 @@ on:
 jobs:
   # Build job
   build:
-    # There is a project that requires Windows, but has been excluded because the AWS deployment part requires Ubunto.
+    # There is a project that requires Windows, but has been excluded because the AWS deployment part requires Ubuntu.
     # The Meadow.Foundation.Peripherals/Displays.WinForms project requires Windows `dotnet` to build successfully via DocFX.
     #runs-on: windows-latest
     runs-on: ubuntu-latest
