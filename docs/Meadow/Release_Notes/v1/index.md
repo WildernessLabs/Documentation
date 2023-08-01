@@ -3,6 +3,49 @@ layout: Meadow
 title: Meadow v1
 subtitle: Release Notes
 ---
+# v1.2
+
+## OS
+* Greatly improved reliability of cell networking
+* Extended maximum low-power mode sleep time from 18 hours to 25 days
+* Enhanced Ethernet driver & added support for ethernet connect after startup
+* Adjusted thread priorities aiming to improve responsiveness in debugging
+
+
+## Meadow.Core
+* Greatly improved app startup time
+* Improved latency of first interrupt
+* Added app-accessible Settings to IApp
+* Added StateChanged event to IUpdateService
+* Bug fix in refreshing network adapter info
+* Added support for Connectors
+* Bug fix for incorrect scaling in AnalogInputPort
+* Integrated cell networking support via the new CellNetworkAdapter class
+* Added a Cloud Log Provider to send logs and events to Meadow.Cloud
+
+## Meadow.Foundation
+* New MicroLayout library - a lightweight UI framework that works with MikroGraphics
+* New ME007YS ultrasonic distance sensor driver
+* Fixed ST7789 display support for 320x240 displays
+* Fixed GC9A01 display reset bug
+* Bug fix in MicroGraphics vertical alignment
+
+## Meadow.Cloud
+* View device logs and events. The following filters are applicable in the search box: `source:log|event` `deviceId:{deviceId}`
+* Added a Metadata field to the package publish flow to pass metadata to the Update Service.  [Issue 319](https://github.com/WildernessLabs/Meadow_Issues/issues/319)
+* Updated the MQTT service infrastructure. Meadow.Core update required for OtA compatibility.
+
+## Meadow.CLI
+* Added a new parameter for `--metadata` during `package publish`. This metadata is passed through to the Update Service and can be used to determine which devices to update. [Issue 319](https://github.com/WildernessLabs/Meadow_Issues/issues/319)
+* `package create` fix for incorrect Windows backslash: [Issue 300](https://github.com/WildernessLabs/Meadow.CLI/pull/300)
+
+## VS Extensions
+* [VS2022-Windows] The Meadow tab should now receive focus after deployment.
+* [VS2022-Windows] The Meadow tab’s logs should be cleared each debugging run.
+* Due to the debugging priority change in the OS, debugging should be more responsive in all the extensions.
+
+## Meadow.Linux
+* n/a
 
 # v1.1
 
