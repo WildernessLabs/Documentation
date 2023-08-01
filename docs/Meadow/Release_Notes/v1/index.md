@@ -16,11 +16,11 @@ subtitle: Release Notes
 * Greatly improved app startup time
 * Improved latency of first interrupt
 * Added app-accessible Settings to IApp
-* Added StateChanged event to IUpdateService
+* Added `StateChanged` event to `IUpdateService`
 * Bug fix in refreshing network adapter info
 * Added support for Connectors
-* Bug fix for incorrect scaling in AnalogInputPort
-* Integrated cell networking support via the new CellNetworkAdapter class
+* Bug fix for incorrect scaling in `AnalogInputPort`
+* Integrated cell networking support via the new `CellNetworkAdapter` class
 * Added a Cloud Log Provider to send logs and events to Meadow.Cloud
 
 ## Meadow.Foundation

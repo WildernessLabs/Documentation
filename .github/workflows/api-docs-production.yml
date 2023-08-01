@@ -73,7 +73,7 @@ jobs:
         with:
           repository: WildernessLabs/MQTTnet
           path: MQTTnet
-          ref: main
+          ref: master
           
       - name: Checkout Meadow side-by-side
         uses: actions/checkout@v3
