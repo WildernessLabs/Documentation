@@ -548,7 +548,7 @@ nav.subcategory ul {
     top: 27px;
     width: 22px;
     height: 22px;
-    background: url("../../assets/svg/hamburger-icon.svg"); }
+    background: url("../assets/svg/hamburger-icon.svg"); }
   #main-nav ul li {
     border-top: 1px solid #666; }
     #main-nav ul li a {
@@ -572,7 +572,7 @@ nav.subcategory ul {
     width: 22px;
     height: 25px;
     display: block;
-    background: left 4px url("../../assets/svg/hamburger-icon-blue.svg") no-repeat;
+    background: left 4px url("../assets/svg/hamburger-icon-blue.svg") no-repeat;
     font-family: 'Wavehaus-66Book';
     font-size: em(20);
     padding: 0 0 0 30px;
@@ -1318,7 +1318,7 @@ main .content-slider {
     main .content-slider .slick-slider.copy .slick-prev, main .content-slider .slick-slider.copy .slick-next {
       position: absolute;
       z-index: 2;
-      background: url("../../assets/svg/slider-arrow.svg") left top no-repeat;
+      background: url("../assets/svg/slider-arrow.svg") left top no-repeat;
       height: 90px;
       width: 40px;
       border: 0px;
@@ -1639,7 +1639,7 @@ main {
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("../../assets/svg/meadow-intro-overlay.svg") center center no-repeat;
+      background: url("../assets/svg/meadow-intro-overlay.svg") center center no-repeat;
       background-size: cover;
       z-index: 3;
       background-position: left -25%;
