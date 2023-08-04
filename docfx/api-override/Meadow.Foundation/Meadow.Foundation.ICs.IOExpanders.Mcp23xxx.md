@@ -62,7 +62,7 @@ You can find code examples and links to sample projects for each of the MCP23XXX
     * [MCP23009](Meadow.Foundation.ICs.IOExpanders.Mcp23009.html)
     * [MCP23S08](Meadow.Foundation.ICs.IOExpanders.Mcp23s08.html)
     * [MCP23S09](Meadow.Foundation.ICs.IOExpanders.Mcp23s09.html)
-* [MCP23x1x](Meadow.Foundation.ICs.IOExpanders.Mcp23x11.html)
+* [MCP23x1x](Meadow.Foundation.ICs.IOExpanders.Mcp23x1x.html)
     * [MCP23017](Meadow.Foundation.ICs.IOExpanders.Mcp23017.html)
     * [MCP23018](Meadow.Foundation.ICs.IOExpanders.Mcp23018.html)
     * [MCP23S17](Meadow.Foundation.ICs.IOExpanders.Mcp23s17.html)
