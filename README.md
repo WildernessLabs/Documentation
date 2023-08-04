@@ -20,21 +20,21 @@ This repo is also a Ruby site powered by jekyll (which is how it's hosted by Git
 
 1. Open a terminal and navigate to the `Documentation/docs` folder and run:
 
-    ```
-    $ brew install ruby
+    ```console
+    brew install ruby
     ```
 
 1. Once you have Ruby, you'll need Jekyll and Bundler to build and host the site locally:
 
-    ```
-    $ sudo gem install jekyll bundler
+    ```console
+    sudo gem install jekyll bundler
     ```
 
 1. With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
 (Change your terminal working folder to `Documentation/docs`)
 
-    ```
-    $ bundle install
+    ```console
+    bundle install
     ```
 
 ### To browse locally on Windows (Steps 1 and 2):
@@ -45,19 +45,19 @@ This repo is also a Ruby site powered by jekyll (which is how it's hosted by Git
 
 1. Open a PowerShell prompt and navigate to the `Documentation/docs` folder and run:
 
-    ```
+    ```console
     choco install ruby
     ```
 
 1. Install MSYS2 using Ruby Installer 2 (`ridk`). Then, choose MSYS2 and MINGW development toolchain option (tip: you may need to restart your shell):
 
-    ```
+    ```console
     ridk install
     ```
 
     If you encounter several key verification errors during the toolchain setup, ridk may have installed an [older version of MSYS2 with bad key validation](https://stackoverflow.com/a/64396724/48700). You can upgrade the version installed by ridk using Chocolatey.
-    
-    ```
+
+    ```console
     choco upgrade msys2
     ```
 
@@ -65,20 +65,20 @@ This repo is also a Ruby site powered by jekyll (which is how it's hosted by Git
 
 Once you have Ruby and MSYS2, you'll need Jekyll and Bundler to build and host the site locally:
 
-```
-$ gem install jekyll bundler
+```console
+gem install jekyll bundler
 ```
 
 With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
 (Change your PowerShell working folder to `Documentation/docs`; and you may need to restart your shell if you just installed the prerequisites.)
 
-```
-$ bundle install
+```console
+bundle install
 ```
 
 ### 3. Launch local server
 
-```
+```console
 bundle exec jekyll serve
 ```
 
@@ -95,12 +95,11 @@ To update the front end, setup a version of that repository and follow the instr
 1. Go into the `watch_config.json` file contained at root of the documentation repo. Update the path in that configuration to point to your WLabs_Web repo's dist directory
 2. Run the `watch.rb` task using the command below. This will watch the dist directory for any changes that are made and move them to the 'docs' and 'docsfx repo'
 
-    ```
+    ```console
     ruby watch.rb
     ```
 
 3. In WLabs_Web repo run `gulp watch` and update any front end files or `gulp dist`
-
 
 ## [Contributing](Contributing)
 
