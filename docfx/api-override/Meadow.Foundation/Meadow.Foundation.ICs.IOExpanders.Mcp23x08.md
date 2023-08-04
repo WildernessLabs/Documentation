@@ -14,8 +14,6 @@ The **MCP23008** chip is an 8-bit (8 port) digital I/O expander chip that uses I
 
 MCP23008 is a ubiquitous chip in the hardware world and is the typical interface chip for common I2C LCD backpacks, with the 74595 chip being the typical interface chip for SPI LCD backpacks.
 
-NOTE This is a pre-release driver, and interrupts have not been implemented yet.
-
 ### MCP Chip Family
 
 In addition to the MCP23008, the MCP family of chips includes; the MCP23017, which is a 16-bit version of the MCP23008, offering 16 digital ports in total, and the MCP23S08 and MCP23S017 which are SPI versions of the MCP23008 and MCP23017, respectively.

@@ -27,7 +27,6 @@
             "/Source/Meadow.Foundation.Peripherals/**/Datasheet/**",
             "/Source/Meadow.Foundation.Peripherals/**/Sample/**",
             "/Source/Meadow.Foundation.Peripherals/**/Samples/**",
-            "/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Tca9548A/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/bin/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/obj/**",
             "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Sample/**",
