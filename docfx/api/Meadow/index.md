@@ -8,7 +8,7 @@ To search, use the filer on the hand navigation.
 
 Here are some important API docs:
 
-* **[`Meadow.Hardware` namespace](/api/Meadow.Foundation/Meadow.Hardware.html)** - Docs related to IO and ports.
+* **[`Meadow.Hardware` namespace](/docs/api/Meadow/Meadow.Hardware.html)** - Docs related to IO and ports.
 
 ### Other Documentation
 
