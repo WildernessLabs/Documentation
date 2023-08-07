@@ -41,7 +41,7 @@ Settings:
     ScanMode: false # Activate the cell network scanning mode (optional)
 ```
 
-> **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. However, if you encounter any connectivity issues, it is advisable to manually configure these settings. If you don't know your operator code, you can scan the cell networks to find out it.
+> **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. However, if you encounter any connectivity issues, it is advisable to manually configure these settings. If you don't know your operator code, you can scan the cell networks to find it.
 
 2 - Select `Cell` as `DefaultInterface` in the **meadow.config.yaml**, if you don't have this *yaml* file in your device, you should create and flash it to the device:
 
@@ -104,12 +104,12 @@ Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with a
 
 > **Notes**: To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
 
-## Testing
+#### Testing
 
 To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like this:
 `Connection established successfully! IP address '100.69.106.222'.`
 
-#### Handling Cell connection using a .NET application
+## Handling Cell connection using a .NET application
 
 You can check the Cell connection status by accessing the `IsConnected` property present in the `ICellNetworkAdapter`, as in the following example:
 
@@ -132,7 +132,7 @@ Therefore, you can use the `NetworkConnected` and `NetworkDisconnected` event ha
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
 
 cell.NetworkConnected += CellAdapter_NetworkConnected;
-cell.NetworkDisconnected += CellAdapter_NetworkConnected;
+cell.NetworkDisconnected += CellAdapter_NetworkDisconnected;
 
 void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, NetworkConnectionEventArgs e)
 {
@@ -146,7 +146,7 @@ void CellAdapter_NetworkDisconnected(INetworkAdapter networkAdapter)
 
 ```
 
-> Note: Cell uses higher timeouts due to limited bandwidth in LPWA modules, which may result in a longer delay for the NetworkDisconnected event to be triggered.
+> **Notes**: Cell uses higher timeouts due to limited bandwidth in LPWA modules, which may result in a longer delay for the NetworkDisconnected event to be triggered.
 
 Besides that, you can get some extra information about the connection and the module, such as the Cell Signal Quality (CSQ), and the International Mobile Equipment Identity (IMEI).
 
@@ -168,23 +168,23 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 }
 ```
 
-> Note: Prior to checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value obtained on the connection.
+> **Notes**: Before checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value obtained on the connection.
 
 #### Scanning Cell networks
 
-To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, you can connect faster and more reliably. To find out the carrier code, you can use Cell network scanner by following these two steps:
+To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, you can ensure that you are connecting to the right network, connecting faster and more reliably. To find out the carrier code, you can use Cell network scanner by following these two steps:
 
-1) Add the `ScanMode: true` in your `cell.config.yaml`, to let Cell in the scanning mode.
+1) Add the `ScanMode: true` and `Timeout: 300` in your `cell.config.yaml`, to let Cell in the scanning mode and to increase the scanning timeout, since the default 30s may not be enough in some cases.
 2) Use the `Scan` method, as in the example:
 
 ```csharp
 try
 {
-    List<CellNetwork> operatorList = cell.Scan();
+    CellNetwork[] operators = cell.Scan();
 
-    foreach (CellNetwork data in operatorList)
+    foreach (CellNetwork operator in operators)
     {
-        Console.WriteLine($"Operator Status: {data.Status}, Operator Name: {data.Name}, Operator: {data.Operator}, Operator Code: {data.Code}, Mode: {data.Mode}");
+        Console.WriteLine($"Operator Status: {operator.Status}, Operator Name: {operator.Name}, Operator: {operator.Operator}, Operator Code: {operator.Code}, Mode: {operator.Mode}");
     }
 }
 catch (Exception ex)
@@ -193,4 +193,4 @@ catch (Exception ex)
 }
 ```
 
-> Note: Some modules, such as the BG95-M3, memorize the last network mode used and take it into consideration during scanning. For example, if you previously connected to an NB-IoT network, the scanner will return the available NB-IoT networks. If you want to view available CAT-M1 networks, begin by connecting to this network initially, allowing the module to set CAT-M1 as network mode. Afterward, follow the steps mentioned above to initiate the scanner successfully.
+> **Notes**: Some modules, such as the BG95-M3, memorize the last network mode used and consider it during scanning. For example, if you previously connected to an NB-IoT network, the scanner may return only the available NB-IoT networks. If you want to view available CAT-M1 networks, begin by connecting to this network initially, allowing the module to set CAT-M1 as network mode. Afterward, follow the steps mentioned above to initiate the scanner successfully.
