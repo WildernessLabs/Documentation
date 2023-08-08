@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: MicroLayout Library
-subtitle: Using the lightweight, MCU-optimized Meadow.Foundation UI graphics library with Meadow.
+subtitle: Using the lightweight, MCU-optimized Meadow.Foundation HMI UI library with Meadow.
 ---
 
 If you're working on an IoT project with a display, then you're almost certainly wanting to show information to a user. Drawing that information using drawing primitives can be both cumbersome and non-portable. We at Wilderness Labs have released our MicroLayout library to help .NET developers easily create lightweight HMIs for their projects.
