@@ -49,7 +49,7 @@ PTH and SMT refer to how the components are attached to the board.
 
 ### (Plated) Through-Hole (PTH)
 
-Through-Hole means that the components have leads that are placed thorugh holes in the PCB and then soldered on the back:
+Through-Hole means that the components have leads that are placed through holes in the PCB and then soldered on the back:
 
 [TODO: Need image of PTH]
 
@@ -64,7 +64,7 @@ Surface-Mount means that instead of going through the PCBs, the component leads 
 Most modern PCB designs are primarily SMD because they have a number of advantages over PTH designs, including:
 
  * **Machine Assembly** - SMD designs can be assembled by a _pick-and-place_ machine and therefore are much cheaper to manufacture. 
- * **Smaller** - Surface mount components can be made with very small leads, therby reducing the overall size of the components which saves space, shortens routing, and enables for much more complex and precise electrical designs.
+ * **Smaller** - Surface mount components can be made with very small leads, thereby reducing the overall size of the components which saves space, shortens routing, and enables for much more complex and precise electrical designs.
  * **Simplified Routing** - By only using real estate on one side of the PCB, surface mount components also provide more options for routing underneath then, enabling much more complex circuit designs in a smaller area.
 
 ### Hybrid Designs

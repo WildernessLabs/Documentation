@@ -15,7 +15,7 @@ In order to understand how circuits work and how to design them, we must first u
 
 
 
-# [Part 2 - Quanitfying Electricity; amps, volts, and watts](../Part2/) 
+# [Part 2 - Quantifying Electricity; amps, volts, and watts](../Part2/)  
 
 <br/>
 
@@ -24,7 +24,7 @@ In order to understand how circuits work and how to design them, we must first u
 # NOTES
 
  * Electrons orbit the Nucleus in incredibly complex patterns, but at any given time tend to be at a particular distance away from the nucleus. That distance is a predictable distance and is called a shell.
-    * this is key to how work is done with electricy
+    * this is key to how work is done with electricity
 
 -->
 

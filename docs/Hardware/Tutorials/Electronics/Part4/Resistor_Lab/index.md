@@ -51,7 +51,7 @@ Each row of 5 pins (they're numbered in the illustration, and most good breadboa
 
 Usually, the positive (`+`) side of power rails are connected to the `3.3V` or `5V` pin on the Netduino, and the negative (`-`) side is connected to ground:
 
-![Diagram of a Netdiuno connected to the positive and ground rails of a breadboard from the board's 3.3-volt and ground pins, and then the two side power rails are connected by a jumper to share voltage on both sides.](../Breadboard_w_Power_bb.svg){:standalone}
+![Diagram of a Netduino connected to the positive and ground rails of a breadboard from the board's 3.3-volt and ground pins, and then the two side power rails are connected by a jumper to share voltage on both sides.](../Breadboard_w_Power_bb.svg){:standalone}
 
 This provides a very useful base for adding more complex circuits that share power and ground.
 
@@ -59,7 +59,7 @@ This provides a very useful base for adding more complex circuits that share pow
 
 Sometimes, when building circuits, they might require both `3.3V` and `5V` power, in which case, you can wire one power rail to the `3.3V` pin, and one to the `5V` pin, while they both share a ground connection:
 
-![Diagram of a Netdiuno connected to a breadboard's left positive and ground rails to the boards 3.3-volt and ground pins, and the breadboard's right positive rail connected to the board's 5-volt pin, and a jumper between the two ground rails.](../Breadboard_w_3.3_and_5V_bb.svg){:standalone}
+![Diagram of a Netduino connected to a breadboard's left positive and ground rails to the boards 3.3-volt and ground pins, and the breadboard's right positive rail connected to the board's 5-volt pin, and a jumper between the two ground rails.](../Breadboard_w_3.3_and_5V_bb.svg){:standalone}
 
 ### Breadboard Jumper Wires
 

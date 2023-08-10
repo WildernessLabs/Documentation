@@ -48,7 +48,7 @@ And the PCB editor looks like the following:
 
 The following is a screenshot of the schematic editor:
 
-![Screenshot of KiCad showing a sample shcematics view.](KiCad_Schematic_View.png){:standalone}
+![Screenshot of KiCad showing a sample schematics view.](KiCad_Schematic_View.png){:standalone}
 
 And the PCB editor looks like the following:
 

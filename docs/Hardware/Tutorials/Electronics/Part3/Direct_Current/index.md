@@ -12,7 +12,7 @@ The simple nature of direct current lends itself well to creating digital logic 
  
 Because DC is used as the primary type of current in digital logic circuits, most of this tutorial will focus on DC circuits.
 
-Direct curent is also used in [long distance, high power, electrical transmission lines](https://en.wikipedia.org/wiki/High-voltage_direct_current) (usually `>250kV`) because of lower electrical losses.
+Direct current is also used in [long distance, high power, electrical transmission lines](https://en.wikipedia.org/wiki/High-voltage_direct_current) (usually `>250kV`) because of lower electrical losses.
 
 Meadow provides two _power rails_ that supply `5V` and `3.3V` direct current. The `3.3V` rail can be found on the left header, and the `5V` rail can be found on the right header:
 
