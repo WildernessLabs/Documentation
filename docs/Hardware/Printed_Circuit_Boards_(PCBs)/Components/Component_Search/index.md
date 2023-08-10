@@ -10,7 +10,7 @@ Next, we're going to add a screw terminal for connecting an optional solar panel
 
 ![title](2_Pos_2.54mm_ScrewTerminal.jpg)
 
-## Searching for Comoponents
+## Searching for Components
 
 First, we need to find an appropriate screw terminal. 
 

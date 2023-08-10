@@ -6,7 +6,7 @@ subtitle: Driving an LED with a current-limiting Pulse-Width-Modulation (PWM) Si
 
 ## Overview
 
-An LED current can be limited with a [Pulse Width Modulation](/Netduino/Input_Output/Digital/PWM/) signal. Netduino includes 6 hardware PWM generators, availalbe on digital pins 3, 5, 6, 9, 10, and 11:
+An LED current can be limited with a [Pulse Width Modulation](/Netduino/Input_Output/Digital/PWM/) signal. Netduino includes 6 hardware PWM generators, available on digital pins 3, 5, 6, 9, 10, and 11:
 
 ![Pinout diagram of the Netduino 3](../../../../../Netduino/About/Netduino3_Pinout.svg){:standalone}
 
@@ -26,7 +26,7 @@ The [`RgbPwmLed`](http://netduino.foundation/API/LEDs/RgbPwmLed/) class represen
 
 A PWM signal can be manually configured by either setting the duty cycle, as a percentage of on time, or by manually configuring the period and duration.
 
-While we recommend using [Netduino.Foudation](http://Netduino.Foundation) to control LEDs, the following low-level illustrates manually controlling an LED by setting pin 3 to duty cycle of 50%, and the onboard LED to a duty cycle of 33% (by manually setting the period and duration and cycles between the two:
+While we recommend using [Netduino.Foundation](http://Netduino.Foundation) to control LEDs, the following low-level illustrates manually controlling an LED by setting pin 3 to duty cycle of 50%, and the onboard LED to a duty cycle of 33% (by manually setting the period and duration and cycles between the two:
 
 ```csharp
 using System;
