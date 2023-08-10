@@ -9,7 +9,7 @@ Netduino applications are built using the .NET Microframework (v4.3), also known
 
 ### SPOT Namespace
 
-.NETMF was originally built to run on the Microsoft SPOT watch, so much of the hardware APIs can be found in the [Microsoft.SPOT](https://msdn.microsoft.com/en-us/library/microsoft.spot(v=vs.102).aspx) nanmespace (and child namespaces such as [Microsoft.SPOT.Hardware](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware(v=vs.102).aspx), [Microsoft.SPOT.IO](https://msdn.microsoft.com/en-us/library/microsoft.spot.io(v=vs.102).aspx), etc..).
+.NETMF was originally built to run on the Microsoft SPOT watch, so much of the hardware APIs can be found in the [Microsoft.SPOT](https://msdn.microsoft.com/en-us/library/microsoft.spot(v=vs.102).aspx) namespace (and child namespaces such as [Microsoft.SPOT.Hardware](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware(v=vs.102).aspx), [Microsoft.SPOT.IO](https://msdn.microsoft.com/en-us/library/microsoft.spot.io(v=vs.102).aspx), etc..).
 
 
 ## .NETMF API Documentation

@@ -242,6 +242,6 @@ Message received: 4
 A number of cables and boards are available to connect TTL serial ports on the Netduino to a PC or Mac over USB.  Examples include:
 
 -	[SparkFun's FTDI boards and cables](https://www.sparkfun.com/search/results?term=ftdi)
--	[FDTI Cable](https://www.adafruit.com/product/70)
+-	[FTDI Cable](https://www.adafruit.com/product/70)
 -	[USV to TTL Serial Cable](https://www.adafruit.com/product/954)
 -	[FTDI Friend](https://www.adafruit.com/product/284)
