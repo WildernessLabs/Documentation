@@ -8,7 +8,7 @@ subtitle: Working with Netduino's onboard push button and LED.
 
 Netduino has an accessible button and a blue LED onboard. This means that you can test code that uses a button or LED circuit without having to build an external one.
 
-The onboard LED  is availble via the `Pins.ONBOARD_LED` enumeration, and turns on briefly when power is turned on, as well as after booting to indicate the OS is operational and the program is ready to run.
+The onboard LED  is available via the `Pins.ONBOARD_LED` enumeration, and turns on briefly when power is turned on, as well as after booting to indicate the OS is operational and the program is ready to run.
 
 The onboard Button is available via `Pins.ONBOARD_BTN` enumeration, and if not bound to either an `InputPort` or `OutputPort`, will reset the Netduino by default when pressed. To disable it, simple assign a port to it.
 

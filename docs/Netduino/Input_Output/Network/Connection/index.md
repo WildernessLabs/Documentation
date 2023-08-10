@@ -185,7 +185,7 @@ namespace BlinkUntilConnected
                     // if we got here, we either timed out or got an address, so let's find out.
                     if (networkInterface.IPAddress == IPAddress.Any.ToString())
                     {
-                        Debug.Print("Failed to get an IP Address in the alotted time.");
+                        Debug.Print("Failed to get an IP Address in the allotted time.");
                         return false;
                     }
 
