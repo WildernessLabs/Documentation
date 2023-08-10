@@ -103,7 +103,7 @@ Additionally, it's important to protect the ADC from occasional voltage spikes, 
 
 ##### Voltage "Storage" and Normalization
 
-Finally, a small capacitor, typically `0.1µF`, can be used to "store" the voltage input to provide a more normalized voltage value if the input is being read (sampled), very often, which can deplete the circuit of the voltage value. This capacitor will also help to smoot out the signal if there is noise on the line, or the sensor being read is noisy.
+Finally, a small capacitor, typically `0.1µF`, can be used to "store" the voltage input to provide a more normalized voltage value if the input is being read (sampled), very often, which can deplete the circuit of the voltage value. This capacitor will also help to smooth out the signal if there is noise on the line, or the sensor being read is noisy.
 
 #### Example Circuit
 
@@ -114,10 +114,10 @@ For example, the following circuit illustrates these concepts in action. It uses
 Examining it, it has several important features:
 
 * **Voltage Divider** - The output of the solar panel comes in on the `6V_Solar` net and the first thing that happens is that it hits a voltage divider (`R16` and `R17`) that divides the input voltage in half by sinking half of it to `GND`. Typically, solar panels output a maximum of `6.5V`, so by dividing that in half, at full power the ADC will only receive `3.25V` at maximum.
-* **Transient Voltage Suppression** - `D1` in the diagram is a diode that connects the divided voltage output to the `3V3` rail. As long as the voltage to that diode is less than the voltage on the `3V3` rail, it will go into the ADC as, expected. However, if a voltage spike occurs and that voltage exceeds the `3V3` raile, for instance, if there's a static eletricity discharge from the solar panel, it will dump any excess voltage onto that rail.
+* **Transient Voltage Suppression** - `D1` in the diagram is a diode that connects the divided voltage output to the `3V3` rail. As long as the voltage to that diode is less than the voltage on the `3V3` rail, it will go into the ADC as, expected. However, if a voltage spike occurs and that voltage exceeds the `3V3` rail, for instance, if there's a static electricity discharge from the solar panel, it will dump any excess voltage onto that rail.
 * **Smoothing Capacitor** - `C2` in the diagram is a `0.1µf` capacitor that will store the input voltage and resist fast changes to the voltage level, providing a smoother value.
 
-Additionally, there is one more intersting component in the circuit, `D2`, which is a diode that will make sure when the Meadow board is plugged into USB, the `5V` rail power isn't fed into the solar intensity gauge circuit.
+Additionally, there is one more interesting component in the circuit, `D2`, which is a diode that will make sure when the Meadow board is plugged into USB, the `5V` rail power isn't fed into the solar intensity gauge circuit.
 
 ### Analog Reference (`AREF`)
 

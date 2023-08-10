@@ -26,7 +26,7 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 
 ## Executing Commands
 
-Once installed, Meadow.CLI is accessble from a terminal prompt via the `meadow` command, and command arguments are passed via a fluent syntax, for instance, the following command will download the latest Meadow.OS:
+Once installed, Meadow.CLI is accessible from a terminal prompt via the `meadow` command, and command arguments are passed via a fluent syntax, for instance, the following command will download the latest Meadow.OS:
 
 ```bash
 meadow download os

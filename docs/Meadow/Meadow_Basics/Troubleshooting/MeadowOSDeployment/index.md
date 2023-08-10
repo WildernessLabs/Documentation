@@ -27,7 +27,7 @@ All three components are usually deployed using the `meadow flash os` command.  
 
 The first component to start when power is applied of the system resets is the bootloader.  This performs some system checks and if all is well it will hand control over to the OS.
 
-NuttX starts the kernel components and then launches the application which will allow the Meadow board to communicate with a computer attached to the USB port on the board.  The application running on the ESP32 starts in parallel with NuttX.  These two components synchronise the communications channel between the main processor and the coprocessor and the ESP32 is made ready to respond to requests from the STM32 running NuttX.
+NuttX starts the kernel components and then launches the application which will allow the Meadow board to communicate with a computer attached to the USB port on the board.  The application running on the ESP32 starts in parallel with NuttX.  These two components synchronize the communications channel between the main processor and the coprocessor and the ESP32 is made ready to respond to requests from the STM32 running NuttX.
 
 ## LED Indicators (Meadow V1 and V2)
 
