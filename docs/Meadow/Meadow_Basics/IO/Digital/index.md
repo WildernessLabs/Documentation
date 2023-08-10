@@ -8,7 +8,7 @@ Digital IO is often referred to as _General Purpose, Input/Output_ or GPIO. GPIO
 
 ## Samples
 
-For sample Meadow applications that illustrate the usage of digial ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO).
+For sample Meadow applications that illustrate the usage of digital ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO).
 
 ## Digital Outputs
 
