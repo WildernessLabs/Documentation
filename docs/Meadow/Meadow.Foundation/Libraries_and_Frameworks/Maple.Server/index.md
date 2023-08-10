@@ -41,7 +41,7 @@ public class MyRequestHandler : RequestHandlerBase
 
 ### Relative Routing
 
-If your route *does not* begin with a forward slash (`/`) then it is considered a relative route, and requests will be routed to the provided route prefixed with an appreviated `RequestHandler` prefix.  The route prefix is determined by using the class name and trimming off any "Requesthandler" suffix.
+If your route *does not* begin with a forward slash (`/`) then it is considered a relative route, and requests will be routed to the provided route prefixed with an abbreviated `RequestHandler` prefix.  The route prefix is determined by using the class name and trimming off any "RequestHandler" suffix.
 
 
 For example, the following will respond to `GET` requests to `http://[meadow.address]/my/hello`
@@ -97,7 +97,7 @@ Supported parameter types are:
 
 ## Handler Caching
 
-By default Maple will create a new instance of an API handler for every request received.  If you want your application to reuse the same handler instance, which provides faster handler execution and decreases GC allocation, simply override the `IsResuable` base property and return `true`.
+By default Maple will create a new instance of an API handler for every request received.  If you want your application to reuse the same handler instance, which provides faster handler execution and decreases GC allocation, simply override the `IsReusable` base property and return `true`.
 
 ```csharp
 public override bool IsReusable => true;
