@@ -52,7 +52,7 @@ By default, OtA is not enabled. Follow the steps to enable OtA in your applicati
         {
             Resolver.Log.Info("Update available!");
 
-            // queue it for retreival "later"
+            // queue it for retrieval "later"
             Task.Run(async () =>
             {
                 await Task.Delay(5000);
@@ -76,7 +76,7 @@ By default, OtA is not enabled. Follow the steps to enable OtA in your applicati
     }
     ```
 
-    This code adds event handers to download the new package, `updateService.RetrieveUpdate(info);`. and send the new file(s) to the bootloader, `updateService.ApplyUpdate(info);`
+    This code adds event handlers to download the new package, `updateService.RetrieveUpdate(info);`. and send the new file(s) to the bootloader, `updateService.ApplyUpdate(info);`
 
 ## MPAK Creation
 
