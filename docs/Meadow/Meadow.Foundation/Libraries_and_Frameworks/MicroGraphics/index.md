@@ -287,7 +287,7 @@ graphics.DrawText(
 
 µGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GraphicsPath` object and drawn using the `DrawPath` method.
 
-`GraphicsPath` uses the concepts of **verbs** to conrtol the path. It currently supports:
+`GraphicsPath` uses the concepts of **verbs** to control the path. It currently supports:
 
 * `Move` which sets the current position
 * `Line` which draws a line from the current position to a new position

@@ -4,9 +4,9 @@ title: GPS/GNSS NMEA Sentence Processor Library
 subtitle: NMEA sentence decoder and processing engine for GPS and GNNS systems.
 ---
 
-The GPS/GNSS NMEA procesing library is a set of classes that makes parsing and decoding [NMEA Sentences](https://gpsd.gitlab.io/gpsd/NMEA.html) from Global Positioning System (GPS)/Global Naviation Satellite System (GNSS) receivers easy. 
+The GPS/GNSS NMEA processing library is a set of classes that makes parsing and decoding [NMEA Sentences](https://gpsd.gitlab.io/gpsd/NMEA.html) from Global Positioning System (GPS)/Global Navigation Satellite System (GNSS) receivers easy. 
 
-GPS/GNSS peripherals communicate by sending semi-standardized _sentences_ that have a prefix tag that describes their type, and data encoded in them, separated by commas. For instance, the following NMEA sentence is of the _recommended minimum information_ type and encodes location (latitude, longitude, altidude) information:
+GPS/GNSS peripherals communicate by sending semi-standardized _sentences_ that have a prefix tag that describes their type, and data encoded in them, separated by commas. For instance, the following NMEA sentence is of the _recommended minimum information_ type and encodes location (latitude, longitude, altitude) information:
 
 ```
 "$GPRMC,000049.799,V,,,,,0.00,0.00,060180,,,N*48"
@@ -174,8 +174,8 @@ NMEA sentences must have a calculated checksum at the end of the string that val
 There are a number of built-in NMEA decoders for the most common sentences, including:
 
  * **GgaDecoder** - _GPS Fix Data_ decoder. Comprehensive location data including latitude, longitude, altitude, quality of signal, time, and precision.
- * **GllDecoder** - _Geographic Position - Latitude/Longitude_ decoder. Describes location of reciever in latitude and longitude coordinates.
- * **GsaDecoder** - _GPS Dilution of Precision (DoP) and Active Satellites_ decoder. Lists the satelites used for the location fix, along with their dilution of precision information.
+ * **GllDecoder** - _Geographic Position - Latitude/Longitude_ decoder. Describes location of receiver in latitude and longitude coordinates.
+ * **GsaDecoder** - _GPS Dilution of Precision (DoP) and Active Satellites_ decoder. Lists the satellites used for the location fix, along with their dilution of precision information.
  * **GsvDecoder** - _Satellites in View_ decoder. Describes the sky position of satellites that the GPS receiver can "see."
  * **RmcDecoder** - _Recommended Minimum Navigation Information_ decoder. Includes the minimum amount of navigation information including position as well as _track made good_ (direction of travel) and speed.
  * **VtgDecoder** - _Track Made Good and Ground Speed_ decoder. Describes the course over ground (direction of travel) as well as the speed.

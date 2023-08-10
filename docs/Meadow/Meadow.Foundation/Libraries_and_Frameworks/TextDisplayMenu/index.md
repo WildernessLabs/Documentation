@@ -21,7 +21,7 @@ Before using a `TextDisplayMenu` you need to:
 
 Generally, to use `TextDisplayMenu` you need to:
 
- * Configure an `ITextDisplay` or `µGraphicsLibray` to display the menu.
+ * Configure an `ITextDisplay` or `µGraphicsLibrary` to display the menu.
  * Define the menu items in JSON or programmatically using the `MenuItem`, `MenuPage`, etc. classes.
  * Instantiate a new `Menu` class, passing the display object, and  either the JSON or menu classes.
  * Wire up user inputs (such as buttons or a rotary encoder) to call `Next()`, `Previous()` and `Select()` on the menu for navigation.
@@ -207,7 +207,7 @@ menu.Selected += (s, e) =>
 
 ## Exit Event
 
-If the menu is not the desired application launch screen, then the menu can be programatically can be loaded or unloaded by using `Enable()` or `Disable()`, respectively.  Additionally, there is an optional parameter when instantiating a new Menu, `showBackOnRoot`, and when set to `true`, "< Back" displays as the first item on the root level and when selected, an `Exited` event will be raised.
+If the menu is not the desired application launch screen, then the menu can be programmatically can be loaded or unloaded by using `Enable()` or `Disable()`, respectively.  Additionally, there is an optional parameter when instantiating a new Menu, `showBackOnRoot`, and when set to `true`, "< Back" displays as the first item on the root level and when selected, an `Exited` event will be raised.
 
 To get notified when the menu is exited, assign a handler to the `Exited` event:
 
