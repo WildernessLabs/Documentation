@@ -366,9 +366,9 @@ A new deployment method for the .NET core libraries removes the build issues bro
 
 ### F7 Device Coprocessor Lifecycle Cleanup
 
-The `Coprocessor` on F7 devices are automatically initialized during device startup, so when using the `WiFiAdapter` or `BluetoothAdpater`, you no longer need to initialize the coprocessor first.
+The `Coprocessor` on F7 devices are automatically initialized during device startup, so when using the `WiFiAdapter` or `BluetoothAdapter`, you no longer need to initialize the coprocessor first.
 
-* **Breaking Change** - The `InitCoprocessor()`, `InitWiFiAdapater()`, and `InitBluetoothAdapter()` methods are no longer necessary, and are either inaccessible or have been removed entirely.
+* **Breaking Change** - The `InitCoprocessor()`, `InitWiFiAdapter()`, and `InitBluetoothAdapter()` methods are no longer necessary, and are either inaccessible or have been removed entirely.
 
 ### Added Full-Duplex Support to `IByteCommunications.Exchange()` and `SpiPeripheral`
 

@@ -28,7 +28,7 @@ In addition to the features above, which are all gating for a v1.0 release, thes
  * **.NET 6.0 Support** - We plan on starting our move to .NET 6 from .NET Standard 2.1 later this summer. Depending on the stability of .NET 6, we may ship it before v1.0.
  * **Power & Sleep APIs** - The ability to put the device to sleep and wake up on schedule, or from an external interrupt.
  * **CAN Bus** - Controller-Area-Network (CAN) bus support. Used in vehicles and less-commonly, in industrial hardware.
- * **Partial Ahead-of-Time (AoT) Compilation** - Our first step toward full-AoT will likely involve shipping pre-AoT compiled binares of mscorlib, Meadow.Core, etc. However, we have some investigation to do here to see if there will be interop costs.
+ * **Partial Ahead-of-Time (AoT) Compilation** - Our first step toward full-AoT will likely involve shipping pre-AoT compiled binaries of mscorlib, Meadow.Core, etc. However, we have some investigation to do here to see if there will be interop costs.
  * **Meadow.OS TimeZone Support** - In order to fully support TimeZones in Meadow.OS we need to add TimeZone support to NuttX and then expose it in a POSIX way to Mono.
 
 ## Post v1.0 Roadmap
@@ -44,7 +44,7 @@ In addition to the above, we have a number of hardware IO specific features that
  * **IO Direct-Memory-Access (DMA)** - DMA will add a significant performance increase for interrupts and bus operations, especially when large amounts of data are pushed over SPI.
  * **DMA2D/Hardware Accelerated 2D Graphics** - In additional to general DMA, the F7 chip has hardware accelerated graphics operations that we'd like to expose to provide faster 2D drawing capabilities.
  * **Frequency Timer** - We already have PWM output exposed, but we'd also like to expose the F7's ability to sample incoming frequencies. This can be used for hall sensors, and the like.
- * **Low Power Timer/Pulse Counter** - The F7 also has the ability to count pulses, even when in low-power mode, and we'd like to expose this as a specalized port.
+ * **Low Power Timer/Pulse Counter** - The F7 also has the ability to count pulses, even when in low-power mode, and we'd like to expose this as a specialized port.
  * **Quadrature Encoding/Capture-Compare** - While rotary encoders work excellent today, we'd like to expose the underlying quadrature encoding functionality to have realtime support for encoding motors running at high speed.
  * **UART over USB** - Currently, we use UART/Serial over USB for deployment, debugging, etc., but we'd like to expose a second UART over USB channel so that user applications can communicate with a USB host via UART/serial.
  * **Inter-IC Sound (I2S)** - The F7 has advanced support for I2S, which provides a bus interface for sound input and output. We'd like to expose this as a specialized port.

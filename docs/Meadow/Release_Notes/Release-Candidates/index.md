@@ -174,9 +174,9 @@ Here's another update with API improvements and new drivers! This release includ
 
 RC-2.2 includes:
 * **Meadow Desktop Support** - it's now possible build Meadow apps on a desktop! This release includes preliminary support with more coming soon
-* **New Pin Controller API pattern** - We've overhalled the way Meadow creates ports from pins. This both simplifies using peripheral drivers and makes Meadow far more flexible when using IO expanders.
+* **New Pin Controller API pattern** - We've overhauled the way Meadow creates ports from pins. This both simplifies using peripheral drivers and makes Meadow far more flexible when using IO expanders.
 * **Improved MicroGraphics APIs** - We added a new circular arc API to draw angles as well a top-to-bottom API cleanup
-* **New Drivers** - We've added three new drivers for Meadow Desktop incuding a display driver for Windows Forms, a display driver for Gtk and a keyboard driver! We've also added support for the GNSS 5 mikro click board.
+* **New Drivers** - We've added three new drivers for Meadow Desktop including a display driver for Windows Forms, a display driver for Gtk and a keyboard driver! We've also added support for the GNSS 5 mikro click board.
 
 ## Updating to RC-2.1
 
@@ -184,7 +184,7 @@ You just need to grab the latest Meadow nugets (verion 0.95.0) and install the l
 
 ## Pin Controller pattern
 
-Meadow.Foundation drivers no longer require passing in the Meadow Device when using constructor overloads the accept Meadow pins. This means existing applications will need to be udpated. This just requires removing the `Device` parameter when instantiating drivers. 
+Meadow.Foundation drivers no longer require passing in the Meadow Device when using constructor overloads the accept Meadow pins. This means existing applications will need to be updated. This just requires removing the `Device` parameter when instantiating drivers. 
 
 For example:
 
@@ -691,13 +691,13 @@ As part of the stability and performance work, we've invested significant time o
 * [bufferRgb888 and 8888 missing InvertPixel implementation #391](https://github.com/WildernessLabs/Meadow.Foundation/issues/391) - Fixed.
 * [PushButton LongPress not working properly #408](https://github.com/WildernessLabs/Meadow.Foundation/issues/408) - Default time duration for long-press added.
 * [PushButton with port ctor fails #422](https://github.com/WildernessLabs/Meadow.Foundation/issues/422) - Fixed.
-* [Buffer Overflow occuring on certain projects, that locked up Visual Studio ](https://github.com/WildernessLabs/Meadow_Issues/issues/212) - Fixed
+* [Buffer Overflow occurring on certain projects, that locked up Visual Studio ](https://github.com/WildernessLabs/Meadow_Issues/issues/212) - Fixed
 
 ## Known Issues
 * If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
 * There is some extra logging code that shows how many bytes are being sent and received between the Meadow and Visual Studio, so we can track down a buffer overflow bug. This extra logging will be removed in RC2.
-* Occationally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
-* [Windows Extensions] Due to an MS API change auto-deploy when debugging does not currently work. WORK AROUND: To debug on Windows deploy your app 1st, then hit the Debug button to step through your deployed code etc. We are working on a fix for this issue for RC2. Appologies for the inconvenience.
+* Occasionally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.
+* [Windows Extensions] Due to an MS API change auto-deploy when debugging does not currently work. WORK AROUND: To debug on Windows deploy your app 1st, then hit the Debug button to step through your deployed code etc. We are working on a fix for this issue for RC2. Apologies for the inconvenience.
 
 ### Meadow.OS Deploy, App Deploy/Debug Workflow
 
