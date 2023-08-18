@@ -97,9 +97,27 @@ $GPGGA,162254.00,3723.02837,N,12159.39853,W,1,03,2.36,525.6,M,-25.6,M,,*65
 In this case, the serial message port should be created using the following constructor from the `IIODevice`:
 
 ```csharp
-ISerialMessagePort CreateSerialMessagePort(SerialPortName portName, byte[] suffixDelimiter, 
-    bool preserveDelimiter, int baudRate, int dataBits = 8, Parity parity = Parity.None, 
-    StopBits stopBits = StopBits.One, int readBufferSize = 4096);
+ISerialMessagePort CreateSerialMessagePort(
+    SerialPortName portName,
+    byte[] suffixDelimiter,
+    bool preserveDelimiter,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 512);
+```
+
+Alternatively, you can use a convenience extension method from `SerialPortName` to create your port, which will call the above interface method:
+
+```csharp
+public static ISerialPort CreateSerialPort(
+    this SerialPortName name,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 1024)
 ```
 
 For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `\r\n` as its suffix delimiter, we can use the following code:
@@ -124,17 +142,41 @@ $2083992
 In this case, the serial message port should be created using the following constructor from the `IIODevice`:
 
 ```csharp
-ISerialMessagePort CreateSerialMessagePort(SerialPortName portName, byte[] prefixDelimiter,
-    bool preserveDelimiter, int messageLength, int baudRate = 9600, int dataBits = 8,
-    Parity parity = Parity.None, StopBits stopBits = StopBits.One, int readBufferSize = 4096);
+ISerialMessagePort CreateSerialMessagePort(
+    SerialPortName portName,
+    byte[] prefixDelimiter,
+    bool preserveDelimiter,
+    int messageLength,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 512);
+```
 
+Alternatively, you can use a convenience extension method from `SerialPortName` to create your port, which will call the above interface method:
+
+```csharp
+public static ISerialMessagePort CreateSerialMessagePort(
+    this SerialPortName name,
+    byte[] prefixDelimiter,
+    bool preserveDelimiter,
+    int messageLength,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 512)
 ```
 
 For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `$` as its prefix delimiter, and has a 6 byte message length, we can use the following code:
 
 ```csharp
-Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 
-    prefixDelimiter: Encoding.UTF8.GetBytes('$'), messageLength: 8, preserveDelimiter: true);
+var port = Device.PlatformOS.GetSerialPortName("COM4")
+    .CreateSerialMessagePort(
+        suffixDelimiter: Encoding.UTF8.GetBytes("$"),
+        messageLength: 8
+        preserveDelimiter: true);
 ```
 
 ## Legacy `ISerialPort`
