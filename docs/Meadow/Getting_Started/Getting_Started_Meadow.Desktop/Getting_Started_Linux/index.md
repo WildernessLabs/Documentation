@@ -8,7 +8,7 @@ Meadow.Linux offers an environment for developing Meadow code that can run on Li
 
 Running Meadow applications on Linux can provide a very convenient development loop for prototyping and testing your Meadow applications, quickly iterating and seeing the result of code changes even using the same components you would use on a Meadow Feather or Core-Compute module.
 
-You can also quickly prototype graphics using an emulated IDisplay object that renders to a window on your Linux machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intesive workloads requiring much more processing power.
+You can also quickly prototype graphics using an emulated IDisplay object that renders to a window on your Linux machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intensive workloads requiring much more processing power.
 
 ## Supported Meadow.Linux platforms
 
@@ -86,7 +86,7 @@ To get started with Meadow.Linux, you will need to install the following prerequ
 
 Meadow.Linux offers several options for development and deployment. You can use your regular development machine to write your Meadow app and then deploy it to your Meadow.Linux device. Or, you can use your Meadow.Linux device as your development machine and write, build, and run your Meadow app directly. Additionally, you can use your Meadow.Linux device as a remote development machine and develop your Meadow app on you Linux device through a remote connection from your development machine using Visual Studio Code and Visual Studio Code Server.
 
-For simplicity, we'll use a seaparate development machine and then deploy the app to the Meadow.Linux device.
+For simplicity, we'll use a separate development machine and then deploy the app to the Meadow.Linux device.
 
 ## Create your first Meadow.Linux app
 
@@ -159,7 +159,7 @@ For simplicity, we'll use a seaparate development machine and then deploy the ap
 
 1. Run the app on your remote Meadow.Linux device.
 
-    This can be done directly on the device or over an SSH connection. For the Raspberry Pi example over SSH, you can connnect and run your deployed app with the following commands.
+    This can be done directly on the device or over an SSH connection. For the Raspberry Pi example over SSH, you can connect and run your deployed app with the following commands.
 
     ```bash
     ssh pi@raspberry

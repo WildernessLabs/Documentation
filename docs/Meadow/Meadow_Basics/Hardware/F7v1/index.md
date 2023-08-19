@@ -4,7 +4,7 @@ title: Meadow F7v1
 subtitle: The inaugural Meadow F7 board.
 ---
 
-The Meadow F7v1 was the inaugural Meadow F7 board that shipped as part of our Kickstarter campaign rewards and beyond. It has now been superceded by the [Meadow F7v2 board](../F7v2), but is still completely supported!
+The Meadow F7v1 was the inaugural Meadow F7 board that shipped as part of our Kickstarter campaign rewards and beyond. It has now been superseded by the [Meadow F7v2 board](../F7v2), but is still completely supported!
 
 ## F7v1 Features
 

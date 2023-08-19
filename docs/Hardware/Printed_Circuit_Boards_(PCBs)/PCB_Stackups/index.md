@@ -24,13 +24,13 @@ Because multi-layered PCBs are made by sandwiching these layers, they almost alw
 
 ### Copper Weight
 
-The copper thickness is typically described in terms of **weight**. For instance, two common thicknesses for copper are `1oz` and `2oz`. A `1oz` copper thickness means that the weight of that copper spread evenly over a square foot is equaly to `1oz`, which works out to be `1.37mils` (thousanths of an inch), or `0.0347mm` thick. Generally, the thicker the copper is, the more current it can carry at any given trace width (because there's more copper for the electricity to travel through), but the further apart the traces must be.
+The copper thickness is typically described in terms of **weight**. For instance, two common thicknesses for copper are `1oz` and `2oz`. A `1oz` copper thickness means that the weight of that copper spread evenly over a square foot is equal to `1oz`, which works out to be `1.37mils` (thousandths of an inch), or `0.0347mm` thick. Generally, the thicker the copper is, the more current it can carry at any given trace width (because there's more copper for the electricity to travel through), but the further apart the traces must be.
 
 ### Insulation Substrate Thickness
 
 The insulation layer in PCB Core and Prepreg have 
 
-[thickness and fiberweave - affect dialectric constant]
+[thickness and fiberweave - affect dielectric constant]
 
 [we'll explore below in controlled impedance.]
 
@@ -64,7 +64,7 @@ Some signal traces need to control for a particular electrical characteristic ca
 ### Common Impedance Values
 
 * **USB** - `90Ω` differential pair.
-* **Ethernet** - [differnet between MCU and PHY, and PHY and "Magnetics"]
+* **Ethernet** - [different between MCU and PHY, and PHY and "Magnetics"]
  * **MCU <-> PHY** - `50Ω` differential pair.
  * **PHY <-> Magnetics** - `100Ω` differential pair.
 
@@ -77,11 +77,11 @@ Some signal traces need to control for a particular electrical characteristic ca
 
 ### Designing for a Specific Impedance
 
-[The stackup dialectric will determine what size of trace you need to use in order to conform to the particular impedance.]
+[The stackup dielectric will determine what size of trace you need to use in order to conform to the particular impedance.]
 
 [Start with stack up from you preferred PCB supplier.]
 
-[use a calclator. TODO: link to a general calculator. and also to JLCPCB's impedance calculator for their stackup.]
+[use a calculator. TODO: link to a general calculator. and also to JLCPCB's impedance calculator for their stackup.]
 
 * [JLCPCB Stackups](https://cart.jlcpcb.com/impedance)
 * [JLCPCB Impedance Calculator](https://cart.jlcpcb.com/impedanceCalculation)

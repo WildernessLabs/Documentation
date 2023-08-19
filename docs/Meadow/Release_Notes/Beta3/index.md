@@ -259,7 +259,7 @@ This release includes bug fixes and performance improvements in several drivers.
 
 #### Other Improvements
 
-* **CharacterDisplay** - We improved error checking and gracefull handle long strings.
+* **CharacterDisplay** - We improved error checking and gracefully handle long strings.
 
 ## Beta 3.9
 
@@ -381,7 +381,7 @@ This release is a major leap in API stability. We closed nearly all of the open 
 * [#50 - SpiPeripheral.ReadRegister always returns 0](https://github.com/WildernessLabs/Meadow_Issues/issues/50) - Fixed.
 * [#55 - Feature request : SPI frequency change](https://github.com/WildernessLabs/Meadow_Issues/issues/55) - Fixed; you can now change the configuration after constructing, including frequency and polarity.
 * [#56 - Setting PWM frequency on D13 changed D12](https://github.com/WildernessLabs/Meadow_Issues/issues/56) - This is fixed. We did an overhaul of the checks during this API call. PWMs on the same timer must have the same frequency, though their duty cycle can differ. We now throw an exception if you try and create two PWM channels on the same timer using different frequencies.
-* [#57 - Console.WriteLine output disappearing](https://github.com/WildernessLabs/Meadow_Issues/issues/57) - Fixed. We re-architected and re-implemted how the output gets passed from Meadow to the CLI, and it's much cleaner, simpler, and hopefully, works better.
+* [#57 - Console.WriteLine output disappearing](https://github.com/WildernessLabs/Meadow_Issues/issues/57) - Fixed. We re-architected and re-implemented how the output gets passed from Meadow to the CLI, and it's much cleaner, simpler, and hopefully, works better.
 * [#58 - Can't deploy due to HCOM thread starvation](https://github.com/WildernessLabs/Meadow_Issues/issues/58) - At least partially fixed. This issue cropped up for folks on a second deploy, where they were unable to deploy or even make CLI calls. The thread that listens for the CLI wasn't responding. The workaround was to reset the board and then immediately make a call to recreate the file system via the CLI. It seems to be more or less fixed now, though we have some additional improvements on the plate for the future.
 
 #### Known Issues
@@ -520,7 +520,7 @@ SPI display driver performance:
 - automatic partial screen updates (when possible) to reduce drawing time
 
 Better display support:
-- fixes to improve display support across several drivers including support for the 135x240 varient of the ST7789 display
+- fixes to improve display support across several drivers including support for the 135x240 variant of the ST7789 display
 - re-write of the ePaper display drivers to expand supported displays and make it easier to identify the correct driver
 
 ### New Developer Site

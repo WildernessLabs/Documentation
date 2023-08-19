@@ -42,7 +42,7 @@ Additionally, the [Netduino version of the NETMF SDK](https://github.com/Wildern
  * **[Simple WPF Application](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/SimpleWPFApplication)**
  * **[Socket Client](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/SocketClient)**
  * **[Socket Server](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/SocketServer)**
- * **[Temperature Samnple](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/TemperatureSample)**
+ * **[Temperature Sample](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/TemperatureSample)**
  * **[Threading](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/Threading)**
  * **[Time](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/Time)**
  * **[Touch Panel](https://github.com/WildernessLabs/Netduino_SDK/tree/master/Netduino_3_NETMF/Product/Samples/TouchPanel)**

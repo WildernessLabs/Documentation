@@ -81,7 +81,7 @@ async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 
 Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not available in this release candidate.
 
-Note: SSL validation can sometimes fail due to Meadow's clock being too far from the current time. This can be resolved by either [configuring Meadow to aqcuire the network time at startup](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/), or by [setting the clock manually](/Meadow/Meadow.OS/RTC/) at runtime.
+Note: SSL validation can sometimes fail due to Meadow's clock being too far from the current time. This can be resolved by either [configuring Meadow to acquire the network time at startup](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/), or by [setting the clock manually](/Meadow/Meadow.OS/RTC/) at runtime.
 
 ## HTTP Get Request Example
 

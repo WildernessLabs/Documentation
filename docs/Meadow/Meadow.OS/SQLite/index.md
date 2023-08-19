@@ -25,7 +25,7 @@ SQLite.NET is available as a Meadow-compatible Nuget package called [`sqlite-net
 
 ## Configuring the Database
 
-Before using your database, you must first configure it. This is typically done during the application starup.
+Before using your database, you must first configure it. This is typically done during the application startup.
 
 The following sample code opens a connection to a database called `MySqliteDatabase.db` in the `DataDirectory` folder and creates the appropriate tables:
 
@@ -81,7 +81,7 @@ There are a number of optional attributes that can be applied to the data model 
  * `[Table(Name)]` - This class attribute specifies the name of the table. If not present, the class name will be used.
  * `[Column(name)]` - This field attribute specifies the name of the column. If not present, the field name will be used.
  * `[PrimaryKey]` - Specifies that the field will be used as an integer primary key. Note that composite keys are not supported.
- * `[AutoIncremet]` - Causes the field to be created as an auto-incrementing column, meaning that each object inserted into the table will have a value incremented from the last inserted.
+ * `[AutoIncrement]` - Causes the field to be created as an auto-incrementing column, meaning that each object inserted into the table will have a value incremented from the last inserted.
  * `[MaxLength]` - Specifies the length of of a string column.
  * `[Ignore]` - Causes the field to be ignored. If the data type should (or cannot) be stored in the database, this attribute is particularly useful.
  * `[Unique]` - Ensures that the values in the database column are unique.
@@ -138,7 +138,7 @@ var sensorReading1 = Database.Get<SensorModel>(1);
 
 ### Via LINQ
 
-You can also use LINQ to create a query that will operate on a table. For example, the folowing code queries the `SensorModel`
+You can also use LINQ to create a query that will operate on a table. For example, the following code queries the `SensorModel`
 
 ```csharp
 var readings = from rows in Database.Table<SensorModel>()

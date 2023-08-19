@@ -33,5 +33,5 @@ title: Printed Circuit Board (PCB) Fundamentals
 
  * [Component Types]
  * [Component Packages and Sizes]
- * [Choosing Componennts]
+ * [Choosing Components]
 

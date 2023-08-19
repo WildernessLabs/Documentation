@@ -89,8 +89,8 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 * **MicroGraphics** Gets two new fonts ideal for lower resolution displays: 4x6 & 6x8 pixels per character
 * **MicroGraphics** Also gets a couple handy helper APIs: `MeasureText` returns a `Size` in pixels of text for a given font, and `GraphicsPath` now has a `Bounds` property that returns the size of the path in pixels
-* **Apa102** driver now derrives from `DisplayBase` so it can be used with `GraphicsLibrary` to draw primitives and text when configured as a color pixel display
-* **TftSpi** color display drivers receive a performance optimization when clearing the screen, a small but noticable improvement
+* **Apa102** driver now derives from `DisplayBase` so it can be used with `GraphicsLibrary` to draw primitives and text when configured as a color pixel display
+* **TftSpi** color display drivers receive a performance optimization when clearing the screen, a small but noticeable improvement
 
 ### New Drivers
 
@@ -307,7 +307,7 @@ This release focuses on stability and ease of use, and it comes with a couple of
 ## Meadow.Foundation
 
 This release also includes a couple of new drivers:
-* `Analog.WaterLevel` is driver that represents common analog water level sensors to detect both the presense and depth of water.
+* `Analog.WaterLevel` is driver that represents common analog water level sensors to detect both the presence and depth of water.
 
 * `Audio.Mp3.Yx5300` is an MP3 player controlled over serial. It's now possible to add sound effects or music to your Meadow project.
 
@@ -409,7 +409,7 @@ Basic WiFi networking is up! Check out our [Networking guide](/Meadow/Meadow.OS/
 
 ### File System
 
-You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard flash device. For more infomation, see the [File System guide](/Meadow/Meadow.OS/File_System).
+You can now use the `System.IO` file system calls to do basic file system operations such as create, open, and delete files on the onboard flash device. For more information, see the [File System guide](/Meadow/Meadow.OS/File_System).
 
 #### Known Issues
 

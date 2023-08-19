@@ -4,7 +4,7 @@ title: Product Design Lifecycle
 subtitle: Understanding the lifecycle of IoT and hardware products.
 ---
 
-Designing an IoT/hardware device is an iterative and interelated process that typically consists of the following major phases:
+Designing an IoT/hardware device is an iterative and interrelated process that typically consists of the following major phases:
 
 * **Hardware Prototyping**
 * **Industrial Design Prototyping**
@@ -14,7 +14,7 @@ Designing an IoT/hardware device is an iterative and interelated process that ty
 
 ## Hardware Prototyping
 
-IoT products are often designed from the inside-out, with the hardware-design ocurring first. Even industrial design-heavy products in which the industrial design drives many hardware layout decisions are first prototyped this way. Components used in this initial design phase are very large and there are usually lots of debug features built into the hardware design itself.  
+IoT products are often designed from the inside-out, with the hardware-design occurring first. Even industrial design-heavy products in which the industrial design drives many hardware layout decisions are first prototyped this way. Components used in this initial design phase are very large and there are usually lots of debug features built into the hardware design itself.  
 
 This is phase is where many of the major hardware design decision are made and various hardware challenges are solved. It's not uncommon during this phase to approach hardware challenges from multiple angles and try different solutions. It can also be **very helpful at this stage to break the hardware design into constituent pieces and solve them individually** in their own breadboard and/or PCB prototypes before putting them together.
 
@@ -43,7 +43,7 @@ Once the major design challenges have been solved and the product has been valid
 
 ## Certification 
 
-Going to market may also require that your product earn certain certifications such as an FCC or CE mark. If it plugs into mains electrical, it may need a Underwriters Labratory (UL) certification.
+Going to market may also require that your product earn certain certifications such as an FCC or CE mark. If it plugs into mains electrical, it may need a Underwriters Laboratory (UL) certification.
 
 ## [Next: Unit Production Scale](/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/)
 

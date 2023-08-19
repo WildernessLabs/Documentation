@@ -45,7 +45,7 @@ public class InputObservableApp : App<F7Micro, InputObservableApp>
             handler: result => {
                 Console.WriteLine($"Observer filter satisfied, time: {result.New.Time.ToShortTimeString()}");
             },
-            // Optional filter paramter, showing a 1 second filter, i.e., only notify
+            // Optional filter parameter, showing a 1 second filter, i.e., only notify
             // if the new event is > 1 second from last time it was notified.
             filter: result => {
                 if (result.Old is { } old) { // C# 8 null pattern matching for not null

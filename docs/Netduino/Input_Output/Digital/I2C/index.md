@@ -71,7 +71,7 @@ In code, the sequence of events looks as follows:
 // create a new TMP102 device at address 0x48
 I2CDevice tmp102 = new I2CDevice(new I2CDevice.Configuration(0x48, 50));
 
-// create a buffer to read data from the deivce
+// create a buffer to read data from the device
 byte[] buffer = new byte[2];
 I2CDevice.I2CTransaction[] reading = new I2CDevice.I2CTransaction[1];
 
