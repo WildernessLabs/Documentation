@@ -185,7 +185,7 @@ var port = Device.PlatformOS.GetSerialPortName("COM4")
 
 ## Raw `ISerialPort`
 
-To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](/docs/api/Meadow/Meadow.Hardware.IPlatformOS.html) you're using, passing the `SerialPortName`:
+To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](/docs/api/Meadow/Meadow.IPlatformOS.html) you're using, passing the `SerialPortName`:
 
 ```csharp
 var serialPort = Device.PlatformOS.GetSerialPortName("COM4").CreateSerialPort(baudRate: 115200);
