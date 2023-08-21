@@ -135,4 +135,4 @@ Your Meadow app should now be able to run on Meadow.Windows, calling into the us
 
 ## Next steps
 
-Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Windows.Samples).
+Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Windows).
