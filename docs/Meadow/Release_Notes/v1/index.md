@@ -3,6 +3,61 @@ layout: Meadow
 title: Meadow v1
 subtitle: Release Notes
 ---
+# v1.3
+
+## OS
+* Added limited TLS client certificate support
+* Reliability improvements for OS OTA updates
+* Stability and usability improvements for cell networking:
+  * NetworkConnected/NetworkDisconnected events added to CellNetworkInterface
+  * Support for scanning cell networks added via F7CellNetworkAdapter.Scan()
+  * Exposed module IMEI and cell signal strength properties via F7CellNetworkAdapter.Imei and .Csq properties
+  * Greatly improved network reconnect speed when connection is dropped
+  * Fixed an issue with BG95 not turning when resetting Meadow
+  * IPCP-provided DNS servers are now prioritized for use by default
+
+## Meadow.Core
+* Easily add health metrics reporting to Meadow.Cloud. To enable this, add the following to  `app.config.yaml`:
+```
+HealthMetrics:
+  Enabled: true
+  Interval: 10
+```
+(Interval is in minutes.) Health metrics get sent to Meadow.Cloud once a network connection is available.
+
+## Meadow.Foundation
+* Sc16is7x2 - new UART expander driver
+* NeoPixel Featherwing - new driver
+* My7000s - improved sampling logic
+* MaxBotix - improved sampling logic for serial sensors
+* MicroLayout - adding ScaleFactor ti DisplayLabel
+* MicroGraphics - fixed negative y out of bounds exception
+* MicroGraphics - fixed index bug for 12x16 font
+* SwitchingRainGauge - sample updated to to avoid D15 error
+* Updated all projects to C# 10
+
+## Meadow.Cloud
+* Receive health metrics from device and update `LastHeartbeat` and `Version` in the device list
+* Retrieve log and event data via Webhook and Azure Event Hubs integrations
+
+## Meadow.CLI
+* New Classic build for some customers having issues on Windows 10 and some Windows 11 machines. Please download from here. 
+* If the runtime version is unknown (typically on brand new boards), it will force a flash erase, without prompting.
+* Simplified meadow packaging with a project target (instead of folder/file) that builds and trims assemblies before creating an MPAK.
+
+## VS Extensions
+* VSCode
+  * Support for Microsoft’s new 2.x C# Extension
+  * Due to dropping Omnisharp support extensions should now load a bit quicker.
+  * Attached devices now appear in ethe configuration list.
+  * Ability to toggle between Debug and Release configurations before deploying to your Meadow.
+
+## Meadow.Linux
+* n/a
+
+## Known Issues
+* Device Sleep/Wake is known to have intermittent stability issues that we are investigating.
+
 # v1.2
 
 ## OS
