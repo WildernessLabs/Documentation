@@ -17,12 +17,14 @@ subtitle: Release Notes
   * IPCP-provided DNS servers are now prioritized for use by default
 
 ## Meadow.Core
-* Easily add health metrics reporting to Meadow.Cloud. To enable this, add the following to  `app.config.yaml`:
+* Easily add health metrics reporting to Meadow.Cloud. To enable this, add the following to  `app.config.yaml`:  
+
 ```yaml
-HealthMetrics:  
-  Enabled: true  
-  Interval: 10  
+HealthMetrics:
+  Enabled: true
+  Interval: 10
 ```
+
 (Interval is in minutes.) Health metrics get sent to Meadow.Cloud once a network connection is available.
 
 ## Meadow.Foundation
