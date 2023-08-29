@@ -81,9 +81,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Ch1115](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ch1115.html) | Ch1115 SPI monochrome OLED display |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.ePaper](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaperBase.html) | SPI eInk / ePaper display controllers (IL0373, IL0376F, IL0398, IL3897, IL91874, ILI91874v3, SSD1608) |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.ePaper](#displaysepaper) | SPI eInk / ePaper display controllers (IL0373, IL0376F, IL0398, IL3897, IL91874, ILI91874v3, SSD1608) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.ePaperWaveShare](#displaysepaperwaveshare) | WaveShare SPI eInk / ePaper display controllers |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Gtk](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Gtk.html) | Gtk display driver for Meadow |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.GtkDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.GtkDisplay.html) | Gtk display driver for Meadow |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Lcd.CharacterDisplay](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) | Digital and I2C LCD character displays |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.FourDigitSevenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourDigitSevenSegment.html) | Digital Four digit seven segment displays |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Led.FourteenSegment](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourteenSegment.html) | Digital Fourteen (14) segment display |
@@ -98,7 +98,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.TftSpi](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpiBase.html) | SPI Color TFT and OLED displays (GC9A01, HC8357B, HX8357D, ILI9163, ILI9341, ILI9481, ILI9488, RM68140, S6D02A1, SSD1331, SSD1351, ST7735, ST7789) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Tm1637](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637.html) | TM1637 digital character display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.Uc1609c](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Uc1609c.html) | Uc1609c SPI monochrome OLED display |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.WinForms](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.WinForms.html) | Windows Forms display driver for Meadow |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Displays.WinForms](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.WinFormsDisplay.html) | Windows Forms display driver for Meadow |
 
 
 #### Displays.ePaper

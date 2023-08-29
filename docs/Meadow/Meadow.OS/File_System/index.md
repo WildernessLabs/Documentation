@@ -8,13 +8,13 @@ Meadow.OS has full support for file and directory manipulation via `System.IO` A
 
 ## Named Directories
 
-There are a number of named directories available via the `MeadowOS.FileSystem` class that provide known, convenient lcoations to store files and data, each with a set of rules around the persistance of their contents during reboot, OS upgrade, etc. These named directories are:
+There are a number of named directories available via the `MeadowOS.FileSystem` class that provide known, convenient locations to store files and data, each with a set of rules around the persistance of their contents during reboot, OS upgrade, etc. These named directories are:
 
  * **`UserFileSystemRoot`** - This returns `/meadow0`, which is the root directory of the flash storage on the Meadow device. This directory shouldn't be used directly, but is the root for other, more useful directories.
  * **`DataDirectory`** - Gets the `Data` directory. Use this directory to store files that require permanent persistence, such as SQL data files, even through OS deployments and Over-the-Air (OtA) updates.
  * **`DocumentsDirectory`** - Gets the `Documents` directory. Use this directory to store files that require permanent persistence, such as application document files, even through OS deployments and Over-the-Air (OtA) updates.
  * **`CacheDirectory`** - Gets the `Cache` directory. Use this directory to store semi-transient files. The contents of this folder will be erased during application updates.
- * **`TempDirectory`** - Gets the `Temp` directory. Use this directory to store transient files. This contens of this folder will be erased on device restart.
+ * **`TempDirectory`** - Gets the `Temp` directory. Use this directory to store transient files. This contents of this folder will be erased on device restart.
 
 ### Named Directory Example
 

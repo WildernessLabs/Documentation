@@ -22,7 +22,7 @@ Using the RGB calculation described [here](/Hardware/Reference/Components/LEDs/D
 3.3V - 3.2V (green and blue) = .1V
 ```
 
-Therefore, the resistance neccessary is:
+Therefore, the resistance necessary is:
 
 ```
 Red R = 1.1V / 0.020A = 55Ω

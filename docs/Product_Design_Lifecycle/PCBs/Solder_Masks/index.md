@@ -10,7 +10,7 @@ Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy so
 [usually silkscreened on, with component solder placements masked so that they don't get covered in the finish]
 
 [two types; glossy or matte, but available in a large number of colors]
-[glossy or matte, process is same, usually cost is neglible, if any]
+[glossy or matte, process is same, usually cost is negligible, if any]
 
 [matte is recommended]
 

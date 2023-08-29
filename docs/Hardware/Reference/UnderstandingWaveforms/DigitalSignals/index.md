@@ -33,7 +33,7 @@ Digital circuits work with two logic levels:
 
 In a perfect world, a high logic level is represented by the supply voltage and a low logic level is represented by ground.
 
-The Nedtuino family of boards use 3.3V to represent a digital 1 and ground to represent digital 0.  The boards will tolerate 5V as a digital 1 input signal.
+The Netduino family of boards use 3.3V to represent a digital 1 and ground to represent digital 0.  The boards will tolerate 5V as a digital 1 input signal.
 
 ## Oscilloscope Traces
 
@@ -59,7 +59,7 @@ This shows a simple trace where the signal is high for 50% of the time and low f
 
 ### Duty Cycle
 
-The **duty cylce** is a percentage of time the signal is high.  When the time the signal is high is the same as the time the signal is low then the duty cycle is 50%:
+The **duty cycle** is a percentage of time the signal is high.  When the time the signal is high is the same as the time the signal is low then the duty cycle is 50%:
 
 ![50% Duty Cycle](DutyCycle50Percent.png){:standalone}
 

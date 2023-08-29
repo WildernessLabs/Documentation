@@ -8,7 +8,7 @@ Meadow.Windows offers an environment for developing Meadow code that can run on 
 
 Running Meadow applications on Windows can provide a very convenient development loop for prototyping and testing your Meadow applications, quickly iterating and seeing the result of code changes, potentially using the same components you would use on a Meadow Feather or Core-Compute module by way of an FTDI breakout board such as FT232H that provide GPIO, SPI, and I2C. (In this early stage, Meadow.Windows does not yet support I2C.)
 
-You can also quickly prototype graphics using an emulated IDisplay object that renders to a standard window on your Windows machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intesive workloads requiring much more processing power.
+You can also quickly prototype graphics using an emulated IDisplay object that renders to a standard window on your Windows machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intensive workloads requiring much more processing power.
 
 ## Prerequisites
 
@@ -135,4 +135,4 @@ Your Meadow app should now be able to run on Meadow.Windows, calling into the us
 
 ## Next steps
 
-Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Windows.Samples).
+Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Windows).

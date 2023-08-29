@@ -15,7 +15,7 @@ IAnalogInputPort analogIn = Device.CreateAnalogInputPort(Device.Pins.A00);
 Voltage voltageReading = await analogIn.Read();
 ```
 
-Similarily, in Meadow.Foundation, the `AnalogTemperatureSensor` driver returns a `Temperature` object when reading it:
+Similarly, in Meadow.Foundation, the `AnalogTemperatureSensor` driver returns a `Temperature` object when reading it:
 
 ```csharp
 AnalogTemperature analogTemperature = new AnalogTemperature (
@@ -69,13 +69,13 @@ Console.WriteLine($"new: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}
 
 ### IChangeResult in Use
 
-`IChangeResult<UNIT>` is used for nearly all events and notifications in Meadow. For instance, the `TemperatureUdated` event in `ITemperatureSensor` has the following signature:
+`IChangeResult<UNIT>` is used for nearly all events and notifications in Meadow. For instance, the `TemperatureUpdated` event in `ITemperatureSensor` has the following signature:
 
 ```csharp
 event EventHandler<IChangeResult<Temperature>> TemperatureUpdated;
 ```
 
-Additionall, there is an accompanying `ChangeResult<UNIT>` class that provides a concrete implementation for the interface. 
+Additionally, there is an accompanying `ChangeResult<UNIT>` class that provides a concrete implementation for the interface. 
 
 As opposed to `EventArgs`, `ChangeResult<UNIT>` has the advantage of being a struct, which helps prevent prevent allocations and Garbage Collector (GC) churn.
 

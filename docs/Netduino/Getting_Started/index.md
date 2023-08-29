@@ -31,7 +31,7 @@ Once your development environment is configured, make sure your board has the la
 
      * Microsoft.Spot.Hardware
      * SecretLabs.NETMF.Hardware
-     * SecretLabs.NETMF.Harware.Netduino (or NetduinoPlus if that's what you're using)
+     * SecretLabs.NETMF.Hardware.Netduino (or NetduinoPlus if that's what you're using)
 
 #### Visual Studio for mac
 
@@ -45,7 +45,7 @@ Once your development environment is configured, make sure your board has the la
 
     * Microsoft.Spot.Hardware
     * SecretLabs.NETMF.Hardware
-    * SecretLabs.NETMF.Harware.Netduino
+    * SecretLabs.NETMF.Hardware.Netduino
 
 #### Add the Application Code
 

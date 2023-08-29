@@ -26,7 +26,7 @@ It's important to note that this force is relative; even if the water towers wer
 
 This means that current flowing from a `10V` source to `5V`, the potential difference is still only `5V`. The amount of force differential between those two points would be the same as `5V` flowing to `0V`.
 
-A minor, technical point, is that while EMF exists whether curent is flowing or not, voltage only applies when a current exists. 
+A minor, technical point, is that while EMF exists whether current is flowing or not, voltage only applies when a current exists. 
 
 ### Common Source Voltages
 

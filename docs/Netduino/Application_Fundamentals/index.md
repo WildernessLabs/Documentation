@@ -96,6 +96,6 @@ NETMF also provides a method for accessing the hardware on the microcontroller. 
 ## Further Reading
 
 * [NETMF: Threads and Thread Priorities](https://blogs.msdn.microsoft.com/netmfteam/2011/01/17/threads-and-thread-priorities-in-netmf/)
-* [NETMF: Thread Communication and Synchronisation](https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/)
+* [NETMF: Thread Communication and Synchronization](https://blogs.msdn.microsoft.com/netmfteam/2011/02/01/thread-communication-and-synchronization/)
 * [.NET Micro Framework](NETMF)
 * [SPOT namespace origin](https://en.wikipedia.org/wiki/Smart_Personal_Objects_Technology)

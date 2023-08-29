@@ -1,7 +1,7 @@
 ---
 layout: Hardware
 title: Amps
-subtitle: Quantity of electricity, in coloumbs.
+subtitle: Quantity of electricity, in coulombs.
 ---
 
 ## Intro

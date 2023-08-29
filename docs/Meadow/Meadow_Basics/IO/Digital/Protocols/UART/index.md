@@ -63,7 +63,7 @@ The Meadow F7 Feather has two exposed serial ports, named `COM4` and `COM1` with
 
 ![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
-# Using the Meadow Serial API
+## Using the Meadow Serial API
 
 Because serial is a legacy technology, working with it can be a little tricky. In fact, because of this, we have two serial port classes that you can use for serial communications:
 
@@ -71,6 +71,14 @@ Because serial is a legacy technology, working with it can be a little tricky. I
 * **`ISerialPort`** - For legacy uses, this works like traditional serial ports, it's not thread-safe, and care must be taken to make sure that the communications buffer is used appropriately if there are multiple subscribers to its events.
 
 For both classes, creating, opening, and writing to the underlying serial port is effectively the same, but the `ISerialMessagePort` handles reads in an asynchronous fashion, and bundles them into _messages_ that can provide a much easier way of reading data coming in. In contrast, the class `ISerialPort` class must be manually read from when data comes in.
+
+Regardless of how you interact with the port, these serial ports can have different names depending on the platform where you are developing your Meadow app. We will need to retreive the platform's preferred port name first.
+
+```csharp
+var port4 = Device.PlatformOS.GetSerialPortName("COM4");
+```
+
+Using the `SerialPortName` the platform returns, we can create either a message-based or raw serial port.
 
 ## `ISerialMessagePort`
 
@@ -81,7 +89,7 @@ For both classes, creating, opening, and writing to the underlying serial port i
 
 The `ISerialMessagePort` is configured in its constructor to operate in either of those two modes.
 
-### Suffix Delimited Messages
+### Instantiating an `ISerialMessagePort` using Suffix Delimited Messages
 
 Often times, serial peripherals send varying length messages that are terminated by a sequence. For instance, GPS receivers send NMEA sentences of indeterminate length, but each sentence ends with the "newline" suffix of carriage-return and line-feed characters (`\r\n`) as in the following:
 
@@ -92,14 +100,30 @@ $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
 $GPGGA,162254.00,3723.02837,N,12159.39853,W,1,03,2.36,525.6,M,-25.6,M,,*65
 ```
 
-#### Instantiating an `ISerialMessagePort` using Suffix Delimited Messages
-
 In this case, the serial message port should be created using the following constructor from the `IIODevice`:
 
 ```csharp
-ISerialMessagePort CreateSerialMessagePort(SerialPortName portName, byte[] suffixDelimiter, 
-    bool preserveDelimiter, int baudRate, int dataBits = 8, Parity parity = Parity.None, 
-    StopBits stopBits = StopBits.One, int readBufferSize = 4096);
+ISerialMessagePort CreateSerialMessagePort(
+    SerialPortName portName,
+    byte[] suffixDelimiter,
+    bool preserveDelimiter,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 512);
+```
+
+Alternatively, you can use a convenience extension method from `SerialPortName` to create your port, which will call the above interface method:
+
+```csharp
+public static ISerialPort CreateSerialPort(
+    this SerialPortName name,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 1024)
 ```
 
 For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `\r\n` as its suffix delimiter, we can use the following code:
@@ -109,7 +133,7 @@ Device.CreateSerialMessagePort(Device.SerialPortNames.Com4,
     suffixDelimiter: Encoding.UTF8.GetBytes("\r\n"), preserveDelimiter: true);
 ```
 
-### Fixed-length, Prefix Delimited Messages
+### Instantiating an `ISerialMessagePort` using Fixed-Length Prefix-Delimited Messages
 
 Sometimes, serial peripherals will send fixed-length messages that have a common prefix as in the following:
 
@@ -119,33 +143,55 @@ $0420029
 $2083992
 ```
 
-#### Instantiating an `ISerialMessagePort` using Prefix Delimited Messages
-
 In this case, the serial message port should be created using the following constructor from the `IIODevice`:
 
 ```csharp
-ISerialMessagePort CreateSerialMessagePort(SerialPortName portName, byte[] prefixDelimiter,
-    bool preserveDelimiter, int messageLength, int baudRate = 9600, int dataBits = 8,
-    Parity parity = Parity.None, StopBits stopBits = StopBits.One, int readBufferSize = 4096);
+ISerialMessagePort CreateSerialMessagePort(
+    SerialPortName portName,
+    byte[] prefixDelimiter,
+    bool preserveDelimiter,
+    int messageLength,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 512);
+```
 
+Alternatively, you can use a convenience extension method from `SerialPortName` to create your port, which will call the above interface method:
+
+```csharp
+public static ISerialMessagePort CreateSerialMessagePort(
+    this SerialPortName name,
+    byte[] prefixDelimiter,
+    bool preserveDelimiter,
+    int messageLength,
+    int baudRate = 9600,
+    int dataBits = 8,
+    Parity parity = Parity.None,
+    StopBits stopBits = StopBits.One,
+    int readBufferSize = 512)
 ```
 
 For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `$` as its prefix delimiter, and has a 6 byte message length, we can use the following code:
 
 ```csharp
-Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 
-    prefixDelimiter: Encoding.UTF8.GetBytes('$'), messageLength: 8, preserveDelimiter: true);
+var port = Device.PlatformOS.GetSerialPortName("COM4")
+    .CreateSerialMessagePort(
+        suffixDelimiter: Encoding.UTF8.GetBytes("$"),
+        messageLength: 8
+        preserveDelimiter: true);
 ```
 
-## Legacy `ISerialPort`
+## Raw `ISerialPort`
 
-To use the classic Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using, passing the `SerialPortName`:
+To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](/docs/api/Meadow/Meadow.IPlatformOS.html) you're using, passing the `SerialPortName`:
 
 ```csharp
-var serialPort = Device.CreateSerialPort(Device.SerialPortNames.Com4, 115200);
+var serialPort = Device.PlatformOS.GetSerialPortName("COM4").CreateSerialPort(baudRate: 115200);
 ```
 
-## Opening a Serial Port
+### Opening a Serial Port
 
 Once either an `ISerialMessagePort` or `ISerialPort` is created, call the `Open()` method to establish a connection with a peripheral:
 
@@ -153,7 +199,7 @@ Once either an `ISerialMessagePort` or `ISerialPort` is created, call the `Open(
 serialPort.Open();
 ```
 
-### Data Protocol Structure Configuration
+## Data Protocol Structure Configuration
 
 Optionally, you can also specify the number of data bits in a message frame, parity, and number of stop bits. The datasheet on your serial peripheral should specify what those values should be. The most common is `8n1`, which means `8` data bits, no parity check, or `Parity.None`, and one stop bit, or `StopBits.One`. 8n1 is the default for the serial port constructor, but you can specify something different as well:
 
@@ -173,7 +219,7 @@ var buffer = new byte[] { 0x00, 0x0F, 0x01 };
 serialPort.Write(buffer);
 ```
 
-### Encoding and Decoding Serial Port Messages
+## Encoding and Decoding Serial Port Messages
 
 Note that serial ports deal in `byte` arrays, rather than strings or characters, so any strings need to be converted to bytes. Typically, you'll want to use `Encoding.UTF8` or `Encoding.ASCII` encoding.
 
@@ -189,11 +235,11 @@ Encoding.UTF8.GetBytes("\r\n")
 
 Both of these approaches have massive drawbacks. Polling a serial port is processor intensive, as it relies on a loop that constantly checks for new data. Waiting for an event to read from the buffer is more efficient, but both methods can be extremely problematic when actually reading from the buffer. The issue is that a serial port has a single receive buffer, and reading from that buffer removes the data from it. If multiple actors are reading from the buffer, then the each actor might only get fragments of the intended data, rendering the data invalid. Additionally, because messages are indeterminate in their termination, when the data received event comes in, the entire message data may not have arrived, so a data consumer would need to either continuously poll for more data until it can be determined that all the data has come in, or use advanced threading techniques to resume the reading thread when additional data has come in.
 
-### Reading Messages via `ISerialMessagePort`
+## Reading Messages via `ISerialMessagePort`
 
 It is for this reason that we created the `ISerialMessagePort`, which handles all of the underlying concurrency issues on the receive buffer and takes an asynchronous approach to serial messages. Simply define your message type during construction and then listen for incoming message notifications. In this way, multiple consumers can listen for new data without concurrency issues, and all reading is handled efficiently, under the hood.
 
-#### `MessageReceived` Event
+### `MessageReceived` Event
 
 When a fully formed message arrives, the `ISerialMessagePort` raises a `MessageReceived` event that can be subscribed to:
 

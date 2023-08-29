@@ -137,7 +137,7 @@ The memory leak that caused Meadow applications that made lots of web requests c
 
 ### SSL/HTTPs Improvements
 
-We fixed the memory leak occuring after every HTTPS connection, reduced general memory consumption per connection and removed the debug spew that would get output when making SSL/HTTPs requests.
+We fixed the memory leak occurring after every HTTPS connection, reduced general memory consumption per connection and removed the debug spew that would get output when making SSL/HTTPs requests.
 
 ## Meadow.Core
 

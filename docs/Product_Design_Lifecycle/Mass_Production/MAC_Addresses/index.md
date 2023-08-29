@@ -6,7 +6,7 @@ If your product has a network adapter, regardless of how it connects (WiFi, Ethe
 
 # Block Size + Cost
 
-MAC Address registrations are managed by the [IEEE-SA Standard Organization](http://standards.ieee.org/main/regauth/grpmac/) and are assigned in blocks that are priced according to the number of addresses assigned. IEEE-SA also provides cofidential registration for an additional fee (and yearly maintenance cost):
+MAC Address registrations are managed by the [IEEE-SA Standard Organization](http://standards.ieee.org/main/regauth/grpmac/) and are assigned in blocks that are priced according to the number of addresses assigned. IEEE-SA also provides confidential registration for an additional fee (and yearly maintenance cost):
 
 | Block Type | Block Size | Price (USD)|
 |------------|------------|------|

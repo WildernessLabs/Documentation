@@ -152,7 +152,7 @@ namespace Blinky
                     // if we got here, we either timed out or got an address, so let's find out.
                     if (net.IPAddress == IPAddress.Any.ToString()) 
                     {
-                        Debug.Print ("Failed to get an IP Address in the alotted time.");
+                        Debug.Print ("Failed to get an IP Address in the allotted time.");
                         return false;
                     }
 
@@ -221,7 +221,7 @@ namespace Blinky
         {
             string hexString = string.Empty;
 
-            // Create a character array for hexidecimal conversion.
+            // Create a character array for hexadecimal conversion.
             const string hexChars = "0123456789ABCDEF";
 
             // Loop through the bytes.

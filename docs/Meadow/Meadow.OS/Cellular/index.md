@@ -38,9 +38,10 @@ Settings:
     Mode: CATM1 # Network mode (CATM1, NBIOT or GSM) (optional)
     Interface: /dev/ttyS1 # Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) (optional)
     TurnOnPin: D10 # Pin used to turn on the Cell module (optional)
+    ScanMode: false # Activate the cell network scanning mode (optional)
 ```
 
-> **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. However, if you encounter any connectivity issues, it is advisable to manually configure these settings.
+> **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. However, if you encounter any connectivity issues, it is advisable to manually configure these settings. If you don't know your operator code, you can scan the cell networks to find out it.
 
 2 - Select `Cell` as `DefaultInterface` in the **meadow.config.yaml**, if you don't have this *yaml* file in your device, you should create and flash it to the device:
 
@@ -56,7 +57,7 @@ Device:
     ReservedPins: I9;H13;C7
 ```
 
-> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the corresponding ones, according to the pinout denifition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A3` MCU pin.
+> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the corresponding ones, according to the pinout definition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A3` MCU pin.
 
 ## Hardware configuration
 
@@ -110,7 +111,7 @@ To check if you established a connection, you can use the `meadow listen` CLI co
 
 #### Handling Cell connection using a .NET application
 
-You can check the Cell connection status by accessing the `IsConnected` property present in the Cell Network Adapter, as in the following example:
+You can check the Cell connection status by accessing the `IsConnected` property present in the `ICellNetworkAdapter`, as in the following example:
 
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
@@ -124,3 +125,72 @@ else
     Console.WriteLine("Cell isn't connected");
 }
 ```
+
+Therefore, you can use the `NetworkConnected` and `NetworkDisconnected` event handlers with Cell.
+
+```csharp
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+
+cell.NetworkConnected += CellAdapter_NetworkConnected;
+cell.NetworkDisconnected += CellAdapter_NetworkConnected;
+
+void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, NetworkConnectionEventArgs e)
+{
+    Resolver.Log.Info("Cell network connected!");
+}
+
+void CellAdapter_NetworkDisconnected(INetworkAdapter networkAdapter)
+{
+    Resolver.Log.Info("Cell network disconnected!");
+}
+
+```
+
+> Note: Cell uses higher timeouts due to limited bandwidth in LPWA modules, which may result in a longer delay for the NetworkDisconnected event to be triggered.
+
+Besides that, you can get some extra information about the connection and the module, such as the Cell Signal Quality (CSQ), and the International Mobile Equipment Identity (IMEI).
+
+```csharp
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+
+cell.NetworkConnected += CellAdapter_NetworkConnected;
+
+void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapter networkAdapter)
+{
+    Resolver.Log.Info("Cell network connected!");
+
+    ICellNetworkAdapter cellAdapter = networkAdapter as ICellNetworkAdapter;
+    if (cellAdapter != null)
+    {
+        Console.WriteLine("Cell CSQ: " + cellAdapter.Csq);
+        Console.WriteLine("Cell IMEI: " + cellAdapter.Imei);
+    }
+}
+```
+
+> Note: Prior to checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value obtained on the connection.
+
+#### Scanning Cell networks
+
+To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, you can connect faster and more reliably. To find out the carrier code, you can use Cell network scanner by following these two steps:
+
+1) Add the `ScanMode: true` in your `cell.config.yaml`, to let Cell in the scanning mode.
+2) Use the `Scan` method, as in the example:
+
+```csharp
+try
+{
+    List<CellNetwork> operatorList = cell.Scan();
+
+    foreach (CellNetwork data in operatorList)
+    {
+        Console.WriteLine($"Operator Status: {data.Status}, Operator Name: {data.Name}, Operator: {data.Operator}, Operator Code: {data.Code}, Mode: {data.Mode}");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine("An error occurred: " + ex.Message);
+}
+```
+
+> Note: Some modules, such as the BG95-M3, memorize the last network mode used and take it into consideration during scanning. For example, if you previously connected to an NB-IoT network, the scanner will return the available NB-IoT networks. If you want to view available CAT-M1 networks, begin by connecting to this network initially, allowing the module to set CAT-M1 as network mode. Afterward, follow the steps mentioned above to initiate the scanner successfully.
