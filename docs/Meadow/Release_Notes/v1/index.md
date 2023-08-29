@@ -43,7 +43,7 @@ HealthMetrics:
 * Retrieve log and event data via Webhook and Azure Event Hubs integrations
 
 ## Meadow.CLI
-* New Classic build for some customers having issues on Windows 10 and some Windows 11 machines. Please download from here. 
+* New Classic build for some customers having issues on Windows 10 and some Windows 11 machines. Please download from [here](https://github.com/WildernessLabs/Meadow.CLI/releases/tag/v1.3.0.0). 
 * If the runtime version is unknown (typically on brand new boards), it will force a flash erase, without prompting.
 * Simplified meadow packaging with a project target (instead of folder/file) that builds and trims assemblies before creating an MPAK.
 
