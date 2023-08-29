@@ -18,10 +18,10 @@ subtitle: Release Notes
 
 ## Meadow.Core
 * Easily add health metrics reporting to Meadow.Cloud. To enable this, add the following to  `app.config.yaml`:
-```
-HealthMetrics:
-  Enabled: true
-  Interval: 10
+```yaml
+HealthMetrics:  
+  Enabled: true  
+  Interval: 10  
 ```
 (Interval is in minutes.) Health metrics get sent to Meadow.Cloud once a network connection is available.
 
