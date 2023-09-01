@@ -10,4 +10,4 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
 * Next, run `meadow cloud login` to authenticate. You'll need to register an account with Wilderness Labs if you haven't already done so.
 * Finally, connect your Meadow device and run, `meadow device provision --name "my device"`. Adding a device name is optional, but recommended.
 
-You can visit https://www.meadowcloud.co/ to ensure your device has been successfully provisioned.
+You can visit [https://www.meadowcloud.co](https://www.meadowcloud.co) to verify your device has been successfully provisioned.
