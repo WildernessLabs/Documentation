@@ -7,7 +7,7 @@ subtitle:
 
 ## Overview
 
-Command + Control makes is easy to send a command to a set of devices. Here is an oveview of the process: 
+Command + Control makes it easy to send a command to a set of devices. Here is an oveview of the process: 
 
 ![alt text](cmd_overview.png "Command + Control Overview")
 
@@ -46,12 +46,13 @@ Authorization: Bearer <user token> or Authorization: api_key TODO
    "qos": 0
 }
 ```
-
-`collectionIds`: The set of collections Ids  
-`deviceIds`: The set of device Ids  
-`commandName`: Name of the command  
-`args`: A JSON object of argument keys/values  
-`qos`: [QoS of the MQTT message](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/), 0=At Most Once, 1=At least once, 2=Exactly Once  
+| Field | Description | 
+| ----- | ----------- |
+| `collectionIds` | Devices in this set of Collection IDs will be sent the command |  
+| `deviceIds` | Devices in this set will be sent the command  |
+| `commandName` | Name of the command  |
+| `args` | An object of argument key value pairs |  
+| `qos` | [QoS of the MQTT message](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/), 0=At Most Once, 1=At least once, 2=Exactly Once  |
 
 ## Receiving a Command
 
@@ -65,6 +66,7 @@ In `app.config.yaml`, set the following:
 Update:
   Enabled: true
 ```
+When the Command Service is enabled, the device connects to MQTT and subscibes to the appropriate topic to receive commands from Meadow.Cloud. The Command Service is currently coupled with the Update Service. There is a work item to decouple this in an upcoming release.  
 
 ### Event Handler Registration
 
