@@ -3,6 +3,7 @@ layout: Meadow
 title: Logs and Events
 subtitle: 
 ---
+[< Meadow.Cloud](../)  
 
 ## Enabling CloudLogger
 
