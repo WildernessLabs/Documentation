@@ -33,7 +33,7 @@ public override async Task Initialize()
 Then, call `LogEvent(int eventId, string description, Dictionary<string, object> measurements)` when a measurement needs to be made.
 ```c#
 var cloudLogger = Resolver.Services.Get<CloudLogger>();
-ccloudLoggerl.LogEvent(1000, "enviroment reading", new Dictionary<string, object>()
+cloudLogger.LogEvent(1000, "enviroment reading", new Dictionary<string, object>()
 {
     { "temperature", temperatureValue },
     { "humidity", humidityValue },
@@ -44,12 +44,12 @@ ccloudLoggerl.LogEvent(1000, "enviroment reading", new Dictionary<string, object
 
 ## Viewing Logs and Events
 
-Log and event data is transmitted to Meadow.Cloud and indexed. To view and search data, visit https://www.meadowcloud.co/[orgName]/search. Freeform text entered in the search box will be used to filter the results. Additionally, the following filters can be applied:
+Log and event data is transmitted to Meadow.Cloud and indexed. To view and search data, visit [https://www.meadowcloud.co/[orgName]/search](https://www.meadowcloud.co/[orgName]/search). Freeform text entered in the search box will be used to filter the results. Additionally, the following filters can be applied:
 
-Severity: `severity:information`, `severity:warn`, `severity:error`
-Source: `source:log` or `source:event`
-Device: `device:[deviceId]`
-
+* Severity: `severity:information`, `severity:warn`, `severity:error`  
+* Source: `source:log` or `source:event`  
+* Device: `device:[deviceId]`  
+ 
 ## Sample Application
 
 For a reference on Logs and Events, view the [Sample Application](https://github.com/WildernessLabs/Meadow.Logging/blob/main/Source/Meadow.Logging.LogProviders/Samples/CloudLogger_Sample/MeadowApp.cs).
