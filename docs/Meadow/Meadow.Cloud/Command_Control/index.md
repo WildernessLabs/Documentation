@@ -50,7 +50,7 @@ Authorization: Bearer <user token> or Authorization: api_key TODO
 | Field | Description |
 | ----- | ----------- |
 | `collectionIds` | Devices in this set of Collection IDs will be sent the command |
-| `deviceIds` | Devices in this set will be sent the command |
+| `deviceIds` | Devices in this set of Device IDs will be sent the command |
 | `commandName` | Name of the command |
 | `args` | An object of argument key value pairs |
 | `qos` | [QoS of the MQTT message](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/), 0=At Most Once, 1=At least once, 2=Exactly Once |
@@ -106,11 +106,11 @@ Resolver.CommandService.Subscribe<SetHeatPower>(command =>
 });
 ```
 
-When a command message is received by the device, it looks for a class with the same name as `commandName` that implements `IMeadowCommand`, deserializes the message, and invokes the event handler. 
+When a command message is received by the device, it looks for a class with the same name as `commandName` that implements `IMeadowCommand`, deserializes the message, and invokes the event. 
 
 #### Untyped
 
-If you have a command without arguments or prefer going the untyped route, you can subscribe to and handle the commands directly:
+If you have a command without arguments or want to handle raw commands in bulk, you can subscribe directly:
 
 ```c#
 Resolver.CommandService.Subscribe(command =>
