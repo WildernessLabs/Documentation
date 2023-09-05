@@ -4,14 +4,14 @@ title: Enterprise Integrations
 subtitle: 
 ---
 [< Meadow.Cloud](../)  
-
-Integrate your device data in Meadow.Cloud into your existing infrastructure.  
+## Overview
+Log and event data from devices sent to Meadow.Cloud can easily be ingested into your own infrastructure or third-party integrations. Check out the docs on how to get setup with the integration of your choice.
 
 * [Webhooks](Webhooks/index.md)
 * [Azure Event Hubs](AzureEventHubs/index.md)
-* [Datacake](Datacake/index.md)
 
 Coming soon:
+* Datacake
 * Ubidots
 * MQTT
 * Elasticsearch
