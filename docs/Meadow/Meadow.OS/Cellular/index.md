@@ -41,7 +41,7 @@ Settings:
     ScanMode: false # Activate the cell network scanning mode (optional)
 ```
 
-> **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. However, if you encounter any connectivity issues, it is advisable to manually configure these settings. If you don't know your operator code, you can scan the cell networks to find it.
+> **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. **However, if you encounter any connectivity issues, it is advisable to add the Operator to the cell config file**. If you don't know your operator code, you can use the **Cell Network Scanner**, included in that documentation, to find it out.
 
 2 - Select `Cell` as `DefaultInterface` in the **meadow.config.yaml**, if you don't have this *yaml* file in your device, you should create and flash it to the device:
 
@@ -57,7 +57,7 @@ Device:
     ReservedPins: I9;H13;C7
 ```
 
-> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the corresponding ones, according to the pinout definition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A3` MCU pin.
+> **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the corresponding ones, according to the pinout definition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A3` MCU pin, instead of `C7`.
 
 ## Hardware configuration
 
@@ -104,14 +104,12 @@ Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with a
 
 > **Notes**: To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
 
-#### Testing
+## Handling Cell connection using a .NET application
 
 To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like this:
 `Connection established successfully! IP address '100.69.106.222'.`
 
-## Handling Cell connection using a .NET application
-
-You can check the Cell connection status by accessing the `IsConnected` property present in the `ICellNetworkAdapter`, as in the following example:
+You can also check the Cell connection status by accessing the `IsConnected` property present in the `ICellNetworkAdapter`, as in the following example:
 
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
@@ -146,8 +144,6 @@ void CellAdapter_NetworkDisconnected(INetworkAdapter networkAdapter)
 
 ```
 
-> **Notes**: Cell uses higher timeouts due to limited bandwidth in LPWA modules, which may result in a longer delay for the NetworkDisconnected event to be triggered.
-
 Besides that, you can get some extra information about the connection and the module, such as the Cell Signal Quality (CSQ), and the International Mobile Equipment Identity (IMEI).
 
 ```csharp
@@ -168,16 +164,22 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 }
 ```
 
-> **Notes**: Before checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value obtained on the connection.
+> **Notes**: Before checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value (0-31) representing the signal quality obtained on the connection. To convert this number to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value).
 
+## Troubleshooting
 #### Scanning Cell networks
 
-To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, you can ensure that you are connecting to the right network, connecting faster and more reliably. To find out the carrier code, you can use Cell network scanner by following these two steps:
+To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, **you can ensure that you are connecting to the right network, connecting faster and more reliably**. To find out the carrier code, you can use Cell network scanner by following these two steps:
 
-1) Add the `ScanMode: true` and `Timeout: 300` in your `cell.config.yaml`, to let Cell in the scanning mode and to increase the scanning timeout, since the default 30s may not be enough in some cases.
+1) Add the `ScanMode: true` in your `cell.config.yaml`, to let Cell in the scanning mode.
 2) Use the `Scan` method, as in the example:
 
 ```csharp
+using Meadow.Networking;
+...
+
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+
 try
 {
     CellNetwork[] operators = cell.Scan();
@@ -194,3 +196,19 @@ catch (Exception ex)
 ```
 
 > **Notes**: Some modules, such as the BG95-M3, memorize the last network mode used and consider it during scanning. For example, if you previously connected to an NB-IoT network, the scanner may return only the available NB-IoT networks. If you want to view available CAT-M1 networks, begin by connecting to this network initially, allowing the module to set CAT-M1 as network mode. Afterward, follow the steps mentioned above to initiate the scanner successfully.
+
+#### Getting Cellular network connection logs
+The cellular network connection logs might be helpful for users' troubleshooting. This raw data often holds valuable clues to help pinpoint and fix errors or connectivity issues. The following example will show how to get the cellular module AT commands output:
+
+```csharp
+using Meadow.Networking;
+...
+
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+
+while (!cell.IsConnected)
+{
+    await Task.Delay(10000);
+    Console.WriteLine($"Cell AT commands output: {cell.AtCmdsOutput}");
+}
+```
