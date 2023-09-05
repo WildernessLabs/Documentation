@@ -18,11 +18,11 @@ The `Ssid` name will be set as the default access point to be used as the system
 
 The `wifi.config.yaml` file will be deleted from flash storage after it has been processed and stored in secure storage on the ESP32 as the information is considered sensitive. This prevents the possibility of the file being read at a later point in time.
 
-The contents of this file along with the `AutomaticallyStartNetwork` value in `meadow.config.yaml` can be used to automatically connect to an access point when the board starts.
+The contents of this file along with the [`AutomaticallyStartNetwork` value in `meadow.config.yaml`](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration#automaticallystartnetwork) can be used to automatically connect to an access point when the board starts.
 
 ## Sample Apps
 
-For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/Config_Files) in the `Meadow.Core.Samples` repo.
 
 <table>
     <tr>
