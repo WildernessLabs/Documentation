@@ -7,8 +7,8 @@ subtitle:
 ## Overview
 Log and event data from devices sent to Meadow.Cloud can easily be ingested into your own infrastructure or third-party integrations. Check out the docs on how to get setup with the integration of your choice.
 
-* [Webhooks](Webhooks/index.md)
-* [Azure Event Hubs](AzureEventHubs/index.md)
+* [Webhooks](Webhooks/)
+* [Azure Event Hubs](AzureEventHubs)
 
 Coming soon:
 * Datacake
