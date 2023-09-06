@@ -1,12 +1,10 @@
 ---
 layout: Meadow
 title: Logs and Events
-subtitle: 
+subtitle: Getting started with logs and events
 ---
 [< Meadow.Cloud](../)  
-
 ## Enabling CloudLogger
-
 Today, logging output through `Resolver.Log.Info("foo bar");` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, getting the same logs in Meadow.Cloud is really simple, all you need do is register a new `CloudLogger`:
 
 ```c#

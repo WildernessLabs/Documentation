@@ -1,12 +1,10 @@
 ---
 layout: Meadow
 title: Command + Control
-subtitle: 
+subtitle: Getting started
 ---
 [< Meadow.Cloud](../)  
-
 ## Overview
-
 Command + Control makes it easy to send a command to a set of devices. Here is an oveview of the process: 
 
 ![alt text](cmd_overview.png "Command + Control Overview")
