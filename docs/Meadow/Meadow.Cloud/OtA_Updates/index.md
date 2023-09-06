@@ -79,4 +79,4 @@ An .mpak file is an application bundle. We'll use the application we created in 
 ## Publish
 
 * To publish via CLI, run `meadow package publish -p your_package_id`.  
-* To publish via Web, go to [https://www.meadowcloud.co/packages](https://www.meadowcloud.co/packages) and click `Publish`.
+* To publish via Web, go to [https://www.meadowcloud.co/my/packages](https://www.meadowcloud.co/my/packages) and click `Publish`.
