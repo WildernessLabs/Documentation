@@ -74,7 +74,7 @@ By default, OtA is not enabled. Follow the steps to enable OtA in your applicati
 An .mpak file is an application bundle. We'll use the application we created in the previous section.
 
 * Run `meadow package create -p application_path/your_app.csproj -v [Target Meadow OS version] -n "name of MPAK"`. An example target Meadow OS version is `1.3.0.0` This command creates an .mpak file with the contents of your application and additional metadata.
-* To upload your newly created .mpak to Meadow.Cloud, run `meadow package upload -p [path to .mpak file]`. Visit [https://www.meadowcloud.co/packages](https://www.meadowcloud.co/packages) to verify your package was successfully uploaded.
+* To upload your newly created .mpak to Meadow.Cloud, run `meadow package upload -p [path to .mpak file]`. Visit [https://www.meadowcloud.co/my/packages](https://www.meadowcloud.co/my/packages) to verify your package was successfully uploaded.
 
 ## Publish
 
