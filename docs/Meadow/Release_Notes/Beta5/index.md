@@ -153,7 +153,7 @@ CreateFile(MeadowOS.FileSystem.TempDirectory, "hello.txt");
 
 [File System guide](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/File_System/)
 
-Check out the [FileSystem_Basics app sample in Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/OS/FileSystem_Basics) to see it in action.
+Check out the [FileSystem_Basics app sample in Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/FileSystem_Basics) to see it in action.
 
 ### I2C/SPI API Updates
 
