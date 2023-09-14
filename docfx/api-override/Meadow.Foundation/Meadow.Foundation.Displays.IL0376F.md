@@ -70,11 +70,11 @@ public override Task Run()
 | CLK     | SCK        |
 | DIN     | MOSI       |
 | GND     | GND        |
-| VCC     | 3V3        |
+| 3V3     | 3V3        |
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL0373/ePaper_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.IL0376F/ePaper_Fritzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 

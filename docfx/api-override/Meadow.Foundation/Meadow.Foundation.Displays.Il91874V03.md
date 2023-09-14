@@ -69,7 +69,7 @@ public override Task Run()
 | CLK       | SCK        |
 | DIN       | MOSI       |
 | GND       | GND        |
-| VCC       | 3V3        |
+| 3V3       | 3V3        |
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
