@@ -49,7 +49,9 @@ The menu items support the following properties:
 | `Command`  | `command` | Command name to distinguish menu selection events. If `command` is set, it takes precedence over editable menu item. |
 | `ID`       | `id`      | Unique identifier for the type. Required for an editable menu item. |
 | `Type`     | `type`    | Type of the input, ex: `Age`, `Time`. Required for an editable menu item. |
+| `Value`    | `value`   | The default value for editable items. |
 | `SubItems` | `sub`     | Array of child menu items for submenus. |
+
 
 
 ### Defining a Menu Programmatically
@@ -65,7 +67,6 @@ var menuItems = new MenuItem[]
     new MenuItem("Pong", command: "startPong"),
     new MenuItem("Span4", command: "startSpan4"),
     new MenuItem("Snake", command: "startSnake"),
-    new MenuItem("Tetraminos", command: "startTetraminos"),
     new MenuItem("Tetraminos", command: "startTetraminos"),
     new MenuItem("Options", 
                 subItems: new MenuItem[]{new MenuItem("Sound {value}", id: "sound", type: "OnOff", value: true),
@@ -167,7 +168,7 @@ Once the menu hierarchy is created and the display is configured, the menu can b
 
 ```csharp
 // loading from an in-memory object graph:
-menu = new Menu(display, menuItems);
+menu = new TextDisplayMenu(display, menuItems);
 
 // loading from JSON
 var menuData = LoadResource("menu.json");
