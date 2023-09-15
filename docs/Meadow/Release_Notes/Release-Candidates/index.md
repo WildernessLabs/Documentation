@@ -83,7 +83,7 @@ As usual, all our samples repos and API docs have been updated to latest API cha
 * [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
 * [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
 * [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
-* [API Documentation](../../../../docfx/index.md)
+* [API Documentation](../../../docs/api/Meadow/)
 
 # RC-3 (v0.9.6.3)
 
