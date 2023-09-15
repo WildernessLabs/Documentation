@@ -366,7 +366,7 @@ First, go to the [Downloads page](http://developer.wildernesslabs.co/Meadow/Gett
 Unzip everything to a common folder, the instructions below assume the OS and network binaries are in the same folder and the CLI is in a `Meadow.CLI` subfolder relative to the OS binaries.
 
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util
-installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
+installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/).
 
 1. Connect Meadow in normal mode
 1. Disable mono (may need to run twice if you get an exception the first time).
