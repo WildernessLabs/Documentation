@@ -1,10 +1,13 @@
 ---
 layout: Meadow
 title: Device Provisioning
-subtitle: Getting started 
+subtitle: Getting started
 ---
-[< Meadow.Cloud](../)  
+
+[< Meadow.Cloud](../)
+
 ## Overview
+
 Before a device can enjoy things like Over-the-Air updates and Health Monitoring, it needs to get provisioned with Meadow.Cloud. This is a straightforward process with a few command-line steps:
 
 1. Install the [Meadow.CLI](https://www.nuget.org/packages/WildernessLabs.Meadow.CLI) using the .NET CLI.
@@ -26,3 +29,11 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
     ```
 
 You can visit [https://www.meadowcloud.co](https://www.meadowcloud.co) to verify your device has been successfully provisioned.
+
+With a device provisioned, check out the other Meadow.Cloud features.
+
+* [Over-the-Air (OtA) Updates](../OtA_Updates/)
+* [Health Monitoring](../Health_Monitoring/)
+* [Logs + Events](../Logs_Events/)
+* [Command + Control](../Command_Control/)
+* [Integrations](../Integrations/)

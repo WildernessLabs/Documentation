@@ -3,8 +3,10 @@ layout: Meadow
 title: Over-the-Air (OtA) Updates
 subtitle: Getting started with OtA
 ---
-[< Meadow.Cloud](../)  
-# Overview
+
+[< Meadow.Cloud](../)
+
+## Overview
 
 Meadow.Cloud provides secure, Over-the-Air (OtA) updates, which enable you to push a new version of a Meadow application to a device in the field over the network.
 
@@ -94,3 +96,10 @@ An .mpak file is an application bundle. We'll use the application we created in 
 * To publish via CLI, run `meadow package publish -p your_package_id`.
 * To publish via Web, go to [https://www.meadowcloud.co/my/packages](https://www.meadowcloud.co/my/packages) and click **Publish**.
 
+With a Meadow app deployed that can be updated via Over-the-Air (OtA) updates, check out the other Meadow.Cloud features.
+
+* [Provision more Devices](../Device_Provisioning/)
+* [Health Monitoring](../Health_Monitoring/)
+* [Logs + Events](../Logs_Events/)
+* [Command + Control](../Command_Control/)
+* [Integrations](../Integrations/)

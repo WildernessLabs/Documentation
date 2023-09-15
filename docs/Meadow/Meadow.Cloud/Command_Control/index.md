@@ -3,7 +3,9 @@ layout: Meadow
 title: Command + Control
 subtitle: Getting started
 ---
-[< Meadow.Cloud](../)  
+
+[< Meadow.Cloud](../)
+
 ## Overview
 
 Command + Control makes it easy to send a command to a set of devices. Here is an oveview of the process:
@@ -141,3 +143,8 @@ Resolver.CommandService.Subscribe(command =>
 
 With your Meadow app capable of receiving and responding to commands, check out the other Meadow.Cloud features.
 
+* [Provision more Devices](../Device_Provisioning/)
+* [Over-the-Air (OtA) Updates](../OtA_Updates/)
+* [Health Monitoring](../Health_Monitoring/)
+* [Logs + Events](../Logs_Events/)
+* [Integrations](../Integrations/)

@@ -3,8 +3,11 @@ layout: Meadow
 title: Logs and Events
 subtitle: Getting started with logs and events
 ---
-[< Meadow.Cloud](../)  
+
+[< Meadow.Cloud](../)
+
 ## Enabling CloudLogger
+
 Today, logging output through `Resolver.Log.Info("foo bar");` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, getting the same logs in Meadow.Cloud is really simple, all you need do is register a new `CloudLogger`:
 
 ```csharp
@@ -66,3 +69,10 @@ Recommendations
 
 Check out our [Integrations](../Integrations/) to ingest log and event data into your own infrastructure via webhooks, Azure Event Hubs, and more.
 
+With your Meadow application logging events to Meadow.Cloud, check out the other Meadow.Cloud features.
+
+* [Provision more Devices](../Device_Provisioning/)
+* [Over-the-Air (OtA) Updates](../OtA_Updates/)
+* [Health Monitoring](../Health_Monitoring/)
+* [Command + Control](../Command_Control/)
+* [Integrations](../Integrations/)
