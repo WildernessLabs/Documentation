@@ -5,9 +5,10 @@ subtitle:
 ---
 [< Meadow.Cloud](../)  
 ## Overview
-Monitoring the health of a device in the field is mission critical. With Meadow, this is a first class feature and simple to setup. Once enabled, you can see the status of your device at a glance. Additionally, you can drill down to see raw data as well as basic charts to view the data over time.
 
-Setting this up requires the following update in `app.config.yaml`:  
+The ability to monitor the health of a device in the field is critical. With Meadow, this is a first class feature and simple to set up. Once enabled, you can see the status of your device at a glance. Additionally, you can drill down to see raw data as well as basic charts to view the data over time.
+
+Setting up health monitoring requires the following update in `app.config.yaml`:
 
 ```yaml
 HealthMetrics:
@@ -15,7 +16,7 @@ HealthMetrics:
   Interval: 15
 ```
 
-`HealthMetrics.Interval` is in minutes and optional. Default is 60.
+`HealthMetrics.Interval` is in minutes and optional. The default interval is 60 minutes.
 
 Here are the metrics gathered per device:
 
@@ -25,4 +26,7 @@ Here are the metrics gathered per device:
 * disk_space_used
 * battery_percentage
 
-Lastly, check out our [Integrations](../Integrations/) to ingest this data into your own infrastructure via Wehbooks, Azure Event Hubs, and more.
+Check out our [Integrations](../Integrations/) to ingest this data into your own infrastructure via webhooks, Azure Event Hub, and more.
+
+With your Meadow application logging health metrics to Meadow.Cloud, check out the other Meadow.Cloud features.
+

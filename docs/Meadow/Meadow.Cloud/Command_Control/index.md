@@ -5,9 +5,10 @@ subtitle: Getting started
 ---
 [< Meadow.Cloud](../)  
 ## Overview
-Command + Control makes it easy to send a command to a set of devices. Here is an oveview of the process: 
 
-![alt text](cmd_overview.png "Command + Control Overview")
+Command + Control makes it easy to send a command to a set of devices. Here is an oveview of the process:
+
+![Flow diagram showing client sending data to meadowcloud.co via REST API, then to MQTT messages, then to an device event handler.](cmd_overview.png "Command + Control Overview")
 
 First, a message is sent from the client to the meadowcloud.co REST API, then an MQTT message is sent to the appropriate devices with the command payload. On the device, the payload is received, deserialized, and processed by an event handler.
 
@@ -16,9 +17,10 @@ First, a message is sent from the client to the meadowcloud.co REST API, then an
 A command can be sent to a set of collections or devices:
 
 **Collections**
-```
+
+```log
 POST /api/collections/commands
-Authorization: Bearer <user token> or Authorization: apikey <apikey>  
+Authorization: Bearer <user token> or Authorization: apikey <apikey>
 {
    "collectionIds": ["COLLECTION_ID_1", "COLLECTION_ID_2"],
    "commandName": "myCommand",
@@ -31,9 +33,10 @@ Authorization: Bearer <user token> or Authorization: apikey <apikey>
 ```
 
 **Devices**
-```
+
+```log
 POST /api/devices/commands
-Authorization: Bearer <user token> or Authorization: apikey <apikey>   
+Authorization: Bearer <user token> or Authorization: apikey <apikey>
 {
    "deviceIds": ["DEVICE_ID_1", "DEVICE_ID_2"],
    "commandName": "myCommand",
@@ -44,21 +47,26 @@ Authorization: Bearer <user token> or Authorization: apikey <apikey>
    "qos": 0
 }
 ```
-**collectionIds**  
+
+**collectionIds**
+
 Devices in this set of Collection IDs will be sent the command
 
-**deviceIds**  
+**deviceIds**
+
 Devices in this set of Device IDs will be sent the command
 
-**commandName**  
+**commandName**
+
 Name of the command
 
-**args**  
+**args**
+
 An object of argument key-value pairs
 
-**qos**  
-[QoS of the MQTT message](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/) (0=At Most Once, 1=At least once, 2=Exactly Once)
+**qos**
 
+[QoS of the MQTT message](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/) (0=At Most Once, 1=At least once, 2=Exactly Once)
 
 ## Receiving a Command
 
@@ -72,7 +80,8 @@ In `app.config.yaml`, set the following:
 Update:
   Enabled: true
 ```
-When the Command Service is enabled, the device connects to MQTT and subscibes to the appropriate topic to receive commands from Meadow.Cloud. The Command Service is currently coupled with the Update Service. There is a work item to decouple this in an upcoming release.  
+
+When the Command Service is enabled, the device connects to MQTT and subscibes to the appropriate topic to receive commands from Meadow.Cloud. The Command Service is currently coupled with the Update Service. There is a work item to decouple this in an upcoming release.
 
 ### Event Handler Registration
 
@@ -95,15 +104,16 @@ For the following examples, let's assume we are operating a greenhouse and want 
 
 With the typed approach, we can create a class of type `IMeadowCommand`:
 
-```c#
-public class SetHeatPower : IMeadowCommand 
+```csharp
+public class SetHeatPower : IMeadowCommand
 {
     public int Power { get; set; }
 }
 ```
+
 We can then register the event handler with this type:
 
-```c#
+```csharp
 Resolver.CommandService.Subscribe<SetHeatPower>(command =>
 {
     Resolver.Log.Info($"Received SetHeatPower command with power: {command.Power}");
@@ -111,13 +121,13 @@ Resolver.CommandService.Subscribe<SetHeatPower>(command =>
 });
 ```
 
-When a command message is received by the device, it looks for a class with the same name as `commandName` that implements `IMeadowCommand`, deserializes the message, and invokes the event. 
+When a command message is received by the device, it looks for a class with the same name as `commandName` that implements `IMeadowCommand`, deserializes the message, and invokes the event.
 
 #### Untyped
 
 If you have a command without arguments or want to handle raw commands in bulk, you can subscribe directly:
 
-```c#
+```csharp
 Resolver.CommandService.Subscribe(command =>
 {
     Resolver.Log.Info($"Command received: {command.CommandName}, args: {command.Arguments}");
@@ -129,6 +139,5 @@ Resolver.CommandService.Subscribe(command =>
 });
 ```
 
-## Sample Application
+With your Meadow app capable of receiving and responding to commands, check out the other Meadow.Cloud features.
 
-TODO: add sample application for reference
