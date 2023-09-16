@@ -36,7 +36,7 @@ Yaaaasss!! Meadow.OS now has first-class, integrated support for on-device datab
 
 ## Meadow.Foundation
 
-* **uGraphics cleanup** - GraphicsLibrary now tracks pen color when saving and restoring state, and added support for `IgnoreOutOfBoundsPixels` for several displays
+* **MicroGraphics cleanup** - GraphicsLibrary now tracks pen color when saving and restoring state, and added support for `IgnoreOutOfBoundsPixels` for several displays
 * **Maple improvements** Maple server is continuing to evolve and now has basic route aliasing support
 * **Standardized I2C address properties** All I2C peripherals now have a standard `DEFAULT_ADDRESS` property
 * **Samples Cleanup** We did a top to bottom review to make sure samples are well formed, well named, and written consistently to make it easier to start working with a new peripheral driver
