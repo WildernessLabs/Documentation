@@ -79,7 +79,7 @@ pwm.Start();
 
 ### Software Generated via `SoftPwmPort`
 
-For PWM frequencies below `1hz` (one cycle per second), as used in industrial control systems such as HVACs, Meadow.Foundation contains a [`Generators.SoftPwmPort`](http://beta-developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Generators.SoftPwmPort.html) that can be created on any  `IDigitalOutputPort` and used just like a hardware PWM port:
+For PWM frequencies below `1hz` (one cycle per second), as used in industrial control systems such as HVACs, Meadow.Foundation contains a [`Generators.SoftPwmPort`](/docs/api/Meadow.Foundation/Meadow.Foundation.Generators.SoftPwmPort.html) that can be created on any  `IDigitalOutputPort` and used just like a hardware PWM port:
 
 ```csharp
 IDigitalOutputPort digiOut = Device.CreateDigitalOutputPort(Device.Pins.D00);
