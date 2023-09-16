@@ -249,7 +249,7 @@ This is a big release with a ton of stability fixes, an overhaul of the CLI, and
  * **Networking Server Methods** - `UdpClient`, `TcpListener` and `TcpClient` are all working now. Note that we're still working on `HttpListener`.
  * **[Meadow.OS Watchdog Timer](/Meadow/Meadow.OS/Automatic_Restarts/)** - You can now use the hardware watch timer, which will automatically restart the device in case of an application hang.
  <!--* **`TextDisplayMenu`** - Meadow.Foundation now has a new library called `TextDisplayMenu` that allows for easy menu creation and interaction.-->
- * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The [Graphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/) available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `CharacterDisplay`s).
+ * **Meadow.Foundation `GraphicsLibrary` Upgrades** - The [Graphics Library](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/) available in Meadow.Foundation got some serious performance upgrades, as well as the ability to run `TextDisplayMenu` on any graphics display (as well as `CharacterDisplay`s).
 
 ## Meadow.Foundation
 
@@ -263,7 +263,7 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 ### `GraphicsLibrary` Updates
 
-We improved performance for all displays using [`GraphicsLibrary`](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/uGraphics/) with additional performance for color Tft displays.
+We improved performance for all displays using [`GraphicsLibrary`](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/) with additional performance for color Tft displays.
 
 `GraphicsLibrary` also includes several new and improved APIs including:
 - Support for 12bpp (RGB444) display buffers which reduces frame buffer memory
@@ -366,7 +366,7 @@ First, go to the [Downloads page](http://developer.wildernesslabs.co/Meadow/Gett
 Unzip everything to a common folder, the instructions below assume the OS and network binaries are in the same folder and the CLI is in a `Meadow.CLI` subfolder relative to the OS binaries.
 
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util
-installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/DFU/).
+installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/).
 
 1. Connect Meadow in normal mode
 1. Disable mono (may need to run twice if you get an exception the first time).

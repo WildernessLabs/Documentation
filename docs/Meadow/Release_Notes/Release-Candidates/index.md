@@ -83,7 +83,7 @@ As usual, all our samples repos and API docs have been updated to latest API cha
 * [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
 * [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
 * [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
-* [API Documentation](../../../../docfx/index.md)
+* [API Documentation](../../../docs/api/Meadow/)
 
 # RC-3 (v0.9.6.3)
 
@@ -580,7 +580,7 @@ The `Resolver` also contains an instance of a simple `Logger`. This `Logger` sup
 
 ### Application Configuration
 
-`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Setting_configuration) for more information.
+`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration) for more information.
 
 ### Network APIs
 
