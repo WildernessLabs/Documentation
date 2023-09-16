@@ -580,7 +580,7 @@ The `Resolver` also contains an instance of a simple `Logger`. This `Logger` sup
 
 ### Application Configuration
 
-`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Setting_configuration) for more information.
+`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration) for more information.
 
 ### Network APIs
 
