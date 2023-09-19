@@ -14,7 +14,7 @@ Meadow has the capabilities to both read and write analog signals, but presently
 
 ## Samples
 
-For sample Meadow applications that illustrate the usage of analog ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Meadow.Core.Samples/IO).
+For sample Meadow applications that illustrate the usage of analog ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/IO).
 
 ## Analog Input
 

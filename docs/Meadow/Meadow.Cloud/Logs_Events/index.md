@@ -1,12 +1,10 @@
 ---
 layout: Meadow
 title: Logs and Events
-subtitle: 
+subtitle: Getting started with logs and events
 ---
 [< Meadow.Cloud](../)  
-
 ## Enabling CloudLogger
-
 Today, logging output through `Resolver.Log.Info("foo bar");` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, getting the same logs in Meadow.Cloud is really simple, all you need do is register a new `CloudLogger`:
 
 ```c#
@@ -45,7 +43,7 @@ cloudLogger.LogEvent(1000, "enviroment reading", new Dictionary<string, object>(
 
 ## Viewing Logs and Events
 
-Log and event data is transmitted to Meadow.Cloud and indexed. To view and search data, visit [https://www.meadowcloud.co/[orgName]/search](https://www.meadowcloud.co/[orgName]/search). Freeform text entered in the search box will be used to filter the results. Additionally, the following filters can be applied:
+Log and event data is transmitted to Meadow.Cloud and indexed. To view and search data, visit [https://www.meadowcloud.co/my/search](https://www.meadowcloud.co/my/search). Freeform text entered in the search box will be used to filter the results. Additionally, the following filters can be applied:
 
 * Severity: `severity:information`, `severity:warn`, `severity:error`  
 * Source: `source:log` or `source:event`  

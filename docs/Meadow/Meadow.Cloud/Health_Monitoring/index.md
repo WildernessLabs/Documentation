@@ -4,7 +4,7 @@ title: Health Monitoring
 subtitle: 
 ---
 [< Meadow.Cloud](../)  
-
+## Overview
 Monitoring the health of a device in the field is mission critical. With Meadow, this is a first class feature and simple to setup. Once enabled, you can see the status of your device at a glance. Additionally, you can drill down to see raw data as well as basic charts to view the data over time.
 
 Setting this up requires the following update in `app.config.yaml`:  
