@@ -6,13 +6,32 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-## Sample Apps
 
-For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
 
-* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
-* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
-* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+# Ethernet
+
+If you're using an Ethernet add-on module, or a CCM DevKit, you can easily use Ethernet network connectivity by switching the `DefaultInterface` setting in the meadow.config.yaml file:
+
+```yml
+...
+# Network configuration.
+Network:
+  Interfaces:
+    - Name: Ethernet
+      UseDHCP: false
+      IPAddress: 192.168.1.60
+      NetMask: 255.255.255.0
+      Gateway: 192.168.1.254
+#    - Name: Ethernet
+#      UseDHCP: true
+#      IPAddress:
+#      NetMask:
+#      Gateway:
+
+  DefaultInterface: Ethernet
+...
+```
+Optionally you can set the `UseDHCP: true` to get an IP Address automatically. If `DefaultInterface` is not set on the config file, it will default to WiFi.
 
 # WiFi
 
@@ -120,6 +139,14 @@ For more information on getting the current antenna information and switching, s
 # Creating RESTful Web APIs with Maple Server
 
 If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called [Maple Server](../../Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index.md) that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+
+# Sample projects
+
+For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
+
+* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
 
 # Sample projects
 
