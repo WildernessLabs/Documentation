@@ -8,6 +8,8 @@ Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi 
 
 - [WiFi](#wifi)
     - [Connecting to a WiFi Network](#connecting-to-a-wifi-network)
+        - [Option 1 Programatically using C#](#option-1---programatically-using-c)
+        - [Option 2 - Using Config Files](#option-2---using-config-files)
     - [Scanning for WiFi Networks](#scanning-for-wifi-networks)
 - [Ethernet](#ethernet)
 - [Performing Requests](#performing-requests)
@@ -21,7 +23,9 @@ Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi 
 
 # WiFi
 
-## Connecting to a Wi-Fi Network
+## Connecting to a WiFi Network
+
+### Option 1 - Programatically using C#
 
 To connect to a Wi-Fi network, call the async function `Connect`, passing in the network name (SSID) and password. It will return a `Connection.Status` to verify if the connection was successful or if something went wrong, and allowing you to handle those situations.
 
@@ -51,6 +55,37 @@ wifi.NetworkConnected += (networkAdapter, networkConnectionEventArgs) =>
     Console.WriteLine($"Gateway: {networkAdapter.Gateway}");
 };
 ```
+
+### Option 2 - Using Config Files
+
+Another option is you can make your Meadow device join a network at startup automatically using the app's configuration files.
+
+In the `meadow.config.yaml` file, make sure you set these values:
+
+```yaml
+...
+# Control how the ESP coprocessor will start and operate.
+Coprocessor:
+  # Automatically attempt to connect to an access point at startup
+  AutomaticallyStartNetwork: true
+
+  # Automatically reconnect to the configured access point
+  AutomaticallyReconnect: true
+
+  # Maximum number of retry attempts for connections etc. before an error code is returned.
+  MaximumRetryCount: 7
+...
+```
+
+If you're configuring to join the network this way, you'll also need to edit the `wifi.config.yaml` file to store the WiFi credentials:
+
+```yaml
+Credentials:
+  Ssid: YourSSID
+  Password: SSIDPassword
+```
+
+In this case, you might want to register the `NetworkConnected` event in the `Initialize()` method to start any network related tasks once the device joins your network.
 
 ## Scanning for WiFi Networks
 
@@ -98,9 +133,6 @@ Network:
       Gateway: 192.168.1.254
 #    - Name: Ethernet
 #      UseDHCP: true
-#      IPAddress:
-#      NetMask:
-#      Gateway:
 
   DefaultInterface: Ethernet
 ...
