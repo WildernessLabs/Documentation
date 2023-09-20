@@ -6,17 +6,26 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-## Sample Apps
-
-For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
-
-* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
-* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
-* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+- [WiFi](#wifi)
+    - [Connecting to a WiFi Network](#connecting-to-a-wifi-network)
+        - [Option 1 Programatically using C#](#option-1---programatically-using-c)
+        - [Option 2 - Using Config Files](#option-2---using-config-files)
+    - [Scanning for WiFi Networks](#scanning-for-wifi-networks)
+- [Ethernet](#ethernet)
+- [Performing Requests](#performing-requests)
+    - [HTTP GET Request Example](#http-get-request-example)
+    - [HTTP POST Request Example](#http-post-request-example)
+- [Antenna](#antenna)
+- [Creating RESTful Web APIs with Maple Server](#creating-restful-web-apis-with-maple-server)
+- [Sample projects](#sample-projects)
+    - [Core project samples](#core-project-samples)
+    - [Additional project samples](#additional-project-samples)
 
 # WiFi
 
-## Connecting to a Wi-Fi Network
+## Connecting to a WiFi Network
+
+### Option 1 - Programatically using C#
 
 To connect to a Wi-Fi network, call the async function `Connect`, passing in the network name (SSID) and password. It will return a `Connection.Status` to verify if the connection was successful or if something went wrong, and allowing you to handle those situations.
 
@@ -46,6 +55,37 @@ wifi.NetworkConnected += (networkAdapter, networkConnectionEventArgs) =>
     Console.WriteLine($"Gateway: {networkAdapter.Gateway}");
 };
 ```
+
+### Option 2 - Using Config Files
+
+Another option is you can make your Meadow device join a network at startup automatically using the app's configuration files.
+
+In the `meadow.config.yaml` file, make sure you set these values:
+
+```yaml
+...
+# Control how the ESP coprocessor will start and operate.
+Coprocessor:
+  # Automatically attempt to connect to an access point at startup
+  AutomaticallyStartNetwork: true
+
+  # Automatically reconnect to the configured access point
+  AutomaticallyReconnect: true
+
+  # Maximum number of retry attempts for connections etc. before an error code is returned.
+  MaximumRetryCount: 7
+...
+```
+
+If you're configuring to join the network this way, you'll also need to edit the `wifi.config.yaml` file to store the WiFi credentials:
+
+```yaml
+Credentials:
+  Ssid: YourSSID
+  Password: SSIDPassword
+```
+
+In this case, you might want to register the `NetworkConnected` event in the `Initialize()` method to start any network related tasks once the device joins your network.
 
 ## Scanning for WiFi Networks
 
@@ -77,6 +117,28 @@ async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 }
 ```
 
+# Ethernet
+
+If you're using an [Dual, Switching Ethernet Add-on module](https://store.wildernesslabs.co/collections/meadow-core-compute/products/dual-ethernet-add-on), or a [Meadow F7v2 Core-Compute Dev Kit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board), you can easily use Ethernet network connectivity by switching the `DefaultInterface` setting in the meadow.config.yaml file:
+
+```yml
+...
+# Network configuration.
+Network:
+  Interfaces:
+    - Name: Ethernet
+      UseDHCP: false
+      IPAddress: 192.168.1.60
+      NetMask: 255.255.255.0
+      Gateway: 192.168.1.254
+#    - Name: Ethernet
+#      UseDHCP: true
+
+  DefaultInterface: Ethernet
+...
+```
+Optionally you can set the `UseDHCP: true` to get an IP Address automatically. If `DefaultInterface` is not set on the config file, it will default to WiFi.
+
 # Performing Requests
 
 Once the network is connected, you can generally use the built-in .NET network methods as usual, however `HttpServer` is not available in this release candidate.
@@ -96,7 +158,7 @@ using (HttpClient client = new HttpClient()) {
 }
 ```
 
-### HTTP Post Request Example
+## HTTP Post Request Example
 
 You can also modify the request to `POST` data. For example, the following code posts a temperature reading to the Adafruit IO data platform:
 
@@ -123,7 +185,17 @@ If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a ligh
 
 # Sample projects
 
-You can look through these for usa samples in our [Meadow Core Samples](https://github.com/WildernessLabs/Meadow.Core.Samples) repo or refer to these practical projects available on [Hackster](https://www.hackster.io/WildernessLabs).
+## Core project samples
+
+For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
+
+* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+
+## Additional project samples
+
+You can look through these practical projects available on [Hackster](https://www.hackster.io/WildernessLabs).
 
 <table>
     <tr>
