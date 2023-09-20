@@ -146,55 +146,6 @@ One thing to bear in mind when creating interrupts on multiple pins is that inpu
 
 ![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
 
-<!--
-## Timing
-
-**NOTE FROM THE WILDERNESS LABS TEAM:**
- 
-These timing values are measurements from Beta 3.6. We recognize that they are not fast enough for all applications, but they are adequate for many. Keep in mind that these values are a significant improvement from earlier Betas and the expectation is for them to improve drastically as we move toward release, so if they don't meet your needs feel free to contact us with your requirements to find our when to expect a release that will meet your needs.
-
-An important consideration for most applications is the minimum timing capabilities of the platform on which you're running.
-
-Keep in mind that Meadow is running .NET and is therefore not a deterministic, real-time system.  These values are representative numbers, but system behaviors like memory allocation and garbage collection could occasionally yield much larger values.
-
-Some basic timing measurements and expectations are as follows:
-
-### Minimum Output Transition Time: ~4ms
-
-How fast can the platform cycle a simple digital output?  The following test, measured with an oscilloscope, shows that the line has a 50% duty cycle, with each `HIGH` and `LOW` state maintained for approximately 4.1ms:
-
-```csharp
-var d04 = Device.CreateDigitalOutputPort(Device.Pins.D04);
-
-while (true)
-{
-    _d04.State = true;
-    _d04.State = false;
-}
-```
-
-### Minimum Interrupt Service Time: ~50ms
-
-Given an incoming interrupt, how fact can the platform react and execute some handler?  The following test, measured with an oscilloscope, shows that the time from the rising input edge to the rising output edge to be approximately 50ms:
-
-```csharp
-var input = Device.CreateDigitalInputPort(
-    Device.Pins.D03,
-    InterruptMode.EdgeRising);
-            
-var output = Device.CreateDigitalOutputPort(
-    Device.Pins.D05, false);
-
-input.Changed += async (s, o) =>
-{
-    output.State = true;
-    await Task.Delay(1000);
-    output.State = false;
-    Console.WriteLine($"click");
-};
-```
--->
-
 ## [Pulse-Width-Modulation PWM](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 Digital output ports can be used to generate a _Pulse-Width-Modulation_ (PWM) signal, which approximates an intermediate voltage between `LOW` or `HIGH` by switching between ON and OFF very quickly: 
