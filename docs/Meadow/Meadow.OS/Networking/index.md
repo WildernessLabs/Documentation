@@ -84,7 +84,7 @@ async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 
 # Ethernet
 
-If you're using an Ethernet add-on module, or a CCM DevKit, you can easily use Ethernet network connectivity by switching the `DefaultInterface` setting in the meadow.config.yaml file:
+If you're using an [Dual, Switching Ethernet Add-on module](https://store.wildernesslabs.co/collections/meadow-core-compute/products/dual-ethernet-add-on), or a [Meadow F7v2 Core-Compute Dev Kit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board), you can easily use Ethernet network connectivity by switching the `DefaultInterface` setting in the meadow.config.yaml file:
 
 ```yml
 ...
