@@ -153,6 +153,8 @@ void CellAdapter_NetworkDisconnected(INetworkAdapter networkAdapter)
 
 ```
 
+### Getting module IMEI
+
 Besides that, you can get some extra information about the connection and the module, such as the Cell Signal Quality (CSQ), and the International Mobile Equipment Identity (IMEI).
 
 ```csharp
@@ -173,7 +175,20 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 }
 ```
 
-> **Notes**: Before checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value (0-31) representing the signal quality obtained on the connection. To convert this number to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value).
+> **Notes**: Before using the mentioned properties, ensure a successful connection has been established. The `Csq` property returns a static value (0-31) representing the signal quality obtained on the connection.
+
+### Fetching Cell Signal Quality (CSQ)
+
+It's important to note that the `Csq` property returns a cached value obtained from the connection, then to retrieve the most up-to-date CSQ (Cellular Signal Quality), you should utilize the `GetSignalQuality` method, as illustrated in the following example:
+
+```csharp
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+
+double csq  = cellAdapter.GetSignalQuality();
+Console.WriteLine("Cell Signal Quality: " + csq);
+```
+
+> **Notes**: To convert the CSQ value to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value). You may experience disconnection from the cellular network for a brief period while the module gets the signal quality, so it's advisable to avoid calling this method in very short time intervals for a seamless user experience.
 
 ## Using GNSS with cellular modules
 Some cellular modules, such as the BG95-M3, offer support for GNSS functionalities. As illustrated in the following example, you can define an interval between the position fixes, as well as select which kind of NMEA sentence should be retrieved, by specifying it in an `IGnssResult` array:
