@@ -8,11 +8,11 @@ subtitle: Connect Meadow to LTE/4G cellular signals
 
 The beta cellular network for the Meadow platform is compatible with various modules, each supporting different network operation modes. The following table describes the network operation modes supported by each module:
 
-| Modules / Network Modes   | Cat-M1 (LTE-M or eMTC) | NB-IoT | GSM/GRPS 2G |
-|--------------------------|------------------------|--------|-------------|
-| Quectel BG770A Cell Wing | ✔                  | ✔  | -        |
-| Quectel BG95-M3          | ✔                  | ✔  | ✔       |
-| Quectel M95              | -                   | -   | ✔       |
+| Modules / Network Modes   | Cat-M1 (LTE-M or eMTC) | NB-IoT | GSM/GRPS 2G | GNSS   |
+|--------------------------|------------------------|--------|-------------|--------|
+| Quectel BG770A Cell Wing | ✔                      | ✔      | -           | -      |
+| Quectel BG95-M3          | ✔                      | ✔      | ✔           | ✔      |
+| Quectel M95              | -                      | -      | ✔           | -      |
 
 
 **Cat-M1**, **NB-IoT**, and **GSM** (Global System for Mobile Communications) are all cellular network technologies with distinct characteristics. **GSM**, the most widely used cellular standard globally, provides higher data rates compared to **NB-IoT** and **Cat-M1** but has higher power consumption. In contrast, **Cat-M1** and **NB-IoT** are optimized for IoT applications. **Cat-M1** offers higher data rates and mobility, while **NB-IoT** provides ultra-low power consumption and extended coverage. The choice among **GSM**, **Cat-M1**, and **NB-IoT** depends on the specific requirements of the application, considering factors such as data rates, power consumption, and coverage area.
@@ -174,6 +174,46 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 ```
 
 > **Notes**: Before checking the Cell Quality Signal (CSQ) and module IMEI, ensure a successful connection has been established. The CSQ is a static value (0-31) representing the signal quality obtained on the connection. To convert this number to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value).
+
+## Using GNSS with cellular modules
+Some cellular modules, such as the BG95-M3, offer support for GNSS functionalities. As illustrated in the following example, you can define an interval between the position fixes, as well as select which kind of NMEA sentence should be retrieved, by specifying it in an `IGnssResult` array:
+
+```csharp
+using Meadow.Foundation.Sensors.Location.Gnss;
+using Meadow.Peripherals.Sensors.Location.Gnss;
+using Meadow.Foundation.Sensors.Gnss;
+...
+    void ProcessGnssPosition(object sender, IGnssResult location)
+    {
+        Resolver.Log.Info("*********************************************");
+        Resolver.Log.Info(location.ToString());
+        Resolver.Log.Info("*********************************************");  
+    }
+...
+    IGnssResult[] resultTypes = new IGnssResult[]
+    {
+        new GnssPositionInfo(),
+        new ActiveSatellites(),
+        new CourseOverGround(),
+        new SatellitesInView(new Satellite[0])
+    };
+
+    ICellNetworkAdapter cell = networkAdapter as ICellNetworkAdapter;
+
+    var bg95M3 = new Bg95M3(cellAdapter, TimeSpan.FromMinutes(30), resultTypes);
+
+    bg95M3.GnssDataReceived += ProcessGnssPosition;
+
+    bg95M3.StartUpdating();
+```
+
+For a more comprehensive example, you can refer to the [BG95-M3 GNSS sample](https://github.com/WildernessLabs/Meadow.Foundation/blob/develop/Source/Meadow.Foundation.Peripherals/Sensors.Gnss.Bg95M3/Samples/Bg95M3_Sample/MeadowApp.cs) available in the Meadow.Foundation repository.
+
+### GNSS Hardware Setup
+
+When utilizing a **Quectel BG95-M3 NimbeLink Skywire click board**, you can follow the same setup instructions as for the cellular connection. Additionally, ensure you attach a GPS antenna to the `X3` IPX connector to enable your cellular module to obtain position fixes.
+
+> **Notes**: Due to a hardware limitation of this board, concurrent use of GNSS and Cellular functionality is not possible. Consequently, you may experience disconnection from the cellular network for a brief period while the module acquires a position fix. It is advisable to avoid using very short time intervals between obtaining position fixes for a seamless user experience.
 
 ## Troubleshooting
 
