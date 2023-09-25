@@ -219,10 +219,7 @@ When utilizing a **Quectel BG95-M3 NimbeLink Skywire click board**, you can foll
 
 #### Scanning Cell networks
 
-To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, **you can ensure that you are connecting to the right network, connecting faster and more reliably**. To find out the carrier code, you can use Cell network scanner by following these two steps:
-
-1. Add the `ScanMode: true` in your `cell.config.yaml`, to let Cell in the scanning mode.
-1. Use the `Scan` method, as in the example:
+To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, **you can ensure that you are connecting to the right network, connecting faster and more reliably**. To find out the carrier code, you can use the Cell network scanner as in the following example:
 
 ```csharp
 using Meadow.Networking;
@@ -232,11 +229,11 @@ var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
 
 try
 {
-    CellNetwork[] operators = cell.Scan();
+    CellNetwork[] availableNetworks = cell.ScanForAvailableNetworks();
 
-    foreach (CellNetwork operator in operators)
+    foreach (CellNetwork network in availableNetworks)
     {
-        Console.WriteLine($"Operator Status: {operator.Status}, Operator Name: {operator.Name}, Operator: {operator.Operator}, Operator Code: {operator.Code}, Mode: {operator.Mode}");
+        Console.WriteLine($"Network Status: {network.Status}, Operator Name: {network.Name}, Operator: {network.Operator}, Operator Code: {network.Code}, Mode: {network.Mode}");
     }
 }
 catch (Exception ex)
