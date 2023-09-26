@@ -28,7 +28,7 @@ public override Task Initialize()
 
     port.Updated += (s, result) =>
     {
-        Console.WriteLine($"Analog event, new voltage: {result.New.Volts}V, old: {result.Old?.Volts}V");
+        Resolver.Log.Info($"Analog event, new voltage: {result.New.Volts}V, old: {result.Old?.Volts}V");
     };
 
     var observer = IAnalogInputPort.CreateObserver(
