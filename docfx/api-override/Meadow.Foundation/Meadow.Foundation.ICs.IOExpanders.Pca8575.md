@@ -78,12 +78,12 @@ private void TestDigitalOutputPorts(int loopCount)
             Thread.Sleep(1000);
 
             // turn on just one
-            Console.WriteLine($"Update pin {i} to {true}");
+            Resolver.Log.Info($"Update pin {i} to {true}");
             outputPorts[i].State = true;
             Thread.Sleep(250);
 
             // turn off just one
-            Console.WriteLine($"Update pin {i} to {false}");
+            Resolver.Log.Info($"Update pin {i} to {false}");
             outputPorts[i].State = false;
             Thread.Sleep(250);
         }
@@ -98,5 +98,4 @@ private void TestDigitalOutputPorts(int loopCount)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pcx857x/Samples/Pca8575_Sample)
-
 

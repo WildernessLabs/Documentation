@@ -1,5 +1,5 @@
 ---
-uid: Meadow.Foundation.Motors;.BidirectionalDcMotor
+uid: Meadow.Foundation.Motors.BidirectionalDcMotor
 remarks: *content
 ---
 

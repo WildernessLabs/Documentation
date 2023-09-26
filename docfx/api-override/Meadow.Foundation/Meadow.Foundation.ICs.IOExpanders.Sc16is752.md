@@ -132,4 +132,3 @@ private async Task PingReply(ISerialPort portA, ISerialPort portB)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Sc16is7x2/Samples/Sc16is752_Sample)
 
-

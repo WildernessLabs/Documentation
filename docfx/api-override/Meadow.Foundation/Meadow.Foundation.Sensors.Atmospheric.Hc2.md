@@ -62,4 +62,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hc2/Samples/Hc2_Sample)
 
-

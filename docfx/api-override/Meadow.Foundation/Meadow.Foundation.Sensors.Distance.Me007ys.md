@@ -58,4 +58,3 @@ private void Me007y_DistanceUpdated(object sender, IChangeResult<Length> e)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Me007ys/Samples/Me007ys_Sample)
 
-

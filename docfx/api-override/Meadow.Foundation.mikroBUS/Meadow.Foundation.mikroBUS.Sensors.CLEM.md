@@ -22,4 +22,3 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CLEM/Sample/CLEM_Sample)
 
-

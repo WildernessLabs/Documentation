@@ -89,4 +89,3 @@ private async Task PollProc(ISerialPort port)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Sc16is7x2/Samples/Sc16is762_Sample)
 
-

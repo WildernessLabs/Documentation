@@ -49,4 +49,3 @@ void HandleResult(object sender, IChangeResult<MagneticField3D> result)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis3Mdl/Samples/Lis3Mdl_Sample)
 
-
