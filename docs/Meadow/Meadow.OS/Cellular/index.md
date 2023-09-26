@@ -38,7 +38,6 @@ Then, to configure your network you just need to follow these three steps:
         Mode: CATM1 # Network mode (CATM1, NBIOT or GSM) (optional)
         Interface: /dev/ttyS1 # Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) (optional)
         TurnOnPin: D10 # Pin used to turn on the Cell module (optional)
-        ScanMode: false # Activate the cell network scanning mode (optional)
     ```
 
     > **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. **However, if you encounter any connectivity issues, it is advisable to add the Operator to the cell config file**. If you don't know your operator code, you can use the **Cell Network Scanner**, included in that documentation, to find it out.
