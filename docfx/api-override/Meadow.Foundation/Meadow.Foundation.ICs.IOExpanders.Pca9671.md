@@ -85,4 +85,3 @@ private void TestDigitalOutputPorts(int loopCount)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pca9671/Samples/Pca9671_Sample)
 
-

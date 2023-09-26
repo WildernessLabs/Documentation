@@ -52,4 +52,3 @@ void HandleResult(object sender,
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6Dsox/Samples/Lsm6Dsox_Sample)
 
-

@@ -54,4 +54,3 @@ private void OnCurrentUpdated(object sender, IChangeResult<Meadow.Units.Current>
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CACCurrent/Sample/CACCurrent_Sample)
 
-

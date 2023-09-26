@@ -88,4 +88,3 @@ private void TestDigitalOutputPorts(int loopCount)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pcx857x/Samples/Pcf8574_Sample)
 
-

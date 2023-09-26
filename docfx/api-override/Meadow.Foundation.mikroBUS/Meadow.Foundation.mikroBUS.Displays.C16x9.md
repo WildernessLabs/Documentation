@@ -45,4 +45,3 @@ public MeadowApp()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/C16x9/Sample/C16x9_Sample)
 
-
