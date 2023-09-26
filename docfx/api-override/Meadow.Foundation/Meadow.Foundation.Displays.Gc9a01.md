@@ -26,7 +26,7 @@ public override Task Initialize()
     var display = new Gc9a01
     (
         spiBus: spiBus,
-        chipSelectPin: Device.Pins.D02,
+        chipSelectPin: Device.Pins.A02,
         dcPin: Device.Pins.D01,
         resetPin: Device.Pins.D00
     );
@@ -34,7 +34,8 @@ public override Task Initialize()
     graphics = new MicroGraphics(display)
     {
         IgnoreOutOfBoundsPixels = true,
-        CurrentFont = new Font12x20()
+        CurrentFont = new Font12x20(),
+        Rotation = RotationType._180Degrees
     };
 
     return base.Initialize();
@@ -43,10 +44,9 @@ public override Task Initialize()
 public override Task Run()
 {
     graphics.Clear();
-    graphics.DrawTriangle(10, 10, 50, 50, 10, 50, Meadow.Foundation.Color.Red);
-    graphics.DrawRectangle(20, 15, 40, 20, Meadow.Foundation.Color.Yellow, false);
-    graphics.DrawCircle(50, 50, 40, Meadow.Foundation.Color.Blue, false);
-    graphics.DrawText(5, 5, "Meadow F7");
+    graphics.DrawCircle(120, 120, 100, Meadow.Foundation.Color.Cyan, false);
+    graphics.DrawRoundedRectangle(50, 50, 140, 140, 50, Meadow.Foundation.Color.BlueViolet, false);
+    graphics.DrawText(120, 120, "Meadow F7", alignmentH: HorizontalAlignment.Center, alignmentV: VerticalAlignment.Center);
     graphics.Show();
 
     return base.Run();

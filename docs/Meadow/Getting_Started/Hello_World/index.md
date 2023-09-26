@@ -179,7 +179,7 @@ To create new Meadow projects for development, debugging, and deploying in Visua
 
 After selecting the device deployment target the first time, the selected serial port value will be used for future deployments. If you want to change which device is targeted for deployment, select the **Select Device** status item in the bottom status bar or run the **Meadow: Select Device** command. This will open the prompt to select a different connected Meadow device.
 
-![Visual Studio Code status bar showing the Meadow device selection details.](vscode-device-target-status.png)
+![Visual Studio Code status bar showing the Meadow device selection details.](vscode_device_target_status.png)
 
 #### Specify a .NET Version
 

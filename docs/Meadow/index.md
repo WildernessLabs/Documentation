@@ -18,7 +18,7 @@ If you're just beginning, check out the [Getting Started](/Meadow/Getting_Starte
 
 Then continue on to the [Meadow Basics](/Meadow/Meadow_Basics) Guides to learn about the fundamentals of Meadow applications as well as the current beta feature status.
 
- * [Beta Status](/Meadow/Meadow_Basics/Status)
+ * [Feature Status](/Meadow/Meadow_Basics/Status)
  * [App Fundamentals](/Meadow/Meadow_Basics/Apps)
  * [Input/Output (IO)](/Meadow/Meadow_Basics/IO)
 

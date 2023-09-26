@@ -6,16 +6,16 @@ subtitle: Meadow b5.0 BLE Draft Implementation
 
 ![Bluetooth logo](Bluetooth_Logo.svg)
 
-## Bluetooth Low-Energy (BLE) Beta Feature Set
+## Bluetooth Low-Energy (BLE) Feature Subset
 
-The b5.0 release of Meadow contains a draft subset of BLE features and while covering a large number of basic bluetooth use cases, it's by no means a complete BLE implementation, but rather a starting point from which additional features will be added. The BLE specification contains a very large number of potential features, from common to rarely used. As you use and test the current implementation, please help us prioritize and curate what features get added next. If you have a use case that is not currently covered, please file an issue in the [Meadow_Issues GitHub repo](https://github.com/WildernessLabs/Meadow_Issues/issues) describing your use case and the features needed.
+Meadow contains an initial subset of BLE features. While this covers a large number of basic Bluetooth use cases, and a starting point from which additional features will be added. It's not a complete BLE implementation. The BLE specification contains a very large number of potential features, from common to rarely used. As you use and test the current implementation, please help us prioritize and curate what features get added next. If you have a use case that is not currently covered, please file an issue in the [Meadow_Issues GitHub repo](https://github.com/WildernessLabs/Meadow_Issues/issues) describing your use case and the features needed.
 
 ### Currently Available Features
 
 The following features are available in this release:
 
 - **User-Definable BLE Definition Tree** - You can create a BLE tree `Definition` of _services_ and _characteristics_ that contain primitive type values including; `int`, `double`, `string`, etc.
-- **BLE Server** - Start a bluetooth server on the Meadow and initialize it with your BLE definition tree.
+- **BLE Server** - Start a Bluetooth server on the Meadow and initialize it with your BLE definition tree.
 - **Accept Client Connections** - Connect to the server from a _client_ device application such as a mobile phone.
 - **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
 - **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in you BLE tree.
@@ -30,7 +30,7 @@ The following features are not available today, but are on-deck for implementati
 
 ## BLE Clients
 
-There are a variety of BLE client applications and libraries. When filing bluetooth issues, please let us know which client you're using.
+There are a variety of BLE client applications and libraries. When filing Bluetooth issues, please let us know which client you're using.
 
 ### Mobile BLE Clients
 
