@@ -30,7 +30,7 @@ In this circuit:
 * Each slave device has an address.  This allows the master device to choose which of the slaves it is communicating with
 * The two signal (bus) wires used are usually labelled `SDA` (Data) and `SCL` (Clock)
 * `SDA` and `SCL` are common to all devices on the bus
-* `SDA` and `SCL` are [open drain outputs](https://en.wikipedia.org/wiki/Open_collector) and so require [pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/) to connect the two lines to V<sub>cc</sub>
+* `SDA` and `SCL` are [open drain outputs](https://en.wikipedia.org/wiki/Open_collector) and so require [pull up resistors](/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/) to connect the two lines to V<sub>cc</sub>
 
 I2C is normally used to connect low speed devices over short distances.  Compare this to the main characteristics of [SPI](../SPI/) and [Serial](../UART) communications:
 
@@ -107,7 +107,7 @@ In addition to the 7 address bits, the master device will also send a single bit
 
 ### Pull-up Resistors
 
-Both of the bus lines (`SDA` and `SCL`) require [pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/) to be connected to them.  The value of the pull-up resistor will depend upon the capacitance of the bus.  The number of components on the board, type of substrate used will all influence the bus capacitance.
+Both of the bus lines (`SDA` and `SCL`) require [pull up resistors](/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/) to be connected to them.  The value of the pull-up resistor will depend upon the capacitance of the bus.  The number of components on the board, type of substrate used will all influence the bus capacitance.
 
 Most I2C breakout boards are supplied with pull-up resistors already on the breakout board.  In the case where one is not supplied, then a 4.7 K&Omega; resistor is usually good enough for prototyping.
 
@@ -130,6 +130,6 @@ For an in-depth discussion on writing data, see the [writing to I2C guide](Writi
 ## Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
-* [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)
+* [Pull up resistors](/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/)
 * [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors)
 * [Netduino.Foundation `I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/)

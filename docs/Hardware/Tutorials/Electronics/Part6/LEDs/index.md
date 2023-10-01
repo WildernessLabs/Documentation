@@ -9,7 +9,7 @@ subtitle: Light Emitting Diodes.
 LEDs come in a variety of packages and combinations. Many packages have an arrangement of multiple LEDs in one, such as bar graphs and _7 segment_ displays that are often used to show levels or digit characters.
 
 <!-- MarkT: commented out, this is a broken link 
-![](/Hardware/Reference/Components/LEDs/SomeLEDs.jpg){:standalone}
+![](/Hardware/Circuits/Components/LEDs/SomeLEDs.jpg){:standalone}
 -->
 
 Regardless of what they look like, they're all basically the same to use. There are only two practical circuit concerns: making sure the _polarity_ is correct and limiting the current through them so they don't burn out.

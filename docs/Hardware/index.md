@@ -12,14 +12,14 @@ This section is a reference guide to common hardware and circuit information. Pl
 
 Contains various core component information.
 
- * [Surface Mount Device Packages and Sizes](/Hardware/Reference/Components/Packages_and_Sizes)
- * [Capacitors](/Hardware/Reference/Components/Capacitors)
- * [Diodes](/Hardware/Reference/Components/Diodes)
- * [LEDs](/Hardware/Reference/Components/LEDs)
-   * [Driving an LED with a PWM Signal](/Hardware/Reference/Components/LEDs/Driving_w_PWM/)
-   * [Driving an LED with a resistor](/Hardware/Reference/Components/LEDs/Driving_w_Resistor/)
- * [Resistors](/Hardware/Reference/Components/Resistors)
-   * [Reading a Resistor's Value](/Hardware/Reference/Components/Resistors/Reading)
+ * [Surface Mount Device Packages and Sizes](/Hardware/Circuits/Components/Packages_and_Sizes)
+ * [Capacitors](/Hardware/Circuits/Components/Capacitors)
+ * [Diodes](/Hardware/Circuits/Components/Diodes)
+ * [LEDs](/Hardware/Circuits/Components/LEDs)
+   * [Driving an LED with a PWM Signal](/Hardware/Circuits/Components/LEDs/Driving_w_PWM/)
+   * [Driving an LED with a resistor](/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/)
+ * [Resistors](/Hardware/Circuits/Components/Resistors)
+   * [Reading a Resistor's Value](/Hardware/Circuits/Components/Resistors/Reading)
 
 ## Equations and Laws
 
