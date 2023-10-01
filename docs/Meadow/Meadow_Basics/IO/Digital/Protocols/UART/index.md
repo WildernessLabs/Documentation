@@ -129,7 +129,7 @@ public static ISerialPort CreateSerialPort(
 For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `\r\n` as its suffix delimiter, we can use the following code:
 
 ```csharp
-Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 
+Device.CreateSerialMessagePort(Device.PlatformOS.GetSerialPortName("COM4"), 
     suffixDelimiter: Encoding.UTF8.GetBytes("\r\n"), preserveDelimiter: true);
 ```
 
@@ -204,7 +204,7 @@ serialPort.Open();
 Optionally, you can also specify the number of data bits in a message frame, parity, and number of stop bits. The datasheet on your serial peripheral should specify what those values should be. The most common is `8n1`, which means `8` data bits, no parity check, or `Parity.None`, and one stop bit, or `StopBits.One`. 8n1 is the default for the serial port constructor, but you can specify something different as well:
 
 ```csharp
-var serialPort = Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 9600, 7, Parity.Even, StopBits.Two);
+var serialPort = Device.CreateSerialMessagePort(Device.PlatformOS.GetSerialPortName("COM4"), 9600, 7, Parity.Even, StopBits.Two);
 serialPort.Open();
 ```
 
