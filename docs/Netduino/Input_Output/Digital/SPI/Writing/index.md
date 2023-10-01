@@ -119,7 +119,7 @@ As noted, the backpack allows the Netduino to talk to the LCD using SPI.  This r
 
 ### Software
 
-The MicroLiquidCrystal library allows a number of different way to connect to an LCD display.  The mechanism used is defined by a _Transfer Provider_.  In the cas of the [Adafruit LCD Backpack](https://www.adafruit.com/product/292) this is a [74595 shift register](/Hardware/Reference/Components/ShiftRegister74595).  This register takes 8 data bits transmitted serially (using SPI) and presents them to the display as 8 parallel data bits.
+The MicroLiquidCrystal library allows a number of different way to connect to an LCD display.  The mechanism used is defined by a _Transfer Provider_.  In the cas of the [Adafruit LCD Backpack](https://www.adafruit.com/product/292) this is a [74595 shift register](/Hardware/Circuits/Components/ShiftRegister74595).  This register takes 8 data bits transmitted serially (using SPI) and presents them to the display as 8 parallel data bits.
 
 The first section of code sets up the transport provider interface:
 
@@ -183,4 +183,4 @@ The next section  of the guide on SPI will demonstrate how to read data from an 
 * [Serial Peripheral Interface Bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) on Wikipedia.
 * [HD44780 LCD Interface](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) This is a common interface used to drive LCD displays.
 * [Adafruit I2C/ SPI Character LCD Backpack](https://www.adafruit.com/product/292)
-* [74595 shift register](/Hardware/Reference/Components/ShiftRegister74595)
+* [74595 shift register](/Hardware/Circuits/Components/ShiftRegister74595)

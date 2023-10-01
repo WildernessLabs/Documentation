@@ -11,7 +11,7 @@ BitBanging is a technique for controlling the output pins of a microcontroller. 
 * Unsupported protocol (for example the communication protocol for the [DHT22](https://www.adafruit.com/product/385) temperature and humidity sensor)
 * All of the serial peripherals are in use for other purposes
 
-The guide on using the [74595 shift register](/Hardware/Reference/Components/ShiftRegister74595/) contains some simple BitBanging code:
+The guide on using the [74595 shift register](/Hardware/Circuits/Components/ShiftRegister74595/) contains some simple BitBanging code:
 
 ```csharp
 private static void BitBang(OutputPort data, OutputPort clock, byte value)
