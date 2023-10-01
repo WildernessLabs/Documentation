@@ -324,6 +324,6 @@ Temperature data: 0x0c, 0xb1
 ## Further Information
 
 * [This Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C) contains a description of the protocol, the various modes and the bus characteristics.
-* [Pull up resistors](/Hardware/Reference/Components/Resistors/PullUpAndPullDownResistors/)
+* [Pull up resistors](/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/)
 * [Effects of Varying I2C Pull-Up Resistor (external link)](http://dsscircuits.com/articles/effects-of-varying-i2c-pull-up-resistors)
 * [Netduino.Foundation `I2CBus`](http://netduino.foundation/API/Devices/Netduino/I2CBus/)
