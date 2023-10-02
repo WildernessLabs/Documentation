@@ -177,7 +177,7 @@ using (HttpClient client = new HttpClient()) {
 
 Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
 
-For more information on getting the current antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
+For more information on getting the current antenna information and switching, see the [Antenna guide](Antenna).
 
 # Creating RESTful Web APIs with Maple Server
 

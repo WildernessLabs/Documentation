@@ -8,16 +8,23 @@ Both the Meadow F7 Feather development board and Core-Compute Module have an onb
 
 ## Determining the Currently Selected Antenna
 
-The current antenna in use is available via the device's `CurrentAntenna` property. For example, the following code will write which antenna is currently in use to the console output:
+The current antenna in use is available via the device WiFi adapter's `CurrentAntenna` property. For example, the following code will write which antenna is currently in use to the log output:
 
 ```csharp
-Console.WriteLine($"Current antenna in use: {Device.CurrentAntenna}");
+var wifi = Device.NetworkAdapters.Primary<IWiFiNetworkAdapter>();
+Resolver.Log.Info($"Current antenna in use: {wifi.CurrentAntenna}");
 ```
 
 ## Switching the Antenna
 
-Likewise, switching the antenna is also available via the device. Use the `SetAntenna()` method to change the current antenna:
+Likewise, switching the antenna is also available via the device. Use a WiFi adapter's `SetAntenna()` method to change the current antenna:
 
 ```csharp
-Device.SetAntenna(AntennaType.External);
+var wifi = Device.NetworkAdapters.Primary<IWiFiNetworkAdapter>();
+...
+wifi.SetAntenna(AntennaType.External, persist: false);
 ```
+
+## Antenna Sample
+
+For a more comprehensive example of using and changing the antenna, check out our [Antenna Switching sample](https://github.com/WildernessLabs/Meadow.Core.Samples/blob/main/Source/Network/Antenna_Switching/MeadowApp.cs).
