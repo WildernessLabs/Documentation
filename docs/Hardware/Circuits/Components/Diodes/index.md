@@ -27,7 +27,7 @@ Diodes have a number of uses:
 
 #### Light Emitting Diode (LED)
 
-A Light Emitting Diode (LED) is a small compact device capable of generating light when a current flows though it.  LEDs are available in a number of different colours.  A fuller description of LEDs and their properties and used can be found [here](../LEDs).
+A Light Emitting Diode (LED) is a small compact device capable of generating light when a current flows though it.  LEDs are available in a number of different colors.  A fuller description of LEDs and their properties and used can be found [here](../LEDs).
 
 #### Bridge Rectifier
 
@@ -63,7 +63,7 @@ If both `A` and `B` are set to `5V` then the current cannot flow through either 
 
 ### Common General Diode Reference
 
-| Diode Part | Type | Peak Inverse Voltage (PIV) | Max. Forward Current (`I`<sub>`O(max)`</sub> | Max. Reverse Current `I`<sub>`R(max)`</sub> | Peak Surge Current (`I`<sub>`fsm`</sub>) | Max. Voltage Drop (`V`<sub>`f(max)`) |
+| Diode Part | Type | Peak Inverse Voltage (PIV) | Max. Forward Current (`I`<sub>`O(max)`</sub> | Max. Reverse Current `I`<sub>`R(max)`</sub> | Peak Surge Current (`I`<sub>`fsm`</sub>) | Max. Voltage Drop (`V`<sub>`f(max)`</sub>) |
 |------------|-------------|---------|----------|----------|--------|---------|
 | 1N34A      | Signal (Ge) | `60V`   | `8.5mA`  | `15µA`   |        | `1.0V`  |
 | **1N67A**  | Signal (Ge) | `100V`  | `4.0mA`  | `5µA`    |        | `1.0V`  |
@@ -85,7 +85,6 @@ If both `A` and `B` are set to `5V` then the current cannot flow through either 
 | 1N5822     | Schottky    | `40V`   | `3A`     |          |        |         |
 | 1N6263     | Schottky    | `70V`   | `15mA`   |          | `50mA` | `0.41V` |
 | 5052-2823  | Schottky    | `8V`    | `1mA`    | `100nA`  | `10mA` | `0.34V` |
-
 
 ## Further Reading
 
