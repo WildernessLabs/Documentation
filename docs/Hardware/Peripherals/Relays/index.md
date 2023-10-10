@@ -18,17 +18,17 @@ Relays have some interesting electrical behaviors due to the fact that they're t
 
 For example this, [Keyestudio 2 Channel relay board](https://www.amazon.com/Keyestudio-Module-Arduino-raspberry-2-channel/dp/B0177WOT1E/ref=sr_1_1?ie=UTF8&qid=1503712979&sr=8-1&keywords=2+channel+relay+keyestudio) can control up to 10A of 250V AC or 30V DC with 5V of power:
 
-![Photo of a Keye Studio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg){:standalone}
+![Photo of a Keyestudio 2 Channel, SPDT relay board.](Keyestudio_2Channel_SPDT_Relay_Small.jpg){:standalone}
 
 ### Power Requirements
 
 Because these relays are electromagnetic; they can require quite a lot of power to drive. Their power requirements are usually listed in their datasheet under _coil voltage_ and _coil current_. The Songle relays on the Keyestudio relay board above take around `120mA` at `5V` each. Typically, a USB port is rated to deliver only `400mA` in total, and a microcontroller actively driving IO will often use `300mA` on its own, leaving very little power leftover for the relay. Additionally, the relay itself can cause power spikes when it operates. For this reason, it's best to use a second power supply dedicated to the relay.
 
-[general setup with two power supplies]
+<!-- TODO: [general setup with two power supplies] -->
 
 #### Keyestudio Optoisolation Circuit
 
-Additionally, the Keyestudio relay board above has a nice circuit that further isolates the power circuit from the control inputs, allowing it to be hooked to a second power source and makes sure that it draws very little power from the inputs by using an [optoisolator]() to read the inputs.
+Additionally, the Keyestudio relay board above has a nice circuit that further isolates the power circuit from the control inputs, allowing it to be hooked to a second power source and makes sure that it draws very little power from the inputs by using an optoisolator to read the inputs.
 
 ##### Keyestudio Sample Circuit
 
@@ -52,10 +52,10 @@ Relays, like other switches, come in various _pole_ (P) and _throw_ (T) configur
 
 The most common set of configurations are:
 
- * **SPST** - Single Pole, Single Throw
- * **SPDT** - Single Pole, Dual Throw
- * **DPST** - Dual Pole, Single Throw
- * **DPDT** - Dual Pole, Dual Throw
+* **SPST** - Single Pole, Single Throw
+* **SPDT** - Single Pole, Dual Throw
+* **DPST** - Dual Pole, Single Throw
+* **DPDT** - Dual Pole, Dual Throw
 
 The throw end of the switch most commonly comes in a _normally closed_ (NC), or _normally open_ configuration, which refers to whether or not that throw node is in the open or closed circuit configuration when at rest.
 
@@ -65,7 +65,7 @@ The following schematic shows a simplified circuit diagram of how to use a relay
 
 ![Circuit diagram showing a Netduino board connected to a relay that controls two LEDs based on whether the relay is open or closed.](Relay_schematic.svg){:standalone}
 
-Note that the relay in this schematic actually represents a relay circuit such as one contained in the Keyes all in one relay board mentioned above. So a practical example might look like the following:
+Note that the relay in this schematic actually represents a relay circuit such as one contained in the Keyestudio all-in-one relay board mentioned above. So a practical example might look like the following:
 
 ![Photo of a physical version of the above diagram, a Netduino board connected to a breadboard and two-channel relay.](Relay_Practical_OFF_small.jpg){:standalone}
 
