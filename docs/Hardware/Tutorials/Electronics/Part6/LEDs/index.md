@@ -170,7 +170,7 @@ However, as soon as that segment starts to let water flow, imagine that the heig
 
 Finally, with ALL the current that was intended to be distributed across three dams flowing through that segment, the segment will fail and for a brief moment, let a lot of current through, before the infrastructure completely gives out (diode breaks), and closes off that river:
 
-![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_files/Dam_w_Diode_Failure.svg){:standalone}
+![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_Files/Dam_w_Diode_Failure.svg){:standalone}
 
 Then the process repeats itself for the remaining segments of the dam.
 
