@@ -9,7 +9,7 @@ name: "[beta] Deploy Jekyll site"
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["blob"]
+    branches: ["develop"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,6 +36,6 @@ jobs:
         with:
           source_dir: 'docs/_site'
           container_name: '$web'
-          connection_string: ${{ secrets.ConnectionString }}
+          connection_string: ${{ secrets.DEVELOPER_DEV_BLOB_CONNECTIONSTRING }}
           overwrite: 'true'
           #sync: 'true'
