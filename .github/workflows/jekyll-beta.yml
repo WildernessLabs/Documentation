@@ -37,4 +37,5 @@ jobs:
           source_dir: 'docs/_site'
           container_name: '$web'
           connection_string: ${{ secrets.ConnectionString }}
+          overwrite: 'true'
           #sync: 'true'
