@@ -143,7 +143,8 @@ jobs:
         uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: 'src/docfx/docs'
-          container_name: '$web/docs'
+          container_name: '$web'
+          extra_args: '--destination-path docs'
           connection_string: ${{ secrets.ConnectionString }}
           overwrite: 'true'
         # This requires more research and testing. We want a way to ensure files that are not part of this deployment get removed from the site (e.g., files that were moved or deleted).
