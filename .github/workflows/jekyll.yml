@@ -32,11 +32,9 @@ jobs:
           cd docs
           bundle install
           bundle exec jekyll build
-      - uses: jakejarvis/s3-sync-action@master
-        #with:
-        #  args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: 'developer.wildernesslabs.co'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: 'docs/_site'
+      - uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: 'docs/_site'
+          container_name: '$web'
+          connection_string: ${{ secrets.DEVELOPER_PROD_BLOB_CONNECTIONSTRING }}
+          overwrite: 'true'
