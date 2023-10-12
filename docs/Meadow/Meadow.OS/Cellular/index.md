@@ -4,113 +4,110 @@ title: Cellular
 subtitle: Connect Meadow to LTE/4G cellular signals
 ---
 
-##  Cellular
+#  Cellular
 
-The beta cellular network for the Meadow platform is compatible with various modules, each supporting different network operation modes. The following table describes the network operation modes supported by each module:
-
-| Modules / Network Modes   | Cat-M1 (LTE-M or eMTC) | NB-IoT | GSM/GRPS 2G | GNSS   |
-|--------------------------|------------------------|--------|-------------|--------|
-| Quectel BG770A Cell Wing | ✔                      | ✔      | -           | -      |
-| Quectel BG95-M3          | ✔                      | ✔      | ✔           | ✔      |
-| Quectel M95              | -                      | -      | ✔           | -      |
-
+## Cellular Network Technologies
 
 **Cat-M1**, **NB-IoT**, and **GSM** (Global System for Mobile Communications) are all cellular network technologies with distinct characteristics. **GSM**, the most widely used cellular standard globally, provides higher data rates compared to **NB-IoT** and **Cat-M1** but has higher power consumption. In contrast, **Cat-M1** and **NB-IoT** are optimized for IoT applications. **Cat-M1** offers higher data rates and mobility, while **NB-IoT** provides ultra-low power consumption and extended coverage. The choice among **GSM**, **Cat-M1**, and **NB-IoT** depends on the specific requirements of the application, considering factors such as data rates, power consumption, and coverage area.
 
+## Supported Cellular Modules
 
-## Network configuration
+The cellular network for the Meadow platform is compatible with various modules, each supporting different network operation modes. The following table describes the network operation modes supported by each module:
 
-Using Cellular Meadow, you don't need to understand the complexities of AT commands or invest time studying module datasheets to enable the cellular network interface.
-
-You only need to create a **cell.config.yaml** file, where the cell settings will be defined, define the cell interface on the **meadow.config.yaml**, and reserve some pins used by the cell module.
-
-Then, to configure your network you just need to follow these three steps:
-
-1. Create a **cell.config.yaml** and flash it to the device, here's an example:
-
-    ```yaml
-    Settings:
-        APN: virtueyes.com.br # Access Point Name
-        Module: BG95M3 # Module model (BG770A, BG95M3 or M95)
-        User: virtu # APN user (optional)
-        Password: virtu # APN password (optional)
-        Operator: 72410 # Carrier numeric operator code (optional)
-        Mode: CATM1 # Network mode (CATM1, NBIOT or GSM) (optional)
-        Interface: /dev/ttyS1 # Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) (optional)
-        TurnOnPin: D10 # Pin used to turn on the Cell module (optional)
-    ```
-
-    > **Notes**: If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. **However, if you encounter any connectivity issues, it is advisable to add the Operator to the cell config file**. If you don't know your operator code, you can use the **Cell Network Scanner**, included in that documentation, to find it out.
-
-1. Select `Cell` as `DefaultInterface` in the **meadow.config.yaml**, if you don't have this *yaml* file in your device, you should create and flash it to the device:
-
-    ```yaml
-    Network:
-        DefaultInterface: Cell
-    ```
-
-1. Reserve the pins `I9` and `H13`, which are used to exchange data between the modem and the **Meadow F7v2 Feather**, and the `C7`, which is used to turn on the modules:
-
-    ```yaml
-    Device:
-        ReservedPins: I9;H13;C7
-    ```
-    
-    > **Notes**: You can find the pins `I9`, `H13` and `C7` as `D00`, `D01` and `D10` on the **Meadow F7v2 Feather**, respectively. If you use different pins, you should reserve the corresponding ones, according to the pinout definition present in the [**Meadow F7v2 Feather** datasheet](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf). For instance, if you want to utilize the `A02` **Meadow F7v2 Feather** pin to turn on the module, you should reserve the corresponding `A3` MCU pin, instead of `C7`.
+| Modules / Network Modes   | Cat-M1 (LTE-M or eMTC) | NB-IoT | GSM/GRPS 2G | GNSS   |
+|---------------------------|------------------------|--------|-------------|--------|
+| Quectel BG770A Cell Wing  | ✔                     | ✔      | -           | -      |
+| Quectel BG95-M3           | ✔                     | ✔      | ✔           | ✔      |
+| Quectel M95               | -                      | -      | ✔           | -      |
 
 ## Hardware configuration
 
-To set up the hardware, the easiest way is to use our **BG770A Cell Wing** by attaching it to the **Meadow F7v2 Feather**. This provides a straightforward and hassle-free solution for establishing cellular connectivity. However, you can also use other cell click board models. All you need to do is connect the click boards to the **Meadow F7v2 Feather** using a few jumpers. To set up the hardware, follow the instructions based on your cell click board model:
-
-### Quectel BG770A - Meadow Cell Wing
-
-To utilize the **BG770A Cell Wing** with the **Meadow F7v2 Feather**, simply attach them, connect an LTE antenna (Rubber ducky or Dome) to the click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
-
-![Quectel BG770A/Meadow Cell Wing setup](images/cell_wing.jpeg){: .center-image :standalone}
-
-<p align="center" style="font-size: smaller;">Quectel BG770A/Meadow Cell Wing with Meadow F7v2 Feather setup</p>
-
 ### Quectel BG95-M3 - NimbeLink Skywire click board
 
-To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+To setup the hardware, you could use a Skywire click adapter, which hosts NimbeLink/Skywire ™ cellular modems (using stacking headers) to MikroElektronika development boards. 
 
-#### Connecting serial pins (UART)
-
-To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-
-#### Power-up and supply pins
-
-Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
-
-#### Attaching an antenna
-
-Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
-
-![Quectel BG95-M3/NimbeLink Skywire click board setup](images/bg95.jpeg){: .center-image :standalone}
-
-<p align="center" style="font-size: smaller;">Quectel BG95-M3 click board with Meadow F7v2 Feather setup</p>
-
-### Quectel M95 - GSM2 click board
+[Image here]
 
 To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
 
-#### Connecting serial pins (UART)
+[Image here]
 
-To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
+* **Connecting the serial pins (UART)**: If you're using a `Meadow F7v2 Feather` board, you will need to connect `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
+* **Power and supply pins**: Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
+* **Attaching an antenna**: Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
-#### Power-up and supply pins
-
-Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3** and **BG770A**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
-
-#### Attaching an antenna
-
-Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
-
-![Quectel M95 - GSM2 Click Board Setup](images/m95.jpeg){: .center-image :standalone}
-
-<p align="center" style="font-size: smaller;">Quectel M95/GSM2 click board with Meadow F7v2 Feather setup using an external energy supply connected to the 5V and GND pins</p>
+[Image here]
 
 > **Notes**: To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
+
+## Enabling Cellular on your Meadow Application
+
+Using Cellular on Meadow, you don't need to understand the complexities of AT commands or invest time studying module datasheets to enable the cellular network interface. You will need three things:
+
+### Adding a cell.config.yaml file
+
+Create a **cell.config.yaml**, set the `Copy To Output` property to `Copy always` or `copy if newer`, here's an example:
+
+```yaml
+Settings:
+    APN: virtueyes.com.br # (required) Access Point Name
+    Module: BG95M3        # (required) Module model (BG770A, BG95M3 or M95)
+    User: virtu           # (optional) APN user 
+    Password: virtu       # (optional) APN password
+    Operator: 72410       # (optional) Carrier numeric operator code
+    Mode: CATM1           # (optional) Network mode (CATM1, NBIOT or GSM)
+    Interface: /dev/ttyS1 # (optional?) Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) 
+```
+
+A few things to consider:
+ * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
+ * **However, if you encounter any connectivity issues, we recomment to set the operator code value to the `Operator` property**. If you don't know your operator code, you can use the **Cell Network Scanner**, included in that documentation, to find it out.
+
+### Specify Network Interface and reserved pins connected to the Cellular module
+
+In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial pins and an additional pin to turn on or off Meadow the cellular module. The reserved pins must be specified by MCU Pin name, not by Meadow Pin name:
+
+* If you're using a [Meadow Feather V2](https://developer.wildernesslabs.co/Common_Files/Meadow_F7v2_Micro_Pinout.svg), you would connect the cellular module to `D00` and `D01`, which are the COM4 serial pins that, according to the [datasheet](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf), the MCU Pin names are `PI9` and `PH13`, but in the config file we can ommit the `p` prefix. As for the power pin, say if you connect it to the `D10` pin, the MCU pin name is `C7`
+
+```yaml
+# Device specific config.
+Device:
+    # Name of the device on the network.
+    Name: CellBasics
+
+    # Corresponding MCU pin names for the reserved pins
+    # (COMX_RX pin, COM_TX pin, POWER pin)
+    ReservedPins: I9;H13;C7
+
+# Network configuration.
+Network:
+    #  Which interface should be used?
+    DefaultInterface: Cell
+```
+
+
+
+### Listen for connection events in your Meadow application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Handling Cell connection using a .NET application
 
