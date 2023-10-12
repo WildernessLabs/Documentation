@@ -15,7 +15,7 @@ The forward voltage on the LED is:
 
 And a current draw of 20mA for each color.
 
-Using the RGB calculation described [here](/Hardware/Reference/Components/LEDs/Driving_w_Resistor/), we get the following voltage drops:
+Using the RGB calculation described [here](/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/), we get the following voltage drops:
 
 ```
 3.3V - 2.2V (red) = 1.1V

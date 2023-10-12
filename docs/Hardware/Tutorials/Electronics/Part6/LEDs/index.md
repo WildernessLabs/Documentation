@@ -9,7 +9,7 @@ subtitle: Light Emitting Diodes.
 LEDs come in a variety of packages and combinations. Many packages have an arrangement of multiple LEDs in one, such as bar graphs and _7 segment_ displays that are often used to show levels or digit characters.
 
 <!-- MarkT: commented out, this is a broken link 
-![](/Hardware/Reference/Components/LEDs/SomeLEDs.jpg){:standalone}
+![](/Hardware/Circuits/Components/LEDs/SomeLEDs.jpg){:standalone}
 -->
 
 Regardless of what they look like, they're all basically the same to use. There are only two practical circuit concerns: making sure the _polarity_ is correct and limiting the current through them so they don't burn out.
@@ -170,7 +170,7 @@ However, as soon as that segment starts to let water flow, imagine that the heig
 
 Finally, with ALL the current that was intended to be distributed across three dams flowing through that segment, the segment will fail and for a brief moment, let a lot of current through, before the infrastructure completely gives out (diode breaks), and closes off that river:
 
-![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_files/Dam_w_Diode_Failure.svg){:standalone}
+![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_Files/Dam_w_Diode_Failure.svg){:standalone}
 
 Then the process repeats itself for the remaining segments of the dam.
 

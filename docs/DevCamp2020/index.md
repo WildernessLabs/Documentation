@@ -16,7 +16,7 @@ In case you weren't able to attend or catch a particular session, we've got you 
 
 ### [Keynote](https://www.youtube.com/watch?v=qE8qWhiz8Vw&list=PLoP9Fu9zn7qYOCCRY8UyuNGH6m2hFUls8&index=2&t=0s) - Bryan Costanich
 
-Did you know that in just a few years there will be 10x as many non-mobile connected things on the planet as humans? IoT/hardware is the quiet revolution in technology today, and it’s bigger than anything that’s come before it. Join us as we demystify IoT and show you just how easy it can be to build connected hardware with C#, using Meadow; the latest innovation from former Xamarin folk that enables you to run full .NET applications on real embedded hardware: microcontrollers.
+Did you know that in just a few years there will be 10x as many non-mobile connected things on the planet as humans? IoT/hardware is the quiet revolution in technology today, and it's bigger than anything that's come before it. Join us as we demystify IoT and show you just how easy it can be to build connected hardware with C#, using Meadow; the latest innovation from former Xamarin folk that enables you to run full .NET applications on real embedded hardware: microcontrollers.
 
 ### [Getting Started with Meadow](https://www.youtube.com/watch?v=jahwwrjdg4k&list=PLoP9Fu9zn7qYOCCRY8UyuNGH6m2hFUls8&index=3&t=0s) - Adrian Stevens
 

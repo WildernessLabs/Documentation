@@ -66,7 +66,7 @@ The ratio of the currents is called the Beta. So a beta of `10`, means that `10m
 
 Beta is often notated as `h`<sub>`FE`</sub>. It also often varies based on the current at the collector (`I`<sub>`C`</sub>). A good guideline is to use a factor of 10 to drive the junction into saturation. 
 
-Beta: `I`<sub>`C`</sub> = `I`<sub>`B` * `h`<sub>`FE`</sub>
+Beta: `I`<sub>`C`</sub> = `I`<sub>`B`</sub> * `h`<sub>`FE`</sub>
 
 Diode within the transistor has a voltage drop. ~`0.7V`. You can use more voltage, but it's best to provide it with the about that voltage, or a little more.
 
@@ -161,4 +161,4 @@ MOSFETs are variable resistors. So in high-current situations, you may need a he
 
 ## Example Sources
 
-* [Hackster Motor Speed Control with Transistor](https://www.hackster.io/Marcazzan_M/motor-speed-control-with-one-transistor-0921a8?utm_campaign=new_projects&utm_content=1&utm_medium=email&utm_source=hackster&utm_term=project_name)
+* [Hackster Motor Speed Control with Transistor](https://www.hackster.io/Marcazzan_M/motor-speed-control-with-one-transistor-0921a8)

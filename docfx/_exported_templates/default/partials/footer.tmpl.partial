@@ -32,8 +32,8 @@
         </section>
         <section class="links">
             <ul>
-                <li><a href="/meadow">Meadow</a></li>
-                <li><a href="/netduino">Netduino</a></li>
+                <li><a href="/Meadow">Meadow</a></li>
+                <li><a href="/Netduino">Netduino</a></li>
                 <li><a href="https://community.wildernesslabs.co/">Community</a></li>
                 <li><a href="http://developer.wildernesslabs.co/">Developers</a></li>
                 <li><a href="https://blog.wildernesslabs.co/">Blog</a></li>

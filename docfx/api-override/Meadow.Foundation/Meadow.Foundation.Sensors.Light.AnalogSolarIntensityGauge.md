@@ -25,7 +25,7 @@ public override Task Initialize()
 
     //==== Filterable observer
     var observer = AnalogSolarIntensityGauge.CreateObserver(
-        handler: result => Resolver.Log.Info($"Observer filter satisifed, new intensity: {result.New * 100:n2}%"),
+        handler: result => Resolver.Log.Info($"Observer filter satisfied, new intensity: {result.New * 100:n2}%"),
         filter: result =>
         {
             if (result.Old is { } old)

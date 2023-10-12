@@ -3,6 +3,64 @@ layout: Meadow
 title: Meadow v1
 subtitle: Release Notes
 ---
+# v1.3.4
+
+## OS
+* Fixed issue with Azure IoT hub certificates.
+* Fixed issue where invalid credentials in wifi.config.yaml could lock the board.
+* Changed the way the system checks for the minimum required file set.
+
+## Meadow.Core
+* Bug fix for finding app settings file in Meadow.Linux and Meadow.Windows
+* Added GetMemoryAllocationInfo and  ProcessorLoad for F7 PlatformOS
+* Interface break: Refactor ISerialPort ReadAll method
+* Added interfaces and enums for cellular states and data
+
+## Meadow.Foundation
+
+### New Drivers
+* PCx857x family of digital IO expanders
+* ElectroMagnetic Relay Board
+* LSM6DSOX iNEMO inertial module with Machine Learning Core
+* LIS3MDL digital magnetic sensor
+* HC2 atmospheric sensor
+* BG95-M3 GNSS driver
+* 9-DOF IMU Featherwing
+
+### New Features
+* Added support for Modbus RTU server
+* Updated MicroLayout class names [Interface break]
+* Added LineChart to MicroLayout
+* SpiCommunications now explicitly asserts the CS line on startup
+* x74595 support parallel writes
+* x74595 asserts chip select state at startup
+* MicroGraphics Image class supports BI_BITFIELDS compression for 24bpp images
+
+### Fixes
+* Renamed BidirectionalDcMotor Clockwise and CounterClockwise methods [Interface break]
+* WinForms display driver WriteBuffer fixed
+* GNSS drivers updated to conform to IGnssSensor interface
+* BME688 gas resistance output fixed
+* TextDisplayMenu OnOff item fixed
+* TextDisplayMenu item type now returned on change events
+* LIS2MDL output scaling fixed
+* A lot of cleanup, spelling fixes, XML comment additions, etc.
+
+More information here: [v1.3.4 Milestone](https://github.com/WildernessLabs/Meadow.Foundation/milestone/29)
+
+## Meadow.Cloud
+*  Overhaul of log viewer and a number of other UI improvements
+
+## Meadow.CLI
+* Update dfu-util version check to check for v0.11
+* Only push App.dll to the device Fixes Issue 340
+
+## VS Extensions
+* Bump to 1.3.4 to include the aforementioned Meadow.CLI changes.
+
+## Known Issues
+n/a
+
 # v1.3
 
 ## OS
