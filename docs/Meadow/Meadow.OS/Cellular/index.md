@@ -62,7 +62,7 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 <img src="images/projectlab-modem.jpg" 
     style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
 
-* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1, you're all set and now will need to make a few adjustments to your Meadow app to use cellular.
+* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
 
 ## Choosing a SIM Card
 
