@@ -192,11 +192,11 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 }
 ```
 
-> **Notes**: Before using the mentioned properties, ensure a successful connection has been established. The `CSQ` property returns a static value (0-31) representing the signal quality obtained on the connection.
+> **Notes**: Before using the mentioned properties, ensure a successful connection has been established. The `Csq` property returns a static value (0-31) representing the signal quality obtained on the connection.
 
 ### Fetching Cell Signal Quality
 
-It's important to note that the `CSQ` property returns a cached value obtained from the connection, then to retrieve the most up-to-date CSQ (Cellular Signal Quality), you should utilize the `GetSignalQuality` method, as illustrated in the following example:
+It's important to note that the `Csq` property returns a cached value obtained from the connection, then to retrieve the most up-to-date CSQ (Cellular Signal Quality), you should utilize the `GetSignalQuality` method, as illustrated in the following example:
 
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
