@@ -33,7 +33,6 @@ The cellular network for the Meadow platform is compatible with various modules,
 
 | Modules / Network Modes   | Cat-M1 (LTE-M or eMTC) | NB-IoT | GSM/GRPS 2G | GNSS   |
 |---------------------------|------------------------|--------|-------------|--------|
-| Quectel BG770A Cell Wing  | ✔                     | ✔      | -           | -      |
 | Quectel BG95-M3           | ✔                     | ✔      | ✔           | ✔      |
 | Quectel M95               | -                      | -      | ✔           | -      |
 
@@ -43,12 +42,11 @@ The cellular network for the Meadow platform is compatible with various modules,
 
 To setup the hardware, you could use a Skywire click adapter, which hosts NimbeLink/Skywire ™ cellular modems (using stacking headers) to MikroElektronika development boards. 
 
-<img src="images/modem-skywire-click.jpg" 
-    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+![Quectel BG95M3 with NimbeLink Skywire click board](images/modem-skywire-click.jpg)
 
 To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
 
-## Using a Meadow F7v2 Feather
+### Using a Meadow F7v2 Feather
 
 <img src="images/meadow-modem.jpg" 
     style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
@@ -57,14 +55,40 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 * **Power and supply pins**: Also, you need to connect the `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins on both sides of the Skywire click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
 * **Attaching an antenna**: Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
 
-## Using a Project Lab v3
+### Using a Project Lab v3
 
 <img src="images/projectlab-modem.jpg" 
     style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
 
 * A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
 
-## Choosing a SIM Card
+### Choosing a SIM Card
+
+To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
+
+## Quectel M95 - GSM2 click board
+
+![Quectel BG95M3 with NimbeLink Skywire click board](images/gsm2-click-inside-image.jpg)
+
+To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+
+### Using a Meadow F7v2 Feather
+
+<img src="images/meadow-modem.jpg" 
+    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+
+* **Connecting serial pins (UART)**: To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
+* **Power-up and supply pins**: Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3** and **BG770A**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
+* **Attaching an antenna**: Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
+
+### Using a Project Lab v3
+
+<img src="images/wildernessslabs-projectlab-bgm95.jpg" 
+    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+
+* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
+
+### Choosing a SIM Card
 
 To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
 
@@ -85,11 +109,13 @@ Settings:
     Operator: 00000       # (optional) Carrier numeric operator code
     Mode: CATM1           # (optional) Network mode (CATM1, NBIOT or GSM)
     Interface: /dev/ttyS1 # (optional) Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) 
+    TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. Default value is D10
 ```
 
 A few things to consider:
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
  * **However, if you encounter any connectivity issues, we recomment to set the operator code value to the `Operator` property**. If you don't know your operator code, you can use the **Cell Network Scanner** method that will list nearby networks in the area.
+ * 
 
 ## Specify Network Interface and reserved pins
 
