@@ -10,8 +10,10 @@ on:
       - main
 
 jobs:
-  build:
+  build_and_deploy:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
+    name: Deploy Job
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,18 +28,7 @@ jobs:
           cd docs
           bundle install
           bundle exec jekyll build
-  deploy:
-    needs: build
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-    runs-on: ubuntu-latest
-    name: Deploy Job
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-          lfs: false
-      - name: Build And Deploy
-        id: builddeploy
+      - name: Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLUE_MUSHROOM_0F697A110 }}
