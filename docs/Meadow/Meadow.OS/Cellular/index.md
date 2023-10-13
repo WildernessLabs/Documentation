@@ -9,9 +9,13 @@ subtitle: Connect Meadow to LTE/4G cellular signals
 * [Supported Cellular Modules](#supported-cellular-modules)
 * [Hardware configuration](#hardware-configuration)
     * [Quectel BG95M3 with NimbeLink Skywire click board](#quectel-bg95m3-with-nimbelink-skywire-click-board)
-    * [Using a Meadow F7v2 Feather](#using-a-meadow-f7v2-feather)
-    * [Using a Project Lab v3](#using-a-project-lab-v3)
-    * [Choosing a SIM Card](#choosing-a-sim-card)
+        * [Using a Meadow F7v2 Feather](#using-a-meadow-f7v2-feather)
+        * [Using a Project Lab v3](#using-a-project-lab-v3)
+        * [Choosing a SIM Card](#choosing-a-sim-card)
+    * [Quectel M95 with GSM2 click board](#quectel-m95-with-gsm2-click-board)
+        * [Using a Meadow F7v2 Feather](#using-a-meadow-f7v2-feather)
+        * [Using a Project Lab v3](#using-a-project-lab-v3)
+        * [Choosing a SIM Card](#choosing-a-sim-card)
 * [Enabling Cellular on your Meadow Application](#enabling-cellular-on-your-meadow-application)
     * [Adding a cell.config.yaml file](#adding-a-cellconfigyaml-file)
     * [Specify Network Interface and reserved pins](#specify-network-interface-and-reserved-pins)
@@ -66,15 +70,15 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
 
-## Quectel M95 - GSM2 click board
+## Quectel M95 with GSM2 click board
 
-![Quectel BG95M3 with NimbeLink Skywire click board](images/gsm2-click-inside-image.jpg)
+![Quectel M95 with GSM2 click board](images/gsm2-click-inside-image.jpg)
 
 To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
 
 ### Using a Meadow F7v2 Feather
 
-<img src="images/meadow-modem.jpg" 
+<img src="images/wildernesslabs-meadow-fritzing-m95.jpg" 
     style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
 
 * **Connecting serial pins (UART)**: To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
@@ -109,13 +113,13 @@ Settings:
     Operator: 00000       # (optional) Carrier numeric operator code
     Mode: CATM1           # (optional) Network mode (CATM1, NBIOT or GSM)
     Interface: /dev/ttyS1 # (optional) Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) 
-    TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. Default value is D10
+    TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. Default value is Meadow Pin name D10
 ```
 
 A few things to consider:
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
  * **However, if you encounter any connectivity issues, we recomment to set the operator code value to the `Operator` property**. If you don't know your operator code, you can use the **Cell Network Scanner** method that will list nearby networks in the area.
- * 
+ * `TurnOnPin` is a pin used to turn on the module.
 
 ## Specify Network Interface and reserved pins
 
