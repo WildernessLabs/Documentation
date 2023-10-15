@@ -13,8 +13,8 @@ Alternatively, you can follow this step by step guide for Visual Studio on both 
 
 ## Go to the instructions for your development system and IDE
 
-1. [Visual Studio 2022 or 2019 on Windows](#visual-studio-windows)
-2. [Visual Studio 2022 or 2019 on macOS](#visual-studio-macos)
+1. [Visual Studio 2022 on Windows](#visual-studio-windows)
+2. [Visual Studio 2022 on macOS](#visual-studio-macos)
 3. [Visual Studio Code on macOS, Windows, or Linux (Debian, Ubuntu)](#visual-studio-code)
 
 ## Visual Studio 2022 or 2019 on Windows<a name="visual-studio-windows"></a>
@@ -25,7 +25,7 @@ Alternatively, you can follow this step by step guide for Visual Studio on both 
 
 #### Prerequisites
 
-You'll need [Visual Studio 2019 or 2022 for Windows](https://visualstudio.microsoft.com/downloads/).
+You'll need [Visual Studio 2022 for Windows](https://visualstudio.microsoft.com/downloads/).
 
 You can use any edition including Enterprise, Professional, or the free Community edition.
 
@@ -35,7 +35,7 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 #### Install the Meadow Extension
 
-You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
+You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) or through the Extension Manager
 
 1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
 2. Click **Online** and search for `Meadow`.
@@ -43,7 +43,7 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 ### Step 2: Create a new Meadow Project
 
-1. Open Visual Studio 2019.
+1. Open Visual Studio 2022.
 2. Click **Create a new project**.
 3. Search for `Meadow` (make sure to clear all filters).
 4. Select **Meadow Application** and press **Next**.
