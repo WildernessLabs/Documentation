@@ -26,7 +26,7 @@ namespace HelloPulsy
 
         public override Task Initialize()
         {
-            pwmLed = new PwmLed(Device, Device.Pins.D13, TypicalForwardVoltage.Blue);
+            pwmLed = new PwmLed(Device.Pins.D13, TypicalForwardVoltage.Blue);
             return base.Initialize();
         }
 
