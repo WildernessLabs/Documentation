@@ -17,7 +17,7 @@ Alternatively, you can follow this step by step guide for Visual Studio on both 
 2. [Visual Studio 2022 on macOS](#visual-studio-macos)
 3. [Visual Studio Code on macOS, Windows, or Linux (Debian, Ubuntu)](#visual-studio-code)
 
-## Visual Studio 2022 or 2019 on Windows<a name="visual-studio-windows"></a>
+## Visual Studio 2022 on Windows<a name="visual-studio-windows"></a>
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
 
