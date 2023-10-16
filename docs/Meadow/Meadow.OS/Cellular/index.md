@@ -10,6 +10,7 @@ subtitle: Connect Meadow to LTE/4G cellular signals
 * [Hardware configuration](#hardware-configuration)
     * [Quectel BG95M3 with NimbeLink Skywire click board](#quectel-bg95m3-with-nimbelink-skywire-click-board)
     * [Quectel M95 with GSM2 click board](#quectel-m95-with-gsm2-click-board)
+    * [Choosing a SIM Card](#choosing-a-sim-card)
 * [Enabling Cellular on your Meadow Application](#enabling-cellular-on-your-meadow-application)
     * [Adding a cell.config.yaml file](#adding-a-cellconfigyaml-file)
     * [Specify Network Interface and reserved pins](#specify-network-interface-and-reserved-pins)
@@ -60,10 +61,6 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 * A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
 
-### Choosing a SIM Card
-
-To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
-
 ## Quectel M95 with GSM2 click board
 
 ![Quectel M95 with GSM2 click board](images/gsm2-click-inside-image.jpg)
@@ -86,7 +83,7 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 * A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
 
-### Choosing a SIM Card
+## Choosing a SIM Card
 
 To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
 
@@ -106,13 +103,17 @@ Settings:
     Password: PASSWORD    # (optional) APN password
     Operator: 00000       # (optional) Carrier numeric operator code
     Mode: CATM1           # (optional) Network mode (CATM1, NBIOT or GSM)
-    Interface: /dev/ttyS1 # (optional) Serial interface (UART1 (COM1) = /dev/ttyS0, UART4 (COM4) = /dev/ttyS1, UART6 = /dev/ttyS3) 
-    TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. Default value is Meadow Pin name D10
+    Interface: /dev/ttyS1 # (optional) Serial interface 
+                          # UART1 (COM1) = /dev/ttyS0 
+                          # UART4 (COM4) = /dev/ttyS1 (default), 
+                          # UART6 = /dev/ttyS3) 
+    TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. 
+                          # Default value is Meadow Pin name D10
 ```
 
 A few things to consider:
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
- * **However, if you encounter any connectivity issues, we recomment to set the operator code value to the `Operator` property**. If you don't know your operator code, you can use the **Cell Network Scanner** method that will list nearby networks in the area.
+ * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](https://github.com/WildernessLabs/Documentation/blob/cell-docs-updates/docs/Meadow/Meadow.OS/Cellular/index.md#scanning-cell-networks) method that will list nearby networks in the area.
  * `TurnOnPin` is a pin used to turn on the module.
 
 ## Specify Network Interface and reserved pins
