@@ -140,15 +140,10 @@ jobs:
         # We may also want to manually trigger for structural/template docs changes in this repo, though.
         # Future option might be to trigger this API docs Action on updates to those code repos _and_ only on updates to relevant template files in this repo.
         name: Sync site to production site on manual trigger
-        uses: jakejarvis/s3-sync-action@v0.5.1
-        env:
-          AWS_S3_BUCKET: 'developer.wildernesslabs.co'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: src/docfx/docs
-          DEST_DIR: docs
-        # This requires more research and testing. We want a way to ensure files that are not part of this deployment get removed from the site (e.g., files that were moved or deleted).
-        # This `with...args` is not well documented in the Action for when you deploy to a sub-folder, nor on AWS S3 docs (https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html).
-        # It may be too aggressive when we are now deploying regular docs and API docs separately.
-        # with:
-        #   args: --delete
+        uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: 'src/docfx/docs'
+          container_name: '$web'
+          extra_args: '--destination-path docs'
+          connection_string: ${{ secrets.DEVELOPER_PROD_BLOB_CONNECTIONSTRING }}
+          overwrite: 'true'

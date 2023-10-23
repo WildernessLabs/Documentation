@@ -45,7 +45,7 @@ Before flashing a Meadow board, open the Device Manager and check:
 - When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
 - When connecting it normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
 
-![Meadow drivers shown in Bootloader and regular mode](./meadow_driver_state.png){:standalone}
+![Meadow drivers shown in Bootloader and regular mode]({{ page.url }}meadow_driver_state.png){:standalone}
 
 If the board is in this state you can skip the next step and move on to the [Download Meadow OS and network binaries](#download-meadow-os-and-network-binaries).
 
