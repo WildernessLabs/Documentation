@@ -83,9 +83,16 @@ If you're configuring to join the network this way, you'll also need to edit the
 Credentials:
   Ssid: YourSSID
   Password: SSIDPassword
+
+  # To clear existing wifi credentials
+  # ClearDefaultCredentials: true
 ```
 
 In this case, you might want to register the `NetworkConnected` event in the `Initialize()` method to start any network related tasks once the device joins your network.
+
+Optionally you can set the `ClearDefaultCredentials: true` , to remove the last credentials stored. Once you have done that you can comment on this property or set it to `false` and add new credentials.
+
+It is important to note when the `ClearDefaultCredentials` is set, then the `SSID` and `Password` properties will be ignored.
 
 ## Scanning for WiFi Networks
 
