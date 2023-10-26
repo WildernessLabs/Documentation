@@ -109,6 +109,8 @@ Settings:
                           # UART6 = /dev/ttyS3) 
     TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. 
                           # Default value is Meadow Pin name D10
+    ScanMode: false       # (optional) Activate the cell network scanning mode.
+                          # Default value is false
 ```
 
 A few things to consider:
@@ -217,68 +219,17 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 }
 ```
 
-> **Notes**: Before using the mentioned properties, ensure a successful connection has been established. The `Csq` property returns a static value (0-31) representing the signal quality obtained on the connection.
-
-### Fetching Cell Signal Quality
-
-It's important to note that the `Csq` property returns a cached value obtained from the connection, then to retrieve the most up-to-date CSQ (Cellular Signal Quality), you should utilize the `GetSignalQuality` method, as illustrated in the following example:
-
-```csharp
-var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
-
-double csq  = cellAdapter.GetSignalQuality();
-Console.WriteLine("Cell Signal Quality: " + csq);
-```
-
-> **Notes**: To convert the CSQ value to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value). You may experience disconnection from the cellular network for a brief period while the module gets the signal quality, so we suggest to avoid calling this method frequently to ensure a seamless user experience.
-
-# Using GNSS with cellular modules
-
-Some cellular modules, such as the BG95-M3, offer support for GNSS functionalities. As illustrated in the following example, you can define an interval between the position fixes, as well as select which kind of NMEA sentence should be retrieved, by specifying it in an `IGnssResult` array:
-
-```csharp
-using Meadow.Foundation.Sensors.Location.Gnss;
-using Meadow.Peripherals.Sensors.Location.Gnss;
-using Meadow.Foundation.Sensors.Gnss;
-...
-    void ProcessGnssPosition(object sender, IGnssResult location)
-    {
-        Resolver.Log.Info("*********************************************");
-        Resolver.Log.Info(location.ToString());
-        Resolver.Log.Info("*********************************************");  
-    }
-...
-    IGnssResult[] resultTypes = new IGnssResult[]
-    {
-        new GnssPositionInfo(),
-        new ActiveSatellites(),
-        new CourseOverGround(),
-        new SatellitesInView(new Satellite[0])
-    };
-
-    ICellNetworkAdapter cell = networkAdapter as ICellNetworkAdapter;
-
-    var bg95M3 = new Bg95M3(cellAdapter, TimeSpan.FromMinutes(30), resultTypes);
-
-    bg95M3.GnssDataReceived += ProcessGnssPosition;
-
-    bg95M3.StartUpdating();
-```
-
-For a more comprehensive example, you can refer to the [BG95-M3 GNSS sample](https://github.com/WildernessLabs/Meadow.Foundation/blob/develop/Source/Meadow.Foundation.Peripherals/Sensors.Gnss.Bg95M3/Samples/Bg95M3_Sample/MeadowApp.cs) available in the Meadow.Foundation repository.
-
-## GNSS Hardware Setup
-
-When utilizing a **Quectel BG95-M3 NimbeLink Skywire click board**, you can follow the same setup instructions as for the cellular connection. Additionally, ensure you attach a GPS antenna to the `X3` IPX connector to enable your cellular module to obtain position fixes.
-
-> **Notes**: Due to a hardware limitation of this board, concurrent use of GNSS and Cellular functionality is not possible. Consequently, you may experience disconnection from the cellular network for a brief period while the module acquires a position fix. It is advisable to avoid using very short time intervals between obtaining position fixes for a seamless user experience.
+> **Notes**: Before using the mentioned properties, ensure a successful connection has been established. The `Csq` property returns a static value (0-31) representing the signal quality obtained on the connection. To convert the CSQ value to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value).
 
 # Troubleshooting
 
 ## Scanning Cell networks
 
-To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, **you can ensure that you are connecting to the right network, connecting faster and more reliably**. To find out the carrier code, you can use the Cell network scanner as in the following example:
+To connect using Cell, you can omit the operator code in `cell.config.yaml` and then the module will try to find an operator automatically. However, if you know the carrier code, **you can ensure that you are connecting to the right network, connecting faster and more reliably**. To find out the carrier code, you can use the Cell network scanner by following these two steps:
 
+1. Add the `ScanMode: true` in your `cell.config.yaml`, to let Cell in the scanning mode.
+2. Use the `Scan` method, as in the example:
+   
 ```csharp
 using Meadow.Networking;
 ...
@@ -287,7 +238,7 @@ var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
 
 try
 {
-    CellNetwork[] availableNetworks = cell.ScanForAvailableNetworks();
+    CellNetwork[] availableNetworks = cell.Scan();
 
     foreach (CellNetwork network in availableNetworks)
     {
