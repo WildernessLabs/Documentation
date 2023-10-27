@@ -39,7 +39,7 @@ The cellular network for the Meadow platform is compatible with various modules,
 
 ## Quectel BG95M3 with NimbeLink Skywire click board
 
-To setup the hardware, you could use a Skywire click adapter, which hosts NimbeLink/Skywire ™ cellular modems (using stacking headers) to MikroElektronika development boards. 
+To setup the hardware, you could use a Skywire click adapter, which hosts NimbeLink/Skywire cellular modems (using stacking headers) to MikroElektronika development boards. 
 
 ![Quectel BG95M3 with NimbeLink Skywire click board](images/modem-skywire-click.jpg)
 
@@ -47,8 +47,7 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 ### Using a Meadow F7v2 Feather
 
-<img src="images/meadow-modem.jpg" 
-    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+![Quectel BG95M3 with NimbeLink Skywire click board and a Meadow F7v2 Feather](images/meadow-modem.jpg)
 
 * **Connecting the serial pins (UART)**: If you're using a `Meadow F7v2 Feather` board, you will need to connect `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
 * **Power and supply pins**: Also, you need to connect the `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins on both sides of the Skywire click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
@@ -56,8 +55,7 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 ### Using a Project Lab v3
 
-<img src="images/projectlab-modem.jpg" 
-    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+![Quectel BG95M3 with NimbeLink Skywire click board and a Project Lab v3](images/projectlab-modem.jpg)
 
 * A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
 
@@ -69,8 +67,7 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 ### Using a Meadow F7v2 Feather
 
-<img src="images/wildernesslabs-meadow-fritzing-m95.jpg" 
-    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+![Quectel M95 with GSM2 click board and a Meadow F7v2 Feather](images/wildernesslabs-meadow-fritzing-m95.jpg)
 
 * **Connecting serial pins (UART)**: To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
 * **Power-up and supply pins**: Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3** and **BG770A**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
@@ -78,8 +75,7 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 
 ### Using a Project Lab v3
 
-<img src="images/wildernessslabs-projectlab-bgm95.jpg" 
-    style="width: 75%; display: block; margin-left: auto; margin-right: auto;" />
+![Quectel M95 with GSM2 click board and a Project Lab v3](images/wildernessslabs-projectlab-bgm95.jpg)
 
 * A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
 
