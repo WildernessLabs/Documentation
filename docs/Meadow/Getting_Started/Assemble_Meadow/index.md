@@ -15,7 +15,7 @@ Your kit should include:
  - 4 Screws
  - 8 Nuts
 
-![Meadow developer kit parts: mounting protoboard, Meadow board with headers and mounting hardware, and small breadboard.](./MeadowDev_Parts.jpg){:standalone}
+![Meadow developer kit parts: mounting protoboard, Meadow board with headers and mounting hardware, and small breadboard.](MeadowDev_Parts.jpg)
 
 ### Step 1 - Remove protective cover on the wooden base protoboard
 
@@ -31,7 +31,7 @@ Peel the skin cover from the corners and remove the little bits in the logo and 
 
 Now solder the blue female header pins to the Meadow board. 
 
-![Photo of two Meadow boards, left showing raw header through-holes and one showing blue headers soldering through holes.](./MeadowDev_HeaderPins.jpg){:standalone}
+![Photo of two Meadow boards, left showing raw header through-holes and one showing blue headers soldering through holes.](MeadowDev_HeaderPins.jpg)
 
 Check out the following video for instructions:
 

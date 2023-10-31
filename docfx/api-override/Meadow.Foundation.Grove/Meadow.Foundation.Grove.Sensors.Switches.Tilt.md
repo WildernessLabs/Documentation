@@ -16,13 +16,13 @@ Tilt tiltSwitch;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     tiltSwitch = new Tilt(Device.Pins.D13);
 
     tiltSwitch.Changed += (s, e) =>
     {
-        Console.WriteLine(tiltSwitch.IsOn ? "Switch is High" : "Switch is Low");
+        Resolver.Log.Info(tiltSwitch.IsOn ? "Switch is High" : "Switch is Low");
     };
 
     return Task.CompletedTask;

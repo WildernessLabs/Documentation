@@ -16,13 +16,13 @@ SwitchP groveSwitch;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     groveSwitch = new SwitchP(Device.Pins.D13);
 
     groveSwitch.Changed += (s, e) =>
     {
-        Console.WriteLine(groveSwitch.IsOn ? "Switch is High" : "Switch is Low");
+        Resolver.Log.Info(groveSwitch.IsOn ? "Switch is High" : "Switch is Low");
     };
 
     return Task.CompletedTask;

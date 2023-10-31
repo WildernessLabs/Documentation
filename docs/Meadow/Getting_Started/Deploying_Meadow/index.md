@@ -39,13 +39,22 @@ From a console with admin rights, execute following command:
 meadow install dfu-util
 ```
 
+### Put the device into DFU Bootloader mode.
+To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
+
+**If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
+
+**If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
+
+![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
+
 ### Install Meadow USB drivers
 
 Before flashing a Meadow board, open the Device Manager and check:
 - When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
 - When connecting it normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
 
-![Meadow drivers shown in Bootloader and regular mode](./meadow_driver_state.png){:standalone}
+![Meadow drivers shown in Bootloader and regular mode]({{ page.url }}meadow_driver_state.png){:standalone}
 
 If the board is in this state you can skip the next step and move on to the [Download Meadow OS and network binaries](#download-meadow-os-and-network-binaries).
 
@@ -73,15 +82,6 @@ Execute the following command in your console:
 ```console
 meadow download os
 ```
-
-### Put the device into DFU Bootloader mode.
-To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
-
-**If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
-
-**If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
-
-![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
 
 ### Flash Meadow.OS and Coprocessor Firmware
 
