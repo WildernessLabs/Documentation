@@ -42,7 +42,7 @@ public override Task Initialize()
     {
         sensor.Updated += (sender, result) =>
         {
-            Resolver.Log.Info($"  VOC Concentraion: {result.New.PartsPerMillion:N1}ppm");
+            Resolver.Log.Info($"  VOC Concentration: {result.New.PartsPerMillion:N1}ppm");
         };
     }
 

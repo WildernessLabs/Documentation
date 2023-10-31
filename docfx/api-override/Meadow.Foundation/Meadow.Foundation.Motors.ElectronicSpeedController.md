@@ -77,7 +77,7 @@ float Map(float value, float fromSource, float toSource, float fromTarget, float
 ### Code Example
 
 ```csharp
-Frequency frequency = new Frequency(50, Frequency.UnitType.Hertz);
+readonly Frequency frequency = new Frequency(50, Frequency.UnitType.Hertz);
 const float armMs = 0.5f;
 const float powerIncrement = 0.05f;
 

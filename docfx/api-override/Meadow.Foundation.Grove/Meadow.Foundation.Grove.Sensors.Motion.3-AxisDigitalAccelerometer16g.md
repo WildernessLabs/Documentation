@@ -15,14 +15,14 @@ ThreeAxisDigitalAccelerometer16g sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Resolver.Log.Info("Initializing");
 
     sensor = new ThreeAxisDigitalAccelerometer16g(Device.CreateI2cBus());
     sensor.SetPowerState(false, false, true, false, ThreeAxisDigitalAccelerometer16g.Frequencies.TwoHz);
 
     sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
+        Resolver.Log.Info($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
             $"Y:{result.New.Y.MetersPerSecondSquared:N2}," +
             $"Z:{result.New.Z.MetersPerSecondSquared:N2} (m/s^2)]");
     };

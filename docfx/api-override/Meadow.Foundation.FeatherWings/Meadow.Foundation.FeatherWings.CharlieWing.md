@@ -22,7 +22,7 @@ public override Task Initialize()
 
     charlieWing = new CharlieWing(Device.CreateI2cBus());
 
-    graphics = new MicroGraphics(charlieWing) 
+    graphics = new MicroGraphics(charlieWing)
     {
         CurrentFont = new Font4x8()
     };
