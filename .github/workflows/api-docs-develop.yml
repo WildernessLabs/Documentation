@@ -85,20 +85,30 @@ jobs:
           ref: main # No develop branch on Meadow [yet]
           
       # Clone more Meadow-related repos for API docs generation (via DocFX).
-      - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
+      - name: Checkout Meadow.Foundation.CompositeDevices into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
-          repository: WildernessLabs/Meadow.Foundation.Grove
-          path: Meadow.Foundation.Grove
+          repository: WildernessLabs/Meadow.Foundation.CompositeDevices
+          path: Meadow.Foundation.CompositeDevices
           ref: develop
-          
       - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation.FeatherWings
           path: Meadow.Foundation.FeatherWings
           ref: develop
-          
+      - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Foundation.Grove
+          path: Meadow.Foundation.Grove
+          ref: develop
+      - name: Checkout Meadow.Foundation.MBus into DocFX-expected Source location
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Foundation.MBus
+          path: Meadow.Foundation.MBus
+          ref: develop
       - name: Checkout Meadow.Foundation.mikroBUS into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
