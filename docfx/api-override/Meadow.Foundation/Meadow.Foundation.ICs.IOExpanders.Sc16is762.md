@@ -12,9 +12,9 @@ remarks: *content
 ### Code Example
 
 ```csharp
-private Sc16is762? _expander = null;
-private ISerialPort? _portA = null;
-private ISerialPort? _portB = null;
+private Sc16is762? expander = null;
+private ISerialPort? portA = null;
+private ISerialPort? portB = null;
 
 public override async Task Initialize()
 {
@@ -24,13 +24,13 @@ public override async Task Initialize()
 
     try
     {
-        _expander = new Sc16is762(
+        expander = new Sc16is762(
             Device.CreateI2cBus(),
             new Meadow.Units.Frequency(1.8432, Meadow.Units.Frequency.UnitType.Megahertz),
             address);
 
-        _portA = _expander.PortA.CreateSerialPort();
-        _portB = _expander.PortB.CreateSerialPort();
+        portA = expander.PortA.CreateSerialPort();
+        portB = expander.PortB.CreateSerialPort();
     }
     catch (Exception ex)
     {
@@ -41,7 +41,7 @@ public override async Task Initialize()
 
 public override Task Run()
 {
-    if (_expander == null || _portA == null || _portB == null)
+    if (expander == null || portA == null || portB == null)
     {
         return Task.CompletedTask;
     }
@@ -56,7 +56,13 @@ public override Task Run()
 
 private void PollingApp()
 {
-    Task.Run(() => PollProc(_portA));
+    Task.Run(() =>
+    {
+        if (portA != null)
+        {
+            _ = PollProc(portA);
+        }
+    });
 }
 
 private async Task PollProc(ISerialPort port)

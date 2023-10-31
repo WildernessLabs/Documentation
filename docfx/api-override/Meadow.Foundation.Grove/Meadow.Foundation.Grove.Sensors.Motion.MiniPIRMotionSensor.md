@@ -22,12 +22,12 @@ public override Task Initialize()
 
     miniPIRMotionSensor.OnMotionStart += (sender) =>
     {
-        Console.WriteLine($"Motion start  {DateTime.Now}");
+        Resolver.Log.Info($"Motion start  {DateTime.Now}");
     };
 
     miniPIRMotionSensor.OnMotionEnd += (sender) =>
     {
-        Console.WriteLine($"Motion end  {DateTime.Now}");
+        Resolver.Log.Info($"Motion end  {DateTime.Now}");
     };
 
     return Task.CompletedTask;

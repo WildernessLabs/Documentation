@@ -16,7 +16,7 @@ RTC rtc;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     rtc = new RTC(Device.CreateI2cBus());
 
@@ -27,23 +27,23 @@ public override Task Run()
 {
     var running = rtc.IsRunning;
 
-    Console.WriteLine($"{(running ? "is running" : "is not running")}");
+    Resolver.Log.Info($"{(running ? "is running" : "is not running")}");
 
     if (!running)
     {
-        Console.WriteLine(" Starting RTC...");
+        Resolver.Log.Info(" Starting RTC...");
         rtc.IsRunning = true;
     }
 
     var dateTime = rtc.GetTime();
-    Console.WriteLine($" RTC current time is: {dateTime:MM/dd/yy HH:mm:ss}");
+    Resolver.Log.Info($" RTC current time is: {dateTime:MM/dd/yy HH:mm:ss}");
 
-    Console.WriteLine($" Setting RTC to : {dateTime:MM/dd/yy HH:mm:ss}");
+    Resolver.Log.Info($" Setting RTC to : {dateTime:MM/dd/yy HH:mm:ss}");
     dateTime = new DateTime(2030, 2, 15);
     rtc.SetTime(dateTime);
 
     dateTime = rtc.GetTime();
-    Console.WriteLine($" RTC current time is: {dateTime:MM/dd/yy HH:mm:ss}");
+    Resolver.Log.Info($" RTC current time is: {dateTime:MM/dd/yy HH:mm:ss}");
 
     var rand = new Random();
 
@@ -54,11 +54,11 @@ public override Task Run()
         data[i] = (byte)rand.Next(256);
     }
 
-    Console.WriteLine($" Writing to RTC RAM   : {BitConverter.ToString(data)}");
+    Resolver.Log.Info($" Writing to RTC RAM   : {BitConverter.ToString(data)}");
     rtc.WriteRAM(0, data);
-    Console.Write($" Reading from RTC RAM : ");
+    Resolver.Log.Info($" Reading from RTC RAM : ");
     data = rtc.ReadRAM(0, 56);
-    Console.WriteLine(BitConverter.ToString(data));
+    Resolver.Log.Info(BitConverter.ToString(data));
 
     return Task.CompletedTask;
 }

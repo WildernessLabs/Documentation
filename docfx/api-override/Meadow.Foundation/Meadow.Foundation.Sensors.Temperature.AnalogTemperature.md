@@ -33,7 +33,7 @@ public override Task Initialize()
     Resolver.Log.Info("Initializing...");
 
     // configure our AnalogTemperature sensor
-    analogTemperature = new AnalogTemperature (
+    analogTemperature = new AnalogTemperature(
         analogPin: Device.Pins.A03,
         sensorType: AnalogTemperature.KnownSensorType.LM35
     );
@@ -43,9 +43,10 @@ public override Task Initialize()
         handler: result => Resolver.Log.Info($"Observer filter satisfied: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C"),
 
         // only notify if the change is greater than 0.5°C
-        filter: result => {
-            if (result.Old is { } old) 
-            {   //c# 8 pattern match syntax. checks for !null and assigns var.
+        filter: result =>
+        {
+            if (result.Old is { } old)
+            {
                 return (result.New - old).Abs().Celsius > 0.5; // returns true if > 0.5°C change.
             }
             return false;
@@ -56,7 +57,8 @@ public override Task Initialize()
     analogTemperature.Subscribe(consumer);
 
     // classical .NET events can also be used:
-    analogTemperature.TemperatureUpdated += (sender, result) => {
+    analogTemperature.TemperatureUpdated += (sender, result) =>
+    {
         Resolver.Log.Info($"Temp Changed, temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
     };
 

@@ -16,7 +16,7 @@ LCD display;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     display = new LCD(Device.CreateI2cBus());
 
