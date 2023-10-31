@@ -188,7 +188,7 @@ For more information on getting the current antenna information and switching, s
 
 # Creating RESTful Web APIs with Maple Server
 
-If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called [Maple Server](../../Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index.md) that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called `Maple Server` that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
 
 # Sample projects
 
