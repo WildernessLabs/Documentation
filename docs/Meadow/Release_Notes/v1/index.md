@@ -3,6 +3,63 @@ layout: Meadow
 title: Meadow v1
 subtitle: Release Notes
 ---
+
+# v1.4.0
+
+## Meadow.OS
+* Fixed stability issues when using more than 4 connections on WiFi (https://github.com/WildernessLabs/Meadow_Issues/issues/347)
+* Fixed a minor issue with processing a malformed “wifi.config.yaml”
+* The default gateway is now added to the list of DNS servers on WiFi
+
+## Meadow.Core
+
+* Added IRheostat and IPotentiometer interfaces
+* Bug fix for Meadow.Windows GetPortNames
+* GPIOs are initialized to inputs with no resistor on Core initialization
+
+## Meadow.Units
+
+* New digital storage unit
+* New Apparent Power unit
+* New Reactive Energy unit
+* New Reactive Power unit
+* Cleanup and typo fixes 
+
+## Meadow.Foundation
+
+### New Drivers
+
+* Mcp4xxx Potentiometers and Rheostats
+* Grove 4-Channel SPDT Relay
+* mikroBUS SPI 4-20mA receiver click boards
+
+### New Features
+
+* Added library to support M-Bus (Meter Bus)
+* Project Lab now lazy-loads sensor drivers
+
+### Fixes/Improvements
+
+* MicroLayout DisplayScreen refresh bug fix
+* MicroGraphics improved circle drawing accuracy
+* New Blend extension method for Color
+* Improved nullable checks and null validation
+* A lot of cleanup - thanks Engunneer!
+
+## Meadow.Cloud
+
+Public Beta Launch: https://www.meadowcloud.co/
+
+## Meadow.CLI
+
+* V2 Alpha.1
+  * Allow sequential flashing of devices in bootloader mode. 
+  * --verbose should now work across commands.
+  * Duplicate logging removed from `meadow listen`
+  * Colour coded logging (more to come)
+
+
+
 # v1.3.4
 
 ## OS
