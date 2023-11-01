@@ -8,13 +8,13 @@ subtitle: Release Notes
 
 ## Meadow.OS
 * Fixed stability issues when using more than 4 connections on WiFi (https://github.com/WildernessLabs/Meadow_Issues/issues/347)
-* Fixed a minor issue with processing a malformed “wifi.config.yaml”
+* Fixed a minor issue with processing a malformed "wifi.config.yaml"
 * The default gateway is now added to the list of DNS servers on WiFi
 
 ## Meadow.Core
 
-* Added IRheostat and IPotentiometer interfaces
-* Bug fix for Meadow.Windows GetPortNames
+* Added `IRheostat` and `IPotentiometer` interfaces
+* Bug fix for Meadow.Windows `GetPortNames`
 * GPIOs are initialized to inputs with no resistor on Core initialization
 
 ## Meadow.Units
@@ -40,9 +40,9 @@ subtitle: Release Notes
 
 ### Fixes/Improvements
 
-* MicroLayout DisplayScreen refresh bug fix
+* MicroLayout `DisplayScreen` refresh bug fix
 * MicroGraphics improved circle drawing accuracy
-* New Blend extension method for Color
+* New `Blend` extension method for `Color`
 * Improved nullable checks and null validation
 * A lot of cleanup - thanks Engunneer!
 
@@ -54,9 +54,9 @@ Public Beta Launch: https://www.meadowcloud.co/
 
 * V2 Alpha.1
   * Allow sequential flashing of devices in bootloader mode. 
-  * --verbose should now work across commands.
+  * `--verbose` should now work across commands.
   * Duplicate logging removed from `meadow listen`
-  * Colour coded logging (more to come)
+  * Color-coded logging (more to come)
 
 
 
@@ -69,7 +69,7 @@ Public Beta Launch: https://www.meadowcloud.co/
 
 ## Meadow.Core
 * Bug fix for finding app settings file in Meadow.Linux and Meadow.Windows
-* Added GetMemoryAllocationInfo and  ProcessorLoad for F7 PlatformOS
+* Added GetMemoryAllocationInfo and ProcessorLoad for F7 PlatformOS
 * Interface break: Refactor ISerialPort ReadAll method
 * Added interfaces and enums for cellular states and data
 
