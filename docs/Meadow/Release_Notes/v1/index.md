@@ -8,13 +8,13 @@ subtitle: Release Notes
 
 ## Meadow.OS
 * Fixed stability issues when using more than 4 connections on WiFi (https://github.com/WildernessLabs/Meadow_Issues/issues/347)
-* Fixed a minor issue with processing a malformed “wifi.config.yaml”
+* Fixed a minor issue with processing a malformed `wifi.config.yaml`
 * The default gateway is now added to the list of DNS servers on WiFi
 
 ## Meadow.Core
 
-* Added IRheostat and IPotentiometer interfaces
-* Bug fix for Meadow.Windows GetPortNames
+* Added `IRheostat` and `IPotentiometer` interfaces
+* Bug fix for Meadow.Windows `GetPortNames`
 * GPIOs are initialized to inputs with no resistor on Core initialization
 
 ## Meadow.Units
@@ -40,9 +40,9 @@ subtitle: Release Notes
 
 ### Fixes/Improvements
 
-* MicroLayout DisplayScreen refresh bug fix
+* MicroLayout `DisplayScreen` refresh bug fix
 * MicroGraphics improved circle drawing accuracy
-* New Blend extension method for Color
+* New `Blend` extension method for `Color`
 * Improved nullable checks and null validation
 * A lot of cleanup - thanks Engunneer!
 
@@ -54,9 +54,9 @@ Public Beta Launch: https://www.meadowcloud.co/
 
 * V2 Alpha.1
   * Allow sequential flashing of devices in bootloader mode. 
-  * --verbose should now work across commands.
+  * `--verbose` should now work across commands.
   * Duplicate logging removed from `meadow listen`
-  * Colour coded logging (more to come)
+  * Color-coded logging (more to come)
 
 
 
@@ -69,8 +69,8 @@ Public Beta Launch: https://www.meadowcloud.co/
 
 ## Meadow.Core
 * Bug fix for finding app settings file in Meadow.Linux and Meadow.Windows
-* Added GetMemoryAllocationInfo and  ProcessorLoad for F7 PlatformOS
-* Interface break: Refactor ISerialPort ReadAll method
+* Added `GetMemoryAllocationInfo` and `ProcessorLoad` for F7 `PlatformOS`
+* Interface break: Refactor `ISerialPort` `ReadAll` method
 * Added interfaces and enums for cellular states and data
 
 ## Meadow.Foundation
@@ -87,19 +87,19 @@ Public Beta Launch: https://www.meadowcloud.co/
 ### New Features
 * Added support for Modbus RTU server
 * Updated MicroLayout class names [Interface break]
-* Added LineChart to MicroLayout
-* SpiCommunications now explicitly asserts the CS line on startup
+* Added `LineChart` to MicroLayout
+* `SpiCommunications` now explicitly asserts the CS line on startup
 * x74595 support parallel writes
 * x74595 asserts chip select state at startup
 * MicroGraphics Image class supports BI_BITFIELDS compression for 24bpp images
 
 ### Fixes
-* Renamed BidirectionalDcMotor Clockwise and CounterClockwise methods [Interface break]
-* WinForms display driver WriteBuffer fixed
-* GNSS drivers updated to conform to IGnssSensor interface
+* Renamed `BidirectionalDcMotor` `Clockwise` and `CounterClockwise` methods [Interface break]
+* `WinForms` display driver `WriteBuffer` fixed
+* GNSS drivers updated to conform to `IGnssSensor` interface
 * BME688 gas resistance output fixed
-* TextDisplayMenu OnOff item fixed
-* TextDisplayMenu item type now returned on change events
+* `TextDisplayMenu` `OnOff` item fixed
+* `TextDisplayMenu` item type now returned on change events
 * LIS2MDL output scaling fixed
 * A lot of cleanup, spelling fixes, XML comment additions, etc.
 
@@ -124,9 +124,9 @@ n/a
 * Added limited TLS client certificate support
 * Reliability improvements for OS OTA updates
 * Stability and usability improvements for cell networking:
-  * NetworkConnected/NetworkDisconnected events added to CellNetworkInterface
-  * Support for scanning cell networks added via F7CellNetworkAdapter.Scan()
-  * Exposed module IMEI and cell signal strength properties via F7CellNetworkAdapter.Imei and .Csq properties
+  * `NetworkConnected`/`NetworkDisconnected` events added to `CellNetworkInterface`
+  * Support for scanning cell networks added via `F7CellNetworkAdapter.Scan()`
+  * Exposed module IMEI and cell signal strength properties via `F7CellNetworkAdapter.Imei` and `.Csq` properties
   * Greatly improved network reconnect speed when connection is dropped
   * Fixed an issue with BG95 not turning when resetting Meadow
   * IPCP-provided DNS servers are now prioritized for use by default
@@ -147,8 +147,8 @@ HealthMetrics:
 * NeoPixel Featherwing - new driver
 * My7000s - improved sampling logic
 * MaxBotix - improved sampling logic for serial sensors
-* MicroLayout - adding ScaleFactor ti DisplayLabel
-* MicroGraphics - fixed negative y out of bounds exception
+* MicroLayout - adding `ScaleFactor` to `DisplayLabel`
+* MicroGraphics - fixed negative Y out of bounds exception
 * MicroGraphics - fixed index bug for 12x16 font
 * SwitchingRainGauge - sample updated to to avoid D15 error
 * Updated all projects to C# 10
@@ -164,9 +164,9 @@ HealthMetrics:
 
 ## VS Extensions
 * VSCode
-  * Support for Microsoft’s new 2.x C# Extension
-  * Due to dropping Omnisharp support extensions should now load a bit quicker.
-  * Attached devices now appear in ethe configuration list.
+  * Support for Microsoft's new 2.x C# Extension
+  * Due to dropping OmniSharp support extensions should now load a bit quicker.
+  * Attached devices now appear in the configuration list.
   * Ability to toggle between Debug and Release configurations before deploying to your Meadow.
 
 ## Meadow.Linux
@@ -187,7 +187,7 @@ HealthMetrics:
 ## Meadow.Core
 * Greatly improved app startup time
 * Improved latency of first interrupt
-* Added app-accessible Settings to IApp
+* Added app-accessible Settings to `IApp`
 * Added `StateChanged` event to `IUpdateService`
 * Bug fix in refreshing network adapter info
 * Added support for Connectors
