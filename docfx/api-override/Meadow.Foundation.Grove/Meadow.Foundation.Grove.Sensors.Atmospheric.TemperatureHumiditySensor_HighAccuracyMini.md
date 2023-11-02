@@ -16,14 +16,14 @@ TemperatureHumiditySensor_HighAccuracyMini sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     sensor = new TemperatureHumiditySensor_HighAccuracyMini(Device.CreateI2cBus());
 
     var consumer = TemperatureHumiditySensor_HighAccuracyMini.CreateObserver(
         handler: result =>
         {
-            Console.WriteLine($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
         },
         filter: result =>
         {
@@ -40,8 +40,8 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-        Console.WriteLine($"  Relative Humidity: {result.New.Humidity?.Percent:N2}%");
+        Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+        Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity?.Percent:N2}%");
     };
 
     return Task.CompletedTask;

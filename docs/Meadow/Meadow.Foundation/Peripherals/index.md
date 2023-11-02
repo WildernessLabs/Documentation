@@ -12,7 +12,6 @@ The peripherals are split into two groups; the first group is general, core peri
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen" /> | [AnalogJoystick](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick.html) | A two axis analog joystick |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Led](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led.html) | Led meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [LedBarGraph](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph.html) | LedBarGraph meadow driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [PwmLed](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) | PwmLed meadow driver |
@@ -175,11 +174,13 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.ADC.Ads1x15](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1x15Base.html) | TI ADS1x15 I2C analog to digital converters (ADS1015 / ADS1115) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.ADCs.Mcp3xxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADCs.Mcp3xxxBase.html) | Mcp3xxx SPI analog-to-digital converter (MCP3001, MCP3002, MCP3004, MCP3008, MCP3201, MCP3202, MCP3204, MCP3208) |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.DAC.MCP492x](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DAC.MCP492xBase.html) | Microchip MCP4921 and MCP4922 SPI digital to analog converters |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.DigiPots.Ds3502](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Ds3502.html) | Ds3502 I2C digital potentiometer |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.DigiPots.Mcp4xxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4xxxBase.html) | Mcp4xxx SPI digital rheostats and potentiometers |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.EEPROM.At24Cxx](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx.html) | At24Cxx I2C EEPROMs (AT24C32 / AT24C64 / AT24C128 / AT24C256) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.FanControllers.Emc2101](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.FanControllers.Emc2101.html) | Emc2101 I2C fan controller and temperature monitor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.AnalogMux](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.AnalogMuxBase.html) | Library for various analog multiplexers |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.As1115](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.As1115.html) | AS1115 I2C IO expander, led driver, character display controller and keyscan |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Ds3502](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ds3502.html) | Ds3502 I2C digital potentiometer |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Ft232h](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ft232h.html) | Ft232h USB IOExpander for GPIO, I2C, SPI on Windows |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Ht16k33](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ht16k33.html) | HT16K33 I2C IO expander, led driver, and character display controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.IOExpanders.Is31fl3731](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Is31fl3731.html) | IS31FL3731 I2C matrix led driver |
@@ -211,6 +212,34 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3202](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3202.html) | Mcp3202 analog digital converter driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3204](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3204.html) | Mcp3204 analog digital converter driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3208](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3208.html) | Mcp3208 analog digital converter driver |
+
+#### ICs.DAC.MCP492x
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4921](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DAC.Mcp4921.html) | Mcp4921 dac driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4922](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DAC.Mcp4922.html) | Mcp4922 dac driver |
+
+#### ICs.DigiPots.Mcp4xxx
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4131](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4131.html) | Mcp4131 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4132](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4132.html) | Mcp4132 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4141](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4141.html) | Mcp4141 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4142](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4142.html) | Mcp4142 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4151](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4151.html) | Mcp4151 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4152](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4152.html) | Mcp4152 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4161](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4161.html) | Mcp4161 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4162](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4162.html) | Mcp4162 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4231](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4231.html) | Mcp4231 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4232](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4232.html) | Mcp4232 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4241](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4241.html) | Mcp4241 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4242](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4242.html) | Mcp4242 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4251](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4251.html) | Mcp4251 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4252](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4252.html) | Mcp4252 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4261](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4261.html) | Mcp4261 digipot driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp4262](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4262.html) | Mcp4262 digipot driver |
 
 #### ICs.IOExpanders.AnalogMux
 
@@ -502,6 +531,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Displays.OLEDDisplay112](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.OLEDDisplay112.html) | Grove I2C OLED 1.12" display |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.HID.VibrationMotor](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.HID.VibrationMotor.html) | Grove GPIO vibration motor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Leds.LEDSocket](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Leds.LEDSocket.html) | Grove GPIO led |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Relays.4ChannelSpdtRelay](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay.html) | Grove I2C 4-Channel SPDT Relay |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Relays.Relay](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Relays.Relay.html) | Grove Relay driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.RTCs.RTC](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.RTCs.RTC.html) | Grove I2C real time clock (DS1307) |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini](/docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini.html) | Grove I2C Temperature and Humidity sensor - High Accuracy and Mini (TH02) |
@@ -555,6 +585,15 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Buttons.CACCurrent](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Buttons.CACCurrent.html) | MikroElectronika SPI AC Current click board |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Buttons.CButton](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Buttons.CButton.html) | MikroElectronika PWM GPIO Led Button MikroBus click board |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Buttons.CLEM](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Buttons.CLEM.html) | MikroElectronika SPI LEM AC Current click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.C420R](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.C420R.html) | MikroElectronika SPI 4-20mA Receiver click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.C420T](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.C420T.html) | MikroElectronika SPI 4-20mA Transmitter click board |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Gnss.CGNSS10](/docs/api/Meadow.Foundation.mikroBus/Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS10.html) | MikroElectronika Serial I2C SPI Neo M8 GPS / GNSS 10 MikroBus click board |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Gnss.CGNSS5](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS5.html) | MikroElectronika Serial I2C Neo M8 GPS / GNSS 5 MikroBus click board |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.Hid.CJoystick](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Hid.CJoystick.html) | MikroElectronika I2C Joystick MikroBus click board |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [mikroBUS.Sensors.MBus.CMBusMaster](/docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.MBus.CMBusMaster.html) | MikroElectronika Serial M-Bus MikroBus click board |
+
+## Composite Devices
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Relays.ElectromagneticRelayModule](/docs/api/Meadow.Foundation.CompositeDevices/Meadow.Foundation.Relays.ElectromagneticRelayModule.html) | I2C 4 Channel Electromagnetic Relay Module |

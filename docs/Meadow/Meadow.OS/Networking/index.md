@@ -83,9 +83,16 @@ If you're configuring to join the network this way, you'll also need to edit the
 Credentials:
   Ssid: YourSSID
   Password: SSIDPassword
+
+  # To clear existing wifi credentials
+  # ClearDefaultCredentials: true
 ```
 
 In this case, you might want to register the `NetworkConnected` event in the `Initialize()` method to start any network related tasks once the device joins your network.
+
+Optionally you can set the `ClearDefaultCredentials: true` , to remove the last credentials stored. Once you have done that you can comment on this property or set it to `false` and add new credentials.
+
+It is important to note when the `ClearDefaultCredentials` is set, then the `SSID` and `Password` properties will be ignored.
 
 ## Scanning for WiFi Networks
 
@@ -177,11 +184,11 @@ using (HttpClient client = new HttpClient()) {
 
 Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
 
-For more information on getting the current antenna information and switching, see the [Antenna guide](/Meadow/Meadow_Basics/Networking/Antenna).
+For more information on getting the current antenna information and switching, see the [Antenna guide](Antenna).
 
 # Creating RESTful Web APIs with Maple Server
 
-If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called [Maple Server](../../Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index.md) that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called `Maple Server` that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
 
 # Sample projects
 

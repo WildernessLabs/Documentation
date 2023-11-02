@@ -59,7 +59,7 @@ namespace MeadowApp
         void Initialize()
         {
             serialPort = Device.CreateSerialMessagePort(
-                Device.SerialPortNames.Com4,
+                Device.PlatformOS.GetSerialPortName("COM4"),
                 suffixDelimiter: Encoding.UTF8.GetBytes("\r\n"),
                 preserveDelimiter: true);
             serialPort.MessageReceived += SerialPort_MessageReceived;
