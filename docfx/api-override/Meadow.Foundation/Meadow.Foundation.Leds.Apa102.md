@@ -60,9 +60,4 @@ To wire a Apa102 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.Apa102/Apa102_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![Wiring an Apa102 to a Meadow F7](../../API_Assets/Meadow.Foundation.Leds.Apa102/Apa102_Fritzing.png)

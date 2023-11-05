@@ -9,7 +9,7 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Leds) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for Meadow.Foundation" /></a> |
 
-**PwmLed* represents an LED whose voltage (and brightness) is controlled by the duty-cycle of a PWM signal. It can be used both with Leds that have been current limited with in-series resistors, or Leds without resistors.
+**PwmLed** represents an LED whose voltage (and brightness) is controlled by the duty-cycle of a PWM signal. It can be used both with Leds that have been current limited with in-series resistors, or Leds without resistors.
 
 Controlling an LED via a PWM signal is more power efficient than using a current-limiting resistor. It also provides more control, allowing multiple grades of brightness. 
 
@@ -117,4 +117,4 @@ public override async Task Run()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed_Fritzing.svg" 
+![PWM LED connected to a Meadow F7](../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed_Fritzing.svg)

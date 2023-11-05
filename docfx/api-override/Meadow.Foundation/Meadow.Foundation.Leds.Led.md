@@ -124,4 +124,4 @@ public override async Task Run()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.Led/Led_Fritzing.svg" alt="Circuit layout sample showing an LED connected through a resistor to pin D08 and ground on a Meadow F7." style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+![Circuit layout sample showing an LED connected through a resistor to pin D08 and ground on a Meadow F7](../../API_Assets/Meadow.Foundation.Leds.Led/Led_Fritzing.svg)
