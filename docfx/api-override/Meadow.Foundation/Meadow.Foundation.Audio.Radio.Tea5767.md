@@ -14,14 +14,7 @@ The **TEA5767** FM module is based on the TEA5767GH which is a single-chip, elec
 
 The TEA5767 is controlled via I2C. It comes with two 1/4" jacks, one for connection to a headphone/speaker and one to connect an antenna (often sold with the module).
 
-<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-### Purchasing
-
-You can get a TEA5767 module (with antenna included) from the following supplier(s):
-
-* [newegg](https://www.newegg.ca/p/2S7-01JA-0KY52?item=9SIAJHJ8XC0373&source=region&nm_mc=knc-googleadwordscamkpl-pc&cm_mmc=knc-googleadwordscamkpl-pc-_-pla-lyx+tech+ltd-_-gadgets-_-9SIAJHJ8XC0373&gclid=Cj0KCQjwoKzsBRC5ARIsAITcwXFdQwVcwKklE8IqlrxY8GWLK0dcccGzBlp7OGjuNijObuUBybiqWuwaAqjwEALw_wcB)
+![TEA5767 FM module](../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767.png)
 
 ### Code Example
 
@@ -70,5 +63,4 @@ To wire a TEA5767 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+![Wiring a Tea5767 to a Meadow F7](../../API_Assets/Meadow.Foundation.Audio.Radio.Tea5767/TEA5767_Fritzing.png)
