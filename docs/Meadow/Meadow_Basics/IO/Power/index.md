@@ -53,12 +53,6 @@ The battery charging circuit is hooked directly to the `USB` power rail. When po
 
 The battery charging circuit is also connected to the `5V` rail via a diode. You can charge a battery when powering Meadow via the `5V` rail. However, this will cause up to `200mA` to flow through the `5V` rail reducing your `5V` power budget. This is important because Meadow has a current limit on the `5V` rail, `500mA` for `1.c` boards and `800mA` for `1.d` boards. You'll only be able to safely use and additional `300mA` for `1.c` boards and `600mA` for `1.d` boards regardless of the available current of the external power supply.
 
-## Solar + Battery Power
-
-The board can be adequately powered by a solar panel that outputs a minimum of `500mA` at `6V`, but it's best to pair a solar panel with a battery in order to provide backup power when solar power is not available.
-
-![Diagram of Meadow connected to a solar panel connected to ground and 5 volts and a 3.7-volt battery connected to the battery connector.](/Common_Files/MeadowPower.svg)
-
 ## Real-Time Clock (RTC)
 
 The STM32F7 is equipped with a real-time clock (RTC), which, when set, will retain the system time as long as the the board has power. If the board will have intermittent power, as when powered by a solar panel, having a battery hooked up to the board will ensure the RTC will not lose the time.
