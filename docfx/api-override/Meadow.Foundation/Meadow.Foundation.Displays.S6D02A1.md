@@ -81,9 +81,4 @@ public override Task Run()
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.S6D02A1/S6D02A1_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![SevenSegment displays](../../API_Assets/Meadow.Foundation.Displays.Tft.S6D02A1/S6D02A1_Fritzing.png)
