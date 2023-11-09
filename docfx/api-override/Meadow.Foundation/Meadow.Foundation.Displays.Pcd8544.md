@@ -14,10 +14,6 @@ The **PCD8544** display, also known as a Nokia 5110 LCD, is a single color 84x84
 
 These displays have excellent visibility in daylight, even without the backlight, making them a good choice for builds with low-power restrictions and require visibility is bright light or daylight.
 
-### Purchasing
-
-* [NOKIA 5110 SPI LCD graphic display 84x48](https://www.ebay.com/sch/i.html?LH_CAds=&_ex_kw=&_fpos=&_fspt=1&_mPrRngCbx=1&_nkw=Nokia+5110+arduino&_sacat=&_sadis=&_sop=12&_udhi=&_udlo=&_fosrp=1)
-
 ### Code Example
 
 ```csharp
@@ -66,14 +62,9 @@ public override Task Run()
 | LIGHT   | GND        |
 | VCC     | 3V3        |
 | CLK     | SCK        |
-| DIN     | MOSI       |
+| DIN     | COPI       |
 | DC      | D00        |
 | CE      | D01        |
 | RST     | D02        |
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![SevenSegment displays](../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png)
