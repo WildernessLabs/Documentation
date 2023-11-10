@@ -14,12 +14,6 @@ An h-bridge motor controller enables a control signal to drive a much larger loa
 <img src="../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridges.jpg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
-### Purchasing
-
-This generic driver works with standard h-bridges ICs such as the Texas Instruments [L2N93E](https://octopart.com/search?q=L293NE) or [SN754410](https://octopart.com/search?q=SN754410) chips.
-
-It should also work with heavier duty [L298N](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=l298n) drivers.
-
 ### Code Example
 
 ```csharp
