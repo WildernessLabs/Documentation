@@ -12,15 +12,6 @@ remarks: *content
 
 The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
 
-## Purchasing
-
-The BME280 sensor is available as a breakout board from the following suppliers:
-
-* [SparkFun BME280](https://www.sparkfun.com/products/13676)
-* [Adafruit BME280](https://www.adafruit.com/product/2652)
-
-The BME280 can operating in polling and interrupt mode.  By default, this sensor operates in interrupt mode.
-
 ### Code Example
 
 ```csharp

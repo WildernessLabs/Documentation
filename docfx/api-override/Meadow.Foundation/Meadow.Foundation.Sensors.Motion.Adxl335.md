@@ -87,18 +87,7 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl335/Samples/) 
 
-### Purchasing
-
-The ADXL335 sensor can be purchased on a breakout board from the following suppliers:
-
-* [Adafruit ADXL335](https://www.adafruit.com/product/163)
-* [Sparkfun ADXL335](https://www.sparkfun.com/products/9269)
-
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl335/Adxl335_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
