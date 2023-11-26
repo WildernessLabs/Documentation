@@ -9,6 +9,7 @@ Log and event data from devices sent to Meadow.Cloud can easily be ingested into
 
 * [Webhooks](Webhooks/)
 * [Azure Event Hubs](AzureEventHubs)
+* [Azure Event Grids](AzureEventGrids)
 
 Coming soon:
 * Datacake
