@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-title: Integrate with Azure Event Grids
-subtitle: Getting started with Azure Event Grids
+title: Integrate with Azure Event Grid
+subtitle: Getting started with Azure Event Grid
 ---
 [< Integrations](../)  
 ## Overview
