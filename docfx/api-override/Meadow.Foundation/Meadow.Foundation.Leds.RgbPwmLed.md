@@ -69,7 +69,7 @@ public async Task TestColors()
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/develop/Source/Meadow.Foundation.Core.Samples/Leds.RgbPwmLed_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Leds.RgbPwmLed_Onboard_Sample)
 
 ### Wiring Example
 

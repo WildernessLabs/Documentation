@@ -77,12 +77,11 @@ float Map(float value, float fromSource, float toSource, float fromTarget, float
 ### Code Example
 
 ```csharp
-readonly Frequency frequency = new Frequency(50, Frequency.UnitType.Hertz);
-const float armMs = 0.5f;
-const float powerIncrement = 0.05f;
-
-ElectronicSpeedController esc;
-RotaryEncoderWithButton rotary;
+private readonly Frequency frequency = new Frequency(50, Frequency.UnitType.Hertz);
+private const float armMs = 0.5f;
+private const float powerIncrement = 0.05f;
+private ElectronicSpeedController esc;
+private RotaryEncoderWithButton rotary;
 
 public override Task Initialize()
 {
@@ -108,7 +107,7 @@ private void RotaryRotated(object sender, RotaryChangeResult e)
     esc.Power += (e.New == RotationDirection.Clockwise) ? powerIncrement : -powerIncrement;
     DisplayPowerOnLed(esc.Power);
 
-    Resolver.Log.Info($"New Power: {esc.Power * (float)100:n0}%");
+    Resolver.Log.Info($"New Power: {esc.Power * 100:n0}%");
 }
 
 /// <summary>
@@ -116,7 +115,7 @@ private void RotaryRotated(object sender, RotaryChangeResult e)
 /// blue @ `0%`, and a proportional mix, in between those speeds.
 /// </summary>
 /// <param name="power"></param>
-void DisplayPowerOnLed(float power)
+private void DisplayPowerOnLed(float power)
 {
     // `0.0` - `1.0`
     int r = (int)ExtensionMethods.Map(power, 0f, 1f, 0f, 255f);

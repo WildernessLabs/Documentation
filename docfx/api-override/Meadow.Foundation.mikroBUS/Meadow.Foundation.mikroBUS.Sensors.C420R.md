@@ -36,4 +36,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/C420R/Sample/C420R_Sample)
 
-

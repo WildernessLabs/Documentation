@@ -292,6 +292,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.ElectronicSpeedController](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.ElectronicSpeedController.html) | PWM Electronic speed controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.A4988](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.A4988.html) | A4988 digital input stepper motor controller |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.Em542s](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Em542s.html) | Leadshine EM542S digital input stepper motor controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.Uln2003](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003.html) | ULN2003 digital input stepper motor controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Tb67h420ftg](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Tb67h420ftg.html) | Tb67h420ftg digital input motor controller |
 
@@ -357,6 +358,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Distance.A02yyuw](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.A02yyuw.html) | A02yyuw serial ultrasonic distance sensor |
 | <img alt="Status badge: in-progress" src="https://img.shields.io/badge/InProgress-yellow"/> | [Sensors.Distance.Hcsr04](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04.html) | HCSR04 digital ultrasonic distance sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Distance.MaxBotix](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.MaxBotix.html) | MaxBotix I2C, analog and serial ultrasonic distance sensors |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Distance.Me007ys](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Me007ys.html) | Me007ys serial ultrasonic distance sensor |
