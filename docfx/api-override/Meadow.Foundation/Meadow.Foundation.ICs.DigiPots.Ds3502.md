@@ -40,4 +40,3 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.DigiPots.Ds3502/Samples/Ds3502_Sample)
 
-
