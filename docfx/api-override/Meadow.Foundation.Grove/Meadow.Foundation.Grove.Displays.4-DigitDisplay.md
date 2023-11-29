@@ -18,7 +18,6 @@ public override Task Initialize()
     Resolver.Log.Info("Initializing ...");
 
     display = new FourDigitDisplay(
-        device: Device,
         pinClock: Device.Pins.D02,
         pinData: Device.Pins.D01)
     {

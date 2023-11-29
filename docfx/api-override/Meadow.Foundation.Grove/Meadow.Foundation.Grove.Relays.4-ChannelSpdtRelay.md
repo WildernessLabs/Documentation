@@ -58,4 +58,3 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/4-ChannelSpdtRelay/Sample/4-ChannelSpdtRelay_Sample)
 
-

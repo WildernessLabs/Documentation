@@ -12,8 +12,7 @@ remarks: *content
 
 Servos are integrated packages that usually include a DC electric motor, torque-increasing gearing, and electronics to control the motor: 
 
-<img src="../../API_Assets/Meadow.Foundation.Servos.Servo/Servos_Medium.jpg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+![Servo motors](../../API_Assets/Meadow.Foundation.Servos.Servo/Servos_Medium.jpg)
 
 The gained their popularity as an important part of remote controlled cars, airplanes, and such, but are now also very common in robotics.
 
@@ -77,10 +76,7 @@ When powering with an external power source, you must connect the external `GND`
 
 In the above illustration, (4), AA batteries are used, but we usually use a power supply like the following:
 
-<img src="../../API_Assets/Meadow.Foundation.Servos.Servo/PowerSupply_Medium.jpg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-The female plug adapter shown above can be found on [Amazon](https://amzn.to/2r7o20B).
+![Servo with a power supply](../../API_Assets/Meadow.Foundation.Servos.Servo/PowerSupply_Medium.jpg)
 
 ## Cable Colors
 

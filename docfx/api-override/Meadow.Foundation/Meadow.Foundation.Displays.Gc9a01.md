@@ -72,9 +72,4 @@ public override Task Run()
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Gc9a01/Gc9a01_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![Wiring a Gc9a01 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tft.Gc9a01/Gc9a01_Fritzing.png)

@@ -48,19 +48,7 @@ private void HCSR04_DistanceUpdated(object sender, IChangeResult<Meadow.Units.Le
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04/Samples/Hcsr04_Sample)
 
-### Purchasing
-
-The HC-SR04 sensor is available from Sparkfun:
-
-* [Ultrasonic Sensor - HC-SR04](https://www.sparkfun.com/products/13959)
-
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hcsr04/Samples/) 
-
 ### Wiring Example
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-

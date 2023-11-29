@@ -14,14 +14,7 @@ The **ADXL345** is a small, low power, triple axis acceleration sensor capable o
 
 The ADXL345 is controlled via I2C.
 
-
 The ADXL345 can operating in interrupt and polling mode. Polling applications are responsible for determining when a sensor is read.  Interrupt applications will be notified when the sensor reading changes by + / - a threshold value.
-
-### Purchasing
-
-The ADXL345 is available on a small breakout board:
-
-* [Sparkfun ADXL345 Breakout Board](https://www.sparkfun.com/products/9836)
 
 ### Code Example
 
@@ -67,7 +60,3 @@ protected async Task ReadConditions()
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl345/Adxl345_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
