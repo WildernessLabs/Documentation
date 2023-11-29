@@ -4,6 +4,51 @@ title: Meadow v1
 subtitle: Release Notes
 ---
 
+# v1.5.0
+
+## Meadow.OS
+
+* Fixed an issue where the TLS subsystem (mbedTLS) was racing on initialization, generating intermittent issues with connecting to HTTPS endpoints
+* Upgraded external flash driver. This resolves issues with intermittent hanging after a software reset, which affected Meadow error recovery
+
+## Meadow.Core
+
+* Added Meadow.Core API support for disabling server certificate validation for TLS (HTTPS) connections using MeadowOS.SetServerCertificateValidationMode()
+* Clean up and performance improvements in F7 serial ports.
+* Added F7 os-level protection around mq operations
+* IPin extensions moved up in namespace to improve discoverability
+* Added SerialMessagePort convenience methods to appropriate Connectors
+
+## Meadow.Foundation
+
+### New Drivers
+
+* A02YYUW serial distance sensor
+
+### New Features
+
+* Added IDisposable to all appropriate drivers
+
+### Fixes/Improvements
+
+* MicroLayout chart layout improvements
+* MicroGraphics fix exception when calling DrawImage
+* Add sensor interfaces to BMI270
+* Improved null reference checking
+* WinForms Display Screen updated and improved, now a movable window showing on the center of the screen when running, and buffer boundaries fixed.
+
+## Meadow.Cloud
+* Users can now create, edit, and manage API Keys to access search and command endpoints.
+
+## Meadow.CLI
+* ### V1 1.5.0
+  * Improve dependency filter for App.dll
+Do a directory existing check before we check for the internet connection
+* ### V2 Alpha.4
+  * Trimming Enabled
+  * Fixed an issue where if device.Runtime didn’t have a corresponding local directory, it would break `meadow app deploy`
+
+
 # v1.4.0
 
 ## Meadow.OS
