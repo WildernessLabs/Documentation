@@ -1,0 +1,72 @@
+/*
+  Font Declarations
+*/
+
+@font-face {
+  font-family:"Wavehaus-Book";
+  src: url("wavehaus/Wavehaus-66Book.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-66Book.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-66Book.woff") format("woff"),
+       url("wavehaus/Wavehaus-66Book.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-66Book.svg#Wavehaus-66Book") format("svg"),
+       url("wavehaus/Wavehaus-66Book.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family:"Wavehaus-Bold";
+  src: url("wavehaus/Wavehaus-128Bold.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-128Bold.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-128Bold.woff") format("woff"),
+       url("wavehaus/Wavehaus-128Bold.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-128Bold.svg#Wavehaus-128Bold") format("svg"),
+       url("wavehaus/Wavehaus-128Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Wavehaus-ExtraBold";
+  src: url("wavehaus/Wavehaus-158ExtraBold.eot");
+  src: local("☺"),
+	   url("wavehaus/Wavehaus-158ExtraBold.woff2") format("woff2"),
+       url("wavehaus/Wavehaus-158ExtraBold.woff") format("woff"),
+       url("wavehaus/Wavehaus-158ExtraBold.ttf") format("truetype"),
+       url("wavehaus/Wavehaus-158ExtraBold.svg#Wavehaus-158ExtraBold") format("svg"),
+       url("wavehaus/Wavehaus-158ExtraBold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"MrsEaves-Roman";
+  src: url("mrseaves/MrsEavesOT-Roman.eot");
+  src: local("☺"),
+	   url("mrseaves/MrsEavesOT-Roman.woff2") format("woff2"),
+       url("mrseaves/MrsEavesOT-Roman.woff") format("woff"),
+       url("mrseaves/MrsEavesOT-Roman.ttf") format("truetype"),
+       url("mrseaves/MrsEavesOT-Roman.svg#MrsEavesOT-Roman") format("svg"),
+       url("mrseaves/MrsEavesOT-Roman.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+
+@font-face {
+  font-family:"MrsEaves-Bold";
+  src: url("mrseaves/MrsEavesOT-Bold.eot");
+  src: local("☺"),
+	   url("mrseaves/MrsEavesOT-Bold.woff2") format("woff2"),
+       url("mrseaves/MrsEavesOT-Bold.woff") format("woff"),
+       url("mrseaves/MrsEavesOT-Bold.ttf") format("truetype"),
+       url("mrseaves/MrsEavesOT-Bold.svg#MrsEavesOT-Bold") format("svg"),
+       url("mrseaves/MrsEavesOT-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-variant-ligatures: discretionary-ligatures;
+}
