@@ -4,6 +4,33 @@ title: Meadow v1
 subtitle: Release Notes
 ---
 
+# v1.6.0
+
+## Meadow.OS
+
+* Resolved a memory leak that occurs in common network operations over Wifi. Improves device reliability when using WiFi.
+* Various minor fixes and improvements
+
+## Meadow.Core
+
+* Added support for high-speed ADC calls for F7 platform
+* Added several interfaces for motors: `IMotor`, `IVariableSpeedMotor`, `IPositionalMotor` and `IStepperMotor`
+* Added `IDissolvedOxygenSensor` interface
+* Added SensorService
+* Refactor and clean-up of `Updated` event for `ISamplingSensor<T>` implementations
+
+## Meadow.Foundation
+
+### New Drivers
+
+* StepDirMotor and CwCcwMotor stepper motors
+* Atlas Scientific Gravity Dissolved Oxygen sensor
+
+### Fixes/Updates
+
+* New composite driver pattern improves authoring drivers that implement multiple sensor contracts
+* Improved behavior of serial distance sensor drivers for single reads and sampling
+
 # v1.5.0
 
 ## Meadow.OS
