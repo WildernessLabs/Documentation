@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/About/Source/index",
+  "id": "Netduino/About/Source/index",
+  "title": "Source",
+  "description": "Open Source Hardware",
+  "source": "@site/docs/Netduino/About/Source/index.md",
+  "sourceDirName": "Netduino/About/Source",
+  "slug": "/Netduino/About/Source/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/About/Source/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/About/Source/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Source",
+    "subtitle": "Netduino design and other source files."
+  }
+}

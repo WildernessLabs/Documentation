@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Reference/Algorithms/index",
+  "id": "Hardware/Reference/Algorithms/index",
+  "title": "Algorithms",
+  "description": "",
+  "source": "@site/docs/Hardware/Reference/Algorithms/index.md",
+  "sourceDirName": "Hardware/Reference/Algorithms",
+  "slug": "/Hardware/Reference/Algorithms/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Algorithms"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Hardware & Circuits Reference",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/"
+  },
+  "next": {
+    "title": "PID",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/"
+  }
+}

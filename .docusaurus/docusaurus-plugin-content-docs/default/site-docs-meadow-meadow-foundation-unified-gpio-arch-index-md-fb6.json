@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index",
+  "id": "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index",
+  "title": "Meadow.Foundation Unified IO Architecture",
+  "description": "Meadow.Foundation incorporates an architecture that was designed to extend peripheral support seamlessly across expansion peripherals such as I2C/SPI/etc. I/O expansion chips. For example, you can connect an MCP23x or 74x595 I/O expansion chip to a Meadow, and then drive a Relay via one of the pins on the expansion chip, just as if it were connected directly to the Meadow board!",
+  "source": "@site/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/Unified_GPIO_Arch",
+  "slug": "/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow.Foundation Unified IO Architecture",
+    "subtitle": "Extending Meadow IOs seamlessly with external IO expansion peripherals via the Unified IO pattern."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow.Foundation Peripherals Library",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/"
+  },
+  "next": {
+    "title": "Working with Sensors",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/"
+  }
+}

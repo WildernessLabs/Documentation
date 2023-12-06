@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Input_Output/Network/Configuration/index",
+  "id": "Netduino/Input_Output/Network/Configuration/index",
+  "title": "Network Configuration",
+  "description": "Configuring Network Access",
+  "source": "@site/docs/Netduino/Input_Output/Network/Configuration/index.md",
+  "sourceDirName": "Netduino/Input_Output/Network/Configuration",
+  "slug": "/Netduino/Input_Output/Network/Configuration/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Input_Output/Network/Configuration/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Input_Output/Network/Configuration/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Network Configuration",
+    "subtitle": "Configuring the Network interface"
+  }
+}

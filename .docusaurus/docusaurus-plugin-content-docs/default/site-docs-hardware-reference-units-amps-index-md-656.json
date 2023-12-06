@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Units/Amps/index",
+  "id": "Hardware/Reference/Units/Amps/index",
+  "title": "Amps",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Reference/Units/Amps/index.md",
+  "sourceDirName": "Hardware/Reference/Units/Amps",
+  "slug": "/Hardware/Reference/Units/Amps/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Units/Amps/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Amps",
+    "subtitle": "Quantity of electricity, in coulombs."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Units",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/"
+  },
+  "next": {
+    "title": "Volts",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/"
+  }
+}

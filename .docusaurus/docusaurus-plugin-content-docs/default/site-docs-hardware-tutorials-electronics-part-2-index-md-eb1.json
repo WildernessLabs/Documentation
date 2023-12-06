@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part2/index",
+  "id": "Hardware/Tutorials/Electronics/Part2/index",
+  "title": "Part 2 - Quantifying Electricity; Amps, Volts, and Watts",
+  "description": "Overview",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part2/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part2",
+  "slug": "/Hardware/Tutorials/Electronics/Part2/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part2/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Part 2 - Quantifying Electricity; Amps, Volts, and Watts"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Review",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/"
+  },
+  "next": {
+    "title": "Amount & Force",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/"
+  }
+}

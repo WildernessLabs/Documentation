@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/About/index",
+  "id": "Netduino/About/index",
+  "title": "About Netduino",
+  "description": "Overview",
+  "source": "@site/docs/Netduino/About/index.md",
+  "sourceDirName": "Netduino/About",
+  "slug": "/Netduino/About/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/About/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/About/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "About Netduino",
+    "subtitle": "Features of Netduino, pinout, and power requirements."
+  }
+}

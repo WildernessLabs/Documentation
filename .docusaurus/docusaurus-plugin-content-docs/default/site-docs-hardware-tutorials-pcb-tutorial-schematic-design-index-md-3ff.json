@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index",
+  "id": "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index",
+  "title": "Schematic Capture",
+  "description": "<!--",
+  "source": "@site/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index.md",
+  "sourceDirName": "Hardware/Tutorials/PCB_Tutorial/Schematic_Design",
+  "slug": "/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Schematic Capture",
+    "subtitle": "PCB Design Tutorial, Part 1: Schematic design/capture."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Project Creation",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/"
+  },
+  "next": {
+    "title": "Hardware & Circuits",
+    "permalink": "/DocsDocusaurus/docs/Hardware/"
+  }
+}

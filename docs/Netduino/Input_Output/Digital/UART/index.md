@@ -29,7 +29,7 @@ One serial protocol commonly used is [RS-232](https://en.wikipedia.org/wiki/RS-2
 
 There are four UARTs available on the Netduino, labeled as "COM" ports:
 
-![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg){:standalone}
+![Netduino Pinout](../../../../Netduino/About/Netduino3_Pinout.svg){:standalone}
 
 ## Simple Transmitter and Receiver
 

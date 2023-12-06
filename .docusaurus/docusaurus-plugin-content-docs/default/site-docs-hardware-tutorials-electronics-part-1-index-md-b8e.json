@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part1/index",
+  "id": "Hardware/Tutorials/Electronics/Part1/index",
+  "title": "Part 1 - The Physics of Electrical Theory",
+  "description": "In order to understand how circuits work and how to design them, we must first understand some basic physics. Electrical theory and application comes directly from the structure and forces of atoms.",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part1/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part1",
+  "slug": "/Hardware/Tutorials/Electronics/Part1/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part1/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Part 1 - The Physics of Electrical Theory"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "TODO",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes"
+  },
+  "next": {
+    "title": "Atoms",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/"
+  }
+}

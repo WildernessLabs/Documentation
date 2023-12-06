@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/Troubleshooting/index",
+  "id": "Meadow/Meadow_Basics/Troubleshooting/index",
+  "title": "Troubleshooting",
+  "description": "USB Cables",
+  "source": "@site/docs/Meadow/Meadow_Basics/Troubleshooting/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/Troubleshooting",
+  "slug": "/Meadow/Meadow_Basics/Troubleshooting/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Troubleshooting/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Troubleshooting",
+    "subtitle": "Steps to getting your Meadow board working"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow F7 Status",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Status/"
+  },
+  "next": {
+    "title": "Linux",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/"
+  }
+}

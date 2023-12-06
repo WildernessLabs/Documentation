@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part4/Resistance/index",
+  "id": "Hardware/Tutorials/Electronics/Part4/Resistance/index",
+  "title": "Resistance & Resistors",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/Resistance/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part4/Resistance",
+  "slug": "/Hardware/Tutorials/Electronics/Part4/Resistance/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/Resistance/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Resistance & Resistors",
+    "subtitle": "Limiting the flow of electrical current."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Reading Axial Resistor Values",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/"
+  },
+  "next": {
+    "title": "Resistor Circuit Comparison",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/"
+  }
+}

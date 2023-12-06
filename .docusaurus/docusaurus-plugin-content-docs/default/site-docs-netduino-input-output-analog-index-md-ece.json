@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Netduino/Input_Output/Analog/index",
+  "id": "Netduino/Input_Output/Analog/index",
+  "title": "Analog I/O",
+  "description": "Analog ports can operate at a range of voltages between 0 and 3.3V, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal which is represented as binary on or off.",
+  "source": "@site/docs/Netduino/Input_Output/Analog/index.md",
+  "sourceDirName": "Netduino/Input_Output/Analog",
+  "slug": "/Netduino/Input_Output/Analog/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Input_Output/Analog/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Input_Output/Analog/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Analog I/O"
+  }
+}

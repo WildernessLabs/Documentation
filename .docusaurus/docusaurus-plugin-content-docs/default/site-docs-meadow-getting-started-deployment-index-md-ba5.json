@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Getting_Started/Deployment/index",
+  "id": "Meadow/Getting_Started/Deployment/index",
+  "title": "Deployment",
+  "description": "* macOS",
+  "source": "@site/docs/Meadow/Getting_Started/Deployment/index.md",
+  "sourceDirName": "Meadow/Getting_Started/Deployment",
+  "slug": "/Meadow/Getting_Started/Deployment/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Deployment/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Deployment",
+    "subtitle": "Guides and documentation for Meadow"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow OS Deployment",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/"
+  },
+  "next": {
+    "title": "Get started with Meadow Core-Compute module",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Samples/Netduino/LCDMicroLiquidCrystal/index",
+  "id": "Samples/Netduino/LCDMicroLiquidCrystal/index",
+  "title": "LCD Display Sample",
+  "description": "LCD Display",
+  "source": "@site/docs/Samples/Netduino/LCDMicroLiquidCrystal/index.md",
+  "sourceDirName": "Samples/Netduino/LCDMicroLiquidCrystal",
+  "slug": "/Samples/Netduino/LCDMicroLiquidCrystal/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/LCDMicroLiquidCrystal/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/LCDMicroLiquidCrystal/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "LCD Display Sample",
+    "subtitle": "Sample using the µLiquidCrystal LCD library"
+  }
+}

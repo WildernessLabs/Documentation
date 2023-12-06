@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Notes",
+  "id": "Hardware/Tutorials/Electronics/Notes",
+  "title": "TODO",
+  "description": "* Add Negative Voltage to voltage page (current flowing in opposite direction)",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Notes.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics",
+  "slug": "/Hardware/Tutorials/Electronics/Notes",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Notes.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Fundamentals of Electronics Tutorial",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/"
+  },
+  "next": {
+    "title": "Part 1 - The Physics of Electrical Theory",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/"
+  }
+}

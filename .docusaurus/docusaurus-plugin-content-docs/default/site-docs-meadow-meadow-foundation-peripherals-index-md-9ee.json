@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/Peripherals/index",
+  "id": "Meadow/Meadow.Foundation/Peripherals/index",
+  "title": "Meadow.Foundation Peripherals Library",
+  "description": "The Meadow.Foundation peripherals library is an open source repository of drivers for various peripherals such as sensors, motors, displays, cameras, and other peripherals which make it easy to add hardware to your Meadow application.",
+  "source": "@site/docs/Meadow/Meadow.Foundation/Peripherals/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/Peripherals",
+  "slug": "/Meadow/Meadow.Foundation/Peripherals/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Peripherals/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow.Foundation Peripherals Library",
+    "subtitle": "Drivers for hardware peripherals such as sensors, buttons, displays, and more!"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "TextDisplayMenu Library",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/"
+  },
+  "next": {
+    "title": "Meadow.Foundation Unified IO Architecture",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Input_Output/Onboard_Button_+_LED/index",
+  "id": "Netduino/Input_Output/Onboard_Button_+_LED/index",
+  "title": "Onboard Button + LED",
+  "description": "Info",
+  "source": "@site/docs/Netduino/Input_Output/Onboard_Button_+_LED/index.md",
+  "sourceDirName": "Netduino/Input_Output/Onboard_Button_+_LED",
+  "slug": "/Netduino/Input_Output/Onboard_Button_+_LED/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Input_Output/Onboard_Button_+_LED/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Input_Output/Onboard_Button_+_LED/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Onboard Button + LED",
+    "subtitle": "Working with Netduino's onboard push button and LED."
+  }
+}

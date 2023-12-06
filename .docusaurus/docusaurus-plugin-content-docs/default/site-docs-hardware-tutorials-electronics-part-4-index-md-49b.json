@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part4/index",
+  "id": "Hardware/Tutorials/Electronics/Part4/index",
+  "title": "Part 4 - Resistance and Ohm's Law",
+  "description": "Resistance & Ohms",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part4",
+  "slug": "/Hardware/Tutorials/Electronics/Part4/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Part 4 - Resistance and Ohm's Law"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Review",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/"
+  },
+  "next": {
+    "title": "Calculating Simple Resistance",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/"
+  }
+}

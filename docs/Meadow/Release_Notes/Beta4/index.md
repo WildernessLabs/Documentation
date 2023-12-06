@@ -73,7 +73,7 @@ See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.
 
 Maple server is an ultra-lightweight RESTful Web API server made specifically for Meadow that has native support for JSON. It enables easy remote interaction and control with Meadow over http.
 
-Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+Check out the [Maple Server guide](/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
 
 And for a real world sample application, check out the [On-Air Sign project](https://github.com/wildernesslabs/OnAir_Sign) that uses Maple Server to show a message on an LED matrix display to make sure no one walks in on your meetings.
 
@@ -81,7 +81,8 @@ And for a real world sample application, check out the [On-Air Sign project](htt
 
 The [`TextDisplayMenu`](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/) library is an extensible framework for quickly creating hierarchical, editable menus that can display on a `CharacterDisplay` or a graphics display via `GraphicsLibrary`. 
 
-![Animated image of a menu displayed on an LCD with a rotary encoder driving navigation.](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/TextDisplayMenu.gif)
+![Animated image of a menu displayed on an LCD with a rotary encoder driving navigation.](../../Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/TextDisplayMenu.gif)
+
 
 The menu can be created programmatically or loaded from JSON, and has a number of built-in menu item types for display and editing input including: time, temperature, and numbers. Additionally, you can easily create custom menu item types that allow users to edit their value via the inputs.
 

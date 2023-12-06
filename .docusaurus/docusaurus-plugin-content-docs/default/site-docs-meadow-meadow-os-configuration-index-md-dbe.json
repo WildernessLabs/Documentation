@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Configuration/index",
+  "id": "Meadow/Meadow.OS/Configuration/index",
+  "title": "Configuration",
+  "description": "Meadow has a robust configuration framework allowing you to adjust settings at build-time and deploy them with your app.",
+  "source": "@site/docs/Meadow/Meadow.OS/Configuration/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Configuration",
+  "slug": "/Meadow/Meadow.OS/Configuration/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Configuration/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Configuration",
+    "subtitle": "Controlling settings at build-time for device and app information."
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Wi-Fi Configuration",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/"
+  },
+  "next": {
+    "title": "SD Card use with Core-Compute module",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/"
+  }
+}

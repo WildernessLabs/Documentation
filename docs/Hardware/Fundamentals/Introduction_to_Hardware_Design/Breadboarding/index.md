@@ -40,7 +40,7 @@ A word of caution, however; while we've had almost no issues with high-quality m
 
 Another aspect of the early stage of hardware design is circuit simulation. This can be especially useful if you're spinning logic circuits that control or amplify power and you want to quickly test a design before you actually build it.
 
-![Screenshot of an example circuit schematic diagramed in the iCircuit simulation software.](/Hardware/Tutorials/Electronics/Part5/Circuit_Software/iCircuit.png)
+![Screenshot of an example circuit schematic diagramed in the iCircuit simulation software.](../../../Tutorials/Electronics/Part5/Circuit_Software/iCircuit.png)
 
 For this, there are a number circuit simulators available, a couple very good ones are:
 

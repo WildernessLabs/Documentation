@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Units/Volts/index",
+  "id": "Hardware/Reference/Units/Volts/index",
+  "title": "Volts",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Reference/Units/Volts/index.md",
+  "sourceDirName": "Hardware/Reference/Units/Volts",
+  "slug": "/Hardware/Reference/Units/Volts/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Units/Volts/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Volts",
+    "subtitle": "Amount of Electromotive Force (EMF) of electricity."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Amps",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/"
+  },
+  "next": {
+    "title": "Watts",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/"
+  }
+}

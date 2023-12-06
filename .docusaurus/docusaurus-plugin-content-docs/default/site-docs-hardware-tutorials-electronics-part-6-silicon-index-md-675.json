@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part6/Silicon/index",
+  "id": "Hardware/Tutorials/Electronics/Part6/Silicon/index",
+  "title": "Silicon (Si)",
+  "description": "Silicon Crystal",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/Silicon/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part6/Silicon",
+  "slug": "/Hardware/Tutorials/Electronics/Part6/Silicon/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/Silicon/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Silicon (Si)",
+    "subtitle": "The heart of modern semiconductors."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Semiconductors Part 1 (Diodes)",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/"
+  },
+  "next": {
+    "title": "Notes",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes"
+  }
+}

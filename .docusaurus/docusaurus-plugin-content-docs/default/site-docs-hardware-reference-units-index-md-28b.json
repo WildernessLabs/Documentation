@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Reference/Units/index",
+  "id": "Hardware/Reference/Units/index",
+  "title": "Units",
+  "description": "Amps",
+  "source": "@site/docs/Hardware/Reference/Units/index.md",
+  "sourceDirName": "Hardware/Reference/Units",
+  "slug": "/Hardware/Reference/Units/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Units/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Units"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Digital Signals",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/"
+  },
+  "next": {
+    "title": "Amps",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/"
+  }
+}

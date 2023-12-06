@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part2/Wattage/index",
+  "id": "Hardware/Tutorials/Electronics/Part2/Wattage/index",
+  "title": "Wattage",
+  "description": "The Relationship of Force and Quantity",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part2/Wattage/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part2/Wattage",
+  "slug": "/Hardware/Tutorials/Electronics/Part2/Wattage/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part2/Wattage/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Wattage",
+    "subtitle": "The product of amperage and voltage."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Voltage",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Voltage/"
+  },
+  "next": {
+    "title": "Part 3 - Power Sources & Current Types",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/"
+  }
+}

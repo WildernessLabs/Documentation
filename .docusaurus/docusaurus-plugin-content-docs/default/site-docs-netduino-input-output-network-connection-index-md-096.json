@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Input_Output/Network/Connection/index",
+  "id": "Netduino/Input_Output/Network/Connection/index",
+  "title": "Connecting to a Network",
+  "description": "Waiting for the Network to Initialize",
+  "source": "@site/docs/Netduino/Input_Output/Network/Connection/index.md",
+  "sourceDirName": "Netduino/Input_Output/Network/Connection",
+  "slug": "/Netduino/Input_Output/Network/Connection/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Input_Output/Network/Connection/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Input_Output/Network/Connection/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Connecting to a Network",
+    "subtitle": "Configuring and initialing the Network interface and accessing network resources."
+  }
+}

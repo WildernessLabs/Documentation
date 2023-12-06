@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index",
+  "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index",
+  "title": "PCB Stackups",
+  "description": "The simplest PCBs are 1 or 2 sided; that is, they have copper on one or both sides of a insulating substrate, usually fiberglass. This laminate, with copper on one or both sides is called PCB Core:",
+  "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index.md",
+  "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups",
+  "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PCB Stackups",
+    "subtitle": "Understanding how PCB layering affect designs."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "PCB Fabrication",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/"
+  },
+  "next": {
+    "title": "Hardware & Circuits Reference",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/"
+  }
+}

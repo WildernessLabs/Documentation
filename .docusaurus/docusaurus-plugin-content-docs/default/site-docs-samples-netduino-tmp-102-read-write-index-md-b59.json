@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/TMP102ReadWrite/index",
+  "id": "Samples/Netduino/TMP102ReadWrite/index",
+  "title": "Writing to a TMP102 Temperature Sensor Using I2C",
+  "description": "This example demonstrates how to read from and write to a TMP102 temperature sensor using the I2C protocol.",
+  "source": "@site/docs/Samples/Netduino/TMP102ReadWrite/index.md",
+  "sourceDirName": "Samples/Netduino/TMP102ReadWrite",
+  "slug": "/Samples/Netduino/TMP102ReadWrite/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/TMP102ReadWrite/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/TMP102ReadWrite/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "Writing to a TMP102 Temperature Sensor Using I2C"
+  }
+}

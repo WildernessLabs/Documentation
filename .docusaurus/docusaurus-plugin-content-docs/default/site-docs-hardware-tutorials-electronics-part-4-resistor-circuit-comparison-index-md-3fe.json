@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index",
+  "id": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index",
+  "title": "Resistor Circuit Comparison",
+  "description": "| Single Resistor   | Resistors in Series  | Resistors in Parallel     |",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison",
+  "slug": "/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Resistor Circuit Comparison"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Resistance & Resistors",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/"
+  },
+  "next": {
+    "title": "Resistor Lab",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/"
+  }
+}

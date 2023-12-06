@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part3/Current_Types/index",
+  "id": "Hardware/Tutorials/Electronics/Part3/Current_Types/index",
+  "title": "Current Types",
+  "description": "Introduction",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part3/Current_Types",
+  "slug": "/Hardware/Tutorials/Electronics/Part3/Current_Types/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Current Types",
+    "subtitle": "AC and DC electrical currents."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Alternating Current (AC)",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/"
+  },
+  "next": {
+    "title": "Direct Current",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/"
+  }
+}

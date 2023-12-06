@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Cloud/Integrations/Datacake/index",
+  "id": "Meadow/Meadow.Cloud/Integrations/Datacake/index",
+  "title": "Integrate with Datacake",
+  "description": "< Integrations",
+  "source": "@site/docs/Meadow/Meadow.Cloud/Integrations/Datacake/index.md",
+  "sourceDirName": "Meadow/Meadow.Cloud/Integrations/Datacake",
+  "slug": "/Meadow/Meadow.Cloud/Integrations/Datacake/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Cloud/Integrations/Datacake/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Integrate with Datacake",
+    "subtitle": "Getting started with Datacake"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Integrate with Azure Event Hubs",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/"
+  },
+  "next": {
+    "title": "Integrate with Webhooks",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/"
+  }
+}

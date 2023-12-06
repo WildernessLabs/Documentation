@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Equations_and_Laws/Voltage/index",
+  "id": "Hardware/Reference/Equations_and_Laws/Voltage/index",
+  "title": "Voltage Laws",
+  "description": "Overview",
+  "source": "@site/docs/Hardware/Reference/Equations_and_Laws/Voltage/index.md",
+  "sourceDirName": "Hardware/Reference/Equations_and_Laws/Voltage",
+  "slug": "/Hardware/Reference/Equations_and_Laws/Voltage/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Equations_and_Laws/Voltage/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Voltage Laws",
+    "subtitle": "Calculations involving voltage."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Series Resistance",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/"
+  },
+  "next": {
+    "title": "Voltage Division",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/"
+  }
+}

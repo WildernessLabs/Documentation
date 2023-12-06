@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/SDCardIO/index",
+  "id": "Samples/Netduino/SDCardIO/index",
+  "title": "SD Card IO",
+  "description": "This sample illustrates access the SD card and writing to a file using standard System.IO calls.",
+  "source": "@site/docs/Samples/Netduino/SDCardIO/index.md",
+  "sourceDirName": "Samples/Netduino/SDCardIO",
+  "slug": "/Samples/Netduino/SDCardIO/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/SDCardIO/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/SDCardIO/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "SD Card IO"
+  }
+}

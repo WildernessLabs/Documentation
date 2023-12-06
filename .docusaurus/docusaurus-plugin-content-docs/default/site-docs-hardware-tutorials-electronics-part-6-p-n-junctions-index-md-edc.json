@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index",
+  "id": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index",
+  "title": "P-N Junctions",
+  "description": "Combining P-type and N-type Semiconductors",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions",
+  "slug": "/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "P-N Junctions",
+    "subtitle": "Fundamental building block of modern electronics."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "N-type Semiconductor",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/"
+  },
+  "next": {
+    "title": "P-type Semiconductor",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/"
+  }
+}

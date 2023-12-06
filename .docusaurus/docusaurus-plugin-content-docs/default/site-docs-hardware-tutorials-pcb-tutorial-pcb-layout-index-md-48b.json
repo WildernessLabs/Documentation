@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index",
+  "id": "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index",
+  "title": "PCB Layout",
+  "description": "General Process",
+  "source": "@site/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index.md",
+  "sourceDirName": "Hardware/Tutorials/PCB_Tutorial/PCB_Layout",
+  "slug": "/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PCB Layout",
+    "subtitle": "Designing the physical Printed Circuit Board layout."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "PCB Assembly",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/"
+  },
+  "next": {
+    "title": "Project Creation",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/"
+  }
+}

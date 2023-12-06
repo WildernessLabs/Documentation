@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index",
+  "id": "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index",
+  "title": "Analog Level Shifting Lab",
+  "description": "Lab Overview",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab",
+  "slug": "/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Analog Level Shifting Lab",
+    "subtitle": "Reducing 5V sensor output to 3.3V so it can be read by the Netduino Analog-to-Digital Converter (ADC)."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Kirchhoff's Voltage Law",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/"
+  },
+  "next": {
+    "title": "Photoresistor Lab",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/"
+  }
+}

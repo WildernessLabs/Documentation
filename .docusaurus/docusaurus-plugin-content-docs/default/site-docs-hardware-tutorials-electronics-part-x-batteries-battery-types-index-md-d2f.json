@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index",
+  "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index",
+  "title": "Battery Types",
+  "description": "Batteries come in two types; single use batteries that cannot be recharged, and multi-use batteries that are rechargeable.",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types",
+  "slug": "/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Battery Types"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Battery Resistance; Ideal vs. Practical Voltage",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/"
+  },
+  "next": {
+    "title": "Review",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/"
+  }
+}

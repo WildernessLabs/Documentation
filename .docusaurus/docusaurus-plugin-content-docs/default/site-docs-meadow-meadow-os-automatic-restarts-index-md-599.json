@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Automatic_Restarts/index",
+  "id": "Meadow/Meadow.OS/Automatic_Restarts/index",
+  "title": "Automatic Restarts",
+  "description": "Meadow offers two systems to handle when your code doesn't behave as expected. If your application throws an unhandled exception, there is an automatic restart system for when your app doesn't recover from an error. If you have some code that might become unresponsive, there is a watchdog timer system to reset the device if some part of your code execution takes too long.",
+  "source": "@site/docs/Meadow/Meadow.OS/Automatic_Restarts/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Automatic_Restarts",
+  "slug": "/Meadow/Meadow.OS/Automatic_Restarts/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Automatic_Restarts/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Automatic Restarts",
+    "subtitle": "Enabling and using the Meadow systems for handling application crashes or unresponsiveness with automatic restarts and watchdog timers."
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Meadow.OS",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/"
+  },
+  "next": {
+    "title": "Bluetooth",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/"
+  }
+}

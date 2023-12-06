@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part3/AC_Generation/index",
+  "id": "Hardware/Tutorials/Electronics/Part3/AC_Generation/index",
+  "title": "AC Power Generation",
+  "description": "Generators",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part3/AC_Generation",
+  "slug": "/Hardware/Tutorials/Electronics/Part3/AC_Generation/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "AC Power Generation",
+    "subtitle": "How alternating current is created."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "AC Characteristics",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/"
+  },
+  "next": {
+    "title": "Alternating Current (AC)",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/"
+  }
+}

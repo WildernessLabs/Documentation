@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/TMP102BasicRead/index",
+  "id": "Samples/Netduino/TMP102BasicRead/index",
+  "title": "Reading From a TMP102 Temperature Sensor Using I2C",
+  "description": "This example demonstrates how to read from a TMP102 temperature sensor using the I2C protocol.",
+  "source": "@site/docs/Samples/Netduino/TMP102BasicRead/index.md",
+  "sourceDirName": "Samples/Netduino/TMP102BasicRead",
+  "slug": "/Samples/Netduino/TMP102BasicRead/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/TMP102BasicRead/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/TMP102BasicRead/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "Reading From a TMP102 Temperature Sensor Using I2C"
+  }
+}

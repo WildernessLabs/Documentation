@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/File_System/index",
+  "id": "Meadow/Meadow_Basics/File_System/index",
+  "title": "File System",
+  "description": "This content has moved to here.",
+  "source": "@site/docs/Meadow/Meadow_Basics/File_System/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/File_System",
+  "slug": "/Meadow/Meadow_Basics/File_System/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/File_System/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "File System",
+    "subtitle": "Content moved."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Events and IObservable",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/"
+  },
+  "next": {
+    "title": "Meadow Hardware",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/"
+  }
+}

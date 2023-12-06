@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/Troubleshooting/Linux/index",
+  "id": "Meadow/Meadow_Basics/Troubleshooting/Linux/index",
+  "title": "Linux",
+  "description": "Device not found",
+  "source": "@site/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/Troubleshooting/Linux",
+  "slug": "/Meadow/Meadow_Basics/Troubleshooting/Linux/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Linux",
+    "subtitle": "Troubleshooting guide to detect Meadow on Linux"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Troubleshooting",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/"
+  },
+  "next": {
+    "title": "Meadow OS Deployment Troubleshooting",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/"
+  }
+}

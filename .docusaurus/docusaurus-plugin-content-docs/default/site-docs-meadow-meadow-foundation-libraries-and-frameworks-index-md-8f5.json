@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index",
+  "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index",
+  "title": "Meadow.Foundation Libraries and Frameworks",
+  "description": "Meadow.Foundation includes a number of libraries and frameworks to make working with embedded hardware easier, including:",
+  "source": "@site/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/Libraries_and_Frameworks",
+  "slug": "/Meadow/Meadow.Foundation/Libraries_and_Frameworks/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow.Foundation Libraries and Frameworks",
+    "subtitle": "Libraries and frameworks that make working with embedded hardware easier."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/"
+  },
+  "next": {
+    "title": "GPS/GNSS NMEA Sentence Processor Library",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/"
+  }
+}

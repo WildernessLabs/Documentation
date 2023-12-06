@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/IO/Digital/index",
+  "id": "Meadow/Meadow_Basics/IO/Digital/index",
+  "title": "Digital IO",
+  "description": "Digital IO is often referred to as General Purpose, Input/Output or GPIO. GPIO ports can generally be set to be HIGH (powered at 3.3V), or LOW (grounded at 0V) which correspond to digital 1 and 0, respectively. Additionally, those values can be read, if their state is changed by an external source, when the ports are configured for input mode.",
+  "source": "@site/docs/Meadow/Meadow_Basics/IO/Digital/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/IO/Digital",
+  "slug": "/Meadow/Meadow_Basics/IO/Digital/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/IO/Digital/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Digital IO",
+    "subtitle": "Reading and writing digital voltage levels on the GPIO pins."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Analog I/O",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/"
+  },
+  "next": {
+    "title": "PWM",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/PWM/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Circuits/Components/Capacitors/index",
+  "id": "Hardware/Circuits/Components/Capacitors/index",
+  "title": "Capacitors",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Circuits/Components/Capacitors/index.md",
+  "sourceDirName": "Hardware/Circuits/Components/Capacitors",
+  "slug": "/Hardware/Circuits/Components/Capacitors/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/Capacitors/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Capacitors",
+    "subtitle": "Energy storage components."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Component Reference",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/"
+  },
+  "next": {
+    "title": "Diodes",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/index",
+  "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/index",
+  "title": "PID",
+  "description": "This is a multipart series on understanding and using the Proportional, Integral, Derivative (PID) algorithm.",
+  "source": "@site/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/index.md",
+  "sourceDirName": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative",
+  "slug": "/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PID",
+    "subtitle": "Proportional, Integral, Derivative (PID), the quintessential industrial control algorithm."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Algorithms",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/"
+  },
+  "next": {
+    "title": "Closed Loop Gain Controllers",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/"
+  }
+}

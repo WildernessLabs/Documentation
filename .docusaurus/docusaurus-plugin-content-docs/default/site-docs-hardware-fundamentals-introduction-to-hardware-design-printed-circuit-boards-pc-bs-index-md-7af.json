@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index",
+  "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index",
+  "title": "PCBs",
+  "description": "Printed Circuit Boards (PCBs) are the basis of all modern electronics. They provide both a foundation for the electronic components that power a circuit, as well as the wiring, known as traces, that connect them.",
+  "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index.md",
+  "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)",
+  "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PCBs",
+    "subtitle": "An introduction to Printed Circuit Boards (PCBs)."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Breadboarding, Modules, and Simulation.",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/"
+  },
+  "next": {
+    "title": "Product Design Lifecycle",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/"
+  }
+}

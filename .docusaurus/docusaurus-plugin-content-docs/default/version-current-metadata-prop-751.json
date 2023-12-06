@@ -1,0 +1,3515 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "meadowSidebar": [
+      {
+        "type": "category",
+        "label": "Get started with Meadow",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Assemble Meadow Board",
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Assemble_Meadow/",
+            "docId": "Meadow/Getting_Started/Assemble_Meadow/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow OS Deployment",
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/",
+            "docId": "Meadow/Getting_Started/Deploying_Meadow/index"
+          },
+          {
+            "type": "link",
+            "label": "Deployment",
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/",
+            "docId": "Meadow/Getting_Started/Deployment/index"
+          },
+          {
+            "type": "link",
+            "label": "Get started with Meadow Core-Compute module",
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
+            "docId": "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index"
+          },
+          {
+            "type": "category",
+            "label": "Getting Started with Meadow.Desktop",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Get started with Meadow.Linux",
+                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/",
+                "docId": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index"
+              },
+              {
+                "type": "link",
+                "label": "Get started with Meadow.Windows",
+                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/",
+                "docId": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/"
+          },
+          {
+            "type": "link",
+            "label": "Hello, Meadow!",
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/",
+            "docId": "Meadow/Getting_Started/Hello_World/index"
+          },
+          {
+            "type": "category",
+            "label": "Setup",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Windows Setup",
+                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/Windows/",
+                "docId": "Meadow/Getting_Started/Setup/Windows/index"
+              },
+              {
+                "type": "link",
+                "label": "macOS Setup",
+                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/macos/",
+                "docId": "Meadow/Getting_Started/Setup/macos/index"
+              },
+              {
+                "type": "link",
+                "label": "ST-Link",
+                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/",
+                "docId": "Meadow/Getting_Started/Setup/stlink/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/"
+          },
+          {
+            "type": "link",
+            "label": "Update USB Driver for ST devices",
+            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/",
+            "docId": "Meadow/Getting_Started/Update_USB_Driver/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/"
+      },
+      {
+        "type": "category",
+        "label": "Meadow.Cloud",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Command + Control",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Command_Control/",
+            "docId": "Meadow/Meadow.Cloud/Command_Control/index"
+          },
+          {
+            "type": "link",
+            "label": "Device Provisioning",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Device_Provisioning/",
+            "docId": "Meadow/Meadow.Cloud/Device_Provisioning/index"
+          },
+          {
+            "type": "link",
+            "label": "Health Monitoring",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/",
+            "docId": "Meadow/Meadow.Cloud/Health_Monitoring/index"
+          },
+          {
+            "type": "category",
+            "label": "Enterprise Integrations",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Integrate with Azure Event Grid",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/",
+                "docId": "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index"
+              },
+              {
+                "type": "link",
+                "label": "Integrate with Azure Event Hubs",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
+                "docId": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index"
+              },
+              {
+                "type": "link",
+                "label": "Integrate with Datacake",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/",
+                "docId": "Meadow/Meadow.Cloud/Integrations/Datacake/index"
+              },
+              {
+                "type": "link",
+                "label": "Integrate with Webhooks",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/",
+                "docId": "Meadow/Meadow.Cloud/Integrations/Webhooks/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/"
+          },
+          {
+            "type": "link",
+            "label": "Logs and Events",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Logs_Events/",
+            "docId": "Meadow/Meadow.Cloud/Logs_Events/index"
+          },
+          {
+            "type": "link",
+            "label": "Over-the-Air (OtA) Updates",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/OtA_Updates/",
+            "docId": "Meadow/Meadow.Cloud/OtA_Updates/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/"
+      },
+      {
+        "type": "category",
+        "label": "Meadow.Foundation",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "API Samples",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/",
+            "docId": "Meadow/Meadow.Foundation/API_Samples/index"
+          },
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/",
+            "docId": "Meadow/Meadow.Foundation/Getting_Started/index"
+          },
+          {
+            "type": "category",
+            "label": "Meadow.Foundation Libraries and Frameworks",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "GPS/GNSS NMEA Sentence Processor Library",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/",
+                "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index"
+              },
+              {
+                "type": "link",
+                "label": "Maple Server",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/",
+                "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index"
+              },
+              {
+                "type": "link",
+                "label": "MicroGraphics Library",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/",
+                "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index"
+              },
+              {
+                "type": "link",
+                "label": "MicroLayout Library",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/",
+                "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index"
+              },
+              {
+                "type": "link",
+                "label": "TextDisplayMenu Library",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/",
+                "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/"
+          },
+          {
+            "type": "link",
+            "label": "Meadow.Foundation Peripherals Library",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/",
+            "docId": "Meadow/Meadow.Foundation/Peripherals/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow.Foundation Unified IO Architecture",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
+            "docId": "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index"
+          },
+          {
+            "type": "link",
+            "label": "Working with Sensors",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/",
+            "docId": "Meadow/Meadow.Foundation/Working_with_Sensors/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/"
+      },
+      {
+        "type": "category",
+        "label": "Meadow.OS",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Automatic Restarts",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/",
+            "docId": "Meadow/Meadow.OS/Automatic_Restarts/index"
+          },
+          {
+            "type": "link",
+            "label": "Bluetooth",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/",
+            "docId": "Meadow/Meadow.OS/Bluetooth/index"
+          },
+          {
+            "type": "link",
+            "label": "Cellular",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/",
+            "docId": "Meadow/Meadow.OS/Cellular/index"
+          },
+          {
+            "type": "category",
+            "label": "Configuration",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Application Settings Configuration",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/",
+                "docId": "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index"
+              },
+              {
+                "type": "link",
+                "label": "OS & Device Configuration",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/",
+                "docId": "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index"
+              },
+              {
+                "type": "link",
+                "label": "Wi-Fi Configuration",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+                "docId": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/"
+          },
+          {
+            "type": "link",
+            "label": "SD Card use with Core-Compute module",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/",
+            "docId": "Meadow/Meadow.OS/Core-Compute_SD_Card/index"
+          },
+          {
+            "type": "link",
+            "label": "File System",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/",
+            "docId": "Meadow/Meadow.OS/File_System/index"
+          },
+          {
+            "type": "category",
+            "label": "Networking",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "WiFi/Bluetooth Antenna",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/",
+                "docId": "Meadow/Meadow.OS/Networking/Antenna/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/"
+          },
+          {
+            "type": "link",
+            "label": "Real Time Clock",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/",
+            "docId": "Meadow/Meadow.OS/RTC/index"
+          },
+          {
+            "type": "link",
+            "label": "SQLite",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/",
+            "docId": "Meadow/Meadow.OS/SQLite/index"
+          },
+          {
+            "type": "link",
+            "label": "Threading",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/",
+            "docId": "Meadow/Meadow.OS/Threading/index"
+          },
+          {
+            "type": "link",
+            "label": "Over-the-Air (OtA) Updates",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/",
+            "docId": "Meadow/Meadow.OS/Updates/index"
+          },
+          {
+            "type": "link",
+            "label": "Watchdog Timer",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/",
+            "docId": "Meadow/Meadow.OS/Watchdog/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/"
+      },
+      {
+        "type": "category",
+        "label": "Meadow Basics",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Meadow Applications",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Meadow Application Lifecycle Events",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/",
+                "docId": "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index"
+              },
+              {
+                "type": "link",
+                "label": "Meadow Application Sleep",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Sleep/",
+                "docId": "Meadow/Meadow_Basics/Apps/Sleep/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/"
+          },
+          {
+            "type": "link",
+            "label": "Bluetooth",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/",
+            "docId": "Meadow/Meadow_Basics/Bluetooth/index"
+          },
+          {
+            "type": "link",
+            "label": "Events and IObservable",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/",
+            "docId": "Meadow/Meadow_Basics/Events_and_IObservable/index"
+          },
+          {
+            "type": "link",
+            "label": "File System",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/",
+            "docId": "Meadow/Meadow_Basics/File_System/index"
+          },
+          {
+            "type": "category",
+            "label": "Meadow Hardware",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Meadow F7v1",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v1/",
+                "docId": "Meadow/Meadow_Basics/Hardware/F7v1/index"
+              },
+              {
+                "type": "link",
+                "label": "Meadow F7v2",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/",
+                "docId": "Meadow/Meadow_Basics/Hardware/F7v2/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/"
+          },
+          {
+            "type": "category",
+            "label": "Input/Output (IO)",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Analog I/O",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/",
+                "docId": "Meadow/Meadow_Basics/IO/Analog/index"
+              },
+              {
+                "type": "category",
+                "label": "Digital IO",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "PWM",
+                    "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/PWM/",
+                    "docId": "Meadow/Meadow_Basics/IO/Digital/PWM/index"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Digital Protocols",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "I2C",
+                        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/",
+                        "docId": "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index"
+                      },
+                      {
+                        "type": "link",
+                        "label": "SPI",
+                        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/",
+                        "docId": "Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index"
+                      },
+                      {
+                        "type": "link",
+                        "label": "Serial/UART",
+                        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/",
+                        "docId": "Meadow/Meadow_Basics/IO/Digital/Protocols/UART/index"
+                      }
+                    ],
+                    "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/"
+              },
+              {
+                "type": "link",
+                "label": "Power IO",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/",
+                "docId": "Meadow/Meadow_Basics/IO/Power/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/"
+          },
+          {
+            "type": "category",
+            "label": "Meadow.OS",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Realtime Clock",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/",
+                "docId": "Meadow/Meadow_Basics/Meadow.OS/RTC/index"
+              },
+              {
+                "type": "link",
+                "label": "Watchdog Timer",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/",
+                "docId": "Meadow/Meadow_Basics/Meadow.OS/Watchdog/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/"
+          },
+          {
+            "type": "link",
+            "label": "Meadow.CLI",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow_CLI/",
+            "docId": "Meadow/Meadow_Basics/Meadow_CLI/index"
+          },
+          {
+            "type": "link",
+            "label": "Networking",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Networking/",
+            "docId": "Meadow/Meadow_Basics/Networking/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow F7 Status",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Status/",
+            "docId": "Meadow/Meadow_Basics/Status/index"
+          },
+          {
+            "type": "category",
+            "label": "Troubleshooting",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Linux",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/",
+                "docId": "Meadow/Meadow_Basics/Troubleshooting/Linux/index"
+              },
+              {
+                "type": "link",
+                "label": "Meadow OS Deployment Troubleshooting",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/",
+                "docId": "Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/index"
+              },
+              {
+                "type": "link",
+                "label": "Visual Studio",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/",
+                "docId": "Meadow/Meadow_Basics/Troubleshooting/VisualStudio/index"
+              },
+              {
+                "type": "link",
+                "label": "macOS",
+                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/",
+                "docId": "Meadow/Meadow_Basics/Troubleshooting/macOS/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/"
+          },
+          {
+            "type": "link",
+            "label": "Units",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/",
+            "docId": "Meadow/Meadow_Basics/Units/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/"
+      },
+      {
+        "type": "category",
+        "label": "Meadow V1 Roadmap",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Meadow Beta 2",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/",
+            "docId": "Meadow/Release_Notes/Beta2/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 3",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/",
+            "docId": "Meadow/Release_Notes/Beta3/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 4",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/",
+            "docId": "Meadow/Release_Notes/Beta4/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 5",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/",
+            "docId": "Meadow/Release_Notes/Beta5/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 6",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/",
+            "docId": "Meadow/Release_Notes/Beta6/index"
+          },
+          {
+            "type": "category",
+            "label": "Meadow v1.0 Release-Candidates",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Meadow application lifecycle update",
+                "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/",
+                "docId": "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Roadmap",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/",
+            "docId": "Meadow/Release_Notes/Roadmap/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow v1",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/v1/",
+            "docId": "Meadow/Release_Notes/v1/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/"
+      },
+      {
+        "type": "link",
+        "label": "Meadow Guides",
+        "href": "/DocsDocusaurus/docs/Meadow/",
+        "docId": "Meadow/index"
+      }
+    ],
+    "hardwareSidebar": [
+      {
+        "type": "category",
+        "label": "Circuits",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Component Reference",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Capacitors",
+                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/",
+                "docId": "Hardware/Circuits/Components/Capacitors/index"
+              },
+              {
+                "type": "link",
+                "label": "Diodes",
+                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/",
+                "docId": "Hardware/Circuits/Components/Diodes/index"
+              },
+              {
+                "type": "category",
+                "label": "LEDs",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "LED w/PWM",
+                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/",
+                    "docId": "Hardware/Circuits/Components/LEDs/Driving_w_PWM/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "LED w/Resistor",
+                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/",
+                    "docId": "Hardware/Circuits/Components/LEDs/Driving_w_Resistor/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/"
+              },
+              {
+                "type": "category",
+                "label": "Resistors",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Pull Up and Pull Down Resistors",
+                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/",
+                    "docId": "Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Reading a Resistor's Value",
+                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/",
+                    "docId": "Hardware/Circuits/Components/Resistors/Reading/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/"
+              },
+              {
+                "type": "link",
+                "label": "74595 Shift Register",
+                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/",
+                "docId": "Hardware/Circuits/Components/ShiftRegister74595/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/"
+          },
+          {
+            "type": "category",
+            "label": "Integrating_Meadow",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "category",
+                "label": "Meadow Integration",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Core-Compute Module Integration",
+                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/",
+                    "docId": "Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "F7 Dev Module Integration",
+                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/",
+                    "docId": "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Design",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "PCB_Design_and_Assembly",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "PCB Reference",
+                "href": "/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/",
+                "docId": "Hardware/Design/PCB_Design_and_Assembly/Reference/index"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Fundamentals",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Intro to Hardware Design",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Breadboarding, Modules, and Simulation.",
+                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
+                "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index"
+              },
+              {
+                "type": "link",
+                "label": "PCBs",
+                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/",
+                "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index"
+              },
+              {
+                "type": "link",
+                "label": "Product Design Lifecycle",
+                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
+                "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index"
+              },
+              {
+                "type": "link",
+                "label": "Production Scale",
+                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/",
+                "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Peripheral Reference",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "IOExpanders",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "74595 Shift Register",
+                "href": "/DocsDocusaurus/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/",
+                "docId": "Hardware/Peripherals/IOExpanders/ShiftRegister74595/index"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Motors_and_Servos",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Servos",
+                "href": "/DocsDocusaurus/docs/Hardware/Peripherals/Motors_and_Servos/Servos/",
+                "docId": "Hardware/Peripherals/Motors_and_Servos/Servos/index"
+              }
+            ]
+          },
+          {
+            "type": "link",
+            "label": "Relays",
+            "href": "/DocsDocusaurus/docs/Hardware/Peripherals/Relays/",
+            "docId": "Hardware/Peripherals/Relays/index"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Hardware/Peripherals/"
+      },
+      {
+        "type": "category",
+        "label": "Printed_Circuit_Boards_(PCBs)",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Components",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Searching for Components",
+                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/",
+                "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/index"
+              },
+              {
+                "type": "link",
+                "label": "SMD Packages",
+                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/",
+                "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/index"
+              },
+              {
+                "type": "link",
+                "label": "Symbols and Footprints",
+                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/",
+                "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/"
+          },
+          {
+            "type": "category",
+            "label": "PCB Assembly",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Component Placement",
+                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/",
+                "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/index"
+              },
+              {
+                "type": "link",
+                "label": "Solder Paste Application",
+                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/",
+                "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/"
+          },
+          {
+            "type": "link",
+            "label": "PCB Fabrication",
+            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/",
+            "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index"
+          },
+          {
+            "type": "link",
+            "label": "PCB Stackups",
+            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/",
+            "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Hardware & Circuits Reference",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Algorithms",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "category",
+                "label": "PID",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Closed Loop Gain Controllers",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/",
+                    "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Ideal PID Algorithm",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/",
+                    "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "PID Intro",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/",
+                    "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Standard PID Algorithm",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/",
+                    "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "index",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/",
+                    "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Using PID",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/",
+                    "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/"
+          },
+          {
+            "type": "link",
+            "label": "BitBanging",
+            "href": "/DocsDocusaurus/docs/Hardware/Reference/BitBanging/",
+            "docId": "Hardware/Reference/BitBanging/index"
+          },
+          {
+            "type": "category",
+            "label": "Equations and Laws",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Capacitance",
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/",
+                "docId": "Hardware/Reference/Equations_and_Laws/Capacitance/index"
+              },
+              {
+                "type": "category",
+                "label": "Resistance Calculations",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Parallel Resistance",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/",
+                    "docId": "Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Series Resistance",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/",
+                    "docId": "Hardware/Reference/Equations_and_Laws/Resistance/Series/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/"
+              },
+              {
+                "type": "category",
+                "label": "Voltage Laws",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Voltage Division",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/",
+                    "docId": "Hardware/Reference/Equations_and_Laws/Voltage/Division/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "OHM's Law",
+                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/",
+                    "docId": "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/"
+          },
+          {
+            "type": "category",
+            "label": "UnderstandingWaveforms",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Digital Signals",
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/",
+                "docId": "Hardware/Reference/UnderstandingWaveforms/DigitalSignals/index"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Units",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Amps",
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/",
+                "docId": "Hardware/Reference/Units/Amps/index"
+              },
+              {
+                "type": "link",
+                "label": "Volts",
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/",
+                "docId": "Hardware/Reference/Units/Volts/index"
+              },
+              {
+                "type": "link",
+                "label": "Watts",
+                "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/",
+                "docId": "Hardware/Reference/Units/Watts/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Hardware/Reference/"
+      },
+      {
+        "type": "category",
+        "label": "Tutorials",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Fundamentals of Electronics Tutorial",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "TODO",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes",
+                "docId": "Hardware/Tutorials/Electronics/Notes"
+              },
+              {
+                "type": "category",
+                "label": "Part 1 - The Physics of Electrical Theory",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Atoms",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/",
+                    "docId": "Hardware/Tutorials/Electronics/Part1/Atoms/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Electrical Current",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/",
+                    "docId": "Hardware/Tutorials/Electronics/Part1/Electrical_Current/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Electromagnetism",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/",
+                    "docId": "Hardware/Tutorials/Electronics/Part1/Electromagnetism/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/Part1/Review/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/"
+              },
+              {
+                "type": "category",
+                "label": "Part 2 - Quantifying Electricity; Amps, Volts, and Watts",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Amount & Force",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/",
+                    "docId": "Hardware/Tutorials/Electronics/Part2/Amount_and_Force/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Amperage",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/",
+                    "docId": "Hardware/Tutorials/Electronics/Part2/Amperage/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/Part2/Review/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Source, Load, and Ground",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/",
+                    "docId": "Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Voltage",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Voltage/",
+                    "docId": "Hardware/Tutorials/Electronics/Part2/Voltage/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Wattage",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/",
+                    "docId": "Hardware/Tutorials/Electronics/Part2/Wattage/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/"
+              },
+              {
+                "type": "category",
+                "label": "Part 3 - Power Sources & Current Types",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "AC Characteristics",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/",
+                    "docId": "Hardware/Tutorials/Electronics/Part3/AC_Characteristics/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "AC Power Generation",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/",
+                    "docId": "Hardware/Tutorials/Electronics/Part3/AC_Generation/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Alternating Current (AC)",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/",
+                    "docId": "Hardware/Tutorials/Electronics/Part3/Alternating_Current/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Current Types",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/",
+                    "docId": "Hardware/Tutorials/Electronics/Part3/Current_Types/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Direct Current",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/",
+                    "docId": "Hardware/Tutorials/Electronics/Part3/Direct_Current/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/Part3/Review/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/"
+              },
+              {
+                "type": "category",
+                "label": "Part 4 - Resistance and Ohm's Law",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Calculating Simple Resistance",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Ohm's Law",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Ohms_Law/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistors in Parallel",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/index"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Pull-up & Pull-down Resistors",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "notes",
+                        "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
+                        "docId": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes"
+                      }
+                    ],
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Reading Axial Resistor Values",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistance & Resistors",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Resistance/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistor Circuit Comparison",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistor Lab",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Lab/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistor Power Rating",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistor Tolerance and Preferred Values",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Review/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Resistors in Series",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/",
+                    "docId": "Hardware/Tutorials/Electronics/Part4/Series_Resistance/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/"
+              },
+              {
+                "type": "category",
+                "label": "index",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Circuit Software",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Circuit_Software/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "DC Circuit Analysis",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/DC_Circuits/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Kirchhoff's Current Law",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Kirchhoff's Voltage Law",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Analog Level Shifting Lab",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Photoresistor Lab",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Review/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Voltage Divider Practicals",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Voltage Division",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/",
+                    "docId": "Hardware/Tutorials/Electronics/Part5/Voltage_Division/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/"
+              },
+              {
+                "type": "category",
+                "label": "index",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Diode Logic Gate Lab",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "General Diodes",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/General_Diodes/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "LED Lab",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/LED_Lab/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "LEDs",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LEDs/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/LEDs/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Light-Related Diodes",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "N-type Semiconductor",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/N-Type/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "P-N Junctions",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "P-type Semiconductor",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/P-Type/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "index",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/Review/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Semiconductors Part 1 (Diodes)",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/Semiconductors/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Silicon (Si)",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/",
+                    "docId": "Hardware/Tutorials/Electronics/Part6/Silicon/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/"
+              },
+              {
+                "type": "category",
+                "label": "Part7",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Notes",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes",
+                    "docId": "Hardware/Tutorials/Electronics/Part7/Notes"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Transistors",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Transistors/",
+                    "docId": "Hardware/Tutorials/Electronics/Part7/Transistors/index"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "PartX_Batteries",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Batteries",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/",
+                    "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Battery Circuits",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/",
+                    "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Battery Resistance; Ideal vs. Practical Voltage",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/",
+                    "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Battery Types",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
+                    "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Review",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/",
+                    "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Review/index"
+                  }
+                ]
+              },
+              {
+                "type": "link",
+                "label": "Part 5 - Other Circuit Components",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/",
+                "docId": "Hardware/Tutorials/Electronics/PartY_Other_Components/index"
+              },
+              {
+                "type": "category",
+                "label": "index",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Requirements",
+                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/",
+                    "docId": "Hardware/Tutorials/Electronics/Prologue/Requirements/index"
+                  }
+                ],
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/"
+          },
+          {
+            "type": "category",
+            "label": "PCB Design Tutorial",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Part Libraries",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/",
+                "docId": "Hardware/Tutorials/PCB_Tutorial/Add_Meadow/index"
+              },
+              {
+                "type": "link",
+                "label": "PCB Assembly",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/",
+                "docId": "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index"
+              },
+              {
+                "type": "link",
+                "label": "PCB Layout",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/",
+                "docId": "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index"
+              },
+              {
+                "type": "link",
+                "label": "Project Creation",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/",
+                "docId": "Hardware/Tutorials/PCB_Tutorial/Project_Creation/index"
+              },
+              {
+                "type": "link",
+                "label": "Schematic Capture",
+                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/",
+                "docId": "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index"
+              }
+            ],
+            "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/"
+          }
+        ],
+        "href": "/DocsDocusaurus/docs/Hardware/Tutorials/"
+      },
+      {
+        "type": "link",
+        "label": "Hardware & Circuits",
+        "href": "/DocsDocusaurus/docs/Hardware/",
+        "docId": "Hardware/index"
+      }
+    ],
+    "meadowOsSidebar": [
+      {
+        "type": "category",
+        "label": "Meadow.OS",
+        "items": [
+          {
+            "type": "link",
+            "label": "Meadow.OS",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/",
+            "docId": "Meadow/Meadow.OS/index"
+          },
+          {
+            "type": "link",
+            "label": "Automatic Restarts",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/",
+            "docId": "Meadow/Meadow.OS/Automatic_Restarts/index"
+          },
+          {
+            "type": "link",
+            "label": "Bluetooth",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/",
+            "docId": "Meadow/Meadow.OS/Bluetooth/index"
+          },
+          {
+            "type": "link",
+            "label": "Cellular",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/",
+            "docId": "Meadow/Meadow.OS/Cellular/index"
+          },
+          {
+            "type": "link",
+            "label": "Application Settings Configuration",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/",
+            "docId": "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index"
+          },
+          {
+            "type": "link",
+            "label": "OS & Device Configuration",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/",
+            "docId": "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index"
+          },
+          {
+            "type": "link",
+            "label": "Wi-Fi Configuration",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+            "docId": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index"
+          },
+          {
+            "type": "link",
+            "label": "Configuration",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/",
+            "docId": "Meadow/Meadow.OS/Configuration/index"
+          },
+          {
+            "type": "link",
+            "label": "SD Card use with Core-Compute module",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/",
+            "docId": "Meadow/Meadow.OS/Core-Compute_SD_Card/index"
+          },
+          {
+            "type": "link",
+            "label": "File System",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/",
+            "docId": "Meadow/Meadow.OS/File_System/index"
+          },
+          {
+            "type": "link",
+            "label": "WiFi/Bluetooth Antenna",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/",
+            "docId": "Meadow/Meadow.OS/Networking/Antenna/index"
+          },
+          {
+            "type": "link",
+            "label": "Networking",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/",
+            "docId": "Meadow/Meadow.OS/Networking/index"
+          },
+          {
+            "type": "link",
+            "label": "Real Time Clock",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/",
+            "docId": "Meadow/Meadow.OS/RTC/index"
+          },
+          {
+            "type": "link",
+            "label": "SQLite",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/",
+            "docId": "Meadow/Meadow.OS/SQLite/index"
+          },
+          {
+            "type": "link",
+            "label": "Threading",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/",
+            "docId": "Meadow/Meadow.OS/Threading/index"
+          },
+          {
+            "type": "link",
+            "label": "Over-the-Air (OtA) Updates",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/",
+            "docId": "Meadow/Meadow.OS/Updates/index"
+          },
+          {
+            "type": "link",
+            "label": "Watchdog Timer",
+            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/",
+            "docId": "Meadow/Meadow.OS/Watchdog/index"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Release Notes",
+        "items": [
+          {
+            "type": "link",
+            "label": "Meadow V1 Roadmap",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/",
+            "docId": "Meadow/Release_Notes/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow v1.0 Release-Candidates",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/",
+            "docId": "Meadow/Release_Notes/Release-Candidates/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 6",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/",
+            "docId": "Meadow/Release_Notes/Beta6/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 5",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/",
+            "docId": "Meadow/Release_Notes/Beta5/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 4",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/",
+            "docId": "Meadow/Release_Notes/Beta4/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 3",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/",
+            "docId": "Meadow/Release_Notes/Beta3/index"
+          },
+          {
+            "type": "link",
+            "label": "Meadow Beta 2",
+            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/",
+            "docId": "Meadow/Release_Notes/Beta2/index"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "DevCamp2020/index": {
+      "id": "DevCamp2020/index",
+      "title": "Wilderness Labs Dev Camp 2020",
+      "description": "Wilderness Labs Dev Camp logo"
+    },
+    "DevCamp2021/index": {
+      "id": "DevCamp2021/index",
+      "title": "Wilderness Labs Dev Camp 2021",
+      "description": "Wilderness Labs Dev Camp logo"
+    },
+    "Events/index": {
+      "id": "Events/index",
+      "title": "Upcoming Events",
+      "description": "June"
+    },
+    "HackKit/BlogSeries/index": {
+      "id": "HackKit/BlogSeries/index",
+      "title": "HackKit Blog Series",
+      "description": "| Post       | Image |"
+    },
+    "HackKit/Contents/index": {
+      "id": "HackKit/Contents/index",
+      "title": "Hack Kit Pro Contents",
+      "description": "F7 Feather Dev Kit"
+    },
+    "HackKit/HackKitLite/index": {
+      "id": "HackKit/HackKitLite/index",
+      "title": "Hack Kit Lite",
+      "description": "The Hack Kit Lite was available as a reward in our original Meadow Kickstarter project, and is discontinued."
+    },
+    "HackKit/index": {
+      "id": "HackKit/index",
+      "title": "Hack Kit Pro",
+      "description": "Composite photo showing a Meadow Hack Kit Pro's contents and several example projects assembled from Meadow boards and Hack Kit components.{:standalone}"
+    },
+    "HackKit/Projects/index": {
+      "id": "HackKit/Projects/index",
+      "title": "Hackster Project Inspiration",
+      "description": "| Project       | Image |"
+    },
+    "Hardware/Circuits/Components/Capacitors/index": {
+      "id": "Hardware/Circuits/Components/Capacitors/index",
+      "title": "Capacitors",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/Diodes/index": {
+      "id": "Hardware/Circuits/Components/Diodes/index",
+      "title": "Diodes",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/index": {
+      "id": "Hardware/Circuits/Components/index",
+      "title": "Component Reference",
+      "description": "Packages and Sizes",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/LEDs/Driving_w_PWM/index": {
+      "id": "Hardware/Circuits/Components/LEDs/Driving_w_PWM/index",
+      "title": "LED w/PWM",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/LEDs/Driving_w_Resistor/index": {
+      "id": "Hardware/Circuits/Components/LEDs/Driving_w_Resistor/index",
+      "title": "LED w/Resistor",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/LEDs/index": {
+      "id": "Hardware/Circuits/Components/LEDs/index",
+      "title": "LEDs",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/Resistors/index": {
+      "id": "Hardware/Circuits/Components/Resistors/index",
+      "title": "Resistors",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/index": {
+      "id": "Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/index",
+      "title": "Pull Up and Pull Down Resistors",
+      "description": "Why are they needed",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/Resistors/Reading/index": {
+      "id": "Hardware/Circuits/Components/Resistors/Reading/index",
+      "title": "Reading a Resistor's Value",
+      "description": "Through-hole (PTH) Axial Resistor Colored Bands",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Components/ShiftRegister74595/index": {
+      "id": "Hardware/Circuits/Components/ShiftRegister74595/index",
+      "title": "74595 Shift Register",
+      "description": "This guide has moved here.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/index": {
+      "id": "Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/index",
+      "title": "Core-Compute Module Integration",
+      "description": "Ethernet",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index": {
+      "id": "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index",
+      "title": "F7 Dev Module Integration",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Circuits/Integrating_Meadow/F7/index": {
+      "id": "Hardware/Circuits/Integrating_Meadow/F7/index",
+      "title": "Meadow Integration",
+      "description": "Docs on how to integrate a Meadow F7 into a hardware design.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Design/PCB_Design_and_Assembly/Reference/index": {
+      "id": "Hardware/Design/PCB_Design_and_Assembly/Reference/index",
+      "title": "PCB Reference",
+      "description": "[stuff]",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index": {
+      "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index",
+      "title": "Breadboarding, Modules, and Simulation.",
+      "description": "While we usually bias towards spinning a custom PCB for anything of complexity, breadboarding is a great way to design, build, and validate parts of circuits.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Fundamentals/Introduction_to_Hardware_Design/index": {
+      "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/index",
+      "title": "Intro to Hardware Design",
+      "description": "A Practical Guide to the Hardware Arts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index": {
+      "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index",
+      "title": "PCBs",
+      "description": "Printed Circuit Boards (PCBs) are the basis of all modern electronics. They provide both a foundation for the electronic components that power a circuit, as well as the wiring, known as traces, that connect them.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index": {
+      "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index",
+      "title": "Product Design Lifecycle",
+      "description": "Designing an IoT/hardware device is an iterative and interrelated process that typically consists of the following major phases:",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index": {
+      "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index",
+      "title": "Production Scale",
+      "description": "It's helpful to think in terms of unit production volumes to get an understanding of production phase and unit/economic scale. As production quantities increase, PCB fabrication, component, and PCB Assembly costs per unit drop drastically.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/index": {
+      "id": "Hardware/index",
+      "title": "Hardware & Circuits",
+      "description": "This section is a reference guide to common hardware and circuit information. Please note that it is a work in progress.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Peripherals/index": {
+      "id": "Hardware/Peripherals/index",
+      "title": "Peripheral Reference",
+      "description": "Relays",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Peripherals/IOExpanders/ShiftRegister74595/index": {
+      "id": "Hardware/Peripherals/IOExpanders/ShiftRegister74595/index",
+      "title": "74595 Shift Register",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Peripherals/Motors_and_Servos/Servos/index": {
+      "id": "Hardware/Peripherals/Motors_and_Servos/Servos/index",
+      "title": "Servos",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Peripherals/Relays/index": {
+      "id": "Hardware/Peripherals/Relays/index",
+      "title": "Relays",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/index",
+      "title": "Searching for Components",
+      "description": "Add External Power Input",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/Components/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/index",
+      "title": "Components",
+      "description": "stuff",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/index",
+      "title": "SMD Packages",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index",
+      "title": "Symbols and Footprints",
+      "description": "cover:",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/index",
+      "title": "Component Placement",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/index",
+      "title": "PCB Assembly",
+      "description": "[stuff]",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/index",
+      "title": "Solder Paste Application",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index",
+      "title": "PCB Fabrication",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index": {
+      "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index",
+      "title": "PCB Stackups",
+      "description": "The simplest PCBs are 1 or 2 sided; that is, they have copper on one or both sides of a insulating substrate, usually fiberglass. This laminate, with copper on one or both sides is called PCB Core:",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/index": {
+      "id": "Hardware/Reference/Algorithms/index",
+      "title": "Algorithms",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/index",
+      "title": "Closed Loop Gain Controllers",
+      "description": "Control Theory: Closed Loop Gain Controllers",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index",
+      "title": "Ideal PID Algorithm",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/index",
+      "title": "PID",
+      "description": "This is a multipart series on understanding and using the Proportional, Integral, Derivative (PID) algorithm.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index",
+      "title": "PID Intro",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index",
+      "title": "Standard PID Algorithm",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/index",
+      "title": "index",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index": {
+      "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index",
+      "title": "Using PID",
+      "description": "Dehydrator Example",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/BitBanging/index": {
+      "id": "Hardware/Reference/BitBanging/index",
+      "title": "BitBanging",
+      "description": "BitBanging is a technique for controlling the output pins of a microcontroller.  This may be necessary for several reasons:",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Capacitance/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Capacitance/index",
+      "title": "Capacitance",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/index",
+      "title": "Equations and Laws",
+      "description": "Voltage",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Resistance/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Resistance/index",
+      "title": "Resistance Calculations",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index",
+      "title": "Parallel Resistance",
+      "description": "Quick Reference",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Resistance/Series/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Resistance/Series/index",
+      "title": "Series Resistance",
+      "description": "Quick Reference",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Voltage/Division/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Voltage/Division/index",
+      "title": "Voltage Division",
+      "description": "Quick Reference",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Voltage/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Voltage/index",
+      "title": "Voltage Laws",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index": {
+      "id": "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index",
+      "title": "OHM's Law",
+      "description": "Quick Reference",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/index": {
+      "id": "Hardware/Reference/index",
+      "title": "Hardware & Circuits Reference",
+      "description": "Components",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/UnderstandingWaveforms/DigitalSignals/index": {
+      "id": "Hardware/Reference/UnderstandingWaveforms/DigitalSignals/index",
+      "title": "Digital Signals",
+      "description": "Digital signals use two voltages to represent two distinct states, digital 0 and digital 1.  These two values are the basics of digital data processing and communication.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Units/Amps/index": {
+      "id": "Hardware/Reference/Units/Amps/index",
+      "title": "Amps",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Units/index": {
+      "id": "Hardware/Reference/Units/index",
+      "title": "Units",
+      "description": "Amps",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Units/Volts/index": {
+      "id": "Hardware/Reference/Units/Volts/index",
+      "title": "Volts",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Reference/Units/Watts/index": {
+      "id": "Hardware/Reference/Units/Watts/index",
+      "title": "Watts",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/index": {
+      "id": "Hardware/Tutorials/Electronics/index",
+      "title": "Fundamentals of Electronics Tutorial",
+      "description": "This is a practical, hands-on tutorial on electronic circuits that focuses on modern circuit development for connected things. It starts with fundamentals and builds a solid foundation for doing more complex circuits, with a focus on common circuit designs and microcontroller integrations. For most of the tutorial, only basic proficiency in algebra is necessary.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Notes": {
+      "id": "Hardware/Tutorials/Electronics/Notes",
+      "title": "TODO",
+      "description": "* Add Negative Voltage to voltage page (current flowing in opposite direction)",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part1/Atoms/index": {
+      "id": "Hardware/Tutorials/Electronics/Part1/Atoms/index",
+      "title": "Atoms",
+      "description": "Atomic Composition",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part1/Electrical_Current/index": {
+      "id": "Hardware/Tutorials/Electronics/Part1/Electrical_Current/index",
+      "title": "Electrical Current",
+      "description": "Achieving Balance",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part1/Electromagnetism/index": {
+      "id": "Hardware/Tutorials/Electronics/Part1/Electromagnetism/index",
+      "title": "Electromagnetism",
+      "description": "Magnetic Field",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part1/index": {
+      "id": "Hardware/Tutorials/Electronics/Part1/index",
+      "title": "Part 1 - The Physics of Electrical Theory",
+      "description": "In order to understand how circuits work and how to design them, we must first understand some basic physics. Electrical theory and application comes directly from the structure and forces of atoms.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part1/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/Part1/Review/index",
+      "title": "Review",
+      "description": "Important Concepts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/Amount_and_Force/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/Amount_and_Force/index",
+      "title": "Amount & Force",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/Amperage/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/Amperage/index",
+      "title": "Amperage",
+      "description": "The Ampere",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/index",
+      "title": "Part 2 - Quantifying Electricity; Amps, Volts, and Watts",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/Review/index",
+      "title": "Review",
+      "description": "Important Concepts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/index",
+      "title": "Source, Load, and Ground",
+      "description": "Electrical Circuits",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/Voltage/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/Voltage/index",
+      "title": "Voltage",
+      "description": "Electromotive Force (EMF)",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part2/Wattage/index": {
+      "id": "Hardware/Tutorials/Electronics/Part2/Wattage/index",
+      "title": "Wattage",
+      "description": "The Relationship of Force and Quantity",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/AC_Characteristics/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/AC_Characteristics/index",
+      "title": "AC Characteristics",
+      "description": "Characteristics",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/AC_Generation/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/AC_Generation/index",
+      "title": "AC Power Generation",
+      "description": "Generators",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/Alternating_Current/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/Alternating_Current/index",
+      "title": "Alternating Current (AC)",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/Current_Types/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/Current_Types/index",
+      "title": "Current Types",
+      "description": "Introduction",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/Direct_Current/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/Direct_Current/index",
+      "title": "Direct Current",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/index",
+      "title": "Part 3 - Power Sources & Current Types",
+      "description": "Current Types",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part3/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/Part3/Review/index",
+      "title": "Review",
+      "description": "Important Concepts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/index",
+      "title": "Calculating Simple Resistance",
+      "description": "Sample Circuit",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/index",
+      "title": "Part 4 - Resistance and Ohm's Law",
+      "description": "Resistance & Ohms",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Ohms_Law/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Ohms_Law/index",
+      "title": "Ohm's Law",
+      "description": "Current Flow is Proportionate to Resistance",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/index",
+      "title": "Resistors in Parallel",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/index",
+      "title": "Pull-up & Pull-down Resistors",
+      "description": "Pull-up & Pull-down Resistors",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes": {
+      "id": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
+      "title": "notes",
+      "description": "Notes on Pulling resistors",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index",
+      "title": "Reading Axial Resistor Values",
+      "description": "Axial Resistor Colored Bands",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Resistance/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Resistance/index",
+      "title": "Resistance & Resistors",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index",
+      "title": "Resistor Circuit Comparison",
+      "description": "| Single Resistor   | Resistors in Series  | Resistors in Parallel     |",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Resistor_Lab/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Resistor_Lab/index",
+      "title": "Resistor Lab",
+      "description": "Lab Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/index",
+      "title": "Resistor Power Rating",
+      "description": "Power Rating",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/index",
+      "title": "Resistor Tolerance and Preferred Values",
+      "description": "Resistor Manufacturing Variance",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Review/index",
+      "title": "Review",
+      "description": "Important Concepts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part4/Series_Resistance/index": {
+      "id": "Hardware/Tutorials/Electronics/Part4/Series_Resistance/index",
+      "title": "Resistors in Series",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Circuit_Software/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Circuit_Software/index",
+      "title": "Circuit Software",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/DC_Circuits/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/DC_Circuits/index",
+      "title": "DC Circuit Analysis",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/index",
+      "title": "index",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index",
+      "title": "Kirchhoff's Current Law",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index",
+      "title": "Kirchhoff's Voltage Law",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index",
+      "title": "Analog Level Shifting Lab",
+      "description": "Lab Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/index",
+      "title": "Photoresistor Lab",
+      "description": "Lab Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Review/index",
+      "title": "Review",
+      "description": "Important Concepts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/index",
+      "title": "Voltage Divider Practicals",
+      "description": "Common Uses",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part5/Voltage_Division/index": {
+      "id": "Hardware/Tutorials/Electronics/Part5/Voltage_Division/index",
+      "title": "Voltage Division",
+      "description": "Rewriting the Voltage Division Equation",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/index",
+      "title": "Diode Logic Gate Lab",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/General_Diodes/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/General_Diodes/index",
+      "title": "General Diodes",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/index",
+      "title": "index",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/LED_Lab/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/LED_Lab/index",
+      "title": "LED Lab",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/LEDs/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/LEDs/index",
+      "title": "LEDs",
+      "description": "Overview",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/index",
+      "title": "Light-Related Diodes",
+      "description": "Intro",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/N-Type/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/N-Type/index",
+      "title": "N-type Semiconductor",
+      "description": "Creating N-type Semiconductors",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index",
+      "title": "P-N Junctions",
+      "description": "Combining P-type and N-type Semiconductors",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/P-Type/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/P-Type/index",
+      "title": "P-type Semiconductor",
+      "description": "Creating P-Type Semiconductors",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index",
+      "title": "index",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/Review/index",
+      "title": "Review",
+      "description": "Important Concepts",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/Semiconductors/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/Semiconductors/index",
+      "title": "Semiconductors Part 1 (Diodes)",
+      "description": "CHAPTER IN BETA",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part6/Silicon/index": {
+      "id": "Hardware/Tutorials/Electronics/Part6/Silicon/index",
+      "title": "Silicon (Si)",
+      "description": "Silicon Crystal",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part7/Notes": {
+      "id": "Hardware/Tutorials/Electronics/Part7/Notes",
+      "title": "Notes",
+      "description": "Semiconductors Part 2 - The Transistor",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Part7/Transistors/index": {
+      "id": "Hardware/Tutorials/Electronics/Part7/Transistors/index",
+      "title": "Transistors",
+      "description": "NOTE: This section is still being developed.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/index": {
+      "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/index",
+      "title": "Batteries",
+      "description": "Batteries are made by placing two conductive materials, an anode (-) and a cathode (+), in paralell and separating them with an electrically conductive solution known as an electrolyte.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/index": {
+      "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/index",
+      "title": "Battery Circuits",
+      "description": "Batteries in Series",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/index": {
+      "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/index",
+      "title": "Battery Resistance; Ideal vs. Practical Voltage",
+      "description": "<!--",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index": {
+      "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index",
+      "title": "Battery Types",
+      "description": "Batteries come in two types; single use batteries that cannot be recharged, and multi-use batteries that are rechargeable.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/PartX_Batteries/Review/index": {
+      "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Review/index",
+      "title": "Review",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/PartY_Other_Components/index": {
+      "id": "Hardware/Tutorials/Electronics/PartY_Other_Components/index",
+      "title": "Part 5 - Other Circuit Components",
+      "description": "Capacitors",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Prologue/index": {
+      "id": "Hardware/Tutorials/Electronics/Prologue/index",
+      "title": "index",
+      "description": "",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/Electronics/Prologue/Requirements/index": {
+      "id": "Hardware/Tutorials/Electronics/Prologue/Requirements/index",
+      "title": "Requirements",
+      "description": "Tools and Components",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/index": {
+      "id": "Hardware/Tutorials/index",
+      "title": "Tutorials",
+      "description": "Electronics Tutorial",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/PCB_Tutorial/Add_Meadow/index": {
+      "id": "Hardware/Tutorials/PCB_Tutorial/Add_Meadow/index",
+      "title": "Part Libraries",
+      "description": "The first thing we need to do is add a Meadow to our design, which is a good time to talk about the parts libraries in EasyEDA.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/PCB_Tutorial/index": {
+      "id": "Hardware/Tutorials/PCB_Tutorial/index",
+      "title": "PCB Design Tutorial",
+      "description": "The most effective way to learn PCB design is to actually design and build one. So that's what we'll do. In this multipart tutorial, we're going to design and build a PCB that is a partial version of Clima that includes  BME280 to track temperature, humidity, and barometric pressure, and get its power from a solar power input. In the end, you'll come away with a general grasp of PCB design from start to finish.",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index": {
+      "id": "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
+      "title": "PCB Assembly",
+      "description": "Video Tutorial",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index": {
+      "id": "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index",
+      "title": "PCB Layout",
+      "description": "General Process",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/PCB_Tutorial/Project_Creation/index": {
+      "id": "Hardware/Tutorials/PCB_Tutorial/Project_Creation/index",
+      "title": "Project Creation",
+      "description": "Pre-requisite: Get EasyEDA",
+      "sidebar": "hardwareSidebar"
+    },
+    "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index": {
+      "id": "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index",
+      "title": "Schematic Capture",
+      "description": "<!--",
+      "sidebar": "hardwareSidebar"
+    },
+    "index": {
+      "id": "index",
+      "title": "Developer Portal",
+      "description": "Upcoming Events"
+    },
+    "Meadow/Getting_Started/Assemble_Meadow/index": {
+      "id": "Meadow/Getting_Started/Assemble_Meadow/index",
+      "title": "Assemble Meadow Board",
+      "description": "This guide will walk you through the steps to assemble your Meadow development board to get you started.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Deploying_Meadow/index": {
+      "id": "Meadow/Getting_Started/Deploying_Meadow/index",
+      "title": "Meadow OS Deployment",
+      "description": "When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or flashed, to it.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Deployment/index": {
+      "id": "Meadow/Getting_Started/Deployment/index",
+      "title": "Deployment",
+      "description": "* macOS",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index": {
+      "id": "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index",
+      "title": "Get started with Meadow Core-Compute module",
+      "description": "Getting started with the Meadow Core-Compute module is similar to getting started with a Meadow Feather board, especially if you are working with the Core-Compute Development Kit which offers breakout headers that mimic the Feather headers.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index": {
+      "id": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index",
+      "title": "Get started with Meadow.Linux",
+      "description": "Meadow.Linux offers an environment for developing Meadow code that can run on Linux distributions where .NET is available, including Raspberry Pi computers and NVIDIA Jetson development boards where you can access general-purpose input/output (GPIO) pins. Developing with Meadow.Linux requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index": {
+      "id": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index",
+      "title": "Get started with Meadow.Windows",
+      "description": "Meadow.Windows offers an environment for developing Meadow code that can run on Windows, and with an extra add-on can even access general-purpose input/output (GPIO) pins. Developing with Meadow.Windows requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/index": {
+      "id": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/index",
+      "title": "Getting Started with Meadow.Desktop",
+      "description": "Meadow.Desktop offers quick-prototyping and high-responsiveness environments for developing Meadow code that can run on Windows and various Linux distributions, including Windows Subsystem for Linux 2 (WSL2). With appropriate hardware, such as certain single-board computers (SBCs) or using add-on hardware like FT232H modules, you can even access general-purpose input/output (GPIO) pins, SPI, and I2C as you would on a Meadow Feather or Core-Compute module.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Hello_World/index": {
+      "id": "Meadow/Getting_Started/Hello_World/index",
+      "title": "Hello, Meadow!",
+      "description": "Once Meadow.OS has been deployed to your board, you can create and deploy Meadow apps to it.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/index": {
+      "id": "Meadow/Getting_Started/index",
+      "title": "Get started with Meadow",
+      "description": "1. Download and Install Visual Studio for either Windows or macOS. Community edition will work fine.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Setup/index": {
+      "id": "Meadow/Getting_Started/Setup/index",
+      "title": "Setup",
+      "description": "1. Connect Meadow to the ST-Link V2",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Setup/macos/index": {
+      "id": "Meadow/Getting_Started/Setup/macos/index",
+      "title": "macOS Setup",
+      "description": "This content has moved.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Setup/stlink/index": {
+      "id": "Meadow/Getting_Started/Setup/stlink/index",
+      "title": "ST-Link",
+      "description": "This content has moved.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Setup/Windows/index": {
+      "id": "Meadow/Getting_Started/Setup/Windows/index",
+      "title": "Windows Setup",
+      "description": "This content has moved.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Getting_Started/Update_USB_Driver/index": {
+      "id": "Meadow/Getting_Started/Update_USB_Driver/index",
+      "title": "Update USB Driver for ST devices",
+      "description": "In order to flash Meadow OS, dfu-util is recommended. However, the default Windows USB driver for ST devices is not compatible with dfu-util, so it needs to be replaced. For more in-depth information on this, check out Scott Hanselman's post.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/index": {
+      "id": "Meadow/index",
+      "title": "Meadow Guides",
+      "description": "Getting Started",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Apps/index": {
+      "id": "Meadow/Meadow_Basics/Apps/index",
+      "title": "Meadow Applications",
+      "description": "Meadow projects are built as .NET framework class libraries, but the code is executed like an application on the Meadow hardware.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index": {
+      "id": "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index",
+      "title": "Meadow Application Lifecycle Events",
+      "description": "Meadow provides several connection points to respond to important events in the process of launching and running your application, such as initialization, errors, and sleep states.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Apps/Sleep/index": {
+      "id": "Meadow/Meadow_Basics/Apps/Sleep/index",
+      "title": "Meadow Application Sleep",
+      "description": "Meadow can be put into a power-saving sleep state. In this state, your code stops executing and reduces the power draw to only what is required to recover from being in a sleep state. After resuming from a sleep state, your code will resume executing where it left off.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Bluetooth/index": {
+      "id": "Meadow/Meadow_Basics/Bluetooth/index",
+      "title": "Bluetooth",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Events_and_IObservable/index": {
+      "id": "Meadow/Meadow_Basics/Events_and_IObservable/index",
+      "title": "Events and IObservable",
+      "description": "Meadow has two complementary approaches to notifications when interrupts (changes) happen on inputs. The first is the classic .NET Eventing pattern, in which an event is raised on change, and the second is an IObservable pattern, which is a more powerful and flexible reactive-style approach.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/File_System/index": {
+      "id": "Meadow/Meadow_Basics/File_System/index",
+      "title": "File System",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Hardware/F7v1/index": {
+      "id": "Meadow/Meadow_Basics/Hardware/F7v1/index",
+      "title": "Meadow F7v1",
+      "description": "The Meadow F7v1 was the inaugural Meadow F7 board that shipped as part of our Kickstarter campaign rewards and beyond. It has now been superseded by the Meadow F7v2 board, but is still completely supported!",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Hardware/F7v2/index": {
+      "id": "Meadow/Meadow_Basics/Hardware/F7v2/index",
+      "title": "Meadow F7v2",
+      "description": "The Meadow F7v2 System-on-Module (SoM) is available in two models, based on two differing form factors:",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Hardware/index": {
+      "id": "Meadow/Meadow_Basics/Hardware/index",
+      "title": "Meadow Hardware",
+      "description": "The Meadow F7 is a workhorse Wi-Fi and Bluetooth enabled System-on-Module (SoM) microcontroller-based board designed for sophisticated IoT applications and is based on the STMicroelectronics STM32F7 microcontroller (MCU) with an Espressif ESP32 coprocessor.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/index": {
+      "id": "Meadow/Meadow_Basics/index",
+      "title": "Meadow Basics",
+      "description": "This section covers the fundamentals of creating Meadow applications.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Analog/index": {
+      "id": "Meadow/Meadow_Basics/IO/Analog/index",
+      "title": "Analog I/O",
+      "description": "In modern digital electronics, we often deal with finite states of HIGH or LOW, which represent digital 1/0, or On/Off, respectively. However, there are many sensors or other integrations that communicate not in binary, but in a range of voltages. For instance, a TMP35 analog temp sensor might output 0V when it's reading an ambient temperature of 0ºC, 1.6V @ 50ºC, and 3.3V @ 100ºC.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Digital/index": {
+      "id": "Meadow/Meadow_Basics/IO/Digital/index",
+      "title": "Digital IO",
+      "description": "Digital IO is often referred to as General Purpose, Input/Output or GPIO. GPIO ports can generally be set to be HIGH (powered at 3.3V), or LOW (grounded at 0V) which correspond to digital 1 and 0, respectively. Additionally, those values can be read, if their state is changed by an external source, when the ports are configured for input mode.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index": {
+      "id": "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index",
+      "title": "I2C",
+      "description": "I2C (Inter-Integrated Circuit), pronounced, \"eye-squared-sea\", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground):",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Digital/Protocols/index": {
+      "id": "Meadow/Meadow_Basics/IO/Digital/Protocols/index",
+      "title": "Digital Protocols",
+      "description": "Meadow has support for the following digital communication protocols:",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index": {
+      "id": "Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index",
+      "title": "SPI",
+      "description": "Serial Peripheral Interface (SPI) is a high speed communication protocol for short distances between devices using four signal wires:",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Digital/Protocols/UART/index": {
+      "id": "Meadow/Meadow_Basics/IO/Digital/Protocols/UART/index",
+      "title": "Serial/UART",
+      "description": "Standard serial, typically referred to as RS-232 or UART (Universal Asynchronous Receiver Transmitter) is a moderate-speed, reliable, old-school, digital protocol used to communicate with a single device, using two wires:",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Digital/PWM/index": {
+      "id": "Meadow/Meadow_Basics/IO/Digital/PWM/index",
+      "title": "PWM",
+      "description": "Pulse-Width-Modulation is a way of controlling voltage digitally to emulate an analog signal. By turning a digital output ON and OFF very rapidly, an intermediate average output voltage can be achieved:",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/index": {
+      "id": "Meadow/Meadow_Basics/IO/index",
+      "title": "Input/Output (IO)",
+      "description": "IO is a big part of what makes Meadow powerful. Meadow boards expose a wide variety of ways to control and interact with external peripherals and hardware via Input/Output (IO) ports.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/IO/Power/index": {
+      "id": "Meadow/Meadow_Basics/IO/Power/index",
+      "title": "Power IO",
+      "description": "Powering the Meadow F7 Feather",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Meadow_CLI/index": {
+      "id": "Meadow/Meadow_Basics/Meadow_CLI/index",
+      "title": "Meadow.CLI",
+      "description": "The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with the board and perform functions via a terminal/command-line window.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Meadow.OS/index": {
+      "id": "Meadow/Meadow_Basics/Meadow.OS/index",
+      "title": "Meadow.OS",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Meadow.OS/RTC/index": {
+      "id": "Meadow/Meadow_Basics/Meadow.OS/RTC/index",
+      "title": "Realtime Clock",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Meadow.OS/Watchdog/index": {
+      "id": "Meadow/Meadow_Basics/Meadow.OS/Watchdog/index",
+      "title": "Watchdog Timer",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Networking/index": {
+      "id": "Meadow/Meadow_Basics/Networking/index",
+      "title": "Networking",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Status/index": {
+      "id": "Meadow/Meadow_Basics/Status/index",
+      "title": "Meadow F7 Status",
+      "description": "We are currently in Meadow v1.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Troubleshooting/index": {
+      "id": "Meadow/Meadow_Basics/Troubleshooting/index",
+      "title": "Troubleshooting",
+      "description": "USB Cables",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Troubleshooting/Linux/index": {
+      "id": "Meadow/Meadow_Basics/Troubleshooting/Linux/index",
+      "title": "Linux",
+      "description": "Device not found",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Troubleshooting/macOS/index": {
+      "id": "Meadow/Meadow_Basics/Troubleshooting/macOS/index",
+      "title": "macOS",
+      "description": "libusb not found on ARM Macs",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/index": {
+      "id": "Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/index",
+      "title": "Meadow OS Deployment Troubleshooting",
+      "description": "Meadow OS Deployment Troubleshooting",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Troubleshooting/VisualStudio/index": {
+      "id": "Meadow/Meadow_Basics/Troubleshooting/VisualStudio/index",
+      "title": "Visual Studio",
+      "description": "Which COM port do I use?",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow_Basics/Units/index": {
+      "id": "Meadow/Meadow_Basics/Units/index",
+      "title": "Units",
+      "description": "Throughout the Meadow stack, strongly-typed units such as Temperature, Length, Frequency, and Speed, are used in place of primitive types like float or integer to prevent errors due to unit ambiguity, conversion, or mismatch.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Command_Control/index": {
+      "id": "Meadow/Meadow.Cloud/Command_Control/index",
+      "title": "Command + Control",
+      "description": "< Meadow.Cloud",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Device_Provisioning/index": {
+      "id": "Meadow/Meadow.Cloud/Device_Provisioning/index",
+      "title": "Device Provisioning",
+      "description": "< Meadow.Cloud",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Health_Monitoring/index": {
+      "id": "Meadow/Meadow.Cloud/Health_Monitoring/index",
+      "title": "Health Monitoring",
+      "description": "< Meadow.Cloud",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/index": {
+      "id": "Meadow/Meadow.Cloud/index",
+      "title": "Meadow.Cloud",
+      "description": "Overview",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index": {
+      "id": "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index",
+      "title": "Integrate with Azure Event Grid",
+      "description": "< Integrations",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index": {
+      "id": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index",
+      "title": "Integrate with Azure Event Hubs",
+      "description": "< Integrations",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Integrations/Datacake/index": {
+      "id": "Meadow/Meadow.Cloud/Integrations/Datacake/index",
+      "title": "Integrate with Datacake",
+      "description": "< Integrations",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Integrations/index": {
+      "id": "Meadow/Meadow.Cloud/Integrations/index",
+      "title": "Enterprise Integrations",
+      "description": "< Meadow.Cloud",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Integrations/Webhooks/index": {
+      "id": "Meadow/Meadow.Cloud/Integrations/Webhooks/index",
+      "title": "Integrate with Webhooks",
+      "description": "< Integrations",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/Logs_Events/index": {
+      "id": "Meadow/Meadow.Cloud/Logs_Events/index",
+      "title": "Logs and Events",
+      "description": "< Meadow.Cloud",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Cloud/OtA_Updates/index": {
+      "id": "Meadow/Meadow.Cloud/OtA_Updates/index",
+      "title": "Over-the-Air (OtA) Updates",
+      "description": "< Meadow.Cloud",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/API_Samples/index": {
+      "id": "Meadow/Meadow.Foundation/API_Samples/index",
+      "title": "API Samples",
+      "description": "Controlling a Hitec Servo",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Getting_Started/index": {
+      "id": "Meadow/Meadow.Foundation/Getting_Started/index",
+      "title": "Getting Started",
+      "description": "Hello, World!",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/index": {
+      "id": "Meadow/Meadow.Foundation/index",
+      "title": "Meadow.Foundation",
+      "description": "Meadow.Foundation Logo{:standalone}",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index": {
+      "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index",
+      "title": "GPS/GNSS NMEA Sentence Processor Library",
+      "description": "The GPS/GNSS NMEA processing library is a set of classes that makes parsing and decoding NMEA Sentences from Global Positioning System (GPS)/Global Navigation Satellite System (GNSS) receivers easy.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index": {
+      "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index",
+      "title": "Meadow.Foundation Libraries and Frameworks",
+      "description": "Meadow.Foundation includes a number of libraries and frameworks to make working with embedded hardware easier, including:",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index": {
+      "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index",
+      "title": "Maple Server",
+      "description": "Maple",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index": {
+      "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index",
+      "title": "MicroGraphics Library",
+      "description": "<!--",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index": {
+      "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index",
+      "title": "MicroLayout Library",
+      "description": "If you're working on an IoT project with a display, then you're almost certainly wanting to show information to a user. Drawing that information using drawing primitives can be both cumbersome and non-portable. We at Wilderness Labs have released our MicroLayout library to help .NET developers easily create lightweight HMIs for their projects.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index": {
+      "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index",
+      "title": "TextDisplayMenu Library",
+      "description": "The TextDisplayMenu library is an extensible framework for quickly creating hierarchical, editable menus that can display on a display that implements ITextDisplay - any graphical display via the MicroGraphics Library or supported character display and can be driven using input devices such as buttons or rotary encoders.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Peripherals/index": {
+      "id": "Meadow/Meadow.Foundation/Peripherals/index",
+      "title": "Meadow.Foundation Peripherals Library",
+      "description": "The Meadow.Foundation peripherals library is an open source repository of drivers for various peripherals such as sensors, motors, displays, cameras, and other peripherals which make it easy to add hardware to your Meadow application.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index": {
+      "id": "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index",
+      "title": "Meadow.Foundation Unified IO Architecture",
+      "description": "Meadow.Foundation incorporates an architecture that was designed to extend peripheral support seamlessly across expansion peripherals such as I2C/SPI/etc. I/O expansion chips. For example, you can connect an MCP23x or 74x595 I/O expansion chip to a Meadow, and then drive a Relay via one of the pins on the expansion chip, just as if it were connected directly to the Meadow board!",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.Foundation/Working_with_Sensors/index": {
+      "id": "Meadow/Meadow.Foundation/Working_with_Sensors/index",
+      "title": "Working with Sensors",
+      "description": "Meadow.Foundation extends the underlying events and IObservable pattern found in Meadow.Core to sensors, providing a simple, yet powerful way to read, poll, and filter input from sensors automatically.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Meadow.OS/Automatic_Restarts/index": {
+      "id": "Meadow/Meadow.OS/Automatic_Restarts/index",
+      "title": "Automatic Restarts",
+      "description": "Meadow offers two systems to handle when your code doesn't behave as expected. If your application throws an unhandled exception, there is an automatic restart system for when your app doesn't recover from an error. If you have some code that might become unresponsive, there is a watchdog timer system to reset the device if some part of your code execution takes too long.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Bluetooth/index": {
+      "id": "Meadow/Meadow.OS/Bluetooth/index",
+      "title": "Bluetooth",
+      "description": "Bluetooth logo",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Cellular/index": {
+      "id": "Meadow/Meadow.OS/Cellular/index",
+      "title": "Cellular",
+      "description": "Contents",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index": {
+      "id": "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index",
+      "title": "Application Settings Configuration",
+      "description": "The app.config.yaml or app.config.json files can be used to configure application settings for logging and reboot configuration. You can also add custom developer application settings.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Configuration/index": {
+      "id": "Meadow/Meadow.OS/Configuration/index",
+      "title": "Configuration",
+      "description": "Meadow has a robust configuration framework allowing you to adjust settings at build-time and deploy them with your app.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index": {
+      "id": "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index",
+      "title": "OS & Device Configuration",
+      "description": "The meadow.config.yaml file can be used to set general board and system configuration settings. This includes OS and device level settings such as device name, default network behavior, and network settings.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index": {
+      "id": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
+      "title": "Wi-Fi Configuration",
+      "description": "The wifi.config.yaml file can be used to set the default Wi-Fi access point and the password for that access point. The wifi.config.yaml file should look similar to this:",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Core-Compute_SD_Card/index": {
+      "id": "Meadow/Meadow.OS/Core-Compute_SD_Card/index",
+      "title": "SD Card use with Core-Compute module",
+      "description": "The Meadow Core-Compute Development Kit includes an SD card add-on, and one can be connected to a Core-Compute module designs. You can use the SD card system for many tasks such as saving data to a removable card or providing configuration updates.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/File_System/index": {
+      "id": "Meadow/Meadow.OS/File_System/index",
+      "title": "File System",
+      "description": "Meadow.OS has full support for file and directory manipulation via System.IO API calls. In addition, the Meadow F7 board has onboard non-volatile flash storage that, while primarily used for app deployment and storage, can also be used as for persistent storage like a traditional hard drive.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/index": {
+      "id": "Meadow/Meadow.OS/index",
+      "title": "Meadow.OS",
+      "description": "Bluetooth*",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Networking/Antenna/index": {
+      "id": "Meadow/Meadow.OS/Networking/Antenna/index",
+      "title": "WiFi/Bluetooth Antenna",
+      "description": "Both the Meadow F7 Feather development board and Core-Compute Module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio. Additionally, there is a software antenna switch for toggling between the two antenna; by default, the chip antenna is selected, and you must use the Meadow.OS device API to switch to the external antenna.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Networking/index": {
+      "id": "Meadow/Meadow.OS/Networking/index",
+      "title": "Networking",
+      "description": "Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/RTC/index": {
+      "id": "Meadow/Meadow.OS/RTC/index",
+      "title": "Real Time Clock",
+      "description": "The STM32F7 is equipped with a real-time clock (RTC), which, when set, will retain the system time as long as the the board has power.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/SQLite/index": {
+      "id": "Meadow/Meadow.OS/SQLite/index",
+      "title": "SQLite",
+      "description": "SQLite Logo - A feather with the logotype \"SQLIte\".",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Threading/index": {
+      "id": "Meadow/Meadow.OS/Threading/index",
+      "title": "Threading",
+      "description": "Parallel programming in Meadow.OS is essentially the same as any other .NET enabled platform. Meadow fully supports System.Threading and System.Threading.Tasks as well as the underlying Task Parallel Library methods.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Updates/index": {
+      "id": "Meadow/Meadow.OS/Updates/index",
+      "title": "Over-the-Air (OtA) Updates",
+      "description": "This document has been moved",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Meadow.OS/Watchdog/index": {
+      "id": "Meadow/Meadow.OS/Watchdog/index",
+      "title": "Watchdog Timer",
+      "description": "This content has moved to here.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Beta2/index": {
+      "id": "Meadow/Release_Notes/Beta2/index",
+      "title": "Meadow Beta 2",
+      "description": "New Core Features",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Beta3/index": {
+      "id": "Meadow/Release_Notes/Beta3/index",
+      "title": "Meadow Beta 3",
+      "description": "Beta 3.12",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Beta4/index": {
+      "id": "Meadow/Release_Notes/Beta4/index",
+      "title": "Meadow Beta 4",
+      "description": "This is another tiny release to address an issue when connecting to a WiFi network that resulted in a CannotStartNetworkInterface exception that was affecting a small percentage of boards.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Beta5/index": {
+      "id": "Meadow/Release_Notes/Beta5/index",
+      "title": "Meadow Beta 5",
+      "description": "Our most stable and complete release yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Beta6/index": {
+      "id": "Meadow/Release_Notes/Beta6/index",
+      "title": "Meadow Beta 6",
+      "description": "This is a huge release and includes a TON of stability fixes and changes. With it we are very close to Release-Candidate status. This release includes fixes across the entire stack, including:",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/index": {
+      "id": "Meadow/Release_Notes/index",
+      "title": "Meadow V1 Roadmap",
+      "description": "* v1",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Release-Candidates/index": {
+      "id": "Meadow/Release_Notes/Release-Candidates/index",
+      "title": "Meadow v1.0 Release-Candidates",
+      "description": "We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and includes improvements to the Meadow.Foundation peripheral library.",
+      "sidebar": "meadowOsSidebar"
+    },
+    "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index": {
+      "id": "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index",
+      "title": "Meadow application lifecycle update",
+      "description": "If you are updating Meadow.OS beta applications to the new Meadow.OS release candidate application lifecycle, there are some required code updates.",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Release_Notes/Roadmap/index": {
+      "id": "Meadow/Release_Notes/Roadmap/index",
+      "title": "Meadow Roadmap",
+      "description": "Meadow v1.0 Roadmap",
+      "sidebar": "meadowSidebar"
+    },
+    "Meadow/Release_Notes/v1/index": {
+      "id": "Meadow/Release_Notes/v1/index",
+      "title": "Meadow v1",
+      "description": "Meadow.OS",
+      "sidebar": "meadowSidebar"
+    },
+    "Netduino/About/Downloads/index": {
+      "id": "Netduino/About/Downloads/index",
+      "title": "Downloads",
+      "description": "Links and Resources"
+    },
+    "Netduino/About/index": {
+      "id": "Netduino/About/index",
+      "title": "About Netduino",
+      "description": "Overview"
+    },
+    "Netduino/About/Source/index": {
+      "id": "Netduino/About/Source/index",
+      "title": "Source",
+      "description": "Open Source Hardware"
+    },
+    "Netduino/About/Troubleshooting/index": {
+      "id": "Netduino/About/Troubleshooting/index",
+      "title": "Troubleshooting",
+      "description": "Info"
+    },
+    "Netduino/About/Updating_Firmware/index": {
+      "id": "Netduino/About/Updating_Firmware/index",
+      "title": "Firmware Updates",
+      "description": "Ensuring that your Netduino has the latest firmware means that it will be up to date with the current Netduino-specific .NET Micro Framework runtime. Additionally, unless your Netduino has the latest firmware, you may have issues deploying your application to it."
+    },
+    "Netduino/Application_Fundamentals/Debug_Print/index": {
+      "id": "Netduino/Application_Fundamentals/Debug_Print/index",
+      "title": "Debug.Print",
+      "description": "Intro"
+    },
+    "Netduino/Application_Fundamentals/index": {
+      "id": "Netduino/Application_Fundamentals/index",
+      "title": "Application Fundamentals",
+      "description": "Info"
+    },
+    "Netduino/Application_Fundamentals/Memory_Management/index": {
+      "id": "Netduino/Application_Fundamentals/Memory_Management/index",
+      "title": "Memory Management",
+      "description": ""
+    },
+    "Netduino/Application_Fundamentals/NETMF/index": {
+      "id": "Netduino/Application_Fundamentals/NETMF/index",
+      "title": ".NET Micro Framework (NETMF)",
+      "description": "Netduino applications are built using the .NET Microframework (v4.3), also known as (dot)NETMF. NETMF is an open source project that is further customized to run on the Netduino."
+    },
+    "Netduino/Application_Fundamentals/Threading/index": {
+      "id": "Netduino/Application_Fundamentals/Threading/index",
+      "title": "Threading",
+      "description": "Intro"
+    },
+    "Netduino/Getting_Started/index": {
+      "id": "Netduino/Getting_Started/index",
+      "title": "Getting Started",
+      "description": "Instructions"
+    },
+    "Netduino/Getting_Started/Installation/Mac/index": {
+      "id": "Netduino/Getting_Started/Installation/Mac/index",
+      "title": "Mac Installation",
+      "description": "Instructions"
+    },
+    "Netduino/Getting_Started/Installation/Windows/index": {
+      "id": "Netduino/Getting_Started/Installation/Windows/index",
+      "title": "Windows Installation",
+      "description": "Windows"
+    },
+    "Netduino/index": {
+      "id": "Netduino/index",
+      "title": "Netduino",
+      "description": "Getting Started"
+    },
+    "Netduino/Input_Output/Analog/index": {
+      "id": "Netduino/Input_Output/Analog/index",
+      "title": "Analog I/O",
+      "description": "Analog ports can operate at a range of voltages between 0 and 3.3V, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal which is represented as binary on or off."
+    },
+    "Netduino/Input_Output/Digital/I2C/index": {
+      "id": "Netduino/Input_Output/Digital/I2C/index",
+      "title": "I2C/IIC",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/I2C/Reading/index": {
+      "id": "Netduino/Input_Output/Digital/I2C/Reading/index",
+      "title": "I2C Reading",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/I2C/Writing/index": {
+      "id": "Netduino/Input_Output/Digital/I2C/Writing/index",
+      "title": "I2C Writing",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/index": {
+      "id": "Netduino/Input_Output/Digital/index",
+      "title": "Digital I/O",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/PWM/index": {
+      "id": "Netduino/Input_Output/Digital/PWM/index",
+      "title": "PWM",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/SPI/ControllingLCD/index": {
+      "id": "Netduino/Input_Output/Digital/SPI/ControllingLCD/index",
+      "title": "Content Moved",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/SPI/index": {
+      "id": "Netduino/Input_Output/Digital/SPI/index",
+      "title": "SPI",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/SPI/Reading/index": {
+      "id": "Netduino/Input_Output/Digital/SPI/Reading/index",
+      "title": "SPI Reading",
+      "description": "SPI Reading"
+    },
+    "Netduino/Input_Output/Digital/SPI/ReadingTime/index": {
+      "id": "Netduino/Input_Output/Digital/SPI/ReadingTime/index",
+      "title": "Content Moved",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/SPI/Writing/index": {
+      "id": "Netduino/Input_Output/Digital/SPI/Writing/index",
+      "title": "SPI Writing",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Digital/UART/index": {
+      "id": "Netduino/Input_Output/Digital/UART/index",
+      "title": "UART",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/File_Storage/index": {
+      "id": "Netduino/Input_Output/File_Storage/index",
+      "title": "File IO",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/index": {
+      "id": "Netduino/Input_Output/index",
+      "title": "IO",
+      "description": "Info"
+    },
+    "Netduino/Input_Output/Network/Configuration/index": {
+      "id": "Netduino/Input_Output/Network/Configuration/index",
+      "title": "Network Configuration",
+      "description": "Configuring Network Access"
+    },
+    "Netduino/Input_Output/Network/Connection/index": {
+      "id": "Netduino/Input_Output/Network/Connection/index",
+      "title": "Connecting to a Network",
+      "description": "Waiting for the Network to Initialize"
+    },
+    "Netduino/Input_Output/Network/index": {
+      "id": "Netduino/Input_Output/Network/index",
+      "title": "Network Info",
+      "description": "Network Info"
+    },
+    "Netduino/Input_Output/Onboard_Button_+_LED/index": {
+      "id": "Netduino/Input_Output/Onboard_Button_+_LED/index",
+      "title": "Onboard Button + LED",
+      "description": "Info"
+    },
+    "Product_Design_Lifecycle/Breadboard_Prototyping/index": {
+      "id": "Product_Design_Lifecycle/Breadboard_Prototyping/index",
+      "title": "Breadboard Prototyping",
+      "description": ""
+    },
+    "Product_Design_Lifecycle/Conceptual_Design/index": {
+      "id": "Product_Design_Lifecycle/Conceptual_Design/index",
+      "title": "Conceptual Design",
+      "description": ""
+    },
+    "Product_Design_Lifecycle/Industrial_Design/index": {
+      "id": "Product_Design_Lifecycle/Industrial_Design/index",
+      "title": "Industrial Design",
+      "description": ""
+    },
+    "Product_Design_Lifecycle/Mass_Production/Certifications/index": {
+      "id": "Product_Design_Lifecycle/Mass_Production/Certifications/index",
+      "title": "Important Certifications",
+      "description": ""
+    },
+    "Product_Design_Lifecycle/Mass_Production/index": {
+      "id": "Product_Design_Lifecycle/Mass_Production/index",
+      "title": "Mass Production",
+      "description": ""
+    },
+    "Product_Design_Lifecycle/Mass_Production/MAC_Addresses/index": {
+      "id": "Product_Design_Lifecycle/Mass_Production/MAC_Addresses/index",
+      "title": "MAC Addresses",
+      "description": "If your product has a network adapter, regardless of how it connects (WiFi, Ethernet, other), the network adapter needs to have a unique MAC address (Wikipedia link). A unique MAC address ensures that a device can have network traffic directed to it without conflicts with other devices."
+    },
+    "Product_Design_Lifecycle/Mass_Production/UPCs_EANs/index": {
+      "id": "Product_Design_Lifecycle/Mass_Production/UPCs_EANs/index",
+      "title": "Universal Product Codes (UPCs) and International Article Numbers (EANs)",
+      "description": "When selling a product, most retail distributors want a unique barcode that identifies your product. The choice between a [UPC and an EAN is largely one of where you and/or your distributors are located]. Both are managed by the same organization, [GS1. Unique UPCs/EANs are needed for each product you sell, and different sizes and colors of the same product require unique UPCs/EANs. As such, the number needed can add up quickly."
+    },
+    "Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/index": {
+      "id": "Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/index",
+      "title": "USB Vendor IDs",
+      "description": "If your product is accessible/connectable via USB, then you'll need to purchase a USB Vendor ID that uniquely identifies the product as yours."
+    },
+    "Product_Design_Lifecycle/PCBs/Assembly/index": {
+      "id": "Product_Design_Lifecycle/PCBs/Assembly/index",
+      "title": "PCB Assembly",
+      "description": "[how assembly works]"
+    },
+    "Product_Design_Lifecycle/PCBs/Fabrication/index": {
+      "id": "Product_Design_Lifecycle/PCBs/Fabrication/index",
+      "title": "PCB Fabrication",
+      "description": "[How PCB fabrication works]"
+    },
+    "Product_Design_Lifecycle/PCBs/index": {
+      "id": "Product_Design_Lifecycle/PCBs/index",
+      "title": "Printed Circuit Board (PCB) Fundamentals",
+      "description": "[Breadboards allow prototyping and developing. PCBs provide the necessary infrastructure to permanently hold electrical components together.]"
+    },
+    "Product_Design_Lifecycle/PCBs/Prototyping/index": {
+      "id": "Product_Design_Lifecycle/PCBs/Prototyping/index",
+      "title": "PCB Prototyping",
+      "description": "[can save money; solderable at home]"
+    },
+    "Product_Design_Lifecycle/PCBs/Solder_Masks/index": {
+      "id": "Product_Design_Lifecycle/PCBs/Solder_Masks/index",
+      "title": "Solder Masks",
+      "description": "Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won't be soldered to"
+    },
+    "Product_Design_Lifecycle/PCBs/Surface_Finishes/index": {
+      "id": "Product_Design_Lifecycle/PCBs/Surface_Finishes/index",
+      "title": "Surface Finishes",
+      "description": "Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won't be soldered to. However, the copper areas that are exposed need also be protected and [solderability]"
+    },
+    "Product_Design_Lifecycle/Programming/index": {
+      "id": "Product_Design_Lifecycle/Programming/index",
+      "title": "Hardware Programming",
+      "description": ""
+    },
+    "Product_Design_Lifecycle/Schematic_Design/index": {
+      "id": "Product_Design_Lifecycle/Schematic_Design/index",
+      "title": "Schematic Design",
+      "description": ""
+    },
+    "readme": {
+      "id": "readme",
+      "title": "Netduino.Foundation Web Site",
+      "description": "Running Locally"
+    },
+    "Samples/index": {
+      "id": "Samples/index",
+      "title": "Meadow Samples",
+      "description": "The following samples can be found in the Wilderness Labs Netduino Samples repo."
+    },
+    "Samples/Netduino/Blinky/index": {
+      "id": "Samples/Netduino/Blinky/index",
+      "title": "Blinky",
+      "description": "Blinky is the much revered \"Hello, World\" app for Netduino."
+    },
+    "Samples/Netduino/ButtonInterruptEvents/index": {
+      "id": "Samples/Netduino/ButtonInterruptEvents/index",
+      "title": "Button Interrupt Events",
+      "description": "This sample illustrates wiring up an event to fire when interrupts come in on an InterruptPort when wired up to a circuit that sends intermittent signals such as a button."
+    },
+    "Samples/Netduino/ControllingAServo/index": {
+      "id": "Samples/Netduino/ControllingAServo/index",
+      "title": "Controlling a Servo Using PWM",
+      "description": "Servo motors (servos) are available in a wide range of sizes amd capabilities.  A servo makes it easy to add controlled motion to a project."
+    },
+    "Samples/Netduino/DrivingLED_w_PWM/index": {
+      "id": "Samples/Netduino/DrivingLED_w_PWM/index",
+      "title": "Driving an LED with a PWM signal",
+      "description": "This sample lights up an LED with a PWM signal so that a current limiting resistor isn't needed to prevent the LED from burning out."
+    },
+    "Samples/Netduino/GlitchFilter/index": {
+      "id": "Samples/Netduino/GlitchFilter/index",
+      "title": "Glitch Filtering",
+      "description": "The following sample illustrates configuring the glitch filter to 5 milliseconds."
+    },
+    "Samples/Netduino/index": {
+      "id": "Samples/Netduino/index",
+      "title": "Netduino Samples",
+      "description": ""
+    },
+    "Samples/Netduino/LCDMicroLiquidCrystal/index": {
+      "id": "Samples/Netduino/LCDMicroLiquidCrystal/index",
+      "title": "LCD Display Sample",
+      "description": "LCD Display"
+    },
+    "Samples/Netduino/OnboardButtonAndLed/index": {
+      "id": "Samples/Netduino/OnboardButtonAndLed/index",
+      "title": "Onboard Button & LED",
+      "description": "Illustrates basic Port IO by reading the value of the Onboard Button circuit and lighting the onboard LED when the button is pressed."
+    },
+    "Samples/Netduino/PotentiometerControlled_RgbLed/index": {
+      "id": "Samples/Netduino/PotentiometerControlled_RgbLed/index",
+      "title": "RGB LED Controlled with Potentiometer",
+      "description": "This sample sets the color of an RGB LED from the value read from a potentiometer. It illustrates reading an analog input and controlling PWMs with it."
+    },
+    "Samples/Netduino/ReadDS3234/index": {
+      "id": "Samples/Netduino/ReadDS3234/index",
+      "title": "Read Date and Time from DS3234 Real Time Clock",
+      "description": "This application reads the date and time values from the Sparkfun DeadOn RTC Breakout Board.  This board contains the DS3234 Real Time Clock module."
+    },
+    "Samples/Netduino/RGB_Blinky/index": {
+      "id": "Samples/Netduino/RGB_Blinky/index",
+      "title": "RGB LED Blinky",
+      "description": "This sample illustrates a simple program to cycle an RGB LED through each of its primary colors: red, green, and blue."
+    },
+    "Samples/Netduino/RgbLed/index": {
+      "id": "Samples/Netduino/RgbLed/index",
+      "title": "Driving an RGB LED with PWM",
+      "description": "This sample cycles an RGB LED through the rainbow, by looping through all possible hues in the visible color spectrum."
+    },
+    "Samples/Netduino/SDCardIO/index": {
+      "id": "Samples/Netduino/SDCardIO/index",
+      "title": "SD Card IO",
+      "description": "This sample illustrates access the SD card and writing to a file using standard System.IO calls."
+    },
+    "Samples/Netduino/TMP102BasicRead/index": {
+      "id": "Samples/Netduino/TMP102BasicRead/index",
+      "title": "Reading From a TMP102 Temperature Sensor Using I2C",
+      "description": "This example demonstrates how to read from a TMP102 temperature sensor using the I2C protocol."
+    },
+    "Samples/Netduino/TMP102ReadWrite/index": {
+      "id": "Samples/Netduino/TMP102ReadWrite/index",
+      "title": "Writing to a TMP102 Temperature Sensor Using I2C",
+      "description": "This example demonstrates how to read from and write to a TMP102 temperature sensor using the I2C protocol."
+    },
+    "Samples/Netduino/UARTTest/index": {
+      "id": "Samples/Netduino/UARTTest/index",
+      "title": "UART",
+      "description": "This example uses two UARTs on the Netduino and demonstrates how to send a message over one UART to the second."
+    },
+    "Samples/Netduino/WebRequest/index": {
+      "id": "Samples/Netduino/WebRequest/index",
+      "title": "Web Request",
+      "description": "This sample makes a web request to http"
+    },
+    "Samples/Netduino/WebRequestMultithreaded/index": {
+      "id": "Samples/Netduino/WebRequestMultithreaded/index",
+      "title": "Web Request Multithreaded Version",
+      "description": "This sample makes a web request to http"
+    }
+  }
+}

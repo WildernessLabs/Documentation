@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index",
+  "id": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index",
+  "title": "Integrate with Azure Event Hubs",
+  "description": "< Integrations",
+  "source": "@site/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index.md",
+  "sourceDirName": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs",
+  "slug": "/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Integrate with Azure Event Hubs",
+    "subtitle": "Getting started with Azure Event Hubs"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Integrate with Azure Event Grid",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/"
+  },
+  "next": {
+    "title": "Integrate with Datacake",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/"
+  }
+}

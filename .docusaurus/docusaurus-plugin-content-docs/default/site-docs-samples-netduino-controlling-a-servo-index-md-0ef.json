@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/ControllingAServo/index",
+  "id": "Samples/Netduino/ControllingAServo/index",
+  "title": "Controlling a Servo Using PWM",
+  "description": "Servo motors (servos) are available in a wide range of sizes amd capabilities.  A servo makes it easy to add controlled motion to a project.",
+  "source": "@site/docs/Samples/Netduino/ControllingAServo/index.md",
+  "sourceDirName": "Samples/Netduino/ControllingAServo",
+  "slug": "/Samples/Netduino/ControllingAServo/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/ControllingAServo/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/ControllingAServo/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "Controlling a Servo Using PWM"
+  }
+}

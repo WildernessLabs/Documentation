@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Cellular/index",
+  "id": "Meadow/Meadow.OS/Cellular/index",
+  "title": "Cellular",
+  "description": "Contents",
+  "source": "@site/docs/Meadow/Meadow.OS/Cellular/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Cellular",
+  "slug": "/Meadow/Meadow.OS/Cellular/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Cellular/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Cellular",
+    "subtitle": "Connect Meadow to LTE/4G cellular signals"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Bluetooth",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/"
+  },
+  "next": {
+    "title": "Application Settings Configuration",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/"
+  }
+}

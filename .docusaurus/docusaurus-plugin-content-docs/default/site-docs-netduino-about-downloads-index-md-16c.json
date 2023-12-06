@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/About/Downloads/index",
+  "id": "Netduino/About/Downloads/index",
+  "title": "Downloads",
+  "description": "Links and Resources",
+  "source": "@site/docs/Netduino/About/Downloads/index.md",
+  "sourceDirName": "Netduino/About/Downloads",
+  "slug": "/Netduino/About/Downloads/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/About/Downloads/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/About/Downloads/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Downloads",
+    "subtitle": "Netduino resources."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Reference/index",
+  "id": "Hardware/Reference/index",
+  "title": "Hardware & Circuits Reference",
+  "description": "Components",
+  "source": "@site/docs/Hardware/Reference/index.md",
+  "sourceDirName": "Hardware/Reference",
+  "slug": "/Hardware/Reference/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Hardware & Circuits Reference"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "PCB Stackups",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/"
+  },
+  "next": {
+    "title": "Algorithms",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/"
+  }
+}

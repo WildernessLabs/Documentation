@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index",
+  "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index",
+  "title": "PCB Fabrication",
+  "description": "",
+  "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index.md",
+  "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication",
+  "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PCB Fabrication",
+    "subtitle": "yeah yeah yah!"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Solder Paste Application",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/"
+  },
+  "next": {
+    "title": "PCB Stackups",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/"
+  }
+}

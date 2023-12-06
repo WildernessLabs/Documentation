@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Meadow/Getting_Started/Update_USB_Driver/index",
+  "id": "Meadow/Getting_Started/Update_USB_Driver/index",
+  "title": "Update USB Driver for ST devices",
+  "description": "In order to flash Meadow OS, dfu-util is recommended. However, the default Windows USB driver for ST devices is not compatible with dfu-util, so it needs to be replaced. For more in-depth information on this, check out Scott Hanselman's post.",
+  "source": "@site/docs/Meadow/Getting_Started/Update_USB_Driver/index.md",
+  "sourceDirName": "Meadow/Getting_Started/Update_USB_Driver",
+  "slug": "/Meadow/Getting_Started/Update_USB_Driver/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Update_USB_Driver/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Update USB Driver for ST devices"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "ST-Link",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/"
+  },
+  "next": {
+    "title": "Meadow.Cloud",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/"
+  }
+}

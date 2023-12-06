@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Getting_Started/Installation/Windows/index",
+  "id": "Netduino/Getting_Started/Installation/Windows/index",
+  "title": "Windows Installation",
+  "description": "Windows",
+  "source": "@site/docs/Netduino/Getting_Started/Installation/Windows/index.md",
+  "sourceDirName": "Netduino/Getting_Started/Installation/Windows",
+  "slug": "/Netduino/Getting_Started/Installation/Windows/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Windows/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Getting_Started/Installation/Windows/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Windows Installation",
+    "subtitle": "Installing the .NET MicroFramework and Netduino SDKs on Windows."
+  }
+}

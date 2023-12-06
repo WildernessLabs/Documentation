@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/Meadow.OS/index",
+  "id": "Meadow/Meadow_Basics/Meadow.OS/index",
+  "title": "Meadow.OS",
+  "description": "This content has moved to here.",
+  "source": "@site/docs/Meadow/Meadow_Basics/Meadow.OS/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/Meadow.OS",
+  "slug": "/Meadow/Meadow_Basics/Meadow.OS/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Meadow.OS/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow.OS",
+    "subtitle": "Content moved."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Power IO",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/"
+  },
+  "next": {
+    "title": "Realtime Clock",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Application_Fundamentals/index",
+  "id": "Netduino/Application_Fundamentals/index",
+  "title": "Application Fundamentals",
+  "description": "Info",
+  "source": "@site/docs/Netduino/Application_Fundamentals/index.md",
+  "sourceDirName": "Netduino/Application_Fundamentals",
+  "slug": "/Netduino/Application_Fundamentals/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Application_Fundamentals/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Application_Fundamentals/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Application Fundamentals",
+    "subtitle": "Building .NET MicroFramework applications for Netduino."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/GlitchFilter/index",
+  "id": "Samples/Netduino/GlitchFilter/index",
+  "title": "Glitch Filtering",
+  "description": "The following sample illustrates configuring the glitch filter to 5 milliseconds.",
+  "source": "@site/docs/Samples/Netduino/GlitchFilter/index.md",
+  "sourceDirName": "Samples/Netduino/GlitchFilter",
+  "slug": "/Samples/Netduino/GlitchFilter/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/GlitchFilter/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/GlitchFilter/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "Glitch Filtering"
+  }
+}

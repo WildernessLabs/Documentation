@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Release_Notes/Beta5/index",
+  "id": "Meadow/Release_Notes/Beta5/index",
+  "title": "Meadow Beta 5",
+  "description": "Our most stable and complete release yet. We spent a lot of effort fixing issues introduced in b5.1/b5.2, and also added SQLite support to Meadow! Big changes and fixes include:",
+  "source": "@site/docs/Meadow/Release_Notes/Beta5/index.md",
+  "sourceDirName": "Meadow/Release_Notes/Beta5",
+  "slug": "/Meadow/Release_Notes/Beta5/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Beta5/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow Beta 5",
+    "subtitle": "Release Notes"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Meadow Beta 6",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/"
+  },
+  "next": {
+    "title": "Meadow Beta 4",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/"
+  }
+}

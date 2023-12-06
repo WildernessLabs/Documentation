@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/Meadow_CLI/index",
+  "id": "Meadow/Meadow_Basics/Meadow_CLI/index",
+  "title": "Meadow.CLI",
+  "description": "The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with the board and perform functions via a terminal/command-line window.",
+  "source": "@site/docs/Meadow/Meadow_Basics/Meadow_CLI/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/Meadow_CLI",
+  "slug": "/Meadow/Meadow_Basics/Meadow_CLI/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow_CLI/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Meadow_CLI/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow.CLI",
+    "subtitle": "Command-Line-Interface for Meadow"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Watchdog Timer",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/"
+  },
+  "next": {
+    "title": "Networking",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Networking/"
+  }
+}

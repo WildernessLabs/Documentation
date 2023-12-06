@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/PartX_Batteries/Review/index",
+  "id": "Hardware/Tutorials/Electronics/PartX_Batteries/Review/index",
+  "title": "Review",
+  "description": "",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/PartX_Batteries/Review",
+  "slug": "/Hardware/Tutorials/Electronics/PartX_Batteries/Review/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Review"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Battery Types",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/"
+  },
+  "next": {
+    "title": "Part 5 - Other Circuit Components",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/"
+  }
+}

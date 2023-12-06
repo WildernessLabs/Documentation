@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Tutorials/index",
+  "id": "Hardware/Tutorials/index",
+  "title": "Tutorials",
+  "description": "Electronics Tutorial",
+  "source": "@site/docs/Hardware/Tutorials/index.md",
+  "sourceDirName": "Hardware/Tutorials",
+  "slug": "/Hardware/Tutorials/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Tutorials"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Watts",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/"
+  },
+  "next": {
+    "title": "Fundamentals of Electronics Tutorial",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/"
+  }
+}

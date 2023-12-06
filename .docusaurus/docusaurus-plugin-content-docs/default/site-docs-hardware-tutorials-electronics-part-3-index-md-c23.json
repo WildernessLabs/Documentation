@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part3/index",
+  "id": "Hardware/Tutorials/Electronics/Part3/index",
+  "title": "Part 3 - Power Sources & Current Types",
+  "description": "Current Types",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part3/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part3",
+  "slug": "/Hardware/Tutorials/Electronics/Part3/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part3/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Part 3 - Power Sources & Current Types"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Wattage",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/"
+  },
+  "next": {
+    "title": "AC Characteristics",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/"
+  }
+}

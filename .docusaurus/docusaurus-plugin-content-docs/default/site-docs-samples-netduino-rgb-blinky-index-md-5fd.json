@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/RGB_Blinky/index",
+  "id": "Samples/Netduino/RGB_Blinky/index",
+  "title": "RGB LED Blinky",
+  "description": "This sample illustrates a simple program to cycle an RGB LED through each of its primary colors: red, green, and blue.",
+  "source": "@site/docs/Samples/Netduino/RGB_Blinky/index.md",
+  "sourceDirName": "Samples/Netduino/RGB_Blinky",
+  "slug": "/Samples/Netduino/RGB_Blinky/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/RGB_Blinky/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/RGB_Blinky/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "RGB LED Blinky"
+  }
+}

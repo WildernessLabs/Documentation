@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index",
+  "id": "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index",
+  "title": "Meadow application lifecycle update",
+  "description": "If you are updating Meadow.OS beta applications to the new Meadow.OS release candidate application lifecycle, there are some required code updates.",
+  "source": "@site/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index.md",
+  "sourceDirName": "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update",
+  "slug": "/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow application lifecycle update",
+    "subtitle": "Meadow.OS release candidate required migration updates"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow v1.0 Release-Candidates",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/"
+  },
+  "next": {
+    "title": "Meadow Roadmap",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/"
+  }
+}

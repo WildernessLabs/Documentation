@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Release_Notes/Roadmap/index",
+  "id": "Meadow/Release_Notes/Roadmap/index",
+  "title": "Meadow Roadmap",
+  "description": "Meadow v1.0 Roadmap",
+  "source": "@site/docs/Meadow/Release_Notes/Roadmap/index.md",
+  "sourceDirName": "Meadow/Release_Notes/Roadmap",
+  "slug": "/Meadow/Release_Notes/Roadmap/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Roadmap/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow Roadmap",
+    "subtitle": "Planned features and functionality for Meadow v1.0 and beyond."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow application lifecycle update",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/"
+  },
+  "next": {
+    "title": "Meadow v1",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/v1/"
+  }
+}

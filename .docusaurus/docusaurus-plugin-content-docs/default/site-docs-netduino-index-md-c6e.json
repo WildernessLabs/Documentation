@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/index",
+  "id": "Netduino/index",
+  "title": "Netduino",
+  "description": "Getting Started",
+  "source": "@site/docs/Netduino/index.md",
+  "sourceDirName": "Netduino",
+  "slug": "/Netduino/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Netduino",
+    "subtitle": "Guides and documentation for Netduino"
+  }
+}

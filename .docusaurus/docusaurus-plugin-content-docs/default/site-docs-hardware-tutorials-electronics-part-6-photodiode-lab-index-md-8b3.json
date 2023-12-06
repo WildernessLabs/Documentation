@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index",
+  "id": "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index",
+  "title": "index",
+  "description": "",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab",
+  "slug": "/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "P-type Semiconductor",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/"
+  },
+  "next": {
+    "title": "Review",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "HackKit/index",
+  "id": "HackKit/index",
+  "title": "Hack Kit Pro",
+  "description": "Composite photo showing a Meadow Hack Kit Pro's contents and several example projects assembled from Meadow boards and Hack Kit components.{:standalone}",
+  "source": "@site/docs/HackKit/index.md",
+  "sourceDirName": "HackKit",
+  "slug": "/HackKit/",
+  "permalink": "/DocsDocusaurus/docs/HackKit/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/HackKit/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Hack Kit Pro",
+    "subtitle": "Instructions and inspiration for Wilderness Labs Hack Kit Pro."
+  }
+}

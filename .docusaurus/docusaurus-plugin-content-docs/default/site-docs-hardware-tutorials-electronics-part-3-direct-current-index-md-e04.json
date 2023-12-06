@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part3/Direct_Current/index",
+  "id": "Hardware/Tutorials/Electronics/Part3/Direct_Current/index",
+  "title": "Direct Current",
+  "description": "Overview",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part3/Direct_Current",
+  "slug": "/Hardware/Tutorials/Electronics/Part3/Direct_Current/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Direct Current",
+    "subtitle": "Constant polarity current."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Current Types",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/"
+  },
+  "next": {
+    "title": "Review",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/"
+  }
+}

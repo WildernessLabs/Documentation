@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index",
+  "id": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index",
+  "title": "Symbols and Footprints",
+  "description": "cover:",
+  "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index.md",
+  "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints",
+  "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Symbols and Footprints",
+    "subtitle": "finding symbols/footprints, creating them"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "SMD Packages",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/"
+  },
+  "next": {
+    "title": "PCB Assembly",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/"
+  }
+}

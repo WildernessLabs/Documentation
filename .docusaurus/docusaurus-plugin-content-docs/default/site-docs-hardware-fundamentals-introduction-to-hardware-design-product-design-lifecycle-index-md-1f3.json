@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index",
+  "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index",
+  "title": "Product Design Lifecycle",
+  "description": "Designing an IoT/hardware device is an iterative and interrelated process that typically consists of the following major phases:",
+  "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index.md",
+  "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle",
+  "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Product Design Lifecycle",
+    "subtitle": "Understanding the lifecycle of IoT and hardware products."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "PCBs",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/"
+  },
+  "next": {
+    "title": "Production Scale",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/"
+  }
+}

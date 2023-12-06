@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/DrivingLED_w_PWM/index",
+  "id": "Samples/Netduino/DrivingLED_w_PWM/index",
+  "title": "Driving an LED with a PWM signal",
+  "description": "This sample lights up an LED with a PWM signal so that a current limiting resistor isn't needed to prevent the LED from burning out.",
+  "source": "@site/docs/Samples/Netduino/DrivingLED_w_PWM/index.md",
+  "sourceDirName": "Samples/Netduino/DrivingLED_w_PWM",
+  "slug": "/Samples/Netduino/DrivingLED_w_PWM/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/DrivingLED_w_PWM/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/DrivingLED_w_PWM/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "Driving an LED with a PWM signal"
+  }
+}

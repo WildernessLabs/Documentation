@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
+  "id": "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
+  "title": "PCB Assembly",
+  "description": "Video Tutorial",
+  "source": "@site/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index.md",
+  "sourceDirName": "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly",
+  "slug": "/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PCB Assembly",
+    "subtitle": "Placing and soldering hardware components on a PCB."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Part Libraries",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/"
+  },
+  "next": {
+    "title": "PCB Layout",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/"
+  }
+}

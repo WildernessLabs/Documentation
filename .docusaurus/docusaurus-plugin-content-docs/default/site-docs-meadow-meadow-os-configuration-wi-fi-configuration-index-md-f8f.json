@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
+  "id": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
+  "title": "Wi-Fi Configuration",
+  "description": "The wifi.config.yaml file can be used to set the default Wi-Fi access point and the password for that access point. The wifi.config.yaml file should look similar to this:",
+  "source": "@site/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Configuration/WiFi_Configuration",
+  "slug": "/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Wi-Fi Configuration",
+    "subtitle": "Configure Wi-Fi settings at build-time to connect Meadow to a specific access point."
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "OS & Device Configuration",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Getting_Started/Setup/index",
+  "id": "Meadow/Getting_Started/Setup/index",
+  "title": "Setup",
+  "description": "1. Connect Meadow to the ST-Link V2",
+  "source": "@site/docs/Meadow/Getting_Started/Setup/index.md",
+  "sourceDirName": "Meadow/Getting_Started/Setup",
+  "slug": "/Meadow/Getting_Started/Setup/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Setup/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Setup",
+    "subtitle": "Guides and documentation for Meadow"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Hello, Meadow!",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/"
+  },
+  "next": {
+    "title": "Windows Setup",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/Windows/"
+  }
+}

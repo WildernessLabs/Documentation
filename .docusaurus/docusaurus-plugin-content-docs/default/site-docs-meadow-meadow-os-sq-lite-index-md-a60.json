@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/SQLite/index",
+  "id": "Meadow/Meadow.OS/SQLite/index",
+  "title": "SQLite",
+  "description": "SQLite Logo - A feather with the logotype \"SQLIte\".",
+  "source": "@site/docs/Meadow/Meadow.OS/SQLite/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/SQLite",
+  "slug": "/Meadow/Meadow.OS/SQLite/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/SQLite/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "SQLite",
+    "subtitle": "Using SQLite in Meadow.OS to create and manage local databases."
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Real Time Clock",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/"
+  },
+  "next": {
+    "title": "Threading",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/"
+  }
+}

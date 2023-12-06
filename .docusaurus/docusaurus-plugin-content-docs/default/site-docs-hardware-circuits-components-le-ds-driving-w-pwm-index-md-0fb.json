@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Circuits/Components/LEDs/Driving_w_PWM/index",
+  "id": "Hardware/Circuits/Components/LEDs/Driving_w_PWM/index",
+  "title": "LED w/PWM",
+  "description": "Overview",
+  "source": "@site/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/index.md",
+  "sourceDirName": "Hardware/Circuits/Components/LEDs/Driving_w_PWM",
+  "slug": "/Hardware/Circuits/Components/LEDs/Driving_w_PWM/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "LED w/PWM",
+    "subtitle": "Driving an LED with a current-limiting Pulse-Width-Modulation (PWM) Signal."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "LEDs",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/"
+  },
+  "next": {
+    "title": "LED w/Resistor",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/"
+  }
+}

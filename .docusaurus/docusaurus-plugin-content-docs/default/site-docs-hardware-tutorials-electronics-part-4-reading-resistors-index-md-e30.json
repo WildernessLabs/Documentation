@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index",
+  "id": "Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index",
+  "title": "Reading Axial Resistor Values",
+  "description": "Axial Resistor Colored Bands",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part4/Reading_Resistors",
+  "slug": "/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Reading Axial Resistor Values",
+    "subtitle": "Determining a resistor's value from its band markings."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "notes",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes"
+  },
+  "next": {
+    "title": "Resistance & Resistors",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/"
+  }
+}

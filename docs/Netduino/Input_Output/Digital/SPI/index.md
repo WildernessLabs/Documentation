@@ -43,7 +43,7 @@ The four possible modes are determined by the active state of the clock signal (
 
 The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](/Netduino/About/Netduino3_Pinout.svg){:standalone}
+![N3 Pinout Diagram](../../../../Netduino/About/Netduino3_Pinout.svg){:standalone}
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 

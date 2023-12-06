@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/About/Troubleshooting/index",
+  "id": "Netduino/About/Troubleshooting/index",
+  "title": "Troubleshooting",
+  "description": "Info",
+  "source": "@site/docs/Netduino/About/Troubleshooting/index.md",
+  "sourceDirName": "Netduino/About/Troubleshooting",
+  "slug": "/Netduino/About/Troubleshooting/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/About/Troubleshooting/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/About/Troubleshooting/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Troubleshooting",
+    "subtitle": "Debugging and fixing issues with Netduino."
+  }
+}

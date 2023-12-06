@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index",
+  "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index",
+  "title": "MicroGraphics Library",
+  "description": "<!--",
+  "source": "@site/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics",
+  "slug": "/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "MicroGraphics Library",
+    "subtitle": "Using the lightweight, MCU-optimized Meadow.Foundation MicroGraphics 2D drawing library with Meadow."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Maple Server",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/"
+  },
+  "next": {
+    "title": "MicroLayout Library",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/index",
+  "id": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/index",
+  "title": "PCB Assembly",
+  "description": "[stuff]",
+  "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/index.md",
+  "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly",
+  "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PCB Assembly",
+    "subtitle": [
+      "blah"
+    ]
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Symbols and Footprints",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/"
+  },
+  "next": {
+    "title": "Component Placement",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/"
+  }
+}

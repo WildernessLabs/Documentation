@@ -1,0 +1,18 @@
+{
+  "unversionedId": "Samples/Netduino/RgbLed/index",
+  "id": "Samples/Netduino/RgbLed/index",
+  "title": "Driving an RGB LED with PWM",
+  "description": "This sample cycles an RGB LED through the rainbow, by looping through all possible hues in the visible color spectrum.",
+  "source": "@site/docs/Samples/Netduino/RgbLed/index.md",
+  "sourceDirName": "Samples/Netduino/RgbLed",
+  "slug": "/Samples/Netduino/RgbLed/",
+  "permalink": "/DocsDocusaurus/docs/Samples/Netduino/RgbLed/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/Netduino/RgbLed/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Samples",
+    "title": "Driving an RGB LED with PWM"
+  }
+}

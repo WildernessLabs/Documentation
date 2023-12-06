@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part7/Notes",
+  "id": "Hardware/Tutorials/Electronics/Part7/Notes",
+  "title": "Notes",
+  "description": "Semiconductors Part 2 - The Transistor",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part7/Notes.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part7",
+  "slug": "/Hardware/Tutorials/Electronics/Part7/Notes",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part7/Notes.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Silicon (Si)",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/"
+  },
+  "next": {
+    "title": "Transistors",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Transistors/"
+  }
+}

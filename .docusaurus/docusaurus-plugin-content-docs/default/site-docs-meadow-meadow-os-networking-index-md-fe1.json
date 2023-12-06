@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Networking/index",
+  "id": "Meadow/Meadow.OS/Networking/index",
+  "title": "Networking",
+  "description": "Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.",
+  "source": "@site/docs/Meadow/Meadow.OS/Networking/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Networking",
+  "slug": "/Meadow/Meadow.OS/Networking/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Networking/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Networking",
+    "subtitle": "Network options and operation."
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "WiFi/Bluetooth Antenna",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/"
+  },
+  "next": {
+    "title": "Real Time Clock",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/"
+  }
+}

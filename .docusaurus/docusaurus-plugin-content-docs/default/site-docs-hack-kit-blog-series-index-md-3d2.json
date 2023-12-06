@@ -1,0 +1,19 @@
+{
+  "unversionedId": "HackKit/BlogSeries/index",
+  "id": "HackKit/BlogSeries/index",
+  "title": "HackKit Blog Series",
+  "description": "| Post       | Image |",
+  "source": "@site/docs/HackKit/BlogSeries/index.md",
+  "sourceDirName": "HackKit/BlogSeries",
+  "slug": "/HackKit/BlogSeries/",
+  "permalink": "/DocsDocusaurus/docs/HackKit/BlogSeries/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/HackKit/BlogSeries/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "HackKit Blog Series",
+    "subtitle": "Blog posts series on the most common peripherals included in the Hack Kit."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part6/P-Type/index",
+  "id": "Hardware/Tutorials/Electronics/Part6/P-Type/index",
+  "title": "P-type Semiconductor",
+  "description": "Creating P-Type Semiconductors",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/P-Type/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part6/P-Type",
+  "slug": "/Hardware/Tutorials/Electronics/Part6/P-Type/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/P-Type/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "P-type Semiconductor",
+    "subtitle": "Semiconductor with a majority of positive (hole) charge carriers."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "P-N Junctions",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/"
+  },
+  "next": {
+    "title": "index",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/"
+  }
+}

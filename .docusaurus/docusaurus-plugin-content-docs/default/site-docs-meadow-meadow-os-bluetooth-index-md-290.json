@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Bluetooth/index",
+  "id": "Meadow/Meadow.OS/Bluetooth/index",
+  "title": "Bluetooth",
+  "description": "Bluetooth logo",
+  "source": "@site/docs/Meadow/Meadow.OS/Bluetooth/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Bluetooth",
+  "slug": "/Meadow/Meadow.OS/Bluetooth/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Bluetooth/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Bluetooth",
+    "subtitle": "Meadow b5.0 BLE Draft Implementation"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Automatic Restarts",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/"
+  },
+  "next": {
+    "title": "Cellular",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/"
+  }
+}

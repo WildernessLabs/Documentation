@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index",
+  "id": "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index",
+  "title": "F7 Dev Module Integration",
+  "description": "",
+  "source": "@site/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index.md",
+  "sourceDirName": "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro",
+  "slug": "/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "F7 Dev Module Integration",
+    "subtitle": "Considerations for integrating a Meadow F7 Developer module into a design."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Core-Compute Module Integration",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/"
+  },
+  "next": {
+    "title": "PCB Reference",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/index",
+  "id": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/index",
+  "title": "Pull-up & Pull-down Resistors",
+  "description": "Pull-up & Pull-down Resistors",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors",
+  "slug": "/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Pull-up & Pull-down Resistors",
+    "subtitle": "Providing a default value to an input in a circuit."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Resistors in Parallel",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/"
+  },
+  "next": {
+    "title": "notes",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes"
+  }
+}

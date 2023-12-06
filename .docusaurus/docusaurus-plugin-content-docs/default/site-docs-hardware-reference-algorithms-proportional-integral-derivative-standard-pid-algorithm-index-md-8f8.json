@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index",
+  "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index",
+  "title": "Standard PID Algorithm",
+  "description": "Overview",
+  "source": "@site/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index.md",
+  "sourceDirName": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm",
+  "slug": "/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Standard PID Algorithm",
+    "subtitle": "Understanding the real-world PID algorithm."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "PID Intro",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/"
+  },
+  "next": {
+    "title": "index",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/"
+  }
+}

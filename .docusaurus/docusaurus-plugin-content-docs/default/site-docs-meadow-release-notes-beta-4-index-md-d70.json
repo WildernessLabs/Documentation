@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Release_Notes/Beta4/index",
+  "id": "Meadow/Release_Notes/Beta4/index",
+  "title": "Meadow Beta 4",
+  "description": "This is another tiny release to address an issue when connecting to a WiFi network that resulted in a CannotStartNetworkInterface exception that was affecting a small percentage of boards.",
+  "source": "@site/docs/Meadow/Release_Notes/Beta4/index.md",
+  "sourceDirName": "Meadow/Release_Notes/Beta4",
+  "slug": "/Meadow/Release_Notes/Beta4/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Beta4/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow Beta 4",
+    "subtitle": "Release Notes"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Meadow Beta 5",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/"
+  },
+  "next": {
+    "title": "Meadow Beta 3",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/"
+  }
+}

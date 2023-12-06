@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Input_Output/File_Storage/index",
+  "id": "Netduino/Input_Output/File_Storage/index",
+  "title": "File IO",
+  "description": "Info",
+  "source": "@site/docs/Netduino/Input_Output/File_Storage/index.md",
+  "sourceDirName": "Netduino/Input_Output/File_Storage",
+  "slug": "/Netduino/Input_Output/File_Storage/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Input_Output/File_Storage/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Input_Output/File_Storage/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "File IO",
+    "subtitle": "Using the onboard micro SD card as a persistent storage device."
+  }
+}

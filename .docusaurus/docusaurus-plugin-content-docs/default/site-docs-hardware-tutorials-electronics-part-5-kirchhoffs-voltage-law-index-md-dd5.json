@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index",
+  "id": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index",
+  "title": "Kirchhoff's Voltage Law",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law",
+  "slug": "/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Kirchhoff's Voltage Law",
+    "subtitle": "The sum of voltage drops is equal to the voltage source."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Kirchhoff's Current Law",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/"
+  },
+  "next": {
+    "title": "Analog Level Shifting Lab",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/"
+  }
+}

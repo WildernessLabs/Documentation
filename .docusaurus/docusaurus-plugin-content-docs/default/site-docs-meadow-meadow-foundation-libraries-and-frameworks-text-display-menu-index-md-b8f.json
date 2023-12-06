@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index",
+  "id": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index",
+  "title": "TextDisplayMenu Library",
+  "description": "The TextDisplayMenu library is an extensible framework for quickly creating hierarchical, editable menus that can display on a display that implements ITextDisplay - any graphical display via the MicroGraphics Library or supported character display and can be driven using input devices such as buttons or rotary encoders.",
+  "source": "@site/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu",
+  "slug": "/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "TextDisplayMenu Library",
+    "subtitle": "Multiline display menu framework for quick prototyping human interfaces on connected things."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "MicroLayout Library",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/"
+  },
+  "next": {
+    "title": "Meadow.Foundation Peripherals Library",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/"
+  }
+}

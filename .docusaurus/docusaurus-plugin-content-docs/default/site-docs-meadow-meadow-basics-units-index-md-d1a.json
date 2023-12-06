@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/Units/index",
+  "id": "Meadow/Meadow_Basics/Units/index",
+  "title": "Units",
+  "description": "Throughout the Meadow stack, strongly-typed units such as Temperature, Length, Frequency, and Speed, are used in place of primitive types like float or integer to prevent errors due to unit ambiguity, conversion, or mismatch.",
+  "source": "@site/docs/Meadow/Meadow_Basics/Units/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/Units",
+  "slug": "/Meadow/Meadow_Basics/Units/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Units/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Units",
+    "subtitle": "Understanding the strongly-typed units architecture in Meadow."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "macOS",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/"
+  },
+  "next": {
+    "title": "Meadow V1 Roadmap",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/"
+  }
+}

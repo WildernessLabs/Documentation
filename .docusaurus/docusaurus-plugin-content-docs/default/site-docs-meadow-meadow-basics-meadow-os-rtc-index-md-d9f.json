@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/Meadow.OS/RTC/index",
+  "id": "Meadow/Meadow_Basics/Meadow.OS/RTC/index",
+  "title": "Realtime Clock",
+  "description": "This content has moved to here.",
+  "source": "@site/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/Meadow.OS/RTC",
+  "slug": "/Meadow/Meadow_Basics/Meadow.OS/RTC/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Realtime Clock",
+    "subtitle": "Content moved."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow.OS",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/"
+  },
+  "next": {
+    "title": "Watchdog Timer",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/"
+  }
+}

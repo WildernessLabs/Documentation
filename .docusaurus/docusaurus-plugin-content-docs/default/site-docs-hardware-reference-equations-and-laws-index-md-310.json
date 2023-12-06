@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Reference/Equations_and_Laws/index",
+  "id": "Hardware/Reference/Equations_and_Laws/index",
+  "title": "Equations and Laws",
+  "description": "Voltage",
+  "source": "@site/docs/Hardware/Reference/Equations_and_Laws/index.md",
+  "sourceDirName": "Hardware/Reference/Equations_and_Laws",
+  "slug": "/Hardware/Reference/Equations_and_Laws/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Equations_and_Laws/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Equations and Laws"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "BitBanging",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/BitBanging/"
+  },
+  "next": {
+    "title": "Capacitance",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/"
+  }
+}

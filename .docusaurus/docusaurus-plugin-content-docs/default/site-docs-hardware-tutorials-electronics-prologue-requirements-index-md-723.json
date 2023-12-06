@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Prologue/Requirements/index",
+  "id": "Hardware/Tutorials/Electronics/Prologue/Requirements/index",
+  "title": "Requirements",
+  "description": "Tools and Components",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Prologue/Requirements",
+  "slug": "/Hardware/Tutorials/Electronics/Prologue/Requirements/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Requirements",
+    "subtitle": "Necessary components and tools required for tutorial completion."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "index",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/"
+  },
+  "next": {
+    "title": "PCB Design Tutorial",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/"
+  }
+}

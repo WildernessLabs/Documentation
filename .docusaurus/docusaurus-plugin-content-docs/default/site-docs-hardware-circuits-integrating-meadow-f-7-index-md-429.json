@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Circuits/Integrating_Meadow/F7/index",
+  "id": "Hardware/Circuits/Integrating_Meadow/F7/index",
+  "title": "Meadow Integration",
+  "description": "Docs on how to integrate a Meadow F7 into a hardware design.",
+  "source": "@site/docs/Hardware/Circuits/Integrating_Meadow/F7/index.md",
+  "sourceDirName": "Hardware/Circuits/Integrating_Meadow/F7",
+  "slug": "/Hardware/Circuits/Integrating_Meadow/F7/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Integrating_Meadow/F7/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Meadow Integration",
+    "subtitle": "Considerations for integrating a Meadow F7 module into designs."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "74595 Shift Register",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/"
+  },
+  "next": {
+    "title": "Core-Compute Module Integration",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/"
+  }
+}

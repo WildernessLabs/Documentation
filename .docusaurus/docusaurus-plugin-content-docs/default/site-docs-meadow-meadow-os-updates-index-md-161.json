@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/Updates/index",
+  "id": "Meadow/Meadow.OS/Updates/index",
+  "title": "Over-the-Air (OtA) Updates",
+  "description": "This document has been moved",
+  "source": "@site/docs/Meadow/Meadow.OS/Updates/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/Updates",
+  "slug": "/Meadow/Meadow.OS/Updates/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Updates/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Over-the-Air (OtA) Updates",
+    "subtitle": "Getting setup with OtA on Meadow.Cloud"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Threading",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/"
+  },
+  "next": {
+    "title": "Watchdog Timer",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/"
+  }
+}

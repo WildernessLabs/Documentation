@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.OS/File_System/index",
+  "id": "Meadow/Meadow.OS/File_System/index",
+  "title": "File System",
+  "description": "Meadow.OS has full support for file and directory manipulation via System.IO API calls. In addition, the Meadow F7 board has onboard non-volatile flash storage that, while primarily used for app deployment and storage, can also be used as for persistent storage like a traditional hard drive.",
+  "source": "@site/docs/Meadow/Meadow.OS/File_System/index.md",
+  "sourceDirName": "Meadow/Meadow.OS/File_System",
+  "slug": "/Meadow/Meadow.OS/File_System/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/File_System/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "File System",
+    "subtitle": "Working with files and directories in Meadow"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "SD Card use with Core-Compute module",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/"
+  },
+  "next": {
+    "title": "WiFi/Bluetooth Antenna",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/"
+  }
+}

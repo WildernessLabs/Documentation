@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/IO/index",
+  "id": "Meadow/Meadow_Basics/IO/index",
+  "title": "Input/Output (IO)",
+  "description": "IO is a big part of what makes Meadow powerful. Meadow boards expose a wide variety of ways to control and interact with external peripherals and hardware via Input/Output (IO) ports.",
+  "source": "@site/docs/Meadow/Meadow_Basics/IO/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/IO",
+  "slug": "/Meadow/Meadow_Basics/IO/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/IO/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Input/Output (IO)",
+    "subtitle": "Understanding how to interact with hardware using the IO pins on Meadow."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow F7v2",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/"
+  },
+  "next": {
+    "title": "Analog I/O",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/"
+  }
+}

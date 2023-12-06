@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/API_Samples/index",
+  "id": "Meadow/Meadow.Foundation/API_Samples/index",
+  "title": "API Samples",
+  "description": "Controlling a Hitec Servo",
+  "source": "@site/docs/Meadow/Meadow.Foundation/API_Samples/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/API_Samples",
+  "slug": "/Meadow/Meadow.Foundation/API_Samples/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/API_Samples/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "API Samples",
+    "subtitle": "Simple and intuitive API code samples wiring a small set of peripherals and sensors together"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Meadow.Foundation",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/"
+  }
+}

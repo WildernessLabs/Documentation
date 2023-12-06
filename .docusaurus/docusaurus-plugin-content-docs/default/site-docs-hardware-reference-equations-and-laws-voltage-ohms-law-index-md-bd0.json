@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index",
+  "id": "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index",
+  "title": "OHM's Law",
+  "description": "Quick Reference",
+  "source": "@site/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index.md",
+  "sourceDirName": "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law",
+  "slug": "/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "OHM's Law",
+    "subtitle": "The fundamental law of electricity."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Voltage Division",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/"
+  },
+  "next": {
+    "title": "Digital Signals",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/"
+  }
+}

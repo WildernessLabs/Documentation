@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Release_Notes/Beta3/index",
+  "id": "Meadow/Release_Notes/Beta3/index",
+  "title": "Meadow Beta 3",
+  "description": "Beta 3.12",
+  "source": "@site/docs/Meadow/Release_Notes/Beta3/index.md",
+  "sourceDirName": "Meadow/Release_Notes/Beta3",
+  "slug": "/Meadow/Release_Notes/Beta3/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Beta3/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow Beta 3",
+    "subtitle": "Release Notes"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Meadow Beta 4",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/"
+  },
+  "next": {
+    "title": "Meadow Beta 2",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "Netduino/Input_Output/Digital/index",
+  "id": "Netduino/Input_Output/Digital/index",
+  "title": "Digital I/O",
+  "description": "Info",
+  "source": "@site/docs/Netduino/Input_Output/Digital/index.md",
+  "sourceDirName": "Netduino/Input_Output/Digital",
+  "slug": "/Netduino/Input_Output/Digital/",
+  "permalink": "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Netduino/Input_Output/Digital/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Netduino",
+    "title": "Digital I/O",
+    "subtitle": "Netduino digital (binary) Input/Output capabilities."
+  }
+}

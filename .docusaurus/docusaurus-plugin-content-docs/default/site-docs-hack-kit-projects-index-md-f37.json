@@ -1,0 +1,19 @@
+{
+  "unversionedId": "HackKit/Projects/index",
+  "id": "HackKit/Projects/index",
+  "title": "Hackster Project Inspiration",
+  "description": "| Project       | Image |",
+  "source": "@site/docs/HackKit/Projects/index.md",
+  "sourceDirName": "HackKit/Projects",
+  "slug": "/HackKit/Projects/",
+  "permalink": "/DocsDocusaurus/docs/HackKit/Projects/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/HackKit/Projects/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Hackster Project Inspiration",
+    "subtitle": "Check out our awesome projects you can build with a Hack Kit Pro"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index",
+  "id": "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index",
+  "title": "I2C",
+  "description": "I2C (Inter-Integrated Circuit), pronounced, \"eye-squared-sea\", is a communication protocol allowing bi-directional communication between devices using only two signal wires (in addition to power and ground):",
+  "source": "@site/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index.md",
+  "sourceDirName": "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C",
+  "slug": "/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "I2C",
+    "subtitle": "Introduction to the Inter-Integrated Circuit (IIC/I2C) protocol."
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Digital Protocols",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/"
+  },
+  "next": {
+    "title": "SPI",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/"
+  }
+}

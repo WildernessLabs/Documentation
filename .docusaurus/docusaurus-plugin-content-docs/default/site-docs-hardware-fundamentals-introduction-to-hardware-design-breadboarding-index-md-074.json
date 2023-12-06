@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index",
+  "id": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index",
+  "title": "Breadboarding, Modules, and Simulation.",
+  "description": "While we usually bias towards spinning a custom PCB for anything of complexity, breadboarding is a great way to design, build, and validate parts of circuits.",
+  "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index.md",
+  "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding",
+  "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Breadboarding, Modules, and Simulation.",
+    "subtitle": "Taking the first steps in hardware design with early breadboard prototyping and simulation."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Intro to Hardware Design",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
+  },
+  "next": {
+    "title": "PCBs",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/"
+  }
+}

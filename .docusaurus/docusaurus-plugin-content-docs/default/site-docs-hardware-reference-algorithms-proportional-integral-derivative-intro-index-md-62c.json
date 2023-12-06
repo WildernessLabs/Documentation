@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index",
+  "id": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index",
+  "title": "PID Intro",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index.md",
+  "sourceDirName": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro",
+  "slug": "/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "PID Intro",
+    "subtitle": "Proportional, Integral, Derivative (PID), the quintessential industrial control algorithm."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Ideal PID Algorithm",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/"
+  },
+  "next": {
+    "title": "Standard PID Algorithm",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/"
+  }
+}

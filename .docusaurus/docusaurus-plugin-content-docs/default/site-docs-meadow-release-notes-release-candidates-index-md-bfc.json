@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Release_Notes/Release-Candidates/index",
+  "id": "Meadow/Release_Notes/Release-Candidates/index",
+  "title": "Meadow v1.0 Release-Candidates",
+  "description": "We have a new release candidate, with a few fixes in the operating system but some big driver updates! This release resolves several issues with applying OTA updates via Meadow Cloud, and includes improvements to the Meadow.Foundation peripheral library.",
+  "source": "@site/docs/Meadow/Release_Notes/Release-Candidates/index.md",
+  "sourceDirName": "Meadow/Release_Notes/Release-Candidates",
+  "slug": "/Meadow/Release_Notes/Release-Candidates/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Release-Candidates/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow v1.0 Release-Candidates",
+    "subtitle": "Release Notes"
+  },
+  "sidebar": "meadowOsSidebar",
+  "previous": {
+    "title": "Meadow V1 Roadmap",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/"
+  },
+  "next": {
+    "title": "Meadow Beta 6",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/"
+  }
+}

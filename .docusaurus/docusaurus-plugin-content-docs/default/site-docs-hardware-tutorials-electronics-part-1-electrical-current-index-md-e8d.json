@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part1/Electrical_Current/index",
+  "id": "Hardware/Tutorials/Electronics/Part1/Electrical_Current/index",
+  "title": "Electrical Current",
+  "description": "Achieving Balance",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part1/Electrical_Current",
+  "slug": "/Hardware/Tutorials/Electronics/Part1/Electrical_Current/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Electrical Current",
+    "subtitle": "The movement of electrons."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Atoms",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/"
+  },
+  "next": {
+    "title": "Electromagnetism",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/"
+  }
+}

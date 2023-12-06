@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Meadow.Foundation/Getting_Started/index",
+  "id": "Meadow/Meadow.Foundation/Getting_Started/index",
+  "title": "Getting Started",
+  "description": "Hello, World!",
+  "source": "@site/docs/Meadow/Meadow.Foundation/Getting_Started/index.md",
+  "sourceDirName": "Meadow/Meadow.Foundation/Getting_Started",
+  "slug": "/Meadow/Meadow.Foundation/Getting_Started/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Getting_Started/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Getting Started",
+    "subtitle": "Meadow.Foundation"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "API Samples",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/"
+  },
+  "next": {
+    "title": "Meadow.Foundation Libraries and Frameworks",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/"
+  }
+}

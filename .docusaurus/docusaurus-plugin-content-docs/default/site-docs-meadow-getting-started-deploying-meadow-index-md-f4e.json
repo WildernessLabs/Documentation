@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Meadow/Getting_Started/Deploying_Meadow/index",
+  "id": "Meadow/Getting_Started/Deploying_Meadow/index",
+  "title": "Meadow OS Deployment",
+  "description": "When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or flashed, to it.",
+  "source": "@site/docs/Meadow/Getting_Started/Deploying_Meadow/index.md",
+  "sourceDirName": "Meadow/Getting_Started/Deploying_Meadow",
+  "slug": "/Meadow/Getting_Started/Deploying_Meadow/",
+  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Deploying_Meadow/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Meadow",
+    "title": "Meadow OS Deployment",
+    "subtitle": "Flashing the Meadow with the latest OS via Meadow.CLI"
+  },
+  "sidebar": "meadowSidebar",
+  "previous": {
+    "title": "Assemble Meadow Board",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Assemble_Meadow/"
+  },
+  "next": {
+    "title": "Deployment",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/"
+  }
+}

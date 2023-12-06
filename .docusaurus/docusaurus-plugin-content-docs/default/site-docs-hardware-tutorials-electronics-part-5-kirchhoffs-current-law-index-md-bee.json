@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index",
+  "id": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index",
+  "title": "Kirchhoff's Current Law",
+  "description": "Intro",
+  "source": "@site/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index.md",
+  "sourceDirName": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law",
+  "slug": "/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "ElectronicsTutorial",
+    "title": "Kirchhoff's Current Law",
+    "subtitle": "What goes in, must come out."
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "DC Circuit Analysis",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/"
+  },
+  "next": {
+    "title": "Kirchhoff's Voltage Law",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/"
+  }
+}

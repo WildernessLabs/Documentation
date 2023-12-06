@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Hardware/Circuits/Components/LEDs/index",
+  "id": "Hardware/Circuits/Components/LEDs/index",
+  "title": "LEDs",
+  "description": "Overview",
+  "source": "@site/docs/Hardware/Circuits/Components/LEDs/index.md",
+  "sourceDirName": "Hardware/Circuits/Components/LEDs",
+  "slug": "/Hardware/Circuits/Components/LEDs/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/LEDs/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "LEDs",
+    "subtitle": "Light Emitting Diodes"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Diodes",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/"
+  },
+  "next": {
+    "title": "LED w/PWM",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/"
+  }
+}

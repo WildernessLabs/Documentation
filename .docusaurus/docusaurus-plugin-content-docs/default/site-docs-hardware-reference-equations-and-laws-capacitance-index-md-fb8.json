@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Hardware/Reference/Equations_and_Laws/Capacitance/index",
+  "id": "Hardware/Reference/Equations_and_Laws/Capacitance/index",
+  "title": "Capacitance",
+  "description": "",
+  "source": "@site/docs/Hardware/Reference/Equations_and_Laws/Capacitance/index.md",
+  "sourceDirName": "Hardware/Reference/Equations_and_Laws/Capacitance",
+  "slug": "/Hardware/Reference/Equations_and_Laws/Capacitance/",
+  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/",
+  "draft": false,
+  "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Equations_and_Laws/Capacitance/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "Hardware",
+    "title": "Capacitance"
+  },
+  "sidebar": "hardwareSidebar",
+  "previous": {
+    "title": "Equations and Laws",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/"
+  },
+  "next": {
+    "title": "Resistance Calculations",
+    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/"
+  }
+}
