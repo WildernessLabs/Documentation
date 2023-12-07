@@ -255,6 +255,9 @@ paket-files/
 #Ignore vagrant files
 .vagrant/
 
+#Ignore build files
+build/
+
 #Ignore Jekyll files
 _site/
 .jekyll*
