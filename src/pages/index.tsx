@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
                   <div className="wl-card border thick-1 orange radius-8">
                     <img
                       className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}/img/homepage/card-meadow-apps.png`}
+                      src={`${siteConfig.baseUrl}img/homepage/card-meadow-apps.png`}
                     />
                     <div className="card-content">
                       <h3>Meadow apps</h3>
@@ -59,7 +59,7 @@ export default function Home(): JSX.Element {
                   <div className="wl-card border thick-1 orange radius-8">
                     <img
                       className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}/img/homepage/card-network.png`}
+                      src={`${siteConfig.baseUrl}img/homepage/card-network.png`}
                     />
                     <div className="card-content">
                       <h3>Network</h3>
@@ -74,7 +74,7 @@ export default function Home(): JSX.Element {
                   <div className="wl-card border thick-1 orange radius-8">
                     <img
                       className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}/img/homepage/card-input-output.png`}
+                      src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
                     />
                     <div className="card-content">
                       <h3>Input/Output (I/O)</h3>
