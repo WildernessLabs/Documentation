@@ -152,7 +152,7 @@ jobs:
     steps:
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          source_dir: './src/build'
+          source_dir: 'build'
           container_name: '$web'
           connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
           overwrite: 'true'
