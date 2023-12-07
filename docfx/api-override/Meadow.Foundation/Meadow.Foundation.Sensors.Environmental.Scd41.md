@@ -12,7 +12,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-Scd41 sensor;
+private Scd41 sensor;
 
 public override Task Initialize()
 {
