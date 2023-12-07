@@ -13,7 +13,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-private A4988 a4988;
+A4988 a4988;
 
 public override Task Initialize()
 {

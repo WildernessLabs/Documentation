@@ -16,7 +16,7 @@ Relay relay;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     relay = new Relay(Device.Pins.D13);
 
@@ -31,7 +31,7 @@ public override async Task Run()
     {
         state = !state;
 
-        Resolver.Log.Info($"- State: {state}");
+        Console.WriteLine($"- State: {state}");
         relay.IsOn = state;
 
         await Task.Delay(500);

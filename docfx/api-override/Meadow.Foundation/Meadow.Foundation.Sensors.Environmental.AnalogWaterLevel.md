@@ -35,8 +35,7 @@ public override Task Initialize()
     ));
 
     // classical .NET events can also be used:
-    analogWaterLevel.Updated += (object sender, IChangeResult<float> e) =>
-    {
+    analogWaterLevel.Updated += (object sender, IChangeResult<float> e) => {
         Resolver.Log.Info($"Level Changed, level: {e.New}cm");
     };
 
@@ -52,7 +51,7 @@ public override Task Initialize()
 protected async Task ReadLevel()
 {
     var conditions = await analogWaterLevel.Read();
-    Resolver.Log.Info($"Initial level: {conditions}");
+    Resolver.Log.Info($"Initial level: { conditions }");
 }
 
 ```

@@ -16,7 +16,7 @@ ThumbJoystick joystick;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initializing hardware...");
+    Console.WriteLine("Initializing hardware...");
 
     joystick = new ThumbJoystick(
         Device.CreateAnalogInputPort(Device.Pins.A01, 1, TimeSpan.FromMilliseconds(10), new Voltage(3.3)),
@@ -37,8 +37,8 @@ public override async Task Run()
 
 private void JoystickUpdated(object sender, IChangeResult<AnalogJoystickPosition> e)
 {
-    Resolver.Log.Info($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
-    Resolver.Log.Info($"Digital position: {joystick.DigitalPosition}");
+    Console.WriteLine($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
+    Console.WriteLine($"Digital position: {joystick.DigitalPosition}");
 }
 
 ```

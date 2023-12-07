@@ -76,10 +76,9 @@ public override Task Initialize()
     );
 
     var consumer = Fc28.CreateObserver(
-        handler: result =>
-        {
+        handler: result => {
             // the first time through, old will be null.
-            string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a";
+            string oldValue = (result.Old is { } old) ? $"{old:n2}" : "n/a"; // C# 8 pattern matching
             Resolver.Log.Info($"Subscribed - " +
                 $"new: {result.New}, " +
                 $"old: {oldValue}");
@@ -88,7 +87,7 @@ public override Task Initialize()
     );
     fc28.Subscribe(consumer);
 
-    fc28.MoistureUpdated += (object sender, IChangeResult<double> e) =>
+    fc28.HumidityUpdated += (object sender, IChangeResult<double> e) =>
     {
         Resolver.Log.Info($"Moisture Updated: {e.New}");
     };
@@ -99,7 +98,7 @@ public override Task Initialize()
 public async override Task Run()
 {
     var moisture = await fc28.Read();
-    Resolver.Log.Info($"Moisture Value {moisture}");
+    Resolver.Log.Info($"Moisture Value { moisture}");
 
     fc28.StartUpdating(TimeSpan.FromMilliseconds(5000));
 }

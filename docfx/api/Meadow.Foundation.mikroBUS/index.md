@@ -1,3 +1,0 @@
-## Meadow.Foundation.mikroBUS API Reference Documentation
-
-The Meadow.Foundation.mikroBUS peripherals library is an open source repository of Meadow compatible drivers for [MikroElektronika](https://www.mikroe.com/click) mikroBUS Click Boards. Meadow.Foundation.mikroBUS is part of the open source driver and peripheral library [Meadow.Foundation](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Peripherals/).

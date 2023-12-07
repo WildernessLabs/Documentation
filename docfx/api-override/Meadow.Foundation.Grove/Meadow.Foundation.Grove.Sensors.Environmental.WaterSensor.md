@@ -16,18 +16,18 @@ WaterSensor waterSensor;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     waterSensor = new WaterSensor(Device.Pins.A01);
 
     waterSensor.Subscribe(WaterSensor.CreateObserver(
-        h => Resolver.Log.Info($"Water level changed by 10 mm; new: {h.New}, old: {h.Old}"),
+        h => Console.WriteLine($"Water level changed by 10 mm; new: {h.New}, old: {h.Old}"),
         null //e => { return Math.Abs(e.Delta) > 0.1f; }
     ));
 
-    waterSensor.Updated += (object sender, IChangeResult<float> e) =>
+    waterSensor.Updated += (object sender, IChangeResult<float> e) => 
     {
-        Resolver.Log.Info($"Level Changed, level: {e.New}cm");
+        Console.WriteLine($"Level Changed, level: {e.New}cm");
     };
 
     return Task.CompletedTask;
@@ -36,7 +36,7 @@ public override Task Initialize()
 public override async Task Run()
 {
     var conditions = await waterSensor.Read();
-    Resolver.Log.Info($"Initial level: {conditions}");
+    Console.WriteLine($"Initial level: {conditions}");
 
     waterSensor.StartUpdating(TimeSpan.FromSeconds(5));
 }

@@ -13,7 +13,8 @@ An LED Bar Graph is packaged array of LEDs commonly used to indicate level or pr
 
 The **LedBarGraph** class allows you to control an led bar graph using GPIO.
 
-![LED bar graphs](../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/img_LedBarGraph.jpg)
+<img src="../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/img_LedBarGraph.jpg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 Use the `SetLed` method to turn on or off LEDs individually, or assign a value on the `Percentage` property to represent it visually on the graph bar, like a battery indicator, temperature, humidity, etc.  
 
@@ -128,4 +129,4 @@ public override async Task Run()
 
 ### Wiring Example
 
-![Circuit layout sample showing an LED BAR graph connected to a Meadow F7](../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/LedBarGraph_Fritzing.svg)
+<img src="../../API_Assets/Meadow.Foundation.Leds.LedBarGraph/LedBarGraph_Fritzing.svg" 

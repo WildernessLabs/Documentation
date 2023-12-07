@@ -16,7 +16,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     display = new OLEDDisplay1_12inch(Device.CreateI2cBus(), OLEDDisplayVersion.Version3x);
 

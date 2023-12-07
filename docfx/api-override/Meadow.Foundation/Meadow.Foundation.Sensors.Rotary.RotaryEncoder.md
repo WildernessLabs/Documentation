@@ -52,11 +52,11 @@ public override Task Initialize()
     rotaryEncoder.Rotated += RotaryEncoder_Rotated;
 
     rotaryEncoder.Clicked += (s, e) => Resolver.Log.Info("Button Clicked");
-
+  
     rotaryEncoder.PressEnded += (s, e) => Resolver.Log.Info("Press ended");
-
+       
     rotaryEncoder.PressStarted += (s, e) => Resolver.Log.Info("Press started");
-
+     
     Resolver.Log.Info("Hardware initialization complete.");
 
     return Task.CompletedTask;
@@ -64,7 +64,7 @@ public override Task Initialize()
 
 private void RotaryEncoder_Rotated(object sender, RotaryChangeResult e)
 {
-    switch (e.New)
+    switch (e.New) 
     {
         case RotationDirection.Clockwise:
             value++;

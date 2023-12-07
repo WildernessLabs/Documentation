@@ -18,7 +18,15 @@ The displays are simply a collection of single color leds in a pre-configured so
 
 The pinouts vary from device to device, check the documentation to map the pinouts to a specific segment. The come in a wide selection of colors and may be common anode or common cathode.
 
-![SevenSegment displays](../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+### Purchasing
+
+You can get 7-segment displays from the following supplier(s):
+
+* [Digi-Key](https://www.digikey.ca/product-detail/en/kingbright-company-llc/SA05-11SRWA/754-1677-5-ND/3084460?utm_adgroup=&mkwid=sEc2Kbmrm&pcrid=311487093563&pkw=&pmt=&pdv=c&productid=3084460&slid=&gclid=Cj0KCQjw_5rtBRDxARIsAJfxvYA-QhkE8ReFOaIaxWxF3q54830jvZKy1GHBbQu0E68FXQ5fudSMumAaAvw_EALw_wcB)
+* [Elmwood Electronics](https://elmwoodelectronics.ca/products/8546?variant=28162038787&currency=CAD&utm_campaign=gs-2019-02-19&utm_source=google&utm_medium=smart_campaign&gclid=Cj0KCQjw_5rtBRDxARIsAJfxvYCC-J_psvSkkcZ5TwJHb_jiCvhzJg8Qie0PYdPdpWE8i96i65x-A9oaAqrUEALw_wcB)
 
 ### Code Example
 
@@ -74,4 +82,9 @@ To wire a Common Cathode Seven Segment Display (like the 5161AS) to your Meadow 
 
 It should look like the following diagram:
 
-![Wiring a SevenSegment to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

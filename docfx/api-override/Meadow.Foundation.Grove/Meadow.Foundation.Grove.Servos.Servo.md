@@ -16,7 +16,7 @@ Servo servo;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     servo = new Servo(Device.Pins.D13);
 
@@ -32,16 +32,16 @@ public override async Task Run()
         for (int i = 0; i <= servo.Config.MaximumAngle.Degrees; i++)
         {
             await servo.RotateTo(new Angle(i, AU.Degrees));
-            Resolver.Log.Info($"Rotating to {i}");
+            Console.WriteLine($"Rotating to {i}");
             await Task.Delay(40);
         }
 
         await Task.Delay(2000);
-
+        
         for (int i = 180; i >= servo.Config.MinimumAngle.Degrees; i--)
         {
             await servo.RotateTo(new Angle(i, AU.Degrees));
-            Resolver.Log.Info($"Rotating to {i}");
+            Console.WriteLine($"Rotating to {i}");
             await Task.Delay(40);
         }
 

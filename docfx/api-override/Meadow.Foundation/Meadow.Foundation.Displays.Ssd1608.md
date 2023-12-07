@@ -72,4 +72,9 @@ public override Task Run()
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-![Wiring a SSD1608 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.ePaper.SSD1608/ePaper_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.SSD1608/ePaper_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

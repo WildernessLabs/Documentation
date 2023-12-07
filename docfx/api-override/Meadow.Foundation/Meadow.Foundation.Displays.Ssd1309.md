@@ -92,4 +92,9 @@ public override Task Run()
 
 The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C interface is as follows:
 
-![Wiring a Ssd1309 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Ssd1309/SSD1309_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1309/SSD1309_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

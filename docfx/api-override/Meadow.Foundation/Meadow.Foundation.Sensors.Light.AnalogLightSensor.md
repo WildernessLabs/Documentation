@@ -26,10 +26,9 @@ public override Task Initialize()
         handler: result => Resolver.Log.Info($"Observer filter satisfied: {result.New.Lux:N2} lux, old: {result.Old.Value.Lux:N2} lux"),
 
         // only notify if the change is greater than 0.5
-        filter: result =>
-        {
-            if (result.Old is { } old)
-            {
+        filter: result => {
+            if (result.Old is { } old) 
+            {   //c# 8 pattern match syntax. checks for !null and assigns var.
                 return (result.New - old).Abs().Lux > 0.5; // returns true if > 0.5  change.
             }
             return false;
@@ -40,7 +39,7 @@ public override Task Initialize()
     analogLightSensor.Subscribe(consumer);
 
     // classical .NET events can also be used:
-    analogLightSensor.IlluminanceUpdated += (sender, result) =>
+    analogLightSensor.LuminosityUpdated += (sender, result) => 
         Resolver.Log.Info($"Lux changed: {result.New.Lux:N2} lux, old: {result.Old?.Lux:N2} lux");
 
     //==== One-off reading use case/pattern

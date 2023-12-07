@@ -14,13 +14,13 @@ remarks: *content
 ```csharp
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     var lineFinder = new LineFinder(Device.Pins.D13);
 
     lineFinder.ColorChanged += (s, e) =>
     {
-        Resolver.Log.Info($"line color: {e}");
+        Console.WriteLine($"line color: {e}");
     };
 
     return Task.CompletedTask;

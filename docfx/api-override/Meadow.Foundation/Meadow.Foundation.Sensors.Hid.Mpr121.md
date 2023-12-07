@@ -9,6 +9,8 @@ remarks: *content
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.Mpr121) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.Mpr121/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Hid.Mpr121/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Hid.Mpr121.svg?label=Meadow.Foundation.Sensors.Hid.Mpr121" alt="NuGet Gallery for Meadow.Foundation.Sensors.Hid.Mpr121" /></a> |
+                    <img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Hid.Mpr121.svg?label=Meadow.Foundation.Sensors.Hid.Mpr121" 
+                    style="width: auto; height: -webkit-fill-available;" /></a> |
 
 ### Code Example
 
@@ -27,9 +29,9 @@ private void Sensor_ChannelStatusesChanged(object sender, ChannelStatusChangedEv
 {
     string pads = string.Empty;
 
-    for (int i = 0; i < e.ChannelStatus.Count; i++)
+    for(int i = 0; i < e.ChannelStatus.Count; i++)
     {
-        if (e.ChannelStatus[(Mpr121.Channels)i] == true)
+        if(e.ChannelStatus[(Mpr121.Channels)i] == true)
         {
             pads += i + ", ";
         }

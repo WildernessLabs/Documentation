@@ -46,8 +46,8 @@ public override Task Initialize()
         sensor.Updated += (sender, result) =>
         {
             Resolver.Log.Info($"  CO2 Concentration: {result.New.CO2Concentration?.PartsPerMillion:N0}ppm");
-            Resolver.Log.Info($"  Ethanol Concentration: {result.New.EthanolConcentration?.PartsPerBillion:N0}ppb");
-            Resolver.Log.Info($"  TVOC Concentration: {result.New.TVOCConcentration?.PartsPerBillion:N0}ppb");
+            Resolver.Log.Info($"  Ethanol Concentraion: {result.New.EthanolConcentration?.PartsPerBillion:N0}ppb");
+            Resolver.Log.Info($"  TVOC Concentraion: {result.New.TVOCConcentration?.PartsPerBillion:N0}ppb");
             Resolver.Log.Info($"  AQI: {sensor.GetAirQualityIndex()}");
         };
     }

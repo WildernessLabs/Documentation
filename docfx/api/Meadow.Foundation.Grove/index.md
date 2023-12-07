@@ -1,3 +1,0 @@
-## Meadow.Foundation.Grove API Reference Documentation
-
-The Meadow.Foundation.Grove peripherals library is an open source repository of Meadow compatible drivers for [Seeed Studio Grove](https://www.seeedstudio.com/grove.html) modular hardware peripherals. Meadow.Foundation.Grove is part of the open source driver and peripheral library [Meadow.Foundation](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Peripherals/).

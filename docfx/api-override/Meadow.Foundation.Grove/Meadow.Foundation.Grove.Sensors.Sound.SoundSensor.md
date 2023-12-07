@@ -16,13 +16,13 @@ SoundSensor sensor;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     // configure our sensor
     sensor = new SoundSensor(Device.Pins.A01);
 
     var consumer = SoundSensor.CreateObserver(
-        handler: result => Resolver.Log.Info($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
+        handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
         filter: result =>
         {
             if (result.Old is { } old)
@@ -35,7 +35,7 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Resolver.Log.Info($"Voltage Changed, new: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV");
+        Console.WriteLine($"Voltage Changed, new: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV");
     };
 
     return Task.CompletedTask;
@@ -44,7 +44,7 @@ public override Task Initialize()
 public override async Task Run()
 {
     var result = await sensor.Read();
-    Resolver.Log.Info($"Initial read: {result.Millivolts:N2}mV");
+    Console.WriteLine($"Initial read: {result.Millivolts:N2}mV");
 
     sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
 }

@@ -16,7 +16,7 @@ VibrationMotor vibrationMotor;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     vibrationMotor = new VibrationMotor(Device.Pins.D13);
 
@@ -27,11 +27,11 @@ public override async Task Run()
 {
     for (int i = 0; i < 5; i++)
     {
-        Resolver.Log.Info("Motor on");
+        Console.WriteLine("Motor on");
         vibrationMotor.IsVibrating = true;
         await Task.Delay(1000);
 
-        Resolver.Log.Info("Motor off");
+        Console.WriteLine("Motor off");
         vibrationMotor.IsVibrating = false;
         await Task.Delay(1000);
     }

@@ -20,7 +20,7 @@ public override Task Initialize()
 
     var i2cBus = Device.CreateI2cBus(WiiClassicController.DefaultI2cSpeed);
 
-    classicController = new WiiClassicController(i2cBus: i2cBus,
+    classicController = new WiiClassicController(i2cBus: i2cBus, 
                                                  useHighResolutionMode: true);
 
     //onetime update - could be used in a game loop

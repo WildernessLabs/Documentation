@@ -14,6 +14,19 @@ The **DS18B20** is a 1-Wire temperature sensor manufactured by Maxim.  The senso
 
 Each sensor has a 64-bit unique identifier built in.  This allows multiple sensors to be connected to the same 1-Wire bus.  So for instance, a project could measure internal and external temperature using a single GPIO pin.
 
+# Purchasing
+
+DS18B20 sensors are available in TO-92 packaging and also in a waterproof version from the following suppliers:
+
+* [Adafruit DS18B20 TO-92 Package with Pull-up Resistor](https://www.adafruit.com/product/374)
+* [Adafruit Waterproof DS18B20](https://www.adafruit.com/product/381)
+* [Sparkfun DS18B20 TO-92 Package](https://www.sparkfun.com/products/245)
+* [Sparkfun Waterproof DS18B20](https://www.sparkfun.com/products/11050)
+
+Note that when purchasing a DS18B20 you will require a 4K7 pull-up resistor if one is not already supplied with the sensor.
+
+The driver for the DS18B20 temperature sensor can operate in interrupt or polling mode.
+
 ### Code Example
 
 ```csharp

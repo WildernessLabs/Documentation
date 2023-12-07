@@ -13,7 +13,8 @@ An LED Bar Graph is packaged array of LEDs commonly used to indicate level or pr
 
 The **PwmLedBarGraph** class allows you to control an led bar graph using PWM ports.
 
-![LED bar graphs](../../API_Assets/Meadow.Foundation.Leds.PwmLedBarGraph/img_LedBarGraph.jpg)
+<img src="../../API_Assets/Meadow.Foundation.Leds.PwmLedBarGraph/img_LedBarGraph.jpg" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
 
 Use the `SetLed` method to turn on or off LEDs individually, or assign a value on the `Percentage` property to represent it visually on the graph bar, like a battery indicator, temperature, humidity, etc.  
 
@@ -117,4 +118,4 @@ public override async Task Run()
 
 ### Wiring Example
 
-![LED bar graphs](../../API_Assets/Meadow.Foundation.Leds.PwmLedBarGraph/PwmLedBarGraph_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Leds.PwmLedBarGraph/PwmLedBarGraph_Fritzing.png" 

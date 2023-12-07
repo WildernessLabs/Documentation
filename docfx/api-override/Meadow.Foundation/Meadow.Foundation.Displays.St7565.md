@@ -52,7 +52,7 @@ public override Task Run()
 
 ### Wiring Example
 
-To wire a ST7565 to your Meadow board, connect the following:
+ To wire a ST7565 to your Meadow board, connect the following:
 
 | ST7565 | Meadow Pin |
 |--------|------------|
@@ -65,4 +65,9 @@ To wire a ST7565 to your Meadow board, connect the following:
 | RST    | D01        |
 | CS     | D02        |
 
-![Wiring a Ssd1681 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.St7565/St7565_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.St7565/St7565_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

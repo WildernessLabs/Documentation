@@ -32,6 +32,7 @@ public override Task Initialize()
         },
         filter: result =>
         {
+            //c# 8 pattern match syntax. checks for !null and assigns var.
             if (result.Old?.Temperature is { } oldTemp &&
                 result.Old?.Humidity is { } oldHumidity &&
                 result.New.Temperature is { } newTemp &&
@@ -115,4 +116,4 @@ async Task ReadConditions()
 
 To wire a Bme680 to your Meadow board, connect the following:
 
-![Wiring a BME680 sensor to Meadow](../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme680/Bme680_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme680/Bme680_Fritzing.png" 

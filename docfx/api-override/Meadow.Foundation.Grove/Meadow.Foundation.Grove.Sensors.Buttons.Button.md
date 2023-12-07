@@ -16,16 +16,16 @@ Button button;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     button = new Button(Device.Pins.D13)
     {
         LongClickedThreshold = TimeSpan.FromMilliseconds(1500)
     };
 
-    button.Clicked += (s, e) => Resolver.Log.Info("Grove Button clicked");
+    button.Clicked += (s, e) => Console.WriteLine("Grove Button clicked");
 
-    button.LongClicked += (s, e) => Resolver.Log.Info("Grove Button long clicked");
+    button.LongClicked += (s, e) => Console.WriteLine("Grove Button long clicked");
 
     return Task.CompletedTask;
 }

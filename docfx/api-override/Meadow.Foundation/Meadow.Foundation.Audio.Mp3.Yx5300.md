@@ -58,4 +58,5 @@ To wire a Yx5300 to your Meadow board, connect the following:
 | RX     | D01        |
 | TX     | D00        |
 
-![Wiring a Yx5300 to a Meadow F7](../../API_Assets/Meadow.Foundation.Audio.Mp3.Yx5300/Yx5300_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Audio.Mp3.Yx5300/Yx5300_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />

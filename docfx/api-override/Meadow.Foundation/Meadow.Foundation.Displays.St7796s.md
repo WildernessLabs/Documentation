@@ -23,7 +23,7 @@ public override Task Initialize()
 
     Resolver.Log.Info("Create display driver instance");
 
-    var display = new St7796s
+    var display = new Ssd1331
     (
         spiBus: spiBus,
         resetPin: Device.Pins.D00,
@@ -71,4 +71,9 @@ public override Task Run()
 
 It should look like the following diagram:
 
-![Wiring a St7796s to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tft.St7796s/St7796s_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.St7796s/St7796s_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

@@ -24,11 +24,10 @@ public override Task Initialize()
     sensor = new Mag3110(Device.CreateI2cBus());
 
     // classical .NET events can  be used
-    sensor.Updated += (sender, result) =>
-    {
+    sensor.Updated += (sender, result) => {
         Resolver.Log.Info($"Magnetic Field: [X:{result.New.MagneticField3D?.X.MicroTesla:N2}," +
             $"Y:{result.New.MagneticField3D?.Y.MicroTesla:N2}," +
-            $"Z:{result.New.MagneticField3D?.Z.MicroTesla:N2} (microTeslas)]");
+            $"Z:{result.New.MagneticField3D?.Z.MicroTesla:N2} (MicroTeslas)]");
 
         Resolver.Log.Info($"Temp: {result.New.Temperature?.Celsius:N2}C");
     };
@@ -37,10 +36,8 @@ public override Task Initialize()
     var consumer = Mag3110.CreateObserver(
         handler: result => Resolver.Log.Info($"Observer: [x] changed by threshold; new [x]: X:{result.New.MagneticField3D?.X.MicroTesla:N2}, old: X:{result.Old?.MagneticField3D?.X.MicroTesla:N2}"),
         // only notify if there's a greater than 1 micro tesla on the Y axis
-        filter: result =>
-        {
-            if (result.Old is { } old)
-            {
+        filter: result => {
+            if (result.Old is { } old) { //c# 8 pattern match syntax. checks for !null and assigns var.
                 return ((result.New.MagneticField3D - old.MagneticField3D)?.Y > new MagneticField(1, MU.MicroTesla));
             }
             return false;
@@ -54,9 +51,9 @@ public async override Task Run()
 {
     var result = await sensor.Read();
     Resolver.Log.Info("Initial Readings:");
-    Resolver.Log.Info($"Magnetic field: [X:{result.MagneticField3D?.X.MicroTesla:N2}," +
+    Resolver.Log.Info($"Mangetic field: [X:{result.MagneticField3D?.X.MicroTesla:N2}," +
         $"Y:{result.MagneticField3D?.Y.MicroTesla:N2}," +
-        $"Z:{result.MagneticField3D?.Z.MicroTesla:N2} (microTeslas)]");
+        $"Z:{result.MagneticField3D?.Z.MicroTesla:N2} (microteslas)]");
 
     Resolver.Log.Info($"Temp: {result.Temperature?.Celsius:N2}C");
 

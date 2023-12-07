@@ -14,8 +14,8 @@ remarks: *content
 
 ```csharp
 Apa102 apa102;
-readonly int numberOfLeds = 256;
-readonly float maxBrightness = 0.25f;
+int numberOfLeds = 256;
+float maxBrightness = 0.25f;
 
 public override Task Initialize()
 {
@@ -60,4 +60,9 @@ To wire a Apa102 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-![Wiring an Apa102 to a Meadow F7](../../API_Assets/Meadow.Foundation.Leds.Apa102/Apa102_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Leds.Apa102/Apa102_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

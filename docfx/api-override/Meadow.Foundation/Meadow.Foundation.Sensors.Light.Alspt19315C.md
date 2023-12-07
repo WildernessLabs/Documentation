@@ -32,7 +32,7 @@ public override Task Initialize()
         filter: result =>
         {
             if (result.Old is { } old)
-            {
+            { //c# 8 pattern match syntax. checks for !null and assigns var.
                 return (result.New - old).Abs().Volts > 0.5; // returns true if > 0.5V change.
             }
             return false;
@@ -61,9 +61,21 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Alspt19315C/Samples/Alspt19315C_Sample)
 
+### Purchasing
+
+The ALS-PT19 senors are available on breakout boards and as individual sensors:
+
+* [Adafruit breakout board](https://www.adafruit.com/product/2748)
+* [Sparkfun ALS-PT19 Sensor](https://www.proto-pic.co.uk/als-pt19-light-sensor.html)
+* [Sparkfun Weather Shield](https://www.proto-pic.co.uk/weather-shield.html)
+
 ### Wiring Example
 
 The ALS-PT19C is a simple analog device requiring only three connections:
 
 <img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Alspt19315C/Alspt19315C_Fritzing.svg" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

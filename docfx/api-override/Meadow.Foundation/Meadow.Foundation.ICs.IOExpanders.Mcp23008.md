@@ -53,7 +53,7 @@ private void BenchmarkDigitalOutputPorts()
 
     var state = false;
     var stopwatch = new Stopwatch();
-    Resolver.Log.Info("Starting benchmark");
+    Console.WriteLine("Starting benchmark");
 
     for (var x = 0; x < 10; x++)
     {
@@ -69,10 +69,10 @@ private void BenchmarkDigitalOutputPorts()
         }
         stopwatch.Stop();
 
-        Resolver.Log.Info($"{100 * outputPorts.Count} pins toggled in {stopwatch.ElapsedMilliseconds}ms");
+        Console.WriteLine($"{100 * outputPorts.Count} pins toggled in {stopwatch.ElapsedMilliseconds}ms");
     }
 
-    Resolver.Log.Info("Benchmark finished");
+    Console.WriteLine("Benchmark finished");
 }
 
 private void TestDigitalOutputPorts(int loopCount)

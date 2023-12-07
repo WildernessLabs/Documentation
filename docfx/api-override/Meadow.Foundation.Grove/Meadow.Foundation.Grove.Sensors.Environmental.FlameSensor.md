@@ -16,13 +16,13 @@ FlameSensor flameSensor;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     flameSensor = new FlameSensor(Device.Pins.D13);
 
     flameSensor.FlameDetected += (s, e) =>
     {
-        Resolver.Log.Info($"fire detected: {e}");
+        Console.WriteLine($"fire detected: {e}");
     };
 
     return Task.CompletedTask;

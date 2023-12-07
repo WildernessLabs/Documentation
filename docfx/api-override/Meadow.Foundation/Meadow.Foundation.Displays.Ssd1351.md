@@ -79,7 +79,7 @@ public override Task Run()
 |---------|------------|
 | LED-    | 3V3        |
 | LED+    | GND        |
-| MOSI    | COPI       |
+| MOSI    | MOSI       |
 | SCK     | SCK        |
 | RESET   | D15        |
 | A0      | D14        |
@@ -89,4 +89,9 @@ public override Task Run()
 
 It should look like the following diagram:
 
-![Wiring a Ssd1351 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tft.Ssd1351/Ssd1351_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ssd1351/Ssd1351_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
+
+
+

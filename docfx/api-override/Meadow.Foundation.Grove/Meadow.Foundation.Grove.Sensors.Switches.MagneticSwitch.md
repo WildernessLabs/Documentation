@@ -14,13 +14,13 @@ remarks: *content
 ```csharp
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     var magneticSwitch = new MagneticSwitch(Device.Pins.D13);
 
     magneticSwitch.Changed += (s, e) =>
     {
-        Resolver.Log.Info($"Switched - open {magneticSwitch.IsOn}");
+        Console.WriteLine($"Switched - open {magneticSwitch.IsOn}");
     };
 
     return Task.CompletedTask;

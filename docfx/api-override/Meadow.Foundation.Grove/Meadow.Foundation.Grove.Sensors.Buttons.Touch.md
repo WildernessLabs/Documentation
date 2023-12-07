@@ -16,19 +16,19 @@ Touch touch;
 
 public override Task Initialize()
 {
-    Resolver.Log.Info("Initialize...");
+    Console.WriteLine("Initialize...");
 
     touch = new Touch(Device.Pins.D04);
     touch.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
 
     touch.Clicked += (s, e) =>
     {
-        Resolver.Log.Info("Grove Touch pressed");
+        Console.WriteLine("Grove Touch pressed");
     };
 
     touch.LongClicked += (s, e) =>
     {
-        Resolver.Log.Info("Grove Touch long pressed");
+        Console.WriteLine("Grove Touch long pressed");
     };
 
     return Task.CompletedTask;

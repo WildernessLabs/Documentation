@@ -19,7 +19,7 @@ public override Task Initialize()
     Resolver.Log.Info("Initialize...");
 
     // initialize the rain gauge driver
-    rainGauge = new SwitchingRainGauge(Device.Pins.D14);
+    rainGauge = new SwitchingRainGauge(Device.Pins.D15);
 
     //==== Classic event example:
     rainGauge.Updated += (sender, result) => Resolver.Log.Info($"Updated event {result.New.Millimeters}mm");

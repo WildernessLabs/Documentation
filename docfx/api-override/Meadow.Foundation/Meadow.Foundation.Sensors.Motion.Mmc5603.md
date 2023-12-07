@@ -12,7 +12,7 @@ remarks: *content
 ### Code Example
 
 ```csharp
-private Mmc5603 sensor;
+Mmc5603 sensor;
 
 public override Task Initialize()
 {
@@ -21,7 +21,7 @@ public override Task Initialize()
     sensor = new Mmc5603(Device.CreateI2cBus());
 
     // classical .NET events can  be used
-    sensor.Updated += (sender, result) =>
+    sensor.Updated += (sender, result) => 
     {
         Resolver.Log.Info($"Magnetic Field: [X:{result.New.X.MicroTesla:N2}," +
             $"Y:{result.New.Y.MicroTesla:N2}," +
@@ -32,10 +32,10 @@ public override Task Initialize()
     var consumer = Mmc5603.CreateObserver(
         handler: result => Resolver.Log.Info($"Observer: [x] changed by threshold; new [x]: X:{result.New.X.MicroTesla:N2}, old: X:{result.Old?.X.MicroTesla:N2}"),
         // only notify if there's a greater than 1 micro tesla on the Y axis
-        filter: result =>
+        filter: result => 
         {
-            if (result.Old is { } old)
-            {
+            if (result.Old is { } old) 
+            { //c# 8 pattern match syntax. checks for !null and assigns var
                 return (result.New - old).Y > new MagneticField(1, MU.MicroTesla);
             }
             return false;
@@ -46,15 +46,17 @@ public override Task Initialize()
     return Task.CompletedTask;
 }
 
-public override async Task Run()
+public async override Task Run()
 {
+    Resolver.Log.Loglevel = Meadow.Logging.LogLevel.Trace;
+
     //Read from sensor
     var result = await sensor.Read();
 
     //output initial readings text to console
     Resolver.Log.Info("Initial Readings:");
     Resolver.Log.Info(
-        $"Magnetic field: [X:{result.X.MicroTesla:N2}," +
+        $"Mangetic field: [X:{result.X.MicroTesla:N2}," +
         $"Y:{result.Y.MicroTesla:N2}," +
         $"Z:{result.Z.MicroTesla:N2} (MicroTeslas)]");
 

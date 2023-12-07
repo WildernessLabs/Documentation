@@ -26,7 +26,7 @@ public override Task Initialize()
 
     gps = new GPSWing(serial);
 
-    gps.GgaReceived += (object sender, GnssPositionInfo location) =>
+    gps.GgaReceived += (object sender, GnssPositionInfo location) => 
     {
         Console.WriteLine("*********************************************");
         Console.WriteLine(location);
@@ -34,7 +34,7 @@ public override Task Initialize()
     };
 
     // GLL
-    gps.GllReceived += (object sender, GnssPositionInfo location) =>
+    gps.GllReceived += (object sender, GnssPositionInfo location) => 
     {
         Console.WriteLine("*********************************************");
         Console.WriteLine(location);
@@ -42,7 +42,7 @@ public override Task Initialize()
     };
 
     // GSA
-    gps.GsaReceived += (object sender, ActiveSatellites activeSatellites) =>
+    gps.GsaReceived += (object sender, ActiveSatellites activeSatellites) => 
     {
         Console.WriteLine("*********************************************");
         Console.WriteLine(activeSatellites);
@@ -50,7 +50,7 @@ public override Task Initialize()
     };
 
     // RMC (recommended minimum)
-    gps.RmcReceived += (object sender, GnssPositionInfo positionCourseAndTime) =>
+    gps.RmcReceived += (object sender, GnssPositionInfo positionCourseAndTime) => 
     {
         Console.WriteLine("*********************************************");
         Console.WriteLine(positionCourseAndTime);
@@ -59,7 +59,7 @@ public override Task Initialize()
     };
 
     // VTG (course made good)
-    gps.VtgReceived += (object sender, CourseOverGround courseAndVelocity) =>
+    gps.VtgReceived += (object sender, CourseOverGround courseAndVelocity) => 
     {
         Console.WriteLine("*********************************************");
         Console.WriteLine($"{courseAndVelocity}");
@@ -67,7 +67,7 @@ public override Task Initialize()
     };
 
     // GSV (satellites in view)
-    gps.GsvReceived += (object sender, SatellitesInView satellites) =>
+    gps.GsvReceived += (object sender, SatellitesInView satellites) => 
     {
         Console.WriteLine("*********************************************");
         Console.WriteLine($"{satellites}");

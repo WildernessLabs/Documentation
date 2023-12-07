@@ -36,7 +36,7 @@ public override Task Run()
     graphics.Clear();
 
     for (int i = 10; i > 0; i--)
-    {   //iterate across different brightnesses
+    {   //interate across different brightnesses
         graphics.DrawText(0, i * 11, "SSD1327", Color.FromRgb(i * 0.1, i * 0.1, i * 0.1));
     }
 
@@ -58,11 +58,13 @@ To wire a Ssd1327 to your Meadow board, connect the following:
 | GND      | GND        |
 | VCC      | 3V3        |
 | SCL      | SCK        |
-| SDA      | COPI       |
+| SDA      | MOSI       |
 | RESET    | D00        |
 | DC       | D01        |
 | CS       | D02        |
 
 It should look like the following diagram:
 
-![Wiring a Ssd1327 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Ssd1327/Ssd1327_Fritzing.png)
+<img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1327/Ssd1327_Fritzing.png" 
+    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+
