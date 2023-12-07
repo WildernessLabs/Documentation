@@ -138,7 +138,7 @@ Default value: 8000000
 
 ### `AutomaticallyStartNetwork`
 
-This parameter determines if the system will automatically attempt to connect to an access point as the board starts. This requires a default access point [configured in a separate `wifi.config.yaml` file](/Meadow/Meadow.OS/Configuration/WiFi_Configuration).
+This parameter determines if the system will automatically attempt to connect to an access point as the board starts. This requires a default access point [configured in a separate `wifi.config.yaml` file](../WiFi_Configuration).
 
 Valid values are:
 
@@ -182,7 +182,7 @@ DNS server(s) to use for DNS queries.
 
 For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/Config_Files) in the `Meadow.Core.Samples` repo.
 
-<table>
+<!-- <table>
     <tr>
         <td style="width:50%">
             <img alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon." src="../../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
@@ -219,4 +219,4 @@ For an example of configuration in use, see the [Config Files sample App](https:
             </p>
         </td>
     </tr>
-</table>
+</table> -->

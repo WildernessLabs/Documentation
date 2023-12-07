@@ -18,8 +18,8 @@
   },
   "sidebar": "meadowSidebar",
   "previous": {
-    "title": "Integrate with Azure Event Grid",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/"
+    "title": "Enterprise Integrations",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/"
   },
   "next": {
     "title": "Integrate with Datacake",

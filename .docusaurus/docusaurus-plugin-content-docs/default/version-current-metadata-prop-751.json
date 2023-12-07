@@ -134,12 +134,6 @@
             "items": [
               {
                 "type": "link",
-                "label": "Integrate with Azure Event Grid",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/",
-                "docId": "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index"
-              },
-              {
-                "type": "link",
                 "label": "Integrate with Azure Event Hubs",
                 "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
                 "docId": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index"
@@ -2592,7 +2586,7 @@
     },
     "index": {
       "id": "index",
-      "title": "Developer Portal",
+      "title": "index",
       "description": "Upcoming Events"
     },
     "Meadow/Getting_Started/Assemble_Meadow/index": {
@@ -2832,7 +2826,7 @@
     "Meadow/Meadow_Basics/Status/index": {
       "id": "Meadow/Meadow_Basics/Status/index",
       "title": "Meadow F7 Status",
-      "description": "We are currently in Meadow v1.",
+      "description": "We are currently in Meadow v1.0.",
       "sidebar": "meadowSidebar"
     },
     "Meadow/Meadow_Basics/Troubleshooting/index": {
@@ -2893,12 +2887,6 @@
       "id": "Meadow/Meadow.Cloud/index",
       "title": "Meadow.Cloud",
       "description": "Overview",
-      "sidebar": "meadowSidebar"
-    },
-    "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index": {
-      "id": "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index",
-      "title": "Integrate with Azure Event Grid",
-      "description": "< Integrations",
       "sidebar": "meadowSidebar"
     },
     "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index": {
@@ -3024,7 +3012,7 @@
     "Meadow/Meadow.OS/Cellular/index": {
       "id": "Meadow/Meadow.OS/Cellular/index",
       "title": "Cellular",
-      "description": "Contents",
+      "description": "Cellular",
       "sidebar": "meadowOsSidebar"
     },
     "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index": {
@@ -3168,7 +3156,7 @@
     "Meadow/Release_Notes/v1/index": {
       "id": "Meadow/Release_Notes/v1/index",
       "title": "Meadow v1",
-      "description": "Meadow.OS",
+      "description": "OS",
       "sidebar": "meadowSidebar"
     },
     "Netduino/About/Downloads/index": {
@@ -3330,186 +3318,6 @@
       "id": "Netduino/Input_Output/Onboard_Button_+_LED/index",
       "title": "Onboard Button + LED",
       "description": "Info"
-    },
-    "Product_Design_Lifecycle/Breadboard_Prototyping/index": {
-      "id": "Product_Design_Lifecycle/Breadboard_Prototyping/index",
-      "title": "Breadboard Prototyping",
-      "description": ""
-    },
-    "Product_Design_Lifecycle/Conceptual_Design/index": {
-      "id": "Product_Design_Lifecycle/Conceptual_Design/index",
-      "title": "Conceptual Design",
-      "description": ""
-    },
-    "Product_Design_Lifecycle/Industrial_Design/index": {
-      "id": "Product_Design_Lifecycle/Industrial_Design/index",
-      "title": "Industrial Design",
-      "description": ""
-    },
-    "Product_Design_Lifecycle/Mass_Production/Certifications/index": {
-      "id": "Product_Design_Lifecycle/Mass_Production/Certifications/index",
-      "title": "Important Certifications",
-      "description": ""
-    },
-    "Product_Design_Lifecycle/Mass_Production/index": {
-      "id": "Product_Design_Lifecycle/Mass_Production/index",
-      "title": "Mass Production",
-      "description": ""
-    },
-    "Product_Design_Lifecycle/Mass_Production/MAC_Addresses/index": {
-      "id": "Product_Design_Lifecycle/Mass_Production/MAC_Addresses/index",
-      "title": "MAC Addresses",
-      "description": "If your product has a network adapter, regardless of how it connects (WiFi, Ethernet, other), the network adapter needs to have a unique MAC address (Wikipedia link). A unique MAC address ensures that a device can have network traffic directed to it without conflicts with other devices."
-    },
-    "Product_Design_Lifecycle/Mass_Production/UPCs_EANs/index": {
-      "id": "Product_Design_Lifecycle/Mass_Production/UPCs_EANs/index",
-      "title": "Universal Product Codes (UPCs) and International Article Numbers (EANs)",
-      "description": "When selling a product, most retail distributors want a unique barcode that identifies your product. The choice between a [UPC and an EAN is largely one of where you and/or your distributors are located]. Both are managed by the same organization, [GS1. Unique UPCs/EANs are needed for each product you sell, and different sizes and colors of the same product require unique UPCs/EANs. As such, the number needed can add up quickly."
-    },
-    "Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/index": {
-      "id": "Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/index",
-      "title": "USB Vendor IDs",
-      "description": "If your product is accessible/connectable via USB, then you'll need to purchase a USB Vendor ID that uniquely identifies the product as yours."
-    },
-    "Product_Design_Lifecycle/PCBs/Assembly/index": {
-      "id": "Product_Design_Lifecycle/PCBs/Assembly/index",
-      "title": "PCB Assembly",
-      "description": "[how assembly works]"
-    },
-    "Product_Design_Lifecycle/PCBs/Fabrication/index": {
-      "id": "Product_Design_Lifecycle/PCBs/Fabrication/index",
-      "title": "PCB Fabrication",
-      "description": "[How PCB fabrication works]"
-    },
-    "Product_Design_Lifecycle/PCBs/index": {
-      "id": "Product_Design_Lifecycle/PCBs/index",
-      "title": "Printed Circuit Board (PCB) Fundamentals",
-      "description": "[Breadboards allow prototyping and developing. PCBs provide the necessary infrastructure to permanently hold electrical components together.]"
-    },
-    "Product_Design_Lifecycle/PCBs/Prototyping/index": {
-      "id": "Product_Design_Lifecycle/PCBs/Prototyping/index",
-      "title": "PCB Prototyping",
-      "description": "[can save money; solderable at home]"
-    },
-    "Product_Design_Lifecycle/PCBs/Solder_Masks/index": {
-      "id": "Product_Design_Lifecycle/PCBs/Solder_Masks/index",
-      "title": "Solder Masks",
-      "description": "Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won't be soldered to"
-    },
-    "Product_Design_Lifecycle/PCBs/Surface_Finishes/index": {
-      "id": "Product_Design_Lifecycle/PCBs/Surface_Finishes/index",
-      "title": "Surface Finishes",
-      "description": "Usually, the bottom and top of a Printed Circuit Board (PCB) has a thin epoxy solder mask that covers the areas that components won't be soldered to. However, the copper areas that are exposed need also be protected and [solderability]"
-    },
-    "Product_Design_Lifecycle/Programming/index": {
-      "id": "Product_Design_Lifecycle/Programming/index",
-      "title": "Hardware Programming",
-      "description": ""
-    },
-    "Product_Design_Lifecycle/Schematic_Design/index": {
-      "id": "Product_Design_Lifecycle/Schematic_Design/index",
-      "title": "Schematic Design",
-      "description": ""
-    },
-    "readme": {
-      "id": "readme",
-      "title": "Netduino.Foundation Web Site",
-      "description": "Running Locally"
-    },
-    "Samples/index": {
-      "id": "Samples/index",
-      "title": "Meadow Samples",
-      "description": "The following samples can be found in the Wilderness Labs Netduino Samples repo."
-    },
-    "Samples/Netduino/Blinky/index": {
-      "id": "Samples/Netduino/Blinky/index",
-      "title": "Blinky",
-      "description": "Blinky is the much revered \"Hello, World\" app for Netduino."
-    },
-    "Samples/Netduino/ButtonInterruptEvents/index": {
-      "id": "Samples/Netduino/ButtonInterruptEvents/index",
-      "title": "Button Interrupt Events",
-      "description": "This sample illustrates wiring up an event to fire when interrupts come in on an InterruptPort when wired up to a circuit that sends intermittent signals such as a button."
-    },
-    "Samples/Netduino/ControllingAServo/index": {
-      "id": "Samples/Netduino/ControllingAServo/index",
-      "title": "Controlling a Servo Using PWM",
-      "description": "Servo motors (servos) are available in a wide range of sizes amd capabilities.  A servo makes it easy to add controlled motion to a project."
-    },
-    "Samples/Netduino/DrivingLED_w_PWM/index": {
-      "id": "Samples/Netduino/DrivingLED_w_PWM/index",
-      "title": "Driving an LED with a PWM signal",
-      "description": "This sample lights up an LED with a PWM signal so that a current limiting resistor isn't needed to prevent the LED from burning out."
-    },
-    "Samples/Netduino/GlitchFilter/index": {
-      "id": "Samples/Netduino/GlitchFilter/index",
-      "title": "Glitch Filtering",
-      "description": "The following sample illustrates configuring the glitch filter to 5 milliseconds."
-    },
-    "Samples/Netduino/index": {
-      "id": "Samples/Netduino/index",
-      "title": "Netduino Samples",
-      "description": ""
-    },
-    "Samples/Netduino/LCDMicroLiquidCrystal/index": {
-      "id": "Samples/Netduino/LCDMicroLiquidCrystal/index",
-      "title": "LCD Display Sample",
-      "description": "LCD Display"
-    },
-    "Samples/Netduino/OnboardButtonAndLed/index": {
-      "id": "Samples/Netduino/OnboardButtonAndLed/index",
-      "title": "Onboard Button & LED",
-      "description": "Illustrates basic Port IO by reading the value of the Onboard Button circuit and lighting the onboard LED when the button is pressed."
-    },
-    "Samples/Netduino/PotentiometerControlled_RgbLed/index": {
-      "id": "Samples/Netduino/PotentiometerControlled_RgbLed/index",
-      "title": "RGB LED Controlled with Potentiometer",
-      "description": "This sample sets the color of an RGB LED from the value read from a potentiometer. It illustrates reading an analog input and controlling PWMs with it."
-    },
-    "Samples/Netduino/ReadDS3234/index": {
-      "id": "Samples/Netduino/ReadDS3234/index",
-      "title": "Read Date and Time from DS3234 Real Time Clock",
-      "description": "This application reads the date and time values from the Sparkfun DeadOn RTC Breakout Board.  This board contains the DS3234 Real Time Clock module."
-    },
-    "Samples/Netduino/RGB_Blinky/index": {
-      "id": "Samples/Netduino/RGB_Blinky/index",
-      "title": "RGB LED Blinky",
-      "description": "This sample illustrates a simple program to cycle an RGB LED through each of its primary colors: red, green, and blue."
-    },
-    "Samples/Netduino/RgbLed/index": {
-      "id": "Samples/Netduino/RgbLed/index",
-      "title": "Driving an RGB LED with PWM",
-      "description": "This sample cycles an RGB LED through the rainbow, by looping through all possible hues in the visible color spectrum."
-    },
-    "Samples/Netduino/SDCardIO/index": {
-      "id": "Samples/Netduino/SDCardIO/index",
-      "title": "SD Card IO",
-      "description": "This sample illustrates access the SD card and writing to a file using standard System.IO calls."
-    },
-    "Samples/Netduino/TMP102BasicRead/index": {
-      "id": "Samples/Netduino/TMP102BasicRead/index",
-      "title": "Reading From a TMP102 Temperature Sensor Using I2C",
-      "description": "This example demonstrates how to read from a TMP102 temperature sensor using the I2C protocol."
-    },
-    "Samples/Netduino/TMP102ReadWrite/index": {
-      "id": "Samples/Netduino/TMP102ReadWrite/index",
-      "title": "Writing to a TMP102 Temperature Sensor Using I2C",
-      "description": "This example demonstrates how to read from and write to a TMP102 temperature sensor using the I2C protocol."
-    },
-    "Samples/Netduino/UARTTest/index": {
-      "id": "Samples/Netduino/UARTTest/index",
-      "title": "UART",
-      "description": "This example uses two UARTs on the Netduino and demonstrates how to send a message over one UART to the second."
-    },
-    "Samples/Netduino/WebRequest/index": {
-      "id": "Samples/Netduino/WebRequest/index",
-      "title": "Web Request",
-      "description": "This sample makes a web request to http"
-    },
-    "Samples/Netduino/WebRequestMultithreaded/index": {
-      "id": "Samples/Netduino/WebRequestMultithreaded/index",
-      "title": "Web Request Multithreaded Version",
-      "description": "This sample makes a web request to http"
     }
   }
 }

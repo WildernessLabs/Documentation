@@ -10,11 +10,11 @@ Meadow has a robust configuration framework allowing you to adjust settings at b
 
 Meadow.OS supports three configuration sets that are placed in three different files:
 
-* **[OS & Device Configuration](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)**: Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
+* **[OS & Device Configuration](OS_Device_Configuration)**: Specified in the `meadow.config.yaml` file. Includes general board and system configuration settings.
 
-* **[Wi-Fi Configuration](/Meadow/Meadow.OS/Configuration/WiFi_Configuration)**: Specified in the `wifi.config.yaml`. Wi-Fi access point and password configuration for connecting to a known network.
+* **[Wi-Fi Configuration](WiFi_Configuration)**: Specified in the `wifi.config.yaml`. Wi-Fi access point and password configuration for connecting to a known network.
 
-* **[Application Settings Configuration](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration)**: Specified in either `app.config.yaml` or `app.config.json`. Includes application settings for logging and reboot configuration. These files are used for custom developer application settings.
+* **[Application Settings Configuration](Application_Settings_Configuration)**: Specified in either `app.config.yaml` or `app.config.json`. Includes application settings for logging and reboot configuration. These files are used for custom developer application settings.
 
 These files are optional and, where applicable, default values will be used if the particular file is not found in the Meadow file system.
 
@@ -26,7 +26,7 @@ In order to make sure your configuration files are deployed to the device, selec
 
 For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/Config_Files) in the `Meadow.Core.Samples` repo.
 
-<table>
+<!-- <table>
     <tr>
         <td style="width:50%">
             <img alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon." src="../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
@@ -63,4 +63,4 @@ For an example of configuration in use, see the [Config Files sample App](https:
             </p>
         </td>
     </tr>
-</table>
+</table> -->

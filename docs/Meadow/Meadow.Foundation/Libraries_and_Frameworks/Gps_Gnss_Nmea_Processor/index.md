@@ -4,7 +4,7 @@ title: GPS/GNSS NMEA Sentence Processor Library
 subtitle: NMEA sentence decoder and processing engine for GPS and GNNS systems.
 ---
 
-The GPS/GNSS NMEA processing library is a set of classes that makes parsing and decoding [NMEA Sentences](https://gpsd.gitlab.io/gpsd/NMEA.html) from Global Positioning System (GPS)/Global Navigation Satellite System (GNSS) receivers easy. 
+The GPS/GNSS NMEA processing library is a set of classes that makes parsing and decoding [NMEA Sentences](https://gpsd.gitlab.io/gpsd/NMEA.html) from Global Positioning System (GPS)/Global Navigation Satellite System (GNSS) receivers easy.
 
 GPS/GNSS peripherals communicate by sending semi-standardized _sentences_ that have a prefix tag that describes their type, and data encoded in them, separated by commas. For instance, the following NMEA sentence is of the _recommended minimum information_ type and encodes location (latitude, longitude, altitude) information:
 
@@ -24,7 +24,7 @@ For this reason, the NMEA processing library uses an event-based, asynchronous p
 
 ## Using
 
-To use, create an instance of the [`NmeaSentenceProcessor`](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.NmeaSentenceProcessor.html), register any NMEA sentence decoders you want to use by passing an `INmeaDecoder` to the `RegisterDecoder` method, and then call `ParseNmeaMessage`, passing the NMEA sentence string. 
+To use, create an instance of the [`NmeaSentenceProcessor`](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.NmeaSentenceProcessor.html), register any NMEA sentence decoders you want to use by passing an `INmeaDecoder` to the `RegisterDecoder` method, and then call `ParseNmeaMessage`, passing the NMEA sentence string.
 
 For example, the following Meadow application listens to a serial port for NMEA sentences, feeds them to the NMEA processor, and then listens for decoded message events and writes them to the console:
 
@@ -59,7 +59,7 @@ namespace MeadowApp
         void Initialize()
         {
             serialPort = Device.CreateSerialMessagePort(
-                Device.PlatformOS.GetSerialPortName("COM4"),
+                Device.SerialPortNames.Com4,
                 suffixDelimiter: Encoding.UTF8.GetBytes("\r\n"),
                 preserveDelimiter: true);
             serialPort.MessageReceived += SerialPort_MessageReceived;
@@ -76,7 +76,7 @@ namespace MeadowApp
         private void SerialPort_MessageReceived(object sender, SerialMessageData e)
         {
             Console.WriteLine("Message received.");
-            
+
             Console.WriteLine($"{e.GetMessageString(Encoding.UTF8)}");
             nmeaProcessor.ProcessNmeaMessage(e.GetMessageString(Encoding.UTF8));
         }
@@ -150,10 +150,10 @@ namespace MeadowApp
 }
 ```
 
-    
+
 ## NMEA Sentence Class with Automatic Parsing
 
-If you need to manually construct or parse a NMEA sentence, you can use the [`NmeaSentence`](/docs/api/Meadow/Meadow.Peripherals.Sensors.Location.Gnss.NmeaSentence.html) class.
+If you need to manually construct or parse a NMEA sentence, you can use the [`NmeaSentence`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Peripherals.Sensors.Location.Gnss.NmeaSentence.html) class.
 
 ### Parsing a NMEA Sentence
 
@@ -168,16 +168,16 @@ This will create a new instance of the `NmeaSentence` class with the NMEA data p
 ### Outputting a NMEA Sentence with Checksum
 
 NMEA sentences must have a calculated checksum at the end of the string that validates the data contained within. If you call `ToString()` on the `NmeaSentence`, it'll automatically calculate the checksum for you and append it to the output.
-    
+
 ## Built-in Decoders
 
 There are a number of built-in NMEA decoders for the most common sentences, including:
 
- * **GgaDecoder** - _GPS Fix Data_ decoder. Comprehensive location data including latitude, longitude, altitude, quality of signal, time, and precision.
- * **GllDecoder** - _Geographic Position - Latitude/Longitude_ decoder. Describes location of receiver in latitude and longitude coordinates.
- * **GsaDecoder** - _GPS Dilution of Precision (DoP) and Active Satellites_ decoder. Lists the satellites used for the location fix, along with their dilution of precision information.
- * **GsvDecoder** - _Satellites in View_ decoder. Describes the sky position of satellites that the GPS receiver can "see."
- * **RmcDecoder** - _Recommended Minimum Navigation Information_ decoder. Includes the minimum amount of navigation information including position as well as _track made good_ (direction of travel) and speed.
- * **VtgDecoder** - _Track Made Good and Ground Speed_ decoder. Describes the course over ground (direction of travel) as well as the speed.
+* **GgaDecoder** - _GPS Fix Data_ decoder. Comprehensive location data including latitude, longitude, altitude, quality of signal, time, and precision.
+* **GllDecoder** - _Geographic Position - Latitude/Longitude_ decoder. Describes location of receiver in latitude and longitude coordinates.
+* **GsaDecoder** - _GPS Dilution of Precision (DoP) and Active Satellites_ decoder. Lists the satellites used for the location fix, along with their dilution of precision information.
+* **GsvDecoder** - _Satellites in View_ decoder. Describes the sky position of satellites that the GPS receiver can "see."
+* **RmcDecoder** - _Recommended Minimum Navigation Information_ decoder. Includes the minimum amount of navigation information including position as well as _track made good_ (direction of travel) and speed.
+* **VtgDecoder** - _Track Made Good and Ground Speed_ decoder. Describes the course over ground (direction of travel) as well as the speed.
 
 All of these are open source, and it's easy to add new sentence parser as well.

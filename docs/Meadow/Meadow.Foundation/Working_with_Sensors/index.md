@@ -7,13 +7,13 @@ subtitle: Reading and getting updates from sensors in Meadow.Foundation.
 
 # Intro
 
-Meadow.Foundation extends the underlying [events and IObservable](/Meadow/Meadow_Basics/Events_and_IObservable/) pattern found in Meadow.Core to sensors, providing a simple, yet powerful way to read, poll, and filter input from sensors automatically.
+Meadow.Foundation extends the underlying [events and IObservable](../../Meadow_Basics/Events_and_IObservable/) pattern found in Meadow.Core to sensors, providing a simple, yet powerful way to read, poll, and filter input from sensors automatically.
 
 At a high level, the sensor drivers in Meadow.Foundation provide three important methods to get sensor data:
 
- * **`Read()`** - Convenience method for one-off, or occasional reads, which returns the sensor read value directly to the caller.
- * **`StartUpdating()`** - Starts up a sensor polling thread for automatic change notifications and events.
- * **`StopUpdating()`** - Stops the sensor polling thread, and associated events and notifications.
+* **`Read()`** - Convenience method for one-off, or occasional reads, which returns the sensor read value directly to the caller.
+* **`StartUpdating()`** - Starts up a sensor polling thread for automatic change notifications and events.
+* **`StopUpdating()`** - Stops the sensor polling thread, and associated events and notifications.
 
 ## Automatic Oversampling
 
@@ -31,8 +31,8 @@ Oversampling means to take multiple readings (samples), and then average their v
 
 Nearly all sensor drivers in Meadow.Foundation have support for automatic oversampling built into them, and are generally controlled by the following parameters:
 
- * **`sampleCount`** - Number of samples to take in any given sensor reading.
- * **`sampleIntervalDuration`** - The time, in milliseconds, between samples.
+* **`sampleCount`** - Number of samples to take in any given sensor reading.
+* **`sampleIntervalDuration`** - The time, in milliseconds, between samples.
 
 Additionally, if automatic polling and notifications are used via the `StartSampling()` method, a `standbyDuration` parameter is available that specifies how long to wait, in milliseconds, in between oversampled readings.
 
@@ -81,7 +81,7 @@ analogTemperature.StartUpdating();
 
 ### With FilterableObservable and IObservable
 
-For a more powerful and composeable approach, you can use the same [IObservable/Reactive pattern](/Meadow/Meadow_Basics/Events_and_IObservable/) that the underling ports use. For instance, the following code creates a `FilterableChangeObservable` handler that subscribes to the changes from an analog temperature sensor, but automatically filters so that the application is only notified when the temperature changes by at least `0.5°C`:
+For a more powerful and composeable approach, you can use the same [IObservable/Reactive pattern](../../Meadow_Basics/Events_and_IObservable/) that the underling ports use. For instance, the following code creates a `FilterableChangeObservable` handler that subscribes to the changes from an analog temperature sensor, but automatically filters so that the application is only notified when the temperature changes by at least `0.5°C`:
 
 ```csharp
 AnalogTemperature analogTemperature = new AnalogTemperature (
@@ -106,7 +106,7 @@ analogTemperature.Subscribe(consumer);
 analogTemperature.StartUpdating();
 ```
 
-In the case above, a filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableObservable` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used. 
+In the case above, a filter expression, or _predicate_, that tests for a particular condition is passed in to the `FilterableObservable` constructor, which is used to test whether the change satisfies a particular condition. Any expression that evaluates to a `boolean` (`true`/`false`), can be used.
 
 ### Advantage and Recommended Use
 
@@ -116,5 +116,4 @@ Because there is also a `StopUpdating()` method, you can still manually spin up 
 
 And with the `FilterableChangeObservable`, you can create filters to only get notified when needed, rather than having to manually filter all events.
 
-# [Next - Unified GPIO](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
-
+## [Next - Unified GPIO](../../Meadow.Foundation/Unified_GPIO_Arch/)

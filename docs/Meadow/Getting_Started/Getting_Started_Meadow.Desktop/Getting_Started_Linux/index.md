@@ -27,7 +27,7 @@ You can also find any supported boards in the [Meadow.Linux implementation pinou
 
 ## Prerequisites
 
-Before you can get started with Meadow.Linux, make sure your [development machine is set up for Meadow development](Hello_World/).
+Before you can get started with Meadow.Linux, make sure your [development machine is set up for Meadow development](../../Hello_World/index.md).
 
 To get started with Meadow.Linux, you will need to install the following prerequisites on your host Linux machine.
 
@@ -200,7 +200,7 @@ For example, here are the changes to make the MeadowApp class work on Meadow.Lin
     </Project>
     ```
 
-1.  Within the Meadow app's class file, change the `App` type to align with your target Meadow.Linux device, such as `App<Linux<RaspberryPi>>` for a Raspberry Pi. This requires an additional `using` statement for the `Meadow.Pinouts` namespace.
+1. Within the Meadow app's class file, change the `App` type to align with your target Meadow.Linux device, such as `App<Linux<RaspberryPi>>` for a Raspberry Pi. This requires an additional `using` statement for the `Meadow.Pinouts` namespace.
 
     ```csharp
     using Meadow.Pinouts;
@@ -225,4 +225,4 @@ Your Meadow app should now be able to run on Meadow.Linux, calling into the usua
 
 ## Next steps
 
-Now that you have your Meadow.Linux device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Linux samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Linux).
+Now that you have your Meadow.Linux device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/index.md) libraries to add functionality to your Meadow app. Check out the other [Meadow.Linux samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Linux).

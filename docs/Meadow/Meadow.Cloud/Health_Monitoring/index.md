@@ -28,7 +28,7 @@ Here are the metrics gathered per device:
 * disk_space_used
 * battery_percentage
 
-Check out our [Integrations](../Integrations/) to ingest this data into your own infrastructure via webhooks, Azure Event Hub, Azure Event Grid and more.
+Check out our [Integrations](../Integrations/) to ingest this data into your own infrastructure via webhooks, Azure Event Hub, and more.
 
 With your Meadow application logging health metrics to Meadow.Cloud, check out the other Meadow.Cloud features.
 

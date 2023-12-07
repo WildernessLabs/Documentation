@@ -8,36 +8,36 @@ subtitle: Guides and documentation for Meadow devices and applications.
 
 ## Getting Started
 
-If you're just beginning, check out the [Getting Started](/Meadow/Getting_Started) walkthrough to get your development environment configured and deploy your first Meadow application:
+If you're just beginning, check out the [Getting Started](./Getting_Started/) walkthrough to get your development environment configured and deploy your first Meadow application:
 
- * [Assembling your Meadow board](/Meadow/Getting_Started/Assemble_Meadow)
- * [Deploying Meadow OS](/Meadow/Getting_Started/Deploying_Meadow)
- * [Hello, Meadow](/Meadow/Getting_Started/Hello_World)
+* [Assembling your Meadow board](./Getting_Started/Assemble_Meadow/)
+* [Deploying Meadow OS](./Getting_Started/Deploying_Meadow/)
+* [Hello, Meadow](./Getting_Started/Hello_World/)
 
 ## Meadow Basics
 
-Then continue on to the [Meadow Basics](/Meadow/Meadow_Basics) Guides to learn about the fundamentals of Meadow applications as well as the current beta feature status.
+Then continue on to the [Meadow Basics](./Meadow_Basics/) Guides to learn about the fundamentals of Meadow applications as well as the current beta feature status.
 
- * [Feature Status](/Meadow/Meadow_Basics/Status)
- * [App Fundamentals](/Meadow/Meadow_Basics/Apps)
- * [Input/Output (IO)](/Meadow/Meadow_Basics/IO)
+* [Feature Status](./Meadow_Basics/Status/)
+* [App Fundamentals](./Meadow_Basics/Apps/)
+* [Input/Output (IO)](./Meadow_Basics/IO/)
 
 ### Roadmap + Release Notes
 
- * [Roadmap](/Meadow/Release_Notes/Roadmap)
- * [Release Notes](/Meadow/Release_Notes)
+* [Roadmap](./Release_Notes/Roadmap/)
+* [Release Notes](./Release_Notes/)
 
 ## Meadow.Foundation
 
-Finally, check out [Meadow.Foundation](/Meadow/Meadow.Foundation) to learn how it can greatly simplify building connected things.
+Finally, check out [Meadow.Foundation](./Meadow.Foundation/index.md) to learn how it can greatly simplify building connected things.
 
- * [Getting Started w/Meadow.Foundation](/Meadow/Meadow.Foundation/Getting_Started)
- * [Meadow.Foundation Peripheral Library](/Meadow/Meadow.Foundation/Peripherals)
- * [Unified GPIO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch)
- * [Meadow.Foundation Libraries and Frameworks](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)
+* [Getting Started with Meadow.Foundation](./Meadow.Foundation/Getting_Started/)
+* [Meadow.Foundation Peripheral Library](./Meadow.Foundation/Peripherals/)
+* [Unified GPIO Architecture](./Meadow.Foundation/Unified_GPIO_Arch/)
+* [Meadow.Foundation Libraries and Frameworks](./Meadow.Foundation/Libraries_and_Frameworks/)
 
 ## Issues and Support
 
-Meadow issues can be filed at the Wilderness Labs [Meadow_Issues](https://github.com/WildernessLabs/Meadow_Issues) repo.
+Meadow issues can be filed at the Wilderness Labs [Meadow_Issues](https://github.com/WildernessLabs/Meadow_Issues/) repo.
 
-Also, make sure to join the [Wilderness Labs Slack](http://slackinvite.wildernesslabs.co) to chat with us!
+Also, make sure to join the [Wilderness Labs Slack](https://slackinvite.wildernesslabs.co) to chat with us!

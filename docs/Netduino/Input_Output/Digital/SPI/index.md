@@ -43,13 +43,13 @@ The four possible modes are determined by the active state of the clock signal (
 
 The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](../../../../Netduino/About/Netduino3_Pinout.svg){:standalone}
+![N3 Pinout Diagram](../../../About/Netduino3_Pinout.svg){:standalone}
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 
 ### Liquid Crystal Display (LCD)
 
-LCDs are readily available and provide a really useful way of displaying data in your project.  Common display sizes are 16x2 and 20x4 (16x2 = 2 lines of 16 characters each).  These usually require a large number of pins to drive them.  Luckily Adafruit have a [LCD Character Backpack](https://www.adafruit.com/product/292) that can be used to drive these displays.  The board can use SPI or [I2C](/Netduino/Input_Output/Digital/I2C/), both of which reduce the number of pins required to drive the LCD.
+LCDs are readily available and provide a really useful way of displaying data in your project.  Common display sizes are 16x2 and 20x4 (16x2 = 2 lines of 16 characters each).  These usually require a large number of pins to drive them.  Luckily Adafruit have a [LCD Character Backpack](https://www.adafruit.com/product/292) that can be used to drive these displays.  The board can use SPI or [I2C](../../../Input_Output/Digital/I2C/), both of which reduce the number of pins required to drive the LCD.
 
 #### Simple Write
 

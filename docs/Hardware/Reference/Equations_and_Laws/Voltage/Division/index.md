@@ -6,25 +6,25 @@ subtitle: Calculating
 
 ## Quick Reference
 
-![](../../../../Tutorials/Electronics/Part5/Support_Files/Voltage_Divider_Equation.svg){:standalone}
+<!-- ![](../../../../Tutorials/Electronics/Part5/Support_Files/Voltage_Divider_Equation.svg){:standalone} -->
 
 ### Voltage Division Calculations
 
 #### Solved for `Vout`
 
-```
+```text
 Vout = Vs * (R2 / R1 + R2)
 ```
 
 #### Solved for Bottom-half of Divider (`R2`)
 
-```
+```text
 R2 = (R1 * Vout) / (Vs - Vout)
 ```
 
 #### Current at `Vout`
 
-```
+```text
 I = V / R1
 ```
 
@@ -36,12 +36,11 @@ Where `R1` is the top-half of the divider.
 
 The Netduino ADC has an impedance value of approximately `11kΩ`.
 
-
 #### 5V to 3.3 Voltage Divider Resistor Values
 
 When level-shifting to a `5V` voltage domain to a `3.3V` voltage domain for use with the Netduino ADC, the following resistor values are recommended:
 
-```
+```text
 R1 = 1kΩ
 R2 = 2.2kΩ
 ```

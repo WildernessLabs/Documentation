@@ -129,7 +129,7 @@ public static ISerialPort CreateSerialPort(
 For instance, if we wanted to create a serial port on `COM4` (pins `D00` and `D01` on the F7 Feather) that defines `\r\n` as its suffix delimiter, we can use the following code:
 
 ```csharp
-Device.CreateSerialMessagePort(Device.PlatformOS.GetSerialPortName("COM4"), 
+Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 
     suffixDelimiter: Encoding.UTF8.GetBytes("\r\n"), preserveDelimiter: true);
 ```
 
@@ -185,7 +185,7 @@ var port = Device.PlatformOS.GetSerialPortName("COM4")
 
 ## Raw `ISerialPort`
 
-To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](/docs/api/Meadow/Meadow.IPlatformOS.html) you're using, passing the `SerialPortName`:
+To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.IPlatformOS.html) you're using, passing the `SerialPortName`:
 
 ```csharp
 var serialPort = Device.PlatformOS.GetSerialPortName("COM4").CreateSerialPort(baudRate: 115200);
@@ -204,7 +204,7 @@ serialPort.Open();
 Optionally, you can also specify the number of data bits in a message frame, parity, and number of stop bits. The datasheet on your serial peripheral should specify what those values should be. The most common is `8n1`, which means `8` data bits, no parity check, or `Parity.None`, and one stop bit, or `StopBits.One`. 8n1 is the default for the serial port constructor, but you can specify something different as well:
 
 ```csharp
-var serialPort = Device.CreateSerialMessagePort(Device.PlatformOS.GetSerialPortName("COM4"), 9600, 7, Parity.Even, StopBits.Two);
+var serialPort = Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, 9600, 7, Parity.Even, StopBits.Two);
 serialPort.Open();
 ```
 
@@ -212,7 +212,7 @@ serialPort.Open();
 
 Once the serial port is opened, communication with peripherals is possible and done with `byte[]` data.
 
-To write, call the [`Write(byte[] buffer)`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Write_System_Byte___) method and pass in the bytes to send to the peripheral:
+To write, call the [`Write(byte[] buffer)`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Write_System_Byte___) method and pass in the bytes to send to the peripheral:
 
 ```csharp
 var buffer = new byte[] { 0x00, 0x0F, 0x01 };
@@ -260,7 +260,7 @@ void SerialPort_MessageReceived(object sender, SerialMessageData e)
 
 ## Reading from the Receive Buffer via `ClassicSerialPort`
 
-When data from the peripheral is received, it's placed in an internal [circular receive buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read.
+When data from the peripheral is received, it's placed in an internal [circular receive buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read.
 
 For example, the following code will read 7 bytes from the buffer:
 
@@ -269,11 +269,11 @@ byte[] response = new byte[7];
 this.serialPort.Read(response, 0, 7);
 ```
 
-Read will also remove (dequeue) those bytes from the buffer. If you want to read from the buffer without removing the data, you can use the [`Peek()` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Peek).
+Read will also remove (dequeue) those bytes from the buffer. If you want to read from the buffer without removing the data, you can use the [`Peek()` method](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Peek).
 
 ### `DataReceived` Event
 
-As data is received by the serial port, a [`DataReceived` event](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_DataReceived) is raised.
+As data is received by the serial port, a [`DataReceived` event](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_DataReceived) is raised.
 
 ### `Read()` Warning
 
@@ -281,4 +281,4 @@ Because the receive buffer is shared, and a single message might arrive in multi
 
 ### Additional APIs
 
-There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.
+There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.

@@ -1,3 +1,0 @@
----
-title: Schematic Design
----

@@ -14,7 +14,7 @@
   "frontMatter": {
     "layout": "Meadow",
     "title": "MicroGraphics Library",
-    "subtitle": "Using the lightweight, MCU-optimized Meadow.Foundation MicroGraphics 2D drawing library with Meadow."
+    "subtitle": "Using the lightweight, MCU-optimized Meadow.Foundation µGraphics 2D drawing library with Meadow."
   },
   "sidebar": "meadowSidebar",
   "previous": {

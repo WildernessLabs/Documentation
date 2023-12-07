@@ -4,7 +4,7 @@ title: Meadow F7 Status
 subtitle: Current feature and version status.
 ---
 
-We are currently in [Meadow v1](/Meadow/Release_Notes/v1/).
+We are currently in [Meadow v1.0](../../Release_Notes/v1/).
 
 ## General IO Features
 

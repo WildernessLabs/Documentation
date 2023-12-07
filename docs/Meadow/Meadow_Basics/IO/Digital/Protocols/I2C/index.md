@@ -44,7 +44,7 @@ In addition to the seven address bits, the master device will also send a single
 
 ## Pull-Up Resistors
 
-Both of the bus lines require [pull-up resistors](/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) to be connected to them. Pull-up resistors allow a tiny amount of current to flow on the bus lines which gives them a default logic value of `1`/`ON`, so that clean digital logic transitions can occur and provide a reliable signal.
+Both of the bus lines require [pull-up resistors](../../../../Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/) to be connected to them. Pull-up resistors allow a tiny amount of current to flow on the bus lines which gives them a default logic value of `1`/`ON`, so that clean digital logic transitions can occur and provide a reliable signal.
 
 The value of the pull-up resistors depends on the speed and number of devices, length of the bus, and capacitance. However, in practice, most I2C circuits will work reliably with a couple of `4.7kΩ` resistors. In fact, many I2C breakout boards already have `4.7kΩ` resistors installed on them.
 
@@ -54,7 +54,7 @@ For a more in depth discussion on how to determine ideal resistance value, see t
 
 ## Creating an I2C Bus
 
-To use I2C in Meadow, first create an [`II2cBus`](/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using:
+To use I2C in Meadow, first create an [`II2cBus`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.II2cBus.html) from the [`IIODevice`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.IIODevice.html) you're using:
 
 ```csharp
 II2cBus i2cBus = Device.CreateI2cBus();
@@ -70,7 +70,7 @@ II2cPeripheral i2cPeripheral = new I2cPeripheral(i2cBus, 39);
 
 ### Peripheral Communication
 
-Generally, you won't need to handle low-level I2C peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](/docs/api/Meadow/Meadow.Hardware.IByteCommunications.html) interface, which I2C peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
+Generally, you won't need to handle low-level I2C peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.IByteCommunications.html) interface, which I2C peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
 
 ```csharp
 i2cPeripheral.WriteByte(0x01);

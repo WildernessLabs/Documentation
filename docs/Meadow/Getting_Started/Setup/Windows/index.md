@@ -4,4 +4,4 @@ title: Windows Setup
 subtitle: Guides and documentation for Meadow
 ---
 
-This content has [moved](/Meadow/Getting_Started/).
+This content has [moved](../../index.md).

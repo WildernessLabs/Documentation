@@ -12,7 +12,7 @@ It's completely [open source](https://github.com/WildernessLabs/Meadow.Foundatio
 
 ## Hello, World Example
 
-With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
+With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
 
 ```csharp
 using Meadow;
@@ -46,14 +46,14 @@ public class MeadowApp : App<F7FeatherV2>
 }
 ```
 
-**[Get Started with Meadow.Foundation](/Meadow/Meadow.Foundation/Getting_Started)**
+**[Get Started with Meadow.Foundation](../Meadow.Foundation/Getting_Started)**
 
 ## Huge Peripheral Driver Library
 
 Meadow.Foundation has built in support for most common sensors, motors, and other peripherals available on the market.
 
-**[See the full peripheral list](/Meadow/Meadow.Foundation/Peripherals)**
+**[See the full peripheral list](../Meadow.Foundation/Peripherals)**
 
 ## Powerful Frameworks and Libraries
 
-**[See the full list](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)**
+**[See the full list](../Meadow.Foundation/Libraries_and_Frameworks)**

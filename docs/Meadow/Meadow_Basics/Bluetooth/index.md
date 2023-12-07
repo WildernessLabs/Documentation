@@ -4,4 +4,4 @@ title: Bluetooth
 subtitle: Content moved.
 ---
 
-This content has moved to [here](/Meadow/Meadow.OS/Bluetooth/).
+This content has moved to [here](../../Meadow.OS/Bluetooth/).

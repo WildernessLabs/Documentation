@@ -12,7 +12,7 @@ You can also quickly prototype graphics using an emulated IDisplay object that r
 
 ## Prerequisites
 
-Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](Hello_World/).
+Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](../../Hello_World/index.md).
 
 If you don't already have it, you may want to install the .NET 7.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/). (Currently, all Meadow.Windows samples are targeting .NET 7.0, though they also support targeting .NET 6.0.)
 
@@ -113,7 +113,7 @@ For example, here are the changes to make the MeadowApp class work on Meadow.Win
     </Project>
     ```
 
-1.  Within the Meadow app's class file, change the `App` type to align with your target Meadow.Windows device: `App<Windows>`.
+1. Within the Meadow app's class file, change the `App` type to align with your target Meadow.Windows device: `App<Windows>`.
 
     ```csharp
     public class MeadowApp : App<Windows>
@@ -135,4 +135,4 @@ Your Meadow app should now be able to run on Meadow.Windows, calling into the us
 
 ## Next steps
 
-Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Windows).
+Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/index.md) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Windows).

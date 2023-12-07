@@ -3,57 +3,17 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/DocsDocusaurus/__docusaurus/debug/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/', '726'),
-    exact: true
-  },
-  {
-    path: '/DocsDocusaurus/__docusaurus/debug/config/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/config/', '0da'),
-    exact: true
-  },
-  {
-    path: '/DocsDocusaurus/__docusaurus/debug/content/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/content/', 'a9c'),
-    exact: true
-  },
-  {
-    path: '/DocsDocusaurus/__docusaurus/debug/globalData/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/globalData/', '213'),
-    exact: true
-  },
-  {
-    path: '/DocsDocusaurus/__docusaurus/debug/metadata/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/metadata/', '82e'),
-    exact: true
-  },
-  {
-    path: '/DocsDocusaurus/__docusaurus/debug/registry/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/registry/', 'ca0'),
-    exact: true
-  },
-  {
-    path: '/DocsDocusaurus/__docusaurus/debug/routes/',
-    component: ComponentCreator('/DocsDocusaurus/__docusaurus/debug/routes/', '8c4'),
-    exact: true
-  },
-  {
     path: '/DocsDocusaurus/markdown-page/',
     component: ComponentCreator('/DocsDocusaurus/markdown-page/', 'e69'),
     exact: true
   },
   {
     path: '/DocsDocusaurus/docs/',
-    component: ComponentCreator('/DocsDocusaurus/docs/', '914'),
+    component: ComponentCreator('/DocsDocusaurus/docs/', '668'),
     routes: [
       {
         path: '/DocsDocusaurus/docs/',
         component: ComponentCreator('/DocsDocusaurus/docs/', 'fb3'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/', '923'),
         exact: true
       },
       {
@@ -1189,12 +1149,6 @@ export default [
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/', '462'),
-        exact: true,
-        sidebar: "meadowSidebar"
-      },
-      {
         path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/',
         component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/', 'eb1'),
         exact: true,
@@ -1616,181 +1570,6 @@ export default [
       {
         path: '/DocsDocusaurus/docs/Netduino/Input_Output/Onboard_Button_+_LED/',
         component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Onboard_Button_+_LED/', '656'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Breadboard_Prototyping/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Breadboard_Prototyping/', 'f5a'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Conceptual_Design/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Conceptual_Design/', '22c'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Industrial_Design/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Industrial_Design/', 'faf'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/', '718'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/Certifications/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/Certifications/', '966'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/MAC_Addresses/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/MAC_Addresses/', '7f2'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/UPCs_EANs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/UPCs_EANs/', 'ec5'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/', '6a0'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/', '50d'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Assembly/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Assembly/', '5a3'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Fabrication/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Fabrication/', '980'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Prototyping/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Prototyping/', '9ec'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Solder_Masks/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Solder_Masks/', '0b1'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Surface_Finishes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/PCBs/Surface_Finishes/', '45c'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Programming/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Programming/', '696'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Product_Design_Lifecycle/Schematic_Design/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Product_Design_Lifecycle/Schematic_Design/', '4f7'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/', '99f'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/', '423'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/Blinky/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/Blinky/', '848'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/ButtonInterruptEvents/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/ButtonInterruptEvents/', '5db'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/ControllingAServo/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/ControllingAServo/', 'f76'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/DrivingLED_w_PWM/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/DrivingLED_w_PWM/', 'f60'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/GlitchFilter/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/GlitchFilter/', '3a1'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/LCDMicroLiquidCrystal/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/LCDMicroLiquidCrystal/', '586'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/OnboardButtonAndLed/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/OnboardButtonAndLed/', '1cd'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/PotentiometerControlled_RgbLed/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/PotentiometerControlled_RgbLed/', 'b56'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/ReadDS3234/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/ReadDS3234/', '65d'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/RGB_Blinky/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/RGB_Blinky/', 'ecc'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/RgbLed/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/RgbLed/', '441'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/SDCardIO/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/SDCardIO/', '5d5'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/TMP102BasicRead/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/TMP102BasicRead/', '69f'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/TMP102ReadWrite/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/TMP102ReadWrite/', 'ab9'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/UARTTest/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/UARTTest/', '6a0'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/WebRequest/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/WebRequest/', 'efe'),
-        exact: true
-      },
-      {
-        path: '/DocsDocusaurus/docs/Samples/Netduino/WebRequestMultithreaded/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Samples/Netduino/WebRequestMultithreaded/', 'ac5'),
         exact: true
       }
     ]

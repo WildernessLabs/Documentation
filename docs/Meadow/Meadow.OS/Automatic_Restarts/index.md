@@ -10,7 +10,7 @@ Meadow offers two systems to handle when your code doesn't behave as expected. I
 
 If your application fails with an unhandled exception, Meadow can offer to detect this and relaunch your application. You can enable this feature and set a custom delay before any restart by configuring the `Lifecycle` application settings.
 
-These settings are added to a YAML or JSON configuration file. Learn more about configuring automatic restarts for your Meadow applications in [application settings configuration](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration).
+These settings are added to a YAML or JSON configuration file. Learn more about configuring automatic restarts for your Meadow applications in [application settings configuration](../Configuration/Application_Settings_Configuration).
 
 ```yml
 Lifecycle:
@@ -72,5 +72,5 @@ There are several elements to consider when implementing the watchdog time for y
 
 * As described in the API auto-complete documentation, the watchdog timer duration cannot exceed 32,768 milliseconds. If you try to enable the timer for longer than that, you will cause an `ArgumentOutofRangeException`.
 * If the watchdog timer system is enabled at any point, it cannot be disabled without resetting the Meadow board. This is a constraint of the underlying STM32's watchdog system, exposed for use by Meadow.
-* When [sleeping your Meadow](/Meadow/Meadow_Basics/Apps/Sleep/) in combination with the watchdog timer, sleep durations should not exceed the watchdog duration you choose. If you sleep longer than the watchdog timer duration, the watchdog system will trigger before Meadow can resume from sleep.
+* When [sleeping your Meadow](../../Meadow_Basics/Apps/Sleep/) in combination with the watchdog timer, sleep durations should not exceed the watchdog duration you choose. If you sleep longer than the watchdog timer duration, the watchdog system will trigger before Meadow can resume from sleep.
     To work around the watchdog timer while sleeping for long periods of time, you would need to wake prior to the watchdog timer elapsing, potentially many times, to reset the watchdog before returning to sleep.

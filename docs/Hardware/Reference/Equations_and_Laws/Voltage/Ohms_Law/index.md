@@ -8,7 +8,7 @@ subtitle: The fundamental law of electricity.
 
 ### Ohm's Law Calculations
 
-```
+```text
 V = I * R
 R = V / I
 I = V / R
@@ -22,7 +22,7 @@ I = V / R
 
 The amount of current flowing through a conductor is proportional to the voltage applied across the conductor.  This is true of all conductors with the exception of super-conductors.  Mathematically this is stated as:
 
-```
+```text
 V = k * I
 ```
 
@@ -36,13 +36,13 @@ Where:
 
 This relation is codified in [_Ohm's Law_](https://en.wikipedia.org/wiki/Ohm%27s_law), where, `k` is replaced by resistance (in ohms) of the conductor. The equation becomes:
 
-```
+```text
 V = I * R
 ```
 
 For historical reasons, amperage is often labeled `I` (for intensity), and sometimes voltage is labeled `E` (for electromotive force). So, while the most common labeling for Ohm's law is typically uses `V` for volts, `I` for amps, and `R` for resistance, sometimes the following is seen:
 
-```
+```text
 E = I * R
 ```
 
@@ -54,14 +54,14 @@ Using algebra, Ohm's law can also be solved for resistance (`R`) or (`I`):
 
 #### Solved for Resistance (R)
 
-```
+```text
 R = V / I
 ohms = volts / amps
 ```
 
 #### Solved for Voltage (V)
 
-```
+```text
 I = V / R
 amps = volts / ohms
 ```
@@ -78,7 +78,7 @@ To read it, choose any given unit as the solution, and then use the division/mul
 
 Therefore, starting with a solution for `V`, it's read as:
 
-```
+```text
 V = I * R
 ```
 

@@ -22,7 +22,7 @@
     "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/"
   },
   "next": {
-    "title": "Integrate with Azure Event Grid",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/"
+    "title": "Integrate with Azure Event Hubs",
+    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/"
   }
 }

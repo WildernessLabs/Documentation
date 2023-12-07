@@ -4,7 +4,7 @@ title: Hello, Meadow!
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow), you can create and deploy Meadow apps to it.
+Once [Meadow.OS has been deployed to your board](../../Getting_Started/Deploying_Meadow), you can create and deploy Meadow apps to it.
 
 The video below shows you how to create and deploy your first Meadow app on a Mac:
 <p><iframe width="640" height="360" src="https://www.youtube.com/embed/wkekz5I7ycE" frameborder="3" allowfullscreen></iframe></p>
@@ -13,11 +13,11 @@ Alternatively, you can follow this step by step guide for Visual Studio on both 
 
 ## Go to the instructions for your development system and IDE
 
-1. [Visual Studio 2022 on Windows](#visual-studio-windows)
-2. [Visual Studio 2022 on macOS](#visual-studio-macos)
+1. [Visual Studio 2022 or 2019 on Windows](#visual-studio-windows)
+2. [Visual Studio 2022 or 2019 on macOS](#visual-studio-macos)
 3. [Visual Studio Code on macOS, Windows, or Linux (Debian, Ubuntu)](#visual-studio-code)
 
-## Visual Studio 2022 on Windows<a name="visual-studio-windows"></a>
+## Visual Studio 2022 or 2019 on Windows<a name="visual-studio-windows"></a>
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
 
@@ -25,7 +25,7 @@ Alternatively, you can follow this step by step guide for Visual Studio on both 
 
 #### Prerequisites
 
-You'll need [Visual Studio 2022 for Windows](https://visualstudio.microsoft.com/downloads/).
+You'll need [Visual Studio 2019 or 2022 for Windows](https://visualstudio.microsoft.com/downloads/).
 
 You can use any edition including Enterprise, Professional, or the free Community edition.
 
@@ -35,7 +35,7 @@ You can use any edition including Enterprise, Professional, or the free Communit
 
 #### Install the Meadow Extension
 
-You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) or through the Extension Manager
+You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow01) or through the Extension Manager
 
 1. In Visual Studio, go to **Extensions** > **Manage Extensions**.
 2. Click **Online** and search for `Meadow`.
@@ -43,7 +43,7 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 ### Step 2: Create a new Meadow Project
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2019.
 2. Click **Create a new project**.
 3. Search for `Meadow` (make sure to clear all filters).
 4. Select **Meadow Application** and press **Next**.
@@ -52,7 +52,7 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 ### Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](../../Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 1. Connect your Meadow device to your development machine
 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar. (Alternatively, you can show the list from the **View** > **Toolbars** > **Meadow Device List** menu entry.)
@@ -113,7 +113,7 @@ To fix this do the following:
 
 ### Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](../../Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 1. Connect your Meadow device to your development machine
 2. Press the **Play** button in Visual Studio to compile and deploy your application
@@ -309,7 +309,7 @@ These are the typical minimum set of namespaces in a Meadow app class and provid
 
 * `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
 * `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Feather V1 and V2 dev boards, or the F7v2 Core-Compute module.
-* `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
+* `Meadow.Foundation` - [Meadow.Foundation](../../Meadow.Foundation/index.md) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
 * `Meadow.Foundation.Leds` - Provided with the Meadow.Foundation library. Used to simplify use of RGB LEDs in this sample.
 * `Meadow.Peripherals.Leds` - Provided with the Meadow.Contracts library. Used to access LED type enumeration.
 
@@ -321,11 +321,11 @@ Notice that the `HelloMeadow` application class inherits from `App`, and has one
 public class HelloMeadow : App<F7FeatherV2>
 ```
 
-All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.App-2.html) base class. Under the hood, Meadow.OS will look for a class in your code inheriting from `IApp`, such as the `App` implementation, and launches the app automatically. It also provides hooks for getting notified during system events, such as the board being put to sleep.
+All Meadow applications should inherit from the [App](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.App-2.html) base class. Under the hood, Meadow.OS will look for a class in your code inheriting from `IApp`, such as the `App` implementation, and launches the app automatically. It also provides hooks for getting notified during system events, such as the board being put to sleep.
 
 `App` requires one parameter: the current device definition. This is passed in to provide a strongly-typed reference to the current device.
 
-The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](/docs/api/Meadow.Contracts/Meadow.Resolver.html) class, allowing you to access them using autocomplete, via the specific device type:
+The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](http://developer.wildernesslabs.co/docs/api/Meadow.Contracts/Meadow.Resolver.html) class, allowing you to access them using autocomplete, via the specific device type:
 
 ```csharp
 Device.Pins.OnboardLedRed
@@ -403,5 +403,5 @@ void ShowColorPulse(Color color, TimeSpan duration)
 
 Now that you understand the basics of a Meadow application, we recommend learning about the following topics:
 
-* [Hardware I/O](/Meadow/Meadow_Basics/IO/)
-* [Meadow.Foundation](/Meadow/Meadow.Foundation/)
+* [Hardware I/O](../../Meadow_Basics/IO/)
+* [Meadow.Foundation](../../Meadow.Foundation/index.md)

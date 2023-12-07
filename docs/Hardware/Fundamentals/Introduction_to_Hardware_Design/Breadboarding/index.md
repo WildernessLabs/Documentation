@@ -14,7 +14,7 @@ In fact, the first step in designing a hardware solution (or software for that m
 
 ## Starting with Pre-made Modules
 
-Fortunately these days, you can find high-quality, breadboard-friendly, pre-made _modules_ and _breakouts_ for most IoT peripherals and the hardware scenarios that they address. For instance, [SparkFun](https://www.sparkfun.com/) and [Adafruit](https://www.adafruit.com/) are industry leaders in such hardware and have a vast library of sensors, displays, motor drivers, GNSS (GPS) sensors, servos, and nearly anything else you'll need. 
+Fortunately these days, you can find high-quality, breadboard-friendly, pre-made _modules_ and _breakouts_ for most IoT peripherals and the hardware scenarios that they address. For instance, [SparkFun](https://www.sparkfun.com/) and [Adafruit](https://www.adafruit.com/) are industry leaders in such hardware and have a vast library of sensors, displays, motor drivers, GNSS (GPS) sensors, servos, and nearly anything else you'll need.
 
 For instance, the picture below comes from on of our [Hackster Projects](https://www.hackster.io/wilderness-labs/make-a-basic-level-with-an-mpu6050-four-leds-and-meadow-53a883) and illustrates a breadboard version of a GY521 Gyroscopic sensor breakout:
 
@@ -32,7 +32,7 @@ There are also providers like [DFRobot](https://www.dfrobot.com/) and [Pololu](h
 
 ### Asian (Chinese) Suppliers
 
-Reasonable facsimiles of many of these modules can be found cheaper (and in bulk) from Asian (primarily Chinese) suppliers on [AliExpress](https://www.aliexpress.com/). 
+Reasonable facsimiles of many of these modules can be found cheaper (and in bulk) from Asian (primarily Chinese) suppliers on [AliExpress](https://www.aliexpress.com/).
 
 A word of caution, however; while we've had almost no issues with high-quality modules from Adafruit, Sparkfun, or other reputable designer/suppliers, if you're buying in bulk from Chinese suppliers, make sure to first order a small quantity and test them first. They're typically of acceptable quality, but you can find the occasional low-quality part that will cause grief. Additionally, if you're shipping anywhere outside of China, the shipping costs will almost always exceed the price difference on low quantities.
 

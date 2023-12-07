@@ -4,7 +4,7 @@ title: Batteries
 
 Batteries are made by placing two conductive materials, an anode (`-`) and a cathode (`+`), in paralell and separating them with an electrically conductive solution known as an [electrolyte](https://en.wikipedia.org/wiki/Electrolyte).
 
-The chemical reactions in the battery causes a build of electrons in the electrolyte at the anode side, but they are unable to travel directly to the cathode through the solution becuse of the voltage differential. 
+The chemical reactions in the battery causes a build of electrons in the electrolyte at the anode side, but they are unable to travel directly to the cathode through the solution because of the voltage differential.
 
 Connecting a wire between the anode and cathode allows those electrons to flow from from the anode to the cathode:
 
@@ -16,20 +16,18 @@ Most common batteries are cylindrical, which offers a compromise between a perfe
 
 The circuit symbol for a battery is two uneven plates:
 
-![Battery Circuit Symbol; two uneven plates at a short distance from each other.](../../../../../Common_Files/SingleCell_Battery.svg){:standalone}
+![Battery Circuit Symbol; two uneven plates at a short distance from each other.](../../../../../../static/Common_Files/Singlecell_Battery.svg){:standalone}
 
 Batteries that have more than one cell, or a battery pack, have the plates repeated:
 
-![](../../../../../Common_Files/MultiCell_Battery.svg){:standalone}
+![](../../../../../../static/Common_Files/Multicell_Battery.svg){:standalone}
 
 In some circuit diagrams, they have polarity markings:
 
-![](../../../../../Common_Files/SingleCell_Battery_w_Polarity.svg){:standalone}
+![](../../../../../../static/Common_Files/Singlecell_Battery_w_Polarity.svg){:standalone}
 
-![](../../../../../Common_Files/MultiCell_Battery_w_Polarity.svg){:standalone}
+![](../../../../../../static/Common_Files/Multicell_Battery_w_Polarity.svg){:standalone}
 
 If no polarity markings are present, polarity can be reasoned by the mnemonic that the longer side has more (`+`), and the short side has less (`-`).
 
 ### [Next - Battery Types](../Battery_Types)
-
-<br/>

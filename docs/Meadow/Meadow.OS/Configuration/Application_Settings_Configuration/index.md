@@ -76,7 +76,7 @@ Update:
 }
 ```
 
-You can learn more about enabling and responding to OtA updates in your Meadow application from the [Over-the-Air Updates documentation](/Meadow/Meadow.OS/Updates/).
+You can learn more about enabling and responding to OtA updates in your Meadow application from the [Over-the-Air Updates documentation](../../Updates/).
 
 ### Custom Developer Application Settings
 
@@ -141,7 +141,7 @@ public class MeadowApp : App<F7FeatherV2>
 
 For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/Config_Files) in the `Meadow.Core.Samples` repo.
 
-<table>
+<!-- <table>
     <tr>
         <td style="width:50%">
             <img alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon." src="../../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
@@ -178,4 +178,4 @@ For an example of configuration in use, see the [Config Files sample App](https:
             </p>
         </td>
     </tr>
-</table>
+</table> -->

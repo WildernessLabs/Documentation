@@ -30,7 +30,7 @@ DateTime clock = DateTime.Now;
 
 You can check these RTC Samples on Hackster that you can try out yourself. Notice that you can either set the time manually, or you can use a config file that will get and set your local date and time via Network Time Protocol at app startup.
 
-<table>
+<!-- <table>
     <tr>
         <td style="width:50%">
             <img alt="Video showing a Meadow connected to a multi-line character display showing text, Meadow RTC is now available in b3.9, followed by the date and then the current time with the seconds incrementing." src="../../../Common_Files/Hackster/RtcClock.gif"/>
@@ -67,4 +67,4 @@ You can check these RTC Samples on Hackster that you can try out yourself. Notic
             </p>
         </td>
     </tr>
-</table>
+</table> -->
