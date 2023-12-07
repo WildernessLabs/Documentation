@@ -141,10 +141,10 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./src/build
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v2
+      #   with:
+      #     path: ./src/build
 
   deploy:
     runs-on: ubuntu-latest
@@ -152,7 +152,7 @@ jobs:
     steps:
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          source_dir: 'build'
+          source_dir: './build'
           container_name: '$web'
           connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
           overwrite: 'true'
