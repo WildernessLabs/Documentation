@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.OS/Networking/index.md",
   "sourceDirName": "Meadow/Meadow.OS/Networking",
   "slug": "/Meadow/Meadow.OS/Networking/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/",
+  "permalink": "/docs/Meadow/Meadow.OS/Networking/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Networking/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowOsSidebar",
   "previous": {
     "title": "WiFi/Bluetooth Antenna",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/"
+    "permalink": "/docs/Meadow/Meadow.OS/Networking/Antenna/"
   },
   "next": {
     "title": "Real Time Clock",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/"
+    "permalink": "/docs/Meadow/Meadow.OS/RTC/"
   }
 }

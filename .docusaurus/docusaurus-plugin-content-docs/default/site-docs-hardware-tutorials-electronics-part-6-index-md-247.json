@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part6",
   "slug": "/Hardware/Tutorials/Electronics/Part6/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/index.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Voltage Division",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/"
   },
   "next": {
     "title": "Diode Logic Gate Lab",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/"
   }
 }

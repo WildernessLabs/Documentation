@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/index.md",
   "sourceDirName": "Hardware/Design/PCB_Design_and_Assembly/Reference",
   "slug": "/Hardware/Design/PCB_Design_and_Assembly/Reference/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/",
+  "permalink": "/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/index.md",
   "tags": [],
@@ -21,10 +21,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "F7 Dev Module Integration",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/"
+    "permalink": "/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/"
   },
   "next": {
     "title": "Intro to Hardware Design",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
   }
 }

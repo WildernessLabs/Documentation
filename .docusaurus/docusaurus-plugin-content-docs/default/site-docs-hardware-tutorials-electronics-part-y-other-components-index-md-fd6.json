@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/PartY_Other_Components",
   "slug": "/Hardware/Tutorials/Electronics/PartY_Other_Components/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/index.md",
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Review",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/"
   },
   "next": {
     "title": "index",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Prologue/"
   }
 }

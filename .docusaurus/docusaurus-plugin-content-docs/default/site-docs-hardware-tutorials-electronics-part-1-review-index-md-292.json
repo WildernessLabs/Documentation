@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part1/Review/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part1/Review",
   "slug": "/Hardware/Tutorials/Electronics/Part1/Review/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/Review/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part1/Review/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Electromagnetism",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/"
   },
   "next": {
     "title": "Part 2 - Quantifying Electricity; Amps, Volts, and Watts",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/"
   }
 }

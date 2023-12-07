@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part5/Review/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part5/Review",
   "slug": "/Hardware/Tutorials/Electronics/Part5/Review/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Review/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Review/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part5/Review/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Photoresistor Lab",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/"
   },
   "next": {
     "title": "Voltage Divider Practicals",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/"
   }
 }

@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index.md",
   "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle",
   "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
+  "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "PCBs",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/"
   },
   "next": {
     "title": "Production Scale",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/"
   }
 }

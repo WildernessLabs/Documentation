@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part4",
   "slug": "/Hardware/Tutorials/Electronics/Part4/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Review",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part3/Review/"
   },
   "next": {
     "title": "Calculating Simple Resistance",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/"
   }
 }

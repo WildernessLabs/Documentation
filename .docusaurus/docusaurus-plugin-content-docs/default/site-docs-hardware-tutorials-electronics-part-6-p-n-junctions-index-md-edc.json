@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions",
   "slug": "/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "N-type Semiconductor",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/N-Type/"
   },
   "next": {
     "title": "P-type Semiconductor",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/P-Type/"
   }
 }

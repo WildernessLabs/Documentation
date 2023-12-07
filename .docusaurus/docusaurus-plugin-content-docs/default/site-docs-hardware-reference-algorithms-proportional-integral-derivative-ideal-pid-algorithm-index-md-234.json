@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index.md",
   "sourceDirName": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm",
   "slug": "/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/",
+  "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Closed Loop Gain Controllers",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/"
+    "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/"
   },
   "next": {
     "title": "PID Intro",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/"
+    "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/"
   }
 }

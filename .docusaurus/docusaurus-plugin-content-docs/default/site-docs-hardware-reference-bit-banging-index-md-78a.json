@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/BitBanging/index.md",
   "sourceDirName": "Hardware/Reference/BitBanging",
   "slug": "/Hardware/Reference/BitBanging/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/BitBanging/",
+  "permalink": "/docs/Hardware/Reference/BitBanging/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/BitBanging/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Using PID",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/"
+    "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/"
   },
   "next": {
     "title": "Equations and Laws",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/"
+    "permalink": "/docs/Hardware/Reference/Equations_and_Laws/"
   }
 }

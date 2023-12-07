@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index.md",
   "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding",
   "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
+  "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Intro to Hardware Design",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
   },
   "next": {
     "title": "PCBs",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/"
   }
 }

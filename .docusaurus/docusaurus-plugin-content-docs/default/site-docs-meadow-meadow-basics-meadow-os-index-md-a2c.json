@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow_Basics/Meadow.OS/index.md",
   "sourceDirName": "Meadow/Meadow_Basics/Meadow.OS",
   "slug": "/Meadow/Meadow_Basics/Meadow.OS/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/",
+  "permalink": "/docs/Meadow/Meadow_Basics/Meadow.OS/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Meadow.OS/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Power IO",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/"
+    "permalink": "/docs/Meadow/Meadow_Basics/IO/Power/"
   },
   "next": {
     "title": "Realtime Clock",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/"
   }
 }

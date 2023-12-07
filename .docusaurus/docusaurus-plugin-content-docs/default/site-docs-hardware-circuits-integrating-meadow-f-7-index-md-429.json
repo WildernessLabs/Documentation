@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Circuits/Integrating_Meadow/F7/index.md",
   "sourceDirName": "Hardware/Circuits/Integrating_Meadow/F7",
   "slug": "/Hardware/Circuits/Integrating_Meadow/F7/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/",
+  "permalink": "/docs/Hardware/Circuits/Integrating_Meadow/F7/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Integrating_Meadow/F7/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "74595 Shift Register",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/"
+    "permalink": "/docs/Hardware/Circuits/Components/ShiftRegister74595/"
   },
   "next": {
     "title": "Core-Compute Module Integration",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/"
+    "permalink": "/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/"
   }
 }

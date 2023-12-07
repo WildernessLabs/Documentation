@@ -51,7 +51,7 @@ const config = {
   url: 'https://wildernesslabs.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/DocsDocusaurus/',
+  baseUrl: '/',
   trailingSlash: true,
 
   // GitHub pages deployment config.

@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/index.md",
   "sourceDirName": "Hardware/Tutorials/PCB_Tutorial/Project_Creation",
   "slug": "/Hardware/Tutorials/PCB_Tutorial/Project_Creation/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/",
+  "permalink": "/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "PCB Layout",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/"
+    "permalink": "/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/"
   },
   "next": {
     "title": "Schematic Capture",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/"
+    "permalink": "/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/"
   }
 }

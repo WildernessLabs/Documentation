@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/PCB_Tutorial/index.md",
   "sourceDirName": "Hardware/Tutorials/PCB_Tutorial",
   "slug": "/Hardware/Tutorials/PCB_Tutorial/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/",
+  "permalink": "/docs/Hardware/Tutorials/PCB_Tutorial/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/PCB_Tutorial/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Requirements",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/"
   },
   "next": {
     "title": "Part Libraries",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/"
+    "permalink": "/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/"
   }
 }

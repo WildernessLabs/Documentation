@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part5/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part5",
   "slug": "/Hardware/Tutorials/Electronics/Part5/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part5/index.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Resistors in Series",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/"
   },
   "next": {
     "title": "Circuit Software",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/"
   }
 }

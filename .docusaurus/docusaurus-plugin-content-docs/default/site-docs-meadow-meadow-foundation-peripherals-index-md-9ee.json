@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.Foundation/Peripherals/index.md",
   "sourceDirName": "Meadow/Meadow.Foundation/Peripherals",
   "slug": "/Meadow/Meadow.Foundation/Peripherals/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/",
+  "permalink": "/docs/Meadow/Meadow.Foundation/Peripherals/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Peripherals/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "TextDisplayMenu Library",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/"
+    "permalink": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/"
   },
   "next": {
     "title": "Meadow.Foundation Unified IO Architecture",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/"
+    "permalink": "/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/"
   }
 }

@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/P-Type/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part6/P-Type",
   "slug": "/Hardware/Tutorials/Electronics/Part6/P-Type/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/P-Type/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/P-Type/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "P-N Junctions",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/"
   },
   "next": {
     "title": "index",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/"
   }
 }

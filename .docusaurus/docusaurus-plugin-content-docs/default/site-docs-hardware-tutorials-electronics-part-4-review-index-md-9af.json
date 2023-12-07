@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/Review/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part4/Review",
   "slug": "/Hardware/Tutorials/Electronics/Part4/Review/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Review/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Review/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/Review/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Resistor Tolerance and Preferred Values",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/"
   },
   "next": {
     "title": "Resistors in Series",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/"
   }
 }

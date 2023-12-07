@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits",
   "slug": "/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/index.md",
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Batteries",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/"
   },
   "next": {
     "title": "Battery Resistance; Ideal vs. Practical Voltage",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/"
   }
 }

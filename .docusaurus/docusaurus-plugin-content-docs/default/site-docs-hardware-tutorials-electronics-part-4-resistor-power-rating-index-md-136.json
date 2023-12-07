@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating",
   "slug": "/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Resistor Lab",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/"
   },
   "next": {
     "title": "Resistor Tolerance and Preferred Values",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/"
   }
 }

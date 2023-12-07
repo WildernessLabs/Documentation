@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part1/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part1",
   "slug": "/Hardware/Tutorials/Electronics/Part1/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part1/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "TODO",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Notes"
   },
   "next": {
     "title": "Atoms",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/Atoms/"
   }
 }

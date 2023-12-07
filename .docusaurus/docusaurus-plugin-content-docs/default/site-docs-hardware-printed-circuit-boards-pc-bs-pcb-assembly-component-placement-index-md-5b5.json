@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/index.md",
   "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement",
   "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/",
+  "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "PCB Assembly",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/"
+    "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/"
   },
   "next": {
     "title": "Solder Paste Application",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/"
+    "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/"
   }
 }

@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Getting_Started/Update_USB_Driver/index.md",
   "sourceDirName": "Meadow/Getting_Started/Update_USB_Driver",
   "slug": "/Meadow/Getting_Started/Update_USB_Driver/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/",
+  "permalink": "/docs/Meadow/Getting_Started/Update_USB_Driver/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Update_USB_Driver/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "ST-Link",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/"
+    "permalink": "/docs/Meadow/Getting_Started/Setup/stlink/"
   },
   "next": {
     "title": "Meadow.Cloud",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/"
+    "permalink": "/docs/Meadow/Meadow.Cloud/"
   }
 }

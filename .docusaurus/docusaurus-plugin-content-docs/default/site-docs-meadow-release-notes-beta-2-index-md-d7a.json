@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Release_Notes/Beta2/index.md",
   "sourceDirName": "Meadow/Release_Notes/Beta2",
   "slug": "/Meadow/Release_Notes/Beta2/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/",
+  "permalink": "/docs/Meadow/Release_Notes/Beta2/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Release_Notes/Beta2/index.md",
   "tags": [],
@@ -19,6 +19,6 @@
   "sidebar": "meadowOsSidebar",
   "previous": {
     "title": "Meadow Beta 3",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/"
+    "permalink": "/docs/Meadow/Release_Notes/Beta3/"
   }
 }

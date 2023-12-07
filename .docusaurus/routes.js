@@ -3,1580 +3,1615 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/DocsDocusaurus/markdown-page/',
-    component: ComponentCreator('/DocsDocusaurus/markdown-page/', 'e69'),
+    path: '/__docusaurus/debug/',
+    component: ComponentCreator('/__docusaurus/debug/', '279'),
     exact: true
   },
   {
-    path: '/DocsDocusaurus/docs/',
-    component: ComponentCreator('/DocsDocusaurus/docs/', '668'),
+    path: '/__docusaurus/debug/config/',
+    component: ComponentCreator('/__docusaurus/debug/config/', '4d6'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content/',
+    component: ComponentCreator('/__docusaurus/debug/content/', 'dd1'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData/',
+    component: ComponentCreator('/__docusaurus/debug/globalData/', 'db3'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata/',
+    component: ComponentCreator('/__docusaurus/debug/metadata/', '645'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry/',
+    component: ComponentCreator('/__docusaurus/debug/registry/', '491'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes/',
+    component: ComponentCreator('/__docusaurus/debug/routes/', '0ab'),
+    exact: true
+  },
+  {
+    path: '/markdown-page/',
+    component: ComponentCreator('/markdown-page/', 'bbb'),
+    exact: true
+  },
+  {
+    path: '/docs/',
+    component: ComponentCreator('/docs/', '779'),
     routes: [
       {
-        path: '/DocsDocusaurus/docs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/', 'fb3'),
+        path: '/docs/',
+        component: ComponentCreator('/docs/', 'b00'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/DevCamp2020/',
-        component: ComponentCreator('/DocsDocusaurus/docs/DevCamp2020/', 'e75'),
+        path: '/docs/DevCamp2020/',
+        component: ComponentCreator('/docs/DevCamp2020/', '16f'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/DevCamp2021/',
-        component: ComponentCreator('/DocsDocusaurus/docs/DevCamp2021/', '71d'),
+        path: '/docs/DevCamp2021/',
+        component: ComponentCreator('/docs/DevCamp2021/', '4a3'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Events/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Events/', '5b3'),
+        path: '/docs/Events/',
+        component: ComponentCreator('/docs/Events/', '47b'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/HackKit/',
-        component: ComponentCreator('/DocsDocusaurus/docs/HackKit/', '5c2'),
+        path: '/docs/HackKit/',
+        component: ComponentCreator('/docs/HackKit/', '7fb'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/HackKit/BlogSeries/',
-        component: ComponentCreator('/DocsDocusaurus/docs/HackKit/BlogSeries/', '8f6'),
+        path: '/docs/HackKit/BlogSeries/',
+        component: ComponentCreator('/docs/HackKit/BlogSeries/', '9e8'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/HackKit/Contents/',
-        component: ComponentCreator('/DocsDocusaurus/docs/HackKit/Contents/', '2d8'),
+        path: '/docs/HackKit/Contents/',
+        component: ComponentCreator('/docs/HackKit/Contents/', '91e'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/HackKit/HackKitLite/',
-        component: ComponentCreator('/DocsDocusaurus/docs/HackKit/HackKitLite/', '30b'),
+        path: '/docs/HackKit/HackKitLite/',
+        component: ComponentCreator('/docs/HackKit/HackKitLite/', 'e95'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/HackKit/Projects/',
-        component: ComponentCreator('/DocsDocusaurus/docs/HackKit/Projects/', 'c05'),
+        path: '/docs/HackKit/Projects/',
+        component: ComponentCreator('/docs/HackKit/Projects/', '5b5'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/', '82c'),
+        path: '/docs/Hardware/',
+        component: ComponentCreator('/docs/Hardware/', '347'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/', 'b50'),
+        path: '/docs/Hardware/Circuits/Components/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/', '2c1'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/', '923'),
+        path: '/docs/Hardware/Circuits/Components/Capacitors/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/Capacitors/', '9a2'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/', '963'),
+        path: '/docs/Hardware/Circuits/Components/Diodes/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/Diodes/', '2cc'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/', '684'),
+        path: '/docs/Hardware/Circuits/Components/LEDs/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/LEDs/', '36f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/', 'ac7'),
+        path: '/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/', 'b00'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/', '707'),
+        path: '/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/', '0d5'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/', '2d2'),
+        path: '/docs/Hardware/Circuits/Components/Resistors/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/Resistors/', '339'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/', '364'),
+        path: '/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/', '191'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/', '174'),
+        path: '/docs/Hardware/Circuits/Components/Resistors/Reading/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/Resistors/Reading/', '3d0'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/', '3c5'),
+        path: '/docs/Hardware/Circuits/Components/ShiftRegister74595/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Components/ShiftRegister74595/', 'e45'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/', 'bc5'),
+        path: '/docs/Hardware/Circuits/Integrating_Meadow/F7/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Integrating_Meadow/F7/', 'e71'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/', '731'),
+        path: '/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/', '4b5'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/', 'fc0'),
+        path: '/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/',
+        component: ComponentCreator('/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/', '3e8'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/', '1f5'),
+        path: '/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/',
+        component: ComponentCreator('/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/', '338'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/', '95d'),
+        path: '/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/',
+        component: ComponentCreator('/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/', '357'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/', '69d'),
+        path: '/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/',
+        component: ComponentCreator('/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/', '320'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/', '9d3'),
+        path: '/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/',
+        component: ComponentCreator('/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/', 'a9f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/', '5dd'),
+        path: '/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/',
+        component: ComponentCreator('/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/', '02f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/', '67d'),
+        path: '/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/',
+        component: ComponentCreator('/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/', 'a52'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Peripherals/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Peripherals/', '3ef'),
+        path: '/docs/Hardware/Peripherals/',
+        component: ComponentCreator('/docs/Hardware/Peripherals/', '67b'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/', '7a1'),
+        path: '/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/',
+        component: ComponentCreator('/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/', '2a5'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Peripherals/Motors_and_Servos/Servos/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Peripherals/Motors_and_Servos/Servos/', '4d9'),
+        path: '/docs/Hardware/Peripherals/Motors_and_Servos/Servos/',
+        component: ComponentCreator('/docs/Hardware/Peripherals/Motors_and_Servos/Servos/', 'f0b'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Peripherals/Relays/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Peripherals/Relays/', '8e2'),
+        path: '/docs/Hardware/Peripherals/Relays/',
+        component: ComponentCreator('/docs/Hardware/Peripherals/Relays/', 'f6c'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/', 'ad5'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/', 'b35'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/', '3c7'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/', 'd20'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/', 'f5b'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/', '76f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/', 'b29'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/', '576'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/', '4dc'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/', '660'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/', '682'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/', '5da'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/', '1c3'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/', '8e4'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/', 'fe8'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/', '83f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/', 'aaa'),
+        path: '/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/',
+        component: ComponentCreator('/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/', '600'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/', '2a8'),
+        path: '/docs/Hardware/Reference/',
+        component: ComponentCreator('/docs/Hardware/Reference/', '66f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/', 'a97'),
+        path: '/docs/Hardware/Reference/Algorithms/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/', 'b1c'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/', '75b'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/', '45c'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/', '702'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/', 'b1f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/', 'a6b'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/', '8c9'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/', 'c0b'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/', '674'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/', 'b23'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/', 'c7c'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/', '7b9'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/', 'ef9'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/', '5ce'),
+        path: '/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/',
+        component: ComponentCreator('/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/', '6b2'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/BitBanging/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/BitBanging/', 'fcc'),
+        path: '/docs/Hardware/Reference/BitBanging/',
+        component: ComponentCreator('/docs/Hardware/Reference/BitBanging/', '147'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/', '2f6'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/', '14c'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/', '0ae'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Capacitance/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Capacitance/', 'df9'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/', 'b14'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Resistance/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Resistance/', '740'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/', 'f33'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/', 'f34'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/', 'af2'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/', '44e'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/', '11c'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Voltage/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Voltage/', 'c24'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/', '67c'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/', '4c3'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/', 'd21'),
+        path: '/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/',
+        component: ComponentCreator('/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/', 'd95'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/', 'efc'),
+        path: '/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/',
+        component: ComponentCreator('/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/', 'f1d'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Units/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Units/', '6ba'),
+        path: '/docs/Hardware/Reference/Units/',
+        component: ComponentCreator('/docs/Hardware/Reference/Units/', '2fb'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/', 'f91'),
+        path: '/docs/Hardware/Reference/Units/Amps/',
+        component: ComponentCreator('/docs/Hardware/Reference/Units/Amps/', '9ee'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/', 'dec'),
+        path: '/docs/Hardware/Reference/Units/Volts/',
+        component: ComponentCreator('/docs/Hardware/Reference/Units/Volts/', '6ba'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/', '0a3'),
+        path: '/docs/Hardware/Reference/Units/Watts/',
+        component: ComponentCreator('/docs/Hardware/Reference/Units/Watts/', '044'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/', '14e'),
+        path: '/docs/Hardware/Tutorials/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/', '56e'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/', '45c'),
+        path: '/docs/Hardware/Tutorials/Electronics/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/', '880'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes/', 'df9'),
+        path: '/docs/Hardware/Tutorials/Electronics/Notes/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Notes/', '78a'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/', 'aad'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part1/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part1/', '93e'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/', 'c57'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part1/Atoms/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part1/Atoms/', '151'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/', 'ecf'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/', '4ae'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/', 'e9a'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/', '1bf'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/', 'fa4'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part1/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part1/Review/', 'a62'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/', '797'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/', 'f52'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/', '09e'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/', 'bf4'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/', '4e5'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/Amperage/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/Amperage/', '593'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Review/', '130'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/Review/', 'f75'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/', '998'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/', '419'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Voltage/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Voltage/', 'edb'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/Voltage/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/Voltage/', 'dbb'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/', 'a49'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part2/Wattage/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part2/Wattage/', '1a4'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/', '30d'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/', '368'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/', '1f1'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/', '8b0'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/', 'c31'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/', '754'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/', '013'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/', '155'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/', '892'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/', '8e8'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/', 'c4e'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/', '066'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/', '7eb'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part3/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part3/Review/', '513'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/', 'b38'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/', '562'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/', 'a31'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/', '232'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/', 'c03'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/', 'e60'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/', 'e56'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/', 'cf0'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/', '879'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/', '972'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes/', 'ad1'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes/', '443'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/', '221'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/', '663'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/', '815'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Resistance/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Resistance/', '503'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/', '03c'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/', '36d'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/', 'c9b'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/', '995'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/', 'dfb'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/', '1fe'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/', 'd13'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/', '9e7'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Review/', '56d'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Review/', '3fe'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/', 'dba'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/', '65a'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/', '32f'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/', '600'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/', '3c6'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/', '97d'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/', '99d'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/', '723'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/', '3a2'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/', '659'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/', 'f42'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/', 'd6f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/', 'e57'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/', '91b'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/', 'cd9'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/', '46e'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Review/', '297'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Review/', '47d'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/', '17b'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/', '3ad'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/', 'c4b'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/', '086'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/', '8cb'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/', 'cf4'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/', 'ecd'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/', '0db'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/', '2d6'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/', 'a28'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/', '037'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/', '1d8'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LEDs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LEDs/', '850'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/LEDs/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/LEDs/', 'fbb'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/', '495'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/', 'e21'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/', '32a'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/N-Type/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/N-Type/', 'dde'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/', 'bed'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/', 'bfc'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/', '1d4'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/P-Type/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/P-Type/', 'df9'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/', 'e82'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/', '190'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/', '938'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/Review/', 'cb1'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/', '3ac'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/', 'aac'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/', 'c06'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part6/Silicon/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part6/Silicon/', '4c4'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes/', 'b12'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part7/Notes/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part7/Notes/', 'c83'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Transistors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Transistors/', '3ed'),
+        path: '/docs/Hardware/Tutorials/Electronics/Part7/Transistors/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Part7/Transistors/', '001'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/', '726'),
+        path: '/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/', 'd71'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/', '3f6'),
+        path: '/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/', 'b1f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/', 'a5a'),
+        path: '/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/', 'e52'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/', '9fe'),
+        path: '/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/', '6e7'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/', 'fb7'),
+        path: '/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/', '535'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/', '1fa'),
+        path: '/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/', '7b7'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/', '803'),
+        path: '/docs/Hardware/Tutorials/Electronics/Prologue/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Prologue/', 'b4e'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/', '1f7'),
+        path: '/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/', '41f'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/', 'a9c'),
+        path: '/docs/Hardware/Tutorials/PCB_Tutorial/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/PCB_Tutorial/', '8e1'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/', '14c'),
+        path: '/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/', 'b07'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/', '8a1'),
+        path: '/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/', 'fb9'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/', 'fb8'),
+        path: '/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/', '059'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/', '27d'),
+        path: '/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/', '0aa'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/', '62f'),
+        path: '/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/',
+        component: ComponentCreator('/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/', '3e2'),
         exact: true,
         sidebar: "hardwareSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/', '08b'),
+        path: '/docs/Meadow/',
+        component: ComponentCreator('/docs/Meadow/', '71c'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/', '856'),
+        path: '/docs/Meadow/Getting_Started/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/', '6d8'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Assemble_Meadow/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Assemble_Meadow/', '79f'),
+        path: '/docs/Meadow/Getting_Started/Assemble_Meadow/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Assemble_Meadow/', '685'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/', 'b1c'),
+        path: '/docs/Meadow/Getting_Started/Deploying_Meadow/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Deploying_Meadow/', '40b'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/', 'e45'),
+        path: '/docs/Meadow/Getting_Started/Deployment/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Deployment/', 'd7d'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/', '987'),
+        path: '/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/', 'bbf'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/', '55b'),
+        path: '/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/', '332'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/', '163'),
+        path: '/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/', '86e'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/', 'f1d'),
+        path: '/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/', '898'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/', '47e'),
+        path: '/docs/Meadow/Getting_Started/Hello_World/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Hello_World/', 'c35'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/', '8ed'),
+        path: '/docs/Meadow/Getting_Started/Setup/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Setup/', '2de'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/macos/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/macos/', '5a5'),
+        path: '/docs/Meadow/Getting_Started/Setup/macos/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Setup/macos/', 'a23'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/', 'cad'),
+        path: '/docs/Meadow/Getting_Started/Setup/stlink/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Setup/stlink/', '31f'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/Windows/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/Windows/', '7b0'),
+        path: '/docs/Meadow/Getting_Started/Setup/Windows/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Setup/Windows/', '5fe'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/', '537'),
+        path: '/docs/Meadow/Getting_Started/Update_USB_Driver/',
+        component: ComponentCreator('/docs/Meadow/Getting_Started/Update_USB_Driver/', '4dc'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/', '7b4'),
+        path: '/docs/Meadow/Meadow_Basics/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/', '815'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/', 'a46'),
+        path: '/docs/Meadow/Meadow_Basics/Apps/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Apps/', '4db'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/', '173'),
+        path: '/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/', '991'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Sleep/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Sleep/', 'eb8'),
+        path: '/docs/Meadow/Meadow_Basics/Apps/Sleep/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Apps/Sleep/', 'fd4'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/', 'cad'),
+        path: '/docs/Meadow/Meadow_Basics/Bluetooth/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Bluetooth/', 'dab'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/', '931'),
+        path: '/docs/Meadow/Meadow_Basics/Events_and_IObservable/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Events_and_IObservable/', '58e'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/', '0f8'),
+        path: '/docs/Meadow/Meadow_Basics/File_System/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/File_System/', '935'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/', '8f7'),
+        path: '/docs/Meadow/Meadow_Basics/Hardware/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Hardware/', 'fec'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v1/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v1/', '35c'),
+        path: '/docs/Meadow/Meadow_Basics/Hardware/F7v1/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Hardware/F7v1/', 'be4'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/', 'b5e'),
+        path: '/docs/Meadow/Meadow_Basics/Hardware/F7v2/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Hardware/F7v2/', '18b'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/', '3c0'),
+        path: '/docs/Meadow/Meadow_Basics/IO/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/', '517'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/', '1c3'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Analog/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Analog/', '7d9'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/', '479'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Digital/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Digital/', '8bc'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/', 'ae6'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/', '609'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/', '627'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/', '0c0'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/', 'f42'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/', '0c6'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/', '32c'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/', '86e'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/PWM/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/PWM/', 'cd9'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Digital/PWM/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Digital/PWM/', '818'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/', '446'),
+        path: '/docs/Meadow/Meadow_Basics/IO/Power/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/IO/Power/', '97e'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow_CLI/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow_CLI/', 'cb2'),
+        path: '/docs/Meadow/Meadow_Basics/Meadow_CLI/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Meadow_CLI/', '205'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/', 'd57'),
+        path: '/docs/Meadow/Meadow_Basics/Meadow.OS/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Meadow.OS/', '201'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/', 'ffe'),
+        path: '/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/', 'cb6'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/', 'b24'),
+        path: '/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/', 'f3f'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Networking/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Networking/', 'ab0'),
+        path: '/docs/Meadow/Meadow_Basics/Networking/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Networking/', '530'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Status/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Status/', 'c84'),
+        path: '/docs/Meadow/Meadow_Basics/Status/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Status/', '756'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/', 'c86'),
+        path: '/docs/Meadow/Meadow_Basics/Troubleshooting/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Troubleshooting/', '1ce'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/', '976'),
+        path: '/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/', 'ade'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/', '532'),
+        path: '/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/', '7ad'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/', '87a'),
+        path: '/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/', '72a'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/', 'bed'),
+        path: '/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/', '3d3'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/', 'a54'),
+        path: '/docs/Meadow/Meadow_Basics/Units/',
+        component: ComponentCreator('/docs/Meadow/Meadow_Basics/Units/', '8e7'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/', '475'),
+        path: '/docs/Meadow/Meadow.Cloud/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/', '64e'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Command_Control/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Command_Control/', '69b'),
+        path: '/docs/Meadow/Meadow.Cloud/Command_Control/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Command_Control/', '8f5'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Device_Provisioning/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Device_Provisioning/', '58d'),
+        path: '/docs/Meadow/Meadow.Cloud/Device_Provisioning/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Device_Provisioning/', '31b'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/', '852'),
+        path: '/docs/Meadow/Meadow.Cloud/Health_Monitoring/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Health_Monitoring/', 'fe4'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/', '641'),
+        path: '/docs/Meadow/Meadow.Cloud/Integrations/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Integrations/', 'fef'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/', 'eb1'),
+        path: '/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/', '55e'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/', '511'),
+        path: '/docs/Meadow/Meadow.Cloud/Integrations/Datacake/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Integrations/Datacake/', '305'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/', 'eea'),
+        path: '/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/', '2e8'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Logs_Events/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Logs_Events/', '668'),
+        path: '/docs/Meadow/Meadow.Cloud/Logs_Events/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Logs_Events/', '834'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Cloud/OtA_Updates/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Cloud/OtA_Updates/', 'e44'),
+        path: '/docs/Meadow/Meadow.Cloud/OtA_Updates/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/OtA_Updates/', 'de5'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/', 'f78'),
+        path: '/docs/Meadow/Meadow.Foundation/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/', '04f'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/', '92c'),
+        path: '/docs/Meadow/Meadow.Foundation/API_Samples/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/API_Samples/', 'bb7'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/', 'a5a'),
+        path: '/docs/Meadow/Meadow.Foundation/Getting_Started/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Getting_Started/', 'e61'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/', '3f2'),
+        path: '/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/', '122'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/', '026'),
+        path: '/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/', '269'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/', '38b'),
+        path: '/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/', '4a7'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/', 'ee5'),
+        path: '/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/', '398'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/', '328'),
+        path: '/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/', 'fd8'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/', '934'),
+        path: '/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/', '0a5'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/', '23d'),
+        path: '/docs/Meadow/Meadow.Foundation/Peripherals/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Peripherals/', 'b4b'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/', 'db7'),
+        path: '/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/', '2f5'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/', '5a5'),
+        path: '/docs/Meadow/Meadow.Foundation/Working_with_Sensors/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Foundation/Working_with_Sensors/', 'e13'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/', '0eb'),
+        path: '/docs/Meadow/Meadow.OS/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/', 'd92'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/', '6cf'),
+        path: '/docs/Meadow/Meadow.OS/Automatic_Restarts/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Automatic_Restarts/', '350'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/', '668'),
+        path: '/docs/Meadow/Meadow.OS/Bluetooth/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Bluetooth/', '5ed'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/', 'a56'),
+        path: '/docs/Meadow/Meadow.OS/Cellular/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Cellular/', '647'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/', '5a7'),
+        path: '/docs/Meadow/Meadow.OS/Configuration/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Configuration/', '4ec'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/', '560'),
+        path: '/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/', '917'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/', 'a31'),
+        path: '/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/', 'aaf'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/', 'cf4'),
+        path: '/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/', '6bd'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/', '744'),
+        path: '/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/', 'aef'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/', 'dfe'),
+        path: '/docs/Meadow/Meadow.OS/File_System/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/File_System/', '51b'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/', '048'),
+        path: '/docs/Meadow/Meadow.OS/Networking/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Networking/', 'ce8'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/', 'c1d'),
+        path: '/docs/Meadow/Meadow.OS/Networking/Antenna/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Networking/Antenna/', 'df4'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/', '504'),
+        path: '/docs/Meadow/Meadow.OS/RTC/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/RTC/', 'e87'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/', 'c0b'),
+        path: '/docs/Meadow/Meadow.OS/SQLite/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/SQLite/', 'b86'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/', '238'),
+        path: '/docs/Meadow/Meadow.OS/Threading/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Threading/', 'e24'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/', '14c'),
+        path: '/docs/Meadow/Meadow.OS/Updates/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Updates/', '4db'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/', '8fd'),
+        path: '/docs/Meadow/Meadow.OS/Watchdog/',
+        component: ComponentCreator('/docs/Meadow/Meadow.OS/Watchdog/', 'a70'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/', '6ef'),
+        path: '/docs/Meadow/Release_Notes/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/', '986'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/', '360'),
+        path: '/docs/Meadow/Release_Notes/Beta2/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Beta2/', '7b4'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/', '16d'),
+        path: '/docs/Meadow/Release_Notes/Beta3/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Beta3/', '29e'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/', '6be'),
+        path: '/docs/Meadow/Release_Notes/Beta4/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Beta4/', '572'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/', '81a'),
+        path: '/docs/Meadow/Release_Notes/Beta5/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Beta5/', '63a'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/', 'eb3'),
+        path: '/docs/Meadow/Release_Notes/Beta6/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Beta6/', '2af'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/', 'ee4'),
+        path: '/docs/Meadow/Release_Notes/Release-Candidates/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Release-Candidates/', '3f9'),
         exact: true,
         sidebar: "meadowOsSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/', '42e'),
+        path: '/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/', '896'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/', 'b6b'),
+        path: '/docs/Meadow/Release_Notes/Roadmap/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/Roadmap/', 'cbf'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Meadow/Release_Notes/v1/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Meadow/Release_Notes/v1/', '575'),
+        path: '/docs/Meadow/Release_Notes/v1/',
+        component: ComponentCreator('/docs/Meadow/Release_Notes/v1/', '46d'),
         exact: true,
         sidebar: "meadowSidebar"
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/', '137'),
+        path: '/docs/Netduino/',
+        component: ComponentCreator('/docs/Netduino/', '60d'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/About/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/About/', '4a3'),
+        path: '/docs/Netduino/About/',
+        component: ComponentCreator('/docs/Netduino/About/', '9a8'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/About/Downloads/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/About/Downloads/', '02c'),
+        path: '/docs/Netduino/About/Downloads/',
+        component: ComponentCreator('/docs/Netduino/About/Downloads/', '262'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/About/Source/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/About/Source/', '300'),
+        path: '/docs/Netduino/About/Source/',
+        component: ComponentCreator('/docs/Netduino/About/Source/', 'c14'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/About/Troubleshooting/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/About/Troubleshooting/', 'c7d'),
+        path: '/docs/Netduino/About/Troubleshooting/',
+        component: ComponentCreator('/docs/Netduino/About/Troubleshooting/', '6a3'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/About/Updating_Firmware/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/About/Updating_Firmware/', '4f5'),
+        path: '/docs/Netduino/About/Updating_Firmware/',
+        component: ComponentCreator('/docs/Netduino/About/Updating_Firmware/', '553'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Application_Fundamentals/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Application_Fundamentals/', '02d'),
+        path: '/docs/Netduino/Application_Fundamentals/',
+        component: ComponentCreator('/docs/Netduino/Application_Fundamentals/', '05c'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Debug_Print/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Debug_Print/', '5ad'),
+        path: '/docs/Netduino/Application_Fundamentals/Debug_Print/',
+        component: ComponentCreator('/docs/Netduino/Application_Fundamentals/Debug_Print/', '305'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Memory_Management/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Memory_Management/', 'e8f'),
+        path: '/docs/Netduino/Application_Fundamentals/Memory_Management/',
+        component: ComponentCreator('/docs/Netduino/Application_Fundamentals/Memory_Management/', '95c'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Application_Fundamentals/NETMF/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Application_Fundamentals/NETMF/', 'a88'),
+        path: '/docs/Netduino/Application_Fundamentals/NETMF/',
+        component: ComponentCreator('/docs/Netduino/Application_Fundamentals/NETMF/', '445'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Threading/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Threading/', 'bb2'),
+        path: '/docs/Netduino/Application_Fundamentals/Threading/',
+        component: ComponentCreator('/docs/Netduino/Application_Fundamentals/Threading/', '7c9'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Getting_Started/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Getting_Started/', '3df'),
+        path: '/docs/Netduino/Getting_Started/',
+        component: ComponentCreator('/docs/Netduino/Getting_Started/', '5ca'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Mac/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Mac/', '5d6'),
+        path: '/docs/Netduino/Getting_Started/Installation/Mac/',
+        component: ComponentCreator('/docs/Netduino/Getting_Started/Installation/Mac/', '0c6'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Windows/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Windows/', '3e4'),
+        path: '/docs/Netduino/Getting_Started/Installation/Windows/',
+        component: ComponentCreator('/docs/Netduino/Getting_Started/Installation/Windows/', 'a50'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/', 'b0a'),
+        path: '/docs/Netduino/Input_Output/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/', '58c'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Analog/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Analog/', 'a25'),
+        path: '/docs/Netduino/Input_Output/Analog/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Analog/', '924'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/', '5b2'),
+        path: '/docs/Netduino/Input_Output/Digital/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/', '997'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/', 'b3a'),
+        path: '/docs/Netduino/Input_Output/Digital/I2C/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/I2C/', 'c56'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/Reading/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/Reading/', '8a4'),
+        path: '/docs/Netduino/Input_Output/Digital/I2C/Reading/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/I2C/Reading/', '40a'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/Writing/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/Writing/', '272'),
+        path: '/docs/Netduino/Input_Output/Digital/I2C/Writing/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/I2C/Writing/', '8d8'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/PWM/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/PWM/', 'cab'),
+        path: '/docs/Netduino/Input_Output/Digital/PWM/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/PWM/', 'd8a'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/', '134'),
+        path: '/docs/Netduino/Input_Output/Digital/SPI/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/SPI/', 'cfd'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/ControllingLCD/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/ControllingLCD/', 'cc4'),
+        path: '/docs/Netduino/Input_Output/Digital/SPI/ControllingLCD/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/SPI/ControllingLCD/', 'e21'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/Reading/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/Reading/', '96b'),
+        path: '/docs/Netduino/Input_Output/Digital/SPI/Reading/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/SPI/Reading/', 'aff'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/ReadingTime/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/ReadingTime/', '043'),
+        path: '/docs/Netduino/Input_Output/Digital/SPI/ReadingTime/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/SPI/ReadingTime/', '950'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/Writing/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/Writing/', '192'),
+        path: '/docs/Netduino/Input_Output/Digital/SPI/Writing/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/SPI/Writing/', 'd92'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Digital/UART/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Digital/UART/', '01c'),
+        path: '/docs/Netduino/Input_Output/Digital/UART/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Digital/UART/', '95c'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/File_Storage/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/File_Storage/', '80a'),
+        path: '/docs/Netduino/Input_Output/File_Storage/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/File_Storage/', 'cde'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Network/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Network/', '826'),
+        path: '/docs/Netduino/Input_Output/Network/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Network/', '7fd'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Network/Configuration/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Network/Configuration/', 'ef6'),
+        path: '/docs/Netduino/Input_Output/Network/Configuration/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Network/Configuration/', 'ffa'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Network/Connection/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Network/Connection/', '1c2'),
+        path: '/docs/Netduino/Input_Output/Network/Connection/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Network/Connection/', '406'),
         exact: true
       },
       {
-        path: '/DocsDocusaurus/docs/Netduino/Input_Output/Onboard_Button_+_LED/',
-        component: ComponentCreator('/DocsDocusaurus/docs/Netduino/Input_Output/Onboard_Button_+_LED/', '656'),
+        path: '/docs/Netduino/Input_Output/Onboard_Button_+_LED/',
+        component: ComponentCreator('/docs/Netduino/Input_Output/Onboard_Button_+_LED/', '214'),
         exact: true
       }
     ]
   },
   {
-    path: '/DocsDocusaurus/',
-    component: ComponentCreator('/DocsDocusaurus/', '04c'),
+    path: '/',
+    component: ComponentCreator('/', '1a1'),
     exact: true
   },
   {

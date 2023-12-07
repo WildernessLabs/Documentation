@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.OS/SQLite/index.md",
   "sourceDirName": "Meadow/Meadow.OS/SQLite",
   "slug": "/Meadow/Meadow.OS/SQLite/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/",
+  "permalink": "/docs/Meadow/Meadow.OS/SQLite/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/SQLite/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowOsSidebar",
   "previous": {
     "title": "Real Time Clock",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/"
+    "permalink": "/docs/Meadow/Meadow.OS/RTC/"
   },
   "next": {
     "title": "Threading",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/"
+    "permalink": "/docs/Meadow/Meadow.OS/Threading/"
   }
 }

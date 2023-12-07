@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/index.md",
   "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search",
   "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/",
+  "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Components",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/"
+    "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/"
   },
   "next": {
     "title": "SMD Packages",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/"
+    "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/"
   }
 }

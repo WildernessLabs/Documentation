@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison",
   "slug": "/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Resistance & Resistors",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistance/"
   },
   "next": {
     "title": "Resistor Lab",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/"
   }
 }

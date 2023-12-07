@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index.md",
   "sourceDirName": "Meadow/Meadow_Basics/IO/Digital/Protocols/SPI",
   "slug": "/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/",
+  "permalink": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "I2C",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/"
+    "permalink": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/"
   },
   "next": {
     "title": "Serial/UART",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/"
+    "permalink": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/"
   }
 }

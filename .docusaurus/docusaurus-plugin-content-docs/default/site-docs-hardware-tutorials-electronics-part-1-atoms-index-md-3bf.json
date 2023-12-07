@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part1/Atoms/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part1/Atoms",
   "slug": "/Hardware/Tutorials/Electronics/Part1/Atoms/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/Atoms/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part1/Atoms/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Part 1 - The Physics of Electrical Theory",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/"
   },
   "next": {
     "title": "Electrical Current",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/"
   }
 }

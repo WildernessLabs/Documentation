@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Prologue/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Prologue",
   "slug": "/Hardware/Tutorials/Electronics/Prologue/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Prologue/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Prologue/index.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Part 5 - Other Circuit Components",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/"
   },
   "next": {
     "title": "Requirements",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/"
   }
 }

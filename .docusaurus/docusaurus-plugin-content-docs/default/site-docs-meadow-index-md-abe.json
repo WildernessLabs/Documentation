@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/index.md",
   "sourceDirName": "Meadow",
   "slug": "/Meadow/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/",
+  "permalink": "/docs/Meadow/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/index.md",
   "tags": [],
@@ -19,6 +19,6 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Meadow v1",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Release_Notes/v1/"
+    "permalink": "/docs/Meadow/Release_Notes/v1/"
   }
 }

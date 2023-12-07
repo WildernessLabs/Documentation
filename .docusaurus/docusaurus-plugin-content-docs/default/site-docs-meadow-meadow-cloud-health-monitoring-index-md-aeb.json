@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.Cloud/Health_Monitoring/index.md",
   "sourceDirName": "Meadow/Meadow.Cloud/Health_Monitoring",
   "slug": "/Meadow/Meadow.Cloud/Health_Monitoring/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/",
+  "permalink": "/docs/Meadow/Meadow.Cloud/Health_Monitoring/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Cloud/Health_Monitoring/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Device Provisioning",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Device_Provisioning/"
+    "permalink": "/docs/Meadow/Meadow.Cloud/Device_Provisioning/"
   },
   "next": {
     "title": "Enterprise Integrations",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/"
+    "permalink": "/docs/Meadow/Meadow.Cloud/Integrations/"
   }
 }

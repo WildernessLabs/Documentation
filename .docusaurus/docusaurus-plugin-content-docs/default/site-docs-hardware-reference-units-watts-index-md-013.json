@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/Units/Watts/index.md",
   "sourceDirName": "Hardware/Reference/Units/Watts",
   "slug": "/Hardware/Reference/Units/Watts/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/",
+  "permalink": "/docs/Hardware/Reference/Units/Watts/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Units/Watts/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Volts",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/"
+    "permalink": "/docs/Hardware/Reference/Units/Volts/"
   },
   "next": {
     "title": "Tutorials",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/"
+    "permalink": "/docs/Hardware/Tutorials/"
   }
 }

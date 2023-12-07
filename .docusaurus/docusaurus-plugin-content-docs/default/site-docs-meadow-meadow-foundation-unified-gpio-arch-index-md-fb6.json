@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/index.md",
   "sourceDirName": "Meadow/Meadow.Foundation/Unified_GPIO_Arch",
   "slug": "/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
+  "permalink": "/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Meadow.Foundation Peripherals Library",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/"
+    "permalink": "/docs/Meadow/Meadow.Foundation/Peripherals/"
   },
   "next": {
     "title": "Working with Sensors",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/"
+    "permalink": "/docs/Meadow/Meadow.Foundation/Working_with_Sensors/"
   }
 }

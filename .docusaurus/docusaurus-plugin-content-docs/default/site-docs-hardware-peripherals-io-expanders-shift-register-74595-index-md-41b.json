@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/index.md",
   "sourceDirName": "Hardware/Peripherals/IOExpanders/ShiftRegister74595",
   "slug": "/Hardware/Peripherals/IOExpanders/ShiftRegister74595/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/",
+  "permalink": "/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Peripheral Reference",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Peripherals/"
+    "permalink": "/docs/Hardware/Peripherals/"
   },
   "next": {
     "title": "Servos",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Peripherals/Motors_and_Servos/Servos/"
+    "permalink": "/docs/Hardware/Peripherals/Motors_and_Servos/Servos/"
   }
 }

@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/index.md",
   "sourceDirName": "Meadow/Meadow_Basics/Troubleshooting/macOS",
   "slug": "/Meadow/Meadow_Basics/Troubleshooting/macOS/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/",
+  "permalink": "/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Visual Studio",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/"
   },
   "next": {
     "title": "Units",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Units/"
   }
 }

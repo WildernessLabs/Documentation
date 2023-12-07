@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.OS/Networking/Antenna/index.md",
   "sourceDirName": "Meadow/Meadow.OS/Networking/Antenna",
   "slug": "/Meadow/Meadow.OS/Networking/Antenna/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/",
+  "permalink": "/docs/Meadow/Meadow.OS/Networking/Antenna/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Networking/Antenna/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowOsSidebar",
   "previous": {
     "title": "File System",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/"
+    "permalink": "/docs/Meadow/Meadow.OS/File_System/"
   },
   "next": {
     "title": "Networking",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/"
+    "permalink": "/docs/Meadow/Meadow.OS/Networking/"
   }
 }

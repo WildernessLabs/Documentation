@@ -18,25 +18,25 @@
           {
             "type": "link",
             "label": "Assemble Meadow Board",
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Assemble_Meadow/",
+            "href": "/docs/Meadow/Getting_Started/Assemble_Meadow/",
             "docId": "Meadow/Getting_Started/Assemble_Meadow/index"
           },
           {
             "type": "link",
             "label": "Meadow OS Deployment",
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/",
+            "href": "/docs/Meadow/Getting_Started/Deploying_Meadow/",
             "docId": "Meadow/Getting_Started/Deploying_Meadow/index"
           },
           {
             "type": "link",
             "label": "Deployment",
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/",
+            "href": "/docs/Meadow/Getting_Started/Deployment/",
             "docId": "Meadow/Getting_Started/Deployment/index"
           },
           {
             "type": "link",
             "label": "Get started with Meadow Core-Compute module",
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
+            "href": "/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
             "docId": "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index"
           },
           {
@@ -48,22 +48,22 @@
               {
                 "type": "link",
                 "label": "Get started with Meadow.Linux",
-                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/",
+                "href": "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/",
                 "docId": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index"
               },
               {
                 "type": "link",
                 "label": "Get started with Meadow.Windows",
-                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/",
+                "href": "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/",
                 "docId": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/"
+            "href": "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/"
           },
           {
             "type": "link",
             "label": "Hello, Meadow!",
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/",
+            "href": "/docs/Meadow/Getting_Started/Hello_World/",
             "docId": "Meadow/Getting_Started/Hello_World/index"
           },
           {
@@ -75,32 +75,32 @@
               {
                 "type": "link",
                 "label": "Windows Setup",
-                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/Windows/",
+                "href": "/docs/Meadow/Getting_Started/Setup/Windows/",
                 "docId": "Meadow/Getting_Started/Setup/Windows/index"
               },
               {
                 "type": "link",
                 "label": "macOS Setup",
-                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/macos/",
+                "href": "/docs/Meadow/Getting_Started/Setup/macos/",
                 "docId": "Meadow/Getting_Started/Setup/macos/index"
               },
               {
                 "type": "link",
                 "label": "ST-Link",
-                "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/",
+                "href": "/docs/Meadow/Getting_Started/Setup/stlink/",
                 "docId": "Meadow/Getting_Started/Setup/stlink/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/"
+            "href": "/docs/Meadow/Getting_Started/Setup/"
           },
           {
             "type": "link",
             "label": "Update USB Driver for ST devices",
-            "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/",
+            "href": "/docs/Meadow/Getting_Started/Update_USB_Driver/",
             "docId": "Meadow/Getting_Started/Update_USB_Driver/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Meadow/Getting_Started/"
+        "href": "/docs/Meadow/Getting_Started/"
       },
       {
         "type": "category",
@@ -111,19 +111,19 @@
           {
             "type": "link",
             "label": "Command + Control",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Command_Control/",
+            "href": "/docs/Meadow/Meadow.Cloud/Command_Control/",
             "docId": "Meadow/Meadow.Cloud/Command_Control/index"
           },
           {
             "type": "link",
             "label": "Device Provisioning",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Device_Provisioning/",
+            "href": "/docs/Meadow/Meadow.Cloud/Device_Provisioning/",
             "docId": "Meadow/Meadow.Cloud/Device_Provisioning/index"
           },
           {
             "type": "link",
             "label": "Health Monitoring",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/",
+            "href": "/docs/Meadow/Meadow.Cloud/Health_Monitoring/",
             "docId": "Meadow/Meadow.Cloud/Health_Monitoring/index"
           },
           {
@@ -135,38 +135,38 @@
               {
                 "type": "link",
                 "label": "Integrate with Azure Event Hubs",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
+                "href": "/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
                 "docId": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index"
               },
               {
                 "type": "link",
                 "label": "Integrate with Datacake",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/",
+                "href": "/docs/Meadow/Meadow.Cloud/Integrations/Datacake/",
                 "docId": "Meadow/Meadow.Cloud/Integrations/Datacake/index"
               },
               {
                 "type": "link",
                 "label": "Integrate with Webhooks",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/",
+                "href": "/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/",
                 "docId": "Meadow/Meadow.Cloud/Integrations/Webhooks/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/"
+            "href": "/docs/Meadow/Meadow.Cloud/Integrations/"
           },
           {
             "type": "link",
             "label": "Logs and Events",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Logs_Events/",
+            "href": "/docs/Meadow/Meadow.Cloud/Logs_Events/",
             "docId": "Meadow/Meadow.Cloud/Logs_Events/index"
           },
           {
             "type": "link",
             "label": "Over-the-Air (OtA) Updates",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/OtA_Updates/",
+            "href": "/docs/Meadow/Meadow.Cloud/OtA_Updates/",
             "docId": "Meadow/Meadow.Cloud/OtA_Updates/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/"
+        "href": "/docs/Meadow/Meadow.Cloud/"
       },
       {
         "type": "category",
@@ -177,13 +177,13 @@
           {
             "type": "link",
             "label": "API Samples",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/",
+            "href": "/docs/Meadow/Meadow.Foundation/API_Samples/",
             "docId": "Meadow/Meadow.Foundation/API_Samples/index"
           },
           {
             "type": "link",
             "label": "Getting Started",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/",
+            "href": "/docs/Meadow/Meadow.Foundation/Getting_Started/",
             "docId": "Meadow/Meadow.Foundation/Getting_Started/index"
           },
           {
@@ -195,56 +195,56 @@
               {
                 "type": "link",
                 "label": "GPS/GNSS NMEA Sentence Processor Library",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/",
+                "href": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/",
                 "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index"
               },
               {
                 "type": "link",
                 "label": "Maple Server",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/",
+                "href": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/",
                 "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index"
               },
               {
                 "type": "link",
                 "label": "MicroGraphics Library",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/",
+                "href": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/",
                 "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index"
               },
               {
                 "type": "link",
                 "label": "MicroLayout Library",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/",
+                "href": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/",
                 "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index"
               },
               {
                 "type": "link",
                 "label": "TextDisplayMenu Library",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/",
+                "href": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/",
                 "docId": "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/"
+            "href": "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/"
           },
           {
             "type": "link",
             "label": "Meadow.Foundation Peripherals Library",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/",
+            "href": "/docs/Meadow/Meadow.Foundation/Peripherals/",
             "docId": "Meadow/Meadow.Foundation/Peripherals/index"
           },
           {
             "type": "link",
             "label": "Meadow.Foundation Unified IO Architecture",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
+            "href": "/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/",
             "docId": "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index"
           },
           {
             "type": "link",
             "label": "Working with Sensors",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/",
+            "href": "/docs/Meadow/Meadow.Foundation/Working_with_Sensors/",
             "docId": "Meadow/Meadow.Foundation/Working_with_Sensors/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/"
+        "href": "/docs/Meadow/Meadow.Foundation/"
       },
       {
         "type": "category",
@@ -255,19 +255,19 @@
           {
             "type": "link",
             "label": "Automatic Restarts",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/",
+            "href": "/docs/Meadow/Meadow.OS/Automatic_Restarts/",
             "docId": "Meadow/Meadow.OS/Automatic_Restarts/index"
           },
           {
             "type": "link",
             "label": "Bluetooth",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/",
+            "href": "/docs/Meadow/Meadow.OS/Bluetooth/",
             "docId": "Meadow/Meadow.OS/Bluetooth/index"
           },
           {
             "type": "link",
             "label": "Cellular",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/",
+            "href": "/docs/Meadow/Meadow.OS/Cellular/",
             "docId": "Meadow/Meadow.OS/Cellular/index"
           },
           {
@@ -279,34 +279,34 @@
               {
                 "type": "link",
                 "label": "Application Settings Configuration",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/",
+                "href": "/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/",
                 "docId": "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index"
               },
               {
                 "type": "link",
                 "label": "OS & Device Configuration",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/",
+                "href": "/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/",
                 "docId": "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index"
               },
               {
                 "type": "link",
                 "label": "Wi-Fi Configuration",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+                "href": "/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
                 "docId": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/"
+            "href": "/docs/Meadow/Meadow.OS/Configuration/"
           },
           {
             "type": "link",
             "label": "SD Card use with Core-Compute module",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/",
+            "href": "/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/",
             "docId": "Meadow/Meadow.OS/Core-Compute_SD_Card/index"
           },
           {
             "type": "link",
             "label": "File System",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/",
+            "href": "/docs/Meadow/Meadow.OS/File_System/",
             "docId": "Meadow/Meadow.OS/File_System/index"
           },
           {
@@ -318,44 +318,44 @@
               {
                 "type": "link",
                 "label": "WiFi/Bluetooth Antenna",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/",
+                "href": "/docs/Meadow/Meadow.OS/Networking/Antenna/",
                 "docId": "Meadow/Meadow.OS/Networking/Antenna/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/"
+            "href": "/docs/Meadow/Meadow.OS/Networking/"
           },
           {
             "type": "link",
             "label": "Real Time Clock",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/",
+            "href": "/docs/Meadow/Meadow.OS/RTC/",
             "docId": "Meadow/Meadow.OS/RTC/index"
           },
           {
             "type": "link",
             "label": "SQLite",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/",
+            "href": "/docs/Meadow/Meadow.OS/SQLite/",
             "docId": "Meadow/Meadow.OS/SQLite/index"
           },
           {
             "type": "link",
             "label": "Threading",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/",
+            "href": "/docs/Meadow/Meadow.OS/Threading/",
             "docId": "Meadow/Meadow.OS/Threading/index"
           },
           {
             "type": "link",
             "label": "Over-the-Air (OtA) Updates",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/",
+            "href": "/docs/Meadow/Meadow.OS/Updates/",
             "docId": "Meadow/Meadow.OS/Updates/index"
           },
           {
             "type": "link",
             "label": "Watchdog Timer",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/",
+            "href": "/docs/Meadow/Meadow.OS/Watchdog/",
             "docId": "Meadow/Meadow.OS/Watchdog/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/"
+        "href": "/docs/Meadow/Meadow.OS/"
       },
       {
         "type": "category",
@@ -372,34 +372,34 @@
               {
                 "type": "link",
                 "label": "Meadow Application Lifecycle Events",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/",
+                "href": "/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/",
                 "docId": "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index"
               },
               {
                 "type": "link",
                 "label": "Meadow Application Sleep",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Sleep/",
+                "href": "/docs/Meadow/Meadow_Basics/Apps/Sleep/",
                 "docId": "Meadow/Meadow_Basics/Apps/Sleep/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/"
+            "href": "/docs/Meadow/Meadow_Basics/Apps/"
           },
           {
             "type": "link",
             "label": "Bluetooth",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/",
+            "href": "/docs/Meadow/Meadow_Basics/Bluetooth/",
             "docId": "Meadow/Meadow_Basics/Bluetooth/index"
           },
           {
             "type": "link",
             "label": "Events and IObservable",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/",
+            "href": "/docs/Meadow/Meadow_Basics/Events_and_IObservable/",
             "docId": "Meadow/Meadow_Basics/Events_and_IObservable/index"
           },
           {
             "type": "link",
             "label": "File System",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/",
+            "href": "/docs/Meadow/Meadow_Basics/File_System/",
             "docId": "Meadow/Meadow_Basics/File_System/index"
           },
           {
@@ -411,17 +411,17 @@
               {
                 "type": "link",
                 "label": "Meadow F7v1",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v1/",
+                "href": "/docs/Meadow/Meadow_Basics/Hardware/F7v1/",
                 "docId": "Meadow/Meadow_Basics/Hardware/F7v1/index"
               },
               {
                 "type": "link",
                 "label": "Meadow F7v2",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/",
+                "href": "/docs/Meadow/Meadow_Basics/Hardware/F7v2/",
                 "docId": "Meadow/Meadow_Basics/Hardware/F7v2/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/"
+            "href": "/docs/Meadow/Meadow_Basics/Hardware/"
           },
           {
             "type": "category",
@@ -432,7 +432,7 @@
               {
                 "type": "link",
                 "label": "Analog I/O",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/",
+                "href": "/docs/Meadow/Meadow_Basics/IO/Analog/",
                 "docId": "Meadow/Meadow_Basics/IO/Analog/index"
               },
               {
@@ -444,7 +444,7 @@
                   {
                     "type": "link",
                     "label": "PWM",
-                    "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/PWM/",
+                    "href": "/docs/Meadow/Meadow_Basics/IO/Digital/PWM/",
                     "docId": "Meadow/Meadow_Basics/IO/Digital/PWM/index"
                   },
                   {
@@ -456,35 +456,35 @@
                       {
                         "type": "link",
                         "label": "I2C",
-                        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/",
+                        "href": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/",
                         "docId": "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index"
                       },
                       {
                         "type": "link",
                         "label": "SPI",
-                        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/",
+                        "href": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/",
                         "docId": "Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index"
                       },
                       {
                         "type": "link",
                         "label": "Serial/UART",
-                        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/",
+                        "href": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/",
                         "docId": "Meadow/Meadow_Basics/IO/Digital/Protocols/UART/index"
                       }
                     ],
-                    "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/"
+                    "href": "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/"
+                "href": "/docs/Meadow/Meadow_Basics/IO/Digital/"
               },
               {
                 "type": "link",
                 "label": "Power IO",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/",
+                "href": "/docs/Meadow/Meadow_Basics/IO/Power/",
                 "docId": "Meadow/Meadow_Basics/IO/Power/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/"
+            "href": "/docs/Meadow/Meadow_Basics/IO/"
           },
           {
             "type": "category",
@@ -495,34 +495,34 @@
               {
                 "type": "link",
                 "label": "Realtime Clock",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/",
+                "href": "/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/",
                 "docId": "Meadow/Meadow_Basics/Meadow.OS/RTC/index"
               },
               {
                 "type": "link",
                 "label": "Watchdog Timer",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/",
+                "href": "/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/",
                 "docId": "Meadow/Meadow_Basics/Meadow.OS/Watchdog/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/"
+            "href": "/docs/Meadow/Meadow_Basics/Meadow.OS/"
           },
           {
             "type": "link",
             "label": "Meadow.CLI",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow_CLI/",
+            "href": "/docs/Meadow/Meadow_Basics/Meadow_CLI/",
             "docId": "Meadow/Meadow_Basics/Meadow_CLI/index"
           },
           {
             "type": "link",
             "label": "Networking",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Networking/",
+            "href": "/docs/Meadow/Meadow_Basics/Networking/",
             "docId": "Meadow/Meadow_Basics/Networking/index"
           },
           {
             "type": "link",
             "label": "Meadow F7 Status",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Status/",
+            "href": "/docs/Meadow/Meadow_Basics/Status/",
             "docId": "Meadow/Meadow_Basics/Status/index"
           },
           {
@@ -534,38 +534,38 @@
               {
                 "type": "link",
                 "label": "Linux",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/",
+                "href": "/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/",
                 "docId": "Meadow/Meadow_Basics/Troubleshooting/Linux/index"
               },
               {
                 "type": "link",
                 "label": "Meadow OS Deployment Troubleshooting",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/",
+                "href": "/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/",
                 "docId": "Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/index"
               },
               {
                 "type": "link",
                 "label": "Visual Studio",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/",
+                "href": "/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/",
                 "docId": "Meadow/Meadow_Basics/Troubleshooting/VisualStudio/index"
               },
               {
                 "type": "link",
                 "label": "macOS",
-                "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/",
+                "href": "/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/",
                 "docId": "Meadow/Meadow_Basics/Troubleshooting/macOS/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/"
+            "href": "/docs/Meadow/Meadow_Basics/Troubleshooting/"
           },
           {
             "type": "link",
             "label": "Units",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/",
+            "href": "/docs/Meadow/Meadow_Basics/Units/",
             "docId": "Meadow/Meadow_Basics/Units/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/"
+        "href": "/docs/Meadow/Meadow_Basics/"
       },
       {
         "type": "category",
@@ -576,31 +576,31 @@
           {
             "type": "link",
             "label": "Meadow Beta 2",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/",
+            "href": "/docs/Meadow/Release_Notes/Beta2/",
             "docId": "Meadow/Release_Notes/Beta2/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 3",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/",
+            "href": "/docs/Meadow/Release_Notes/Beta3/",
             "docId": "Meadow/Release_Notes/Beta3/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 4",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/",
+            "href": "/docs/Meadow/Release_Notes/Beta4/",
             "docId": "Meadow/Release_Notes/Beta4/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 5",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/",
+            "href": "/docs/Meadow/Release_Notes/Beta5/",
             "docId": "Meadow/Release_Notes/Beta5/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 6",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/",
+            "href": "/docs/Meadow/Release_Notes/Beta6/",
             "docId": "Meadow/Release_Notes/Beta6/index"
           },
           {
@@ -612,31 +612,31 @@
               {
                 "type": "link",
                 "label": "Meadow application lifecycle update",
-                "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/",
+                "href": "/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/",
                 "docId": "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/"
+            "href": "/docs/Meadow/Release_Notes/Release-Candidates/"
           },
           {
             "type": "link",
             "label": "Meadow Roadmap",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/",
+            "href": "/docs/Meadow/Release_Notes/Roadmap/",
             "docId": "Meadow/Release_Notes/Roadmap/index"
           },
           {
             "type": "link",
             "label": "Meadow v1",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/v1/",
+            "href": "/docs/Meadow/Release_Notes/v1/",
             "docId": "Meadow/Release_Notes/v1/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/"
+        "href": "/docs/Meadow/Release_Notes/"
       },
       {
         "type": "link",
         "label": "Meadow Guides",
-        "href": "/DocsDocusaurus/docs/Meadow/",
+        "href": "/docs/Meadow/",
         "docId": "Meadow/index"
       }
     ],
@@ -656,13 +656,13 @@
               {
                 "type": "link",
                 "label": "Capacitors",
-                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/",
+                "href": "/docs/Hardware/Circuits/Components/Capacitors/",
                 "docId": "Hardware/Circuits/Components/Capacitors/index"
               },
               {
                 "type": "link",
                 "label": "Diodes",
-                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/",
+                "href": "/docs/Hardware/Circuits/Components/Diodes/",
                 "docId": "Hardware/Circuits/Components/Diodes/index"
               },
               {
@@ -674,17 +674,17 @@
                   {
                     "type": "link",
                     "label": "LED w/PWM",
-                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/",
+                    "href": "/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/",
                     "docId": "Hardware/Circuits/Components/LEDs/Driving_w_PWM/index"
                   },
                   {
                     "type": "link",
                     "label": "LED w/Resistor",
-                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/",
+                    "href": "/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/",
                     "docId": "Hardware/Circuits/Components/LEDs/Driving_w_Resistor/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/"
+                "href": "/docs/Hardware/Circuits/Components/LEDs/"
               },
               {
                 "type": "category",
@@ -695,26 +695,26 @@
                   {
                     "type": "link",
                     "label": "Pull Up and Pull Down Resistors",
-                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/",
+                    "href": "/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/",
                     "docId": "Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/index"
                   },
                   {
                     "type": "link",
                     "label": "Reading a Resistor's Value",
-                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/",
+                    "href": "/docs/Hardware/Circuits/Components/Resistors/Reading/",
                     "docId": "Hardware/Circuits/Components/Resistors/Reading/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/"
+                "href": "/docs/Hardware/Circuits/Components/Resistors/"
               },
               {
                 "type": "link",
                 "label": "74595 Shift Register",
-                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/",
+                "href": "/docs/Hardware/Circuits/Components/ShiftRegister74595/",
                 "docId": "Hardware/Circuits/Components/ShiftRegister74595/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Circuits/Components/"
+            "href": "/docs/Hardware/Circuits/Components/"
           },
           {
             "type": "category",
@@ -731,17 +731,17 @@
                   {
                     "type": "link",
                     "label": "Core-Compute Module Integration",
-                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/",
+                    "href": "/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/",
                     "docId": "Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/index"
                   },
                   {
                     "type": "link",
                     "label": "F7 Dev Module Integration",
-                    "href": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/",
+                    "href": "/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/",
                     "docId": "Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/"
+                "href": "/docs/Hardware/Circuits/Integrating_Meadow/F7/"
               }
             ]
           }
@@ -762,7 +762,7 @@
               {
                 "type": "link",
                 "label": "PCB Reference",
-                "href": "/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/",
+                "href": "/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/",
                 "docId": "Hardware/Design/PCB_Design_and_Assembly/Reference/index"
               }
             ]
@@ -784,29 +784,29 @@
               {
                 "type": "link",
                 "label": "Breadboarding, Modules, and Simulation.",
-                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
+                "href": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/",
                 "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index"
               },
               {
                 "type": "link",
                 "label": "PCBs",
-                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/",
+                "href": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/",
                 "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/index"
               },
               {
                 "type": "link",
                 "label": "Product Design Lifecycle",
-                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
+                "href": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/",
                 "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index"
               },
               {
                 "type": "link",
                 "label": "Production Scale",
-                "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/",
+                "href": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/",
                 "docId": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
+            "href": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/"
           }
         ]
       },
@@ -825,7 +825,7 @@
               {
                 "type": "link",
                 "label": "74595 Shift Register",
-                "href": "/DocsDocusaurus/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/",
+                "href": "/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/",
                 "docId": "Hardware/Peripherals/IOExpanders/ShiftRegister74595/index"
               }
             ]
@@ -839,7 +839,7 @@
               {
                 "type": "link",
                 "label": "Servos",
-                "href": "/DocsDocusaurus/docs/Hardware/Peripherals/Motors_and_Servos/Servos/",
+                "href": "/docs/Hardware/Peripherals/Motors_and_Servos/Servos/",
                 "docId": "Hardware/Peripherals/Motors_and_Servos/Servos/index"
               }
             ]
@@ -847,11 +847,11 @@
           {
             "type": "link",
             "label": "Relays",
-            "href": "/DocsDocusaurus/docs/Hardware/Peripherals/Relays/",
+            "href": "/docs/Hardware/Peripherals/Relays/",
             "docId": "Hardware/Peripherals/Relays/index"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Hardware/Peripherals/"
+        "href": "/docs/Hardware/Peripherals/"
       },
       {
         "type": "category",
@@ -868,23 +868,23 @@
               {
                 "type": "link",
                 "label": "Searching for Components",
-                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/",
+                "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/",
                 "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/index"
               },
               {
                 "type": "link",
                 "label": "SMD Packages",
-                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/",
+                "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/",
                 "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/index"
               },
               {
                 "type": "link",
                 "label": "Symbols and Footprints",
-                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/",
+                "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/",
                 "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/"
+            "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/"
           },
           {
             "type": "category",
@@ -895,28 +895,28 @@
               {
                 "type": "link",
                 "label": "Component Placement",
-                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/",
+                "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/",
                 "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/index"
               },
               {
                 "type": "link",
                 "label": "Solder Paste Application",
-                "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/",
+                "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/",
                 "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/"
+            "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/"
           },
           {
             "type": "link",
             "label": "PCB Fabrication",
-            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/",
+            "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/",
             "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/index"
           },
           {
             "type": "link",
             "label": "PCB Stackups",
-            "href": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/",
+            "href": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/",
             "docId": "Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/index"
           }
         ]
@@ -942,49 +942,49 @@
                   {
                     "type": "link",
                     "label": "Closed Loop Gain Controllers",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/",
+                    "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/",
                     "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/index"
                   },
                   {
                     "type": "link",
                     "label": "Ideal PID Algorithm",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/",
+                    "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/",
                     "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index"
                   },
                   {
                     "type": "link",
                     "label": "PID Intro",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/",
+                    "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/",
                     "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/index"
                   },
                   {
                     "type": "link",
                     "label": "Standard PID Algorithm",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/",
+                    "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/",
                     "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index"
                   },
                   {
                     "type": "link",
                     "label": "index",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/",
+                    "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/",
                     "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/index"
                   },
                   {
                     "type": "link",
                     "label": "Using PID",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/",
+                    "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/",
                     "docId": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/"
+                "href": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/"
+            "href": "/docs/Hardware/Reference/Algorithms/"
           },
           {
             "type": "link",
             "label": "BitBanging",
-            "href": "/DocsDocusaurus/docs/Hardware/Reference/BitBanging/",
+            "href": "/docs/Hardware/Reference/BitBanging/",
             "docId": "Hardware/Reference/BitBanging/index"
           },
           {
@@ -996,7 +996,7 @@
               {
                 "type": "link",
                 "label": "Capacitance",
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/",
+                "href": "/docs/Hardware/Reference/Equations_and_Laws/Capacitance/",
                 "docId": "Hardware/Reference/Equations_and_Laws/Capacitance/index"
               },
               {
@@ -1008,17 +1008,17 @@
                   {
                     "type": "link",
                     "label": "Parallel Resistance",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/",
+                    "href": "/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/",
                     "docId": "Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index"
                   },
                   {
                     "type": "link",
                     "label": "Series Resistance",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/",
+                    "href": "/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/",
                     "docId": "Hardware/Reference/Equations_and_Laws/Resistance/Series/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/"
+                "href": "/docs/Hardware/Reference/Equations_and_Laws/Resistance/"
               },
               {
                 "type": "category",
@@ -1029,20 +1029,20 @@
                   {
                     "type": "link",
                     "label": "Voltage Division",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/",
+                    "href": "/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/",
                     "docId": "Hardware/Reference/Equations_and_Laws/Voltage/Division/index"
                   },
                   {
                     "type": "link",
                     "label": "OHM's Law",
-                    "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/",
+                    "href": "/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/",
                     "docId": "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/"
+                "href": "/docs/Hardware/Reference/Equations_and_Laws/Voltage/"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/"
+            "href": "/docs/Hardware/Reference/Equations_and_Laws/"
           },
           {
             "type": "category",
@@ -1053,7 +1053,7 @@
               {
                 "type": "link",
                 "label": "Digital Signals",
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/",
+                "href": "/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/",
                 "docId": "Hardware/Reference/UnderstandingWaveforms/DigitalSignals/index"
               }
             ]
@@ -1067,26 +1067,26 @@
               {
                 "type": "link",
                 "label": "Amps",
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/",
+                "href": "/docs/Hardware/Reference/Units/Amps/",
                 "docId": "Hardware/Reference/Units/Amps/index"
               },
               {
                 "type": "link",
                 "label": "Volts",
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/",
+                "href": "/docs/Hardware/Reference/Units/Volts/",
                 "docId": "Hardware/Reference/Units/Volts/index"
               },
               {
                 "type": "link",
                 "label": "Watts",
-                "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/",
+                "href": "/docs/Hardware/Reference/Units/Watts/",
                 "docId": "Hardware/Reference/Units/Watts/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Reference/Units/"
+            "href": "/docs/Hardware/Reference/Units/"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Hardware/Reference/"
+        "href": "/docs/Hardware/Reference/"
       },
       {
         "type": "category",
@@ -1103,7 +1103,7 @@
               {
                 "type": "link",
                 "label": "TODO",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes",
+                "href": "/docs/Hardware/Tutorials/Electronics/Notes",
                 "docId": "Hardware/Tutorials/Electronics/Notes"
               },
               {
@@ -1115,29 +1115,29 @@
                   {
                     "type": "link",
                     "label": "Atoms",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part1/Atoms/",
                     "docId": "Hardware/Tutorials/Electronics/Part1/Atoms/index"
                   },
                   {
                     "type": "link",
                     "label": "Electrical Current",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/",
                     "docId": "Hardware/Tutorials/Electronics/Part1/Electrical_Current/index"
                   },
                   {
                     "type": "link",
                     "label": "Electromagnetism",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/",
                     "docId": "Hardware/Tutorials/Electronics/Part1/Electromagnetism/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part1/Review/",
                     "docId": "Hardware/Tutorials/Electronics/Part1/Review/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Part1/"
               },
               {
                 "type": "category",
@@ -1148,41 +1148,41 @@
                   {
                     "type": "link",
                     "label": "Amount & Force",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/",
                     "docId": "Hardware/Tutorials/Electronics/Part2/Amount_and_Force/index"
                   },
                   {
                     "type": "link",
                     "label": "Amperage",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part2/Amperage/",
                     "docId": "Hardware/Tutorials/Electronics/Part2/Amperage/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part2/Review/",
                     "docId": "Hardware/Tutorials/Electronics/Part2/Review/index"
                   },
                   {
                     "type": "link",
                     "label": "Source, Load, and Ground",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/",
                     "docId": "Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/index"
                   },
                   {
                     "type": "link",
                     "label": "Voltage",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Voltage/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part2/Voltage/",
                     "docId": "Hardware/Tutorials/Electronics/Part2/Voltage/index"
                   },
                   {
                     "type": "link",
                     "label": "Wattage",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part2/Wattage/",
                     "docId": "Hardware/Tutorials/Electronics/Part2/Wattage/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Part2/"
               },
               {
                 "type": "category",
@@ -1193,41 +1193,41 @@
                   {
                     "type": "link",
                     "label": "AC Characteristics",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/",
                     "docId": "Hardware/Tutorials/Electronics/Part3/AC_Characteristics/index"
                   },
                   {
                     "type": "link",
                     "label": "AC Power Generation",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/",
                     "docId": "Hardware/Tutorials/Electronics/Part3/AC_Generation/index"
                   },
                   {
                     "type": "link",
                     "label": "Alternating Current (AC)",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/",
                     "docId": "Hardware/Tutorials/Electronics/Part3/Alternating_Current/index"
                   },
                   {
                     "type": "link",
                     "label": "Current Types",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/",
                     "docId": "Hardware/Tutorials/Electronics/Part3/Current_Types/index"
                   },
                   {
                     "type": "link",
                     "label": "Direct Current",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/",
                     "docId": "Hardware/Tutorials/Electronics/Part3/Direct_Current/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part3/Review/",
                     "docId": "Hardware/Tutorials/Electronics/Part3/Review/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Part3/"
               },
               {
                 "type": "category",
@@ -1238,19 +1238,19 @@
                   {
                     "type": "link",
                     "label": "Calculating Simple Resistance",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/index"
                   },
                   {
                     "type": "link",
                     "label": "Ohm's Law",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Ohms_Law/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistors in Parallel",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/index"
                   },
                   {
@@ -1262,62 +1262,62 @@
                       {
                         "type": "link",
                         "label": "notes",
-                        "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
+                        "href": "/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
                         "docId": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes"
                       }
                     ],
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/"
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/"
                   },
                   {
                     "type": "link",
                     "label": "Reading Axial Resistor Values",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Reading_Resistors/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistance & Resistors",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Resistance/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Resistance/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistor Circuit Comparison",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistor Lab",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Lab/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistor Power Rating",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistor Tolerance and Preferred Values",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Review/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Review/index"
                   },
                   {
                     "type": "link",
                     "label": "Resistors in Series",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/",
                     "docId": "Hardware/Tutorials/Electronics/Part4/Series_Resistance/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Part4/"
               },
               {
                 "type": "category",
@@ -1328,59 +1328,59 @@
                   {
                     "type": "link",
                     "label": "Circuit Software",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Circuit_Software/index"
                   },
                   {
                     "type": "link",
                     "label": "DC Circuit Analysis",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/DC_Circuits/index"
                   },
                   {
                     "type": "link",
                     "label": "Kirchhoff's Current Law",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/index"
                   },
                   {
                     "type": "link",
                     "label": "Kirchhoff's Voltage Law",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/index"
                   },
                   {
                     "type": "link",
                     "label": "Analog Level Shifting Lab",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/index"
                   },
                   {
                     "type": "link",
                     "label": "Photoresistor Lab",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Review/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Review/index"
                   },
                   {
                     "type": "link",
                     "label": "Voltage Divider Practicals",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/index"
                   },
                   {
                     "type": "link",
                     "label": "Voltage Division",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/",
                     "docId": "Hardware/Tutorials/Electronics/Part5/Voltage_Division/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Part5/"
               },
               {
                 "type": "category",
@@ -1391,77 +1391,77 @@
                   {
                     "type": "link",
                     "label": "Diode Logic Gate Lab",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/index"
                   },
                   {
                     "type": "link",
                     "label": "General Diodes",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/General_Diodes/index"
                   },
                   {
                     "type": "link",
                     "label": "LED Lab",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/LED_Lab/index"
                   },
                   {
                     "type": "link",
                     "label": "LEDs",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LEDs/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/LEDs/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/LEDs/index"
                   },
                   {
                     "type": "link",
                     "label": "Light-Related Diodes",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/index"
                   },
                   {
                     "type": "link",
                     "label": "N-type Semiconductor",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/N-Type/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/N-Type/index"
                   },
                   {
                     "type": "link",
                     "label": "P-N Junctions",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/P-N_Junctions/index"
                   },
                   {
                     "type": "link",
                     "label": "P-type Semiconductor",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/P-Type/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/P-Type/index"
                   },
                   {
                     "type": "link",
                     "label": "index",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/Review/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/Review/index"
                   },
                   {
                     "type": "link",
                     "label": "Semiconductors Part 1 (Diodes)",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/Semiconductors/index"
                   },
                   {
                     "type": "link",
                     "label": "Silicon (Si)",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part6/Silicon/",
                     "docId": "Hardware/Tutorials/Electronics/Part6/Silicon/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Part6/"
               },
               {
                 "type": "category",
@@ -1472,13 +1472,13 @@
                   {
                     "type": "link",
                     "label": "Notes",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part7/Notes",
                     "docId": "Hardware/Tutorials/Electronics/Part7/Notes"
                   },
                   {
                     "type": "link",
                     "label": "Transistors",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Transistors/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Part7/Transistors/",
                     "docId": "Hardware/Tutorials/Electronics/Part7/Transistors/index"
                   }
                 ]
@@ -1492,31 +1492,31 @@
                   {
                     "type": "link",
                     "label": "Batteries",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/",
                     "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/index"
                   },
                   {
                     "type": "link",
                     "label": "Battery Circuits",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/",
                     "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/index"
                   },
                   {
                     "type": "link",
                     "label": "Battery Resistance; Ideal vs. Practical Voltage",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/",
                     "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/index"
                   },
                   {
                     "type": "link",
                     "label": "Battery Types",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
                     "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index"
                   },
                   {
                     "type": "link",
                     "label": "Review",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/",
                     "docId": "Hardware/Tutorials/Electronics/PartX_Batteries/Review/index"
                   }
                 ]
@@ -1524,7 +1524,7 @@
               {
                 "type": "link",
                 "label": "Part 5 - Other Circuit Components",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/",
+                "href": "/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/",
                 "docId": "Hardware/Tutorials/Electronics/PartY_Other_Components/index"
               },
               {
@@ -1536,14 +1536,14 @@
                   {
                     "type": "link",
                     "label": "Requirements",
-                    "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/",
+                    "href": "/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/",
                     "docId": "Hardware/Tutorials/Electronics/Prologue/Requirements/index"
                   }
                 ],
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/"
+                "href": "/docs/Hardware/Tutorials/Electronics/Prologue/"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/"
+            "href": "/docs/Hardware/Tutorials/Electronics/"
           },
           {
             "type": "category",
@@ -1554,43 +1554,43 @@
               {
                 "type": "link",
                 "label": "Part Libraries",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/",
+                "href": "/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/",
                 "docId": "Hardware/Tutorials/PCB_Tutorial/Add_Meadow/index"
               },
               {
                 "type": "link",
                 "label": "PCB Assembly",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/",
+                "href": "/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/",
                 "docId": "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index"
               },
               {
                 "type": "link",
                 "label": "PCB Layout",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/",
+                "href": "/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/",
                 "docId": "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index"
               },
               {
                 "type": "link",
                 "label": "Project Creation",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/",
+                "href": "/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/",
                 "docId": "Hardware/Tutorials/PCB_Tutorial/Project_Creation/index"
               },
               {
                 "type": "link",
                 "label": "Schematic Capture",
-                "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/",
+                "href": "/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/",
                 "docId": "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index"
               }
             ],
-            "href": "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/"
+            "href": "/docs/Hardware/Tutorials/PCB_Tutorial/"
           }
         ],
-        "href": "/DocsDocusaurus/docs/Hardware/Tutorials/"
+        "href": "/docs/Hardware/Tutorials/"
       },
       {
         "type": "link",
         "label": "Hardware & Circuits",
-        "href": "/DocsDocusaurus/docs/Hardware/",
+        "href": "/docs/Hardware/",
         "docId": "Hardware/index"
       }
     ],
@@ -1602,103 +1602,103 @@
           {
             "type": "link",
             "label": "Meadow.OS",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/",
+            "href": "/docs/Meadow/Meadow.OS/",
             "docId": "Meadow/Meadow.OS/index"
           },
           {
             "type": "link",
             "label": "Automatic Restarts",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/",
+            "href": "/docs/Meadow/Meadow.OS/Automatic_Restarts/",
             "docId": "Meadow/Meadow.OS/Automatic_Restarts/index"
           },
           {
             "type": "link",
             "label": "Bluetooth",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/",
+            "href": "/docs/Meadow/Meadow.OS/Bluetooth/",
             "docId": "Meadow/Meadow.OS/Bluetooth/index"
           },
           {
             "type": "link",
             "label": "Cellular",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/",
+            "href": "/docs/Meadow/Meadow.OS/Cellular/",
             "docId": "Meadow/Meadow.OS/Cellular/index"
           },
           {
             "type": "link",
             "label": "Application Settings Configuration",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/",
+            "href": "/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/",
             "docId": "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index"
           },
           {
             "type": "link",
             "label": "OS & Device Configuration",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/",
+            "href": "/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/",
             "docId": "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index"
           },
           {
             "type": "link",
             "label": "Wi-Fi Configuration",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+            "href": "/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
             "docId": "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index"
           },
           {
             "type": "link",
             "label": "Configuration",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/",
+            "href": "/docs/Meadow/Meadow.OS/Configuration/",
             "docId": "Meadow/Meadow.OS/Configuration/index"
           },
           {
             "type": "link",
             "label": "SD Card use with Core-Compute module",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/",
+            "href": "/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/",
             "docId": "Meadow/Meadow.OS/Core-Compute_SD_Card/index"
           },
           {
             "type": "link",
             "label": "File System",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/",
+            "href": "/docs/Meadow/Meadow.OS/File_System/",
             "docId": "Meadow/Meadow.OS/File_System/index"
           },
           {
             "type": "link",
             "label": "WiFi/Bluetooth Antenna",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/",
+            "href": "/docs/Meadow/Meadow.OS/Networking/Antenna/",
             "docId": "Meadow/Meadow.OS/Networking/Antenna/index"
           },
           {
             "type": "link",
             "label": "Networking",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/",
+            "href": "/docs/Meadow/Meadow.OS/Networking/",
             "docId": "Meadow/Meadow.OS/Networking/index"
           },
           {
             "type": "link",
             "label": "Real Time Clock",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/",
+            "href": "/docs/Meadow/Meadow.OS/RTC/",
             "docId": "Meadow/Meadow.OS/RTC/index"
           },
           {
             "type": "link",
             "label": "SQLite",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/",
+            "href": "/docs/Meadow/Meadow.OS/SQLite/",
             "docId": "Meadow/Meadow.OS/SQLite/index"
           },
           {
             "type": "link",
             "label": "Threading",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/",
+            "href": "/docs/Meadow/Meadow.OS/Threading/",
             "docId": "Meadow/Meadow.OS/Threading/index"
           },
           {
             "type": "link",
             "label": "Over-the-Air (OtA) Updates",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/",
+            "href": "/docs/Meadow/Meadow.OS/Updates/",
             "docId": "Meadow/Meadow.OS/Updates/index"
           },
           {
             "type": "link",
             "label": "Watchdog Timer",
-            "href": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/",
+            "href": "/docs/Meadow/Meadow.OS/Watchdog/",
             "docId": "Meadow/Meadow.OS/Watchdog/index"
           }
         ],
@@ -1712,43 +1712,43 @@
           {
             "type": "link",
             "label": "Meadow V1 Roadmap",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/",
+            "href": "/docs/Meadow/Release_Notes/",
             "docId": "Meadow/Release_Notes/index"
           },
           {
             "type": "link",
             "label": "Meadow v1.0 Release-Candidates",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/",
+            "href": "/docs/Meadow/Release_Notes/Release-Candidates/",
             "docId": "Meadow/Release_Notes/Release-Candidates/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 6",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/",
+            "href": "/docs/Meadow/Release_Notes/Beta6/",
             "docId": "Meadow/Release_Notes/Beta6/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 5",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/",
+            "href": "/docs/Meadow/Release_Notes/Beta5/",
             "docId": "Meadow/Release_Notes/Beta5/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 4",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/",
+            "href": "/docs/Meadow/Release_Notes/Beta4/",
             "docId": "Meadow/Release_Notes/Beta4/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 3",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/",
+            "href": "/docs/Meadow/Release_Notes/Beta3/",
             "docId": "Meadow/Release_Notes/Beta3/index"
           },
           {
             "type": "link",
             "label": "Meadow Beta 2",
-            "href": "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/",
+            "href": "/docs/Meadow/Release_Notes/Beta2/",
             "docId": "Meadow/Release_Notes/Beta2/index"
           }
         ],

@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow_Basics/Apps/Sleep/index.md",
   "sourceDirName": "Meadow/Meadow_Basics/Apps/Sleep",
   "slug": "/Meadow/Meadow_Basics/Apps/Sleep/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Sleep/",
+  "permalink": "/docs/Meadow/Meadow_Basics/Apps/Sleep/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Apps/Sleep/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Meadow Application Lifecycle Events",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/"
   },
   "next": {
     "title": "Bluetooth",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Bluetooth/"
   }
 }

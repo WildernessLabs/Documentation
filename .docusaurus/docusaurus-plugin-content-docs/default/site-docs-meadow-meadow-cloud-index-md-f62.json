@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.Cloud/index.md",
   "sourceDirName": "Meadow/Meadow.Cloud",
   "slug": "/Meadow/Meadow.Cloud/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/",
+  "permalink": "/docs/Meadow/Meadow.Cloud/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Cloud/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Update USB Driver for ST devices",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/"
+    "permalink": "/docs/Meadow/Getting_Started/Update_USB_Driver/"
   },
   "next": {
     "title": "Command + Control",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Command_Control/"
+    "permalink": "/docs/Meadow/Meadow.Cloud/Command_Control/"
   }
 }

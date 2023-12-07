@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/index.md",
   "sourceDirName": "Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors",
   "slug": "/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/",
+  "permalink": "/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Resistors",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/"
+    "permalink": "/docs/Hardware/Circuits/Components/Resistors/"
   },
   "next": {
     "title": "Reading a Resistor's Value",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/"
+    "permalink": "/docs/Hardware/Circuits/Components/Resistors/Reading/"
   }
 }

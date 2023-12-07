@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/index.md",
   "sourceDirName": "Meadow/Meadow.OS/Configuration/WiFi_Configuration",
   "slug": "/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
+  "permalink": "/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowOsSidebar",
   "previous": {
     "title": "OS & Device Configuration",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/"
+    "permalink": "/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/"
   },
   "next": {
     "title": "Configuration",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/"
+    "permalink": "/docs/Meadow/Meadow.OS/Configuration/"
   }
 }

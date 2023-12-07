@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Notes.md",
   "sourceDirName": "Hardware/Tutorials/Electronics",
   "slug": "/Hardware/Tutorials/Electronics/Notes",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Notes",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Notes.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Fundamentals of Electronics Tutorial",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/"
   },
   "next": {
     "title": "Part 1 - The Physics of Electrical Theory",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part1/"
   }
 }

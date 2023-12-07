@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/index.md",
   "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design",
   "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/",
+  "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "PCB Reference",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/"
+    "permalink": "/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/"
   },
   "next": {
     "title": "Breadboarding, Modules, and Simulation.",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/"
   }
 }

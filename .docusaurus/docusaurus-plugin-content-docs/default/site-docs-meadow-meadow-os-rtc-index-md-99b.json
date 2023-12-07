@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.OS/RTC/index.md",
   "sourceDirName": "Meadow/Meadow.OS/RTC",
   "slug": "/Meadow/Meadow.OS/RTC/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/",
+  "permalink": "/docs/Meadow/Meadow.OS/RTC/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.OS/RTC/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowOsSidebar",
   "previous": {
     "title": "Networking",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/"
+    "permalink": "/docs/Meadow/Meadow.OS/Networking/"
   },
   "next": {
     "title": "SQLite",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/"
+    "permalink": "/docs/Meadow/Meadow.OS/SQLite/"
   }
 }

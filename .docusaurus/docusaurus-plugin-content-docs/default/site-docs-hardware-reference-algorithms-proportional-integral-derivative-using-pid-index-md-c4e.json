@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index.md",
   "sourceDirName": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID",
   "slug": "/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/",
+  "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "index",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/"
+    "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/"
   },
   "next": {
     "title": "BitBanging",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/BitBanging/"
+    "permalink": "/docs/Hardware/Reference/BitBanging/"
   }
 }

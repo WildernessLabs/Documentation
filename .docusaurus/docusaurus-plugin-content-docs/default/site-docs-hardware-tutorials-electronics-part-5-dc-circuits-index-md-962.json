@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part5/DC_Circuits",
   "slug": "/Hardware/Tutorials/Electronics/Part5/DC_Circuits/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Circuit Software",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/"
   },
   "next": {
     "title": "Kirchhoff's Current Law",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/"
   }
 }

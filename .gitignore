@@ -257,6 +257,7 @@ paket-files/
 
 #Ignore build files
 build/
+.docusaurus/
 
 #Ignore Jekyll files
 _site/

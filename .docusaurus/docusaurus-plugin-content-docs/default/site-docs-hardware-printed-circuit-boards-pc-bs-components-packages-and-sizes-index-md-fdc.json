@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/index.md",
   "sourceDirName": "Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes",
   "slug": "/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/",
+  "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Searching for Components",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/"
+    "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/"
   },
   "next": {
     "title": "Symbols and Footprints",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/"
+    "permalink": "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/"
   }
 }

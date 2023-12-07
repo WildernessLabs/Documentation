@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types",
   "slug": "/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/index.md",
   "tags": [],
@@ -17,10 +17,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Battery Resistance; Ideal vs. Practical Voltage",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/"
   },
   "next": {
     "title": "Review",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/"
   }
 }

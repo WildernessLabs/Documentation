@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors",
   "slug": "/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Pull-up & Pull-down Resistors",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/"
   },
   "next": {
     "title": "Reading Axial Resistor Values",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/"
   }
 }

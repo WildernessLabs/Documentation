@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/index.md",
   "sourceDirName": "Hardware/Reference/UnderstandingWaveforms/DigitalSignals",
   "slug": "/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/",
+  "permalink": "/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/index.md",
   "tags": [],
@@ -18,10 +18,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "OHM's Law",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/"
+    "permalink": "/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/"
   },
   "next": {
     "title": "Units",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Units/"
+    "permalink": "/docs/Hardware/Reference/Units/"
   }
 }

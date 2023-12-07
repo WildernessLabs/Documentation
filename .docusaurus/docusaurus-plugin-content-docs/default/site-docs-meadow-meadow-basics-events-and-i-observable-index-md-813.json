@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow_Basics/Events_and_IObservable/index.md",
   "sourceDirName": "Meadow/Meadow_Basics/Events_and_IObservable",
   "slug": "/Meadow/Meadow_Basics/Events_and_IObservable/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/",
+  "permalink": "/docs/Meadow/Meadow_Basics/Events_and_IObservable/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Events_and_IObservable/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Bluetooth",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Bluetooth/"
   },
   "next": {
     "title": "File System",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/"
+    "permalink": "/docs/Meadow/Meadow_Basics/File_System/"
   }
 }

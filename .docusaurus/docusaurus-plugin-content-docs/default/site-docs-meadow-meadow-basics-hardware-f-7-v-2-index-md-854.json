@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow_Basics/Hardware/F7v2/index.md",
   "sourceDirName": "Meadow/Meadow_Basics/Hardware/F7v2",
   "slug": "/Meadow/Meadow_Basics/Hardware/F7v2/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/",
+  "permalink": "/docs/Meadow/Meadow_Basics/Hardware/F7v2/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow_Basics/Hardware/F7v2/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Meadow F7v1",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v1/"
+    "permalink": "/docs/Meadow/Meadow_Basics/Hardware/F7v1/"
   },
   "next": {
     "title": "Input/Output (IO)",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/"
+    "permalink": "/docs/Meadow/Meadow_Basics/IO/"
   }
 }

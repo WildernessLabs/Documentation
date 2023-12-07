@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index.md",
   "sourceDirName": "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale",
   "slug": "/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/",
+  "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Product Design Lifecycle",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/"
+    "permalink": "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/"
   },
   "next": {
     "title": "Peripheral Reference",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Peripherals/"
+    "permalink": "/docs/Hardware/Peripherals/"
   }
 }

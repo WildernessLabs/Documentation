@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/LEDs/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part6/LEDs",
   "slug": "/Hardware/Tutorials/Electronics/Part6/LEDs/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LEDs/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/LEDs/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/LEDs/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "LED Lab",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/"
   },
   "next": {
     "title": "Light-Related Diodes",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/"
   }
 }

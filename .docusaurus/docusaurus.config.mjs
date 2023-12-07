@@ -42,7 +42,7 @@ export default {
     "docusaurus-plugin-sass"
   ],
   "url": "https://wildernesslabs.github.io",
-  "baseUrl": "/DocsDocusaurus/",
+  "baseUrl": "/",
   "trailingSlash": true,
   "organizationName": "WildernessLabs",
   "projectName": "DocsDocusaurus",

@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part2/Review/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part2/Review",
   "slug": "/Hardware/Tutorials/Electronics/Part2/Review/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Review/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/Review/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part2/Review/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Amperage",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/Amperage/"
   },
   "next": {
     "title": "Source, Load, and Ground",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/"
   }
 }

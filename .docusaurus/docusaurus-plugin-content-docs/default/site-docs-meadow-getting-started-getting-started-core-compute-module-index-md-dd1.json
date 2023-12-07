@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index.md",
   "sourceDirName": "Meadow/Getting_Started/Getting_Started_Core-Compute_Module",
   "slug": "/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
+  "permalink": "/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Deployment",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/"
+    "permalink": "/docs/Meadow/Getting_Started/Deployment/"
   },
   "next": {
     "title": "Getting Started with Meadow.Desktop",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/"
+    "permalink": "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/"
   }
 }

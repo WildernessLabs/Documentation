@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part2/Amount_and_Force",
   "slug": "/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Part 2 - Quantifying Electricity; Amps, Volts, and Watts",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/"
   },
   "next": {
     "title": "Amperage",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part2/Amperage/"
   }
 }

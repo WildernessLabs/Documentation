@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/index.md",
   "sourceDirName": "Hardware/Circuits/Components/LEDs/Driving_w_Resistor",
   "slug": "/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/",
+  "permalink": "/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "LED w/PWM",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/"
+    "permalink": "/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/"
   },
   "next": {
     "title": "Resistors",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/"
+    "permalink": "/docs/Hardware/Circuits/Components/Resistors/"
   }
 }

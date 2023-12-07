@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index.md",
   "sourceDirName": "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows",
   "slug": "/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/",
+  "permalink": "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Get started with Meadow.Linux",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/"
+    "permalink": "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/"
   },
   "next": {
     "title": "Hello, Meadow!",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/"
+    "permalink": "/docs/Meadow/Getting_Started/Hello_World/"
   }
 }

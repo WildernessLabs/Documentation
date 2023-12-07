@@ -1,1091 +1,1134 @@
 {
-  "/DocsDocusaurus/markdown-page/-e69": {
-    "__comp": "1f391b9e",
+  "/__docusaurus/debug/-279": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "3ac79073"
-    },
-    "content": "393be207"
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
+    }
   },
-  "/DocsDocusaurus/docs/-668": {
-    "__comp": "1be78505",
+  "/__docusaurus/debug/config/-4d6": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "44f24d60"
-    },
-    "versionMetadata": "935f2afb"
-  },
-  "/DocsDocusaurus/docs/-fb3": {
-    "__comp": "17896441",
-    "content": "c377a04b"
-  },
-  "/DocsDocusaurus/docs/DevCamp2020/-e75": {
-    "__comp": "17896441",
-    "content": "6f8aed55"
-  },
-  "/DocsDocusaurus/docs/DevCamp2021/-71d": {
-    "__comp": "17896441",
-    "content": "87c9c39a"
-  },
-  "/DocsDocusaurus/docs/Events/-5b3": {
-    "__comp": "17896441",
-    "content": "4f16c7a7"
-  },
-  "/DocsDocusaurus/docs/HackKit/-5c2": {
-    "__comp": "17896441",
-    "content": "19cab6c7"
-  },
-  "/DocsDocusaurus/docs/HackKit/BlogSeries/-8f6": {
-    "__comp": "17896441",
-    "content": "3d29660d"
-  },
-  "/DocsDocusaurus/docs/HackKit/Contents/-2d8": {
-    "__comp": "17896441",
-    "content": "6f52b0ff"
-  },
-  "/DocsDocusaurus/docs/HackKit/HackKitLite/-30b": {
-    "__comp": "17896441",
-    "content": "e2fed490"
-  },
-  "/DocsDocusaurus/docs/HackKit/Projects/-c05": {
-    "__comp": "17896441",
-    "content": "f37b8616"
-  },
-  "/DocsDocusaurus/docs/Hardware/-82c": {
-    "__comp": "17896441",
-    "content": "6d80ad55"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/-b50": {
-    "__comp": "17896441",
-    "content": "eeed986f"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/-923": {
-    "__comp": "17896441",
-    "content": "6667e561"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/Diodes/-963": {
-    "__comp": "17896441",
-    "content": "a4721aa8"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/-684": {
-    "__comp": "17896441",
-    "content": "5ab3a63e"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/-ac7": {
-    "__comp": "17896441",
-    "content": "0fb3d5da"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/-707": {
-    "__comp": "17896441",
-    "content": "41c0d1aa"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/-2d2": {
-    "__comp": "17896441",
-    "content": "64b20878"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/-364": {
-    "__comp": "17896441",
-    "content": "52367c5b"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/-174": {
-    "__comp": "17896441",
-    "content": "c702cc7d"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/-3c5": {
-    "__comp": "17896441",
-    "content": "db8d1650"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/-bc5": {
-    "__comp": "17896441",
-    "content": "429762ec"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/-731": {
-    "__comp": "17896441",
-    "content": "3b099f9c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/-fc0": {
-    "__comp": "17896441",
-    "content": "c892e59b"
-  },
-  "/DocsDocusaurus/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/-1f5": {
-    "__comp": "17896441",
-    "content": "65802e38"
-  },
-  "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/-95d": {
-    "__comp": "17896441",
-    "content": "7516f666"
-  },
-  "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/-69d": {
-    "__comp": "17896441",
-    "content": "074d7cec"
-  },
-  "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/-9d3": {
-    "__comp": "17896441",
-    "content": "7af442e8"
-  },
-  "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/-5dd": {
-    "__comp": "17896441",
-    "content": "1f39fce2"
-  },
-  "/DocsDocusaurus/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/-67d": {
-    "__comp": "17896441",
-    "content": "5513f4c9"
-  },
-  "/DocsDocusaurus/docs/Hardware/Peripherals/-3ef": {
-    "__comp": "17896441",
-    "content": "163f451c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/-7a1": {
-    "__comp": "17896441",
-    "content": "41b12035"
-  },
-  "/DocsDocusaurus/docs/Hardware/Peripherals/Motors_and_Servos/Servos/-4d9": {
-    "__comp": "17896441",
-    "content": "382bfadc"
-  },
-  "/DocsDocusaurus/docs/Hardware/Peripherals/Relays/-8e2": {
-    "__comp": "17896441",
-    "content": "9ffe74be"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/-ad5": {
-    "__comp": "17896441",
-    "content": "bf41f8a0"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/-3c7": {
-    "__comp": "17896441",
-    "content": "a122f851"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/-f5b": {
-    "__comp": "17896441",
-    "content": "fdc9181d"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/-b29": {
-    "__comp": "17896441",
-    "content": "36d0e2fd"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/-4dc": {
-    "__comp": "17896441",
-    "content": "c647a382"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/-682": {
-    "__comp": "17896441",
-    "content": "5b5efa1c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/-1c3": {
-    "__comp": "17896441",
-    "content": "8f74ca7c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/-fe8": {
-    "__comp": "17896441",
-    "content": "85aebe6c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/-aaa": {
-    "__comp": "17896441",
-    "content": "43b9c3f2"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/-2a8": {
-    "__comp": "17896441",
-    "content": "20765542"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/-a97": {
-    "__comp": "17896441",
-    "content": "aec536ea"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/-75b": {
-    "__comp": "17896441",
-    "content": "517da472"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/-702": {
-    "__comp": "17896441",
-    "content": "cc550370"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/-a6b": {
-    "__comp": "17896441",
-    "content": "234bbcd5"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/-c0b": {
-    "__comp": "17896441",
-    "content": "62ca3df6"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/-b23": {
-    "__comp": "17896441",
-    "content": "8f8d343e"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/-7b9": {
-    "__comp": "17896441",
-    "content": "0462b1a2"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/-5ce": {
-    "__comp": "17896441",
-    "content": "c4eab7e4"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/BitBanging/-fcc": {
-    "__comp": "17896441",
-    "content": "78ad976c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/-2f6": {
-    "__comp": "17896441",
-    "content": "31090a51"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Capacitance/-0ae": {
-    "__comp": "17896441",
-    "content": "fb81f779"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/-b14": {
-    "__comp": "17896441",
-    "content": "87f0efc0"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/-f33": {
-    "__comp": "17896441",
-    "content": "47511eca"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/-af2": {
-    "__comp": "17896441",
-    "content": "2d29ad1e"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/-11c": {
-    "__comp": "17896441",
-    "content": "19d1be46"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/-67c": {
-    "__comp": "17896441",
-    "content": "a777b313"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/-d21": {
-    "__comp": "17896441",
-    "content": "bd0e7094"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/-efc": {
-    "__comp": "17896441",
-    "content": "7420acc5"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Units/-6ba": {
-    "__comp": "17896441",
-    "content": "28be4f33"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Units/Amps/-f91": {
-    "__comp": "17896441",
-    "content": "65616b7c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Units/Volts/-dec": {
-    "__comp": "17896441",
-    "content": "1c6a6ab6"
-  },
-  "/DocsDocusaurus/docs/Hardware/Reference/Units/Watts/-0a3": {
-    "__comp": "17896441",
-    "content": "013cc29f"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/-14e": {
-    "__comp": "17896441",
-    "content": "ea6b2a55"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/-45c": {
-    "__comp": "17896441",
-    "content": "994246b3"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Notes/-df9": {
-    "__comp": "17896441",
-    "content": "02d03c7e"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/-aad": {
-    "__comp": "17896441",
-    "content": "b8edd845"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Atoms/-c57": {
-    "__comp": "17896441",
-    "content": "3bf9958a"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/-ecf": {
-    "__comp": "17896441",
-    "content": "e8d6c32b"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/-e9a": {
-    "__comp": "17896441",
-    "content": "226ccc54"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part1/Review/-fa4": {
-    "__comp": "17896441",
-    "content": "2929a6c2"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/-797": {
-    "__comp": "17896441",
-    "content": "eb12ace1"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/-09e": {
-    "__comp": "17896441",
-    "content": "ac81acac"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Amperage/-4e5": {
-    "__comp": "17896441",
-    "content": "ce064251"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Review/-130": {
-    "__comp": "17896441",
-    "content": "ce8db2bd"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/-998": {
-    "__comp": "17896441",
-    "content": "787e27e2"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Voltage/-edb": {
-    "__comp": "17896441",
-    "content": "71179af4"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part2/Wattage/-a49": {
-    "__comp": "17896441",
-    "content": "5cdfd48a"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/-30d": {
-    "__comp": "17896441",
-    "content": "c23ad0dc"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/-1f1": {
-    "__comp": "17896441",
-    "content": "73daa575"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/-c31": {
-    "__comp": "17896441",
-    "content": "6fe23948"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/-013": {
-    "__comp": "17896441",
-    "content": "2998cc0c"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/-892": {
-    "__comp": "17896441",
-    "content": "285e6f85"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/-c4e": {
-    "__comp": "17896441",
-    "content": "e04c92d1"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part3/Review/-7eb": {
-    "__comp": "17896441",
-    "content": "db0c81f4"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/-b38": {
-    "__comp": "17896441",
-    "content": "49bd893b"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/-a31": {
-    "__comp": "17896441",
-    "content": "553daa93"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/-c03": {
-    "__comp": "17896441",
-    "content": "5c01d858"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/-e56": {
-    "__comp": "17896441",
-    "content": "faf2f64d"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/-879": {
-    "__comp": "17896441",
-    "content": "b6e703af"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes/-ad1": {
-    "__comp": "17896441",
-    "content": "872045d1"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/-221": {
-    "__comp": "17896441",
-    "content": "e306a6ab"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistance/-815": {
-    "__comp": "17896441",
-    "content": "69e59ce3"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/-03c": {
-    "__comp": "17896441",
-    "content": "3fe3fc82"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/-c9b": {
-    "__comp": "17896441",
-    "content": "dc495801"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/-dfb": {
-    "__comp": "17896441",
-    "content": "136ebbb6"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/-d13": {
-    "__comp": "17896441",
-    "content": "cc03cf50"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Review/-56d": {
-    "__comp": "17896441",
-    "content": "9afed4b1"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/-dba": {
-    "__comp": "17896441",
-    "content": "4a8ec8f0"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/-32f": {
-    "__comp": "17896441",
-    "content": "e0653361"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/-3c6": {
-    "__comp": "17896441",
-    "content": "01f0476a"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/-99d": {
-    "__comp": "17896441",
-    "content": "9621011e"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/-3a2": {
-    "__comp": "17896441",
-    "content": "beea10a3"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/-f42": {
-    "__comp": "17896441",
-    "content": "dd50d825"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/-e57": {
-    "__comp": "17896441",
-    "content": "21def321"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/-cd9": {
-    "__comp": "17896441",
-    "content": "8175259d"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Review/-297": {
-    "__comp": "17896441",
-    "content": "2b116c8a"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/-17b": {
-    "__comp": "17896441",
-    "content": "9df7c551"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/-c4b": {
-    "__comp": "17896441",
-    "content": "6e81b40f"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/-8cb": {
-    "__comp": "17896441",
-    "content": "2473ca98"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/-ecd": {
-    "__comp": "17896441",
-    "content": "b1853c09"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/-2d6": {
-    "__comp": "17896441",
-    "content": "4acad9f5"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/-037": {
-    "__comp": "17896441",
-    "content": "af36e787"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/LEDs/-850": {
-    "__comp": "17896441",
-    "content": "c31ef746"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/-495": {
-    "__comp": "17896441",
-    "content": "41a6d518"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/N-Type/-32a": {
-    "__comp": "17896441",
-    "content": "5f1e475b"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/-bed": {
-    "__comp": "17896441",
-    "content": "edcf1377"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/P-Type/-1d4": {
-    "__comp": "17896441",
-    "content": "55a51b1f"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/-e82": {
-    "__comp": "17896441",
-    "content": "8b33840d"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/-938": {
-    "__comp": "17896441",
-    "content": "ab9fcaeb"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/-3ac": {
-    "__comp": "17896441",
-    "content": "70fcd118"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/-c06": {
-    "__comp": "17896441",
-    "content": "6759b0ea"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Notes/-b12": {
-    "__comp": "17896441",
-    "content": "48723b5a"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part7/Transistors/-3ed": {
-    "__comp": "17896441",
-    "content": "93fc0bf7"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/-726": {
-    "__comp": "17896441",
-    "content": "2fb3ed29"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/-3f6": {
-    "__comp": "17896441",
-    "content": "5762febc"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/-a5a": {
-    "__comp": "17896441",
-    "content": "b3e00545"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/-9fe": {
-    "__comp": "17896441",
-    "content": "d2f1ded0"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/-fb7": {
-    "__comp": "17896441",
-    "content": "df31b1d9"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/-1fa": {
-    "__comp": "17896441",
-    "content": "fd6324ac"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/-803": {
-    "__comp": "17896441",
-    "content": "c6c1e5c2"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/-1f7": {
-    "__comp": "17896441",
-    "content": "72362a58"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/-a9c": {
-    "__comp": "17896441",
-    "content": "85733cb5"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/-14c": {
-    "__comp": "17896441",
-    "content": "cb1509d0"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/-8a1": {
-    "__comp": "17896441",
-    "content": "2be32ba5"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/-fb8": {
-    "__comp": "17896441",
-    "content": "48ba9e93"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/-27d": {
-    "__comp": "17896441",
-    "content": "20d67103"
-  },
-  "/DocsDocusaurus/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/-62f": {
-    "__comp": "17896441",
-    "content": "3ff782d8"
-  },
-  "/DocsDocusaurus/docs/Meadow/-08b": {
-    "__comp": "17896441",
-    "content": "abe0159e"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/-856": {
-    "__comp": "17896441",
-    "content": "3dee7500"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Assemble_Meadow/-79f": {
-    "__comp": "17896441",
-    "content": "383d99b8"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Deploying_Meadow/-b1c": {
-    "__comp": "17896441",
-    "content": "f4e336e6"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Deployment/-e45": {
-    "__comp": "17896441",
-    "content": "ba5b892a"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/-987": {
-    "__comp": "17896441",
-    "content": "dd1eea49"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/-55b": {
-    "__comp": "17896441",
-    "content": "dda53f2e"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/-163": {
-    "__comp": "17896441",
-    "content": "ca062197"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/-f1d": {
-    "__comp": "17896441",
-    "content": "a72fdec9"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Hello_World/-47e": {
-    "__comp": "17896441",
-    "content": "84595907"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/-8ed": {
-    "__comp": "17896441",
-    "content": "1227aaf0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/macos/-5a5": {
-    "__comp": "17896441",
-    "content": "ae5f4379"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/stlink/-cad": {
-    "__comp": "17896441",
-    "content": "c13e3f12"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Setup/Windows/-7b0": {
-    "__comp": "17896441",
-    "content": "2f9e4ce0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Getting_Started/Update_USB_Driver/-537": {
-    "__comp": "17896441",
-    "content": "c734ef5d"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/-7b4": {
-    "__comp": "17896441",
-    "content": "99148c26"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/-a46": {
-    "__comp": "17896441",
-    "content": "55fe75be"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/-173": {
-    "__comp": "17896441",
-    "content": "f7e91fd4"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Apps/Sleep/-eb8": {
-    "__comp": "17896441",
-    "content": "c1d394ba"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Bluetooth/-cad": {
-    "__comp": "17896441",
-    "content": "dd2e3acd"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Events_and_IObservable/-931": {
-    "__comp": "17896441",
-    "content": "8134036b"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/File_System/-0f8": {
-    "__comp": "17896441",
-    "content": "2506750a"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/-8f7": {
-    "__comp": "17896441",
-    "content": "deca2982"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v1/-35c": {
-    "__comp": "17896441",
-    "content": "5d06273a"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Hardware/F7v2/-b5e": {
-    "__comp": "17896441",
-    "content": "85477714"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/-3c0": {
-    "__comp": "17896441",
-    "content": "3ff46afd"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Analog/-1c3": {
-    "__comp": "17896441",
-    "content": "a3f6707a"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/-479": {
-    "__comp": "17896441",
-    "content": "66a2b8df"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/-ae6": {
-    "__comp": "17896441",
-    "content": "fe2b803d"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/-627": {
-    "__comp": "17896441",
-    "content": "18615636"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/-f42": {
-    "__comp": "17896441",
-    "content": "b5d7c386"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/-32c": {
-    "__comp": "17896441",
-    "content": "999afb38"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/PWM/-cd9": {
-    "__comp": "17896441",
-    "content": "398521d2"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Power/-446": {
-    "__comp": "17896441",
-    "content": "0a665ede"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow_CLI/-cb2": {
-    "__comp": "17896441",
-    "content": "a7d9fd27"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/-d57": {
-    "__comp": "17896441",
-    "content": "a2c8dd9f"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/-ffe": {
-    "__comp": "17896441",
-    "content": "d9f4a865"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/-b24": {
-    "__comp": "17896441",
-    "content": "2dabfec0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Networking/-ab0": {
-    "__comp": "17896441",
-    "content": "f2b84f03"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Status/-c84": {
-    "__comp": "17896441",
-    "content": "004ef39b"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/-c86": {
-    "__comp": "17896441",
-    "content": "eca8b3f1"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/-976": {
-    "__comp": "17896441",
-    "content": "1dd9d523"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/-532": {
-    "__comp": "17896441",
-    "content": "9d1ea52f"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/-87a": {
-    "__comp": "17896441",
-    "content": "3881ea23"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/-bed": {
-    "__comp": "17896441",
-    "content": "a8bbcf90"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow_Basics/Units/-a54": {
-    "__comp": "17896441",
-    "content": "d1a1e3f3"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/-475": {
-    "__comp": "17896441",
-    "content": "f621c44d"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Command_Control/-69b": {
-    "__comp": "17896441",
-    "content": "513034e5"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Device_Provisioning/-58d": {
-    "__comp": "17896441",
-    "content": "074ea08b"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/-852": {
-    "__comp": "17896441",
-    "content": "aeb4daf9"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/-641": {
-    "__comp": "17896441",
-    "content": "bf2b33fa"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/-eb1": {
-    "__comp": "17896441",
-    "content": "68218de5"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Datacake/-511": {
-    "__comp": "17896441",
-    "content": "aabc028a"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/-eea": {
-    "__comp": "17896441",
-    "content": "89e4d7c0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Logs_Events/-668": {
-    "__comp": "17896441",
-    "content": "32c62c47"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/OtA_Updates/-e44": {
-    "__comp": "17896441",
-    "content": "2a1c2852"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/-f78": {
-    "__comp": "17896441",
-    "content": "a25ce911"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/API_Samples/-92c": {
-    "__comp": "17896441",
-    "content": "c53805f6"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Getting_Started/-a5a": {
-    "__comp": "17896441",
-    "content": "a2f87178"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/-3f2": {
-    "__comp": "17896441",
-    "content": "8f5309b0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/-026": {
-    "__comp": "17896441",
-    "content": "888409f0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/-38b": {
-    "__comp": "17896441",
-    "content": "b36d54a3"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/-ee5": {
-    "__comp": "17896441",
-    "content": "b54952cc"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/-328": {
-    "__comp": "17896441",
-    "content": "6eda4590"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/-934": {
-    "__comp": "17896441",
-    "content": "b8f1bbed"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Peripherals/-23d": {
-    "__comp": "17896441",
-    "content": "9eea7fce"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/-db7": {
-    "__comp": "17896441",
-    "content": "fb6a261b"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.Foundation/Working_with_Sensors/-5a5": {
-    "__comp": "17896441",
-    "content": "c70ccc99"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/-0eb": {
-    "__comp": "17896441",
-    "content": "65cbd141"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Automatic_Restarts/-6cf": {
-    "__comp": "17896441",
-    "content": "5994c4ee"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Bluetooth/-668": {
-    "__comp": "17896441",
-    "content": "290ec17d"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Cellular/-a56": {
-    "__comp": "17896441",
-    "content": "a8ecc674"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/-5a7": {
-    "__comp": "17896441",
-    "content": "dbe3b395"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/-560": {
-    "__comp": "17896441",
-    "content": "07f25aee"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/-a31": {
-    "__comp": "17896441",
-    "content": "395f97c8"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/-cf4": {
-    "__comp": "17896441",
-    "content": "f8fe4b4a"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/-744": {
-    "__comp": "17896441",
-    "content": "7fc96fe9"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/File_System/-dfe": {
-    "__comp": "17896441",
-    "content": "2982800f"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/-048": {
-    "__comp": "17896441",
-    "content": "fe1fffae"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Networking/Antenna/-c1d": {
-    "__comp": "17896441",
-    "content": "f715d24c"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/RTC/-504": {
-    "__comp": "17896441",
-    "content": "99be76a8"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/SQLite/-c0b": {
-    "__comp": "17896441",
-    "content": "a6015942"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Threading/-238": {
-    "__comp": "17896441",
-    "content": "ce1c07cd"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Updates/-14c": {
-    "__comp": "17896441",
-    "content": "161e5a59"
-  },
-  "/DocsDocusaurus/docs/Meadow/Meadow.OS/Watchdog/-8fd": {
-    "__comp": "17896441",
-    "content": "a4dc21cd"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/-6ef": {
-    "__comp": "17896441",
-    "content": "a3bd87f7"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta2/-360": {
-    "__comp": "17896441",
-    "content": "d7afae3c"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta3/-16d": {
-    "__comp": "17896441",
-    "content": "74ecabe2"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta4/-6be": {
-    "__comp": "17896441",
-    "content": "d706fd34"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta5/-81a": {
-    "__comp": "17896441",
-    "content": "1e33ade0"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Beta6/-eb3": {
-    "__comp": "17896441",
-    "content": "739783d7"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/-ee4": {
-    "__comp": "17896441",
-    "content": "bfcdf058"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/-42e": {
-    "__comp": "17896441",
-    "content": "6bf6bd9f"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/Roadmap/-b6b": {
-    "__comp": "17896441",
-    "content": "43ac6d55"
-  },
-  "/DocsDocusaurus/docs/Meadow/Release_Notes/v1/-575": {
-    "__comp": "17896441",
-    "content": "da80ccf8"
-  },
-  "/DocsDocusaurus/docs/Netduino/-137": {
-    "__comp": "17896441",
-    "content": "c6e1dc89"
-  },
-  "/DocsDocusaurus/docs/Netduino/About/-4a3": {
-    "__comp": "17896441",
-    "content": "70810367"
-  },
-  "/DocsDocusaurus/docs/Netduino/About/Downloads/-02c": {
-    "__comp": "17896441",
-    "content": "16cc86ea"
-  },
-  "/DocsDocusaurus/docs/Netduino/About/Source/-300": {
-    "__comp": "17896441",
-    "content": "8b14c61b"
-  },
-  "/DocsDocusaurus/docs/Netduino/About/Troubleshooting/-c7d": {
-    "__comp": "17896441",
-    "content": "d934ec2e"
-  },
-  "/DocsDocusaurus/docs/Netduino/About/Updating_Firmware/-4f5": {
-    "__comp": "17896441",
-    "content": "0aff3f3c"
-  },
-  "/DocsDocusaurus/docs/Netduino/Application_Fundamentals/-02d": {
-    "__comp": "17896441",
-    "content": "5188312a"
-  },
-  "/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Debug_Print/-5ad": {
-    "__comp": "17896441",
-    "content": "74b4fcfd"
-  },
-  "/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Memory_Management/-e8f": {
-    "__comp": "17896441",
-    "content": "95027522"
-  },
-  "/DocsDocusaurus/docs/Netduino/Application_Fundamentals/NETMF/-a88": {
-    "__comp": "17896441",
-    "content": "7c76dea3"
-  },
-  "/DocsDocusaurus/docs/Netduino/Application_Fundamentals/Threading/-bb2": {
-    "__comp": "17896441",
-    "content": "93245bdd"
-  },
-  "/DocsDocusaurus/docs/Netduino/Getting_Started/-3df": {
-    "__comp": "17896441",
-    "content": "e229e487"
-  },
-  "/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Mac/-5d6": {
-    "__comp": "17896441",
-    "content": "8f77df0f"
-  },
-  "/DocsDocusaurus/docs/Netduino/Getting_Started/Installation/Windows/-3e4": {
-    "__comp": "17896441",
-    "content": "cfcd4508"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/-b0a": {
-    "__comp": "17896441",
-    "content": "2ca1cfef"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Analog/-a25": {
-    "__comp": "17896441",
-    "content": "ecefde3f"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/-5b2": {
-    "__comp": "17896441",
-    "content": "04e02ad8"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/-b3a": {
-    "__comp": "17896441",
-    "content": "75513ef2"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/Reading/-8a4": {
-    "__comp": "17896441",
-    "content": "15b224c9"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/I2C/Writing/-272": {
-    "__comp": "17896441",
-    "content": "b6a37398"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/PWM/-cab": {
-    "__comp": "17896441",
-    "content": "0c939c00"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/-134": {
-    "__comp": "17896441",
-    "content": "800ed436"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/ControllingLCD/-cc4": {
-    "__comp": "17896441",
-    "content": "0bcf5176"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/Reading/-96b": {
-    "__comp": "17896441",
-    "content": "c3f3c52e"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/ReadingTime/-043": {
-    "__comp": "17896441",
-    "content": "0d4cb816"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/SPI/Writing/-192": {
-    "__comp": "17896441",
-    "content": "172d9f94"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Digital/UART/-01c": {
-    "__comp": "17896441",
-    "content": "f58e590a"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/File_Storage/-80a": {
-    "__comp": "17896441",
-    "content": "667f24d6"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Network/-826": {
-    "__comp": "17896441",
-    "content": "e35c3666"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Network/Configuration/-ef6": {
-    "__comp": "17896441",
-    "content": "21cf7927"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Network/Connection/-1c2": {
-    "__comp": "17896441",
-    "content": "09649172"
-  },
-  "/DocsDocusaurus/docs/Netduino/Input_Output/Onboard_Button_+_LED/-656": {
-    "__comp": "17896441",
-    "content": "9183ec25"
-  },
-  "/DocsDocusaurus/-04c": {
-    "__comp": "1df93b7f",
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
+    }
+  },
+  "/__docusaurus/debug/content/-dd1": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "3ac79073"
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
     },
-    "config": "5e9f5e1a"
+    "allContent": "allContent---docusaurus-debug-content-246-d88"
+  },
+  "/__docusaurus/debug/globalData/-db3": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
+    }
+  },
+  "/__docusaurus/debug/metadata/-645": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
+    }
+  },
+  "/__docusaurus/debug/registry/-491": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
+    }
+  },
+  "/__docusaurus/debug/routes/-0ab": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-26-f-18d"
+    }
+  },
+  "/markdown-page/-bbb": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---markdown-page-3-ac-b98"
+    },
+    "content": "content---markdown-page-393-038"
+  },
+  "/docs/-779": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-44-f-576"
+    },
+    "versionMetadata": "versionMetadata---docs-935-739"
+  },
+  "/docs/-b00": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-c-37-4d0"
+  },
+  "/docs/DevCamp2020/-16f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-dev-camp-2020-6-f-8-c4a"
+  },
+  "/docs/DevCamp2021/-4a3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-dev-camp-2021-87-c-e91"
+  },
+  "/docs/Events/-47b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-events-4-f-1-841"
+  },
+  "/docs/HackKit/-7fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hack-kit-19-c-c3f"
+  },
+  "/docs/HackKit/BlogSeries/-9e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hack-kit-blog-series-3-d-2-c95"
+  },
+  "/docs/HackKit/Contents/-91e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hack-kit-contents-6-f-5-369"
+  },
+  "/docs/HackKit/HackKitLite/-e95": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hack-kit-hack-kit-lite-e-2-f-71d"
+  },
+  "/docs/HackKit/Projects/-5b5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hack-kit-projects-f-37-b6b"
+  },
+  "/docs/Hardware/-347": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-6-d-8-d55"
+  },
+  "/docs/Hardware/Circuits/Components/-2c1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-eee-57a"
+  },
+  "/docs/Hardware/Circuits/Components/Capacitors/-9a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-capacitors-666-285"
+  },
+  "/docs/Hardware/Circuits/Components/Diodes/-2cc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-diodes-a-47-351"
+  },
+  "/docs/Hardware/Circuits/Components/LEDs/-36f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-le-ds-5-ab-867"
+  },
+  "/docs/Hardware/Circuits/Components/LEDs/Driving_w_PWM/-b00": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-le-ds-driving-w-pwm-0-fb-132"
+  },
+  "/docs/Hardware/Circuits/Components/LEDs/Driving_w_Resistor/-0d5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-le-ds-driving-w-resistor-41-c-680"
+  },
+  "/docs/Hardware/Circuits/Components/Resistors/-339": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-resistors-64-b-d60"
+  },
+  "/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/-191": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-resistors-pull-up-and-pull-down-resistors-523-983"
+  },
+  "/docs/Hardware/Circuits/Components/Resistors/Reading/-3d0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-resistors-reading-c-70-350"
+  },
+  "/docs/Hardware/Circuits/Components/ShiftRegister74595/-e45": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-components-shift-register-74595-db-8-1f2"
+  },
+  "/docs/Hardware/Circuits/Integrating_Meadow/F7/-e71": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-integrating-meadow-f-7-429-db3"
+  },
+  "/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Core-Compute/-4b5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-integrating-meadow-f-7-f-7-core-compute-3-b-0-0d8"
+  },
+  "/docs/Hardware/Circuits/Integrating_Meadow/F7/F7_Micro/-3e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-circuits-integrating-meadow-f-7-f-7-micro-c-89-c9d"
+  },
+  "/docs/Hardware/Design/PCB_Design_and_Assembly/Reference/-338": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-design-pcb-design-and-assembly-reference-658-33a"
+  },
+  "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/-357": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-fundamentals-introduction-to-hardware-design-751-96a"
+  },
+  "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/-320": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-fundamentals-introduction-to-hardware-design-breadboarding-074-d5c"
+  },
+  "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_(PCBs)/-a9f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-fundamentals-introduction-to-hardware-design-printed-circuit-boards-pc-bs-7-af-6c3"
+  },
+  "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/-02f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-fundamentals-introduction-to-hardware-design-product-design-lifecycle-1-f-3-e10"
+  },
+  "/docs/Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/-a52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-fundamentals-introduction-to-hardware-design-production-scale-551-33c"
+  },
+  "/docs/Hardware/Peripherals/-67b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-peripherals-163-2ec"
+  },
+  "/docs/Hardware/Peripherals/IOExpanders/ShiftRegister74595/-2a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-peripherals-io-expanders-shift-register-74595-41-b-d91"
+  },
+  "/docs/Hardware/Peripherals/Motors_and_Servos/Servos/-f0b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-peripherals-motors-and-servos-servos-382-c6e"
+  },
+  "/docs/Hardware/Peripherals/Relays/-f6c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-peripherals-relays-9-ff-2a5"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/-b35": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-components-bf-4-0fb"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Component_Search/-d20": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-components-component-search-a-12-4f8"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Packages_and_Sizes/-76f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-components-packages-and-sizes-fdc-925"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/Components/Symbols_and_Footprints/-576": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-components-symbols-and-footprints-36-d-04c"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/-660": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-pcb-assembly-c-64-2d1"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Component_Placement/-5da": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-pcb-assembly-component-placement-5-b-5-beb"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Assembly/Solder_Paste_Application/-8e4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-pcb-assembly-solder-paste-application-8-f-7-ae4"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Fabrication/-83f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-pcb-fabrication-85-a-f6d"
+  },
+  "/docs/Hardware/Printed_Circuit_Boards_(PCBs)/PCB_Stackups/-600": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-printed-circuit-boards-pc-bs-pcb-stackups-43-b-7ec"
+  },
+  "/docs/Hardware/Reference/-66f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-207-595"
+  },
+  "/docs/Hardware/Reference/Algorithms/-b1c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-aec-cf4"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/-45c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-517-cae"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Closed_Loop_Gain_Controllers/-b1f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-closed-loop-gain-controllers-cc-5-367"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/-8c9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-ideal-pid-algorithm-234-6bd"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Intro/-674": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-intro-62-c-2cf"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/-c7c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-standard-pid-algorithm-8-f-8-e19"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/-ef9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-tuning-046-f21"
+  },
+  "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/-6b2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-algorithms-proportional-integral-derivative-using-pid-c-4-e-532"
+  },
+  "/docs/Hardware/Reference/BitBanging/-147": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-bit-banging-78-a-9c7"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/-14c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-310-25c"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Capacitance/-df9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-capacitance-fb-8-015"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Resistance/-740": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-resistance-87-f-841"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/-f34": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-resistance-parallel-475-4b1"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/-44e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-resistance-series-2-d-2-5da"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Voltage/-c24": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-voltage-19-d-222"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Voltage/Division/-4c3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-voltage-division-a-77-157"
+  },
+  "/docs/Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/-d95": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-equations-and-laws-voltage-ohms-law-bd-0-b9a"
+  },
+  "/docs/Hardware/Reference/UnderstandingWaveforms/DigitalSignals/-f1d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-understanding-waveforms-digital-signals-742-349"
+  },
+  "/docs/Hardware/Reference/Units/-2fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-units-28-b-bec"
+  },
+  "/docs/Hardware/Reference/Units/Amps/-9ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-units-amps-656-63e"
+  },
+  "/docs/Hardware/Reference/Units/Volts/-6ba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-units-volts-1-c-6-3c4"
+  },
+  "/docs/Hardware/Reference/Units/Watts/-044": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-reference-units-watts-013-12a"
+  },
+  "/docs/Hardware/Tutorials/-56e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-ea-6-526"
+  },
+  "/docs/Hardware/Tutorials/Electronics/-880": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-994-c8f"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Notes/-78a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-notes-02-d-d0d"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part1/-93e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-1-b-8-e-2a1"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part1/Atoms/-151": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-1-atoms-3-bf-826"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part1/Electrical_Current/-4ae": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-1-electrical-current-e-8-d-9e2"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part1/Electromagnetism/-1bf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-1-electromagnetism-226-284"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part1/Review/-a62": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-1-review-292-3c3"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/-f52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-eb-1-a54"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/Amount_and_Force/-bf4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-amount-and-force-ac-8-8b1"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/Amperage/-593": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-amperage-ce-0-8bd"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/Review/-f75": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-review-ce-8-ab7"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/Source_Load_and_Ground/-419": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-source-load-and-ground-787-c05"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/Voltage/-dbb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-voltage-711-708"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part2/Wattage/-1a4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-2-wattage-5-cd-8bd"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/-368": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-c-23-d8d"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/AC_Characteristics/-8b0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-ac-characteristics-73-d-805"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/AC_Generation/-754": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-ac-generation-6-fe-fb4"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/Alternating_Current/-155": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-alternating-current-299-f68"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/Current_Types/-8e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-current-types-285-9ab"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/Direct_Current/-066": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-direct-current-e-04-dc2"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part3/Review/-513": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-3-review-db-0-477"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/-562": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-49-b-a7e"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Calculating_Resistance/-232": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-calculating-resistance-553-0fb"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Ohms_Law/-e60": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-ohms-law-5-c-0-2e2"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Parallel_Resistance/-cf0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-parallel-resistance-faf-cb4"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/-972": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-pull-up-pull-down-resistors-b-6-e-f7d"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/PullUp_PullDown_Resistors/notes/-443": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-pull-up-pull-down-resistors-notes-872-d1c"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Reading_Resistors/-663": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-reading-resistors-e-30-36c"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Resistance/-503": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-resistance-69-e-196"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Circuit_Comparison/-36d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-resistor-circuit-comparison-3-fe-afe"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Lab/-995": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-resistor-lab-dc-4-593"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/-1fe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-resistor-power-rating-136-6ba"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Resistor_Tolerance/-9e7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-resistor-tolerance-cc-0-e3b"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Review/-3fe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-review-9-af-306"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part4/Series_Resistance/-65a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-4-series-resistance-4-a-8-208"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/-600": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-e-06-b8c"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Circuit_Software/-97d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-circuit-software-01-f-320"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/DC_Circuits/-723": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-dc-circuits-962-cd6"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Current_Law/-659": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-kirchhoffs-current-law-bee-4f2"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Kirchhoffs_Voltage_Law/-d6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-kirchhoffs-voltage-law-dd-5-8b1"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/-91b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-level-shifting-lab-21-d-7ff"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Resistive_Sensor_Lab/-46e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-resistive-sensor-lab-817-d87"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Review/-47d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-review-2-b-1-06c"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Divider_Practicals/-3ad": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-voltage-divider-practicals-9-df-513"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part5/Voltage_Division/-086": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-5-voltage-division-6-e-8-c70"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/-cf4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-247-4a5"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/Diode_Logic_Lab/-0db": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-diode-logic-lab-b-18-9be"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/General_Diodes/-a28": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-general-diodes-4-ac-b75"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/LED_Lab/-1d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-led-lab-af-3-9a7"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/LEDs/-fbb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-le-ds-c-31-17e"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/Light_Related_Diodes/-e21": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-light-related-diodes-41-a-f17"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/N-Type/-dde": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-n-type-5-f-1-e6c"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/P-N_Junctions/-bfc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-p-n-junctions-edc-01e"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/P-Type/-df9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-p-type-55-a-555"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/Photodiode_Lab/-190": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-photodiode-lab-8-b-3-d01"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/Review/-cb1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-review-ab-9-074"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/-aac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-semiconductors-70-f-b76"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part6/Silicon/-4c4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-6-silicon-675-0de"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part7/Notes/-c83": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-7-notes-487-eec"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Part7/Transistors/-001": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-7-transistors-93-f-90f"
+  },
+  "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Batteries/-d71": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-x-batteries-batteries-2-fb-943"
+  },
+  "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Circuits/-b1f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-x-batteries-battery-circuits-576-fce"
+  },
+  "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Resistance/-e52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-x-batteries-battery-resistance-b-3-e-b6a"
+  },
+  "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Battery_Types/-6e7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-x-batteries-battery-types-d-2-f-76d"
+  },
+  "/docs/Hardware/Tutorials/Electronics/PartX_Batteries/Review/-535": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-x-batteries-review-df-3-8f9"
+  },
+  "/docs/Hardware/Tutorials/Electronics/PartY_Other_Components/-7b7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-part-y-other-components-fd-6-718"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Prologue/-b4e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-prologue-c-6-c-eb0"
+  },
+  "/docs/Hardware/Tutorials/Electronics/Prologue/Requirements/-41f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-electronics-prologue-requirements-723-8e7"
+  },
+  "/docs/Hardware/Tutorials/PCB_Tutorial/-8e1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-pcb-tutorial-857-52e"
+  },
+  "/docs/Hardware/Tutorials/PCB_Tutorial/Add_Meadow/-b07": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-pcb-tutorial-add-meadow-cb-1-593"
+  },
+  "/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/-fb9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-pcb-tutorial-pcb-assembly-2-be-3dd"
+  },
+  "/docs/Hardware/Tutorials/PCB_Tutorial/PCB_Layout/-059": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-pcb-tutorial-pcb-layout-48-b-865"
+  },
+  "/docs/Hardware/Tutorials/PCB_Tutorial/Project_Creation/-0aa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-pcb-tutorial-project-creation-20-d-eb0"
+  },
+  "/docs/Hardware/Tutorials/PCB_Tutorial/Schematic_Design/-3e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hardware-tutorials-pcb-tutorial-schematic-design-3-ff-a3a"
+  },
+  "/docs/Meadow/-71c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-abe-f7b"
+  },
+  "/docs/Meadow/Getting_Started/-6d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-3-de-b58"
+  },
+  "/docs/Meadow/Getting_Started/Assemble_Meadow/-685": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-assemble-meadow-383-c97"
+  },
+  "/docs/Meadow/Getting_Started/Deploying_Meadow/-40b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-deploying-meadow-f-4-e-135"
+  },
+  "/docs/Meadow/Getting_Started/Deployment/-d7d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-deployment-ba-5-831"
+  },
+  "/docs/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/-bbf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-getting-started-core-compute-module-dd-1-abb"
+  },
+  "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/-332": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-getting-started-meadow-desktop-dda-85c"
+  },
+  "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/-86e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-getting-started-meadow-desktop-getting-started-linux-ca-0-1a4"
+  },
+  "/docs/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/-898": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-getting-started-meadow-desktop-getting-started-windows-a-72-c61"
+  },
+  "/docs/Meadow/Getting_Started/Hello_World/-c35": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-hello-world-845-3c2"
+  },
+  "/docs/Meadow/Getting_Started/Setup/-2de": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-setup-122-71b"
+  },
+  "/docs/Meadow/Getting_Started/Setup/macos/-a23": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-setup-macos-ae-5-6af"
+  },
+  "/docs/Meadow/Getting_Started/Setup/stlink/-31f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-setup-stlink-c-13-5ee"
+  },
+  "/docs/Meadow/Getting_Started/Setup/Windows/-5fe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-setup-windows-2-f-9-9a2"
+  },
+  "/docs/Meadow/Getting_Started/Update_USB_Driver/-4dc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-getting-started-update-usb-driver-c-73-80a"
+  },
+  "/docs/Meadow/Meadow_Basics/-815": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-991-d44"
+  },
+  "/docs/Meadow/Meadow_Basics/Apps/-4db": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-apps-55-f-6ea"
+  },
+  "/docs/Meadow/Meadow_Basics/Apps/Lifecycle_Events/-991": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-apps-lifecycle-events-f-7-e-e11"
+  },
+  "/docs/Meadow/Meadow_Basics/Apps/Sleep/-fd4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-apps-sleep-c-1-d-ed9"
+  },
+  "/docs/Meadow/Meadow_Basics/Bluetooth/-dab": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-bluetooth-dd-2-07a"
+  },
+  "/docs/Meadow/Meadow_Basics/Events_and_IObservable/-58e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-events-and-i-observable-813-c0b"
+  },
+  "/docs/Meadow/Meadow_Basics/File_System/-935": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-file-system-250-8b6"
+  },
+  "/docs/Meadow/Meadow_Basics/Hardware/-fec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-hardware-dec-694"
+  },
+  "/docs/Meadow/Meadow_Basics/Hardware/F7v1/-be4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-hardware-f-7-v-1-5-d-0-31c"
+  },
+  "/docs/Meadow/Meadow_Basics/Hardware/F7v2/-18b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-hardware-f-7-v-2-854-0e2"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/-517": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-3-ff-c2a"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Analog/-7d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-analog-a-3-f-1b6"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Digital/-8bc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-digital-66-a-298"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/-609": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-digital-protocols-fe-2-360"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/-0c0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-digital-protocols-i-2-c-186-2be"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/-0c6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-digital-protocols-spi-b-5-d-681"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/-86e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-digital-protocols-uart-999-95c"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Digital/PWM/-818": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-digital-pwm-398-8c1"
+  },
+  "/docs/Meadow/Meadow_Basics/IO/Power/-97e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-io-power-0-a-6-54c"
+  },
+  "/docs/Meadow/Meadow_Basics/Meadow_CLI/-205": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-meadow-cli-a-7-d-96e"
+  },
+  "/docs/Meadow/Meadow_Basics/Meadow.OS/-201": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-meadow-os-a-2-c-f75"
+  },
+  "/docs/Meadow/Meadow_Basics/Meadow.OS/RTC/-cb6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-meadow-os-rtc-d-9-f-fbc"
+  },
+  "/docs/Meadow/Meadow_Basics/Meadow.OS/Watchdog/-f3f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-meadow-os-watchdog-2-da-dde"
+  },
+  "/docs/Meadow/Meadow_Basics/Networking/-530": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-networking-f-2-b-f48"
+  },
+  "/docs/Meadow/Meadow_Basics/Status/-756": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-status-004-edf"
+  },
+  "/docs/Meadow/Meadow_Basics/Troubleshooting/-1ce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-troubleshooting-eca-655"
+  },
+  "/docs/Meadow/Meadow_Basics/Troubleshooting/Linux/-ade": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-troubleshooting-linux-1-dd-505"
+  },
+  "/docs/Meadow/Meadow_Basics/Troubleshooting/macOS/-7ad": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-troubleshooting-mac-os-9-d-1-d00"
+  },
+  "/docs/Meadow/Meadow_Basics/Troubleshooting/MeadowOSDeployment/-72a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-troubleshooting-meadow-os-deployment-388-296"
+  },
+  "/docs/Meadow/Meadow_Basics/Troubleshooting/VisualStudio/-3d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-troubleshooting-visual-studio-a-8-b-c16"
+  },
+  "/docs/Meadow/Meadow_Basics/Units/-8e7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-basics-units-d-1-a-7fe"
+  },
+  "/docs/Meadow/Meadow.Cloud/-64e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-f-62-1d0"
+  },
+  "/docs/Meadow/Meadow.Cloud/Command_Control/-8f5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-command-control-513-6b0"
+  },
+  "/docs/Meadow/Meadow.Cloud/Device_Provisioning/-31b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-device-provisioning-074-607"
+  },
+  "/docs/Meadow/Meadow.Cloud/Health_Monitoring/-fe4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-health-monitoring-aeb-07f"
+  },
+  "/docs/Meadow/Meadow.Cloud/Integrations/-fef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-integrations-bf-2-340"
+  },
+  "/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/-55e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-integrations-azure-event-hubs-682-342"
+  },
+  "/docs/Meadow/Meadow.Cloud/Integrations/Datacake/-305": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-integrations-datacake-aab-d82"
+  },
+  "/docs/Meadow/Meadow.Cloud/Integrations/Webhooks/-2e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-integrations-webhooks-89-e-f19"
+  },
+  "/docs/Meadow/Meadow.Cloud/Logs_Events/-834": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-logs-events-32-c-3eb"
+  },
+  "/docs/Meadow/Meadow.Cloud/OtA_Updates/-de5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-cloud-ot-a-updates-2-a-1-b07"
+  },
+  "/docs/Meadow/Meadow.Foundation/-04f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-a-25-b8e"
+  },
+  "/docs/Meadow/Meadow.Foundation/API_Samples/-bb7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-api-samples-c-53-c3c"
+  },
+  "/docs/Meadow/Meadow.Foundation/Getting_Started/-e61": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-getting-started-a-2-f-b94"
+  },
+  "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/-122": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-libraries-and-frameworks-8-f-5-2c8"
+  },
+  "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/-269": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-libraries-and-frameworks-gps-gnss-nmea-processor-888-3cc"
+  },
+  "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/-4a7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-libraries-and-frameworks-maple-server-b-36-648"
+  },
+  "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/-398": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-libraries-and-frameworks-micro-graphics-b-54-360"
+  },
+  "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/-fd8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-libraries-and-frameworks-micro-layout-6-ed-e2b"
+  },
+  "/docs/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/-0a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-libraries-and-frameworks-text-display-menu-b-8-f-fd4"
+  },
+  "/docs/Meadow/Meadow.Foundation/Peripherals/-b4b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-peripherals-9-ee-0bc"
+  },
+  "/docs/Meadow/Meadow.Foundation/Unified_GPIO_Arch/-2f5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-unified-gpio-arch-fb-6-34b"
+  },
+  "/docs/Meadow/Meadow.Foundation/Working_with_Sensors/-e13": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-foundation-working-with-sensors-c-70-389"
+  },
+  "/docs/Meadow/Meadow.OS/-d92": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-65-c-a81"
+  },
+  "/docs/Meadow/Meadow.OS/Automatic_Restarts/-350": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-automatic-restarts-599-237"
+  },
+  "/docs/Meadow/Meadow.OS/Bluetooth/-5ed": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-bluetooth-290-d98"
+  },
+  "/docs/Meadow/Meadow.OS/Cellular/-647": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-cellular-a-8-e-034"
+  },
+  "/docs/Meadow/Meadow.OS/Configuration/-4ec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-configuration-dbe-4b3"
+  },
+  "/docs/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/-917": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-configuration-application-settings-configuration-07-f-a4c"
+  },
+  "/docs/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/-aaf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-configuration-os-device-configuration-395-46f"
+  },
+  "/docs/Meadow/Meadow.OS/Configuration/WiFi_Configuration/-6bd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-configuration-wi-fi-configuration-f-8-f-337"
+  },
+  "/docs/Meadow/Meadow.OS/Core-Compute_SD_Card/-aef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-core-compute-sd-card-7-fc-4ba"
+  },
+  "/docs/Meadow/Meadow.OS/File_System/-51b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-file-system-298-f29"
+  },
+  "/docs/Meadow/Meadow.OS/Networking/-ce8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-networking-fe-1-782"
+  },
+  "/docs/Meadow/Meadow.OS/Networking/Antenna/-df4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-networking-antenna-f-71-744"
+  },
+  "/docs/Meadow/Meadow.OS/RTC/-e87": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-rtc-99-b-ac3"
+  },
+  "/docs/Meadow/Meadow.OS/SQLite/-b86": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-sq-lite-a-60-f28"
+  },
+  "/docs/Meadow/Meadow.OS/Threading/-e24": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-threading-ce-1-e0f"
+  },
+  "/docs/Meadow/Meadow.OS/Updates/-4db": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-updates-161-545"
+  },
+  "/docs/Meadow/Meadow.OS/Watchdog/-a70": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-meadow-os-watchdog-a-4-d-2b4"
+  },
+  "/docs/Meadow/Release_Notes/-986": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-a-3-b-099"
+  },
+  "/docs/Meadow/Release_Notes/Beta2/-7b4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-beta-2-d-7-a-72b"
+  },
+  "/docs/Meadow/Release_Notes/Beta3/-29e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-beta-3-74-e-cd1"
+  },
+  "/docs/Meadow/Release_Notes/Beta4/-572": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-beta-4-d-70-074"
+  },
+  "/docs/Meadow/Release_Notes/Beta5/-63a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-beta-5-1-e-3-1bf"
+  },
+  "/docs/Meadow/Release_Notes/Beta6/-2af": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-beta-6-739-ae0"
+  },
+  "/docs/Meadow/Release_Notes/Release-Candidates/-3f9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-release-candidates-bfc-4b6"
+  },
+  "/docs/Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/-896": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-release-candidates-lifecycle-update-6-bf-b58"
+  },
+  "/docs/Meadow/Release_Notes/Roadmap/-cbf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-roadmap-43-a-963"
+  },
+  "/docs/Meadow/Release_Notes/v1/-46d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-meadow-release-notes-v-1-da-8-0c5"
+  },
+  "/docs/Netduino/-60d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-c-6-e-9e3"
+  },
+  "/docs/Netduino/About/-9a8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-about-708-67c"
+  },
+  "/docs/Netduino/About/Downloads/-262": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-about-downloads-16-c-ed0"
+  },
+  "/docs/Netduino/About/Source/-c14": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-about-source-8-b-1-8dd"
+  },
+  "/docs/Netduino/About/Troubleshooting/-6a3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-about-troubleshooting-d-93-14d"
+  },
+  "/docs/Netduino/About/Updating_Firmware/-553": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-about-updating-firmware-0-af-bf3"
+  },
+  "/docs/Netduino/Application_Fundamentals/-05c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-application-fundamentals-518-5f5"
+  },
+  "/docs/Netduino/Application_Fundamentals/Debug_Print/-305": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-application-fundamentals-debug-print-74-b-cb0"
+  },
+  "/docs/Netduino/Application_Fundamentals/Memory_Management/-95c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-application-fundamentals-memory-management-950-953"
+  },
+  "/docs/Netduino/Application_Fundamentals/NETMF/-445": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-application-fundamentals-netmf-7-c-7-0e1"
+  },
+  "/docs/Netduino/Application_Fundamentals/Threading/-7c9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-application-fundamentals-threading-932-11f"
+  },
+  "/docs/Netduino/Getting_Started/-5ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-getting-started-e-22-d06"
+  },
+  "/docs/Netduino/Getting_Started/Installation/Mac/-0c6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-getting-started-installation-mac-8-f-7-77c"
+  },
+  "/docs/Netduino/Getting_Started/Installation/Windows/-a50": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-getting-started-installation-windows-cfc-b98"
+  },
+  "/docs/Netduino/Input_Output/-58c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-2-ca-4d2"
+  },
+  "/docs/Netduino/Input_Output/Analog/-924": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-analog-ece-0d2"
+  },
+  "/docs/Netduino/Input_Output/Digital/-997": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-04-e-619"
+  },
+  "/docs/Netduino/Input_Output/Digital/I2C/-c56": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-i-2-c-755-927"
+  },
+  "/docs/Netduino/Input_Output/Digital/I2C/Reading/-40a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-i-2-c-reading-15-b-56d"
+  },
+  "/docs/Netduino/Input_Output/Digital/I2C/Writing/-8d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-i-2-c-writing-b-6-a-ec7"
+  },
+  "/docs/Netduino/Input_Output/Digital/PWM/-d8a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-pwm-0-c-9-f8b"
+  },
+  "/docs/Netduino/Input_Output/Digital/SPI/-cfd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-spi-800-091"
+  },
+  "/docs/Netduino/Input_Output/Digital/SPI/ControllingLCD/-e21": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-spi-controlling-lcd-0-bc-4c4"
+  },
+  "/docs/Netduino/Input_Output/Digital/SPI/Reading/-aff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-spi-reading-c-3-f-a68"
+  },
+  "/docs/Netduino/Input_Output/Digital/SPI/ReadingTime/-950": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-spi-reading-time-0-d-4-4ab"
+  },
+  "/docs/Netduino/Input_Output/Digital/SPI/Writing/-d92": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-spi-writing-172-e0e"
+  },
+  "/docs/Netduino/Input_Output/Digital/UART/-95c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-digital-uart-f-58-3a0"
+  },
+  "/docs/Netduino/Input_Output/File_Storage/-cde": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-file-storage-667-e27"
+  },
+  "/docs/Netduino/Input_Output/Network/-7fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-network-e-35-b23"
+  },
+  "/docs/Netduino/Input_Output/Network/Configuration/-ffa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-network-configuration-21-c-6cb"
+  },
+  "/docs/Netduino/Input_Output/Network/Connection/-406": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-network-connection-096-8a7"
+  },
+  "/docs/Netduino/Input_Output/Onboard_Button_+_LED/-214": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-netduino-input-output-onboard-button-led-918-cef"
+  },
+  "/-1a1": {
+    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__context": {
+      "plugin": "plugin---markdown-page-3-ac-b98"
+    },
+    "config": "config---5-e-9-4f3"
   }
 }

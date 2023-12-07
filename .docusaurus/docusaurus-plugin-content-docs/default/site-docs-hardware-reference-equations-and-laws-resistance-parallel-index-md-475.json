@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index.md",
   "sourceDirName": "Hardware/Reference/Equations_and_Laws/Resistance/Parallel",
   "slug": "/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/",
+  "permalink": "/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Resistance Calculations",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/"
+    "permalink": "/docs/Hardware/Reference/Equations_and_Laws/Resistance/"
   },
   "next": {
     "title": "Series Resistance",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/"
+    "permalink": "/docs/Hardware/Reference/Equations_and_Laws/Resistance/Series/"
   }
 }

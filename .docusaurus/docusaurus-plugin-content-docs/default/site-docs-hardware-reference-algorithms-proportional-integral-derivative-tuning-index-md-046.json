@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/index.md",
   "sourceDirName": "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning",
   "slug": "/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/",
+  "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Tuning/index.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Standard PID Algorithm",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/"
+    "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/"
   },
   "next": {
     "title": "Using PID",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/"
+    "permalink": "/docs/Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/"
   }
 }

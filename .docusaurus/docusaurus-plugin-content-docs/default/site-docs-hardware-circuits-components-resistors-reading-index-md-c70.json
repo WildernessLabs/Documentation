@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Circuits/Components/Resistors/Reading/index.md",
   "sourceDirName": "Hardware/Circuits/Components/Resistors/Reading",
   "slug": "/Hardware/Circuits/Components/Resistors/Reading/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/Reading/",
+  "permalink": "/docs/Hardware/Circuits/Components/Resistors/Reading/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/Resistors/Reading/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Pull Up and Pull Down Resistors",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/"
+    "permalink": "/docs/Hardware/Circuits/Components/Resistors/PullUpAndPullDownResistors/"
   },
   "next": {
     "title": "74595 Shift Register",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/ShiftRegister74595/"
+    "permalink": "/docs/Hardware/Circuits/Components/ShiftRegister74595/"
   }
 }

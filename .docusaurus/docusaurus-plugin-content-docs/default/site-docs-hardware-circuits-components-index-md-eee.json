@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Circuits/Components/index.md",
   "sourceDirName": "Hardware/Circuits/Components",
   "slug": "/Hardware/Circuits/Components/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/",
+  "permalink": "/docs/Hardware/Circuits/Components/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Circuits/Components/index.md",
   "tags": [],
@@ -18,6 +18,6 @@
   "sidebar": "hardwareSidebar",
   "next": {
     "title": "Capacitors",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Circuits/Components/Capacitors/"
+    "permalink": "/docs/Hardware/Circuits/Components/Capacitors/"
   }
 }

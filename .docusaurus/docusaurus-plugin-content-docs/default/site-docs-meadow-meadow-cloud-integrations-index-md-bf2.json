@@ -6,7 +6,7 @@
   "source": "@site/docs/Meadow/Meadow.Cloud/Integrations/index.md",
   "sourceDirName": "Meadow/Meadow.Cloud/Integrations",
   "slug": "/Meadow/Meadow.Cloud/Integrations/",
-  "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/",
+  "permalink": "/docs/Meadow/Meadow.Cloud/Integrations/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Meadow/Meadow.Cloud/Integrations/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "meadowSidebar",
   "previous": {
     "title": "Health Monitoring",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Health_Monitoring/"
+    "permalink": "/docs/Meadow/Meadow.Cloud/Health_Monitoring/"
   },
   "next": {
     "title": "Integrate with Azure Event Hubs",
-    "permalink": "/DocsDocusaurus/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/"
+    "permalink": "/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/"
   }
 }

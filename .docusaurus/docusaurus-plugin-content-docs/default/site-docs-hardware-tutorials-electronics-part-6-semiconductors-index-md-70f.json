@@ -6,7 +6,7 @@
   "source": "@site/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/index.md",
   "sourceDirName": "Hardware/Tutorials/Electronics/Part6/Semiconductors",
   "slug": "/Hardware/Tutorials/Electronics/Part6/Semiconductors/",
-  "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/",
+  "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Hardware/Tutorials/Electronics/Part6/Semiconductors/index.md",
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "hardwareSidebar",
   "previous": {
     "title": "Review",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Review/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/Review/"
   },
   "next": {
     "title": "Silicon (Si)",
-    "permalink": "/DocsDocusaurus/docs/Hardware/Tutorials/Electronics/Part6/Silicon/"
+    "permalink": "/docs/Hardware/Tutorials/Electronics/Part6/Silicon/"
   }
 }
