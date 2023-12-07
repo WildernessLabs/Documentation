@@ -30,11 +30,6 @@ public override Task Initialize()
     // classical .NET events can also be used for all sensors
     nineDofImuWing.Updated += HandleResult;
 
-    // or for individual sensors
-    nineDofImuWing.Acceleration3DUpdated += HandleResult;
-    nineDofImuWing.AngularVelocity3DUpdated += HandleResult;
-    nineDofImuWing.MagneticField3DUpdated += HandleResult;
-
     nineDofImuWing.StartUpdating(TimeSpan.FromSeconds(1));
 
     return Task.CompletedTask;
