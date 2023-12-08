@@ -16,6 +16,8 @@ Most common batteries are cylindrical, which offers a compromise between a perfe
 
 The circuit symbol for a battery is two uneven plates:
 
+![Battery Circuit Symbol; two uneven plates at a short distance from each other.](/Common_Files/SingleCell_Battery.svg)
+
 <!-- ![Battery Circuit Symbol; two uneven plates at a short distance from each other.](/Common_Files/SingleCell_Battery.svg){:standalone}
 
 Batteries that have more than one cell, or a battery pack, have the plates repeated:
