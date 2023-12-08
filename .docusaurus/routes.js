@@ -3,52 +3,22 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug/',
-    component: ComponentCreator('/__docusaurus/debug/', '279'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config/',
-    component: ComponentCreator('/__docusaurus/debug/config/', '4d6'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content/',
-    component: ComponentCreator('/__docusaurus/debug/content/', 'dd1'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData/',
-    component: ComponentCreator('/__docusaurus/debug/globalData/', 'db3'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata/',
-    component: ComponentCreator('/__docusaurus/debug/metadata/', '645'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry/',
-    component: ComponentCreator('/__docusaurus/debug/registry/', '491'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes/',
-    component: ComponentCreator('/__docusaurus/debug/routes/', '0ab'),
-    exact: true
-  },
-  {
     path: '/markdown-page/',
     component: ComponentCreator('/markdown-page/', 'bbb'),
     exact: true
   },
   {
     path: '/docs/',
-    component: ComponentCreator('/docs/', '779'),
+    component: ComponentCreator('/docs/', 'b8f'),
     routes: [
       {
         path: '/docs/',
         component: ComponentCreator('/docs/', 'b00'),
+        exact: true
+      },
+      {
+        path: '/docs/',
+        component: ComponentCreator('/docs/', '8db'),
         exact: true
       },
       {
@@ -1184,6 +1154,12 @@ export default [
         sidebar: "meadowSidebar"
       },
       {
+        path: '/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/',
+        component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/', '40b'),
+        exact: true,
+        sidebar: "meadowSidebar"
+      },
+      {
         path: '/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/',
         component: ComponentCreator('/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/', '55e'),
         exact: true,
@@ -1605,6 +1581,181 @@ export default [
       {
         path: '/docs/Netduino/Input_Output/Onboard_Button_+_LED/',
         component: ComponentCreator('/docs/Netduino/Input_Output/Onboard_Button_+_LED/', '214'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Breadboard_Prototyping/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Breadboard_Prototyping/', '759'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Conceptual_Design/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Conceptual_Design/', '3a2'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Industrial_Design/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Industrial_Design/', '73f'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Mass_Production/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Mass_Production/', '74a'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Mass_Production/Certifications/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Mass_Production/Certifications/', '93c'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Mass_Production/MAC_Addresses/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Mass_Production/MAC_Addresses/', 'a97'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Mass_Production/UPCs_EANs/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Mass_Production/UPCs_EANs/', '446'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/', '15b'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/PCBs/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/PCBs/', '56d'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/PCBs/Assembly/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/PCBs/Assembly/', 'a45'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/PCBs/Fabrication/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/PCBs/Fabrication/', '8d4'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/PCBs/Prototyping/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/PCBs/Prototyping/', 'dcb'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/PCBs/Solder_Masks/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/PCBs/Solder_Masks/', '565'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/PCBs/Surface_Finishes/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/PCBs/Surface_Finishes/', '2b7'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Programming/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Programming/', '41e'),
+        exact: true
+      },
+      {
+        path: '/docs/Product_Design_Lifecycle/Schematic_Design/',
+        component: ComponentCreator('/docs/Product_Design_Lifecycle/Schematic_Design/', '637'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/',
+        component: ComponentCreator('/docs/Samples/', '06d'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/',
+        component: ComponentCreator('/docs/Samples/Netduino/', '252'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/Blinky/',
+        component: ComponentCreator('/docs/Samples/Netduino/Blinky/', 'af3'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/ButtonInterruptEvents/',
+        component: ComponentCreator('/docs/Samples/Netduino/ButtonInterruptEvents/', 'e9b'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/ControllingAServo/',
+        component: ComponentCreator('/docs/Samples/Netduino/ControllingAServo/', '3df'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/DrivingLED_w_PWM/',
+        component: ComponentCreator('/docs/Samples/Netduino/DrivingLED_w_PWM/', 'adb'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/GlitchFilter/',
+        component: ComponentCreator('/docs/Samples/Netduino/GlitchFilter/', '2fd'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/LCDMicroLiquidCrystal/',
+        component: ComponentCreator('/docs/Samples/Netduino/LCDMicroLiquidCrystal/', '90c'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/OnboardButtonAndLed/',
+        component: ComponentCreator('/docs/Samples/Netduino/OnboardButtonAndLed/', '361'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/PotentiometerControlled_RgbLed/',
+        component: ComponentCreator('/docs/Samples/Netduino/PotentiometerControlled_RgbLed/', '46b'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/ReadDS3234/',
+        component: ComponentCreator('/docs/Samples/Netduino/ReadDS3234/', '582'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/RGB_Blinky/',
+        component: ComponentCreator('/docs/Samples/Netduino/RGB_Blinky/', '27a'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/RgbLed/',
+        component: ComponentCreator('/docs/Samples/Netduino/RgbLed/', '3e3'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/SDCardIO/',
+        component: ComponentCreator('/docs/Samples/Netduino/SDCardIO/', '888'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/TMP102BasicRead/',
+        component: ComponentCreator('/docs/Samples/Netduino/TMP102BasicRead/', 'dcf'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/TMP102ReadWrite/',
+        component: ComponentCreator('/docs/Samples/Netduino/TMP102ReadWrite/', '123'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/UARTTest/',
+        component: ComponentCreator('/docs/Samples/Netduino/UARTTest/', '428'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/WebRequest/',
+        component: ComponentCreator('/docs/Samples/Netduino/WebRequest/', '698'),
+        exact: true
+      },
+      {
+        path: '/docs/Samples/Netduino/WebRequestMultithreaded/',
+        component: ComponentCreator('/docs/Samples/Netduino/WebRequestMultithreaded/', 'df7'),
         exact: true
       }
     ]

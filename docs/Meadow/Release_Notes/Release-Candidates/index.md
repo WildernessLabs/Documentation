@@ -80,11 +80,10 @@ You can see the complete list of [additions and fixes here](https://github.com/W
 ## Meadow Samples
 
 As usual, all our samples repos and API docs have been updated to latest API changes:
-
 * [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
 * [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
 * [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
-* [API Documentation](http://beta-developer.wildernesslabs.co/docs/api/Meadow/)
+* [API Documentation](../../../docs/api/Meadow/)
 
 # RC-3 (v0.9.6.3)
 
@@ -109,7 +108,7 @@ This is a full stack release requiring an OS update, new nuget packages, a new M
 Start by making sure you have the latest version of the CLI (0.96.x) by running:
 
 ```bash
-dotnet tool update WildernessLabs.Meadow.CLI --global
+dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
 
 ### Updating Meadow.OS
@@ -128,7 +127,7 @@ meadow flash os
 
 ## Known Issues
 
-**Meadow.CLI Mx (MacOS silicon) Support** - We have a workaround for those developers who have installed the CLI, but the basics work, like
+**Meadow.CLI Mx (MacOS silicon) Support** - We have a workaround for those developers who have installed the CLI, but the basics work, like 
 
 ```bash
 meadow list ports
@@ -150,7 +149,7 @@ dotnet meadow.dll flash os
 
 If you are using the `Network` section of `meadow.config.yaml` to configure network access, you will now have to match this example's format instead:
 
-```yaml
+```
 Network:
     Interfaces:
         - Name: Ethernet
@@ -174,7 +173,6 @@ Network:
 Here's another update with API improvements and new drivers! This release includes nugets and Visual Studio extensions - you don't need to flash a new OS - but that doesn't mean it's a small release.
 
 RC-2.2 includes:
-
 * **Meadow Desktop Support** - it's now possible build Meadow apps on a desktop! This release includes preliminary support with more coming soon
 * **New Pin Controller API pattern** - We've overhauled the way Meadow creates ports from pins. This both simplifies using peripheral drivers and makes Meadow far more flexible when using IO expanders.
 * **Improved MicroGraphics APIs** - We added a new circular arc API to draw angles as well a top-to-bottom API cleanup
@@ -186,7 +184,7 @@ You just need to grab the latest Meadow nugets (verion 0.95.0) and install the l
 
 ## Pin Controller pattern
 
-Meadow.Foundation drivers no longer require passing in the Meadow Device when using constructor overloads the accept Meadow pins. This means existing applications will need to be updated. This just requires removing the `Device` parameter when instantiating drivers.
+Meadow.Foundation drivers no longer require passing in the Meadow Device when using constructor overloads the accept Meadow pins. This means existing applications will need to be updated. This just requires removing the `Device` parameter when instantiating drivers. 
 
 For example:
 
@@ -196,7 +194,8 @@ For example:
 **RC2-2** (new!)
 `var myLed = new Led(Device.Pins.D02);`
 
-Under the hood, Meadow pins are now aware of their parent controller. This means a pin for your Meadow F7 knows about the Meadow F7 device which is why the `Device` parameter is no longer needed. This also brings a big improvement when using IO expanders such as the MC23xxx family of digital IO expanders. It's now possible to pass in pins from different controllers to the same peripheral. This is useful for complex peripheral devices that have multiple IO pins.
+Under the hood, Meadow pins are now aware of their parent controller. This means a pin for your Meadow F7 knows about the Meadow F7 device which is why the `Device` parameter is no longer needed. This also brings a big improvement when using IO expanders such as the MC23xxx family of digital IO expanders. It's now possible to pass in pins from different controllers to the same peripheral. This is useful for complex peripheral devices that have multiple IO pins. 
+
 
 # RC-2.1 (v0.9.4.0)
 
@@ -243,7 +242,7 @@ This release includes:
 
 * **SD Card Support** - APIs are now available to use the SD card reader with the Meadow Core-Compute Module
 * **Static IP Address Support** - Meadow now supports setting a static IP address for the WiFi connection
-* **Network Credentials Enhancements** - New methods have been added to work with data in [wifi.config.yaml](../../Meadow.OS/Configuration/WiFi_Configuration/) file
+* **Network Credentials Enhancements** - New methods have been added to work with data in [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file
 
 ## Updating to RC-2
 
@@ -311,7 +310,7 @@ Device:
 
 #### Network Credentials Enhancements
 
-Two new methods have been added to work with the data in the [wifi.config.yaml](../../Meadow.OS/Configuration/WiFi_Configuration/) file:
+Two new methods have been added to work with the data in the [wifi.config.yaml](../../Meadow.OS//Configuration/WiFi_Configuration/index.md) file:
 
 * `ConnectToDefaultAccessPoint`
 * `ClearStoredAccessPointInformation`
@@ -330,7 +329,7 @@ The delay between the OS waking and calls to `Console.WriteLine` is no longer ne
 
 #### Static IP Address Support for WiFi
 
-The system now supports setting a static IP address for the WiFi connection. The address can be set through the [`meadow.config.yaml` file](../../Meadow.OS/Configuration/OS_Device_Configuration/) by adding the following to the config file:
+The system now supports setting a static IP address for the WiFi connection. The address can be set through the [`meadow.config.yaml` file](../../Meadow.OS/Configuration/OS_Device_Configuration/index.md) by adding the following to the config file:
 
 ```yaml
 Network:
@@ -349,6 +348,7 @@ Network:
 * **New Air quality sensor** - The ENS160 air quality sensor is now supported
 
 This release also includes several Meadow.Foundation bug fixes - [details are here](https://github.com/WildernessLabs/Meadow.Foundation/milestone/18?closed=1)
+
 
 # RC-1.1 (v0.9.0.4)
 
@@ -410,7 +410,7 @@ We're so excited to present to you the first Meadow v1.0 Release-Candidate!!! Th
 * **New App Lifecycle** - We've greatly simplified the boilerplate code needed to create a Meadow application, as well as provided an easy way to integrate with the new Power, Sleep, and OS/App update lifecycle.
 * **Lower Power Use on Idle** - The STM32 CPU now idles using its hardware capabilities, reducing total Meadow power consumption considerably.
 * **TLS Certificate Validation & other improvements** - The OS now checks the full validity of TLS (aka. HTTPS/SSL) server certificates against a root Certificate Authority registry. We also implemented logic for more edge cases of TLS datastream processing.
-* **Faster WiFi Connection** - We have made changes to the event model on the
+* **Faster WiFi Connection** - We have made changes to the event model on the 
 32 resulting in a 90% decrease in WiFi connection times, reducing WiFi connection time to 3-5 second on average.
 * **Faster Meadow.OS Startup** - We removed an errant 10 second wait time on startup.
 * **Core-Compute Module Ethernet Support** - Ethernet connectivity is now available on the Core-Compute Module.
@@ -504,7 +504,7 @@ Meadow.OS now has JiT compilation support, which compiles code on startup to low
 
 While we've thoroughly tested JiT with all samples, there may still be edge cases where unexpected behavior is seen, so JiT is off by default. A later release will make it on by default.
 
-To [enable JIT in your Meadow application](../../Meadow.OS/Configuration/OS_Device_Configuration)
+To [enable JIT in your Meadow application](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration)
 
 1. **Add a Meadow config file** - add a text file named `meadow.config.yaml`
 2. **Configure Build Action** - Ensure file is set to a Build configuration of *none* and is always copied to the Output Directory
@@ -539,7 +539,7 @@ We did a major overhaul to app, network, and OS build-time configuration support
 
 Meadow apps now have sophisticated support for a number of configuration files and formats (both YAML and JSON).
 
-Check out the [Configuration Guide](../../Meadow.OS/Configuration/) for more information.
+Check out the [Configuration Guide](/Meadow/Meadow.OS/Configuration/) for more information.
 
 ## Meadow.Core
 
@@ -568,7 +568,7 @@ If you're moving from a Meadow.OS Beta app to a Meadow.OS Release Candidate app,
 For more information check out the following docs:
 
 * **[Lifecycle Update](Lifecycle_Update)** - Instructions for updating apps from previous betas to the new app pattern.
-* **[Meadow Apps](../../Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifecycle events.
+* **[Meadow Apps](/Meadow/Meadow_Basics/Apps/)** - Provides an overview of the new app model and lifecycle events.
 
 ### Service Resolver
 
@@ -580,11 +580,11 @@ The `Resolver` also contains an instance of a simple `Logger`. This `Logger` sup
 
 ### Application Configuration
 
-`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](../../Meadow.OS/Configuration/Application_Settings_Configuration/) for more information.
+`Meadow.Core` now supports application configuration through config files names `app.config.json` or `app.config.yaml`. These files use the Microsoft Configuration Extensions API to maintain familiarity and a common API. Take a look at the [Application Settings Configuration Guide](/Meadow/Meadow.OS/Configuration/Application_Settings_Configuration) for more information.
 
 ### Network APIs
 
-A unified API for getting access to the devices `INetworkAdapters` has been introduced and the old mechanisms for interacting with the WiFi adapter have been deprecated. See the updates in the [Networking Guide](../../Meadow.OS/Networking) for more information.
+A unified API for getting access to the devices `INetworkAdapters` has been introduced and the old mechanisms for interacting with the WiFi adapter have been deprecated. See the updates in the [Networking Guide](/Meadow/Meadow.OS/Networking) for more information.
 
 ### Power & Sleep APIs
 
@@ -691,10 +691,9 @@ As part of the stability and performance work, we've invested significant time o
 * [bufferRgb888 and 8888 missing InvertPixel implementation #391](https://github.com/WildernessLabs/Meadow.Foundation/issues/391) - Fixed.
 * [PushButton LongPress not working properly #408](https://github.com/WildernessLabs/Meadow.Foundation/issues/408) - Default time duration for long-press added.
 * [PushButton with port ctor fails #422](https://github.com/WildernessLabs/Meadow.Foundation/issues/422) - Fixed.
-* [Buffer Overflow occurring on certain projects, that locked up Visual Studio](https://github.com/WildernessLabs/Meadow_Issues/issues/212) - Fixed
+* [Buffer Overflow occurring on certain projects, that locked up Visual Studio ](https://github.com/WildernessLabs/Meadow_Issues/issues/212) - Fixed
 
 ## Known Issues
-
 * If the Deploy fails during the file transfer, you MUST reset the board before deploying again. Deploy will fail if you don't. After resetting and re-deploying the transfer should then continue where it left off. A fix is being worked on for RC2
 * There is some extra logging code that shows how many bytes are being sent and received between the Meadow and Visual Studio, so we can track down a buffer overflow bug. This extra logging will be removed in RC2.
 * Occasionally (hopefully rarely) you may get an error which relates to serial port/addresses already being in use. You may have to reboot your machine and meadow device to be able to free up the port/address and be able to redeploy your Meadow. If you see it and can supply us with a consistent repro, that would be very useful to squashing this bug.

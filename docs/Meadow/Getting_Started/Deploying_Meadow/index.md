@@ -4,18 +4,14 @@ title: Meadow OS Deployment
 subtitle: Flashing the Meadow with the latest OS via Meadow.CLI
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs groupId="operating-systems">
-  <TabItem value="win" label="Windows" default>
-    
-    When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it.
+When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it.
 
 ## Go to the instructions for your development system
 1. [Windows](#windows)
 2. [macOS](#macos)
 3. [Linux (Debian, Ubuntu)](#linux-debian-ubuntu)
+
+## Windows
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
 
@@ -43,13 +39,22 @@ From a console with admin rights, execute following command:
 meadow install dfu-util
 ```
 
+### Put the device into DFU Bootloader mode.
+To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
+
+**If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
+
+**If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
+
+![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
+
 ### Install Meadow USB drivers
 
 Before flashing a Meadow board, open the Device Manager and check:
 - When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
 - When connecting it normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
 
-![Meadow drivers shown in Bootloader and regular mode](./meadow_driver_state.png){:standalone}
+![Meadow drivers shown in Bootloader and regular mode]({{ page.url }}meadow_driver_state.png){:standalone}
 
 If the board is in this state you can skip the next step and move on to the [Download Meadow OS and network binaries](#download-meadow-os-and-network-binaries).
 
@@ -78,15 +83,6 @@ Execute the following command in your console:
 meadow download os
 ```
 
-### Put the device into DFU Bootloader mode.
-To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
-
-**If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
-
-**If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
-
-![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
-
 ### Flash Meadow.OS and Coprocessor Firmware
 
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your console:
@@ -99,9 +95,9 @@ When the flashing process has completed with no errors, disconnect and reconnect
 
 Your board is now ready to have a Meadow application deployed to it!
 
-  </TabItem>
-  <TabItem value="mac" label="MacOS">
-    [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+## macOS
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
 
 ### Install .NET SDK
 
@@ -282,11 +278,6 @@ Once connected the Meadow device via the USB cable and having put the device int
 ```console
 meadow flash os
 ```
-  </TabItem>
-</Tabs>
-
-
-
 
 #### Option 2 (from normal mode)
 This following will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
@@ -326,4 +317,5 @@ meadow flash os -s [PORT]
 Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
-## [Next - Hello, Meadow](../Hello_World/)
+## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)
+

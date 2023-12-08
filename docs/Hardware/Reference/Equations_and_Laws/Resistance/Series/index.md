@@ -8,7 +8,7 @@ subtitle: Calculating total resistance when resistors are connected end-to-end.
 
 ### Series Resistance Calculation
 
-```text
+```
 Total R = ∑(R1...Rn)
 ```
 
@@ -16,17 +16,17 @@ Total R = ∑(R1...Rn)
 
 Resistors can be placed in series (end to end), in a circuit like the following:
 
-![Diagram of three resistors in series from a source voltages going through R1, R2, and R3, in order.](../../../../Tutorials/Electronics/Part4/Resistors_in_Series.svg){:standalone}
+![](/Hardware/Tutorials/Electronics/Part4/Resistors_in_Series.svg){:standalone}
 
 In this case, the total resistance is the _sum_ of each resistor. So for instance, given the following resistors:
 
-* **R1** - `100Ω`
-* **R2** - `5Ω`
-* **R3** - `1kΩ`
+ * **R1** - `100Ω`
+ * **R2** - `5Ω`
+ * **R3** - `1kΩ`
 
 Then the total resistance would be:
 
-```text
+```
 Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 ```
 
@@ -34,7 +34,7 @@ Total Resistance = 1,000Ω + 100Ω + 5Ω = 1,105Ω
 
 Therefore, the equation to calculate total series resistance is as follows:
 
-```text
+```
 Total R = ∑(R1...Rn)
 ```
 
@@ -44,19 +44,19 @@ Resistors in a series share a common current, that is the amount of amps flowing
 
 So for instance, given the previously calculated resistance of `1,105Ω`, if there is a `5V` supply of electrical force, Ohm's law can be used to calculate the current at any given point as:
 
-```text
+```
 I = 5V / 1,105Ω = 0.004A = 4mA
 ```
 
 So no matter where in the circuit that current is measured, it would be `4mA`:
 
-![](../../../../Tutorials/Electronics/Part4/Support_Files/Common_Current_w_Values.svg){:standalone}
+![](/Hardware/Tutorials/Electronics/Part4/Support_Files/Common_Current_w_Values.svg){:standalone}
 
 ### Power Calculation
 
 The `P = I^2 * R` form of the power law can be used to calculate the power at any resistor (`n`) in a series:
 
-```text
+```
 Pn = I^2 * Rn
 ```
 

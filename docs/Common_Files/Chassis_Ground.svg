@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="61px" viewBox="0 0 96 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Chassis_Ground</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Common-and-Ground" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="bevel">
+        <g id="Artboard" transform="translate(-318.000000, -239.000000)" stroke-width="3" stroke="#524740">
+            <g id="Chassis-Ground" transform="translate(302.000000, 239.000000)">
+                <g id="Chassis_Ground" transform="translate(64.000000, 30.000000) rotate(-90.000000) translate(-64.000000, -30.000000) translate(34.000000, -16.000000)">
+                    <polyline id="Path-3-Copy" points="0 26 32 -3.55271368e-15 32 66 7.10542736e-15 92"></polyline>
+                    <polyline id="Path-3-Copy-2" points="0 58 32 32 60 32"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

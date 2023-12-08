@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="104px" viewBox="0 0 90 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Photoresistor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Resistors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-582.000000, -72.000000)">
+            <g id="Photoresistor" transform="translate(570.000000, 71.000000)">
+                <g transform="translate(12.000000, 0.000000)">
+                    <polyline id="Resistor-Copy" stroke="#524740" stroke-width="2" stroke-linejoin="bevel" points="10 65 15 65 20 52 30.5 78 40 52 50 78 60 52 70 78 75 65 80 65"></polyline>
+                    <g id="Line" transform="translate(68.500000, 13.500000) rotate(-330.000000) translate(-68.500000, -13.500000) translate(66.000000, 0.000000)">
+                        <polygon id="Triangle" fill="#524740" transform="translate(2.500000, 20.000000) scale(1, -1) translate(-2.500000, -20.000000) " points="2.5 13.5 5 26.5 0 26.5"></polygon>
+                        <path d="M2.5,0 L2.5,20" id="Path-3" stroke="#524740" stroke-width="2"></path>
+                    </g>
+                    <g id="Line-Copy" transform="translate(78.500000, 19.500000) rotate(-330.000000) translate(-78.500000, -19.500000) translate(76.000000, 6.000000)">
+                        <polygon id="Triangle" fill="#524740" transform="translate(2.500000, 20.000000) scale(1, -1) translate(-2.500000, -20.000000) " points="2.5 13.5 5 26.5 0 26.5"></polygon>
+                        <path d="M2.5,0 L2.5,20" id="Path-3" stroke="#524740" stroke-width="2"></path>
+                    </g>
+                    <circle id="Oval" stroke="#524740" stroke-width="2" cx="45" cy="65" r="39"></circle>
+                    <path d="M10,65 L0,65" id="Path-4" stroke="#524740" stroke-width="2"></path>
+                    <path d="M90,65 L80,65" id="Path-4-Copy" stroke="#524740" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

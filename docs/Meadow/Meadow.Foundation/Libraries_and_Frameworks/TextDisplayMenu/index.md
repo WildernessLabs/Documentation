@@ -16,16 +16,16 @@ The menu can be created programmatically or loaded from JSON, and has a number o
 
 Before using a `TextDisplayMenu` you need to:
 
-* Search and install the Meadow.Foundation.Displays.TextDisplayMenu NuGet package.
-* Search and install a driver NuGet package for your target display, such as Meadow.Foundation.Displays.TftSpi or Meadow.Foundation.Displays.Lcd.CharacterDisplay.
+ * Search and install the Meadow.Foundation.Displays.TextDisplayMenu NuGet package.
+ * Search and install a driver NuGet package for your target display, such as Meadow.Foundation.Displays.TftSpi or Meadow.Foundation.Displays.Lcd.CharacterDisplay.
 
 Generally, to use `TextDisplayMenu` you need to:
 
-* Configure an `ITextDisplay` or `µGraphicsLibrary` to display the menu.
-* Define the menu items in JSON or programmatically using the `MenuItem`, `MenuPage`, etc. classes.
-* Instantiate a new `Menu` class, passing the display object, and  either the JSON or menu classes.
-* Wire up user inputs (such as buttons or a rotary encoder) to call `Next()`, `Previous()` and `Select()` on the menu for navigation.
-* Render the menu by calling `Enable()`.
+ * Configure an `ITextDisplay` or `µGraphicsLibrary` to display the menu.
+ * Define the menu items in JSON or programmatically using the `MenuItem`, `MenuPage`, etc. classes.
+ * Instantiate a new `Menu` class, passing the display object, and  either the JSON or menu classes.
+ * Wire up user inputs (such as buttons or a rotary encoder) to call `Next()`, `Previous()` and `Select()` on the menu for navigation.
+ * Render the menu by calling `Enable()`.
 
 ## Circuit
 
@@ -35,7 +35,7 @@ The following schematic illustrates a typical configuration for driving the menu
 
 ## Configuring the Display
 
-TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphics` library, which itself implements `ITextDisplay`.
+TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphics` library, which itself implements `ITextDisplay`.
 
 ## Defining the Menu
 
@@ -53,6 +53,7 @@ The menu items support the following properties:
 | `SubItems` | `sub`     | Array of child menu items for submenus. |
 
 
+
 ### Defining a Menu Programmatically
 
 To create programmatically, create an array of `MenuItem` objects which represents a page of menu choices. Optionally, you can add sub-pages of items by adding them to the `SubItems` property.
@@ -67,7 +68,7 @@ var menuItems = new MenuItem[]
     new MenuItem("Span4", command: "startSpan4"),
     new MenuItem("Snake", command: "startSnake"),
     new MenuItem("Tetraminos", command: "startTetraminos"),
-    new MenuItem("Options",
+    new MenuItem("Options", 
                 subItems: new MenuItem[]{new MenuItem("Sound {value}", id: "sound", type: "OnOff", value: true),
                                          new MenuItem("Volume {value}", id: "volume", type: "Numerical", value: 5),
                                          new MenuItem("Clear scores", command: "clearScores"),
@@ -153,7 +154,7 @@ For example, the following json code defines a hierarchical menu arranged in men
 ]
 ```
 
-### Adding the Menu JSON as a Resource
+### Adding the Menu JSON as a Resource 
 
 To add the JSON file to the project as a resource:
 
@@ -317,17 +318,29 @@ To resolve, check that are the connections are securely in place and/or use a di
 
 For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Displays.TextDisplayMenu/Samples). Optionally, you can out check this project uploaded on Hackster.
 
-<!-- <table>
+<table>
+  <tbody>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing menu navigation of the TFT display via three buttons, as connected according to the circuit diagram on this page." src="../../../../Common_Files/Hackster/GraphicsMenu.gif"/>
-        </td>
-        <td style="width:50%; font-size:20px;">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-an-interactive-menu-with-textdisplaymenu-using-meadow-218884">Build an Interactive Menu with TextDisplayMenu Using Meadow</a>
-                <br/>
-                Learn how easy is to create interactive menus with editable values and submenus using TextDisplayMenu with a ST7789 display and push buttons
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing menu navigation of the TFT display via three buttons, as connected according to the circuit diagram on this page."
+          src="../../../../Common_Files/Hackster/GraphicsMenu.gif"
+        />
+      </td>
+      <td style={{ width: "50%", fontSize: 20 }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/build-an-interactive-menu-with-textdisplaymenu-using-meadow-218884"
+          >
+            Build an Interactive Menu with TextDisplayMenu Using Meadow
+          </a>
+          <br />
+          Learn how easy is to create interactive menus with editable values and
+          submenus using TextDisplayMenu with a ST7789 display and push buttons
+        </p>
+      </td>
     </tr>
-</table> -->
+  </tbody>
+</table>
+

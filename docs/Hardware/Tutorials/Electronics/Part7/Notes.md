@@ -5,15 +5,15 @@
 * **BJT** = Bipolar Junction Transistor
 * **MOSFET** = Metal-Oxide Semiconductor Field-Effect Transistors
 
-Both are "transistors," however, BJTs are usually what people have historically thought of as transistors. They're the original transistor design and have been used for 70+ years.
+Both are "transistors," however, BJTs are usually what people have historically thought of as transistors. They're the original transistor design and have been used for 70+ years. 
 
 BJTs are fine, but for modern circuits, we use MOSFETs for nearly everything. They're inherently more power efficient, because as we will learn, they operate on voltage, rather than current.
 
-Additionally, when working with larger current loads, you'll almost always want to use a MOSFET.
+Additionally, when working with larger current loads, you'll almost always want to use a MOSFET. 
 
 ### The Basics
 
-Transistors act as logical switches or amplifiers.
+Transistors act as logical switches or amplifiers. 
 
 #### As a Logical Switch
 
@@ -28,6 +28,7 @@ However, transistors can be used for more than just switching, in fact, they can
 [diagram]
 
 This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and to a lesser degree, capacitors (which we'll dive into later).
+
 
 #### Physical Configuration
 
@@ -45,21 +46,25 @@ Transistors almost always have three leads, and though they're called different 
 
 Both MOSFETs and BJTs come in two common flavors (there are actually more types of MOSFETs, but they're specialized and we'll cover them later). These two flavors describe whether or not they allow electrons or holes to flow (N-Type and P-Type) through them easily.
 
-In MOSFETs, the kind that allows electrons (negative charge carriers) to flow are called _N-Channel_, and the corresponding type in BJTs are called _NPN_ transistors.
+In MOSFETs, the kind that allows electrons (negative charge carriers) to flow are called _N-Channel_, and the corresponding type in BJTs are called _NPN_ transistors. 
 
 Negative type (N-Channel MOSFETs and NPN BJTs) are by far the most commonly used transistors, so we'll spend the majority of our time on them.
 
 The other kind, that allow holes (positive charge carriers) to flow easily are known as _P-Channel_ when referring to MOSFETs, and _PNP_ when referring to BJTs.
 
+
 ### BJT Transistors
+
 
 #### Function
 
+
 A small current applied to the base allows more current to flow from the collector to the emitter.
 
-The ratio of the currents is called the Beta. So a beta of `10`, means that `10mA` of current at base means `100mA` can flow from collector to emitter.
+The ratio of the currents is called the Beta. So a beta of `10`, means that `10mA` of current at base means `100mA` can flow from collector to emitter. 
 
-Beta is often notated as `h`<sub>`FE`</sub>. It also often varies based on the current at the collector (`I`<sub>`C`</sub>). A good guideline is to use a factor of 10 to drive the junction into saturation.
+
+Beta is often notated as `h`<sub>`FE`</sub>. It also often varies based on the current at the collector (`I`<sub>`C`</sub>). A good guideline is to use a factor of 10 to drive the junction into saturation. 
 
 Beta: `I`<sub>`C`</sub> = `I`<sub>`B`</sub> * `h`<sub>`FE`</sub>
 
@@ -73,18 +78,18 @@ To determine `I`<sub>`B`</sub> we need to determine how much current needed to d
 
 #### NPN vs. PNP
 
-The simplest practical difference between a NPN and PNP type of transistor is that NPN is `OFF` (no current flow between collector and emitter) by default (when no current is applied to the base), and an NPN is `ON` by default.
+The simplest practical difference between a NPN and PNP type of transistor is that NPN is `OFF` (no current flow between collector and emitter) by default (when no current is applied to the base), and an NPN is `ON` by default. 
 
 This is because a NPN transistor is effectively two diodes pointing out, and when the base region is saturated with current, it begins to conduct. Whereas [blah]
 
-However, the underlying physics
+However, the underlying physics 
 
 * NPN transistors _source_ current in to the base.
 * PNP transistors _sink_ current into the base.
 
 [need diagram of what this means]
 
-NPN
+NPN 
 
 [many tutorials say that you can just swap the voltages and polarity and use a PNP instead of an NPN, but that's not really true. In fact, PNP is a little difficult to use in a modern circuit, in which logic levels are used to control larger voltages. Consider the following circuit:]
 
@@ -92,19 +97,22 @@ NPN
 
 [No way to turn this off, and in fact, it'll blow the transistor]
 
+
 #### Mnemonic
 
 NPN = **N**ever **P**oints i**N**.
+
+
 
 #### High-Side vs. Low-Side
 
 #### Nomenclature
 
-Beta =
-
-* `V`<sub>`C`</sub> = Voltage @ Collector
-* `I`<sub>`B`</sub> = Current at Base
-* `V`<sub>`BE`</sub> = Voltage from Base to Emitter
+Beta = 
+ 
+ * `V`<sub>`C`</sub> = Voltage @ Collector
+ * `I`<sub>`B`</sub> = Current at Base
+ * `V`<sub>`BE`</sub> = Voltage from Base to Emitter
 
 `VCC` = Voltage @ Common Collectors; positive supply voltage at all the collectors within a circuit.
 
@@ -121,15 +129,14 @@ If using a Transistor or MOSFET to power a motor other things with a coil, such 
 ### MOSFETs
 
 Two types:
-
 * **Depletion** - Current flows by default. Applying a negative voltage causes the current flow to stop.
 * **Enhancement** - Comes in N-channel and P-channel types. N-channel MOSFETs are the ones you'll use most often.
 
 #### Parts
 
 * **Gate** - Like the base on a BJT. Controlling voltage lead.
-* **Drain** -
-* **Source** -
+* **Drain** - 
+* **Source** - 
 
 #### Operation
 
@@ -139,7 +146,7 @@ Work like a variable resistor, in which the amount of resistance between drain a
 
 #### Nomenclature
 
-* **Threshold Voltage** - `V`<sub>`GS`</sub> Threshold. The amount of voltage necessary at the gate to allow current to flow between source and drain.
+* **Threshold Voltage** - `V`<sub>`GS`</sub> Threshold. The amount of voltage necessary at the gate to allow current to flow between source and drain. 
 * **`R`<sub>`DS`</sub>`ON`** - Resistance between the drain and the source.
 
 Logic-level MOSFETs allow you to control them with "logical-level" voltages, or <`5V`. F1P30N06L is a common one.

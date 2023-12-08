@@ -70,7 +70,7 @@ Something to be aware when creating PWM ports on multiple pins is that PWM pins 
 
 ### Hardware PWM
 
-Hardware PWM signals are controlled via an [`IPwmPort`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.IPwmPort.html), which is created via an `IPwmController`:
+Hardware PWM signals are controlled via an [`IPwmPort`](/docs/api/Meadow/Meadow.Hardware.IPwmPort.html), which is created via an `IPwmController`:
 
 ```csharp
 IPwmPort pwm = Device.CreatePwmPort(Device.Pins.D07, new Frequency(100, Frequency.UnitType.Hertz), 0.5f);
@@ -79,7 +79,7 @@ pwm.Start();
 
 ### Software Generated via `SoftPwmPort`
 
-For PWM frequencies below `1hz` (one cycle per second), as used in industrial control systems such as HVACs, Meadow.Foundation contains a [`Generators.SoftPwmPort`](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Generators.SoftPwmPort.html) that can be created on any  `IDigitalOutputPort` and used just like a hardware PWM port:
+For PWM frequencies below `1hz` (one cycle per second), as used in industrial control systems such as HVACs, Meadow.Foundation contains a [`Generators.SoftPwmPort`](/docs/api/Meadow.Foundation/Meadow.Foundation.Generators.SoftPwmPort.html) that can be created on any  `IDigitalOutputPort` and used just like a hardware PWM port:
 
 ```csharp
 IDigitalOutputPort digiOut = Device.CreateDigitalOutputPort(Device.Pins.D00);

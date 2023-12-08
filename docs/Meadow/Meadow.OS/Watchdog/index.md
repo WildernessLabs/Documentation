@@ -4,4 +4,4 @@ title: Watchdog Timer
 subtitle: Content moved.
 ---
 
-This content has moved to [here](../Automatic_Restarts/).
+This content has moved to [here](/Meadow/Meadow.OS/Automatic_Restarts/).

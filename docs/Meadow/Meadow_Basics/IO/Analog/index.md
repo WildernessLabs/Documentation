@@ -4,7 +4,7 @@ title: Analog I/O
 subtitle: Reading and writing non-binary voltages via the Analog-to-Digital Converter (ADC), and Digital-to-Analog Converter (DAC).
 ---
 
-In modern digital electronics, we often deal with finite states of `HIGH` or `LOW`, which represent digital `1`/`0`, or `On`/`Off`, respectively. However, there are many sensors or other integrations that communicate not in binary, but in a range of voltages. For instance, a [TMP35 analog temp sensor](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) might output `0V` when it's reading an ambient temperature of `0ºC`, `1.6V` @ `50ºC`, and `3.3V` @ `100ºC`.
+In modern digital electronics, we often deal with finite states of `HIGH` or `LOW`, which represent digital `1`/`0`, or `On`/`Off`, respectively. However, there are many sensors or other integrations that communicate not in binary, but in a range of voltages. For instance, a [TMP35 analog temp sensor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature.html) might output `0V` when it's reading an ambient temperature of `0ºC`, `1.6V` @ `50ºC`, and `3.3V` @ `100ºC`.
 
 Analog ports are specifically design for this scenario, and are able to operate throughout a specified range of voltages, in both an input (reading) and output (writing) capacity.
 
@@ -18,7 +18,7 @@ For sample Meadow applications that illustrate the usage of analog ports, check 
 
 ## Analog Input
 
-Analog input is converted to a digital value via the onboard _Analog to Digital Converter_ (ADC), which is accessed via an [`AnalogInputPort`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html), and created from a device that implements `IAnalogInputController`:
+Analog input is converted to a digital value via the onboard _Analog to Digital Converter_ (ADC), which is accessed via an [`AnalogInputPort`](/docs/api/Meadow/Meadow.Hardware.AnalogInputPort.html), and created from a device that implements `IAnalogInputController`:
 
 ```csharp
 IAnalogInputPort analogIn = Device.CreateAnalogInputPort(Device.Pins.A02);
@@ -70,7 +70,7 @@ analogIn.StartUpdating();
 
 Because the filter is optional, passing `null` for it will result in getting notified every time the analog input port is sampled.
 
-For more information, see the [Events and IObservable guide](../../Events_and_IObservable/).
+For more information, see the [Events and IObservable guide](/Meadow/Meadow_Basics/Events_and_IObservable/).
 
 #### `StartUpdating()`/`StopUpdating()`
 
@@ -80,7 +80,7 @@ In order to get events or notifications, the `StartUpdating()` method must be ca
 void StartUpdating(int sampleCount = 10, int sampleIntervalDuration = 40, int standbyDuration = 100);
 ```
 
-For more information on oversampling, see the [Working with Sensor guide](../../../Meadow.Foundation/Working_with_Sensors/).
+For more information on oversampling, see the [Working with Sensor guide](/Meadow/Meadow.Foundation/Working_with_Sensors/).
 
 ### Input Voltage Tolerance and Sample Circuit
 
@@ -95,11 +95,11 @@ It's important to note that unlike the digital inputs (which are `5V` tolerant),
 
 ##### Dividing Input Voltage
 
-If your sensor regularly operates at a higher voltage range, for instance, if it's a `5V` sensor, a two resistor [_voltage divider_](../../../../Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/) should be used to "divide" the voltage down from `5V` to `3.3V`.
+If your sensor regularly operates at a higher voltage range, for instance, if it's a `5V` sensor, a two resistor [_voltage divider_](/Hardware/Tutorials/Electronics/Part5/Level_Shifting_Lab/) should be used to "divide" the voltage down from `5V` to `3.3V`.
 
 ##### Transient Voltage Suppression
 
-Additionally, it's important to protect the ADC from occasional voltage spikes, typically by using a [Diode](../../../../Hardware/Tutorials/Electronics/Part6/General_Diodes) and a [resistor](../../../../Tutorials/Electronics/Part4/Resistance/) as illustrated in this [tutorial](https://www.electroniclinic.com/input-overvoltage-protection-for-arduino-inputs-using-a-zener-diode/)
+Additionally, it's important to protect the ADC from occasional voltage spikes, typically by using a [Diode](/Hardware/Tutorials/Electronics/Part6/General_Diodes) and a [resistor](/Hardware/Tutorials/Electronics/Part4/Resistance/) as illustrated in this [tutorial](https://www.electroniclinic.com/input-overvoltage-protection-for-arduino-inputs-using-a-zener-diode/)
 
 ##### Voltage "Storage" and Normalization
 
@@ -121,7 +121,7 @@ Additionally, there is one more interesting component in the circuit, `D2`, whic
 
 ### Analog Reference (`AREF`)
 
-The _analog reference_ (`AREF`) pin provides a reference voltage for the [_Analog to Digital Converter_ (ADC)](../../../Meadow_Basics/IO/Analog/) to compare against. Typically, this should be supplied with `3.3V`, so as a convenience, the `AREF` pin is actually connected to the `3.3V` rail via `0Ω` resistor that is located next to the `D08` pin, just below the main MCU:
+The _analog reference_ (`AREF`) pin provides a reference voltage for the [_Analog to Digital Converter_ (ADC)](/Meadow/Meadow_Basics/IO/Analog/) to compare against. Typically, this should be supplied with `3.3V`, so as a convenience, the `AREF` pin is actually connected to the `3.3V` rail via `0Ω` resistor that is located next to the `D08` pin, just below the main MCU:
 
 ![Image showing the location of the AREF 0Ω resistor, which is just below the F7 MCU, and on the right side, when the board is turned so that the USB connector is on top. The resistor is immediately to the left of the D08 header pin.](/Common_Files/F7_Micro_AREF_Resistor.svg)
 

@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: MicroGraphics Library
-subtitle: Using the lightweight, MCU-optimized Meadow.Foundation µGraphics 2D drawing library with Meadow.
+subtitle: Using the lightweight, MCU-optimized Meadow.Foundation MicroGraphics 2D drawing library with Meadow.
 ---
 
 <!--
@@ -10,9 +10,9 @@ Doc Notes:
 
 -->
 
-The Meadow.Foundation µGraphics library (MicroGraphics), formerly known as GraphicsLibrary, is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on pixel display devices.
+The Meadow.Foundation MicroGraphics library, formerly known as GraphicsLibrary, is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on pixel display devices.
 
-µGraphics includes the ability to draw many different primitives such as lines, shapes, text (using bitmap fonts), as well as bitmap images. Note - It can also be used to display Jpegs by using the open-source `SimpleJpegDecoder` nuget package.
+MicroGraphics includes the ability to draw many different primitives such as lines, shapes, text (using bitmap fonts), as well as bitmap images. Note - It can also be used to display JPEGs by using the open-source `SimpleJpegDecoder` nuget package.
 
 Additionally, it implements `ITextDisplay`, so it enables any graphic display to be a canvas for use with the `TextDisplayMenu` library, easily enabling menus to be created and displayed on graphics displays.
 
@@ -22,11 +22,11 @@ To use the graphics display you:
  2. Draw your graphics to the canvas (in-memory display buffer).
  3. Call `Show()` to copy the canvas content to the display.
 
-# Initializing the µGraphics Library
+# Initializing the MicroGraphics Library
 
 In Meadow.Foundation, every graphics display driver manages its own buffer, since each display has different requirements in terms of display size, color depth and byte order.
 
-For this reason, an initialized display driver must be passed to the µGraphics instance during construction. For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
+For this reason, an initialized display driver must be passed to the MicroGraphics instance during construction. For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
 
 ```csharp
 St7789 st7789;
@@ -65,7 +65,7 @@ canvas.Rotation = RotationType._270Degrees;
 
 # Canvas and Painter's Model
 
-The µGraphics Library utilizes the _painter’s model_. That means that as you draw onto the drawing surface, each subsequent drawing operation is applied on top of the previous. For this reason, it's useful to think of an instantiated µGraphics class as _canvas_ that you'll draw to.
+The MicroGraphics Library utilizes the _painter’s model_. That means that as you draw onto the drawing surface, each subsequent drawing operation is applied on top of the previous. For this reason, it's useful to think of an instantiated MicroGraphics class as _canvas_ that you'll draw to.
 
 Unlike layers in programs like Photoshop, once you have drawn something, you can’t undraw it, or remove layers. If you want to build an application like that, you either need to store a list of your draw operations and then re-draw each of the ones that you want to apply.
 
@@ -89,7 +89,7 @@ canvas.Show();
 
 ## Coordinate System
 
-µGraphics uses a standard X/Y cartesian coordinate system for drawing and placing elements, with the origin (`0`,`0`) in the top left of the canvas. Increasing the X and Y coordinate moves right and down, respectively.
+MicroGraphics uses a standard X/Y cartesian coordinate system for drawing and placing elements, with the origin (`0`,`0`) in the top left of the canvas. Increasing the X and Y coordinate moves right and down, respectively.
 
 <!-- TODO: need an illustration -->
 
@@ -230,13 +230,34 @@ Executing this code would result in something similar to the following:
 
 ## Drawing Images
 
-µGraphics includes the ability to draw bitmap images via the `DrawBitmap()` method.
+MicroGraphics includes the ability to draw bitmap images via the `DrawBitmap()` method.
 
 <!-- need sample -->
 
+### Make Images Available to Code
+
+In order to use images with MicroGraphics, you need to make them available to your app. The common way to do this is to embed image assets as resources in your .NET project.
+
+1. Add the image to your project structure. For Visual Studio 2022, you can also right-click a solution folder and select **Add** > **Existing Item...** and find your image file to copy it into the project.
+1. Make the image an embedded resource copied to output directory.
+    * In Visual Studio 2022...
+        1. Select the image in Solution Explorer.
+        1. Within the **Properties** panel, change the **Build Action** to **Embedded resource**.
+        1. Also within the **Properties** panel, change the **Copy to Output Directory** setting to **Copy if newer**.
+    * In Visual Studio Code...
+        1. Open the parent .csproj file.
+        1. Find or add an `<ItemGroup>` where you will organize your embedded resources.
+        1. Add an `<EmbeddedResource ...>` element to the item group, setting the appropriate `Include` attribute and add a containing `<CopyToOutputDirectory ...>` element.
+
+            ```csharp
+            <EmbeddedResource Include="images\logo.bmp">
+              <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            </EmbeddedResource>
+            ```
+
 ### JPEG Decoding
 
-We recommend using the [`SimpleJpegDecoder` library](https://github.com/adrianstevens/SimpleJpegDecoder) to convert JPEG images into bitmaps for use with the µGraphics Library. For example, the following code illustrates how to load a JPEG image from a resource, store it in a `BufferRgb888` object, and display it on screen:
+We recommend using the [`SimpleJpegDecoder` library](https://github.com/adrianstevens/SimpleJpegDecoder) to convert JPEG images into bitmaps for use with the MicroGraphics Library. For example, the following code illustrates how to load a JPEG image from a resource, store it in a `BufferRgb888` object, and display it on screen:
 
 ```csharp
 var jpgData = LoadResource("meadow.jpg");
@@ -254,7 +275,7 @@ display.Show();
 
 ## Drawing Text
 
-For performance and typical IoT display size reasons, µGraphics supports drawing text using bitmap fonts which define glyphs by their pixels, rather than their curves (as is done in fonts such as TrueType or OpenType). Meadow.Foundation includes a number of bitmap fonts.
+For performance and typical IoT display size reasons, MicroGraphics supports drawing text using bitmap fonts which define glyphs by their pixels, rather than their curves (as is done in fonts such as TrueType or OpenType). Meadow.Foundation includes a number of bitmap fonts.
 
 ```csharp
 graphics.CurrentFont = new Font12x20();
@@ -285,7 +306,7 @@ graphics.DrawText(
 
 ### Paths
 
-µGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GraphicsPath` object and drawn using the `DrawPath` method.
+MicroGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GraphicsPath` object and drawn using the `DrawPath` method.
 
 `GraphicsPath` uses the concepts of **verbs** to control the path. It currently supports:
 
@@ -352,41 +373,61 @@ protected void Render()
 
 You can check these MicroGraphics Samples on Hackster that you can try out yourself.
 
-<!-- <table>
+<table>
+  <tbody>
     <tr>
-        <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsClock.gif"/>
-        </td>
-        <td style="width:50%; font-size:20px;">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-st7789-display-using-meadow-e2295a">Working with Graphics on a ST7789 Display Using Meadow</a>
-                <br/>
-                Learn how to connect an SPI LCD display to your Meadow board to draw shapes, text and images with the Meadow.Foundation Graphics Library.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img src="../../../../Common_Files/Hackster/GraphicsClock.gif" />
+      </td>
+      <td style={{ width: "50%", fontSize: 20 }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-st7789-display-using-meadow-e2295a"
+          >
+            Working with Graphics on a ST7789 Display Using Meadow
+          </a>
+          <br />
+          Learn how to connect an SPI LCD display to your Meadow board to draw
+          shapes, text and images with the Meadow.Foundation Graphics Library.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsTetris.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-your-own-tetris-game-with-meadow-bc5643">Make Your Own Tetris Game with Meadow</a>
-                <br/>
-                Learn how easy is to make a Tetris game with a joystick and an LED matrix.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img src="../../../../Common_Files/Hackster/GraphicsTetris.gif" />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/make-your-own-tetris-game-with-meadow-bc5643"
+          >
+            Make Your Own Tetris Game with Meadow
+          </a>
+          <br />
+          Learn how easy is to make a Tetris game with a joystick and an LED
+          matrix.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsMorse.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/train-your-morse-code-spelling-skills-with-meadow-3f2d9e">Train your Morse Code spelling skills with Meadow</a>
-                <br/>
-                Learn how to spell the random alphabet letters and numbers in morse code with a push button using Meadow.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img src="../../../../Common_Files/Hackster/GraphicsMorse.gif" />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/train-your-morse-code-spelling-skills-with-meadow-3f2d9e"
+          >
+            Train your Morse Code spelling skills with Meadow
+          </a>
+          <br />
+          Learn how to spell the random alphabet letters and numbers in morse
+          code with a push button using Meadow.
+        </p>
+      </td>
     </tr>
-</table> -->
+  </tbody>
+</table>

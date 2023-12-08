@@ -38,6 +38,7 @@ const config = {
   title: 'Wilderness Labs Developer Portal',
   tagline: 'Wilderness Labs developer documentation and resource site.',
   favicon: 'img/favicon.ico',
+  staticDirectories: ['docs', 'static'],
   customFields: {
     email: 'hello@wildernesslabs.co',
     twitter_username: 'wildernesslabs',

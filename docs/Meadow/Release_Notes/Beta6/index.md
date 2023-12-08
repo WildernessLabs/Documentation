@@ -126,7 +126,6 @@ New repos can be found here:
 * **Improved error messages** - The CLI is now properly handling several unhandled exceptions and error messages have been updated for clarity
 
 ### Visual Studio extensions
-
 * **Port selector in Windows** - The Meadow extensions for Visual Studio 2019 and 2022 now have a Meadow port selector widget on the toolbar - this greatly streamlines selecting the Meadow COM port
 * **Visual Studio for Mac 2022** - Now that VS for Mac 2022 has "gone gold" and enabled extensions we're now able to support the latest Mac IDE
 
@@ -152,7 +151,7 @@ This update consists of OS binaries and a new CLI. There are no API changes or n
 To update, start by installing the latest version of Meadow CLI (0.19.0):
 
 ```bash
-dotnet tool update WildernessLabs.Meadow.CLI --global
+dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
 
 Download the latest os:
@@ -350,7 +349,7 @@ It's now possible to have Meadow.OS automatically connect to a preferred WiFi ne
 
 You can also configure the name of the device, and more.
 
-For more information, check out the [Configuration guide](../../Meadow.OS/Configuration/).
+For more information, check out the [Configuration guide](/Meadow/Meadow.OS/Configuration/).
 
 ### Network Time Protocol (NTP)
 

@@ -6,7 +6,7 @@ subtitle: Working with an SD card on the Meadow Core-Compute Development Kit
 
 The Meadow Core-Compute Development Kit includes an SD card add-on, and one can be connected to a Core-Compute module designs. You can use the SD card system for many tasks such as saving data to a removable card or providing configuration updates.
 
-There is an event subscription system to monitor for external storage events in your Meadow app. And, from there, file operations can be done with the `System.IO` API as described in the [File System docs](../File_System/).
+There is an event subscription system to monitor for external storage events in your Meadow app. And, from there, file operations can be done with the `System.IO` API as described in the [File System docs](/Meadow/Meadow.OS/File_System/).
 
 ## Enable SD card hardware support
 
@@ -18,7 +18,7 @@ Device:
     SdStorageSupported: true
 ```
 
-For more information about this setting, read the details in the [OS & Device Configuration](../Configuration/OS_Device_Configuration/) documentation.
+For more information about this setting, read the details in the [OS & Device Configuration](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/) documentation.
 
 ## Check for external storage devices
 
@@ -79,6 +79,6 @@ void PlatformOS_ExternalStorageEvent(IExternalStorage storage, ExternalStorageSt
 }
 ```
 
-If a Meadow device were running in a remote location, local log files could be written to one of the [Meadow named directories](../File_System/). Then, when external storage is inserted, it could copy those log files to the new storage location for analysis.
+If a Meadow device were running in a remote location, local log files could be written to one of the [Meadow named directories](/Meadow/Meadow.OS/File_System/). Then, when external storage is inserted, it could copy those log files to the new storage location for analysis.
 
 Or, if your app wants to allow configuration changes via SD card import, your Meadow app could scan for new config files and alter local configuration accordingly.

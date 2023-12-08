@@ -10,7 +10,7 @@ subtitle: Getting started with OtA
 
 Meadow.Cloud provides secure, Over-the-Air (OtA) updates, which enable you to push a new version of a Meadow application to a device in the field over the network.
 
-To get OtA setup you need to first [provision your device](../Device_Provisioning/). Then, you need to package an application that enables the _Update Service_ and upload it to Meadow.Cloud. Finally, you can publish your package to be received by your devices.
+To get OtA setup you need to first [provision your device](/Meadow/Meadow.Cloud/Device_Provisioning/). Then, you need to package an application that enables the _Update Service_ and upload it to Meadow.Cloud. Finally, you can publish your package to be received by your devices.
 
 ## Enable Update Service in Meadow.Core
 

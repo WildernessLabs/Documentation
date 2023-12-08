@@ -1,7 +1,7 @@
 {
   "unversionedId": "index",
   "id": "index",
-  "title": "index",
+  "title": "Developer Portal",
   "description": "Upcoming Events",
   "source": "@site/docs/index.md",
   "sourceDirName": ".",
@@ -12,6 +12,7 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "layout": "Home"
+    "layout": "Home",
+    "title": "Developer Portal"
   }
 }

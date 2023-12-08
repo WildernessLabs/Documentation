@@ -4,4 +4,4 @@ title: Meadow.OS
 subtitle: Content moved.
 ---
 
-This content has moved to [here](../../Meadow.OS/index.md).
+This content has moved to [here](/Meadow/Meadow.OS/index).

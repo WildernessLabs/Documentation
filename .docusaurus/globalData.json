@@ -952,6 +952,11 @@
               "sidebar": "meadowSidebar"
             },
             {
+              "id": "Meadow/Meadow.Cloud/Integrations/AzureEventGrid/index",
+              "path": "/docs/Meadow/Meadow.Cloud/Integrations/AzureEventGrid/",
+              "sidebar": "meadowSidebar"
+            },
+            {
               "id": "Meadow/Meadow.Cloud/Integrations/AzureEventHubs/index",
               "path": "/docs/Meadow/Meadow.Cloud/Integrations/AzureEventHubs/",
               "sidebar": "meadowSidebar"
@@ -1303,6 +1308,150 @@
             {
               "id": "Netduino/Input_Output/Onboard_Button_+_LED/index",
               "path": "/docs/Netduino/Input_Output/Onboard_Button_+_LED/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Breadboard_Prototyping/index",
+              "path": "/docs/Product_Design_Lifecycle/Breadboard_Prototyping/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Conceptual_Design/index",
+              "path": "/docs/Product_Design_Lifecycle/Conceptual_Design/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Industrial_Design/index",
+              "path": "/docs/Product_Design_Lifecycle/Industrial_Design/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Mass_Production/Certifications/index",
+              "path": "/docs/Product_Design_Lifecycle/Mass_Production/Certifications/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Mass_Production/index",
+              "path": "/docs/Product_Design_Lifecycle/Mass_Production/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Mass_Production/MAC_Addresses/index",
+              "path": "/docs/Product_Design_Lifecycle/Mass_Production/MAC_Addresses/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Mass_Production/UPCs_EANs/index",
+              "path": "/docs/Product_Design_Lifecycle/Mass_Production/UPCs_EANs/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/index",
+              "path": "/docs/Product_Design_Lifecycle/Mass_Production/USB_VendorIDs/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/PCBs/Assembly/index",
+              "path": "/docs/Product_Design_Lifecycle/PCBs/Assembly/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/PCBs/Fabrication/index",
+              "path": "/docs/Product_Design_Lifecycle/PCBs/Fabrication/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/PCBs/index",
+              "path": "/docs/Product_Design_Lifecycle/PCBs/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/PCBs/Prototyping/index",
+              "path": "/docs/Product_Design_Lifecycle/PCBs/Prototyping/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/PCBs/Solder_Masks/index",
+              "path": "/docs/Product_Design_Lifecycle/PCBs/Solder_Masks/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/PCBs/Surface_Finishes/index",
+              "path": "/docs/Product_Design_Lifecycle/PCBs/Surface_Finishes/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Programming/index",
+              "path": "/docs/Product_Design_Lifecycle/Programming/"
+            },
+            {
+              "id": "Product_Design_Lifecycle/Schematic_Design/index",
+              "path": "/docs/Product_Design_Lifecycle/Schematic_Design/"
+            },
+            {
+              "id": "readme",
+              "path": "/docs/"
+            },
+            {
+              "id": "Samples/index",
+              "path": "/docs/Samples/"
+            },
+            {
+              "id": "Samples/Netduino/Blinky/index",
+              "path": "/docs/Samples/Netduino/Blinky/"
+            },
+            {
+              "id": "Samples/Netduino/ButtonInterruptEvents/index",
+              "path": "/docs/Samples/Netduino/ButtonInterruptEvents/"
+            },
+            {
+              "id": "Samples/Netduino/ControllingAServo/index",
+              "path": "/docs/Samples/Netduino/ControllingAServo/"
+            },
+            {
+              "id": "Samples/Netduino/DrivingLED_w_PWM/index",
+              "path": "/docs/Samples/Netduino/DrivingLED_w_PWM/"
+            },
+            {
+              "id": "Samples/Netduino/GlitchFilter/index",
+              "path": "/docs/Samples/Netduino/GlitchFilter/"
+            },
+            {
+              "id": "Samples/Netduino/index",
+              "path": "/docs/Samples/Netduino/"
+            },
+            {
+              "id": "Samples/Netduino/LCDMicroLiquidCrystal/index",
+              "path": "/docs/Samples/Netduino/LCDMicroLiquidCrystal/"
+            },
+            {
+              "id": "Samples/Netduino/OnboardButtonAndLed/index",
+              "path": "/docs/Samples/Netduino/OnboardButtonAndLed/"
+            },
+            {
+              "id": "Samples/Netduino/PotentiometerControlled_RgbLed/index",
+              "path": "/docs/Samples/Netduino/PotentiometerControlled_RgbLed/"
+            },
+            {
+              "id": "Samples/Netduino/ReadDS3234/index",
+              "path": "/docs/Samples/Netduino/ReadDS3234/"
+            },
+            {
+              "id": "Samples/Netduino/RGB_Blinky/index",
+              "path": "/docs/Samples/Netduino/RGB_Blinky/"
+            },
+            {
+              "id": "Samples/Netduino/RgbLed/index",
+              "path": "/docs/Samples/Netduino/RgbLed/"
+            },
+            {
+              "id": "Samples/Netduino/SDCardIO/index",
+              "path": "/docs/Samples/Netduino/SDCardIO/"
+            },
+            {
+              "id": "Samples/Netduino/TMP102BasicRead/index",
+              "path": "/docs/Samples/Netduino/TMP102BasicRead/"
+            },
+            {
+              "id": "Samples/Netduino/TMP102ReadWrite/index",
+              "path": "/docs/Samples/Netduino/TMP102ReadWrite/"
+            },
+            {
+              "id": "Samples/Netduino/UARTTest/index",
+              "path": "/docs/Samples/Netduino/UARTTest/"
+            },
+            {
+              "id": "Samples/Netduino/WebRequest/index",
+              "path": "/docs/Samples/Netduino/WebRequest/"
+            },
+            {
+              "id": "Samples/Netduino/WebRequestMultithreaded/index",
+              "path": "/docs/Samples/Netduino/WebRequestMultithreaded/"
             }
           ],
           "draftIds": [],

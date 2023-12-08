@@ -10,5 +10,5 @@ You can also quickly prototype graphics using an emulated IDisplay object that r
 
 ## Meadow.Desktop environments
 
-* [Meadow.Linux](Getting_Started_Linux/)
-* [Meadow.Windows](Getting_Started_Windows/)
+ * [Meadow.Linux](Getting_Started_Linux/)
+ * [Meadow.Windows](Getting_Started_Windows/)

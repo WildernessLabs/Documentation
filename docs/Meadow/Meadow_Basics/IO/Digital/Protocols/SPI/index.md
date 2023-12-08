@@ -48,7 +48,7 @@ Any pin that supports digital output can be used as a chip select line.
 
 ## Creating an SPI Bus
 
-To use SPI in Meadow, first create an [`ISpiBus`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.ISpiBus.html) from the `ISpiController` you're using:
+To use SPI in Meadow, first create an [`ISpiBus`](/docs/api/Meadow/Meadow.Hardware.ISpiBus.html) from the `ISpiController` you're using:
 
 ```csharp
 ISpiBus spiBus = Device.CreateSpiBus();
@@ -65,7 +65,7 @@ ISpiPeripheral spiPeriph = new SpiPeripheral(spiBus, spiPeriphChipSelect);
 
 ### Peripheral Communication
 
-Generally, you won't need to handle low-level SPI peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.Hardware.IByteCommunications.html) interface, which SPI peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
+Generally, you won't need to handle low-level SPI peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](/docs/api/Meadow/Meadow.Hardware.IByteCommunications.html) interface, which SPI peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
 
 ```csharp
 spiPeriph.WriteByte(0x01);

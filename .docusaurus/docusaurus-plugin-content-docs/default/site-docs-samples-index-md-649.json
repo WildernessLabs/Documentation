@@ -6,7 +6,7 @@
   "source": "@site/docs/Samples/index.md",
   "sourceDirName": "Samples",
   "slug": "/Samples/",
-  "permalink": "/DocsDocusaurus/docs/Samples/",
+  "permalink": "/docs/Samples/",
   "draft": false,
   "editUrl": "https://github.com/WildernessLabs/DocsDocusaurus/tree/main/docs/Samples/index.md",
   "tags": [],

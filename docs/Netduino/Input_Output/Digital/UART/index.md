@@ -14,10 +14,10 @@ The data lines are normally labelled R<sub>x</sub> for receive and T<sub>x</sub>
 
 Serial ports rely upon the transmitter and the receiver being configured identically.  A mismatch in the properties can result in a communication failure.  The four properties most associated with a UART are:
 
-* Baud rate
-* Number of data bits
-* Number of stop bits
-* Parity
+- Baud rate
+- Number of data bits
+- Number of stop bits
+- Parity
 
 #### Voltage Levels
 
@@ -29,7 +29,7 @@ One serial protocol commonly used is [RS-232](https://en.wikipedia.org/wiki/RS-2
 
 There are four UARTs available on the Netduino, labeled as "COM" ports:
 
-![Netduino Pinout](../../../About/Netduino3_Pinout.svg){:standalone}
+![Netduino Pinout](/Netduino/About/Netduino3_Pinout.svg){:standalone}
 
 ## Simple Transmitter and Receiver
 
@@ -56,69 +56,69 @@ namespace UARTTest
 {
     public class Program
     {
-        /// <summary>
-        /// Two com ports, one sender and one receiver.
-        /// </summary>
-        /// <remarks>
-        /// Note that the transmitter and the receiver must be configured to use the
-        /// same baud rate, number of bits etc.
-        /// </remarks>
-        static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
-        static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+		/// <summary>
+		/// Two com ports, one sender and one receiver.
+		/// </summary>
+		/// <remarks>
+		/// Note that the transmitter and the receiver must be configured to use the
+		/// same baud rate, number of bits etc.
+		/// </remarks>
+		static SerialPort transmitter = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
+		static SerialPort receiver = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
 
-        /// <summary>
-        /// Timer object generates and event periodically to transmit data to the receiver.
-        /// </summary>
+		/// <summary>
+		/// Timer object generates and event periodically to transmit data to the receiver.
+		/// </summary>
         static Timer timer = new Timer(Timer_Interrupt, null, 0, 2000);
 
-        /// <summary>
-        /// Variables to hold information about the messages being transmitted and received.
-        /// </summary>
+		/// <summary>
+		/// Variables to hold information about the messages being transmitted and received.
+		/// </summary>
         static int count = 0;
-        static string messageBeingReceived = "";
+		static string messageBeingReceived = "";
 
-        /// <summary>
-        /// The entry point of the program, where the program control starts and ends.
-        /// </summary>
-        public static void Main()
+		/// <summary>
+		/// The entry point of the program, where the program control starts and ends.
+		/// </summary>
+		public static void Main()
         {
             transmitter.Open();
             receiver.Open();
-            receiver.DataReceived += SerialDataReceived;
-            Thread.Sleep(Timeout.Infinite);
+			receiver.DataReceived += SerialDataReceived;
+			Thread.Sleep(Timeout.Infinite);
         }
 
         /// <summary>
-        /// Process data from the serial port(s)
+		/// Process data from the serial port(s)
         /// </summary>
         /// <param name="sender">Serial port that is receiving the data.</param>
         /// <param name="e">Event information.</param>
         static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            if ((e.EventType == SerialData.Chars) && (sender == receiver))
-            {
-                const int BUFFER_SIZE = 1024;
-                byte[] buffer = new byte[BUFFER_SIZE];
+			if ((e.EventType == SerialData.Chars) && (sender == receiver))
+			{
+				const int BUFFER_SIZE = 1024;
+				byte[] buffer = new byte[BUFFER_SIZE];
 
-                int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
-                if (amount > 0)
-                {
-                    char[] characters = Encoding.UTF8.GetChars(buffer);
-                    for (int index = 0; index < amount; index++)
-                    {
-                        if (buffer[index] == '\n')
-                        {
-                            Debug.Print("Message received: " + messageBeingReceived);
-                            messageBeingReceived = "";
-                        }
-                        else
-                        {
-                            messageBeingReceived += characters[index];
-                        }
-                    }
-                }
-            }
-        }
+				int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
+				if (amount > 0)
+				{
+					char[] characters = Encoding.UTF8.GetChars(buffer);
+					for (int index = 0; index < amount; index++)
+					{
+						if (buffer[index] == '\n')
+						{
+							Debug.Print("Message received: " + messageBeingReceived);
+							messageBeingReceived = "";
+						}
+						else
+						{
+							messageBeingReceived += characters[index];
+						}
+					}
+				}
+			}
+		}
 
         /// <summary>
         /// Periodic interrupt generated by the timer.
@@ -181,29 +181,29 @@ The most complex part of this application is the _SerialDataReceived_ event.  Th
 ```csharp
 static void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
 {
-    if ((e.EventType == SerialData.Chars) && (sender == receiver))
-    {
-        const int BUFFER_SIZE = 1024;
-        byte[] buffer = new byte[BUFFER_SIZE];
+	if ((e.EventType == SerialData.Chars) && (sender == receiver))
+	{
+		const int BUFFER_SIZE = 1024;
+		byte[] buffer = new byte[BUFFER_SIZE];
 
-        int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
-        if (amount > 0)
-        {
-            char[] characters = Encoding.UTF8.GetChars(buffer);
-            for (int index = 0; index < amount; index++)
-            {
-                if (buffer[index] == '\n')
-                {
-                    Debug.Print("Message received: " + messageBeingReceived);
-                    messageBeingReceived = "";
-                }
-                else
-                {
-                    messageBeingReceived += characters[index];
-                }
-            }
-        }
-    }
+		int amount = ((SerialPort)sender).Read(buffer, 0, BUFFER_SIZE);
+		if (amount > 0)
+		{
+			char[] characters = Encoding.UTF8.GetChars(buffer);
+			for (int index = 0; index < amount; index++)
+			{
+				if (buffer[index] == '\n')
+				{
+					Debug.Print("Message received: " + messageBeingReceived);
+					messageBeingReceived = "";
+				}
+				else
+				{
+					messageBeingReceived += characters[index];
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -219,7 +219,7 @@ The white dots show the points where the protocol analyzer is expecting to read 
 
 Running the above application generates the following output:
 
-```text
+```
 Sending message: 1
 Message received: 1
 Sending message: 2
@@ -232,16 +232,16 @@ Message received: 4
 
 ## Further Reading
 
-* [Wikipedia article describing UARTs](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter)
-* [MAX232 Datasheet](http://www.ti.com/lit/ds/symlink/max232.pdf)
-* [TTL (Transistor - Transistor Logic)](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic)
-* [RS-232](https://en.wikipedia.org/wiki/RS-232) serial communication
+- [Wikipedia article describing UARTs](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter)
+- [MAX232 Datasheet](http://www.ti.com/lit/ds/symlink/max232.pdf)
+- [TTL (Transistor - Transistor Logic)](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic)
+- [RS-232](https://en.wikipedia.org/wiki/RS-232) serial communication
 
 ## Related Hardware
 
 A number of cables and boards are available to connect TTL serial ports on the Netduino to a PC or Mac over USB.  Examples include:
 
-* [SparkFun's FTDI boards and cables](https://www.sparkfun.com/search/results?term=ftdi)
-* [FTDI Cable](https://www.adafruit.com/product/70)
-* [USV to TTL Serial Cable](https://www.adafruit.com/product/954)
-* [FTDI Friend](https://www.adafruit.com/product/284)
+-	[SparkFun's FTDI boards and cables](https://www.sparkfun.com/search/results?term=ftdi)
+-	[FTDI Cable](https://www.adafruit.com/product/70)
+-	[USV to TTL Serial Cable](https://www.adafruit.com/product/954)
+-	[FTDI Friend](https://www.adafruit.com/product/284)

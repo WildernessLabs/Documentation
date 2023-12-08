@@ -182,7 +182,7 @@ LEDs can be placed in series, as in the following configuration:
 
 However, there are two important considerations in this particular configuration.
 
-First, since the [current for all the components in series is the same](../../../../../Hardware/Tutorials/Electronics/Part4/Series_Resistance/#common-current-different-voltage), all the LEDs have to be rated for the same current; you _can_ mix colors and get the same amount of brightness from each one, but they have to have the same current rating.
+First, since the [current for all the components in series is the same](/Hardware/Tutorials/Electronics/Part4/Series_Resistance/#common-current-different-voltage), all the LEDs have to be rated for the same current; you _can_ mix colors and get the same amount of brightness from each one, but they have to have the same current rating.
 
 Secondly, the `V`<sub>`f`</sub> of each LED is additive; which requires a voltage source with a high enough voltage to overcome the sum of the voltage drops, with enough leftover voltage to still drive current. A general guide is to use a voltage source that is about `1.5x` the sum of the voltage drops.
 
@@ -190,7 +190,7 @@ Secondly, the `V`<sub>`f`</sub> of each LED is additive; which requires a voltag
 
 Calculating the resistance needed is the same as a single LED, except that you must remove all the voltage drops from the voltage source, and the current (`I`) must be the same:
 
-```text
+```
 R = (Vs - (Vf1 + Vfn...)) / I
 ```
 
@@ -204,7 +204,7 @@ The first thing to consider here is the voltage requirement; the circuit contain
 
 However, if we did have an adequate voltage source, the resistance needed is easy to solve for:
 
-```text
+```
 Given:
 R = (Vs - (Vf1 + Vfn...)) / I
 
@@ -240,5 +240,7 @@ To lower the voltage, we typically reduce the duty cycle (amount of time `ON`):
 Because a PWM signal is actually a pulse, at lower frequencies it can cause a noticeable flicker. Humans start to perceive a flicker at around `60Hz` (60 cycles per second) or lower, so it's best to make sure the frequency is above that. Fortunately, this isn't typically an issue, since modern microcontrollers (like the ones that power Meadow and Netduino) are capable of driving PWM signals at many thousands of hertz (Hz).
 
 Incidentally, pigeons notice flicker around `100hz`, so if you're designing circuits for pigeons, you'll need to make sure that your PWM frequency is `100Hz` or higher. 🤣
+
+
 
 ## [Next - LED Lab](../LED_Lab)
