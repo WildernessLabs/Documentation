@@ -27,7 +27,7 @@
           "src": "../../Meadow.Logging/source/Meadow.Logging"
         }
       ],
-      "dest": "api/Meadow",
+      "dest": "docs/api/Meadow",
       "disableGitFeatures": true,
       "disableDefaultFilter": false
     }
