@@ -27,7 +27,6 @@ const sidebars = {
         id: 'Meadow/Meadow.OS/index',
       },
       items: [
-        { type: "doc", id: "Meadow/Meadow.OS/index", className: "hidden-doc" },
         "Meadow/Meadow.OS/Automatic_Restarts/index",
         "Meadow/Meadow.OS/Bluetooth/index",
         "Meadow/Meadow.OS/Cellular/index",
