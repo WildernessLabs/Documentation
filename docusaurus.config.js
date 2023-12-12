@@ -7,27 +7,27 @@ const darkCodeTheme = require('./src/themes/wlDark');
 const getTopNav = () => {
   return [
     {
-      "href": "Meadow/Meadow.OS",
+      "href": "Meadow/Meadow.OS/",
       "label": "Meadow.OS",
     },
     {
-        "href": "Meadow",
+        "href": "Meadow/",
         "label": "Meadow.NET"
     },
     {
-      "href": "Meadow/Meadow.Cloud",
+      "href": "Meadow/Meadow.Cloud/",
       "label": "Meadow.Cloud"
     },
     {
-        "href": "Hardware",
+        "href": "Hardware/",
         "label": "Hardware & Circuits"
     },
     {
-      "href": "Hardware/Tutorials",
+      "href": "Hardware/Tutorials/",
       "label": "Electronics Tutorials"
     },
     {
-      "href": "",
+      "href": "api/",
       "label": "API Docs"
     },
 ];
