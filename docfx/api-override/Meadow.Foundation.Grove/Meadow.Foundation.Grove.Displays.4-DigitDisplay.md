@@ -15,13 +15,12 @@ FourDigitDisplay display;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing ...");
 
     display = new FourDigitDisplay(
-        device: Device, 
         pinClock: Device.Pins.D02,
-        pinData: Device.Pins.D01) 
-    { 
+        pinData: Device.Pins.D01)
+    {
         Brightness = 7,
         ScreenOn = true
     };

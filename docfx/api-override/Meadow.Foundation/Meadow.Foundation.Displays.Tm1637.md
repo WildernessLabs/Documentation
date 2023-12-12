@@ -25,7 +25,7 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
-    display = new Tm1637(Device, Device.Pins.D02, Device.Pins.D01);
+    display = new Tm1637(Device.Pins.D02, Device.Pins.D01);
 
     display.Brightness = 7;
     display.ScreenOn = true;
@@ -59,9 +59,4 @@ public override Task Run()
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![Wiring a TM1637 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png)

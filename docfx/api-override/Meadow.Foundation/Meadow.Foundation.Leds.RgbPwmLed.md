@@ -43,23 +43,23 @@ public async Task TestColors()
 {
     while (true)
     {
-        Console.WriteLine("SetColor(RgbLedColors.Red);");
+        Resolver.Log.Info("SetColor(RgbLedColors.Red);");
         onboardLed.SetColor(Color.Red);
         await Task.Delay(3000);
 
-        Console.WriteLine("StartPulse();");
+        Resolver.Log.Info("StartPulse();");
         await onboardLed.StartPulse();
         await Task.Delay(3000);
 
-        Console.WriteLine("StartPulse(RgbLedColors.Green);");
+        Resolver.Log.Info("StartPulse(RgbLedColors.Green);");
         await onboardLed.StartPulse(Color.Green);
         await Task.Delay(3000);
 
-        Console.WriteLine("SetColor(RgbLedColors.Yellow);");
+        Resolver.Log.Info("SetColor(RgbLedColors.Yellow);");
         onboardLed.SetColor(Color.Yellow);
         await Task.Delay(3000);
 
-        Console.WriteLine("StartPulse(RgbLedColors.Cyan, 200, 200);");
+        Resolver.Log.Info("StartPulse(RgbLedColors.Cyan, 200, 200);");
         await onboardLed.StartPulse(Color.Cyan, TimeSpan.FromMilliseconds(400));
         await Task.Delay(3000);
 
@@ -71,48 +71,6 @@ public async Task TestColors()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Leds.RgbPwmLed_Onboard_Sample)
 
-### Example Code
-
-The following example code loops through the entire 360º of hue spectrum and displays that color on the RGB LED.
-
-```csharp
-public MeadowApp : App<F7Micro, MeadowApp>
-{
-    public MeadowApp()
-    {
-        // create a new RgbPwmLed on pin 8
-        var pwmLed = new RgbPwmLed(
-            redPin: Device.Pins.D11,
-            greenPin: Device.Pins.D10,
-            bluePin: Device.Pins.D09,
-            redLedForwardVoltage: 1.05f,
-            greenLedForwardVoltage: 1.5f,
-            blueLedForwardVoltage: 1.5f);
-        );
-
-        // alternate between blinking and pulsing the LED 
-        while (true)
-        {
-            for (int i = 0; i < 360; i++)
-            {
-                var hue = ((double)i / 360F);
-                Debug.Print(hue.ToString());
-
-                // set the color of the RGB
-                rgbPwmLed.SetColor(Color.FromHsba(((double)i / 360F), 1, 1));
-
-                // for a fun, fast rotation through the hue spectrum:
-                //Thread.Sleep (1);
-                // for a gentle walk through the forest of colors;
-                Thread.Sleep(18);
-            }
-        }
-    }
-}
-```
-
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples) 
-
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Leds.RgbPwmLed/RgbPwmLed_Fritzing.svg" 
+![](../../API_Assets/Meadow.Foundation.Leds.RgbPwmLed/RgbPwmLed_Fritzing.svg)

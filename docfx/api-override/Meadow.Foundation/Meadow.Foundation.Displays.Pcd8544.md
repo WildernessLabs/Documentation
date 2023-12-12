@@ -10,13 +10,9 @@ remarks: *content
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Pcd8544/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Pcd8544/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Pcd8544.svg?label=Meadow.Foundation.Displays.Pcd8544" alt="NuGet Gallery for Meadow.Foundation.Displays.Pcd8544" /></a> |
 
-The **PCD8544** display, also known as a Nokia 5110 LCD, is a single color 84x84 LCD display. Data is sent to the display via SPI. The also typically also include an led backlight controlled via a single pin. 
+The **PCD8544** display, also known as a Nokia 5110 LCD, is a single color 84x84 LCD display. Data is sent to the display via SPI. The also typically also include an LED backlight controlled via a single pin. 
 
 These displays have excellent visibility in daylight, even without the backlight, making them a good choice for builds with low-power restrictions and require visibility is bright light or daylight.
-
-### Purchasing
-
-* [NOKIA 5110 SPI LCD graphic display 84x48](https://www.ebay.com/sch/i.html?LH_CAds=&_ex_kw=&_fpos=&_fspt=1&_mPrRngCbx=1&_nkw=Nokia+5110+arduino&_sacat=&_sadis=&_sop=12&_udhi=&_udlo=&_fosrp=1)
 
 ### Code Example
 
@@ -66,14 +62,9 @@ public override Task Run()
 | LIGHT   | GND        |
 | VCC     | 3V3        |
 | CLK     | SCK        |
-| DIN     | MOSI       |
+| DIN     | COPI       |
 | DC      | D00        |
 | CE      | D01        |
 | RST     | D02        |
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![SevenSegment displays](../../API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png)

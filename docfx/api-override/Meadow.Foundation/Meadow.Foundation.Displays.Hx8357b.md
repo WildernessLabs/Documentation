@@ -73,9 +73,4 @@ public override Task Run()
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Hx8357b/Hx8357b_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![Wiring up Hx8357b to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tft.Hx8357b/Hx8357b_Fritzing.png)

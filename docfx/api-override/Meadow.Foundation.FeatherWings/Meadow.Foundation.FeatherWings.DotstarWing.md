@@ -21,11 +21,11 @@ public override Task Initialize()
     Console.WriteLine("Initialize...");
 
     var spiBus = Device.CreateSpiBus();
-    dotStarWing = new DotstarWing(spiBus) 
+    dotStarWing = new DotstarWing(spiBus)
     {
         Brightness = 0.1f
     };
-    graphics = new MicroGraphics(dotStarWing) 
+    graphics = new MicroGraphics(dotStarWing)
     {
         CurrentFont = new Font4x6()
     };

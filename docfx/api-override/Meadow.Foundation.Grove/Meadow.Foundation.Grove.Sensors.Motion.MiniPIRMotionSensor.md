@@ -15,19 +15,19 @@ remarks: *content
 public override Task Initialize()
 {
     var miniPIRMotionSensor = new MiniPIRMotionSensor(
-        Device.CreateDigitalInputPort(
-            Device.Pins.D13, 
-            InterruptMode.EdgeBoth, 
+        Device.CreateDigitalInterruptPort(
+            Device.Pins.D13,
+            InterruptMode.EdgeBoth,
             ResistorMode.Disabled));
-    
+
     miniPIRMotionSensor.OnMotionStart += (sender) =>
     {
-        Console.WriteLine($"Motion start  {DateTime.Now}");
+        Resolver.Log.Info($"Motion start  {DateTime.Now}");
     };
 
-    miniPIRMotionSensor.OnMotionEnd += (sender) => 
-    { 
-        Console.WriteLine($"Motion end  {DateTime.Now}"); 
+    miniPIRMotionSensor.OnMotionEnd += (sender) =>
+    {
+        Resolver.Log.Info($"Motion end  {DateTime.Now}");
     };
 
     return Task.CompletedTask;

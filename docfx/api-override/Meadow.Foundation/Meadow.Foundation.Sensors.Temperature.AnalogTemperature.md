@@ -33,7 +33,7 @@ public override Task Initialize()
     Resolver.Log.Info("Initializing...");
 
     // configure our AnalogTemperature sensor
-    analogTemperature = new AnalogTemperature (
+    analogTemperature = new AnalogTemperature(
         analogPin: Device.Pins.A03,
         sensorType: AnalogTemperature.KnownSensorType.LM35
     );
@@ -43,9 +43,10 @@ public override Task Initialize()
         handler: result => Resolver.Log.Info($"Observer filter satisfied: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C"),
 
         // only notify if the change is greater than 0.5°C
-        filter: result => {
-            if (result.Old is { } old) 
-            {   //c# 8 pattern match syntax. checks for !null and assigns var.
+        filter: result =>
+        {
+            if (result.Old is { } old)
+            {
                 return (result.New - old).Abs().Celsius > 0.5; // returns true if > 0.5°C change.
             }
             return false;
@@ -56,7 +57,8 @@ public override Task Initialize()
     analogTemperature.Subscribe(consumer);
 
     // classical .NET events can also be used:
-    analogTemperature.TemperatureUpdated += (sender, result) => {
+    analogTemperature.TemperatureUpdated += (sender, result) =>
+    {
         Resolver.Log.Info($"Temp Changed, temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
     };
 
@@ -78,61 +80,6 @@ protected async Task ReadTemp()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Sensors.Temperature.AnalogTemperature_Sample)
-
-### Purchasing
-
-TMP36 sensors can be purchased from a number of suppliers including:
-
-* [Adafruit](https://www.adafruit.com/product/165)
-* [Sparkfun](https://www.sparkfun.com/products/10988)
-
-The following application demonstrates how to use the TMP36 in interrupt mode. The sensor will be read every second and changes in values greater than +/- 0.1C will generate and interrupt:
-
-```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    AnalogTemperature analogTemperature;
-
-    public MeadowApp()
-    {
-        Console.WriteLine("Initializing...");
-
-        analogTemperature = new AnalogTemperature (
-            device: Device,
-            analogPin: Device.Pins.A00,
-            sensorType: AnalogTemperature.KnownSensorType.LM35
-        );
-
-        var consumer = AnalogTemperature.CreateObserver(
-            handler: result => {
-                Console.WriteLine($"Observer filter satisfied: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
-            },
-            filter: result => {
-                if (result.Old is { } old) { //c# 8 pattern match syntax. checks for !null and assigns var.
-                    return (result.New - old).Abs().Celsius > 0.5; // returns true if > 0.5°C change.
-                } return false;
-            }
-        );
-        analogTemperature.Subscribe(consumer);
-
-        analogTemperature.TemperatureUpdated += (object sender, IChangeResult<Meadow.Units.Temperature> result) => {
-            Console.WriteLine($"Temp Changed, temp: {result.New.Celsius:N2}C, old: {result.Old?.Celsius:N2}C");
-        };
-
-        ReadTemp().Wait();
-
-        analogTemperature.StartUpdating();
-    }
-
-    async Task ReadTemp()
-    {
-        var temperature = await analogTemperature.Read();
-        Console.WriteLine($"Initial temp: {temperature.New.Celsius:N2}C");
-    }
-}
-```
-
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core.Samples/Sensors.Temperature.AnalogTemperature_Sample) 
 
 ### Wiring Example
 

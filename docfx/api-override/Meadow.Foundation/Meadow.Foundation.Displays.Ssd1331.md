@@ -75,9 +75,4 @@ public override Task Run()
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Tft.Ssd1331/Ssd1331_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
-
-
-
-
+![Wiring a Ssd1331 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tft.Ssd1331/Ssd1331_Fritzing.png)

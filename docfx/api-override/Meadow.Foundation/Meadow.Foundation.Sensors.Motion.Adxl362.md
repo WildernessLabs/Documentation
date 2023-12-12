@@ -16,12 +16,6 @@ The ADXL362 is controlled via I2C.
 
 [Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Adxl362/Samples/) 
 
-## Purchasing
-
-The ADXL362 is available on a small breakout board:
-
-* [Sparkfun ADXL362 Breakout Board](https://www.sparkfun.com/products/11446)
-
 ### Code Example
 
 ```csharp
@@ -50,7 +44,7 @@ public override Task Initialize()
         filter: result =>
         {
             if (result.Old is { } old)
-            { //c# 8 pattern match syntax. checks for !null and assigns var.
+            {
                 return ((result.New.Acceleration3D - old.Acceleration3D)?.Y > new Acceleration(1, AU.MetersPerSecondSquared));
             }
             return false;

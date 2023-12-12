@@ -49,7 +49,7 @@ void TestDigitalMode()
     Resolver.Log.Info("Digital test");
 
     display.SetMode(Max7219.Max7219Mode.Digital);
-    //control indivial LEDs - for 8x8 matrix configurations - use the Meadow graphics library
+    //control individual LEDs - for 8x8 matrix configurations - use the Meadow graphics library
     for (byte i = 0; i < 64; i++)
     {
         for (int d = 0; d < 8; d++)
@@ -77,5 +77,4 @@ public override Task Run()
 
 To wire a Max7219 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Max7219/Max7219_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+![Wiring a SevenSegment to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Max7219/Max7219_Fritzing.png)

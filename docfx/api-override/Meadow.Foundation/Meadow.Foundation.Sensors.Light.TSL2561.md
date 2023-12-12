@@ -13,17 +13,6 @@ The **TSL2561** is alight sensor that is compensated for the presence of infrare
 
 An interrupt pin allows the sensor to generate an interrupt if the sensor reading goes below a lower threshold or exceeds an upper threshold.
 
-The sensor is controlled and data read over the I2C bus.
-
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Tsl2561/Samples/) 
-
-## Purchasing
-
-The TSL2561 is available as a breakout board from the following suppliers:
-
-* [Adafruit](https://www.adafruit.com/product/439)
-* [Sparkfun](https://www.sparkfun.com/products/12055)
-
 Applications using the TSL2561 can operating in two ways:
 
 * Polled

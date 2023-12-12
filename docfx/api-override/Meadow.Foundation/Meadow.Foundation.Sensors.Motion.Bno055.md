@@ -12,9 +12,6 @@ remarks: *content
 
 **BNO055** is a 9-axis absolute orientation sensor. The three sensors (accelerometer, gyroscope and magnetometer) are measured with a 32-bit cortex M0 microcontroller. The BNO055 is controlled via I2C.
 
-### Purchasing
-* [Tindie BNO-055 9-axis motion sensor with fusion hardware](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-fusion/)
-
 ### Code Example
 
 ```csharp
@@ -65,11 +62,11 @@ public override Task Initialize()
     var consumer = Bno055.CreateObserver(
         handler: result => Resolver.Log.Info($"Observer: [x] changed by threshold; new [x]: X:{result.New.Acceleration3D?.X.MetersPerSecondSquared:N2}, old: X:{result.Old?.Acceleration3D?.X.MetersPerSecondSquared:N2}"),
         // only notify if there's a greater than 1 micro tesla on the Y axis
-        
+
         filter: result =>
         {
             if (result.Old is { } old)
-            { //c# 8 pattern match syntax. checks for !null and assigns var.
+            {
                 return ((result.New.Acceleration3D - old.Acceleration3D)?.Y > new Acceleration(1, AU.MetersPerSecondSquared));
             }
             return false;
@@ -80,7 +77,7 @@ public override Task Initialize()
 }
 
 public async override Task Run()
-{ 
+{
     await ReadConditions();
 
     sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
