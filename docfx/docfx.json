@@ -6,28 +6,28 @@
           "files": [
             "/**.csproj"
           ],
-          "src": "../../Meadow.Core/source/Meadow.Core"
+          "src": "../Meadow.Core/source/Meadow.Core"
         },
         {
           "files": [
             "/**.csproj"
           ],
-          "src": "../../Meadow.Contracts/Source/Meadow.Contracts"
+          "src": "../Meadow.Contracts/Source/Meadow.Contracts"
         },
         {
           "files": [
             "/**.csproj"
           ],
-          "src": "../../Meadow.Units/Source/Meadow.Units"
+          "src": "../Meadow.Units/Source/Meadow.Units"
         },
         {
           "files": [
             "/**.csproj"
           ],
-          "src": "../../Meadow.Logging/source/Meadow.Logging"
+          "src": "../Meadow.Logging/source/Meadow.Logging"
         }
       ],
-      "dest": "docs/api/Meadow",
+      "dest": "api/Meadow",
       "disableGitFeatures": true,
       "disableDefaultFilter": false
     }
