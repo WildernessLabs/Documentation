@@ -38,7 +38,7 @@ const config = {
   title: 'Wilderness Labs Developer Portal',
   tagline: 'Wilderness Labs developer documentation and resource site.',
   favicon: 'img/favicon.ico',
-  staticDirectories: ['docs', 'static'],
+  staticDirectories: ['/', 'docs', 'static'],
   customFields: {
     email: 'hello@wildernesslabs.co',
     twitter_username: 'wildernesslabs',
@@ -196,11 +196,11 @@ const config = {
             items: [
               {
                 label: 'Meadow',
-                to: '/docs/Meadow/',
+                to: '/Meadow/',
               },
               {
                 label: 'Netduino',
-                to: '/docs/Netduino/',
+                to: '/Netduino/',
               },
               {
                 label: 'Community',
@@ -208,7 +208,7 @@ const config = {
               },
               {
                 label: 'Developers',
-                to: '/docs/',
+                to: '/',
               },
               {
                 label: 'Blog',
