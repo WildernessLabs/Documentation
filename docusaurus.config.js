@@ -7,23 +7,23 @@ const darkCodeTheme = require('./src/themes/wlDark');
 const getTopNav = () => {
   return [
     {
-      "href": "docs/Meadow/Meadow.OS",
+      "href": "Meadow/Meadow.OS",
       "label": "Meadow.OS",
     },
     {
-        "href": "docs/Meadow",
+        "href": "Meadow",
         "label": "Meadow.NET"
     },
     {
-      "href": "docs/Meadow/Meadow.Cloud",
+      "href": "Meadow/Meadow.Cloud",
       "label": "Meadow.Cloud"
     },
     {
-        "href": "docs/Hardware",
+        "href": "Hardware",
         "label": "Hardware & Circuits"
     },
     {
-      "href": "docs/Hardware/Tutorial",
+      "href": "Hardware/Tutorials",
       "label": "Electronics Tutorials"
     },
     {
@@ -82,6 +82,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/WildernessLabs/DocsDocusaurus/tree/main/',
+          routeBasePath: '/'
         },
         blog: {
           showReadingTime: true,
