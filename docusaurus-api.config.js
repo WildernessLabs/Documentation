@@ -3,35 +3,7 @@
 
 const lightCodeTheme = require('./src/themes/wlLight/index.cjs');
 const darkCodeTheme = require('./src/themes/wlDark/index.cjs');
-
-const getTopNav = () => {
-  return [
-    {
-      "href": "Meadow/Meadow.OS/",
-      "label": "Meadow.OS",
-    },
-    {
-        "href": "Meadow/",
-        "label": "Meadow.NET"
-    },
-    {
-      "href": "Meadow/Meadow.Cloud/",
-      "label": "Meadow.Cloud"
-    },
-    {
-        "href": "Hardware/",
-        "label": "Hardware & Circuits"
-    },
-    {
-      "href": "Hardware/Tutorials/",
-      "label": "Electronics Tutorials"
-    },
-    {
-      "href": "docs/api/",
-      "label": "API Docs"
-    },
-];
-}
+const getTopNav = require('./src/util/nav');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

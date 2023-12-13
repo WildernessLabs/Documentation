@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('./src/themes/wlLight');
 const darkCodeTheme = require('./src/themes/wlDark');
+const getTopNav = require('./src/util/nav');
 
 
 
@@ -16,6 +17,7 @@ const config = {
     email: 'hello@wildernesslabs.co',
     twitter_username: 'wildernesslabs',
     github_username: 'wildernesslabs',
+    topNav: getTopNav()
   },
 
   plugins: ['docusaurus-plugin-sass'],
@@ -82,6 +84,13 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Wilderness Labs`,
       },
       prism: {
         theme: lightCodeTheme,
