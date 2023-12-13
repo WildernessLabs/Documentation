@@ -4,34 +4,7 @@
 const lightCodeTheme = require('./src/themes/wlLight');
 const darkCodeTheme = require('./src/themes/wlDark');
 
-const getTopNav = () => {
-  return [
-    {
-      "href": "Meadow/Meadow.OS/",
-      "label": "Meadow.OS",
-    },
-    {
-        "href": "Meadow/",
-        "label": "Meadow.NET"
-    },
-    {
-      "href": "Meadow/Meadow.Cloud/",
-      "label": "Meadow.Cloud"
-    },
-    {
-        "href": "Hardware/",
-        "label": "Hardware & Circuits"
-    },
-    {
-      "href": "Hardware/Tutorials/",
-      "label": "Electronics Tutorials"
-    },
-    {
-      "href": "api/",
-      "label": "API Docs"
-    },
-];
-}
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -43,7 +16,6 @@ const config = {
     email: 'hello@wildernesslabs.co',
     twitter_username: 'wildernesslabs',
     github_username: 'wildernesslabs',
-    topNav: getTopNav()
   },
 
   plugins: ['docusaurus-plugin-sass'],
@@ -82,7 +54,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/WildernessLabs/Documentation/tree/main/',
-          // routeBasePath: '/'
+          routeBasePath: '/' // <-- removes "docs" from url
         },
         blog: {
           showReadingTime: true,
@@ -109,128 +81,7 @@ const config = {
           alt: 'Wilderness Labs',
           src: 'img/logo.svg',
         },
-        items: [
-          {
-            href: "https://www.wildernesslabs.co/developers",
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Developers',
-          },
-          {
-            href: "https://www.wildernesslabs.co/enterprise",
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Enterprise',
-          },
-          {
-            href: "https://www.wildernesslabs.co/hardware",
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Hardware',
-          },
-          {
-            href: "https://store.wildernesslabs.co/",
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Shop',
-          },
-          {
-            href: "https://community.wildernesslabs.co/",
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Community',
-          },
-          {
-            href: 'https://blog.wildernesslabs.co/',
-            label: 'Blog',
-            position: 'left',
-            external: false,
-          },
-          {
-            href: "https://connect.wildernesslabs.co/contact",
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Contact',
-          },
-          {
-            href: 'https://github.com/WildernessLabs/Documentation',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            items: [
-              {
-                label: 'Facebook',
-                href: 'https://www.facebook.com/wildernesslabs',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/wildernesslabs',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/WildernessLabs',
-              },
-              {
-                label: 'Slack',
-                href: 'http://slackinvite.wildernesslabs.co/',
-              },
-            ],
-          },
-          {
-            title: 'Contact',
-            items: [
-              {
-                label: 'hello@wildernesslabs.co',
-                href: 'mailto:hello@wildernesslabs.co',
-              },
-            ],
-          },
-          {
-            // title: 'Docs',
-            items: [
-              {
-                label: 'Meadow',
-                to: '/Meadow/',
-              },
-              {
-                label: 'Netduino',
-                to: '/Netduino/',
-              },
-              {
-                label: 'Community',
-                to: 'https://community.wildernesslabs.co/',
-              },
-              {
-                label: 'Developers',
-                to: '/',
-              },
-              {
-                label: 'Blog',
-                to: 'https://blog.wildernesslabs.co/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Terms of Use',
-                href: 'https://www.wildernesslabs.co/terms',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'https://www.wildernesslabs.co/privacy',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Wilderness Labs`,
+        items: [],
       },
       prism: {
         theme: lightCodeTheme,

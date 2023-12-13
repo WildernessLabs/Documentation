@@ -30,6 +30,27 @@ jobs:
           path: src
           # ref: develop # <-- required to deploy beta docs
 
+      #docusaurus guides build
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+          # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
+          cache-dependency-path: src/package-lock.json
+      - name: Build and Deploy (mostly just Docusaurus)
+        working-directory: ./src
+        run: |
+          npm install
+          npm run build
+      - uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: './src/build'
+          container_name: '$web'
+          connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
+          overwrite: 'true'
+          #sync: 'true'
+
       # Clone all the Meadow dependencies adjacent for DocFX build use.
       - name: Checkout Meadow.Units side-by-side
         uses: actions/checkout@v3
@@ -128,7 +149,7 @@ jobs:
         run: |
           dfmg
 
-      #docusaurus build
+      #docusaurus api build
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -140,11 +161,7 @@ jobs:
         working-directory: ./src
         run: |
           npm install
-          npm run build
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v2
-      #   with:
-      #     path: ./src/build
+          npm run build --config ./docusaurus-api.config.js
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: './src/build'

@@ -1,9 +1,4 @@
 {
-  // "build": {
-  //   "content": [
-  //     { "files": "**/*.{md,yml}", "src": "docs", "dest": "" }
-  //   ]
-  // },
   "metadata": [
     {
       "src": [
