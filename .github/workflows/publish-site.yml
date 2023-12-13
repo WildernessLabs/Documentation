@@ -161,7 +161,7 @@ jobs:
         working-directory: ./src
         run: |
           npm install
-          npm run build --config ./docusaurus-api.config.js
+          npm run build-api
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: './src/build'
