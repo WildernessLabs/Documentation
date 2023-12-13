@@ -1,9 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("./src/themes/wlLight/index.cjs");
-const darkCodeTheme = require("./src/themes/wlDark/index.cjs");
-const getTopNav = require("./src/util/nav");
+const getTopNav = require("./docusaurus-config/nav");
+const themeConfig = require("./docusaurus-config/theme-config");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -68,63 +67,7 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // TODO: Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
-      navbar: {
-        // title: 'My Site',
-        logo: {
-          alt: "Wilderness Labs",
-          src: "img/logo.svg",
-        },
-        items: [],
-      },
-      footer: {
-        style: "dark",
-        links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Wilderness Labs`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ["csharp", "powershell"],
-      },
-      colorMode: {
-        defaultMode: "light",
-        respectPrefersColorScheme: true,
-      },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: "A4D5IOMP59",
-
-        // Public API key: it is safe to commit it
-        apiKey: "b72b27b61280e89266704664307c36e5",
-
-        indexName: "developer-usaurus-wildernesslabs",
-
-        // Optional: see doc section below
-        contextualSearch: true,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: "external\\.com|domain\\.com",
-
-        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        replaceSearchResultPathname: {
-          from: "/docs/", // or as RegExp: /\/docs\//
-          to: "/",
-        },
-
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: "search",
-
-        //... other Algolia params
-      },
-    }),
+  themeConfig
 };
 
 module.exports = config;
