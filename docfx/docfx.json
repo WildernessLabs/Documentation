@@ -1,3 +1,45 @@
+// {
+//   "build": {
+//     "content": [
+//       { "files": "**/*.{md,yml}", "src": "docs", "dest": "" }
+//     ]
+//   },
+//   "metadata": [
+//     {
+//       "src": [
+//         {
+//           "files": [
+//             "/**.csproj"
+//           ],
+//           "src": "../../Meadow.Core/source/Meadow.Core"
+//         },
+//         {
+//           "files": [
+//             "/**.csproj"
+//           ],
+//           "src": "../../Meadow.Contracts/Source/Meadow.Contracts"
+//         },
+//         {
+//           "files": [
+//             "/**.csproj"
+//           ],
+//           "src": "../../Meadow.Units/Source/Meadow.Units"
+//         },
+//         {
+//           "files": [
+//             "/**.csproj"
+//           ],
+//           "src": "../../Meadow.Logging/source/Meadow.Logging"
+//         }
+//       ],
+//       "dest": "api/Meadow",
+//       "disableGitFeatures": true,
+//       "disableDefaultFilter": false
+//     }
+//   ]
+// }
+
+
 {
   "metadata": [
     {
@@ -28,8 +70,164 @@
         }
       ],
       "dest": "api/Meadow",
-      "disableGitFeatures": true,
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/Meadow.Foundation.Peripherals/Displays.WinForms/**",
+            "/Source/Meadow.Foundation.Core.Samples/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Driver/bin/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Driver/obj/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Datasheet/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Sample/**",
+            "/Source/Meadow.Foundation.Peripherals/**/Samples/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/bin/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Driver/obj/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Sample/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/**/Samples/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Tests/**",
+            "/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple.MapleServer/Utilities/**"
+          ],
+          "src": "../../Meadow.Foundation"
+        }
+      ],
+      "dest": "api/Meadow.Foundation",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/**/Sample/**",
+            "/Source/**/Samples/**",
+            "/Source/**/Driver/bin/**",
+            "/Source/**/Driver/obj/**"
+          ],
+          "src": "../../Meadow.Foundation.Grove"
+        }
+      ],
+      "dest": "api/Meadow.Foundation.Grove",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/**/Sample/**",
+            "/Source/**/Samples/**",
+            "/Source/**/Driver/bin/**",
+            "/Source/**/Driver/obj/**"
+          ],
+          "src": "../../Meadow.Foundation.FeatherWings"
+        }
+      ],
+      "dest": "api/Meadow.Foundation.FeatherWings",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "/**.csproj"
+          ],
+          "exclude": [
+            "/Source/**/Sample/**",
+            "/Source/**/Samples/**",
+            "/Source/**/Driver/bin/**",
+            "/Source/**/Driver/obj/**"
+          ],
+          "src": "../../Meadow.Foundation.mikroBUS"
+        }
+      ],
+      "dest": "api/Meadow.Foundation.mikroBUS",
+      "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
-  ]
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/Meadow/index.md",
+          "api/Meadow.Foundation/index.md",
+          "api/Meadow.Foundation.FeatherWings/index.md",
+          "api/Meadow.Foundation.Grove/index.md",
+          "api/Meadow.Foundation.mikroBUS/index.md"
+        ]
+      },
+      {
+        "files": [
+          "guides/**.md",
+          "guides/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "Common_Assets/**",
+          "API_Assets/**",
+          "guides/**/*.png",
+          "guides/**/*.svg",
+          "guides/**/*.jpg",
+          "guides/**/*.jpeg",
+          "guides/**/*.giv",
+          "guides/**/*.bmp"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "api-override/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "docs/**"
+        ]
+      }
+    ],
+    "dest": "docs",
+    "globalMetadata": 
+    {
+      "_appTitle": "Meadow.Foundation API website",
+      "_appFooter": "Meadow.Foundation API website",
+      "_disableContribution": true,
+      "_gitUrlPattern": "",
+      "newFileRepository": 
+      {
+        "branch": "master"
+      }
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "_exported_templates/default"
+    ],
+    "postProcessors": [],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
 }

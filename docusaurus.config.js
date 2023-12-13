@@ -58,7 +58,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'WildernessLabs', // Usually your GitHub org/user name.
-  projectName: 'DocsDocusaurus', // Usually your repo name.
+  projectName: 'Documentation', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -81,15 +81,15 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/WildernessLabs/DocsDocusaurus/tree/main/',
-          // routeBasePath: '/'
+            'https://github.com/WildernessLabs/Documentation/tree/main/',
+          routeBasePath: '/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/',
+            'https://github.com/WildernessLabs/Documentation/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
