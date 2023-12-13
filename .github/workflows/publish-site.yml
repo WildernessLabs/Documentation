@@ -115,10 +115,10 @@ jobs:
       - name: Install DocFxMarkdownGen
         run: |
           dotnet tool install --global DocFxMarkdownGen
-      # - name: Run DocFX
-      #   working-directory: ./src/docfx
-      #   run: |
-      #     docfx docfx.json
+      - name: Run DocFX
+        working-directory: ./src/docfx
+        run: |
+          docfx docfx.json
       - name: Run DocFxMarkdownGen (dfmg) to generate API .md files
         # dfmg uses config.yaml for input/output paths
         # Currently config has to be limited to `docfx/api/Meadow`, which means we need to figure out a way to run it for all the other /api directories.
