@@ -11,7 +11,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: var($color-brown);
+  --ifm-color-primary: #EF7D3B;
   --ifm-color-primary-dark: var($color-brown);
   --ifm-color-primary-darker: var($color-brown);
   --ifm-color-primary-darkest: var($color-brown);
@@ -334,15 +334,15 @@ code {
 
 
 // Search
-[data-theme='light'] .DocSearch {
+.DocSearch {
   /* --docsearch-primary-color: var(--ifm-color-primary); */
-  /* --docsearch-text-color: var(--ifm-font-color-base); */
+  --docsearch-text-color: #3c3424;
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(94, 100, 112, 0.7);
   /* Modal */
   --docsearch-modal-background: var(--ifm-color-secondary-lighter);
   /* Search box */
-  --docsearch-searchbox-background: var(--ifm-color-secondary);
+  --docsearch-searchbox-background: #edeff0;
   --docsearch-searchbox-focus-background: var(--ifm-color-white);
   /* Hit */
   --docsearch-hit-color: var(--ifm-font-color-base);
@@ -350,6 +350,9 @@ code {
   --docsearch-hit-background: var(--ifm-color-white);
   /* Footer */
   --docsearch-footer-background: var(--ifm-color-white);
+
+  font-family: "Wavehaus-Book";
+  font-size: 17px;
 }
 
 [data-theme='dark'] .DocSearch {
@@ -357,7 +360,7 @@ code {
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(47, 55, 69, 0.7);
   /* Modal */
-  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-modal-background: #20252b;
   /* Search box */
   --docsearch-searchbox-background: var(--ifm-background-color);
   --docsearch-searchbox-focus-background: var(--ifm-color-black);
