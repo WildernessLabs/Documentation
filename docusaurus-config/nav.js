@@ -5,20 +5,16 @@ let getTopNav = () => {
       label: "Meadow.OS",
     },
     {
-      href: "Meadow/",
-      label: "Meadow.NET",
-    },
-    {
       href: "Meadow/Meadow.Cloud/",
       label: "Meadow.Cloud",
     },
     {
       href: "Hardware/",
-      label: "Hardware & Circuits",
+      label: "Hardware Reference",
     },
     {
       href: "Hardware/Tutorials/",
-      label: "Electronics Tutorials",
+      label: "Hardware Tutorials",
     },
     {
       href: "docs/api/",
