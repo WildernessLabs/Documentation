@@ -152,6 +152,18 @@ jobs:
         working-directory: ./src/docfx/dfmg/Meadow.Foundation
         run: |
           dfmg
+      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.FeatherWings
+        working-directory: ./src/docfx/dfmg/Meadow.Foundation.FeatherWings
+        run: |
+          dfmg
+      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.Grove
+        working-directory: ./src/docfx/dfmg/Meadow.Foundation.Grove
+        run: |
+          dfmg
+      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.mikroBUS
+        working-directory: ./src/docfx/dfmg/Meadow.Foundation.mikroBUS
+        run: |
+          dfmg
 
       #docusaurus api build
       - name: Use Node.js
