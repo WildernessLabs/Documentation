@@ -21,6 +21,24 @@ const sidebars = {
   meadowOsSidebar: [
     {
       type: "category",
+      label: "Getting Started",
+      link: {
+        type: 'doc',
+        id: 'Meadow/Getting_Started/index',
+      },
+      items: [
+        "Meadow/Getting_Started/Assemble_Meadow/",
+        "Meadow/Getting_Started/Deploying_Meadow/",
+        "Meadow/Getting_Started/Deployment/",
+        "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
+        "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/",
+        "Meadow/Getting_Started/Hello_World/",
+        "Meadow/Getting_Started/Setup/",
+        "Meadow/Getting_Started/Update_USB_Driver/",
+      ],
+    },
+    {
+      type: "category",
       label: "Meadow.OS",
       link: {
         type: 'doc',
