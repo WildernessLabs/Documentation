@@ -66,7 +66,7 @@ Your "Hello, World" app should be running on your Meadow device.
 
 * [Continue below to the details of the "Hello, World" Meadow application you just created and deployed.](#hello-world)
 
-## Visual Studio 2022 or 2019 on macOS<a name="visual-studio-macos"></a>
+## Visual Studio 2022 on macOS<a name="visual-studio-macos"></a>
 
 [//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
 
@@ -99,7 +99,7 @@ Occasionally, when updating the extension, or if you install the extension manua
 
 To fix this do the following:
 1. Shut down Visual Studio for Mac.
-2. Within Finder go to `~/Library/Caches/VisualStudio/8.0/` for VS2019 and `~/Library/Caches/VisualStudio/17.0/` for VS2022 (use `Command+Shift+G` to get a path entry both that you can paste this path into).
+2. Within Finder, go to `~/Library/Caches/VisualStudio/17.0/` for VS2022 (use <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd>` to get a path entry both that you can paste this path into).
 3. you should see a `addin-db-*` directory. Delete it.
 4. Restart Visual Studio for Mac. It will then recreate the addin-db-* directory from scratch. VS will take a little longer to start-up.
 
