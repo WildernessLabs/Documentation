@@ -24,7 +24,7 @@
           "files": [
             "/**.csproj"
           ],
-          "src": "../../Meadow.Logging/source/Meadow.Logging"
+          "src": "../../Meadow.Logging/Source/Meadow.Logging"
         }
       ],
       "dest": "api/Meadow",
