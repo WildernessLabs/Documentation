@@ -1,5 +1,6 @@
 const sharp = require("sharp");
 const glob = require("glob");
+const fs = require("fs");
 
 const targetFolder = process.argv[2] || "."; // You can specify the folder as a command-line argument
 
@@ -10,14 +11,17 @@ const compressImage = (filePath) => {
   if (filePath.endsWith("png")) {
     sharp(filePath)
       .png({ quality: 80 })
-      .toFile(filePath)
+      .toBuffer(function (err, buffer) {
+        fs.writeFile(filePath, buffer, function (e) {});
+      })
       .then(() => console.log(`Compressed: ${outputPath}`))
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
-  } else if (filePath.endsWith("jpg") || filePath.endsWith("jpeg"))
-  {
+  } else if (filePath.endsWith("jpg") || filePath.endsWith("jpeg")) {
     sharp(filePath)
       .jpeg({ mozjpeg: true, quality: 80 })
-      .toFile(filePath)
+      .toBuffer(function (err, buffer) {
+        fs.writeFile(filePath, buffer, function (e) {});
+      })
       .then(() => console.log(`Compressed: ${outputPath}`))
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   }
