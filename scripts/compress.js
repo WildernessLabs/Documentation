@@ -12,7 +12,7 @@ const compressImage = (filePath) => {
   if (filePath.endsWith("png")) {
     sharp(filePath)
       .png({ quality: 80 })
-      .toFile(filePath + '__tmp')
+      .toFile("__tmp__/"+ filePath)
       .then(() => console.log(`Compressed: ${outputPath}`))
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   } else if (filePath.endsWith("jpg") || filePath.endsWith("jpeg"))
@@ -28,7 +28,7 @@ const compressImage = (filePath) => {
 const renameImage = (filePath) => {
     console.log(`Attempting to rename: ${filePath}`);
 
-    const tmpPath = filePath + "__tmp";
+    const tmpPath = "__tmp__/"+ filePath;
 
     try {
         fs.unlinkSync(filePath);
