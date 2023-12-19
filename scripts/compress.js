@@ -1,6 +1,5 @@
-// const sharp = require('sharp');
+const sharp = require('sharp');
 const glob = require('glob');
-const path = require('path');
 
 const targetFolder = process.argv[2] || '.'; // You can specify the folder as a command-line argument
 
