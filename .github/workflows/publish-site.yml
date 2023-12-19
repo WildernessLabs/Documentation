@@ -27,7 +27,9 @@ jobs:
       # compress the images
       - name: Compress Images
         working-directory: ./src
-        run: node ./scripts/compress.js ./
+        run: |
+          npm install
+          node ./scripts/compress.js ./
 
       #docusaurus guides build
       - name: Use Node.js
@@ -40,7 +42,6 @@ jobs:
       - name: Build and Deploy (mostly just Docusaurus)
         working-directory: ./src
         run: |
-          npm install
           npm run build
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
@@ -175,7 +176,6 @@ jobs:
       - name: Build and Deploy (mostly just Docusaurus)
         working-directory: ./src
         run: |
-          npm install
           npm run build-api
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
