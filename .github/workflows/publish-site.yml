@@ -7,12 +7,6 @@ on:
   pull_request:
     branches: [ "docusaurus" ]
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -29,6 +23,10 @@ jobs:
         with:
           path: src
           # ref: develop # <-- required to deploy beta docs
+
+      # compress the images
+      - name: Compress Images
+        run: node ./scripts/compress.js ./
 
       #docusaurus guides build
       - name: Use Node.js
