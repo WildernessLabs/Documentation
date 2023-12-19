@@ -1,4 +1,4 @@
-const sharp = require('sharp');
+// const sharp = require('sharp');
 const glob = require('glob');
 const path = require('path');
 
@@ -6,12 +6,12 @@ const targetFolder = process.argv[2] || '.'; // You can specify the folder as a 
 
 // Function to compress images
 const compressImage = (filePath) => {
-  const outputPath = path.join(path.dirname(filePath), 'compressed', path.basename(filePath));
-  
+
+    console.log(`Attempting to compress: ${filePath}`);
+
   sharp(filePath)
-    .resize(1024) // or any other dimensions you prefer
-    .jpeg({ quality: 80 }) // adjust the quality
-    .toFile(outputPath)
+    .compressImage(filePath)
+    .toFile(filePath)
     .then(() => console.log(`Compressed: ${outputPath}`))
     .catch(err => console.error(`Error compressing ${filePath}:`, err));
 };
@@ -19,11 +19,11 @@ const compressImage = (filePath) => {
 // Glob pattern to find images (jpg and png)
 const pattern = `${targetFolder}/**/*.+(jpg|jpeg|png)`;
 
-glob(pattern, (err, files) => {
+images = glob.globSync(pattern, (err, files) => {
   if (err) {
     console.error('Error finding files:', err);
     return;
-  }
-
-  files.forEach(compressImage);
+  }  
 });
+
+images.forEach(compressImage);
