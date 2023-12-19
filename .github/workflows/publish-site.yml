@@ -26,7 +26,8 @@ jobs:
 
       # compress the images
       - name: Compress Images
-        run: node ../scripts/compress.js ./
+        working-directory: ./src
+        run: node ./scripts/compress.js ./
 
       #docusaurus guides build
       - name: Use Node.js
