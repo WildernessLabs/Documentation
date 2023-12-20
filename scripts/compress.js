@@ -23,7 +23,10 @@ const compressImage = (filePath) => {
     sharp(filePath)
       .jpeg({ mozjpeg: true, quality: 80 })
       .toFile(filePath + "__tmp")
-      .then(() => console.log(`Compressed: ${filePath}`))
+      .then(() => {
+        console.log(`Compressed: ${filePath}`)
+        renameImage(filePath);
+      })
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   }
 };
