@@ -24,11 +24,16 @@ jobs:
           path: src
           # ref: develop # <-- required to deploy beta docs
 
+      # npm install
+      - name: npm install
+        working-directory: ./src
+        run: |
+          npm install
+
       # compress the images
       - name: Compress Images
         working-directory: ./src
         run: |
-          npm install
           node ./scripts/compress.js ./
 
       #docusaurus guides build
