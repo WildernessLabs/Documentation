@@ -23,7 +23,7 @@ const compressImage = (filePath) => {
     sharp(filePath)
       .jpeg({ mozjpeg: true, quality: 80 })
       .toFile(filePath + "__tmp")
-      .then(() => console.log(`Compressed: ${outputPath}`))
+      .then(() => console.log(`Compressed: ${filePath}`))
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   }
 };
@@ -33,18 +33,19 @@ const renameImage = (filePath) => {
 
     const tmpPath = filePath + "__tmp";
 
-    // try {
-    //     fs.unlinkSync(filePath);
-    //     console.log(`File deleted: ${filePath}`);
-    // } catch (err) {
-    //     console.error('Error deleting file:', err);
-    // }
+    try {
+        fs.unlinkSync(filePath);
+        console.log(`File deleted: ${filePath}`);
+    } catch (err) {
+        console.error('Error deleting file:', err);
+    }
     
-    // try {
-    //     fs.renameSync(tmpPath, filePath);
-    // } catch (err) {
-    //     console.error('Error renaming file:', err);
-    // }
+    try {
+        fs.renameSync(tmpPath, filePath);
+    } catch (err) {
+        console.error('Error renaming file:', err);
+    }
+
 }
 
 // Glob pattern to find images (jpg and png)
