@@ -12,14 +12,17 @@ const compressImage = (filePath) => {
   if (filePath.endsWith("png")) {
     sharp(filePath)
       .png({ quality: 80 })
-      .toFile("__tmp__/"+ filePath)
-      .then(() => console.log(`Compressed: ${outputPath}`))
+      .toFile(filePath + "__tmp")
+      .then(() => {
+        console.log(`Compressed: ${filePath}`)
+        renameImage(filePath);
+      })
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   } else if (filePath.endsWith("jpg") || filePath.endsWith("jpeg"))
   {
     sharp(filePath)
       .jpeg({ mozjpeg: true, quality: 80 })
-      .toFile("__tmp__/"+ filePath)
+      .toFile(filePath + "__tmp")
       .then(() => console.log(`Compressed: ${outputPath}`))
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   }
@@ -28,20 +31,20 @@ const compressImage = (filePath) => {
 const renameImage = (filePath) => {
     console.log(`Attempting to rename: ${filePath}`);
 
-    const tmpPath = "__tmp__/"+ filePath;
+    const tmpPath = filePath + "__tmp";
 
-    try {
-        fs.unlinkSync(filePath);
-        console.log(`File deleted: ${filePath}`);
-    } catch (err) {
-        console.error('Error deleting file:', err);
-    }
+    // try {
+    //     fs.unlinkSync(filePath);
+    //     console.log(`File deleted: ${filePath}`);
+    // } catch (err) {
+    //     console.error('Error deleting file:', err);
+    // }
     
-    try {
-        fs.renameSync(tmpPath, filePath);
-    } catch (err) {
-        console.error('Error renaming file:', err);
-    }
+    // try {
+    //     fs.renameSync(tmpPath, filePath);
+    // } catch (err) {
+    //     console.error('Error renaming file:', err);
+    // }
 }
 
 // Glob pattern to find images (jpg and png)
@@ -55,4 +58,3 @@ images = glob.globSync(pattern, (err, files) => {
 });
 
 images.forEach(compressImage);
-images.forEach(renameImage);
