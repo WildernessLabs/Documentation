@@ -7,7 +7,7 @@ const targetFolder = process.argv[2] || "."; // You can specify the folder as a 
 
 // Function to compress images
 const compressImage = (filePath) => {
-  console.log(`Attempting to compress: ${filePath}`);
+//   console.log(`Attempting to compress: ${filePath}`);
   ("");
   if (filePath.endsWith("png")) {
     sharp(filePath)
@@ -19,7 +19,7 @@ const compressImage = (filePath) => {
   {
     sharp(filePath)
       .jpeg({ mozjpeg: true, quality: 80 })
-      .toFile(filePath + '__tmp')
+      .toFile("__tmp__/"+ filePath)
       .then(() => console.log(`Compressed: ${outputPath}`))
       .catch((err) => console.error(`Error compressing ${filePath}:`, err));
   }
