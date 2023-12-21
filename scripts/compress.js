@@ -13,7 +13,7 @@ const compressImage = (filePath) => {
       .metadata()
       .then((metadata) => {
         if (metadata.width > 1000) {
-          image = image.resize(1000).png().toBuffer();
+          image = image.resize(1000);
         }
         image
           .png({ quality: 80 })
@@ -30,7 +30,7 @@ const compressImage = (filePath) => {
       .metadata()
       .then((metadata) => {
         if (metadata.width > 1000) {
-          image = image.resize(1000).jpeg().toBuffer();
+          image = image.resize(1000);
         }
         image
           .jpeg({ quality: 80 })
