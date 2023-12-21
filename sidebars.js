@@ -23,8 +23,8 @@ const sidebars = {
       type: "category",
       label: "Getting Started",
       link: {
-        type: 'doc',
-        id: 'Meadow/Getting_Started/index',
+        type: "doc",
+        id: "Meadow/Getting_Started/index",
       },
       items: [
         "Meadow/Getting_Started/Assemble_Meadow/index",
@@ -41,13 +41,25 @@ const sidebars = {
       type: "category",
       label: "Meadow Basics",
       link: {
-        type: 'doc',
-        id: 'Meadow/Meadow_Basics/index',
+        type: "doc",
+        id: "Meadow/Meadow_Basics/index",
       },
       items: [
-        "Meadow/Meadow_Basics/Apps/index",
-        "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index",
-        "Meadow/Meadow_Basics/Apps/Sleep/index",
+        // categories can have sub categories
+        {
+          type: "category",
+          label: "Meadow Apps",
+          link: {
+            type: "doc",
+            id: "Meadow/Meadow_Basics/Apps/index",
+          },
+          items: [
+            "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index",
+            "Meadow/Meadow_Basics/Apps/Sleep/index",
+          ],
+        },
+
+        //...and can sit alongside regular items
         "Meadow/Meadow_Basics/IO/index",
         "Meadow/Meadow_Basics/IO/Analog/index",
         "Meadow/Meadow_Basics/IO/Digital/index",
@@ -75,8 +87,8 @@ const sidebars = {
       type: "category",
       label: "Meadow.OS",
       link: {
-        type: 'doc',
-        id: 'Meadow/Meadow.OS/index',
+        type: "doc",
+        id: "Meadow/Meadow.OS/index",
       },
       items: [
         "Meadow/Meadow.OS/Automatic_Restarts/index",
