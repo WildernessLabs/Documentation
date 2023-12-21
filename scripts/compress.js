@@ -13,33 +13,35 @@ const compressImage = (filePath) => {
       .metadata()
       .then((metadata) => {
         if (metadata.width > 1000) {
-          return image.resize(1000).png().toBuffer();
+          image = image.resize(1000).png().toBuffer();
         }
-        return image;
+        image
+          .png({ quality: 80 })
+          .toFile(filePath + "__tmp")
+          .then(() => {
+            console.log(`Compressed: ${filePath}`);
+            renameImage(filePath);
+          })
+          .catch((err) => console.error(`Error compressing ${filePath}:`, err));
       })
-      .png({ quality: 80 })
-      .toFile(filePath + "__tmp")
-      .then(() => {
-        console.log(`Compressed: ${filePath}`);
-        renameImage(filePath);
-      })
-      .catch((err) => console.error(`Error compressing ${filePath}:`, err));
+      .catch((err) => console.error(`Error resizing ${filePath}:`, err));
   } else if (filePath.endsWith("jpg") || filePath.endsWith("jpeg")) {
     image
       .metadata()
       .then((metadata) => {
         if (metadata.width > 1000) {
-          return image.resize(1000).jpeg().toBuffer();
+          image = image.resize(1000).jpeg().toBuffer();
         }
-        return image;
+        image
+          .jpeg({ quality: 80 })
+          .toFile(filePath + "__tmp")
+          .then(() => {
+            console.log(`Compressed: ${filePath}`);
+            renameImage(filePath);
+          })
+          .catch((err) => console.error(`Error compressing ${filePath}:`, err));
       })
-      .jpeg({ mozjpeg: true, quality: 80 })
-      .toFile(filePath + "__tmp")
-      .then(() => {
-        console.log(`Compressed: ${filePath}`);
-        renameImage(filePath);
-      })
-      .catch((err) => console.error(`Error compressing ${filePath}:`, err));
+      .catch((err) => console.error(`Error resizing ${filePath}:`, err));
   }
 };
 
