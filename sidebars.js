@@ -39,6 +39,19 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Meadow Basics",
+      link: {
+        type: 'doc',
+        id: 'Meadow/Meadow_Basics/index',
+      },
+      items: [
+        "Meadow/Meadow_Basics/Apps/index",
+        "Meadow/Meadow_Basics/Apps/Lifecycle_Events/index",
+        "Meadow/Meadow_Basics/Apps/Sleep/index",
+      ],
+    },
+    {
+      type: "category",
       label: "Meadow.OS",
       link: {
         type: 'doc',
