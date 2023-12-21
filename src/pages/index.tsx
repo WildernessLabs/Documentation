@@ -35,7 +35,11 @@ export default function Home(): JSX.Element {
                 </p>
                 <div className="wl-grid mb-80">
                   {/* Meadow App Basics */}
-                  <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="wl-card border thick-1 orange radius-8">
+                    <img
+                      className="border only bottom thick-1 orange"
+                      src={`${siteConfig.baseUrl}img/homepage/card-meadow-apps.png`}
+                    />
                     <div className="card-content">
                       <h3>Meadow Application Basics</h3>
                       <div className="wl-grid space">
@@ -51,7 +55,11 @@ export default function Home(): JSX.Element {
                     </div>
                   </div>
                   {/* Meadow.OS Fundamentals */}
-                  <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="wl-card border thick-1 orange radius-8">
+                    <img
+                      className="border only bottom thick-1 orange"
+                      src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
+                    />
                     <div className="card-content">
                       <h3>Meadow.OS Fundamentals</h3>
                       <div className="wl-grid space">
@@ -69,7 +77,11 @@ export default function Home(): JSX.Element {
                   </div>
 
                   {/* Meadow.Foundation */}
-                  <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="wl-card border thick-1 orange radius-8">
+                    <img
+                      className="border only bottom thick-1 orange"
+                      src={`${siteConfig.baseUrl}img/homepage/card-network.png`}
+                    />
                     <div className="card-content">
                       <h3>Meadow.Foundation</h3>
                       <div className="wl-grid space">
@@ -85,6 +97,7 @@ export default function Home(): JSX.Element {
                 </div>
               </section>
 
+{/* ROW 2 */}
 
               <section className="meadow-general wl-container">
                 <h2>Meadow</h2>
