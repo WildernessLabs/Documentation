@@ -30,7 +30,7 @@ The ideal PID algorithm can be described mathematically as the following:
 
 It looks pretty complicated, but is actually quite simple, and is probably better understood visually, in the following block diagram:
 
-![Flow diagram showing inputs, reference and actual signals, connected to the first step, calculate error (reference minus actual), then connected to calculate PID corrections (proportional, integral, and derivative corrections), then connected to sum corrections before outputting a control signal.](../Ideal_PID_Block_Diagram.svg){:standalone}
+![Flow diagram showing inputs, reference and actual signals, connected to the first step, calculate error (reference minus actual), then connected to calculate PID corrections (proportional, integral, and derivative corrections), then connected to sum corrections before outputting a control signal.](../Ideal_PID_Block_Diagram.svg)
 
 #### Calculation Steps
 
@@ -68,7 +68,7 @@ Changing the 	`ProportionalGain` generally affects how strongly the controller r
 
 The following graph illustrates the reaction of a sample system to various `ProportionGain` (K). A higher gain means that the system gets to the target state faster, but has much more error. Whereas a lower gain means less error, but it takes longer to affect change:
 
-[![PID varyingP](https://upload.wikimedia.org/wikipedia/commons/a/a3/PID_varyingP.jpg){:standalone}](https://commons.wikimedia.org/wiki/File%3APID_varyingP.jpg){:standalone}
+[![PID varyingP](https://upload.wikimedia.org/wikipedia/commons/a/a3/PID_varyingP.jpg)](https://commons.wikimedia.org/wiki/File%3APID_varyingP.jpg)
 
 When tuning the `ProportionalGain`, a good starting place for the value is `1`.
 
@@ -79,7 +79,7 @@ Using only proportional control has a major drawback; many system will continue 
 
 For this reason, in primitive proportional only control systems, sometimes a _bias_ is added to the control output which can maintain system stability when the error is zero:
 
-![Flow diagram showing inputs (reference signal and actual signal) connected to control calculations (PID) and a bias signal combined with the PID output into the control bias, then output as a control signal.](../Bias_Diagram.svg){:standalone}
+![Flow diagram showing inputs (reference signal and actual signal) connected to control calculations (PID) and a bias signal combined with the PID output into the control bias, then output as a control signal.](../Bias_Diagram.svg)
 
 For example, in the coffee example, when the coffee gets up to temp, in order to keep it at temp, we probably need to keep the hot plate on at some percent of maximum to maintain the coffee temp.
 
@@ -97,13 +97,13 @@ To counteract this, the bias would have to be manually adjusted to suit these co
 
 In calculus, the _integral_ is defined as the area under the graph of a function between two particular _x_ coordinates. For example, it could be the blue area in the following graph of our coffee :
 
-![Graph showing temperature fluctuating as it overshoots and undershoots a target of 75 degrees Celsius, with the area under the curve from time X1 to time X2 filled in.](../PID_Integral.svg){:standalone}
+![Graph showing temperature fluctuating as it overshoots and undershoots a target of 75 degrees Celsius, with the area under the curve from time X1 to time X2 filled in.](../PID_Integral.svg)
 
 If we knew the exact definition of the brown curve, as a mathematical function, we could use some calculus to tell us exactly what the derivative was between any two given _x_ (time) coordinates.
 
 However, in real life systems, we almost never know that, so we sample the actual value (_y_) of the thing we're trying to control (coffee temp) at regular intervals, and approximate the area by multiplying `y` by the time interval (`x`), which provides the bounds of a rectangle. For example, if we sampled our coffee temp every minute, the area graph might look like the following:
 
-![Graph showing temperature fluctuating as it overshoots and undershoots a target of 75 degrees Celsius, but this time the area is filled with several rectangles to approximate the area under the curve from time X1 to time X2.](../PID_Integral_Approximation.svg){:standalone}
+![Graph showing temperature fluctuating as it overshoots and undershoots a target of 75 degrees Celsius, but this time the area is filled with several rectangles to approximate the area under the curve from time X1 to time X2.](../PID_Integral_Approximation.svg)
 
 If the readings were: `{ 24º, 38º, 70º, 86º, 97º, 98º, 97º, 88º, 80º, 73º }`, we would add each one, multiplied by the time interval (`1minute`) to get the signal integral:
 
@@ -123,7 +123,7 @@ While the proportional action will attempt to correct based on any instantaneous
 
 This is important because the integral action will break out of the offset error via incremental steps beyond any proportional change limits. This means that in time it will even drive the error to zero on its, but it can be slow; which is why it's most effectively used in conjunction with the proportional action. The following graph illustrates a sample system response to an integral-only algorithm:
 
-![Graph showing a more ideal approach of temperature over time as it approaches a target of 75 degrees Celsius without overshooting.](../PID_Integral_Only.svg){:standalone}
+![Graph showing a more ideal approach of temperature over time as it approaches a target of 75 degrees Celsius without overshooting.](../PID_Integral_Only.svg)
 
 #### Autoreset
 
@@ -131,7 +131,7 @@ The integral action is also known as _autoreset_, because it doesn't require a m
 
 The following diagram illustrates what can happen in a sample system at various integral gain constants when the proportional and derivative gains are constant:
 
-[![PID Change with Integral](https://upload.wikimedia.org/wikipedia/commons/c/c0/Change_with_Ki.png){:standalone}](https://commons.wikimedia.org/wiki/File%3AChange_with_Ki.png){:standalone}
+[![PID Change with Integral](https://upload.wikimedia.org/wikipedia/commons/c/c0/Change_with_Ki.png)](https://commons.wikimedia.org/wiki/File%3AChange_with_Ki.png)
 
 Too much integral gain can cause oscillation via overcorrection, whereas too little integral gain will cause a slow approach to error.
 

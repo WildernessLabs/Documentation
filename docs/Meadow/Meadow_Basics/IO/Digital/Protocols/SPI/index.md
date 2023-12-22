@@ -6,7 +6,7 @@ subtitle: Understanding the Serial Peripheral Interface.
 
 [Serial Peripheral Interface (SPI)](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface) is a high speed communication protocol for short distances between devices using four signal wires:
 
-![SPI Circuit showing two SPI peripherals connected to a meadow board via the SPI pins and chip selects coming out of D00 and D01](SPI_Circuit.svg){:standalone}
+![SPI Circuit showing two SPI peripherals connected to a meadow board via the SPI pins and chip selects coming out of D00 and D01](SPI_Circuit.svg)
 
 Unlike I2C, there is no upper limit on the speed of SPI devices, so clock speeds of `100MHz` or more are generally possible. However, SPI is intended to be used over very short distances, with an absolute maximum of around 3 meters, and performs best when it's traveling over 10cm or less.
 
@@ -40,7 +40,7 @@ Note: SPI supports shared `CS` lines in a _daisy-chain_ configuration, but it's 
 
 The SPI pins on the F7 Feather are labeled `SCK`, `MOSI` (`COPI`), and `MISO` (`CIPO`) and can be found between `A05` and `D00`:
 
-![Illustration of a Meadow F7 Feather board with two peripherals (Chip Select 1 and Chip Select 2) connected via SPI using the SCK, MOSI, and MISO pins as well as D00 and D01 pins for chip select](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Illustration of a Meadow F7 Feather board with two peripherals (Chip Select 1 and Chip Select 2) connected via SPI using the SCK, MOSI, and MISO pins as well as D00 and D01 pins for chip select](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 Any pin that supports digital output can be used as a chip select line.
 

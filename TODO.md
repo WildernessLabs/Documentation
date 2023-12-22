@@ -9,7 +9,7 @@
   * [ ] Re-enable `onBrokenLinks: 'error'` in Docusaurus config.
 * [ ] Customize link previews (e.g., when shared in Slack, likely also Twitter and friends). Currently shows a Docusaurus image.
 * [ ] Default to index.md when clicking on the Developers top nav item, rather than jumping directly to Meadow Guides (e.g., http://developer.wildernesslabs.co/docs/api/Meadow/index.html vs. http://developer.wildernesslabs.co/docs/api/Meadow/Meadow.html; currently only https://wildernesslabs.github.io/DocsDocusaurus/docs/api/Meadow/, which hosts the latter)
-* [ ] Handle `{:standalone}` images ([example](http://localhost:3000/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/))
+* [ ] Handle `` images ([example](http://localhost:3000/DocsDocusaurus/docs/Meadow/Meadow_Basics/IO/Digital/))
   * [ ] Research if this does anything currently, and if we need it going forward.
 * [ ] Update to WL social card (becomes `<meta property="og:image" content="{whatever}" ... />`)
   * [ ] Find current WL social card, if any

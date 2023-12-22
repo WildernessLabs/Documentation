@@ -10,7 +10,7 @@ Netduino is equipped with a varied set of Input and Output (I/O) ports that can 
 
 Netduino IO ports are divided into two categories; _Digital_ and _Analog_. 
 
-![N3 Pinout Diagram](../About/Netduino3_Pinout.svg){:standalone}
+![N3 Pinout Diagram](../About/Netduino3_Pinout.svg)
 
 #### General Purpose Input/Output (GPIO) Ports
 

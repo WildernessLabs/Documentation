@@ -6,7 +6,7 @@ subtitle: Serial communications over UART/RS-232.
 
 Standard serial, typically referred to as RS-232 or UART (Universal Asynchronous Receiver Transmitter) is a moderate-speed, reliable, old-school, digital protocol used to communicate with a single device, using two wires:
 
-![Illustration showing a Meadow board connected to for UART serial on COM4, with a receive line on pin D00 and a transmit line on pin D01.](Serial(UART)_Circuit.svg){:standalone}
+![Illustration showing a Meadow board connected to for UART serial on COM4, with a receive line on pin D00 and a transmit line on pin D01.](Serial(UART)_Circuit.svg)
 
 Depending on the hardware involved, serial can be used in extremely noisy industrial environments, over long distances; up to 60 meters (200 feet).
 
@@ -32,7 +32,7 @@ However, within that specification are generally two different flavors that desc
 
 Serial has been around for a long time; before USB, it used to be a standard way for computers to talk to various peripherals such as keyboards and mice and connected to the serial port on a computer via an RS-232 cable with a connector like this:
 
-![Photo of the end of an RS232 cable showing the trapezoidal plug shape and nine pins, four on the narrower side and five on the wider side.](RS232_Cable.svg){:standalone}
+![Photo of the end of an RS232 cable showing the trapezoidal plug shape and nine pins, four on the narrower side and five on the wider side.](RS232_Cable.svg)
 
 And many industrial peripherals that use standard serial communications still use RS-232 connectors.
 
@@ -52,7 +52,7 @@ When using an RS-232 peripheral, the signal voltages must be level-shifted and i
 
 Additionally, [SparkFun has an RS-232 to TTL Shifter breakout board](https://www.sparkfun.com/products/449) that not only converts RS-232 to TTL levels, but also includes an onboard RS-232 connector:
 
-![Photo of a SparkFun RS232 to TTL converter board with a 9-pin RS-232 port.](SparkFun_RS232_Shifter.svg){:standalone}
+![Photo of a SparkFun RS232 to TTL converter board with a 9-pin RS-232 port.](SparkFun_RS232_Shifter.svg)
 
 ## Meadow Serial Ports
 
@@ -61,7 +61,7 @@ The Meadow F7 Feather has two exposed serial ports, named `COM4` and `COM1` with
 * **COM4** - `D00` = `RX`, `D01` = `TX`
 * **COM1** - `D13` = `RX`, `D12` = `TX`
 
-![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 ## Using the Meadow Serial API
 

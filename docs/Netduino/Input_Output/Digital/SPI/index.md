@@ -43,7 +43,7 @@ The four possible modes are determined by the active state of the clock signal (
 
 The Netduino has a SPI interface defined on ditigal IO pins 11, 12, 13 and 4:
 
-![N3 Pinout Diagram](/Netduino/About/Netduino3_Pinout.svg){:standalone}
+![N3 Pinout Diagram](/Netduino/About/Netduino3_Pinout.svg)
 
 It should be noted that the chip select pin (D4, labelled SPI - NSS) can be changed in the SPI configuration constructor.  The remaining three pins cannot be changed.
 
@@ -94,11 +94,11 @@ Note that the application used [named arguments](https://docs.microsoft.com/en-u
 
 Executing this application results in the following output on a logic analyzer:
 
-![Basic SPI Output on Logic Analyzer](BasicSPIOutput.png){:standalone}
+![Basic SPI Output on Logic Analyzer](BasicSPIOutput.png)
 
 Zooming in on the output for one character shows the relationship between the clock and the data being transmitted:
 
-![Single Character in the Message](SingleCharacterOutput.png){:standalone}
+![Single Character in the Message](SingleCharacterOutput.png)
 
 ## Further Reading
 

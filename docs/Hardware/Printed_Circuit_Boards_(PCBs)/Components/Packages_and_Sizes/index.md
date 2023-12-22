@@ -19,7 +19,7 @@ When purchasing components by their size code, it's important to know whether or
 
 The following chart illustrates the actual size of components in relation to their size code:
 
-![sizes](Component_Sizes.svg){:standalone}
+![sizes](Component_Sizes.svg)
 
 Note that sizes 1812 and 1206 imperial are specialized sizes, most commonly used for components that high heat dissipation requirements.
 

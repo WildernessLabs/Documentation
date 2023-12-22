@@ -16,7 +16,7 @@ Total R = ∑(R1...Rn)
 
 Resistors can be placed in series (end to end), in a circuit like the following:
 
-![](/Hardware/Tutorials/Electronics/Part4/Resistors_in_Series.svg){:standalone}
+![](/Hardware/Tutorials/Electronics/Part4/Resistors_in_Series.svg)
 
 In this case, the total resistance is the _sum_ of each resistor. So for instance, given the following resistors:
 
@@ -50,7 +50,7 @@ I = 5V / 1,105Ω = 0.004A = 4mA
 
 So no matter where in the circuit that current is measured, it would be `4mA`:
 
-![](/Hardware/Tutorials/Electronics/Part4/Support_Files/Common_Current_w_Values.svg){:standalone}
+![](/Hardware/Tutorials/Electronics/Part4/Support_Files/Common_Current_w_Values.svg)
 
 ### Power Calculation
 

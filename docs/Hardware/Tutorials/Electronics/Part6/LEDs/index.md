@@ -9,20 +9,20 @@ subtitle: Light Emitting Diodes.
 LEDs come in a variety of packages and combinations. Many packages have an arrangement of multiple LEDs in one, such as bar graphs and _7 segment_ displays that are often used to show levels or digit characters.
 
 <!-- MarkT: commented out, this is a broken link 
-![](/Hardware/Circuits/Components/LEDs/SomeLEDs.jpg){:standalone}
+![](/Hardware/Circuits/Components/LEDs/SomeLEDs.jpg)
 -->
 
 Regardless of what they look like, they're all basically the same to use. There are only two practical circuit concerns: making sure the _polarity_ is correct and limiting the current through them so they don't burn out.
 
 The circuit symbol for an LED is a diode with arrows coming out of it, signifying the photon emission:
 
-![LED symbol which is a diode with two arrows coming out, indicating photon emission.](../Support_Files/LED.svg){:standalone}
+![LED symbol which is a diode with two arrows coming out, indicating photon emission.](../Support_Files/LED.svg)
 
 ### Physics
 
 As electrons move into the holes in the P-Type lattice from the N-Type, they move from a higher energy orbit/state, known as the _conductance band_, to a lower energy orbit/state. When that transition happens, they lose energy. However, as the [first law of thermodynamics](https://en.wikipedia.org/wiki/First_law_of_thermodynamics) states; energy cannot be destroyed or created, only converted; so that energy is released in the form of photons (light particles):
 
-![Diagram of an electron moving from a higher-energy state to a lower-energy state and causing a photon to be released from the lattice.](../Support_Files/Photon_Emission.svg){:standalone}
+![Diagram of an electron moving from a higher-energy state to a lower-energy state and causing a photon to be released from the lattice.](../Support_Files/Photon_Emission.svg)
 
 In silicon, the electron orbital drop is very small, so the light released is low energy and the photon escapes at a low frequency of vibration. Since the color of light depends on its frequency, the light emitted is in the infrared spectrum, which is just below the frequency energies of the visible light spectrum.
 
@@ -32,13 +32,13 @@ Most diodes are designed in such a way that the P-N junction is hidden inside it
 
 Typical through-hole LEDs have a flat spot on the cathode side, and a longer anode leg, signifying how to wire them up with the correct polarity:
 
-![Diagram of the internal and external components of an LED. The external case has a flat spot to indicate which of the two legs is the cathode.](../Support_Files/LED_Components.svg){:standalone}
+![Diagram of the internal and external components of an LED. The external case has a flat spot to indicate which of the two legs is the cathode.](../Support_Files/LED_Components.svg)
 
 ### LED Colors
 
 Because LEDs have a higher electron orbital energy transition than most diodes, the photons released are at higher energy/frequency, usually in the visible light spectrum (note that the energy/frequency is higher to the left, and lower to the right in the following image):
 
-![Diagram of the visible light spectrum and the colors associated with different frequency.](../Support_Files/Linear_visible_spectrum.svg){:standalone}
+![Diagram of the visible light spectrum and the colors associated with different frequency.](../Support_Files/Linear_visible_spectrum.svg)
 
 What's interesting about this, is that in order to change the color of light emitted, differing voltage drops (`V`<sub>`f`</sub>) are needed. The voltage drop therefore generally increases with the light frequency:
 
@@ -60,17 +60,17 @@ RGB LEDs are available that have all three color components in a single package.
 
 Through-hole RGB LEDs will have a "common" leg that's longer than the rest, which could be anode or cathode, depending on if they're _common anode_ or _common cathode_:
 
-![Photo of an RGB LED showing one leg longer than the rest.](../Support_Files/RGB_LED_Photo.jpg){:standalone}
+![Photo of an RGB LED showing one leg longer than the rest.](../Support_Files/RGB_LED_Photo.jpg)
 
 ## Using LEDs in Circuits
 
 Single LED circuits are typically fairly simple, requiring only a DC power source and a resistor to restrict current flow:
 
-![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to an LED, and finally to the negative terminal of the source.](../Support_Files/LED_Circuit_Simplified.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to an LED, and finally to the negative terminal of the source.](../Support_Files/LED_Circuit_Simplified.svg)
 
 RGB LEDs are only slightly more complex. They come in two flavors, depending on whether they're common cathode or common anode:
 
-![Diagram of the two types of RGB LEDs showing how each type would be connected to a voltage source.](../Support_Files/RGB_LED_Wiring.svg){:standalone}
+![Diagram of the two types of RGB LEDs showing how each type would be connected to a voltage source.](../Support_Files/RGB_LED_Wiring.svg)
 
 ### Controlling Current
 
@@ -91,11 +91,11 @@ I = V / R
 
 This means that as we increase the voltage (amount of force), as long as the resistance stays the same, the amount of current allowed to flow is proportional:
 
-![Graph of voltage on the x-axis against current on the y-axis. The relationship is a 45º line beginning at the origin and moving up and to the right.](../Support_Files/Ohms_Law_Behavior_Graph.svg){:standalone}
+![Graph of voltage on the x-axis against current on the y-axis. The relationship is a 45º line beginning at the origin and moving up and to the right.](../Support_Files/Ohms_Law_Behavior_Graph.svg)
 
 However, recall that with a P-N junction, as the voltage increases, the resistance actually goes down, which means that more current is allowed to flow. Recall the same scenario with a P-N junction looks like this:
 
-![Graph of voltage on the x-axis against current on the y-axis for a P-N junction. The current remains near zero initially as voltage increases, then rises rapidly over a very small increase in voltage.](../Support_Files/Diode_Forward_Behavior.svg){:standalone}
+![Graph of voltage on the x-axis against current on the y-axis for a P-N junction. The current remains near zero initially as voltage increases, then rises rapidly over a very small increase in voltage.](../Support_Files/Diode_Forward_Behavior.svg)
 
 Once the voltage requirement has been met to overcome the junction potential, further increase in voltage greatly reduces the resistance of the diode, and therefore, the amount of current that the diode will conduct rises rapidly. The trick with LEDs then is to supply just enough voltage to light them up.
 
@@ -124,7 +124,7 @@ This means that the overall voltage available to the LED is actually reduced by 
 R = (Vs - Fv) / I
 ```
 
-![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to an LED, and finally to the negative terminal of the source.](../Support_Files/Single_LED_Circuit.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to an LED, and finally to the negative terminal of the source.](../Support_Files/Single_LED_Circuit.svg)
 
 ##### Example
 
@@ -142,13 +142,13 @@ However, in practice, we typically use a much larger resistor value because at t
 
 It's technically possible to use a single resistor with LEDs in parallel:
 
-![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to three LEDs wired in parallel, and finally to the negative terminal of the source.](../Support_Files/LED_Parallel_Circuit.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor, then to three LEDs wired in parallel, and finally to the negative terminal of the source.](../Support_Files/LED_Parallel_Circuit.svg)
 
 However, in practice, it's nearly impossible, because the voltage drop of LEDs are almost never perfectly balanced, which causes only one of them to conduct, pass too much current and fail, thus starting a cascade of failing LEDs.
 
 Instead, the best practice is to use a resistor for each LED:
 
-![Circuit diagram of the positive terminal of a voltage source connected to three sub-circuits wired in parallel and then to the negative terminal of the source. Each sub-circuit consists of a resistor and an LED connected in series.](../Support_Files/LED_Parallel_Circuit_Practical.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to three sub-circuits wired in parallel and then to the negative terminal of the source. Each sub-circuit consists of a resistor and an LED connected in series.](../Support_Files/LED_Parallel_Circuit_Practical.svg)
 
 In this case, each resistor is calculated as individual LED circuits.
 
@@ -158,19 +158,19 @@ If you need to calculate the total current draw, simply add the current from eac
 
 To understand the failure of parallel LEDs with a single resistor, imagine the circuit as a deep river gorge that has  dam blocking the flow of water. The dam is divided into three segments and each segment is a different height. The segments of the dam represent the LEDs. The varying segment heights indicate that each LED has a little different voltage height due slight variations during manufacture:
 
-![Illustration of the front view of a dam with three segments of different heights.](../Support_Files/Dam_w_Varying_Heights.svg){:standalone}
+![Illustration of the front view of a dam with three segments of different heights.](../Support_Files/Dam_w_Varying_Heights.svg)
 
 When the river "turns on," behind the dam, the river will rise until it reaches the top of the shortest segment, and when it does, it'll start to flow over that segment:
 
-![Illustration of the front view of a three-segment dam with water flowing over the shortest segment.](../Support_Files/Dam_w_Single_LED.svg){:standalone}
+![Illustration of the front view of a three-segment dam with water flowing over the shortest segment.](../Support_Files/Dam_w_Single_LED.svg)
 
 However, as soon as that segment starts to let water flow, imagine that the height of that segment of the dam actually gets lower, which means _more_ current is allowed to flow, current that was intended to spill over the other dams.
 
-![Illustration of the front view of a three-segment dam where the shortest segment of the dam has lowered thus letting the water flow through that segment almost unimpeded.](../Support_Files/Dam_w_Avalanche_Breakdown.svg){:standalone}
+![Illustration of the front view of a three-segment dam where the shortest segment of the dam has lowered thus letting the water flow through that segment almost unimpeded.](../Support_Files/Dam_w_Avalanche_Breakdown.svg)
 
 Finally, with ALL the current that was intended to be distributed across three dams flowing through that segment, the segment will fail and for a brief moment, let a lot of current through, before the infrastructure completely gives out (diode breaks), and closes off that river:
 
-![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_Files/Dam_w_Diode_Failure.svg){:standalone}
+![Illustration of the front view of a three-segment dam where the shortest segment of the dam has completely collapsed and the rubble has entirely blocked the water from flowing through that area.](../Support_Files/Dam_w_Diode_Failure.svg)
 
 Then the process repeats itself for the remaining segments of the dam.
 
@@ -178,7 +178,7 @@ Then the process repeats itself for the remaining segments of the dam.
 
 LEDs can be placed in series, as in the following configuration:
 
-![Circuit diagram of the positive terminal of a voltage source connected first to a resistor, then to three LEDs all wired in series, and finally to the negative terminal of the source.](../Support_Files/LED_Series_Circuit.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected first to a resistor, then to three LEDs all wired in series, and finally to the negative terminal of the source.](../Support_Files/LED_Series_Circuit.svg)
 
 However, there are two important considerations in this particular configuration.
 
@@ -198,7 +198,7 @@ R = (Vs - (Vf1 + Vfn...)) / I
 
 Consider the following series LED circuit:
 
-![Circuit diagram of the positive terminal of a voltage source connected to a resistor and two LEDs all wired in series, then to the negative terminal of the source.](../Support_Files/LED_Series_Circuit_Example.svg){:standalone}
+![Circuit diagram of the positive terminal of a voltage source connected to a resistor and two LEDs all wired in series, then to the negative terminal of the source.](../Support_Files/LED_Series_Circuit_Example.svg)
 
 The first thing to consider here is the voltage requirement; the circuit contains two LEDs, one green LED with a `V`<sub>`f`</sub> of `2V`, and a blue LED with a `V`<sub>`f`</sub> of `3V`, for a total of `5V` voltage drop. That means that we'll likely need at least somewhere near `7.5V` to power the LEDs; something that would be impossible to power directly from a `3.3V` output from a Meadow or Netduino board. In this case, we'd need to power from an external power supply and switch via a transistor (which we'll cover in the next chapter). Instead it would probably be simpler just to wire them in parallel.
 
@@ -223,7 +223,7 @@ While [iCircuit](http://icircuitapp.com/) is my go-to tool for circuit simulatio
 
 In order to "pulse" an LED, that is; gradually dim it on or off, you'd either need a complicated circuit or use a Pulse-Width-Modulation (PWM) signal:
 
-![Illustration of a PWM 50% Duty Cycle. The voltage is a square wave alternating equally between 0 and 3.3 volts with an average of 1.6 volts.](../Support_Files/PWM_50p_DutyCycle.svg){:standalone}
+![Illustration of a PWM 50% Duty Cycle. The voltage is a square wave alternating equally between 0 and 3.3 volts with an average of 1.6 volts.](../Support_Files/PWM_50p_DutyCycle.svg)
 
 PWM is a way of controlling voltage digitally to emulate an analog signal. Instead of either being at `HIGH` or `LOW` such as `3.3V` or `0V`, it can actually have an intermediate value such as `1.6V`; by rapidly turning it off and on. Because of the inertia of electrons and the latency of the P-N junction change, the LED actually "sees" a voltage that is an average of the `ON`/`OFF` value:
 
@@ -233,7 +233,7 @@ In the above diagram, the time where the signal is high is the same as the time 
 
 To lower the voltage, we typically reduce the duty cycle (amount of time `ON`):
 
-![Illustration of a PWM 25% Duty Cycle. The voltage is a square wave alternating between 0 and 3.3 volts. The signal is high 25% of the time which yields an average of 0.8 volts.](../Support_Files/PWM_25p_DutyCycle.svg){:standalone}
+![Illustration of a PWM 25% Duty Cycle. The voltage is a square wave alternating between 0 and 3.3 volts. The signal is high 25% of the time which yields an average of 0.8 volts.](../Support_Files/PWM_25p_DutyCycle.svg)
 
 #### Frequency and Flicker
 

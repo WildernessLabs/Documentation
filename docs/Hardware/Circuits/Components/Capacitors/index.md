@@ -6,7 +6,7 @@ subtitle: Energy storage components.
 
 ## Intro
 
-![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg){:standalone}
+![Capacitor Circuit Symbol](/Common_Files/Capacitor.svg)
 
 A capacitor is an electrical device capable of storing energy.
 
@@ -47,11 +47,11 @@ The ability of a capacitor to store and release energy at short notice makes it 
 
 Mechanical switches are noisy devices.  Pressing a button does not always result in a single clean signal.  The mechanical properties of the switch mean that contact can sometimes generate spurious signals:
 
-![Switch Bounce](SwitchBounce.jpg){:standalone}
+![Switch Bounce](SwitchBounce.jpg)
 
 RC Circuits can be used to smooth out the signal.  Adding an RC circuit results in signals such as the following:
 
-![RC Debounced Switch Signal](RCAddedToSwitch.jpg){:standalone}
+![RC Debounced Switch Signal](RCAddedToSwitch.jpg)
 
 Notice the curved nature of both the falling and rising signals.
 

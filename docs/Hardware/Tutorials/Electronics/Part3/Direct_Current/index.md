@@ -16,13 +16,13 @@ Direct curent is also used in [long distance, high power, electrical transmissio
 
 Meadow provides two _power rails_ that supply `5V` and `3.3V` direct current. The `3.3V` rail can be found on the left header, and the `5V` rail can be found on the right header:
 
-![Illustration of Meadow board pin headers, including 3.3 volts on the second left pin from the USB connector and 5 volts on the third right pin from the USB connector.](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Illustration of Meadow board pin headers, including 3.3 volts on the second left pin from the USB connector and 5 volts on the third right pin from the USB connector.](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 ### DC Power Symbols
 
 A general DC power source symbol looks like the following:
 
-![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/Circuit_Symbols/DC_Power.svg){:standalone}
+![DC Power Symbol; a Circle with a Plus and Minus Sign](/Common_Files/Circuit_Symbols/DC_Power.svg)
 
 But many specific power sources have their own symbols, such as batteries, as we'll see later.
 
@@ -59,7 +59,7 @@ The following levels are acceptable for CMOS and TTL circuits:
 
 Therefore, for a `3.3V` CMOS circuit, the acceptable levels are between `0V` - `1.1V` for `LOW`, and `2.2V` - `3.3V` for `HIGH`:
 
-![illustration of digital signal where on/high can be between 2.2 volts and 3.3 volts, and off/low can be 0 volts to 1.1 volts.](../Support_Files/CMOS_Digital_Logic_Levels.svg){:standalone}
+![illustration of digital signal where on/high can be between 2.2 volts and 3.3 volts, and off/low can be 0 volts to 1.1 volts.](../Support_Files/CMOS_Digital_Logic_Levels.svg)
 
 #### Logic Level Shifters
 

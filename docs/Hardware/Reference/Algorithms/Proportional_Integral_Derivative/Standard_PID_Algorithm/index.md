@@ -14,7 +14,7 @@ In the standard form, instead of adding the PID corrections together, the integr
 
 Again, a visual representation of this algorithm might be more enlightening:
 
-![Flow diagram showing inputs, reference and actual signals, connected to the first step, calculate error (reference minus actual), then connected to calculate ID corrections (integral and derivative corrections), then connected to sum corrections before multiplying by P and outputting a control signal.](../Standard_PID_Block_Diagram.svg){:standalone}
+![Flow diagram showing inputs, reference and actual signals, connected to the first step, calculate error (reference minus actual), then connected to calculate ID corrections (integral and derivative corrections), then connected to sum corrections before multiplying by P and outputting a control signal.](../Standard_PID_Block_Diagram.svg)
 
 ### Integral and Derivative Gain Components in Relation to Time
 

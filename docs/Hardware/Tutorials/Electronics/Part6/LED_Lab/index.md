@@ -34,7 +34,7 @@ LEDs are useful and inexpensive, so I like to keep a pile of them around. They m
 
 For [$14, you can get a lifetime supply (750) of single color LEDs in white, red, green, blue, and yellow on Amazon.com](https://amzn.to/2RmpjyV):
 
-![Photo of a package of LEDs in five colors.](../Support_Files/Amazon_LED_Pack.jpg){:standalone}
+![Photo of a package of LEDs in five colors.](../Support_Files/Amazon_LED_Pack.jpg)
 
 When buying LEDs, make sure that the `V`<sub>`f`</sub> of the LEDs you want to use are less than your voltage source. In the LED set above, all of them can be driven with a `3.3V` source.
 
@@ -46,7 +46,7 @@ RGB LEDs come in common anode or common cathode. I prefer common cathode in whic
 
 Pushbuttons are sometimes called _tactile switches_. For prototyping on breadboards, the 6mm x 6mm versions fit well. They usually come in a variety of colors and dimensions. These are 6mm x 6mm x 4.3mm:
 
-![Photo of five push buttons with different color buttons.](../Support_Files/Pushbuttons_Medium.jpg){:standalone}
+![Photo of five push buttons with different color buttons.](../Support_Files/Pushbuttons_Medium.jpg)
 
 4.3mm refers to the height of the button; these are available in tall heights to account for designs where the circuit board is far away from the control panel.
 
@@ -56,7 +56,7 @@ A pack of 100 black ones runs [~USD$7 on Amazon](https://amzn.to/2StraPJ). Also,
 
 These pushbuttons have two sets of legs. The top two legs are always connected to each other. Similarly, the bottom two legs are always connected. When the switch is pressed, a connection is made between the top set and the bottom set:
 
-![Diagram of two pushbuttons, one in the unpushed state and one in the pushed state. In the pushed state, the top and bottom legs are connected.](../Support_Files/Pushbutton_Wiring.svg){:standalone}
+![Diagram of two pushbuttons, one in the unpushed state and one in the pushed state. In the pushed state, the top and bottom legs are connected.](../Support_Files/Pushbutton_Wiring.svg)
 
 Having four legs instead of two makes them more stable.
 
@@ -64,11 +64,11 @@ Having four legs instead of two makes them more stable.
 
 For the first lab exercise, we're going to build a very simple, pushbutton activated, single-LED circuit with a ballast resistor:
 
-![Circuit diagram of a 3.3V source connected first to a pushbutton, then an LED, followed by a resistor, and finally to ground.](../Support_Files/Lab_Circuit_Single_LED_w_Ballast_Resistor.svg){:standalone}
+![Circuit diagram of a 3.3V source connected first to a pushbutton, then an LED, followed by a resistor, and finally to ground.](../Support_Files/Lab_Circuit_Single_LED_w_Ballast_Resistor.svg)
 
 Note that the new circuit symbol introduced above represents a pushbutton:
 
-![Diagram of the circuit symbol for a pushbutton.](../Support_Files/Pushbutton.svg){:standalone}
+![Diagram of the circuit symbol for a pushbutton.](../Support_Files/Pushbutton.svg)
 
 The power can come from the `3.3V` rail on the Meadow or Netduino board. Use an LED of your choosing that has less than a `3.3V`<sub>`f`</sub>.
 
@@ -95,13 +95,13 @@ In this simple circuit, the most likely failure point is getting the polarity of
 
 You can also test the voltage across the LED with a multimeter:
 
-![Image of multimeter test leads on both sides of the LED.](../Support_Files/LED_Lead_Test_Medium.jpg){:standalone}
+![Image of multimeter test leads on both sides of the LED.](../Support_Files/LED_Lead_Test_Medium.jpg)
 
 ## Exercise 2: Series LED Circuit
 
 For this exercise, we're going to wire up two LEDs in series that are button actuated as before and use a ballast resistor:
 
-![Circuit diagram of a 9V source connected first to a pushbutton, then an LED, a second LED, followed by a resistor, and finally to ground.](../Support_Files/Lab_Circuit_Dual_LED_w_Ballast_Resistor.svg){:standalone}
+![Circuit diagram of a 9V source connected first to a pushbutton, then an LED, a second LED, followed by a resistor, and finally to ground.](../Support_Files/Lab_Circuit_Dual_LED_w_Ballast_Resistor.svg)
 
 For my circuit, I've chosen a red and a blue LED that have a `2.1V` and a `3.3V` `V`<sub>`f`</sub>, respectively. That means a total `V`<sub>`f`</sub> of `5.4V`, so I'm going to power the circuit with a `9V` battery.
 
@@ -127,7 +127,7 @@ By putting a pushbutton in front of each color component of an RGB LED, 7 differ
 The circuit we're going to build looks like this:
 
 <!-- MarkT: image caption doesn't match the circuit -->
-![Circuit diagram of a 3.3V source connected to three sub-circuits wired in parallel, an RGB LED, and then to ground. Each sub-circuit has a pushbutton and a resistor wired in series and then connected to one of the inputs of the LED.](../Support_Files/Lab_Circuit_7_Color_RGB.svg){:standalone}
+![Circuit diagram of a 3.3V source connected to three sub-circuits wired in parallel, an RGB LED, and then to ground. Each sub-circuit has a pushbutton and a resistor wired in series and then connected to one of the inputs of the LED.](../Support_Files/Lab_Circuit_7_Color_RGB.svg)
 
 It doesn't matter which side of the LED (or button) the resistor goes on, since each LED current path has the same amount of current flowing through it at any given point. As we'll see, placing the pushbutton first makes it fit on the breadboard nicely. In fact, I was able to comfortably fit all four of the exercises in this lab on a single breadboard.
 
@@ -163,7 +163,7 @@ The wiring for this exercise can be a little tricky. Look at the solution below 
 
 PDF versions coming soon. In the meantime, here's a photo:
 
-![Photo of a breadboard implementing exercises 1, 2, and 3.](../Support_Files/LED_Lab_Breadboard_Solution.png){:standalone}
+![Photo of a breadboard implementing exercises 1, 2, and 3.](../Support_Files/LED_Lab_Breadboard_Solution.png)
 
 Note the jumpers to the left of the RGB buttons that connect the bottom legs to the resistor.
 

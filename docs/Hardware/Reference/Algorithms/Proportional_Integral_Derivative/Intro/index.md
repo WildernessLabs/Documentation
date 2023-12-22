@@ -12,7 +12,7 @@ It's the algorithm that keeps drones balanced in the air, your car at the right 
 
 Consider the following graph of heating a cup of coffee from room temp to 75ºC. The green line represents the ideal, that is, we decide that our coffee which sits at 22ºC (72ºF) is too cold to drink, and so we want it instantly heated to 75º. This "ideal value" is also known as the _reference_, _target_, or _setpoint_ (SP) signal. And the blue line represents an efficient realization of the reference signal in the real world; in which it takes time to heat the coffee to that temp:
 
-![Graph showing temperature over time as it tries to reach a target temperature, barely overshooting and correcting around that target.](../PID_Reference_and_Ideal.svg){:standalone}
+![Graph showing temperature over time as it tries to reach a target temperature, barely overshooting and correcting around that target.](../PID_Reference_and_Ideal.svg)
 
 In this idealized example, the coffee is quickly brought up _just past_ the target temperature, and then stabilized.
 
@@ -30,7 +30,7 @@ Probably the easiest and most intuitive way to heat up a cup of coffee sitting o
 
 This is a very simple algorithm, but it leads to a lot of error. Consider the following graph, which is the likely outcome of that the aforementioned loop, in which the orange line represents the actual temperature:
 
-![Graph plotting actual temperature over time against a target of 75 degrees Celsius, oscillating above and below the target.](../PID_Binary.svg){:standalone}
+![Graph plotting actual temperature over time against a target of 75 degrees Celsius, oscillating above and below the target.](../PID_Binary.svg)
 
 While the actual temperature of the coffee will eventually get close to the target temperature, most of the time there will be a lot of error, due to the _oscillation_ of the system. Each time a control signal is changed, for instance, when the hotplate is turned off, there is some lag as all of the components of the system recover from the inertia of the previous control signal.
 

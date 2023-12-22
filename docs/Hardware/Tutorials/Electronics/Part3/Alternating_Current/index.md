@@ -20,6 +20,6 @@ Designing AC circuits is a little more complicated than DC, but for most work in
 
 The symbol for an AC power source looks similar to the DC power source, but instead of `+` and `-` polarity indicators, it has a wave in it, symbolizing the cycle of voltage polarity:
 
-![AC Power Source Symbol; A circle with a wave inside it.](/Common_Files/Circuit_Symbols/AC_Power.svg){:standalone}
+![AC Power Source Symbol; A circle with a wave inside it.](/Common_Files/Circuit_Symbols/AC_Power.svg)
 
 ## [Next - AC Power Generation](../AC_Generation)
