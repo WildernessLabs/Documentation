@@ -116,5 +116,40 @@
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
-  ]
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/Meadow/index.md",
+          "api/Meadow.Foundation/index.md",
+          "api/Meadow.Foundation.FeatherWings/index.md",
+          "api/Meadow.Foundation.Grove/index.md",
+          "api/Meadow.Foundation.mikroBUS/index.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "Common_Assets/**",
+          "API_Assets/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "api-override/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "docs/**"
+        ]
+      }
+    ],
+    "dest": "docs"
+  }
 }
