@@ -5,7 +5,7 @@ uid: Meadow.Foundation.RTCs.Ds1307
 
 | Ds1307 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/RTCs.Ds1307/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.RTCs.Ds1307/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.RTCs.Ds1307.svg?label=Meadow.Foundation.RTCs.Ds1307" alt="NuGet Gallery for Meadow.Foundation.RTCs.Ds1307" /></a> |
@@ -84,8 +84,7 @@ The DS3231 real time clock module (see image below) requires only four (for simp
 
 The 32K pin outputs the 32,768 Hz clock signal from the module.  This signal is only available when power is supplied by V<sub>cc</sub>, it is not available when the module is on battery power.
 
-<img src="../../API_Assets/Meadow.Foundation.RTCs.DS1307/DS1307_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.RTCs.DS1307/DS1307_Fritzing.png" />
 
 
 

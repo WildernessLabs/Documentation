@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Relays.Relay
 
 | Relay | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Relays) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" alt="NuGet Gallery for Meadow.Foundation" /></a> |
 
@@ -48,5 +48,4 @@ public override Task Run()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Relays.Relay/Relay_Fritzing.svg"
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Relays.Relay/Relay_Fritzing.svg" />

@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Bme280
 
 | Bme280 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bme280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bme280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bme280" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bme280" /></a> |
@@ -197,8 +197,7 @@ The BME280 can be connected using I2C or SPI.  Only 4 wires are required when us
 * SDA
 * SCL
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BME280/BME280_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.BME280/BME280_Fritzing.svg" />
 
 It should be noted that the Sparkfun board is supplied with pull-up resistors enabled by default.  The Adafruit board does not have any pull-up resistors onboard.  It is therefore necessary to add two pull-up resistors (`4.7 K` should be adequate for a single device) between 3.3V and SDA and 3.3V and SCL.
 

@@ -5,7 +5,7 @@ uid: Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS5
 
 | CGNSS5 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CGNSS5) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS5/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS5.svg?label=Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS5" alt="NuGet Gallery for Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS5" /></a> |
 

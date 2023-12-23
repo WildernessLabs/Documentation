@@ -11,8 +11,7 @@ uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
 
 **SpdtSwitch** represents a simple, two position, Single-Pole-Dual-Throw (SPDT) switch that closes a circuit to either ground/common or high depending on position.
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Switches.SpdtSwitch/SPDT_Switch.png"  />
 
 The following example shows how to use a SPDT switch:
 

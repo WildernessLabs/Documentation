@@ -5,7 +5,7 @@ uid: Meadow.Foundation.mikroBUS.Displays.C8x8
 
 | C8x8 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/C8x8) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.mikroBUS.Displays.C8x8/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.mikroBUS.Displays.C8x8.svg?label=Meadow.Foundation.mikroBUS.Displays.C8x8" alt="NuGet Gallery for Meadow.Foundation.mikroBUS.Displays.C8x8" /></a> |
 

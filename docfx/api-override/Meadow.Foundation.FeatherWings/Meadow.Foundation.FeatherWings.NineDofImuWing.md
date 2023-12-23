@@ -5,7 +5,7 @@ uid: Meadow.Foundation.FeatherWings.NineDofImuWing
 
 | NineDofImuWing | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/NineDofImuWing) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.NineDofImuWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.NineDofImuWing.svg?label=Meadow.Foundation.FeatherWings.NineDofImuWing" alt="NuGet Gallery for Meadow.Foundation.FeatherWings.NineDofImuWing" /></a> |
 

@@ -5,7 +5,7 @@ uid: Meadow.Foundation.mikroBUS.Displays.C8800Retro
 
 | C8800Retro | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/C8800Retro) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.mikroBUS.Displays.C8800Retro/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.mikroBUS.Displays.C8800Retro.svg?label=Meadow.Foundation.mikroBUS.Displays.C8800Retro" alt="NuGet Gallery for Meadow.Foundation.mikroBUS.Displays.C8800Retro" /></a> |
 

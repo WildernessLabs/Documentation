@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay
 
 | 4-ChannelSpdtRelay | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/4-ChannelSpdtRelay) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay.svg?label=Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay" alt="NuGet Gallery for Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay" /></a> |
 

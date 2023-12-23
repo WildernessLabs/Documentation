@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Displays.Led.SixteenSegment
 
 | SixteenSegment | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Led.SixteenSegment) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Led.SixteenSegment/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Led.SixteenSegment.svg?label=Meadow.Foundation.Displays.Led.SixteenSegment" alt="NuGet Gallery for Meadow.Foundation.Displays.Led.SixteenSegment" /></a> |
 

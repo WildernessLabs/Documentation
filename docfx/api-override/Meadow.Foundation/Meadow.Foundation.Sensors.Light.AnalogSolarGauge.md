@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Light.AnalogSolarGauge
 
 | AnalogSolarGauge | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.AnalogSolarGauge/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge.svg?label=Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge" alt="NuGet Gallery for Meadow.Foundation.Sensors.Light.AnalogSolarIntensityGauge" /></a> |

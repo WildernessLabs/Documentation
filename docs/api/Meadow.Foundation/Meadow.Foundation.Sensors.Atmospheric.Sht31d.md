@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Sht31d
 
 | Sht31d | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Sht31D/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Sht31d/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Sht31d.svg?label=Meadow.Foundation.Sensors.Atmospheric.Sht31d" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Sht31d" /></a> |
@@ -129,8 +129,7 @@ The SHT31D breakout board from Adafruit is supplied with pull-up resistors insta
 
 The `ADR` line is tied low giving and I2C address of 0x44.  This address line can also be tied high and in this case the I2C address is 0x45.
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.SHT31D/SHT31D_Fritzing.svg" />
 
 
 

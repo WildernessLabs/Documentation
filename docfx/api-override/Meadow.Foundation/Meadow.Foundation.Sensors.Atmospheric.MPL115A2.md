@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Mpl115a2
 
 | Mpl115a2 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115A2) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Mpl115A2/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2.svg?label=Meadow.Foundation.Sensors.Atmospheric.Mpl115a2" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Mpl115a2" /></a> |
@@ -71,8 +71,7 @@ public override async Task Run()
 
 Connecting the MPL115A2 to Meadow requires four connections:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/MPL115A2_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/MPL115A2_Fritzing.svg" />
 
 In this diagram, the shutdown (`SDWN`) and reset (`RST`) pins have been left floating.  Both of these pins are active low and can be tied to V<sub>cc</sub> in normal operation.
 

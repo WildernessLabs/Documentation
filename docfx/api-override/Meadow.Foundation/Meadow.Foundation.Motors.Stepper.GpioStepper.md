@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Motors.Stepper.GpioStepper
 
 | GpioStepper | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.GpioStepper) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Motors.GpioStepper/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Motors.Stepper.GpioStepper/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Motors.Stepper.GpioStepper.svg?label=Meadow.Foundation.Motors.Stepper.GpioStepper" alt="NuGet Gallery for Meadow.Foundation.Motors.Stepper.GpioStepper" /></a> |

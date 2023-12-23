@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Grove.Sensors.Switches.Tilt
 
 | Tilt | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Tilt) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Sensors.Switches.Tilt/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Sensors.Switches.Tilt.svg?label=Meadow.Foundation.Grove.Sensors.Switches.Tilt" alt="NuGet Gallery for Meadow.Foundation.Grove.Sensors.Switches.Tilt" /></a> |
 

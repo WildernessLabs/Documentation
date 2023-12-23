@@ -5,7 +5,7 @@ uid: Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15
 
 | CTempHum15 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CTempHum15) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15.svg?label=Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15" alt="NuGet Gallery for Meadow.Foundation.mikroBUS.Sensors.Atmospheric.CTempHum15" /></a> |
 

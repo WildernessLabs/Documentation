@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Bmp180
 
 | Bmp180 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmp180/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmp180/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bmp180.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bmp180" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bmp180" /></a> |
@@ -74,8 +74,7 @@ To wire a BMP180 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bmp180/Bmp180_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bmp180/Bmp180_Fritzing.png" />
 
 
 

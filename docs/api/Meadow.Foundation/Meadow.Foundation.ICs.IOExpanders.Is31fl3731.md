@@ -5,7 +5,7 @@ uid: Meadow.Foundation.ICs.IOExpanders.Is31fl3731
 
 | Is31fl3731 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Is31fl3731) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Is31fl3731/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Is31fl3731/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Is31fl3731.svg?label=Meadow.Foundation.ICs.IOExpanders.Is31fl3731" alt="NuGet Gallery for Meadow.Foundation.ICs.IOExpanders.Is31fl3731" /></a> |
@@ -52,6 +52,5 @@ public override Task Run()
 
 To wire a Is31fl3731 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Is31fl3731/Is31fl3731_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Is31fl3731/Is31fl3731_Fritzing.png" />
 

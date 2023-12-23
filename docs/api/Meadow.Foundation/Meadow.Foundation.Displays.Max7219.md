@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Displays.Max7219
 
 | Max7219 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Max7219) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Max7219/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Max7219/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Max7219.svg?label=Meadow.Foundation.Displays.Max7219" alt="NuGet Gallery for Meadow.Foundation.Displays.Max7219" /></a> |

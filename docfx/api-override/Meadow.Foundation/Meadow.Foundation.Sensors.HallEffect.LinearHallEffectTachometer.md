@@ -7,7 +7,7 @@ uid: Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer
 |-----------|----------------|
 | Status    | Not Tested     |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Core/Sensors/HallEffect) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style="width: auto; height: -webkit-fill-available;" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.svg?label=Meadow.Foundation" style={{ width: "auto", height: "-webkit-fill-available" }}/></a> |
 
 A Hall effect sensor is a device that is used to measure the magnitude of a magnetic field. Its output voltage is directly proportional to the magnetic field strength through it. These sensors are commonly used for proximity sensing, positioning, speed detection, and current sensing applications.
 
@@ -54,5 +54,4 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer_Fritzing.svg" />

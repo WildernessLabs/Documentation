@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Grove.Servos.Servo
 
 | Servo | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Servo) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Servos.Servo/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Servos.Servo.svg?label=Meadow.Foundation.Grove.Servos.Servo" alt="NuGet Gallery for Meadow.Foundation.Grove.Servos.Servo" /></a> |
 

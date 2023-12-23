@@ -5,7 +5,7 @@ uid: Meadow.Foundation.ICs.EEPROM.At24Cxx
 
 | At24Cxx | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.At24Cxx) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.EEPROM.At24Cxx/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.EEPROM.At24Cxx/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.EEPROM.At24Cxx.svg?label=Meadow.Foundation.ICs.EEPROM.At24Cxx" alt="NuGet Gallery for Meadow.Foundation.ICs.EEPROM.At24Cxx" /></a> |
@@ -72,8 +72,7 @@ To wire a At24Cxx to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.ICs.EEPROM.AT24Cxx/AT24Cxx_Fritzing.png" />
 
 
 

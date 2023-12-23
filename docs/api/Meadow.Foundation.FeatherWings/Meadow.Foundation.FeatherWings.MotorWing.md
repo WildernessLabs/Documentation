@@ -5,7 +5,7 @@ uid: Meadow.Foundation.FeatherWings.MotorWing
 
 | MotorWing | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/MotorWing) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/MotorWing/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.MotorWing/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.FeatherWings.MotorWing.svg?label=Meadow.Foundation.FeatherWings.MotorWing" alt="NuGet Gallery for Meadow.Foundation.FeatherWings.MotorWing" /></a> |

@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Distance.Sfsr02
 
 | Sfsr02 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Sfsr02) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Sfsr02/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Sfsr02.svg?label=Meadow.Foundation.Sensors.Distance.Sfsr02" alt="NuGet Gallery for Meadow.Foundation.Sensors.Distance.Sfsr02" /></a> |
 

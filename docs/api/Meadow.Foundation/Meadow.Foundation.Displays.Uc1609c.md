@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Displays.Uc1609c
 
 | Uc1609c | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Uc1609c) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Uc1609c/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Uc1609c/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Uc1609c.svg?label=Meadow.Foundation.Displays.Uc1609c" alt="NuGet Gallery for Meadow.Foundation.Displays.Uc1609c" /></a> |

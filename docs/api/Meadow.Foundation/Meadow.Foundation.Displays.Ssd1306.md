@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Displays.Ssd1306
 
 | Ssd1306 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Ssd130x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Ssd130x.svg?label=Meadow.Foundation.Displays.Ssd130x" alt="NuGet Gallery for Meadow.Foundation.Displays.Ssd130x" /></a> |
@@ -87,8 +87,7 @@ public override Task Run()
 
 The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C interface is as follows:
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1306/Ssd1306_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Displays.Ssd1306/Ssd1306_Fritzing.png" />
 
 
 

@@ -5,7 +5,7 @@ uid: Meadow.Foundation.mikroBUS.Sensors.C420T
 
 | C420T | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/C420T) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.mikroBUS.Sensors.C420T/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.mikroBUS.Sensors.C420T.svg?label=Meadow.Foundation.mikroBUS.Sensors.C420T" alt="NuGet Gallery for Meadow.Foundation.mikroBUS.Sensors.C420T" /></a> |
 

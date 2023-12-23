@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Displays.Lcd.CharacterDisplay
 
 | CharacterDisplay | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Lcd.CharacterDisplay) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Lcd.CharacterDisplay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Lcd.CharacterDisplay.svg?label=Meadow.Foundation.Displays.Lcd.CharacterDisplay" alt="NuGet Gallery for Meadow.Foundation.Displays.Lcd.CharacterDisplay" /></a> |
 

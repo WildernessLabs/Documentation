@@ -5,7 +5,7 @@ uid: Meadow.Foundation.ICs.IOExpanders.Ht16K33
 
 | Ht16k33 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ht16k33) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ht16k33/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Ht16k33/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.ICs.IOExpanders.Ht16k33.svg?label=Meadow.Foundation.ICs.IOExpanders.Ht16k33" alt="NuGet Gallery for Meadow.Foundation.ICs.IOExpanders.Ht16k33" /></a> |
@@ -61,8 +61,7 @@ public override async Task Run()
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.HT16K33/Ht16K33_Fritzing.png" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.HT16K33/Ht16K33_Fritzing.png" />
 
 
 

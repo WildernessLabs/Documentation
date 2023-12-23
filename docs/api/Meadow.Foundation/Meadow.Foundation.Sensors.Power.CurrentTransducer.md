@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Power.CurrentTransducer
 
 | CurrentTransducer | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Power.CurrentTransducer) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Power.CurrentTransducer/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Power.CurrentTransducer.svg?label=Meadow.Foundation.Sensors.Power.CurrentTransducer" alt="NuGet Gallery for Meadow.Foundation.Sensors.Power.CurrentTransducer" /></a> |
 

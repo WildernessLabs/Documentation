@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Atmospheric.Hih6130
 
 | Hih6130 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Hih6130/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Hih6130/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Hih6130.svg?label=Meadow.Foundation.Sensors.Atmospheric.Hih6130" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Hih6130" /></a> |
@@ -80,8 +80,7 @@ The HIH6130 requires only four connections between Meadow and the breakout board
 | SC           | SCK            | Blue       |
 | SD           | SDC            | White      |
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Atmospheric.HIH6130/HIH6130_Fritzing.svg" />
 
 
 

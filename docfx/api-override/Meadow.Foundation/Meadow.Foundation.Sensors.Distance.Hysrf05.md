@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Sensors.Distance.Hysrf05
 
 | Hysrf05 | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style="width: auto; height: -webkit-fill-available;" alt="Status badge: in-progress" /> |
+| Status | <img src="https://img.shields.io/badge/InProgress-yellow" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: in-progress" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hysrf05) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Distance.Hysrf05/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Distance.Hysrf05/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Distance.Hysrf05.svg?label=Meadow.Foundation.Sensors.Distance.Hysrf05" alt="NuGet Gallery for Meadow.Foundation.Sensors.Distance.Hysrf05" /></a> |
@@ -55,8 +55,7 @@ private void HYSRF05_DistanceUpdated(object sender, IChangeResult<Meadow.Units.L
 
 The HY-SRF05 sensor has 5 pins, but you’ll only connect 4: power, ground, echo and trigger (out isn’t used).
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05_Fritzing.svg" 
-    style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
+<img src="../../API_Assets/Meadow.Foundation.Sensors.Distance.HYSRF05/HYSRF05_Fritzing.svg" />
 
 
 

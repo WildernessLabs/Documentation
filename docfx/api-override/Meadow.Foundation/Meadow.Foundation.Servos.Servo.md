@@ -5,7 +5,7 @@ uid: Meadow.Foundation.Servos.Servo
 
 | ServoCore | |
 |--------|--------|
-| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style="width: auto; height: -webkit-fill-available;" alt="Status badge: working" /> |
+| Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Servos.ServoCore) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Servos.ServoCore/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Servos.ServoCore/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Servos.ServoCore.svg?label=Meadow.Foundation.Servos.ServoCore" alt="NuGet Gallery for Meadow.Foundation.Servos.ServoCore" /></a> |
