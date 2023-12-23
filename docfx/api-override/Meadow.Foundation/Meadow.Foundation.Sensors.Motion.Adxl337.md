@@ -65,7 +65,7 @@ public async override Task Run()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adx337/Adx337_Fritzing.svg" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Motion.Adx337/Adx337_Fritzing.svg" />
 
 
 

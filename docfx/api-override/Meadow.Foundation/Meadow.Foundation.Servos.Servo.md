@@ -12,7 +12,7 @@ uid: Meadow.Foundation.Servos.Servo
 
 Servos are integrated packages that usually include a DC electric motor, torque-increasing gearing, and electronics to control the motor: 
 
-![Servo motors](../../API_Assets/Meadow.Foundation.Servos.Servo/Servos_Medium.jpg)
+![Servo motors](/docs/API_Assets/Meadow.Foundation.Servos.Servo/Servos_Medium.jpg)
 
 The gained their popularity as an important part of remote controlled cars, airplanes, and such, but are now also very common in robotics.
 
@@ -66,17 +66,17 @@ For just testing however, they can be powered via the `5V` rail on the Meadow as
 
 ### Testing Circuit
 
-![Servo connected to Meadow for testing](../../API_Assets/Meadow.Foundation.Servos.Servo/Servo_Fritzing.png)
+![Servo connected to Meadow for testing](/docs/API_Assets/Meadow.Foundation.Servos.Servo/Servo_Fritzing.png)
 
 ### External Power Circuit
 
 When powering with an external power source, you must connect the external `GND` to the `GND` rail on the Meadow (as shown in the following schematic and breadboard illustration), or the PWM control signal will not work:
 
-![Servo connected to Meadow and external power supply](../../API_Assets/Meadow.Foundation.Servos.Servo/ServoPower.png)
+![Servo connected to Meadow and external power supply](/docs/API_Assets/Meadow.Foundation.Servos.Servo/ServoPower.png)
 
 In the above illustration, (4), AA batteries are used, but we usually use a power supply like the following:
 
-![Servo with a power supply](../../API_Assets/Meadow.Foundation.Servos.Servo/PowerSupply_Medium.jpg)
+![Servo with a power supply](/docs/API_Assets/Meadow.Foundation.Servos.Servo/PowerSupply_Medium.jpg)
 
 ## Cable Colors
 

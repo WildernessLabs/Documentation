@@ -48,4 +48,4 @@ void JoystickUpdated(object sender, IChangeResult<AnalogJoystickPosition> e)
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Hid.AnalogJoystick/AnalogJoystick_Fritzing.png" 
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Hid.AnalogJoystick/AnalogJoystick_Fritzing.png" 

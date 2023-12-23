@@ -72,4 +72,4 @@ public override Task Run()
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-<img src="../../API_Assets/Meadow.Foundation.Displays.ePaper.Il0373/ePaper_Fritzing.png" style={{ width: "60%", display: "block", marginLeft: "auto", marginRight: "auto" }} />
+<img src="/docs/API_Assets/Meadow.Foundation.Displays.ePaper.Il0373/ePaper_Fritzing.png" style={{ width: "60%", display: "block", marginLeft: "auto", marginRight: "auto" }} />

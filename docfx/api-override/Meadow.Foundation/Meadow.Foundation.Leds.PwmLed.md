@@ -117,4 +117,4 @@ public override async Task Run()
 
 ### Wiring Example
 
-![PWM LED connected to a Meadow F7](../../API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed_Fritzing.svg)
+![PWM LED connected to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Leds.PwmLed/PwmLed_Fritzing.svg)

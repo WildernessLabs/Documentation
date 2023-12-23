@@ -58,4 +58,4 @@ protected async Task ReadConditions()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Motion.Adxl345/Adxl345_Fritzing.svg" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Motion.Adxl345/Adxl345_Fritzing.svg" />

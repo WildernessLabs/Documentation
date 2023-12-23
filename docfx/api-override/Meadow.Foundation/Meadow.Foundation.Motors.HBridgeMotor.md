@@ -11,7 +11,7 @@ uid: Meadow.Foundation.Motors.HBridgeMotor
 
 An h-bridge motor controller enables a control signal to drive a much larger load in either polarity, allowing Meadow to drive DC motors in forward or reverse from an external power supply. Using pulse-width-modulation (PWM) as the control signal, provides forward or reverse control, and variable speeds in either direction.
 
-<img src="../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridges.jpg"  />
+<img src="/docs/API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridges.jpg"  />
 
 ### Code Example
 
@@ -72,4 +72,4 @@ Though h-bridge motor controllers come in various form factors, they typically s
 
 The following breadboard diagram illustrates connecting two motors to an h-bridge chip that uses a external power supply to drive the motors:
 
-<img src="../../API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridgeMotor_Fritzing.svg" 
+<img src="/docs/API_Assets/Meadow.Foundation.Motors.HBridgeMotor/HBridgeMotor_Fritzing.svg" 

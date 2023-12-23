@@ -56,7 +56,7 @@ To wire a Mpr121 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Hid.Mpr121/Mpr121_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Hid.Mpr121/Mpr121_Fritzing.png" />
 
 
 

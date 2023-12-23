@@ -59,4 +59,4 @@ public override Task Run()
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
 
-![Wiring a TM1637 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png)
+![Wiring a TM1637 to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Tm1637/Tm1637_Fritzing.png)

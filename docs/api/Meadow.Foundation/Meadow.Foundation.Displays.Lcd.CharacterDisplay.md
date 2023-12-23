@@ -140,4 +140,4 @@ public override Task Run()
 
 ### Wiring Example
 
-![Wiring a CharacterDisplay to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay_Fritzing.svg)
+![Wiring a CharacterDisplay to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Lcd.CharacterDisplay/CharacterDisplay_Fritzing.svg)

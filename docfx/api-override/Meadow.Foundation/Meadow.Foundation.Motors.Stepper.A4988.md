@@ -68,5 +68,5 @@ To wire a A4988 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Motors.Stepper.A4988/A4988_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.Motors.Stepper.A4988/A4988_Fritzing.png" />
 

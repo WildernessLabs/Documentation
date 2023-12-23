@@ -60,7 +60,7 @@ To wire a Veml7700 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Veml7700/Veml7700_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Light.Veml7700/Veml7700_Fritzing.png" />
 
 
 

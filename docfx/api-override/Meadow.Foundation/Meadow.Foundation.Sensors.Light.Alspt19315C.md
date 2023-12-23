@@ -65,4 +65,4 @@ public override async Task Run()
 
 The ALS-PT19C is a simple analog device requiring only three connections:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Alspt19315C/Alspt19315C_Fritzing.svg" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Light.Alspt19315C/Alspt19315C_Fritzing.svg" />

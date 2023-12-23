@@ -72,7 +72,7 @@ To wire a Temt6000 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Temt6000/Temt6000_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Light.Temt6000/Temt6000_Fritzing.png" />
 
 
 

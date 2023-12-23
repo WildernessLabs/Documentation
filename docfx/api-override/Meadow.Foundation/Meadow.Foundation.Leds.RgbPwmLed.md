@@ -73,4 +73,4 @@ public async Task TestColors()
 
 ### Wiring Example
 
-![](../../API_Assets/Meadow.Foundation.Leds.RgbPwmLed/RgbPwmLed_Fritzing.svg)
+![](/docs/API_Assets/Meadow.Foundation.Leds.RgbPwmLed/RgbPwmLed_Fritzing.svg)

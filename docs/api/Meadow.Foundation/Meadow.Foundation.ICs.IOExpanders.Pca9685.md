@@ -45,5 +45,5 @@ public override Task Run()
 
 To wire a PCA9685 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Pca9685/Pca9685_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.ICs.IOExpanders.Pca9685/Pca9685_Fritzing.png" />
 

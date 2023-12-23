@@ -77,4 +77,4 @@ public override Task Run()
 
 To wire a Max7219 to your Meadow board, connect the following:
 
-![Wiring a SevenSegment to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Max7219/Max7219_Fritzing.png)
+![Wiring a SevenSegment to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Max7219/Max7219_Fritzing.png)

@@ -57,7 +57,7 @@ public override async Task Run()
 
 ### Wiring Example
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Temperature.Ds18B20/Ds18B20_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Temperature.Ds18B20/Ds18B20_Fritzing.png" />
 
 
 

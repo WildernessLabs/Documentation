@@ -52,5 +52,5 @@ public override Task Run()
 
 To wire a Is31fl3731 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.Is31fl3731/Is31fl3731_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.ICs.IOExpanders.Is31fl3731/Is31fl3731_Fritzing.png" />
 

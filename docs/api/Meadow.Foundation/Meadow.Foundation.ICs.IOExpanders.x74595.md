@@ -72,7 +72,7 @@ public override async Task Run()
 
 To wire a 74HCT595 to your Meadow board, connect the following:
 
-<img src="../../API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595_Fritzing.svg" />
+<img src="/docs/API_Assets/Meadow.Foundation.ICs.IOExpanders.x74595/x74595_Fritzing.svg" />
 
 
 

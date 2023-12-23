@@ -76,7 +76,7 @@ To wire a Bh1750 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Sensors.Light.Bh1750/Bh1750_Fritzing.png" />
+<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Light.Bh1750/Bh1750_Fritzing.png" />
 
 
 

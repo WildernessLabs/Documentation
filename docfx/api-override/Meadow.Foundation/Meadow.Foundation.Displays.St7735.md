@@ -81,4 +81,4 @@ public override Task Run()
 
 It should look like the following diagram:
 
-![Wiring a ST7735 to a Meadow F7](../../API_Assets/Meadow.Foundation.Displays.Tft.ST7735/ST7735_Fritzing.png)
+![Wiring a ST7735 to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Tft.ST7735/ST7735_Fritzing.png)
