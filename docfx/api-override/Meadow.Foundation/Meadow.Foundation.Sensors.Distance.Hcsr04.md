@@ -50,4 +50,4 @@ private void HCSR04_DistanceUpdated(object sender, IChangeResult<Meadow.Units.Le
 
 ### Wiring Example
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Distance.HCSR04/HCSR04_Fritzing.svg" />

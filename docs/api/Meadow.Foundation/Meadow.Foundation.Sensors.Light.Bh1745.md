@@ -96,7 +96,7 @@ To wire a Bh1745 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Light.Bh1745/Bh1745_Frizzing.png"  />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Light.Bh1745/Bh1745_Frizzing.png"  />
 
 
 

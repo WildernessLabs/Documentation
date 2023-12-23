@@ -18,7 +18,7 @@ The displays are simply a collection of single color leds in a pre-configured so
 
 The pinouts vary from device to device, check the documentation to map the pinouts to a specific segment. The come in a wide selection of colors and may be common anode or common cathode.
 
-![SevenSegment displays](/docs/API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg)
+![SevenSegment displays](/API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment.jpg)
 
 ### Code Example
 
@@ -74,4 +74,4 @@ To wire a Common Cathode Seven Segment Display (like the 5161AS) to your Meadow 
 
 It should look like the following diagram:
 
-![Wiring a SevenSegment to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Fritzing.png)
+![Wiring a SevenSegment to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.Led.SevenSegment/SevenSegment_Fritzing.png)

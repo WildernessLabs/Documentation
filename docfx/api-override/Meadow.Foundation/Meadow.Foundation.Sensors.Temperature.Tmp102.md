@@ -57,4 +57,4 @@ public override async Task Run()
 
 TMP102 sensors can be connected to Meadow using only four connections:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102_Fritzing.svg" />

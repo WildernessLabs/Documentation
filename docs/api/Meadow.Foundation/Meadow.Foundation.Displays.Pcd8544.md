@@ -67,4 +67,4 @@ public override Task Run()
 | CE      | D01        |
 | RST     | D02        |
 
-![SevenSegment displays](/docs/API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png)
+![SevenSegment displays](/API_Assets/Meadow.Foundation.Displays.Pcd8544/PCD8544_Fritzing.png)

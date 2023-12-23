@@ -125,7 +125,7 @@ protected async Task ReadConditions()
 
 The following diagram shows the BNO055 configured for bas
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Motion.Bno055/Bno055_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Motion.Bno055/Bno055_Fritzing.svg" />
 
 
 

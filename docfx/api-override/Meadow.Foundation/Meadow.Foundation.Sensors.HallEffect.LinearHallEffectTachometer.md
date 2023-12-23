@@ -54,4 +54,4 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer/LinearHallEffectTachometer_Fritzing.svg" />

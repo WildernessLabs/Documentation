@@ -37,4 +37,4 @@ public override Task Initialize()
 
 The Parallax PIR sensor requires only three connections, power, ground and motion detection signal:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPir/ParallaxPIR_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Motion.ParallaxPir/ParallaxPIR_Fritzing.svg" />

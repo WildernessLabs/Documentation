@@ -79,4 +79,4 @@ To wire a DHT12 to your Meadow board, connect the following:
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Dht12/Dht12_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Dht12/Dht12_Fritzing.png" />

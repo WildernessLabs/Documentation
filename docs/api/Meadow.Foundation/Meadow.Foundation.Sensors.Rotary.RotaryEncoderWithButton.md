@@ -11,7 +11,7 @@ uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton
 
 Rotary encoders are similar in form factor to potentiometers, but instead of modifying a voltage output, they send a digital signal encoded using Gray Code when rotated that can be decoded to ascertain the direction of turn.
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.jpg"  />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.jpg"  />
 
 Rotary encoders have several advantages over potentiometers as input devices, namely:
 
@@ -156,4 +156,4 @@ public class MeadowApp : App<F7Micro, MeadowApp>
 
 ### Wiring Example
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton/RotaryEncoderWithButton_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton/RotaryEncoderWithButton_Fritzing.svg" />

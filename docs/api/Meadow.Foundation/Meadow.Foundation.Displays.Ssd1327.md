@@ -65,4 +65,4 @@ To wire a Ssd1327 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-![Wiring a Ssd1327 to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Ssd1327/Ssd1327_Fritzing.png)
+![Wiring a Ssd1327 to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.Ssd1327/Ssd1327_Fritzing.png)

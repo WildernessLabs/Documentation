@@ -82,7 +82,7 @@ public override async Task Run()
 
 ### Wiring Example
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Light.SI1145/SI1145_Fritzing.svg" />
 
 
 

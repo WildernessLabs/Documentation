@@ -73,4 +73,4 @@ public override Task Run()
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-<img src="/docs/API_Assets/Meadow.Foundation.Displays.ePaper.Il91874V03/ePaper_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Displays.ePaper.Il91874V03/ePaper_Fritzing.png" />

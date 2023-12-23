@@ -100,7 +100,7 @@ To wire a Si7021 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Si70xx/Si7021_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Si70xx/Si7021_Fritzing.png" />
 
 
 

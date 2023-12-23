@@ -11,7 +11,7 @@ uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoder
 
 Rotary encoders are similar in form factor to potentiometers, but instead of modifying a voltage output, they send a digital signal encoded using Gray Code when rotated that can be decoded to ascertain the direction of turn.
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.jpg"  />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder.jpg"  />
 
 Rotary encoders have several advantages over potentiometers as input devices, namely:
 
@@ -143,4 +143,4 @@ Note, depending on your encoder, it may have a common/ground (gnd) or (-) leg in
 
 The a-phase pin may be labeled (A), (CLK) or other. If the Rotated event is indicating the wrong direction, simply switch the a-phase and b-phase pins.
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Rotary.RotaryEncoder/RotaryEncoder_Fritzing.svg" />

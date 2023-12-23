@@ -65,7 +65,7 @@ To wire a Vl53l0x to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Distance.Vl53l0x/Vl53l0x_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Distance.Vl53l0x/Vl53l0x_Fritzing.png" />
 
 
 

@@ -79,5 +79,5 @@ To wire a Ccs811 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Ccs811/Ccs811_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Ccs811/Ccs811_Fritzing.png" />
 

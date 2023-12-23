@@ -11,17 +11,17 @@ uid: Meadow.Foundation.Leds.RgbLed
 
 **RgbLed** represents an RGB LED whose color is controlled by three digital output ports. These diodes consist of four legs - one for each of the colors mentioned and one for a common cathode (ground) or common anode (vcc), which is also the longest one.
 
-![Common Cathode/Common Anode RGB LEDs](/docs/API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed.jpg)
+![Common Cathode/Common Anode RGB LEDs](/API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed.jpg)
 
 To connect these deds to Meadow, it is recommended to use an external resistor of ~270 to 1K ohms to prevent too much current from flowing through the led and causing damage. 
 
 ### Circuit of a common anode RGB LED
 
-![Common Anode RGB LEDs](/docs/API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonAnode_Fritzing.png)
+![Common Anode RGB LEDs](/API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonAnode_Fritzing.png)
 
 ### Circuit of a common cathode RGB LED
 
-![Common Cathode RGB LEDs](/docs/API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonCathode_Fritzing.png)
+![Common Cathode RGB LEDs](/API_Assets/Meadow.Foundation.Leds.RgbLed/RgbLed_CommonCathode_Fritzing.png)
 
 ### Code Example
 

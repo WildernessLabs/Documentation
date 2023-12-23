@@ -61,7 +61,7 @@ public override async Task Run()
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
 
-<img src="/docs/API_Assets/Meadow.Foundation.ICs.IOExpanders.HT16K33/Ht16K33_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.ICs.IOExpanders.HT16K33/Ht16K33_Fritzing.png" />
 
 
 

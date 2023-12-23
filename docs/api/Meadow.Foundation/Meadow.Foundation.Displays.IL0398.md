@@ -87,4 +87,4 @@ public override Task Run()
 
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
-![Wiring a IL0398 to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.ePaper.IL0398/ePaper_Fritzing.png)
+![Wiring a IL0398 to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.ePaper.IL0398/ePaper_Fritzing.png)

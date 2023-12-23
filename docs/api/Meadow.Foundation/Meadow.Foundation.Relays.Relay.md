@@ -48,4 +48,4 @@ public override Task Run()
 
 ### Wiring Example
 
-<img src="/docs/API_Assets/Meadow.Foundation.Relays.Relay/Relay_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Relays.Relay/Relay_Fritzing.svg" />

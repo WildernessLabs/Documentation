@@ -92,5 +92,5 @@ To wire a Tb67h420ftg to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Motors.Tb67h420ftg/Tb67h420ftg_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Motors.Tb67h420ftg/Tb67h420ftg_Fritzing.png" />
 

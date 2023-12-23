@@ -115,4 +115,4 @@ async Task ReadConditions()
 
 To wire a Bme688 to your Meadow board, connect the following:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme688/Bme688_Fritzing.png" 
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme688/Bme688_Fritzing.png" 

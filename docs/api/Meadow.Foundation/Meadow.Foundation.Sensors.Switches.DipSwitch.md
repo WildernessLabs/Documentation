@@ -11,7 +11,7 @@ uid: Meadow.Foundation.Sensors.Switches.DipSwitch
 
 **DipSwitch** represents a DIP-switch wired in a bus configuration, in which all switches are terminated to the same ground/common or high pin.
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg"  />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DIP_Switches.jpg"  />
 
 ```csharp
 public class MeadowApp : App<F7Micro, MeadowApp>
@@ -78,4 +78,4 @@ public override Task Initialize()
 
 ### Wiring Example
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DipSwitch_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Switches.DipSwitch/DipSwitch_Fritzing.svg" />

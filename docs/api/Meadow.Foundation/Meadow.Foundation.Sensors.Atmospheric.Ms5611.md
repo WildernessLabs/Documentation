@@ -79,7 +79,7 @@ To wire a Ms5611 to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Ms5611/Ms5611_Fritzing.png" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Ms5611/Ms5611_Fritzing.png" />
 
 
 

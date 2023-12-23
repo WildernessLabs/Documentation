@@ -71,7 +71,7 @@ public override async Task Run()
 
 Connecting the MPL115A2 to Meadow requires four connections:
 
-<img src="/docs/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/MPL115A2_Fritzing.svg" />
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Mpl115a2/MPL115A2_Fritzing.svg" />
 
 In this diagram, the shutdown (`SDWN`) and reset (`RST`) pins have been left floating.  Both of these pins are active low and can be tied to V<sub>cc</sub> in normal operation.
 

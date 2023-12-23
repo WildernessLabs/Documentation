@@ -72,4 +72,4 @@ It should look like the following diagram:
 
 ### Wiring Example
 
-![Wiring a SevenSegment to a Meadow F7](/docs/API_Assets/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/FourDigitSevenSegment_Fritzing.png)
+![Wiring a SevenSegment to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.Led.FourDigitSevenSegment/FourDigitSevenSegment_Fritzing.png)
