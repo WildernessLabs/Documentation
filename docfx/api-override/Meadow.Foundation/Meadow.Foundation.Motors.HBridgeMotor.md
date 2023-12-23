@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors.HBridgeMotor
-remarks: *content
+
 ---
 
 | HBridgeMotor | |

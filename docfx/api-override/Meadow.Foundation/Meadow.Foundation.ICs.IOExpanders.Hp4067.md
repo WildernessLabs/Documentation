@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Hp4067
-remarks: *content
+
 ---
 
 | Hp4067 | |

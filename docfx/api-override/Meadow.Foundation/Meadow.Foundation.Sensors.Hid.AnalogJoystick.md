@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.AnalogJoystick
-remarks: *content
+
 ---
 
 | AnalogJoystick | |

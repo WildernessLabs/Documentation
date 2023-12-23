@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoder
-remarks: *content
+
 ---
 
 | RotaryEncoder | |

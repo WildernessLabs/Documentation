@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Switches.DipSwitch
-remarks: *content
+
 ---
 
 | DipSwitch | |

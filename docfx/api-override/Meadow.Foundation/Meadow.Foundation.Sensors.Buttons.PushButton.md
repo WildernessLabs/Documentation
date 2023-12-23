@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Buttons.PushButton
-remarks: *content
+
 ---
 
 | PushButton | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Bme688
-remarks: *content
+
 ---
 
 | Bme688 | |

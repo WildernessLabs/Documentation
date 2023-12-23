@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Switches.SpstSwitch
-remarks: *content
+
 ---
 
 | SpstSwitch | |
