@@ -14,7 +14,6 @@ import Footer from '@theme/Footer';
 import LayoutProvider from '@theme/Layout/Provider';
 import ErrorPageContent from '@theme/ErrorPageContent';
 import styles from './styles.module.css';
-import LinksRow from '../../components/LinksRow';
 export default function Layout(props) {
   const {
     children,
@@ -34,8 +33,6 @@ export default function Layout(props) {
       <AnnouncementBar />
 
       <Navbar />
-
-      <LinksRow />
 
       <div
         id={SkipToContentFallbackId}
