@@ -30,9 +30,6 @@ export default function Home(): JSX.Element {
             <section className="meadow-features wl-container">
                 <h2>Meadow.OS</h2>
                 <hr></hr>
-                <p className="content-primary">
-                  Any text necessary here?
-                </p>
                 <div className="wl-grid mb-80">
                   {/* Meadow App Basics */}
                   <div className="wl-card border thick-1 orange radius-8">
@@ -42,16 +39,14 @@ export default function Home(): JSX.Element {
                     />
                     <div className="card-content">
                       <h3>Meadow Application Basics</h3>
-                      <div className="wl-grid space">
-                        <a href="/Meadow/Meadow_Basics/Apps/">Meadow Apps</a>
-                        <a href="/Meadow/Meadow_Basics/Apps/Lifecycle_Events/">App Lifecycle</a>
-                        <a href="/Meadow/Meadow_Basics/Apps/Sleep/">Device Sleep</a>
-                        <a href="/Meadow/Meadow_Basics/IO/">Input/Output (IO)</a>
-                        <a href="/Meadow/Meadow_Basics/IO/Digital/Protocols/">Digital Protocols</a>
-                        <a href="/Meadow/Meadow_Basics/Units/">Units</a>
-                        <a href="/Meadow/Meadow_Basics/Events_and_IObservable/">Eventing</a>
-                        {/*<a href="/Meadow/Meadow_Basics/Meadow_CLI/">Meadow.CLI</a>*/}
-                      </div>
+                      <ul className="flat">
+                        <li><a href="/Meadow/Meadow_Basics/Apps/">Meadow Apps</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/IO/">Input/Output (IO)</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols/">Digital Protocols</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/Units/">Units</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable/">Eventing</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/">more...</a></li>
+                      </ul>
                     </div>
                   </div>
                   {/* Meadow.OS Fundamentals */}
@@ -62,17 +57,14 @@ export default function Home(): JSX.Element {
                     />
                     <div className="card-content">
                       <h3>Meadow.OS Fundamentals</h3>
-                      <div className="wl-grid space">
-                        <a href="/Meadow/Meadow.OS/Networking/">Networking</a>
-                        <a href="/Meadow/Meadow.OS/Bluetooth/">Bluetooth</a>
-                        <a href="/Meadow/Meadow.OS/File_System/">File System</a>
-                        <a href="/Meadow/Meadow.OS/Configuration/">Configuration</a>
-                        <a href="/Meadow/Meadow.OS/Updates/">Updates</a>
-                        <a href="/Meadow/Meadow.OS/RTC/">Clock</a>
-                        <a href="/Meadow/Meadow.OS/Threading/">Threading</a>
-                        <a href="/Meadow/Meadow.OS/Watchdog/">Watchdog</a>
-                        {/*<a href="/Meadow/Meadow_Basics/Meadow_CLI/">Meadow.CLI</a>*/}
-                      </div>
+                      <ul className="flat">
+                        <li><a href="/Meadow/Meadow.OS/Networking/">Networking</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Bluetooth/">Bluetooth</a></li>
+                        <li><a href="/Meadow/Meadow.OS/File_System/">File System</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Configuration/">Configuration</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Threading/">Threading</a></li>
+                        <li><a href="/Meadow/Meadow.OS/">more...</a></li>
+                      </ul>
                     </div>
                   </div>
 
@@ -84,85 +76,20 @@ export default function Home(): JSX.Element {
                     />
                     <div className="card-content">
                       <h3>Meadow.Foundation</h3>
-                      <div className="wl-grid space">
-                        <a href="/Meadow/Meadow.Foundation/">Getting Started</a>
-                        <a href="/Meadow/Meadow.Foundation/Peripherals/">Peripheral Driver List</a>
-                        <a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks/">Libraries + Frameworks</a>
-                        <a href="/Meadow/Meadow.Foundation/Working_with_Sensors/">Working w/Sensors</a>
-                        <a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch/">Unified IO</a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-
-{/* ROW 2 */}
-
-              <section className="meadow-general wl-container">
-                <h2>Meadow</h2>
-                <hr></hr>
-                <p className="content-primary">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  metus dui adipiscing nunc commodo at et in. Aliquam, ultrices
-                  arcu nulla at eget ultrices ultricies rhoncus, vitae.
-                </p>
-                <div className="wl-grid mb-80">
-                  <div className="wl-card border thick-1 orange radius-8">
-                    <img
-                      className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}img/homepage/card-meadow-apps.png`}
-                    />
-                    <div className="card-content">
-                      <h3>Meadow apps</h3>
                       <ul className="flat">
-                        <li>
-                          <a href="#">Downloads</a>
-                        </li>
-                        <li>
-                          <a href="#">Events & iObservable</a>
-                        </li>
-                        <li>
-                          <a href="#">Release notes</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="wl-card border thick-1 orange radius-8">
-                    <img
-                      className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}img/homepage/card-network.png`}
-                    />
-                    <div className="card-content">
-                      <h3>Network</h3>
-                      <ul className="flat">
-                        <li>
-                          <a href="#">File System</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="wl-card border thick-1 orange radius-8">
-                    <img
-                      className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
-                    />
-                    <div className="card-content">
-                      <h3>Input/Output (I/O)</h3>
-                      <ul className="flat">
-                        <li>
-                          <a href="#">Analog.Digital.PWM</a>
-                        </li>
-                        <li>
-                          <a href="#">Protocols: 12C,SPI,Serial Power</a>
-                        </li>
+                        <li><a href="/Meadow/Meadow.Foundation/">Getting Started</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Peripherals/">Peripheral Driver List</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks/">Libraries + Frameworks</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Working_with_Sensors/">Working w/Sensors</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch/">Unified IO</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/">more...</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </section>
+
+              {/* ROW 2 */}
               <section className="meadow-features wl-container">
                 <h2>Meadow</h2>
                 <hr></hr>
