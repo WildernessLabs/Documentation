@@ -219,7 +219,7 @@ We did a major overhaul to the motion sensor (accelerometers and such) APIs, upd
 * **`ITextDisplay`** - Updated the API to work with larger variety of display types, `TextDisplayMenu` coming soon!
 * **`RotaryEncoder`** - Is now more responsive when turning quickly 
 * **`RgbPwmLed`** - Improved brightness control when setting the color
-* **`Max7219`** - Has been updated to support more display configutations when driving 8x8 led arrays
+* **`Max7219`** - Has been updated to support more display configurations when driving 8x8 led arrays
 * **`TftSpi` Display Driver** - Improved performance when making partial screen updates  
 * **`GraphicsLibrary`** - Performance improvements and several rendering fixes when drawing basic shapes 
 * **`Button`** - Long press does not raise click event and is disabled by default

@@ -33,7 +33,7 @@ $ bundle install
 
 ### 3. Launch local server
 
-Change your terminal working folder to `Documentation/docs` (if it's not aleady) and run:
+Change your terminal working folder to `Documentation/docs` (if it's not already) and run:
 
 ```
 bundle exec jekyll serve

@@ -70,7 +70,7 @@ Resolver.Device.WatchdogEnable(TimeSpan.FromSeconds(10));
 
 There are several elements to consider when implementing the watchdog time for your app.
 
-* As described in the API auto-complete documentation, the watchdog timer duration cannot exceed 32,768 milliseconds. If you try to enable the timer for longer than that, you will cause an `ArgumentOutofRangeException`.
+* As described in the API auto-complete documentation, the watchdog timer duration cannot exceed 32,768 milliseconds. If you try to enable the timer for longer than that, you will cause an `ArgumentOutOfRangeException`.
 * If the watchdog timer system is enabled at any point, it cannot be disabled without resetting the Meadow board. This is a constraint of the underlying STM32's watchdog system, exposed for use by Meadow.
 * When [sleeping your Meadow](/Meadow/Meadow_Basics/Apps/Sleep/) in combination with the watchdog timer, sleep durations should not exceed the watchdog duration you choose. If you sleep longer than the watchdog timer duration, the watchdog system will trigger before Meadow can resume from sleep.
     To work around the watchdog timer while sleeping for long periods of time, you would need to wake prior to the watchdog timer elapsing, potentially many times, to reset the watchdog before returning to sleep.

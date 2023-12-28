@@ -8,7 +8,7 @@ subtitle: Getting started
 
 ## Overview
 
-Command + Control makes it easy to send a command to a set of devices. Here is an oveview of the process:
+Command + Control makes it easy to send a command to a set of devices. Here is an overview of the process:
 
 ![Flow diagram showing client sending data to meadowcloud.co via REST API, then to MQTT messages, then to an device event handler.](cmd_overview.png "Command + Control Overview")
 
