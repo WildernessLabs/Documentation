@@ -178,7 +178,7 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.FeatherWings &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
-          node ./scripts/merge-api-overrides.js Meadow.mikroBUS
+          node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
 
       #docusaurus api build
       - name: Use Node.js
