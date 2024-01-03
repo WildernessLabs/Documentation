@@ -1,6 +1,6 @@
 # DocFxMarkdownGen config file
 # Requires running `docfx docfx/docfx.json` first
 
-outputPath: ../../../docs/api/Meadow.Foundation.FeatherWings
+outputPath: ../../../api/Meadow.Foundation.FeatherWings
 yamlPath: ../../api/Meadow.Foundation.FeatherWings
 indexSlug: /api/Meadow.Foundation.FeatherWings
