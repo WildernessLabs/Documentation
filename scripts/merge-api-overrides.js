@@ -5,7 +5,7 @@ const path = require('path');
 const targetFolder = process.argv[2] || "";
 if(!targetFolder)
 {
-    console.error(`Please supply a target folder, like this for example, "node ./scripts/merge-api-overrides.js Meadow.Foundation"`, null);
+    console.error(`Please supply a target folder, like this for example, "node ./scripts/merge-api-overrides.js Meadow.Foundation"`);
     return;
 }
 const folderA = `./docs/api/${targetFolder}`;
