@@ -2,8 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 // Directory locations
-const folderA = "../docs/api/Meadow.Foundation";
-const folderB = "../api/Meadow.Foundation";
+const targetFolder = process.argv[2] || "";
+if(!targetFolder)
+{
+    console.error(`Please supply a target folder, like this for example, "node ./scripts/merge-api-overrides.js Meadow.Foundation"`, null);
+    return;
+}
+const folderA = `./docs/api/${targetFolder}`;
+const folderB = `./api/${targetFolder}`;
 
 // Read all markdown files from folder A
 fs.readdir(folderA, (err, files) => {
@@ -39,7 +45,7 @@ fs.readdir(folderA, (err, files) => {
                     }
 
                     // Find the first '#' character and get all content from there
-                    const contentToAdd = dataB.substring(dataB.indexOf('#'));
+                    const contentToAdd = "\n" + dataB.substring(dataB.indexOf('#'));
 
                     // Append this content to the original file in folder A
                     fs.appendFile(fullPathA, contentToAdd, (err) => {
