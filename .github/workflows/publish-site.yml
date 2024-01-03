@@ -170,6 +170,16 @@ jobs:
         run: |
           dfmg
 
+      # Now we need to take all of the generated class/api reference documentation, and merge
+      # it into the api-overrides content
+      - name: Merge api docs together
+        working-directory: ./src
+        run: |
+          node ./scripts/merge-api-overrides.js Meadow.Foundation &&
+          node ./scripts/merge-api-overrides.js Meadow.Foundation.FeatherWings &&
+          node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
+          node ./scripts/merge-api-overrides.js Meadow.mikroBUS
+
       #docusaurus api build
       - name: Use Node.js
         uses: actions/setup-node@v3
