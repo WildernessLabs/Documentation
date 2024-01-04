@@ -170,6 +170,12 @@ jobs:
         run: |
           dfmg
 
+      # let's put the api overrides files where they belong
+      - name: Copy api files to content locations
+        working-directory: ./src
+        run: |
+          node ./scripts/copy-api.js
+
       # Now we need to take all of the generated class/api reference documentation, and merge
       # it into the api-overrides content
       - name: Merge api docs together
