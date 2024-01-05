@@ -40,12 +40,12 @@ export default function Home(): JSX.Element {
                     <div className="card-content">
                       <h3>Meadow Application Basics</h3>
                       <ul className="flat">
-                        <li><a href="/Meadow/Meadow_Basics/Apps/">Meadow Apps</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/IO/">Input/Output (IO)</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols/">Digital Protocols</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/Units/">Units</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable/">Eventing</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/">more...</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/Apps">Meadow Apps</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/IO">Input/Output (IO)</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols">Digital Protocols</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/Units">Units</a></li>
+                        <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable">Eventing</a></li>
+                        <li><a href="/Meadow/Meadow_Basics">more...</a></li>
                       </ul>
                     </div>
                   </div>
@@ -58,12 +58,12 @@ export default function Home(): JSX.Element {
                     <div className="card-content">
                       <h3>Meadow.OS Fundamentals</h3>
                       <ul className="flat">
-                        <li><a href="/Meadow/Meadow.OS/Networking/">Networking</a></li>
-                        <li><a href="/Meadow/Meadow.OS/Bluetooth/">Bluetooth</a></li>
-                        <li><a href="/Meadow/Meadow.OS/File_System/">File System</a></li>
-                        <li><a href="/Meadow/Meadow.OS/Configuration/">Configuration</a></li>
-                        <li><a href="/Meadow/Meadow.OS/Threading/">Threading</a></li>
-                        <li><a href="/Meadow/Meadow.OS/">more...</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Networking">Networking</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Bluetooth">Bluetooth</a></li>
+                        <li><a href="/Meadow/Meadow.OS/File_System">File System</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Configuration">Configuration</a></li>
+                        <li><a href="/Meadow/Meadow.OS/Threading">Threading</a></li>
+                        <li><a href="/Meadow/Meadow.OS">more...</a></li>
                       </ul>
                     </div>
                   </div>
@@ -77,12 +77,12 @@ export default function Home(): JSX.Element {
                     <div className="card-content">
                       <h3>Meadow.Foundation</h3>
                       <ul className="flat">
-                        <li><a href="/Meadow/Meadow.Foundation/">Getting Started</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Peripherals/">Peripheral Driver List</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks/">Libraries + Frameworks</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Working_with_Sensors/">Working w/Sensors</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch/">Unified IO</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/">more...</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation">Getting Started</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Peripherals">Peripheral Driver List</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks">Libraries + Frameworks</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Working_with_Sensors">Working w/Sensors</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch">Unified IO</a></li>
+                        <li><a href="/Meadow/Meadow.Foundation">more...</a></li>
                       </ul>
                     </div>
                   </div>

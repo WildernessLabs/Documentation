@@ -19,31 +19,31 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
       label: 'Home',
     },
     {
-      href: "/Meadow/Meadow.OS/",
+      href: "/Meadow/Meadow.OS",
       sidebarId: 'tutorialSidebar',
       position: 'left',
       label: 'Meadow.OS',
     },
     {
-      href: "/Meadow/Meadow.Cloud/",
+      href: "/Meadow/Meadow.Cloud",
       sidebarId: 'tutorialSidebar',
       position: 'left',
       label: 'Meadow.Cloud',
     },
     {
-      href: "/Hardware/",
+      href: "/Hardware",
       sidebarId: 'tutorialSidebar',
       position: 'left',
       label: 'Hardware Reference',
     },
     {
-      href: '/Hardware/Tutorials/',
+      href: '/Hardware/Tutorials',
       label: 'Hardware Tutorials',
       position: 'left',
       external: false,
     },
     {
-      href: "/docs/api/",
+      href: "/docs/api",
       sidebarId: 'tutorialSidebar',
       position: 'left',
       label: 'API Docs',
@@ -91,11 +91,11 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
         items: [
           {
             label: 'Meadow',
-            to: '/Meadow/',
+            to: '/Meadow',
           },
           {
             label: 'Netduino',
-            to: '/Netduino/',
+            to: '/Netduino',
           },
           {
             label: 'Community',
