@@ -150,12 +150,11 @@ jobs:
         run: |
           dfmg
 
-      # let's add correct slugs, and put the api files where they belong
-      - name: Copy api files to content locations
+      # let's add correct slugs. They are important, because things won't build if they dont have "slug: /docs/api/..."
+      - name: Update slugs in frontmatter.
         working-directory: ./src
         run: |
-          node ./scripts/update-frontmatter.js &&
-          node ./scripts/copy-api.js
+          node ./scripts/update-frontmatter.js
 
       # Now we need to take all of the generated class/api reference documentation, and merge
       # it into the api-overrides content
@@ -166,6 +165,13 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation.FeatherWings &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
+
+      # Let's put the api files where they belong
+      - name: Copy api files to content locations
+        working-directory: ./src
+        run: |
+          node ./scripts/update-frontmatter.js &&
+          node ./scripts/copy-api.js
 
       #docusaurus build
       - name: Use Node.js
