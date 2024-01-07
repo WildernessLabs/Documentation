@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.As1115
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.As1115
 ---
 
 | As1115 | |

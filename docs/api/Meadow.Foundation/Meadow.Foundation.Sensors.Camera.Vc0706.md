@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Camera.Vc0706
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706
 ---
 
 | Vc0706 | |

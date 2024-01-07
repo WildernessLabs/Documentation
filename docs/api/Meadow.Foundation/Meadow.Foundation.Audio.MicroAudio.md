@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Audio.MicroAudio
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Audio.MicroAudio
 ---
 
 | MicroAudio | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors.Stepper.Uln2003
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003
 ---
 
 | Uln2003 | |

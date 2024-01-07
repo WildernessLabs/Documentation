@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Grove.Leds.LEDSocket
-
+slug: /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Leds.LEDSocket
 ---
 
 | LEDSocket | |

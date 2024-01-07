@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Sht31d
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Sht31d
 ---
 
 | Sht31d | |

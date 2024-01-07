@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Pca9671
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9671
 ---
 
 | Pca9671 | |

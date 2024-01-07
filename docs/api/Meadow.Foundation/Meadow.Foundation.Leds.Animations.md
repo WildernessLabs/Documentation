@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.RgbPwmLed.Animations
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Animations
 ---
 
 | Animations | |

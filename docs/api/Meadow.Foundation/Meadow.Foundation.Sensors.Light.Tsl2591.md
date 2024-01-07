@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Tsl2591
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tsl2591
 ---
 
 | Tsl2591 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.WinUI
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.WinUI
 ---
 
 | WinUI | |

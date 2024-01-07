@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Sensors.Motion.PIRMotionSensor
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.PIRMotionSensor
 ---
 
 | PIRMotionSensor | |

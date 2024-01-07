@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Displays.C8800Retro
-
+slug: >-
+  /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C8800Retro
 ---
 
 | C8800Retro | |

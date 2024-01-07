@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.DotstarWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.DotstarWing
 ---
 
 | DotstarWing | |

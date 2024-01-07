@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Hx8357d
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Hx8357d
 ---
 
 | Hx8357d | |

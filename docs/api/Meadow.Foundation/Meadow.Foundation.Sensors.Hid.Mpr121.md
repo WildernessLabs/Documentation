@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.Mpr121
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121
 ---
 
 | Mpr121 | |

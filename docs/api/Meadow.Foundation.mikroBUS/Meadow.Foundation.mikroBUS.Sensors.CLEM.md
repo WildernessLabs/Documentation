@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Sensors.CLEM
-
+slug: /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.CLEM
 ---
 
 | CLEM | |

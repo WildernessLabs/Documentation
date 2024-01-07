@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.FanControllers.Emc2101
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.FanControllers.Emc2101
 ---
 
 | Emc2101 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.Pmsa003i
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Pmsa003i
 ---
 
 | Pmsa003i | |

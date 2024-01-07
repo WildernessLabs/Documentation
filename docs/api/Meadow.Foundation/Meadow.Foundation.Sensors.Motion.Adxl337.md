@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Adxl337
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Adxl337
 ---
 
 | Adxl337 | |

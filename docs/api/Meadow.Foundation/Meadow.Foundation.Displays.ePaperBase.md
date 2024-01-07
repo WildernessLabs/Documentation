@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.ePaper
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.ePaperBase
 ---
 
 | ePaper        |             |

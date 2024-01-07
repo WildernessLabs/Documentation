@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Moisture.Capacitive
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Capacitive
 ---
 
 | Capacitive | |

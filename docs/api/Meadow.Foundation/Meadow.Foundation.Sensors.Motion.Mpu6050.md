@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Mpu6050
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mpu6050
 ---
 
 | Mpu6050 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Epd5in65f
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd5in65f
 ---
 
 | Epd5in65f | |

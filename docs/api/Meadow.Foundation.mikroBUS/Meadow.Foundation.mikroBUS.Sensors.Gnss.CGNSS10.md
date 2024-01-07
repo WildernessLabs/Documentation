@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS10
-
+slug: >-
+  /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Gnss.CGNSS10
 ---
 
 | CGNSS10 | |

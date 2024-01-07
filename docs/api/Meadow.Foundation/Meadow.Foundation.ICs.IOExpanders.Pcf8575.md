@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Pcf8575
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pcf8575
 ---
 
 | Pcf8575 | |

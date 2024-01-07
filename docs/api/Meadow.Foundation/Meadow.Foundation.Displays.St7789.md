@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.St7789
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.St7789
 ---
 
 | St7789 | |

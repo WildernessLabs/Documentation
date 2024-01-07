@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Sc16is762
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Sc16is762
 ---
 
 | Sc16is762 | |

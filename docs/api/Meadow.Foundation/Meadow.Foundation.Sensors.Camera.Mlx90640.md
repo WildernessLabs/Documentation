@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Camera.Mlx90640
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Mlx90640
 ---
 
 | Mlx90640 | |

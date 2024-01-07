@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Mcp3008
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3008
 ---
 
 | Mcp3008 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Sensors.C420T
-
+slug: /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.C420T
 ---
 
 | C420T | |

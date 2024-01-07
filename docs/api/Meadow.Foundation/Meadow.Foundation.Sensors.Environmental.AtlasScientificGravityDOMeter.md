@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.AtlasScientificGravityDOMeter
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AtlasScientificGravityDOMeter
 ---
 
 | AtlasScientificGravityDOMeter | |

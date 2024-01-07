@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Veml7700
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Veml7700
 ---
 
 | Veml7700 | |

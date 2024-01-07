@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Mpl3115a2
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Mpl3115A2
 ---
 
 | Mpl3115a2 | |

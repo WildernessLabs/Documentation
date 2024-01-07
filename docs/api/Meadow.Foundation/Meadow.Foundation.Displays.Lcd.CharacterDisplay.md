@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Lcd.CharacterDisplay
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay
 ---
 
 | CharacterDisplay | |

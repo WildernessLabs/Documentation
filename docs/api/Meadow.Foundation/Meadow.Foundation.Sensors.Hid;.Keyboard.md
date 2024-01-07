@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid;.Keyboard
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid;.Keyboard
 ---
 
 | Keyboard | |

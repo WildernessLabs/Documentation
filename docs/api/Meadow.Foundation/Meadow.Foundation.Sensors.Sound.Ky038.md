@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Sound.Ky038
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Sound.Ky038
 ---
 
 | Ky038 | |

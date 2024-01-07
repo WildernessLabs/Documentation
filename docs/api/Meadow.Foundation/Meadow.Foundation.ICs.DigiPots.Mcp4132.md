@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.DigiPots.Mcp4132
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Mcp4132
 ---
 
 | Mcp4132 | |

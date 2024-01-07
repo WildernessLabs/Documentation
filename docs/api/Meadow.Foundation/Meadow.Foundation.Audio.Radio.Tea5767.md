@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Audio.Radio.Tea5767
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Radio.Tea5767
 ---
 
 | Tea5767 | |

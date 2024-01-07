@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.Ags01Db
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ags01Db
 ---
 
 | Ags01Db | |

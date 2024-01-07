@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Weather.SwitchingRainGauge
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Weather.SwitchingRainGauge
 ---
 
 | SwitchingRainGauge | |

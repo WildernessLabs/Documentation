@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.DataLoggers.SensorReading
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.DataLoggers.SensorReading
 ---
 
 | SensorReading | |

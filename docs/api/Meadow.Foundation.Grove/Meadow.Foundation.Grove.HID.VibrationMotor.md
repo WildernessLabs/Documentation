@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Grove.HID.VibrationMotor
-
+slug: /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.HID.VibrationMotor
 ---
 
 | VibrationMotor | |

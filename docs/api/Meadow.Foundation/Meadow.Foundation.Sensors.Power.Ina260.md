@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Power.Ina260
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.Ina260
 ---
 
 | Ina260 | |

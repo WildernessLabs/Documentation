@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.Sfsr02
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Sfsr02
 ---
 
 | Sfsr02 | |

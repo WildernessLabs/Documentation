@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.Tsc2004
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Tsc2004
 ---
 
 | Tsc2004 | |

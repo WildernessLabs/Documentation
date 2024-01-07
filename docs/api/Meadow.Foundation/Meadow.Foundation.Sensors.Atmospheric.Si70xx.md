@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Si70xx
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Si70xx
 ---
 
 | Si70xx | |

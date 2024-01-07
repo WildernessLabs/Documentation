@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Bmp180
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp180
 ---
 
 | Bmp180 | |

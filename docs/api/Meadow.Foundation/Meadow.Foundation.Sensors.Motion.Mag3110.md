@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Mag3110
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110
 ---
 
 | Mag3110 | |

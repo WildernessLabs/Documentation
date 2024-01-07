@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Lis3Mdl
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lis3Mdl
 ---
 
 | Lis3Mdl | |

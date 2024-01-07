@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.Mcp9600
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9600
 ---
 
 | Mcp9600 | |

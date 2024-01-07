@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.Y4000
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Y4000
 ---
 
 | Y4000 | |

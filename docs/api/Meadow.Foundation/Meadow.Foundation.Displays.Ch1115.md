@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Ch1115
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ch1115
 ---
 
 | Ch1115 | |

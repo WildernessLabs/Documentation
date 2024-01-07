@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Hmc5883
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hmc5883
 ---
 
 | Hmc5883 | |

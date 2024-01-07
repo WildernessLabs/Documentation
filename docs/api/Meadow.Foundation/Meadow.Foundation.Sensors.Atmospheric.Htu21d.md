@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Htu21d
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d
 ---
 
 | Htu21d | |

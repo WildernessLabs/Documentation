@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLS
 ---
 
 | AdafruitMPRLS | |

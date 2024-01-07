@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Rm68140
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Rm68140
 ---
 
 | Rm68140 | |

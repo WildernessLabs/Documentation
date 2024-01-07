@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.CharlieWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.CharlieWing
 ---
 
 | CharlieWing | |

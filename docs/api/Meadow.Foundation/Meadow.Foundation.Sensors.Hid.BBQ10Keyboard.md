@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.Bbq10Keyboard
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.BBQ10Keyboard
 ---
 
 | Bbq10Keyboard | |

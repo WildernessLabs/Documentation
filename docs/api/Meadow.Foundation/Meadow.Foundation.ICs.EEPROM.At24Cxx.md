@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.EEPROM.At24Cxx
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.EEPROM.At24Cxx
 ---
 
 | At24Cxx | |

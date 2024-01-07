@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Accelerometers.Lis2Mdl
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Accelerometers.Lis2Mdl
 ---
 
 | Lis2Mdl | |

@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Sensors.MBus.CMBusMaster
-
+slug: >-
+  /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.MBus.CMBusMaster
 ---
 
 | CMBusMaster | |

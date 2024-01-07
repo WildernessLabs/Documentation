@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.HallEffect.LinearHallEffectTachometer
 ---
 
 | LinearHallEffectTachometer |  |

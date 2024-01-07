@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Switches.DipSwitch
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.DipSwitch
 ---
 
 | DipSwitch | |

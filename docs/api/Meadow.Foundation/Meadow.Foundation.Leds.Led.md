@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.Led
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Led
 ---
 
 | Led | |

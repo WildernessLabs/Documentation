@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Gnss.NeoM8
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Gnss.NeoM8
 ---
 
 | NeoM8 | |

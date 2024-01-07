@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.Lm75
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75
 ---
 
 | Lm75 | |

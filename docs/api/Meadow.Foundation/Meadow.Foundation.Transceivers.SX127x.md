@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Transceivers.SX127x
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.SX127x
 ---
 
 | SX127x | |

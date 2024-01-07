@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Apds9960
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Apds9960
 ---
 
 | Apds9960 | |

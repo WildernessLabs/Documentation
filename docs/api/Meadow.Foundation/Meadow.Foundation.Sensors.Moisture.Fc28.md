@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Moisture.Fc28
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Moisture.Fc28
 ---
 
 | Fc28 | |

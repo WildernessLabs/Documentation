@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors;.BidirectionalDcMotor
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors;.BidirectionalDcMotor
 ---
 
 | BidirectionalDcMotor | |

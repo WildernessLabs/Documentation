@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Relays.Relay
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Relays.Relay
 ---
 
 | Relay | |

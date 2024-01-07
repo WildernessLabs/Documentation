@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Servos.Servo
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Servos.Servo
 ---
 
 | ServoCore | |

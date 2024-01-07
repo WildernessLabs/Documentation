@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.NextPm
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.NextPm
 ---
 
 | NextPm | |

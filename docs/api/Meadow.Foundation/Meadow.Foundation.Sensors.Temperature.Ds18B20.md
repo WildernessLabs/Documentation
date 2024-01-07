@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.Ds18B20
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Ds18B20
 ---
 
 | Ds18B20 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Bh1750
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Bh1750
 ---
 
 | Bh1750 | |

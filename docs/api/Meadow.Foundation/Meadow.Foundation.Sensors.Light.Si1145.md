@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Si1145
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Si1145
 ---
 
 | Si1145 | |

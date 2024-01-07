@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.WiiClassicControllerPro
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.WiiClassicControllerPro
 ---
 
 | WiiClassicControllerPro | |

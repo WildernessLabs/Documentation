@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Ssd1351
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1351
 ---
 
 | Ssd1351 | |

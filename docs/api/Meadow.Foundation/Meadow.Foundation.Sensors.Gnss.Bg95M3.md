@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Gnss.Bg95M3
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Gnss.Bg95M3
 ---
 
 | Bg95M3 | |

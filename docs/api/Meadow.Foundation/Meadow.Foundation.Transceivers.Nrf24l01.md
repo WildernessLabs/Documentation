@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Transceivers.Nrf24l01
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Transceivers.Nrf24l01
 ---
 
 | Nrf24l01 | |

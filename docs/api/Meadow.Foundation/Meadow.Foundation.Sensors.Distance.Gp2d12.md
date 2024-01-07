@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.Gp2d12
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Gp2d12
 ---
 
 | Gp2d12 | |

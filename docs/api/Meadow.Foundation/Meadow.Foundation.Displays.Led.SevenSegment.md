@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Led.SevenSegment
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SevenSegment
 ---
 
 | SevenSegment | |

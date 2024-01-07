@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.Me007ys
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Me007ys
 ---
 
 | Me007ys | |

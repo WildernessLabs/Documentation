@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.Vl53l0x
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x
 ---
 
 | Vl53l0x | |

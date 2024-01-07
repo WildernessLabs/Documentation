@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.S6D02A1
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.S6D02A1
 ---
 
 | S6D02A1 | |

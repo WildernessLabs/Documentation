@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Displays.C16x9
-
+slug: /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C16x9
 ---
 
 | C16x9 | |

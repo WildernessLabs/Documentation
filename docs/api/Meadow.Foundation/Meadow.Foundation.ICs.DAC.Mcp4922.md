@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.DAC.Mcp4922
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DAC.Mcp4922
 ---
 
 | Mcp4922 | |

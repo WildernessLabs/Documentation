@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.GPSWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.GPSWing
 ---
 
 | GPSWing | |

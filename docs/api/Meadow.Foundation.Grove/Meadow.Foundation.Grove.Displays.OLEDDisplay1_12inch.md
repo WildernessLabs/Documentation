@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Displays.OLEDDisplay1_12inch
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.OLEDDisplay1_12inch
 ---
 
 | OLEDDisplay1_12inch | |

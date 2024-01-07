@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors;.HBridgeMotor
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors;.HBridgeMotor
 ---
 
 | HBridgeMotor | |

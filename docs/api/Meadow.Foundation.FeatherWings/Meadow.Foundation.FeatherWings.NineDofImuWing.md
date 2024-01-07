@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.NineDofImuWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.NineDofImuWing
 ---
 
 | NineDofImuWing | |

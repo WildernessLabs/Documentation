@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.MiniPID2
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.MiniPID2
 ---
 
 | MiniPID2 | |

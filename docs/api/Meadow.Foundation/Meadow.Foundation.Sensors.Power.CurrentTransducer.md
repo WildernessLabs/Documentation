@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Power.CurrentTransducer
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.CurrentTransducer
 ---
 
 | CurrentTransducer | |

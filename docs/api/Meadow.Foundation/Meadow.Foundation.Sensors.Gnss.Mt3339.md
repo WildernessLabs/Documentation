@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Gnss.Mt3339
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Gnss.Mt3339
 ---
 
 | Mt3339 | |

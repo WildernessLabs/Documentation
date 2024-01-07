@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Tm1637
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tm1637
 ---
 
 | Tm1637 | |

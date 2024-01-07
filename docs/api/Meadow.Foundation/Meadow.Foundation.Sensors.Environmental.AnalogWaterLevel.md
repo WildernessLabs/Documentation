@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel
 ---
 
 | AnalogWaterLevel | |

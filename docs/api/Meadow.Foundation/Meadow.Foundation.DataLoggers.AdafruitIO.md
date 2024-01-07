@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.DataLoggers.AdafruitIO
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.DataLoggers.AdafruitIO
 ---
 
 | AdafruitIO | |

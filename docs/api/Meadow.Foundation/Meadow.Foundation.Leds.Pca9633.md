@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.Pca9633
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Pca9633
 ---
 
 | Pca9633 | |

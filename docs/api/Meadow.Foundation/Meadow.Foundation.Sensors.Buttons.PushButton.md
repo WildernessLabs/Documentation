@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Buttons.PushButton
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PushButton
 ---
 
 | PushButton | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors.Tb67h420ftg
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Tb67h420ftg
 ---
 
 | Tb67h420ftg | |

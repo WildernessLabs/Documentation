@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Camera.ArducamMini
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.ArducamMini
 ---
 
 | ArducamMini | |

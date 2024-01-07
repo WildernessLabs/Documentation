@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.AnalogTemperature
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.AnalogTemperature
 ---
 
 | AnalogTemperature | |

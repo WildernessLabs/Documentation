@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.AnalogJoystick
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.AnalogJoystick
 ---
 
 | AnalogJoystick | |

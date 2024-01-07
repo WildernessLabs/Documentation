@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Switches.SpdtSwitch
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpdtSwitch
 ---
 
 | SpdtSwitch | |

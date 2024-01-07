@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.LoadCell.Nau7802
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.LoadCell.Nau7802
 ---
 
 | Nau7802 | |

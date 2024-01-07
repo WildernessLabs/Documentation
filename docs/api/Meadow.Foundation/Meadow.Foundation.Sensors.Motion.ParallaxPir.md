@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.ParallaxPir
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.ParallaxPir
 ---
 
 | ParallaxPir | |

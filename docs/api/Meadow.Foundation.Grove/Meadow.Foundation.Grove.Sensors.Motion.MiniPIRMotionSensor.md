@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor
 ---
 
 | MiniPIRMotionSensor | |

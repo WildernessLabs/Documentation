@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.RTCs.Ds1307
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds1307
 ---
 
 | Ds1307 | |

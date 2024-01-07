@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.Ens160
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ens160
 ---
 
 | Ens160 | |

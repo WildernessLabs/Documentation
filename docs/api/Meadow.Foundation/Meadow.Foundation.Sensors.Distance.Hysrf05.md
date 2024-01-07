@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.Hysrf05
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hysrf05
 ---
 
 | Hysrf05 | |

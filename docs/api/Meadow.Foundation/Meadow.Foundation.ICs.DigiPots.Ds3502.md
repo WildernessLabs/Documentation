@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.DigiPots.Ds3502
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DigiPots.Ds3502
 ---
 
 | Ds3502 | |

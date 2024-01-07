@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.Ws2812
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Ws2812
 ---
 
 | Ws2812 | |

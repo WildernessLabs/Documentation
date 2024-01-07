@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Uc8151c
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Uc8151c
 ---
 
 | Uc8151c | |

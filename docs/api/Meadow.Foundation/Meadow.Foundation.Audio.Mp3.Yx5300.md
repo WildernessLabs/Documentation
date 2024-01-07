@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Audio.Mp3.Yx5300
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300
 ---
 
 | Yx5300 | |

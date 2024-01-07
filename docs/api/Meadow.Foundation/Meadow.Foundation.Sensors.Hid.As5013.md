@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.As5013
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.As5013
 ---
 
 | As5013 | |

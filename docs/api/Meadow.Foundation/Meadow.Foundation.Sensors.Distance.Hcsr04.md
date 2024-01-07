@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.Hcsr04
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Hcsr04
 ---
 
 | Hcsr04 | |

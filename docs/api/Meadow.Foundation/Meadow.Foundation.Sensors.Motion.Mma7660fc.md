@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Mma7660fc
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mma7660fc
 ---
 
 | Mma7660fc | |

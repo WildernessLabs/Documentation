@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Gtk
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Gtk
 ---
 
 | Gtk | |

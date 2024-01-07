@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Tcs3472x
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Tcs3472x
 ---
 
 | Tcs3472x | |

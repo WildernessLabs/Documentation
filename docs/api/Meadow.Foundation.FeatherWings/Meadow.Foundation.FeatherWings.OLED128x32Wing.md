@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.OLED128x32Wing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.OLED128x32Wing
 ---
 
 | OLED128x32Wing | |

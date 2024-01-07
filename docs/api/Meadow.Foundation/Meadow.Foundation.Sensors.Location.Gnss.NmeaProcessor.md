@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Graphics.MicroGraphics
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaProcessor
 ---
 
 | NmeaProcessor | |

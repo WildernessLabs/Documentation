@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.ADC.Ads1x15
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1x15
 ---
 
 | Ads1x15 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Epd2in7b
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd2in7b
 ---
 
 | Epd2in7b | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.Scd41
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd41
 ---
 
 | Scd41 | |

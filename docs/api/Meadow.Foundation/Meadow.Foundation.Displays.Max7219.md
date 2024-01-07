@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Max7219
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Max7219
 ---
 
 | Max7219 | |

@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Sensors.Hid.CJoystick
-
+slug: >-
+  /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.Hid.CJoystick
 ---
 
 | CJoystick | |

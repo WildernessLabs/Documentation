@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Led.SixteenSegment
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.SixteenSegment
 ---
 
 | SixteenSegment | |

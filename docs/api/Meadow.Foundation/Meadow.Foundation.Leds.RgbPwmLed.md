@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.RgbPwmLed
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.RgbPwmLed
 ---
 
 | RgbPwmLed | |

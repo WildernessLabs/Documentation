@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor
 ---
 
 | MoistureSensor | |

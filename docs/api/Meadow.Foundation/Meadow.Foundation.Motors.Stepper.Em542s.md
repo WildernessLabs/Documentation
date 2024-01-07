@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors.Stepper.Em542s
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Em542s
 ---
 
 | Em542s | |

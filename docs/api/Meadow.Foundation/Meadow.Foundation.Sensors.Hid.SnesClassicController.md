@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Hid.SnesClassicController
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.SnesClassicController
 ---
 
 | SnesClassicController | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.AnalogLightSensor
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.AnalogLightSensor
 ---
 
 | AnalogLightSensor | |

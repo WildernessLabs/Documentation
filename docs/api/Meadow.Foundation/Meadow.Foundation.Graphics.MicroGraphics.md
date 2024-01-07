@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Graphics.MicroGraphics
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.MicroGraphics
 ---
 
 | MicroGraphics | |

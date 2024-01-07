@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.KeyboardWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.KeyboardWing
 ---
 
 | KeyboardWing | |

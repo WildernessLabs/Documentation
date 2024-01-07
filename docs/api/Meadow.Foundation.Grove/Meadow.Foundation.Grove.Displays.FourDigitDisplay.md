@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Displays.FourDigitDisplay
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Displays.FourDigitDisplay
 ---
 
 | 4-DigitDisplay | |

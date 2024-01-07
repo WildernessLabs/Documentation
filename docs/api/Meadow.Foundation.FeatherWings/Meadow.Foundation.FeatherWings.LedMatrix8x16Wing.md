@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.LedMatrix8x16Wing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.LedMatrix8x16Wing
 ---
 
 | LedMatrix8x16Wing | |

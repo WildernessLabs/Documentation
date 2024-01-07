@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Il91874V03
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Il91874V03
 ---
 
 | Il91874V03 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.RTCs.Ds323x
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds323x
 ---
 
 | Ds323x | |

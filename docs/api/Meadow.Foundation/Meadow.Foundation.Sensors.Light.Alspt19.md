@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Alspt19
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Alspt19
 ---
 
 | Alspt19       |             |

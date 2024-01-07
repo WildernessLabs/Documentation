@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Displays.Led.FourDigitSevenSegment
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Led.FourDigitSevenSegment
 ---
 
 | FourDigitSevenSegment | |

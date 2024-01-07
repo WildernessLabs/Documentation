@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass
 ---
 
 | 3-AxisDigitalCompass | |

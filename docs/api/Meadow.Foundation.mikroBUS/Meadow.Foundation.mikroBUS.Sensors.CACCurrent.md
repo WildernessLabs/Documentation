@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Sensors.CACCurrent
-
+slug: >-
+  /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Sensors.CACCurrent
 ---
 
 | CACCurrent | |

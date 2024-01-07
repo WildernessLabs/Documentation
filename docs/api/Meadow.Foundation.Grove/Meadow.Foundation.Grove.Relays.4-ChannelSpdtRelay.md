@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay
 ---
 
 | 4-ChannelSpdtRelay | |

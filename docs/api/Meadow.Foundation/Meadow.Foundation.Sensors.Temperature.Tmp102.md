@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.Tmp102
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102
 ---
 
 | Tmp102 | |

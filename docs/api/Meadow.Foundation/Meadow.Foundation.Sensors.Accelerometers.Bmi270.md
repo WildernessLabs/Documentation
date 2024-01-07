@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Accelerometers.Bmi270
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Accelerometers.Bmi270
 ---
 
 | Bmi270 | |

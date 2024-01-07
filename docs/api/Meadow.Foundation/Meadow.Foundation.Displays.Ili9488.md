@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Ili9488
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ili9488
 ---
 
 | Ili9488 | |

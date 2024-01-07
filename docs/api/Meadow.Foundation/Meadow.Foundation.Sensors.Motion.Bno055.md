@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Bno055
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Bno055
 ---
 
 | Bno055 | |

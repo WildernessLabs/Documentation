@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Audio.PiezoSpeaker
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Audio.PiezoSpeaker
 ---
 
 | PiezoSpeaker | |

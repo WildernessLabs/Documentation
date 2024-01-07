@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Pcd8544
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Pcd8544
 ---
 
 | Pcd8544 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Lsm303agr
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lsm303agr
 ---
 
 | Lsm303agr | |

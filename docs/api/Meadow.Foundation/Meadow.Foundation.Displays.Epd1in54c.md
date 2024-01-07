@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Epd1in54c
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd1in54c
 ---
 
 | Epd1in54c | |

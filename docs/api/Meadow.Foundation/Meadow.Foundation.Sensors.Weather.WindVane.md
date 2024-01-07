@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Weather.WindVane
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Weather.WindVane
 ---
 
 | WindVane | |

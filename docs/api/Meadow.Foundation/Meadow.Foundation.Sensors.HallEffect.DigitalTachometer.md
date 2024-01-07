@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.HallEffect.DigitalTachometer
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.HallEffect.DigitalTachometer
 ---
 
 | DigitalTachometer | |

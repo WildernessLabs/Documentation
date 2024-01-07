@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Sh1106
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Sh1106
 ---
 
 | Sh1106 | |

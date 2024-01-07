@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.x74595
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.x74595
 ---
 
 | x74595 | |

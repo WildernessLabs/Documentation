@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Distance.MaxBotix
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.MaxBotix
 ---
 
 | MaxBotix | |

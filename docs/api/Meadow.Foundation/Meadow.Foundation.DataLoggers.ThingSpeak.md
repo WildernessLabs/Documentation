@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.DataLoggers.ThingSpeak
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.DataLoggers.ThingSpeak
 ---
 
 | ThingSpeak | |

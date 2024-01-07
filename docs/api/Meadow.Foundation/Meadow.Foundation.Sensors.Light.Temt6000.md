@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Temt6000
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Temt6000
 ---
 
 | Temt6000 | |

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.AnalogSolarGauge
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.AnalogSolarGauge
 ---
 
 | AnalogSolarGauge | |

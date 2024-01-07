@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.LedBarGraph
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.LedBarGraph
 ---
 
 | LedBarGraph | |

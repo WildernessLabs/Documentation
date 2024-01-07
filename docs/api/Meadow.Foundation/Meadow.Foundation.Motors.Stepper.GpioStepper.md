@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors.Stepper.GpioStepper
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.GpioStepper
 ---
 
 | GpioStepper | |

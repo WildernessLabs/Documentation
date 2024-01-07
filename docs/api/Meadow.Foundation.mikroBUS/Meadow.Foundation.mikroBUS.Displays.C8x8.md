@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.mikroBUS.Displays.C8x8
-
+slug: /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C8x8
 ---
 
 | C8x8 | |

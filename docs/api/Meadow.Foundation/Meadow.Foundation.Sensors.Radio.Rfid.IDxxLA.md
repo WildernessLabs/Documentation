@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Radio.Rfid.IDxxLA
 ---
 
 | IDxxLA | |

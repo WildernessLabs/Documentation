@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.NeoPixelWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.NeoPixelWing
 ---
 
 | NeoPixelWing | |

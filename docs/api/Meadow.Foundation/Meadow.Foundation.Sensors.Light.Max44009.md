@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Light.Max44009
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Light.Max44009
 ---
 
 | Max44009 | |

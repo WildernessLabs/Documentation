@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer16g
-
+slug: >-
+  /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer16g
 ---
 
 | 3-AxisDigitalAccelerometer16g | |

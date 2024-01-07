@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rotary.RotaryEncoderWithButton
 ---
 
 | RotaryEncoderWithButton | |

@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Controllers.Pid.StandardPidController
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Controllers.Pid.StandardPidController
 ---
 
 | StandardPidController | |

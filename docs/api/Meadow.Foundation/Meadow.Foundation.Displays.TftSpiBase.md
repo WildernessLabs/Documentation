@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.TftSpi
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TftSpiBase
 ---
 
 | TftSpi        |             |

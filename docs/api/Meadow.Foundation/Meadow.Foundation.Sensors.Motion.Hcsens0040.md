@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Hcsens0040
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Hcsens0040
 ---
 
 | Hcsens0040 | |

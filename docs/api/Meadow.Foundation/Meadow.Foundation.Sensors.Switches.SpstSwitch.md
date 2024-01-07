@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Switches.SpstSwitch
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Switches.SpstSwitch
 ---
 
 | SpstSwitch | |

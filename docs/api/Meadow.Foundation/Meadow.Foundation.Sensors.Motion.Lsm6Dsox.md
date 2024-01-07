@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Motion.Lsm6Dsox
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lsm6Dsox
 ---
 
 | Lsm6Dsox | |

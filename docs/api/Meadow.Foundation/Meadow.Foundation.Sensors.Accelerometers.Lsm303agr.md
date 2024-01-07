@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Accelerometers.Lsm303agr
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Accelerometers.Lsm303agr
 ---
 
 | Lsm303agr | |

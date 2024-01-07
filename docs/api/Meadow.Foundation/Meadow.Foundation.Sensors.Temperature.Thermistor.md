@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.Thermistor
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Thermistor
 ---
 
 | Thermistor | |

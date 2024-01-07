@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Sensors.Buttons.PollingPushButton
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Buttons.PollingPushButton
 ---
 
 | PollingPushButton | |

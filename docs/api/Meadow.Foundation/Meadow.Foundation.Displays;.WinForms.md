@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays;.WinForms
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays;.WinForms
 ---
 
 | WinForms | |

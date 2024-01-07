@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Leds.Apa102
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Leds.Apa102
 ---
 
 | Apa102 | |

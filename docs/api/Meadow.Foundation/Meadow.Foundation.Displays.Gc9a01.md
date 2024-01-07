@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.Gc9a01
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Gc9a01
 ---
 
 | Gc9a01 | |

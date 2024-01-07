@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.Displays.TextDisplayMenu.TextDisplayMenu
-
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.TextDisplayMenu.TextDisplayMenu
 ---
 
 | TextDisplayMenu | |

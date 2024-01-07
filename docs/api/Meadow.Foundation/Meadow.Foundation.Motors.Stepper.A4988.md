@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Motors.Stepper.A4988
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.A4988
 ---
 
 | A4988 | |

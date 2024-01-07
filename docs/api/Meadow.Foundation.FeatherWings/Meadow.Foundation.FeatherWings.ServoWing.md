@@ -1,6 +1,7 @@
 ---
 uid: Meadow.Foundation.FeatherWings.ServoWing
-
+slug: >-
+  /docs/api/Meadow.Foundation.FeatherWings/Meadow.Foundation.FeatherWings.ServoWing
 ---
 
 | ServoWing | |

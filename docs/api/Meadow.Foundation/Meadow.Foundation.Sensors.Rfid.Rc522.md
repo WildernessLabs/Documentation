@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Rfid.Rc522
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Rfid.Rc522
 ---
 
 | Rc522 | |

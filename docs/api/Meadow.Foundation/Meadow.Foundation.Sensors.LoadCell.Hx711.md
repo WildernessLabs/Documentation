@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.LoadCell.Hx711
-
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.LoadCell.Hx711
 ---
 
 | Hx711 | |
