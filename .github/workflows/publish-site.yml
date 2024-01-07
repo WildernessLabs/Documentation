@@ -36,25 +36,25 @@ jobs:
         run: |
           node ./scripts/compress.js ./
 
-      #docusaurus guides build
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
-          # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
-          cache-dependency-path: src/package-lock.json
-      - name: Build and Deploy (mostly just Docusaurus)
-        working-directory: ./src
-        run: |
-          npm run build
-      - uses: bacongobbler/azure-blob-storage-upload@main
-        with:
-          source_dir: './src/build'
-          container_name: '$web'
-          connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
-          overwrite: 'true'
-          #sync: 'true'
+      # #docusaurus guides build
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 18
+      #     cache: 'npm'
+      #     # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
+      #     cache-dependency-path: src/package-lock.json
+      # - name: Build and Deploy (mostly just Docusaurus)
+      #   working-directory: ./src
+      #   run: |
+      #     npm run build
+      # - uses: bacongobbler/azure-blob-storage-upload@main
+      #   with:
+      #     source_dir: './src/build'
+      #     container_name: '$web'
+      #     connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
+      #     overwrite: 'true'
+      #     #sync: 'true'
 
       # Clone all the Meadow dependencies adjacent for DocFX build use.
       - name: Checkout Meadow.Units side-by-side
@@ -186,7 +186,7 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
 
-      #docusaurus api build
+      #docusaurus build
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -194,10 +194,10 @@ jobs:
           cache: 'npm'
           # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
           cache-dependency-path: src/package-lock.json
-      - name: Build and Deploy (mostly just Docusaurus)
+      - name: Docusaurus Build and Deploy
         working-directory: ./src
         run: |
-          npm run build-api
+          npm run build
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: './src/build'
