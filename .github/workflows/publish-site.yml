@@ -36,26 +36,6 @@ jobs:
         run: |
           node ./scripts/compress.js ./
 
-      # #docusaurus guides build
-      # - name: Use Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 18
-      #     cache: 'npm'
-      #     # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
-      #     cache-dependency-path: src/package-lock.json
-      # - name: Build and Deploy (mostly just Docusaurus)
-      #   working-directory: ./src
-      #   run: |
-      #     npm run build
-      # - uses: bacongobbler/azure-blob-storage-upload@main
-      #   with:
-      #     source_dir: './src/build'
-      #     container_name: '$web'
-      #     connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
-      #     overwrite: 'true'
-      #     #sync: 'true'
-
       # Clone all the Meadow dependencies adjacent for DocFX build use.
       - name: Checkout Meadow.Units side-by-side
         uses: actions/checkout@v3
@@ -170,10 +150,11 @@ jobs:
         run: |
           dfmg
 
-      # let's put the api overrides files where they belong
+      # let's add correct slugs, and put the api files where they belong
       - name: Copy api files to content locations
         working-directory: ./src
         run: |
+          node ./scripts/update-frontmatter.js &&
           node ./scripts/copy-api.js
 
       # Now we need to take all of the generated class/api reference documentation, and merge
