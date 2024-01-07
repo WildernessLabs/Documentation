@@ -23,7 +23,7 @@ const config = {
   url: "https://wildernesslabs.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/docs/",
   trailingSlash: true,
 
   // GitHub pages deployment config.
@@ -52,7 +52,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/WildernessLabs/Documentation/tree/main/",
-          // routeBasePath: '/' // <-- removes "docs" from url
+          routeBasePath: '/' // <-- removes "docs" from url
         },
         blog: {
           showReadingTime: true,
