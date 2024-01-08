@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
                     Setup your development environment, configure your Meadow
                     dev kit, and deploy your first application.
                   </p>
-                  <a className="button-blue" href="/meadow/Getting_Started">
+                  <a className="button-blue" href="/Getting_Started">
                     Get Started
                   </a>
                 </div>
