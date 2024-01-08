@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
       <main>
         <section id="homepage">
           <div className="home-container">
-            <header className="hero mb-80">
+            <header className="hero mb-50">
               <div className="wl-container hero-content">
                 <div className="">
                   <h1>Welcome.</h1>
@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
             <section className="meadow-features wl-container">
                 <h2>Meadow.OS</h2>
                 <hr></hr>
-                <div className="wl-grid mb-80">
+                <div className="wl-grid mb-50">
                   {/* Meadow App Basics */}
                   <div className="wl-card border thick-1 orange radius-8">
                     <img
@@ -98,7 +98,7 @@ export default function Home(): JSX.Element {
                   metus dui adipiscing nunc commodo at et in. Aliquam, ultrices
                   arcu nulla at eget ultrices ultricies rhoncus, vitae.
                 </p>
-                <div className="wl-grid mb-80">
+                <div className="wl-grid mb-50">
                   <div className="wl-card border thick-3 blue radius-8 corner">
                     <div className="card-content">
                       <h3>
@@ -136,7 +136,7 @@ export default function Home(): JSX.Element {
                 </div>
               </section>
               <section className="meadow-docs wl-container">
-                <div className="wl-grid mb-80">
+                <div className="wl-grid mb-50">
                   <div className="wl-card full bg-light-1 pb-50">
                     <div className="card-content">
                       <h2>Electronics Tutorial</h2>
@@ -170,7 +170,7 @@ export default function Home(): JSX.Element {
               <section className="rel-section" >
                 <div className="dev-camp"></div>
               </section>
-              <section className="events  mb-80">
+              <section className="events  mb-50">
                 <div className="centered-callout">
                   <h2>Join us at these upcoming virtual events</h2>
                   <h3> Bryan, is this the place to post virtual events? Maybe our marketing site instead?
