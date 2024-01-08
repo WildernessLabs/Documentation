@@ -6,7 +6,7 @@ subtitle: Placing and soldering hardware components on a PCB.
 
 ## Video Tutorial
 
-<p><iframe width="640" height="360" src="https://www.youtube.com/embed/6sRQgr-drBA" frameborder="3" allowfullscreen></iframe></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/kJGqTV1O_14?si=05iOzsXmjOcbxsPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 
 ## Further Reading
