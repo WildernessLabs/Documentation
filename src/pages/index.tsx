@@ -91,34 +91,31 @@ export default function Home(): JSX.Element {
 
               {/* ROW 2 */}
               <section className="meadow-features wl-container">
-                <h2>Meadow</h2>
+                <h2>Meadow.Cloud, Hardware, & Other</h2>
                 <hr></hr>
-                <p className="content-primary">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  metus dui adipiscing nunc commodo at et in. Aliquam, ultrices
-                  arcu nulla at eget ultrices ultricies rhoncus, vitae.
-                </p>
                 <div className="wl-grid mb-80">
                   <div className="wl-card border thick-3 blue radius-8 corner">
                     <div className="card-content">
                       <h3>
-                        <a href="#">Getting Started</a>
+                        <a href="/Meadow/Meadow.Cloud/">Meadow.Cloud</a>
                       </h3>
-                      <p>Short sentence about getting started</p>
+                      <p>Deploy, maintain, and scale devices in the field with Meadow.Cloud.</p>
                       <div className="wl-grid space">
-                        <a>Link #1</a>
-                        <a>Link #2</a>
+                        <a href="/Meadow/Meadow.Cloud/OtA_Updates/">OtA Updates</a>
+                        <a href="/Meadow/Meadow.Cloud/Command_Control/">Command + Control</a>
+                        <a href="/Meadow/Meadow.Cloud/Health_Monitoring/">Health Monitoring</a>
+                        <a href="/Meadow/Meadow.Cloud/Logs_Events/">Logs + Events</a>
                       </div>
                     </div>
                   </div>
 
                   <div className="wl-card border thick-3 blue radius-8 corner">
                     <div className="card-content">
-                      <h3>Peripheral driver library</h3>
-                      <p>Short sentence about getting started</p>
+                      <h3>Hardware Tutorials + Reference</h3>
+                      <p>These tutorials and reference guides cover key electronics concepts.</p>
                       <div className="wl-grid space">
-                        <a>Link #1</a>
-                        <a>Link #2</a>
+                        <a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a>
+                        <a href="/Hardware/Fundamentals/Introduction_to_Hardware_Design/">PCB Design Tutorial</a>
                       </div>
                     </div>
                   </div>
