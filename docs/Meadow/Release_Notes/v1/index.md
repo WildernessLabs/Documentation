@@ -4,6 +4,40 @@ title: Meadow v1
 subtitle: Release Notes
 ---
 
+# v1.7.0
+
+## Meadow.OS && Meadow.Core
+
+* System.Debug.WriteLine is now functional and no longer crashes the device
+* New property added to Meadow.Core NetworkAdapters: `DnsAddresses`
+* Added SensorService, read more here.
+* Several low-level fixes & improvements
+
+## Meadow.Foundation
+
+### New Drivers
+
+* New OLED 128x64 Featherwing driver
+* New Useful Sensor’s Person Sensor driver
+* New AMG8833 driver
+* New AsciiConsole display driver
+* New DFRobot Gravity Dissolved Oxygen sensor driver
+* Mac keyboard support added to keyboard driver
+* SH1107 display driver cleanup and fixes
+* Improved relay API and contracts
+* General cleanup of sensor contracts 
+* General cleanup and memory optimizations
+
+### Breaking changes
+
+* Moved `Color` struct to Meadow.Contracts and changed namespace to Meadow
+* MicroLayout - Property `Visible` on all controls has been renamed to `IsVisible`
+* MicroLayout - Property `Filled` on Box has been renamed to `IsFilled`
+
+## Meadow.Cloud
+
+* Added new integration for Azure Event Grid
+
 # v1.6.0
 
 ## Meadow.OS
