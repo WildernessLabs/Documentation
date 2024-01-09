@@ -11,7 +11,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #EF7D3B;
+  --ifm-color-primary: #ef7d3b;
   --ifm-color-primary-dark: var($color-brown);
   --ifm-color-primary-darker: var($color-brown);
   --ifm-color-primary-darkest: var($color-brown);
@@ -22,7 +22,8 @@
   --ifm-color-emphasis-300: #12bbf3;
   --ifm-color-emphasis-200: #12bbf3 !important;
   --ifm-hover-overlay: none !important;
-  --ifm-menu-link-sublist-icon-filter: invert(61%) sepia(72%) saturate(1890%) hue-rotate(349deg) brightness(100%) contrast(106%) !important;
+  --ifm-menu-link-sublist-icon-filter: invert(61%) sepia(72%) saturate(1890%)
+    hue-rotate(349deg) brightness(100%) contrast(106%) !important;
   --ifm-menu-link-padding-vertical: 5px;
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,1)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
   --ifm-transition-fast: 0ms !important;
@@ -49,8 +50,7 @@
     }
   }
 
-  aside
-  {
+  aside {
     border-right: 0;
   }
 
@@ -65,8 +65,7 @@
       padding-top: 0 !important;
       padding-bottom: 0 !important;
 
-      .row
-      {
+      .row {
         flex-wrap: nowrap;
 
         div[class^="col col--3"] {
@@ -100,8 +99,7 @@
     }
   }
 
-  .menu__list-item-collapsible
-  {
+  .menu__list-item-collapsible {
     padding: 10px 0px;
     border-bottom: solid 0.25px $color-dark-grey;
     border-top: solid 0.25px $color-dark-grey;
@@ -135,8 +133,7 @@
   }
 
   .menu__caret:before,
-  .menu__link--sublist-caret:after
-  {
+  .menu__link--sublist-caret:after {
     width: 20px;
     min-width: 20px;
   }
@@ -198,29 +195,24 @@
     height: 100%;
     max-height: 100%;
 
-    .table-of-contents
-    {
+    .table-of-contents {
       font-size: 16px;
       border: none;
     }
   }
-  .theme-doc-sidebar-item-link-level-1
-  {
+  .theme-doc-sidebar-item-link-level-1 {
     font-size: 17px;
   }
 
   .theme-doc-sidebar-item-category-level-1 {
     margin: 0;
 
-    a
-    {
+    a {
       font-size: 17px;
     }
-    
-    ul {
 
-      .menu__list-item-collapsible
-      {
+    ul {
+      .menu__list-item-collapsible {
         padding: 0;
         border-bottom: 0;
         border-top: 0;
@@ -228,6 +220,18 @@
 
       li:last-child {
         margin-bottom: 10px;
+      }
+    }
+
+    .theme-doc-sidebar-item-link-level-3 {
+      a {
+        padding-left: 50px !important;
+      }
+    }
+
+    .theme-doc-sidebar-item-link-level-4 {
+      a {
+        padding-left: 70px !important;
       }
     }
   }
@@ -245,13 +249,11 @@
     overflow-x: hidden;
   }
 
-  .tabs__item
-  {
+  .tabs__item {
     font-family: "Wavehaus-Book";
     color: $color-brown;
   }
-  .tabs__item--active
-  {
+  .tabs__item--active {
     border-bottom-color: $color-orange;
   }
 }
@@ -321,18 +323,14 @@ code {
     color: white !important;
   }
 
-  .tabs__item
-  {
+  .tabs__item {
     color: white;
   }
 }
 
-
-.hidden-doc
-{
+.hidden-doc {
   display: none;
 }
-
 
 // Search
 .DocSearch {
@@ -356,7 +354,7 @@ code {
   font-size: 17px;
 }
 
-[data-theme='dark'] .DocSearch {
+[data-theme="dark"] .DocSearch {
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(47, 55, 69, 0.7);
