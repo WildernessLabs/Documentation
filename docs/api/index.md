@@ -6,18 +6,18 @@ slug: /docs/api/
 ---
 
 ### Meadow
-[Api reference for all things Meadow](../Meadow/), Meadow.Cloud, Meadow.Hardware, Meadow.Logging, and much more.
-* [Meadow](./Meadow/Meadow.md)
-* [Meadow.Cloud](./Meadow.Cloud/Meadow.Cloud.md)
-* [Meadow.Devices](./Meadow.Devices/Meadow.Devices.md)
-* [Meadow.Gateways](./Meadow.Gateways/Meadow.Gateways.md)
-* [Meadow.Hardware](./Meadow.Hardware/Meadow.Hardware.md)
-* [Meadow.Logging](./Meadow.Logging/Meadow.Logging.md)
-* [Meadow.Networking](./Meadow.Networking/Meadow.Networking.md)
-* [Meadow.Peripherals](./Meadow.Peripherals/Meadow.Peripherals.md)
-* [Meadow.Units](./Meadow.Units/Meadow.Units.md)
-* [Meadow.Update](./Meadow.Update/Meadow.Update.md)
-* [Meadow.Utilities](./Meadow.Utilities/Meadow.Utilities.md)
+[Api reference for all things Meadow](/docs/api/Meadow/index), Meadow.Cloud, Meadow.Hardware, Meadow.Logging, and much more.
+* [Meadow](/docs/api/Meadow/index)
+* [Meadow.Cloud](/docs/api/Meadow/Meadow.Cloud/)
+* [Meadow.Devices](/docs/api/Meadow/Meadow.Devices/)
+* [Meadow.Gateways](/docs/api/Meadow/Meadow.Gateways/)
+* [Meadow.Hardware](/docs/api/Meadow/Meadow.Hardware/)
+* [Meadow.Logging](/docs/api/Meadow/Meadow.Logging/)
+* [Meadow.Networking](/docs/api/Meadow/Meadow.Networking/)
+* [Meadow.Peripherals](/docs/api/Meadow/Meadow.Peripherals/)
+* [Meadow.Units](/docs/api/Meadow/Meadow.Units/)
+* [Meadow.Update](/docs/api/Meadow/Meadow.Update/)
+* [Meadow.Utilities](/docs/api/Meadow/Meadow.Utilities/)
 
 ### Meadow.Foundation
 The [Meadow.Foundation](/Meadow/Meadow.Foundation/Peripherals/) peripherals library is an open source repository of drivers and libraries that streamline and simplify adding hardware to your .NET Meadow IoT application.
