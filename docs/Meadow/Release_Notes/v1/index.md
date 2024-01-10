@@ -17,20 +17,20 @@ subtitle: Release Notes
 
 ### New Drivers
 
-* New [OLED 128x64 Featherwing](https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.OLED128x64Wing) driver
-* New Useful [Sensor’s Person Sensor](https://www.nuget.org/packages/Meadow.Foundation.Sensors.PersonSensor) driver
-* New Infrared camera [AMG8833](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Amg8833) driver
-* New [AsciiConsole display](https://www.nuget.org/packages/Meadow.Foundation.Displays.AsciiConsole) driver
-* New [DFRobot Gravity Dissolved Oxygen sensor](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter) driver
+* New [OLED 128x64 Featherwing](https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.OLED128x64Wing)
+* New Useful Sensor’s [`PersonSensor`](https://www.nuget.org/packages/Meadow.Foundation.Sensors.PersonSensor)
+* New Infrared camera [`Amg8833`](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Amg8833)
+* New [`AsciiConsole` display](https://www.nuget.org/packages/Meadow.Foundation.Displays.AsciiConsole)
+* New [`DFRobot Gravity Dissolved Oxygen` sensor](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter) driver
 * Mac keyboard support added to keyboard driver
-* SH1107 display driver cleanup and fixes
+* `SH1107` display driver cleanup and fixes
 * Improved relay API and contracts
 * General cleanup of sensor contracts 
 * General cleanup and memory optimizations
 
 ### Breaking changes
 
-* Moved `Color` struct to Meadow.Contracts and changed namespace to Meadow
+* Moved `Color` struct to `Meadow.Contracts` and changed namespace to `Meadow`
 * MicroLayout - Property `Visible` on all controls has been renamed to `IsVisible`
 * MicroLayout - Property `Filled` on Box has been renamed to `IsFilled`
 
