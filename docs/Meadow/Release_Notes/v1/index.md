@@ -6,22 +6,22 @@ subtitle: Release Notes
 
 # v1.7.0
 
-## Meadow.OS && Meadow.Core
+## Meadow.OS & Meadow.Core
 
-* System.Debug.WriteLine is now functional and no longer crashes the device
+* `System.Debug.WriteLine` is now functional and no longer crashes the device
 * New property added to Meadow.Core NetworkAdapters: `DnsAddresses`
-* Added SensorService, read more here.
+* Added SensorService, read more [here](https://blog.wildernesslabs.co/using-meadows-sensorservice-to-optimize-sensor-reads-into-a-single-thread/).
 * Several low-level fixes & improvements
 
 ## Meadow.Foundation
 
 ### New Drivers
 
-* New OLED 128x64 Featherwing driver
-* New Useful Sensor’s Person Sensor driver
-* New AMG8833 driver
-* New AsciiConsole display driver
-* New DFRobot Gravity Dissolved Oxygen sensor driver
+* New [OLED 128x64 Featherwing](https://www.nuget.org/packages/Meadow.Foundation.FeatherWings.OLED128x64Wing) driver
+* New Useful [Sensor’s Person Sensor](https://www.nuget.org/packages/Meadow.Foundation.Sensors.PersonSensor) driver
+* New Infrared camera [AMG8833](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Camera.Amg8833) driver
+* New [AsciiConsole display](https://www.nuget.org/packages/Meadow.Foundation.Displays.AsciiConsole) driver
+* New [DFRobot Gravity Dissolved Oxygen sensor](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter) driver
 * Mac keyboard support added to keyboard driver
 * SH1107 display driver cleanup and fixes
 * Improved relay API and contracts
@@ -57,7 +57,7 @@ subtitle: Release Notes
 
 ### New Drivers
 
-* StepDirMotor and CwCcwMotor stepper motors
+* `StepDirMotor` and CwCcwMotor stepper motors
 * Atlas Scientific Gravity Dissolved Oxygen sensor
 
 ### Fixes/Updates
