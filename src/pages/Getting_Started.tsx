@@ -14,7 +14,7 @@ export default function Getting_Started(): JSX.Element {
 
           {/* Meadow.OS */}
           <section className="meadow-features wl-container">
-              <h2>Getting Started</h2>
+              <h2>Getting Started w/Meadow IoT Devices</h2>
               <hr></hr>
               Choose your compute platform.
               <div className="wl-grid mb-50">
