@@ -7,7 +7,7 @@ slug: /docs/api/
 
 ### Meadow
 [Api reference for all things Meadow](/docs/api/Meadow/), Meadow.Cloud, Meadow.Hardware, Meadow.Logging, and much more.
-* [Meadow](/docs/api/Meadow/)
+* [Meadow.Core](/docs/api/Meadow/)
 * [Meadow.Cloud](/docs/api/Meadow/Meadow.Cloud/)
 * [Meadow.Devices](/docs/api/Meadow/Meadow.Devices/)
 * [Meadow.Gateways](/docs/api/Meadow/Meadow.Gateways/)
