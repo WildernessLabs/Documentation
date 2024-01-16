@@ -4,6 +4,23 @@ title: Meadow v1
 subtitle: Release Notes
 ---
 
+# v1.8.0
+
+## Meadow.OS & Meadow.Core
+
+* Resolved instability issues when using multiple TLS connections simultaneously, closing issues [#355](https://github.com/WildernessLabs/Meadow_Issues/issues/355) and [#380](https://github.com/WildernessLabs/Meadow_Issues/issues/380)
+* Meadow.Units added static `Zero` properties to `Angle`, `Power`, `Resistance`, and `Voltage`
+* Meadow.Units added construction extensions to `Frequency`, `Resistance`, `Length` and `Temperature`
+
+## Meadow.Foundation
+
+### New Drivers
+
+* New [Useful Sensor’s Tiny Code Reader QR](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Cameras.UsefulSensors.TinyCodeReader) code scanner driver
+* Added methods to to draw vertical and horizontal gradients to `MicroGraphics`
+* Added method to draw buffers with a transparency (ignore) color
+* Event cleanup on environmental drivers
+
 # v1.7.0
 
 ## Meadow.OS & Meadow.Core
