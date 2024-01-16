@@ -50,7 +50,6 @@
 }
 
 .hero {
-  background: url("/img/homepage/homepage-banner-image.png");
   background-color: #f7f7f7 !important;
   background-position: center right;
   background-size: contain;
@@ -85,8 +84,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url("/img/homepage/homepage-banner-image.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-position-x: right;
   }
 }

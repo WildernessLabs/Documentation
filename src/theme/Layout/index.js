@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import ErrorBoundary from '@docusaurus/ErrorBoundary';
 import {
@@ -14,6 +14,7 @@ import Footer from '@theme/Footer';
 import LayoutProvider from '@theme/Layout/Provider';
 import ErrorPageContent from '@theme/ErrorPageContent';
 import styles from './styles.module.css';
+import lozad from 'lozad';
 export default function Layout(props) {
   const {
     children,
@@ -24,6 +25,11 @@ export default function Layout(props) {
     description,
   } = props;
   useKeyboardNavigation();
+  useEffect(() => {
+    // Initialize lozad
+    const observer = lozad();
+    observer.observe();
+  }, []);
   return (
     <LayoutProvider>
       <PageMetadata title={title} description={description} />

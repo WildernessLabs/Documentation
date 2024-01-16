@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
       <main>
         <section id="homepage">
           <div className="home-container">
-            <header className="hero mb-50">
+            <header className="lozad hero mb-50" data-background-image="/img/homepage/homepage-banner-image.png">
               <div className="wl-container hero-content">
                 <div className="">
                   <h1>Welcome.</h1>
@@ -28,112 +28,180 @@ export default function Home(): JSX.Element {
 
             {/* Meadow.OS */}
             <section className="meadow-features wl-container">
-                <h2>Meadow.OS</h2>
-                <hr></hr>
-                <div className="wl-grid mb-50">
-                  {/* Meadow App Basics */}
-                  <div className="wl-card border thick-1 orange radius-8">
-                    <img
-                      className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}img/homepage/card-meadow-apps.png`}
-                    />
-                    <div className="card-content">
-                      <h3>Meadow Application Basics</h3>
-                      <ul className="flat">
-                        <li><a href="/Meadow/Meadow_Basics/Apps">Meadow Apps</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/IO">Input/Output (IO)</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols">Digital Protocols</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/Units">Units</a></li>
-                        <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable">Eventing</a></li>
-                        <li><a href="/Meadow/Meadow_Basics">more...</a></li>
-                      </ul>
-                    </div>
+              <h2>Meadow.OS</h2>
+              <hr></hr>
+              <div className="wl-grid mb-50">
+                {/* Meadow App Basics */}
+                <div className="wl-card border thick-1 orange radius-8">
+                  <img
+                    className="border only bottom thick-1 orange"
+                    src={`${siteConfig.baseUrl}img/homepage/card-meadow-apps.png`}
+                  />
+                  <div className="card-content">
+                    <h3>Meadow Application Basics</h3>
+                    <ul className="flat">
+                      <li>
+                        <a href="/Meadow/Meadow_Basics/Apps">Meadow Apps</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow_Basics/IO">Input/Output (IO)</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow_Basics/IO/Digital/Protocols">
+                          Digital Protocols
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow_Basics/Units">Units</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow_Basics/Events_and_IObservable">
+                          Eventing
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow_Basics">more...</a>
+                      </li>
+                    </ul>
                   </div>
-                  {/* Meadow.OS Fundamentals */}
-                  <div className="wl-card border thick-1 orange radius-8">
-                    <img
-                      className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
-                    />
-                    <div className="card-content">
-                      <h3>Meadow.OS Fundamentals</h3>
-                      <ul className="flat">
-                        <li><a href="/Meadow/Meadow.OS/Networking">Networking</a></li>
-                        <li><a href="/Meadow/Meadow.OS/Bluetooth">Bluetooth</a></li>
-                        <li><a href="/Meadow/Meadow.OS/File_System">File System</a></li>
-                        <li><a href="/Meadow/Meadow.OS/Configuration">Configuration</a></li>
-                        <li><a href="/Meadow/Meadow.OS/Threading">Threading</a></li>
-                        <li><a href="/Meadow/Meadow.OS">more...</a></li>
-                      </ul>
-                    </div>
+                </div>
+                {/* Meadow.OS Fundamentals */}
+                <div className="wl-card border thick-1 orange radius-8">
+                  <img
+                    className="border only bottom thick-1 orange"
+                    src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
+                  />
+                  <div className="card-content">
+                    <h3>Meadow.OS Fundamentals</h3>
+                    <ul className="flat">
+                      <li>
+                        <a href="/Meadow/Meadow.OS/Networking">Networking</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.OS/Bluetooth">Bluetooth</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.OS/File_System">File System</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.OS/Configuration">
+                          Configuration
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.OS/Threading">Threading</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.OS">more...</a>
+                      </li>
+                    </ul>
                   </div>
+                </div>
 
-                  {/* Meadow.Foundation */}
-                  <div className="wl-card border thick-1 orange radius-8">
-                    <img
-                      className="border only bottom thick-1 orange"
-                      src={`${siteConfig.baseUrl}img/homepage/card-network.png`}
-                    />
-                    <div className="card-content">
-                      <h3>Meadow.Foundation</h3>
-                      <ul className="flat">
-                        <li><a href="/Meadow/Meadow.Foundation">Getting Started</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Peripherals">Peripheral Driver List</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks">Libraries + Frameworks</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Working_with_Sensors">Working w/Sensors</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch">Unified IO</a></li>
-                        <li><a href="/Meadow/Meadow.Foundation">more...</a></li>
-                      </ul>
+                {/* Meadow.Foundation */}
+                <div className="wl-card border thick-1 orange radius-8">
+                  <img
+                    className="border only bottom thick-1 orange"
+                    src={`${siteConfig.baseUrl}img/homepage/card-network.png`}
+                  />
+                  <div className="card-content">
+                    <h3>Meadow.Foundation</h3>
+                    <ul className="flat">
+                      <li>
+                        <a href="/Meadow/Meadow.Foundation">Getting Started</a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.Foundation/Peripherals">
+                          Peripheral Driver List
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks">
+                          Libraries + Frameworks
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.Foundation/Working_with_Sensors">
+                          Working w/Sensors
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch">
+                          Unified IO
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Meadow/Meadow.Foundation">more...</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* ROW 2 */}
+            <section className="meadow-features wl-container">
+              <h2>Meadow.Cloud, Hardware, & Other</h2>
+              <hr></hr>
+              <div className="wl-grid mb-50">
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>
+                      <a href="/Meadow/Meadow.Cloud/">Meadow.Cloud</a>
+                    </h3>
+                    <p>
+                      Deploy, maintain, and scale devices in the field with
+                      Meadow.Cloud.
+                    </p>
+                    <div className="wl-grid space">
+                      <a href="/Meadow/Meadow.Cloud/OtA_Updates/">
+                        OtA Updates
+                      </a>
+                      <a href="/Meadow/Meadow.Cloud/Command_Control/">
+                        Command + Control
+                      </a>
+                      <a href="/Meadow/Meadow.Cloud/Health_Monitoring/">
+                        Health Monitoring
+                      </a>
+                      <a href="/Meadow/Meadow.Cloud/Logs_Events/">
+                        Logs + Events
+                      </a>
                     </div>
                   </div>
                 </div>
-              </section>
 
-              {/* ROW 2 */}
-              <section className="meadow-features wl-container">
-                <h2>Meadow.Cloud, Hardware, & Other</h2>
-                <hr></hr>
-                <div className="wl-grid mb-50">
-                  <div className="wl-card border thick-3 blue radius-8 corner">
-                    <div className="card-content">
-                      <h3>
-                        <a href="/Meadow/Meadow.Cloud/">Meadow.Cloud</a>
-                      </h3>
-                      <p>Deploy, maintain, and scale devices in the field with Meadow.Cloud.</p>
-                      <div className="wl-grid space">
-                        <a href="/Meadow/Meadow.Cloud/OtA_Updates/">OtA Updates</a>
-                        <a href="/Meadow/Meadow.Cloud/Command_Control/">Command + Control</a>
-                        <a href="/Meadow/Meadow.Cloud/Health_Monitoring/">Health Monitoring</a>
-                        <a href="/Meadow/Meadow.Cloud/Logs_Events/">Logs + Events</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="wl-card border thick-3 blue radius-8 corner">
-                    <div className="card-content">
-                      <h3>Hardware Tutorials + Reference</h3>
-                      <p>These tutorials and reference guides cover key electronics concepts.</p>
-                      <div className="wl-grid space">
-                        <a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a>
-                        <a href="/Hardware/Fundamentals/Introduction_to_Hardware_Design/">PCB Design Tutorial</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="wl-card border thick-3 blue radius-8 corner">
-                    <div className="card-content">
-                      <h3>API Documentation</h3>
-                      <p>Reference documentation for the Meadow.IoT stack.</p>
-                      <div className="wl-grid space">
-                        <a>Link #1</a>
-                        <a>Link #2</a>
-                      </div>
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>Hardware Tutorials + Reference</h3>
+                    <p>
+                      These tutorials and reference guides cover key electronics
+                      concepts.
+                    </p>
+                    <div className="wl-grid space">
+                      <a href="/Hardware/Tutorials/Electronics/">
+                        Electronics Tutorial
+                      </a>
+                      <a href="/Hardware/Fundamentals/Introduction_to_Hardware_Design/">
+                        PCB Design Tutorial
+                      </a>
                     </div>
                   </div>
                 </div>
-              </section>
 
-{/*
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>API Documentation</h3>
+                    <p>Reference documentation for the Meadow.IoT stack.</p>
+                    <div className="wl-grid space">
+                      <a>Link #1</a>
+                      <a>Link #2</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/*
 
               <section className="meadow-docs wl-container">
                 <div className="wl-grid mb-50">
@@ -177,20 +245,27 @@ export default function Home(): JSX.Element {
                   </h3>
                 </div>
               </section>
- */}              
-              <section className="rel-section" style={{minHeight:'310px'}}>
-                <div className="sample-projects">
-                  <div className="project-card border radius-8">
-                    <h2>Project samples at Hackster.io.</h2>
-                    <a href="https://www.hackster.io/WildernessLabs" className="button-orange-clear">See our projects</a>
-                  </div>
+ */}
+            <section className="rel-section" style={{ minHeight: "310px" }}>
+              <div className="sample-projects">
+                <div className="project-card border radius-8">
+                  <h2>Project samples at Hackster.io.</h2>
+                  <a
+                    href="https://www.hackster.io/WildernessLabs"
+                    className="button-orange-clear"
+                  >
+                    See our projects
+                  </a>
                 </div>
-              </section>
-              <section className="meadow-extra wl-container">
-                <hr></hr>
-                <p>Don't see what you're looking for?</p>
-                <p>Ask a <a href="">question</a>, or make a <a href="">request</a></p>
-              </section>
+              </div>
+            </section>
+            <section className="meadow-extra wl-container">
+              <hr></hr>
+              <p>Don't see what you're looking for?</p>
+              <p>
+                Ask a <a href="">question</a>, or make a <a href="">request</a>
+              </p>
+            </section>
           </div>
         </section>
       </main>
