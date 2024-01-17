@@ -20,7 +20,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
     },
     {
       href: "/Meadow/Meadow.OS",
-      sidebarId: 'meadowOsSidebar',
+      sidebarId: 's',
       position: 'left',
       label: 'Meadow.OS',
     },

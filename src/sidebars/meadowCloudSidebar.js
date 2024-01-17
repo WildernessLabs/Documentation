@@ -7,7 +7,7 @@ const meadowCloudSidebar = [
       type: "doc",
       id: "Meadow/Meadow.Cloud/index",
     },
-    items: ["Meadow/Meadow.Cloud/Device_Provisioning/index"],
+    items: [],
   },
   {
     // Cloud Basics
