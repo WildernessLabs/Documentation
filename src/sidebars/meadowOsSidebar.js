@@ -232,6 +232,20 @@ const meadowOsSidebar = [
       "Meadow/Release_Notes/Beta2/index",
     ],
   },
+  {
+    // Hack Kit Guide
+    type: "category",
+    label: "Hack Kit Guide",
+    link: {
+      type: "doc",
+      id: "https://developer.wildernesslabs.co/HackKit/index",
+    },
+    items: [
+      "https://developer.wildernesslabs.co/HackKit/Contents/index",
+      "https://developer.wildernesslabs.co/HackKit/Projects/",
+      "https://developer.wildernesslabs.co/HackKit/BlogSeries/"
+    ],
+  },
 ];
 
 module.exports = meadowOsSidebar;
