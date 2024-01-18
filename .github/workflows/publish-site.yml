@@ -31,7 +31,7 @@ jobs:
       # Purge Azure Front Door Cache
       - name: Purge Cache
         run: |
-              az afd endpoint purge -g web01 --profile-name afd-docusaurus-developer --domains developer-docusaurus.wildernesslabs.co --content-paths '/*' --endpoint-name developer-docusaurus
+              az afd endpoint purge -g $RESOURCE_GROUP --profile-name $AFD_PROFILE_NAME --domains $AFD_DOMAINS --content-paths '/*' --endpoint-name $AFD_ENDPOINT_NAME
       # Clone current repo
       - name: Checkout
         uses: actions/checkout@v3
