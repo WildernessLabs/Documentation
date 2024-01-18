@@ -238,12 +238,12 @@ const meadowOsSidebar = [
     label: "Hack Kit Guide",
     link: {
       type: "doc",
-      id: "https://developer.wildernesslabs.co/HackKit/index",
+      id: "HackKit/index",
     },
     items: [
-      "https://developer.wildernesslabs.co/HackKit/Contents/index",
-      "https://developer.wildernesslabs.co/HackKit/Projects/",
-      "https://developer.wildernesslabs.co/HackKit/BlogSeries/"
+      "HackKit/Contents/index",
+      "HackKit/Projects/",
+      "HackKit/BlogSeries/"
     ],
   },
 ];
