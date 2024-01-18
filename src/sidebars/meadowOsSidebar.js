@@ -242,8 +242,8 @@ const meadowOsSidebar = [
     },
     items: [
       "HackKit/Contents/index",
-      "HackKit/Projects/",
-      "HackKit/BlogSeries/"
+      "HackKit/Projects/index",
+      "HackKit/BlogSeries/index"
     ],
   },
 ];
