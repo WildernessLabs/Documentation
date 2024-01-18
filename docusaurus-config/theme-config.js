@@ -37,7 +37,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
       position: 'left',
     },
     {
-      href: "/Hardware/Reference",
+      href: "/Hardware",
       sidebarId: 'hardwareReferenceSidebar',
       position: 'left',
       label: 'Hardware Reference',
