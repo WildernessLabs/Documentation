@@ -43,21 +43,6 @@ const hardwareReferenceSidebar = [
     label: "Advanced PCB Concepts",
     items: [
       "Hardware/Printed_Circuit_Boards_PCBs/PCB_Stackups/index",
-      
-      {
-        type: "category",
-        label: "PCB Design Tutorial",
-        link: {
-          type: "doc",
-          id: "Hardware/Tutorials/PCB_Tutorial/index",
-        },
-        items: [
-          "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index",
-          "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index",
-          "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
-        ],
-      },
-
       {
         type: "category",
         label: "Components",
