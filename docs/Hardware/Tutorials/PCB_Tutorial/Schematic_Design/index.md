@@ -5,7 +5,7 @@ subtitle: "PCB Design Tutorial, Part 1: Schematic design/capture."
 ---
 
 
-<p><iframe width="640" height="360" src="https://www.youtube.com/embed/7G_xel6gnMs" frameborder="3" allowfullscreen></iframe></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/k8xpYY73xPw?si=ZcgzdE4qyl1sjFvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 <!-- TODO: add these back in, when the content is finished -->
 <!--
