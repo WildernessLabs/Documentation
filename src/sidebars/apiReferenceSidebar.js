@@ -14,9 +14,15 @@ const apiReferenceSidebar = [
       },
     
       {
-        type: "link",
-        href: "/docs/api/Meadow.Foundation/",
+        type: "category",
         label: "Meadow.Foundation",
+        link: {
+          type: "doc",
+          id: "api/Meadow.Foundation/index",
+        },
+        items: [
+          "Meadow/Meadow.Foundation/Peripherals/index"
+        ]
       },
       {
         type: "link",
