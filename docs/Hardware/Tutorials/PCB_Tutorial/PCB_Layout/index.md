@@ -4,7 +4,7 @@ title: PCB Layout
 subtitle: Designing the physical Printed Circuit Board layout.
 ---
 
-<p><iframe width="640" height="360" src="https://www.youtube.com/embed/apVZykbD8no" frameborder="3" allowfullscreen></iframe></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/4MyprXc0298?si=6jPtF_CljC-SzxRR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 
 ## General Process
