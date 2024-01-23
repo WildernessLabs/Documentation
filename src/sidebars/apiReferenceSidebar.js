@@ -1,7 +1,7 @@
 const apiReferenceSidebar = [
   {
     type: "category",
-    label: "Meadow API Reference Documentation",
+    label: "Meadow API Reference",
     link: {
       type: "doc",
       id: "api/index",
