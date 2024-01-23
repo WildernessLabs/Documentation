@@ -44,6 +44,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
     },
     {
       href: "/docs/api",
+      sidebarId: 'apiReferenceSidebar'
       position: 'left',
       label: 'API Docs',
     },
