@@ -26,25 +26,12 @@ Device.PlatformOS.Sleep(DateTime.Now.AddDays(1));
 
 ## Sleep-related events
 
-Additionally, you can respond to the sleep state changes in [application lifecycle events](../Lifecycle_Events), specifically `BeforeSleep` and `AfterWake`. `BeforeSleep` is called right before your application goes into sleep mode. And `AfterWake` is called right after Meadow resumes from sleep but before your code resumes.
+Additionally, you can respond to the sleep state changes in [application lifecycle events](../Lifecycle_Events), specifically `BeforeSleep` and `AfterWake`. `BeforeSleep` is called right before your application goes into sleep mode. And `AfterWake` is called right after Meadow resumes from sleep but before your code resumes. `AfterWake` receives, as a parameter, the source of the wake (eitehr `Timer` or `Interrupt`).
 
 These are exposed as events on the `Device.PlatformOS` object and can have event handlers added to them like any standard .NET event.
 
 ```csharp
 Device.PlatformOS.BeforeSleep += () => {...};
 
-Device.PlatformOS.AfterWake += () => {...};
-```
-
-## RC1 known issue
-
-Note that there is a bug in the RC1 Meadow OS release where writing to the console output immediately after waking from sleep can cause your app to get stuck. To work around this, avoid writing to the console immediately after waking by adding a small delay before the first logging call.
-
-```csharp
-Device.PlatformOS.AfterWake += () =>
-{
-    // RC1 known issue workaround: small delay to avoid locking up app.
-    Thread.Sleep(TimeSpan.FromMilliseconds(500));
-    Resolver.Log.Info("Device has returned from sleep mode");
-};
+Device.PlatformOS.AfterWake += (sender, wakeSource) => {...};
 ```
