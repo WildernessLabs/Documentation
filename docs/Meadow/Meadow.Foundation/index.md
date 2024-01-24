@@ -12,7 +12,7 @@ It's completely [open source](https://github.com/WildernessLabs/Meadow.Foundatio
 
 ## Hello, World Example
 
-With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
+With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds/PwmLed/) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
 
 ```csharp
 using Meadow;
