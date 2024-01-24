@@ -34,7 +34,7 @@ public class LEDApp : App<F7FeatherV1>
 
 ### `D` = Device
 
-Specifying the `D` parameter sets the current device so that it can be accessed via the [`Device`](/docs/api/Meadow/Meadow.Devices.IMeadowDevice.html) property of the `IApp`:
+Specifying the `D` parameter sets the current device so that it can be accessed via the [`Device`](/docs/api/Meadow/Meadow.Devices/IMeadowDevice/) property of the `IApp`:
 
 ```csharp
 var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
@@ -42,7 +42,7 @@ var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
 
 ### Accessing your running App, Device, or Log
 
-If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`](/docs/api/Meadow.Contracts/Meadow.Resolver.html) class.
+If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`](/docs/api/Meadow.Contracts/Meadow/Resolver/) class.
 
 ```csharp
 MyApp myApp = Resolver.App;
