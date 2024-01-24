@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 sidebar_label: Hello, F7 Feather
-title: Hello, Meadow F7 Feather!
+title: Hello, Meadow F7 Feather
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
