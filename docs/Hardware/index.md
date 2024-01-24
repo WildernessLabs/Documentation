@@ -10,6 +10,7 @@ Hands-on tutorials for learning about hardware and circuits, as well as designin
 
 * [Electronics Tutorial](Tutorials/Electronics)
 * [PCB Design Tutorial](Tutorials/PCB_Tutorial)
+* [Introduction to Hardware Design](Fundamentals/Introduction_to_Hardware_Design)
 
 ## Info
 
