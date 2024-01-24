@@ -19,7 +19,7 @@ This section is a reference guide to common hardware and circuit information. Pl
 
 Contains various core component information.
 
-* [Surface Mount Device Packages and Sizes](/Hardware/Circuits/Components/Packages_and_Sizes)
+* [Surface Mount Device Packages and Sizes](Printed_Circuit_Boards_PCBs/Components/Packages_and_Sizes)
 * [Capacitors](/Hardware/Circuits/Components/Capacitors)
 * [Diodes](/Hardware/Circuits/Components/Diodes)
 * [LEDs](/Hardware/Circuits/Components/LEDs)
@@ -43,9 +43,9 @@ Important circuit calculation equations and the laws that define them.
 
 Contains information on using various peripherals. For a library of peripheral drivers, please see [Meadow.Foundation](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/)
 
-* [Relays](/Hardware/Reference/Peripherals/Relays)
-* [74595 Shift Register](/Hardware/Reference/Peripherals/ShiftRegister74595)
-* [Servos](/Hardware/Reference/Peripherals/Servos)
+* [Relays](/Hardware/Peripherals/Relays)
+* [74595 Shift Register](/Hardware/Peripherals/IOExpanders/ShiftRegister74595)
+* [Servos](/Hardware/Peripherals/Motors_and_Servos/Servos)
 
 ### Units
 
