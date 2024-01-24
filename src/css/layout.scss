@@ -44,14 +44,18 @@
 
             h1,h2,h3,h4
             {
-                font-family: "Wavehaus-Bold" !important;;
+                font-family: "Wavehaus-Bold" !important;
+
+                a {
+                    font-family: "Wavehaus-Bold" !important;
+                }
             }
 
             a
             {
-                color: $color-blue !important;
                 text-decoration: underline;
                 font-family: "Wavehaus-Book";
+                text-decoration: none;
             }
             a:hover
             {
