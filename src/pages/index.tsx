@@ -40,28 +40,12 @@ export default function Home(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow Application Basics</h3>
                     <ul className="flat">
-                      <li>
-                        <a href="/Meadow/Meadow_Basics/Apps">Meadow Apps</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow_Basics/IO">Input/Output (IO)</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow_Basics/IO/Digital/Protocols">
-                          Digital Protocols
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow_Basics/Units">Units</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow_Basics/Events_and_IObservable">
-                          Eventing
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow_Basics">more...</a>
-                      </li>
+                      <li><a href="/Meadow/Meadow_Basics/Apps">Meadow Apps</a></li>
+                      <li><a href="/Meadow/Meadow_Basics/IO">Input/Output (IO)</a></li>
+                      <li><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols">Digital Protocols</a></li>
+                      <li><a href="/Meadow/Meadow_Basics/Units">Units</a></li>
+                      <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable">Eventing</a></li>
+                      <li><a href="/Meadow/Meadow_Basics">more...</a></li>
                     </ul>
                   </div>
                 </div>
@@ -74,26 +58,12 @@ export default function Home(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow.OS Fundamentals</h3>
                     <ul className="flat">
-                      <li>
-                        <a href="/Meadow/Meadow.OS/Networking">Networking</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.OS/Bluetooth">Bluetooth</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.OS/File_System">File System</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.OS/Configuration">
-                          Configuration
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.OS/Threading">Threading</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.OS">more...</a>
-                      </li>
+                      <li><a href="/Meadow/Meadow.OS/Networking">Networking</a></li>
+                      <li><a href="/Meadow/Meadow.OS/Bluetooth">Bluetooth</a></li>
+                      <li><a href="/Meadow/Meadow.OS/File_System">File System</a></li>
+                      <li><a href="/Meadow/Meadow.OS/Configuration">Configuration</a></li>
+                      <li><a href="/Meadow/Meadow.OS/Threading">Threading</a></li>
+                      <li><a href="/Meadow/Meadow.OS">more...</a></li>
                     </ul>
                   </div>
                 </div>
@@ -107,32 +77,12 @@ export default function Home(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow.Foundation</h3>
                     <ul className="flat">
-                      <li>
-                        <a href="/Meadow/Meadow.Foundation">Getting Started</a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.Foundation/Peripherals">
-                          Peripheral Driver List
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks">
-                          Libraries + Frameworks
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.Foundation/Working_with_Sensors">
-                          Working w/Sensors
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch">
-                          Unified IO
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Meadow/Meadow.Foundation">more...</a>
-                      </li>
+                      <li><a href="/Meadow/Meadow.Foundation">Getting Started</a></li>
+                      <li><a href="/Meadow/Meadow.Foundation/Peripherals">Peripheral Driver List</a></li>
+                      <li><a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks">Libraries + Frameworks</a></li>
+                      <li><a href="/Meadow/Meadow.Foundation/Working_with_Sensors">Working w/Sensors</a></li>
+                      <li><a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch">Unified IO</a></li>
+                      <li><a href="/Meadow/Meadow.Foundation">more...</a></li>
                     </ul>
                   </div>
                 </div>
@@ -144,57 +94,48 @@ export default function Home(): JSX.Element {
               <h2>Meadow.Cloud, Hardware, & Other</h2>
               <hr></hr>
               <div className="wl-grid mb-50">
+                {/* Meadow.Cloud */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
-                    <h3>
-                      <a href="/Meadow/Meadow.Cloud/">Meadow.Cloud</a>
-                    </h3>
+                    <h3><a href="/Meadow/Meadow.Cloud/">Meadow.Cloud</a></h3>
                     <p>
                       Deploy, maintain, and scale devices in the field with
                       Meadow.Cloud.
                     </p>
                     <div className="wl-grid space">
-                      <a href="/Meadow/Meadow.Cloud/OtA_Updates/">
-                        OtA Updates
-                      </a>
-                      <a href="/Meadow/Meadow.Cloud/Command_Control/">
-                        Command + Control
-                      </a>
-                      <a href="/Meadow/Meadow.Cloud/Health_Monitoring/">
-                        Health Monitoring
-                      </a>
-                      <a href="/Meadow/Meadow.Cloud/Logs_Events/">
-                        Logs + Events
-                      </a>
+                      <a href="/Meadow/Meadow.Cloud/OtA_Updates/">OtA Updates</a>
+                      <a href="/Meadow/Meadow.Cloud/Command_Control/">Command + Control</a>
+                      <a href="/Meadow/Meadow.Cloud/Health_Monitoring/">Health Monitoring</a>
+                      <a href="/Meadow/Meadow.Cloud/Logs_Events/">Logs + Events</a>
                     </div>
                   </div>
                 </div>
 
+                {/* Hardware */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
-                    <h3>Hardware Tutorials + Reference</h3>
+                    <h3>Hardware Tutorials + Ref.</h3>
                     <p>
                       These tutorials and reference guides cover key electronics
                       concepts.
                     </p>
                     <div className="wl-grid space">
-                      <a href="/Hardware/Tutorials/Electronics/">
-                        Electronics Tutorial
-                      </a>
-                      <a href="/Hardware/Fundamentals/Introduction_to_Hardware_Design/">
-                        PCB Design Tutorial
-                      </a>
+                      <a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a>
+                      <a href="/Hardware/Fundamentals/Introduction_to_Hardware_Design/">PCB Design Tutorial</a>
                     </div>
                   </div>
                 </div>
 
+                {/* API Docs */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
                     <h3>API Documentation</h3>
                     <p>Reference documentation for the Meadow.IoT stack.</p>
                     <div className="wl-grid space">
-                      <a>Link #1</a>
-                      <a>Link #2</a>
+                      <a href="docs/api/Meadow/">Meadow.Core</a>
+                      <a href="docs/api/Meadow.Foundation/">Meadow.Foundation</a>
+                      <a href="docs/api/Meadow/Meadow.Cloud/">Meadow.Cloud</a>
+                      <a href="docs/api/Meadow/Meadow.Hardware/">Meadow.Hardware</a>
                     </div>
                   </div>
                 </div>
