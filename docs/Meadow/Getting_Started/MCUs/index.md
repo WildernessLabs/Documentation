@@ -7,9 +7,9 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ## Shared Steps
 
-* Install Meadow.CLI
-* Install IDE Extensions
-* Deploy Meadow.OS
+* [Install Meadow.CLI](../Meadow.CLI/)
+* [Install IDE Extensions](../IDE_Extensions/)
+* [Deploy Meadow.OS](Deploying_Meadow.OS/)
 
 ## Board-Specific Instructions
 
