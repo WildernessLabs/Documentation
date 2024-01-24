@@ -1,8 +1,8 @@
 const hardwareReferenceSidebar = [
   {
-    // Advanced PCB Concepts
+    // Hardware Reference
     type: "category",
-    label: "Advanced PCB Concepts",
+    label: "Hardware Reference",
     items: [
       "Hardware/index",
       {
