@@ -8,8 +8,8 @@ const meadowOsSidebar = [
       id: "Meadow/Getting_Started/index",
     },
     items: [
-      // "Meadow/Getting_Started/Assemble_Meadow/index", // Install Meadow.CLI
-      // "Meadow/Getting_Started/Deploying_Meadow/index", // Install IDE Extensions
+      "Meadow/Getting_Started/Meadow.CLI/index",
+      "Meadow/Getting_Started/IDE_Extensions/index",
 
       {
         // MCUs
