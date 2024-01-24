@@ -157,7 +157,6 @@ const meadowOsSidebar = [
           },
         ],
       },
-      "Meadow/Meadow_Basics/Status/index",
     ],
   },
   {
@@ -191,10 +190,11 @@ const meadowOsSidebar = [
           type: "doc",
           id: "Meadow/Meadow.OS/Networking/index",
         },
-        items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
+        items: [
+          "Meadow/Meadow.OS/Networking/Antenna/index",
+          "Meadow/Meadow.OS/Cellular/index",
+        ],
       },
-      "Meadow/Meadow.OS/Cellular/index",
-      "Meadow/Meadow.OS/Updates/index",
       "Meadow/Meadow.OS/RTC/index",
       "Meadow/Meadow.OS/SQLite/index",
       "Meadow/Meadow.OS/Threading/index",
@@ -241,23 +241,14 @@ const meadowOsSidebar = [
       id: "Meadow/Release_Notes/index",
     },
     items: [
-      "Meadow/Release_Notes/Roadmap/index",
-      {
-        type: "category",
-        label: "Meadow Release Condidates",
-        link: {
-          type: "doc",
-          id: "Meadow/Release_Notes/Release-Candidates/index",
-        },
-        items: [
-          "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index",
-        ],
-      },
+      "Meadow/Release_Notes/v1/index",
+      "Meadow/Release_Notes/Release-Candidates/index",
       "Meadow/Release_Notes/Beta6/index",
       "Meadow/Release_Notes/Beta5/index",
       "Meadow/Release_Notes/Beta4/index",
       "Meadow/Release_Notes/Beta3/index",
       "Meadow/Release_Notes/Beta2/index",
+      "Meadow/Release_Notes/Roadmap/index",
     ],
   },
   {

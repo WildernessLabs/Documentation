@@ -6,21 +6,6 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-- [WiFi](#wifi)
-    - [Connecting to a WiFi Network](#connecting-to-a-wifi-network)
-        - [Option 1 Programatically using C#](#option-1---programatically-using-c)
-        - [Option 2 - Using Config Files](#option-2---using-config-files)
-    - [Scanning for WiFi Networks](#scanning-for-wifi-networks)
-- [Ethernet](#ethernet)
-- [Performing Requests](#performing-requests)
-    - [HTTP GET Request Example](#http-get-request-example)
-    - [HTTP POST Request Example](#http-post-request-example)
-- [Antenna](#antenna)
-- [Creating RESTful Web APIs with Maple Server](#creating-restful-web-apis-with-maple-server)
-- [Sample projects](#sample-projects)
-    - [Core project samples](#core-project-samples)
-    - [Additional project samples](#additional-project-samples)
-
 # WiFi
 
 ## Connecting to a WiFi Network
