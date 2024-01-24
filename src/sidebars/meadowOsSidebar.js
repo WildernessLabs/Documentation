@@ -10,9 +10,8 @@ const meadowOsSidebar = [
     items: [
       "Meadow/Getting_Started/Assemble_Meadow/index",
       "Meadow/Getting_Started/Deploying_Meadow/index",
-      "Meadow/Getting_Started/Hello_World/index",
+      "Meadow/Getting_Started/MCUs/F7_Feather/index",
       "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index",
-
       {
         // Getting Started Desktop
         type: "category",

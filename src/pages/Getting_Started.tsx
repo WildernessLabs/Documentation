@@ -27,9 +27,9 @@ export default function Getting_Started(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow F7 Microcontrollers</h3>
                     <ul className="flat">
-                      <li><a href="/Meadow/Meadow_Basics/Apps">Meadow F7 Feather</a></li>
-                      <li><a href="/Meadow/Meadow_Basics/Apps">Meadow Project Lab</a></li>
-                      <li><a href="/Meadow/Meadow_Basics/Apps">Meadow Core-Compute Module</a></li>
+                      <li><a href="/Meadow/Getting_Started/MCUs/F7_Feather/">F7 Feather</a></li>
+                      <li><a href="/Meadow/Getting_Started/MCUs/Project_Lab/">Project Lab</a></li>
+                      <li><a href="/Meadow/Getting_Started/MCUs/Core_Compute_Module_DevKit/">Core-Compute Module DevKit</a></li>
                     </ul>
                   </div>
                 </div>
@@ -42,8 +42,9 @@ export default function Getting_Started(): JSX.Element {
                   <div className="card-content">
                     <h3>Raspberry Pi & Meadow.Linux</h3>
                     <ul className="flat">
-                      <li><a href="#">Raspberry Pi x</a></li>
-                      <li><a href="#">Nvidia Jetson x</a></li>
+                      <li><a href="/Meadow/Getting_Started/SBCs/RaspberryPi/">Raspberry Pi</a></li>
+                      <li><a href="/Meadow/Getting_Started/SBCs/SeeedStudio_ReTerminal/">Seeed Studio ReTerminal</a></li>
+                      <li><a href="/Meadow/Getting_Started/SBCs/Jetson_Nano/">Nvidia Jetson Nano</a></li>
                     </ul>
                   </div>
                 </div>
@@ -57,8 +58,8 @@ export default function Getting_Started(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow.Desktop + Simulator</h3>
                     <ul className="flat">
-                      <li><a href="#">Meadow.Desktop Simulator</a></li>
-                      <li><a href="#">Meadow.Desktop w/FT232</a></li>
+                      <li><a href="/Meadow/Getting_Started/Desktop/Hello_Simulator/">Meadow.Simulator</a></li>
+                      <li><a href="/Meadow/Getting_Started/Desktop/Hello_Ft232/">Meadow.Desktop + FT232</a></li>
                     </ul>
                   </div>
                 </div>
