@@ -8,12 +8,43 @@ const meadowOsSidebar = [
       id: "Meadow/Getting_Started/index",
     },
     items: [
-      "Meadow/Getting_Started/Assemble_Meadow/index",
-      "Meadow/Getting_Started/Deploying_Meadow/index",
-      "Meadow/Getting_Started/MCUs/F7_Feather/index",
-      "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index",
+      // "Meadow/Getting_Started/Assemble_Meadow/index", // Install Meadow.CLI
+      // "Meadow/Getting_Started/Deploying_Meadow/index", // Install IDE Extensions
+
       {
-        // Getting Started Desktop
+        // MCUs
+        type: "category",
+        label: "Microcontrollers (MCUs)",
+        link: {
+          type: "doc",
+          id: "Meadow/Getting_Started/MCUs/index",
+        },
+        items: [
+          "Meadow/Getting_Started/Deploying_Meadow/index",
+          "Meadow/Getting_Started/MCUs/Assemble_F7Feather_DevKit/index",
+          "Meadow/Getting_Started/Hello_World/index",
+          "Meadow/Getting_Started/MCUs/Core_Compute_Module_DevKit/index", 
+          "Meadow/Getting_Started/MCUs/Project_Lab/index",
+        ],
+      },
+
+      {
+        // SBCs
+        type: "category",
+        label: "Single-Board-Computers (SBCs)",
+        link: {
+          type: "doc",
+          id: "Meadow/Getting_Started/SBCs/index",
+        },
+        items: [
+          "Meadow/Getting_Started/SBCs/RaspberryPi/index",
+          "Meadow/Getting_Started/SBCs/SeeedStudio_ReTerminal/index",
+          "Meadow/Getting_Started/SBCs/Jetson_Nano/index",
+        ],
+      },
+
+      {
+        // Meadow.Desktop
         type: "category",
         label: "Meadow.Desktop",
         link: {
@@ -21,10 +52,11 @@ const meadowOsSidebar = [
           id: "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/index",
         },
         items: [
-          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index",
-          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index",
+          "Meadow/Getting_Started/Desktop/Hello_Ft232/index",
+          "Meadow/Getting_Started/Desktop/Hello_Simulator/index"
         ],
       },
+
     ],
   },
   {
@@ -159,10 +191,8 @@ const meadowOsSidebar = [
           type: "doc",
           id: "Meadow/Meadow.OS/Networking/index",
         },
-        items: [
-          "Meadow/Meadow.OS/Networking/Antenna/index",
-        ],
-      }, 
+        items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
+      },
       "Meadow/Meadow.OS/Cellular/index",
       "Meadow/Meadow.OS/Updates/index",
       "Meadow/Meadow.OS/RTC/index",
@@ -197,8 +227,7 @@ const meadowOsSidebar = [
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index",
         ],
       },
-      
-      
+
       "Meadow/Meadow.Foundation/Working_with_Sensors/index",
       "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index",
     ],
@@ -221,8 +250,8 @@ const meadowOsSidebar = [
           id: "Meadow/Release_Notes/Release-Candidates/index",
         },
         items: [
-          "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index"
-        ]
+          "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index",
+        ],
       },
       "Meadow/Release_Notes/Beta6/index",
       "Meadow/Release_Notes/Beta5/index",
@@ -242,7 +271,7 @@ const meadowOsSidebar = [
     items: [
       "HackKit/Contents/index",
       "HackKit/Projects/index",
-      "HackKit/BlogSeries/index"
+      "HackKit/BlogSeries/index",
     ],
   },
 ];
