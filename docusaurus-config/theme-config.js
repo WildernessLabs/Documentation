@@ -14,13 +14,12 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
     },
     items: [{
       href: "/",
-      sidebarId: 'meadowSidebar',
       position: 'left',
       label: 'Home',
     },
     {
       href: "/Meadow/Meadow.OS",
-      sidebarId: 's',
+      sidebarId: 'meadowSidebar',
       position: 'left',
       label: 'Meadow.OS',
     },
