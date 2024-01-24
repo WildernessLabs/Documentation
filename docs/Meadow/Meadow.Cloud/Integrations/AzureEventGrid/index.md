@@ -3,7 +3,7 @@ layout: Meadow
 title: Integrate with Azure Event Grid
 subtitle: Getting started with Azure Event Grid
 ---
-[< Integrations](../)  
+
 ## Overview
 
 An Azure Event Grid integration sends device data in Meadow.Cloud to an Event Grid in near real-time.

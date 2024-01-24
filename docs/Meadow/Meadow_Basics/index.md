@@ -6,10 +6,12 @@ subtitle: Guides and documentation for Meadow
 
 This section covers the fundamentals of creating Meadow applications.
 
- * [Feature Status](/Meadow/Meadow_Basics/Status)
- * [Meadow Applications](/Meadow/Meadow_Basics/Apps)
- * [Input & Output (IO)](/Meadow/Meadow_Basics/IO)
- * [Events and `IObservable` Pattern](/Meadow/Meadow_Basics/Events_and_IObservable/)
+* [Meadow Applications](/Meadow/Meadow_Basics/Apps)
+* [Input & Output (IO)](/Meadow/Meadow_Basics/IO)
+* [Units of Measure](/Meadow/Meadow_Basics/Units)
+* [Events and `IObservable` Pattern](/Meadow/Meadow_Basics/Events_and_IObservable/)
+* [Meadow.CLI](/Meadow/Meadow_Basics/Meadow_CLI)
+* [Troubleshooting](/Meadow/Meadow_Basics/Troubleshooting)
+* [Meadow Hardware](/Meadow/Meadow_Basics/Hardware)
 
 ## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/index)
- 
