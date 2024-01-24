@@ -134,6 +134,20 @@ const hardwareTutorialsSidebar = [
       ],
     },
     {
+      type: "category",
+      label: "Intro to Hardware Design",
+      link: {
+        type: "doc",
+        id: "Hardware/Fundamentals/Introduction_to_Hardware_Design/index",
+      },
+      items: [
+        "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index",
+        "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index",
+        "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index",
+        "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_PCBs/index",
+      ],
+    },
+    {
       // PCB Design Tutorial
       type: "category",
       label: "PCB Design Tutorial",

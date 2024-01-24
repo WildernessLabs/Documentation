@@ -1,43 +1,5 @@
 const hardwareReferenceSidebar = [
   {
-    // Hardware Fundementals
-    type: "category",
-    label: "Hardware Fundementals",
-    link: {
-      type: "doc",
-      id: "Hardware/index",
-    },
-    items: [
-      {
-        type: "category",
-        label: "Intro to Hardware Design",
-        link: {
-          type: "doc",
-          id: "Hardware/Fundamentals/Introduction_to_Hardware_Design/index",
-        },
-        items: [
-          "Hardware/Fundamentals/Introduction_to_Hardware_Design/Product_Design_Lifecycle/index",
-          "Hardware/Fundamentals/Introduction_to_Hardware_Design/Production_Scale/index",
-          "Hardware/Fundamentals/Introduction_to_Hardware_Design/Breadboarding/index",
-          "Hardware/Fundamentals/Introduction_to_Hardware_Design/Printed_Circuit_Boards_PCBs/index",
-        ],
-      },
-      {
-        type: "category",
-        label: "PCB Design Tutorial",
-        link: {
-          type: "doc",
-          id: "Hardware/Tutorials/PCB_Tutorial/index",
-        },
-        items: [
-          "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index",
-          "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index",
-          "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
-        ],
-      },
-    ],
-  },
-  {
     // Advanced PCB Concepts
     type: "category",
     label: "Advanced PCB Concepts",
@@ -75,7 +37,6 @@ const hardwareReferenceSidebar = [
       },
     ],
   },
-
   {
     type: "category",
     label: "Equations and Laws",

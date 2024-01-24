@@ -37,7 +37,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
       position: 'left',
     },
     {
-      href: "/Hardware",
+      href: "/Hardware/Printed_Circuit_Boards_PCBs/PCB_Stackups/",
       sidebarId: 'hardwareReferenceSidebar',
       position: 'left',
       label: 'Hardware Reference',

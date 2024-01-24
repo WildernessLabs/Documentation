@@ -33,6 +33,10 @@
   font-size: 18px;
   -webkit-font-smoothing: auto;
 
+  .pagination-nav {
+    display: none;
+  }
+
   a {
     color: $color-brown-light;
   }
