@@ -111,7 +111,7 @@ export default function Home(): JSX.Element {
                 {/* Hardware */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
-                    <h3>Hardware Tutorials + Ref.</h3>
+                    <h3><a href="/Hardware/">Hardware Tutorials + Ref.</a></h3>
                     <p>
                       These tutorials and reference guides cover key electronics
                       concepts.
