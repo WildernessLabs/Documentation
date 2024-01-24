@@ -38,14 +38,13 @@ export default function Home(): JSX.Element {
                     src={`${siteConfig.baseUrl}img/homepage/card-meadow-apps.png`}
                   />
                   <div className="card-content">
-                    <h3>Meadow Application Basics</h3>
+                    <h3><a href="/Meadow/Meadow_Basics">Meadow Application Basics</a></h3>
                     <ul className="flat">
                       <li><a href="/Meadow/Meadow_Basics/Apps">Meadow Apps</a></li>
                       <li><a href="/Meadow/Meadow_Basics/IO">Input/Output (IO)</a></li>
                       <li><a href="/Meadow/Meadow_Basics/IO/Digital/Protocols">Digital Protocols</a></li>
                       <li><a href="/Meadow/Meadow_Basics/Units">Units</a></li>
                       <li><a href="/Meadow/Meadow_Basics/Events_and_IObservable">Eventing</a></li>
-                      <li><a href="/Meadow/Meadow_Basics">more...</a></li>
                     </ul>
                   </div>
                 </div>
@@ -56,14 +55,13 @@ export default function Home(): JSX.Element {
                     src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
                   />
                   <div className="card-content">
-                    <h3>Meadow.OS Fundamentals</h3>
+                    <h3><a href="/Meadow/Meadow.OS">Meadow.OS Fundamentals</a></h3>
                     <ul className="flat">
                       <li><a href="/Meadow/Meadow.OS/Networking">Networking</a></li>
                       <li><a href="/Meadow/Meadow.OS/Bluetooth">Bluetooth</a></li>
                       <li><a href="/Meadow/Meadow.OS/File_System">File System</a></li>
                       <li><a href="/Meadow/Meadow.OS/Configuration">Configuration</a></li>
                       <li><a href="/Meadow/Meadow.OS/Threading">Threading</a></li>
-                      <li><a href="/Meadow/Meadow.OS">more...</a></li>
                     </ul>
                   </div>
                 </div>
@@ -75,14 +73,13 @@ export default function Home(): JSX.Element {
                     src={`${siteConfig.baseUrl}img/homepage/card-network.png`}
                   />
                   <div className="card-content">
-                    <h3>Meadow.Foundation</h3>
+                    <h3><a href="/Meadow/Meadow.Foundation">Meadow.Foundation</a></h3>
                     <ul className="flat">
                       <li><a href="/Meadow/Meadow.Foundation">Getting Started</a></li>
                       <li><a href="/Meadow/Meadow.Foundation/Peripherals">Peripheral Driver List</a></li>
                       <li><a href="/Meadow/Meadow.Foundation/Libraries_and_Frameworks">Libraries + Frameworks</a></li>
                       <li><a href="/Meadow/Meadow.Foundation/Working_with_Sensors">Working w/Sensors</a></li>
                       <li><a href="/Meadow/Meadow.Foundation/Unified_GPIO_Arch">Unified IO</a></li>
-                      <li><a href="/Meadow/Meadow.Foundation">more...</a></li>
                     </ul>
                   </div>
                 </div>
@@ -121,7 +118,7 @@ export default function Home(): JSX.Element {
                     </p>
                     <div className="wl-grid space">
                       <a href="/Hardware/Tutorials/Electronics/">Electronics Tutorial</a>
-                      <a href="/Hardware/Fundamentals/Introduction_to_Hardware_Design/">PCB Design Tutorial</a>
+                      <a href="/Hardware/Tutorials/PCB_Tutorial/">PCB Design Tutorial</a>
                     </div>
                   </div>
                 </div>
@@ -129,7 +126,7 @@ export default function Home(): JSX.Element {
                 {/* API Docs */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
-                    <h3>API Documentation</h3>
+                    <h3><a href="/docs/api/">API Documentation</a></h3>
                     <p>Reference documentation for the Meadow.IoT stack.</p>
                     <div className="wl-grid space">
                       <a href="docs/api/Meadow/">Meadow.Core</a>
