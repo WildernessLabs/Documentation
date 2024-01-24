@@ -4,11 +4,12 @@ const hardwareReferenceSidebar = [
     type: "category",
     label: "Advanced PCB Concepts",
     items: [
-      "Hardware/Printed_Circuit_Boards_PCBs/PCB_Stackups/index",
+      "Hardware/index",
       {
         type: "category",
         label: "Components",
         items: [
+          "Hardware/Printed_Circuit_Boards_PCBs/PCB_Stackups/index",
           "Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
           "Hardware/Printed_Circuit_Boards_PCBs/Components/Packages_and_Sizes/index",
           "Hardware/Printed_Circuit_Boards_PCBs/Components/Symbols_and_Footprints/index",
