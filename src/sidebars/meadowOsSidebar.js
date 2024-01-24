@@ -20,9 +20,9 @@ const meadowOsSidebar = [
           id: "Meadow/Getting_Started/MCUs/index",
         },
         items: [
-          "Meadow/Getting_Started/Deploying_Meadow/index",
+          "Meadow/Getting_Started/Deploying_Meadow.OS/index",
           "Meadow/Getting_Started/MCUs/Assemble_F7Feather_DevKit/index",
-          "Meadow/Getting_Started/Hello_World/index",
+          "Meadow/Getting_Started/MCUs/F7_Feather/index",
           "Meadow/Getting_Started/MCUs/Core_Compute_Module_DevKit/index", 
           "Meadow/Getting_Started/MCUs/Project_Lab/index",
         ],
@@ -31,7 +31,7 @@ const meadowOsSidebar = [
       {
         // SBCs
         type: "category",
-        label: "Single-Board-Computers (SBCs)",
+        label: "Single-Board-Computers",
         link: {
           type: "doc",
           id: "Meadow/Getting_Started/SBCs/index",
