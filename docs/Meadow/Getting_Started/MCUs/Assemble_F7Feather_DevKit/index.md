@@ -1,5 +1,6 @@
 ---
 layout: Meadow
+sidebar_label: Assemble F7 DevKit
 title: Assemble Meadow Board
 subtitle: Guides and documentation for Meadow
 ---
