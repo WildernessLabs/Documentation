@@ -1,24 +1,21 @@
 ---
 layout: Meadow
 sidebar_label: Deploy Meadow.OS
-title: Meadow OS Deployment
+title: Meadow.OS Deployment
 subtitle: Flashing the Meadow with the latest OS via Meadow.CLI
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem'
+
 When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it.
 
-## Go to the instructions for your development system
-1. [Windows](#windows)
-2. [macOS](#macos)
-3. [Linux (Debian, Ubuntu)](#linux-debian-ubuntu)
-
-## Windows
-
-[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+<Tabs>
+  <TabItem value="windows" label="Windows" default>
 
 ### Install .NET SDK
 
-Download and install the latest [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your console:
@@ -47,7 +44,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
-![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
+![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./wildernesslabs_meadow_boot_button.jpg)
 
 ### Install Meadow USB drivers
 
@@ -81,7 +78,7 @@ Now to flash Meadow OS, *dfu-util* is recommended. However, the default Windows 
 Execute the following command in your console:
 
 ```console
-meadow download os
+meadow firmware download
 ```
 
 ### Flash Meadow.OS and Coprocessor Firmware
@@ -89,20 +86,19 @@ meadow download os
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your console:
 
 ```console
-meadow flash os
+meadow firmware write
 ```
 
 When the flashing process has completed with no errors, disconnect and reconnect the Meadow board to give it a full restart.
 
 Your board is now ready to have a Meadow application deployed to it!
 
-## macOS
-
-[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+  </TabItem>
+  <TabItem value="macos" label="macOS">
 
 ### Install .NET SDK
 
-Download and install the latest [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) for your Mac's processor architecture.
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) for your Mac's processor architecture.
 
 Even if you are working on an ARM-based computer, such as Apple M1, M1 Pro, or M2 CPUs, you should still install the x86 version of the .NET SDK.
 
@@ -141,7 +137,7 @@ brew install dfu-util
 Execute the following command in your terminal:
 
 ```console
-meadow download os
+meadow firmware download
 ```
 
 **NOTE: If the `meadow` command returns an error: command not found:**
@@ -159,7 +155,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
-![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
+![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./wildernesslabs_meadow_boot_button.jpg)
 
 ### Flash Meadow.OS and Coprocessor Firmware
 Now you have two options, please try the option 1 first:
@@ -168,7 +164,7 @@ Now you have two options, please try the option 1 first:
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your terminal:
 
 ```console
-meadow flash os
+meadow firmware write
 ```
 
 #### Option 2 (from normal mode)
@@ -185,7 +181,7 @@ The port should be something like `/dev/tty.usbmodem01`.
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow flash os -s [PORT]
+meadow meadow firmware download
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
@@ -193,15 +189,14 @@ meadow flash os -s [PORT]
 Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
-## Linux (Debian, Ubuntu)
-
-[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS sections as well to keep them in sync with each other.)
+  </TabItem>
+  <TabItem value="linux" label="Linux">
 
 Please note: Linux may require `sudo` to access USB devices.
 
 ### Install .NET SDK
 
-Download and install the latest [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your terminal:
@@ -234,7 +229,7 @@ sudo apt-get install libusb-1.0-0-dev
 Execute the following command in your terminal:
 
 ```console
-meadow download os
+meadow firmware download
 ```
 
 ### Put the device into DFU Bootloader mode.
@@ -244,7 +239,7 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
-![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./primary_usb.png)
+![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./wildernesslabs_meadow_boot_button.jpg)
 
 ### Enable access to the device
 To be able to access the device a udev rule needs to be added.  
@@ -277,7 +272,7 @@ Now you have two options, please try the option 1 first:
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your terminal:
 
 ```console
-meadow flash os
+meadow firmware write
 ```
 
 #### Option 2 (from normal mode)
@@ -310,7 +305,7 @@ or similar. The port might change between reboots of the Meadow so make sure to 
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow flash os -s [PORT]
+meadow firmware write
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
@@ -318,5 +313,5 @@ meadow flash os -s [PORT]
 Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
-## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)
-
+  </TabItem>
+</Tabs>
