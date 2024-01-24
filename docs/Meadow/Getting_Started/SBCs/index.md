@@ -6,6 +6,7 @@ subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
 ## Board-Specific Instructions
-* Raspberry Pi
-* SeeedStudio ReTerminal
-* Jetson Nano
+
+* [Raspberry Pi](RaspberryPi/)
+* [SeeedStudio ReTerminal](ReTerminal/)
+* [Jetson Nano](JetsonNano/)
