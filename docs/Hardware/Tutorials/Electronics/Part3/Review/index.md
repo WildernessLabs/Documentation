@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Review
+title: Part 3 Review
 subtitle: Important concepts regarding types of electricity.
 ---
 
