@@ -1,6 +1,6 @@
 ---
 layout: Netduino
-title: PWM
+title: Netduino PWM
 subtitle: Complex voltage control via Pulse-Width-Modulation (PWM) signals.
 ---
 

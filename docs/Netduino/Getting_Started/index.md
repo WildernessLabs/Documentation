@@ -1,6 +1,6 @@
 ---
 layout: Netduino
-title: Getting Started
+title: Getting Started with Netduino
 subtitle: Configuring your Netduino development environment and deploying your first application.
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: Netduino
-title: SPI
+title: Netduino SPI
 subtitle: Netduino Serial Peripheral Interface (SPI) protocol support. 
 ---
 
