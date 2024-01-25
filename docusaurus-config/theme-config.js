@@ -1,5 +1,6 @@
 const lightCodeTheme = require('../src/themes/wlLight');
 const darkCodeTheme = require('../src/themes/wlDark');
+const algolia = require('./algolia.js');
 
 let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 ({
@@ -139,35 +140,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
     defaultMode: 'light',
     respectPrefersColorScheme: true,
   },
-  algolia: {
-    // The application ID provided by Algolia
-    appId: 'A4D5IOMP59',
-
-    // Public API key: it is safe to commit it
-    apiKey: 'b72b27b61280e89266704664307c36e5',
-
-    indexName: 'developer-usaurus-wildernesslabs',
-
-    // Optional: see doc section below
-    contextualSearch: true,
-
-    // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-    externalUrlRegex: 'external\\.com|domain\\.com',
-
-    // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-    replaceSearchResultPathname: {
-      from: '/docs/', // or as RegExp: /\/docs\//
-      to: '/',
-    },
-
-    // Optional: Algolia search parameters
-    searchParameters: {},
-
-    // Optional: path for search page that enabled by default (`false` to disable it)
-    searchPagePath: 'search',
-
-    //... other Algolia params
-  },
+  algolia
 });
 
 module.exports = themeConfig;
