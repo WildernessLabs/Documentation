@@ -6,7 +6,7 @@ subtitle: Light Emitting Diodes
 
 ## Overview
 
-An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](/Hardware/Circuits/Diodes/) (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:
+An [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) is a [diode](/Hardware/Circuits/Components/Diodes/) (a component that attempts to let current flow only one way through it) that emits light when voltage is applied to it. On a circuit diagram, it looks like a Diode with two arrows (to indicate emitting photons) pointing away from it:
 
 ![LED Circuit Symbol](LED.svg)
 
@@ -38,11 +38,9 @@ These values may vary between suppliers and the data sheet for the component pur
 
 LEDs require a minimum voltage drop across the LED in order for it to open it's _PN-gate_ and light up. This threshold is called the _forward voltage_ (V<sub>f</sub>). However once that voltage is met, there is a limited operating range of voltage that is safe for the LED.
 
-
 ## Maximum Current
 
 Maximum current (I<sub>fmax</sub>) rating is the maximum current that can flow through the diode without burning out the component.  Lower currents can be applied, these will just result in a dimmer output from the LED. Exceeding the maximum current rating for an LED by very much will usually burn out an LED quite quickly.
-
 
 ## LED Colors
 
@@ -64,8 +62,8 @@ LEDs are extremely efficient light generators because they convert currently dir
 
 Because of this, the current that drives an LED is typically limited by one of two methods:
 
- * [A current limiting resistor](Driving_w_Resistor) - A resistor can be used to reduce the current. This is probably the most common way to drive an LED.
- * [Driving it with a Pulse Width Modulation (PWM) signal](Driving_w_PWM) - By using a PWM, the LED receives pulses of current that limit the overall current through the LED over time.
+* [A current limiting resistor](Driving_w_Resistor) - A resistor can be used to reduce the current. This is probably the most common way to drive an LED.
+* [Driving it with a Pulse Width Modulation (PWM) signal](Driving_w_PWM) - By using a PWM, the LED receives pulses of current that limit the overall current through the LED over time.
 
 ## Construction and Physics
 

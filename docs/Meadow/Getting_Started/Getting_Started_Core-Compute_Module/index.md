@@ -94,7 +94,7 @@ When using the Core-Compute module within the Core-Compute Development Kit, some
 Now that you understand the basics of a Meadow application, we recommend learning about the following topics:
 
 * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
-* [Meadow.Foundation](/Meadow/Meadow.Foundation/index)
+* [Meadow.Foundation](/Meadow/Meadow%2EFoundation/)
 
 With the Core-Compute Development Kit, you can also explore the additional onboard peripherals, depending on your kit's configuration:
 

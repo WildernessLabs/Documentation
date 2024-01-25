@@ -14,4 +14,4 @@ This section covers the fundamentals of creating Meadow applications.
 * [Troubleshooting](/Meadow/Meadow_Basics/Troubleshooting)
 * [Meadow Hardware](/Meadow/Meadow_Basics/Hardware)
 
-## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/index)
+## [Next - Meadow.Foundation](/Meadow/Meadow%2EFoundation/)
