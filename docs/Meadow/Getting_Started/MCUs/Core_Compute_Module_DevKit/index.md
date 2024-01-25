@@ -72,7 +72,9 @@ Use the [Meadow.CLI](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Me
 
 Open a Terminal and enter the following command to install a list of Meadow project templates:
 
-`dotnet new install WildernessLabs.Meadow.Template`
+```console
+dotnet new install WildernessLabs.Meadow.Template
+```
 
 When installed, you’ll see a list of Templates available
 
@@ -84,7 +86,9 @@ Lets verify everything is set up by deploying your first Meadow application.
 
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
-`dotnet new Meadow -n Blinky`
+```console
+dotnet new MeadowCcm -n BlinkyCcm
+```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the CCM Dev Kit's onboard RGB LED and cycles through different colors.
 
