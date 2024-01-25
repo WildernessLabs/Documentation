@@ -87,6 +87,18 @@
 
   .navbar {
     border-bottom: solid 1px $color-blue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .navbar__item--active,
+  .navbar__link[aria-current="page"] {
+    background-color: $color-orange;
+    color: #ffffff;
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+    padding-top: 18px;
   }
 
   .menu__link--active {
@@ -227,19 +239,22 @@
       }
     }
 
-    .theme-doc-sidebar-item-link-level-3, .theme-doc-sidebar-item-category-level-3 {
+    .theme-doc-sidebar-item-link-level-3,
+    .theme-doc-sidebar-item-category-level-3 {
       a {
         padding-left: 50px !important;
       }
     }
 
-    .theme-doc-sidebar-item-link-level-4, .theme-doc-sidebar-item-category-level-4 {
+    .theme-doc-sidebar-item-link-level-4,
+    .theme-doc-sidebar-item-category-level-4 {
       a {
         padding-left: 70px !important;
       }
     }
 
-    .theme-doc-sidebar-item-link-level-5, .theme-doc-sidebar-item-category-level-5 {
+    .theme-doc-sidebar-item-link-level-5,
+    .theme-doc-sidebar-item-category-level-5 {
       a {
         padding-left: 90px !important;
       }
@@ -250,7 +265,7 @@
     padding-top: 0;
 
     nav {
-      word-break:normal;
+      word-break: normal;
       padding: 0 0 0.5rem 0rem;
       scrollbar-gutter: auto;
     }
