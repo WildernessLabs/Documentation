@@ -6,16 +6,16 @@ subtitle: Netduino digital (binary) Input/Output capabilities.
 
 ## Info
 
-Digital ports are useful for binary communication in which the port is either high/on (powered at `3.3V`) or low/off (grounded at `0V`). High represents a digital `1` or boolean `true`, and low represents digital `0` or boolean `false`. 
+Digital ports are useful for binary communication in which the port is either high/on (powered at `3.3V`) or low/off (grounded at `0V`). High represents a digital `1` or boolean `true`, and low represents digital `0` or boolean `false`.
 
-Additionally, Netduino provides built-in support for a host of different types of common digital communication protocols via the digital ports. 
+Additionally, Netduino provides built-in support for a host of different types of common digital communication protocols via the digital ports.
 
 * [I2C (Inter Integrated Circuit)](I2C/)
 * [PWM (Pulse Width Modulation)](PWM/)
-* [SPI (Serial Peripheral Interface)](SPI/) 
+* [SPI (Serial Peripheral Interface)](SPI/)
 * [UART (Serial)](UART/)
 
-The above protocols are sometimes called peripherals.  The location of the peripherals is shown on the pin out diagram for the boards.  The Netduino 3 and Netduino 3 WiFi pin out is as follows:
+The above protocols are sometimes called peripherals. The location of the peripherals is shown on the pin out diagram for the boards. The Netduino 3 and Netduino 3 WiFi pin out is as follows:
 
 ![](../../About/Netduino3_Pinout.svg)
 
@@ -49,7 +49,7 @@ bool state = inputPort.Read();
 
 In addition to polling/requesting a port for its value, the .NET MicroFramework can be set to raise an event when a port's value changes by using an [`InterruptPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.interruptport(v=vs.102).aspx). For example, in response to a button being pressed that connects a circuit and raises the input port's voltage from low (`0V`) to high (`3.3V`).
 
-The [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents) illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:
+The [Button Interrupt Events Sample](/Samples/Netduino/ButtonInterruptEvents/) illustrates listening for the event raised when the onboard button is pressed, and then lights up the onboard LED:
 
 ```csharp
 using System;
@@ -59,41 +59,41 @@ using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace ButtonInterruptEvents
 {
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+    public class Program
+    {
+        // An output port allows you to write (send a signal) to a pin
+        static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 
-		// An interrupt port raises events when its value changes. in this case, 
-		// we use it to create an event when the button is clicked.
-		// We set the Interrupt mode to raise an event on both edges of the signal;
-		// both down, and up.
-		static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false, 
-			Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
-		
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
+        // An interrupt port raises events when its value changes. in this case,
+        // we use it to create an event when the button is clicked.
+        // We set the Interrupt mode to raise an event on both edges of the signal;
+        // both down, and up.
+        static InterruptPort _button = new InterruptPort((Cpu.Pin)0x15, false,
+            Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth );
 
-			// wire up the interrupt to our event handler
-			_button.OnInterrupt += handleButtonClick;
+        public static void Main()
+        {
+            // turn the LED off initially
+            _led.Write(false);
 
-			// run forever
-			while (true)
-			{
-				
-			}
+            // wire up the interrupt to our event handler
+            _button.OnInterrupt += handleButtonClick;
 
-		}
+            // run forever
+            while (true)
+            {
 
-		static void handleButtonClick (uint port, uint data, DateTime time)
-		{
-			// will be 1 when pressed (raised high), and 0, when unpressed
-			Debug.Print ("Data: " + data.ToString ());
-			_led.Write (data == 1);
-		}
-	}
+            }
+
+        }
+
+        static void handleButtonClick (uint port, uint data, DateTime time)
+        {
+            // will be 1 when pressed (raised high), and 0, when unpressed
+            Debug.Print ("Data: " + data.ToString ());
+            _led.Write (data == 1);
+        }
+    }
 }
 ```
 
@@ -124,37 +124,37 @@ using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace GlitchFilter
 {
-	public class Program
-	{
-		// An output port allows you to write (send a signal) to a pin
-		static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
-		// An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
-		static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
+    public class Program
+    {
+        // An output port allows you to write (send a signal) to a pin
+        static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
+        // An input port reads the signal from a pin (Should be Pins.ONBOARD_BTN, but there is a bug)
+        static InputPort _button = new InputPort((Cpu.Pin)0x15, true, Port.ResistorMode.Disabled);
 
-		public static void Main()
-		{
-			// turn the LED off initially
-			_led.Write(false);
+        public static void Main()
+        {
+            // turn the LED off initially
+            _led.Write(false);
 
-			// smooth noise out over 5 milliseconds
-			Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
+            // smooth noise out over 5 milliseconds
+            Cpu.GlitchFilterTime = new TimeSpan(0,0,0,0,5);
 
 
-			// run forever
-			while (true)
-			{
-				// set the onboard LED output to be the input of the button
-				_led.Write(_button.Read());
-			}
+            // run forever
+            while (true)
+            {
+                // set the onboard LED output to be the input of the button
+                _led.Write(_button.Read());
+            }
 
-		}
-	}
+        }
+    }
 }
 ```
 
 ### Output
 
-To write to a port, an [`OutputPort`](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx) is instantiated. The code below is from the same [Button Interrupt Events Sample](/Samples/Netduino/ButtonInteruptEvents):
+To write to a port, an [`OutputPort`](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb285754(v=vs.102)) is instantiated. The code below is from the same [Button Interrupt Events Sample](/Samples/Netduino/ButtonInterruptEvents):
 
 ```csharp
 static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
@@ -163,13 +163,13 @@ static OutputPort _led = new OutputPort(Pins.ONBOARD_LED, false);
 To send a signal to the port, the `Write` method is called, passing in `false` for a low signal (`0V`), or `true` for a high (`3.3V`) signal:
 
 ```csharp
-_led.Write(true); 
+_led.Write(true);
 ```
 
 ## See Also
 
-* [`InputPort` API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.inputport(v=vs.102).aspx)
-* [`OutputPort` API Reference](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.outputport(v=vs.102).aspx)
-* [`Port.ResistorMode` Enumeration](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.port.resistormode(v=vs.102).aspx)
-* [`Port.InterruptMode` Enumeration](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.port.interruptmode(v=vs.102).aspx)
-* [`Cpu.GlitchFilterTime` Property](https://msdn.microsoft.com/en-us/library/microsoft.spot.hardware.cpu.glitchfiltertime(v=vs.102).aspx)
+* [`InputPort` API Reference](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb329378(v=vs.102))
+* [`OutputPort` API Reference](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb285754(v=vs.102))
+* [`Port.ResistorMode` Enumeration](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb285927(v=vs.102))
+* [`Port.InterruptMode` Enumeration](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb329406(v=vs.102))
+* [`Cpu.GlitchFilterTime` Property](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb285608(v=vs.102))

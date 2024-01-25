@@ -204,4 +204,4 @@ The following table lists all the accessible pins on the Meadow F7 Feather dev b
 
 When building Meadow applications, most of the time, you'll use high-level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
-## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/index)
+## [Next - Meadow.Foundation](/Meadow/Meadow%2EFoundation/)

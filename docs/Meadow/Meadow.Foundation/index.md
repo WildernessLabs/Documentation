@@ -15,7 +15,7 @@ It's completely [open source](https://github.com/WildernessLabs/Meadow.Foundatio
 * [Libraries and Frameworks](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)
   * [MicroLayout](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout)
   * [MicroGraphics](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics)
-  * [Maple Server](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index)
+  * [Maple Server](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer)
   * [TextDisplayMenu](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu)
   * [GPS/GNSS NMEA Processor](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor)
 * [Working with Sensors](/Meadow/Meadow.Foundation/Working_with_Sensors)
