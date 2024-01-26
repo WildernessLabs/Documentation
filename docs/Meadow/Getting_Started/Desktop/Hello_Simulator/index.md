@@ -1,14 +1,14 @@
 ---
 layout: Meadow
 sidebar_label: Hello, Windows
-title: Hello, Meadow.Windows!
+title: Hello, Meadow.Windows
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'
 
-![](wildernesslabs_desktop_getting_started.jpg)
+![](wildernesslabs_desktop_getting_started.png)
 
 <Tabs>
   <TabItem value="visualstudio" label="Visual Studio 2022" default>
