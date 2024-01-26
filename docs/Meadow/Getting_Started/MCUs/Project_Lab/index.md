@@ -81,7 +81,6 @@ dotnet new install WildernessLabs.Meadow.Template
 When installed, you’ll see a list of Templates available
 
 ```console
-C:\Users\ramir>dotnet new install WildernessLabs.Meadow.Template
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
