@@ -1,5 +1,6 @@
 ---
 layout: Meadow
+sidebar_label: Hello, reTerminal
 title: Hello, Seeed Studio ReTerminal
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
@@ -77,7 +78,11 @@ And finally to run the Meadow application, use the command:
 dotnet run
 ```
 
-At that point, you should see the application’s output in the console and the RGB LED cycling through different colors:
+A GTK window should show up in the center of the screen saying `Hello, World`, like below:
+
+![Create new Meadow Application](wildernesslabs_reterminal_demo_running.jpg)
+
+And if you check the output you should see something like this:
 
 ```console
 Log level: Information
@@ -86,7 +91,7 @@ Update Service is disabled.
 Health Metrics disabled.
 Initialize...
 Run...
-Hello, Raspberry Pi!
+Hello, reTerminal!
 ```
 
   </TabItem>
