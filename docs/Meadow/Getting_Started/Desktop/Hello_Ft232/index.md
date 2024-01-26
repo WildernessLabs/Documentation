@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-sidebar_label: Hello, Simulator + FT232
-title: Hello, Meadow.Simulator w/ FT232
+sidebar_label: Hello, Windows + FT232
+title: Hello, Meadow.Windows w/ FT232
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
@@ -50,7 +50,24 @@ dotnet new install WildernessLabs.Meadow.Template
 
 When installed, you’ll see a list of Templates available
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_templates_install.png)
+```console
+C:\Users\ramir>dotnet new install WildernessLabs.Meadow.Template
+The following template packages will be installed:
+   WildernessLabs.Meadow.Template
+
+Success: WildernessLabs.Meadow.Template::1.8.0.2 installed the following templates:
+Template Name                               Short Name         Language        Tags
+------------------------------------------  -----------------  --------------  --------------
+Meadow App (Core-Compute Module)            CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
+Meadow App (Feather F7)                     FeatherF7          [C#],F#,VB.NET  Meadow/Console
+Meadow App (Project Lab)                    ProjectLab         [C#]            Meadow/Console
+Meadow Library                              Library            [C#],F#,VB.NET  Meadow/Library
+Meadow.Linux App (Jetson Nano)              JetsonNano         [C#]            Meadow/Console
+Meadow.Linux App (Raspberry Pi)             RaspberryPi        [C#]            Meadow/Console
+Meadow.Linux App (Seeed Studio reTerminal)  reTerminal         [C#]            Meadow/Console
+Meadow.Windows App (WinForms + Hardware)    WinFormsHardware   [C#]            Meadow/Console
+Meadow.Windows App (WinForms)               WinForms           [C#]            Meadow/Console
+```
 
 ### Step 4 - Create your first Meadow application
 
@@ -59,10 +76,10 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Windows project:
 
 ```console
-dotnet new MeadowWF -n MeadowWinFormsDemo
+dotnet new WinFormsHardware -n WinFormsHardwareDemo
 ```
 
-This Meadow.Windows application controls an RGB LED connected to a FT232H IO Expander that you can connect to your machine via USB-C,and opens a 320x240 pixel WinForms window saying Hello,World using MicroGraphics.
+This Meadow.Windows application controls an RGB LED connected to a FT232H IO Expander that you can connect to your machine via USB-C, and opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
 
 ![Create new Meadow Application](wildernesslabs_desktop_ft232_fritzing.png)
 
@@ -86,7 +103,7 @@ At that point, you should see the application’s output in the console and the 
 
 ![Create new Meadow Application](wildernesslabs_desktop_ft232.gif)
 
-And a WinForm window should show up in the center of the screen saying Hello World, like below:
+And a WinForm window should show up in the center of the screen saying `Hello, World`, like below:
 
 ![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
 
