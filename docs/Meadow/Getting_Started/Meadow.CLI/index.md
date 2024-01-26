@@ -20,3 +20,30 @@ To update, simply change the install keyword to update:
 ```console
 dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
+
+You can confirm the Meadow.CLI was successfully installed by typing `meadow`.
+
+```console
+C:\Users\ramir>meadow
+meadow v2.0.0.6
+
+USAGE
+  meadow [options]
+  meadow [command] [...]
+
+OPTIONS
+  -h|--help         Shows help text.
+  --version         Shows version information.
+
+COMMANDS
+  app build         Compile a Meadow application
+  app debug         Debug a running application
+  app deploy        Deploy a built Meadow application to a target device
+  app run           Builds, trims and deploys a Meadow application to a target device
+  app trim          Runs an already-compiled Meadow application through reference trimming
+  .
+  .
+  .
+```
+
+For more usage information, head over to the Meadow.CLI documentation.
