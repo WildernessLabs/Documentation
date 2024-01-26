@@ -72,7 +72,24 @@ dotnet new install WildernessLabs.Meadow.Template
 
 When installed, you’ll see a list of Templates available
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_templates_install.png)
+```console
+C:\Users\ramir>dotnet new install WildernessLabs.Meadow.Template
+The following template packages will be installed:
+   WildernessLabs.Meadow.Template
+
+Success: WildernessLabs.Meadow.Template::1.8.0.2 installed the following templates:
+Template Name                               Short Name         Language        Tags
+------------------------------------------  -----------------  --------------  --------------
+Meadow App (Core-Compute Module)            CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
+Meadow App (Feather F7)                     FeatherF7          [C#],F#,VB.NET  Meadow/Console
+Meadow App (Project Lab)                    ProjectLab         [C#]            Meadow/Console
+Meadow Library                              Library            [C#],F#,VB.NET  Meadow/Library
+Meadow.Linux App (Jetson Nano)              JetsonNano         [C#]            Meadow/Console
+Meadow.Linux App (Raspberry Pi)             RaspberryPi        [C#]            Meadow/Console
+Meadow.Linux App (Seeed Studio reTerminal)  reTerminal         [C#]            Meadow/Console
+Meadow.Windows App (WinForms + Hardware)    WinFormsHardware   [C#]            Meadow/Console
+Meadow.Windows App (WinForms)               WinForms           [C#]            Meadow/Console
+```
 
 ### Step 6 - Create your first Meadow application
 
@@ -81,7 +98,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
 
 ```console
-dotnet new MeadowPL -n ProjectLabDemo
+dotnet new ProjectLab -n ProjectLabDemo
 ```
 
 This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.
@@ -94,7 +111,7 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 
 ![Deploying Project Lab app on VS Code](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.jpg)
 
-**Note**: When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that you’ve changed.
+⚠️ **Note**: When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that you’ve changed.
 
 Once all the files are transferred to your device, the app will start in debug mode and you should see your Project Lab loading up a screen with all the sensor values refreshing every few seconds. You can also press the push buttons and see their status change right away.
 
