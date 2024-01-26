@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-sidebar_label: Hello, Windows + FT232
-title: Hello, Meadow.Windows w/ FT232
+sidebar_label: Hello, Windows + FT232H
+title: Hello, Meadow.Windows + FT232H
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
