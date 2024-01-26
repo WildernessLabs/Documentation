@@ -9,7 +9,7 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 * [Install Meadow.CLI](/Meadow/Getting_Started/Meadow%2ECLI/)
 * [Install IDE Extensions](../IDE_Extensions/)
-* [Deploy Meadow.OS](Deploying_Meadow.OS/)
+* [Deploy Meadow.OS](../Deploying_Meadow%2EOS/)
 
 ## Board-Specific Instructions
 
