@@ -16,7 +16,16 @@ export default function Getting_Started(): JSX.Element {
           <section className="meadow-features wl-container">
               <h2>Getting Started w/Meadow IoT Devices</h2>
               <hr></hr>
-              Choose your compute platform.
+              <p>
+                Meadow is a cross-platform solution for building IoT applications, enabling 
+                the same application code to run across a variety of compute contexts from 
+                Microcontrollers (MCUs) like the F7 Feather, Single-Board-Computers (SBCs) 
+                like the Raspberry Pi, and even on the desktop, either with or without external
+                hardware peripherals.
+              </p>
+              <p>
+                To get started, choose your compute class and device below:
+              </p>
               <div className="wl-grid mb-50">
                 {/* Meadow F7 */}
                 <div className="wl-card border thick-1 orange radius-8">
