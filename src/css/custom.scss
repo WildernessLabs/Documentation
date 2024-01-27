@@ -278,10 +278,12 @@
   .tabs__item {
     font-family: "Wavehaus-Book";
     color: $color-brown;
+    padding: 8px 20px 8px 20px;
   }
   .tabs__item--active {
     border-bottom-color: $color-orange;
   }
+  
 }
 
 h1,

@@ -3,10 +3,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import "../css/components/home-page.scss";
 
-export default function Getting_Started(): JSX.Element {
+export default function GettingStarted(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout title={`Hello from ${siteConfig.title}`}>
       <main><br></br>
 
       <section id="homepage">
@@ -77,6 +76,5 @@ export default function Getting_Started(): JSX.Element {
           </div>
         </section>           
       </main>
-    </Layout>
   );
 }
