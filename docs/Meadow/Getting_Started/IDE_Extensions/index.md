@@ -42,9 +42,9 @@ If you havent, download and Install [Visual Studio Code](https://visualstudio.mi
 ### Installation
 
 1. In VSCode go to the Extensions tab (macOS: Cmd+Shift+X. Others: Ctrl+Shift+X)
-1. In the search bar type VSCode Tools for Meadow. It should be the 1st extension in the list.
+1. In the search bar type `VSCode Tools for Meadow`. It should be the first extension in the list.
 
-![vscode meadow extension](vscode-extension-marketplace.png)
+  ![vscode meadow extension](vscode-extension-marketplace.png)
 
 1. Click it the Install button on the bottom right of the listed item.
 1. The extension should now be installed.
