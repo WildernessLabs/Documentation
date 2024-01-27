@@ -9,6 +9,12 @@ subtitle: Installing the Meadow Command-Line-Interface (CLI).
 
 The Meadow Command-Line-Interface (Meadow.CLI) provides a way to interact with the board and perform functions via a terminal/command-line window.
 
+### Pre-requisites
+
+Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
+
+### Installation
+
 Meadow.CLI can be installed via the dotnet tool from a nuget package at the terminal:
 
 ```console
