@@ -17,18 +17,6 @@ function useForceUpdate() {
   return update;
 }
 
-function getDocusaurusTabItems() {
-  const items = {};
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (/^docusaurus\.tab\..+/.test(key)) {
-      // Regular expression to match the pattern
-      items[key] = localStorage.getItem(key);
-    }
-  }
-  return items;
-}
-
 export default function TOC({ className, ...props }) {
   const forceUpdate = useForceUpdate();
   let activeTab, setActiveTab;
