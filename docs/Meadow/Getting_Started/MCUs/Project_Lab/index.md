@@ -5,9 +5,6 @@ title: Hello, Meadow Project Lab
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'
-
 ![](wildernesslabs_projectlab_getting_started.jpg)
 
 <Tabs groupId="ide">

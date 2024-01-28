@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback } from "react";
 import clsx from "clsx";
 import TOCItems from "@theme/TOCItems";
 import styles from "./styles.module.css";
-import { useLocation } from "react-router-dom";
 import TOCEditArticle from "@site/src/components/TOCEditArticle";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 const LINK_CLASS_NAME = "table-of-contents__link toc-highlight";
 const LINK_ACTIVE_CLASS_NAME = "table-of-contents__link--active";
@@ -18,6 +18,9 @@ function useForceUpdate() {
 }
 
 export default function TOC({ className, ...props }) {
+  const isBrowser = useIsBrowser();
+  if(!isBrowser) return (<div></div>);
+
   const forceUpdate = useForceUpdate();
   let activeTab, setActiveTab;
   function setupUseTabState() {

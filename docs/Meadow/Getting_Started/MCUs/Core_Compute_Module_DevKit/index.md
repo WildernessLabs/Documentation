@@ -5,9 +5,6 @@ title: Hello, Meadow Core-Compute Module (CCM) DevKit
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'
-
 ![](wildernesslabs_ccm_getting_started.jpg)
 
 <Tabs groupId="os">

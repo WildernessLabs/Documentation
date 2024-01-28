@@ -16,6 +16,7 @@ import ErrorPageContent from "@theme/ErrorPageContent";
 import styles from "./styles.module.css";
 import lozad from "lozad";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 export default function Layout(props) {
   const {
     children,
@@ -27,14 +28,16 @@ export default function Layout(props) {
   } = props;
 
   //loop through the configured tab groups, and make sure they are in the local storage.
-  const { siteConfig } = useDocusaurusContext();
-  const tabGroups = siteConfig.customFields.tabGroups;
-  for(let group of tabGroups)
-  {
-    const item = localStorage.getItem(`docusaurus.tab.${group.id}`);
-    if(!item)
-    {
-      localStorage.setItem(`docusaurus.tab.${group.id}`, group.defaultTab);
+  const isBrowser = useIsBrowser();
+  if (isBrowser) {
+    //isBrowser helps us bypass a build error, where we don't have access to windo.location - https://docusaurus.io/docs/advanced/ssg#useisbrowser
+    const { siteConfig } = useDocusaurusContext();
+    const tabGroups = siteConfig.customFields.tabGroups;
+    for (let group of tabGroups) {
+      const item = localStorage.getItem(`docusaurus.tab.${group.id}`);
+      if (!item) {
+        localStorage.setItem(`docusaurus.tab.${group.id}`, group.defaultTab);
+      }
     }
   }
 

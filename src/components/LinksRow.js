@@ -33,7 +33,6 @@ function LinksRow() {
   let {siteConfig} = useDocusaurusContext();
   const items = useNavbarItems(siteConfig);
   var match = getHrefMatch(items, siteConfig);
-  console.log(match);
   return (
     <div className="links-row">
       {items.map((item, i) => (
