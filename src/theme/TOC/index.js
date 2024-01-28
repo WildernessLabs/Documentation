@@ -32,12 +32,6 @@ function getDocusaurusTabItems() {
 export default function TOC({ className, ...props }) {
   const forceUpdate = useForceUpdate();
   let activeTab, setActiveTab;
-  // let [activeTab, setActiveTab] =
-  //   useState(localStorage.getItem("docusaurus.tab.ide")) &&
-  //   useState(localStorage.getItem("docusaurus.tab.os"));
-  // [activeTab, setActiveTab] = useState(
-  //   localStorage.getItem("docusaurus.tab.os")
-  // );
   function setupUseTabState() {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
@@ -87,7 +81,7 @@ export default function TOC({ className, ...props }) {
     const handleStorageChange = (event) => {
       if (event.key.includes("docusaurus.tab")) {
         const newActiveTab = localStorage.getItem(event.key);
-        setActiveTab(newActiveTab);
+        if(setActiveTab) setActiveTab(newActiveTab);
       }
     };
 
