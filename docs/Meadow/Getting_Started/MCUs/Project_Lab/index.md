@@ -10,8 +10,8 @@ import TabItem from '@theme/TabItem'
 
 ![](wildernesslabs_projectlab_getting_started.jpg)
 
-<Tabs>
-  <TabItem value="visualstudio" label="Visual Studio 2022" default>
+<Tabs groupId="ide">
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
 ### Step 1 - Install .NET Runtime
 
@@ -52,7 +52,7 @@ Once all the files are transferred to your device, the app will start in debug m
 ![Project Lab app running](wildernesslabs_projectlab_blinky.gif)
 
   </TabItem>
-  <TabItem value="vscode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
 

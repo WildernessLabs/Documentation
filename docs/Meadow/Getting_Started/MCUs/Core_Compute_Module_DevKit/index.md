@@ -10,8 +10,8 @@ import TabItem from '@theme/TabItem'
 
 ![](wildernesslabs_ccm_getting_started.jpg)
 
-<Tabs>
-  <TabItem value="visualstudio" label="Visual Studio 2022" default>
+<Tabs groupId="os">
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
 ### Step 1 - Install .NET Runtime
 
@@ -50,7 +50,7 @@ Connect your board if disconnected, and in the **Meadow devices** drop down it s
 Once all the files are transferred to your device, the app will start in debug mode and you should see CCM Dev Kit's onboard RGB LED lighting up in different colors.
 
   </TabItem>
-  <TabItem value="vscode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
 
