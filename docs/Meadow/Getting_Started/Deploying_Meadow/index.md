@@ -317,5 +317,5 @@ meadow flash os -s [PORT]
 Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
-## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)
+## [Next - Hello, Meadow](/Meadow/Getting_Started/MCUs/F7_Feather/)
 

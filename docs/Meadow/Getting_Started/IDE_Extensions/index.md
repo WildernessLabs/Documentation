@@ -26,9 +26,12 @@ If you havent already, download and Install [Visual Studio](https://visualstudio
 
 You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) or through the Extension Manager
 
-1. In Visual Studio, go to Extensions =&gt; Manage Extensions
-1. Click Online and search for Meadow.
-1. Install VS Tools for Meadow, then close all instances of Visual Studio so the extension gets installed.
+1. In Visual Studio, go to **Extensions** =&gt; **Manage Extensions**
+1. Click **Online** and search for `VS 2022 Tools for Meadow`. It should be the first extension in the list.
+
+  ![vscode meadow extension](vs2022-extension-marketplace.png)
+
+1. Install **VS Tools for Meadow**, then close all instances of Visual Studio so the extension gets installed.
 
 
   </TabItem>
@@ -46,7 +49,7 @@ If you havent, download and Install [Visual Studio Code](https://visualstudio.mi
 
   ![vscode meadow extension](vscode-extension-marketplace.png)
 
-1. Click it the Install button on the bottom right of the listed item.
+1. Click it the **Install** button on the bottom right of the listed item.
 1. The extension should now be installed.
 
 

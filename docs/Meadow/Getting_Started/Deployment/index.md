@@ -10,4 +10,4 @@ subtitle: Guides and documentation for Meadow
 * [Windows](Windows/)
 * [Linux](Linux/)
 
-## [Next - Hello, World](/Meadow/Getting_Started/Hello_World/)
+## [Next - Hello, World](/Meadow/Getting_Started/MCUs/F7_Feather/)

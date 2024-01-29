@@ -662,7 +662,7 @@ We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merg
 
 ### Visual Studio Extension
 
-Our project template is now included enabling the creation of new Meadow Apps within Visual Studio, [check out the update](/Meadow/Getting_Started/Hello_World/). Debugging remains unavailable, but the console app gracefully exists.
+Our project template is now included enabling the creation of new Meadow Apps within Visual Studio, [check out the update](/Meadow/Getting_Started/MCUs/F7_Feather/). Debugging remains unavailable, but the console app gracefully exists.
 
 ### Meadow.CLI
 Now available for [download](http://wldrn.es/latestmeadowcli).
