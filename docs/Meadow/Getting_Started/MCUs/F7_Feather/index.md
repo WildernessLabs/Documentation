@@ -5,13 +5,10 @@ title: Hello, Meadow F7 Feather
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'
-
 ![](wildernesslabs_feather_getting_started.jpg)
 
-<Tabs>
-  <TabItem value="visualstudio" label="Visual Studio 2022" default>
+<Tabs groupId="ide">
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
 ### Step 1 - Install .NET Runtime
 
@@ -52,7 +49,7 @@ Once all the files are transferred to your device, the app will start in debug m
 ![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
 
   </TabItem>
-  <TabItem value="vscode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
 

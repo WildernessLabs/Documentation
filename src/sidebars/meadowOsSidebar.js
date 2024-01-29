@@ -57,6 +57,7 @@ const meadowOsSidebar = [
         ],
       },
 
+      "Meadow/Getting_Started/Meadow.Cloud/index",
     ],
   },
   {
