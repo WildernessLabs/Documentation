@@ -19,7 +19,7 @@ function useForceUpdate() {
 
 export default function TOC({ className, ...props }) {
   const isBrowser = useIsBrowser();
-  if(!isBrowser) return (<div></div>);
+  if (!isBrowser) return <div></div>;
 
   const forceUpdate = useForceUpdate();
   let activeTab, setActiveTab;
@@ -27,7 +27,8 @@ export default function TOC({ className, ...props }) {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
       if (/^docusaurus\.tab\..+/.test(key)) {
-        [activeTab, setActiveTab] = [activeTab, setActiveTab] && useState(localStorage.getItem(key))
+        [activeTab, setActiveTab] =
+          [activeTab, setActiveTab] && useState(localStorage.getItem(key));
       }
     }
   }
@@ -61,6 +62,12 @@ export default function TOC({ className, ...props }) {
     if (nonTabHeadings.length) {
       hashmap["all"] = nonTabHeadings;
     }
+
+    var storageEvent = new StorageEvent("storage", {
+      key: "docusaurus.tab.ide",
+    });
+    if(isBrowser) setTimeout(() => window.dispatchEvent(storageEvent), 1);
+    console.log(hashmap);
     return hashmap;
   }
 
@@ -68,11 +75,11 @@ export default function TOC({ className, ...props }) {
     tocHashMap = {};
     tocHashMap = !tocHashMap["all"] ? constructTOCHashmap() : tocHashMap;
     forceUpdate();
-
     const handleStorageChange = (event) => {
       if (event.key.includes("docusaurus.tab")) {
         const newActiveTab = localStorage.getItem(event.key);
-        if(setActiveTab) setActiveTab(newActiveTab);
+        console.log(event.key);
+        if (setActiveTab) setActiveTab(newActiveTab);
       }
     };
 
