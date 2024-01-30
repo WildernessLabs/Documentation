@@ -5,18 +5,20 @@ title: Assemble Meadow Board
 subtitle: Guides and documentation for Meadow
 ---
 
+![Meadow developer kit parts: mounting protoboard, Meadow board with headers and mounting hardware, and small breadboard.](wildernesslabs_feather_assembling.jpg)
+
 This guide will walk you through the steps to assemble your Meadow development board to get you started.
 
 ### Parts
 
 Your kit should include:
  - 1 Meadow board
+ - 1 Half-sized breadboard
  - 1 Wooden Wilderness Labs protoboard
  - 2 Blue female header pins
+ - 2 Orange male header pins
  - 4 Screws
  - 8 Nuts
-
-![Meadow developer kit parts: mounting protoboard, Meadow board with headers and mounting hardware, and small breadboard.](MeadowDev_Parts.jpg)
 
 ### Step 1 - Remove protective cover on the wooden base protoboard
 
@@ -59,7 +61,3 @@ Now you can finally fix Meadow through the protoboard and use the remaining 4 nu
 Additionally, you could get metal or nylon fasteners so you screw them in the corners of the base board so it can sit flat on any surface.
 
 ![Meadow developer kit with standoff fasteners attached to outer corners.](./MeadowDev_Fasteners.jpg)
-
-Congratulations, your Meadow developer kit assembled and now you're ready to test the Meadow board on the next section. 
-
-## [Next - Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow/)
