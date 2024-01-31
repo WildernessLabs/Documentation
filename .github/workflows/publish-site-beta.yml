@@ -3,9 +3,9 @@ name: "[prod] Publish static site"
 on:
   workflow_dispatch:
   push:
-    branches: [ "docusaurus" ]
+    branches: [ "docusaurus", "develop" ]
   pull_request:
-    branches: [ "docusaurus" ]
+    branches: [ "docusaurus", "develop" ]
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -20,176 +20,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: prod
+    environment: beta
     steps:
-      # Clone current repo
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: src
-          # ref: develop # <-- required to deploy beta docs
-
-      # npm install
-      - name: npm install
-        working-directory: ./src
-        run: |
-          npm install
-
-      # compress the images
-      - name: Compress Images
-        working-directory: ./src
-        run: |
-          node ./scripts/compress.js ./
-
-      # Clone all the Meadow dependencies adjacent for DocFX build use.
-      - name: Checkout Meadow.Units side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Units
-          path: Meadow.Units
-          ref: main
-      - name: Checkout Meadow.Logging side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Logging
-          path: Meadow.Logging
-          ref: main
-      - name: Checkout Meadow.Contracts side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Contracts
-          path: Meadow.Contracts
-          ref: main
-      - name: Checkout Meadow.Modbus side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Modbus
-          path: Meadow.Modbus
-          ref: main
-      - name: Checkout Meadow.Foundation side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Foundation
-          path: Meadow.Foundation
-          ref: main
-      - name: Checkout Meadow.Core side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Core
-          path: Meadow.Core
-          ref: main
-      - name: Checkout MQTTnet side-by-side
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/MQTTnet
-          path: MQTTnet
-          ref: master
-      - name: Checkout Meadow side-by-side
-        uses: actions/checkout@v3
-        with:
-          # Private repo requires token access; rest are public repos.
-          token: ${{ secrets.CI_ACCESS_TOKEN }}
-          repository: WildernessLabs/Meadow
-          path: Meadow
-          ref: main
-      # Clone more Meadow-related repos for API docs generation (via DocFX).
-      - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Foundation.Grove
-          path: Meadow.Foundation.Grove
-          ref: main
-      - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Foundation.FeatherWings
-          path: Meadow.Foundation.FeatherWings
-          ref: main
-      - name: Checkout Meadow.Foundation.mikroBUS into DocFX-expected Source location
-        uses: actions/checkout@v3
-        with:
-          repository: WildernessLabs/Meadow.Foundation.mikroBUS
-          path: Meadow.Foundation.mikroBUS
-          ref: main
-
-      # # Set up for DocFX
-      - name: Setup .NET Core SDK 7.0.x
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: |
-            7.0.x
-      - name: Setup NuGet
-        uses: Nuget/setup-nuget@v1.2.0
-      - name: Install DocFX globally
-        run: |
-          dotnet tool install --global docfx
-      - name: Install DocFxMarkdownGen
-        run: |
-          dotnet tool install --global DocFxMarkdownGen
-      - name: Run DocFX
-        working-directory: ./src/docfx
-        run: |
-          docfx docfx.json
-      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow
-        # dfmg uses config.yaml for input/output paths
-        # Currently config has to be limited to `docfx/api/Meadow`, which means we need to figure out a way to run it for all the other /api directories.
-        # We might be able to set `env:DFMG_YAML_PATH` and `env:DFMG_OUTPUT_PATH` to the correct values for each repo, to generate them all before merging them together.
-        # One option is setting `env: {whatever}` via Actions syntax (https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun).
-        working-directory: ./src/docfx/dfmg/Meadow
-        run: |
-          dfmg
-      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation
-        working-directory: ./src/docfx/dfmg/Meadow.Foundation
-        run: |
-          dfmg
-      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.FeatherWings
-        working-directory: ./src/docfx/dfmg/Meadow.Foundation.FeatherWings
-        run: |
-          dfmg
-      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.Grove
-        working-directory: ./src/docfx/dfmg/Meadow.Foundation.Grove
-        run: |
-          dfmg
-      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.mikroBUS
-        working-directory: ./src/docfx/dfmg/Meadow.Foundation.mikroBUS
-        run: |
-          dfmg
-
-      # let's add correct slugs. They are important, because things won't build if they dont have "slug: /docs/api/..."
-      - name: Update slugs in frontmatter.
-        working-directory: ./src
-        run: |
-          node ./scripts/update-frontmatter.js
-
-      # Now we need to take all of the generated class/api reference documentation, and merge
-      # it into the api-overrides content
-      - name: Merge api docs together
-        working-directory: ./src
-        run: |
-          node ./scripts/merge-api-overrides.js Meadow.Foundation &&
-          node ./scripts/merge-api-overrides.js Meadow.Foundation.FeatherWings &&
-          node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
-          node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
-
-      # Let's put the api files where they belong
-      - name: Copy api files to content locations
-        working-directory: ./src
-        run: |
-          node ./scripts/update-frontmatter.js &&
-          node ./scripts/copy-api.js
-
-      #docusaurus build
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
-          # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
-          cache-dependency-path: src/package-lock.json
-      - name: Docusaurus Build and Deploy
-        working-directory: ./src
-        run: |
-          npm run build
+      - name: Run common build steps
+        uses: ./common-publish-steps.yml
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: './src/build'

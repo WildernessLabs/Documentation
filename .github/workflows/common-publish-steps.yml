@@ -1,26 +1,10 @@
-name: "[prod] Publish static site"
-
+name: Common Publish Steps
 on:
-  workflow_dispatch:
-  push:
-    branches: [ "none" ]
-  pull_request:
-    branches: [ "none" ]
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-permissions:
-  id-token: write
-  contents: read
+  workflow_call:
 
 jobs:
-  build:
+  common-steps:
     runs-on: ubuntu-latest
-    environment: prod
     steps:
       # Clone current repo
       - name: Checkout
@@ -183,28 +167,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
           # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
           cache-dependency-path: src/package-lock.json
       - name: Docusaurus Build and Deploy
         working-directory: ./src
         run: |
           npm run build
-      - uses: bacongobbler/azure-blob-storage-upload@main
-        with:
-          source_dir: './src/build'
-          container_name: '$web'
-          connection_string: ${{ secrets.DEVELOPER_DOCUSAURUS_BLOB_CONNECTIONSTRING }}
-          overwrite: 'true'
-          #sync: 'true'
-
-      # Purge Azure Front Door Cache
-      - name: Log into Azure        
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: Purge Cache
-        run: |
-              az afd endpoint purge -g ${{ vars.RESOURCE_GROUP }} --profile-name ${{ vars.AFD_PROFILE_NAME }} --domains ${{ vars.AFD_DOMAINS }} --content-paths '/*' --endpoint-name ${{ vars.AFD_ENDPOINT_NAME }}
