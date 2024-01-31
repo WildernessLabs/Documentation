@@ -23,7 +23,7 @@ jobs:
     environment: beta
     steps:
       - name: Run common build steps
-        uses: ./common-publish-steps.yml
+        uses: ./.github/workflows/common-publish-steps.yml
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: './src/build'
