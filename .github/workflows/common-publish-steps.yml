@@ -6,12 +6,6 @@ jobs:
   common-steps:
     runs-on: ubuntu-latest
     steps:
-      # Clone current repo
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: src
-          # ref: develop # <-- required to deploy beta docs
 
       # npm install
       - name: npm install
