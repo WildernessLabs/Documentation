@@ -1,15 +1,5 @@
 const meadowCloudSidebar = [
   {
-    // Getting Started
-    type: "category",
-    label: "Getting Started",
-    link: {
-      type: "doc",
-      id: "Meadow/Meadow.Cloud/index",
-    },
-    items: [],
-  },
-  {
     // Cloud Basics
     type: "category",
     label: "Cloud Basics",
