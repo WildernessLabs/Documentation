@@ -58,6 +58,32 @@
     border-right: 0;
   }
 
+  $types: (
+    "note": $color-brown,
+    "tip": $color-blue,
+    "info": $color-dark-green,
+    "caution": $color-orange,
+    "danger": $color-brown-light2,
+  );
+
+  @each $type, $color in $types {
+    admonition[type="#{$type}"] {
+      p {
+        background-color: $color;
+        padding: 20px;
+        border-left: 5px solid darken($color, 20%);
+        border-radius: 6px;
+        color: #fefefe;
+
+        code {
+          color: $color-brown;
+        }
+      }
+
+      margin-bottom: 20px;
+    }
+  }
+
   main[class^="docMainContainer_"] {
     border-left: 1px solid var(--ifm-toc-border-color);
 
@@ -283,7 +309,6 @@
   .tabs__item--active {
     border-bottom-color: $color-orange;
   }
-  
 }
 
 h1,
