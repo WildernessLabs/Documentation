@@ -187,7 +187,7 @@ export default function Home(): JSX.Element {
             <section className="rel-section" style={{ minHeight: "310px" }}>
               <div className="sample-projects">
                 <div className="project-card border radius-8">
-                  <h2>Project samples at Hackster.io.</h2>
+                  <h2 className="project-hackster-title">Project samples at Hackster.io</h2>
                   <a
                     href="https://www.hackster.io/WildernessLabs"
                     className="button-orange-clear"
