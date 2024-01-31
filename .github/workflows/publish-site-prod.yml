@@ -188,7 +188,7 @@ jobs:
         with:
           source_dir: './src/build'
           container_name: '$web'
-          connection_string: ${{ vars.BLOB_CONNECTIONSTRING }}
+          connection_string: ${{ secrets.BLOB_CONNECTIONSTRING }}
           overwrite: 'true'
           #sync: 'true'
 
