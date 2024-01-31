@@ -8,6 +8,37 @@ The Hack Kit Lite was available as a reward in our original Meadow Kickstarter p
 
 ## Contents
 
+<table>
+    <tr>
+        <td>
+            <img src="images/MeadowAzureIoTHub.png" alt="iot, dotnet, meadow, azure, iot-hub"/>
+            Send environmental data to Azure IoT Hub via AMQP or MQTT
+            <a href="https://www.hackster.io/wilderness-labs/send-temperature-humidity-data-from-meadow-to-azure-iot-hub-340b39">Hackster</a> | <a href="Source/Azure/AzureIoTHub/">Source Code</a>
+        </td>
+        <td>
+            <img src="images/MeadowRoverBle.png" alt="iot, dotnet, meadow, rover"/>
+            Meadow Rover Part 2: Remote Control over Bluetooth
+            <a href="https://www.hackster.io/wilderness-labs/meadow-rover-part-2-remote-control-over-bluetooth-fe43f5">Hackster</a> | <a href="Source/Hackster/Rover/">Source Code</a>
+        </td>
+        <td>
+            <img src="images/MeadowWifi.png" alt="iot, dotnet, meadow, wifi"/>
+            Configure Meadow's WIFI over Bluetooth
+            <a href="https://www.hackster.io/wilderness-labs/configure-meadow-s-wifi-over-bluetooth-c2841e">Hackster</a> | <a href="Source/Hackster/Wifi/">Source Code</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </td>
+        <td>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </td>
+        <td>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </td>
+    </tr>
+</table>
+
 | Item                    | QTY | Description |
 |-------------------------|------|-------------|
 | Hack Kit Box            | 1 | Box that holds all the hack goodies. |
