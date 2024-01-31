@@ -28,7 +28,7 @@ jobs:
         with:
           path: src
           # ref: develop # <-- required to deploy beta docs
-          
+
       - name: Run common build steps
         uses: ./.github/workflows/common-publish-steps.yml
       - uses: bacongobbler/azure-blob-storage-upload@main
