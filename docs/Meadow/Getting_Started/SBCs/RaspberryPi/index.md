@@ -1,5 +1,6 @@
 ---
 layout: Meadow
+sidebar_label: Hello, Raspberry Pi
 title: Hello, Raspberry Pi
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
@@ -7,10 +8,7 @@ subtitle: Create, deploy, and understand your first Meadow application.
 ![](wildernesslabs_raspberry_pi_getting_started.jpg)
 
 <Tabs groupId="ide">
-  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
-
-  </TabItem>
-  <TabItem value="visualstudiocode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code" default>
 
 ### Step 1 - Install .NET Runtime
 
