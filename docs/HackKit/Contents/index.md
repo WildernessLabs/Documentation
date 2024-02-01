@@ -4,10 +4,13 @@ title: Hack Kit Pro Contents
 subtitle: Here we list all the components included in the Hack Kit Pro
 ---
 
+![](./Images/wildernesslabs_hackkit_contents.jpg)
+
 ### F7 Feather Dev Kit
 
 | Item                   | QTY | Description | |
 |------------------------|:---:|-------------|-|
+| Meadow F7 Feather v2 | 1 | Prototype-friendly, embeddable developer board to enable you to prototype on real hardware and embed it directly into products. | ![Photo of Meadow F7 Feather v2](Images/meadowF7.jpg) |
 | Laser-etched Baseboard | 1 | Baseboard that holds a Meadow and a Half+ size breadboard for prototyping. | ![Photo of a laser-cut and engraved wooden board with the Wilderness Labs logo on it.](Images/protoboard.jpg) |
 | Half+ Breadboard       | 2 | Breadboard for quick, temporary, prototyping. | ![Photo of a pair of small breadboards.](Images/breadboards.jpg) |
 | M2x8MM Hex Bolts | 4 | | ![Photo of four M2 by 8mm hex bolts.](Images/bolts.jpg) |

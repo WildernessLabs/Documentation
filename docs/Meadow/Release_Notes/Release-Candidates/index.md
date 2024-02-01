@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-sidebar_label: Meadow V1.0 RCs
+sidebar_label: Meadow v1.0 RC's
 title: Meadow v1.0 Release-Candidates
 subtitle: Release Notes
 ---

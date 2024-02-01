@@ -20,7 +20,9 @@ The Meadow developer Extension for Visual Studio enables projects to be built, d
 
 If you havent already, download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 
+:::caution
 ⚠️ **IMPORTANT**: Make sure to include the **.NET Multi-platform App UI development** component when installing Visual Studio.
+:::
 
 ### Installation
 

@@ -1,17 +1,11 @@
 ---
 layout: Meadow
-title: Meadow V1 Roadmap
+title: Meadow Release Notes
 subtitle: Guides and documentation for Meadow
 ---
 
 # Release Notes
 
- * [v1](v1)
- * [Release Candidates](Release-Candidates)
- * [Beta 6](Beta6)
- * [Beta 5](Beta5)
- * [Beta 4](Beta4)
- * [Beta 3](Beta3)
- * [Beta 2](Beta2)
-
-<!--# [Roadmap](/Meadow/Release_Notes/Roadmap)-->
+ * [Meadow v1.*](v1)
+ * [Meadow v1.0 Release-Candidates](Release-Candidates)
+ * [Meadow Pre-v1.0 Betas](Betas/)

@@ -73,8 +73,6 @@ See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.
 
 Maple server is an ultra-lightweight RESTful Web API server made specifically for Meadow that has native support for JSON. It enables easy remote interaction and control with Meadow over http.
 
-Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer) for more information.
-
 And for a real world sample application, check out the [On-Air Sign project](https://github.com/wildernesslabs/OnAir_Sign) that uses Maple Server to show a message on an LED matrix display to make sure no one walks in on your meetings.
 
 ## `TextDisplayMenu` Library
@@ -272,21 +270,21 @@ We improved performance for all displays using [`GraphicsLibrary`](/Meadow/Meado
 
 ### New Drivers
 
- * [Audio.Mp3.Yx5300 (serial MP3 player)](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3/Yx5300/)
- * [Sensors.Atmospheric.AdaFruitMPRLS (ported pressure sensor)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric/AdafruitMPRLSSensor/)
- * [Sensors.Motion.Mag3110 (3-axis magnetometer)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion/Mag3110/)
- * [Sensors.Environmental.AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental/AnalogWaterLevel/)
- * [Displays.Ssd1327 (4bpp greyscale OLED)](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays/Ssd1327/)
+ * [Audio.Mp3.Yx5300 (serial MP3 player)](/docs/api/Meadow.Foundation/Meadow.Foundation.Audio.Mp3.Yx5300.html)
+ * [Sensors.Atmospheric.AdaFruitMPRLS (ported pressure sensor)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.AdafruitMPRLSSensor.html)
+ * [Sensors.Motion.Mag3110 (3-axis magnetometer)](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Mag3110.html)
+ * [Sensors.Environmental.AnalogWaterLevel](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AnalogWaterLevel.html)
+ * [Displays.Ssd1327 (4bpp greyscale OLED)](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Ssd1327.html)
  
  * Additional TFT SPI Display Drivers:
-   * [Displays.Tft.HX8357b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Hx8357b/)
-   * [Displays.Tft.HX8357d](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Hx8357d/)
-   * [Displays.Tft.GC9A01](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Gc9a01/)
-   * [Displays.Tft.ILI9481](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Ili9481/)
-   * [Displays.Tft.ILI9486](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Ili9486/)
-   * [Displays.Tft.ILI9488](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Ili9488/)
-   * [Displays.Tft.Rm68140](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/Rm68140/)
-   * [Displays.Tft.ST7796s](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft/St7796s/)
+   * [Displays.Tft.HX8357b](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Hx8357b.html)
+   * [Displays.Tft.HX8357d](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Hx8357d.html)
+   * [Displays.Tft.GC9A01](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Gc9a01.html)
+   * [Displays.Tft.ILI9481](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9481.html)
+   * [Displays.Tft.ILI9486](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9486.html)
+   * [Displays.Tft.ILI9488](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Ili9488.html)
+   * [Displays.Tft.Rm68140](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.Rm68140.html)
+   * [Displays.Tft.ST7796s](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Tft.St7796s.html)
 
 ## Bug Fixes
 
@@ -445,8 +443,8 @@ down the host communications.
 
 Meadow.Foundation has new peripheral drivers to play with, including:
 
-- [Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid/Mpr121/)
-- [Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance/Vl53l0x/)
+- [Mpr121](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Mpr121.html)
+- [Vl53l0x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Distance.Vl53l0x.html)
 
 #### Minor update on SG90 Servos
 

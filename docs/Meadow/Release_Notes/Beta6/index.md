@@ -142,7 +142,7 @@ New repos can be found here:
 
 # b6.3
 
-This is fast follow to beta 6.2 with some much anticipated network stability improvements. We tested well beyond 3 million! HTTP requests with no degradation in performance! And this includes the Meadow Foundation Web Server - [Maple](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer/).
+This is fast follow to beta 6.2 with some much anticipated network stability improvements. We tested well beyond 3 million! HTTP requests with no degradation in performance! And this includes the Meadow Foundation Web Server - [Maple](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/).
 
 ## Updating
 
@@ -151,7 +151,7 @@ This update consists of OS binaries and a new CLI. There are no API changes or n
 To update, start by installing the latest version of Meadow CLI (0.19.0):
 
 ```bash
-dotnet tool update WildernessLabs.Meadow.CLI --global
+dotnet tool update Wildernesslabs.Meadow.CLI --global
 ```
 
 Download the latest os:
