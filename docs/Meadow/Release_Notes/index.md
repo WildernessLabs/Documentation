@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Meadow v1.0 Release Notes
+title: v1.* Release Notes
 subtitle: Guides and documentation for Meadow
 ---
 

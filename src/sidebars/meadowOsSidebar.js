@@ -242,7 +242,7 @@ const meadowOsSidebar = [
       id: "Meadow/Release_Notes/index",
     },
     items: [
-      "Meadow/Release_Notes/Beta6/index",
+      "Meadow/Release_Notes/Pre_v1/index",
     ],
   },
   {
