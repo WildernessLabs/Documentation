@@ -242,23 +242,7 @@ const meadowOsSidebar = [
       id: "Meadow/Release_Notes/index",
     },
     items: [
-      "Meadow/Release_Notes/Roadmap/index",
-      {
-        type: "category",
-        label: "Meadow Release Condidates",
-        link: {
-          type: "doc",
-          id: "Meadow/Release_Notes/Release-Candidates/index",
-        },
-        items: [
-          "Meadow/Release_Notes/Release-Candidates/Lifecycle_Update/index",
-        ],
-      },
       "Meadow/Release_Notes/Beta6/index",
-      "Meadow/Release_Notes/Beta5/index",
-      "Meadow/Release_Notes/Beta4/index",
-      "Meadow/Release_Notes/Beta3/index",
-      "Meadow/Release_Notes/Beta2/index",
     ],
   },
   {
