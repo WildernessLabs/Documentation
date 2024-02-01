@@ -412,12 +412,3 @@ Update by putting your Meadow device in boot loader mode and running:
 ```bash
 meadow flash os
 ```
-
-## Archived Release Notes
-
- * [Release Candidates](Release-Candidates)
- * [Beta 6](Beta6)
- * [Beta 5](Beta5)
- * [Beta 4](Beta4)
- * [Beta 3](Beta3)
- * [Beta 2](Beta2)
