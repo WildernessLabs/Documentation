@@ -247,7 +247,7 @@ const meadowOsSidebar = [
       {
         // Release Notes
         type: "category",
-        label: "Meadow Pre-v1.0 Betas",
+        label: "Meadow Betas",
         link: {
           type: "doc",
           id: "Meadow/Release_Notes/Betas/index",

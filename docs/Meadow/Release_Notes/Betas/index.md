@@ -1,5 +1,6 @@
 ---
 layout: Meadow
+sidebar_label: Meadow Betas
 title: Meadow Beta Release Notes
 subtitle: Guides and documentation for Meadow
 ---
