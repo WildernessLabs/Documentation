@@ -1,11 +1,11 @@
 let algolia = {
   // The application ID provided by Algolia
-  appId: 'HB1LKRZI2Z',
+  appId: 'A4D5IOMP59',
 
   // Public API key: it is safe to commit it
-  apiKey: '7c48237516468f23f78facf8ee4bdde0',
+  apiKey: 'b72b27b61280e89266704664307c36e5',
 
-  indexName: 'developer-developer-wildernesslabs',
+  indexName: 'developer-usaurus-wildernesslabs',
 
   // Optional: see doc section below
   contextualSearch: true,
