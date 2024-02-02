@@ -16,7 +16,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add Meadow Visual Studio Extension
 
@@ -104,7 +104,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new FeatherF7 -n FeatherF7Demo
+dotnet new F7Feather -n F7FeatherDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the onboard RGB LED and cycles through different colors.

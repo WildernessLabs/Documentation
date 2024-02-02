@@ -5,9 +5,6 @@ title: Hello, Meadow.Windows + FT232H
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'
-
 ![](wildernesslabs_desktop_getting_started.jpg)
 
 <Tabs>
@@ -27,7 +24,15 @@ Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Mea
 
 ### Step 4 - Create your first Meadow.Windows application
 
-TBD
+In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Windows + FT232H App (Wilderness Labs)**:
+
+![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
+
+Once the new project is loaded, right-click on the toolbar area and select the Meadow Device List item.
+
+### Step 6 - Deploy your application
+
+Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
 
   </TabItem>
   <TabItem value="vscode" label="Visual Studio Code">
