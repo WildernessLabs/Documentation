@@ -76,7 +76,7 @@ export default function GettingStarted(): JSX.Element {
 
             {/* ROW 2 */}
             <section className="meadow-features wl-container">
-              <h2>Meadow.Cloud, IoT Acclerators, and Videos</h2>
+              <h2>Meadow.Cloud, IoT Accelerators, and Videos</h2>
               <hr></hr>
               <div className="wl-grid mb-50">
                 {/* Meadow.Cloud */}
