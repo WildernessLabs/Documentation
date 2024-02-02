@@ -206,7 +206,7 @@ export default function Home(): JSX.Element {
               <hr></hr>
               <p>Don't see what you're looking for?</p>
               <p>
-                Ask a <a href="">question</a>, or make a <a href="">request</a>
+                Ask a <a href="https://slack.wildernesslabs.co/">question</a>, or make a <a href="https://github.com/WildernessLabs/Meadow_Issues/issues/new/choose">request</a>
               </p>
             </section>
           </div>
