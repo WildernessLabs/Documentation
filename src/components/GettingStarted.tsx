@@ -100,16 +100,6 @@ export default function GettingStarted(): JSX.Element {
                     </ul>
                   </div>
                 </div>
-
-                {/* Videos */}
-                <div className="wl-card border thick-3 blue radius-8 corner">
-                  <div className="card-content">
-                    <h3>Videos</h3>
-                    <ul className="flat">
-                      <li><a href="#">Deploying Meadow.OS</a></li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </section>
 
