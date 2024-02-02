@@ -3,9 +3,9 @@ name: "[prod] Publish static site"
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "docusaurus" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "docusaurus" ]
 
 permissions:
   id-token: write
