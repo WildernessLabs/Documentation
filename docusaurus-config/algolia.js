@@ -3,7 +3,7 @@ let algolia = {
   appId: 'HB1LKRZI2Z',
 
   // Public API key: it is safe to commit it
-  apiKey: '7c48237516468f23f78facf8ee4bdde0',
+  apiKey: '139527161fe39144fe7a2581055ed16b',
 
   indexName: 'developer-wildernesslabs',
 
