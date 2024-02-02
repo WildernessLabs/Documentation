@@ -5,7 +5,7 @@ let algolia = {
   // Public API key: it is safe to commit it
   apiKey: '7c48237516468f23f78facf8ee4bdde0',
 
-  indexName: 'developer-wildernesslabs',
+  indexName: 'developer-developer-wildernesslabs',
 
   // Optional: see doc section below
   contextualSearch: true,
