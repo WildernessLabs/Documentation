@@ -1,13 +1,15 @@
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 import "../css/components/home-page.scss";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
 
-  insertTagManager();
-
+  const isBrowser = useIsBrowser();
+  if(isBrowser) insertTagManager();  //isBrowser helps us bypass a build error, where we don't have access to windo.location - https://docusaurus.io/docs/advanced/ssg#useisbrowser
+  
   return (
     <Layout title={`Hello from ${siteConfig.title}`}>
       <main>
