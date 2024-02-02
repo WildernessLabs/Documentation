@@ -1,6 +1,6 @@
 let algolia = {
   // The application ID provided by Algolia
-  appId: 'A4D5IOMP59',
+  appId: 'HB1LKRZI2Z',
 
   // Public API key: it is safe to commit it
   apiKey: 'b72b27b61280e89266704664307c36e5',
