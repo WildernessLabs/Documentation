@@ -3,9 +3,9 @@ let algolia = {
   appId: 'HB1LKRZI2Z',
 
   // Public API key: it is safe to commit it
-  apiKey: 'b72b27b61280e89266704664307c36e5',
+  apiKey: '7c48237516468f23f78facf8ee4bdde0',
 
-  indexName: 'developer-usaurus-wildernesslabs',
+  indexName: 'developer-wildernesslabs',
 
   // Optional: see doc section below
   contextualSearch: true,
