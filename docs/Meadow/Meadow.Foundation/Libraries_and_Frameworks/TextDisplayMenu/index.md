@@ -35,7 +35,7 @@ The following schematic illustrates a typical configuration for driving the menu
 
 ## Configuring the Display
 
-TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd.CharacterDisplay.html) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphics` library, which itself implements `ITextDisplay`.
+TextDisplayMenu requires an `ITextDisplay` to render on. You can either use any of the text [character displays](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Lcd/CharacterDisplay/) directly, such as the 4x20 LCD Character Display in the Hack Kit, or you can can use a graphics display in conjunction with the `µGraphics` library, which itself implements `ITextDisplay`.
 
 ## Defining the Menu
 
@@ -319,16 +319,28 @@ To resolve, check that are the connections are securely in place and/or use a di
 For complete sample code, check out the [Meadow.Foundation Libraries and Frameworks Samples](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Displays.TextDisplayMenu/Samples). Optionally, you can out check this project uploaded on Hackster.
 
 <table>
+  <tbody>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing menu navigation of the TFT display via three buttons, as connected according to the circuit diagram on this page." src="../../../../Common_Files/Hackster/GraphicsMenu.gif"/>
-        </td>
-        <td style="width:50%; font-size:20px;">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-an-interactive-menu-with-textdisplaymenu-using-meadow-218884">Build an Interactive Menu with TextDisplayMenu Using Meadow</a>
-                <br/>
-                Learn how easy is to create interactive menus with editable values and submenus using TextDisplayMenu with a ST7789 display and push buttons
-            </p>
-        </td>
-    </tr>    
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing menu navigation of the TFT display via three buttons, as connected according to the circuit diagram on this page."
+          src="../../../../Common_Files/Hackster/GraphicsMenu.gif"
+        />
+      </td>
+      <td style={{ width: "50%", fontSize: 20 }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/build-an-interactive-menu-with-textdisplaymenu-using-meadow-218884"
+          >
+            Build an Interactive Menu with TextDisplayMenu Using Meadow
+          </a>
+          <br />
+          Learn how easy is to create interactive menus with editable values and
+          submenus using TextDisplayMenu with a ST7789 display and push buttons
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
+

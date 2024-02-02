@@ -72,7 +72,7 @@ P = V^2 / R
 
 Recalling the simple resistant circuit:
 
-![Diagram a simple resistant circuit, showing a source voltage connected to a resistor.](../Support_Files/Ohms_Circuit.svg){:standalone}
+![Diagram a simple resistant circuit, showing a source voltage connected to a resistor.](../Support_Files/Ohms_Circuit.svg)
 
 And our power calculation shortcuts:
 

@@ -73,11 +73,11 @@ GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 
 
 #### Meadow F7v2 Feather Pinout
 
-![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg){:standalone}
+![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 #### Meadow F7v1 Feather Pinout
 
-![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 The function that they serve depends on how they are configured when a _port_ is instantiated on one of the pins. For instance, pin `D00` can be configured to be used a digital input or output, or as the `RX` (receive) half of a Serial UART port available as "COM4".
 
@@ -85,9 +85,9 @@ The function that they serve depends on how they are configured when a _port_ is
 
 When working with IO in Meadow, there are three different terms/concepts to be aware of:
 
-* **[IPin](/docs/api/Meadow/Meadow.Hardware.IPin.html)** - Represents a physical connection point on a device, such as pin `D01`.
-* **[IPort](/docs/api/Meadow/Meadow.Hardware.IPort.html)** - Represents the underlying IO feature that allows communication, such as a `Meadow.Hardware.DigitalInputPort` which reads digital input signals on a particular pin.
-* **[IChannelInfo](/docs/api/Meadow/Meadow.Hardware.IChannelInfo.html)** - Describes the capabilities of a particular pin or port, for instance, whether or not a pin supports digital interrupts (a notification when the state changes).
+* **[IPin](/docs/api/Meadow/Meadow.Hardware/IPin/)** - Represents a physical connection point on a device, such as pin `D01`.
+* **[IPort](/docs/api/Meadow/Meadow.Hardware/IPort/)** - Represents the underlying IO feature that allows communication, such as a `Meadow.Hardware.DigitalInputPort` which reads digital input signals on a particular pin.
+* **[IChannelInfo](/docs/api/Meadow/Meadow.Hardware/IChannelInfo/)** - Describes the capabilities of a particular pin or port, for instance, whether or not a pin supports digital interrupts (a notification when the state changes).
 
 ### `IIOController`
 
@@ -204,4 +204,4 @@ The following table lists all the accessible pins on the Meadow F7 Feather dev b
 
 When building Meadow applications, most of the time, you'll use high-level peripheral drivers via Meadow.Foundation instead of interacting with ports directly, as we'll explore in the next section.
 
-## [Next - Meadow.Foundation](/Meadow/Meadow.Foundation/)
+## [Next - Meadow.Foundation](/Meadow/Meadow%2EFoundation/)

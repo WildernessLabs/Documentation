@@ -4,8 +4,6 @@ title: Over-the-Air (OtA) Updates
 subtitle: Getting started with OtA
 ---
 
-[< Meadow.Cloud](../)
-
 ## Overview
 
 Meadow.Cloud provides secure, Over-the-Air (OtA) updates, which enable you to push a new version of a Meadow application to a device in the field over the network.

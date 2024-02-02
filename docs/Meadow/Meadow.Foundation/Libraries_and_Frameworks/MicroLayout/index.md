@@ -29,7 +29,7 @@ _screen.Controls.Add(
 ```
 It should look like this on a ILI4498 320x240 screen.
 
-<img src="meadow-microlayout-hello-world.jpg" style="width:50%" />
+<img src="meadow-microlayout-hello-world.jpg" style={{width:"50%"}} />
 
 You can move, resize or recolor the controls at run time to easily create effects and animations. For example, I've created a very simple Menu sample for the [ProjectLab v3](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) that uses DisplayLabels for the menu items and a DisplayBox that sits behind the DisplayLabels as a "highlight."
 
@@ -77,7 +77,7 @@ public void Draw(int oldRow, int newRow)
 
 The project running should look like this:
 
-<img src="meadow-microlayout-menu.gif" style="width:50%" />
+<img src="meadow-microlayout-menu.gif" style={{width:"50%"}} />
 
 The full source for the Menu sample is available in the [Project Lab Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples) repository.
 

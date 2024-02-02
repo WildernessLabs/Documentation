@@ -8,7 +8,7 @@ subtitle: What goes in, must come out.
 
 Kirchhoff's first law states that the amount of current flowing into a point is the same as the amount flowing out:
 
-![Diagram showing a junction of two incoming currents, I1 and I2, and two outgoing currents, I3 going through a resistor and I4 with the equation I1 plus I2 equal to I3 plus I4.](../Support_Files/Kirchhoffs_Current_Law.svg){:standalone}
+![Diagram showing a junction of two incoming currents, I1 and I2, and two outgoing currents, I3 going through a resistor and I4 with the equation I1 plus I2 equal to I3 plus I4.](../Support_Files/Kirchhoffs_Current_Law.svg)
 
 This law is also known as _Kirchhoff's current law_, _Kirchhoff's point rule_, or _Kirchhoff's junction rule_. Sometimes this is also called the _conservation of charge_; current cannot be lost here because it has nowhere to go. This might seem like common sense, given what we know about the physics of electricity, but at the time he discovered this (1845), very little was actually known about the underlying physics. 
 
@@ -24,7 +24,7 @@ This law is also known as _Kirchhoff's current law_, _Kirchhoff's point rule_, o
 
 When circuits branch off at a node, they're known as _branching circuits_. Consider the following parallel branching circuit:
 
-![Diagram of a circuit with a 12-volt source wired to a 10-ohm resistor with input point A and output point D and a parallel 1.5-ohm resistors with input B and output C.](../Support_Files/Current_Law_Parallel_Circuit.svg){:standalone}
+![Diagram of a circuit with a 12-volt source wired to a 10-ohm resistor with input point A and output point D and a parallel 1.5-ohm resistors with input B and output C.](../Support_Files/Current_Law_Parallel_Circuit.svg)
 
 Using Kirchhoff's current law, in conjunction with Ohm's law, we can determine the total amount of current flowing through the circuit. First, let's calculate the amount of current flowing through each resistor (circuits `A -> D` and `B -> C`):
 

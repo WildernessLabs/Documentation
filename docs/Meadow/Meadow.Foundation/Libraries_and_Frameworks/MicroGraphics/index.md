@@ -374,40 +374,60 @@ protected void Render()
 You can check these MicroGraphics Samples on Hackster that you can try out yourself.
 
 <table>
+  <tbody>
     <tr>
-        <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsClock.gif"/>
-        </td>
-        <td style="width:50%; font-size:20px;">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-st7789-display-using-meadow-e2295a">Working with Graphics on a ST7789 Display Using Meadow</a>
-                <br/>
-                Learn how to connect an SPI LCD display to your Meadow board to draw shapes, text and images with the Meadow.Foundation Graphics Library.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img src="../../../../Common_Files/Hackster/GraphicsClock.gif" />
+      </td>
+      <td style={{ width: "50%", fontSize: 20 }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/working-with-graphics-on-a-st7789-display-using-meadow-e2295a"
+          >
+            Working with Graphics on a ST7789 Display Using Meadow
+          </a>
+          <br />
+          Learn how to connect an SPI LCD display to your Meadow board to draw
+          shapes, text and images with the Meadow.Foundation Graphics Library.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsTetris.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-your-own-tetris-game-with-meadow-bc5643">Make Your Own Tetris Game with Meadow</a>
-                <br/>
-                Learn how easy is to make a Tetris game with a joystick and an LED matrix.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img src="../../../../Common_Files/Hackster/GraphicsTetris.gif" />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/make-your-own-tetris-game-with-meadow-bc5643"
+          >
+            Make Your Own Tetris Game with Meadow
+          </a>
+          <br />
+          Learn how easy is to make a Tetris game with a joystick and an LED
+          matrix.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img src="../../../../Common_Files/Hackster/GraphicsMorse.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/train-your-morse-code-spelling-skills-with-meadow-3f2d9e">Train your Morse Code spelling skills with Meadow</a>
-                <br/>
-                Learn how to spell the random alphabet letters and numbers in morse code with a push button using Meadow.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img src="../../../../Common_Files/Hackster/GraphicsMorse.gif" />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/train-your-morse-code-spelling-skills-with-meadow-3f2d9e"
+          >
+            Train your Morse Code spelling skills with Meadow
+          </a>
+          <br />
+          Learn how to spell the random alphabet letters and numbers in morse
+          code with a push button using Meadow.
+        </p>
+      </td>
     </tr>
+  </tbody>
 </table>

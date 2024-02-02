@@ -73,8 +73,6 @@ See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.
 
 Maple server is an ultra-lightweight RESTful Web API server made specifically for Meadow that has native support for JSON. It enables easy remote interaction and control with Meadow over http.
 
-Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
-
 And for a real world sample application, check out the [On-Air Sign project](https://github.com/wildernesslabs/OnAir_Sign) that uses Maple Server to show a message on an LED matrix display to make sure no one walks in on your meetings.
 
 ## `TextDisplayMenu` Library

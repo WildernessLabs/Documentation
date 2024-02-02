@@ -8,11 +8,11 @@ subtitle: Calculating resistance when resistors are placed side by side.
 
 When arranging resistors (or resistances) in parallel, as in the following diagram, something interesting occurs:
 
-![Diagram of a circuit showing a source voltage and three resistors connected in parallel, labeled R1, R2, and R3.](../Support_Files/Resistors_in_Parallel.svg){:standalone}
+![Diagram of a circuit showing a source voltage and three resistors connected in parallel, labeled R1, R2, and R3.](../Support_Files/Resistors_in_Parallel.svg)
 
 Instead of providing more resistance than a single resistor, or resistors in series, it actually provides less. To understand this, we have to turn the idea of a resistor on its head, and consider the amount of current it conducts. Imagine the water analogy from before, but this time there are three resistor valves that let water through:
 
-![Illustration of water as an analogy for parallel resistance: a single source pipe branching to three pipes, each with a flow-limiting valve (resistors).](../Support_Files/Parallel_Resistance.svg){:standalone}
+![Illustration of water as an analogy for parallel resistance: a single source pipe branching to three pipes, each with a flow-limiting valve (resistors).](../Support_Files/Parallel_Resistance.svg)
 
 Each resistor lets through some current, so in order to figure out how much total resistance there is, we actually have to figure out how much is current is conducted by each resistor, add those conductances together, and then convert back to resistance.
 

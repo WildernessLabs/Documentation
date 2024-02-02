@@ -8,7 +8,7 @@ subtitle: Common diodes and their uses.
 
 As we examined in the last section, a diode is basically just a P-N junction with leads attached to either side. The anode (`A`) is the lead attached to the P-type side, the cathode (`K`) is attached to the N-type side, and the preferential, or forward bias is when electrons flow from cathode to anode (which means anode is hooked to the positive voltage source):
 
-![Diagram of a diode connected to a voltage source. The anode is connected to the positive side of a voltage source and the cathode to the negative side.](../Support_Files/Diode_Forward_Bias.svg){:standalone}
+![Diagram of a diode connected to a voltage source. The anode is connected to the positive side of a voltage source and the cathode to the negative side.](../Support_Files/Diode_Forward_Bias.svg)
 
 The symbol for a diode is a triangle pointing in the direction of current (hole-flow) connected to a perpendicular line which represents the junction:
 
@@ -22,11 +22,11 @@ The [Wikipedia diode entry](https://en.wikipedia.org/wiki/Diode) lists almost 20
 
 To differentiate which end of a diode is the anode and which is the cathode, they usually have a marking on the end denoting the **cathode**. The following photo shows four different diodes, each with their cathode mark on the right:
 
-![Photo of four diodes showing a colored band on each diode indicating the cathode side.](../Support_Files/Diodes_Cropped.jpg){:standalone}
+![Photo of four diodes showing a colored band on each diode indicating the cathode side.](../Support_Files/Diodes_Cropped.jpg)
 
 Recall that positive charge carriers (holes) flow preferentially from anode to cathode, so the diodes above are in the same orientation as the circuit symbol below:
 
-![Illustration of a diode with the anode indicated by a plus sign and the cathode indicated by a minus sign.](../Support_Files/Diode_Polarity.svg){:standalone}
+![Illustration of a diode with the anode indicated by a plus sign and the cathode indicated by a minus sign.](../Support_Files/Diode_Polarity.svg)
 
 ### Diode Characteristics
 
@@ -50,7 +50,7 @@ Depending on how they're constructed, a diode can have some interesting behavior
 
 Switching diodes are one of the most common diodes available, largely because of their usefulness in high frequency circuits like radios, where their fast switching abilities are required.
 
-![](../Support_Files/Signal_Diodes_Medium.jpg){:standalone}
+![](../Support_Files/Signal_Diodes_Medium.jpg)
 
 They typically have small power ratings, `150mA` or less, and a `V`<sub>`f`</sub> of `0.7V`.
 
@@ -70,17 +70,17 @@ Flywheel diodes protect circuits from collapsing magnetic fields created by de-p
 
 Voltage clamping refers to clipping a signal to a maximum/minimum value to prevent it from going outside a particular range, or shifting an entire AC signal wave above or below `0V`.
 
-![Diagram of two graphs that illustrate how a diode restricts output voltage to a reduced range.](../Support_Files/Voltage_Clamping.svg){:standalone}
+![Diagram of two graphs that illustrate how a diode restricts output voltage to a reduced range.](../Support_Files/Voltage_Clamping.svg)
 
 #### Rectifiers
 
 Alternating Current (AC) electrical signals can be converted into Direct Current (DC) through a clever arrangement of diodes known as a _rectifier_:
 
-![Diagram of four diodes arranged in square pattern to form a rectifier.](../Support_Files/Rectification_Circuit.svg){:standalone}
+![Diagram of four diodes arranged in square pattern to form a rectifier.](../Support_Files/Rectification_Circuit.svg)
 
 The above circuit will transform a two-phase AC wave form into positive and ground voltages:
 
-![Illustration of how a rectifier changes a two-phase AC wave that varies between -110v to +110v into a wave that varies between 0v and +110v.](../Support_Files/Rectification_Transform.svg){:standalone}
+![Illustration of how a rectifier changes a two-phase AC wave that varies between -110v to +110v into a wave that varies between 0v and +110v.](../Support_Files/Rectification_Transform.svg)
 
 With some additional components, the DC wave output above can be transformed into a smooth, level DC signal.
 
@@ -92,7 +92,7 @@ _Schottky diodes_ use a piece of metal against the N-type side instead of a P-ty
 
 The circuit symbol for a Schottky diode looks similar to the diode symbol, except that the perpendicular line looks similar to an `S`.
 
-![Illustration of the Schottky diode symbol.](../Support_Files/Schottky_Diode.svg){:standalone}
+![Illustration of the Schottky diode symbol.](../Support_Files/Schottky_Diode.svg)
 
 Schottky diodes typically have a very low voltage drop (`V`<sub>`f`</sub>), typically around `0.2V` (`0.15V` to `0.45V`) which makes them very fast and also makes them ideal for use in simple circuit logic.
 
@@ -106,7 +106,7 @@ These logic circuits can be arranged to provide operations such as `AND` and `OR
 
 Consider the following circuits:
 
-![Illustration of Shottky diodes used to form logical gates.](../Support_Files/Logical_AND_OR_Gates.svg){:standalone}
+![Illustration of Shottky diodes used to form logical gates.](../Support_Files/Logical_AND_OR_Gates.svg)
 
 ##### OR Gate Truth Table
 
@@ -148,15 +148,15 @@ Zener diodes have a known, precise breakdown voltage, which makes them very usef
 
 Sometimes, a circuit needs a reference signal at a precise voltage. By utilizing the breakdown voltage of a reverse-biased Zener in a circuit, its `V`<sub>`f`</sub> back-pressure can provide that voltage reference. Consider the following circuit:
 
-![Illustration of a circuit utilizing a Zener diode to provide a 5V voltage from a 9V source.](../Support_Files/Zener_Voltage_Reference_Circuit.svg){:standalone}
+![Illustration of a circuit utilizing a Zener diode to provide a 5V voltage from a 9V source.](../Support_Files/Zener_Voltage_Reference_Circuit.svg)
 
 In the circuit above, a Zener with a `5V` breakdown voltage is being reverse biased with `9V`, which means that it's breakdown threshold has been reached, and will conduct current, with a `5V` voltage drop. Since the voltage drop acts like a dam, no matter how much voltage is applied, `5V` of back pressure will always be present:
 
-![Illustration of the analogy of a Zener diode acting like a dam for water flow.](../Support_Files/Voltage_Reference.svg){:standalone}
+![Illustration of the analogy of a Zener diode acting like a dam for water flow.](../Support_Files/Voltage_Reference.svg)
 
 As long as the current is limited, in this case with a resistor, it will stay within that precise operating band. Recall the diode behavior chart from before, specifically the breakdown behavior:
 
-![Illustration of the diode breakdown curve.](../Support_Files/Diode_Reverse_Behavior.svg){:standalone}
+![Illustration of the diode breakdown curve.](../Support_Files/Diode_Reverse_Behavior.svg)
 
 While this circuit looks a lot like a two resistor voltage divider, it's got a huge advantage over a divider; as long as the current is limited, no matter what amount of voltage is applied (within the diode's tolerance), the `V`<sub>`out`</sub> reference will always be the same.
 

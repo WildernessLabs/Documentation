@@ -8,7 +8,7 @@ subtitle: Calculating resistance when resistors are placed end to end.
 
 Resistors can be placed in series (end to end), in a circuit like the following:
 
-![Diagram of a circuit showing a source voltage connected to three resistors connected in series, labeled R1, R2, and R3.](../Support_Files/Resistors_in_Series.svg){:standalone}
+![Diagram of a circuit showing a source voltage connected to three resistors connected in series, labeled R1, R2, and R3.](../Support_Files/Resistors_in_Series.svg)
 
 In this case, the total resistance is the _sum_ of each resistor. So for instance, given the following resistors:
 
@@ -34,7 +34,7 @@ I = 5V / 1,105Ω = 0.004A = 4mA
 
 So no matter where in the circuit that we measure the current, we would get the same value of `4mA`:
 
-![Diagram of a circuit showing a source voltage connected to three resistors connected in series, labeled with 100 ohms, 5 ohms, and 1 kiloohm.](../Support_Files/Common_Current_w_Values.svg){:standalone}
+![Diagram of a circuit showing a source voltage connected to three resistors connected in series, labeled with 100 ohms, 5 ohms, and 1 kiloohm.](../Support_Files/Common_Current_w_Values.svg)
 
 ### Power Calculation
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="492px" height="378px" viewBox="0 0 492 378" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Wooden_Baseboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-115.000000, -80.000000)">
+        <g id="Wooden_Baseboard" transform="translate(115.000000, 80.000000)">
+            <rect fill="#B09679" x="0" y="0" width="492" height="378" rx="14"></rect>
+            <circle id="Oval" fill="#FFFFFF" cx="19" cy="19" r="6.5"></circle>
+            <circle id="Oval-Copy" fill="#FFFFFF" cx="473" cy="19" r="6.5"></circle>
+            <circle id="Oval-Copy-3" fill="#FFFFFF" cx="19" cy="359" r="6.5"></circle>
+            <circle id="Oval-Copy-2" fill="#FFFFFF" cx="473" cy="359" r="6.5"></circle>
+        </g>
+    </g>
+</svg>

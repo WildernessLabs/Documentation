@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Review
+title: Part 4 Review
 subtitle: Important concepts pertaining to resistance and Ohm's law.
 ---
 

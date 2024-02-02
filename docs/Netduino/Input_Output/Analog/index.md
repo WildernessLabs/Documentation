@@ -1,6 +1,6 @@
 ---
 layout: Netduino
-title: Analog I/O
+title: Netduino Analog I/O
 ---
 
 Analog ports can operate at a range of voltages between 0 and 3.3V, which is especially useful when reading analog sensors that supply their data as a voltage reading, rather than a digital signal which is represented as binary on or off.

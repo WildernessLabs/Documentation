@@ -1,0 +1,158 @@
+@import "../variables.scss";
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  h2 {
+    font-family: "Wavehaus-Bold" !important;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    color: $color-blue;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  hr {
+    background-color: black;
+    height: 3px;
+    margin-top: -5px;
+  }
+
+  .content-primary {
+    font-size: 22px;
+  }
+
+  .meadow-extra {
+    margin-bottom: 80px;
+
+    hr {
+      background-color: #ff8e0e !important;
+      height: 5px;
+    }
+
+    a {
+      color: $color-blue;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: #f7f7f7 !important;
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 0px;
+
+  .hero-content {
+    padding-left: 2px;
+    margin: 0 auto;
+    align-self: start;
+    width: 100%;
+    font-size: 16px;
+
+    h1 {
+      color: #0391c0;
+    }
+
+    p {
+      margin-right: 560px;
+      max-width: 650px;
+
+      @media screen and (max-width: 1200px) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      max-width: 900px;
+      padding-left: 20px;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/homepage/homepage-banner-image.png") !important;
+    background-position-x: right;
+  }
+}
+
+.rel-section {
+  position: relative;
+  min-height: 250px;
+  margin-bottom: 80px;
+
+  > div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    position: absolute;
+  }
+
+  .dev-camp {
+    background-image: url("/img/homepage/dev-camp-temp-desktop.png");
+  }
+
+  .sample-projects {
+    background-image: url("/img/homepage/projects-banner.png");
+    min-height: 310px;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .project-card {
+      background-color: white;
+      border-color: white;
+      max-width: 600px;
+      padding: 50px;
+    }
+
+    .project-hackster-title
+    {
+      color: black;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .hero {
+    background-color: #152527 !important;
+  }
+}
+
+.wl-card {
+  font-size: 22px;
+
+  h3 {
+    font-size: 28px;
+  }
+
+  &.bg-light-1 {
+    background-color: #e6e4e9;
+    color: $color-brown;
+  }
+
+  &.bg-light-2 {
+    background-color: $color-almost-white;
+    color: $color-brown;
+  }
+}

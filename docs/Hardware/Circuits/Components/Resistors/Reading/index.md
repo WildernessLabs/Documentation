@@ -10,7 +10,7 @@ Axial resistors, the kind that is most often used when prototyping, have color c
 
 To read a banded resistor, align it so that the three (or four) closely spaced bands are on the left, and the furthest spaced band is on the right. Then, use the following chart to determine the values from left to right:
 
-![4-band resistor color chart](/Common_Files/Reading_Axial_Resistors.svg){:standalone}
+![4-band resistor color chart](/Common_Files/Reading_Axial_Resistors.svg)
 
 The first 2 (or 3 bands, on a 5-band resistor) specify the resistance value, and the 3rd (or 4th) specify the magnitude multiplier.
 

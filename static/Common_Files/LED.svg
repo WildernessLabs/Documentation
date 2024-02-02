@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="109px" viewBox="0 0 140 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>LED</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Diodes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-352.000000, -98.000000)">
+            <g id="LED" transform="translate(352.000000, 95.000000)">
+                <g>
+                    <polygon id="Path-2" stroke="#524740" stroke-width="3" fill="#524740" stroke-linejoin="bevel" points="49 58 88 84 49 110"></polygon>
+                    <path d="M88,84 L140,84" id="Path-2-Copy" stroke="#524740" stroke-width="3"></path>
+                    <path d="M88,58 L88,110" id="Path-4-Copy" stroke="#524740" stroke-width="3"></path>
+                    <path d="M0,84 L49,84" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    <g id="Arrow" transform="translate(93.000000, 34.500000) rotate(-135.000000) translate(-93.000000, -34.500000) translate(88.000000, 8.000000)">
+                        <polygon id="Triangle" fill="#524740" transform="translate(5.000000, 40.000000) scale(1, -1) translate(-5.000000, -40.000000) " points="5 27 10 53 0 53"></polygon>
+                        <path d="M5,0 L5,40" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    </g>
+                    <g id="Arrow-Copy" transform="translate(80.000000, 22.500000) rotate(-135.000000) translate(-80.000000, -22.500000) translate(75.000000, -4.000000)">
+                        <polygon id="Triangle" fill="#524740" transform="translate(5.000000, 40.000000) scale(1, -1) translate(-5.000000, -40.000000) " points="5 27 10 53 0 53"></polygon>
+                        <path d="M5,0 L5,40" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-light-grey;
+  font-weight: bold;
+
+  a {
+    padding: 15px 20px;
+  }
+
+  .active {
+    color: white !important;
+    background-color: $color-orange;
+  }
+}
+
+[data-theme="dark"] {
+  .links-row {
+    background-color: $color-grey-blue;
+  
+    .active {
+      color: white !important;
+      background-color: $color-orange;
+    }
+  }
+}

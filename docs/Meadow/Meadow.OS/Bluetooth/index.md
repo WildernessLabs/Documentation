@@ -168,40 +168,69 @@ The incoming parameters are the `Characteristic` definition being set and a type
 You can look through these samples to use Bluetooth on Meadow with a Xamarin.Forms companion app.
 
 <table>
+  <tbody>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing LED color selection from a phone app color slider and reflected on an RGB LED connected to a Meadow." src="../../../Common_Files/Hackster/BleRgbLed.gif"/>
-        </td>
-        <td style="width:50%; font-size:20px;">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3">Control an RGB LED via Bluetooth with Meadow and Xamarin</a>
-                <br/>
-                Check this project to learn how to control an RGB LED using Meadow's Bluetooth capability with a Xamarin.Forms app.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing LED color selection from a phone app color slider and reflected on an RGB LED connected to a Meadow."
+          src="../../../Common_Files/Hackster/BleRgbLed.gif"
+        />
+      </td>
+      <td style={{ width: "50%", fontSize: 20 }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/control-an-rgb-led-via-bluetooth-with-meadow-and-xamarin-9b2af3"
+          >
+            Control an RGB LED via Bluetooth with Meadow and Xamarin
+          </a>
+          <br />
+          Check this project to learn how to control an RGB LED using Meadow's
+          Bluetooth capability with a Xamarin.Forms app.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing servo rotation selection from a phone app slider and reflected on a servo connected to a Meadow." src="../../../Common_Files/Hackster/BleServo.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wildernesslabs/control-a-servo-via-bluetooth-with-meadow-and-xamarin-57940a">Control a Servo via Bluetooth with Meadow and Xamarin</a>
-                <br/>
-                Check this project to learn how to control a micro servo using Meadow's Bluetooth capability with a Xamarin.Forms app.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing servo rotation selection from a phone app slider and reflected on a servo connected to a Meadow."
+          src="../../../Common_Files/Hackster/BleServo.gif"
+        />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wildernesslabs/control-a-servo-via-bluetooth-with-meadow-and-xamarin-57940a"
+          >
+            Control a Servo via Bluetooth with Meadow and Xamarin
+          </a>
+          <br />
+          Check this project to learn how to control a micro servo using
+          Meadow's Bluetooth capability with a Xamarin.Forms app.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing a remote controlled vehicle built with a Meadow and controlled by a phone app remote." src="../../../Common_Files/Hackster/BleRover.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/meadow-rover-part-2-remote-control-over-bluetooth-fe43f5">Meadow Rover Part 2: Remote Control over Bluetooth</a>
-                <br/>
-                Control the Meadow Rover with Bluetooth using a Xamarin application on your mobile device.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing a remote controlled vehicle built with a Meadow and controlled by a phone app remote."
+          src="../../../Common_Files/Hackster/BleRover.gif"
+        />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/meadow-rover-part-2-remote-control-over-bluetooth-fe43f5"
+          >
+            Meadow Rover Part 2: Remote Control over Bluetooth
+          </a>
+          <br />
+          Control the Meadow Rover with Bluetooth using a Xamarin application on
+          your mobile device.
+        </p>
+      </td>
     </tr>
+  </tbody>
 </table>

@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Review
+title: Part 1 Review
 subtitle: Important concepts regarding the physics of electricity.
 ---
 

@@ -23,7 +23,7 @@ In this guide the date and time function will be the only feature considered.
 
 The Netduino and DeadOn RTC breakout board are connected as follows:
 
-![Netduino and DS3234 Breakout Board](NetduinoDS3234Fritzing.png){:standalone}
+![Netduino and DS3234 Breakout Board](NetduinoDS3234Fritzing.png)
 
 The DS3234 chip will start to increment the time as soon as it is connected to power or a battery is inserted into the board.
 
@@ -120,7 +120,7 @@ The third parameter is an offset for the read operation and is better understood
 
 The above application generated the following trace:
 
-![Logic Analyzer Output](LogicAnalyzerOutput.png){:standalone}
+![Logic Analyzer Output](LogicAnalyzerOutput.png)
 
 Starting from the left, the value 0 is output on the MOSI line by the Netduino.  At the same time, the MISO line is also set to 0.  This is done by the DS3234.
 

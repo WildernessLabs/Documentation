@@ -9,7 +9,7 @@ title: Battery Circuits
 
 ### Batteries in Series
 
-![](../Batteries_in_Series_Voltage_Diagram.svg){:standalone}
+![](../Batteries_in_Series_Voltage_Diagram.svg)
 
 [voltages are additive, because the electromagnetic force (voltage) from one flows into the next, and that battery adds its own voltage]
 
@@ -34,12 +34,12 @@ Batteries are often arranged in serial to get the desired voltage necxessary to 
 
 ### Batteries in Series with Opposing Polarity
 
-![](../Batteries_in_Series_Opposing_Voltage_Diagram.svg){:standalone}
+![](../Batteries_in_Series_Opposing_Voltage_Diagram.svg)
 
 
 ### Batteries in Parallel
 
-![](../Batteries_in_Parallel_Voltage_Diagram.svg){:standalone}
+![](../Batteries_in_Parallel_Voltage_Diagram.svg)
 
 [voltage must be the same]
 

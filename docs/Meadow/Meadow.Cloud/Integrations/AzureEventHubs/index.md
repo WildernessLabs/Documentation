@@ -3,7 +3,7 @@ layout: Meadow
 title: Integrate with Azure Event Hubs
 subtitle: Getting started with Azure Event Hubs
 ---
-[< Integrations](../)  
+
 ## Overview
 
 An Azure Event Hub integration sends device data in Meadow.Cloud to an Event Hub in near real-time.

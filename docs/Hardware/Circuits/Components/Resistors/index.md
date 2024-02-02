@@ -55,4 +55,4 @@ The use zig-zag line is more commonly used in America than the rectangle.
 
 #### IEEE Symbol
 
-![Resistor Circuit Symbol](Resistor.svg){:standalone}
+![Resistor Circuit Symbol](Resistor.svg)
