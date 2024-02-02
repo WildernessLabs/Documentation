@@ -5,6 +5,9 @@ import "../css/components/home-page.scss";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+
+  insertTagManager();
+
   return (
     <Layout title={`Hello from ${siteConfig.title}`}>
       <main>
@@ -209,4 +212,24 @@ export default function Home(): JSX.Element {
       </main>
     </Layout>
   );
+}
+
+function insertTagManager()
+{
+  // Create noscript element
+  var noScript = document.createElement('noscript');
+
+  // Create iframe element
+  var iframe = document.createElement('iframe');
+  iframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-M7WHZPTR";
+  iframe.height = "0";
+  iframe.width = "0";
+  iframe.style.display = "none";
+  iframe.style.visibility = "hidden";
+
+  // Append iframe to noscript
+  noScript.appendChild(iframe);
+
+  // Insert noscript at the beginning of the body
+  document.body.insertBefore(noScript, document.body.firstChild);
 }
