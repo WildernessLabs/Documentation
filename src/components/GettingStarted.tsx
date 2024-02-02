@@ -8,11 +8,11 @@ export default function GettingStarted(): JSX.Element {
   return (
       <main><br></br>
 
-      <section id="homepage">
+        <section id="homepage">
           <div className="home-container">
 
-          {/* Meadow.OS */}
-          <section className="meadow-features wl-container">
+            {/* Meadow.OS */}
+            <section className="meadow-features wl-container">
               <h2>Getting Started w/Meadow IoT Devices</h2>
               <hr></hr>
               <p>
@@ -73,6 +73,46 @@ export default function GettingStarted(): JSX.Element {
                 </div>
               </div>
             </section>
+
+            {/* ROW 2 */}
+            <section className="meadow-features wl-container">
+              <h2>Meadow.Cloud, IoT Acclerators, and Videos</h2>
+              <hr></hr>
+              <div className="wl-grid mb-50">
+                {/* Meadow.Cloud */}
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>Meadow.Cloud</h3>
+                    <ul className="flat">
+                      <li><a href="/Meadow/Getting_Started/Meadow.Cloud/">Hello, Meadow.Cloud</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* IoT Accelerators */}
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>Meadow.Cloud</h3>
+                    <ul className="flat">
+                      <li><a href="https://github.com/WildernessLabs/Clima?tab=readme-ov-file#getting-started">Clima</a></li>
+                      <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker">GNSS/GPS Tracker</a></li>
+                      <li><a href="https://github.com/WildernessLabs/Juego?tab=readme-ov-file#getting-started">Juego</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Videos */}
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>Videos</h3>
+                    <ul className="flat">
+                      <li><a href="#">Deploying Meadow.OS</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
           </div>
         </section>           
       </main>
