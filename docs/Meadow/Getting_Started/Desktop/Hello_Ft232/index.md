@@ -7,8 +7,8 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ![](wildernesslabs_desktop_getting_started.jpg)
 
-<Tabs>
-  <TabItem value="visualstudio" label="Visual Studio 2022" default>
+<Tabs groupId="ide">
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
 ### Step 1 - Install .NET Runtime
 
