@@ -4,15 +4,26 @@ title: Meadow.Foundation
 subtitle: Peripheral driver library and hardware control libraries that make IoT development plug-and-play.
 ---
 
-![Meadow.Foundation Logo](Meadow.Foundation_Logo_white_BG.svg){:standalone}
+![Meadow.Foundation Logo](Meadow.Foundation_Logo_white_BG.svg)
 
 Meadow.Foundation greatly simplifies the task of building connected things with Meadow, by providing a unified driver and library framework that includes drivers and abstractions for common peripherals such as sensors, displays, motors, and more. Additionally, it includes utility functions and helpers for common tasks when building connected things.
 
 It's completely [open source](https://github.com/WildernessLabs/Meadow.Foundation) and we welcome pull-requests!
 
+* [Get Started with Meadow.Foundation](/Meadow/Meadow.Foundation/Getting_Started)
+* [Meadow.Foundation's Peripheral Library](/Meadow/Meadow.Foundation/Peripherals)
+* [Libraries and Frameworks](/Meadow/Meadow.Foundation/Libraries_and_Frameworks)
+  * [MicroLayout](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout)
+  * [MicroGraphics](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics)
+  * [Maple Server](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer)
+  * [TextDisplayMenu](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu)
+  * [GPS/GNSS NMEA Processor](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor)
+* [Working with Sensors](/Meadow/Meadow.Foundation/Working_with_Sensors)
+* [Meadow.Foundation Unified IO Architecture](/Meadow/Meadow.Foundation/Unified_GPIO_Arch)
+
 ## Hello, World Example
 
-With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds.PwmLed.html) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
+With Meadow.Foundation, you can use drivers and hardware abstractions directly. For example, instead of using an `IDigitalOutputPort` class, an LED can be driven by the the [`PwmLed`](/docs/api/Meadow.Foundation/Meadow.Foundation.Leds/PwmLed/) class, using high-level methods such as `StartBlink()`, `StartPulse()`, and more.
 
 ```csharp
 using Meadow;
@@ -45,8 +56,6 @@ public class MeadowApp : App<F7FeatherV2>
     }
 }
 ```
-
-**[Get Started with Meadow.Foundation](/Meadow/Meadow.Foundation/Getting_Started)**
 
 ## Huge Peripheral Driver Library
 

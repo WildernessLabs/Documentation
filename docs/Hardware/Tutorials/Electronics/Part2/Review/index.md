@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Review
+title: Part 2 Review
 subtitle: Important concepts regarding the quantification of electricity.
 ---
 

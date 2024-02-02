@@ -22,7 +22,7 @@ The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2
 
 I2C devices are connected to the Netduino via the `SCL` and `SDA` pins, and are addressed via unique addresses on the communication bus. The following diagram illustrates a typical setup for I2C devices connected to a Netduino:
 
-![I2C Bus Master / Slave Illustration](I2CBusIllustration.jpg){:standalone}
+![I2C Bus Master / Slave Illustration](I2CBusIllustration.jpg)
 
 In this circuit:
 
@@ -117,7 +117,7 @@ For a more in depth discussion on why pull-up resistors are important and how to
 
 The Netduino has two pins allocated for the I2C protocol.  These pins are labelled **SD** (for `SDA`) and **SC** (for `SCL`) and can be found above the 14 digital pins on the right of the board as viewed below:
 
-![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg){:standalone}
+![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
 
 ## Reading Data from an I2C Device
 

@@ -140,17 +140,17 @@ One thing to bear in mind when creating interrupts on multiple pins is that inpu
 
 ##### Meadow F7v2 Feather Pinout
 
-![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg){:standalone}
+![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 ##### Meadow F7v1 Feather Pinout
 
-![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 ## [Pulse-Width-Modulation PWM](/Meadow/Meadow_Basics/IO/Digital/PWM/)
 
 Digital output ports can be used to generate a _Pulse-Width-Modulation_ (PWM) signal, which approximates an intermediate voltage between `LOW` or `HIGH` by switching between ON and OFF very quickly: 
 
-![Illustration of a PWM signal changing between 0V and 3.3V at regular intervals](/Meadow/Meadow_Basics/IO/Digital/PWM/PWM_Signal.svg){:standalone}
+![Illustration of a PWM signal changing between 0V and 3.3V at regular intervals](/Meadow/Meadow_Basics/IO/Digital/PWM/PWM_Signal.svg)
 
 PWM signals are frequently used to control the brightness of LEDs, as well as serve as the control signal for precision motors such as servos and stepper motors.
 

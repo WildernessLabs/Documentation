@@ -6,7 +6,7 @@ subtitle: Serial communications over UART/RS-232.
 
 Standard serial, typically referred to as RS-232 or UART (Universal Asynchronous Receiver Transmitter) is a moderate-speed, reliable, old-school, digital protocol used to communicate with a single device, using two wires:
 
-![Illustration showing a Meadow board connected to for UART serial on COM4, with a receive line on pin D00 and a transmit line on pin D01.](Serial(UART)_Circuit.svg){:standalone}
+![Illustration showing a Meadow board connected to for UART serial on COM4, with a receive line on pin D00 and a transmit line on pin D01.](Serial(UART)_Circuit.svg)
 
 Depending on the hardware involved, serial can be used in extremely noisy industrial environments, over long distances; up to 60 meters (200 feet).
 
@@ -32,7 +32,7 @@ However, within that specification are generally two different flavors that desc
 
 Serial has been around for a long time; before USB, it used to be a standard way for computers to talk to various peripherals such as keyboards and mice and connected to the serial port on a computer via an RS-232 cable with a connector like this:
 
-![Photo of the end of an RS232 cable showing the trapezoidal plug shape and nine pins, four on the narrower side and five on the wider side.](RS232_Cable.svg){:standalone}
+![Photo of the end of an RS232 cable showing the trapezoidal plug shape and nine pins, four on the narrower side and five on the wider side.](RS232_Cable.svg)
 
 And many industrial peripherals that use standard serial communications still use RS-232 connectors.
 
@@ -52,7 +52,7 @@ When using an RS-232 peripheral, the signal voltages must be level-shifted and i
 
 Additionally, [SparkFun has an RS-232 to TTL Shifter breakout board](https://www.sparkfun.com/products/449) that not only converts RS-232 to TTL levels, but also includes an onboard RS-232 connector:
 
-![Photo of a SparkFun RS232 to TTL converter board with a 9-pin RS-232 port.](SparkFun_RS232_Shifter.svg){:standalone}
+![Photo of a SparkFun RS232 to TTL converter board with a 9-pin RS-232 port.](SparkFun_RS232_Shifter.svg)
 
 ## Meadow Serial Ports
 
@@ -61,7 +61,7 @@ The Meadow F7 Feather has two exposed serial ports, named `COM4` and `COM1` with
 * **COM4** - `D00` = `RX`, `D01` = `TX`
 * **COM1** - `D13` = `RX`, `D12` = `TX`
 
-![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg){:standalone}
+![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg)
 
 ## Using the Meadow Serial API
 
@@ -185,7 +185,7 @@ var port = Device.PlatformOS.GetSerialPortName("COM4")
 
 ## Raw `ISerialPort`
 
-To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](/docs/api/Meadow/Meadow.IPlatformOS.html) you're using, passing the `SerialPortName`:
+To use a non-messaged Serial Port in Meadow, first create an [`ISerialPort`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) from the [`IPlatformOS`](/docs/api/Meadow/Meadow/IPlatformOS/) you're using, passing the `SerialPortName`:
 
 ```csharp
 var serialPort = Device.PlatformOS.GetSerialPortName("COM4").CreateSerialPort(baudRate: 115200);
@@ -212,7 +212,7 @@ serialPort.Open();
 
 Once the serial port is opened, communication with peripherals is possible and done with `byte[]` data.
 
-To write, call the [`Write(byte[] buffer)`](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Write_System_Byte___) method and pass in the bytes to send to the peripheral:
+To write, call the [`Write(byte[] buffer)`](/docs/api/Meadow/Meadow.Hardware/ISerialPort/#Meadow_Hardware_ISerialPort_Write_System_Byte___) method and pass in the bytes to send to the peripheral:
 
 ```csharp
 var buffer = new byte[] { 0x00, 0x0F, 0x01 };
@@ -260,7 +260,7 @@ void SerialPort_MessageReceived(object sender, SerialMessageData e)
 
 ## Reading from the Receive Buffer via `ClassicSerialPort`
 
-When data from the peripheral is received, it's placed in an internal [circular receive buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read.
+When data from the peripheral is received, it's placed in an internal [circular receive buffer](https://en.wikipedia.org/wiki/Circular_buffer). The simplest way to read the data from that buffer is to call the [`Read(byte[] buffer, int offset, int count)` method](/docs/api/Meadow/Meadow.Hardware/ISerialPort/#Meadow_Hardware_ISerialPort_Read_System_Byte___System_Int32_System_Int32_), passing in a buffer to read the bytes into, as well as the start index and the number of bytes to read.
 
 For example, the following code will read 7 bytes from the buffer:
 
@@ -269,11 +269,11 @@ byte[] response = new byte[7];
 this.serialPort.Read(response, 0, 7);
 ```
 
-Read will also remove (dequeue) those bytes from the buffer. If you want to read from the buffer without removing the data, you can use the [`Peek()` method](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_Peek).
+Read will also remove (dequeue) those bytes from the buffer. If you want to read from the buffer without removing the data, you can use the [`Peek()` method](/docs/api/Meadow/Meadow.Hardware/ISerialPort/#Meadow_Hardware_ISerialPort_Peek).
 
 ### `DataReceived` Event
 
-As data is received by the serial port, a [`DataReceived` event](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html#Meadow_Hardware_ISerialPort_DataReceived) is raised.
+As data is received by the serial port, a [`DataReceived` event](/docs/api/Meadow/Meadow.Hardware/ISerialPort/#Meadow_Hardware_ISerialPort_DataReceived) is raised.
 
 ### `Read()` Warning
 
@@ -281,4 +281,4 @@ Because the receive buffer is shared, and a single message might arrive in multi
 
 ### Additional APIs
 
-There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](/docs/api/Meadow/Meadow.Hardware.ISerialPort.html) for more details.
+There are a number of other APIs available on serial ports, please see the [`ISerialPort` API documentation](/docs/api/Meadow/Meadow.Hardware/ISerialPort/) for more details.

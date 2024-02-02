@@ -12,17 +12,17 @@ By sandwiching P-type and N-type semiconductor together into what's known as a _
 
 When P-type and N-type semiconductors are joined, the free electrons from the N-type side _diffuse_ nearby into the P-type side to fill the holes:
 
-![Diagram of a P-N Junction showing several electrons moving from the N-type to the P-type semiconductor.](../Support_Files/P-N_Junction_Electron_Diffusion.svg){:standalone}
+![Diagram of a P-N Junction showing several electrons moving from the N-type to the P-type semiconductor.](../Support_Files/P-N_Junction_Electron_Diffusion.svg)
 
 What remains are the positively and negatively charged ions along the junction boundary, since they have been stripped of the free particles that were keeping that area electrically neutral. This region is called the _depletion region_ (along with [half a dozen other names](https://en.wikipedia.org/wiki/Depletion_region)):
 
-![Diagram of a P-N Junction with the depletion region at the P-N boundary highlighted.](../Support_Files/P-N_Junction_Depletion_Region.svg){:standalone}
+![Diagram of a P-N Junction with the depletion region at the P-N boundary highlighted.](../Support_Files/P-N_Junction_Depletion_Region.svg)
 
 ### Junction Electric Field
 
 The depletion region gives rise to an electric field because there's a electromagnetic force (voltage) differential between the negatively and positively charged ions:
 
-![Diagram of a P-N Junction showing the junction potential created at the P-N boundary.](../Support_Files/P-N_Junction_Electric_Field.svg){:standalone}
+![Diagram of a P-N Junction showing the junction potential created at the P-N boundary.](../Support_Files/P-N_Junction_Electric_Field.svg)
 
 This electric field is known as the _Junction Potential_ and is usually between `600mV - 700mV (0.6V - 0.7V)` in silicon, and `200mV - 300mV` in germanium.
 
@@ -34,11 +34,11 @@ Putting metal connectors on either side of the P-N Junction creates what are kno
 
 Applying a positive current to the anode and a negative current to the cathode side is a preferential _bias_, because the positive hole charge carriers and negative electrons are pushed towards the junction, thus shrinking the depletion zone. This voltage application, in the preferential direction of current flow is called _forward biasing_:
 
-![Diagram of a forward-biased P-N Junction.](../Support_Files/Diode_Forward_Bias.svg){:standalone}
+![Diagram of a forward-biased P-N Junction.](../Support_Files/Diode_Forward_Bias.svg)
 
 **In order for charge carriers (current) to pass through the electric field, they must have greater electromotive force (EMF/voltage) than the junction potential to overcome the electric field.** Meaning that it takes greater than `0.7V` (in silicon) of EMF to get them through:
 
-![Diagram of a forward-biased P-N Junction with a voltage source greater than the junction potential.](../Support_Files/Diode_Forward_Bias_Over_Vf.svg){:standalone}
+![Diagram of a forward-biased P-N Junction with a voltage source greater than the junction potential.](../Support_Files/Diode_Forward_Bias_Over_Vf.svg)
 
 In the process of overcoming that junction potential, they actually lose the same amount of EMF to it. It's like holding a door open on a spring; some of the force is lost to the spring.
 
@@ -50,7 +50,7 @@ In the process of overcoming that junction potential, they actually lose the sam
 
 An interesting consequence of voltage drop is that it provides a sort of back-pressure; any voltage above `V`<sub>`f`</sub> is let past the junction, but the voltage measured on the side pushing will read the same as the `V`<sub>`f`</sub>. In this way, revisiting the water analogies, we can think of a P-N junction as a dam in which the dam wall is `V`<sub>`f`</sub> high, and any additional voltage is let past:
 
-![Illustration of a dam in which the wall is Vf high, and excess V is let past.](../Support_Files/Voltage_Drop_Dam.svg){:standalone}
+![Illustration of a dam in which the wall is Vf high, and excess V is let past.](../Support_Files/Voltage_Drop_Dam.svg)
 
 Voltage drop is an important concept that will come up over and over in circuit design, and as we'll examine shortly, that back-pressure can be very useful.
 
@@ -58,7 +58,7 @@ Voltage drop is an important concept that will come up over and over in circuit 
 
 _Reverse biasing_ is when a voltage is applied in the opposite direction of preferential current flow. This causes the holes in the P-type side to be attracted to the anode and the electrons in the N-type side to be attracted to the cathode, causing the depletion region to widen:
 
-![Diagram of a reverse-biased P-N Junction with a depletion region that grew larger when the reverse-biased voltage was applied.](../Support_Files/Diode_Reverse_Bias.svg){:standalone}
+![Diagram of a reverse-biased P-N Junction with a depletion region that grew larger when the reverse-biased voltage was applied.](../Support_Files/Diode_Reverse_Bias.svg)
 
 When this happens, the area of negative and positively charged ions increases, which also increases the junction potential.
 
@@ -76,7 +76,7 @@ Some diodes are specifically designed with this behavior in mind, and we'll exam
 
 Generally, the current response to forward and reverse bias currents of a P-N junction is described by the following graph:
 
-![Graph of the amount of forward-applied voltage vs the forward current through a diode.](../Support_Files/Diode_Behavior.svg){:standalone}
+![Graph of the amount of forward-applied voltage vs the forward current through a diode.](../Support_Files/Diode_Behavior.svg)
 
 The right half of the graph represents forward bias current, that is, positive current applied to the cathode. Until the voltage reaches the forward voltage (`V`<sub>`f`</sub>), almost zero current makes it through, but once that threshold is reached, the P-N junction readily conducts electricity.
 

@@ -4,7 +4,7 @@ title: Hack Kit Pro
 subtitle: Instructions and inspiration for Wilderness Labs Hack Kit Pro.
 ---
 
-![Composite photo showing a Meadow Hack Kit Pro's contents and several example projects assembled from Meadow boards and Hack Kit components.](Wilderness_Labs_Hack_Kit.svg){:standalone}
+![Composite photo showing a Meadow Hack Kit Pro's contents and several example projects assembled from Meadow boards and Hack Kit components.](Wilderness_Labs_Hack_Kit.svg)
 
 Got a cool Wilderness Labs Hack Kit and want to build something awesome with it? You're at the right spot. This page has instructions and information for the Hack Kit Pro, for information on the discontinued Hack Kit Lite, check [here](HackKitLite/).
 

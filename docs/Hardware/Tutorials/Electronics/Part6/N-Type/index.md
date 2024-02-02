@@ -10,7 +10,7 @@ N-type semiconductors are electrically opposite to P-type. By doping silicon wit
 
 As such, the electron is repelled out of the phosphorous atom and travels around the surrounding lattice. By losing one of it's electrons, it becomes a positively charged ion, because it now has one more proton than electron:
 
-![Diagram showing a phosphorous atom surrounded by four silicon atoms. One electron from the phorphorous atom participates in a covalent bond with one of the four silicon atoms. Since the phosphorous atom has five valence electrons in total, and four of them are participating in covalent bonds, there is one extra electron.](../Support_Files/N-Type_Silicon_Crystal.svg){:standalone}
+![Diagram showing a phosphorous atom surrounded by four silicon atoms. One electron from the phorphorous atom participates in a covalent bond with one of the four silicon atoms. Since the phosphorous atom has five valence electrons in total, and four of them are participating in covalent bonds, there is one extra electron.](../Support_Files/N-Type_Silicon_Crystal.svg)
 
 ### Electrically Neutral
 
@@ -24,7 +24,7 @@ Impurities that introduce extra electrons are called _donor impurities_ because 
 
 Just as the holes move around the P-type semiconductor, free electrons also move around the N-type lattice, trying in perpetuity, to achieve balance. The result is an ever changing mesh containing an abundance of negatively charged electrons, giving rise to the name N-type, which stands for _Negative-type_.
 
-![Illustration of N-type silicon crystal lattice in which there are a few phosphorous atoms in the lattice that are postively charged, and throughout the lattice are free electrons.](../Support_Files/N-Type_Silicon_Crystal_Lattice.svg){:standalone}
+![Illustration of N-type silicon crystal lattice in which there are a few phosphorous atoms in the lattice that are postively charged, and throughout the lattice are free electrons.](../Support_Files/N-Type_Silicon_Crystal_Lattice.svg)
 
 Just as with the P-type semiconductor, N-type semiconductors will readily conduct electricity, because it has extra electrons moving around in it already.
 

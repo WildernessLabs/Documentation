@@ -18,6 +18,6 @@ In part 1 of our electronics primer we got an understanding of the physical natu
 
 ### [Review](Review)
 
-## [Part 3 - Resistance and Ohm's Law](../Part3/Amount_and_Force)
+## [Part 3 - Power Sources & Current Types](../Part3/)
 
 <br/>

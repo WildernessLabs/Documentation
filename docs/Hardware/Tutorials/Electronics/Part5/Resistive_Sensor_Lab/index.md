@@ -29,7 +29,7 @@ Additionally, you'll reuse the following tools and components from earlier labs:
 
 To build a photoresistor sensor circuit, we need to start with a photoresistor. Photoresistors usually look something like the following, and can usually be [sourced for less than USD$1](http://www.mouser.com/ProductDetail/Adafruit/161/?qs=%2fha2pyFadugRELlGV3EJvhiJsyG6%2fjztqGMot59Rgn9%2fJAtRYbFvdw%3d%3d):
 
-![Photo of a photoresistor with a top flat disc sensor shape on top of two mounting legs. The sensor has two sides separated by a winding path back and forth between them.](Photoresistor.jpg){:standalone}
+![Photo of a photoresistor with a top flat disc sensor shape on top of two mounting legs. The sensor has two sides separated by a winding path back and forth between them.](Photoresistor.jpg)
 
 There are several major component supply websites that serve the majority of the world. The most common ones we use are:
 
@@ -54,7 +54,7 @@ Resistance can't be measured directly with a Netduino, but voltage can be measur
 
 The following circuit schematic is the exact same as our voltage divider from before, except now, `R2` is a resistive sensor, in this case, it's a photoresistor:
 
-![Diagram of a voltage passing through resistor R1 to voltage out and continuing to a resistive sensor R2 before connecting to ground.](../Support_Files/Resistive_Sensor_Circuit.svg){:standalone}
+![Diagram of a voltage passing through resistor R1 to voltage out and continuing to a resistive sensor R2 before connecting to ground.](../Support_Files/Resistive_Sensor_Circuit.svg)
 
 ## Exercise 1 - Reading a Resistive Sensor
 
@@ -63,7 +63,7 @@ The following circuit schematic is the exact same as our voltage divider from be
 
 To measure the resistance of a photoresistor, set the multimeter to its resistance measurement setting, which is usually denoted by the ohm (`Ω`) symbol, and put the multimeter leads on each of the photoresistor leads. It might be helpful to put the photoresistor in a breadboard to keep it still:
 
-![Photo of using a multimeter to measure resistance of a photoresistor mounted in a breadboard.](Photoresistor_Measuring.jpg){:standalone}
+![Photo of using a multimeter to measure resistance of a photoresistor mounted in a breadboard.](Photoresistor_Measuring.jpg)
 
 If using a breadboard, make sure the legs of the photoresistor are on opposite sides of the center well (or on different rows), so the legs aren't connected.
 
@@ -154,7 +154,7 @@ Using that formula, I created the following table of values:
 
 The circuit therefore would look something like this:
 
-![Diagram of a 3-volt source passing through a 4.7 kiloohm resistor to where the voltage is 0.53 to 2.2 volts, then through a 1-to-30 kiloohm resistive sensor to ground.](../Support_Files/Photoresistor_Circuit.svg){:standalone}
+![Diagram of a 3-volt source passing through a 4.7 kiloohm resistor to where the voltage is 0.53 to 2.2 volts, then through a 1-to-30 kiloohm resistive sensor to ground.](../Support_Files/Photoresistor_Circuit.svg)
 
 My measured voltage spread with a `4.7kΩ` resistor should then be somewhere between `0.53V` and `2.2V`, which provides a good resolution for reading the value.
 
@@ -203,11 +203,11 @@ Using the expected high and low `Vout` values from your calculations in step 2, 
 
 The following circuit schematic represents the circuit that we're going to build. Circuit schematics reduce component complexities to a minimum to illustrate the functional design of a circuit. As such, they usually show a simplified version of many components. Nearly all complex items and sub circuits are shown as a box with leads, representing pins or other connections. In this case, the Netduino is represented by one such box:
 
-![Schematic of connecting a Netduino to a resistor and resistive sensor with the Netduino represented as a single box with leads for the pins connected to the resistors.](Photoresistor_Circuit_schem.svg){:standalone}
+![Schematic of connecting a Netduino to a resistor and resistive sensor with the Netduino represented as a single box with leads for the pins connected to the resistors.](Photoresistor_Circuit_schem.svg)
 
 Additionally, schematics are usually arranged logically by functional area, as opposed to physical layout. For instance, compare the schematic of the lab above, to the breadboard layout schematic below:
 
-![Diagram of a Netduino connected to a resistor and resistive sensor on a breadboard with the Netduino shown visually with wires connecting the components to pins.](Photoresistor_Circuit_bb.svg){:standalone}
+![Diagram of a Netduino connected to a resistor and resistive sensor on a breadboard with the Netduino shown visually with wires connecting the components to pins.](Photoresistor_Circuit_bb.svg)
 
 The breadboard view above, which I've created in [Fritzing](http://fritzing.org), is electrically equivalent to the schematic, but shows a possible real-world prototype layout. Note that because of routing, it's a bit more complex than the schematic:
 
@@ -219,7 +219,7 @@ The printable breadboard overlay for this circuit can be found [here](Photoresis
 
 A baseboard to mount the Netduino and the breadboard on is really helpful to hold the whole assembly together, though it's not required:
 
-![Diagram of a Netduino connected to a resistor and resistive sensor on a breadboard with the main components mounted to a baseboard.](Photoresistor_Lab.svg){:standalone}
+![Diagram of a Netduino connected to a resistor and resistive sensor on a breadboard with the main components mounted to a baseboard.](Photoresistor_Lab.svg)
 
 Our [Wilderness Labs Hack kit](http://amzn.to/2y8LzPg) includes a laser etched wooden baseboard, but if you have access to a 3D printer, you can also print one from our [3D designs repo](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Baseboards).
 

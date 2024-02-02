@@ -8,7 +8,7 @@ subtitle: Writing data using the SPI protocol.
 
 The [SPI guide](/Netduino/Input_Output/Digital/SPI) demonstrated simple data transmission using SPI. This guide demonstrates using the SPI protocol to communicate with an [LCD display fitted with an SPI backpack](https://www.adafruit.com/product/292) via an examination of the µLiquidCrystal library's SPI LCD implementation.
 
-![Netduino Controlling 16x2 LCD](LCDDisplay.gif){:standalone}
+![Netduino Controlling 16x2 LCD](LCDDisplay.gif)
 
 ### Netduino.Foundation Display Drivers
 
@@ -114,7 +114,7 @@ namespace HelloWorld
 
 As noted, the backpack allows the Netduino to talk to the LCD using SPI.  This requires three wires plus power connections.  The LCD Backpack should be wired as follows:
 
-![Netduino and LCD wiring](NetduinoAndLCDFritzing.png){:standalone}
+![Netduino and LCD wiring](NetduinoAndLCDFritzing.png)
 
 
 ### Software

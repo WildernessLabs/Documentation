@@ -13,6 +13,6 @@ Launch Visual Studio for Mac and install the NETMF plug-in:
 1. Open the *Visual Studio* menu and select *Extensions*. Note, for Xamarin Studio users, the menu item is called *Add-ins...*.
 2. Select the *Gallery* Tab.
 3. In the *search* box, type `MicroFramework`
-![MicroFramework Search Dialog](../../VS_MicroFramework_Addin.png){:standalone}
+![MicroFramework Search Dialog](../../VS_MicroFramework_Addin.png)
 4. Click *install* and follow the directions.
 5. Restart Visual Studio/Xamarin Studio.

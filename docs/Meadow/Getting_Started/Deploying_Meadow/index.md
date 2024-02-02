@@ -54,13 +54,13 @@ Before flashing a Meadow board, open the Device Manager and check:
 - When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
 - When connecting it normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
 
-![Meadow drivers shown in Bootloader and regular mode]({{ page.url }}meadow_driver_state.png){:standalone}
+![Meadow drivers shown in Bootloader and regular mode]({{ page.url }}meadow_driver_state.png)
 
 If the board is in this state you can skip the next step and move on to the [Download Meadow OS and network binaries](#download-meadow-os-and-network-binaries).
 
 If Meadow shows as **Meadow F7 Micro (COMX)** in regular mode, right-click on it and select **Uninstall Device**, and make sure to select *Attempt to remove the driver for this device* like so:
 
-![Uninstall wrong Meadow Driver](./meadow_uninstall.png){:standalone}
+![Uninstall wrong Meadow Driver](./meadow_uninstall.png)
 
 Now to flash Meadow OS, *dfu-util* is recommended. However, the default Windows USB driver for ST devices is not compatible with *dfu-util*, so it needs to be replaced. For more in-depth information on this, check out [Scott Hanselman's post](https://www.hanselman.com/blog/how-to-fix-dfuutil-stm-winusb-zadig-bootloaders-and-other-firmware-flashing-issues-on-windows). Follow these steps:
 
@@ -70,11 +70,11 @@ Now to flash Meadow OS, *dfu-util* is recommended. However, the default Windows 
 1. Select **STM32 BOOTLOADER** in the dropdown
 1. Click *Replace Driver*
 
-    ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png){:standalone}
+    ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png)
 
 1. After the installation is complete, driver should be *WinUSB*
 
-    ![Zadig showing the replaced driver as WinUSB with a Reinstall Driver button.](./zadig2.png){:standalone}
+    ![Zadig showing the replaced driver as WinUSB with a Reinstall Driver button.](./zadig2.png)
 
 ### Download Meadow OS and network binaries
 Execute the following command in your console:
@@ -317,5 +317,5 @@ meadow flash os -s [PORT]
 Unplug and replug Meadow to give it a full restart.
 Your board is now ready to have a Meadow application deployed to it!
 
-## [Next - Hello, Meadow](/Meadow/Getting_Started/Hello_World/)
+## [Next - Hello, Meadow](/Meadow/Getting_Started/MCUs/F7_Feather/)
 

@@ -8,7 +8,7 @@ subtitle: Basic control theory.
 
 PID (and other control algorithms) are part of a control system that is called a _closed loop gain_, because the control output is fed back into the system and the controller is then given the response to its previous control signal and can react appropriately to the change and further refine the output:
 
-![Diagram of a closed loop gain system: a target signal (reference) is an input to the controller which outputs a control signal (gain) to the system before feeding the actual signal (feedback) back into the controller input.](../Closed_Loop_Gain_Controller.svg){:standalone}
+![Diagram of a closed loop gain system: a target signal (reference) is an input to the controller which outputs a control signal (gain) to the system before feeding the actual signal (feedback) back into the controller input.](../Closed_Loop_Gain_Controller.svg)
 
 In this context, [_gain_](https://en.wikipedia.org/wiki/Gain_(electronics)) is the output signal and can be either positive or negative.
 

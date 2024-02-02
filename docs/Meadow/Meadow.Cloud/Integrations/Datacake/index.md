@@ -3,7 +3,7 @@ layout: Meadow
 title: Integrate with Datacake
 subtitle: Getting started with Datacake
 ---
-[< Integrations](../)  
+
 ## Overview
 
 A Datacake integration sends device data in Meadow.Cloud to Datacake in near real-time.

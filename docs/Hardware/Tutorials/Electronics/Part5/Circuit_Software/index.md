@@ -14,11 +14,11 @@ There are a number of good and decent circuit simulation and design programs out
 
 Here's a screenshot showing the schematic view:
 
-![Screenshot of the Fritzing software showing a Netduino sample schematic view where components are represented as boxes with input and output pins.](Fritzing_Schematic_View.png){:standalone}
+![Screenshot of the Fritzing software showing a Netduino sample schematic view where components are represented as boxes with input and output pins.](Fritzing_Schematic_View.png)
 
 And the breadboard view of the same schematic:
 
-![Screenshot of the Fritzing software showing a Netduino sample breadboard view where components are represented as visual components connected to each other as you would build them.](Fritzing_Breadboard_View.png){:standalone}
+![Screenshot of the Fritzing software showing a Netduino sample breadboard view where components are represented as visual components connected to each other as you would build them.](Fritzing_Breadboard_View.png)
 
 Much of the circuits created in this tutorial are done in Fritzing.
 
@@ -26,7 +26,7 @@ Much of the circuits created in this tutorial are done in Fritzing.
 
 [iCircuit](http://icircuitapp.com/) is a commercial, yet affordable (USD$5 - $10), and very powerful real time circuit simulator. It's available for iOS, Android, Windows Phone, Mac, and Windows, and has a lot of great example circuits. It's great for doing all the circuit math for you and actually model how a circuit works in real time. The following screenshot is a circuit that has a 555 timer changing a 7-segment LED, and what's neat about it, is that you can watch the 7-segment LED go through numbers in the app!
 
-![Screenshot of iCircuit showing a sample simulation schematic of driving a 7-segment LED from a 5-5-5 timer.](iCircuit.png){:standalone}
+![Screenshot of iCircuit showing a sample simulation schematic of driving a 7-segment LED from a 5-5-5 timer.](iCircuit.png)
 
 ## Eagle CAD
 
@@ -36,11 +36,11 @@ SparkFun and Adafruit publish most of their open-source designs in eagle, so it'
 
 The following screenshot shows the schematic view in Eagle:
 
-![Screenshot of Eagle CAD software showing a sample schematics view.](Eagle_Schematic_View.png){:standalone}
+![Screenshot of Eagle CAD software showing a sample schematics view.](Eagle_Schematic_View.png)
 
 And the PCB editor looks like the following:
 
-![Screenshot of Eagle CAD software showing a sample PCB editor view with overlapping traces of various thicknesses, represented by different colors.](Eagle_PCB_Design_View.png){:standalone}
+![Screenshot of Eagle CAD software showing a sample PCB editor view with overlapping traces of various thicknesses, represented by different colors.](Eagle_PCB_Design_View.png)
 
 ## KiCAD
 
@@ -48,11 +48,11 @@ And the PCB editor looks like the following:
 
 The following is a screenshot of the schematic editor:
 
-![Screenshot of KiCad showing a sample shcematics view.](KiCad_Schematic_View.png){:standalone}
+![Screenshot of KiCad showing a sample shcematics view.](KiCad_Schematic_View.png)
 
 And the PCB editor looks like the following:
 
-![Screenshot of KiCad showing a sample PCB editor view.](KiCad_PCB_Design_View.png){:standalone}
+![Screenshot of KiCad showing a sample PCB editor view.](KiCad_PCB_Design_View.png)
 
 ## Others
 

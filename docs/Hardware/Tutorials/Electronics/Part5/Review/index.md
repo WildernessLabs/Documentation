@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Review
+title: Part 5 Review
 subtitle: Important points on basic DC circuit analysis.
 ---
 

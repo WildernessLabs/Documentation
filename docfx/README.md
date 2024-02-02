@@ -6,7 +6,7 @@ For instructions on how to use DocFX, visit https://dotnet.github.io/docfx/
 ## Getting Started
 
 1. Install DocFX
-  
+
   On OSX ([brew](https://brew.sh/) required)
   ```
   brew install docfx
@@ -16,16 +16,16 @@ For instructions on how to use DocFX, visit https://dotnet.github.io/docfx/
   choco install docfx -y
   ```
 
-2. Clone Repo  
+2. Clone Repo
 
-If you haven't cloned [Meadow.Core](https://github.com/WildernessLabs/Meadow.Core) and [Meadow.Foundation](https://github.com/WildernessLabs/Meadow.Foundation) do so first and then clone `docfx` as a sibling. 
+If you haven't cloned [Meadow.Core](https://github.com/WildernessLabs/Meadow.Core) and [Meadow.Foundation](https://github.com/WildernessLabs/Meadow.Foundation) do so first and then clone `docfx` as a sibling.
 
   ```
   git clone git@github.com:WildernessLabs/Meadow.Core.git
   ```
 
 3. Launch site:
-  
+
   ```
   cd docfx
   docfx docfx.json --serve
@@ -43,14 +43,15 @@ chmod +x ./get-latest.sh
 
 ## Committing Changes
 
-Before committing back to the repo, run `./build-docs.sh`. This will ensure you have the latest from  `Meadow.Core` and `Meadow.Foundation` repos.  Here's a breakdown of helper scripts:  
-- `./build-docs.sh` - runs `./get-latest.sh`, then runs `docfx docfx.json`       
-- `./build-serve-docs.sh` - runs `./get-latest.sh`, then runs `docfx docfx.json --serve`  
-- `./get-latest.sh` - gets latest from `Meadow.Core` and `Meadow.Foundation`
+Before committing back to the repo, run `./build-docs.sh`. This will ensure you have the latest from  `Meadow.Core` and `Meadow.Foundation` repos.  Here's a breakdown of helper scripts:
+
+* `./build-docs.sh` - runs `./get-latest.sh`, then runs `docfx docfx.json`
+* `./build-serve-docs.sh` - runs `./get-latest.sh`, then runs `docfx docfx.json --serve`
+* `./get-latest.sh` - gets latest from `Meadow.Core` and `Meadow.Foundation`
 
 ## DocFX stuff
 
-You can link to APIs this way:
+You can link to APIs this way, but you probably won't use it. This works _only_ within DocFX processed content and not within the general docs content.
 
 * MD link notation: `[IApp](xref:Meadow.IApp)`
 * `@` notation: `@"Meadow.IApp"`
@@ -63,7 +64,7 @@ The `@` notation is shorter, but the MD notation allows you to set the link titl
 
 If it fails on Mac/Linux with some `SQLitePCLRaw` nonsense, run this:
 
-```
+```console
 nuget install -OutputDirectory $TMPDIR SQLitePCLRaw.core -ExcludeVersion
 for docfx in /usr/local/Cellar/docfx/*; do cp "$TMPDIR/SQLitePCLRaw.core/lib/net45/SQLitePCLRaw.core.dll" "$docfx/libexec"; done
 ```
@@ -78,7 +79,7 @@ Electronics tutorial copyright Bryan Costanich.
 
 ### Documentation Prose
 
-All the documentation prose is released under a [Creative Commons 
+All the documentation prose is released under a [Creative Commons
 Attribution + Noncommercial + NoDerivatives (CC BY-NC-ND) license](Licenses/CreativeCommons_BY_NC_ND.md). Feel free to share verbatim in non-commercial usage and provide attribution. Commercial usage may be granted in certain use cases. If you need a more permissive license, please contact us at [hello@wildernesslabs.co](mailto:hello@wildernesslabs.co).
 
 ![Creative Commons BY-NC-ND Logo](Licenses/Cc-by-nc-nd_icon.png)
