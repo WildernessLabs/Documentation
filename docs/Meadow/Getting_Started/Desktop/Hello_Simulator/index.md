@@ -28,14 +28,16 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-This project creates a Meadow app that has a `DisplayController` class with a WinForms display showing a Hello World text using MicroLayouts. 
+This project creates a Meadow.Windows app that has a Windows Forms (WinForms) window showing a Hello World text using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md). 
 
-### Step 6 - Deploy your application
+### Step 5 - Run a Meadow.Windows Application
 
 Right-click the new project and select **Set as Startup project**
 
+![Meadow.Windows App running](wildernesslabs-meadow-windows-hello.jpg)
+
   </TabItem>
-  <TabItem value="vscode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
 

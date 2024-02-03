@@ -28,14 +28,22 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-Once the new project is loaded, right-click on the toolbar area and select the Meadow Device List item.
+This project creates a Meadow.Windows app that has a Windows Forms (WinForms) window showing a Hello World text using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md) and a RGB LED connected to a FT232H IO Expander, will blink and change colors simultaneously.
 
-### Step 6 - Deploy your application
+![FT232H connected to an RGB LED](wildernesslabs_desktop_ft232_fritzing.png)
 
-Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
+### Step 5 - Run a Meadow.Windows Application
+
+Right-click the new project and select **Set as Startup project**
+
+![Meadow.Windows App running](wildernesslabs-meadow-windows-hello.jpg)
+
+And as for the FT232H with the RGB LED, you should see something like this:
+
+![RGB LED flashing](wildernesslabs_desktop_ft232.gif)
 
   </TabItem>
-  <TabItem value="vscode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
 
