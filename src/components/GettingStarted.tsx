@@ -76,7 +76,7 @@ export default function GettingStarted(): JSX.Element {
 
             {/* ROW 2 */}
             <section className="meadow-features wl-container">
-              <h2>Meadow.Cloud, IoT Accelerators, and Videos</h2>
+              <h2>Meadow.Cloud and IoT Accelerators</h2>
               <hr></hr>
               <div className="wl-grid mb-50">
                 {/* Meadow.Cloud */}
@@ -92,21 +92,11 @@ export default function GettingStarted(): JSX.Element {
                 {/* IoT Accelerators */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
-                    <h3>Meadow.Cloud</h3>
+                    <h3>IoT Accelerators</h3>
                     <ul className="flat">
                       <li><a href="https://github.com/WildernessLabs/Clima?tab=readme-ov-file#getting-started">Clima</a></li>
                       <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker">GNSS/GPS Tracker</a></li>
                       <li><a href="https://github.com/WildernessLabs/Juego?tab=readme-ov-file#getting-started">Juego</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Videos */}
-                <div className="wl-card border thick-3 blue radius-8 corner">
-                  <div className="card-content">
-                    <h3>Videos</h3>
-                    <ul className="flat">
-                      <li><a href="#">Deploying Meadow.OS</a></li>
                     </ul>
                   </div>
                 </div>
