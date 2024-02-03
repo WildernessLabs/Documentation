@@ -50,6 +50,12 @@ Once all the files are transferred to your device, the app will start in debug m
 
 ![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
 
+### Step 7 - Check out additional samples
+
+You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
+
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
 
@@ -126,6 +132,12 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 Once all the files are transferred to your device, the app will start in debug mode and you should see Meadow’s onboard RGB LED lighting up in different colors.
 
 ![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
+
+### Step 8 - Check out additional samples
+
+You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
 
   </TabItem>
 </Tabs>

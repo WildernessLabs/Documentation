@@ -50,6 +50,12 @@ Once all the files are transferred to your device, the app will start in debug m
 
 ![Project Lab app running](wildernesslabs_projectlab_blinky.gif)
 
+### Step 7 - Check out additional samples
+
+You can check more samples in our [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-projectlab-samples.jpg)
+
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
 
@@ -124,6 +130,12 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 Once all the files are transferred to your device, the app will start in debug mode and you should see your Project Lab loading up a screen with all the sensor values refreshing every few seconds. You can also press the push buttons and see their status change right away.
 
 ![Project Lab app running](wildernesslabs_projectlab_blinky.gif)
+
+### Step 8 - Check out additional samples
+
+You can check more samples in our [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-projectlab-samples.jpg)
 
   </TabItem>
 </Tabs>
