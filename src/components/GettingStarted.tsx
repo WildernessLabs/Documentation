@@ -92,7 +92,7 @@ export default function GettingStarted(): JSX.Element {
                 {/* IoT Accelerators */}
                 <div className="wl-card border thick-3 blue radius-8 corner">
                   <div className="card-content">
-                    <h3>Meadow.Cloud</h3>
+                    <h3>IoT Accelerators</h3>
                     <ul className="flat">
                       <li><a href="https://github.com/WildernessLabs/Clima?tab=readme-ov-file#getting-started">Clima</a></li>
                       <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker">GNSS/GPS Tracker</a></li>
