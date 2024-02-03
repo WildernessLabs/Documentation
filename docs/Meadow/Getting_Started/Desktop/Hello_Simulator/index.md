@@ -16,7 +16,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add Meadow Visual Studio Extension
 
@@ -28,11 +28,11 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-Once the new project is loaded, right-click on the toolbar area and select the Meadow Device List item.
+This project creates a Meadow app that has a `DisplayController` class with a WinForms display showing a Hello World text using MicroLayouts. 
 
 ### Step 6 - Deploy your application
 
-Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
+Right-click the new project and select **Set as Startup project**
 
   </TabItem>
   <TabItem value="vscode" label="Visual Studio Code">
