@@ -5,6 +5,8 @@ title: Getting started with Meadow microcontrollers (MCUs)
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
+![Microcontroller Meadow F7 Core-Compute Module Project Lab](wildernesslabs-microcontrollers.jpg)
+
 ## Shared Steps
 
 * [Install Meadow.CLI](/Meadow/Getting_Started/Meadow%2ECLI/)
