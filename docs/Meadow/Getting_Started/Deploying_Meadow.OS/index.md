@@ -5,12 +5,9 @@ title: Meadow.OS Deployment
 subtitle: Flashing the Meadow with the latest OS via Meadow.CLI
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'
-
 When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it.
 
-<Tabs>
+<Tabs groupId="os">
   <TabItem value="windows" label="Windows" default>
 
 ### Install .NET SDK
