@@ -128,8 +128,8 @@ const hardwareTutorialsSidebar = [
           ],
         },
 
-        "Hardware/Tutorials/Electronics/Part7/Transistors/index",
-        "Hardware/Tutorials/Electronics/PartY_Other_Components/index",
+        //"Hardware/Tutorials/Electronics/Part7/Transistors/index",
+        //"Hardware/Tutorials/Electronics/PartY_Other_Components/index",
         // "Hardware/Tutorials/Electronics/Notes",
       ],
     },
