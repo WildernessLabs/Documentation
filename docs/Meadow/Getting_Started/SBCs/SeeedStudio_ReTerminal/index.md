@@ -54,11 +54,13 @@ Run...
 Hello, reTerminal!
 ```
 
-![Meadow.Linux reTerminal App Running](wildernesslabs-reterminal-hello-world.png)
+![Meadow.Linux reTerminal App Running](wildernesslabs_reterminal_demo_running.jpg)
 
 ### Step 6 - Check out additional samples
 
 You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
@@ -129,7 +131,7 @@ dotnet run
 
 A GTK window should show up in the center of the screen saying `Hello, World`, like below:
 
-![Create new Meadow Application](wildernesslabs_reterminal_demo_running.jpg)
+![Meadow.Linux reTerminal App Running](wildernesslabs_reterminal_demo_running.jpg)
 
 And if you check the output you should see something like this:
 
@@ -142,6 +144,12 @@ Initialize...
 Run...
 Hello, reTerminal!
 ```
+
+### Step 6 - Check out additional samples
+
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
   </TabItem>
 </Tabs>

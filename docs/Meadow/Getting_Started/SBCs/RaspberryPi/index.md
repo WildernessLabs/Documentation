@@ -8,7 +8,7 @@ subtitle: Create, deploy, and understand your first Meadow application.
 ![](wildernesslabs_raspberry_pi_getting_started.jpg)
 
 <Tabs groupId="ide">
-<TabItem value="visualstudio2022" label="Visual Studio 2022" default>
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
 ### Step 1 - Install .NET Runtime
 
@@ -22,7 +22,7 @@ Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for Wi
 
 Open Visual Studio’s Extensions Manager and install the [VS Linux Debugger](https://marketplace.visualstudio.com/items?itemName=SuessLabs.VSLinuxDebugger) Extension.
 
-Make sure you go through their Getting Started instructions to properly configure the target device (reTerminal) and how to use the extension to build and deploy the Meadow.Linux application over the network.
+Make sure you go through their Getting Started instructions to properly configure the target device (Raspberry Pi) and how to use the extension to build and deploy the Meadow.Linux application over the network.
 
 ### Step 4 - Create your first Meadow.Linux application
 
@@ -34,7 +34,7 @@ This is a minimal Meadow.Linux application that it'll output a few strings on a 
 
 ### Step 5 - Deploy your application
 
-Once the application is deployed successfully, open a terminal on the reTerminal and go to inside the project's folder and type:
+Once the application is deployed successfully, open a terminal on the Raspberry Pi and go to inside the project's folder and type:
 
 ```console
 dotnet [Your Project Name].dll
@@ -58,8 +58,10 @@ Hello, Raspberry Pi!
 
 You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
 
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
+
   </TabItem>
-  <TabItem value="visualstudiocode" label="Visual Studio Code" default>
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
 
@@ -136,6 +138,12 @@ Initialize...
 Run...
 Hello, Raspberry Pi!
 ```
+
+### Step 6 - Check out additional samples
+
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
   </TabItem>
 </Tabs>
