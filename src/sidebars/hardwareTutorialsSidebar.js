@@ -56,6 +56,7 @@ const hardwareTutorialsSidebar = [
             "Hardware/Tutorials/Electronics/Part3/Current_Types/index",
             "Hardware/Tutorials/Electronics/Part3/Direct_Current/index",
             "Hardware/Tutorials/Electronics/Part3/Alternating_Current/index",
+            "Hardware/Tutorials/Electronics/Part3/AC_Generation/index",
             "Hardware/Tutorials/Electronics/Part3/AC_Characteristics/index",
             "Hardware/Tutorials/Electronics/Part3/Review/index",
           ],
