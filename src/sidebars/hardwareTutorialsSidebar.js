@@ -13,7 +13,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 1
           type: "category",
-          label: "Chapter 1 - Physics of Electricity",
+          label: "1. - Physics of Electricity",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part1/index",
@@ -29,7 +29,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 2
           type: "category",
-          label: "Chapter 2 - Amps, Volts, and Watts",
+          label: "2. - Amps, Volts, and Watts",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part2/index",
@@ -47,7 +47,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 3
           type: "category",
-          label: "Chapter 3 - Current Types; AC & DC",
+          label: "3. - Current Types; AC & DC",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part3/index",
@@ -65,7 +65,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 4
           type: "category",
-          label: "Chapter 4 - Resistance & Ohm's Law",
+          label: "4. - Resistance & Ohm's Law",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part4/index",
@@ -88,7 +88,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 5
           type: "category",
-          label: "Chapter 5 - DC Curcuit Basics",
+          label: "5. - DC Circuit Basics",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part5/index",
@@ -109,7 +109,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 6
           type: "category",
-          label: "Chapter 6 - Semiconductors, Part 1: Diodes",
+          label: "6. - Semiconductors, Part 1: Diodes",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part6/index",
