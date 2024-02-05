@@ -36,15 +36,12 @@ Device.PlatformOS.BeforeSleep += () => {...};
 Device.PlatformOS.AfterWake += () => {...};
 ```
 
-## RC1 known issue
+## Wake up on Interrupt
 
-Note that there is a bug in the RC1 Meadow OS release where writing to the console output immediately after waking from sleep can cause your app to get stuck. To work around this, avoid writing to the console immediately after waking by adding a small delay before the first logging call.
+If Meadow is put into sleep mode, you can have it wake up when listening to an interupt port. Just use the same `Sleep` method and pass an interrupt-capable pin:
 
 ```csharp
-Device.PlatformOS.AfterWake += () =>
-{
-    // RC1 known issue workaround: small delay to avoid locking up app.
-    Thread.Sleep(TimeSpan.FromMilliseconds(500));
-    Resolver.Log.Info("Device has returned from sleep mode");
-};
+Device.PlatformOS.Sleep(Device.Pins.D05, InterruptMode.EdgeRising, ResistorMode.InternalPullDown);
 ```
+
+When the event is triggered, Meadow will wake up and `AfterAwake` event gets fired.
