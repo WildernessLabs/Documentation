@@ -16,7 +16,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add Meadow Visual Studio Extension
 
@@ -28,19 +28,21 @@ Use the [Meadow.CLI](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Me
 
 ### Step 5 - Create your first Meadow application
 
-In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow Application**:
+In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow F7 Feather App (Wilderness Labs)**:
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-Name the project whatever you like or leave the default name and let Visual Studio load up the new Meadow app. Once the new project is loaded, right-click on the toolbar area and select the Meadow Device List item.
+Once the new project is loaded, right-click on the toolbar area and select the **Meadow Device List** item.
 
 ![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs_meadow_toolbar.png)
 
-This is your device selector to deploy applications to your Meadow devices.
+This is your device selector to deploy applications to Meadow devices.
 
 ### Step 6 - Deploy your application
 
 Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
+
+![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs-vswin-usage.jpg)
 
 :::caution
 ⚠️ **Note**: When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
@@ -49,6 +51,12 @@ Connect your board if disconnected, and in the **Meadow devices** drop down it s
 Once all the files are transferred to your device, the app will start in debug mode and you should see Meadow’s onboard RGB LED lighting up in different colors.
 
 ![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
+
+### Step 7 - Check out additional samples
+
+You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
 
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
@@ -83,18 +91,18 @@ When installed, you’ll see a list of Templates available
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template::1.8.0.2 installed the following templates:
-Template Name                               Short Name         Language        Tags
-------------------------------------------  -----------------  --------------  --------------
-Meadow App (Core-Compute Module)            CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow App (Feather F7)                     FeatherF7          [C#],F#,VB.NET  Meadow/Console
-Meadow App (Project Lab)                    ProjectLab         [C#]            Meadow/Console
-Meadow Library                              Library            [C#],F#,VB.NET  Meadow/Library
-Meadow.Linux App (Jetson Nano)              JetsonNano         [C#]            Meadow/Console
-Meadow.Linux App (Raspberry Pi)             RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux App (Seeed Studio reTerminal)  reTerminal         [C#]            Meadow/Console
-Meadow.Windows App (WinForms + Hardware)    WinFormsHardware   [C#]            Meadow/Console
-Meadow.Windows App (WinForms)               WinForms           [C#]            Meadow/Console
+Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Template Name                  Short Name         Language        Tags
+-----------------------------  -----------------  --------------  --------------
+Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
+Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
+Meadow.Windows App             WinForms           [C#]            Meadow/Console
 ```
 
 ### Step 6 - Create your first Meadow application
@@ -104,7 +112,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new FeatherF7 -n FeatherF7Demo
+dotnet new F7Feather -n F7FeatherDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the onboard RGB LED and cycles through different colors.
@@ -126,6 +134,12 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 Once all the files are transferred to your device, the app will start in debug mode and you should see Meadow’s onboard RGB LED lighting up in different colors.
 
 ![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
+
+### Step 8 - Check out additional samples
+
+You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
 
   </TabItem>
 </Tabs>

@@ -5,13 +5,10 @@ title: Installing Meadow IDE Extensions
 subtitle: Installing the Meadow IDE extensions for Visual Studio and VS Code.
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'
-
 ![](wildernesslabs_meadow_extensions_getting_started.jpg)
 
-<Tabs>
-  <TabItem value="visualstudio" label="Visual Studio 2022" default>
+<Tabs groupId="ide">
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
 
 ### Pre-requisites
@@ -35,9 +32,14 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 1. Install **VS Tools for Meadow**, then close all instances of Visual Studio so the extension gets installed.
 
+### References
+
+* [VS_Win_Meadow_Extension GitHub Repo](https://github.com/WildernessLabs/VS_Win_Meadow_Extension)
+
+
 
   </TabItem>
-  <TabItem value="vscode" label="Visual Studio Code">
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
   
 
 ### Pre-requisites
@@ -54,6 +56,9 @@ If you havent, download and Install [Visual Studio Code](https://visualstudio.mi
 1. Click it the **Install** button on the bottom right of the listed item.
 1. The extension should now be installed.
 
+### References
+
+* [VSCode_Meadow_Extension GitHub Repo](https://github.com/WildernessLabs/VSCode_Meadow_Extension)
 
 
   </TabItem>
