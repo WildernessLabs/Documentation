@@ -10,7 +10,7 @@
 
 
 ## Lower Priority Docs (Up for grabs)
- * using an oscillscope
+ * using an oscilloscope
  * using a multimeter
  * using a logic analyzer
 

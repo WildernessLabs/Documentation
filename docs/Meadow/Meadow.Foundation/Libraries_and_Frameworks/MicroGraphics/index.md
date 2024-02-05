@@ -369,7 +369,7 @@ protected void Render()
 }
 ```
 
-## Sample Application
+## Sample Applications
 
 You can check these MicroGraphics Samples on Hackster that you can try out yourself.
 

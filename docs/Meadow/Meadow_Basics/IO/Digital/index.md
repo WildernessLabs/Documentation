@@ -12,7 +12,7 @@ For sample Meadow applications that illustrate the usage of digital ports, check
 
 ## Digital Outputs
 
-_Setting_ the state of a _digital output_ is done using an implementation of the `IDigitalOutputPort` interface, available on any device that implements the `IDigitOutputController` interface, which provides a method called `CreateDigitalOutputPort`:
+_Setting_ the state of a _digital output_ is done using an implementation of the `IDigitalOutputPort` interface, available on any device that implements the `IDigitalOutputController` interface, which provides a method called `CreateDigitalOutputPort`:
 
 ```csharp
 IDigitalOutputPort CreateDigitalOutputPort(
@@ -49,7 +49,7 @@ When in _Open-Drain_ mode, the MCU port utilizes only one switch internally, and
 
 ## Digital Inputs
 
-_Reading_ the state of a _digital input_ is done using an implementation of the `IDigitalInputPort` interface, available on any device that implements the `IDigitInputController` interface, which provides a method called `CreateDigitalOutputPort`:
+_Reading_ the state of a _digital input_ is done using an implementation of the `IDigitalInputPort` interface, available on any device that implements the `IDigitalInputController` interface, which provides a method called `CreateDigitalOutputPort`:
 
 ```csharp
 IDigitalInputPort CreateDigitalInputPort(

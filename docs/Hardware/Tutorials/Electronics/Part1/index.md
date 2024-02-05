@@ -3,21 +3,15 @@ layout: ElectronicsTutorial
 title: Part 1 - The Physics of Electrical Theory
 ---
 
-In order to understand how circuits work and how to design them, we must first understand some basic physics. Electrical theory and application comes directly from the structure and forces of atoms.
+In order to understand how circuits work and how to design them, we must first understand some basic physics. Electrical theory and application comes directly from the structure and forces of atoms. This section dives into the atomic structure of conductors to explore 
+what electricity is, and how it works.
 
-### [Atoms](Atoms)
+* [Chapter 1. - Atoms](Atoms)
+* [Chapter 2. - Electrical Current](Electrical_Current)
+* [Chapter 3. - Electromagnetism](Electromagnetism)
+* [Part 1 Review](Review)
 
-### [Electrical Current](Electrical_Current)
-
-### [Electromagnetism](Electromagnetism)
-
-### [Part 1 Review](Review)
-
-
-
-# [Part 2 - Quantifying Electricity; amps, volts, and watts](../Part2/)  
-
-<br/>
+## [Part 2 - Quantifying Electricity; amps, volts, and watts](../Part2/)  
 
 <!-- 
 
