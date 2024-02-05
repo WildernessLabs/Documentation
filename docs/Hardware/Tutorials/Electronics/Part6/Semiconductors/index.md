@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Semiconductors Part 1 (Diodes)
+title: Introduction to Semiconductors
 subtitle: The foundation of modern electronic circuits.
 ---
 
