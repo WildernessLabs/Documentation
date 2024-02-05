@@ -88,7 +88,7 @@ const hardwareTutorialsSidebar = [
         {
           // part 5
           type: "category",
-          label: "5. - DC Curcuit Basics",
+          label: "5. - DC Circuit Basics",
           link: {
             type: "doc",
             id: "Hardware/Tutorials/Electronics/Part5/index",
