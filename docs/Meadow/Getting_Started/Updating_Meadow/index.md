@@ -91,7 +91,7 @@ Firmware Versions
 Done.
 ```
 
-In the `Firmware Version` section, make sure the major and minor version numbers match.
+In the `Firmware Version` section, make sure the first two version parts (major and minor version) match for each. The third and forth version parts (patch and build) may differ.
 
 ## Updating Visual Studio (for Windows) Extension
 
