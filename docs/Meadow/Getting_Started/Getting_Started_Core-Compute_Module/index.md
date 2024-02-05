@@ -12,7 +12,7 @@ If you are working with a bare Meadow Core-Compute module without the developmen
 
 1. **Install Visual Studio** - Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 1. **Deploy Meadow.OS** - Use the Meadow.CLI to [deploy Meadow.OS to your board](/Meadow/Getting_Started/Deploying_Meadow/), booting the Core-Compute module into bootloader mode when you first connect it to your development machine.
-1. **Deploy Hello, World** - Verify everything is setup by deploying your first Meadow application. You can start working from the Feather [Hello, Meadow](/Meadow/Getting_Started/Hello_World/) application, but you will need to connect external components or peripherals to recreate the experience of the onboard RGB LED. You can still see logging output without any additional components.
+1. **Deploy Hello, World** - Verify everything is setup by deploying your first Meadow application. You can start working from the Feather [Hello, Meadow](/Meadow/Getting_Started/MCUs/F7_Feather/) application, but you will need to connect external components or peripherals to recreate the experience of the onboard RGB LED. You can still see logging output without any additional components.
 
 ```csharp
 using Meadow;
@@ -94,7 +94,7 @@ When using the Core-Compute module within the Core-Compute Development Kit, some
 Now that you understand the basics of a Meadow application, we recommend learning about the following topics:
 
 * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
-* [Meadow.Foundation](/Meadow/Meadow.Foundation/)
+* [Meadow.Foundation](/Meadow/Meadow%2EFoundation/)
 
 With the Core-Compute Development Kit, you can also explore the additional onboard peripherals, depending on your kit's configuration:
 

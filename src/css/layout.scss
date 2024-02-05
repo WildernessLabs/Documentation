@@ -1,0 +1,147 @@
+@import "./variables.scss";
+
+.wl-container
+{
+    width: 88% !important;
+    margin: 0 auto;
+}
+
+.wl-grid
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    &.space
+    {
+        justify-content: space-between;
+    }
+
+    .wl-card
+    {
+        flex: 1;
+        min-width: 210px;
+        // max-width: 355px;
+        min-height: 250px;
+
+        &.full
+        {
+            min-width: none;
+            max-width: none;
+        }
+
+        &.corner
+        {
+            background-image: url("/img/homepage/corner-bg.png");
+            background-size:300px;
+            background-repeat: no-repeat;
+        }
+
+        .card-content
+        {
+            padding: 20px;
+
+            h1,h2,h3,h4
+            {
+                font-family: "Wavehaus-Bold" !important;
+
+                a {
+                    font-family: "Wavehaus-Bold" !important;
+                }
+            }
+
+            a
+            {
+                text-decoration: underline;
+                font-family: "Wavehaus-Book";
+                text-decoration: none;
+            }
+            a:hover
+            {
+                color: $color-blue !important;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+.centered-callout
+{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.border
+{
+    border-style: solid;
+
+    &.only
+    {
+        border-style: none;
+
+        &.bottom{
+            border-bottom-style: solid;
+        }
+    }
+
+    &.orange
+    {
+        border-color: $color-orange;
+    }
+
+    &.blue
+    {
+        border-color: $color-blue;
+    }
+
+    &.thick-1
+    {
+        border-width: 1px;
+    }
+
+    &.thick-3
+    {
+        border-width: 3px;
+    }
+
+    &.radius-8
+    {
+        border-radius: 8px;
+    }
+}
+
+ul.flat
+{
+    list-style: none;
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    line-height: 34px;
+}
+
+.mb-50
+{
+    margin-bottom: 50px;
+}
+
+.mb-80
+{
+    margin-bottom: 80px;
+}
+
+.pb-50
+{
+    padding-bottom: 50px;
+}
+
+.container
+{
+    &.no-margin
+    {
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -18,7 +18,7 @@ When you create a new Meadow application, the `Meadow` core package should be au
 
 ## `App` Class
 
-The main Meadow application class should inherit [Meadow.App](/docs/api/Meadow/Meadow.App-1.html), which provides a way for Meadow OS to notify the application of system events, such as going to sleep or waking up. Meadow will scan your application assembly for a class that implements `IApp` and launch that automatically.
+The main Meadow application class should inherit [Meadow.App](/docs/api/Meadow/Meadow/App%60D%60/), which provides a way for Meadow OS to notify the application of system events, such as going to sleep or waking up. Meadow will scan your application assembly for a class that implements `IApp` and launch that automatically.
 
 The `App` declaration requires a generic parameter, `D`, representing the device type. For `D`, you'll need to pass a `Meadow.IDevice` that represents the board you're using. For example, if your app class is called `LEDApp`, and you're using a Meadow Feather v2 board, your `LEDApp` declaration would look like the following:
 
@@ -34,7 +34,7 @@ public class LEDApp : App<F7FeatherV1>
 
 ### `D` = Device
 
-Specifying the `D` parameter sets the current device so that it can be accessed via the [`Device`](/docs/api/Meadow/Meadow.Devices.IMeadowDevice.html) property of the `IApp`:
+Specifying the `D` parameter sets the current device so that it can be accessed via the [`Device`](/docs/api/Meadow/Meadow.Devices/IMeadowDevice/) property of the `IApp`:
 
 ```csharp
 var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
@@ -42,7 +42,7 @@ var redLED = new DigitalOutputPort(Device.Pins.OnboardLEDRed, false);
 
 ### Accessing your running App, Device, or Log
 
-If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`](/docs/api/Meadow.Contracts/Meadow.Resolver.html) class.
+If you need access to the currently running Meadow App, Device, or Log, you can access those via the [`Resolver`](/docs/api/Meadow.Contracts/Meadow/Resolver/) class.
 
 ```csharp
 MyApp myApp = Resolver.App;

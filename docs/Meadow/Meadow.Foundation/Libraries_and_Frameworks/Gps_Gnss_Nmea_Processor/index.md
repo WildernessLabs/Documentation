@@ -24,7 +24,7 @@ For this reason, the NMEA processing library uses an event-based, asynchronous p
 
 ## Using
 
-To use, create an instance of the [`NmeaSentenceProcessor`](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing.NmeaSentenceProcessor.html), register any NMEA sentence decoders you want to use by passing an `INmeaDecoder` to the `RegisterDecoder` method, and then call `ParseNmeaMessage`, passing the NMEA sentence string. 
+To use, create an instance of the [`NmeaSentenceProcessor`](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Location.Gnss.NmeaParsing/NmeaSentenceProcessor/), register any NMEA sentence decoders you want to use by passing an `INmeaDecoder` to the `RegisterDecoder` method, and then call `ParseNmeaMessage`, passing the NMEA sentence string. 
 
 For example, the following Meadow application listens to a serial port for NMEA sentences, feeds them to the NMEA processor, and then listens for decoded message events and writes them to the console:
 
@@ -153,7 +153,7 @@ namespace MeadowApp
     
 ## NMEA Sentence Class with Automatic Parsing
 
-If you need to manually construct or parse a NMEA sentence, you can use the [`NmeaSentence`](/docs/api/Meadow/Meadow.Peripherals.Sensors.Location.Gnss.NmeaSentence.html) class.
+If you need to manually construct or parse a NMEA sentence, you can use the [`NmeaSentence`](/docs/api/Meadow/Meadow.Peripherals.Sensors.Location.Gnss/NmeaSentence/) class.
 
 ### Parsing a NMEA Sentence
 

@@ -1,0 +1,435 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "./layout.scss";
+@import "./components/buttons.scss";
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ef7d3b;
+  --ifm-color-primary-dark: var($color-brown);
+  --ifm-color-primary-darker: var($color-brown);
+  --ifm-color-primary-darkest: var($color-brown);
+  --ifm-color-primary-light: var($color-mid-orange);
+  --ifm-color-primary-lighter: var($color-orange);
+  --ifm-color-primary-lightest: var($color-orange);
+  --ifm-code-font-size: 95%;
+  --ifm-color-emphasis-300: #12bbf3;
+  --ifm-color-emphasis-200: #12bbf3 !important;
+  --ifm-hover-overlay: none !important;
+  --ifm-menu-link-sublist-icon-filter: invert(61%) sepia(72%) saturate(1890%)
+    hue-rotate(349deg) brightness(100%) contrast(106%) !important;
+  --ifm-menu-link-padding-vertical: 5px;
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,1)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  --ifm-transition-fast: 0ms !important;
+  --ifm-transition-slow: 0ms !important;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  font-family: "Wavehaus-Book";
+  font-size: 18px;
+  -webkit-font-smoothing: auto;
+
+  .pagination-nav {
+    display: none;
+  }
+
+  a {
+    color: $color-brown-light;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  article {
+    font-family: "IBM Plex Serif";
+    padding-top: 1rem;
+    color: $color-brown;
+
+    a {
+      color: $color-mid-blue !important;
+    }
+  }
+
+  aside {
+    border-right: 0;
+  }
+
+  $types: (
+    "note": $color-brown,
+    "tip": $color-blue,
+    "info": $color-dark-green,
+    "caution": $color-orange,
+    "danger": $color-brown-light2,
+  );
+
+  @each $type, $color in $types {
+    admonition[type="#{$type}"] {
+      p {
+        background-color: $color;
+        padding: 20px;
+        border-left: 5px solid darken($color, 20%);
+        border-radius: 6px;
+        color: #fefefe;
+
+        code {
+          color: $color-brown;
+        }
+      }
+
+      margin-bottom: 20px;
+    }
+  }
+
+  main[class^="docMainContainer_"] {
+    border-left: 1px solid var(--ifm-toc-border-color);
+
+    @media screen and (max-width: 996px) {
+      border-left: 0;
+    }
+
+    .container {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      .row {
+        flex-wrap: nowrap;
+
+        div[class^="col col--3"] {
+          border-left: 1px solid var(--ifm-toc-border-color);
+          padding: 0 1rem 0 0;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  div[class^="col docItemCol_"] {
+    padding-bottom: 2rem !important;
+  }
+
+  .navbar {
+    border-bottom: solid 1px $color-blue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .navbar__item--active,
+  .navbar__link[aria-current="page"] {
+    background-color: $color-orange;
+    color: #ffffff;
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+    padding-top: 18px;
+  }
+
+  .menu__link--active {
+    color: $color-dark-orange !important;
+  }
+
+  .menu__list .menu__list {
+    padding-left: 0;
+    margin-top: 0px;
+
+    .menu__link {
+      padding-left: 30px;
+      font-size: 16px;
+    }
+  }
+
+  .menu__list-item-collapsible {
+    padding: 10px 0px;
+    border-bottom: solid 0.25px $color-dark-grey;
+    border-top: solid 0.25px $color-dark-grey;
+    border-radius: 0;
+    width: calc(var(--doc-sidebar-width) - 1px);
+  }
+
+  .menu__list-item-collapsible--active,
+  .menu__link--active:not(.menu__link--sublist),
+  .menu__link:hover,
+  .menu__list-item-collapsible:hover {
+    background: $color-off-white;
+    border-radius: 0;
+    color: $color-dark-orange !important;
+    position: relative;
+
+    a {
+      color: $color-dark-orange !important;
+      text-decoration: underline;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0px;
+      top: -1px;
+      background-color: $color-orange;
+      height: 103%;
+      min-width: 2px;
+      content: "";
+    }
+  }
+
+  .menu__caret:before,
+  .menu__link--sublist-caret:after {
+    width: 20px;
+    min-width: 20px;
+  }
+
+  .menu__caret:before,
+  .menu__link--sublist-caret:after {
+    background-size: contain;
+  }
+
+  .footer--dark {
+    background-color: $color-dark-blue !important;
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .hero {
+    background-color: $color-mid-blue;
+  }
+
+  .theme-code-block {
+    border: solid 1px $color-blue;
+  }
+  .theme-doc-sidebar-container {
+    margin-top: 0px;
+  }
+
+  .navbar__items {
+    justify-content: left;
+    font-weight: bold;
+    font-size: 17px;
+
+    .navbar__link {
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 996px) {
+      justify-content: start;
+    }
+
+    .navbar__item {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    font-family: "Wavehaus-Book";
+
+    .breadcrumbs__link {
+      color: $color-brown;
+    }
+  }
+
+  div[class^="tableOfContents_"] {
+    top: calc(var(--ifm-navbar-height));
+    height: 100%;
+    max-height: 100%;
+
+    .table-of-contents {
+      font-size: 16px;
+      border: none;
+    }
+  }
+  .theme-doc-sidebar-item-link-level-1 {
+    font-size: 17px;
+  }
+
+  .theme-doc-sidebar-item-category-level-1 {
+    margin: 0;
+
+    a {
+      font-size: 17px;
+    }
+
+    ul {
+      .menu__list-item-collapsible {
+        padding: 0;
+        border-bottom: 0;
+        border-top: 0;
+      }
+
+      li:last-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    .theme-doc-sidebar-item-link-level-3,
+    .theme-doc-sidebar-item-category-level-3 {
+      a {
+        padding-left: 50px !important;
+      }
+    }
+
+    .theme-doc-sidebar-item-link-level-4,
+    .theme-doc-sidebar-item-category-level-4 {
+      a {
+        padding-left: 70px !important;
+      }
+    }
+
+    .theme-doc-sidebar-item-link-level-5,
+    .theme-doc-sidebar-item-category-level-5 {
+      a {
+        padding-left: 90px !important;
+      }
+    }
+  }
+
+  div[class^="sidebar_"] {
+    padding-top: 0;
+
+    nav {
+      word-break: normal;
+      padding: 0 0 0.5rem 0rem;
+      scrollbar-gutter: auto;
+    }
+  }
+
+  @media screen and (min-width: 996px) {
+    overflow-x: hidden;
+  }
+
+  .tabs__item {
+    font-family: "Wavehaus-Book";
+    color: $color-brown;
+    padding: 8px 20px 8px 20px;
+  }
+  .tabs__item--active {
+    border-bottom-color: $color-orange;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Wavehaus-Book" !important;
+  font-weight: bold;
+}
+
+code {
+  font-family: "IBM Plex Mono" !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: var($color-brown);
+  --ifm-color-primary-dark: var($color-brown);
+  --ifm-color-primary-darker: var($color-brown);
+  --ifm-color-primary-darkest: var($color-brown);
+  --ifm-color-primary-light: var($color-mid-orange);
+  --ifm-color-primary-lighter: var($color-orange);
+  --ifm-color-primary-lightest: var($color-orange);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  a {
+    color: white;
+  }
+  a:hover {
+    color: $color-brown-light2;
+    text-decoration: underline;
+  }
+
+  article {
+    color: $color-almost-white;
+
+    a {
+      color: $color-blue !important;
+    }
+  }
+
+  .menu__link--active {
+    color: $color-orange !important;
+  }
+
+  #__docusaurus {
+    background-color: $color-dark-blue !important;
+  }
+
+  .navbar {
+    background-color: $color-dark-blue !important;
+  }
+
+  .footer--dark {
+    background-color: $color-grey-blue !important;
+  }
+
+  .theme-code-block {
+    border: solid 1px $color-light-grey;
+  }
+
+  .breadcrumbs__link {
+    color: white !important;
+  }
+
+  .tabs__item {
+    color: white;
+  }
+}
+
+.hidden-doc {
+  display: none;
+}
+
+// Search
+.DocSearch {
+  /* --docsearch-primary-color: var(--ifm-color-primary); */
+  --docsearch-text-color: #3c3424;
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  /* Search box */
+  --docsearch-searchbox-background: #edeff0;
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-color-white);
+
+  font-family: "Wavehaus-Book";
+  font-size: 17px;
+}
+
+[data-theme="dark"] .DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* Modal */
+  --docsearch-modal-background: #20252b;
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+}

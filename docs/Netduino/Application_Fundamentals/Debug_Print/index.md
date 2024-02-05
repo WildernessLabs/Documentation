@@ -26,4 +26,4 @@ using Microsoft.SPOT;
 
 The debug output can then be seen in the output window in Visual Studio:
 
-![](Debug_Output_Window.png){:standalone}
+![](Debug_Output_Window.png)

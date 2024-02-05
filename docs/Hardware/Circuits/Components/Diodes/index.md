@@ -8,7 +8,7 @@ subtitle: Voltage direction limiting devices.
 
 Diodes are one way conductors and under normal circumstances will allow current to pass from the anode to the cathode.  The symbol for a diode is:
 
-![Diode Circuit Symbol](/Common_Files/Diode.svg){:standalone}
+![Diode Circuit Symbol](/Common_Files/Diode.svg)
 
 The arrow head (triangle) points towards the direction of current flow.
 
@@ -33,7 +33,7 @@ A Light Emitting Diode (LED) is a small compact device capable of generating lig
 
 A bridge rectifier be used to take an [alternating current](https://en.wikipedia.org/wiki/AC_power) (AC) signal and convert this to a [direct current](https://simple.wikipedia.org/wiki/Direct_current) (DC) signal.  
 
-![Bridge Rectifier](DiodeBridgeRectifier.jpg){:standalone}
+![Bridge Rectifier](DiodeBridgeRectifier.jpg)
 
 The alternating voltage (on the left) is placed across the bridge.  The diodes will only allow the current to pass one way and this configuration produces a positive wave form that varies between 0V and the voltage applied.  The [capacitor](../Capacitors/) helps to smooth the voltage out into an approximation of a flat DC signal.
 
@@ -47,13 +47,13 @@ In the circuit below, the `10K` resistor acts as a pull-down resistor.  If no vo
 
 If a voltage of `5V` is applied to either of the inputs (`A` and `B`) then the diode will allow current to flow and the output will `5V`.
 
-![OR Gate](OR_Gate.svg){:standalone}
+![OR Gate](OR_Gate.svg)
 
 ##### AND Gate
 
 The AND gate circuit below uses the laziness property of electricity, it will always seek the path of lowest resistance to ground.
 
-![AND Gate](AND_Gate.svg){:standalone}
+![AND Gate](AND_Gate.svg)
 
 If the inputs (A and B) at at 0V then the current from the `5V` source will flow through the resistor to either `A` or `B`.  The result is that the output (`Out`) will be `0V`.
 

@@ -140,9 +140,9 @@ You'll need [Visual Studio Code](https://code.visualstudio.com/Download). Visual
 You'll also need to install the [Meadow extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow). This extension works across all supported platforms.
 
 1. Switch to the Extensions icon in the Visual Studio Code Activity Bar on the left. (Alternatively, you can select the **View** > **Extensions** menu item.)
-3. Search for `Meadow` in the **Extensions: Marketplace** search bar.
-4. Select the [**Meadow** extension](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow).
-5. Select **Install** from the Meadow extension details.
+1. Search for `Meadow` in the **Extensions: Marketplace** search bar.
+1. Select the [**Meadow** extension](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow).
+1. Select **Install** from the Meadow extension details.
 
 ### Step 2: Create a new Meadow Project
 
@@ -309,7 +309,7 @@ These are the typical minimum set of namespaces in a Meadow app class and provid
 
 * `Meadow` - The root namespace contains Meadow application and OS classes, enabling you to interact with the Meadow.OS.
 * `Meadow.Devices` - Contains device-specific definitions for different Meadow boards, such as the F7 Feather V1 and V2 dev boards, or the F7v2 Core-Compute module.
-* `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow.Foundation) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
+* `Meadow.Foundation` - [Meadow.Foundation](/Meadow/Meadow%2EFoundation/) is a set of open-source peripheral drivers and hardware control libraries that make hardware development with Meadow, plug-and-play.
 * `Meadow.Foundation.Leds` - Provided with the Meadow.Foundation library. Used to simplify use of RGB LEDs in this sample.
 * `Meadow.Peripherals.Leds` - Provided with the Meadow.Contracts library. Used to access LED type enumeration.
 
@@ -321,11 +321,11 @@ Notice that the `HelloMeadow` application class inherits from `App`, and has one
 public class HelloMeadow : App<F7FeatherV2>
 ```
 
-All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow.App-2.html) base class. Under the hood, Meadow.OS will look for a class in your code inheriting from `IApp`, such as the `App` implementation, and launches the app automatically. It also provides hooks for getting notified during system events, such as the board being put to sleep.
+All Meadow applications should inherit from the [App](/docs/api/Meadow/Meadow/App%60D%60/) base class. Under the hood, Meadow.OS will look for a class in your code inheriting from `IApp`, such as the `App` implementation, and launches the app automatically. It also provides hooks for getting notified during system events, such as the board being put to sleep.
 
 `App` requires one parameter: the current device definition. This is passed in to provide a strongly-typed reference to the current device.
 
-The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](/docs/api/Meadow.Contracts/Meadow.Resolver.html) class, allowing you to access them using autocomplete, via the specific device type:
+The device class defines properties and capabilities of the current device, such as the pins. While your app is running, your code can access the current device from the `Device` property on the [`Resolver`](/docs/api/Meadow/Meadow/Resolver/) class, allowing you to access them using autocomplete, via the specific device type:
 
 ```csharp
 Device.Pins.OnboardLedRed
@@ -404,4 +404,4 @@ void ShowColorPulse(Color color, TimeSpan duration)
 Now that you understand the basics of a Meadow application, we recommend learning about the following topics:
 
 * [Hardware I/O](/Meadow/Meadow_Basics/IO/)
-* [Meadow.Foundation](/Meadow/Meadow.Foundation/)
+* [Meadow.Foundation](/Meadow/Meadow%2EFoundation/)

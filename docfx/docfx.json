@@ -24,7 +24,7 @@
           "files": [
             "/**.csproj"
           ],
-          "src": "../../Meadow.Logging/source/Meadow.Logging"
+          "src": "../../Meadow.Logging/Source/Meadow.Logging"
         }
       ],
       "dest": "api/Meadow",
@@ -116,76 +116,5 @@
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
-  ],
-  "build": {
-    "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api/Meadow/index.md",
-          "api/Meadow.Foundation/index.md",
-          "api/Meadow.Foundation.FeatherWings/index.md",
-          "api/Meadow.Foundation.Grove/index.md",
-          "api/Meadow.Foundation.mikroBUS/index.md"
-        ]
-      },
-      {
-        "files": [
-          "guides/**.md",
-          "guides/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "images/**",
-          "Common_Assets/**",
-          "API_Assets/**",
-          "guides/**/*.png",
-          "guides/**/*.svg",
-          "guides/**/*.jpg",
-          "guides/**/*.jpeg",
-          "guides/**/*.giv",
-          "guides/**/*.bmp"
-        ]
-      }
-    ],
-    "overwrite": [
-      {
-        "files": [
-          "api-override/**.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "docs/**"
-        ]
-      }
-    ],
-    "dest": "docs",
-    "globalMetadata": 
-    {
-      "_appTitle": "Meadow.Foundation API website",
-      "_appFooter": "Meadow.Foundation API website",
-      "_disableContribution": true,
-      "_gitUrlPattern": "",
-      "newFileRepository": 
-      {
-        "branch": "master"
-      }
-    },
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "template": [
-      "default",
-      "_exported_templates/default"
-    ],
-    "postProcessors": [],
-    "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
-  }
+  ]
 }

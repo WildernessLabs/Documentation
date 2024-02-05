@@ -3,7 +3,7 @@ layout: Meadow
 title: Integrate with Webhooks
 subtitle: 
 ---
-[< Integrations](../)  
+
 ## Overview
 When a Webhook integration is activated, an HTTP POST with the payload is sent to a specified location in near real-time. Additionally, the payload can be signed with a `Secret` to ensure the data is coming from a valid source.
 

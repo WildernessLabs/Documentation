@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Review
+title: Part 6 Review
 subtitle: Semiconductor, P-N Junction, and Diode reference.
 ---
 

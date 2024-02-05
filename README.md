@@ -10,96 +10,29 @@ Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are
 
 ## Running Locally
 
-This repo is also a Ruby site powered by jekyll (which is how it's hosted by GitHub Pages). You can run and browse this site locally, which is especially useful if you're contributing documentation, or you just want an offline experience.
+This repo is compiled using [Docusuaurus V2](https://docusaurus.io/docs/2.x). You can run and browse this site locally, which is especially useful if you're contributing documentation, or you just want an offline experience.
 
-### To browse locally on OSX (Steps 1 and 2):
+### To browse locally:
 
-#### 1. [Install Homebrew](https://brew.sh/) (if not already installed)
+#### [Install npm and node](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (if not already installed)
 
-#### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
-
-1. Open a terminal and navigate to the `Documentation/docs` folder and run:
+1. Open a terminal and navigate to the `Documentation/` folder and run:
 
     ```console
-    brew install ruby
+    npm install
     ```
 
-1. Once you have Ruby, you'll need Jekyll and Bundler to build and host the site locally:
+1. To start the site in localhost run:
 
     ```console
-    sudo gem install jekyll bundler
+    npm start
     ```
 
-1. With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
-(Change your terminal working folder to `Documentation/docs`)
-
-    ```console
-    bundle install
-    ```
-
-### To browse locally on Windows (Steps 1 and 2):
-
-#### 1. [Install Chocolatey](https://chocolatey.org/install) (if not already installed)
-
-#### 2. Install prerequisites: Ruby, Jekyll, Bundler, and various gems
-
-1. Open a PowerShell prompt and navigate to the `Documentation/docs` folder and run:
-
-    ```console
-    choco install ruby
-    ```
-
-1. Install MSYS2 using Ruby Installer 2 (`ridk`). Then, choose MSYS2 and MINGW development toolchain option (tip: you may need to restart your shell):
-
-    ```console
-    ridk install
-    ```
-
-    If you encounter several key verification errors during the toolchain setup, ridk may have installed an [older version of MSYS2 with bad key validation](https://stackoverflow.com/a/64396724/48700). You can upgrade the version installed by ridk using Chocolatey.
-
-    ```console
-    choco upgrade msys2
-    ```
-
-### After OS installs
-
-Once you have Ruby and MSYS2, you'll need Jekyll and Bundler to build and host the site locally:
-
-```console
-gem install jekyll bundler
-```
-
-With the Bundler installed to manage the Ruby gems, you can run a command to install all the prerequisite gems for the site:
-(Change your PowerShell working folder to `Documentation/docs`; and you may need to restart your shell if you just installed the prerequisites.)
-
-```console
-bundle install
-```
-
-### 3. Launch local server
-
-```console
-bundle exec jekyll serve
-```
-
-The site should be available locally at: `http://127.0.0.1:4001/`. You can verify the IP address and port from the jekyll output in terminal.
+The site should be available locally at: `http://localhost:3000/`.
 
 Changes should automatically be picked up and displayed on the site.
 
-## Customizing the front end
-
-The three sites: Wildernesslabs.co, Docs, and Docfx share the same core front end code. Because of this, all front end modifications come from the [WildernessLabs Web Repository](https://github.com/WildernessLabs/WLabs_Web).
-
-To update the front end, setup a version of that repository and follow the instructions to make updates. Once you have that setup you can configure your watcher.
-
-1. Go into the `watch_config.json` file contained at root of the documentation repo. Update the path in that configuration to point to your WLabs_Web repo's dist directory
-2. Run the `watch.rb` task using the command below. This will watch the dist directory for any changes that are made and move them to the 'docs' and 'docsfx repo'
-
-    ```console
-    ruby watch.rb
-    ```
-
-3. In WLabs_Web repo run `gulp watch` and update any front end files or `gulp dist`
+Please use the [Docusuaurus guides and documentation](https://docusaurus.io/docs/2.x) if you wish to make serious modifications to the user experience of the site. If you run into any issues editing content, like getting links to resolve or html to render, checkout the [Docusaurus tips and tricks](Contributing/docusaurus-tips) page.
 
 ## [Contributing](Contributing)
 

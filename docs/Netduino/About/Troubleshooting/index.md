@@ -35,7 +35,7 @@ If you deploy your app and a `No entrypoint found!` message is displayed in the 
 
 Right-click on the solution and choose **properties**. In the **Configuration Properties** section, make sure **Deploy** is checked:
 
-![](DeployChecked.png){:standalone}
+![](DeployChecked.png)
 
 #### `Resolve: unknown type: System.Diagnostics.DebuggerBrowsableState`
 

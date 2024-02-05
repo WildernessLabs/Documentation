@@ -16,7 +16,7 @@ The [Netduino.Foundation](http://Netduino.Foundation) framework contains an [`I2
 
 The Netduino has two pins allocated for the I2C protocol.  These pins are labelled **SD** (for `SDA`) and **SC** (for `SCL`) and can be found above the 14 digital pins on the right of the board as viewed below:
 
-![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg){:standalone}
+![N3 Pinout Diagram](/Common_Files/Netduino3_Pinout.svg)
 
 ### TMP102 I2C Temperature Breakout Board
 
@@ -44,7 +44,7 @@ Next make the following connections between the temperature breakout board and t
 | GND             | GND               | Black                     |
 | ADD0            | GND               | Black                     |
 
-![Netduino Connected to TMP102](NetduinoAndTMP102FritzingDiagram.png){:standalone}
+![Netduino Connected to TMP102](NetduinoAndTMP102FritzingDiagram.png)
 
 #### Software
 
@@ -153,7 +153,7 @@ The output from the Netduino can be interpreted by using a [logic analyzer](http
 
 The logic analyzer was configured to read data for two-seconds.  The data was then processed by an I2C protocol decoder.  This resulted in the following trace:
 
-![Logic Analyzer Trace](I2CLogicAnalyserOutput.png){:standalone}
+![Logic Analyzer Trace](I2CLogicAnalyserOutput.png)
 
 The trace has been annotated to indicate the signal line and the protocol being analyzed.
 

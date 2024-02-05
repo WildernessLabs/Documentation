@@ -6,21 +6,6 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-- [WiFi](#wifi)
-    - [Connecting to a WiFi Network](#connecting-to-a-wifi-network)
-        - [Option 1 Programatically using C#](#option-1---programatically-using-c)
-        - [Option 2 - Using Config Files](#option-2---using-config-files)
-    - [Scanning for WiFi Networks](#scanning-for-wifi-networks)
-- [Ethernet](#ethernet)
-- [Performing Requests](#performing-requests)
-    - [HTTP GET Request Example](#http-get-request-example)
-    - [HTTP POST Request Example](#http-post-request-example)
-- [Antenna](#antenna)
-- [Creating RESTful Web APIs with Maple Server](#creating-restful-web-apis-with-maple-server)
-- [Sample projects](#sample-projects)
-    - [Core project samples](#core-project-samples)
-    - [Additional project samples](#additional-project-samples)
-
 # WiFi
 
 ## Connecting to a WiFi Network
@@ -188,7 +173,7 @@ For more information on getting the current antenna information and switching, s
 
 # Creating RESTful Web APIs with Maple Server
 
-If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called `Maple Server` that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/) for more information.
+If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called `Maple Server` that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer) for more information.
 
 # Sample projects
 
@@ -205,40 +190,69 @@ For example code, see the following networking sample apps in the [Meadow.Core.S
 You can look through these practical projects available on [Hackster](https://www.hackster.io/WildernessLabs).
 
 <table>
+  <tbody>
     <tr>
-        <td style="width:50%">
-            <img alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon." src="../../../Common_Files/Hackster/GraphicsWeather.jpg"/>
-        </td>
-        <td style="width:50%; font-size:20px;">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765">Weather Station Using Public Web Service Using Meadow</a>
-                <br/>
-                Learn how to connect your Meadow to your local network and get current weather conditions from a free public weather web service.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Photo showing a Meadow hooked up to an LCD displaying the date, time, indoor and outdoor temperature and a weather icon."
+          src="../../../Common_Files/Hackster/GraphicsWeather.jpg"
+        />
+      </td>
+      <td style={{ width: "50%", fontSize: 20 }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765"
+          >
+            Weather Station Using Public Web Service Using Meadow
+          </a>
+          <br />
+          Learn how to connect your Meadow to your local network and get current
+          weather conditions from a free public weather web service.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing a vertical LED matrix showing the current date and then the current time when a button is pressed." src="../../../Common_Files/Hackster/RtcWifi.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6">Build a WIFI Connected Clock Using Meadow</a>
-                <br/>
-                Build this nifty clock with Meadow getting the date and time from an NTP server via WIFI and room temperature with an LM35 Analog sensor.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing a vertical LED matrix showing the current date and then the current time when a button is pressed."
+          src="../../../Common_Files/Hackster/RtcWifi.gif"
+        />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6"
+          >
+            Build a WIFI Connected Clock Using Meadow
+          </a>
+          <br />
+          Build this nifty clock with Meadow getting the date and time from an
+          NTP server via WIFI and room temperature with an LM35 Analog sensor.
+        </p>
+      </td>
     </tr>
     <tr>
-        <td style="width:50%">
-            <img alt="Video showing a Meadow connected to a multi-line character display showing the date, time, indoor and outdoor temperatures, and a weather description." src="../../../Common_Files/Hackster/WifiWeather.gif"/>
-        </td>
-        <td style="width:50%">
-            <p style="font-size:22px;">
-                <a style="font-size:25px;" href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839">Make a Meadow indoor/outdoor temperature/weather desk clock</a>
-                <br/>
-                Build this nifty clock for your desk that gives you time and date, along with room and outdoor temperature using a REST service.
-            </p>
-        </td>
+      <td style={{ width: "50%" }}>
+        <img
+          alt="Video showing a Meadow connected to a multi-line character display showing the date, time, indoor and outdoor temperatures, and a weather description."
+          src="../../../Common_Files/Hackster/WifiWeather.gif"
+        />
+      </td>
+      <td style={{ width: "50%" }}>
+        <p style={{ fontSize: 22 }}>
+          <a
+            style={{ fontSize: 25 }}
+            href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839"
+          >
+            Make a Meadow indoor/outdoor temperature/weather desk clock
+          </a>
+          <br />
+          Build this nifty clock for your desk that gives you time and date,
+          along with room and outdoor temperature using a REST service.
+        </p>
+      </td>
     </tr>
+  </tbody>
 </table>

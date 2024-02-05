@@ -12,7 +12,7 @@ It is even possible to chain two or more 74595 shift requesters together gaining
 
 A block diagram of the internals of the 74595 is as follows:
 
-![Shift Register](ShiftRegister.png){:standalone}
+![Shift Register](ShiftRegister.png)
 
 Data is transmitted to the shift register on the data line.  Data is transferred to the shift register on the positive edge of the clock signal.  At this point the data exists only in the shift register.  The latches are still presenting the old data to the lines Q0 - Q7.
 
@@ -47,7 +47,7 @@ A small number of components are required:
 
 These components, along with a Netduino, should be wired up as follows:
 
-![Netduino and Shift Register](ShiftRegisterAndLEDFritzing.png){:standalone}
+![Netduino and Shift Register](ShiftRegisterAndLEDFritzing.png)
 
 A block of LEDs has been used here are these offer 10 LEDs in a small convenient package.  8 individual LEDs can also be used.
 
@@ -55,7 +55,7 @@ Note that the pins representing the outputs of the shift register are connected 
 
 Translating this to breadboard gives something like the following:
 
-![Netduino and Shift Register Circuit](ShiftRegisterCircuitOnBreadboard.jpg){:standalone}
+![Netduino and Shift Register Circuit](ShiftRegisterCircuitOnBreadboard.jpg)
 
 #### Software
 

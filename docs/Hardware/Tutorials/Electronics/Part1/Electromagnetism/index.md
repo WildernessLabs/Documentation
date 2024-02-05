@@ -12,7 +12,7 @@ The effect of a magnetic field is called _magnetism_. It's caused by rotating el
 
 We can think of magnetism as a kind of magnification of electrical charges, caused by the angular momentum of electrons. A simple electric charge creates attraction or repulsion in all directions. A magnetic field is more complex, it has a three-dimensional polarity with a north/south:
 
-![Illustration of a bar magnet and it's magnetic field with lines leaving the magnet's north pole and returning to the magnet's south pole.](../Support_Files/Magnetic_Field.svg){:standalone}
+![Illustration of a bar magnet and it's magnetic field with lines leaving the magnet's north pole and returning to the magnet's south pole.](../Support_Files/Magnetic_Field.svg)
 
 Magnetic north and south are arbitrary names just like positive and negative charge used to describe repulsion of like polarity and attraction of opposite polarity along an axis.
 
@@ -20,7 +20,7 @@ Magnetism in metals arises when enough electrons have a similar angular momentum
 
 A magnetic field can also be created electrically. A weak magnetic field is created when a current flows through a piece of straight wire, but if that wire is coiled, a much stronger magnetic field is created. In fact, a simple, yet effective magnet can be created with just a standard AA battery, a piece of coated wire, and a nail:
 
-![Illustration of a nail magnet: a battery connected to a wire that is wrapped around a nail to strengthen the magnetic field of the current flowing through the wire.](../Support_Files/Nail_Magnet.svg){:standalone}
+![Illustration of a nail magnet: a battery connected to a wire that is wrapped around a nail to strengthen the magnetic field of the current flowing through the wire.](../Support_Files/Nail_Magnet.svg)
 
 ### Induction
 

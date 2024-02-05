@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="167px" height="160px" viewBox="0 0 167 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Transistor_NPN</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Transistors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-52.000000, -19.000000)">
+            <g id="Transistor-(NPN)" transform="translate(44.000000, 19.000000)">
+                <g id="Transistor_NPN" transform="translate(8.000000, 0.000000)">
+                    <circle id="Oval" stroke="#524740" stroke-width="3" cx="87" cy="80" r="78.5"></circle>
+                    <path d="M0,80 L52,80" id="Path-2" stroke="#524740" stroke-width="3"></path>
+                    <path d="M52,27 L52,133" id="Path-3" stroke="#524740" stroke-width="3"></path>
+                    <path d="M52,106 L121.5,126.5" id="Path-4" stroke="#524740" stroke-width="3"></path>
+                    <polygon id="Triangle" fill="#524740" transform="translate(131.503598, 129.416714) rotate(-74.000000) translate(-131.503598, -129.416714) " points="131.503598 142.416714 136.503598 116.416714 126.503598 116.416714"></polygon>
+                    <path d="M52,27 L144,54" id="Path-4-Copy" stroke="#524740" stroke-width="3" transform="translate(98.000000, 40.500000) scale(1, -1) translate(-98.000000, -40.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
