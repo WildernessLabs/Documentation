@@ -10,7 +10,7 @@ The documentation is all written in Markdown, and I (bryancostanich) highly reco
 
 Typos and other small fixes, additions can just be made and submitted as a pull-request. No need to reserve the topic.
 
-### General Documenation
+### General Documentation
 
 For general documentation, please refer to the [Documentation Roadmap](/DocumentationRoadmap.md) to see a list of high priority requested docs, as well as writer reservations and other notes. 
 
