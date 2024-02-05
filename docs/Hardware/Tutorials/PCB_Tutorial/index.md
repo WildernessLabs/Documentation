@@ -1,6 +1,6 @@
 ---
 layout: Hardware
-title: PCB Design Tutorial
+title: PCB Design Video Tutorial
 subtitle: Building a practical Meadow Wing with GNSS and atmospheric sensors.
 ---
 

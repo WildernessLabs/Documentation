@@ -1,5 +1,6 @@
 ---
 layout: Hardware
+sidebar_label: 3. - PCB Assembly
 title: PCB Assembly
 subtitle: Placing and soldering hardware components on a PCB.
 ---

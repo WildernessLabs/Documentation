@@ -1,5 +1,6 @@
 ---
 layout: Hardware
+sidebar_label: 1. - Schematic Capture
 title: Schematic Capture
 subtitle: "PCB Design Tutorial, Part 1: Schematic design/capture."
 ---
