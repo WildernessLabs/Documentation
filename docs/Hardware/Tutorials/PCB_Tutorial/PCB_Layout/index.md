@@ -1,5 +1,6 @@
 ---
 layout: Hardware
+sidebar_label: 2. - PCB Layout
 title: PCB Layout
 subtitle: Designing the physical Printed Circuit Board layout.
 ---

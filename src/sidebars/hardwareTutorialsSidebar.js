@@ -160,8 +160,6 @@ const hardwareTutorialsSidebar = [
         "Hardware/Tutorials/PCB_Tutorial/Schematic_Design/index",
         "Hardware/Tutorials/PCB_Tutorial/PCB_Layout/index",
         "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
-        "Hardware/Tutorials/PCB_Tutorial/Project_Creation/index",
-        "Hardware/Tutorials/PCB_Tutorial/Add_Meadow/index",
       ],
     },
   ];
