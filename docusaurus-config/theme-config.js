@@ -33,7 +33,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
       label: 'Meadow.Cloud',
     },
     {
-      to: 'Hardware/Tutorials/Electronics',
+      to: 'Hardware/Tutorials',
       activeBaseRegex: '^/Hardware/(Tutorials|Fundamentals)(/|$)',
       sidebarId: 'hardwareTutorialsSidebar',
       label: 'Hardware Tutorials',

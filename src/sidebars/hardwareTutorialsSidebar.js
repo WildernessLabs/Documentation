@@ -5,9 +5,10 @@ const hardwareTutorialsSidebar = [
       label: "Electronics Tutorial",
       link: {
         type: "doc",
-        id: "Hardware/Tutorials/Electronics/index",
+        id: "Hardware/Tutorials/index",
       },
       items: [
+        "Hardware/Tutorials/Electronics/index",
         "Hardware/Tutorials/Electronics/Prologue/Requirements/index",
 
         {
