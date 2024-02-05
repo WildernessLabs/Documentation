@@ -32,15 +32,17 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-Once the new project is loaded, right-click on the toolbar area and select the Meadow Device List item.
+Once the new project is loaded, right-click on the toolbar area and select the **Meadow Device List** item.
 
 ![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs_meadow_toolbar.png)
 
-This is your device selector to deploy applications to your Meadow devices.
+This is your device selector to deploy applications to Meadow devices.
 
 ### Step 6 - Deploy your application
 
 Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
+
+![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs-vswin-usage.jpg)
 
 :::caution
 ⚠️ **Note**: When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.

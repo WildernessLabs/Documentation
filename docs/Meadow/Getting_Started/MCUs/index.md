@@ -7,12 +7,6 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ![Microcontroller Meadow F7 Core-Compute Module Project Lab](wildernesslabs-microcontrollers.jpg)
 
-## Shared Steps
-
-* [Install Meadow.CLI](/Meadow/Getting_Started/Meadow%2ECLI/)
-* [Install IDE Extensions](../IDE_Extensions/)
-* [Deploy Meadow.OS](../Deploying_Meadow%2EOS/)
-
 ## Board-Specific Instructions
 
 * F7 Feather
@@ -22,3 +16,9 @@ subtitle: Create, deploy, and understand your first Meadow application.
     * [Hello, CCM](Core_Compute_Module_DevKit/)
 * Project Lab
     * [Hello, Project Lab](Project_Lab/)
+
+## Shared Steps
+
+* [Install Meadow.CLI](/Meadow/Getting_Started/Meadow%2ECLI/)
+* [Install IDE Extensions](../IDE_Extensions/)
+* [Deploy Meadow.OS](../Deploying_Meadow%2EOS/)
