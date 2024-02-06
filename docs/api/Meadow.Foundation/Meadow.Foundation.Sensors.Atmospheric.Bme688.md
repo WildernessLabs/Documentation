@@ -113,6 +113,6 @@ async Task ReadConditions()
 
 ### Wiring Example
 
-To wire a Bme688 to your Meadow board, connect the following:
+To wire a BME688 to your Meadow board, connect the following:
 
-<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme688/Bme688_Fritzing.png" />
+![Wiring a BME680 sensor to Meadow, which has near-identical pins to a BME688 package.](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme680/Bme680_Fritzing.png)
