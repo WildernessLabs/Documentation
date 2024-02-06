@@ -33,7 +33,7 @@ These are exposed as events on the `Device.PlatformOS` object and can have event
 ```csharp
 Device.PlatformOS.BeforeSleep += () => {...};
 
-Device.PlatformOS.AfterWake += () => {...};
+Device.PlatformOS.AfterWake += (sender, wakeSource) => {...};
 ```
 
 ## Wake up on Interrupt
@@ -45,3 +45,7 @@ Device.PlatformOS.Sleep(Device.Pins.D05, InterruptMode.EdgeRising, ResistorMode.
 ```
 
 When the event is triggered, Meadow will wake up and `AfterAwake` event gets fired.
+
+### Interrupt and maximum F7 sleep duration
+
+On F7 devices, Meadow will sleep for a maximum of 28 days. If your device sleeps that long, it will wake when the timer elapses. You can detect for this in the `AfterAwake` event, and checking if `wakeSource` is `Timer` instead of `Interrupt`.
