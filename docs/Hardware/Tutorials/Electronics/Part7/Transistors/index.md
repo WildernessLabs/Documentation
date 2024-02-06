@@ -1,61 +1,57 @@
 ---
 layout: ElectronicsTutorial
 title: Transistors
-subtitle: Amplifiers, switches, and the fundamental building blocks of modern electronics.
 ---
 
-> NOTE: This section is still being developed.
+![](../Support_Files/Image_Common_Transistors.svg)
 
-## Bipolar Junction Transistors
+## Amplifiers, switches, and the fundamental building blocks of modern electronics.
 
 There is probably no singular component in electronics that is more important, or more prevalent in electronics than the transistor.
 
-Putting two diodes end to end like this seems a little non-intuitive, as there's no way the electricity can flow through without a reverse breakdown:
+The idea was first patented in 1926, but it wasn't until two decades later, in 1947, that the first actual transistor was created. Today, transistors are etched into chips by the billions and trillions and are the fundamental building block of nearly every piece of electronics we use.
+
+### N-P-N + P-N-P Junctions
+
+In the last section we examined how P-N junctions created a one-way flow of electricity by generating a charge gap that either gets stronger or weaker depending on the polarity of electrical force applied to it.
+
+But what happens when you make an N-P-N or a P-N-P junction like two diodes smashed together?
 
 ![](../../Part6/Sketches/PNP_No_Base.png)
 
-However, things become a little clearer when we add a lead to the center, where current can be sent:
+This seems a little non-intuitive, as there's no way the electricity can flow through without applying so much voltage that a reverse breakdown occurs and current flows. However, things become more interesting when we add a lead to the center, where current can be sent:
 
 ![](../../Part6/Sketches/PNP_w_Base.png)
 
-<!-- TODO: In this configuration,  -->
+Effectively, that applying current there serves as a gate between the two ends, enabling current to flow from one end to the other.
 
-### PNP and NPN
+Fundamentally, transistors are essentially just that.
 
-<!-- TODO: ### Forward Voltage -->
+Jumping ahead a bit, we can see how this would work: as current is applied to the _Gate_ in the middle, it can push or repel charges away, creating a region where the charges can move between the _source_ and the _drain_:
 
-<!-- TODO: [Still have to overcome the  -->
-
-### Operation
-![](../Support_Files/Image_Common_Transistors.svg)
-There is probably no singular component in electronics that is more important or prevalent than the transistor.
-
-![](../Support_Files/Image_Common_Transistors.svg){:standalone}
-
-The idea was first patented in 1926, but it wasn't until two decades later, in 1947, that the first actual transistor was created. Today, transistors are etched into chips by the billions and are the fundamental building block of nearly every piece of electronics we use.
+![](../Support_Files/MOSFET_Gate_Voltage.svg)
 
 ## Operation
 
-Transistors have two primary functions; **they work both as an electronic switch, and as a signal amplifier**.
+One of the interesting behaviors of transistors is that they can act both as an electronic switch, and as a signal amplifier:
 
-### Base, Collector, Emitter
-
-![](../../Part6/Sketches/BJT_diagrams.png)
 ### As a Logical Switch
 
 Most often, we use transistors to digitally switch (logical `ON`/`OFF`) higher current or voltage loads with a smaller controlling current or voltage. For instance, if we wanted to control a `6V` DC motor using a `3.3V` digital output on a Meadow board, we could use a transistor circuit that acts a sort of digital "switch" to allow `6V` from an external source to flow through the motor:
 
-![](../Support_Files/Transistor_as_Switch.svg){:standalone}
+![](../Support_Files/Transistor_as_Switch.svg)
 
 ### As an Amplifier
 
-However, transistors can be used for more than just switching, in fact, they can also be used in an analog way to "amplify" a control signal, by providing a gradient of control over a larger load using a smaller controlling signal. So for instance, not only can you switch `ON` a DC motor, but you could potentially set it to `60%` power.
+If you apply an intermediary amount of voltage, you can control how much current is let through. This pattern of usage is called _signal amplification_ because you're typically using a smaller signal (the controlling voltage to the gate) to control a large signal (the current between source and drain). So for instance, not only can you switch `ON` a DC motor, but you could potentially set it to `60%` power.
 
-[diagram]
+[**could use a graph of two signals, on small, one large, with the larger one increasing exponentially over time in response to a gradually increasing control signal**]
 
-This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and to a lesser degree, capacitors (which we'll dive into later).
+### Versatile Component
 
-## MOSFETs and BJTs
+This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and capacitors (which we'll dive into later).
+
+## MOSFETs vs. BJTs
 
 While Wikipedia lists [52 different types of transistors](https://en.wikipedia.org/wiki/Category:Transistor_types?sa=X&ved=0ahUKEwiMvbG4l8zhAhWBsJ4KHdwtBvUQ1i8IJzAh), there are really only two types of transistors that are commonly used in modern digital circuits, _MOSFETs_, and _BJTs_.
 
@@ -64,11 +60,48 @@ While Wikipedia lists [52 different types of transistors](https://en.wikipedia.o
 
 Both are "transistors," however, BJTs are usually what people have historically thought of as transistors and have been used for over 70 years.
 
-BJTs are fine, but for modern circuits, we use MOSFETs for nearly everything. They're inherently more power efficient, because as we will learn, they operate on voltage, rather than current.
+### MOSFETs = new hotness, BJTs = old and busted.
 
-<!-- Bell Labs created the first MOSFET in 1959 -->
+If this tutorial were written just 10 years ago, it would likely have focused on BJTs, however, in modern digital circuits, MOSFETs have replaced BJTs for nearly everything. This is because of two reasons. 
+
+#### MOSFETs are _voltage_ devices.
+
+First, MOSFETs operate on voltage, meaning that they act like a pressure switch, as voltage is applied, it controls the valve:
+
+[**need water illustration of a pipe with a pressure valve**] 
+
+BJTs on the other hand, operate on _current_, meaning that while voltage is applied to the gate to control curret flow, it actually uses the current through the gate!
+
+[**need kind of a leaky valve illustration**]
+
+This means that MOSFETs are much more power efficent.
+
+#### MOSFETS handle large current loads better.
 
 Due to the way they work, they're also far better at handling larger current loads while wasting less energy as heat. As such; when working with larger current loads, you'll almost always want to use a MOSFET.
+
+
+
+
+
+
+
+### PNP and NPN
+
+<!-- TODO: ### Forward Voltage -->
+
+<!-- TODO: [Still have to overcome the  -->
+
+
+
+### Base, Collector, Emitter
+
+![](../../Part6/Sketches/BJT_diagrams.png)
+
+
+[diagram]
+
+
 
 <!--
 ### GaNFET
