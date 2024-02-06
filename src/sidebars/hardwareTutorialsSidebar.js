@@ -130,6 +130,24 @@ const hardwareTutorialsSidebar = [
           ],
         },
 
+        {
+          // part 7
+          type: "category",
+          label: "7. - Semiconductors, Part 2: Transistors",
+          link: {
+            type: "doc",
+            id: "Hardware/Tutorials/Electronics/Part7/index",
+          },
+          items: [
+            "Hardware/Tutorials/Electronics/Part7/Transistors/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_Physics/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_Basics/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_Low-Side_Usage/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_High-Side_Usage/index",
+            "Hardware/Tutorials/Electronics/Part7/Review/index",
+          ],
+        },
+
         //"Hardware/Tutorials/Electronics/Part7/Transistors/index",
         //"Hardware/Tutorials/Electronics/PartY_Other_Components/index",
         // "Hardware/Tutorials/Electronics/Notes",
