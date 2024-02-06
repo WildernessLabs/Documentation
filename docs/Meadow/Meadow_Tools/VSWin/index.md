@@ -30,7 +30,7 @@ When you connect a Meadow board to your computer, the **Meadow devices** drop do
 
 ## References
 
-* [VS_Win_Meadow_Extension GitHub Repo](https://github.com/WildernessLabs/VS_Win_Meadow_Extension)
+* This extension is open source and you check the source [here](https://github.com/WildernessLabs/VS_Win_Meadow_Extension).
 
 ## Support
 

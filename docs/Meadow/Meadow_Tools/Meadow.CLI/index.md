@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 sidebar_label: Meadow.CLI
-title: Command-Line-Interface for Meadow
+title: Meadow.CLI
 subtitle: Command-Line-Interface for Meadow
 ---
 
@@ -133,3 +133,9 @@ You only need to specify the port once; all subsequent commands will remember th
 * `meadow trace level`        - Sets the trace logging level on the Meadow
 * `meadow uart trace disable` -   Disables trace log output to UART
 * `meadow uart trace enable`  -  Enables trace log output to UART
+
+## Support
+
+Having trouble using Meadow.CLI? 
+* File an [issue](https://github.com/WildernessLabs/Meadow.Desktop.Samples/issues) with a repro case to investigate, and/or
+* Join our [public Slack](http://slackinvite.wildernesslabs.co/), where we have an awesome community helping, sharing and building amazing things using Meadow.

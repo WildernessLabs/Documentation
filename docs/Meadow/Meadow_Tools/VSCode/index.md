@@ -25,7 +25,7 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 
 ## References
 
-* [VSCode_Meadow_Extension GitHub Repo](https://github.com/WildernessLabs/VSCode_Meadow_Extension)
+* This extension is open source and you check the source [here](https://github.com/WildernessLabs/VSCode_Meadow_Extension).
 
 ## Support
 
