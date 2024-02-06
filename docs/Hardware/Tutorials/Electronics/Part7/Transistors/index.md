@@ -1,14 +1,14 @@
 ---
 layout: ElectronicsTutorial
 title: Transistors
-subtitle: Bipolar Junction Transistors (BJT); amplifiers, switches, and the fundamental building blocks of modern electronics.
+subtitle: Amplifiers, switches, and the fundamental building blocks of modern electronics.
 ---
 
 > NOTE: This section is still being developed.
 
 ## Bipolar Junction Transistors
 
-Transistors are P-N Junctions with an additional P-Type or N-Type semiconductor sandwiched on the opposite end to make a two pole, P-N-P junction. Their long-form name is _bipolar junction transistors_, but are often referred to as "BJTs" or just transistors. [The origin of the term "transistor" is somewhat ambiguous](https://en.wikipedia.org/wiki/History_of_the_transistor#Origin_of_the_term).
+There is probably no singular component in electronics that is more important, or more prevalent in electronics than the transistor.
 
 Putting two diodes end to end like this seems a little non-intuitive, as there's no way the electricity can flow through without a reverse breakdown:
 
@@ -27,14 +27,71 @@ However, things become a little clearer when we add a lead to the center, where 
 <!-- TODO: [Still have to overcome the  -->
 
 ### Operation
+![](../Support_Files/Image_Common_Transistors.svg)
+There is probably no singular component in electronics that is more important or prevalent than the transistor.
 
-* **Current Amplifier** - Also known as _active region_: `I`<sub>`C`</sub> `= I`<sub>`B`</sub> `* β`
-* **Switched On** - Also known as _saturation_, transistor is fully "on:" `I`<sub>`C`</sub> `= I(saturation`
-* **Switched Off** - Also known as _cut off_, transistor is fully "off:" `I`<sub>`C`</sub> `= 0`
+![](../Support_Files/Image_Common_Transistors.svg){:standalone}
+
+The idea was first patented in 1926, but it wasn't until two decades later, in 1947, that the first actual transistor was created. Today, transistors are etched into chips by the billions and are the fundamental building block of nearly every piece of electronics we use.
+
+## Operation
+
+Transistors have two primary functions; **they work both as an electronic switch, and as a signal amplifier**.
 
 ### Base, Collector, Emitter
 
 ![](../../Part6/Sketches/BJT_diagrams.png)
+### As a Logical Switch
+
+Most often, we use transistors to digitally switch (logical `ON`/`OFF`) higher current or voltage loads with a smaller controlling current or voltage. For instance, if we wanted to control a `6V` DC motor using a `3.3V` digital output on a Meadow board, we could use a transistor circuit that acts a sort of digital "switch" to allow `6V` from an external source to flow through the motor:
+
+![](../Support_Files/Transistor_as_Switch.svg){:standalone}
+
+### As an Amplifier
+
+However, transistors can be used for more than just switching, in fact, they can also be used in an analog way to "amplify" a control signal, by providing a gradient of control over a larger load using a smaller controlling signal. So for instance, not only can you switch `ON` a DC motor, but you could potentially set it to `60%` power.
+
+[diagram]
+
+This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and to a lesser degree, capacitors (which we'll dive into later).
+
+## MOSFETs and BJTs
+
+While Wikipedia lists [52 different types of transistors](https://en.wikipedia.org/wiki/Category:Transistor_types?sa=X&ved=0ahUKEwiMvbG4l8zhAhWBsJ4KHdwtBvUQ1i8IJzAh), there are really only two types of transistors that are commonly used in modern digital circuits, _MOSFETs_, and _BJTs_.
+
+* **MOSFET** = Metal-Oxide Semiconductor Field-Effect Transistor
+* **BJT** = Bipolar Junction Transistor
+
+Both are "transistors," however, BJTs are usually what people have historically thought of as transistors and have been used for over 70 years.
+
+BJTs are fine, but for modern circuits, we use MOSFETs for nearly everything. They're inherently more power efficient, because as we will learn, they operate on voltage, rather than current.
+
+<!-- Bell Labs created the first MOSFET in 1959 -->
+
+Due to the way they work, they're also far better at handling larger current loads while wasting less energy as heat. As such; when working with larger current loads, you'll almost always want to use a MOSFET.
+
+<!--
+### GaNFET
+
+There's another 
+-->
+
+## Transistor Uses
+
+[name some of the useful things we do with transistors; controlling motors, relays, fundamental building blocks of more complex circuits, etc.]
+
+## Anatomy; Base, Collector, Emitter/Gate, Source, Drain
+
+Whether BJT, MOSFET, or nearly any other type, transistors almost always have three legs and though they're called different things on a BJT or a MOSFET, they basically do the same thing:
+
+| Lead Function | MOSFET Name | BJT Name    |
+|---------------|-------------|-------------|
+| **Control**   | _Gate_      | _Base_      |
+| **Lead 1**    | _Source_    | _Collector_ |
+| **Lead 2**    | _Drain_     | _Emitter_   |
+
+The _gate_ or _base_ is the lead that controls current flow between the _source_ and _drain_ (on a MOSFET), or the _collector_ and _emitter_ on a BJT.
+
 
 * **`V`<sub>`c`</sub>** - Voltage at the Collector
 * **`i`<sub>`B`</sub>** - Current at Base
@@ -60,3 +117,6 @@ Mnemonics:
 ### Power Ratings
 
 <!-- ## [Next - Transistor Lab](../Transistor_Lab) -->
+[diagram of a few different three lead transistor packages]
+
+# [Next - Physics of MOSFETs](../MOSFET_Physics)
