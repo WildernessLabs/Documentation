@@ -7,6 +7,12 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ![Visual Studio Code Meadow Extension](wildernesslabs-meadow-vscode-extension.jpg)
 
+The Meadow developer Extension for Visual Studio Code enables projects to be built, debugged and deployed to any of our Meadow-powered devices.
+
+## Pre-requisites
+
+If you havent, download and Install [Visual Studio Code](https://visualstudio.microsoft.com/) to prepare your development machine.
+
 ## Installation
 
 1. In VSCode go to the Extensions tab (macOS: Cmd+Shift+X. Others: Ctrl+Shift+X)

@@ -7,6 +7,16 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ![Visual Studio Code Meadow Extension](wildernesslabs-meadow-vs-extension.jpg)
 
+The Meadow developer Extension for Visual Studio enables projects to be built, debugged and deployed to any of our Meadow-powered devices.
+
+## Pre-requisites
+
+If you havent already, download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+
+:::caution
+⚠️ **IMPORTANT**: Make sure to include the **.NET Multi-platform App UI development** component when installing Visual Studio.
+:::
+
 ## Installation
 
 You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) or through the Extension Manager
