@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Depltion-Mode MOSFETs
+title: Depletion-Mode MOSFETs
 ---
 
 
@@ -23,3 +23,4 @@ However, if you apply voltage to the `Gate`, now the field created between the t
 These types of MOSFETs are known as _Depletion Mode_ MOSFETs and using them is the exact same as _Enhancement Mode_ MOSFETs, except that whether or not they conduct is opposite.
 
 Depletion Mode MOSFETs are particularly useful when the default state of a circuit should be to conduct (be `ON`), and only when voltage is applied to the Gate, does the circuit turn `OFF`.
+
