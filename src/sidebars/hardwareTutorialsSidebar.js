@@ -143,6 +143,8 @@ const hardwareTutorialsSidebar = [
             "Hardware/Tutorials/Electronics/Part7/N-Channel_MOSFET/index",
             "Hardware/Tutorials/Electronics/Part7/N-Channel_MOSFET_Low-Side_Usage/index",
             "Hardware/Tutorials/Electronics/Part7/MOSFET_High-Side_Usage/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_Technical_Details/index",
+            "Hardware/Tutorials/Electronics/Part7/Depletion_MOSFETs/index",
             "Hardware/Tutorials/Electronics/Part7/Review/index",
           ],
         },

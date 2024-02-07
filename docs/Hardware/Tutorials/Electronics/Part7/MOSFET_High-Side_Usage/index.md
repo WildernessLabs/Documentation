@@ -55,5 +55,4 @@ The answer is simple, add an N-Channel MOSFET in front of the P-Channel MOSFET i
 
 When the N-Channel gate is pulled `LOW`, it's off, and nothing flows through it. When the gate is pulled `HIGH`, then electrons are allowed to flow from `GND` to the P-Channel gate, and it turns on, in turn, energizing the load!
 
-
-
+# [Next - MOSFET Technical Details.](../MOSFET_Technical_Details/)
