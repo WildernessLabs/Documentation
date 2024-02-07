@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: MOSFET Basics
+title: MOSFET Usage Basics
 subtitle: Using Metal-Oxide Semiconductor Field-Effect Transistors
 ---
 
@@ -15,13 +15,65 @@ There are two basic modes of operations for MOSFETs, which describes how they wo
  * **Enhancement** - By default, if no voltage is applied to the gate, the resistance between source and drain is at its highest, and therefore current will not flow.
  * **Depletion** - By default, if no voltage is applied to the gate, the resistance between source and drain is at the lowest, so current will flow.
 
-##
+## Gate to Source Voltage: Controlling a MOSFET
+
+`V`<sub>`gs`</sub>
+
+## N-Type vs. P-Type
+
+In addition to the mode, MOSFETs also come in two flavors of construction:
+ * N-TYPE
+
+
+
+
+![](../Support_Files/MOSFET-Symbol-TEMP.png)
+
+Mnemonics:
+
+* NPN = "Not pointing in."
+* PNP = "Points in proudly."
+
+# =======
+# OLD OLD
+# =======
 
 ### Parts
+
+![](../../Part6/Sketches/BJT_diagrams.png)
 
 * **Gate** - Like the base on a BJT. Controlling voltage lead.
 * **Drain** - 
 * **Source** - 
+
+## Anatomy; Base, Collector, Emitter/Gate, Source, Drain
+
+Whether BJT, MOSFET, or nearly any other type, transistors almost always have three legs and though they're called different things on a BJT or a MOSFET, they basically do the same thing:
+
+| Lead Function | MOSFET Name | BJT Name    |
+|---------------|-------------|-------------|
+| **Control**   | _Gate_      | _Base_      |
+| **Lead 1**    | _Source_    | _Collector_ |
+| **Lead 2**    | _Drain_     | _Emitter_   |
+
+The _gate_ or _base_ is the lead that controls current flow between the _source_ and _drain_ (on a MOSFET), or the _collector_ and _emitter_ on a BJT.
+
+
+* **`V`<sub>`c`</sub>** - Voltage at the Collector
+* **`i`<sub>`B`</sub>** - Current at Base
+* **`V`<sub>`BE`</sub>** - Voltage from Base to Emitter
+
+[Note: `VCC` comes from Common Voltage at all Collectors in an IC.]
+
+### Beta (β)
+
+Relationship between Base current and current flowing from Collector to Emitter.
+
+Also known as `HFE`.
+
+`I`<sub>`C`</sub> `= I`<sub>`B`</sub> `* β`
+
+
 
 ### Operation
 

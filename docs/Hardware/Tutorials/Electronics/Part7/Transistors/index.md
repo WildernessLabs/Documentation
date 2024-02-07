@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Transistors
+title: Introduction to Transistors
 ---
 
 ![](../Support_Files/Image_Common_Transistors.svg)
@@ -9,7 +9,7 @@ title: Transistors
 
 There is probably no singular component in electronics that is more important, or more prevalent in electronics than the transistor.
 
-The idea was first patented in 1926, but it wasn't until two decades later, in 1947, that the first actual transistor was created. Today, transistors are etched into chips by the billions and trillions and are the fundamental building block of nearly every piece of electronics we use.
+The idea was first patented in 1926, but it wasn't until two decades later, in 1947, that the first actual transistor was created. Today, transistors are etched into CPUs and other processors by the billions are the fundamental building block of nearly every piece of electronics we use.
 
 ### N-P-N + P-N-P Junctions
 
@@ -27,13 +27,17 @@ Effectively, that applying current there serves as a gate between the two ends, 
 
 Fundamentally, transistors are essentially just that.
 
-Jumping ahead a bit, we can see how this would work: as current is applied to the _Gate_ in the middle, it can push or repel charges away, creating a region where the charges can move between the _source_ and the _drain_:
+## N-Channel MOSFET
+
+Jumping ahead a bit and taking at look at probably the most commonly used transistor in existence, the N-Channel MOSFET, we can see how this would work from a concrete perspective. As positive voltage is applied to the _Gate_ in the middle, it attracts the minority negative charges in the P-Type section, causing a _channel_ between the _source_ and _drain_ where the charges can cross and electricity flows:
 
 ![](../Support_Files/MOSFET_Gate_Voltage.svg)
 
+[**Note** - Switch sides of Source and Drain, add an _insulation_ label to brown bit.]
+
 ## Operation
 
-One of the interesting behaviors of transistors is that they can act both as an electronic switch, and as a signal amplifier:
+One of the interesting behaviors of transistors is that they can act both as an electronic switch, and as a signal amplifier.   
 
 ### As a Logical Switch
 
@@ -80,19 +84,15 @@ This means that MOSFETs are much more power efficent.
 
 Due to the way they work, they're also far better at handling larger current loads while wasting less energy as heat. As such; when working with larger current loads, you'll almost always want to use a MOSFET.
 
+Let's dive into the physics of how MOSFETs work, which will help us understand how to use them.
 
-
-
-
-
-
-### PNP and NPN
+# [Next - Physics of N-Channel MOSFETs](../N-Channel_MOSFET)
 
 <!-- TODO: ### Forward Voltage -->
 
 <!-- TODO: [Still have to overcome the  -->
 
-
+<!--
 
 ### Base, Collector, Emitter
 
@@ -101,14 +101,14 @@ Due to the way they work, they're also far better at handling larger current loa
 
 [diagram]
 
-
+-->
 
 <!--
 ### GaNFET
 
 There's another 
 -->
-
+<!--
 ## Transistor Uses
 
 [name some of the useful things we do with transistors; controlling motors, relays, fundamental building blocks of more complex circuits, etc.]
@@ -148,8 +148,6 @@ Mnemonics:
 * PNP = "Points in proudly."
 
 ### Power Ratings
+-0>
 
 <!-- ## [Next - Transistor Lab](../Transistor_Lab) -->
-[diagram of a few different three lead transistor packages]
-
-# [Next - Physics of MOSFETs](../MOSFET_Physics)

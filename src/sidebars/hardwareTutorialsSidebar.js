@@ -140,9 +140,8 @@ const hardwareTutorialsSidebar = [
           },
           items: [
             "Hardware/Tutorials/Electronics/Part7/Transistors/index",
-            "Hardware/Tutorials/Electronics/Part7/MOSFET_Physics/index",
-            "Hardware/Tutorials/Electronics/Part7/MOSFET_Basics/index",
-            "Hardware/Tutorials/Electronics/Part7/MOSFET_Low-Side_Usage/index",
+            "Hardware/Tutorials/Electronics/Part7/N-Channel_MOSFET/index",
+            "Hardware/Tutorials/Electronics/Part7/N-Channel_MOSFET_Low-Side_Usage/index",
             "Hardware/Tutorials/Electronics/Part7/MOSFET_High-Side_Usage/index",
             "Hardware/Tutorials/Electronics/Part7/Review/index",
           ],
