@@ -86,7 +86,7 @@ The function that they serve depends on how they are configured when a _port_ is
 When working with IO in Meadow, there are three different terms/concepts to be aware of:
 
 * **[IPin](/docs/api/Meadow/Meadow.Hardware/IPin/)** - Represents a physical connection point on a device, such as pin `D01`.
-* **[IPort](/docs/api/Meadow/Meadow.Hardware/IPort/)** - Represents the underlying IO feature that allows communication, such as a `Meadow.Hardware.DigitalInputPort` which reads digital input signals on a particular pin.
+* **[IPort](/docs/api/Meadow/Meadow.Hardware/IPort%60C%60/)** - Represents the underlying IO feature that allows communication, such as a `Meadow.Hardware.DigitalInputPort` which reads digital input signals on a particular pin.
 * **[IChannelInfo](/docs/api/Meadow/Meadow.Hardware/IChannelInfo/)** - Describes the capabilities of a particular pin or port, for instance, whether or not a pin supports digital interrupts (a notification when the state changes).
 
 ### `IIOController`
