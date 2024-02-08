@@ -359,7 +359,7 @@ A bug in msbuild is causing `System.Net.Http.dll` to not copy to the Output Dire
 
 #### Manual Update Instructions
 
-First, go to the [Downloads page](http://developer.wildernesslabs.co/Meadow/Getting_Started/Downloads/) and download the Beta 4.0 Meadow.OS binaries, the Beta 4.0 CLI, and the Meadow network binaries.
+Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get the latest Meadow.OS binaries, the beta CLI, and the Meadow network binaries.
 
 Unzip everything to a common folder, the instructions below assume the OS and network binaries are in the same folder and the CLI is in a `Meadow.CLI` subfolder relative to the OS binaries.
 

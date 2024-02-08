@@ -196,7 +196,7 @@ Beta 3.11 is a major release that brings a pile of stabilizations and fixes acro
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Meadow.OS Changes
 
@@ -234,7 +234,7 @@ Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` a
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Additional Free Serial Port
 
@@ -267,7 +267,7 @@ This release includes bug fixes and performance improvements in several drivers.
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### New Features & Changes
 
@@ -303,7 +303,7 @@ This is another point release but it gets us another step closer to `b4.0`. The 
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Bug Fixes
 
@@ -339,7 +339,7 @@ Though this is a point release, it's actually cut from the `b4.0` work, and repr
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Performance Improvements
 
@@ -503,7 +503,7 @@ We've updated and standardized all of the sample projects in Meadow.Foundation t
 
 ### Updating
 
-You'll need to flash new Meadow.OS binaries to your device, upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. All files can be found on the [downloads](/Meadow/Getting_Started/Downloads/) page.
+You'll need to flash new Meadow.OS binaries to your device, upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ## Beta 3.5
 
