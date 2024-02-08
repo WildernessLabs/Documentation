@@ -1,5 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+const math = require("remark-math");
+const katex = require("rehype-katex");
 
 const themeConfig = require("./docusaurus-config/theme-config");
 const getTopNav = require("./docusaurus-config/nav");
@@ -76,6 +78,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/WildernessLabs/Documentation/tree/main/",
           routeBasePath: "/", // <-- removes "docs" from url
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
@@ -91,6 +95,15 @@ const config = {
         },
       }),
     ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig,
