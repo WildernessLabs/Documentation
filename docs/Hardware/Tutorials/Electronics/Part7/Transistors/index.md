@@ -3,6 +3,8 @@ layout: ElectronicsTutorial
 title: Introduction to Transistors
 ---
 
+**Note** - This chapter is in beta and not quite done yet.
+
 ![](../Support_Files/Image_Common_Transistors.svg)
 
 ## Amplifiers, switches, and the fundamental building blocks of modern electronics.
