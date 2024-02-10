@@ -187,7 +187,7 @@ const meadowOsSidebar = [
       "Meadow/Meadow.OS/Bluetooth/index",
       {
         type: "category",
-        label: "Core-Compute Module",
+        label: "Configuration",
         link: {
           type: "doc",
           id: "Meadow/Meadow.OS/Configuration/index",
