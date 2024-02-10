@@ -1,9 +1,9 @@
-name: "[prod] Publish static site"
+name: "[sandbox] Publish static site"
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
+  pull_request:
+    branches: [ "develop" ]
 
 permissions:
   id-token: write
@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: prod
+    environment: sandbox
     steps:
       # Clone current repo
       - name: Checkout
@@ -163,7 +163,7 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
 
-      # Let's put the api files where they belong
+      # Let's put the api files where they belong, and also fix 
       - name: Copy api files to content locations
         working-directory: ./src
         run: |
@@ -197,13 +197,13 @@ jobs:
           overwrite: 'true'
           #sync: 'true'
 
-      # Purge Azure Front Door Cache
-      - name: Log into Azure        
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: Purge Cache
-        run: |
-              az afd endpoint purge -g ${{ vars.RESOURCE_GROUP }} --profile-name ${{ vars.AFD_PROFILE_NAME }} --domains ${{ vars.AFD_DOMAINS }} --content-paths '/*' --endpoint-name ${{ vars.AFD_ENDPOINT_NAME }}
+      # # Purge Azure Front Door Cache
+      # - name: Log into Azure        
+      #   uses: azure/login@v1
+      #   with:
+      #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
+      #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+      #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      # - name: Purge Cache
+      #   run: |
+      #         az afd endpoint purge -g ${{ vars.RESOURCE_GROUP }} --profile-name ${{ vars.AFD_PROFILE_NAME }} --domains ${{ vars.AFD_DOMAINS }} --content-paths '/*' --endpoint-name ${{ vars.AFD_ENDPOINT_NAME }}

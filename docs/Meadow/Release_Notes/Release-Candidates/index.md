@@ -597,7 +597,16 @@ To put your Meadow into a low-power Sleep state, use the following call:
 
 `Device.PlatformOS.Sleep(TimeSpan.FromSeconds(5));`
 
-**Known Issue**: When waking from Sleep, if your application attempts to write to the `Console` within less than approximately 3 seconds, the underlying serial connection will not be available and the application will halt.  For this reason, we recommend adding a `Thread.Sleep(3000);` immediately after any call to `Sleep()` or at the top of any `Device.PlatformOS.AfterWake` handler.
+**Known Issue**: When waking from sleep, if your application attempts to write to the `Console` within less than approximately half a second, the underlying serial connection will not be available and the application will get stuck. For this reason, we recommend adding a `Thread.Sleep(500);` immediately after any call to `Sleep()` or at the top of any `Device.PlatformOS.AfterWake` handler.
+
+```csharp
+Device.PlatformOS.AfterWake += () =>
+{
+    // RC1 known-issue workaround: small delay before logging to avoid app getting stuck.
+    Thread.Sleep(TimeSpan.FromMilliseconds(500));
+    Resolver.Log.Info("Device has returned from sleep mode");
+};
+```
 
 ### Reset API
 

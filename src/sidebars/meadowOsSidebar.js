@@ -162,6 +162,20 @@ const meadowOsSidebar = [
     ],
   },
   {
+    // Release Notes
+    type: "category",
+    label: "Meadow Tools",
+    link: {
+      type: "doc",
+      id: "Meadow/Meadow_Tools/index",
+    },
+    items: [
+      "Meadow/Meadow_Tools/Meadow.CLI/index",
+      "Meadow/Meadow_Tools/VSWin/index",
+      "Meadow/Meadow_Tools/VSCode/index"
+    ],
+  },
+  {
     // Meadow.OS
     type: "category",
     label: "Meadow.OS",
@@ -173,7 +187,7 @@ const meadowOsSidebar = [
       "Meadow/Meadow.OS/Bluetooth/index",
       {
         type: "category",
-        label: "Core-Compute Module",
+        label: "Configuration",
         link: {
           type: "doc",
           id: "Meadow/Meadow.OS/Configuration/index",
