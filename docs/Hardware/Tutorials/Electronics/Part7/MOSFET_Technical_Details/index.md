@@ -5,11 +5,17 @@ title: MOSFET Practical Details
 
 Now that we understand how to use both N-Channel and P-Channel MOSFETs in both Low-Side and High-Side switching circuits from a conceptual perspetive, let's dig into the technical specifications and practical details of MOSFETs that will aid us in finding appropriate parts when designing circuits.
 
+In this section we'll be looking at the [DMN2046UW](https://octopart.com/search?q=DMN2046UW) N-Channel MOSFET, which we use in a lot of our designs. You can find the datasheet [here](../Support_Files/DMN2046UW.pdf).
+
+## MOSFETs Fail Shorted
+
+It's important to select the right MOSFET for the job. Typically, when a MOSFET fails, it fails shorted, meaning that it will no longer switch off and will continuously conduct. This can be extremely dangerous, especially in situations where the MOSFET might control a motor or similar.
+
 ## Gate Sensitivity
 
 MOSFETs have notoriously sensitive gates to Electro-Static Discharges (ESD). This means that static buildup that hits the Gate can cause the MOSFET to fail. For this reason, many modern MOSFET designs have built in Transient-Voltage Suppression (TVS) diodes built in to the gate.
 
-For example, we use the [DMG1012UW](https://octopart.com/search?q=DMN2046UW) N-Channel MOSFET in a lot of our designs, and if you look at its symbol from the datasheet, it has a built-in TVS _gate protection diode_. 
+For example, if you look at the `DMN2046UW` symbol in its datasheet, it has a built-in TVS _gate protection diode_. 
 
 ![](../Support_Files/Protected_MOSFET.png)
 
@@ -26,7 +32,7 @@ There are a number of important parameters and ratings around the switching char
  * `Rds(on)`
  * `Id(max)`
 
-These ratings can be found in the MOSFET's datasheet and can also be used when searching for components on Octopart, Digikey, etc. Though, confusingly, they may not always be named exactly as above. Let's dive into each one of these, using images from the `DMG1012UW` datasheet.
+These ratings can be found in the MOSFET's datasheet and can also be used when searching for components on Octopart, Digikey, etc. Though, confusingly, they may not always be named exactly as above. 
 
 ### Maximum Voltage Ratings
 
@@ -77,51 +83,66 @@ You'll notice that the specifications are given at _Ambient Temperature_ (`Ta`) 
 
 This means, that these ratings are good for operations at room temperature, and are the maximum values the device can handle without the need for external cooling such as a heatsink. Many MOSFETs that are meant for switching large loads are designed with a built in plate that can be attached to a copper area on a PCB or a heatsink, and doing so will enable the MOSFET to dissipate more heat and carry a larger load.
 
-### `R`<sub>`ΘJA`</sub>
-
-Junction to ambient coefficient
-`X°C/Watt`
-
-## 
-
 ## Power Rating and Dissipation
 
+MOSFETs are so efficient that for logic control and the small loads typically found in IoT solutions, you rarely have to worry about their power rating.
+
+With that said, if you're switching large loads, it's good to take a look at the power rating fro your MOSFET and calculate whether it can dissipate enough heat without a heat sink or other cooling to not fail.
+
 ### Calculating the Maximum Power it can dissipate
+
+To calculate the amount of power a MOSFET can safely handle, you'll need the following information from the datasheet:
 
 * `P`<sub>`D`</sub> - Maximum it can dissipate without a heatsink.
 * `Max`<sub>`TJ`</sub> - Maxmimun junction temperature it can withstand (175°C for example)
 * `T`<sub>`A`</sub> - Ambient temperature.
-* Thermal Resistance
+* `R`<sub>`ΘJA`</sub> - Junction to ambient coefficient. Typically specific in `°C` per `Watt`.
 
-Equation:
+These specs are usually found in a **Thermal Characteristics** section:
+
+![](../Support_Files/MOSFET_Datasheet_Thermal_Characteristics.png)
+
+In the case with the table above, two different sets of ratings are given, depending on the PCB composition that it's mounted on. In this case, if it's on a PCB with a heavy copper pour (`2oz` vs. a typical `1oz` thickness) with a large pad, it can dissipate heat much more efficiently:
+
+![](../Support_Files/MOSFET_Datasheet_Thermal_Notes.png)
+
+#### Thermal Dissipation Equation
+
+The equation to determine power dissipation is as follows:
+
 `P`<sub>`D`</sub> = (`Max`<sub>`TJ`</sub> - `T`<sub>`A`</sub>) / `R`<sub>`ΘJA`</sub>
+
+So for example, given our MOSFET mounted on just a normal PCB with a standard footprint:
 
 Example:
 ```
-Pd = (175°C - 25°C) / (62.5°C/Watt)
-Pd = 150/62.5
-Pd = 2.5Watts
+Pd = (150°C - 25°C) / (266°C/Watt)
+Pd = 125/266
+Pd = 0.47Watts or 470mW
 ```
 
-Then calculate the power you'll actually use:
+Therefore, the MOSFET can safely dissipate up to `0.47W` without any special considerations.
 
-Recall power law is `P = RI^2`
+#### Calculating Load Power
 
-`P = R`<sub>`DS(ON)`</sub>`* I^2`
-
-Where `I` is the current your load will draw.
-
-For example, if your MOSFET `RDS`<sub>`(ON)`</sub> is `20mΩ` and your load draws `2A` of current:
+To calculate how much power your load will use, recall from [Part 4](/Hardware/Tutorials/Electronics/Part4/Resistor_Power_Rating/) that the power law is:
 
 ```
-Power = 20mΩ * 2A^2
-P = 20mΩ * 4A
-P = 40mW
+P = RI^2
 ```
 
-`40mW` is way less than `2.5W`, therefore, no heat sink needed.
+In this case, resistance is `R`<sub>`DS(ON)`</sub>, and `I` is the amount of current your load will draw.
 
-Also a maximum power dissipation assuming you can keep it to x°
+So for example, if your `RDS`<sub>`(ON)`</sub> is `50mΩ` and your load draws `1A` of current:
+
+```
+P = Rds(on) * I^2
+Power = 50mΩ * 1A^2
+P = 50mΩ * 1A
+P = 50mW
+```
+
+In this case, `50mW` is considerably less than `470mW`, therefore, no heat sink or special considerations are needed.
 
 ## Packages
 
