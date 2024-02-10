@@ -52,3 +52,7 @@ Part 5 introduces two more laws that govern the behavior of electricity and expl
 Part 6 is the first chapter on semiconductors and introduces what semiconductors are, how they're made, and how they work. It then examines the simplest of semiconductor components, the diode, and dives into one of the most awesome diode components; the Light-Emitting-Diode (LED). Along the way, we learn about logic gates, AC to DC rectification/conversion, and more.
 
 ![](Part6/Support_Files/Logical_AND_OR_Gates.svg)
+
+### [Part 7 - Semiconductors Part 2: Transistors](Part7/Transistors)
+
+![](Part7/Support_Files/MOSFET_Gate_Double_Voltage.svg)

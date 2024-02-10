@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Part 6 - DC Circuit Basics
+title: Part 6 - Semiconductors Pt. 1 > Diodes
 ---
 
 Part 6 is the first chapter on semiconductors and introduces what semiconductors are, how they're made, and how they work. It then examines the simplest of semiconductor components, the diode, and dives into one of the most awesome diode components; the Light-Emitting-Diode (LED). Along the way, we learn about logic gates, AC to DC rectification/conversion, and more.

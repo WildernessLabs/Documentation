@@ -1,46 +1,23 @@
+---
+layout: ElectronicsTutorial
+title: Semiconductors Part 2 - The Transistor
+subtitle: Using Bi-polar Junction Transistors.
+---
+
 ## Semiconductors Part 2 - The Transistor
 
 ### Transistors: BJTs and MOSFETs
 
-* **BJT** = Bipolar Junction Transistor
-* **MOSFET** = Metal-Oxide Semiconductor Field-Effect Transistors
+## Forward Voltage
 
-Both are "transistors," however, BJTs are usually what people have historically thought of as transistors. They're the original transistor design and have been used for 70+ years. 
-
-BJTs are fine, but for modern circuits, we use MOSFETs for nearly everything. They're inherently more power efficient, because as we will learn, they operate on voltage, rather than current.
-
-Additionally, when working with larger current loads, you'll almost always want to use a MOSFET. 
-
-### The Basics
-
-Transistors act as logical switches or amplifiers. 
-
-#### As a Logical Switch
-
-Most often, we use transistors to digitally switch (logical `ON`/`OFF`) higher current or voltage loads with a smaller controlling current. For instance, if we wanted to control a `12V` DC motor  using the `3.3V` digital output on a Meadow board, we could use a transistor circuit that acts a sort of digital "switch" to allow `12V` from an external source to flow through the motor.
-
-[diagram]
-
-#### As an Amplifier
-
-However, transistors can be used for more than just switching, in fact, they can also be used in an analog way to "amplify" a control signal, so that instead of just `ON` or `OFF`, it can be used to provide a gradient  of control over a large load using a small controlling signal. Son for instance, not only can you switch `ON` that DC motor, but you could potentially set it to `60%` power.
-
-[diagram]
-
-This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and to a lesser degree, capacitors (which we'll dive into later).
+[Still have to overcome the 
 
 
-#### Physical Configuration
 
-Transistors almost always have three leads, and though they're called different things on a BJT and a MOSFET, they basically do the same thing:
 
-| Lead Function | MOSFET Name | BJT Name  |
-|---------------|-------------|-----------|
-| Control       | Gate        | Base      |
-| High Side     | Source      | Collector |
-| Low Side      | Drain       | Emitter   |
 
-[diagrams of MOSFETs and BJTs]
+ 
+
 
 ### Types N-Channel/NPN & P-Channel/PNP
 
@@ -101,6 +78,7 @@ NPN
 #### Mnemonic
 
 NPN = **N**ever **P**oints i**N**.
+* PNP = "Points in proudly."
 
 
 
@@ -159,6 +137,8 @@ MOSFETs are variable resistors. So in high-current situations, you may need a he
 
 `R`<sub>`DS`</sub> * `I`<sup>`2`</sup>
 
-## Example Sources
+# Example Sources + Labs
+
+* [transistor optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
 
 * [Hackster Motor Speed Control with Transistor](https://www.hackster.io/Marcazzan_M/motor-speed-control-with-one-transistor-0921a8)
