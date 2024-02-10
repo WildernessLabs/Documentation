@@ -145,6 +145,7 @@ const hardwareTutorialsSidebar = [
             "Hardware/Tutorials/Electronics/Part7/MOSFET_High-Side_Usage/index",
             "Hardware/Tutorials/Electronics/Part7/MOSFET_Technical_Details/index",
             "Hardware/Tutorials/Electronics/Part7/Depletion_MOSFETs/index",
+            "Hardware/Tutorials/Electronics/Part7/Motor_Control_Lab/index",
             "Hardware/Tutorials/Electronics/Part7/Review/index",
           ],
         },

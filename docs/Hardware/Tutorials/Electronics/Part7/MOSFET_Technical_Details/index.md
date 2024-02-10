@@ -146,7 +146,14 @@ In this case, `50mW` is considerably less than `470mW`, therefore, no heat sink 
 
 ## Packages
 
-* **PTH** - 
-* **SMT** - [Small Outline Transistor (SOT)](https://en.wikipedia.org/wiki/Small-outline_transistor)
+The final consideration when choosing MOSFETs is how the component is physically enclosed, also known as the package.
+
+Like most components, MOSFETs come in through-hole (PTH) and surface mount (SMT) designs. However, very few small-signal (logic-level) MOSFETs are actually made in a PTH package.
+
+By far the most common SMT package type that MOSFETs are available in is the [Small Outline Transistor (SOT)](https://en.wikipedia.org/wiki/Small-outline_transistor).
+
+![](../Support_Files/SOT23.png)
+
+`SOT23` is probably the most common package you'll find them in, but if you need something smaller but still large enough to assemble by hand, the `SOT323` is also a good choice.
 
 # [Next - Depletion Mode MOSFETs.](../Depletion_MOSFETs)

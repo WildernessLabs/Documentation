@@ -10,3 +10,4 @@ Create a motor control circuit that builds on everything we've learned up until 
 * Flywheel diode
 * LED Power Indicator
 
+# [Next - Part 7 Review.](../Review/)

@@ -24,3 +24,4 @@ These types of MOSFETs are known as _Depletion Mode_ MOSFETs and using them is t
 
 Depletion Mode MOSFETs are particularly useful when the default state of a circuit should be to conduct (be `ON`), and only when voltage is applied to the Gate, does the circuit turn `OFF`.
 
+# [Next - MOSFET Motor Control Lab.](../Motor_Control_Lab/)
