@@ -1,6 +1,6 @@
 ---
 layout: ElectronicsTutorial
-title: Part 7.02 - Semiconductors > Transistors
+title: Part 7 - Semiconductors Pt. 2 > Transistors
 ---
 
 **Note** - This part is in beta and not quite done yet.
