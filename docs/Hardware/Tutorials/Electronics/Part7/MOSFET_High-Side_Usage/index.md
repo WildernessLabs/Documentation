@@ -37,6 +37,8 @@ Bringing negatively charged electrons wouldn't open the N-Channel necessary for 
 
 ## P-Channel MOSFET
 
+![](../Support_Files/P-Channel_MOSFET_Symbol.png)
+
 For this reason, we need to invert the construction of the N-Channel MOSFET, which is exactly what a P-Channel MOSFET does. It uses a negative charge at the Gate to bring the postively charged, minority charge carriers (holes) into the P-Channel to conduct:
 
 ![](../Support_Files/P-Channel_MOSFET.png)

@@ -66,7 +66,6 @@ This means that MOSFETs are much more power efficent.
 
 Due to the way they work, they're also far better at handling larger current loads while wasting less energy as heat. As such; when working with larger current loads, you'll almost always want to use a MOSFET.
 
-
 ## Operation
 
 One of the interesting behaviors of transistors is that they can act both as an electronic switch, and as a signal amplifier.   
@@ -145,12 +144,7 @@ Also known as `HFE`.
 
 `I`<sub>`C`</sub> `= I`<sub>`B`</sub> `* β`
 
-### NPN and PNP
 
-Mnemonics:
-
-* NPN = "Not pointing in."
-* PNP = "Points in proudly."
 
 ### Power Ratings
 -0>

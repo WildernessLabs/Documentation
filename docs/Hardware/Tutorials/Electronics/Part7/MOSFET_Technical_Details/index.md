@@ -7,6 +7,17 @@ Now that we understand how to use both N-Channel and P-Channel MOSFETs in both L
 
 In this section we'll be looking at the [DMN2046UW](https://octopart.com/search?q=DMN2046UW) N-Channel MOSFET, which we use in a lot of our designs. You can find the datasheet [here](../Support_Files/DMN2046UW.pdf).
 
+### N-Channel vs. P-Channel Symbols
+
+N-Channel and P-Channel MOSFETs have slightly different symbols, with the arrow pointing in or out, depending on the channel type:
+
+![](../Support_Files/Ehancement_MOSFET-Symbol.png)
+
+To remember which is which, the following nemonic is useful:
+
+* **N-Channel/NPN** = "Not Pointing iN."
+* **P-Channel/PNP** = "Points iN Proudly."
+
 ## MOSFETs Fail Shorted
 
 It's important to select the right MOSFET for the job. Typically, when a MOSFET fails, it fails shorted, meaning that it will no longer switch off and will continuously conduct. This can be extremely dangerous, especially in situations where the MOSFET might control a motor or similar.

@@ -4,6 +4,8 @@ title: N-Channel MOSFET Physics
 subtitle: Understanding the atomic operation of Metal-Oxide Semiconductor Field-Effect Transistors.
 ---
 
+![](../Support_Files/N-Channel_MOSFET_Symbol.png)
+
 ## Components of a MOSFET
 
 In order to understand how MOSFETs work, we need to look at their construction. Consider the following simplified cross-section of one of the most commonly used MOSFETs; an _N-Channel_, _depletion mode_ MOSFET:
@@ -37,7 +39,5 @@ One of the things that makes MOSFETs so power efficient is that because there is
 ### Saturation
 
 However, once a certain threshold of charge carriers have been attracted to the area, it becomes _saturated_ and adding more voltage won't enable any more current to flow.
-
-
 
 # [Next - Using an N-Channel as a Low-Side switch.](../N-Channel_MOSFET_Low-Side_Usage)
