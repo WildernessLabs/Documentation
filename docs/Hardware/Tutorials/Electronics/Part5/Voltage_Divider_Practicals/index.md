@@ -6,7 +6,7 @@ subtitle: Uses and practical considerations when using voltage dividers.
 
 ## Common Uses
 
-Voltage divider circuits have a variety of uses, but for the type of practical circuitry that we're concerned with, they serve two primary functions: reading resistive sensors and analog level shifting.
+Voltage divider circuits have a variety of uses, but for the type of practical circuitry that we're concerned with, they **serve two primary functions: reading resistive sensors and analog level shifting**.
 
 
 ### Reading Resistive Sensors
