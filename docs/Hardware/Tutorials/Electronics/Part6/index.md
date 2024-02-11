@@ -17,4 +17,4 @@ Part 6 is the first chapter on semiconductors and introduces what semiconductors
 * [Chapter 8. - Diode Logic Gate Lab](Diode_Logic_Lab/)
 * [Part 6 Review](Review/)
 
-## Part 7 - Semiconductors, Part 2: FETs (Coming Soon!)
+## [Part 7 - Semiconductors, Part 2: Transistors](../Part7/)
