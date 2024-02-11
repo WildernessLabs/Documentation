@@ -37,6 +37,36 @@ Jumping ahead a bit and taking at look at probably the most commonly used transi
 
 [**Note** - Switch sides of Source and Drain, add an _insulation_ label to brown bit.]
 
+## MOSFETs vs. BJTs
+
+While Wikipedia lists [52 different types of transistors](https://en.wikipedia.org/wiki/Category:Transistor_types?sa=X&ved=0ahUKEwiMvbG4l8zhAhWBsJ4KHdwtBvUQ1i8IJzAh), there are really only two types of transistors that are commonly used in modern digital circuits, _MOSFETs_, and _BJTs_.
+
+* **MOSFET** = Metal-Oxide Semiconductor Field-Effect Transistor
+* **BJT** = Bipolar Junction Transistor
+
+Both are "transistors," however, BJTs are usually what people have historically thought of as transistors and have been used for over 70 years.
+
+### MOSFETs = new hotness, BJTs = old and busted.
+
+If this tutorial were written just 10 years ago, it would likely have focused on BJTs, however, in modern digital circuits, MOSFETs have replaced BJTs for nearly everything. This is because of two reasons. 
+
+
+
+#### MOSFETs are _voltage_ devices.
+
+![](../Support_Files/Transistor_Water_Valves.png)
+
+First, MOSFETs operate on voltage, meaning that they act like a pressure switch, as voltage is applied, it controls the valve:
+
+BJTs on the other hand, operate on _current_, meaning that while voltage is applied to the gate to control curret flow, it actually uses the current through the gate!
+
+This means that MOSFETs are much more power efficent.
+
+#### MOSFETS handle large current loads better.
+
+Due to the way they work, they're also far better at handling larger current loads while wasting less energy as heat. As such; when working with larger current loads, you'll almost always want to use a MOSFET.
+
+
 ## Operation
 
 One of the interesting behaviors of transistors is that they can act both as an electronic switch, and as a signal amplifier.   
@@ -51,40 +81,13 @@ Most often, we use transistors to digitally switch (logical `ON`/`OFF`) higher c
 
 If you apply an intermediary amount of voltage, you can control how much current is let through. This pattern of usage is called _signal amplification_ because you're typically using a smaller signal (the controlling voltage to the gate) to control a large signal (the current between source and drain). So for instance, not only can you switch `ON` a DC motor, but you could potentially set it to `60%` power.
 
-[**could use a graph of two signals, on small, one large, with the larger one increasing exponentially over time in response to a gradually increasing control signal**]
+In this regard, BJTs are actually better for traditional analog circuit amplifiers because their control signal to switching behavior is linear, whereas MOSFETs have a logarithmic behavior, making it more difficult to have fine-grain control over the amplification.
+
+![](../Support_Files/Transitors_as_Amplifiers.png)
 
 ### Versatile Component
 
-This versatility makes transistors one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and capacitors (which we'll dive into later).
-
-## MOSFETs vs. BJTs
-
-While Wikipedia lists [52 different types of transistors](https://en.wikipedia.org/wiki/Category:Transistor_types?sa=X&ved=0ahUKEwiMvbG4l8zhAhWBsJ4KHdwtBvUQ1i8IJzAh), there are really only two types of transistors that are commonly used in modern digital circuits, _MOSFETs_, and _BJTs_.
-
-* **MOSFET** = Metal-Oxide Semiconductor Field-Effect Transistor
-* **BJT** = Bipolar Junction Transistor
-
-Both are "transistors," however, BJTs are usually what people have historically thought of as transistors and have been used for over 70 years.
-
-### MOSFETs = new hotness, BJTs = old and busted.
-
-If this tutorial were written just 10 years ago, it would likely have focused on BJTs, however, in modern digital circuits, MOSFETs have replaced BJTs for nearly everything. This is because of two reasons. 
-
-#### MOSFETs are _voltage_ devices.
-
-First, MOSFETs operate on voltage, meaning that they act like a pressure switch, as voltage is applied, it controls the valve:
-
-[**need water illustration of a pipe with a pressure valve**] 
-
-BJTs on the other hand, operate on _current_, meaning that while voltage is applied to the gate to control curret flow, it actually uses the current through the gate!
-
-[**need kind of a leaky valve illustration**]
-
-This means that MOSFETs are much more power efficent.
-
-#### MOSFETS handle large current loads better.
-
-Due to the way they work, they're also far better at handling larger current loads while wasting less energy as heat. As such; when working with larger current loads, you'll almost always want to use a MOSFET.
+The versatility and utility of transistors make them one of the most powerful and commonly used components in our circuit toolbox. In fact, most circuits are comprised of some combination of transistors, resistors, and capacitors (which we'll dive into later).
 
 Let's dive into the physics of how MOSFETs work, which will help us understand how to use them.
 
