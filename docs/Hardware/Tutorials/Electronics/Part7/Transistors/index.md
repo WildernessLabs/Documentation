@@ -50,13 +50,11 @@ Both are "transistors," however, BJTs are usually what people have historically 
 
 If this tutorial were written just 10 years ago, it would likely have focused on BJTs, however, in modern digital circuits, MOSFETs have replaced BJTs for nearly everything. This is because of two reasons. 
 
-
-
 #### MOSFETs are _voltage_ devices.
 
 ![](../Support_Files/Transistor_Water_Valves.png)
 
-First, MOSFETs operate on voltage, meaning that they act like a pressure switch, as voltage is applied, it controls the valve:
+First, MOSFETs operate on voltage, meaning that they act like a pressure switch, as voltage is applied, it controls the valve.
 
 BJTs on the other hand, operate on _current_, meaning that while voltage is applied to the gate to control curret flow, it actually uses the current through the gate!
 

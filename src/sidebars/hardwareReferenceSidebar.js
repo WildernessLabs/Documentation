@@ -46,10 +46,32 @@ const hardwareReferenceSidebar = [
         type: "category",
         label: "Common Components",
         items: [
-          "Hardware/Reference/Components/Common/Resistors/index",
+          {
+            type: "category",
+            label: "Resistors",
+            link: {
+              type: "doc",
+              id: "Hardware/Reference/Components/Common/Resistors/index",
+            },
+            items: [
+              "Hardware/Reference/Components/Common/Resistors/Reading_Axial_Resistors/index",
+            ],
+          },
           "Hardware/Reference/Components/Common/Diodes/index",
           "Hardware/Reference/Components/Common/Capacitors/index",
-          "Hardware/Reference/Components/Common/Transistors/index",
+          {
+            type: "category",
+            label: "Transistors",
+            link: {
+              type: "doc",
+              id: "Hardware/Reference/Components/Common/Transistors/index",
+            },
+            items: [
+              "Hardware/Reference/Components/Common/Transistors/Low-Side_MOSFET_Circuit/index",
+              "Hardware/Reference/Components/Common/Transistors/High-Side_MOSFET_Circuit/index",
+              "Hardware/Reference/Components/Common/Transistors/MOSFET_Technical_Details/index",
+            ],
+          },
         ],
       },
       "Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
