@@ -89,9 +89,9 @@ const hardwareReferenceSidebar = [
           },
         ],
       },
-      "Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
+      //"Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
       "Hardware/Printed_Circuit_Boards_PCBs/Components/Packages_and_Sizes/index",
-      "Hardware/Printed_Circuit_Boards_PCBs/Components/Symbols_and_Footprints/index",
+      //"Hardware/Printed_Circuit_Boards_PCBs/Components/Symbols_and_Footprints/index",
     ],
   },
   {
