@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+      {
+        "type": "Microsoft.Network/frontDoors",
+        "apiVersion": "2020-05-01",
+        "name": "afd-docs-stg-cus",
+        "location": "global",
+        "properties": {
+          "routingRules": [
+            {
+              "name": "r1_test",
+              "properties": {
+                "frontendEndpoints": [
+                  {
+                    "id": "[concat(resourceId('Microsoft.Network/frontDoors', 'afd-docs-stg-cus'), '/frontendEndpoints/afd-docs-stg-cus-f6dxbtbkajgdamau.z03.azurefd.net')]"
+                  }
+                ],
+                "acceptedProtocols": ["Http", "Https"],
+                "patternsToMatch": ["/Tesst/*"],
+                "routeConfiguration": {
+                  "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                  "redirectType": "Found",
+                  "redirectProtocol": "HttpsOnly",
+                  "customPath": "/Magic/"
+                },
+                "enabledState": "Enabled"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
