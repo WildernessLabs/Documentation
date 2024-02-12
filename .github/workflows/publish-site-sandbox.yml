@@ -210,5 +210,5 @@ jobs:
       - name: Upload redirects
         working-directory: ./src/.github/workflows/ci
         run: |
-              az deployment group create --resource-group ${{ vars.RESOURCE_GROUP }} --template-file redirects.json
+              az deployment group create --resource-group General --template-file redirects.json
 
