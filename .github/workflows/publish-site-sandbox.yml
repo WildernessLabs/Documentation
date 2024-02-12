@@ -208,7 +208,7 @@ jobs:
       #   run: |
       #         az afd endpoint purge -g ${{ vars.RESOURCE_GROUP }} --profile-name ${{ vars.AFD_PROFILE_NAME }} --domains ${{ vars.AFD_DOMAINS }} --content-paths '/*' --endpoint-name ${{ vars.AFD_ENDPOINT_NAME }}
       - name: Upload redirects
-        working-directory: ./ci
+        working-directory: ci
         run: |
               az deployment group create --resource-group ${{ vars.RESOURCE_GROUP }} --template-file redirects.json
 
