@@ -1,20 +1,60 @@
 const hardwareReferenceSidebar = [
   {
-    // Hardware Reference
+    // Electronics Basics
     type: "category",
-    label: "Hardware Reference",
+    label: "Electronic Fundamentals",
     items: [
-      "Hardware/index",
       {
         type: "category",
-        label: "Components",
+        label: "Voltage",
+        link: {
+          type: "doc",
+          id: "Hardware/Reference/Electronic_Fundamentals/Voltage/index",
+        },
         items: [
-          "Hardware/Printed_Circuit_Boards_PCBs/PCB_Stackups/index",
-          "Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
-          "Hardware/Printed_Circuit_Boards_PCBs/Components/Packages_and_Sizes/index",
-          "Hardware/Printed_Circuit_Boards_PCBs/Components/Symbols_and_Footprints/index",
+          "Hardware/Reference/Electronic_Fundamentals/Voltage/Division/index",
         ],
       },
+      "Hardware/Reference/Electronic_Fundamentals/Amperage/index",
+      "Hardware/Reference/Electronic_Fundamentals/Power/index",
+      {
+        type: "category",
+        label: "Resistance",
+        link: {
+          type: "doc",
+          id: "Hardware/Reference/Electronic_Fundamentals/Resistance/index",
+        },
+        items: [
+          "Hardware/Reference/Electronic_Fundamentals/Resistance/Parallel/index",
+          "Hardware/Reference/Electronic_Fundamentals/Resistance/Series/index",
+        ],
+      },
+      "Hardware/Reference/Electronic_Fundamentals/Ohms_Law/index",
+      "Hardware/Reference/Electronic_Fundamentals/Capacitance/index",
+    ],
+  },
+  {
+    // Components Basics
+    type: "category",
+    label: "Components",
+    link: {
+      type: "doc",
+      id: "Hardware/Reference/Components/Common/index",
+    },
+    items: [
+      {
+        type: "category",
+        label: "Common Components",
+        items: [
+          "Hardware/Reference/Components/Common/Resistors/index",
+          "Hardware/Reference/Components/Common/Diodes/index",
+          "Hardware/Reference/Components/Common/Capacitors/index",
+          "Hardware/Reference/Components/Common/Transistors/index",
+        ],
+      },
+      "Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
+      "Hardware/Printed_Circuit_Boards_PCBs/Components/Packages_and_Sizes/index",
+      "Hardware/Printed_Circuit_Boards_PCBs/Components/Symbols_and_Footprints/index",
     ],
   },
   {
@@ -34,41 +74,6 @@ const hardwareReferenceSidebar = [
           "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Ideal_PID_Algorithm/index",
           "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Standard_PID_Algorithm/index",
           "Hardware/Reference/Algorithms/Proportional_Integral_Derivative/Using_PID/index",
-        ],
-      },
-    ],
-  },
-  {
-    type: "category",
-    label: "Equations and Laws",
-    items: [
-      "Hardware/Reference/Units/Amps/index",
-      "Hardware/Reference/Units/Volts/index",
-      "Hardware/Reference/Units/Watts/index",
-
-      {
-        type: "category",
-        label: "Voltage",
-        link: {
-          type: "doc",
-          id: "Hardware/Reference/Equations_and_Laws/Voltage/index",
-        },
-        items: [
-          "Hardware/Reference/Equations_and_Laws/Voltage/Division/index",
-          "Hardware/Reference/Equations_and_Laws/Voltage/Ohms_Law/index",
-        ],
-      },
-
-      {
-        type: "category",
-        label: "Resistance",
-        link: {
-          type: "doc",
-          id: "Hardware/Reference/Equations_and_Laws/Resistance/index",
-        },
-        items: [
-          "Hardware/Reference/Equations_and_Laws/Resistance/Parallel/index",
-          "Hardware/Reference/Equations_and_Laws/Resistance/Series/index",
         ],
       },
     ],

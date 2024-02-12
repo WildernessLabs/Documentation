@@ -1,0 +1,4 @@
+---
+layout: Hardware
+title: Resistors
+---
