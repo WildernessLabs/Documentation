@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     environment: beta
     steps:
-      # # Clone current repo
-      # - name: Checkout
-      #   uses: actions/checkout@v3
-      #   with:
-      #     path: src
-      #     # ref: develop # <-- required to deploy beta docs
+      # Clone current repo
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: src
+          # ref: develop # <-- required to deploy beta docs
 
       # # npm install
       # - name: npm install
@@ -210,5 +210,5 @@ jobs:
       - name: Upload redirects
         working-directory: ./src
         run: |
-              az deployment group create --resource-group ${{ vars.RESOURCE_GROUP }} --template-file ./ci/redirects.json
+              az deployment group create --resource-group ${{ vars.RESOURCE_GROUP }} --template-file ./github/workflows/ci/redirects.json
 
