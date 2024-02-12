@@ -57,7 +57,22 @@ const hardwareReferenceSidebar = [
               "Hardware/Reference/Components/Common/Resistors/Reading_Axial_Resistors/index",
             ],
           },
-          "Hardware/Reference/Components/Common/Diodes/index",
+          {
+            type: "category",
+            label: "Diodes",
+            link: {
+              type: "doc",
+              id: "Hardware/Reference/Components/Common/Diodes/index",
+            },
+            items: [
+              "Hardware/Reference/Components/Common/Diodes/Light-Emitting_Diodes/index",
+              "Hardware/Reference/Components/Common/Diodes/Photodiodes/index",
+              "Hardware/Reference/Components/Common/Diodes/Power_Diodes/index",
+              "Hardware/Reference/Components/Common/Diodes/Schottky_Diodes/index",
+              "Hardware/Reference/Components/Common/Diodes/Small-Signal_Diodes/index",
+              "Hardware/Reference/Components/Common/Diodes/Zener_Diodes/index",
+            ],
+          },
           "Hardware/Reference/Components/Common/Capacitors/index",
           {
             type: "category",
