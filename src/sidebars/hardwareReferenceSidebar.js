@@ -1,10 +1,12 @@
 const hardwareReferenceSidebar = [
+  //"Hardware/Reference/index",
   {
     // Electronics Basics
     type: "category",
     label: "Electronic Fundamentals",
     link: {
       type: "doc",
+      //id: "Hardware/Reference/Electronic_Fundamentals/index",
       id: "Hardware/Reference/index",
     },
     items: [
