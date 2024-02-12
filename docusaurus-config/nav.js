@@ -9,7 +9,7 @@ let getTopNav = () => {
       label: "Meadow.Cloud",
     },
     {
-      href: "Hardware/",
+      href: "Hardware/Reference/",
       label: "Hardware Reference",
     },
     {
