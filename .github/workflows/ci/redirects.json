@@ -10,7 +10,7 @@
         "properties": {
           "routingRules": [
             {
-              "name": "r1_test",
+              "name": "r1Test",
               "properties": {
                 "frontendEndpoints": [
                   {
