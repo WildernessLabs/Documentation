@@ -29,7 +29,7 @@ dotnet tool update Wildernesslabs.Meadow.CLI --global
 Once installed, Meadow.CLI is accessible from a terminal prompt via the `meadow` command, and command arguments are passed via a fluent syntax, for instance, the following command will download the latest Meadow.OS:
 
 ```bash
-meadow download os
+meadow firmware download
 ```
 
 ## Enumerating Commands & Help
@@ -37,13 +37,13 @@ meadow download os
 This guide covers a few of the most common commands, but there are many more to explore. For a complete list of commands, execute the following from a terminal window:
 
 ```bash
-meadow -h
+meadow --help
 ```
 
-Additionally, you can get additional help information for any given command by passing `-h` as option to that command. For instance, the following will provide guidance on the `listen` command:
+Additionally, you can get additional help information for any given command by passing `--help` (or shortened to `-h`) as option to that command. For instance, the following will provide guidance on the `listen` command:
 
 ```bash
-meadow listen -h
+meadow listen --help
 ```
 
 ## Working with Ports
@@ -53,13 +53,13 @@ When a Meadow device is hooked up to a host computer, it exposes it communicates
 To list serial ports, execute the following:
 
 ```bash
-meadow list ports
+meadow port list
 ```
 
-You can then specify the port via the `-s` option when executing commands. For example, the following command will print application output on a specific port to the terminal:
+You can then configure the Meadow.CLI to use that port via the `config route` command when executing commands. For example, the following command will print application output on a specific port to the terminal:
 
 ```bash
-meadow listen -s /dev/tty.usbmodem336F336D30361
+meadow config route /dev/tty.usbmodem206A347653331
 ```
 
 You only need to specify the port once; all subsequent commands will remember the specified port.
@@ -77,7 +77,7 @@ meadow download os
 Once it's downloaded, it can be deployed to the device by executing the following:
 
 ```bash
-meadow flash os
+meadow firmware write
 ```
 
 ### Deploy a Meadow App
