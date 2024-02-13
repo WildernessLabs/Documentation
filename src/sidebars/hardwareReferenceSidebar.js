@@ -6,8 +6,8 @@ const hardwareReferenceSidebar = [
     label: "Electronic Fundamentals",
     link: {
       type: "doc",
-      //id: "Hardware/Reference/Electronic_Fundamentals/index",
-      id: "Hardware/Reference/index",
+      id: "Hardware/Reference/Electronic_Fundamentals/index",
+      //id: "Hardware/Reference/index",
     },
     items: [
       {
@@ -45,7 +45,7 @@ const hardwareReferenceSidebar = [
     label: "Components",
     link: {
       type: "doc",
-      id: "Hardware/Reference/Components/Common/index",
+      id: "Hardware/Reference/Components/index",
     },
     items: [
       {
@@ -95,9 +95,7 @@ const hardwareReferenceSidebar = [
           },
         ],
       },
-      //"Hardware/Printed_Circuit_Boards_PCBs/Components/Component_Search/index",
-      "Hardware/Printed_Circuit_Boards_PCBs/Components/Packages_and_Sizes/index",
-      //"Hardware/Printed_Circuit_Boards_PCBs/Components/Symbols_and_Footprints/index",
+      "Hardware/Reference/Components/Packages_and_Sizes/index",
     ],
   },
   {

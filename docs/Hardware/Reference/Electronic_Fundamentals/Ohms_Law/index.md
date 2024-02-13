@@ -1,6 +1,6 @@
 ---
 layout: Hardware
-title: OHM's Law
+title: Ohm's Law
 subtitle: The fundamental law of electricity.
 ---
 
