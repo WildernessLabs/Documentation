@@ -34,7 +34,7 @@ Therefore:
 
 ## Current
 
-This reveals another interesting fact about voltage division; the voltage drop in a circuit is determined by the ratio of resistances, not the overall resistance. Therefore, any resistor combination that fulfilled that ratio, would provide `3V` out. 
+This reveals another interesting fact about voltage division; **the voltage drop in a circuit is determined by the ratio of resistances, not the overall resistance**. Therefore, any resistor combination that fulfilled that ratio, would provide `3V` out. 
 
 Consider that if we took the exact same circuit as before (`R1 = 8Ω, R2 = 12Ω`), but this time used resistors that were 10x more resistive, we'd still get the same exact voltage drop:
 

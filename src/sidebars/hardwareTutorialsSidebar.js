@@ -130,6 +130,26 @@ const hardwareTutorialsSidebar = [
           ],
         },
 
+        {
+          // part 7
+          type: "category",
+          label: "7. - Semiconductors, Part 2: Transistors",
+          link: {
+            type: "doc",
+            id: "Hardware/Tutorials/Electronics/Part7/index",
+          },
+          items: [
+            "Hardware/Tutorials/Electronics/Part7/Transistors/index",
+            "Hardware/Tutorials/Electronics/Part7/N-Channel_MOSFET/index",
+            "Hardware/Tutorials/Electronics/Part7/N-Channel_MOSFET_Low-Side_Usage/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_High-Side_Usage/index",
+            "Hardware/Tutorials/Electronics/Part7/MOSFET_Technical_Details/index",
+            "Hardware/Tutorials/Electronics/Part7/Depletion_MOSFETs/index",
+            "Hardware/Tutorials/Electronics/Part7/Motor_Control_Lab/index",
+            "Hardware/Tutorials/Electronics/Part7/Review/index",
+          ],
+        },
+
         //"Hardware/Tutorials/Electronics/Part7/Transistors/index",
         //"Hardware/Tutorials/Electronics/PartY_Other_Components/index",
         // "Hardware/Tutorials/Electronics/Notes",

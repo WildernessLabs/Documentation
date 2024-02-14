@@ -21,7 +21,7 @@ Let's calculate the circuit, in a variety of configurations.
 
 ### Simple Resistance Sample Problems
 
-#### 1) Let's say we have a 1.5V battery, and the potentiometer set to 10ohms, how many amps will we have?
+#### 1) Let's say we have a `1.5V` battery, and the potentiometer set to `10Ω`, how many amps will we have?
 
 ```
 Given:
@@ -54,7 +54,7 @@ Power = 12V * 0.012A = .144W = 144mW
 ```
 
 
-#### 3) Now let's say that we have a 1.5v battery, and ammeter reads 15mA, how many ohms is the potentiometer set to?
+#### 3) Now let's say that we have a `1.5V` battery, and ammeter reads `15mA`, how many ohms is the potentiometer set to?
 
 ```
 Given: 
@@ -64,7 +64,7 @@ Therefore:
 R = 1.5/0.015A = 100Ω
 ```
 
-#### 4) What if we need to push 100mA through a 10Ω resistor, how much voltage would the battery need to have?
+#### 4) What if we need to push `100mA` through a `10Ω` resistor, how much voltage would the battery need to have?
 
 ```
 Given:

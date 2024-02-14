@@ -33,8 +33,8 @@ Given:
 I = V / R
 
 Therefore:
-I (at Resistor 1) = 12V / 10Ω = 1.2A
-I (at Resistor 2) = 12V / 1.5Ω = 8A
+I (at Resistor A-D) = 12V / 10Ω = 1.2A
+I (at Resistor B-C) = 12V / 1.5Ω = 8A
 ```
 
 Given Kirchhoff's current law which states the sum of currents entering a junction is equal to the sum of the currents leaving a junction, we can determine that the current entering junction `A` is equal to the amount of current flowing from `A -> D` plus `B -> C`:

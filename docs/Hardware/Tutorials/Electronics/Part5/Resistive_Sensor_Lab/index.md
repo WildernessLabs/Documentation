@@ -38,7 +38,12 @@ There are several major component supply websites that serve the majority of the
  * [Arrow](https://www.arrow.com)
  * [SparkFun](https://www.sparkfun.com)
  * [Adafruit](https://www.adafruit.com)
- * [Alibaba](https://www.alibaba.com)
+ * [AliExpress](https://www.aliexpress.com)
+
+Additionally, there are two **fantastic** sites that aggregate components, their prices, and their availability from many different suppliers and provide a powerful search inteface as well:
+
+ * [Octopart](https://octopart.com)
+ * [OEM Secrets](https://oemsecrets.com)
 
 #### Datasheets
 

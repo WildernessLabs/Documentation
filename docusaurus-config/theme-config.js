@@ -40,7 +40,7 @@ let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} *
       position: 'left',
     },
     {
-      to: "Hardware",
+      to: "Hardware/Reference",
       activeBaseRegex: '^/Hardware/((?!Tutorials|Fundamentals).)*$',
       sidebarId: 'hardwareReferenceSidebar',
       position: 'left',
