@@ -15,7 +15,17 @@ In addition to being able to be used from a terminal window, the `Meadow.CLI.Cor
 
 ## Installation and Updating
 
-`Meadow.CLI` can be installed via the `dotnet` tool from a nuget package at the terminal:
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+
+### Install .NET SDK
+
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
+### Install or update Meadow CLI
+
+To install Meadow.CLI, execute the following command in your console:
 
 ```console
 dotnet tool install WildernessLabs.Meadow.CLI --global
@@ -24,8 +34,68 @@ dotnet tool install WildernessLabs.Meadow.CLI --global
 To update, simply change the `install` keyword to `update`:
 
 ```console
-dotnet tool update Wildernesslabs.Meadow.CLI --global
+dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
+
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+
+### Install .NET SDK
+
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) for your Mac's processor architecture.
+
+Even if you are working on an ARM-based computer, such as Apple M1, M1 Pro, or M2 CPUs, you should still install the x86 version of the .NET SDK.
+
+### Install or update Meadow CLI
+To install Meadow CLI, execute the following command in your terminal:
+
+```console
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
+
+To update Meadow CLI, if already installed, execute the following command in your terminal:
+
+```console
+dotnet tool update WildernessLabs.Meadow.CLI --global
+```
+
+If you are working on an ARM-based Mac (M1, M1 Pro, M2 CPU), you will also need to explicitly add the x64 version of `libusb` and add an additional location to your `PATH` variable that aren't added by default on those systems.
+
+```console
+arch -x86_64 brew install libusb
+export PATH=/usr/local/share/dotnet/x64/:$PATH
+```
+
+
+   </TabItem>
+   <TabItem value="linux" label="Linux">
+
+
+Please note: Linux may require `sudo` to access USB devices.
+
+### Install .NET SDK
+
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
+### Install or update Meadow CLI
+To install Meadow CLI, execute the following command in your terminal:
+
+```console
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
+
+To update Meadow CLI, if already installed, execute the following command in your terminal:
+
+```console
+dotnet tool update WildernessLabs.Meadow.CLI --global
+```
+
+
+  </TabItem>
+</Tabs>
+
 
 ## Executing Commands
 

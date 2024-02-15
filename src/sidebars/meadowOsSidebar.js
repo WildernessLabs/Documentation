@@ -170,7 +170,7 @@ const meadowOsSidebar = [
       id: "Meadow/Meadow_Tools/index",
     },
     items: [
-      "Meadow/Meadow_Tools/Meadow.CLI/index",
+      "Meadow/Meadow_Tools/Meadow_CLI/index",
       "Meadow/Meadow_Tools/VSWin/index",
       "Meadow/Meadow_Tools/VSCode/index"
     ],

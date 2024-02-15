@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 sidebar_label: Deploy Meadow.OS
-title: Meadow.OS Deployment
+title: Deploying Meadow.OS
 subtitle: Flashing the Meadow with the latest OS via Meadow.CLI
 ---
 
@@ -10,48 +10,44 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows" default>
 
-### Install .NET SDK
+### Step 1 - Create a Wilderness Labs Account
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register). 
 
-### Install or update Meadow CLI
-To install Meadow CLI, execute the following command in your console:
+### Step 2 - Install Meadow.CLI
 
-```console
-dotnet tool install WildernessLabs.Meadow.CLI --global
-```
+The way we flash Meadow boards (among other things) is via our command-line-interface tool called [Meadow.CLI](../../Meadow_Tools/Meadow_CLI/). Make sure you have it installed to continue.
 
-To update Meadow CLI, if already installed, execute the following command in your console:
-
-```console
-dotnet tool update WildernessLabs.Meadow.CLI --global
-```
-
-### Install dfu-util
+### Step 3 - Install dfu-util
 From a console with admin rights, execute following command:
 
 ```console
 meadow install dfu-util
 ```
 
-### Put the device into DFU Bootloader mode.
-To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
+### Step 4 - Put the device into DFU Bootloader mode.
 
-**If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
+To flash your board with the latest OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
 
-**If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
+* **If the board is disconnected:** hold the `BOOT` button down and connect the board to your computer via a Micro USB Cable.
+
+* **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button. 
 
 ![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./wildernesslabs_meadow_boot_button.jpg)
 
-### Install Meadow USB drivers
+### Step 5 - Install Meadow USB drivers
+
+#### Checking Meadow USB drivers
 
 Before flashing a Meadow board, open the Device Manager and check:
-- When connecting the board while holding down the BOOT button to power it on in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
-- When connecting it normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
+- When the board is in **Bootloader mode** it should show up as a `STM32 BOOTLOADER` device under `Universal Serial Bus Devices` section.
+- When the board is connected normally it should show up as a `USB Serial Device (COMX)` under the `Ports (COM & LPT)` section
 
-![Meadow drivers shown in Bootloader and regular mode](meadow_driver_state.png)
+  ![Meadow drivers shown in Bootloader and regular mode](meadow_driver_state.png)
 
-If the board is in this state you can skip the next step and move on to the [Download Meadow OS and network binaries](#download-meadow-os-and-network-binaries).
+If the board is in this state you can head over to the next step.
+
+#### Updating Meadow USB drivers
 
 If Meadow shows as **Meadow F7 Micro (COMX)** in regular mode, right-click on it and select **Uninstall Device**, and make sure to select *Attempt to remove the driver for this device* like so:
 
@@ -65,20 +61,33 @@ Now to flash Meadow OS, *dfu-util* is recommended. However, the default Windows 
 1. Select **STM32 BOOTLOADER** in the dropdown
 1. Click *Replace Driver*
 
-    ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png)
+  ![Zadig showing STM32 Bootloader device selected and WinUSB driver chosen with a Replace Driver button.](./zadig1.png)
 
 1. After the installation is complete, driver should be *WinUSB*
 
-    ![Zadig showing the replaced driver as WinUSB with a Reinstall Driver button.](./zadig2.png)
+  ![Zadig showing the replaced driver as WinUSB with a Reinstall Driver button.](./zadig2.png)
 
-### Download Meadow OS and network binaries
-Execute the following command in your console:
+Your board is now ready to flash it with latest Meadow.OS version.
+
+### Step 6 - Log in to your Wilderness Labs account
+
+Use the following command to log into your Wilderness Labs Account:
+
+```console
+meadow login
+```
+
+This will open a web browser where you'll need to enter your account credentials. If successful, you'll receive a confirmation on the CLI.
+
+### Step 7 - Download Meadow.OS
+
+Now we can download the latest Meadow.OS binary files with the command:
 
 ```console
 meadow firmware download
 ```
 
-### Flash Meadow.OS and Coprocessor Firmware
+### Step 8 - Flash Meadow.OS
 
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your console:
 
