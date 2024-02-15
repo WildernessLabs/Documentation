@@ -27,20 +27,20 @@ const replacePatternInFile = async (dir, file) => {
       match.replace(`/${p1}`, "/")
     );
 
-    await fs.writeFile(filePath, result, "utf8");
-    console.log(`File updated: ${filePath}`);
+    // await fs.writeFile(filePath, result, "utf8");
+    // console.log(`File updated: ${filePath}`);
   } catch (err) {
     console.error(`Error processing file: ${filePath}`, err);
   }
   // END JOB 1
 
   // JOB 2
-  const pattern2 = /(?:\[(.*)\]\(..\/(.*)\)))/g;
+  const pattern2 = /(?:\[(.*)\]\(..\/(.*)\))/g;
   try {
     let data = await fs.readFile(filePath, "utf8");
 
     // Replacement logic adjusted for the specific regex
-    const result = data.replace(pattern2, (match, p1) => {
+    const result = data.replace(pattern2, (match, p1, p2) => {
       if(!p1.includes(p2)) return; //We are only interested in the broken ones
       const baseClass = p1.replace(`.${p2}`, "");
       const newString = `[${p1}](./${baseClass}/${p2})`;
@@ -48,8 +48,8 @@ const replacePatternInFile = async (dir, file) => {
       return newString;
     });
 
-    await fs.writeFile(filePath, result, "utf8");
-    console.log(`File updated: ${filePath}`);
+    // await fs.writeFile(filePath, result, "utf8");
+    // console.log(`File updated: ${filePath}`);
   } catch (err) {
     console.error(`Error processing file: ${filePath}`, err);
   }
