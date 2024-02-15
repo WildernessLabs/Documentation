@@ -1,11 +1,13 @@
 ---
 layout: Meadow
 sidebar_label: Hello, CCM DevKit
-title: Hello, Meadow Core-Compute Module (CCM) DevKit
+title: Hello, Meadow CCM DevKit
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-![](wildernesslabs_ccm_getting_started.jpg)
+![Meadow Core-Compute Module Dev Kit Getting Started Guide](wildernesslabs_ccm_getting_started.jpg)
+
+This guide shows you how to set up your [Meadow Core-Compute Module (CCM) DevKit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>

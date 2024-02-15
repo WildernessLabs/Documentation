@@ -5,7 +5,9 @@ title: Hello, Meadow F7 Feather
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-![](wildernesslabs_feather_getting_started.jpg)
+![Meadow F7 Feather Getting Started Guide](wildernesslabs_feather_getting_started.jpg)
+
+This guide shows you how to set up your [Meadow F7 Feather](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7-feather) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
