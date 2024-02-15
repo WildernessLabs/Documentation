@@ -7,7 +7,7 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ![Meadow Project Lab Getting Started Guide](wildernesslabs_projectlab_getting_started.jpg)
 
-This guide shows you how to set up your [Meadow Core-Compute Module (CCM) DevKit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
+This guide shows you how to set up your [Meadow Project Lab](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
