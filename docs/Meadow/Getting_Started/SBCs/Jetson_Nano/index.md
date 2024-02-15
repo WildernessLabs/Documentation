@@ -24,7 +24,7 @@ Open Visual Studio’s Extensions Manager and install the [VS Linux Debugger](ht
 
 Make sure you go through their Getting Started instructions to properly configure the target device (Jetson Nano) and how to use the extension to build and deploy the Meadow.Linux application over the network.
 
-### Step 4 - Create your first Meadow.Linux application
+### Step 4 - Create your first Meadow application
 
 In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Linux Jetson Nano App (Wilderness Labs)**:
 
@@ -32,7 +32,7 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 This is a minimal Meadow.Linux application that it'll output a few strings on a terminal to confirm the application is running correctly.
 
-### Step 5 - Deploy your application
+### Step 5 - Run a Meadow Application
 
 Once the application is deployed successfully, open a terminal on the Jetson Nano and go to inside the project's folder and type:
 
@@ -113,7 +113,7 @@ This Meadow.Linux application shows a basic Meadow app structure with an `Initia
 
 ![Raspberry Pi VS Code](wildernesslabs_raspberry_pi_vscode.png)
 
-### Step 5 - Run your application
+### Step 5 - Run a Meadow Application
 
 Lets run this application as is on your Raspberry Pi. In a terminal inside the project folder, build the project with the command:
 

@@ -22,7 +22,7 @@ Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for ei
 
 Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) Extension.
 
-### Step 4 - Create your first Meadow.Windows application
+### Step 4 - Create your first Meadow application
 
 In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Windows App (Wilderness Labs)**:
 
@@ -30,11 +30,17 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 This project creates a Meadow.Windows app that has a Windows Forms (WinForms) window showing a Hello World text using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md). 
 
-### Step 5 - Run a Meadow.Windows Application
+### Step 5 - Run a Meadow Application
 
 Right-click the new project and select **Set as Startup project**
 
 ![Meadow.Windows App running](wildernesslabs-meadow-windows-hello.jpg)
+
+### Step 6 - Check out additional samples
+
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
@@ -87,7 +93,7 @@ dotnet new WinForms -n WinFormsDemo
 
 This Meadow.Windows application opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
 
-### Step 5 - Deploy your application
+### Step 5 - Run a Meadow Application
 
 With no code changes, let's run this app on your machine. 
 
@@ -106,6 +112,12 @@ dotnet run
 A WinForm window should show up in the center of the screen saying `Hello, World`, like below:
 
 ![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
+
+### Step 6 - Check out additional samples
+
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
   </TabItem>
 </Tabs>
