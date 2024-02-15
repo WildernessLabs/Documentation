@@ -64,3 +64,31 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.ADCs.Mcp3xxx/Samples/Mcp3204_Sample)
 
+
+# Class Mcp3204
+MCP3204 Analog to Digital Converter (ADC)
+
+###### **Assembly**: Mcp3xxx.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.ADCs.Mcp3xxx/Driver/Drivers/Mcp3204.cs#L8)
+```csharp title="Declaration"
+public class Mcp3204 : Mcp3xxx, IAnalogInputController, IPinController, ISpiPeripheral, IDisposable
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.IOExpanders.Mcp3xxx](../Mcp3xxx)
+
+**Implements:**  
+`Meadow.Hardware.IAnalogInputController`, `Meadow.Hardware.IPinController`, `Meadow.Hardware.ISpiPeripheral`, `System.IDisposable`
+
+## Properties
+### Pins
+The pins
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.ADCs.Mcp3xxx/Driver/Drivers/Mcp3204.cs#L13)
+```csharp title="Declaration"
+public Mcp3204.PinDefinitions Pins { get; }
+```
+
+## Implements
+
+* `Meadow.Hardware.IAnalogInputController`
+* `Meadow.Hardware.IPinController`
+* `Meadow.Hardware.ISpiPeripheral`
+* `System.IDisposable`

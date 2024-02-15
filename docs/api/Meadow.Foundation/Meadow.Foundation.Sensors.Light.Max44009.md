@@ -77,3 +77,50 @@ It should look like the following diagram:
 
 
 
+
+# Class Max44009
+Driver for the Max44009 light-to-digital converter
+
+###### **Assembly**: Max44009.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Max44009/Driver/Max44009.Enums.cs#L3)
+```csharp title="Declaration"
+public class Max44009 : ByteCommsSensorBase<Illuminance>, IObservable<IChangeResult<Illuminance>>, ISamplingSensor<Illuminance>, ISensor<Illuminance>, ISensor, ISamplingSensor, IDisposable, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../ByteCommsSensorBase`UNIT`)
+
+**Implements:**  
+`System.IObservable<Meadow.IChangeResult<Meadow.Units.Illuminance>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Illuminance>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Illuminance>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `System.IDisposable`, `Meadow.Hardware.II2cPeripheral`
+
+## Properties
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Max44009/Driver/Max44009.cs#L16)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+## Methods
+### Initialize()
+Initialize the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Max44009/Driver/Max44009.cs#L32)
+```csharp title="Declaration"
+protected void Initialize()
+```
+### ReadSensor()
+Reads data from the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Light.Max44009/Driver/Max44009.cs#L41)
+```csharp title="Declaration"
+protected override Task<Illuminance> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<Meadow.Units.Illuminance>`: The latest sensor reading
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<Meadow.Units.Illuminance>>`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Illuminance>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Illuminance>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `System.IDisposable`
+* `Meadow.Hardware.II2cPeripheral`

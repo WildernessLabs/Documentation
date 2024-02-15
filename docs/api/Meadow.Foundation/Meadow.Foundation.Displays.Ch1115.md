@@ -50,3 +50,300 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Samples/Ch1115_Sample)
 
+
+# Class Ch1115
+Provide an interface to the Ch1115 family of displays
+
+###### **Assembly**: Ch1115.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.Enums.cs#L6)
+```csharp title="Declaration"
+public class Ch1115 : IGraphicsDisplay, ISpiPeripheral, IDisposable
+```
+**Implements:**  
+[Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay), `Meadow.Hardware.ISpiPeripheral`, `System.IDisposable`
+
+## Properties
+### ColorMode
+The display color mode - 1 bit per pixel monochrome
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L18)
+```csharp title="Declaration"
+public ColorMode ColorMode { get; }
+```
+### SupportedColorModes
+The Color mode supported by the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L23)
+```csharp title="Declaration"
+public ColorMode SupportedColorModes { get; }
+```
+### Width
+The display width in pixels
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L28)
+```csharp title="Declaration"
+public int Width { get; }
+```
+### Height
+The display height in pixels
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L33)
+```csharp title="Declaration"
+public int Height { get; }
+```
+### PixelBuffer
+The buffer the holds the pixel data for the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L38)
+```csharp title="Declaration"
+public IPixelBuffer PixelBuffer { get; }
+```
+### DefaultSpiBusSpeed
+The default SPI bus speed for the device
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L43)
+```csharp title="Declaration"
+public Frequency DefaultSpiBusSpeed { get; }
+```
+### SpiBusSpeed
+The SPI bus speed for the device
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L48)
+```csharp title="Declaration"
+public Frequency SpiBusSpeed { get; set; }
+```
+### DefaultSpiBusMode
+The default SPI bus mode for the device
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L57)
+```csharp title="Declaration"
+public SpiClockConfiguration.Mode DefaultSpiBusMode { get; }
+```
+### SpiBusMode
+The SPI bus mode for the device
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L62)
+```csharp title="Declaration"
+public SpiClockConfiguration.Mode SpiBusMode { get; set; }
+```
+### IsDisposed
+Is the object disposed
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L71)
+```csharp title="Declaration"
+public bool IsDisposed { get; }
+```
+## Fields
+### spiComms
+SPI Communication bus used to communicate with the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L76)
+```csharp title="Declaration"
+protected readonly ISpiCommunications spiComms
+```
+## Methods
+### InvertDisplay(bool)
+Invert the entire display (true) or return to normal mode (false).
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L137)
+```csharp title="Declaration"
+public void InvertDisplay(bool invert)
+```
+
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Boolean` | *invert* |
+
+### PowerSaveMode()
+Set display into power saving mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L152)
+```csharp title="Declaration"
+public void PowerSaveMode()
+```
+### SetContrast(byte)
+Set the display contrast
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L223)
+```csharp title="Declaration"
+public void SetContrast(byte contrast)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Byte` | *contrast* | The contrast value (0-63) |
+
+### Show()
+Send the internal pixel buffer to display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L259)
+```csharp title="Declaration"
+public void Show()
+```
+### Show(int, int, int, int)
+Update a region of the display from the offscreen buffer
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L281)
+```csharp title="Declaration"
+public void Show(int left, int top, int right, int bottom)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *left* | Left bounds in pixels |
+| `System.Int32` | *top* | Top bounds in pixels |
+| `System.Int32` | *right* | Right bounds in pixels |
+| `System.Int32` | *bottom* | Bottom bounds in pixels |
+
+### Clear(bool)
+Clear the display buffer
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L309)
+```csharp title="Declaration"
+public void Clear(bool updateDisplay = false)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *updateDisplay* | Immediately update the display when true |
+
+### DrawPixel(int, int, Color)
+Draw pixel at a location
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L322)
+```csharp title="Declaration"
+public void DrawPixel(int x, int y, Color color)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *x* | Abscissa of the pixel to the set / reset |
+| `System.Int32` | *y* | Ordinate of the pixel to the set / reset |
+| `Meadow.Color` | *color* | Any color = turn on pixel, black = turn off pixel |
+
+### DrawPixel(int, int, bool)
+Draw pixel at a location
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L333)
+```csharp title="Declaration"
+public void DrawPixel(int x, int y, bool enabled)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *x* | Abscissa of the pixel to the set / reset |
+| `System.Int32` | *y* | Ordinate of the pixel to the set / reset |
+| `System.Boolean` | *enabled* | True = turn on pixel, false = turn off pixel |
+
+### InvertPixel(int, int)
+Invert a pixel at a location
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L343)
+```csharp title="Declaration"
+public void InvertPixel(int x, int y)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *x* | Abscissa of the pixel to the set / reset |
+| `System.Int32` | *y* | Ordinate of the pixel to the set / reset |
+
+### StartScrolling(ScrollDirection)
+Start the display scrolling in the specified direction.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L352)
+```csharp title="Declaration"
+public void StartScrolling(Ch1115.ScrollDirection direction)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Displays.Ch1115.ScrollDirection](../Ch1115.ScrollDirection) | *direction* | Direction that the display should scroll |
+
+### StartScrolling(ScrollDirection, byte, byte)
+Start the display scrolling
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L367)
+```csharp title="Declaration"
+public void StartScrolling(Ch1115.ScrollDirection direction, byte startPage, byte endPage)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Displays.Ch1115.ScrollDirection](../Ch1115.ScrollDirection) | *direction* | Direction that the display should scroll |
+| `System.Byte` | *startPage* | Start page for the scroll |
+| `System.Byte` | *endPage* | End page for the scroll |
+
+### StopScrolling()
+Turn off scrolling
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L405)
+```csharp title="Declaration"
+public void StopScrolling()
+```
+### Fill(Color, bool)
+Fill display buffer with a color
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L415)
+```csharp title="Declaration"
+public void Fill(Color clearColor, bool updateDisplay = false)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.Color` | *clearColor* | The fill color |
+| `System.Boolean` | *updateDisplay* | If true, update display |
+
+### Fill(int, int, int, int, Color)
+Fill with a color
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L430)
+```csharp title="Declaration"
+public void Fill(int x, int y, int width, int height, Color color)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *x* | X start position in pixels |
+| `System.Int32` | *y* | Y start position in pixels |
+| `System.Int32` | *width* | Width in pixels |
+| `System.Int32` | *height* | Height in pixels |
+| `Meadow.Color` | *color* | The fill color |
+
+### WriteBuffer(int, int, IPixelBuffer)
+Write a buffer to the display offscreen buffer
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L441)
+```csharp title="Declaration"
+public void WriteBuffer(int x, int y, IPixelBuffer displayBuffer)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *x* | The x position in pixels to write the buffer |
+| `System.Int32` | *y* | The y position in pixels to write the buffer |
+| [Meadow.Foundation.Graphics.Buffers.IPixelBuffer](../IPixelBuffer) | *displayBuffer* | The buffer to write |
+
+### Dispose()
+Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L447)
+```csharp title="Declaration"
+public void Dispose()
+```
+### Dispose(bool)
+Dispose of the object
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ch1115/Driver/Ch1115.cs#L457)
+```csharp title="Declaration"
+protected virtual void Dispose(bool disposing)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *disposing* | Is disposing |
+
+
+## Implements
+
+* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
+* `Meadow.Hardware.ISpiPeripheral`
+* `System.IDisposable`

@@ -58,3 +58,58 @@ public override async Task Run()
 TMP102 sensors can be connected to Meadow using only four connections:
 
 <img src="/API_Assets/Meadow.Foundation.Sensors.Temperature.TMP102/TMP102_Fritzing.svg" />
+
+# Class Tmp102
+TMP102 Temperature sensor object
+
+###### **Assembly**: Tmp102.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Driver/Tmp102.Resolution.cs#L3)
+```csharp title="Declaration"
+public class Tmp102 : ByteCommsSensorBase<Temperature>, IObservable<IChangeResult<Temperature>>, IDisposable, ITemperatureSensor, ISamplingSensor<Temperature>, ISensor<Temperature>, ISensor, ISamplingSensor, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../ByteCommsSensorBase`UNIT`)
+
+**Implements:**  
+`System.IObservable<Meadow.IChangeResult<Meadow.Units.Temperature>>`, `System.IDisposable`, `Meadow.Peripherals.Sensors.ITemperatureSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
+
+## Properties
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Driver/Tmp102.cs#L16)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+### SensorResolution
+Get / set the resolution of the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Driver/Tmp102.cs#L26)
+```csharp title="Declaration"
+public Tmp102.Resolution SensorResolution { get; set; }
+```
+### Temperature
+The temperature from the last reading
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Driver/Tmp102.cs#L50)
+```csharp title="Declaration"
+public Temperature? Temperature { get; protected set; }
+```
+## Methods
+### ReadSensor()
+Update the Temperature property
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Tmp102/Driver/Tmp102.cs#L68)
+```csharp title="Declaration"
+protected override Task<Temperature> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<Meadow.Units.Temperature>`
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<Meadow.Units.Temperature>>`
+* `System.IDisposable`
+* `Meadow.Peripherals.Sensors.ITemperatureSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.II2cPeripheral`

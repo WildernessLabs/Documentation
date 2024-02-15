@@ -69,3 +69,83 @@ To wire a Th02 to your Meadow board, connect the following:
 | SCL     | D08 (SCL)   |
 | SDA     | D07 (SDA)   |
 | VCC     | 3V3         |
+
+# Class Th02
+Represents a TH02 temperature and relative humidity sensor by Seeed Studio
+Found in the Grove Temperature and Humidity Sensor (High-Accuracy and Mini)
+
+###### **Assembly**: Th02.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Th02/Driver/Th02.Enums.cs#L3)
+```csharp title="Declaration"
+public class Th02 : ByteCommsSensorBase<(Temperature? Temperature, RelativeHumidity? Humidity)>, IObservable<IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity)>>, ISamplingSensor<(Temperature? Temperature, RelativeHumidity? Humidity)>, ISensor<(Temperature? Temperature, RelativeHumidity? Humidity)>, IDisposable, ITemperatureSensor, ISamplingSensor<Temperature>, ISensor<Temperature>, IHumiditySensor, ISamplingSensor<RelativeHumidity>, ISensor<RelativeHumidity>, ISensor, ISamplingSensor, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../ByteCommsSensorBase`UNIT`)
+
+**Implements:**  
+
+<details><summary>Expand</summary>
+
+`System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>`, `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>`, `System.IDisposable`, `Meadow.Peripherals.Sensors.ITemperatureSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.Atmospheric.IHumiditySensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.RelativeHumidity>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.RelativeHumidity>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
+</details>
+
+
+
+## Properties
+### Temperature
+The current temperature
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Th02/Driver/Th02.cs#L37)
+```csharp title="Declaration"
+public Temperature? Temperature { get; }
+```
+### Humidity
+The current humidity
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Th02/Driver/Th02.cs#L42)
+```csharp title="Declaration"
+public RelativeHumidity? Humidity { get; }
+```
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Th02/Driver/Th02.cs#L47)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+## Methods
+### RaiseEventsAndNotify(IChangeResult&lt;(Temperature? Temperature, RelativeHumidity? Humidity)&gt;)
+Raise all change events for subscribers
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Th02/Driver/Th02.cs#L61)
+```csharp title="Declaration"
+protected override void RaiseEventsAndNotify(IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity)> changeResult)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>` | *changeResult* | temperature and humidity |
+
+### ReadSensor()
+Calculates the compensated pressure and temperature.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Th02/Driver/Th02.cs#L77)
+```csharp title="Declaration"
+protected override Task<(Temperature? Temperature, RelativeHumidity? Humidity)> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>`
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>>`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>`
+* `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>>>`
+* `System.IDisposable`
+* `Meadow.Peripherals.Sensors.ITemperatureSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.Atmospheric.IHumiditySensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.RelativeHumidity>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.RelativeHumidity>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.II2cPeripheral`

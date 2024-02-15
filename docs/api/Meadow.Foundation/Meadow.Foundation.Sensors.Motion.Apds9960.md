@@ -51,3 +51,353 @@ protected async Task ReadConditions()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Samples/Apds9960_Sample)
 
+
+# Class Apds9960
+Represents the APDS9960 Proximity, Light, RGB, and Gesture Sensor
+
+###### **Assembly**: Apds9960.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.States.cs#L3)
+```csharp title="Declaration"
+public class Apds9960 : ByteCommsSensorBase<(Color? Color, Illuminance? AmbientLight)>, IObservable<IChangeResult<(Color? Color, Illuminance? AmbientLight)>>, ISamplingSensor<(Color? Color, Illuminance? AmbientLight)>, ISensor<(Color? Color, Illuminance? AmbientLight)>, ISensor, ISamplingSensor, II2cPeripheral, IDisposable
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../ByteCommsSensorBase`UNIT`)
+
+**Implements:**  
+`System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>`, `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`, `System.IDisposable`
+
+## Properties
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L28)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+### IsDisposed
+Is the object disposed
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L33)
+```csharp title="Declaration"
+public bool IsDisposed { get; }
+```
+### Color
+The current color value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L56)
+```csharp title="Declaration"
+public Color? Color { get; }
+```
+### AmbientLight
+The current ambient light value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L61)
+```csharp title="Declaration"
+public Illuminance? AmbientLight { get; }
+```
+## Methods
+### ReadSensor()
+Reads data from the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L101)
+```csharp title="Declaration"
+protected override Task<(Color? Color, Illuminance? AmbientLight)> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>`: The latest sensor reading### RaiseEventsAndNotify(IChangeResult&lt;(Color? Color, Illuminance? AmbientLight)&gt;)
+Raise events for subscribers and notify of value changes
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L134)
+```csharp title="Declaration"
+protected override void RaiseEventsAndNotify(IChangeResult<(Color? Color, Illuminance? AmbientLight)> changeResult)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>` | *changeResult* | The updated sensor data |
+
+### EnableLightSensor(bool)
+Enable light sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L274)
+```csharp title="Declaration"
+public void EnableLightSensor(bool interrupts)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *interrupts* | True to enable interrupts for light |
+
+### DisableLightSensor()
+Disable light sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L288)
+```csharp title="Declaration"
+public void DisableLightSensor()
+```
+### EnableProximitySensor(bool)
+Enable proximity sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L298)
+```csharp title="Declaration"
+public void EnableProximitySensor(bool interrupts)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *interrupts* | True to enable interrupts for proximity |
+
+### DisableProximitySensor()
+Disable proximity sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L319)
+```csharp title="Declaration"
+public void DisableProximitySensor()
+```
+### EnableGestureSensor(bool)
+Starts the gesture recognition engine on the APDS-9960
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L330)
+```csharp title="Declaration"
+public bool EnableGestureSensor(bool interrupts)
+```
+
+##### Returns
+
+`System.Boolean`: Enable interrupts for gestures
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Boolean` | *interrupts* |
+
+### DisableGestureSensor()
+Disable gestures
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L358)
+```csharp title="Declaration"
+public void DisableGestureSensor()
+```
+### IsGestureAvailable()
+Is a gesture reading available
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L370)
+```csharp title="Declaration"
+public bool IsGestureAvailable()
+```
+
+##### Returns
+
+`System.Boolean`: True if available### ReadGesture()
+Read the current gesture
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L386)
+```csharp title="Declaration"
+public Apds9960.Direction ReadGesture()
+```
+
+##### Returns
+
+[Meadow.Foundation.Sensors.Motion.Apds9960.Direction](../Apds9960.Direction): The direction
+##### Exceptions
+
+`System.Exception`  
+Throws if reading gesture data failed
+### EnablePower(bool)
+Enable power
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L470)
+```csharp title="Declaration"
+public void EnablePower(bool enable)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *enable* | True to enable, false to disable |
+
+### ReadAmbientLight()
+Read ambient light value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L479)
+```csharp title="Declaration"
+protected ushort ReadAmbientLight()
+```
+
+##### Returns
+
+`System.UInt16`
+### ReadRedLight()
+Read red light value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L492)
+```csharp title="Declaration"
+protected ushort ReadRedLight()
+```
+
+##### Returns
+
+`System.UInt16`
+### ReadGreenLight()
+Read green light value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L505)
+```csharp title="Declaration"
+protected ushort ReadGreenLight()
+```
+
+##### Returns
+
+`System.UInt16`
+### ReadBlueLight()
+Read blue light value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L518)
+```csharp title="Declaration"
+protected ushort ReadBlueLight()
+```
+
+##### Returns
+
+`System.UInt16`
+### ReadProximity()
+Read proximity
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L531)
+```csharp title="Declaration"
+public byte ReadProximity()
+```
+
+##### Returns
+
+`System.Byte`
+### GetProxIntLowThresh()
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L822)
+```csharp title="Declaration"
+public byte GetProxIntLowThresh()
+```
+
+##### Returns
+
+`System.Byte`
+### SetProxIntLowThresh(byte)
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L833)
+```csharp title="Declaration"
+public void SetProxIntLowThresh(byte threshold)
+```
+
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Byte` | *threshold* |
+
+### GetProxIntHighThresh()
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L843)
+```csharp title="Declaration"
+public byte GetProxIntHighThresh()
+```
+
+##### Returns
+
+`System.Byte`
+### SetProxIntHighThresh(byte)
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L854)
+```csharp title="Declaration"
+public void SetProxIntHighThresh(byte threshold)
+```
+
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Byte` | *threshold* |
+
+### GetLEDDrive()
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L870)
+```csharp title="Declaration"
+public byte GetLEDDrive()
+```
+
+##### Returns
+
+`System.Byte`
+### SetLEDDrive(byte)
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L892)
+```csharp title="Declaration"
+public bool SetLEDDrive(byte drive)
+```
+
+##### Returns
+
+`System.Boolean`
+
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Byte` | *drive* |
+
+### GetProximityGain()
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L919)
+```csharp title="Declaration"
+public byte GetProximityGain()
+```
+
+##### Returns
+
+`System.Byte`
+### SetProximityGain(byte)
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L941)
+```csharp title="Declaration"
+public void SetProximityGain(byte drive)
+```
+
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Byte` | *drive* |
+
+### Dispose()
+Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L1599)
+```csharp title="Declaration"
+public override void Dispose()
+```
+### Dispose(bool)
+Dispose of the object
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L1609)
+```csharp title="Declaration"
+protected override void Dispose(bool disposing)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *disposing* | Is disposing |
+
+## Events
+### AmbientLightUpdated
+Raised when the ambient light value changes
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L18)
+```csharp title="Declaration"
+public event EventHandler<IChangeResult<Illuminance>> AmbientLightUpdated
+```
+##### Event Type
+`System.EventHandler<Meadow.IChangeResult<Meadow.Units.Illuminance>>`
+### ColorUpdated
+Raised when the color value changes
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Apds9960/Driver/Apds9960.cs#L23)
+```csharp title="Declaration"
+public event EventHandler<IChangeResult<Color>> ColorUpdated
+```
+##### Event Type
+`System.EventHandler<Meadow.IChangeResult<Meadow.Color>>`
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>>`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>`
+* `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Color>,System.Nullable<Meadow.Units.Illuminance>>>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.II2cPeripheral`
+* `System.IDisposable`

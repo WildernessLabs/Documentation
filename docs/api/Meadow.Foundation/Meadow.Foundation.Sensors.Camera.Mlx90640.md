@@ -186,3 +186,134 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Samples/Mlx90640_Sample)
 
+
+# Class Mlx90640
+Represents the MLX90640 32x24 IR array
+The MLX90640 is a fully calibrated 32x24 pixels thermal IR array
+
+###### **Assembly**: Mlx90640.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.Enums.cs#L3)
+```csharp title="Declaration"
+public class Mlx90640 : II2cPeripheral
+```
+**Implements:**  
+`Meadow.Hardware.II2cPeripheral`
+
+## Properties
+### SerialNumber
+Camera serial number as a string
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L16)
+```csharp title="Declaration"
+public string SerialNumber { get; }
+```
+### Emissivity
+Emissivity
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L21)
+```csharp title="Declaration"
+public float Emissivity { get; set; }
+```
+### ReflectedTemperature
+Reflected temperature
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L44)
+```csharp title="Declaration"
+public Temperature ReflectedTemperature { get; set; }
+```
+### Config
+Camera configuration
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L49)
+```csharp title="Declaration"
+public Mlx90640Config Config { get; }
+```
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L59)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+## Fields
+### i2cComms
+I2C Communication bus used to communicate with the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L64)
+```csharp title="Declaration"
+protected readonly II2cCommunications i2cComms
+```
+## Methods
+### ReadRawData()
+Gets all 768 sensor readings
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L110)
+```csharp title="Declaration"
+public float[] ReadRawData()
+```
+
+##### Returns
+
+`System.Single[]`: Float array containing each individual reading### SetMode(Mode)
+Set the reading pattern mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L132)
+```csharp title="Declaration"
+public void SetMode(Mlx90640.Mode mode)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Sensors.Camera.Mlx90640.Mode](../Mlx90640.Mode) | *mode* | Chess or Interleaved |
+
+### GetMode()
+Get the current reading pattern mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L148)
+```csharp title="Declaration"
+public Mlx90640.Mode GetMode()
+```
+
+##### Returns
+
+[Meadow.Foundation.Sensors.Camera.Mlx90640.Mode](../Mlx90640.Mode): Chess or Interleaved### SetResolution(Resolution)
+Sets the resolution
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L154)
+```csharp title="Declaration"
+public void SetResolution(Mlx90640.Resolution res)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Sensors.Camera.Mlx90640.Resolution](../Mlx90640.Resolution) | *res* | Resolution type |
+
+### GetResolution()
+Get the current resolution mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L160)
+```csharp title="Declaration"
+public Mlx90640.Resolution GetResolution()
+```
+
+##### Returns
+
+[Meadow.Foundation.Sensors.Camera.Mlx90640.Resolution](../Mlx90640.Resolution): Resolution mode### GetRefreshRate()
+Gets the Refresh rate
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L166)
+```csharp title="Declaration"
+public Mlx90640.RefreshRate GetRefreshRate()
+```
+
+##### Returns
+
+[Meadow.Foundation.Sensors.Camera.Mlx90640.RefreshRate](../Mlx90640.RefreshRate): RefreshRate type### SetRefreshRate(RefreshRate)
+Sets the refresh rate
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Mlx90640/Driver/Mlx90640.cs#L172)
+```csharp title="Declaration"
+public void SetRefreshRate(Mlx90640.RefreshRate rate)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Sensors.Camera.Mlx90640.RefreshRate](../Mlx90640.RefreshRate) | *rate* | RefreshRate type |
+
+
+## Implements
+
+* `Meadow.Hardware.II2cPeripheral`

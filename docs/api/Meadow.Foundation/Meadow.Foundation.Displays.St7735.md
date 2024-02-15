@@ -82,3 +82,59 @@ public override Task Run()
 It should look like the following diagram:
 
 ![Wiring a ST7735 to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.Tft.ST7735/ST7735_Fritzing.png)
+
+# Class St7735
+Represents a St7735 TFT color display
+
+###### **Assembly**: TftSpi.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/St7735.cs#L9)
+```csharp title="Declaration"
+public class St7735 : TftSpiBase, IGraphicsDisplay, ISpiPeripheral, IDisposable
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.Displays.TftSpiBase](../TftSpiBase)
+
+**Implements:**  
+[Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay), `Meadow.Hardware.ISpiPeripheral`, `System.IDisposable`
+
+## Properties
+### DefaultColorMode
+The default display color mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/St7735.cs#L14)
+```csharp title="Declaration"
+public override ColorMode DefaultColorMode { get; }
+```
+### SupportedColorModes
+The color modes supported by the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/St7735.cs#L19)
+```csharp title="Declaration"
+public override ColorMode SupportedColorModes { get; }
+```
+## Methods
+### Initialize()
+Initialize the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/St7735.cs#L129)
+```csharp title="Declaration"
+protected override void Initialize()
+```
+### SetAddressWindow(int, int, int, int)
+Set address window for display updates
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/St7735.cs#L375)
+```csharp title="Declaration"
+protected override void SetAddressWindow(int x0, int y0, int x1, int y1)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Int32` | *x0* | X start in pixels |
+| `System.Int32` | *y0* | Y start in pixels |
+| `System.Int32` | *x1* | X end in pixels |
+| `System.Int32` | *y1* | Y end in pixels |
+
+
+## Implements
+
+* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
+* `Meadow.Hardware.ISpiPeripheral`
+* `System.IDisposable`

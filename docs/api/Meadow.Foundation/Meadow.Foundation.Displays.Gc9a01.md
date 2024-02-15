@@ -73,3 +73,57 @@ public override Task Run()
 It should look like the following diagram:
 
 ![Wiring a Gc9a01 to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.Tft.Gc9a01/Gc9a01_Fritzing.png)
+
+# Class Gc9a01
+Represents a Gc9a01 TFT color display
+
+###### **Assembly**: TftSpi.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/Gc9a01.cs#L9)
+```csharp title="Declaration"
+public class Gc9a01 : TftSpiBase, IGraphicsDisplay, ISpiPeripheral, IDisposable, IRotatableDisplay
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.Displays.TftSpiBase](../TftSpiBase)
+
+**Implements:**  
+[Meadow.Foundation.Graphics.IGraphicsDisplay](../IRotatableDisplay)
+
+## Properties
+### DefaultColorMode
+The display default color mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/Gc9a01.cs#L14)
+```csharp title="Declaration"
+public override ColorMode DefaultColorMode { get; }
+```
+### SupportedColorModes
+The color modes supported by the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/Gc9a01.cs#L19)
+```csharp title="Declaration"
+public override ColorMode SupportedColorModes { get; }
+```
+## Methods
+### Initialize()
+Initialize the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/Gc9a01.cs#L57)
+```csharp title="Declaration"
+protected override void Initialize()
+```
+### SetRotation(RotationType)
+Set the rotation of the display
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.TftSpi/Driver/Drivers/Gc9a01.cs#L301)
+```csharp title="Declaration"
+public void SetRotation(RotationType rotation)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Graphics.RotationType](../RotationType) | *rotation* | The rotation |
+
+
+## Implements
+
+* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
+* `Meadow.Hardware.ISpiPeripheral`
+* `System.IDisposable`
+* [Meadow.Foundation.Graphics.IRotatableDisplay](../IRotatableDisplay)

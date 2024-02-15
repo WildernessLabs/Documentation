@@ -108,3 +108,63 @@ To wire a Mcp23s09 to your Meadow board, connect the following:
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
+
+# Class Mcp23s09
+Represent an MCP23S09 SPI port expander with open-drain outputs
+
+###### **Assembly**: Mcp23xxx.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23xxx/Driver/Drivers/Mcp23s09.cs#L8)
+```csharp title="Declaration"
+public class Mcp23s09 : Mcp23x0x, IDigitalInputOutputController, IDigitalInputController, IDigitalOutputController, ISpiPeripheral, II2cPeripheral, IDigitalInterruptController, IPinController
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.IOExpanders.Mcp23xxx](../Mcp23x0x)
+
+**Implements:**  
+`Meadow.Hardware.IDigitalInputOutputController`, `Meadow.Hardware.IDigitalInputController`, `Meadow.Hardware.IDigitalOutputController`, `Meadow.Hardware.ISpiPeripheral`, `Meadow.Hardware.II2cPeripheral`, `Meadow.Hardware.IDigitalInterruptController`, `Meadow.Hardware.IPinController`
+
+## Methods
+### CreateDigitalOutputPort(IPin, bool)
+Creates a new DigitalOutputPort using the specified pin and initial state
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23xxx/Driver/Drivers/Mcp23s09.cs#L39)
+```csharp title="Declaration"
+public IDigitalOutputPort CreateDigitalOutputPort(IPin pin, bool initialState = false)
+```
+
+##### Returns
+
+`Meadow.Hardware.IDigitalOutputPort`: IDigitalOutputPort
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.Hardware.IPin` | *pin* | The pin number to create the port on |
+| `System.Boolean` | *initialState* | Whether the pin is initially high or low |
+
+### CreateDigitalOutputPort(IPin, bool, OutputType)
+Creates a new DigitalOutputPort using the specified pin and initial state
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23xxx/Driver/Drivers/Mcp23s09.cs#L51)
+```csharp title="Declaration"
+public override IDigitalOutputPort CreateDigitalOutputPort(IPin pin, bool initialState = false, OutputType outputType = OutputType.OpenDrain)
+```
+
+##### Returns
+
+`Meadow.Hardware.IDigitalOutputPort`: IDigitalOutputPort
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.Hardware.IPin` | *pin* | The pin number to create the port on |
+| `System.Boolean` | *initialState* | Whether the pin is initially high or low |
+| `Meadow.Hardware.OutputType` | *outputType* | The output type |
+
+
+## Implements
+
+* `Meadow.Hardware.IDigitalInputOutputController`
+* `Meadow.Hardware.IDigitalInputController`
+* `Meadow.Hardware.IDigitalOutputController`
+* `Meadow.Hardware.ISpiPeripheral`
+* `Meadow.Hardware.II2cPeripheral`
+* `Meadow.Hardware.IDigitalInterruptController`
+* `Meadow.Hardware.IPinController`

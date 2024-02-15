@@ -116,3 +116,46 @@ async Task ReadConditions()
 To wire a Bme680 to your Meadow board, connect the following:
 
 ![Wiring a BME680 sensor to Meadow](/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Bme680/Bme680_Fritzing.png)
+
+# Class Bme680
+BME680 Temperature, Pressure, Humidity and gas busComms
+
+###### **Assembly**: Bme68x.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme68x/Driver/Drivers/Bme680.cs#L11)
+```csharp title="Declaration"
+public class Bme680 : Bme68x, IObservable<IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure, Resistance? GasResistance)>>, ISamplingSensor<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure, Resistance? GasResistance)>, ISensor<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure, Resistance? GasResistance)>, ITemperatureSensor, ISamplingSensor<Temperature>, ISensor<Temperature>, IHumiditySensor, ISamplingSensor<RelativeHumidity>, ISensor<RelativeHumidity>, IBarometricPressureSensor, ISamplingSensor<Pressure>, ISensor<Pressure>, IGasResistanceSensor, ISamplingSensor<Resistance>, ISensor<Resistance>, ISensor, ISamplingSensor, ISpiPeripheral, II2cPeripheral, IDisposable
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../Bme68x)
+
+**Implements:**  
+
+<details><summary>Expand</summary>
+
+`System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>,System.Nullable<Meadow.Units.Pressure>,System.Nullable<Meadow.Units.Resistance>>>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>,System.Nullable<Meadow.Units.Pressure>,System.Nullable<Meadow.Units.Resistance>>>`, `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>,System.Nullable<Meadow.Units.Pressure>,System.Nullable<Meadow.Units.Resistance>>>`, `Meadow.Peripherals.Sensors.ITemperatureSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.Atmospheric.IHumiditySensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.RelativeHumidity>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.RelativeHumidity>`, `Meadow.Peripherals.Sensors.Atmospheric.IBarometricPressureSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Pressure>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Pressure>`, `Meadow.Peripherals.Sensors.Environmental.IGasResistanceSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Resistance>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Resistance>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.ISpiPeripheral`, `Meadow.Hardware.II2cPeripheral`, `System.IDisposable`
+</details>
+
+
+
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>,System.Nullable<Meadow.Units.Pressure>,System.Nullable<Meadow.Units.Resistance>>>>`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>,System.Nullable<Meadow.Units.Pressure>,System.Nullable<Meadow.Units.Resistance>>>`
+* `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.RelativeHumidity>,System.Nullable<Meadow.Units.Pressure>,System.Nullable<Meadow.Units.Resistance>>>`
+* `Meadow.Peripherals.Sensors.ITemperatureSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.Atmospheric.IHumiditySensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.RelativeHumidity>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.RelativeHumidity>`
+* `Meadow.Peripherals.Sensors.Atmospheric.IBarometricPressureSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Pressure>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Pressure>`
+* `Meadow.Peripherals.Sensors.Environmental.IGasResistanceSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Resistance>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Resistance>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.ISpiPeripheral`
+* `Meadow.Hardware.II2cPeripheral`
+* `System.IDisposable`

@@ -81,3 +81,142 @@ It should look like the following diagram:
 
 <img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.Ccs811/Ccs811_Fritzing.png" />
 
+
+# Class Ccs811
+Provide access to the CCS811 C02 and VOC Air Quality Sensor
+
+###### **Assembly**: Ccs811.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.Enums.cs#L3)
+```csharp title="Declaration"
+public class Ccs811 : PollingSensorBase<(Concentration? Co2, Concentration? Voc)>, IObservable<IChangeResult<(Concentration? Co2, Concentration? Voc)>>, ISamplingSensor<(Concentration? Co2, Concentration? Voc)>, ISensor<(Concentration? Co2, Concentration? Voc)>, ICo2Sensor, IVocSensor, ISamplingSensor<Concentration>, ISensor<Concentration>, ISensor, ISamplingSensor, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../PollingSensorBase`UNIT`)
+
+**Implements:**  
+
+<details><summary>Expand</summary>
+
+`System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>`, `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>`, `Meadow.Peripherals.Sensors.Atmospheric.ICo2Sensor`, `Meadow.Peripherals.Sensors.Atmospheric.IVocSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Concentration>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Concentration>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
+</details>
+
+
+
+## Properties
+### Co2
+The measured CO2 concentration
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L38)
+```csharp title="Declaration"
+public Concentration? Co2 { get; }
+```
+### Voc
+The measured VOC concentration
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L43)
+```csharp title="Declaration"
+public Concentration? Voc { get; }
+```
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L48)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+## Methods
+### Initialize()
+Initialize the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L85)
+```csharp title="Declaration"
+protected void Initialize()
+```
+
+##### Exceptions
+
+`System.Exception`  
+Raised if HW_ID register returns an invalid id
+### GetBaseline()
+Get baseline value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L123)
+```csharp title="Declaration"
+public ushort GetBaseline()
+```
+
+##### Returns
+
+`System.UInt16`: The baseline value### SetBaseline(ushort)
+Set the baseline value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L132)
+```csharp title="Declaration"
+public void SetBaseline(ushort value)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.UInt16` | *value* | The new baseline |
+
+### GetMeasurementMode()
+Get the current measurement mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L141)
+```csharp title="Declaration"
+public Ccs811.MeasurementMode GetMeasurementMode()
+```
+
+##### Returns
+
+[Meadow.Foundation.Sensors.Atmospheric.Ccs811.MeasurementMode](../Ccs811.MeasurementMode): The measurement mode### SetMeasurementMode(MeasurementMode)
+Set the Measurement mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L150)
+```csharp title="Declaration"
+public void SetMeasurementMode(Ccs811.MeasurementMode mode)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| [Meadow.Foundation.Sensors.Atmospheric.Ccs811.MeasurementMode](../Ccs811.MeasurementMode) | *mode* | The new mode |
+
+### ReadSensor()
+Reads data from the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L165)
+```csharp title="Declaration"
+protected override Task<(Concentration? Co2, Concentration? Voc)> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>`: The latest sensor reading### RaiseEventsAndNotify(IChangeResult&lt;(Concentration? Co2, Concentration? Voc)&gt;)
+Raise events for subscribers and notify of value changes
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L181)
+```csharp title="Declaration"
+protected override void RaiseEventsAndNotify(IChangeResult<(Concentration? Co2, Concentration? Voc)> changeResult)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>` | *changeResult* | The updated sensor data |
+
+## Events
+### VocUpdated
+Event raised when the VOC concentration value changes
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Ccs811/Driver/Ccs811.cs#L33)
+```csharp title="Declaration"
+public event EventHandler<ChangeResult<Concentration>> VocUpdated
+```
+##### Event Type
+`System.EventHandler<Meadow.ChangeResult<Meadow.Units.Concentration>>`
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>>`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>`
+* `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Concentration>,System.Nullable<Meadow.Units.Concentration>>>`
+* `Meadow.Peripherals.Sensors.Atmospheric.ICo2Sensor`
+* `Meadow.Peripherals.Sensors.Atmospheric.IVocSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Concentration>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Concentration>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.II2cPeripheral`

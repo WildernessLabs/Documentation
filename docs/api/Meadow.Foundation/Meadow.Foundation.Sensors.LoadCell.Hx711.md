@@ -63,3 +63,136 @@ public void GetAndDisplayCalibrationUnits(Hx711 sensor)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Samples/Hx711_Sample)
 
+
+# Class Hx711
+24-Bit Dual-Channel ADC For Bridge Sensors
+
+###### **Assembly**: Hx711.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.Enums.cs#L3)
+```csharp title="Declaration"
+public class Hx711 : PollingSensorBase<Mass>, IObservable<IChangeResult<Mass>>, IMassSensor, ISamplingSensor<Mass>, ISensor<Mass>, ISensor, ISamplingSensor, IDisposable
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../PollingSensorBase`UNIT`)
+
+**Implements:**  
+`System.IObservable<Meadow.IChangeResult<Meadow.Units.Mass>>`, `Meadow.Peripherals.Sensors.Mass.IMassSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Mass>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Mass>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `System.IDisposable`
+
+## Properties
+### IsDisposed
+Is the peripheral disposed
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L35)
+```csharp title="Declaration"
+public bool IsDisposed { get; }
+```
+### IsSleeping
+Is the peripheral sleeping
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L40)
+```csharp title="Declaration"
+public bool IsSleeping { get; }
+```
+### Gain
+
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L45)
+```csharp title="Declaration"
+public Hx711.AdcGain Gain { get; }
+```
+### TareValue
+Gets/Sets Tare value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L50)
+```csharp title="Declaration"
+public uint TareValue { get; set; }
+```
+### DefaultSamplePeriod
+Gets default sample period (1 Second)
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L55)
+```csharp title="Declaration"
+public TimeSpan DefaultSamplePeriod { get; }
+```
+### Mass
+The last read Mass
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L60)
+```csharp title="Declaration"
+public Mass? Mass { get; }
+```
+## Methods
+### Sleep()
+Puts the device into low-power sleep mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L124)
+```csharp title="Declaration"
+public void Sleep()
+```
+### Wake()
+Takes the device out of low-power sleep mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L138)
+```csharp title="Declaration"
+public void Wake()
+```
+### Tare()
+Tares the sensor, effectively setting the current weight reading to relative zero.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L152)
+```csharp title="Declaration"
+public void Tare()
+```
+### CalculateCalibrationFactor()
+Calculates the calibration factor of the load cell.  Call this method with a known weight on the sensor, and then use the returned value in a call to `Meadow.Foundation.Sensors.LoadCell.Hx711.SetCalibrationFactor(System.Int32%2cMeadow.Units.Mass)` before using the sensor.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L162)
+```csharp title="Declaration"
+public int CalculateCalibrationFactor()
+```
+
+##### Returns
+
+`System.Int32`
+### SetCalibrationFactor(int, Mass)
+Sets the sensor's calibration factor based on a factor calculated with a know weight by calling [Meadow.Foundation.Sensors.LoadCell.Hx711.CalculateCalibrationFactor()](../Hx711#calculatecalibrationfactor).
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L181)
+```csharp title="Declaration"
+public void SetCalibrationFactor(int factor, Mass knownValue)
+```
+
+##### Parameters
+
+| Type | Name |
+|:--- |:--- |
+| `System.Int32` | *factor* |
+| `Meadow.Units.Mass` | *knownValue* |
+
+### ReadSensor()
+Gets the current sensor weight
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L190)
+```csharp title="Declaration"
+protected override Task<Mass> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<Meadow.Units.Mass>`
+### Dispose(bool)
+Dispose of the object
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L304)
+```csharp title="Declaration"
+protected virtual void Dispose(bool disposing)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `System.Boolean` | *disposing* | Is disposing |
+
+### Dispose()
+Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.LoadCell.Hx711/Driver/Hx711.cs#L315)
+```csharp title="Declaration"
+public void Dispose()
+```
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<Meadow.Units.Mass>>`
+* `Meadow.Peripherals.Sensors.Mass.IMassSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Mass>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Mass>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `System.IDisposable`

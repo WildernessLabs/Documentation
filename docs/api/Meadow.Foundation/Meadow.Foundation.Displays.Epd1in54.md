@@ -9,3 +9,24 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd1in54
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.ePaperWaveShare) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.ePaperWaveShare/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.ePaperWaveShare.svg?label=Meadow.Foundation.Displays.ePaperWaveShare" alt="NuGet Gallery for Meadow.Foundation.Displays.ePaperWaveShare" /></a> |
 
+
+# Class Epd1in54
+Represents a WaveShare Epd1in54 ePaper display
+200x200, 1.54 inch e-Ink display, SPI interface
+
+###### **Assembly**: ePaperWaveShare.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.ePaperWaveShare/Driver/Drivers/Epd1in54.cs#L9)
+```csharp title="Declaration"
+public class Epd1in54 : Ssd1608, ISpiPeripheral, IDisposable, IGraphicsDisplay
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.Displays.EPaperBase](../Ssd1608)
+
+**Implements:**  
+`Meadow.Hardware.ISpiPeripheral`, `System.IDisposable`, [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
+
+
+## Implements
+
+* `Meadow.Hardware.ISpiPeripheral`
+* `System.IDisposable`
+* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)

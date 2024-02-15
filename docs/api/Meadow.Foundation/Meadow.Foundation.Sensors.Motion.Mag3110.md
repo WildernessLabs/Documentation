@@ -113,3 +113,112 @@ In it's basic configuration the magnetometer requires four connections:
 
 
 
+
+# Class Mag3110
+Represents the Xtrinsic MAG3110 Three-Axis, Digital Magnetometer
+
+###### **Assembly**: MAG3110.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.Registers.cs#L3)
+```csharp title="Declaration"
+public class Mag3110 : ByteCommsSensorBase<(MagneticField3D? MagneticField3D, Temperature? Temperature)>, IObservable<IChangeResult<(MagneticField3D? MagneticField3D, Temperature? Temperature)>>, ISamplingSensor<(MagneticField3D? MagneticField3D, Temperature? Temperature)>, ISensor<(MagneticField3D? MagneticField3D, Temperature? Temperature)>, IDisposable, ITemperatureSensor, ISamplingSensor<Temperature>, ISensor<Temperature>, IMagnetometer, ISamplingSensor<MagneticField3D>, ISensor<MagneticField3D>, ISensor, ISamplingSensor, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../ByteCommsSensorBase`UNIT`)
+
+**Implements:**  
+
+<details><summary>Expand</summary>
+
+`System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>`, `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>`, `System.IDisposable`, `Meadow.Peripherals.Sensors.ITemperatureSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.Motion.IMagnetometer`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.MagneticField3D>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.MagneticField3D>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
+</details>
+
+
+
+## Properties
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L20)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+### MagneticField3D
+The current magnetic field value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L45)
+```csharp title="Declaration"
+public MagneticField3D? MagneticField3D { get; }
+```
+### Temperature
+Current temperature of the die
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L50)
+```csharp title="Declaration"
+public Temperature? Temperature { get; }
+```
+### Standby
+Change or get the standby status of the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L55)
+```csharp title="Declaration"
+public bool Standby { get; set; }
+```
+### IsDataReady
+Indicate if there is any data ready for reading (x, y or z).
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L83)
+```csharp title="Declaration"
+public bool IsDataReady { get; }
+```
+### DigitalInputsEnabled
+Enable or disable interrupts.
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L94)
+```csharp title="Declaration"
+public bool DigitalInputsEnabled { get; set; }
+```
+## Fields
+### interruptPort
+Interrupt port used to detect then end of a conversion
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L40)
+```csharp title="Declaration"
+protected readonly IDigitalInterruptPort? interruptPort
+```
+## Methods
+### Reset()
+Reset the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L142)
+```csharp title="Declaration"
+public void Reset()
+```
+### RaiseEventsAndNotify(IChangeResult&lt;(MagneticField3D? MagneticField3D, Temperature? Temperature)&gt;)
+Raise events for subscribers and notify of value changes
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L158)
+```csharp title="Declaration"
+protected override void RaiseEventsAndNotify(IChangeResult<(MagneticField3D? MagneticField3D, Temperature? Temperature)> changeResult)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+|:--- |:--- |:--- |
+| `Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>` | *changeResult* | The updated sensor data |
+
+### ReadSensor()
+Reads data from the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mag3110/Driver/Mag3110.cs#L175)
+```csharp title="Declaration"
+protected override Task<(MagneticField3D? MagneticField3D, Temperature? Temperature)> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>`: The latest sensor reading
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>>`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>`
+* `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.MagneticField3D>,System.Nullable<Meadow.Units.Temperature>>>`
+* `System.IDisposable`
+* `Meadow.Peripherals.Sensors.ITemperatureSensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`
+* `Meadow.Peripherals.Sensors.Motion.IMagnetometer`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.MagneticField3D>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.MagneticField3D>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.II2cPeripheral`

@@ -59,3 +59,53 @@ To wire a WiiNunchuck to your Meadow board, connect the following:
 | SCL     | D08 (SCL)   |
 | SDA     | D07 (SDA)   |
 | VCC     | 3V3         |
+
+# Class WiiNunchuck
+Represents a Nintendo Wii I2C Nunchuck
+
+###### **Assembly**: WiiExtensionControllers.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.WiiExtensionControllers/Driver/Drivers/WiiNunchuck.cs#L11)
+```csharp title="Declaration"
+public class WiiNunchuck : WiiExtensionControllerBase, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.Sensors.Hid.WiiExtensionControllerBase](../WiiExtensionControllerBase)
+
+**Implements:**  
+`Meadow.Hardware.II2cPeripheral`
+
+## Properties
+### CButton
+C Button
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.WiiExtensionControllers/Driver/Drivers/WiiNunchuck.cs#L16)
+```csharp title="Declaration"
+public IButton CButton { get; }
+```
+### ZButton
+Z Button
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.WiiExtensionControllers/Driver/Drivers/WiiNunchuck.cs#L20)
+```csharp title="Declaration"
+public IButton ZButton { get; }
+```
+### AnalogStick
+Analog joystick (8 bits of precision)
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.WiiExtensionControllers/Driver/Drivers/WiiNunchuck.cs#L25)
+```csharp title="Declaration"
+public IAnalogJoystick AnalogStick { get; }
+```
+### Acceleration3D
+Acceleration data from accelerometer
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.WiiExtensionControllers/Driver/Drivers/WiiNunchuck.cs#L30)
+```csharp title="Declaration"
+public Acceleration3D? Acceleration3D { get; protected set; }
+```
+## Methods
+### Update()
+Get the latest sensor data from the device
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.WiiExtensionControllers/Driver/Drivers/WiiNunchuck.cs#L54)
+```csharp title="Declaration"
+public override void Update()
+```
+
+## Implements
+
+* `Meadow.Hardware.II2cPeripheral`

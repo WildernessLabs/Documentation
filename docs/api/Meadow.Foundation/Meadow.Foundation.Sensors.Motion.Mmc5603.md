@@ -66,3 +66,74 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Samples/Mmc5603_Sample)
 
+
+# Class Mmc5603
+Represents the Mmc5603 Three-Axis, Digital Magnetometer
+
+###### **Assembly**: MMC5603.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.Registers.cs#L3)
+```csharp title="Declaration"
+public class Mmc5603 : ByteCommsSensorBase<MagneticField3D>, IObservable<IChangeResult<MagneticField3D>>, IDisposable, IMagnetometer, ISamplingSensor<MagneticField3D>, ISensor<MagneticField3D>, ISensor, ISamplingSensor, II2cPeripheral
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../ByteCommsSensorBase`UNIT`)
+
+**Implements:**  
+`System.IObservable<Meadow.IChangeResult<Meadow.Units.MagneticField3D>>`, `System.IDisposable`, `Meadow.Peripherals.Sensors.Motion.IMagnetometer`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.MagneticField3D>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.MagneticField3D>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
+
+## Properties
+### DefaultI2cAddress
+The default I2C address for the peripheral
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.cs#L20)
+```csharp title="Declaration"
+public byte DefaultI2cAddress { get; }
+```
+### MagneticField3D
+The current magnetic field value
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.cs#L25)
+```csharp title="Declaration"
+public MagneticField3D? MagneticField3D { get; }
+```
+### ContinuousModeEnabled
+Get/set continuous sensor reading mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.cs#L30)
+```csharp title="Declaration"
+public bool ContinuousModeEnabled { get; set; }
+```
+## Methods
+### Reset()
+Reset the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.cs#L57)
+```csharp title="Declaration"
+public void Reset()
+```
+### ReadSensor()
+Reads data from the sensor
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.cs#L104)
+```csharp title="Declaration"
+protected override Task<MagneticField3D> ReadSensor()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<Meadow.Units.MagneticField3D>`: The latest sensor reading### ReadTemperature()
+Read the sensor temperature
+Doesn't work in continuous mode
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Mmc5603/Driver/Mmc5603.cs#L144)
+```csharp title="Declaration"
+public Task<Temperature> ReadTemperature()
+```
+
+##### Returns
+
+`System.Threading.Tasks.Task<Meadow.Units.Temperature>`
+
+## Implements
+
+* `System.IObservable<Meadow.IChangeResult<Meadow.Units.MagneticField3D>>`
+* `System.IDisposable`
+* `Meadow.Peripherals.Sensors.Motion.IMagnetometer`
+* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.MagneticField3D>`
+* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.MagneticField3D>`
+* `Meadow.Peripherals.Sensors.ISensor`
+* `Meadow.Peripherals.Sensors.ISamplingSensor`
+* `Meadow.Hardware.II2cPeripheral`

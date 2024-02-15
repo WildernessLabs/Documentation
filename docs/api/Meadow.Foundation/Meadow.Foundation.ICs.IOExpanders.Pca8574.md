@@ -89,3 +89,26 @@ private void TestDigitalOutputPorts(int loopCount)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pcx857x/Samples/Pca8574_Sample)
 
+
+# Class Pca8574
+Represents the Pca8574 8-bit I/O I2C expander
+
+###### **Assembly**: Pcx857x.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Pcx857x/Driver/Drivers/Pca8574.cs#L8)
+```csharp title="Declaration"
+public class Pca8574 : Pcx8574, IDigitalOutputController, IDigitalInputController, IDigitalInterruptController, IPinController, II2cPeripheral, IDisposable
+```
+**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.IOExpanders.Pcx857x](../Pcx8574)
+
+**Implements:**  
+`Meadow.Hardware.IDigitalOutputController`, `Meadow.Hardware.IDigitalInputController`, `Meadow.Hardware.IDigitalInterruptController`, `Meadow.Hardware.IPinController`, `Meadow.Hardware.II2cPeripheral`, `System.IDisposable`
+
+
+## Implements
+
+* `Meadow.Hardware.IDigitalOutputController`
+* `Meadow.Hardware.IDigitalInputController`
+* `Meadow.Hardware.IDigitalInterruptController`
+* `Meadow.Hardware.IPinController`
+* `Meadow.Hardware.II2cPeripheral`
+* `System.IDisposable`
