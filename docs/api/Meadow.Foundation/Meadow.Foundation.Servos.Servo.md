@@ -129,22 +129,3 @@ public async override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Servos.ServoCore/Samples/ServoCore_Sample)
 
-
-# Class Servo
-Class to represent a generic servo motor
-
-###### **Assembly**: ServoCore.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Servos.ServoCore/Driver/ServoCore.cs#L8)
-```csharp title="Declaration"
-public class Servo : AngularServoBase, IAngularServo, IServo
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.Servos.ServoBase](../AngularServoBase)
-
-**Implements:**  
-[Meadow.Foundation.Servos.IAngularServo](../IServo)
-
-
-## Implements
-
-* [Meadow.Foundation.Servos.IAngularServo](../IAngularServo)
-* [Meadow.Foundation.Servos.IServo](../IServo)

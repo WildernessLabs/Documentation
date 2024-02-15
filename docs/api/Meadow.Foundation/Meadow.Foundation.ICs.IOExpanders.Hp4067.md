@@ -21,21 +21,3 @@ To wire a Hp4067 to your Meadow board, connect the following:
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
-
-# Class Hp4067
-Represents an Ti HP4067 16-channel analog multiplexer.
-
-###### **Assembly**: AnalogMux.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.AnalogMux/Driver/Drivers/Hp4067.cs#L9)
-```csharp title="Declaration"
-public class Hp4067 : Nxp74HC4067, IAnalogInputMultiplexer
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.IOExpanders.AnalogMuxBase](../Nxp74HC4067)
-
-**Implements:**  
-[Meadow.Foundation.ICs.IOExpanders.IAnalogInputMultiplexer](../IAnalogInputMultiplexer)
-
-
-## Implements
-
-* [Meadow.Foundation.ICs.IOExpanders.IAnalogInputMultiplexer](../IAnalogInputMultiplexer)

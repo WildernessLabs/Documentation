@@ -47,28 +47,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.DigiPots.Mcp4xxx/Samples/Mcp4162_Sample)
 
-
-# Class Mcp4162
-Represents an MCP4162 digital rheostat.
-
-###### **Assembly**: Mcp4xxx.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.DigiPots.Mcp4xxx/Driver/Drivers/Mcp4162.cs#L9)
-```csharp title="Declaration"
-public class Mcp4162 : Mcp4xx2, ISpiPeripheral
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.DigiPots.Mcp4xxx](../Mcp4xx2)
-
-**Implements:**  
-`Meadow.Hardware.ISpiPeripheral`
-
-## Properties
-### MaxSteps
-Gets the maximum number of steps or resolution.
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.DigiPots.Mcp4xxx/Driver/Drivers/Mcp4162.cs#L12)
-```csharp title="Declaration"
-public override int MaxSteps { get; }
-```
-
-## Implements
-
-* `Meadow.Hardware.ISpiPeripheral`

@@ -24,39 +24,3 @@ To wire a Ads1115 to your Meadow board, connect the following:
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
-
-# Class Ads1115
-Represents an ADS1115 16-bit, 860-SPS, 4-channel, delta-sigma analog-to-digital converter with PGA, oscillator, VREF, comparator
-
-###### **Assembly**: Ads1x15.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.ADC.Ads1x15/Driver/Drivers/Ads1115.cs#L8)
-```csharp title="Declaration"
-public class Ads1115 : Ads1x15Base, IObservable<IChangeResult<Voltage>>, ISamplingSensor<Voltage>, ISensor<Voltage>, ISensor, ISamplingSensor, II2cPeripheral
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../Ads1x15Base)
-
-**Implements:**  
-`System.IObservable<Meadow.IChangeResult<Meadow.Units.Voltage>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Voltage>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Voltage>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
-
-## Properties
-### BitResolution
-Sample resolution
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.ADC.Ads1x15/Driver/Drivers/Ads1115.cs#L52)
-```csharp title="Declaration"
-protected override int BitResolution { get; }
-```
-### SampleRate
-Sample rate setting
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.ADC.Ads1x15/Driver/Drivers/Ads1115.cs#L57)
-```csharp title="Declaration"
-public Ads1115.SampleRateSetting SampleRate { get; set; }
-```
-
-## Implements
-
-* `System.IObservable<Meadow.IChangeResult<Meadow.Units.Voltage>>`
-* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Voltage>`
-* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Voltage>`
-* `Meadow.Peripherals.Sensors.ISensor`
-* `Meadow.Peripherals.Sensors.ISamplingSensor`
-* `Meadow.Hardware.II2cPeripheral`

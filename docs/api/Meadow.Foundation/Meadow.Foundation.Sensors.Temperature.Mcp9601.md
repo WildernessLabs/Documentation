@@ -49,36 +49,3 @@ public override Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Mcp960x/Samples/Mcp9601_Sample)
 
-
-# Class Mcp9601
-Represents a Mcp9601 Thermocouple sensor object
-
-###### **Assembly**: Mcp960x.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Mcp960x/Driver/Drivers/Mcp9601.cs#L8)
-```csharp title="Declaration"
-public class Mcp9601 : Mcp960x, IObservable<IChangeResult<(Temperature? TemperatureHot, Temperature? TemperatureCold)>>, ISamplingSensor<(Temperature? TemperatureHot, Temperature? TemperatureCold)>, ISensor<(Temperature? TemperatureHot, Temperature? TemperatureCold)>, IDisposable, ITemperatureSensor, ISamplingSensor<Temperature>, ISensor<Temperature>, ISensor, ISamplingSensor, II2cPeripheral
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.ObservableBase&lt;UNIT&gt;](../Mcp960x)
-
-**Implements:**  
-
-<details><summary>Expand</summary>
-
-`System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.Temperature>>>>`, `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.Temperature>>>`, `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.Temperature>>>`, `System.IDisposable`, `Meadow.Peripherals.Sensors.ITemperatureSensor`, `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`, `Meadow.Peripherals.Sensors.ISensor`, `Meadow.Peripherals.Sensors.ISamplingSensor`, `Meadow.Hardware.II2cPeripheral`
-</details>
-
-
-
-
-## Implements
-
-* `System.IObservable<Meadow.IChangeResult<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.Temperature>>>>`
-* `Meadow.Peripherals.Sensors.ISamplingSensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.Temperature>>>`
-* `Meadow.Peripherals.Sensors.ISensor<System.ValueTuple<System.Nullable<Meadow.Units.Temperature>,System.Nullable<Meadow.Units.Temperature>>>`
-* `System.IDisposable`
-* `Meadow.Peripherals.Sensors.ITemperatureSensor`
-* `Meadow.Peripherals.Sensors.ISamplingSensor<Meadow.Units.Temperature>`
-* `Meadow.Peripherals.Sensors.ISensor<Meadow.Units.Temperature>`
-* `Meadow.Peripherals.Sensors.ISensor`
-* `Meadow.Peripherals.Sensors.ISamplingSensor`
-* `Meadow.Hardware.II2cPeripheral`

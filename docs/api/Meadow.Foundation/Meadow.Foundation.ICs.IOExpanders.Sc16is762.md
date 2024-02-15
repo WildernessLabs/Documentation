@@ -96,23 +96,3 @@ private async Task PollProc(ISerialPort port)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Sc16is7x2/Samples/Sc16is762_Sample)
 
-
-# Class Sc16is762
-Represents an Sc16is762 I/O expander device
-
-###### **Assembly**: Sc16is7x2.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Sc16is7x2/Driver/Drivers/Sc16is762.cs#L9)
-```csharp title="Declaration"
-public class Sc16is762 : Sc16is7x2, ISerialController, II2cPeripheral, ISpiPeripheral
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.IOExpanders.Sc16is7x2](../Sc16is7x2)
-
-**Implements:**  
-`Meadow.Hardware.ISerialController`, `Meadow.Hardware.II2cPeripheral`, `Meadow.Hardware.ISpiPeripheral`
-
-
-## Implements
-
-* `Meadow.Hardware.ISerialController`
-* `Meadow.Hardware.II2cPeripheral`
-* `Meadow.Hardware.ISpiPeripheral`

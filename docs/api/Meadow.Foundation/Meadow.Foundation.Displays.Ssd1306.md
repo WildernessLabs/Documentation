@@ -92,27 +92,3 @@ The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C
 
 
 
-
-# Class Ssd1306
-Represents the SSD1306 family of OLED displays
-
-###### **Assembly**: Ssd130x.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/Drivers/Ssd1306.cs#L9)
-```csharp title="Declaration"
-public class Ssd1306 : Ssd130xBase, IGraphicsDisplay, ISpiPeripheral, II2cPeripheral, IDisposable
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.Displays.Ssd130xBase](../Ssd130xBase)
-
-**Derived:**  
-[Meadow.Foundation.Displays.Ssd1309](../Ssd1309)
-
-**Implements:**  
-[Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay), `Meadow.Hardware.ISpiPeripheral`, `Meadow.Hardware.II2cPeripheral`, `System.IDisposable`
-
-
-## Implements
-
-* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
-* `Meadow.Hardware.ISpiPeripheral`
-* `Meadow.Hardware.II2cPeripheral`
-* `System.IDisposable`

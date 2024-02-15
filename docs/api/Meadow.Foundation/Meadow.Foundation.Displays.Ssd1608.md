@@ -73,33 +73,3 @@ public override Task Run()
 If your display does not include any of the above pins, they can be omitted. Pass `NULL` into the constructor for the missing pin(s).
 
 ![Wiring a SSD1608 to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.ePaper.SSD1608/ePaper_Fritzing.png)
-
-# Class Ssd1608
-Represents an Ssd1608 ePaper display
-
-###### **Assembly**: EPaper.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Driver/Drivers/Ssd1608.cs#L9)
-```csharp title="Declaration"
-public class Ssd1608 : EPaperMonoBase, ISpiPeripheral, IDisposable, IGraphicsDisplay
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.Displays.EPaperBase](../EPaperMonoBase)
-
-**Derived:**  
-[Meadow.Foundation.Displays.Epd1in54](../Epd2in9)
-
-**Implements:**  
-`Meadow.Hardware.ISpiPeripheral`, `System.IDisposable`, [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
-
-## Methods
-### Initialize()
-Initialize the display
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.ePaper/Driver/Drivers/Ssd1608.cs#L50)
-```csharp title="Declaration"
-protected override void Initialize()
-```
-
-## Implements
-
-* `Meadow.Hardware.ISpiPeripheral`
-* `System.IDisposable`
-* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)

@@ -93,24 +93,3 @@ public override Task Run()
 The OLED displays are available with a SPI or I2C interfaces. Wiring for the I2C interface is as follows:
 
 ![Wiring a Ssd1309 to a Meadow F7](/API_Assets/Meadow.Foundation.Displays.Ssd1309/SSD1309_Fritzing.png)
-
-# Class Ssd1309
-Represents the SSD1309 family of OLED displays
-
-###### **Assembly**: Ssd130x.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/Drivers/Ssd1309.cs#L8)
-```csharp title="Declaration"
-public class Ssd1309 : Ssd1306, IGraphicsDisplay, ISpiPeripheral, II2cPeripheral, IDisposable
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.Displays.Ssd130xBase](../Ssd1306)
-
-**Implements:**  
-[Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay), `Meadow.Hardware.ISpiPeripheral`, `Meadow.Hardware.II2cPeripheral`, `System.IDisposable`
-
-
-## Implements
-
-* [Meadow.Foundation.Graphics.IGraphicsDisplay](../IGraphicsDisplay)
-* `Meadow.Hardware.ISpiPeripheral`
-* `Meadow.Hardware.II2cPeripheral`
-* `System.IDisposable`

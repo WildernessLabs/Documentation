@@ -107,27 +107,3 @@ To wire a Mcp23017 to your Meadow board, connect the following:
 | VCC     | 3V3           |
 | SCL     | D08 (SCL Pin) |
 | SDA     | D07 (SDA Pin) |
-
-# Class Mcp23017
-Represent an MCP23017 I2C port expander
-
-###### **Assembly**: Mcp23xxx.dll
-###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation/blob/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Mcp23xxx/Driver/Drivers/Mcp23017.cs#L8)
-```csharp title="Declaration"
-public class Mcp23017 : Mcp23x1x, IDigitalInputOutputController, IDigitalInputController, IDigitalOutputController, ISpiPeripheral, II2cPeripheral, IDigitalInterruptController, IPinController
-```
-**Inheritance:** `System.Object` -> [Meadow.Foundation.ICs.IOExpanders.Mcp23xxx](../Mcp23x1x)
-
-**Implements:**  
-`Meadow.Hardware.IDigitalInputOutputController`, `Meadow.Hardware.IDigitalInputController`, `Meadow.Hardware.IDigitalOutputController`, `Meadow.Hardware.ISpiPeripheral`, `Meadow.Hardware.II2cPeripheral`, `Meadow.Hardware.IDigitalInterruptController`, `Meadow.Hardware.IPinController`
-
-
-## Implements
-
-* `Meadow.Hardware.IDigitalInputOutputController`
-* `Meadow.Hardware.IDigitalInputController`
-* `Meadow.Hardware.IDigitalOutputController`
-* `Meadow.Hardware.ISpiPeripheral`
-* `Meadow.Hardware.II2cPeripheral`
-* `Meadow.Hardware.IDigitalInterruptController`
-* `Meadow.Hardware.IPinController`
