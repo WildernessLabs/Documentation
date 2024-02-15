@@ -147,7 +147,13 @@ jobs:
         run: |
           dfmg
 
-      # 
+      # We need to divert links within meadow foundation to the right files 
+      - name: Fix Meadow.Foundation links
+        working-directory: ./src
+        run: |
+          node ./scripts/meadow-foundation-broken-link-fixer.js
+      
+      # let's add correct slugs. They are important, because things won't build if they dont have "slug: /docs/api/..."
       - name: Update slugs in frontmatter.
         working-directory: ./src
         run: |
@@ -162,12 +168,6 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation.FeatherWings &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
-
-      # We need to divert links within meadow foundation to the right files 
-      - name: Fix Meadow.Foundation links
-        working-directory: ./src
-        run: |
-          node ./scripts/meadow-foundation-broken-link-fixer.js
       
       # Let's put the api files where they belong, and also fix 
       - name: Copy api files to content locations

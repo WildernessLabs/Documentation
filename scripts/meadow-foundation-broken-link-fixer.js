@@ -3,6 +3,7 @@ const path = require('path');
 
 // Specify the directory containing the markdown files
 const directoryPath = './api/Meadow.Foundation/';
+console.log("Fixing links for './api/Meadow.Foundation/'")
 
 // Read the directory content
 fs.readdir(directoryPath, (err, files) => {
@@ -33,10 +34,10 @@ fs.readdir(directoryPath, (err, files) => {
       });
 
       // Write the modified content back to the file
-      // fs.writeFile(filePath, modifiedData, 'utf8', (err) => {
-      //   if (err) return console.log(err);
-      //   console.log(`File processed: ${filePath}`);
-      // });
+      fs.writeFile(filePath, modifiedData, 'utf8', (err) => {
+        if (err) return console.log(err);
+        console.log(`File processed: ${filePath}`);
+      });
     });
   });
 });
