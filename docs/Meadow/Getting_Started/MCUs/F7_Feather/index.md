@@ -75,7 +75,7 @@ Open VSCode’s Extensions Manager and install [VSCode Tools for Meadow](https:/
 
 ### Step 4 - Deploy latest version of Meadow.OS
 
-Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow&2EOS/) to your board to ensure it’s running with the latest version available.
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
 
 ### Step 5 - Install Meadow Project Templates
 
