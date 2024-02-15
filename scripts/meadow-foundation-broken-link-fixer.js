@@ -21,7 +21,7 @@ fs.readdir(directoryPath, (err, files) => {
       }
 
       // Use the provided regex pattern to find and replace matches
-      const modifiedData = data.replace(/(?:\[(.*)\]\(..\/(.*)\))(?::| )/gm, (match, p1, p2) => {
+      const modifiedData = data.replace(/(?:\[(.*)\]\(..\/(.*)\))(?::| |)/gm, (match, p1, p2) => {
         // Change the second capture group as requested
         // example: [Meadow.Foundation.Displays.Led.FourteenSegment.Segment](./Meadow.Foundation.Displays.Led/FourteenSegment.Segment)
         const baseClass = p1.replace(`.${p2}`, "");
@@ -33,10 +33,10 @@ fs.readdir(directoryPath, (err, files) => {
       });
 
       // Write the modified content back to the file
-      fs.writeFile(filePath, modifiedData, 'utf8', (err) => {
-        if (err) return console.log(err);
-        console.log(`File processed: ${filePath}`);
-      });
+      // fs.writeFile(filePath, modifiedData, 'utf8', (err) => {
+      //   if (err) return console.log(err);
+      //   console.log(`File processed: ${filePath}`);
+      // });
     });
   });
 });
