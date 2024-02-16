@@ -17,9 +17,9 @@ const replacePatternInFile = async (dir, file) => {
     return;
   }
 
+  // JOB 1
   const pattern1 = /(?:\(..\/(.*\/).*\))/g;
   try {
-     // JOB 1
     let data = await fs.readFile(filePath, "utf8");
 
     // Replacement logic adjusted for the specific regex
@@ -29,19 +29,23 @@ const replacePatternInFile = async (dir, file) => {
 
     await fs.writeFile(filePath, result, "utf8");
     console.log(`File updated: ${filePath}`);
+  } catch (err) {
+    console.error(`Error processing file: ${filePath}`, err);
+  }
+  // END JOB 1
 
-    // END JOB 1
-
-    // JOB 2
+  // JOB 2
+  try {
+    let data = await fs.readFile(filePath, "utf8");
     const pattern2 = /(?:\[(.*)\]\(..\/(.*)\))/g;
     const slugPattern = /slug: (.*)/;
     const slugMatches = data.match(slugPattern);
-    const slug = (slugMatches) ? slugMatches[0] : null;
+    const slug = slugMatches ? slugMatches[0] : null;
     // Replacement logic adjusted for the specific regex
     result = data.replace(pattern2, (match, p1, p2) => {
       if (!p1.includes(p2)) return match; //We are only interested in the broken ones
       const baseClass = p1.replace(`.${p2}`, "");
-      if(slug?.includes(baseClass)) return match; //can't go around breaking working links now...
+      if (slug?.includes(baseClass)) return match; //can't go around breaking working links now...
       const newString = `[${p1}](../${baseClass}/${p2})`;
       // console.log(newString);
       return newString;
