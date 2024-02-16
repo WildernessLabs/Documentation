@@ -46,7 +46,7 @@ const replacePatternInFile = async (dir, file) => {
       if (!p1.includes(p2)) return match; //We are only interested in the broken ones
       const baseClass = p1.replace(`.${p2}`, "");
       if (slug?.includes(baseClass)) return match; //can't go around breaking working links now...
-      const newString = `[${p1}](../${baseClass}/${p2})`;
+      const newString = `[${p1}](../../${baseClass}/${p2})`;
       // console.log(newString);
       return newString;
     });
