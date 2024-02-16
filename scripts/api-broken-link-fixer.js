@@ -3,7 +3,7 @@ const { Dirent } = require("fs");
 const path = require("path");
 
 // Get the starting directory from command line arguments
-const startDir = process.argv[2] ? process.argv[2] : "./api/";
+const startDir = process.argv[2] ? process.argv[2] : "./docs/api/";
 
 // Function to replace the specified pattern in file content
 const replacePatternInFile = async (dir, file) => {
