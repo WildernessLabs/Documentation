@@ -2,8 +2,8 @@ name: "[sandbox] Publish static site"
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
+  pull_request:
+    branches: ["develop"]
 
 permissions:
   id-token: write
