@@ -17,7 +17,7 @@ const replacePatternInFile = async (dir, file) => {
     return;
   }
 
-  // JOB 1
+  // JOB 1 - Fix basic links
   const pattern1 = /(?:\(..\/(.*\/).*\))/g;
   try {
     let data = await fs.readFile(filePath, "utf8");
@@ -34,7 +34,7 @@ const replacePatternInFile = async (dir, file) => {
   }
   // END JOB 1
 
-  // JOB 2
+  // JOB 2 - Fix type links
   try {
     let data = await fs.readFile(filePath, "utf8");
     const pattern2 = /(?:\[(.*)\]\(..\/(.*)\))/g;
@@ -50,6 +50,20 @@ const replacePatternInFile = async (dir, file) => {
       // console.log(newString);
       return newString;
     });
+
+    await fs.writeFile(filePath, result, "utf8");
+    console.log(`File updated: ${filePath}`);
+  } catch (err) {
+    console.error(`Error processing file: ${filePath}`, err);
+  }
+  // END JOB 2
+
+  // JOB 3 - Fix broken github source links
+  try {
+    let data = await fs.readFile(filePath, "utf8");
+    const pattern3 = /(?:\[View Source\]\((.* .*)\))/g;
+    // Replacement logic adjusted for the specific regex
+    result = data.replace(pattern3, (match, p1) => `[View Source](${p1.replace(" ", "%20")})`);
 
     await fs.writeFile(filePath, result, "utf8");
     console.log(`File updated: ${filePath}`);
