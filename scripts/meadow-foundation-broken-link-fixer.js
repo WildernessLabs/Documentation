@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Specify the directory containing the markdown files
-const directoryPath = './api/Meadow.Foundation/';
+const directoryPath = './docs/api/Meadow.Foundation/';
 console.log("Fixing links for './docs/api/Meadow.Foundation/'")
 
 // Read the directory content
