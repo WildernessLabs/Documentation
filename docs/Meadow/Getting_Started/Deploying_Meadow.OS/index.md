@@ -187,7 +187,7 @@ The port should be something like `/dev/tty.usbmodem01`.
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow meadow firmware download
+meadow firmware download
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
