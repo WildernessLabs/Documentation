@@ -21,7 +21,7 @@ dotnet tool install WildernessLabs.Meadow.CLI --global
 To update, simply change the `install` keyword to `update`:
 
 ```bash
-dotnet tool update Wildernesslabs.Meadow.CLI --global
+dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
 
 ## Executing Commands
@@ -37,13 +37,13 @@ meadow download os
 This guide covers a few of the most common commands, but there are many more to explore. For a complete list of commands, execute the following from a terminal window:
 
 ```bash
-meadow -h
+meadow --help
 ```
 
-Additionally, you can get additional help information for any given command by passing `-h` as option to that command. For instance, the following will provide guidance on the `listen` command:
+Additionally, you can get additional help information for any given command by passing `--help` (or `-h` shortened) as an option to that command. For instance, the following will provide guidance on the `listen` command:
 
 ```bash
-meadow listen -h
+meadow listen --help
 ```
 
 ## Working with Ports
@@ -56,10 +56,10 @@ To list serial ports, execute the following:
 meadow list ports
 ```
 
-You can then specify the port via the `-s` option when executing commands. For example, the following command will print application output on a specific port to the terminal:
+You can then specify which port to use via for future commands with the `config route` command, replacing `{port}` with the port you found above. Then, after configuring which port to use, future commands will be directed to that port.
 
 ```bash
-meadow listen -s /dev/tty.usbmodem336F336D30361
+meadow config route {port}
 ```
 
 You only need to specify the port once; all subsequent commands will remember the specified port.
@@ -71,13 +71,13 @@ You only need to specify the port once; all subsequent commands will remember th
 To download the latest Meadow.OS, execute the following:
 
 ```bash
-meadow download os
+meadow firmware download
 ```
 
 Once it's downloaded, it can be deployed to the device by executing the following:
 
 ```bash
-meadow flash os
+meadow firmware write
 ```
 
 ### Deploy a Meadow App
