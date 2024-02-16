@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Specify the directory containing the markdown files
-const directoryPath = './docs/api/Meadow.Foundation/';
+const directoryPath = process.argv[2] ? process.argv[2] : './docs/api/Meadow.Foundation/';
 console.log("Fixing links for './docs/api/Meadow.Foundation/'")
 
 // Read the directory content
@@ -28,7 +28,7 @@ fs.readdir(directoryPath, (err, files) => {
         const baseClass = p1.replace(`.${p2}`, "");
         // if(p1.includes('Meadow.Foundation.Sensors.Atmospheric.Ccs811.MeasurementMode'))
         // console.log(p1, p2, baseClass);
-        const newString = `[${p1}](../../${baseClass}/${p2})`;
+        const newString = `[${p1}](../${baseClass}/${p2})`;
         console.log(newString);
         return newString;
       });
