@@ -17,7 +17,7 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
 1. Use the Meadow CLI to authenticate with Meadow.Cloud. You'll need to register an account with Wilderness Labs if you haven't already done so.
 
     ```console
-    `meadow cloud login`
+    meadow cloud login
     ```
 
 1. Connect to your Meadow device and provision it with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
