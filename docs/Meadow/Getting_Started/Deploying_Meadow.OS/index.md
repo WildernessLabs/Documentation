@@ -12,7 +12,7 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 
 ### Install .NET SDK
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your console:
@@ -95,7 +95,7 @@ Your board is now ready to have a Meadow application deployed to it!
 
 ### Install .NET SDK
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) for your Mac's processor architecture.
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) for your Mac's processor architecture.
 
 Even if you are working on an ARM-based computer, such as Apple M1, M1 Pro, or M2 CPUs, you should still install the x86 version of the .NET SDK.
 
@@ -115,7 +115,7 @@ dotnet tool update WildernessLabs.Meadow.CLI --global
 If you are working on an ARM-based Mac (M1, M1 Pro, M2 CPU), you will also need to explicitly add the x64 version of `libusb` and add an additional location to your `PATH` variable that aren't added by default on those systems.
 
 ```console
-arch -x86_64 brew install libusb
+arch -arm64 brew install libusb
 export PATH=/usr/local/share/dotnet/x64/:$PATH
 ```
 
@@ -178,7 +178,7 @@ The port should be something like `/dev/tty.usbmodem01`.
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow meadow firmware download
+meadow config route [PORT]
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
@@ -193,7 +193,7 @@ Please note: Linux may require `sudo` to access USB devices.
 
 ### Install .NET SDK
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your terminal:
@@ -302,7 +302,7 @@ or similar. The port might change between reboots of the Meadow so make sure to 
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow firmware write
+meadow config route [PORT]
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
