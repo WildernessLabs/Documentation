@@ -3,7 +3,7 @@ name: "[sandbox] Publish static site"
 on:
   workflow_dispatch:
   pull_request:
-    branches: [ "develop" ]
+    branches: ["develop"]
 
 permissions:
   id-token: write
@@ -146,7 +146,14 @@ jobs:
         working-directory: ./src/docfx/dfmg/Meadow.Foundation.mikroBUS
         run: |
           dfmg
-      
+
+      # Fun. Docusaurus isn't resolving the links correctly from many
+      # of the files output from dfmg. This script should help with that.
+      - name: Fix api broken links
+        working-directory: ./src
+        run: |
+          node ./scripts/api-broken-link-fixer.js
+
       # let's add correct slugs. They are important, because things won't build if they dont have "slug: /docs/api/..."
       - name: Update slugs in frontmatter.
         working-directory: ./src
@@ -162,26 +169,19 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation.FeatherWings &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
-      
-      # Let's put the api files where they belong, and also fix 
+
+      # Let's put the api files where they belong
       - name: Copy api files to content locations
         working-directory: ./src
         run: |
           node ./scripts/copy-api.js
-
-      # Fun. Docusaurus isn't resolving the links correctly from many
-      # of the files output from dfmg. This script should help with that.
-      - name: Fix api broken links
-        working-directory: ./src
-        run: |
-          node ./scripts/api-broken-link-fixer.js
 
       #docusaurus build
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
           # Tell Node.js to look for the package-lock.json file in the cloned repo location rather than root.
           cache-dependency-path: src/package-lock.json
       - name: Docusaurus Build and Deploy
@@ -190,14 +190,14 @@ jobs:
           npm run build
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          source_dir: './src/build'
-          container_name: '$web'
+          source_dir: "./src/build"
+          container_name: "$web"
           connection_string: ${{ secrets.BLOB_CONNECTIONSTRING }}
-          overwrite: 'true'
+          overwrite: "true"
           #sync: 'true'
 
       # # Purge Azure Front Door Cache
-      # - name: Log into Azure        
+      # - name: Log into Azure
       #   uses: azure/login@v1
       #   with:
       #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
