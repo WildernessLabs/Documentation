@@ -177,6 +177,11 @@ jobs:
         run: |
           node ./scripts/api-broken-link-fixer.js
 
+      - name: Fix Meadow.Foundation periphs broken links
+        working-directory: ./src
+        run: |
+          node ./scripts/meadow-foundation-broken-link-fixer.js
+
       #docusaurus build
       - name: Use Node.js
         uses: actions/setup-node@v3
