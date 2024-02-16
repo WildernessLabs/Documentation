@@ -27,8 +27,8 @@ const replacePatternInFile = async (dir, file) => {
       match.replace(`/${p1}`, "/")
     );
 
-    // await fs.writeFile(filePath, result, "utf8");
-    // console.log(`File updated: ${filePath}`);
+    await fs.writeFile(filePath, result, "utf8");
+    console.log(`File updated: ${filePath}`);
   } catch (err) {
     console.error(`Error processing file: ${filePath}`, err);
   }
@@ -48,8 +48,8 @@ const replacePatternInFile = async (dir, file) => {
       return newString;
     });
 
-    // await fs.writeFile(filePath, result, "utf8");
-    // console.log(`File updated: ${filePath}`);
+    await fs.writeFile(filePath, result, "utf8");
+    console.log(`File updated: ${filePath}`);
   } catch (err) {
     console.error(`Error processing file: ${filePath}`, err);
   }
