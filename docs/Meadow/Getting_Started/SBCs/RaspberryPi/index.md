@@ -18,13 +18,41 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
 
-### Step 3 - Add VS Linux Debugger Studio Extension
+### Step 3 - Install Meadow Project Templates
+
+Open a Terminal and enter the following command to install a list of Meadow project templates:
+
+```console
+dotnet new install WildernessLabs.Meadow.Template
+```
+
+When installed, you’ll see a list of Templates available
+
+```console
+The following template packages will be installed:
+   WildernessLabs.Meadow.Template
+
+Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Template Name                  Short Name         Language        Tags
+-----------------------------  -----------------  --------------  --------------
+Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
+Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
+Meadow.Windows App             WinForms           [C#]            Meadow/Console
+```
+
+### Step 4 - Add VS Linux Debugger Studio Extension
 
 Open Visual Studio’s Extensions Manager and install the [VS Linux Debugger](https://marketplace.visualstudio.com/items?itemName=SuessLabs.VSLinuxDebugger) Extension.
 
 Make sure you go through their Getting Started instructions to properly configure the target device (Raspberry Pi) and how to use the extension to build and deploy the Meadow.Linux application over the network.
 
-### Step 4 - Create your first Meadow.Linux application
+### Step 5 - Create your first Meadow.Linux application
 
 In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Linux Raspberry Pi App (Wilderness Labs)**:
 
@@ -32,7 +60,7 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 This is a minimal Meadow.Linux application that it'll output a few strings on a terminal to confirm the application is running correctly.
 
-### Step 5 - Deploy your application
+### Step 6 - Deploy your application
 
 Once the application is deployed successfully, open a terminal on the Raspberry Pi and go to inside the project's folder and type:
 
@@ -54,7 +82,7 @@ Run...
 Hello, Raspberry Pi!
 ```
 
-### Step 6 - Check out additional samples
+### Step 7 - Check out additional samples
 
 You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
 
