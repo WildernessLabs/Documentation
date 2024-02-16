@@ -28,7 +28,7 @@ fs.readdir(directoryPath, (err, files) => {
         const baseClass = p1.replace(`.${p2}`, "");
         // if(p1.includes('Meadow.Foundation.Sensors.Atmospheric.Ccs811.MeasurementMode'))
         // console.log(p1, p2, baseClass);
-        const newString = `[${p1}](./${baseClass}/${p2})`;
+        const newString = `[${p1}](../../${baseClass}/${p2})`;
         console.log(newString);
         return newString;
       });
