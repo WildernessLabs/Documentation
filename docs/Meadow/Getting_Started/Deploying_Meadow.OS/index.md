@@ -10,6 +10,8 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows" default>
 
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
+
 ### Step 1 - Create a Wilderness Labs Account
 
 In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
@@ -107,6 +109,8 @@ Your board is now ready to have a Meadow application deployed to it!
   </TabItem>
   <TabItem value="macos" label="macOS">
 
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
+
 ### Step 1 - Create a Wilderness Labs Account
 
 In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
@@ -114,8 +118,6 @@ In order to download the latest version of Meadow.OS, you will need to create a 
 ### Step 2 - Install .NET SDK
 
 Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) for your Mac's processor architecture.
-
-Even if you are working on an ARM-based computer, such as Apple M1, M1 Pro, or M2 CPUs, you should still install the x86 version of the .NET SDK.
 
 ### Step 3 - Install or update Meadow CLI
 
@@ -129,13 +131,6 @@ To update Meadow CLI, if already installed, execute the following command in you
 
 ```console
 dotnet tool update WildernessLabs.Meadow.CLI --global
-```
-
-If you are working on an ARM-based Mac (M1, M1 Pro, M2 CPU), you will also need to explicitly add the x64 version of `libusb` and add an additional location to your `PATH` variable that aren't added by default on those systems.
-
-```console
-arch -arm64 brew install libusb
-export PATH=/usr/local/share/dotnet/x64/:$PATH
 ```
 
 ### Step 4 - Install dfu-util
@@ -164,7 +159,7 @@ If your terminal cannot find the `meadow` command, it means the .NET SDK didn't 
 export PATH="$PATH:$HOME/.dotnet/tools"
 ```
 
-### Step 6 - Put the device into DFU Bootloader mode.
+### Step 6 - Put the device into DFU Bootloader mode
 
 To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
 
@@ -173,6 +168,8 @@ To update the OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, t
 **If the board is connected:** hold the `BOOT` button down, and then press and release the `RST` (Reset) button. Then release the `BOOT` button.
 
 ![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./wildernesslabs_meadow_boot_button.jpg)
+
+> NOTE: On macOS Sonoma and newer, you may need to allow USB device access for both regular Meadow mode and bootloader mode. If you release the `BOOT` button before allowing the USB access in bootloader mode, your device may not be available for writing the firmware. Repeat the above process after alowing for USB access to get into bootloader mode again.
 
 ### Step 7 - Flash Meadow.OS and Coprocessor Firmware
 
@@ -191,26 +188,27 @@ meadow firmware write
 This following will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
 Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on.
 
-Execute the following command in your terminal:
+Execute the following Meadow CLI command in your terminal to determine the port your Meadow device is using.
 
 ```console
-ls /dev/tty.usb*
+meadow list ports
 ```
 
-The port should be something like `/dev/tty.usbmodem01`.
-Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
+On macOS, you should see a port like `/dev/tty.usbmodem336F336D30361`.
+Once you've identified the port name, run the following command in your console, replacing `{port}` with the serial port name to send all future `meadow` commands to that device.
 
 ```console
-meadow config route [PORT]
+meadow config route {port}
 ```
 
-**NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
+**NOTE: If the process hangs on _Opening port '{PORT}'..._, hit the RST button on the device.**
 
-Unplug and replug Meadow to give it a full restart.
-Your board is now ready to have a Meadow application deployed to it!
+Unplug and replug Meadow to give it a full restart. Your board is now ready to have a Meadow application deployed to it!
 
   </TabItem>
   <TabItem value="linux" label="Linux">
+
+[//]: # (Whenever editing these OS sections, make sure any common instructions are edited in the other OS/IDE sections as well to keep them in sync with each other.)
 
 Please note: Linux may require `sudo` to access USB devices.
 
