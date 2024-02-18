@@ -522,7 +522,7 @@ You can now set the speed of the I2C bus. Somehow we missed this when we launche
 
 ### Meadow.CLI Docs
 
-We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Basics/Meadow_CLI/).
+We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Tools/Meadow_Cli/).
 
 ### Meadow.Foundation
 

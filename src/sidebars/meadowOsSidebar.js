@@ -121,7 +121,6 @@ const meadowOsSidebar = [
       },
       "Meadow/Meadow_Basics/Units/index",
       "Meadow/Meadow_Basics/Events_and_IObservable/index",
-      "Meadow/Meadow_Basics/Meadow_CLI/index",
 
       {
         type: "category",
