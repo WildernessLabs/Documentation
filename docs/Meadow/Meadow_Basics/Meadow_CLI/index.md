@@ -82,10 +82,10 @@ meadow firmware write
 
 ### Deploy a Meadow App
 
-To deploy an app to the device, execute the following, replacing [Path] with the path to your `app.exe`:
+To deploy an app to the device, execute the following, replacing `{path}` with the path to your app's built `App.dll` file:
 
 ```bash
-meadow app deploy -f [Path]/app.exe
+meadow app deploy -f {path}/App.dll
 ```
 
 ### Working with Files
@@ -131,7 +131,6 @@ All of the files on the file system can be deleted without reformatting the flas
 ```bash
 meadow file delete all
 ```
-
 
 ### Get Meadow's device information
 
