@@ -32,11 +32,11 @@ Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](..
 
 In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow F7 Feather App (Wilderness Labs)**:
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
+![Visual Studio create a new project window showing several Meadow project temlates.](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
 Once the new project is loaded, right-click on the toolbar area and select the **Meadow Device List** item.
 
-![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs_meadow_toolbar.png)
+![Selecting the Meadow Device List item to show in the Visual Studio toolbar.](../../Common_Assets/wildernesslabs_meadow_toolbar.png)
 
 This is your device selector to deploy applications to Meadow devices.
 
@@ -44,7 +44,7 @@ This is your device selector to deploy applications to Meadow devices.
 
 Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
 
-![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs-vswin-usage.jpg)
+![Meadow Devices dropdown in the Visual Studio toolbar showing a selected device port.](../../Common_Assets/wildernesslabs-vswin-usage.jpg)
 
 :::caution
 ⚠️ **Note**: When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
@@ -52,13 +52,13 @@ Connect your board if disconnected, and in the **Meadow devices** drop down it s
 
 Once all the files are transferred to your device, the app will start in debug mode and you should see Meadow’s onboard RGB LED lighting up in different colors.
 
-![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
+![Animation showing Meadow Feather F7 running Blinky and cycling between colors on the onboard LED.](wildernesslabs_feather_blinky.gif)
 
 ### Step 7 - Check out additional samples
 
 You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
 
-![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
+![Several Meadow devices wired up to components and running various sample projects.](wilderness-labs-meadow-project-samples.jpg)
 
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
@@ -119,7 +119,7 @@ dotnet new F7Feather --name F7FeatherDemo
 
 What this Meadow application does is creates an `RgbPwmLed` object on the onboard RGB LED and cycles through different colors.
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_vscode_blinky.png)
+![Source code for a new Blinky application.](../../Common_Assets/wildernesslabs_meadow_vscode_blinky.png)
 
 ### Step 7 - Deploy your application
 
@@ -127,7 +127,7 @@ With no code changes, let's deploy this app to your new board.
 
 In the bottom toolbar, click on the COM port button that will open a drop down menu at the top, where you’ll select the corresponding port your board is using.
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.jpg)
+![Deploying an app to the COM3 port.](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.jpg)
 
 :::caution
 ⚠️ **Note**: When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
@@ -135,7 +135,7 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 
 Once all the files are transferred to your device, the app will start in debug mode and you should see Meadow’s onboard RGB LED lighting up in different colors.
 
-![Meadow Feather F7 running](wildernesslabs_feather_blinky.gif)
+![Animation showing Meadow Feather F7 running Blinky and cycling between colors on the onboard LED.](wildernesslabs_feather_blinky.gif)
 
 ### Step 8 - Check out additional samples
 
