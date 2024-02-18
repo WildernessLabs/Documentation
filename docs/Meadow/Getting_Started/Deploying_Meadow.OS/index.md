@@ -12,20 +12,24 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 
 ### Step 1 - Create a Wilderness Labs Account
 
-In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register). 
+In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
 
-### Step 2 - Install Meadow.CLI
+### Step 2 - Install .NET SDK
+
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet).
+
+### Step 3 - Install Meadow.CLI
 
 The way we flash Meadow boards (among other things) is via our command-line-interface tool called [Meadow.CLI](../../Meadow_Tools/Meadow_CLI/). Make sure you have it installed to continue.
 
-### Step 3 - Install dfu-util
+### Step 4 - Install dfu-util
 From a console with admin rights, execute following command:
 
 ```console
 meadow install dfu-util
 ```
 
-### Step 4 - Put the device into DFU Bootloader mode.
+### Step 5 - Put the device into DFU Bootloader mode
 
 To flash your board with the latest OS, Meadow must be in _DFU bootloader_ mode. To enter this mode, the `BOOT` button needs to be held down while the board boots up. This can be accomplished one of two ways.
 
@@ -35,7 +39,7 @@ To flash your board with the latest OS, Meadow must be in _DFU bootloader_ mode.
 
 ![Meadow board with boot button labeled at the end of the header on the battery JST side of the board.](./wildernesslabs_meadow_boot_button.jpg)
 
-### Step 5 - Install Meadow USB drivers
+### Step 6 - Install Meadow USB drivers
 
 #### Checking Meadow USB drivers
 
@@ -69,7 +73,7 @@ Now to flash Meadow OS, *dfu-util* is recommended. However, the default Windows 
 
 Your board is now ready to flash it with latest Meadow.OS version.
 
-### Step 6 - Log in to your Wilderness Labs account
+### Step 7 - Log in to your Wilderness Labs account
 
 Use the following command to log into your Wilderness Labs Account:
 
@@ -79,7 +83,7 @@ meadow login
 
 This will open a web browser where you'll need to enter your account credentials. If successful, you'll receive a confirmation on the CLI.
 
-### Step 7 - Download Meadow.OS
+### Step 8 - Download Meadow.OS
 
 Now we can download the latest Meadow.OS binary files with the command:
 
@@ -87,7 +91,7 @@ Now we can download the latest Meadow.OS binary files with the command:
 meadow firmware download
 ```
 
-### Step 8 - Flash Meadow.OS
+### Step 9 - Flash Meadow.OS
 
 Once connected the Meadow device via the USB cable and having put the device into DFU Bootloader mode, execute the following command in your console:
 
@@ -102,9 +106,13 @@ Your board is now ready to have a Meadow application deployed to it!
   </TabItem>
   <TabItem value="macos" label="macOS">
 
+### Create a Wilderness Labs Account
+
+In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
+
 ### Install .NET SDK
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) for your Mac's processor architecture.
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) for your Mac's processor architecture.
 
 Even if you are working on an ARM-based computer, such as Apple M1, M1 Pro, or M2 CPUs, you should still install the x86 version of the .NET SDK.
 
@@ -124,7 +132,7 @@ dotnet tool update WildernessLabs.Meadow.CLI --global
 If you are working on an ARM-based Mac (M1, M1 Pro, M2 CPU), you will also need to explicitly add the x64 version of `libusb` and add an additional location to your `PATH` variable that aren't added by default on those systems.
 
 ```console
-arch -x86_64 brew install libusb
+arch -arm64 brew install libusb
 export PATH=/usr/local/share/dotnet/x64/:$PATH
 ```
 
@@ -187,7 +195,7 @@ The port should be something like `/dev/tty.usbmodem01`.
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow firmware download
+meadow config route [PORT]
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**
@@ -200,9 +208,13 @@ Your board is now ready to have a Meadow application deployed to it!
 
 Please note: Linux may require `sudo` to access USB devices.
 
-### Install .NET SDK
+### Step 1 - Create a Wilderness Labs Account
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
+
+### Step 2 - Install .NET SDK
+
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ### Install or update Meadow CLI
 To install Meadow CLI, execute the following command in your terminal:
@@ -311,7 +323,7 @@ or similar. The port might change between reboots of the Meadow so make sure to 
 Once you've identified the port name, run the following command in your console replacing [PORT] with the serial port name:
 
 ```console
-meadow firmware write
+meadow config route [PORT]
 ```
 
 **NOTE: If the process hangs on _Opening port '[PORT]'..._, hit the RST button on the device.**

@@ -62,7 +62,7 @@ You can then specify which port to use via for future commands with the `config 
 meadow config route {port}
 ```
 
-You only need to specify the port once; all subsequent commands will remember the specified port.
+You only need to configure the desired port once; all subsequent commands will remember the specified port.
 
 ## Common Tasks
 
