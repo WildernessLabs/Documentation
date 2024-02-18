@@ -14,7 +14,7 @@ When you receive your Meadow board, it will need to have the latest Meadow.OS up
 
 ### Step 1 - Create a Wilderness Labs Account
 
-In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
+In order to download the latest version of Meadow.OS, you will need to [register for a **Wilderness Labs Account**](https://identity.wildernesslabs.co/signin/register).
 
 ### Step 2 - Install .NET SDK
 
@@ -113,7 +113,7 @@ Your board is now ready to have a Meadow application deployed to it!
 
 ### Step 1 - Create a Wilderness Labs Account
 
-In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
+In order to download the latest version of Meadow.OS, you will need to [register for a **Wilderness Labs Account**](https://identity.wildernesslabs.co/signin/register).
 
 ### Step 2 - Install .NET SDK
 
@@ -214,7 +214,7 @@ Please note: Linux may require `sudo` to access USB devices.
 
 ### Step 1 - Create a Wilderness Labs Account
 
-In order to download the latest version of Meadow.OS, you will need to create a **Wilderness Labs Account**. You can register [here](https://identity.wildernesslabs.co/signin/register).
+In order to download the latest version of Meadow.OS, you will need to [register for a **Wilderness Labs Account**](https://identity.wildernesslabs.co/signin/register).
 
 ### Step 2 - Install .NET SDK
 
