@@ -109,7 +109,7 @@ Settings:
 
 A few things to consider:
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
- * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](https://github.com/WildernessLabs/Documentation/blob/cell-docs-updates/docs/Meadow/Meadow.OS/Cellular/index.md#scanning-cell-networks) method that will list nearby networks in the area.
+ * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](#scanning-cell-networks) method that will list nearby networks in the area.
  * `TurnOnPin` is a pin used to turn on the module.
 
 ## Specify Network Interface and reserved pins
