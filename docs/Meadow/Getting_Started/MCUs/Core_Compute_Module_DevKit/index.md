@@ -79,7 +79,7 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
@@ -106,7 +106,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new CoreComputeModule -n CcmDemo
+dotnet new CoreComputeModule --name CcmDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the CCM Dev Kit's onboard RGB LED and cycles through different colors.

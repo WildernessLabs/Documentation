@@ -87,7 +87,7 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
@@ -114,7 +114,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
 
 ```console
-dotnet new ProjectLab -n ProjectLabDemo
+dotnet new ProjectLab --name ProjectLabDemo
 ```
 
 This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.

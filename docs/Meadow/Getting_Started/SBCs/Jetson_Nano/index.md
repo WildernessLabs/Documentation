@@ -79,7 +79,7 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
@@ -106,7 +106,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow.Linux project that will run on your Raspberry Pi:
 
 ```console
-dotnet new JetsonNano -n JetsonNanoDemo
+dotnet new JetsonNano --name JetsonNanoDemo
 ```
 
 This Meadow.Linux application shows a basic Meadow app structure with an `Initialize` and `Run` methods with logging strings to confirm in the output the application ran successfully.

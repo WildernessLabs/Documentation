@@ -87,7 +87,7 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
@@ -109,12 +109,12 @@ Meadow.Windows App             WinForms           [C#]            Meadow/Console
 
 ### Step 6 - Create your first Meadow application
 
-Lets verify everything is set up by deploying your first Meadow application. 
+Lets verify everything is set up by deploying your first Meadow application.
 
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new F7Feather -n F7FeatherDemo
+dotnet new F7Feather --name F7FeatherDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the onboard RGB LED and cycles through different colors.
@@ -123,7 +123,7 @@ What this Meadow application does is creates an `RgbPwmLed` object on the onboar
 
 ### Step 7 - Deploy your application
 
-With no code changes, let's deploy this app to your new board. 
+With no code changes, let's deploy this app to your new board.
 
 In the bottom toolbar, click on the COM port button that will open a drop down menu at the top, where you’ll select the corresponding port your board is using.
 

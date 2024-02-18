@@ -67,7 +67,7 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
@@ -94,7 +94,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Windows project:
 
 ```console
-dotnet new WinFormsHardware -n WinFormsHardwareDemo
+dotnet new WinFormsHardware --name WinFormsHardwareDemo
 ```
 
 This Meadow.Windows application controls an RGB LED connected to a FT232H IO Expander that you can connect to your machine via USB-C, and opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
