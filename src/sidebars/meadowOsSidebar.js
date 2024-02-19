@@ -121,7 +121,6 @@ const meadowOsSidebar = [
       },
       "Meadow/Meadow_Basics/Units/index",
       "Meadow/Meadow_Basics/Events_and_IObservable/index",
-      "Meadow/Meadow_Basics/Meadow_CLI/index",
 
       {
         type: "category",
@@ -170,7 +169,7 @@ const meadowOsSidebar = [
       id: "Meadow/Meadow_Tools/index",
     },
     items: [
-      "Meadow/Meadow_Tools/Meadow.CLI/index",
+      "Meadow/Meadow_Tools/Meadow_CLI/index",
       "Meadow/Meadow_Tools/VSWin/index",
       "Meadow/Meadow_Tools/VSCode/index"
     ],

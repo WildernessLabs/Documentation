@@ -69,11 +69,11 @@ If your application does not execute, please check your project settings and if 
 
 The Meadow CLI tool can be used to diagnose and fix a number of issues that can appear during the beta phase.
 
-A list of command can be found in the [Meadow CLI](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) documentation.
+A list of command can be found in the [Meadow CLI](http://developer.wildernesslabs.co/Meadow/Meadow_Tools/Meadow_Cli/) documentation.
 
 ### Check Files Deployed to Meadow
 
-Use the `meadow file list` command to verify that all of the required files have been deployed to Meadow.  The list of expected files can be found at the end of the [Meadow CLI](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) documentation page.
+Use the `meadow file list` command to verify that all of the required files have been deployed to Meadow.  The list of expected files can be found at the end of the [Meadow CLI](http://developer.wildernesslabs.co/Meadow/Meadow_Tools/Meadow_Cli/) documentation page.
 
 As noted above, the main application assembly should be _App.exe_.
 
