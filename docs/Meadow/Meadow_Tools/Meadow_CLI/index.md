@@ -20,17 +20,6 @@ Some Meadow.CLI commands [registering for a **Wilderness Labs Account**](https:/
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-  </TabItem>
-  <TabItem value="macos" label="macOS">
-
-   </TabItem>
-   <TabItem value="linux" label="Linux">
-
-Please note: Linux may require `sudo` to access USB devices.
-
-  </TabItem>
-</Tabs>
-
 ### Install .NET SDK
 
 Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
@@ -48,6 +37,54 @@ To update to the latest version, change the `install` keyword to `update`.
 ```console
 dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+### Install .NET SDK
+
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) for your Mac's processor architecture.
+
+### Install or update Meadow CLI
+
+To install Meadow CLI, execute the following command in your terminal:
+
+```console
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
+
+To update Meadow CLI, if already installed, execute the following command in your terminal:
+
+```console
+dotnet tool update WildernessLabs.Meadow.CLI --global
+```
+
+   </TabItem>
+   <TabItem value="linux" label="Linux">
+
+
+Please note: Linux may require `sudo` to access USB devices.
+
+### Install .NET SDK
+
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
+### Install or update Meadow CLI
+To install Meadow CLI, execute the following command in your terminal:
+
+```console
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
+
+To update Meadow CLI, if already installed, execute the following command in your terminal:
+
+```console
+dotnet tool update WildernessLabs.Meadow.CLI --global
+```
+
+  </TabItem>
+</Tabs>
+
 
 ## Executing Commands
 
