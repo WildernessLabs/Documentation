@@ -121,7 +121,7 @@ Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/dow
 
 ### Step 3 - Install or update Meadow CLI
 
-To install Meadow CLI, execute the following command in your terminal:
+To install [Meadow CLI](/Meadow/Meadow_Tools/Meadow_CLI/) as a .NET tool, execute the following command in your terminal:
 
 ```console
 dotnet tool install WildernessLabs.Meadow.CLI --global
