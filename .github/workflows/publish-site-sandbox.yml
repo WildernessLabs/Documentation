@@ -180,7 +180,8 @@ jobs:
       - name: Fix Meadow.Foundation periphs broken links
         working-directory: ./src
         run: |
-          node ./scripts/meadow-foundation-broken-link-fixer.js
+          node ./scripts/meadow-foundation-broken-link-fixer.js &&
+          ./scripts/meadow-foundation-broken-link-fixer.js ./docs/api/Meadow.Foundation.FeatherWings/
 
       #docusaurus build
       - name: Use Node.js

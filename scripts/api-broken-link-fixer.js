@@ -45,7 +45,11 @@ const replacePatternInFile = async (dir, file) => {
     result = data.replace(pattern2, (match, p1, p2) => {
       if (!p1.includes(p2)) return match; //We are only interested in the broken ones
       const baseClass = p1.replace(`.${p2}`, "");
-      if (slug?.includes(baseClass)) return match; //can't go around breaking working links now...
+      const slugBaseClass = ((ss) => {
+        let parts = slug.split("/");
+        return parts[parts.length-2];
+      })();
+      if (slugBaseClass === baseClass) return match; //can't go around breaking working links now...
       const newString = `[${p1}](../../${baseClass}/${p2})`;
       // console.log(newString);
       return newString;
