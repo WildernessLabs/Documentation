@@ -194,7 +194,7 @@ const resolvePathToMdFile = (
     }
   }
 
-  var file = findFileRecursive("./api", fileName);
+  var file = findFileRecursive(startDir, fileName);
   
   if (file) 
   {
