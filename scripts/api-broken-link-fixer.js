@@ -3,7 +3,7 @@ const { Dirent } = require("fs");
 const path = require("path");
 
 // Get the starting directory from command line arguments
-const startDir = process.argv[2] ? process.argv[2] : "./docs/api/";
+const startDir = process.argv[2] ? process.argv[2] : "./api/";
 
 // Function to replace the specified pattern in file content
 const replacePatternInFile = async (dir, file) => {
@@ -40,18 +40,43 @@ const replacePatternInFile = async (dir, file) => {
     const pattern2 = /(?:\[(.*)\]\(..\/(.*)\))/g;
     const slugPattern = /slug: (.*)/;
     const slugMatches = data.match(slugPattern);
-    const slug = slugMatches ? slugMatches[0] : null;
+    const slug = slugMatches ? slugMatches[1] : null;
     // Replacement logic adjusted for the specific regex
     result = data.replace(pattern2, (match, p1, p2) => {
-      if (!p1.includes(p2)) return match; //We are only interested in the broken ones
+      let newString = match;
       const baseClass = p1.replace(`.${p2}`, "");
-      const slugBaseClass = ((ss) => {
+      const { slugBaseClass, slugBasePath } = ((ss) => {
         let parts = slug.split("/");
-        return parts[parts.length-2];
+        const slugBaseClass = parts[parts.length - 2];
+        let slugBasePath = parts.join("/").replace(parts[parts.length - 1], "");
+        slugBasePath = slugBasePath.slice(0, -1);
+        return {
+          slugBaseClass,
+          slugBasePath,
+        };
       })();
-      if (slugBaseClass === baseClass) return match; //can't go around breaking working links now...
-      const newString = `[${p1}](../../${baseClass}/${p2})`;
-      // console.log(newString);
+
+      filePath;
+      if (slugBaseClass === baseClass) {
+        newString = `[${p1}](${slugBasePath}/${p2})`;
+      } else {
+        if (!p1.includes(p2)) {
+          const linkBaseClassArr = baseClass.split(".");
+          linkBaseClassArr.pop();
+          const linkBaseClass = linkBaseClassArr.join(".");
+          if (linkBaseClass === slugBaseClass) {
+            newString = `[${p1}](${slugBasePath}/${p2})`;
+          } else {
+            newString = `[${p1}](${slugBasePath}/${linkBaseClass}/${p2})`;
+          }
+        } else {
+          let libParts = baseClass.split(".");
+          libParts.pop();
+          let lib = libParts.join(".");
+          newString = `[${p1}](/docs/api/${lib}/${baseClass}/${p2})`;
+        }
+      }
+
       return newString;
     });
 
@@ -67,7 +92,10 @@ const replacePatternInFile = async (dir, file) => {
     let data = await fs.readFile(filePath, "utf8");
     const pattern3 = /(?:\[View Source\]\((.* .*)\))/g;
     // Replacement logic adjusted for the specific regex
-    result = data.replace(pattern3, (match, p1) => `[View Source](${p1.replace(" ", "%20")})`);
+    result = data.replace(
+      pattern3,
+      (match, p1) => `[View Source](${p1.replace(" ", "%20")})`
+    );
 
     await fs.writeFile(filePath, result, "utf8");
     console.log(`File updated: ${filePath}`);
