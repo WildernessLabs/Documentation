@@ -12,7 +12,7 @@ Starting with a review of the OS components and boot sequence, we will move on t
 
 The main tools that will be used here are:
 
-* `meadow` [command line tool (CLI)](http://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/)
+* `meadow` [command line tool (CLI)](http://developer.wildernesslabs.co/Meadow/Meadow_Tools/Meadow_Cli/)
 * `dfu-util` which is normally deployed as part of the `meadow` CLI deployment process.
 
 ## Meadow OS Start Sequence

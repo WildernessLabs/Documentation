@@ -1,11 +1,13 @@
 ---
 layout: Meadow
 sidebar_label: Hello, CCM DevKit
-title: Hello, Meadow Core-Compute Module (CCM) DevKit
+title: Hello, Meadow CCM DevKit
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-![](wildernesslabs_ccm_getting_started.jpg)
+![Meadow Core-Compute Module Dev Kit Getting Started Guide](wildernesslabs_ccm_getting_started.jpg)
+
+This guide shows you how to set up your [Meadow Core-Compute Module (CCM) DevKit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
@@ -24,7 +26,7 @@ Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Mea
 
 ### Step 4 - Deploy latest version of Meadow.OS
 
-Use the [Meadow.CLI](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) to deploy [Meadow.OS](https://developer.wildernesslabs.co/Meadow/Getting_Started/Deploying_Meadow/) to your board to ensure it’s running with the latest version available.
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
 
 ### Step 5 - Create your first Meadow application
 
@@ -67,7 +69,7 @@ Open VSCode’s Extensions Manager and install [VSCode Tools for Meadow](https:/
 
 ### Step 4 - Deploy latest version of Meadow.OS
 
-Use the [Meadow.CLI](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) to deploy [Meadow.OS](https://developer.wildernesslabs.co/Meadow/Getting_Started/Deploying_Meadow/) to your board to ensure it’s running with the latest version available.
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
 
 ### Step 5 - Install Meadow Project Templates
 
@@ -77,7 +79,7 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
@@ -104,7 +106,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new CoreComputeModule -n CcmDemo
+dotnet new CoreComputeModule --name CcmDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the CCM Dev Kit's onboard RGB LED and cycles through different colors.
