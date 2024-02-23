@@ -112,6 +112,7 @@ const replacePatternInFile = async (dir, file) => {
         }
       }
 
+      newString = newString.replace("/docs/docs/", "/docs/");
       return newString;
     });
 
