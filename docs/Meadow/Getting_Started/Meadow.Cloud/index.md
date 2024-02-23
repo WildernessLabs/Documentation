@@ -7,7 +7,7 @@ subtitle: Hello, Meadow.Cloud
 
 ![](wildernesslabs_meadow_cloud.jpg)
 
-### Step 1 - Create a Meadow.Cloud account
+### Step 1 - Create a Wilderness Labs account
 
 To access all [Meadow.Cloud](https://www.meadowcloud.co) features, you first need to [sign up](https://identity.wildernesslabs.co/signin/register) to create an account if you dont have one.
 
