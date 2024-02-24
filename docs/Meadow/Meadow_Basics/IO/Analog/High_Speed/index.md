@@ -8,7 +8,7 @@ You can [consume basic analog input using the `AnalogInputPort` class](../) with
 
 If you need to consume analog data at a much faster rate, you will want to use the `AnalogInputArray` analog input system introduced in Meadow version 1.6. You may require this level of analog data sampling for things such as monitoring power systems, reading vibration sensors, or reading analog audio inputs.
 
-`AnalogInputArray` is a powerful class that allows for high-speed data consumption from multiple analog inputs simultaneously via direct memory access (DMA)s. It's particularly useful in scenarios where you need to monitor or process data froms multiple sensors in real-time. On an F7 Feather v2, you can acheive approximately 37,000 samples per second.
+`AnalogInputArray` is a powerful class that allows for high-speed data consumption from multiple analog inputs simultaneously via direct memory access (DMA)s. It's particularly useful in scenarios where you need to monitor or process data froms multiple sensors in real-time. On an F7 Feather v2, for example, across three analog channels you might acheive 37,000 samples per second.
 
 The tradeoff of this level of data sampling is the reduced API, trading events and observables for raw speed.
 
