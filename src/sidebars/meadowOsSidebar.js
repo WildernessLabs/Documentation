@@ -91,7 +91,17 @@ const meadowOsSidebar = [
           id: "Meadow/Meadow_Basics/IO/index",
         },
         items: [
-          "Meadow/Meadow_Basics/IO/Analog/index",
+          {
+            type: "category",
+            label: "Analog",
+            link: {
+              type: "doc",
+              id: "Meadow/Meadow_Basics/IO/Analog/index",
+            },
+            items: [
+              "Meadow/Meadow_Basics/IO/Analog/High_Speed/index",
+            ],
+          },
           {
             type: "category",
             label: "Digital",
