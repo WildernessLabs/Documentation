@@ -12,9 +12,13 @@ On the Meadow F7 Feather, analog signals are written or read with a 12-bit resol
 
 Meadow has the capabilities to both read and write analog signals, but presently only the input/read functionality is exposed via API.
 
+## Consume higher-speed analog data
+
+Note that analog ports provide a rich system for consuming analog inputs. The data consumed this way can be limited to a few samples per second. You can consume [high-speed analog input data with `AnalogInputArray`](High_Speed/) through a simplified API.
+
 ## Samples
 
-For sample Meadow applications that illustrate the usage of analog ports, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/IO).
+For sample Meadow applications that illustrate both the basic usage of analog ports and high-speed analog data acquisition using an analog input array, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/IO).
 
 ## Analog Input
 
