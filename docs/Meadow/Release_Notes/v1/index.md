@@ -11,7 +11,7 @@ Another big update for Meadow! We’ve added SPI DMA which reduces CPU load when
 
 We’re also shipping a big stability improvement by improving how the OS manages and switches between threads.
 
-Note - starting with v1.9.0.0 and CLI v2.0, you’ll need to create a free Meadow account to download new versions of the Meadow OS. 
+Note - starting with v1.9.0.0 and CLI v2.0, you’ll need to [create a free Wilderness Labs account](https://identity.wildernesslabs.co/signin/register) to download new versions of the Meadow OS. 
 
 ### Meadow.OS
 
@@ -58,7 +58,7 @@ Note - starting with v1.9.0.0 and CLI v2.0, you’ll need to create a free Meado
 
 ### Meadow.Tooling
 
-* CLI v2.0 has shipped! This is a massive rework of the command line tool used to communicate with Meadow devices and manage firmware. Note, with this new release, you will need to create a free Meadow account and sign in before downloading firmware updates.
+* [CLI v2.0](https://developer.wildernesslabs.co/Meadow/Meadow_Tools/Meadow_CLI/) has shipped! This is a massive rework of the command line tool used to communicate with Meadow devices and manage firmware. Note, with this new release, you will need to [create a free Wilderness Labs account](https://identity.wildernesslabs.co/signin/register) and sign in before downloading firmware updates.
 
 ## v1.8.0
 
