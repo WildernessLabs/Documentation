@@ -5,6 +5,11 @@ title: Meadow v1.* Releases
 subtitle: Release Notes
 ---
 
+## Updating Instructions
+
+* [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
+* [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
+
 ## v1.9.0
 
 This is a huge update for Meadow! Highlights include:
