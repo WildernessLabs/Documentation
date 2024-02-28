@@ -9,7 +9,7 @@ subtitle: Release Notes
 
 This is a huge update for Meadow! Highlights include:
 
- * **Overall Stability** - With the last few releases we've knocked out nearly ever OS and networkign priority-zero issue. In many cases, Meadow.OS should now be stable for weeks or months without issue.
+ * **Overall Stability** - With the last few releases we've knocked out nearly ever OS and networking priority-zero issue. In many cases, Meadow.OS should now be stable for weeks or months without issue.
  * **OS Multitasking Stability** - We've implemented the `Round-Robin` thread scheduler which brings a massive upgrade to how the OS manages and switches between threads and brings a new level of stability around `Thread` and `Task` operations.
  * **SPI DMA** -  We’ve added SPI DMA which reduces CPU load when communicating with SPI devices and can lead to a 30% increase in drawing performance with SPI displays!
  * **Unified Meadow.Desktop** - Meadow.Desktop got a massive simplification by unifying the launcher between Windows/macOS/Linux, meaning you now only need a single application that will run in any dekstop context for full graphics simulation.
