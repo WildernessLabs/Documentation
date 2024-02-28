@@ -222,7 +222,7 @@ It's important to note that the `Csq` property returns a cached value obtained f
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
 
-double csq  = cellAdapter.GetSignalQuality();
+double csq  = cell.GetSignalQuality();
 Console.WriteLine("Cell Signal Quality: " + csq);
 ```
 
@@ -237,28 +237,29 @@ using Meadow.Foundation.Sensors.Location.Gnss;
 using Meadow.Peripherals.Sensors.Location.Gnss;
 using Meadow.Foundation.Sensors.Gnss;
 ...
-    void ProcessGnssPosition(object sender, IGnssResult location)
-    {
-        Resolver.Log.Info("*********************************************");
-        Resolver.Log.Info(location.ToString());
-        Resolver.Log.Info("*********************************************");  
-    }
+void ProcessGnssPosition(object sender, IGnssResult location)
+{
+   Resolver.Log.Info("*********************************************");
+   Resolver.Log.Info(location.ToString());
+   Resolver.Log.Info("*********************************************");  
+}
 ...
-    IGnssResult[] resultTypes = new IGnssResult[]
-    {
-        new GnssPositionInfo(),
-        new ActiveSatellites(),
-        new CourseOverGround(),
-        new SatellitesInView(new Satellite[0])
-    };
+IGnssResult[] resultTypes = new IGnssResult[]
+{
+   new GnssPositionInfo(),
+   new ActiveSatellites(),
+   new CourseOverGround(),
+   new SatellitesInView(new Satellite[0])
+};
 
-    ICellNetworkAdapter cell = networkAdapter as ICellNetworkAdapter;
+ICellNetworkAdapter cell = networkAdapter as ICellNetworkAdapter;
 
-    var bg95M3 = new Bg95M3(cellAdapter, TimeSpan.FromMinutes(30), resultTypes);
+var bg95M3 = new Bg95M3(cellAdapter, TimeSpan.FromMinutes(30), resultTypes);
 
-    bg95M3.GnssDataReceived += ProcessGnssPosition;
+bg95M3.GnssDataReceived += ProcessGnssPosition;
 
-    bg95M3.StartUpdating();
+bg95M3.StartUpdating();
+...
 ```
 
 For a more comprehensive example, you can refer to the [BG95-M3 GNSS sample](https://github.com/WildernessLabs/Meadow.Foundation/blob/develop/Source/Meadow.Foundation.Peripherals/Sensors.Gnss.Bg95M3/Samples/Bg95M3_Sample/MeadowApp.cs) available in the Meadow.Foundation repository.
