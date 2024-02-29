@@ -1,48 +1,13 @@
 ---
 layout: Meadow
-title: Get started with Meadow.Windows
-sidebar_label: Hello, Meadow.Windows
-subtitle: "To get up and running with Meadow.Windows, follow these steps:"
+title: Get started with Meadow.Mac
+sidebar_label: Hello, Meadow.Mac
+subtitle: "To get up and running with Meadow.Mac, follow these steps:"
 ---
 
 ![](wildernesslabs_desktop_getting_started.png)
 
 <Tabs groupId="ide">
-  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
-
-### Step 1 - Install .NET Runtime
-
-Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
-
-### Step 2 - Install Visual Studio
-
-Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
-
-### Step 3 - Add Meadow Visual Studio Extension
-
-Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) Extension.
-
-### Step 4 - Create your first Meadow application
-
-In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Desktop App (Wilderness Labs)**:
-
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
-
-This project creates a Meadow.Desktop app that has a Windows Forms (WinForms) window showing a Hello World text using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md). 
-
-### Step 5 - Run a Meadow Application
-
-Right-click the new project and select **Set as Startup project**
-
-![Meadow.Windows App running](wildernesslabs-meadow-windows-hello.jpg)
-
-### Step 6 - Check out additional samples
-
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
-
-![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
-
-  </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
 
 ### Step 1 - Install .NET Runtime
@@ -87,10 +52,10 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new Desktop --name WindowsDemo --Framework net8.0-windows
+dotnet new Desktop --name macOSDemo --Framework net8.0
 ```
 
-This Meadow.Desktop application opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
+This Meadow.Desktop application opens a 320x240 pixel GTK window saying `Hello, World` using MicroLayout.
 
 ### Step 5 - Run a Meadow Application
 
@@ -108,7 +73,7 @@ And finally to run the Meadow application, use the command:
 dotnet run
 ```
 
-A WinForm window should show up in the center of the screen saying `Hello, World`, like below:
+A GTK window should show up in the center of the screen saying `Hello, World`, like below:
 
 ![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
 
