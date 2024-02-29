@@ -48,7 +48,7 @@ export default function GettingStarted(): JSX.Element {
                     src={`${siteConfig.baseUrl}img/homepage/card-input-output.png`}
                   />
                   <div className="card-content">
-                    <h3>Raspberry Pi & Meadow.Linux</h3>
+                    <h3>Raspberry Pi and other single-board-computers</h3>
                     <ul className="flat">
                       <li><a href="/Meadow/Getting_Started/SBCs/RaspberryPi/">Raspberry Pi</a></li>
                       <li><a href="/Meadow/Getting_Started/SBCs/SeeedStudio_ReTerminal/">Seeed Studio ReTerminal</a></li>
@@ -66,8 +66,9 @@ export default function GettingStarted(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow.Desktop + Simulator</h3>
                     <ul className="flat">
-                      <li><a href="/Meadow/Getting_Started/Desktop/Hello_Simulator/">Meadow.Simulator</a></li>
-                      <li><a href="/Meadow/Getting_Started/Desktop/Hello_Ft232/">Meadow.Desktop + FT232</a></li>
+                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/">Meadow.Windows</a></li>
+                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/">Meadow.Linux</a></li>
+                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Mac/">Meadow.Mac</a></li>
                     </ul>
                   </div>
                 </div>
@@ -85,6 +86,12 @@ export default function GettingStarted(): JSX.Element {
                     <h3>Meadow.Cloud</h3>
                     <ul className="flat">
                       <li><a href="/Meadow/Getting_Started/Meadow.Cloud/">Hello, Meadow.Cloud</a></li>
+                      <li><a href="/Meadow/Meadow.Cloud/Device_Provisioning/">Provision a Device</a></li>
+                      <li><a href="/Meadow/Meadow.Cloud/OtA_Updates/">Over-the-Air (OtA) Updates</a></li>
+                      <li><a href="/Meadow/Meadow.Cloud/Health_Monitoring/">Health Monitoring</a></li>
+                      <li><a href="/Meadow/Meadow.Cloud/Logs_Events/">Logs + Events</a></li>
+                      <li><a href="/Meadow/Meadow.Cloud/Command_Control/">Command + Control</a></li>
+                      <li><a href="/Meadow/Meadow.Cloud/Integrations/">Integrations</a></li>
                     </ul>
                   </div>
                 </div>
@@ -94,8 +101,9 @@ export default function GettingStarted(): JSX.Element {
                   <div className="card-content">
                     <h3>IoT Accelerators</h3>
                     <ul className="flat">
+                      <li><a href="https://github.com/WildernessLabs/Meadow.ProjectLab?tab=readme-ov-file#getting-started">Project Lab</a></li>
                       <li><a href="https://github.com/WildernessLabs/Clima?tab=readme-ov-file#getting-started">Clima</a></li>
-                      <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker">GNSS/GPS Tracker</a></li>
+                      <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker?tab=readme-ov-file#getting-started">GNSS/GPS Sensor Tracker</a></li>
                       <li><a href="https://github.com/WildernessLabs/Juego?tab=readme-ov-file#getting-started">Juego</a></li>
                     </ul>
                   </div>

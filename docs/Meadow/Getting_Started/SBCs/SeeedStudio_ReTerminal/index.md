@@ -16,7 +16,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add VS Linux Debugger Studio Extension
 
@@ -87,18 +87,17 @@ When installed, you’ll see a list of templates available
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Success: WildernessLabs.Meadow.Template installed the following templates:
 Template Name                  Short Name         Language        Tags
 -----------------------------  -----------------  --------------  --------------
 Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
 Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
 Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
 Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Desktop App             Desktop            [C#]            Meadow/Console
 Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
 Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
 Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
-Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
-Meadow.Windows App             WinForms           [C#]            Meadow/Console
 ```
 
 ### Step 4 - Create your first Meadow application

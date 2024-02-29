@@ -15,7 +15,7 @@ subtitle: Installing the Meadow IDE extensions for Visual Studio and VS Code.
 
 The Meadow developer Extension for Visual Studio enables projects to be built, debugged and deployed to any of our Meadow-powered devices.
 
-If you havent already, download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+If you havent already, Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 
 :::caution
 ⚠️ **IMPORTANT**: Make sure to include the **.NET Multi-platform App UI development** component when installing Visual Studio.
