@@ -1,138 +1,122 @@
 ---
 layout: Meadow
 title: Get started with Meadow.Windows
+sidebar_label: Hello, Meadow.Windows
 subtitle: "To get up and running with Meadow.Windows, follow these steps:"
 ---
 
-Meadow.Windows offers an environment for developing Meadow code that can run on Windows, and with an extra add-on can even access general-purpose input/output (GPIO) pins. Developing with Meadow.Windows requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.
+![](wildernesslabs_desktop_getting_started.png)
 
-Running Meadow applications on Windows can provide a very convenient development loop for prototyping and testing your Meadow applications, quickly iterating and seeing the result of code changes, potentially using the same components you would use on a Meadow Feather or Core-Compute module by way of an FTDI breakout board such as FT232H that provide GPIO, SPI, and I2C. (In this early stage, Meadow.Windows does not yet support I2C.)
+<Tabs groupId="ide">
+  <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
 
-You can also quickly prototype graphics using an emulated IDisplay object that renders to a standard window on your Windows machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intensive workloads requiring much more processing power.
+### Step 1 - Install .NET Runtime
 
-## Prerequisites
+Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
 
-Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](../../Hello_World/).
+### Step 2 - Install Visual Studio
 
-If you don't already have it, you may want to install the .NET 7.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/). (Currently, all Meadow.Windows samples are targeting .NET 7.0, though they also support targeting .NET 6.0.)
+Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows to prepare your development machine. Community edition will work fine.
 
-### Using GPIO and SPI
+### Step 3 - Add Meadow Visual Studio Extension
 
-With an additional accessory, you can add GPIO and SPI capabilities to your Windows device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities. (The FT232H also supports I2C, but in this early stage, Meadow.Windows does not yet support it.)
+Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) Extension.
 
-## Create your first Meadow.Windows app
+### Step 4 - Create your first Meadow application
 
-1. Create a new dotnet app on your development machine and navigate to that new project.
+In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Desktop App (Wilderness Labs)**:
 
-    ```command
-    dotnet new console --output MeadowWindowsSampleApp
-    cd MeadowWindowsSampleApp
-    ```
+![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-    This will ensure the Meadow app has the project settings that will work within Meadow.Windows.
+This project creates a Meadow.Desktop app that has a Windows Forms (WinForms) window showing a Hello World text using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md). 
 
-1. Add the Meadow.Windows NuGet reference to your project.
+### Step 5 - Run a Meadow Application
 
-    ```command
-    dotnet add package Meadow.Windows
-    ```
+Right-click the new project and select **Set as Startup project**
 
-1. Replace the contents of the `Program.cs` file in your project with the following.
+![Meadow.Windows App running](wildernesslabs-meadow-windows-hello.jpg)
 
-    ```csharp
-    using Meadow;
-    using Meadow.Devices;
+### Step 6 - Check out additional samples
 
-    public class MeadowApp : App<Windows>
-    {
-        static async Task Main(string[] args)
-        {
-            await MeadowOS.Start(args);
-        }
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
 
-        public override Task Initialize()
-        {
-            Resolver.Log.Info("Initialize...");
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
-            return base.Initialize();
-        }
+  </TabItem>
+  <TabItem value="visualstudiocode" label="Visual Studio Code">
 
-        public override Task Run()
-        {
-            Resolver.Log.Info("Run...");
+### Step 1 - Install .NET Runtime
 
-            Resolver.Log.Info("Hello, Meadow.Windows!");
+Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
 
-            return base.Run();
-        }
-    }
-    ```
+### Step 2 - Install Visual Studio Code
 
-    This is a simple Meadow.Windows app that will output some messages to the console at various stages of the Meadow app.
+Download and Install [Visual Studio Code](https://visualstudio.microsoft.com/) to prepare your development machine.
 
-1. Build the app for your development machine using either Visual Studio or the `dotnet` tool.
+### Step 3 - Install Meadow Project Templates
 
-    ```command
-    dotnet build
-    ```
+Open a Terminal and enter the following command to install a list of Meadow project templates:
 
-1. Run the app.
+```console
+dotnet new install WildernessLabs.Meadow.Template
+```
 
-    ```command
-    dotnet run
-    ```
+When installed, you’ll see a list of templates available
 
-    At the end of the Meadow app launch output, you should see the following output from your app.
+```console
+The following template packages will be installed:
+   WildernessLabs.Meadow.Template
 
-    ```console
-    Initialize...
-    Run...
-    Hello, Meadow.Windows!
-    ```
+Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Template Name                  Short Name         Language        Tags
+-----------------------------  -----------------  --------------  --------------
+Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Desktop App             Desktop            [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
+Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+```
 
-You have a Meadow.Windows app running on your Windows development machine. You can continue to develop and test your Meadow app on your development machine. When you are ready, you can deploy your Meadow app to other Windows device like any other .NET app.
+### Step 4 - Create your first Meadow application
 
-## Adapt a Meadow app for Meadow.Windows
+Lets verify everything is set up by deploying your first Meadow application. 
 
-You can also modify an existing Meadow app to run on Meadow.Windows by adjusting the `App` type and adding the following static `Main` method to your `MeadowApp` class.
+Open VSCode in a new Terminal within enter the following command to create a new Meadow.Windows project:
 
-For example, here are the changes to make the MeadowApp class work on Meadow.Windows, configured for Windows.
+```console
+dotnet new Desktop --name WinFormsDemo --Framework net8.0-windows
+```
 
-1. Configure the project type to be an executable by changing the project output type to a .NET 7 executable in the project file.
+This Meadow.Desktop application opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
 
-    ```xml
-    <Project Sdk="Microsoft.NET.Sdk">
-        <PropertyGroup>
-            <OutputType>Exe</OutputType>
-            <TargetFramework>net7.0</TargetFramework>
-            <ImplicitUsings>enable</ImplicitUsings>
-            <Nullable>enable</Nullable>
-        </PropertyGroup>
+### Step 5 - Run a Meadow Application
 
-        ...
-    </Project>
-    ```
+With no code changes, let's run this app on your machine. 
 
-1. Within the Meadow app's class file, change the `App` type to align with your target Meadow.Windows device: `App<Windows>`.
+In VSCode, open a terminal inside the project folder, build the project with the command:
 
-    ```csharp
-    public class MeadowApp : App<Windows>
-    {
-        ...
-    }
-    ```
+```console
+dotnet build
+```
 
-1. Within the `MeadowApp` class, or whatever your app's class name is, add a new `Main` method to give the app a target to launch when the app is run.
+And finally to run the Meadow application, use the command:
 
-    ```csharp
-    public static async Task Main(string[] args)
-    {
-        await MeadowOS.Start(args);
-    }
-    ```
+```console
+dotnet run
+```
 
-Your Meadow app should now be able to run on Meadow.Windows, calling into the usual `Initialize` and `Run` methods of your app.
+A WinForm window should show up in the center of the screen saying `Hello, World`, like below:
 
-## Next steps
+![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
 
-Now that you have your Meadow.Windows device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Windows samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Windows).
+### Step 6 - Check out additional samples
+
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+
+![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
+
+  </TabItem>
+</Tabs>

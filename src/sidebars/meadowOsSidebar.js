@@ -52,8 +52,9 @@ const meadowOsSidebar = [
           id: "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/index",
         },
         items: [
-          "Meadow/Getting_Started/Desktop/Hello_Ft232/index",
-          "Meadow/Getting_Started/Desktop/Hello_Simulator/index"
+          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index",
+          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index",
+          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Mac/index",
         ],
       },
 

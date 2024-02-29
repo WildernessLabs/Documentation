@@ -10,7 +10,6 @@ Meadow.Desktop offers quick-prototyping and high-responsiveness environments for
 
 You can also quickly prototype graphics using an emulated IDisplay object that renders to a standard window on your Windows machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intensive workloads requiring much more processing power.
 
-## Getting started with Meadow.Windows
-
-* [Hello, Windows + FT232H](../Desktop/Hello_Ft232/)
-* [Hello, Windows](../Desktop/Hello_Simulator/)
+* [Hello, Meadow.Windows](../Getting_Started_Meadow.Desktop/Getting_Started_Windows/index.md)
+* [Hello, Meadow.Linux](../Getting_Started_Meadow.Desktop/Getting_Started_Linux/index.md)
+* [Hello, Meadow.Mac](../Getting_Started_Meadow.Desktop/Getting_Started_Mac/index.md)
