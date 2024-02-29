@@ -8,9 +8,6 @@ const meadowOsSidebar = [
       id: "Getting_Started",
     },
     items: [
-      "Meadow/Getting_Started/Meadow.CLI/index",
-      "Meadow/Getting_Started/IDE_Extensions/index",
-
       {
         // MCUs
         type: "category",

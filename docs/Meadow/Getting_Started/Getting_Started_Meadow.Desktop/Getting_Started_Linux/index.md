@@ -49,13 +49,13 @@ Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
 
 Lets verify everything is set up by deploying your first Meadow application. 
 
-Open VSCode in a new Terminal within enter the following command to create a new Meadow.Windows project:
+Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new Desktop --name WinFormsDemo --Framework net8.0-windows
+dotnet new Desktop --name macOSDemo --Framework net8.0
 ```
 
-This Meadow.Desktop application opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
+This Meadow.Desktop application opens a 320x240 pixel GTK window saying `Hello, World` using MicroLayout.
 
 ### Step 5 - Run a Meadow Application
 
@@ -73,7 +73,7 @@ And finally to run the Meadow application, use the command:
 dotnet run
 ```
 
-A WinForm window should show up in the center of the screen saying `Hello, World`, like below:
+A GTK window should show up in the center of the screen saying `Hello, World`, like below:
 
 ![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
 
