@@ -25,6 +25,11 @@ const FoundationLinksUpdater = () => {
             "Meadow.Foundation.Grove.",
             ""
           );
+        } else if (link.href.includes("/docs/api/Meadow.Foundation/")) {
+          link.innerText = link.innerText.replace(
+            "Meadow.Foundation.",
+            ""
+          );
         }
       });
     }
