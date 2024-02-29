@@ -67,7 +67,7 @@ When installed, you’ll see a list of templates available
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Success: WildernessLabs.Meadow.Template installed the following templates:
 Template Name                  Short Name         Language        Tags
 -----------------------------  -----------------  --------------  --------------
 Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
