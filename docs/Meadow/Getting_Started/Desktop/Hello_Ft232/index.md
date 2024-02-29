@@ -16,7 +16,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add Meadow Visual Studio Extension
 

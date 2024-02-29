@@ -23,7 +23,7 @@ Before a device can enjoy things like [Over-the-Air updates](../../Meadow.Cloud/
     meadow cloud login
     ```
 
-    This opens a browser with the Wilderness Labs Login page. After authenticating, you can go back to the terminal and it should confirmed you've successfully logged in.
+    This opens a browser with the Wilderness Labs Login page. After authenticating, you can go back to the terminal and it should confirm you've successfully logged in.
 
 1. Connect your Meadow device to your development machine if you havent and enter the following command to make sure we'll provision the device you just connected:
 
