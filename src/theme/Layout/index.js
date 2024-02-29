@@ -60,7 +60,6 @@ export default function Layout(props) {
         ></iframe>
       </noscript>
       {/* End Google Tag Manager (noscript) */}
-      <FoundationLinksUpdater />
       <PageMetadata title={title} description={description} />
 
       <SkipToContent />
@@ -80,7 +79,7 @@ export default function Layout(props) {
           {children}
         </ErrorBoundary>
       </div>
-
+      <FoundationLinksUpdater />
       {!noFooter && <Footer />}
     </LayoutProvider>
   );
