@@ -7,7 +7,6 @@ const FoundationLinksUpdater = () => {
   useEffect(() => {
     function updateLinks() {
       const links = document.querySelectorAll(".menu__link, .toc-item a");
-      console.log(links);
       links.forEach((link) => {
         if (link.href.includes("/docs/api/Meadow.Foundation.mikroBUS/")) {
           link.innerText = link.innerText.replace(
