@@ -55,8 +55,16 @@ openssl x509 -req -in client_csr.pem -signkey private_key.pem -out client_cert.p
 6. Then you can use this [Meadow Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/blob/main/Source/OS/TLS_Client_Authentication/MeadowApp.cs) to send messages to your Hub. Just remember to replace the variables `IOT_HUB_NAME` and `IOT_HUB_DEVICE_ID` with your Azure IoT Hub name and your device ID.
 
 # Troubleshooting
+#### How to use .PFX certificate files
+The .PFX is not supported by the Meadow TLS provider (mbedTLS). However, it's pretty simple to extract the private key and the client certificate from a PFX file using the OpenSSL library. You just need to run these following commands to generate the `private_key.pem` and  `client_cert.pem` files:
+
+```bash
+openssl pkcs12 -in yourfile.pfx -nocerts -out private_key.pem
+openssl pkcs12 -in yourfile.pfx -clcerts -nokeys -out client_cert.pem
+```
+
 #### Failed to parse private key
-Some encryption algorithms are not supported by the Meadow TLS provider (mbedTLS), so if you see the error `Failed to parse private key`, try to encrypt your private key using another algorithm, such as the RSA algorithm with DES3 (Triple DES) encryption and the traditional PKCS#1 formatting, which can be done by using your OS OpenSSL:
+You may see this error if you attempt to use encrypted private keys, since some encryption algorithms are not supported by the Meadow TLS provider (mbedTLS), so if you see the error `Failed to parse private key`, try to encrypt your private key using another algorithm, such as the RSA algorithm with DES3 (Triple DES) encryption and the traditional PKCS#1 formatting, which can be done by using your OS OpenSSL:
 
 ```bash
 openssl rsa -in private_key.pem -out private_key_output.pem -des3 -traditional
