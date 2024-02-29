@@ -52,7 +52,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new Desktop --name macOSDemo --Framework net8.0
+dotnet new Desktop --name LinuxDemo --Framework net8.0
 ```
 
 This Meadow.Desktop application opens a 320x240 pixel GTK window saying `Hello, World` using MicroLayout.
