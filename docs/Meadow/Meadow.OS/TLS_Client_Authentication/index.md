@@ -28,7 +28,7 @@ Upload the client certificate file `client_cert.pem`, the client `private_key.pe
 </None>
 ```
 
-> The client credential files stored in the ESP32 cannot be deleted, but the user can just flash the empty files (`client_cert.pem`, `private_key.pem` and `private_key_pass.txt`) to overwrite them.
+> The client credential files stored in the ESP32 cannot be deleted, but the user can just flash empty files to overwrite the credentials (`client_cert.pem`, `private_key.pem` and `private_key_pass.txt`) previously stored.
 
 > It's restricted to a single certificate per client.
 
@@ -66,7 +66,7 @@ After creating a device on your Azure IoT Hub, and configuring it, you'll need t
 
 ## Step 5 (Optional): Encrypting your private key
 
-If you intend to use encrypted private keys, you'll need to encrypt your key, which can be done by running an OpenSSL command:
+If you want to encrypt your private key, you can just run an OpenSSL command like the following:
 
 ```bash
 openssl rsa -in decrypted_private_key.pem -out private_key.pem -des3 -traditional
