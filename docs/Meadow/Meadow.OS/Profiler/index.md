@@ -24,10 +24,24 @@ Profiling on Meadow is pretty simple, you just need to follow a few steps:
 
 ## Step 1: Enable the Profiler on your Meadow config file
 
-Add the profiler Mono control option in your `meadow.config.yaml` file:
+To configure the Mono profiler and specify the data to collect, add the profiler control option to your `meadow.config.yaml` file. Due to the potential for high data volume and memory consumption, especially on resource-constrained devices, consider the following examples to minimize performance overhead and memory usage:
+
+#### Example 1: Configure Mono profiler to log method calls with a call depth of 10, excluding allocation information
 ```
 MonoControl:
-    Options: --profile=log:noalloc
+  Options: --profile=log:noalloc,calls,calldepth=10
+```
+
+#### Example 2: Configure heapshot logs every 10 seconds:
+```
+MonoControl:
+  Options: --profile=log:noalloc,calls,calldepth=10
+```
+
+#### Example 3: Configure Mono profiler to log method calls without allocation information
+```
+MonoControl:
+  Options: --profile=log:noalloc
 ```
 
 > Important: Some options consume a lot of memory and should be avoided, due to the limited memory of the embedded device, such as `alloc`. The Mono documentation also provides more detailed tips about [how to collect less data](https://www.mono-project.com/docs/debug+profile/profile/profiler/#collect-less-data).
@@ -94,7 +108,7 @@ MonoControl:
 
 It will collect a lot of data, potentially causing `memalign` errors due to the limited embedded RAM.
 
-To know more about the profiler's options, consult the [Mono log profiler documentation](https://www.mono-project.com/docs/debug+profile/profile/profiler/#profiler-option-documentation), but here are some examples of how to collect less data:
+To know more about the profiler's options, consult the [Mono log profiler documentation](https://www.mono-project.com/docs/debug+profile/profile/profiler/#profiler-option-documentation), but here are some examples explained briefly of how to collect less data:
 
 - **Example 1:** Heap shot data can also be huge, but to reduce the frequency, you can specify a heap shot mode: for example to collect every 10 seconds passed since the last heap shot:
 
