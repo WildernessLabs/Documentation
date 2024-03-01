@@ -3,8 +3,12 @@ import { useLocation } from "@docusaurus/router";
 
 const FoundationLinksUpdater = () => {
   const location = useLocation();
-  useEffect(() => {
 
+  useEffect(() => {
+    updateLinks();
+  }, []); // This effect runs once on component mount
+
+  useEffect(() => {
     if(!location.pathname.includes("/docs/api/Meadow.Foundation"))
     {
       return null;
@@ -13,7 +17,6 @@ const FoundationLinksUpdater = () => {
     let count = 0;
     function updateLinks() {
       const links = document.querySelectorAll(".menu__link, .toc-item a");
-      debugger;
       if(!links?.length && count<30)
       {
         count++;
