@@ -31,6 +31,135 @@ It should look like this on a ILI4498 320x240 screen.
 
 <img src="meadow-microlayout-hello-world.jpg" style={{width:"50%"}} />
 
+## Controls
+
+### Box
+
+Draws a colored rectangle:
+
+```csharp
+displayScreen.Controls.Add(new Box(
+    left: 20, 
+    top: 20, 
+    width: displayScreen.Width - 40, 
+    height: displayScreen.Height - 40)
+{
+    ForeColor = Color.Red
+});
+```
+
+The sample code draws a red rectangle.
+
+![microlayout box](microlayout_box.png)
+
+### Label
+
+```csharp
+displayScreen.Controls.Add(new Label(
+    left: 20,
+    top: 20,
+    width: displayScreen.Width - 40,
+    height: displayScreen.Height - 40)
+{
+    Text = "Hello World",
+    TextColor = Color.Red,
+    BackColor = Color.White,
+    Font = new Font12x20(),
+    HorizontalAlignment = HorizontalAlignment.Center,
+    VerticalAlignment = VerticalAlignment.Center,
+});
+```
+
+The sample code draws Hello World Label in the center, text color red and label's background white.
+
+![microlayout box](microlayout_label.png)
+
+### Picture
+
+```csharp
+var image = Image.LoadFromResource("ProjectLabViews.Resources.img_meadow.bmp");
+
+displayScreen.Controls.Add(new Picture(
+    left: 20,
+    top: 20,
+    width: displayScreen.Width - 40,
+    height: displayScreen.Height - 40,
+    image: image)
+{
+    BackColor = Color.DarkBlue
+});
+```
+
+The sample code draws Hello World Label in the center, text color red and label's background white.
+
+![microlayout box](microlayout_picture.png)
+
+### Line Chart
+
+```csharp
+var data = new List<double>
+{
+    1.2,
+    1.5,
+    2.2,
+    2.5,
+    1.8
+};
+
+var series = new LineChartSeries()
+{
+    LineColor = Color.Red,
+    PointColor = Color.Green,
+    LineStroke = 4,
+    PointSize = 6,
+    ShowLines = true,
+    ShowPoints = true,
+};
+
+for (int i = 0; i < data.Count; i++)
+{
+    series.Points.Add(i*2, data[i]);
+}
+
+var chart = new LineChart(
+    left: 20,
+    top: 20,
+    width: displayScreen.Width - 40,
+    height: displayScreen.Height - 40)
+{
+    BackgroundColor = Color.DarkBlue,
+    ShowYAxisLabels = true
+};
+chart.Series.Add(series);
+
+displayScreen.Controls.Add(chart);
+```
+
+The sample code draws Hello World Label in the center, text color red and label's background white.
+
+![microlayout box](microlayout_linechart.png)
+
+### Progress Bar
+
+Draws a colored progress bar:
+
+```csharp
+displayScreen.Controls.Add(new Box(
+    left: 20, 
+    top: 20, 
+    width: displayScreen.Width - 40, 
+    height: displayScreen.Height - 40)
+{
+    ForeColor = Color.Red
+});
+```
+
+The sample code draws a red rectangle.
+
+![microlayout box](microlayout_box.png)
+
+## Interactive Menu Example
+
 You can move, resize or recolor the controls at run time to easily create effects and animations. For example, I've created a very simple Menu sample for the [ProjectLab v3](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) that uses DisplayLabels for the menu items and a DisplayBox that sits behind the DisplayLabels as a "highlight."
 
 ```csharp

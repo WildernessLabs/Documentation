@@ -6,6 +6,7 @@ subtitle: Libraries and frameworks that make working with embedded hardware easi
 
 Meadow.Foundation includes a number of libraries and frameworks to make working with embedded hardware easier, including:
 
+* [MicroLayout](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout) - Lightweight HMI Framework library.
 * [MicroGraphics](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics) - General purpose graphics library.
 * [Maple Server](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer) - Ultra-lightweight web API server.
 * [TextDisplayMenu](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/) - General purpose menu library for character and graphic displays.
