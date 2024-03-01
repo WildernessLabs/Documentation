@@ -27,32 +27,10 @@ Profiling on Meadow is pretty simple, you just need to follow a few steps:
 Add the profiler Mono control option in your `meadow.config.yaml` file:
 ```
 MonoControl:
-    Options: --profile=log
+    Options: --profile=log:noalloc
 ```
 
-When no profiler option is specified as above, it is equivalent to using the following: 
-```
-MonoControl:
-    Options: --profile=log:calls,alloc,maxframes=8,calldepth=100
-```
-It will collect a lot of data, potentially causing `memalign` errors due to the limited embedded RAM.
-
-To know more about the profiler's options, consult the [Mono log profiler documentation](https://www.mono-project.com/docs/debug+profile/profile/profiler/#profiler-option-documentation), but here are some examples of how to collect less data:
-
-- **Example 1:** Heap shot data can also be huge, but to reduce the frequency, you can specify a heap shot mode: for example to collect every 10 seconds passed since the last heap shot:
-
-```
-MonoControl:
-    Options: --profile=log:heapshot=10000ms,noalloc,nocalls
-```
-
-- **Example 2:** Method enter/leave events can be excluded completely with the `nocalls` option or they can be limited to just a few levels of calls with the `calldepth` option. For example, the option:
-```
-MonoControl:
-    Options: --profile=calls,noalloc,calldepth=10
-```
-
-> Important: Some options consume a lot of memory and should be avoided, due to the limited memory of the embedded device, such as `alloc`. The documentation also provides more detailed tips about [how to collect less data](https://www.mono-project.com/docs/debug+profile/profile/profiler/#collect-less-data). 
+> Important: Some options consume a lot of memory and should be avoided, due to the limited memory of the embedded device, such as `alloc`. The Mono documentation also provides more detailed tips about [how to collect less data](https://www.mono-project.com/docs/debug+profile/profile/profiler/#collect-less-data).
 
 ## Step 2: Reserve the UART1 (COM1) pins in your Meadow config file.
 
@@ -67,7 +45,6 @@ Device:
 ## Step 3: Getting the profiling data from the serial port
 
 After connecting a USB serial converter to your Meadow device UART1 (COM1), run the `meadow uart profiler enable` CLI command, which will read the data from UART1 (COM1) and save it as an `output.mlpd` file in your computer, e.g.:
-
 
 ```bash
 meadow uart profiler enable -i /dev/tty.usbserial-1120 -o ./
@@ -93,8 +70,41 @@ OPTIONS
   -o|--outputDirectory  Set the profiling data output directory path 
 ```
 
-## Step 4: Generate reports for a `.mlpd` file 
+## Step 4: Generating reports for a `.mlpd` file 
 
 Given the `.mlpd` obtained in the last step, you can use a report generator, such as the [mprof-report (CLI)](https://www.mankier.com/1/mprof-report) or the [Xamarin Profiler (GUI)](https://learn.microsoft.com/en-us/xamarin/tools/profiler/?tabs=windows) to generate a report:
 ![Mono Log Profiler on Mac](./profiler-mac.png)
 
+# Troubleshooting
+If you experience slowdowns in your application or `memalign` errors, try reducing the amount of data collected.
+
+It's important to notice that when no profiler option is specified as below:
+
+```
+MonoControl:
+    Options: --profile=log
+```
+
+It is equivalent to using the following: 
+
+```
+MonoControl:
+    Options: --profile=log:calls,alloc,maxframes=8,calldepth=100
+```
+
+It will collect a lot of data, potentially causing `memalign` errors due to the limited embedded RAM.
+
+To know more about the profiler's options, consult the [Mono log profiler documentation](https://www.mono-project.com/docs/debug+profile/profile/profiler/#profiler-option-documentation), but here are some examples of how to collect less data:
+
+- **Example 1:** Heap shot data can also be huge, but to reduce the frequency, you can specify a heap shot mode: for example to collect every 10 seconds passed since the last heap shot:
+
+```
+MonoControl:
+    Options: --profile=log:heapshot=10000ms,noalloc,nocalls
+```
+
+- **Example 2:** Method enter/leave events can be excluded completely with the `nocalls` option or they can be limited to just a few levels of calls with the `calldepth` option. For example, the option:
+```
+MonoControl:
+    Options: --profile=calls,noalloc,calldepth=10
+```
