@@ -3,8 +3,13 @@ import { useLocation } from "@docusaurus/router";
 
 const FoundationLinksUpdater = () => {
   const location = useLocation();
-
   useEffect(() => {
+
+    if(!location.pathname.includes("/docs/api/Meadow.Foundation"))
+    {
+      return null;
+    }
+
     function updateLinks() {
       const links = document.querySelectorAll(".menu__link, .toc-item a");
       if(!links?.length)
