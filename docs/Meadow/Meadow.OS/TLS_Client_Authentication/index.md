@@ -8,11 +8,13 @@ subtitle: Enhancing Security and Authorization in Network Communication
 
 During a standard TLS handshake, the server authenticates the client but possesses limited client information. TLS Client Authentication extends this by enabling the server to authenticate clients, ensuring that only authorized ones can connect. This method provides several advantages, such as improved security and privacy of communication, reduced dependency on other authentication methods, simplified access control management, and enhanced server performance and scalability.
 
-## How to use TLS Client Authentication on Meadow
+# How to use TLS Client Authentication on Meadow
 
 To enable TLS client authentication on Meadow you just need to follow a few steps:
 
-1. Upload the client certificate file `client_cert.pem`, the client `private_key.pem`, and the private key passphrase `private_key_pass.txt` to the Meadow using `meadow file write` CLI command or by including them in your .NET project `.csproj` file:
+## Step 1: Upload the client credentials to the Meadow device
+
+Upload the client certificate file `client_cert.pem`, the client `private_key.pem`, and the private key passphrase `private_key_pass.txt` to the Meadow using the `meadow file write` CLI command or by including them in your .NET project `.csproj` file:
 
 ```
 <None Update="client_cert.pem">
@@ -30,13 +32,19 @@ To enable TLS client authentication on Meadow you just need to follow a few step
 
 > It's restricted to a single certificate per client.
 
-2. Remove any C# code related to the client certificate, since it'll be attached automatically by the operating system to all connections that request one.
+## Step 2: Remove any C# code related to the client certificate in your Meadow application
 
-## Meadow TLS Client Authentication Sample App with Azure IoT Hub
+The client certificate will be attached automatically by the operating system to all connections that request one. So, you don't need to worry about adding them to your `C#` application.
 
-For straightforward TLS Client Authentication testing, you can utilize self-signed certificates. These certificates can be generated using a library such as OpenSSL, eliminating the need for a Certificate Authority (CA) to sign them.
+That's all! :) 
 
-1. First, you need to create a private key, and a self-signed client certificate, by following these commands, you should get a `private_key.pem` and a `client_cert.pem`:
+# Meadow TLS Client Authentication Sample App with Azure IoT Hub
+
+For straightforward TLS Client Authentication testing, you can utilize self-signed certificates. These certificates can be generated using libraries such as OpenSSL, eliminating the need for a Certificate Authority (CA) to sign them.
+
+## Step 1: Creating a self-signed client certificate
+
+First, you need to create a private key, and a self-signed client certificate, by running these commands, you should get a `private_key.pem` and a `client_cert.pem`:
 
 ```bash
 openssl genpkey -algorithm RSA -out private_key.pem
@@ -44,19 +52,35 @@ openssl req -new -key private_key.pem -out client_csr.pem
 openssl x509 -req -in client_csr.pem -signkey private_key.pem -out client_cert.pem
 ```
 
-2. On the Azure IoT Hub, first you need to create your IoT Hub. Then, go to `Security Settings -> Certificates`, and add a new certificate, uploading your `client_cert.pem`. You should see a Thumbprint, it'll be required in the next step.
+## Step 2: Adding your certificate to your Azure IoT Hub
 
-3. Then, go to `Device Management -> Devices`, and add a new device, using `X509 Self-Signed` as Authentication type, and using your certificate Thumbprint got in the last step as `Primary Thumbprint` and `Secondary Thumbprint`. This will link the device to the certificate.
+After creating your Azure IoT Hub, go to `Security Settings -> Certificates`, and add a new certificate, uploading your `client_cert.pem`. You should save the certificate Thumbprint, since it'll be required in the next step.
 
-4. With your device created on Azure IoT Hub, and configured, you'll need to upload the client certificate file `client_cert.pem`, and the client `private_key.pem` to the Meadow.
+## Step 3: Link a new device to your client certificate
 
-5. (Optional) If you intend to use encrypted private keys, you'll need to create a file `private_key_pass.txt` to carry the client certificate private key passphrase and upload it as well to the device.
+Go to `Device Management -> Devices`, and add a new device, using `X509 Self-Signed` as the Authentication type, and using your certificate Thumbprint got in the last step as `Primary Thumbprint` and `Secondary Thumbprint`. This will link the device to your client certificate.
 
-6. Then you can use this [Meadow Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/blob/main/Source/OS/TLS_Client_Authentication/MeadowApp.cs) to send messages to your Hub. Just remember to replace the variables `IOT_HUB_NAME` and `IOT_HUB_DEVICE_ID` with your Azure IoT Hub name and your device ID.
+## Step 4: Uploading your client certificate to a Meadow device
+
+After creating a device on your Azure IoT Hub, and configuring it, you'll need to upload the client certificate file `client_cert.pem`, and the client `private_key.pem` to your Meadow device, which can be done by running the `meadow file write` CLI command.
+
+## Step 5 (Optional): Encrypting your private key
+
+If you intend to use encrypted private keys, you'll need to encrypt your key, which can be done by running an OpenSSL command:
+
+```bash
+openssl rsa -in decrypted_private_key.pem -out private_key.pem -des3 -traditional
+```
+
+Then, you'll need to create a file `private_key_pass.txt` carrying the client certificate private key passphrase and upload it as well to the device.
+
+## Step 6: Sending MQTT messages to an Azure IoT Hub
+
+Finally, you can use this [Meadow Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/blob/main/Source/OS/TLS_Client_Authentication/MeadowApp.cs) to send messages to your Azure IoT Hub. Just remember to replace the variables `IOT_HUB_NAME` and `IOT_HUB_DEVICE_ID` with your Azure IoT Hub name and your device ID.
 
 # Troubleshooting
 #### How to use .PFX certificate files
-The .PFX is not supported by the Meadow TLS provider (mbedTLS). However, it's pretty simple to extract the private key and the client certificate from a PFX file using the OpenSSL library. You just need to run these following commands to generate the `private_key.pem` and  `client_cert.pem` files:
+The `.PFX` certificates are not supported by the Meadow TLS provider (mbedTLS). However, it's pretty simple to extract the private key and the client certificate from a PFX file using the OpenSSL library. You just need to run the following commands to generate the `private_key.pem` and  `client_cert.pem` files:
 
 ```bash
 openssl pkcs12 -in yourfile.pfx -nocerts -out private_key.pem
