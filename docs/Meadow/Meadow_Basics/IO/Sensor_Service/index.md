@@ -12,12 +12,6 @@ The `SensorService` provides a shared sensor reading thread that can be used to 
 
 Once you have registered your polling sensors with the `SensorService`, you continue to read values from them using their respective `Read` and events. Behind the scenes, the `SensorService` will manage the polling of the sensors at the regular interval using the shared thread.
 
-## What sensors can use SensorService?
-
-The `SensorService` is designed to work with sensors that implement the `IPollingSensor` interface. This interface is used to define sensors that can be polled at a regular interval, and is used by the `SensorService` to manage the polling of the sensors.
-
-While they won't benefit from the shared sensor reading thread, you can register other sensors with the `SensorService` for discovery and management elsewhere in your code.
-
 ## Migrate your sensors to SensorService
 
 When you finish initializing your desired sensor, you can register it with the `SensorService` to have it automatically polled at a regular interval. For example, if your project has an SCD-40 sensor using I2C for carbon dioxide concentration, temperature, and humidity, you can register it with the `SensorService` after you declare it using the I2C bus.
@@ -28,6 +22,12 @@ Resolver.SensorService.RegisterSensor(scd);
 ```
 
 This is how the various sensors are registered by default in the [Clima](https://store.wildernesslabs.co/collections/frontpage/products/clima-weather-station-kit), [Project Lab](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board), and [GNSS Sensor Tracker](https://store.wildernesslabs.co/collections/frontpage/products/gnss-sensor-tracker) boards initialize their onboard sensors.
+
+## What sensors can use SensorService?
+
+The `SensorService` is designed to work with sensors that implement the `IPollingSensor` interface. This interface is used to define sensors that can be polled at a regular interval, and is used by the `SensorService` to manage the polling of the sensors.
+
+While they won't benefit from the shared sensor reading thread, you can register other sensors with the `SensorService` for discovery and management elsewhere in your code.
 
 ## SensorService polling interval requirements
 
