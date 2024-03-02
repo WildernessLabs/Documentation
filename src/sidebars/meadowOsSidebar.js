@@ -125,6 +125,7 @@ const meadowOsSidebar = [
             ],
           },
           "Meadow/Meadow_Basics/IO/Power/index",
+          "Meadow/Meadow_Basics/IO/Sensor_Service/index",
         ],
       },
       "Meadow/Meadow_Basics/Units/index",

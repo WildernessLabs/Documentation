@@ -1,6 +1,7 @@
 ---
 layout: Meadow
 title: Optimize Sensor Reads with SensorService
+sidebar_label: SensorService
 subtitle: Reduce sensor thread usage by isolating reads to a the shared SensorService.
 ---
 
