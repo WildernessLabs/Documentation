@@ -52,6 +52,25 @@ The sample code draws a red rectangle.
 
 ![microlayout box](microlayout_box.png)
 
+### Circle
+
+Draws a colored progress bar:
+
+```csharp
+displayScreen.Controls.Add(new Circle(
+    centerX: displayScreen.Width / 2,
+    centerY: displayScreen.Height / 2,
+    radius: displayScreen.Height / 3)
+{
+    ForeColor = Color.Red,
+    IsFilled = true
+});
+```
+
+The sample code draws a red rectangle.
+
+![microlayout box](microlayout_circle.png)
+
 ### Label
 
 ```csharp
@@ -144,19 +163,59 @@ The sample code draws Hello World Label in the center, text color red and label'
 Draws a colored progress bar:
 
 ```csharp
-displayScreen.Controls.Add(new Box(
-    left: 20, 
-    top: 20, 
-    width: displayScreen.Width - 40, 
-    height: displayScreen.Height - 40)
+var progressBar = new ProgressBar(
+    left: 20,
+    top: 40,
+    width: displayScreen.Width - 40,
+    height: displayScreen.Height - 80)
 {
-    ForeColor = Color.Red
-});
+    BackColor = Color.DarkBlue,
+    ValueColor = Color.Magenta,
+    BorderColor = Color.Red,
+};
+displayScreen.Controls.Add(progressBar);
+
+for (int i = 0; i < 10; i++)
+{
+    progressBar.Value = i * 10;
+    await Task.Delay(1000);
+}
 ```
 
 The sample code draws a red rectangle.
 
-![microlayout box](microlayout_box.png)
+![microlayout box](microlayout_progressbar.png)
+
+### Button
+
+Draws a colored progress bar:
+
+```csharp
+var button = new Button(
+    left: 20,
+    top: 20,
+    width: displayScreen.Width - 40,
+    height: displayScreen.Height - 40)
+{
+    Text = "Hello World",
+    TextColor = Color.Red,
+    ForeColor = Color.DarkBlue,
+    ShadowColor = Color.DarkGray,
+    HighlightColor = Color.Red,
+    PressedColor = Color.Green,
+    Font = new Font12x20()
+};
+displayScreen.Controls.Add(button);
+
+button.Clicked += (s, e) =>
+{
+    Resolver.Log.Info("Clicked");
+};
+```
+
+The sample code draws a red rectangle.
+
+![microlayout box](microlayout_button.png)
 
 ## Interactive Menu Example
 
