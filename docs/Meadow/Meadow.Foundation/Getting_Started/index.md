@@ -46,6 +46,3 @@ subtitle: Meadow.Foundation
 
     ![Video of a Meadow pulsing a blue LED via pulse-width modulation.](HelloPulsy.gif)
 
-Next up, check out how to work with sensors; which comprise a huge portion of the Meadow.Foundation [peripheral library](/Meadow/Meadow.Foundation/Peripherals).
-
-## [Next - Working with Sensors](/Meadow/Meadow.Foundation/Working_with_Sensors/)

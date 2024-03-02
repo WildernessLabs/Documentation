@@ -115,6 +115,3 @@ The advantage of this approach is that it will automatically poll the sensor in 
 Because there is also a `StopUpdating()` method, you can still manually spin up and spin down the polling thread for periods in which you know that the sensor readings are not needed.
 
 And with the `FilterableChangeObservable`, you can create filters to only get notified when needed, rather than having to manually filter all events.
-
-# [Next - Unified GPIO](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)
-
