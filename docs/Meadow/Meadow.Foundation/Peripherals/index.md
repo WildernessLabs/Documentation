@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Meadow.Foundation Peripherals Library
+title: Peripherals Library
 subtitle: Drivers for hardware peripherals such as sensors, buttons, displays, and more!
 ---
 
