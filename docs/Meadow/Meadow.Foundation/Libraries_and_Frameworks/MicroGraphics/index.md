@@ -7,7 +7,6 @@ subtitle: Using the lightweight, MCU-optimized Meadow.Foundation MicroGraphics 2
 <!--
 Doc Notes:
  * Need photos of the output of all the examples in here
-
 -->
 
 The Meadow.Foundation MicroGraphics library, formerly known as GraphicsLibrary, is an ultra-lightweight, 2D drawing framework that can draw to off screen (in-memory) display buffers and then present them on pixel display devices.
@@ -22,11 +21,11 @@ To use the graphics display you:
  2. Draw your graphics to the canvas (in-memory display buffer).
  3. Call `Show()` to copy the canvas content to the display.
 
-# Initializing the MicroGraphics Library
+## Initializing the MicroGraphics Library
 
 In Meadow.Foundation, every graphics display driver manages its own buffer, since each display has different requirements in terms of display size, color depth and byte order.
 
-For this reason, an initialized display driver must be passed to the MicroGraphics instance during construction. For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
+For this reason, an initialized display driver must be passed to the `MicroGraphics` instance during construction. For example, the following code creates a graphics library canvas from the `ST7789` display that can be found in the Hack Kit:
 
 ```csharp
 MicroGraphics canvas;
@@ -82,7 +81,7 @@ canvas.Show();
 
 MicroGraphics uses a standard X/Y cartesian coordinate system for drawing and placing elements, with the origin (`0`,`0`) in the top left of the canvas. Increasing the X and Y coordinate moves right and down, respectively.
 
-<!-- TODO: need an illustration -->
+![meadow micrographics line](micrographics_axis.png)
 
 Each integer point represents an actual pixel, there is no pixel density scaling.
 
@@ -92,11 +91,14 @@ There are a number of drawing methods available for drawing of various primitive
 
 * Pixel
 * Line
+* Arc
+* Path
 * Triangle
 * Circle
 * Rectangle
 * RoundedRectangle
-* Path
+* HorizontalGradient
+* VerticalGradient
 
 ### `DrawLine`
 
@@ -111,9 +113,27 @@ graphics.DrawLine(
     color: Color.Red);
 ```
 
-The code sample above draws a red rectangle:
+The code sample above draws a red diagonal line:
 
 ![meadow micrographics line](micrographics_line.png)
+
+### `DrawArc`
+
+Draws a colored arc with the provided (x,y) origin, radius, and start and end angle:
+
+```csharp
+graphics.DrawArc(
+    centerX: graphics.Width / 2,
+    centerY: graphics.Height / 3,
+    radius: graphics.Height / 3,
+    startAngle: new Meadow.Units.Angle(-90),
+    endAngle: new Meadow.Units.Angle(90),
+    color: Color.Red);
+```
+
+The code sample above draws the following arc:
+
+![meadow micrographics line](micrographics_arc.png)
 
 ### `DrawTriangle`
 
@@ -148,13 +168,13 @@ graphics.DrawCircle(
     filled: true);
 ```
 
-The code sample above draws a red rectangle:
+The code sample above draws a filled red circle:
 
-![meadow micrographics line](micrographics_circle.png)
+![meadow micrographics circle](micrographics_circle.png)
 
 ### `DrawRectangle`
 
-Draws a colored circle:
+Draws a colored rectangle:
 
 ```csharp
 graphics.DrawRectangle(
@@ -172,7 +192,7 @@ The code sample above draws a red rectangle:
 
 ### `DrawRoundedRectangle`
 
-Draws a colored circle:
+Draws a colored rectangle with rounded corners:
 
 ```csharp
 graphics.DrawRoundedRectangle(
@@ -185,141 +205,45 @@ graphics.DrawRoundedRectangle(
     filled: true);
 ```
 
-The code sample above draws a red rectangle:
+The code sample above draws a red rectangle with rounded rectangles:
 
 ![meadow micrographics line](micrographics_roundedrectangle.png)
 
+### `DrawHorizontalGradient`
 
-
-
-
-
-
-
-
-
-## Watchface Example
-
-For example, the following code renders a clock face using a number of the primitives mentioned above:
+Draws a horizontal gradient pane:
 
 ```csharp
-void DrawClock()
-{
-    graphics.Clear(true);
-
-    hour = 8;
-    minute = 54;
-    DrawWatchFace();
-    while (true)
-    {
-        tick++;
-        Thread.Sleep(1000);
-        UpdateClock(second: tick % 60);
-    }
-}
-void DrawWatchFace()
-{
-    graphics.Clear();
-    int hour = 12;
-    int xCenter = displayWidth / 2;
-    int yCenter = displayHeight / 2;
-    int x, y;
-
-    graphics.DrawRectangle(0, 0, displayWidth, displayHeight, Color.White);
-    graphics.DrawRectangle(5, 5, displayWidth - 10, displayHeight - 10, Color.White);
-
-    graphics.CurrentFont = new Font12x20();
-    graphics.DrawCircle(xCenter, yCenter, 100, WatchBackgroundColor, true);
-    for (int i = 0; i < 60; i++)
-    {
-        x = (int)(xCenter + 80 * Math.Sin(i * Math.PI / 30));
-        y = (int)(yCenter - 80 * Math.Cos(i * Math.PI / 30));
-
-        if (i % 5 == 0)
-        {
-            graphics.DrawText(hour > 9? x-10 : x-5, y-5, hour.ToString(), Color.Black);
-            if (hour == 12) { hour = 1; } else { hour++; }
-        }
-    }
-
-    graphics.Show();
-}
-void UpdateClock(int second = 0)
-{
-    int xCenter = displayWidth / 2;
-    int yCenter = displayHeight / 2;
-    int x, y, xT, yT;
-
-    if (second == 0)
-    {
-        minute++;
-        if (minute == 60)
-        {
-            minute = 0;
-            hour++;
-            if (hour == 12)
-            {
-                hour = 0;
-            }
-        }
-    }
-
-    graphics.Stroke = 3;
-
-    //remove previous hour
-    int previousHour = (hour - 1) < -1 ? 11 : (hour - 1);
-    x = (int)(xCenter + 43 * Math.Sin(previousHour * Math.PI / 6));
-    y = (int)(yCenter - 43 * Math.Cos(previousHour * Math.PI / 6));
-    xT = (int)(xCenter + 3 * Math.Sin((previousHour - 3) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((previousHour - 3) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, WatchBackgroundColor);
-    xT = (int)(xCenter + 3 * Math.Sin((previousHour + 3) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((previousHour + 3) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, WatchBackgroundColor);
-    //current hour
-    x = (int)(xCenter + 43 * Math.Sin(hour * Math.PI / 6));
-    y = (int)(yCenter - 43 * Math.Cos(hour * Math.PI / 6));
-    xT = (int)(xCenter + 3 * Math.Sin((hour - 3) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((hour - 3) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, Color.Black);
-    xT = (int)(xCenter + 3 * Math.Sin((hour + 3) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((hour + 3) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, Color.Black);
-    //remove previous minute
-    int previousMinute = minute - 1 < -1 ? 59 : (minute - 1);
-    x = (int)(xCenter + 55 * Math.Sin(previousMinute * Math.PI / 30));
-    y = (int)(yCenter - 55 * Math.Cos(previousMinute * Math.PI / 30));
-    xT = (int)(xCenter + 3 * Math.Sin((previousMinute - 15) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((previousMinute - 15) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, WatchBackgroundColor);
-    xT = (int)(xCenter + 3 * Math.Sin((previousMinute + 15) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((previousMinute + 15) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, WatchBackgroundColor);
-    //current minute
-    x = (int)(xCenter + 55 * Math.Sin(minute * Math.PI / 30));
-    y = (int)(yCenter - 55 * Math.Cos(minute * Math.PI / 30));
-    xT = (int)(xCenter + 3 * Math.Sin((minute - 15) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((minute - 15) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, Color.Black);
-    xT = (int)(xCenter + 3 * Math.Sin((minute + 15) * Math.PI / 6));
-    yT = (int)(yCenter - 3 * Math.Cos((minute + 15) * Math.PI / 6));
-    graphics.DrawLine(xT, yT, x, y, Color.Black);
-    //remove previous second
-    int previousSecond = second - 1 < -1 ? 59 : (second - 1);
-    x = (int)(xCenter + 70 * Math.Sin(previousSecond * Math.PI / 30));
-    y = (int)(yCenter - 70 * Math.Cos(previousSecond * Math.PI / 30));
-    graphics.DrawLine(xCenter, yCenter, x, y, WatchBackgroundColor);
-    //current second
-    x = (int)(xCenter + 70 * Math.Sin(second * Math.PI / 30));
-    y = (int)(yCenter - 70 * Math.Cos(second * Math.PI / 30));
-    graphics.DrawLine(xCenter, yCenter, x, y, Color.Red);
-    graphics.Show();
-}
+graphics.DrawHorizontalGradient(
+    x: 20,
+    y: 20,
+    width: graphics.Width - 40,
+    height: graphics.Height - 40,
+    colorLeft: Color.Red,
+    colorRight: Color.Green);
 ```
 
-Executing this code would result in something similar to the following:
+The code sample above draws a horizontal gradient from `Red` to `Green`:
 
-![Image of a clock face,](ClockFace.png)
+![meadow micrographics line](micrographics_horizontalgradient.png)
+
+### `DrawVerticalGradient`
+
+Draws a vertical gradient pane:
+
+```csharp
+graphics.DrawVerticalGradient(
+    x: 20,
+    y: 20,
+    width: graphics.Width - 40,
+    height: graphics.Height - 40,
+    colorTop: Color.Red,
+    colorBottom: Color.Green);
+```
+
+The code sample above draws a vertical gradient from `Red` to `Green`:
+
+![meadow micrographics line](micrographics_verticalgradient.png)
 
 ## Drawing Images
 
@@ -397,7 +321,7 @@ graphics.DrawText(
     scaleFactor: ScaleFactor.X2);
 ```
 
-### Paths
+## Drawing Paths
 
 MicroGraphics has added basic path support modelled after SkiaSharp. A path is created by instantiating a `GraphicsPath` object and drawn using the `DrawPath` method.
 
@@ -410,9 +334,9 @@ MicroGraphics has added basic path support modelled after SkiaSharp. A path is c
 ```csharp
 var pathSin = new GraphicsPath();
 
-for (int i = 0; i < 48; i++)
+for (int i = 0; i < 70; i++)
 {
-    if(i == 0)
+    if (i == 0)
     {
         pathSin.MoveTo(0, 120 + (int)(Math.Sin(i * 10 * Math.PI / 180) * 100));
         continue;
@@ -423,12 +347,16 @@ for (int i = 0; i < 48; i++)
 
 graphics.Clear();
 
-graphics.DrawPath(pathSin, Color.LawnGreen);
+graphics.DrawPath(pathSin, Color.Red);
 
 graphics.Show();
 ```
 
-### Implementing a Render Lock
+The code sample above draws a red sine wave curve:
+
+![micrographics path](micrographics_path.png)
+
+## Implementing a Render Lock
 
 When drawing to the canvas within a loop, it's a good practice to implement a render lock so that if a draw operation is already in progress, a render request isn't called in parallel to prevent the operations stacking up:
 
@@ -461,6 +389,133 @@ protected void Render()
     isRendering = false;
 }
 ```
+
+## Watchface Example
+
+For example, the following code renders a clock face using a number of the primitives mentioned above:
+
+```csharp
+int hour = 0;
+int minute = 0;
+int tick = 0;
+
+async Task DrawClock()
+{
+    graphics.Clear(true);
+
+    hour = 8;
+    minute = 54;
+    DrawWatchFace();
+    while (true)
+    {
+        tick++;
+        await Task.Delay(1000);
+        UpdateClock(second: tick % 60);
+    }
+}
+void DrawWatchFace()
+{
+    graphics.Clear();
+    int hour = 12;
+    int xCenter = graphics.Width / 2;
+    int yCenter = graphics.Height / 2;
+    int x, y;
+
+    graphics.DrawRectangle(0, 0, graphics.Width, graphics.Height, Color.White);
+    graphics.DrawRectangle(5, 5, graphics.Width - 10, graphics.Height - 10, Color.White);
+
+    graphics.CurrentFont = new Font12x20();
+    graphics.DrawCircle(xCenter, yCenter, 100, Color.White, true);
+    for (int i = 0; i < 60; i++)
+    {
+        x = (int)(xCenter + 80 * Math.Sin(i * Math.PI / 30));
+        y = (int)(yCenter - 80 * Math.Cos(i * Math.PI / 30));
+
+        if (i % 5 == 0)
+        {
+            graphics.DrawText(hour > 9 ? x - 10 : x - 5, y - 5, hour.ToString(), Color.Black);
+            if (hour == 12) { hour = 1; } else { hour++; }
+        }
+    }
+
+    graphics.Show();
+}
+void UpdateClock(int second = 0)
+{
+    int xCenter = graphics.Width / 2;
+    int yCenter = graphics.Height / 2;
+    int x, y, xT, yT;
+
+    if (second == 0)
+    {
+        minute++;
+        if (minute == 60)
+        {
+            minute = 0;
+            hour++;
+            if (hour == 12)
+            {
+                hour = 0;
+            }
+        }
+    }
+
+    graphics.Stroke = 3;
+
+    //remove previous hour
+    int previousHour = (hour - 1) < -1 ? 11 : (hour - 1);
+    x = (int)(xCenter + 43 * Math.Sin(previousHour * Math.PI / 6));
+    y = (int)(yCenter - 43 * Math.Cos(previousHour * Math.PI / 6));
+    xT = (int)(xCenter + 3 * Math.Sin((previousHour - 3) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((previousHour - 3) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.White);
+    xT = (int)(xCenter + 3 * Math.Sin((previousHour + 3) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((previousHour + 3) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.White);
+    //current hour
+    x = (int)(xCenter + 43 * Math.Sin(hour * Math.PI / 6));
+    y = (int)(yCenter - 43 * Math.Cos(hour * Math.PI / 6));
+    xT = (int)(xCenter + 3 * Math.Sin((hour - 3) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((hour - 3) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.Black);
+    xT = (int)(xCenter + 3 * Math.Sin((hour + 3) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((hour + 3) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.Black);
+    //remove previous minute
+    int previousMinute = minute - 1 < -1 ? 59 : (minute - 1);
+    x = (int)(xCenter + 55 * Math.Sin(previousMinute * Math.PI / 30));
+    y = (int)(yCenter - 55 * Math.Cos(previousMinute * Math.PI / 30));
+    xT = (int)(xCenter + 3 * Math.Sin((previousMinute - 15) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((previousMinute - 15) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.White);
+    xT = (int)(xCenter + 3 * Math.Sin((previousMinute + 15) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((previousMinute + 15) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.White);
+    //current minute
+    x = (int)(xCenter + 55 * Math.Sin(minute * Math.PI / 30));
+    y = (int)(yCenter - 55 * Math.Cos(minute * Math.PI / 30));
+    xT = (int)(xCenter + 3 * Math.Sin((minute - 15) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((minute - 15) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.Black);
+    xT = (int)(xCenter + 3 * Math.Sin((minute + 15) * Math.PI / 6));
+    yT = (int)(yCenter - 3 * Math.Cos((minute + 15) * Math.PI / 6));
+    graphics.DrawLine(xT, yT, x, y, Color.Black);
+    //remove previous second
+    int previousSecond = second - 1 < -1 ? 59 : (second - 1);
+    x = (int)(xCenter + 70 * Math.Sin(previousSecond * Math.PI / 30));
+    y = (int)(yCenter - 70 * Math.Cos(previousSecond * Math.PI / 30));
+    graphics.DrawLine(xCenter, yCenter, x, y, Color.White);
+    //current second
+    x = (int)(xCenter + 70 * Math.Sin(second * Math.PI / 30));
+    y = (int)(yCenter - 70 * Math.Cos(second * Math.PI / 30));
+    graphics.DrawLine(xCenter, yCenter, x, y, Color.Red);
+    graphics.Show();
+}
+```
+
+Executing this code would result in something similar to the following:
+
+![Image of a clock face,](ClockFace.png)
 
 ## Sample Applications
 
