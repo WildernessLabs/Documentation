@@ -29,24 +29,15 @@ In Meadow.Foundation, every graphics display driver manages its own buffer, sinc
 For this reason, an initialized display driver must be passed to the MicroGraphics instance during construction. For example, the following code creates a graphics library canvas from the ST7789 display that can be found in the Hack Kit:
 
 ```csharp
-St7789 st7789;
 MicroGraphics canvas;
 
-// this display needs mode3
-var config = new SpiClockConfiguration(new Meadow.Units.Frequency(12000, Meadow.Units.Frequency.UnitType.Kilohertz), 
-    SpiClockConfiguration.Mode.Mode3);
-
-// new up the display on the SPI bus
-display = new St7789
-(
-    device: MeadowApp.Device,
-    spiBus: MeadowApp.Device.CreateSpiBus(MeadowApp.Device.Pins.SCK, MeadowApp.Device.Pins.MOSI, MeadowApp.Device.Pins.MISO, config),
-    chipSelectPin: null,
-    dcPin: MeadowApp.Device.Pins.D01,
-    resetPin: MeadowApp.Device.Pins.D00,
+var display = new St7789(
+    spiBus: Device.CreateSpiBus(),
+    chipSelectPin: Device.Pins.A03,
+    dcPin: Device.Pins.A04,
+    resetPin: Device.Pins.A05,
     width: 240, height: 240, 
-    displayColorMode: St7789.DisplayColorMode.Format16bppRgb565
-);
+    colorMode: ColorMode.Format16bppRgb565);
 
 // create our graphics canvas that we'll draw onto 
 canvas = new MicroGraphics(display);
@@ -106,6 +97,108 @@ There are a number of drawing methods available for drawing of various primitive
 * Rectangle
 * RoundedRectangle
 * Path
+
+### `DrawLine`
+
+Draws a colored line:
+
+```csharp
+graphics.DrawLine(
+    x0: graphics.Width / 3,
+    y0: graphics.Height / 3,
+    x1: graphics.Width * 2 / 3,
+    y1: graphics.Height * 2 / 3,
+    color: Color.Red);
+```
+
+The code sample above draws a red rectangle:
+
+![meadow micrographics line](micrographics_line.png)
+
+### `DrawTriangle`
+
+Draws a colored line:
+
+```csharp
+graphics.DrawTriangle(
+    x0: graphics.Width / 3,
+    y0: graphics.Height / 3,
+    x1: graphics.Width * 2 / 3,
+    y1: graphics.Height / 3,
+    x2: graphics.Width / 2,
+    y2: graphics.Height * 2 / 3,
+    color: Color.Red,
+    filled: true);
+```
+
+The code sample above draws a red rectangle:
+
+![meadow micrographics line](micrographics_triangle.png)
+
+### `DrawCircle`
+
+Draws a colored circle:
+
+```csharp
+graphics.DrawCircle(
+    centerX: graphics.Width / 2,
+    centerY: graphics.Height / 2,
+    radius: graphics.Height / 3,
+    color: Color.Red,
+    filled: true);
+```
+
+The code sample above draws a red rectangle:
+
+![meadow micrographics line](micrographics_circle.png)
+
+### `DrawRectangle`
+
+Draws a colored circle:
+
+```csharp
+graphics.DrawRectangle(
+    x: 20,
+    y: 20,
+    width: graphics.Width - 40,
+    height: graphics.Height - 40,
+    color: Color.Red,
+    filled: true);
+```
+
+The code sample above draws a red rectangle:
+
+![meadow micrographics line](micrographics_rectangle.png)
+
+### `DrawRoundedRectangle`
+
+Draws a colored circle:
+
+```csharp
+graphics.DrawRoundedRectangle(
+    x: 20,
+    y: 20,
+    width: graphics.Width - 40,
+    height: graphics.Height - 40,
+    cornerRadius: 20,
+    color: Color.Red,
+    filled: true);
+```
+
+The code sample above draws a red rectangle:
+
+![meadow micrographics line](micrographics_roundedrectangle.png)
+
+
+
+
+
+
+
+
+
+
+## Watchface Example
 
 For example, the following code renders a clock face using a number of the primitives mentioned above:
 
