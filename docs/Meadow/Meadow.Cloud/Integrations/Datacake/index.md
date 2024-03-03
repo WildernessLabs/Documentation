@@ -26,7 +26,7 @@ Sync device data from a MeadowCloud device collection.
 Sync device data to a desired Datacake Workspace.
 
 **Pricing Plan**  
-[Pricing Plan](https://datacake.co/pricing#self-service-pricing-table){:target="_blank"} for each device in Datacake. 
+[Pricing Plan](https://datacake.co/pricing#self-service-pricing-table) for each device in Datacake. 
 
 **Active**  
 Turn on/off the integration.

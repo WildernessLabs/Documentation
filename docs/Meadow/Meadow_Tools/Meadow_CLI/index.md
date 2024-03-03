@@ -22,7 +22,7 @@ Some Meadow.CLI commands [registering for a **Wilderness Labs Account**](https:/
 
 ### Install .NET SDK
 
-Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download).
 
 ### Install or update Meadow CLI
 
