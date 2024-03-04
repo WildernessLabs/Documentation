@@ -4,7 +4,7 @@ title: Hello, Meadow!
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow), you can create and deploy Meadow apps to it.
+Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), you can create and deploy Meadow apps to it.
 
 The video below shows you how to create and deploy your first Meadow app on a Mac:
 <p><iframe width="640" height="360" src="https://www.youtube.com/embed/wkekz5I7ycE" frameborder="3" allowfullscreen></iframe></p>
@@ -52,7 +52,7 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 ### Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow%2EOS), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 1. Connect your Meadow device to your development machine
 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar. (Alternatively, you can show the list from the **View** > **Toolbars** > **Meadow Device List** menu entry.)
@@ -115,7 +115,7 @@ To fix this do the following:
 
 ### Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow%2EOS), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 1. Connect your Meadow device to your development machine
 2. Press the **Play** button in Visual Studio to compile and deploy your application

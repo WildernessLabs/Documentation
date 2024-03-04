@@ -49,7 +49,7 @@ There are several good BLE mobile client applications available from iOS and And
 
 ## Pre-requisites
 
-BLE requires your meadow be updated to the latest b5.0 binaries.  This includes both a Meadow OS and new firmware for the ESP32.  See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow/) for more information.
+BLE requires your meadow be updated to the latest b5.0 binaries.  This includes both a Meadow OS and new firmware for the ESP32.  See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
 
 ## Defining a BLE Service Definition
 
