@@ -10,7 +10,7 @@ This is another tiny release to address an issue when connecting to a WiFi netwo
 
 ## Updating
 
-This release requires a Meadow.OS firmware update (follow steps [here](/Meadow/Getting_Started/Deploying_Meadow/)), no IDE or Meadow.CLI updates are necessary.
+This release requires a Meadow.OS firmware update (follow steps [here](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)), no IDE or Meadow.CLI updates are necessary.
 
 # b4.6.1
 
@@ -239,7 +239,7 @@ It also includes some general improvements and bug fixes:
 
 This is a big release with a ton of stability fixes, an overhaul of the CLI, and big new features for networking. Major changes and improvements include:
 
- * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more unified and reliable Meadow.OS upload experience. [Check out the updated guide](/Meadow/Getting_Started/Deploying_Meadow/).
+ * **Meadow.OS Flashing from CLI** - We pulled the Meadow.OS firmware uploading out of the Visual Studio IDE and moved it into the CLI for a more unified and reliable Meadow.OS upload experience. [Check out the updated guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/).
  * **WiFi Enumeration Fix** - You can now enumerate WiFi networks without having to first connect to a Network.
  * **Faster, More Reliable OS Startup** - Meadow.OS startup is more robust and better handles a mismatch between co-processor firmware or runtime version.
  * **Exceptions on Reflection.Emit(ted) code work** - Exceptions via code that was executed from `Reflection.Emit()` now work properly. Previously they would tear down the .NET runtime.
@@ -364,7 +364,7 @@ Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) t
 Unzip everything to a common folder, the instructions below assume the OS and network binaries are in the same folder and the CLI is in a `Meadow.CLI` subfolder relative to the OS binaries.
 
 Open a terminal window and execute the following steps. Please note that if you don't have DFU-Util
-installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow/).
+installed, you can find instructions on how to install it [here](/Meadow/Getting_Started/Deploying_Meadow%2EOS/).
 
 1. Connect Meadow in normal mode
 1. Disable mono (may need to run twice if you get an exception the first time).
