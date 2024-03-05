@@ -69,7 +69,10 @@ const config = {
           {
             from: "/Hardware/Reference/Equations_and_Laws/Voltage/",
             to: "/Hardware/Reference/Electronic_Fundamentals/Voltage/",
-            from: "/Hardware/Ciruits/Components/Resistors/",
+          },
+          {
+            from: "/Meadow/Getting_Started/Deploying_Meadow/",
+            to: "/Meadow/Getting_Started/Deploying_Meadow%2EOS/",
           },
 
           // // Redirect from multiple old paths to the new path
