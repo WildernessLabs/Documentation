@@ -12,6 +12,8 @@ The `SensorService` provides a shared sensor reading thread that can be used to 
 
 Once you have registered your polling sensors with the `SensorService`, you continue to read values from them using their respective `Read` and events. Behind the scenes, the `SensorService` will manage the polling of the sensors at the regular interval using the shared thread.
 
+`SensorService` is transparent to the sensor. It doesn't change how you interact with the sensor, it just manages the polling of the sensor, replacing the timer with the timer built into the service.
+
 ## Migrate your sensors to SensorService
 
 When you finish initializing your desired sensor, you can register it with the `SensorService` to have it automatically polled at a regular interval. For example, if your project has an SCD-40 sensor using I2C for carbon dioxide concentration, temperature, and humidity, you can register it with the `SensorService` after you declare it using the I2C bus.
@@ -31,4 +33,4 @@ While they won't benefit from the shared sensor reading thread, you can register
 
 ## SensorService polling interval requirements
 
-For polling sensor readings, the `SensorService` requires that the polling interval be divisible by an even second. If the interval is not divisible by an even second, it will be rounded up to the nearest even second. For example, if you set the interval to 1.5 seconds, it will be rounded up to 2 seconds.
+For polling sensor readings, the `SensorService` requires that the polling interval be divisible by an even second. If the interval is not divisible by an even second, it will be rounded up to the nearest even second. For example, if you set the interval to 1.5 seconds, it will be rounded up to 2 seconds. As an extension of that, the fastest you can poll sensors through the `SensorService` is every 1 second (1Hz).
