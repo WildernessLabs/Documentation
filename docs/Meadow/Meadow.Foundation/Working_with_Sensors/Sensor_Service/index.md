@@ -33,4 +33,4 @@ While they won't benefit from the shared sensor reading thread, you can register
 
 ## SensorService polling interval requirements
 
-For polling sensor readings, the `SensorService` requires that the polling interval be divisible by an even second. If the interval is not divisible by an even second, it will be rounded up to the nearest even second. For example, if you set the interval to 1.5 seconds, it will be rounded up to 2 seconds. As an extension of that, the fastest you can poll sensors through the `SensorService` is every 1 second (1Hz).
+Even while using the `SensorService`, you can continue to set the polling period with the `StartUpdating` method's optional parameter. The `SensorService` does add an additional contraint to the polling period, requiring that the polling interval be divisible by an even second. If the interval is not divisible by an even second, it will be rounded up to the nearest even second. For example, if you set the interval to 1.5 seconds, you will get a new reading from the service rounded up to every 2 seconds. As an extension of that, the fastest you can poll sensors through the `SensorService` is every 1 second (1Hz).
