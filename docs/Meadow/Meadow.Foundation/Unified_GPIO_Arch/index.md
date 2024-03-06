@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Meadow.Foundation Unified IO Architecture
+title: Unified IO Architecture
 subtitle: Extending Meadow IOs seamlessly with external IO expansion peripherals via the Unified IO pattern.
 ---
 

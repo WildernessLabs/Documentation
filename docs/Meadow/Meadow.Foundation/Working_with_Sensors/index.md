@@ -118,5 +118,3 @@ And with the `FilterableChangeObservable`, you can create filters to only get no
 ## Reducing threads with multiple polling sensors
 
 Having several sensors reading on their own threads at the same time can be resource-intensive on low-resource platforms like Meadow. To help with this, Meadow provides the `SensorService` to help avoid this when you are regularly reading for several sensors every second or more. The [`SensorService` provides a shared sensor reading thread](/Meadow/Meadow.Foundation/Working_with_Sensors/Sensor_Service/) that can be used to poll all registered sensors at a regular interval.
-
-## [Next - Unified GPIO](/Meadow/Meadow.Foundation/Unified_GPIO_Arch/)

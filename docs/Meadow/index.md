@@ -11,7 +11,7 @@ subtitle: Guides and documentation for Meadow devices and applications.
 If you're just beginning, check out the [Getting Started](/Meadow/Getting_Started) walkthrough to get your development environment configured and deploy your first Meadow application:
 
 * [Assembling your Meadow board](/Meadow/Getting_Started/Assemble_Meadow)
-* [Deploying Meadow OS](/Meadow/Getting_Started/Deploying_Meadow)
+* [Deploying Meadow OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS)
 * [Hello, Meadow](/Meadow/Getting_Started/Hello_World)
 
 ## Meadow Basics
