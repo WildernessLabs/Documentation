@@ -7,7 +7,7 @@ subtitle: Connect Meadow to LTE/4G cellular signals
 ## Contents
 * [Cellular Network Technologies](#cellular-network-technologies)
 * [Supported Cellular Modules](#supported-cellular-modules)
-* [Hardware configuration](#hardware-configuration)
+* [Hardware setup](#hardware-setup)
     * [Quectel BG95M3 with NimbeLink Skywire click board](#quectel-bg95m3-with-nimbelink-skywire-click-board)
     * [Quectel M95 with GSM2 click board](#quectel-m95-with-gsm2-click-board)
     * [Choosing a SIM Card](#choosing-a-sim-card)
@@ -16,7 +16,7 @@ subtitle: Connect Meadow to LTE/4G cellular signals
     * [Specify Network Interface and reserved pins](#specify-network-interface-and-reserved-pins)
     * [Handling Cell connection using a Meadow application](#handling-cell-connection-using-a-meadow-application)
         * [Getting module IMEI](#getting-module-imei)
-        * [Fetching Cell Signal Quality](#fetching-cell-signal-quality)
+        * [Getting Cell Signal Quality](#getting-cell-signal-quality)
 * [Using GNSS with cellular modules](#using-gnss-with-cellular-modules)
     * [GNSS Hardware Setup](#gnss-hardware-setup)
 * [Troubleshooting](#troubleshooting)
@@ -35,49 +35,64 @@ The cellular network for the Meadow platform is compatible with various modules,
 | Quectel BG95-M3           | ✔                     | ✔      | ✔           | ✔      |
 | Quectel M95               | -                      | -      | ✔           | -      |
 
-# Hardware configuration
+# Hardware setup
+First, you need to set up your hadware to use cellular on Meadow. This process will depend on your cellular board and the Meadow device that you intend to use.
 
-## Quectel BG95M3 with NimbeLink Skywire click board
+## Quectel BG95-M3 with NimbeLink Skywire click board
 
-To setup the hardware, you could use a Skywire click adapter, which hosts NimbeLink/Skywire cellular modems (using stacking headers) to MikroElektronika development boards. 
+To set up this hardware, you could use a Skywire click adapter, which hosts NimbeLink/Skywire cellular modems (using stacking headers) to MikroElektronika development boards. For simplicity, we may refer to this combination as **Quectel BG95-M3** throughout this tutorial instead of specifying both **Quectel BG95-M3** and **NimbeLink Skywire click board**.
 
 ![Quectel BG95M3 with NimbeLink Skywire click board](images/modem-skywire-click.jpg)
 
-To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+Start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
 
-### Using a Meadow F7v2 Feather
+### Setting up Quectel BG95-M3 using a Meadow F7v2 Feather
 
+In the following example, we'll demonstrate how to set up the **Quectel BG95-M3** module with a **NimbeLink Skywire click board** on the **Meadow F7v2 Feather**.
 ![Quectel BG95M3 with NimbeLink Skywire click board and a Meadow F7v2 Feather](images/meadow-modem.jpg)
 
-* **Connecting the serial pins (UART)**: If you're using a `Meadow F7v2 Feather` board, you will need to connect `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-* **Power and supply pins**: Also, you need to connect the `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins on both sides of the Skywire click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
-* **Attaching an antenna**: Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
+#### Step 1: Connect the serial pins (UART)
+If you're using a `Meadow F7v2 Feather` board, you will need to connect `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
+#### Step 2: Connect turn-on and supply pins
+You need to connect the `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins on both sides of the Skywire click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
-### Using a Project Lab v3
+> **Notes**: Feel free to use other pins to turn on the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+
+#### Step 3: Attach an antenna
+Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
+
+### Setting up Quectel BG95-M3 using a Project Lab v3
 
 ![Quectel BG95M3 with NimbeLink Skywire click board and a Project Lab v3](images/projectlab-modem.jpg)
 
-* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
+* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the **mikroBUS connector 1** and **you're all set!** Whats left is to make a few adjustments to your Meadow application to use cellular.
 
 ## Quectel M95 with GSM2 click board
+To set up this hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
 
 ![Quectel M95 with GSM2 click board](images/gsm2-click-inside-image.jpg)
 
-To configure the hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+For simplicity, we may refer to this combination as **Quectel M95** throughout this tutorial instead of specifying both **M95** and **GSM2 clickboard**.
 
-### Using a Meadow F7v2 Feather
-
+### Setting up Quectel M95 using a Meadow F7v2 Feather
+In the following example, we'll demonstrate how to set up the **Quectel M95 module** with a **GSM2 clickboard** on the **Meadow F7v2 Feather**.
 ![Quectel M95 with GSM2 click board and a Meadow F7v2 Feather](images/wildernesslabs-meadow-fritzing-m95.jpg)
 
-* **Connecting serial pins (UART)**: To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-* **Power-up and supply pins**: Also, you need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3** and **BG770A**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
-* **Attaching an antenna**: Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
+#### Step 1: Connect serial pins (UART)
+To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
+#### Step 2: Connect turn-on and supply pins
+You need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
-### Using a Project Lab v3
+> **Notes**: Feel free to use other pins to turn on the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+
+#### Step 3: Attach an antenna 
+Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
+
+### Setting up Quectel M95 using a Project Lab v3
 
 ![Quectel M95 with GSM2 click board and a Project Lab v3](images/wildernessslabs-projectlab-bgm95.jpg)
 
-* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the mikroBUS connector 1 and you're all set! Whats left is to make a few adjustments to your Meadow application to use cellular.
+* A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the **mikroBUS connector 1** and **you're all set!** Whats left is to make a few adjustments to your Meadow application to use cellular.
 
 ## Choosing a SIM Card
 
@@ -85,38 +100,42 @@ To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized 
 
 # Enabling Cellular on your Meadow Application
 
-Using Cellular on Meadow, you will need to do three things:
+After having properly setup your hardware, you just need to follow a few steps to enable cellular on your Meadow application:
 
-## Adding a cell.config.yaml file
+## Step 1: Adding a cell.config.yaml file
 
 Create a **cell.config.yaml** file, set the `Copy To Output` property to `Copy always` or `Copy if newer`, and fill out the values under the `Settings` section like APN, Module, and a additional optional pins to ensure a proper connection with your internet provider. Here's what a cell config file looks like with the required and optional fields:
 
 ```yaml
 Settings:
     APN: YOUR-APN         # (required) Access Point Name
-    Module: BG95M3        # (required) Module model (BG770A, BG95M3 or M95)
+    Module: BG95M3        # (required) Module model (BG95M3 or M95)
     User: USER            # (optional) APN user 
     Password: PASSWORD    # (optional) APN password
     Operator: 00000       # (optional) Carrier numeric operator code
     Mode: CATM1           # (optional) Network mode (CATM1, NBIOT or GSM)
-    Interface: /dev/ttyS1 # (optional) Serial interface 
-                          # UART1 (COM1) = /dev/ttyS0 
-                          # UART4 (COM4) = /dev/ttyS1 (default), 
-                          # UART6 = /dev/ttyS3) 
-    TurnOnPin: D10        # (optional) Enable pin to turn the module on/off. 
-                          # Default value is Meadow Pin name D10
+    Interface: /dev/ttyS0 # (required) Serial interface:
+                          #   UART1 (COM1) = /dev/ttyS0 (default)
+                          #   UART4 (COM4) = /dev/ttyS1, 
+                          #   UART6 = /dev/ttyS3
+    TurnOnPin: A3         # (required) Enable MCU pin to turn the module on/off
+                          # Default value is MCU Pin A3
+                          #   IMPORTANT:
+                          #   Ensure to use the MCU pin names, 
+                          #   not the Meadow pin names (seen on the board)
 ```
 
 A few things to consider:
+ * **Ensure to use the MCU pin names** in the `TurnOnPin` field, not the Meadow pin names (seen on the board). Consult the pinout definition on your Meadow device datasheet for the correct MCU pin names.
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
  * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](#scanning-cell-networks) method that will list nearby networks in the area.
- * `TurnOnPin` is a pin used to turn on the module.
 
-## Specify Network Interface and reserved pins
+## Step 2: Specify Network Interface and reserved pins
 
-In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial pins and an additional pin to turn on or off Meadow the cellular module. **Important: The reserved pins must be specified by MCU Pin name, not by Meadow Pin name.**
+In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial MCU pins and an additional MCU pin to turn on or off Meadow the cellular module.
 
-* If you're using a [Meadow Feather V2](https://developer.wildernesslabs.co/Common_Files/Meadow_F7v2_Micro_Pinout.svg), you would connect the cellular module to `D00` and `D01`, which are the COM4 serial pins that, according to the [datasheet](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf), the MCU Pin names are `PI9` and `PH13`, but in the config file we can ommit the `p` prefix. As for the enable pin, say if you connect it to the `D10` pin, the MCU pin name is `C7`. So the required values in the config file should look like this:
+### Configuring Meadow F7v2 Feather with BG95-M3 or M95
+If you're using a [Meadow Feather V2](https://developer.wildernesslabs.co/Common_Files/Meadow_F7v2_Micro_Pinout.svg), you would connect the cellular module to `D00` and `D01`, which are the COM4 serial pins that, according to the [datasheet](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf), the MCU pin names are `PI9` and `PH13`, but in the config file we can ommit the `p` prefix. As for the turn-on pin, say if you connect it to the `D10` pin, the MCU pin name is `C7`. So the required values in the config files should look like this:
 
 ```yaml
 # Device specific config
@@ -134,7 +153,16 @@ Network:
     DefaultInterface: Cell
 ```
 
-* In the case that you're using a Project Lab v3, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PA3` for the Serial RX/TX and Enable pins respectively:
+And your `TurnOnPin` in the `cell.config.yaml` should be `C7`:
+```yaml
+Settings:
+...
+    TurnOnPin: C7         # (required) Enable MCU pin to turn the module on/off
+```
+
+### Configuring Project Lab v3 with BG95-M3
+
+In the case that you're using a Project Lab v3 with the BG95-M3, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PA3` for the Serial RX/TX and Enable pins respectively:
 
 ```yaml
 # Device specific config
@@ -152,7 +180,40 @@ Network:
     DefaultInterface: Cell
 ```
 
-## Handling Cell connection using a Meadow application
+And your `TurnOnPin` in the `cell.config.yaml` should be `A3`:
+```yaml
+Settings:
+...
+    TurnOnPin: A3         # (required) Enable MCU pin to turn the module on/off
+```
+
+### Configuring Project Lab v3 with M95
+In the case that you're using a Project Lab v3 with the M95, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PH10` for the Serial RX/TX and Turn-on pins respectively:
+
+```yaml
+# Device specific config
+Device:
+    # Name of the device
+    Name: ProjectLabV3
+
+    # Corresponding MCU pin names for the reserved pins
+    # (COMX_RX pin, COM_TX pin, ENABLE pin)
+    ReservedPins: B15;B14;H10
+
+# Network configuration
+Network:
+    #  Which interface should be used?
+    DefaultInterface: Cell
+```
+
+And your `TurnOnPin` in the `cell.config.yaml` should be `H10`:
+```yaml
+Settings:
+...
+    TurnOnPin: H10         # (required) Enable MCU pin to turn the module on/off
+```
+
+## Step 3: Handling Cell connection using a Meadow application
 
 To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like this:
 `Connection established successfully! IP address '100.69.106.222'.`
@@ -191,9 +252,34 @@ void CellAdapter_NetworkDisconnected(INetworkAdapter networkAdapter)
 }
 ```
 
+**That's all!** After that you should get connected :) If you are having issues to connect using cellular, please take a look at the [Troubleshooting](#troubleshooting) section.
+
 ### Getting module IMEI
 
-You can get some extra information about the connection and the module, such as the Cell Signal Quality (CSQ), and the International Mobile Equipment Identity (IMEI).
+You can get the International Mobile Equipment Identity (IMEI) through the `Imei` property.
+
+```csharp
+var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
+
+cell.NetworkConnected += CellAdapter_NetworkConnected;
+
+void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapter networkAdapter)
+{
+    Resolver.Log.Info("Cell network connected!");
+
+    ICellNetworkAdapter cellAdapter = networkAdapter as ICellNetworkAdapter;
+    if (cellAdapter != null)
+    {
+        Console.WriteLine("Cell IMEI: " + cellAdapter.Imei);
+    }
+}
+```
+
+> **Notes**: Before using this property, ensure a successful connection has been established.
+
+### Getting Cell Signal Quality
+
+You can get the Cell Signal Quality (CSQ) obtained at the time of the connection through the `Csq` property, which is updated after any connection network event.
 
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
@@ -208,16 +294,11 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
     if (cellAdapter != null)
     {
         Console.WriteLine("Cell CSQ: " + cellAdapter.Csq);
-        Console.WriteLine("Cell IMEI: " + cellAdapter.Imei);
     }
 }
 ```
 
-> **Notes**: Before using the mentioned properties, ensure a successful connection has been established. The `Csq` property returns a static value (0-31) representing the signal quality obtained on the connection.
-
-### Fetching Cell Signal Quality
-
-It's important to note that the `Csq` property returns a cached value obtained from the connection, then to retrieve the most up-to-date CSQ (Cellular Signal Quality), you should utilize the `GetSignalQuality` method, as illustrated in the following example:
+To get the most up-to-date Cell Signal Quality (CSQ), you should use the `GetSignalQuality` method instead of relying on the `Csq` property. However, you'll be disconnected from the cellular network for a brief period while the module gets the current signal quality, so it's advised to avoid calling this method frequently to ensure a seamless user experience.
 
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
@@ -226,7 +307,7 @@ double csq  = cell.GetSignalQuality();
 Console.WriteLine("Cell Signal Quality: " + csq);
 ```
 
-> **Notes**: To convert the CSQ value to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value). You may experience disconnection from the cellular network for a brief period while the module gets the signal quality, so we suggest to avoid calling this method frequently to ensure a seamless user experience.
+> **Notes**: Both the `Csq` property and the `GetSignalQuality` method return a value (0-31) representing the Cellular Signal Quality (CSQ), while 99 indicates no connection. To convert the retrieved CSQ value to dBm, you need to use the formula: `dBm = -113 + CSQ * 2`. 
 
 # Using GNSS with cellular modules
 
