@@ -4,7 +4,7 @@ title: Optimize Sensor Reads with SensorService
 subtitle: Reduce sensor thread usage by isolating reads to a the shared SensorService.
 ---
 
-While developing code to read sensors asyncronously in C#, it can be very easy to create a large number of threads because of how simple async Task-based code is to write. On low-resource platforms like Meadow, too many threads can cause excessive CPU cycles as it switches between contexts. To help with this, Meadow provides the `SensorService` to help avoid this when you are regularly reading for several sensors every second or more.
+While developing code to read sensors asyncronously in C#, it can be very easy to create a large number of threads because of how simple async Task-based code is to write. On low-resource platforms like Meadow, too many threads can cause excessive CPU cycles as it switches between contexts. You can also exceed the number of available threads on these low-resource platforms. To help with this, Meadow provides the `SensorService` to help avoid this when you are regularly reading for several sensors every second or more.
 
 ## What does SensorService provide?
 
@@ -12,7 +12,7 @@ The `SensorService` provides a shared sensor reading thread that can be used to 
 
 Once you have registered your polling sensors with the `SensorService`, you continue to read values from them using their respective `Read` and events. Behind the scenes, the `SensorService` will manage the polling of the sensors at the regular interval using the shared thread.
 
-`SensorService` is transparent to the sensor. It doesn't change how you interact with the sensor, it just manages the polling of the sensor, replacing the timer with the timer built into the service.
+`SensorService` is transparent to the sensor. It doesn't change how you interact with the sensor, it just manages the polling of the sensor, replacing the sensor's internal thread loop with the timer thread built into the service.
 
 ## Migrate your sensors to SensorService
 
