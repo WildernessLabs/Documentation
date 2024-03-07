@@ -72,7 +72,7 @@ const config = {
           },
           {
             from: "/Meadow/Getting_Started/Deploying_Meadow/",
-            to: "/Meadow/Getting_Started/Deploying_Meadow%2EOS/",
+            to: "/Meadow/Getting_Started/Deploying_Meadow.OS/",
           },
 
           // // Redirect from multiple old paths to the new path
