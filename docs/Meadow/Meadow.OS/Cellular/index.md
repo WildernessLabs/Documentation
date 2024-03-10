@@ -254,6 +254,8 @@ void CellAdapter_NetworkDisconnected(INetworkAdapter networkAdapter)
 
 **That's all!** After that you should get connected :) If you are having issues to connect using cellular, please take a look at the [Troubleshooting](#troubleshooting) section.
 
+You can also take a look at the [Cellular Meadow Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Cell_Basics/MeadowApp.cs) to help you on your first steps with cell!
+
 ### Getting module IMEI
 
 You can get the International Mobile Equipment Identity (IMEI) through the `Imei` property.
