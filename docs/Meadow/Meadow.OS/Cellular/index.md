@@ -281,7 +281,7 @@ void CellAdapter_NetworkConnected(INetworkAdapter networkAdapter, INetworkAdapte
 
 ### Getting Cell Signal Quality
 
-You can get the Cell Signal Quality (CSQ) obtained at the time of the connection through the `Csq` property, which is updated after any connection network event.
+You can get the Cell Signal Quality (CSQ), in dBm, obtained at the time of the connection through the `Csq` property, which is updated after any connection network event.
 
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
@@ -309,8 +309,7 @@ double csq  = cell.GetSignalQuality();
 Console.WriteLine("Cell Signal Quality: " + csq);
 ```
 
-> **Notes**: Both the `Csq` property and the `GetSignalQuality` method return a value (0-31) representing the Cellular Signal Quality (CSQ), while 99 indicates no connection. To convert the retrieved CSQ value to dBm, you need to use the formula: `dBm = -113 + CSQ * 2`. 
-
+> **Notes**: Both the `Csq` property and the `GetSignalQuality` method return a value in dBm representing the Cellular Signal Quality (CSQ), while `-9999` indicates no connection.
 # Using GNSS with cellular modules
 
 Some cellular modules, such as the BG95-M3, offer support for GNSS functionalities. As illustrated in the following example, you can define an interval between the position fixes, as well as select which kind of NMEA sentence should be retrieved, by specifying it in an `IGnssResult` array:
