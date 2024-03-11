@@ -14,7 +14,7 @@ To set up this hardware, you could use a Skywire click adapter, which hosts Nimb
 
 ![Quectel BG95M3 with NimbeLink Skywire click board](../images/modem-skywire-click.jpg)
 
-Start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+Start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and enable the cell module. Finally, connect an antenna to the click board.
 
 ### Setting up Quectel BG95-M3 using a Meadow F7v2 Feather
 
@@ -24,11 +24,12 @@ In the following example, we'll demonstrate how to set up the **Quectel BG95-M3*
 #### Step 1: Connect the serial pins (UART)
 
 If you're using a `Meadow F7v2 Feather` board, you will need to connect `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-#### Step 2: Connect turn-on and supply pins
+
+#### Step 2: Connect enable and supply pins
 
 You need to connect the `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins on both sides of the Skywire click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
-> **Notes**: Feel free to use other pins to turn on the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+> **Note**: Feel free to use other pins to enable the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
 
 #### Step 3: Attach an antenna
 
@@ -42,7 +43,7 @@ Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board
 
 ## Quectel M95 with GSM2 click board
 
-To set up this hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+To set up this hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and enable the cell module. Finally, connect an antenna to the click board.
 
 ![Quectel M95 with GSM2 click board](../images/gsm2-click-inside-image.jpg)
 
@@ -54,13 +55,16 @@ In the following example, we'll demonstrate how to set up the **Quectel M95 modu
 ![Quectel M95 with GSM2 click board and a Meadow F7v2 Feather](../images/wildernesslabs-meadow-fritzing-m95.jpg)
 
 #### Step 1: Connect serial pins (UART)
+
 To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-#### Step 2: Connect turn-on and supply pins
-You need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
-> **Notes**: Feel free to use other pins to turn on the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+#### Step 2: Connect enable and supply pins
 
-#### Step 3: Attach an antenna 
+You need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to enable the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
+
+> **Note**: Feel free to use other pins to enable the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+
+#### Step 3: Attach an antenna
 
 Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
 
