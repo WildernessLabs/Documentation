@@ -118,7 +118,7 @@ Settings:
                           #   UART1 (COM1) = /dev/ttyS0 (default)
                           #   UART4 (COM4) = /dev/ttyS1, 
                           #   UART6 = /dev/ttyS3
-    TurnOnPin: A3         # (required) Enable MCU pin to turn the module on/off
+    TurnOnPin: A3         # (required) Turn-on MCU pin to power the module on/off
                           # Default value is MCU Pin A3
                           #   IMPORTANT:
                           #   Ensure to use the MCU pin names, 
@@ -144,7 +144,7 @@ Device:
     Name: F7v2Feather
 
     # Corresponding MCU pin names for the reserved pins
-    # (COMX_RX pin, COM_TX pin, ENABLE pin)
+    # (COMX_RX pin, COM_TX pin, TURN_ON pin)
     ReservedPins: I9;H13;C7
 
 # Network configuration
@@ -157,12 +157,12 @@ And your `TurnOnPin` in the `cell.config.yaml` should be `C7`:
 ```yaml
 Settings:
 ...
-    TurnOnPin: C7         # (required) Enable MCU pin to turn the module on/off
+    TurnOnPin: C7         # (required) Turn-on MCU pin to power the module on/off
 ```
 
 ### Configuring Project Lab v3 with BG95-M3
 
-In the case that you're using a Project Lab v3 with the BG95-M3, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PA3` for the Serial RX/TX and Enable pins respectively:
+In the case that you're using a Project Lab v3 with the BG95-M3, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PA3` for the Serial RX/TX and Turn-on pins respectively:
 
 ```yaml
 # Device specific config
@@ -171,7 +171,7 @@ Device:
     Name: ProjectLabV3
 
     # Corresponding MCU pin names for the reserved pins
-    # (COMX_RX pin, COM_TX pin, ENABLE pin)
+    # (COMX_RX pin, COM_TX pin, TURN_ON pin)
     ReservedPins: B15;B14;A3
 
 # Network configuration
@@ -184,7 +184,7 @@ And your `TurnOnPin` in the `cell.config.yaml` should be `A3`:
 ```yaml
 Settings:
 ...
-    TurnOnPin: A3         # (required) Enable MCU pin to turn the module on/off
+    TurnOnPin: A3         # (required) Turn-on MCU pin to power the module on/off
 ```
 
 ### Configuring Project Lab v3 with M95
@@ -197,7 +197,7 @@ Device:
     Name: ProjectLabV3
 
     # Corresponding MCU pin names for the reserved pins
-    # (COMX_RX pin, COM_TX pin, ENABLE pin)
+    # (COMX_RX pin, COM_TX pin, TURN_ON pin)
     ReservedPins: B15;B14;H10
 
 # Network configuration
@@ -210,7 +210,7 @@ And your `TurnOnPin` in the `cell.config.yaml` should be `H10`:
 ```yaml
 Settings:
 ...
-    TurnOnPin: H10         # (required) Enable MCU pin to turn the module on/off
+    TurnOnPin: H10         # (required) Turn-on MCU pin to power the module on/off
 ```
 
 ## Step 3: Handling Cell connection using a Meadow application
