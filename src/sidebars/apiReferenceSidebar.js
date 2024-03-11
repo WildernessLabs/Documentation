@@ -12,17 +12,10 @@ const apiReferenceSidebar = [
         href: "/docs/api/Meadow/",
         label: "Meadow",
       },
-    
       {
-        type: "category",
+        type: "link",
+        href: "/docs/api/Meadow.Foundation/",
         label: "Meadow.Foundation",
-        link: {
-          type: "doc",
-          id: "api/Meadow.Foundation/index",
-        },
-        items: [
-          "Meadow/Meadow.Foundation/Peripherals/index"
-        ]
       },
       {
         type: "link",
@@ -41,8 +34,6 @@ const apiReferenceSidebar = [
       },
     ],
   },
-  
-
 ];
 
 module.exports = apiReferenceSidebar;

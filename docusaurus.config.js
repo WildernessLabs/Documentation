@@ -42,7 +42,45 @@ const config = {
     ],
   },
 
-  plugins: ["docusaurus-plugin-sass"],
+  plugins: [
+    "docusaurus-plugin-sass",
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        // fromExtensions: ["html", "htm"], // /myPage.html -> /myPage
+        // toExtensions: ["exe", "zip"], // /myAsset -> /myAsset.zip (if latter exists)
+        redirects: [
+          {
+            to: "/Hardware/Reference/Electronic_Fundamentals/Voltage/",
+            from: "/Hardware/Reference/Equations_and_Laws/Voltage/",
+          },
+
+          {
+            to: "/Hardware/Reference/Components/Common/",
+            from: "/Hardware/Ciruits/Components/",
+          },
+          {
+            to: "/Hardware/Reference/Components/Common/Capacitors",
+            from: "/Hardware/Ciruits/Components/Capacitors",
+          },
+          {
+            to: "/Hardware/Reference/Components/Common/Diodes",
+            from: "/Hardware/Ciruits/Components/Diodes",
+          },
+          {
+            to: "/Hardware/Reference/Components/Common/Resistors/",
+            from: "/Hardware/Ciruits/Components/Resistors/",
+          },
+
+          // // Redirect from multiple old paths to the new path
+          // {
+          //   to: "/docs/newDoc2",
+          //   from: ["/docs/oldDocFrom2019", "/docs/legacyDocFrom2016"],
+          // },
+        ],
+      },
+    ],
+  ],
 
   // Set the production url of your site here
   url: "https://developer.wildernesslabs.co/",
@@ -98,11 +136,11 @@ const config = {
   ],
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
-      type: 'text/css',
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
       integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
     },
   ],
 

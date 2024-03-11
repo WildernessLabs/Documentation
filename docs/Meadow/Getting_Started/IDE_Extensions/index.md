@@ -5,7 +5,7 @@ title: Installing Meadow IDE Extensions
 subtitle: Installing the Meadow IDE extensions for Visual Studio and VS Code.
 ---
 
-![](wildernesslabs_meadow_extensions_getting_started.jpg)
+![Computer with a Meadow application loaded in both Visual Studio Code and Visual Studio 2022, side-by-side.](wildernesslabs_meadow_extensions_getting_started.jpg)
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
@@ -13,29 +13,28 @@ subtitle: Installing the Meadow IDE extensions for Visual Studio and VS Code.
 
 ### Pre-requisites
 
-The Meadow developer Extension for Visual Studio enables projects to be built, debugged and deployed to any of our Meadow-powered devices.
+The Meadow developer Extension for Visual Studio enables projects to be built, debugged, and deployed to any of our Meadow-powered devices.
 
-If you havent already, download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+If you haven't already, download and install [Visual Studio 2022](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 
 :::caution
-⚠️ **IMPORTANT**: Make sure to include the **.NET Multi-platform App UI development** component when installing Visual Studio.
+**IMPORTANT**: Make sure to include the **.NET Multi-platform App UI development** component when installing Visual Studio.
 :::
 
 ### Installation
 
-You'll need to install the VS Tools for Meadow Extension by [downloading it](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) or through the Extension Manager
+You'll need to [download and install the VS 2022 Tools for Meadow extension](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022), or install it through the Extension Manager
 
-1. In Visual Studio, go to **Extensions** =&gt; **Manage Extensions**
+1. In Visual Studio, go to **Extensions** > **Manage Extensions**
 1. Click **Online** and search for `VS 2022 Tools for Meadow`. It should be the first extension in the list.
 
-  ![vscode meadow extension](vs2022-extension-marketplace.png)
+  ![Visual Studio 2022 Manage Extensions window showing the VS 2022 Tools for Meadow extension in search results.](vs2022-extension-marketplace.png)
 
-1. Install **VS Tools for Meadow**, then close all instances of Visual Studio so the extension gets installed.
+1. Install **VS 2022 Tools for Meadow**, then close all instances of Visual Studio so the extension gets installed.
 
 ### References
 
 * [VS_Win_Meadow_Extension GitHub Repo](https://github.com/WildernessLabs/VS_Win_Meadow_Extension)
-
 
 
   </TabItem>
@@ -44,17 +43,18 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 ### Pre-requisites
 
-If you havent, download and Install [Visual Studio Code](https://visualstudio.microsoft.com/) to prepare your development machine.
+If you haven't, download and install [Visual Studio Code](https://visualstudio.microsoft.com/) to prepare your development machine.
 
 ### Installation
 
-1. In VSCode go to the Extensions tab (macOS: Cmd+Shift+X. Others: Ctrl+Shift+X)
+1. In Visual Studio Code go to the Extensions tab (macOS: Cmd+Shift+X. Others: Ctrl+Shift+X)
 1. In the search bar type `VSCode Tools for Meadow`. It should be the first extension in the list.
 
-  ![vscode meadow extension](vscode-extension-marketplace.png)
+  ![Visual Studio Code Extensions marketplace showing the VSCode Tools for Meadow extension in search results.](vscode-extension-marketplace.png)
 
-1. Click it the **Install** button on the bottom right of the listed item.
-1. The extension should now be installed.
+1. Click the **Install** button on the VSCode Tools for Meadow extension page.
+
+The extension should now be installed.
 
 ### References
 

@@ -3,7 +3,7 @@ name: "[sandbox] Publish static site"
 on:
   workflow_dispatch:
   pull_request:
-    branches: [ "develop" ]
+    branches: ["develop"]
 
 permissions:
   id-token: write
@@ -163,7 +163,7 @@ jobs:
           node ./scripts/merge-api-overrides.js Meadow.Foundation.Grove &&
           node ./scripts/merge-api-overrides.js Meadow.Foundation.mikroBUS
 
-      # Let's put the api files where they belong, and also fix 
+      # Let's put the api files where they belong
       - name: Copy api files to content locations
         working-directory: ./src
         run: |
@@ -175,7 +175,13 @@ jobs:
       - name: Fix api broken links
         working-directory: ./src
         run: |
-          node ./scripts/api-broken-link-fixer.js
+          node ./scripts/api-broken-link-fixer.js ./docs/api/
+
+      # - name: Fix Meadow.Foundation periphs broken links
+      #   working-directory: ./src
+      #   run: |
+      #     node ./scripts/meadow-foundation-broken-link-fixer.js &&
+      #     node ./scripts/meadow-foundation-broken-link-fixer.js ./docs/api/Meadow.Foundation.FeatherWings/
 
       #docusaurus build
       - name: Use Node.js

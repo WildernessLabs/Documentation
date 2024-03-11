@@ -19,6 +19,6 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ## Shared Steps
 
-* [Install Meadow.CLI](/Meadow/Getting_Started/Meadow%2ECLI/)
+* [Install Meadow.CLI](../../Meadow_Tools/Meadow_CLI/)
 * [Install IDE Extensions](../IDE_Extensions/)
 * [Deploy Meadow.OS](../Deploying_Meadow%2EOS/)

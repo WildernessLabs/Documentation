@@ -109,7 +109,7 @@ Settings:
 
 A few things to consider:
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
- * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](https://github.com/WildernessLabs/Documentation/blob/cell-docs-updates/docs/Meadow/Meadow.OS/Cellular/index.md#scanning-cell-networks) method that will list nearby networks in the area.
+ * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](#scanning-cell-networks) method that will list nearby networks in the area.
  * `TurnOnPin` is a pin used to turn on the module.
 
 ## Specify Network Interface and reserved pins
@@ -222,7 +222,7 @@ It's important to note that the `Csq` property returns a cached value obtained f
 ```csharp
 var cell = Device.NetworkAdapters.Primary<ICellNetworkAdapter>();
 
-double csq  = cellAdapter.GetSignalQuality();
+double csq  = cell.GetSignalQuality();
 Console.WriteLine("Cell Signal Quality: " + csq);
 ```
 
@@ -237,28 +237,29 @@ using Meadow.Foundation.Sensors.Location.Gnss;
 using Meadow.Peripherals.Sensors.Location.Gnss;
 using Meadow.Foundation.Sensors.Gnss;
 ...
-    void ProcessGnssPosition(object sender, IGnssResult location)
-    {
-        Resolver.Log.Info("*********************************************");
-        Resolver.Log.Info(location.ToString());
-        Resolver.Log.Info("*********************************************");  
-    }
+void ProcessGnssPosition(object sender, IGnssResult location)
+{
+   Resolver.Log.Info("*********************************************");
+   Resolver.Log.Info(location.ToString());
+   Resolver.Log.Info("*********************************************");  
+}
 ...
-    IGnssResult[] resultTypes = new IGnssResult[]
-    {
-        new GnssPositionInfo(),
-        new ActiveSatellites(),
-        new CourseOverGround(),
-        new SatellitesInView(new Satellite[0])
-    };
+IGnssResult[] resultTypes = new IGnssResult[]
+{
+   new GnssPositionInfo(),
+   new ActiveSatellites(),
+   new CourseOverGround(),
+   new SatellitesInView(new Satellite[0])
+};
 
-    ICellNetworkAdapter cell = networkAdapter as ICellNetworkAdapter;
+ICellNetworkAdapter cell = networkAdapter as ICellNetworkAdapter;
 
-    var bg95M3 = new Bg95M3(cellAdapter, TimeSpan.FromMinutes(30), resultTypes);
+var bg95M3 = new Bg95M3(cellAdapter, TimeSpan.FromMinutes(30), resultTypes);
 
-    bg95M3.GnssDataReceived += ProcessGnssPosition;
+bg95M3.GnssDataReceived += ProcessGnssPosition;
 
-    bg95M3.StartUpdating();
+bg95M3.StartUpdating();
+...
 ```
 
 For a more comprehensive example, you can refer to the [BG95-M3 GNSS sample](https://github.com/WildernessLabs/Meadow.Foundation/blob/develop/Source/Meadow.Foundation.Peripherals/Sensors.Gnss.Bg95M3/Samples/Bg95M3_Sample/MeadowApp.cs) available in the Meadow.Foundation repository.

@@ -16,7 +16,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for Windows to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add VS Linux Debugger Studio Extension
 
@@ -24,7 +24,7 @@ Open Visual Studio’s Extensions Manager and install the [VS Linux Debugger](ht
 
 Make sure you go through their Getting Started instructions to properly configure the target device (Jetson Nano) and how to use the extension to build and deploy the Meadow.Linux application over the network.
 
-### Step 4 - Create your first Meadow.Linux application
+### Step 4 - Create your first Meadow application
 
 In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow.Linux Jetson Nano App (Wilderness Labs)**:
 
@@ -32,7 +32,7 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 This is a minimal Meadow.Linux application that it'll output a few strings on a terminal to confirm the application is running correctly.
 
-### Step 5 - Deploy your application
+### Step 5 - Run a Meadow Application
 
 Once the application is deployed successfully, open a terminal on the Jetson Nano and go to inside the project's folder and type:
 
@@ -79,24 +79,23 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Success: WildernessLabs.Meadow.Template installed the following templates:
 Template Name                  Short Name         Language        Tags
 -----------------------------  -----------------  --------------  --------------
 Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
 Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
 Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
 Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Desktop App             Desktop            [C#]            Meadow/Console
 Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
 Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
 Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
-Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
-Meadow.Windows App             WinForms           [C#]            Meadow/Console
 ```
 
 ### Step 4 - Create your first Meadow application
@@ -106,14 +105,14 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow.Linux project that will run on your Raspberry Pi:
 
 ```console
-dotnet new JetsonNano -n JetsonNanoDemo
+dotnet new JetsonNano --name JetsonNanoDemo
 ```
 
 This Meadow.Linux application shows a basic Meadow app structure with an `Initialize` and `Run` methods with logging strings to confirm in the output the application ran successfully.
 
 ![Raspberry Pi VS Code](wildernesslabs_raspberry_pi_vscode.png)
 
-### Step 5 - Run your application
+### Step 5 - Run a Meadow Application
 
 Lets run this application as is on your Raspberry Pi. In a terminal inside the project folder, build the project with the command:
 

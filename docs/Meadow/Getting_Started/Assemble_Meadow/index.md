@@ -61,4 +61,4 @@ Additionally, you could get metal or nylon fasteners so you screw them in the co
 
 Congratulations, your Meadow developer kit assembled and now you're ready to test the Meadow board on the next section. 
 
-## [Next - Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow/)
+## [Next - Deploy Meadow OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)

@@ -8,9 +8,6 @@ const meadowOsSidebar = [
       id: "Getting_Started",
     },
     items: [
-      "Meadow/Getting_Started/Meadow.CLI/index",
-      "Meadow/Getting_Started/IDE_Extensions/index",
-
       {
         // MCUs
         type: "category",
@@ -52,8 +49,9 @@ const meadowOsSidebar = [
           id: "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/index",
         },
         items: [
-          "Meadow/Getting_Started/Desktop/Hello_Ft232/index",
-          "Meadow/Getting_Started/Desktop/Hello_Simulator/index"
+          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/index",
+          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/index",
+          "Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Mac/index",
         ],
       },
 
@@ -91,7 +89,17 @@ const meadowOsSidebar = [
           id: "Meadow/Meadow_Basics/IO/index",
         },
         items: [
-          "Meadow/Meadow_Basics/IO/Analog/index",
+          {
+            type: "category",
+            label: "Analog",
+            link: {
+              type: "doc",
+              id: "Meadow/Meadow_Basics/IO/Analog/index",
+            },
+            items: [
+              "Meadow/Meadow_Basics/IO/Analog/High_Speed/index",
+            ],
+          },
           {
             type: "category",
             label: "Digital",
@@ -121,7 +129,6 @@ const meadowOsSidebar = [
       },
       "Meadow/Meadow_Basics/Units/index",
       "Meadow/Meadow_Basics/Events_and_IObservable/index",
-      "Meadow/Meadow_Basics/Meadow_CLI/index",
 
       {
         type: "category",
@@ -170,7 +177,7 @@ const meadowOsSidebar = [
       id: "Meadow/Meadow_Tools/index",
     },
     items: [
-      "Meadow/Meadow_Tools/Meadow.CLI/index",
+      "Meadow/Meadow_Tools/Meadow_CLI/index",
       "Meadow/Meadow_Tools/VSWin/index",
       "Meadow/Meadow_Tools/VSCode/index"
     ],

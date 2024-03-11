@@ -5,6 +5,70 @@ title: Meadow v1.* Releases
 subtitle: Release Notes
 ---
 
+## Updating Instructions
+
+* [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
+* [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
+
+## v1.9.0
+
+This is a huge update for Meadow! Highlights include:
+
+ * **Overall Stability** - With the last few releases we've knocked out nearly ever OS and networking priority-zero issue. In many cases, Meadow.OS should now be stable for weeks or months without issue.
+ * **OS Multitasking Stability** - We've implemented the `Round-Robin` thread scheduler which brings a massive upgrade to how the OS manages and switches between threads and brings a new level of stability around `Thread` and `Task` operations.
+ * **SPI DMA** -  We’ve added SPI DMA which reduces CPU load when communicating with SPI devices and can lead to a 30% increase in drawing performance with SPI displays!
+ * **Unified Meadow.Desktop** - Meadow.Desktop got a massive simplification by unifying the launcher between Windows/macOS/Linux, meaning you now only need a single application that will run in any dekstop context for full graphics simulation.
+ * **Meadow.CLI v2** - THe Meadow.CLI got a huge upgrade in its codebase with a complete re-write focused on stability, consistency, and ease-of-use.
+ 
+**Note** - starting with v1.9.0.0 and CLI v2.0, you’ll need to [create a free Wilderness Labs account](https://identity.wildernesslabs.co/signin/register) to download new versions of the Meadow OS.
+
+### Meadow.OS
+
+* **Round-Robin** - .NET threads are now using the round-robin OS scheduler. This brings a much more advanced task scheduling paradigm to embedded and that better matches traditional .NET execution behavior and resolve issues of apps “livelocking” because of a tight loop preventing progress under the First-In, First-Out (FIFO) scheduler.
+* **SPI DMA** - SPI DMA has been enabled for all SPI data transfers. Use of it should be transparent, providing approximately 3x throughput speed for SPI peripheral devices.
+* **Coprocessor Threading Stability** - Changes to the threading on the coprocessor were made, resulting in greater stability for network requests
+* **Deep OS Internal Stability Fixes** - Several low-level fixes & improvements that provide more stability throughout the entire OS stack.
+
+### Meadow.Core
+
+* Support has been added for F7 multi-platform targeting.  One app assembly can now contain IApp instances for multiple F7 hardware targets. (add link to docs).
+* `IPixelDisplayProvider` interface added for Meadow.Desktop platforms.
+* SensorService now auto-registers any `ISleepAwarePeripherals` it knows about.
+* Improvements to Core interrupt handling in F7 platforms.
+* Interrupts events changed from containing a DateTime to a system tick (for performance reasons).
+* OtA Downloads now report progress via an event.
+* Added “reason” to network disconnection events on F7 platforms.
+* Added preliminary support for Raspberry Pi 5.
+
+### Meadow.Foundation
+
+* FT232H/FTDI Driver refactored to support multiple devices at one time and to use the same driver (FT2xxx) for all modes.
+* Improved partial update logic in MicroGraphics and TftSpi display drivers.
+* BME688 gas resistance fix. Thanks to community member `Laszlo` for the fix.
+* SCD40 events fix.
+
+#### Breaking changes
+
+* Renamed `IGraphicsDisplay` to `IPixelDisplay` and moved to `Meadow.Contracts` and changed namespace to `Meadow.Displays `.
+* Moved `IPixelBuffer` to `Meadow.Contracts` and namespace changed to `Meadow.Displays`.
+
+### Meadow.Cloud
+
+* Bug fix for Azure Event Grid data serialization
+* For over-the-air updates, we exposed a new event, `OnUpdateProgress` that is triggered periodically showing the update’s download progress expressed in bytes.
+
+### Meadow.Desktop
+
+* We have added support for `Meadow.Desktop` as a target. This allows a single app to target Windows, Mac or desktop Linux with auto-platform detection and simulated `IPixelDisplay`. New templates are coming soon to make `Meadow.Desktop` app creation simple.
+
+### IoT Accelerators
+
+* Our GNSS Tracker got a big update with its v2 hardware iteration (which is packed with more sensors than its predecessor), including a revamped demo application displaying accurate atmospheric sensor data along with battery and solar input voltage.
+
+### Meadow.Tooling
+
+* [CLI v2.0](https://developer.wildernesslabs.co/Meadow/Meadow_Tools/Meadow_CLI/) has shipped! This is a massive rework of the command line tool used to communicate with Meadow devices and manage firmware. Note, with this new release, you will need to [create a free Wilderness Labs account](https://identity.wildernesslabs.co/signin/register) and sign in before downloading firmware updates.
+
 ## v1.8.0
 
 ### Meadow.OS & Meadow.Core

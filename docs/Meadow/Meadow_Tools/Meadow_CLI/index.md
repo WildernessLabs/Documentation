@@ -5,27 +5,86 @@ title: Meadow.CLI
 subtitle: Command-Line-Interface for Meadow
 ---
 
-![Meadow.CLI Command Line Interface](wildernesslabs_meadow_cli_getting_started.jpg)
+![Meadow.CLI command-line interface running in a terminal window.](wildernesslabs_meadow_cli_getting_started.jpg)
 
-The Meadow Command-Line-Interface (`Meadow.CLI`) provides a way to interact with the board and perform functions via a terminal/command-line window. 
+The Meadow Command-Line-Interface (`Meadow.CLI`) provides a way to interact with the board and perform functions via a terminal/command-line window.
 
 The Meadow.CLI tool supports deployment workflows as well as device and file management including file transfers, and MCU reset.
 
 In addition to being able to be used from a terminal window, the `Meadow.CLI.Core` library can also be used programmatically, within a .NET application. In fact, the IDE extensions use that directly. You can find the source [here](https://github.com/wildernesslabs/Meadow.CLI).
 
+Some Meadow.CLI commands [registering for a **Wilderness Labs Account**](https://identity.wildernesslabs.co/signin/register).
+
 ## Installation and Updating
 
-`Meadow.CLI` can be installed via the `dotnet` tool from a nuget package at the terminal:
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+### Install .NET SDK
+
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download).
+
+### Install or update Meadow CLI
+
+Install the Meadow.CLI using the `dotnet tool` command. From a terminal, install the Meadow.CLI from the NuGet package.
 
 ```console
 dotnet tool install WildernessLabs.Meadow.CLI --global
 ```
 
-To update, simply change the `install` keyword to `update`:
+To update to the latest version, change the `install` keyword to `update`.
 
 ```console
-dotnet tool update Wildernesslabs.Meadow.CLI --global
+dotnet tool update WildernessLabs.Meadow.CLI --global
 ```
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+### Install .NET SDK
+
+Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) for your Mac's processor architecture.
+
+### Install or update Meadow CLI
+
+To install Meadow CLI, execute the following command in your terminal:
+
+```console
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
+
+To update Meadow CLI, if already installed, execute the following command in your terminal:
+
+```console
+dotnet tool update WildernessLabs.Meadow.CLI --global
+```
+
+   </TabItem>
+   <TabItem value="linux" label="Linux">
+
+
+Please note: Linux may require `sudo` to access USB devices.
+
+### Install .NET SDK
+
+Download and install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
+### Install or update Meadow CLI
+To install Meadow CLI, execute the following command in your terminal:
+
+```console
+dotnet tool install WildernessLabs.Meadow.CLI --global
+```
+
+To update Meadow CLI, if already installed, execute the following command in your terminal:
+
+```console
+dotnet tool update WildernessLabs.Meadow.CLI --global
+```
+
+  </TabItem>
+</Tabs>
+
 
 ## Executing Commands
 
@@ -40,13 +99,13 @@ meadow firmware download
 This guide covers a few of the most common commands, but there are many more to explore. For a complete list of commands, execute the following from a terminal window:
 
 ```console
-meadow -h
+meadow --help
 ```
 
-Additionally, you can get additional help information for any given command by passing `-h` as option to that command. For instance, the following will provide guidance on the `listen` command:
+Additionally, you can get additional help information for any given command by passing `--help` (or `-h` shortened) as an option to that command. For instance, the following will provide guidance on the `listen` command:
 
 ```console
-meadow listen -h
+meadow listen --help
 ```
 
 ## Working with Ports
@@ -59,13 +118,89 @@ To list serial ports, execute the following:
 meadow port list
 ```
 
-You can then specify the port via the `meadow port select` command. If it detects only one port, it'll select it automatically, but If multiple Meadow devices are connected, the command will list them and it'll prompt which port should select:
+You can then specify which port to use with the `meadow config route` command. , replacing `{port}` with the port you found above.
 
 ```console
-meadow port select
+meadow config route {port}
 ```
 
-You only need to specify the port once; all subsequent commands will remember the specified port.
+You only need to configure the desired port once; all subsequent commands will remember the specified port.
+
+## Common Tasks
+
+### Download the Latest Meadow.OS and Flash to the Device
+
+To download the latest Meadow.OS, execute the following:
+
+```console
+meadow firmware download
+```
+
+Once it's downloaded, it can be deployed to the device by executing the following:
+
+```console
+meadow firmware write
+```
+
+### Deploy a Meadow App
+
+To deploy an app to the device, execute the following, replacing `{path}` with the path to your app's built `App.dll` file:
+
+```console
+meadow app deploy -f {path}/App.dll
+```
+
+### Working with Files
+
+#### Listing Files on the Device
+
+To get a list of all the files on the device, execute the following:
+
+```console
+meadow file list
+```
+
+#### Writing a File to the Device
+
+To write a file, or files, to the device execute the following, replacing [Filename] with the full path of the file to write:
+
+```console
+meadow file write -f [Filename]
+```
+
+Multiple files can be specified with multiple `-f` parameters:
+
+```console
+meadow file write -f [Filename1] -f [Filename2]
+```
+
+#### Delete a File from the Device
+
+Files can also be deleted:
+
+```console
+meadow file delete -f [Filename]
+```
+
+As with file uploading, multiple files can be specified with multiple `-f` parameters:
+
+```console
+meadow file delete -f [Filename1] -f [Filename2]
+```
+
+All of the files on the file system can be deleted without reformatting the flash:
+
+```console
+meadow file delete all
+```
+
+### Get Meadow's device information
+
+To get information about the device, including OS version, execute the following:
+
+```console
+meadow device info
+```
 
 ## List of Commands
 
@@ -91,7 +226,7 @@ You only need to specify the port once; all subsequent commands will remember th
 * `meadow cloud package list`    - Lists all Meadow Packages (MPAK)
 * `meadow cloud package publish` - Publishes a Meadow Package (MPAK)
 * `meadow cloud package upload`  - Upload a Meadow Package (MPAK) to Meadow.Cloud
- 
+
 ### Device commands
 
 * `meadow device clock` - Gets or sets the device clock (in UTC time)
@@ -136,6 +271,6 @@ You only need to specify the port once; all subsequent commands will remember th
 
 ## Support
 
-Having trouble using Meadow.CLI? 
+Having trouble using Meadow.CLI?
 * File an [issue](https://github.com/WildernessLabs/Meadow.Desktop.Samples/issues) with a repro case to investigate, and/or
 * Join our [public Slack](http://slackinvite.wildernesslabs.co/), where we have an awesome community helping, sharing and building amazing things using Meadow.

@@ -4,7 +4,7 @@ title: Hello, Meadow!
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow), you can create and deploy Meadow apps to it.
+Once [Meadow.OS has been deployed to your board](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), you can create and deploy Meadow apps to it.
 
 The video below shows you how to create and deploy your first Meadow app on a Mac:
 <p><iframe width="640" height="360" src="https://www.youtube.com/embed/wkekz5I7ycE" frameborder="3" allowfullscreen></iframe></p>
@@ -52,7 +52,7 @@ You'll need to install the VS Tools for Meadow Extension by [downloading it](htt
 
 ### Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow%2EOS), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 1. Connect your Meadow device to your development machine
 2. Right-click anywhere in the toolbar area and you'll see _Meadow Device List_ in the dropdown. Click on it and it will be added to your toolbar. (Alternatively, you can show the list from the **View** > **Toolbars** > **Meadow Device List** menu entry.)
@@ -95,11 +95,13 @@ You'll also need to install the Meadow IDE Extension for Visual Studio for Mac.
 ![Visual Studio for Mac Extension Manager showing the Meadow extension in the Gallery search results.](meadow_extension.png)
 
 #### Known issue when updating the Meadow Extension on MacOS
+
 Occasionally, when updating the extension, or if you install the extension manually from file, Visual Studio for Mac will end up with a corrupt extensions database and you may have more than 1 Meadow extension installed. The extension will not work correctly if this happens.
 
 To fix this do the following:
+
 1. Shut down Visual Studio for Mac.
-2. Within Finder, go to `~/Library/Caches/VisualStudio/17.0/` for VS2022 (use <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd>` to get a path entry both that you can paste this path into).
+2. Within Finder, go to `~/Library/Caches/VisualStudio/17.0/` for VS2022 (use <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd>` to get a path entry that you can paste this path into).
 3. you should see a `addin-db-*` directory. Delete it.
 4. Restart Visual Studio for Mac. It will then recreate the addin-db-* directory from scratch. VS will take a little longer to start-up.
 
@@ -113,7 +115,7 @@ To fix this do the following:
 
 ### Step 3: Deploy your Application
 
-The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
+The Meadow application template is a simple application that will pulse the onboard LED. As long as the [Meadow.OS is deployed to your Meadow board](/Meadow/Getting_Started/Deploying_Meadow%2EOS), you can use the same techniques to deploy a Meadow application as you would any other .NET application:
 
 1. Connect your Meadow device to your development machine
 2. Press the **Play** button in Visual Studio to compile and deploy your application
@@ -185,7 +187,7 @@ After selecting the device deployment target the first time, the selected serial
 
 Depending on your system configuration and installed .NET versions. You may need to add a `global.json` file to your project's directory to tell it to use .NET 6.0:
 
-```
+```json
 "sdk": {
     "version": "6.0.101",
     "allowPrerelease": false,
@@ -197,7 +199,7 @@ Depending on your system configuration and installed .NET versions. You may need
 
 Optionally, you can also create a `launch.json` file to keep your debug configuration, instead of always running it dynamically. Select the Debug icon from the Visual Studio Code Activity Bar on the left, and use the button to create a launch.json file. Choose `Meadow` again from the list, and the default launch settings will be created for you.
 
-```
+```json
 {
   "version": "0.2.0",
   "configurations": [

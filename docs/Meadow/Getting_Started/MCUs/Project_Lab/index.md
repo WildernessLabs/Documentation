@@ -5,7 +5,9 @@ title: Hello, Meadow Project Lab
 subtitle: Create, deploy, and understand your first Meadow application.
 ---
 
-![](wildernesslabs_projectlab_getting_started.jpg)
+![Meadow Project Lab Getting Started Guide](wildernesslabs_projectlab_getting_started.jpg)
+
+This guide shows you how to set up your [Meadow Project Lab](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
@@ -16,7 +18,7 @@ Download and install the latest version of the [.NET runtime](https://dotnet.mic
 
 ### Step 2 - Install Visual Studio
 
-Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 
 ### Step 3 - Add Meadow Visual Studio Extension
 
@@ -24,7 +26,7 @@ Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Mea
 
 ### Step 4 - Deploy latest version of Meadow.OS
 
-Use the [Meadow.CLI](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) to deploy [Meadow.OS](https://developer.wildernesslabs.co/Meadow/Getting_Started/Deploying_Meadow/) to your board to ensure it’s running with the latest version available.
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
 
 ### Step 5 - Create your first Meadow application
 
@@ -75,7 +77,7 @@ Open VSCode’s Extensions Manager and install [VSCode Tools for Meadow](https:/
 
 ### Step 4 - Deploy latest version of Meadow.OS
 
-Use the [Meadow.CLI](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Meadow_CLI/) to deploy [Meadow.OS](https://developer.wildernesslabs.co/Meadow/Getting_Started/Deploying_Meadow/) to your board to ensure it’s running with the latest version available.
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
 
 ### Step 5 - Install Meadow Project Templates
 
@@ -85,24 +87,23 @@ Open a Terminal and enter the following command to install a list of Meadow proj
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of Templates available
+When installed, you’ll see a list of templates available
 
 ```console
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Success: WildernessLabs.Meadow.Template installed the following templates:
 Template Name                  Short Name         Language        Tags
 -----------------------------  -----------------  --------------  --------------
 Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
 Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
 Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
 Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Desktop App             Desktop            [C#]            Meadow/Console
 Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
 Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
 Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
-Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
-Meadow.Windows App             WinForms           [C#]            Meadow/Console
 ```
 
 ### Step 6 - Create your first Meadow application
@@ -112,7 +113,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
 
 ```console
-dotnet new ProjectLab -n ProjectLabDemo
+dotnet new ProjectLab --name ProjectLabDemo
 ```
 
 This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.

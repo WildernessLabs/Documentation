@@ -10,8 +10,8 @@ Getting started with the [Meadow Core-Compute module](https://store.wildernessla
 
 If you are working with a bare Meadow Core-Compute module without the development kit, you will likely want to connect the castellated pins to peripherals to be able to move beyond logging or code-only projects. For production builds, the Core-Compute board on its own doesn't include an onboard LED to interact with.
 
-1. **Install Visual Studio** - Download and Install [Visual Studio](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
-1. **Deploy Meadow.OS** - Use the Meadow.CLI to [deploy Meadow.OS to your board](/Meadow/Getting_Started/Deploying_Meadow/), booting the Core-Compute module into bootloader mode when you first connect it to your development machine.
+1. **Install Visual Studio** - Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
+1. **Deploy Meadow.OS** - Use the Meadow.CLI to [deploy Meadow.OS to your board](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), booting the Core-Compute module into bootloader mode when you first connect it to your development machine.
 1. **Deploy Hello, World** - Verify everything is setup by deploying your first Meadow application. You can start working from the Feather [Hello, Meadow](/Meadow/Getting_Started/MCUs/F7_Feather/) application, but you will need to connect external components or peripherals to recreate the experience of the onboard RGB LED. You can still see logging output without any additional components.
 
 ```csharp

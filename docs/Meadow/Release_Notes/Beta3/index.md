@@ -195,7 +195,7 @@ Beta 3.11 is a major release that brings a pile of stabilizations and fixes acro
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Meadow.OS Changes
 
@@ -233,7 +233,7 @@ Beta 3.10 is a cleanup release to fix several regressions introduced in `b3.8` a
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Additional Free Serial Port
 
@@ -266,7 +266,7 @@ This release includes bug fixes and performance improvements in several drivers.
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### New Features & Changes
 
@@ -302,7 +302,7 @@ This is another point release but it gets us another step closer to `b4.0`. The 
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Bug Fixes
 
@@ -338,7 +338,7 @@ Though this is a point release, it's actually cut from the `b4.0` work, and repr
 
 ### Updating
 
-You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
+You'll need to [flash a new Meadow.OS binary to your device](/Meadow/Getting_Started/Deploying_Meadow%2EOS/), upgrade your IDE extension(s), and if you use the Meadow.CLI, you'll also need to download and use the latest version of that as well. Follow along with the [Meadow Getting Started guide](/Meadow/Getting_Started/) to get updated.
 
 ### Performance Improvements
 
@@ -522,7 +522,7 @@ You can now set the speed of the I2C bus. Somehow we missed this when we launche
 
 ### Meadow.CLI Docs
 
-We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Basics/Meadow_CLI/).
+We've published a [guide for the Meadow.CLI (Command Line Interface)](/Meadow/Meadow_Tools/Meadow_Cli/).
 
 ### Meadow.Foundation
 
@@ -632,7 +632,7 @@ We upgraded the file system that Meadow uses to LittleFS; which has the distinct
 
 Now, after when you deploy Meadow.OS, the first startup should be very fast, and you won't need to wait for the flash to format.
 
-To upgrade, you'll need to [flash the latest version of Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow/) to your device.
+To upgrade, you'll need to [flash the latest version of Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) to your device.
 
 ### Basic Analog Input is Up
 
