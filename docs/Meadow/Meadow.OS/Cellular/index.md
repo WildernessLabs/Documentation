@@ -44,7 +44,7 @@ To set up this hardware, you could use a Skywire click adapter, which hosts Nimb
 
 ![Quectel BG95M3 with NimbeLink Skywire click board](images/modem-skywire-click.jpg)
 
-Start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+Start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and enable the cell module. Finally, connect an antenna to the click board.
 
 ### Setting up Quectel BG95-M3 using a Meadow F7v2 Feather
 
@@ -53,10 +53,10 @@ In the following example, we'll demonstrate how to set up the **Quectel BG95-M3*
 
 #### Step 1: Connect the serial pins (UART)
 If you're using a `Meadow F7v2 Feather` board, you will need to connect `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-#### Step 2: Connect turn-on and supply pins
+#### Step 2: Connect enable and supply pins
 You need to connect the `D10` pin to the `EN` **NimbeLink Skywire click board** pin. Additionally, connect the `3.3V`, `5V`, and `GND` pins on both sides of the Skywire click board.  If you are using another click board for the **BG95-M3** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
-> **Notes**: Feel free to use other pins to turn on the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+> **Notes**: Feel free to use other pins to enable the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
 
 #### Step 3: Attach an antenna
 Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board IPX connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert an **M2M** SIM card into the cell module.
@@ -68,7 +68,7 @@ Finally, connect an LTE antenna (Rubber ducky or Dome) with the `X1` click board
 * A [Project Lab](https://raw.githubusercontent.com/WildernessLabs/Meadow.ProjectLab/main/Design/projectlab-pinout-v3.jpg) has two mikroBUS connectors, so simply connect the Skywire click adapter on the **mikroBUS connector 1** and **you're all set!** Whats left is to make a few adjustments to your Meadow application to use cellular.
 
 ## Quectel M95 with GSM2 click board
-To set up this hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and turn on the cell module. Finally, connect an antenna to the click board.
+To set up this hardware, start by connecting the necessary jumpers for communication between the Meadow device and the cell module. Then make the necessary connections to supply and enable the cell module. Finally, connect an antenna to the click board.
 
 ![Quectel M95 with GSM2 click board](images/gsm2-click-inside-image.jpg)
 
@@ -80,10 +80,10 @@ In the following example, we'll demonstrate how to set up the **Quectel M95 modu
 
 #### Step 1: Connect serial pins (UART)
 To use this module you will need to connect the **Meadow F7v2 Feather** `D00` and `D01` pins to the `TX` and `RX` click board pins, respectively, to establish the data communication between them.
-#### Step 2: Connect turn-on and supply pins
-You need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to turn on the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
+#### Step 2: Connect enable and supply pins
+You need to connect the **Meadow F7v2 Feather** `D10` pin to the `PWK` **Quectel GSM2 click board** pin, to enable the module. Additionally, connect the `3.3V` and `GND` pins from the **Meadow F7v2 Feather** to their corresponding pins on the click board. It's recommended to provide a 5V power supply to the click board `5V` and `GND` pins, since this module requires more energy than the LWPA modules (**BG95-M3**). If you are using another click board for the **M95** module, you need to connect the `D10` pin to the equivalent power-up pin.
 
-> **Notes**: Feel free to use other pins to turn on the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
+> **Notes**: Feel free to use other pins to enable the cellular module, as well as another Meadow serial port, just remember to consider it when setting the cellular config file.
 
 #### Step 3: Attach an antenna 
 Finally, establish a connection by attaching a GSM antenna (Rubber ducky) with an SMA Plug connector, aiming for a preferred gain of 5 dBi (recommended) while ensuring a minimum gain of 2 dBi (required), and insert a SIM card into the cell module.
@@ -118,7 +118,7 @@ Settings:
                           #   UART1 (COM1) = /dev/ttyS0 (default)
                           #   UART4 (COM4) = /dev/ttyS1, 
                           #   UART6 = /dev/ttyS3
-    TurnOnPin: A3         # (required) Turn-on MCU pin to power the module on/off
+    EnablePin: A3         # (required) Enable MCU pin to turn the module on/off
                           # Default value is MCU Pin A3
                           #   IMPORTANT:
                           #   Ensure to use the MCU pin names, 
@@ -126,16 +126,16 @@ Settings:
 ```
 
 A few things to consider:
- * **Ensure to use the MCU pin names** in the `TurnOnPin` field, not the Meadow pin names (seen on the board). Consult the pinout definition on your Meadow device datasheet for the correct MCU pin names.
+ * **Ensure to use the MCU pin names** in the `EnablePin` field, not the Meadow pin names (seen on the board). Consult the pinout definition on your Meadow device datasheet for the correct MCU pin names.
  * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location. 
  * **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](#scanning-cell-networks) method that will list nearby networks in the area.
 
 ## Step 2: Specify Network Interface and reserved pins
 
-In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial pins and an additional pin for Meadow to turn on or off the cellular module.
+In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial pins and an additional pin for Meadow to enable the cellular module.
 
 ### Configuring Meadow F7v2 Feather with BG95-M3 or M95
-If you're using a [Meadow Feather V2](https://developer.wildernesslabs.co/Common_Files/Meadow_F7v2_Micro_Pinout.svg), you would connect the cellular module to `D00` and `D01`, which are the COM4 serial pins that, according to the [datasheet](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf), the MCU pin names are `PI9` and `PH13`, but in the config file we can ommit the `p` prefix. As for the turn-on pin, say if you connect it to the `D10` pin, the MCU pin name is `C7`. So the required values in the config files should look like this:
+If you're using a [Meadow Feather V2](https://developer.wildernesslabs.co/Common_Files/Meadow_F7v2_Micro_Pinout.svg), you would connect the cellular module to `D00` and `D01`, which are the COM4 serial pins that, according to the [datasheet](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf), the MCU pin names are `PI9` and `PH13`, but in the config file we can ommit the `p` prefix. As for the enable pin, say if you connect it to the `D10` pin, the MCU pin name is `C7`. So the required values in the config files should look like this:
 
 ```yaml
 # Device specific config
@@ -144,7 +144,7 @@ Device:
     Name: F7v2Feather
 
     # Corresponding MCU pin names for the reserved pins
-    # (COMX_RX pin, COM_TX pin, TURN_ON pin)
+    # (COMX_RX pin, COM_TX pin, ENABLE pin)
     ReservedPins: I9;H13;C7
 
 # Network configuration
@@ -153,16 +153,16 @@ Network:
     DefaultInterface: Cell
 ```
 
-And your `TurnOnPin` in the `cell.config.yaml` should be `C7`:
+And your `EnablePin` in the `cell.config.yaml` should be `C7`:
 ```yaml
 Settings:
 ...
-    TurnOnPin: C7         # (required) Turn-on MCU pin to power the module on/off
+    EnablePin: C7         # (required) Enable MCU pin to turn the module on/off
 ```
 
 ### Configuring Project Lab v3 with BG95-M3
 
-In the case that you're using a Project Lab v3 with the BG95-M3, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PA3` for the Serial RX/TX and Turn-on pins respectively:
+In the case that you're using a Project Lab v3 with the BG95-M3, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PA3` for the Serial RX/TX and Enable pins respectively:
 
 ```yaml
 # Device specific config
@@ -171,7 +171,7 @@ Device:
     Name: ProjectLabV3
 
     # Corresponding MCU pin names for the reserved pins
-    # (COMX_RX pin, COM_TX pin, TURN_ON pin)
+    # (COMX_RX pin, COM_TX pin, ENABLE pin)
     ReservedPins: B15;B14;A3
 
 # Network configuration
@@ -180,15 +180,15 @@ Network:
     DefaultInterface: Cell
 ```
 
-And your `TurnOnPin` in the `cell.config.yaml` should be `A3`:
+And your `EnablePin` in the `cell.config.yaml` should be `A3`:
 ```yaml
 Settings:
 ...
-    TurnOnPin: A3         # (required) Turn-on MCU pin to power the module on/off
+    EnablePin: A3         # (required) Enable MCU pin to power the module on/off
 ```
 
 ### Configuring Project Lab v3 with M95
-In the case that you're using a Project Lab v3 with the M95, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PH10` for the Serial RX/TX and Turn-on pins respectively:
+In the case that you're using a Project Lab v3 with the M95, if you look at the [latest schematic](https://github.com/WildernessLabs/Meadow.ProjectLab/blob/main/Hardware/v3.e/Schematic.pdf) and trace what pins on the Meadow Core Compute Module are connected to the microBUS 1 connector, you'll find that are connected to pins `PB15`, `PB14` and `PH10` for the Serial RX/TX and Enable pins respectively:
 
 ```yaml
 # Device specific config
@@ -197,7 +197,7 @@ Device:
     Name: ProjectLabV3
 
     # Corresponding MCU pin names for the reserved pins
-    # (COMX_RX pin, COM_TX pin, TURN_ON pin)
+    # (COMX_RX pin, COM_TX pin, ENABLE pin)
     ReservedPins: B15;B14;H10
 
 # Network configuration
@@ -206,11 +206,11 @@ Network:
     DefaultInterface: Cell
 ```
 
-And your `TurnOnPin` in the `cell.config.yaml` should be `H10`:
+And your `Enable` in the `cell.config.yaml` should be `H10`:
 ```yaml
 Settings:
 ...
-    TurnOnPin: H10         # (required) Turn-on MCU pin to power the module on/off
+    EnablePin: H10         # (required) Enable MCU pin to turn the module on/off
 ```
 
 ## Step 3: Handling Cell connection using a Meadow application
