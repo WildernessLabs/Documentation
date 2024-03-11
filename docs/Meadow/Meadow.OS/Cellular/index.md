@@ -132,7 +132,7 @@ A few things to consider:
 
 ## Step 2: Specify Network Interface and reserved pins
 
-In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial MCU pins and an additional MCU pin to turn on or off Meadow the cellular module.
+In the `meadow.config.yaml` file, you need to specify `DefaultInterface` to `Cell` and specify the RX/TX serial pins and an additional pin for Meadow to turn on or off the cellular module.
 
 ### Configuring Meadow F7v2 Feather with BG95-M3 or M95
 If you're using a [Meadow Feather V2](https://developer.wildernesslabs.co/Common_Files/Meadow_F7v2_Micro_Pinout.svg), you would connect the cellular module to `D00` and `D01`, which are the COM4 serial pins that, according to the [datasheet](https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Hardware/Wilderness_Labs_Meadow_F7v2_Datasheet.pdf), the MCU pin names are `PI9` and `PH13`, but in the config file we can ommit the `p` prefix. As for the turn-on pin, say if you connect it to the `D10` pin, the MCU pin name is `C7`. So the required values in the config files should look like this:
