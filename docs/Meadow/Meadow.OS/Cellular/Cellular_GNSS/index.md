@@ -43,3 +43,9 @@ For a more comprehensive example, you can refer to the [BG95-M3 GNSS sample](htt
 When utilizing a **Quectel BG95-M3 NimbeLink Skywire click board**, you can follow the same setup instructions as for the cellular connection. Additionally, ensure you attach a GPS antenna to the `X3` IPX connector to enable your cellular module to obtain position fixes.
 
 > **Note**: Due to a hardware limitation of this board, concurrent use of GNSS and Cellular functionality is not possible. Consequently, you may experience disconnection from the cellular network for a brief period while the module acquires a position fix. It is advisable to avoid using very short time intervals between obtaining position fixes for a seamless user experience.
+
+## Additional resources
+
+For general cellular module usage, you can refer to the [Developing Cellular Apps](/Meadow/Meadow.OS/Cellular/Develop_Cellular_Apps) guide.
+
+If you have trouble connecting to your cellular network, check out the [Troubleshooting](/Meadow/Meadow.OS/Cellular/Troubleshooting) guide for some tips on how to scan for available networks and check the cellular network connection logs.

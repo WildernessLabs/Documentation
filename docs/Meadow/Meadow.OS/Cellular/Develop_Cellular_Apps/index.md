@@ -151,3 +151,9 @@ Console.WriteLine("Cell Signal Quality: " + csq);
 ```
 
 > **Note**: To convert the CSQ value to dBm, you need to use the formula: dBm = -113 + CSQ * 2 (where CSQ is the returned value). You may experience disconnection from the cellular network for a brief period while the module gets the signal quality, so we suggest to avoid calling this method frequently to ensure a seamless user experience.
+
+## Additional resources
+
+If you have trouble connecting to your cellular network, check out the [Troubleshooting](/Meadow/Meadow.OS/Cellular/Troubleshooting) guide for some tips on how to scan for available networks and check the cellular network connection logs.
+
+If your cellular module supports it, you can also do GNSS positioning with the cellular module. Check out the [GNSS with Cellular](/Meadow/Meadow.OS/Cellular/Cellular_GNSS) guide for more information.

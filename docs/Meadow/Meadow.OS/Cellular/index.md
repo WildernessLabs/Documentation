@@ -18,3 +18,11 @@ The cellular network for the Meadow platform is compatible with various modules,
 |---------------------------|------------------------|--------|-------------|--------|
 | Quectel BG95-M3           | ✔                     | ✔      | ✔           | ✔      |
 | Quectel M95               | -                      | -      | ✔           | -      |
+
+## Next steps
+
+After you decide which module to use, you can proceed to [configure your cellular provider and connection](/Meadow/Meadow.OS/Cellular/Configuration), and then [start developing your cellular application](/Meadow/Meadow.OS/Cellular/Develop_Cellular_Apps).
+
+If your cellular module supports it, you can also do GNSS positioning with the cellular module. Check out the [GNSS with Cellular](/Meadow/Meadow.OS/Cellular/Cellular_GNSS) guide for more information.
+
+If you have trouble connecting to your cellular network, check out the [Troubleshooting](/Meadow/Meadow.OS/Cellular/Troubleshooting) guide for some tips on how to scan for available networks and check the cellular network connection logs.

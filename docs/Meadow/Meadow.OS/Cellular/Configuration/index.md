@@ -53,3 +53,9 @@ To configure the hardware, start by connecting the necessary jumpers for communi
 ## Choosing a SIM Card
 
 To enable **Cat-M1** (LTE-M or eMTC) or **NB-IoT** network modes, a specialized **M2M** (Machine-to-Machine) SIM card is required, distinct from the standard SIM cards used in cellphones. However, for **GSM/GPRS 2G** connections, a standard SIM card can generally be used.
+
+## Next steps
+
+Once you are set up with your cellular module, you can proceed to [configure your cellular provider and connection](/Meadow/Meadow.OS/Cellular/Configuration), and then [configure the Meadow pins and network settings](/Meadow/Meadow.OS/Cellular/Develop_Cellular_Apps) to enable cellular on your Meadow application.
+
+If you have trouble connecting to your cellular network, check out the [Troubleshooting](/Meadow/Meadow.OS/Cellular/Troubleshooting) guide for some tips on how to scan for available networks and check the cellular network connection logs.
