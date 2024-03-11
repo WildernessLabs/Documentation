@@ -215,7 +215,20 @@ const meadowOsSidebar = [
         },
         items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
       },
-      "Meadow/Meadow.OS/Cellular/index",
+      {
+        type: "category",
+        label: "Cellular",
+        link: {
+          type: "doc",
+          id: "Meadow/Meadow.OS/Cellular/index",
+        },
+        items: [
+          "Meadow/Meadow.OS/Cellular/Configuration/index",
+          "Meadow/Meadow.OS/Cellular/Develop_Cellular_Apps/index",
+          "Meadow/Meadow.OS/Cellular/Cellular_GNSS/index",
+          "Meadow/Meadow.OS/Cellular/Troubleshooting/index",
+        ],
+      },
       "Meadow/Meadow.OS/Updates/index",
       "Meadow/Meadow.OS/RTC/index",
       "Meadow/Meadow.OS/SQLite/index",
