@@ -22,10 +22,7 @@ Settings:
     Password: PASSWORD    # (optional) APN password
     Operator: 00000       # (optional) Carrier numeric operator code
     Mode: CATM1           # (optional) Network mode (CATM1, NBIOT or GSM)
-    Interface: /dev/ttyS0 # (required) Serial interface:
-                          #   UART1 (COM1) = /dev/ttyS0 (default)
-                          #   UART4 (COM4) = /dev/ttyS1,
-                          #   UART6 = /dev/ttyS3
+    Interface: COM1       # (required) Serial interface (COM1 (default), COM4 or COM6)
     EnablePin: A3         # (required) Enable MCU pin to power the module on/off
                           # Default value is MCU Pin A3
                           #   IMPORTANT:
@@ -37,7 +34,7 @@ A few things to consider:
 
 * **Ensure to use the MCU pin names** in the `EnablePin` field, not the Meadow pin names (seen on the board). Consult the pinout definition on your Meadow device datasheet for the correct MCU pin names.
 * If the carrier numeric operator code (**Operator**) or the network mode is not specified (**Mode**), the module will attempt to automatically determine the optimal network based on the M2M sim card inserted and your location.
-* **However, if you encounter any connectivity issues, we recommend to set the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](../Troubleshooting/#scanning-cell-networks) method that will list nearby networks in the area.
+* **However, if you encounter any connectivity issues, we recommend to set both the operator code and operation mode to the `Operator` and `Mode` properties**. If you don't know this information, you can use the [**Cell Network Scanner**](../Troubleshooting/#scanning-cell-networks) method that will list nearby networks in the area.
 
 ## Step 2: Specify Network Interface and reserved pins
 
@@ -63,11 +60,12 @@ Network:
     DefaultInterface: Cell
 ```
 
-And your `EnablePin` in the `cell.config.yaml` should be `C7`:
+And your `EnablePin` and `Interface` in the `cell.config.yaml` should be `C7` and `COM4`, respectively:
 
 ```yaml
 Settings:
 ...
+    Interface: COM4       # (required) Serial interface (COM1 (default), COM4 or COM6)
     EnablePin: C7         # (required) Enable MCU pin to power the module on/off
 ```
 
@@ -91,11 +89,12 @@ Network:
     DefaultInterface: Cell
 ```
 
-And your `EnablePin` in the `cell.config.yaml` should be `A3`:
+And your `EnablePin` and `Interface` in the `cell.config.yaml` should be `A3` and `COM1`, respectively:
 
 ```yaml
 Settings:
 ...
+    Interface: COM1       # (required) Serial interface (COM1 (default), COM4 or COM6)
     EnablePin: A3         # (required) Enable MCU pin to power the module on/off
 ```
 
@@ -119,11 +118,12 @@ Network:
     DefaultInterface: Cell
 ```
 
-And your `EnablePin` in the `cell.config.yaml` should be `H10`:
+And your `EnablePin` and `Interface` in the `cell.config.yaml` should be `H10` and `COM1`, respectively:
 
 ```yaml
 Settings:
 ...
+    Interface: COM1        # (required) Serial interface (COM1 (default), COM4 or COM6)
     EnablePin: H10         # (required) Enable MCU pin to power the module on/off
 ```
 
