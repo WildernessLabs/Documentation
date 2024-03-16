@@ -262,8 +262,17 @@ const meadowOsSidebar = [
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index",
         ],
       },
-
-      "Meadow/Meadow.Foundation/Working_with_Sensors/index",
+      {
+        type: "category",
+        label: "Working with Sensors",
+        link: {
+          type: "doc",
+          id: "Meadow/Meadow.Foundation/Working_with_Sensors/index",
+        },
+        items: [
+          "Meadow/Meadow.Foundation/Working_with_Sensors/Sensor_Service/index",
+        ],
+      },
       "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index",
     ],
   },
