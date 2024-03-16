@@ -83,9 +83,9 @@ Hello, Jetson Nano!
 
 ### Step 7 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
 
-![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
+![Meadow.SBCs.Samples GitHub Repository](../wildernesslabs-meadow-sbcs-samples.jpg)
 
   </TabItem>
   <TabItem value="visualstudiocode" label="Visual Studio Code">
@@ -167,9 +167,9 @@ Hello, Jetson Nano!
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
 
-![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
+![Meadow.SBCs.Samples GitHub Repository](../wildernesslabs-meadow-sbcs-samples.jpg)
 
   </TabItem>
 </Tabs>
