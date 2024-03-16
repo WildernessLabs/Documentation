@@ -77,7 +77,7 @@ export default function GettingStarted(): JSX.Element {
 
             {/* ROW 2 */}
             <section className="meadow-features wl-container">
-              <h2>Meadow.Cloud and IoT Accelerators</h2>
+              <h2>Meadow.Cloud, Tools and IoT Accelerators</h2>
               <hr></hr>
               <div className="wl-grid mb-50">
                 {/* Meadow.Cloud */}
@@ -92,6 +92,18 @@ export default function GettingStarted(): JSX.Element {
                       <li><a href="/Meadow/Meadow.Cloud/Logs_Events/">Logs + Events</a></li>
                       <li><a href="/Meadow/Meadow.Cloud/Command_Control/">Command + Control</a></li>
                       <li><a href="/Meadow/Meadow.Cloud/Integrations/">Integrations</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Meadow.Cloud */}
+                <div className="wl-card border thick-3 blue radius-8 corner">
+                  <div className="card-content">
+                    <h3>Meadow Tools</h3>
+                    <ul className="flat">
+                      <li><a href="/Meadow/Meadow_Tools/VSWin/">Visual Studio 2022 Extension</a></li>
+                      <li><a href="/Meadow/Meadow_Tools/VSCode/">Visual Studio Code Extension</a></li>
+                      <li><a href="/Meadow/Meadow_Tools/Meadow_CLI">Meadow.CLI</a></li>
                     </ul>
                   </div>
                 </div>
