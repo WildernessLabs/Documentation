@@ -1,4 +1,4 @@
-name: "[prod] Publish static site"
+name: "Prod Site"
 
 on:
   workflow_dispatch:

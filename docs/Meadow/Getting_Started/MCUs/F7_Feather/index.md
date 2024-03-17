@@ -83,7 +83,7 @@ Once all the files are transferred to your device, the app will start in debug m
 
 ### Step 8 - Check out additional samples
 
-You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
 
 ![Several Meadow devices wired up to components and running various sample projects.](wilderness-labs-meadow-project-samples.jpg)
 
@@ -165,7 +165,7 @@ Once all the files are transferred to your device, the app will start in debug m
 
 ### Step 8 - Check out additional samples
 
-You can check more samples in our [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
 
 ![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
 

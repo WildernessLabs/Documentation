@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
 
             {/* Meadow.OS */}
             <section className="meadow-features wl-container">
-              <h2>Meadow.OS</h2>
+              <h2>Meadow App Basics, Meadow.OS Fundamentals and Meadow.Foundation</h2>
               <hr></hr>
               <div className="wl-grid mb-50">
                 {/* Meadow App Basics */}

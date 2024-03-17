@@ -1,4 +1,4 @@
-name: "[staging] Publish static site"
+name: "Beta Site"
 
 on:
   workflow_dispatch:
