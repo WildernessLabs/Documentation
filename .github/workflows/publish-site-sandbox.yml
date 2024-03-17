@@ -1,4 +1,4 @@
-name: "[sandbox] Publish static site"
+name: "Sandbox Site"
 
 on:
   workflow_dispatch:
