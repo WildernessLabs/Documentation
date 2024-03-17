@@ -115,7 +115,7 @@ export default function GettingStarted(): JSX.Element {
                     <ul className="flat">
                       <li><a href="https://github.com/WildernessLabs/Meadow.ProjectLab?tab=readme-ov-file#getting-started">Project Lab</a><a href="https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board"><img src={`${siteConfig.baseUrl}img/homepage/img-store.png`} className="img-store" /></a></li>
                       <li><a href="https://github.com/WildernessLabs/Clima?tab=readme-ov-file#getting-started">Clima</a><a href="https://store.wildernesslabs.co/collections/frontpage/products/clima-weather-station-kit"><img src={`${siteConfig.baseUrl}img/homepage/img-store.png`} className="img-store" /></a></li>
-                      <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker?tab=readme-ov-file#getting-started">GNSS/GPS Sensor Tracker</a><a href="https://store.wildernesslabs.co/collections/frontpage/products/gnss-sensor-tracker"><img src={`${siteConfig.baseUrl}img/homepage/img-store.png`} className="img-store" /></a></li>
+                      <li><a href="https://github.com/WildernessLabs/GNSS_Sensor_Tracker?tab=readme-ov-file#getting-started">GNSS/GPS Tracker</a><a href="https://store.wildernesslabs.co/collections/frontpage/products/gnss-sensor-tracker"><img src={`${siteConfig.baseUrl}img/homepage/img-store.png`} className="img-store" /></a></li>
                       <li><a href="https://github.com/WildernessLabs/Juego?tab=readme-ov-file#getting-started">Juego</a><a href="https://store.wildernesslabs.co/collections/frontpage/products/juego"><img src={`${siteConfig.baseUrl}img/homepage/img-store.png`} className="img-store" /></a></li>
                     </ul>
                   </div>
