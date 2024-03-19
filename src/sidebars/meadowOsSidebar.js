@@ -215,7 +215,20 @@ const meadowOsSidebar = [
         },
         items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
       },
-      "Meadow/Meadow.OS/Cellular/index",
+      {
+        type: "category",
+        label: "Cellular",
+        link: {
+          type: "doc",
+          id: "Meadow/Meadow.OS/Cellular/index",
+        },
+        items: [
+          "Meadow/Meadow.OS/Cellular/Configuration/index",
+          "Meadow/Meadow.OS/Cellular/Develop_Cellular_Apps/index",
+          "Meadow/Meadow.OS/Cellular/Cellular_GNSS/index",
+          "Meadow/Meadow.OS/Cellular/Troubleshooting/index",
+        ],
+      },
       "Meadow/Meadow.OS/Updates/index",
       "Meadow/Meadow.OS/RTC/index",
       "Meadow/Meadow.OS/SQLite/index",
@@ -249,8 +262,17 @@ const meadowOsSidebar = [
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index",
         ],
       },
-
-      "Meadow/Meadow.Foundation/Working_with_Sensors/index",
+      {
+        type: "category",
+        label: "Working with Sensors",
+        link: {
+          type: "doc",
+          id: "Meadow/Meadow.Foundation/Working_with_Sensors/index",
+        },
+        items: [
+          "Meadow/Meadow.Foundation/Working_with_Sensors/Sensor_Service/index",
+        ],
+      },
       "Meadow/Meadow.Foundation/Unified_GPIO_Arch/index",
     ],
   },

@@ -2,12 +2,6 @@
 
 Hello, and welcome to the Documentation repo for Wilderness Labs! These docs are probably best viewed at the [developer.wildernesslabs.co](http://developer.wildernesslabs.co), but they should be readable here, as well. You'll also find all the source code to the [samples](samples/) here.
 
-## Build Status
-
-[![Build site for beta site](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-develop.yml/badge.svg)](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-develop.yml)
-
-[![Build site for release site](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-main.yml/badge.svg)](https://github.com/WildernessLabs/Documentation/actions/workflows/docfx-main.yml)
-
 ## Running Locally
 
 This repo is compiled using [Docusuaurus V2](https://docusaurus.io/docs/2.x). You can run and browse this site locally, which is especially useful if you're contributing documentation, or you just want an offline experience.
@@ -32,7 +26,7 @@ The site should be available locally at: `http://localhost:3000/`.
 
 Changes should automatically be picked up and displayed on the site.
 
-Please use the [Docusuaurus guides and documentation](https://docusaurus.io/docs/2.x) if you wish to make serious modifications to the user experience of the site. If you run into any issues editing content, like getting links to resolve or html to render, checkout the [Docusaurus tips and tricks](Contributing/docusaurus-tips) page.
+Please use the [Docusaurus guides and documentation](https://docusaurus.io/docs/2.x) if you wish to make serious modifications to the user experience of the site. If you run into any issues editing content, like getting links to resolve or html to render, checkout the [Docusaurus tips and tricks](Contributing/docusaurus-tips) page.
 
 ## [Contributing](Contributing)
 

@@ -28,7 +28,7 @@ The way we flash Meadow boards (among other things) is via our command-line-inte
 From a console with admin rights, execute following command:
 
 ```console
-meadow install dfu-util
+meadow dfu install
 ```
 
 ### Step 5 - Put the device into DFU Bootloader mode

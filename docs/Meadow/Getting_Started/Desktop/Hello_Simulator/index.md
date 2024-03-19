@@ -55,13 +55,13 @@ Download and Install [Visual Studio Code](https://visualstudio.microsoft.com/) t
 
 ### Step 3 - Install Meadow Project Templates
 
-Open a Terminal and enter the following command to install a list of Meadow project templates:
+Open a console window and enter the following command to install a list of Meadow project templates:
 
 ```console
 dotnet new install WildernessLabs.Meadow.Template
 ```
 
-When installed, you’ll see a list of templates available
+When installed, you’ll see a list of templates available:
 
 ```console
 The following template packages will be installed:
