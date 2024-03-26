@@ -10,7 +10,7 @@ You can disable linking at an assembly level by adding a file called `app.build.
 
 ```yml
 Deploy:
-  nolink: [ Assembly1, Assembly2 ]
+  NoLink: [ Assembly1, Assembly2 ]
 ```
 
 Add the assembly names you wish to omit from linking intop the `nolink` array.  Note that this are assembly names, not file names, so they do not have a `.dll` extension.
