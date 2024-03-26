@@ -10,6 +10,47 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.10.0
+
+### Meadow.OS
+  
+  * Improvements to cell networking usability - clearer documentation and error messages
+  * Improve TLS client certificate authentication
+
+### Meadow.Core
+  
+  * Resolver now contains an `IJsonSerializer` - by default it is `MicroJson` but can be replaced at runtime
+  * Cloud, Command/Update services have been refactored and improved
+    * Connectivity is more granular (commands don’t rely on update)
+    * Serialization use `MicroJson` by default
+  * Linux platforms now support Meadow.Cloud authentication
+  * Unhandled app crashes now send crash reports to Meadow.Cloud when enabled
+  * Added on-board ACT LED to Raspberry Pi pinout
+
+### Meadow.Foundation
+  
+  * Added `Xpt2046` touch screen [driver](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Hid.Xpt2046).
+  * Added `Scd30` environmental sensor [driver](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.Scd30) (thank you @RoccoDevs!)
+  * Added `Ina219`, `Ina228` and `Ina260` and `Ina228` current, voltage, power monitor [drivers](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Power.Ina2xx) (thank you @engunneer!)
+  * Added `Bmp280` atmospheric sensor [driver](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmx280)
+  * Added `Pca8574a` and `Pcf8574` IO expander [drivers](https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Pcx857x)
+  * Added `MicroJson` - a new lightweight, IoT optimized Json serialization [library](https://www.nuget.org/packages/Meadow.Foundation.Serialization.MicroJson)
+  * Updated `TextDisplayMenu` to use `MicroJson` resulting in a 75% reduction in json menu load times
+  * Plus general improvements and optimizations across Meadow.Foundation
+
+### Meadow.Tooling
+  
+  #### Meadow.CLI v2
+  * `device provision` now supports `--gen-command`, `-id`, and `-k` parameters
+  * `device info` now supports `-k`
+  * `config route` now supports `local` endpoint
+  * Dozens of stability and quality-of-life improvements
+
+### Meadow.Cloud
+  
+  * Improved OS support for OtA updates
+  * Improved subscription downgrade experience
+
 ## v1.9.0
 
 This is a huge update for Meadow! Highlights include:
