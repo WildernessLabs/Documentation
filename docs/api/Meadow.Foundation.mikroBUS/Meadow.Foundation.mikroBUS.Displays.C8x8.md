@@ -12,7 +12,7 @@ slug: /docs/api/Meadow.Foundation.mikroBUS/Meadow.Foundation.mikroBUS.Displays.C
 ### Code Example
 
 ```csharp
-C8x8 c8x8;
+readonly C8x8 c8x8;
 
 public MeadowApp()
 {

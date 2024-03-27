@@ -1,9 +1,9 @@
 ---
-uid: Meadow.Foundation.ICs.IOExpanders.Ft232h
-slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ft232h
+uid: Meadow.Foundation.ICs.IOExpanders.Ft4232
+remarks: *content
 ---
 
-| Ft232h | |
+| Ft4232 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.IOExpanders.Ftxxxx) |
