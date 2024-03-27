@@ -27,6 +27,44 @@ subtitle: Release Notes
   * Unhandled app crashes now send crash reports to Meadow.Cloud when enabled
   * Added on-board ACT LED to Raspberry Pi pinout
 
+#### Breaking Changes
+
+  * `IUpdateService` events renamed:
+    * `OnStateChanged` => `StateChanged`
+    * `OnUpdateProgress` => `RetrieveProgress`
+    * `OnUpdateAvailable` => `UpdateAvailable`
+    * `OnUpdateRetrieved` => `UpdateRetrieved`
+  * New `ConnectionStateChanged` event that's triggered with Meadow.Cloud changes. You can get this event via `Resolver.MeadowCloudService`.
+  * `UpdateState` enum was split in 2 enums to distinguish states between Meadow.Cloud operations (`CloudConnectionState`) and OTA Updates (`UpdateState`):
+    * `UpdateState` => { `Dead`, `Disconnected`, `Connected`, `DownloadingFile`, `UpdateInProgress` }
+    * `CloudConnectionState` => { `Unknown`, `Disconnected`,  `Authenticating`, `Connecting`, `Subscribing`, `Connected`, `Paused` }
+  * We updated the Meadow.Cloud configuration settings:
+    ```yaml
+    # Meadow.Cloud configuration.
+    MeadowCloud:
+
+        # Enable Logging, Events, Command + Control
+        Enabled: true
+
+        # Enable Over-the-air Updates
+        EnableUpdates: true
+
+        # Enable Health Metrics
+        EnableHealthMetrics: true
+
+        # How often to send metrics to Meadow.Cloud
+        HealthMetricsIntervalMinutes: 15
+    ```
+  * We made some changes to cell.config.yaml to make it more user friendly:
+    * Interface field now requires: `COM1`, `COM4` and `COM6` instead of `/dev/ttyS0`, `/dev/ttyS1` and `/dev/ttyS3`
+    * `TurnOnPin` was renamed to `EnablePin`
+    * Now we should use MCU pin names in the `EnablePin`, to keep the consistency between that and the `ReservedPins` config
+    * Adjusted some default cell settings as most users use cellular with Project Lab instead of F7 Feather:
+      * Default Interface now will be `COM1`, instead of `COM4`
+      * Default EnablePin will be `A3`
+    * The `Csq` property and the `GetSignalStrength()` now retrieve the signal quality in `dBm`
+
+
 ### Meadow.Foundation
   
   * Added `Xpt2046` touch screen [driver](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Hid.Xpt2046).
