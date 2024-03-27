@@ -59,19 +59,34 @@ Logging:
 }
 ```
 
-### Enable Meadow.Cloud Over-the-Air (OtA) updates
+### Enable Meadow.Cloud features and Over-the-Air (OtA) updates
 
-To allow over-the-air (OtA) updates to your Meadow application, add the following configuration to your application's `app.config.yaml` or `app.config.json` file.
+To allow Meadow.Cloud basic features (Logging, Events and Command + Control) and over-the-air (OtA) updates to your Meadow application, add the following configuration to your application's `app.config.yaml` or `app.config.json` file.
 
 ```yaml
-Update:
-  Enabled: true
+# Meadow.Cloud configuration.
+MeadowCloud:
+
+    # Enable Logging, Events, Command + Control
+    Enabled: true
+
+    # Enable Over-the-air Updates
+    EnableUpdates: true
+
+    # Enable Health Metrics
+    EnableHealthMetrics: true
+
+    # How often to send metrics to Meadow.Cloud
+    HealthMetricsIntervalMinutes: 15
 ```
 
 ```json
 {
-    "Update": {
-        "Enabled": true
+    "MeadowCloud": {
+        "Enabled": true,
+        "EnableUpdates": true,
+        "EnableHealthMetrics": true,
+        "HealthMetricsIntervalMinutes": 15
     }
 }
 ```

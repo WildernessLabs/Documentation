@@ -200,6 +200,7 @@ const meadowOsSidebar = [
           id: "Meadow/Meadow.OS/Configuration/index",
         },
         items: [
+          "Meadow/Meadow.OS/Configuration/Application_Build_Configuration/index",
           "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index",
           "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index",
           "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
