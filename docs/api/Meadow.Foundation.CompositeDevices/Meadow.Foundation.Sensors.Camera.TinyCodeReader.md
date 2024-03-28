@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Camera.TinyCodeReader
-remarks: *content
+slug: /docs/api/Meadow.Foundation.CompositeDevices/Meadow.Foundation.Sensors.Camera.TinyCodeReader
 ---
 
 | TinyCodeReader | |
@@ -53,4 +53,5 @@ private void TinyCodeReader_CodeRead(object sender, string e)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/wildernesslabs/meadow.foundation.compositedevices/tree/main/Source/Sensors.Camera.UsefulSensors.TinyCodeReader/Samples/TinyCodeReader_Sample)
+
 

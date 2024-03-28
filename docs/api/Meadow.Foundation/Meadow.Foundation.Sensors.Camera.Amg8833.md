@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Camera.Amg8833
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Amg8833
 ---
 
 | Amg8833 | |
@@ -38,4 +38,5 @@ public override Task Run()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Camera.Amg8833/Samples/Amg8833_Sample)
+
 

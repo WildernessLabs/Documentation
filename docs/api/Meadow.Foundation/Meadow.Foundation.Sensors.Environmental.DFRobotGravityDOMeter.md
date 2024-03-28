@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter
 ---
 
 | DFRobotGravityDOMeter | |
@@ -59,4 +59,5 @@ protected async Task ReadSensor()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.DFRobotGravityDOMeter/Samples/DFRobotGravityDOMeter_Sample)
+
 

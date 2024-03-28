@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Cp2112
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Cp2112
 ---
 
 | Cp2112 | |

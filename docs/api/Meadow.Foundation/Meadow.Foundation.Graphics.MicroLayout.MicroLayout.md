@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Graphics.MicroLayout.MicroLayout
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Graphics.MicroLayout.MicroLayout
 ---
 
 | MicroLayout | |
