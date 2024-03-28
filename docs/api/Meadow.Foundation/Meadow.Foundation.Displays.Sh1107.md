@@ -8,7 +8,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Sh1107
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Sh110x) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Sh110x/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Sh1106/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Sh1106.svg?label=Meadow.Foundation.Displays.Sh1106" alt="NuGet Gallery for Meadow.Foundation.Displays.Sh1106" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Displays.Sh110x/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Displays.Sh110x.svg?label=Meadow.Foundation.Displays.Sh110x" alt="NuGet Gallery for Meadow.Foundation.Displays.Sh110x" /></a> |
 
 ### Code Example
 

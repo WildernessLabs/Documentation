@@ -31,7 +31,7 @@ public override Task Initialize()
         currentClick = new CACCurrent(Device.Pins.A00.CreateAnalogInputPort(5));
     }
 
-    currentClick.CurrentUpdated += OnCurrentUpdated;
+    currentClick.Updated += OnCurrentUpdated;
     currentClick.StartUpdating();
 
     return Task.CompletedTask;

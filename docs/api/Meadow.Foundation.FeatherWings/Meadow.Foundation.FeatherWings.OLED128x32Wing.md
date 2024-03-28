@@ -19,7 +19,7 @@ MicroGraphics graphics;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing...");
     var i2cBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
 
     oledWing = new OLED128x32Wing(i2cBus, Device.Pins.D11, Device.Pins.D10, Device.Pins.D09);
@@ -27,9 +27,10 @@ public override Task Initialize()
     graphics = new MicroGraphics(oledWing.Display);
     graphics.CurrentFont = new Font12x16();
 
-    oledWing.ButtonA.Clicked += (sender, e) => UpdateDisplay("A pressed");
-    oledWing.ButtonB.Clicked += (sender, e) => UpdateDisplay("B pressed");
-    oledWing.ButtonC.Clicked += (sender, e) => UpdateDisplay("C pressed");
+    oledWing.ButtonA.Clicked += (sender, e) => UpdateDisplay("A Clicked");
+    oledWing.ButtonB.Clicked += (sender, e) => UpdateDisplay("B Clicked");
+    oledWing.ButtonC.Clicked += (sender, e) => UpdateDisplay("C Clicked");
+    UpdateDisplay("Ready");
 
     return Task.CompletedTask;
 }
@@ -37,7 +38,7 @@ public override Task Initialize()
 void UpdateDisplay(string message)
 {
     graphics.Clear();
-    graphics.DrawText(0, 8, message);
+    graphics.DrawText(x: 0, y: 8, message);
     graphics.Show();
 }
 

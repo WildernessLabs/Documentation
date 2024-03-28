@@ -6,11 +6,11 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280
 | Bme280 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bme280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bme280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bme280" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bme280" /></a> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmx280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bmx280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bmx280" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bmx280" /></a> |
 
-The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
+The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C or SPI.
 
 ### Code Example
 
@@ -31,13 +31,14 @@ public override Task Initialize()
         },
         filter: result =>
         {
-            if (result.Old is { } old)
+            if (result.Old?.Temperature is { } oldTemp &&
+                result.Old?.Humidity is { } oldHumidity &&
+                result.New.Temperature is { } newTemp &&
+                result.New.Humidity is { } newHumidity)
             {
-                return (
-                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
-                &&
-                (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05
-                );
+                return
+                (newTemp - oldTemp).Abs().Celsius > 0.5 &&
+                (newHumidity - oldHumidity).Percent > 0.05;
             }
             return false;
         }
@@ -46,9 +47,16 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-        Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity:N2}%");
-        Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+        try
+        {
+            Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity:N2}%");
+            Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+        }
+        catch (Exception ex)
+        {
+            Resolver.Log.Error(ex, "Error reading sensor");
+        }
     };
 
     return Task.CompletedTask;
@@ -78,119 +86,17 @@ void CreateI2CSensor()
     Resolver.Log.Info("Create BME280 sensor with I2C...");
 
     var i2c = Device.CreateI2cBus();
-    sensor = new Bme280(i2c, (byte)Bme280.Addresses.Default); // SDA pulled up
+    sensor = new Bme280(i2c, (byte)Bmx280.Addresses.Default); // SDA pulled up
 
 }
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Samples/Bme280_Sample)
-
-### Interrupt Mode
-
-When the driver is operating in interrupt mode, the driver will periodically check the sensor reading.  An interrupt will be generated if the difference between the last reported reading and the current reading is greater than a threshold value.
-
-The sensor operates in interrupt mode by default.
-
-The following application will generate interrupts when changes to any one of the temperature, humidity or pressure readings exceed their threshold values:
-
-```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    Bme280 bme280;
-
-    public MeadowApp()
-    {
-        Console.WriteLine("Initializing...");
-
-        // configure our BME280 on the I2C Bus
-        var i2c = Device.CreateI2cBus();
-        bme280 = new Bme280 (
-            i2c,
-            Bme280.I2cAddress.Adddress0x77 //default
-        );
-
-        bme280.Subscribe(new FilterableObserver<AtmosphericConditionChangeResult, AtmosphericConditions>(
-            h => {
-                Console.WriteLine($"Temp and pressure changed by threshold; new temp: {h.New.Temperature}, old: {h.Old.Temperature}");
-            },
-            e => {
-                return (
-                    (Math.Abs(e.Delta.Temperature) > 1)
-                    &&
-                    (Math.Abs(e.Delta.Pressure) > 5)
-                    );
-            }
-        ));
-
-        // classical .NET events can also be used:
-        bme280.Updated += (object sender, AtmosphericConditionChangeResult e) => 
-        {
-            Console.WriteLine($"  Temperature: {e.New.Temperature}ºC");
-            Console.WriteLine($"  Pressure: {e.New.Pressure}hPa");
-            Console.WriteLine($"  Relative Humidity: {e.New.Humidity}%");
-        };
-
-        // get chip id
-        Console.WriteLine($"ChipID: {bme280.GetChipID():X2}");            
-
-        // get an initial reading
-        ReadConditions().Wait();
-
-        // start updating continuously
-        bme280.StartUpdating();
-    }
-
-    protected async Task ReadConditions()
-    {
-        var conditions = await bme280.Read();
-        Console.WriteLine("Initial Readings:");
-        Console.WriteLine($"  Temperature: {conditions.Temperature}ºC");
-        Console.WriteLine($"  Pressure: {conditions.Pressure}hPa");
-        Console.WriteLine($"  Relative Humidity: {conditions.Humidity}%");
-    }
-}
-```
-
-[Sample projects available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Samples/) 
-
-### Polling Mode
-
-In polling mode, it is the responsibility of the main application to check the sensor readings ona periodic basis.  The following application creates an instance of the `BME280` class using the I2C interface.  The temperature, pressure and humidity are read every second and the readings displayed using the debugger.
-
-The sensor is put into polling mode by setting the `updateInterval` to `0` in the constructor.
-
-```csharp
-public class MeadowApp : App<F7Micro, MeadowApp>
-{
-    public MeadowApp()
-    {
-        // Create a new BME280 object and put the sensor into polling
-        // mode (update interval set to 0ms).
-        Bme280 sensor = new Bme280(updateInterval: 0);
-
-        string message;
-        while (true)
-        {
-            // Make the sensor take new readings.
-            sensor.Update();
-
-            // Prepare a message for the user and output to the debug console.
-            message = "Temperature: " + sensor.Temperature.ToString("F1") + " C\n";
-            message += "Humidity: " + sensor.Humidity.ToString("F1") + " %\n";
-            message += "Pressure: " + (sensor.Pressure / 100).ToString("F0") + " hPa\n\n";
-            Console.WriteLine(message);
-
-            // Sleep for 1000ms before repeating the process.
-            Thread.Sleep(1000);
-        }
-    }
-}
-```
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280/Samples/Bme280_Sample)
 
 ### Wiring Example
 
-The BME280 can be connected using I2C or SPI.  Only 4 wires are required when using I2C:
+The BME280 can be connected using I2C or SPI. Only 4 wires are required when using I2C:
 
 * 3.3V
 * Ground
@@ -198,9 +104,4 @@ The BME280 can be connected using I2C or SPI.  Only 4 wires are required when us
 * SCL
 
 <img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.BME280/BME280_Fritzing.svg" />
-
-It should be noted that the Sparkfun board is supplied with pull-up resistors enabled by default.  The Adafruit board does not have any pull-up resistors onboard.  It is therefore necessary to add two pull-up resistors (`4.7 K` should be adequate for a single device) between 3.3V and SDA and 3.3V and SCL.
-
-
-
 

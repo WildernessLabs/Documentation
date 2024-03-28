@@ -13,7 +13,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Hid.Tsc2004
 ### Code Example
 
 ```csharp
-Tsc2004 touchScreen;
+private Tsc2004 touchScreen;
 
 public override Task Initialize()
 {

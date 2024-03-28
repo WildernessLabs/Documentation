@@ -12,33 +12,38 @@ slug: /docs/api/Meadow.Foundation.Grove/Meadow.Foundation.Grove.Relays.Relay
 ### Code Example
 
 ```csharp
-Relay relay;
 
-public override Task Initialize()
-{
-    Resolver.Log.Info("Initialize...");
 
-    relay = new Relay(Device.Pins.D13);
+        Relay relay;
 
-    return Task.CompletedTask;
-}
+        public override Task Initialize()
+        {
+            Resolver.Log.Info("Initialize...");
 
-public override async Task Run()
-{
-    var state = false;
+            relay = new Relay(Device.Pins.D13);
 
-    while (true)
-    {
-        state = !state;
+            return Task.CompletedTask;
+        }
 
-        Resolver.Log.Info($"- State: {state}");
-        relay.IsOn = state;
+        public override async Task Run()
+        {
+            var state = false;
 
-        await Task.Delay(500);
-    }
-}
+            while (true)
+            {
+                state = !state;
 
-```
+                Resolver.Log.Info($"- State: {state}");
+
+                relay.State = state
+                    ? Meadow.Peripherals.Relays.RelayState.Closed
+                    : Meadow.Peripherals.Relays.RelayState.Open;
+
+                await Task.Delay(500);
+            }
+        }
+
+        ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/Relay/Sample/Relay_Sample)
 
