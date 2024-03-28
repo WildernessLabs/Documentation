@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Displays.AsciiConsole
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.AsciiConsole
 ---
 
 | AsciiConsole | |

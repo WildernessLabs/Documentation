@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Environmental.Scd30
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd30
 ---
 
 | Scd30 | |
@@ -81,4 +81,5 @@ public override Task Initialize()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Scd30/Samples/Scd30_Sample)
+
 

@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Temperature.Pct2075
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Pct2075
 ---
 
 | Pct2075 | |
@@ -38,4 +38,5 @@ private void OnUpdated(object sender, IChangeResult<Meadow.Units.Temperature> e)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Pct2075/Samples/Pct2075_Sample)
+
 

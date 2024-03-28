@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Ft2232
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Ft2232
 ---
 
 | Ft2232 | |

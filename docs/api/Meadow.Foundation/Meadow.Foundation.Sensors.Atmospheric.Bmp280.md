@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Atmospheric.Bmp280
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bmp280
 ---
 
 | Bmp280 | |
@@ -84,4 +84,15 @@ void CreateI2CSensor()
 ```
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280/Samples/Bmp280_Sample)
+
+### Wiring Example
+
+The BMP280 can be connected using I2C or SPI. Only 4 wires are required when using I2C:
+
+* 3.3V
+* Ground
+* SDA
+* SCL
+
+<img src="/API_Assets/Meadow.Foundation.Sensors.Atmospheric.BME280/BME280_Fritzing.svg" />
 

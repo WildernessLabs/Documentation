@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Sensors.Camera.PersonSensor
-remarks: *content
+slug: /docs/api/Meadow.Foundation.CompositeDevices/Meadow.Foundation.Sensors.Camera.PersonSensor
 ---
 
 | PersonSensor | |
@@ -54,4 +54,5 @@ private void DisplaySensorData(PersonSensorResults sensorData)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/wildernesslabs/meadow.foundation.compositedevices/tree/main/Source/Sensors.Camera.UsefulSensors.PersonSensor/Samples/PersonSensor_Sample)
+
 

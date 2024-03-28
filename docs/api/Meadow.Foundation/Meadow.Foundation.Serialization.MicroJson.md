@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Serialization.MicroJson
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Serialization.MicroJson
 ---
 
 | MicroJson | |

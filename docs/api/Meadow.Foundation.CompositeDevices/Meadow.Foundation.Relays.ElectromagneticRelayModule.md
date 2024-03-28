@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.Relays.ElectromagneticRelayModule
-remarks: *content
+slug: /docs/api/Meadow.Foundation.CompositeDevices/Meadow.Foundation.Relays.ElectromagneticRelayModule
 ---
 
 | ElectromagneticRelayModule | |

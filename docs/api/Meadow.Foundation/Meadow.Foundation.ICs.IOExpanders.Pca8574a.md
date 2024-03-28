@@ -1,6 +1,6 @@
 ---
 uid: Meadow.Foundation.ICs.IOExpanders.Pca8574a
-remarks: *content
+slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca8574a
 ---
 
 | Pca8574a | |
