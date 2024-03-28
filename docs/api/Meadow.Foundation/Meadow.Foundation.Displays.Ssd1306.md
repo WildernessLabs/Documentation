@@ -62,7 +62,7 @@ public override Task Run()
 {
     graphics.Clear();
     graphics.CurrentFont = new Font8x12();
-    graphics.DrawText(0, 0, "Meadow F7", Meadow.Foundation.Color.White);
+    graphics.DrawText(0, 0, "Meadow F7", Color.White);
     graphics.DrawRectangle(5, 14, 30, 10, true);
 
     graphics.Show();

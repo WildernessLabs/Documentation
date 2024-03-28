@@ -6,9 +6,9 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Bme280
 | Bme280 | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bme280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bme280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bme280" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bme280" /></a> |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280/Datasheet) |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmx280/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Atmospheric.Bmx280.svg?label=Meadow.Foundation.Sensors.Atmospheric.Bmx280" alt="NuGet Gallery for Meadow.Foundation.Sensors.Atmospheric.Bmx280" /></a> |
 
 The **BME280** is a combined temperature, pressure and humidity sensor controlled via I2C.
 
@@ -31,13 +31,14 @@ public override Task Initialize()
         },
         filter: result =>
         {
-            if (result.Old is { } old)
+            if (result.Old?.Temperature is { } oldTemp &&
+                result.Old?.Humidity is { } oldHumidity &&
+                result.New.Temperature is { } newTemp &&
+                result.New.Humidity is { } newHumidity)
             {
-                return (
-                (result.New.Temperature.Value - old.Temperature.Value).Abs().Celsius > 0.5
-                &&
-                (result.New.Humidity.Value - old.Humidity.Value).Percent > 0.05
-                );
+                return
+                (newTemp - oldTemp).Abs().Celsius > 0.5 &&
+                (newHumidity - oldHumidity).Percent > 0.05;
             }
             return false;
         }
@@ -46,9 +47,16 @@ public override Task Initialize()
 
     sensor.Updated += (sender, result) =>
     {
-        Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-        Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity:N2}%");
-        Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+        try
+        {
+            Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"  Relative Humidity: {result.New.Humidity:N2}%");
+            Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+        }
+        catch (Exception ex)
+        {
+            Resolver.Log.Error(ex, "Error reading sensor");
+        }
     };
 
     return Task.CompletedTask;
@@ -78,13 +86,13 @@ void CreateI2CSensor()
     Resolver.Log.Info("Create BME280 sensor with I2C...");
 
     var i2c = Device.CreateI2cBus();
-    sensor = new Bme280(i2c, (byte)Bme280.Addresses.Default); // SDA pulled up
+    sensor = new Bme280(i2c, (byte)Bmx280.Addresses.Default); // SDA pulled up
 
 }
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bme280/Samples/Bme280_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Atmospheric.Bmx280/Samples/Bme280_Sample)
 
 ### Interrupt Mode
 

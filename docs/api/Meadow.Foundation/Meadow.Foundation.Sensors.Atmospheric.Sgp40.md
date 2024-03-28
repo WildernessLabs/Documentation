@@ -13,7 +13,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Sgp40
 ### Code Example
 
 ```csharp
-Sgp40? sensor;
+private Sgp40? sensor;
 
 public override Task Initialize()
 {
@@ -59,7 +59,7 @@ public override async Task Run()
     sensor?.StartUpdating(TimeSpan.FromSeconds(1));
 }
 
-async Task ReadConditions()
+private async Task ReadConditions()
 {
     if (sensor == null) { return; }
 

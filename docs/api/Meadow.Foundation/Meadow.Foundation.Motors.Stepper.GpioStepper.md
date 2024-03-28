@@ -13,7 +13,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.GpioStepper
 ### Code Example
 
 ```csharp
-private IPositionalMotor stepper;
+private IStepperMotor stepper;
 
 private bool UseStepDirConfiguration { get; set; } = true;
 
@@ -134,7 +134,7 @@ private async Task RunToSpecificPositions()
         {
             Resolver.Log.Info($"Moving in increments of {increment} degrees");
 
-            await stepper.GoTo(Angle.Zero, direction, rate);
+            await stepper.GoTo(new Angle(0), direction, rate);
             await Task.Delay(1000);
 
             var nextPosition = 0d;
@@ -162,7 +162,7 @@ private async Task RunToSpecificPositions()
 
             var nextPosition = 360d;
 
-            await stepper.GoTo(Angle.Zero, direction, rate);
+            await stepper.GoTo(new Angle(0), direction, rate);
             await Task.Delay(1000);
 
             while (nextPosition > 0)
