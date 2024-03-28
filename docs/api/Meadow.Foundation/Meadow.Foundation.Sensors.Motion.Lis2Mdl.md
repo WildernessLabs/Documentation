@@ -3,7 +3,7 @@ uid: Meadow.Foundation.Sensors.Motion.Lis2Mdl
 slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lis2Mdl
 ---
 
-| Lis2Mdl | |
+| Lis2mdl | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2Mdl) |
@@ -13,18 +13,18 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lis2Mdl
 ### Code Example
 
 ```csharp
-Lis2Mdl sensor;
+Lis2mdl sensor;
 
 public override Task Initialize()
 {
     Resolver.Log.Info("Initialize hardware...");
-    sensor = new Lis2Mdl(Device.CreateI2cBus());
+    sensor = new Lis2mdl(Device.CreateI2cBus());
 
     // classical .NET events can also be used:
     sensor.Updated += HandleResult;
 
     // Example that uses an IObservable subscription to only be notified when the filter is satisfied
-    var consumer = Lis2Mdl.CreateObserver(handler: result => HandleResult(this, result),
+    var consumer = Lis2mdl.CreateObserver(handler: result => HandleResult(this, result),
                                          filter: result => FilterResult(result));
 
     sensor.Subscribe(consumer);

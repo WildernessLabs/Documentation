@@ -13,13 +13,11 @@ slug: /docs/api/Meadow.Foundation.CompositeDevices/Meadow.Foundation.Sensors.Cam
 ```csharp
 TinyCodeReader tinyCodeReader;
 
-
 public override Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
 
     tinyCodeReader = new TinyCodeReader(Device.CreateI2cBus());
-
 
     return Task.CompletedTask;
 }
@@ -53,5 +51,4 @@ private void TinyCodeReader_CodeRead(object sender, string e)
 ```
 
 [Sample project(s) available on GitHub](https://github.com/wildernesslabs/meadow.foundation.compositedevices/tree/main/Source/Sensors.Camera.UsefulSensors.TinyCodeReader/Samples/TinyCodeReader_Sample)
-
 
