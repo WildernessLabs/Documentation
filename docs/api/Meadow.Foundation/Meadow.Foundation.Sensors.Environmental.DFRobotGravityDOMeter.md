@@ -60,4 +60,3 @@ protected async Task ReadSensor()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.DFRobotGravityDOMeter/Samples/DFRobotGravityDOMeter_Sample)
 
-

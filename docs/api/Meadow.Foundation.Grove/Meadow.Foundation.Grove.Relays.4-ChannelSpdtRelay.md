@@ -8,7 +8,7 @@ slug: >-
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation.Grove/tree/main/Source/4-ChannelSpdtRelay) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay.svg?label=Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay" alt="NuGet Gallery for Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay.svg?label=Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay" alt="NuGet Gallery for Meadow.Foundation.Grove.Relays.4-ChannelSpdtRelay" /></a> |
 
 ### Code Example
 

@@ -39,4 +39,3 @@ private void TouchScreen_TouchDown(ITouchScreen sender, TouchPoint point)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Hid.Xpt2046/Samples/Xpt2046_Sample)
 
-

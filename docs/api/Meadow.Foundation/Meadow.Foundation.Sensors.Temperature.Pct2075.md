@@ -39,4 +39,3 @@ private void OnUpdated(object sender, IChangeResult<Meadow.Units.Temperature> e)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Pct2075/Samples/Pct2075_Sample)
 
-
