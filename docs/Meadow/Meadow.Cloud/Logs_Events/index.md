@@ -6,12 +6,22 @@ subtitle: Getting started with logs and events
 
 ## Enabling CloudLogger
 
-Today, logging output through `Resolver.Log.Info("foo bar");` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, getting the same logs in Meadow.Cloud is really simple, all you need do is register a new `CloudLogger`:
+Today, logging output through `Resolver.Log.Info("foo bar");` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, getting the same logs in Meadow.Cloud is really simple.
+
+Setting up logs and events requires the following update in `app.config.yaml`:
+
+```yaml
+MeadowCloud:
+    Enabled: true
+```
+
+Then, all you need to register a new `CloudLogger`:
 
 ```csharp
 public override async Task Initialize()
 {
-    Resolver.Log.AddProvider(new CloudLogger());
+    var cloudLogger = new CloudLogger();
+    Resolver.Log.AddProvider(cloudLogger);
     ...
 }
 ```
