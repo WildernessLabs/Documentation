@@ -128,7 +128,7 @@ public IActionResult GetJsonList()
 
 ## Sample Application
 
-To see Maple Server in action, check out the [unit sample applications](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Web.Maple/Samples) or some practical samples up on Hackster.
+To see Maple Server in action, check out the [unit sample applications](https://github.com/WildernessLabs/Maple) or some practical samples up on Hackster.
 
 <table>
   <tbody>
