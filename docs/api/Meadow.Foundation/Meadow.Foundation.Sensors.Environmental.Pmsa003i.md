@@ -8,7 +8,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Pmsa00
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
 | Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Pmsa003I) |
 | Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Environmental.Pmsa003I/Datasheet) |
-| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.Pmsa300i/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Environmental.Pmsa300i.svg?label=Meadow.Foundation.Sensors.Environmental.Pmsa300i" alt="NuGet Gallery for Meadow.Foundation.Sensors.Environmental.Pmsa300i" /></a> |
+| NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Environmental.Pmsa003i/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Environmental.Pmsa003i.svg?label=Meadow.Foundation.Sensors.Environmental.Pmsa003i" alt="NuGet Gallery for Meadow.Foundation.Sensors.Environmental.Pmsa003i" /></a> |
 
 ### Code Example
 

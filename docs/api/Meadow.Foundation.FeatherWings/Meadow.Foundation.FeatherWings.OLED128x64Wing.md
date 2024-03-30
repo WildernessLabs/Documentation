@@ -46,4 +46,3 @@ void UpdateDisplay(string message)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/OLED128x64Wing/Sample/OLED128x64Wing_Sample)
 
-

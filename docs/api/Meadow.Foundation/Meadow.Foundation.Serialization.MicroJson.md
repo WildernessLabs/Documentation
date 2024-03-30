@@ -67,4 +67,3 @@ private static byte[] LoadResource(string filename)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Libraries_and_Frameworks/Serialization.MicroJson/Samples/MicroJson_Sample)
 
-

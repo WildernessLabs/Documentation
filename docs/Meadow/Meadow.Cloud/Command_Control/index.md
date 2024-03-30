@@ -74,11 +74,11 @@ To receive and process a command in a Meadow application, the Command Service ne
 
 ### Configuration
 
-In `app.config.yaml`, set the following:
+Setting up Command + Control requires the following update in `app.config.yaml`:
 
 ```yaml
-Update:
-  Enabled: true
+MeadowCloud:
+    Enabled: true
 ```
 
 When the Command Service is enabled, the device connects to MQTT and subscibes to the appropriate topic to receive commands from Meadow.Cloud. The Command Service is currently coupled with the Update Service. There is a work item to decouple this in an upcoming release.
