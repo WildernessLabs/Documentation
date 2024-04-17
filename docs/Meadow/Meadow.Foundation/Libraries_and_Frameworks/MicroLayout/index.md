@@ -55,6 +55,27 @@ The code sample above draws a red rectangle:
 
 ![meadow microlayout box](microlayout_box.png)
 
+### `GradientBox`
+
+Draws a gradient colored rectangle:
+
+```csharp
+displayScreen.Controls.Add(new GradientBox(
+    left: 20,
+    top: 20,
+    width: displayScreen.Width - 40,
+    height: displayScreen.Height - 40)
+{
+    StartColor = Color.Red,
+    EndColor = Color.Blue,
+    IsHorizontal = true,
+});
+```
+
+The code sample above draws a red-to-blue gradient rectangle:
+
+![meadow microlayout box](microlayout_gradientbox.png)
+
 ### `Circle`
 
 Draws a colored circle:
@@ -166,6 +187,41 @@ displayScreen.Controls.Add(chart);
 The code sample above plots a line chart based on the list of double of 5 values. With `LineChartSeries` you can specify the style of the curve, and in `LineChart` you can specofy the style of the chart itself (axis colors, background, etc.).
 
 ![meadow microlayout linechart](microlayout_linechart.png)
+
+### `VerticalBarChart`
+
+Draws a vertical bar chart based on an array of float values.
+
+```csharp
+var random = new Random();
+var series = new float[10];
+
+for (var i = 0; i < series.Length; i++)
+{
+    series[i] = random.NextSingle() * 10;
+}
+
+var chart = new VerticalBarChart(
+    20,
+    20,
+    displayScreen.Width - 40,
+    displayScreen.Height - 40,
+    series)
+{
+    AxisLabelColor = Color.Red,
+    AxisColor = Color.DarkRed,
+    AxisStroke = 3,
+    BarSpacing = 3,
+    SeriesColor = Color.DarkBlue,
+    AxisFont = new Font6x8(),
+};
+
+displayScreen.Controls.Add(chart);
+```
+
+The code sample above plots ten vertical bar charts with random values from 0-10. You can specify the style of the chart itself for things like axis colors, stroke, axis font, etc.
+
+![meadow microlayout linechart](microlayout_verticalbarchart.png)
 
 ### `ProgressBar`
 
