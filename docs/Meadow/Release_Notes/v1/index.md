@@ -10,6 +10,34 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.10.2
+
+This is a managed (NuGet packages) only release that improves Meadow.Cloud stability and with some minor performance improvements.
+
+### Meadow.Core
+
+  * Added ephemeral store-and-forwarding to Meadow.Cloud logs and events
+  * Stability and user message improvements across the Meadow.Cloud stack (health reported, connection service, event publishing, etc)
+  * `Meadow.Linux` added disk usage stats
+  * `Meadow.Linux` added debounce support to `InterruptPort`
+  * Added contracts for `IPowerSensor`, `ICurrentSensor` and `IVoltageSensor`
+
+### Meadow.Foundation
+  
+  * Big update to `SC16IS752` IO expanded - thank you [kaarew](https://github.com/kaarew)!
+  * [`MicroLayout`](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/) improvements including `VerticalBarChart` and `GradientBox` controls
+  * Added 16x24 pixel font to [`MicroGraphics`](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/) for high res displays
+  * Added extended characters to 8x12 and 12x16 fonts
+  * [`MicroJson`](https://www.nuget.org/packages/Meadow.Foundation.Serialization.MicroJson#readme-body-tab) compatibility and validation improvements
+  * Bug fix for `AnalogArray` to support Core Compute modules
+  * [`INA2xx`](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Power.Ina2xx) driver updates to support new sensor interfaces
+
+#### Breaking changes
+
+  * `Color` struct now uses float instead of double for a minor performance improvement
+  * `Bmi270` namespace changed from `Meadow.Foundation.Sensors.Accelerometers` to `Meadow.Foundation.Sensors.Motion`
+  * `AsciiConsoleDisplay` renamed to `AsciiConsole`
+
 ## v1.10.0
 
 ### Meadow.OS
