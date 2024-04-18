@@ -4,7 +4,6 @@ const algolia = require('./algolia.js');
 
 let themeConfig = /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 ({
-  // TODO: Replace with your project's social card
   image: 'img/docusaurus-social-card.jpg',
   navbar: {
     // title: 'My Site',
