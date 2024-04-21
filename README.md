@@ -28,6 +28,34 @@ Changes should automatically be picked up and displayed on the site.
 
 Please use the [Docusaurus guides and documentation](https://docusaurus.io/docs/2.x) if you wish to make serious modifications to the user experience of the site. If you run into any issues editing content, like getting links to resolve or html to render, checkout the [Docusaurus tips and tricks](Contributing/docusaurus-tips) page.
 
+## Developer tips
+
+### Table of Contents changes
+
+Depending on changes you want to make to navigation elements, you will need to look in special locations within Docusaurus files. Note that navigation changes may require more review in the pull request process as well, to ensure we keep things ideal for user experience.
+
+### Top navigation
+
+If we need to alter the top navigation elements, it will require modifications to the `/Documentation/docusaurus-config/theme-config.js` file. Edits to this file will definitely require local testing and more review before we make high-impact user-facing changes.
+
+#### Sidebars
+
+If you want to add or alter the left-hand table of contents, there are special JavaScript files Docusaurus uses. These sidebar files are available in the [`/Documentation/src/sidebars/`](https://github.com/WildernessLabs/Documentation/tree/main/src/sidebars) folder, and they are all processed in the [**sidebars.js** file](https://github.com/WildernessLabs/Documentation/blob/main/src/sidebars/sidebars.js), where it is configured for when a specific sidebar will be used based on the current requested path.
+
+### When links don't seem to work
+
+If you see an error for a link you are adding that you are fairly certain is correct, verify that the page filename doesn't contain any special characters. While they may be valid for URL use, sometimes Docusaurus will fail to handle links with characters.
+
+For example, if you want to link to the [`Deploying_Meadow.OS` path](https://developer.wildernesslabs.co/Meadow/Getting_Started/Deploying_Meadow.OS/), the period (`.`) in that last folder name should be fine, but Docusaurus will fail to find the desired destination. Instead, you will need to link to a URL-encoded folder: `.../Deploying_Meadow%2EOS/` (where `%2E` is the "percent-encoded" period character).
+
+### Redirects
+
+When files move or shortcuts are needed, we can use the [Docusaurus plug-in **plugin-client-redirects**](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects/) that is available on the docs site. While not as effective as server-side redirects and HTTP status codes, it allows us to keep old user links, bookmarks, and archived docs content taking users to the latest content.
+
+These redirect rules are established in the [`/Documentation/docusaurus.config.js` file within the `plugins` section](https://github.com/WildernessLabs/Documentation/blob/main/docusaurus.config.js#L52). (The exact line may change as that configuration file is modified, but look for the `@docusaurus/plugin-client-redirects` section.)
+
+Rules include a `from` location(s) and a desired `to` destination. If you need a single `from`, just use a string (`from: "/old/url"`). If you need to redirect multiple pages to a single new location, make the `from` field an array of strings (`from: ["/some/url", "/another/url"]`).
+
 ## [Contributing](Contributing)
 
 Wilderness Labs welcomes and encourages constrictive contributions. We believe that documentation is best when a diverse community of folks with a variety of perspectives and experience share their wisdom and findings with others. Additionally, documentation contributions are a great way to capture learnings that you may even reference yourself.
