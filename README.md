@@ -56,6 +56,28 @@ These redirect rules are established in the [`/Documentation/docusaurus.config.j
 
 Rules include a `from` location(s) and a desired `to` destination. If you need a single `from`, just use a string (`from: "/old/url"`). If you need to redirect multiple pages to a single new location, make the `from` field an array of strings (`from: ["/some/url", "/another/url"]`).
 
+### Tabs
+
+In several places, we want to present similar variations of instructions based on operating system (OS) or development environment without requiring the user to scroll through other options. This is handled by using tabs with a special XML syntax of `Tabs` and `TabItem`, where the user will select their choice and be presented with just those instructions. This [tab functionality is built into Docusaurus](https://docusaurus.io/docs/next/markdown-features/tabs) and is also documented there.
+
+Currently, we use tabs with the `groupId` of `os` and `ide`. Here's an example use, separated by OS. If the user hasn't selected a tab, the `default` attribute indicates which TabItem is shown.
+
+```xml
+<Tabs groupId="os" queryString="currentOs">
+  <TabItem value="windows" label="Windows" default>
+    ...
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+    ...
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+    ...
+  </TabItem>
+</Tabs>
+```
+
+Adding the `queryString` attribute to the Tabs group allows the selected tab to be set by the requested URL querystring. In this case, if the URL contains `?currentOs=macOS`, the user will load the page with the macOS tab preselected. This allows links to be made to specific tabs or even sections within a tab.
+
 ## [Contributing](Contributing)
 
 Wilderness Labs welcomes and encourages constrictive contributions. We believe that documentation is best when a diverse community of folks with a variety of perspectives and experience share their wisdom and findings with others. Additionally, documentation contributions are a great way to capture learnings that you may even reference yourself.
