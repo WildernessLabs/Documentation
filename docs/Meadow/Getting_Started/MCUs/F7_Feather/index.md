@@ -151,9 +151,11 @@ What this Meadow application does is creates an `RgbPwmLed` object on the onboar
 
 With no code changes, let's deploy this app to your new board.
 
-In the bottom toolbar, click on the COM port button that will open a drop down menu at the top, where you’ll select the corresponding port your board is using.
+In the Activity Bar on the side of the window, select the **Run and Debug** icon.
 
-![Deploying an app to the COM3 port.](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.jpg)
+Within the **Run and Debug** side bar, select the configuration drop-down and select the port corresponding to your connected Meadow device.
+
+![Visual Studio Code screenshot showing Run and Debug activity with a highlight of the Meadow COM3 port selected.](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.png)
 
 :::caution
 When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
