@@ -26,7 +26,7 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
     ssh-keygen
     ```
 
-    Generate the keys to the default `.ssh` location, adding a passphrase if you want, though it's not required.
+    Generate the keys to the default `.ssh` location. Do not set a passphrase for the keys, which will prevent the provisioning process from accessing them.
 
     If you skip this step, you will see an error when you provision your Meadow.Desktop host device.
 
