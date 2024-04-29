@@ -20,6 +20,23 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
     meadow login
     ```
 
+1. **One-time prerequisite requirement for Meadow.Desktop hosts**: If you are provisioning a machine running Meadow.Desktop apps, it will require having SSH keys set up before trying to provision the host machine for Meadow.Cloud use. (This step is not required for Meadow devices like Feather and Core-Compute-based systems that will generate their own keys automatically.)
+
+    ```console
+    ssh-keygen
+    ```
+
+    Generate the keys to the default `.ssh` location, adding a passphrase if you want, though it's not required.
+
+    If you skip this step, you will see an error when you provision your Meadow.Desktop host device.
+
+    ```console
+    > meadow device provision
+    Retrieving your user and organization information...
+    Requesting device public key (this will take a minute)...
+    SSH folder not found
+    ```
+
 1. Connect to your Meadow device and provision it with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
 
     ```console
