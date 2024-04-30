@@ -19,7 +19,7 @@ A command can be sent to a set of collections or devices:
 **Collections**
 
 ```log
-POST /api/collections/commands
+POST https://www.meadowcloud.co/api/collections/commands
 Authorization: Bearer <user token> or Authorization: apikey <apikey>
 {
    "collectionIds": ["COLLECTION_ID_1", "COLLECTION_ID_2"],
@@ -35,7 +35,7 @@ Authorization: Bearer <user token> or Authorization: apikey <apikey>
 **Devices**
 
 ```log
-POST /api/devices/commands
+POST https://www.meadowcloud.co/api/devices/commands
 Authorization: Bearer <user token> or Authorization: apikey <apikey>
 {
    "deviceIds": ["DEVICE_ID_1", "DEVICE_ID_2"],
