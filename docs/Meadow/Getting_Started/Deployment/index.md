@@ -1,13 +1,7 @@
 ---
 layout: Meadow
 title: Deployment
-subtitle: Guides and documentation for Meadow
+subtitle: Deploy a Meadow application
 ---
 
-# Deploy a Meadow application
-
-* [macOS](macos/)
-* [Windows](Windows/)
-* [Linux](Linux/)
-
-## [Next - Hello, World](/Meadow/Getting_Started/MCUs/F7_Feather/)
+[This document has been moved](../Deploying_Meadow%2EOS/)
