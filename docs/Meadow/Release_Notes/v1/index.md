@@ -10,6 +10,42 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.11.0
+
+This is a full stack update (OS, Tooling and NuGet packages) release that improves [what?] stability and with some minor performance improvements.
+
+### Meadow.OS
+
+  * Bugfix in WiFi implementation of POSIX `poll()` function should result in increased network stability, and increased performance for `static HttpClient`
+  * Resolved crashing issue when using the “read-ahead data” `Socket.Available` property
+  * Better error reporting for Cell networking connections and the TLS/HTTPS layer
+
+### Meadow.Core
+  
+  * Added `OnBootFromCrash` virtual method to `App`
+  * Added `IsEnabled` property to `MeadowCloudConnectionService`
+  * All `Desktop` platform Displays are now `SilkDisplay` and implement `IResizablePixelDisplay`
+
+  #### Breaking changes
+
+  * Desktop-based applications need to remove GTK/WinForms startup and replace with `SilkDisplay.Run()`
+
+### Meadow.Foundation
+  
+  * Added [`SilkDisplay`](https://www.nuget.org/packages/Meadow.Foundation.Displays.Silk) driver
+  * Bug fix for [`Bmx280`](https://www.nuget.org/packages/Meadow.Foundation.Sensors.Atmospheric.Bmx280) driver
+  * Added `SimulatedAccelerometer`, `SimulatedCurrentSensor`, and `SimulatedAnalogInputPort` drivers included in our [Meadow.Foundation](https://www.nuget.org/packages/Meadow.Foundation) package
+
+### Tooling
+
+#### Meadow Project Templates
+
+Update your project templates with `dotnet new install WildernessLabs.Meadow.Template` command. It includes:
+  
+  * All templates now use C# 10
+  * Meadow.Desktop template now uses new [Silk.NET](https://dotnet.github.io/Silk.NET/)
+  * Minor cleanup on the Project Lab template
+
 ## v1.10.2
 
 This is a managed (NuGet packages) only release that improves Meadow.Cloud stability and with some minor performance improvements.
