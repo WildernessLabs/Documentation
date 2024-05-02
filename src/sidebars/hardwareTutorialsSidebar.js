@@ -183,6 +183,19 @@ const hardwareTutorialsSidebar = [
         "Hardware/Tutorials/PCB_Tutorial/PCB_Assembly/index",
       ],
     },
+    {
+      // Circuit Recipes
+      type: "category",
+      label: "Circuit Recipes",
+      link: {
+        type: "doc",
+        id: "Hardware/Tutorials/Circuit_Recipes/index",
+      },
+      items: [
+        "Hardware/Tutorials/Circuit_Recipes/I2C_Addressing/index",
+    
+      ],
+    },
   ];
   
   module.exports = hardwareTutorialsSidebar;
