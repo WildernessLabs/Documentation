@@ -80,7 +80,7 @@ Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
 Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
 Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
 Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
+Meadow.Desktop App             MeadowDesktop      [C#]            Meadow/Console
 Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
 Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
 Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
