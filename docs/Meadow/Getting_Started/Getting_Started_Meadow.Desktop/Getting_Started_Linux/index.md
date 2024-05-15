@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-title: Get started with Meadow.Linux
-sidebar_label: Hello, Meadow.Linux
+title: Hello, Meadow.Desktop on Linux
+sidebar_label: Linux
 subtitle: "To get up and running with Meadow.Linux, follow these steps:"
 ---
 
@@ -39,7 +39,7 @@ Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
 Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
 Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
 Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
+Meadow.Desktop App             MeadowDesktop      [C#]            Meadow/Console
 Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
 Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
 Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
@@ -52,10 +52,10 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new Desktop --name LinuxDemo --Framework net8.0
+dotnet new MeadowDesktop --name LinuxDemo
 ```
 
-This Meadow.Desktop application opens a 320x240 pixel GTK window saying `Hello, World` using MicroLayout.
+This Meadow.Desktop application creates a 320x240 pixel window saying `Hello, World` using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md).
 
 ### Step 5 - Run a Meadow Application
 
@@ -73,13 +73,13 @@ And finally to run the Meadow application, use the command:
 dotnet run
 ```
 
-A GTK window should show up in the center of the screen saying `Hello, World`, like below:
+A window should show up in the center of the screen saying `Hello, World`, like below:
 
 ![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
