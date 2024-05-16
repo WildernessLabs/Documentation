@@ -256,6 +256,7 @@ const meadowOsSidebar = [
           id: "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index",
         },
         items: [
+          "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroJson/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index",
