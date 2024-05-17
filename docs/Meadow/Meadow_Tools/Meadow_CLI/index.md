@@ -251,7 +251,7 @@ meadow device info
 * `meadow app build`  - Compile a Meadow application
 * `meadow app debug`  - Debug a running application
 * `meadow app deploy` - Deploy a built Meadow application to a target device
-* `meadow app run`    - Builds, trims and deploys a Meadow application to a target device
+* `meadow app run`    - Builds, trims, deploys and starts a Meadow application on a target device
 * `meadow app trim`   - Trim the binaries of a Meadow applicatio
 
 ### Meadow.Cloud commands
