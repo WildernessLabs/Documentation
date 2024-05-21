@@ -17,7 +17,7 @@ The **Publish Meadow MPAK** action automates the process of publishing a Meadow 
 
 _* required fields_
 
-## How to Use
+## Usage
 
 To use this action, define it in your workflow YAML file with the necessary inputs. Below is an example workflow that demonstrates how to configure and use the Publish Meadow MPAK action:
 

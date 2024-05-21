@@ -19,9 +19,9 @@ The **Deploy and Upload Meadow MPAK** action combines building, testing, packagi
 
 _* required fields_
 
-## How to Use
+## Usage
 
-Below is an example of how to implement this action in a GitHub workflow:
+To use this action, define it in your workflow YAML file with the necessary inputs. Below is an example of how to implement this action in a GitHub workflow:
 
 ```yaml
 name: Continuous Deployment of Meadow MPAK
