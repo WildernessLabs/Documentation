@@ -132,7 +132,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow.Linux project that will run on your Raspberry Pi:
 
 ```console
-dotnet new JetsonNano --name JetsonNanoDemo
+dotnet new meadow-jetson-nano --name JetsonNanoDemo
 ```
 
 This Meadow.Linux application shows a basic Meadow app structure with an `Initialize` and `Run` methods with logging strings to confirm in the output the application ran successfully.
