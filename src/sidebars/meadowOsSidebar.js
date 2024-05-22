@@ -144,27 +144,7 @@ const meadowOsSidebar = [
         ],
       },
 
-      {
-        type: "category",
-        label: "Meadow Hardware",
-        link: {
-          type: "doc",
-          id: "Meadow/Meadow_Basics/Hardware/index",
-        },
-        items: [
-          "Meadow/Meadow_Basics/Hardware/F7v1/index",
-          "Meadow/Meadow_Basics/Hardware/F7v2/index",
-          {
-            type: "category",
-            label: "Core-Compute Module",
-            link: {
-              type: "doc",
-              id: "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index",
-            },
-            items: ["Meadow/Meadow.OS/Core-Compute_SD_Card/index"],
-          },
-        ],
-      },
+
       "Meadow/Meadow_Basics/Status/index",
     ],
   },
