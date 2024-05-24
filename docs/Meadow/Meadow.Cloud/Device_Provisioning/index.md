@@ -37,6 +37,18 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
     SSH folder not found
     ```
 
+1. Select the Meadow device you wish to provision to send data to Meadow.Cloud.
+
+    ```console
+    meadow port select
+    ```
+
+    Alternatively, if you are provisioning your local development machine to send data to Meadow.Cloud, you will instead need to set up the route to the local machine manually. This will allow you to send data to Meadow.Cloud from Meadow.Desktop applications as well.
+
+    ```console
+    meadow config route local
+    ```
+
 1. Connect to your Meadow device and provision it with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
 
     ```console
