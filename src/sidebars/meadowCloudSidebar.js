@@ -13,8 +13,6 @@ const meadowCloudSidebar = [
       "Meadow/Meadow.Cloud/Health_Monitoring/index",
       "Meadow/Meadow.Cloud/Logs_Events/index",
       "Meadow/Meadow.Cloud/Command_Control/index",
-      "Meadow/Meadow.Cloud/Automatic_Upload/index",
-      "Meadow/Meadow.Cloud/Automatic_Publish/index",
     ],
   },
   {
