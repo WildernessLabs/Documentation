@@ -20,6 +20,35 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
     meadow login
     ```
 
+1. **One-time prerequisite requirement for Meadow.Desktop hosts**: If you are provisioning a machine running Meadow.Desktop apps, it will require having SSH keys set up before trying to provision the host machine for Meadow.Cloud use. (This step is not required for Meadow devices like Feather and Core-Compute-based systems that will generate their own keys automatically.)
+
+    ```console
+    ssh-keygen -t rsa -m pem
+    ```
+
+    Generate the keys to the default `.ssh` location. Do not set a passphrase for the keys, which will prevent the provisioning process from accessing them.
+
+    If you skip this step, you will see an error when you provision your Meadow.Desktop host device.
+
+    ```console
+    > meadow device provision
+    Retrieving your user and organization information...
+    Requesting device public key (this will take a minute)...
+    SSH folder not found
+    ```
+
+1. Select the Meadow device you wish to provision to send data to Meadow.Cloud.
+
+    ```console
+    meadow port select
+    ```
+
+    Alternatively, if you are provisioning your local development machine to send data to Meadow.Cloud, you will instead need to set up the route to the local machine manually. This will allow you to send data to Meadow.Cloud from Meadow.Desktop applications as well.
+
+    ```console
+    meadow config route local
+    ```
+
 1. Connect to your Meadow device and provision it with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
 
     ```console

@@ -33,17 +33,16 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
-Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
-Meadow.Windows App             WinForms           [C#]            Meadow/Console
+Template Name                  Short Name           Language        Tags
+-----------------------------  -------------------  --------------  --------------
+Meadow Core-Compute App        meadow-ccm           [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          meadow-feather       [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 meadow-library       [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         meadow-project-lab   [C#]            Meadow/Console
+Meadow.Desktop App             meadow-desktop       [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   meadow-jetson-nano   [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  meadow-raspberry-pi  [C#]            Meadow/Console
+Meadow.Linux reTerminal App    meadow-reterminal    [C#]            Meadow/Console
 ```
 
 ### Step 4 - Add VS Linux Debugger Studio Extension
@@ -116,16 +115,16 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name                  Short Name           Language        Tags
+-----------------------------  -------------------  --------------  --------------
+Meadow Core-Compute App        meadow-ccm           [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          meadow-feather       [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 meadow-library       [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         meadow-project-lab   [C#]            Meadow/Console
+Meadow.Desktop App             meadow-desktop       [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   meadow-jetson-nano   [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  meadow-raspberry-pi  [C#]            Meadow/Console
+Meadow.Linux reTerminal App    meadow-reterminal    [C#]            Meadow/Console
 ```
 
 ### Step 4 - Create your first Meadow application

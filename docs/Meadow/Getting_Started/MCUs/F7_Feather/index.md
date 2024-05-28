@@ -39,16 +39,16 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name                  Short Name           Language        Tags
+-----------------------------  -------------------  --------------  --------------
+Meadow Core-Compute App        meadow-ccm           [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          meadow-feather       [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 meadow-library       [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         meadow-project-lab   [C#]            Meadow/Console
+Meadow.Desktop App             meadow-desktop       [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   meadow-jetson-nano   [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  meadow-raspberry-pi  [C#]            Meadow/Console
+Meadow.Linux reTerminal App    meadow-reterminal    [C#]            Meadow/Console
 ```
 
 ### Step 5 - Deploy latest version of Meadow.OS
@@ -121,16 +121,16 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name                  Short Name           Language        Tags
+-----------------------------  -------------------  --------------  --------------
+Meadow Core-Compute App        meadow-ccm           [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          meadow-feather       [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 meadow-library       [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         meadow-project-lab   [C#]            Meadow/Console
+Meadow.Desktop App             meadow-desktop       [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   meadow-jetson-nano   [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  meadow-raspberry-pi  [C#]            Meadow/Console
+Meadow.Linux reTerminal App    meadow-reterminal    [C#]            Meadow/Console
 ```
 
 ### Step 6 - Create your first Meadow application
@@ -143,7 +143,7 @@ Open VSCode and in a new Terminal within, enter the following command to create 
 dotnet new F7Feather --name F7FeatherDemo
 ```
 
-What this Meadow application does is creates an `RgbPwmLed` object on the onboard RGB LED and cycles through different colors.
+This Meadow application creates a `RgbPwmLed` object that represents the onboard RGB LED and cycles through different colors.
 
 ![Source code for a new Blinky application.](../../Common_Assets/wildernesslabs_meadow_vscode_blinky.png)
 
@@ -170,6 +170,83 @@ Once all the files are transferred to your device, the app will start in debug m
 You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
 
 ![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
+
+  </TabItem>
+  <TabItem value="meadowcli" label="Meadow CLI">
+
+### Step 1 - Install .NET Runtime
+
+Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
+
+### Step 2 - Install Meadow CLI
+
+Download and Install [Meadow CLI](https://www.nuget.org/packages/WildernessLabs.Meadow.CLI//) if it's not installed already.
+
+### Step 3 - Deploy latest version of Meadow.OS
+
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
+
+### Step 4 - Install Meadow Project Templates
+
+Open a console window and enter the following command to install a list of Meadow project templates:
+
+```console
+dotnet new install WildernessLabs.Meadow.Template
+```
+
+When installed, you’ll see a list of templates available:
+
+```console
+The following template packages will be installed:
+   WildernessLabs.Meadow.Template
+
+Success: WildernessLabs.Meadow.Template installed the following templates:
+Template Name                  Short Name         Language        Tags
+-----------------------------  -----------------  --------------  --------------
+Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
+Meadow.Desktop App             MeadowDesktop      [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
+Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+```
+
+### Step 5 - Create your first Meadow application
+
+Lets verify everything is set up by deploying your first Meadow application.
+
+Open a console or terminal and enter the following command to create a new Meadow F7 Feather project:
+
+```console
+dotnet new F7Feather --name F7FeatherDemo
+```
+
+This Meadow application creates a `RgbPwmLed` object representing the onboard RGB LED and cycles through different colors.
+
+![Source code for a new Blinky application.](../../Common_Assets/wildernesslabs_meadow_vscode_blinky.png)
+
+### Step 6 - Deploy your application
+
+With no code changes, let's deploy this app to your new board.
+
+Again in your console window, use the `meadow app run` command to build, trim, deploy and start your Meadow application.
+
+:::caution
+When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
+:::
+
+Once all the files are transferred to your device, the app will start and you should see Meadow’s onboard RGB LED lighting up in different colors.
+
+![Animation showing Meadow Feather F7 running Blinky and cycling between colors on the onboard LED.](wildernesslabs_feather_blinky.gif)
+
+### Step 7 - Check out additional samples
+
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
+
+![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-project-samples.jpg)
+
 
   </TabItem>
 </Tabs>
