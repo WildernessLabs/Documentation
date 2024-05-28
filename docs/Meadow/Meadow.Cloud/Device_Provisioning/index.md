@@ -23,7 +23,7 @@ Before a device can enjoy things like Over-the-Air updates and Health Monitoring
 1. **One-time prerequisite requirement for Meadow.Desktop hosts**: If you are provisioning a machine running Meadow.Desktop apps, it will require having SSH keys set up before trying to provision the host machine for Meadow.Cloud use. (This step is not required for Meadow devices like Feather and Core-Compute-based systems that will generate their own keys automatically.)
 
     ```console
-    ssh-keygen
+    ssh-keygen -t rsa -m pem
     ```
 
     Generate the keys to the default `.ssh` location. Do not set a passphrase for the keys, which will prevent the provisioning process from accessing them.
