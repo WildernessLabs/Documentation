@@ -10,9 +10,68 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
-## v1.11.0
+## v1.12.0
 
-This is a full stack update (OS, Tooling and NuGet packages) release that improves [what?] stability and with some minor performance improvements.
+### Meadow.OS
+
+* Comprehensive improvements to the Meadow’s error reporting and catastrophic error recovery logic
+* A WiFi access point scanning memory leak has been resolved.
+* Connections to SNI-enabled TLS server endpoints are now supported
+* Several minor improvements and bug fixes
+
+### Meadow.Core
+  
+* Significant reliability improvements in networking stack
+* General fixes and improvements in Meadow Cloud connections and reporting
+* Added `IRealTimeClock`, `IBatteryBackedPeripheral` interfaces
+* Added `MeadowSystemErrorInfo` class
+* Added `NetworkAdapter.NetworkConnectFailed` event
+* Added `MeadowCloudService.QueueCount` property
+* ESP32 errors now surfaced through `MeadowSystemErrorInfo`
+* Added implementation of `IWifiNetworAdapter` to Windows platform
+* Bug fix in timeout-parameter device `Sleep` call
+* Bug fix for invalid F7-platform CPU temp reporting
+
+  #### Breaking changes
+
+* `NetworkAdapter.ConnectToDefaultnetwork` is now async and returns a Task
+
+### Meadow.Foundation
+  
+* Added `ADT7410` high resolution temperature sensor driver
+* Added `ADXL343` accelerometer driver
+* Added `PCF8523` real time clock driver
+* Added `AHT10` and `AHT20` temperature and humidity sensor drivers
+* Added additional escape character validation to `MicroJson`
+* Added ability to fill paths in `MicroGraphics`
+* Added nearest neighbor and bilinear resizing for `MicroGraphics` buffers
+* Added basic rotation for `MicroGraphics` buffers
+* Added ability to draw anti-aliased lines in `MicroGraphics`
+* Added Rgb666 18bpp `MicroGraphics` buffer
+* Added 18bpp color modes for the `ILI3941` and `ST7789` TFT SPI displays 
+* Added `SimulatedLightSensor`
+* General bug fixes and optimizations
+
+  #### Breaking changes
+
+* `PixelBufferBase.RotateAndCovert` renamed to Rotate
+* `PixelBufferBase.ConvertPixelBuffer` renamed to Convert
+
+### Tooling
+
+#### Meadow.CLI v2
+
+* Improved folder support for file copying and deletes
+* Streamlined output when writing firmware on Mac and Linux
+* Better serial port detection on Mac
+* Fixed file write progress output bug
+* Better OS validation when trimming and running Meadow apps
+* Fixed false error when only writing runtime
+* Improved debugging support
+* Made build configuration check case-insentive
+* Lots of general bug fixes and stability improvements
+
+## v1.11.0.0
 
 ### Meadow.OS
 
