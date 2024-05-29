@@ -4,37 +4,24 @@ title: GitHub Action Upload
 subtitle: Getting started
 ---
 
-# Build and Upload Meadow MPAK Action
+With GitHub Actions, you can automate the complete process of building, testing, and uploading Meadow MPAK files to Meadow.Cloud using [`meadow-cloud-package-upload`](https://github.com/WildernessLabs/meadow-cloud-package-upload) action. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
 
-This GitHub Action is designed for the complete process of building, testing, and uploading Meadow MPAK files to the cloud. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
-
-## Description
-
-The "Deploy and Upload Meadow MPAK" action combines building, testing, packaging, and uploading processes into a single workflow. This ensures that your Meadow applications are compiled, tested, and deployed efficiently and consistently across your development team.
+The **Deploy and Upload Meadow MPAK** action combines building, testing, packaging, and uploading processes into a single workflow. This ensures that your Meadow applications are compiled, tested, and deployed efficiently and consistently across your development team.
 
 ## Inputs
 
-### `organization_id`
-**Required** The identifier for your organization within Meadow's cloud services.
+* `organization_id`* - The identifier for your organization within Meadow's cloud services.
+* `api_key`* - The API key for authenticating with Meadow's cloud services.
+* `os_version` - Specifies the operating system version for the Meadow device, allowing specific firmware versions to be targeted.
+* `cli_version` - Specifies the version of the [Meadow.CLI](../../Meadow_Tools/Meadow_CLI/index.md) tool to use.
+* `configs` - A JSON string of key-value pairs for replacing placeholders in `*.yaml` configuration files. Defaults to an empty object (`{}`).
+* `host` - The API URL for the Meadow cloud services. Allows the action to interface with different Meadow cloud environments.
 
-### `api_key`
-**Required** The API key for authenticating with Meadow's cloud services.
+_* required fields_
 
-### `os_version`
-Optional. Specifies the operating system version for the Meadow device, allowing specific firmware versions to be targeted.
+## Usage
 
-### `cli_version`
-Optional. Specifies the version of the Meadow Command Line Interface (CLI) tool to use.
-
-### `configs`
-Optional. A JSON string of key-value pairs for replacing placeholders in `*.yaml` configuration files. Defaults to an empty object (`{}`).
-
-### `host`
-Optional. The API URL for the Meadow cloud services. Allows the action to interface with different Meadow cloud environments.
-
-## How to Use
-
-Below is an example of how to implement this action in a GitHub workflow:
+To use this action, define it in your workflow YAML file with the necessary inputs. Below is an example of how to implement this action in a GitHub workflow:
 
 ```yaml
 name: Continuous Deployment of Meadow MPAK

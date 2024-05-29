@@ -140,7 +140,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new F7Feather --name F7FeatherDemo
+dotnet new meadow-feather --name F7FeatherDemo
 ```
 
 This Meadow application creates a `RgbPwmLed` object that represents the onboard RGB LED and cycles through different colors.
