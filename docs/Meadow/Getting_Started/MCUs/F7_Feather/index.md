@@ -220,7 +220,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open a console or terminal and enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new F7Feather --name F7FeatherDemo
+dotnet new meadow-feather --name F7FeatherDemo
 ```
 
 This Meadow application creates a `RgbPwmLed` object representing the onboard RGB LED and cycles through different colors.
