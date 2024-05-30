@@ -132,7 +132,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new CoreComputeModule --name CcmDemo
+dotnet new meadow-ccm --name CcmDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the CCM Dev Kit's onboard RGB LED and cycles through different colors.

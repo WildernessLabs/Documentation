@@ -52,7 +52,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new MeadowDesktop --name MacDemo
+dotnet new meadow-desktop --name MacDemo
 ```
 
 This Meadow.Desktop application opens a 320x240 pixel window saying `Hello, World` using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md).

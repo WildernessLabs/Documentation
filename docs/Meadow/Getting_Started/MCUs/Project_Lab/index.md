@@ -140,7 +140,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
 
 ```console
-dotnet new ProjectLab --name ProjectLabDemo
+dotnet new meadow-project-lab --name ProjectLabDemo
 ```
 
 This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.
@@ -168,6 +168,81 @@ Once all the files are transferred to your device, the app will start in debug m
 You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
 
 ![Meadow.Project.Samples GitHub Repository](wilderness-labs-meadow-projectlab-samples.jpg)
+
+  </TabItem>
+  <TabItem value="meadowcli" label="Meadow CLI">
+
+### Step 1 - Install .NET Runtime
+
+Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
+
+### Step 2 - Install Meadow CLI
+
+Download and Install [Meadow CLI](https://www.nuget.org/packages/WildernessLabs.Meadow.CLI//) if it's not installed already.
+
+### Step 3 - Deploy latest version of Meadow.OS
+
+Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
+
+### Step 4 - Install Meadow Project Templates
+
+Open a console window and enter the following command to install a list of Meadow project templates:
+
+```console
+dotnet new install WildernessLabs.Meadow.Template
+```
+
+When installed, you’ll see a list of templates available:
+
+```console
+The following template packages will be installed:
+   WildernessLabs.Meadow.Template
+
+Success: WildernessLabs.Meadow.Template installed the following templates:
+Template Name                  Short Name         Language        Tags
+-----------------------------  -----------------  --------------  --------------
+Meadow Core-Compute App        meadow-ccm           [C#],F#,VB.NET  Meadow/Console
+Meadow F7 Feather App          meadow-feather       [C#],F#,VB.NET  Meadow/Console
+Meadow Library                 meadow-library       [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App         meadow-project-lab   [C#]            Meadow/Console
+Meadow.Desktop App             meadow-desktop       [C#]            Meadow/Console
+Meadow.Linux Jetson Nano App   meadow-jetson-nano   [C#]            Meadow/Console
+Meadow.Linux Raspberry Pi App  meadow-raspberry-pi  [C#]            Meadow/Console
+Meadow.Linux reTerminal App    meadow-reterminal    [C#]            Meadow/Console
+```
+
+### Step 5 - Create your first Meadow application
+
+Lets verify everything is set up by deploying your first Meadow application. 
+
+Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
+
+```console
+dotnet new meadow-project-lab --name ProjectLabDemo
+```
+
+This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.
+
+### Step 6 - Deploy your application
+
+With no code changes, let's deploy this app to your new board.
+
+Again in your console window, use the `meadow app run` command to build, trim, deploy and start your Meadow application.
+
+:::caution
+When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
+:::
+
+Once all the files are transferred to your device, the app will start in debug mode and you should see your Project Lab loading up a screen with all the sensor values refreshing every few seconds. You can also press the push buttons and see their status change right away.
+
+![Project Lab app running](wildernesslabs_projectlab_blinky.gif)
+
+### Step 7 - Check out additional samples
+
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main) GitHub repo.
+
+![Meadow.Samples GitHub Repository](./wilderness-labs-meadow-projectlab-samples.jpg)
+
 
   </TabItem>
 </Tabs>
