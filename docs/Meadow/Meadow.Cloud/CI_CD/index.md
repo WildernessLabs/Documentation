@@ -1,6 +1,7 @@
 ---
 layout: Meadow
-title: Publishing w/ GitHub Actions
+title: Publishing with GitHub Actions
+sidebar_label: GitHub Actions Publisher
 subtitle: Getting started
 ---
 
@@ -10,7 +11,7 @@ With GitHub Actions, you can automate the complete process of building, uploadin
 
 Before you continue with this guide, make sure your Meadow application has [over-the-air updates](../OtA_Updates/index.md) enabled. You can also head over to our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples) repo where you can check OTA Update samples under the Meadow.Cloud section.
 
-## How to configure a repo with Meadow.Cloud Publisher
+## Configure a repo with Meadow.Cloud Publisher
 
 ### Step 1 - Get a Meadow.Cloud API Key
 
@@ -57,17 +58,17 @@ jobs:
     - name: Build + Upload
       uses: WildernessLabs/meadow-cloud-package-upload@v1.0.0
       with:        
-        ORGANIZATION_ID: "<YOUR ORGANIZATION ID>" # Required, set this to your organization
-        API_KEY: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
-        OS_VERSION: "1.12.0.0" # Optional, set this to the OS version if required        
-        CONFIGS : '{"CONFIG_WIFI_SSID": "${{ secrets.CONFIG_WIFI_SSID }}", "CONFIG_WIFI_PASS": "${{ secrets.CONFIG_WIFI_PASS }}"}' # Optional, set this to a matching token to replaced within your *.yaml files if required
+        organization_id: "<YOUR ORGANIZATION ID>" # Required, set this to your organization
+        api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
+        os_version: "1.12.0.0" # Optional, set this to the OS version if required        
+        configs : '{"CONFIG_WIFI_SSID": "${{ secrets.CONFIG_WIFI_SSID }}", "CONFIG_WIFI_PASS": "${{ secrets.CONFIG_WIFI_PASS }}"}' # Optional, set this to a matching token to replaced within your *.yaml files if required
         
     - name: Publish
       uses: WildernessLabs/meadow-cloud-package-publish@v1.0.0
       with:        
-        API_KEY: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
-        COLLECTION_ID: "<YOUR COLLECTION ID>" # Required, set this to an api key that has package scope        
-        METADATA: "metadata part of my publish" # Optional, set this to the desired metadata for publish if required
+        api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
+        collection_id: "<YOUR COLLECTION ID>" # Required, set this to an api key that has package scope        
+        metadata: "metadata part of my publish" # Optional, set this to the desired metadata for publish if required
 ```
 
 Make sure to paste your ``Organization ID`` and ``Collection ID`` in the corresponding fields.
@@ -81,3 +82,12 @@ If everything is configured properly, you can finally publish app updates from G
 ### End-To-End Sample Repo
 
 If you're having issues getting your publisher to work, you can refer to our [F7FeatherDemo](https://github.com/WildernessLabs/F7FeatherDemo) repo that has a basic Meadow F7 Feather application with OTA Updates enabled along with the GitHub Action Publisher properly configured.
+
+### Check out other Meadow.Cloud Features
+
+With the automatic publishing configured, check out the other Meadow.Cloud features.
+
+* [Health Monitoring](../Health_Monitoring/)
+* [Logs + Events](../Logs_Events/)
+* [Command + Control](../Command_Control/)
+* [Integrations](../Integrations/)
