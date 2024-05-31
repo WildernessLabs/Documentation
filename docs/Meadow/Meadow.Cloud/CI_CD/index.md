@@ -6,15 +6,11 @@ subtitle: Getting started
 
 With GitHub Actions, you can automate the complete process of building, uploading and publishing Meadow MPAK files to Meadow.Cloud using [`meadow-cloud-package-upload`](https://github.com/WildernessLabs/meadow-cloud-package-upload) and [`meadow-cloud-package-publish`](https://github.com/WildernessLabs/meadow-cloud-package-publish) actions. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
 
-The **Deploy and Upload Meadow MPAK** action combines building, testing, packaging, and uploading processes into a single workflow. This ensures that your Meadow applications are compiled, tested, and deployed efficiently and consistently across your development team.
-
 ## Ensure your Meadow device receives OTA Updates
 
 Before you continue with this guide, make sure your Meadow application has [over-the-air updates](../OtA_Updates/index.md) enabled. You can also head over to our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples) repo where you can check OTA Update samples under the Meadow.Cloud section.
 
-## Meadow.Cloud Uploader and Publisher
-
-To configure our Meadow.Cloud publisher in your repository, follow these steps:
+## How to configure a repo with Meadow.Cloud Publisher
 
 ### Step 1 - Get a Meadow.Cloud API Key
 
@@ -22,7 +18,7 @@ Login to your Wilderness Labs account in the [Meadow.Cloud](https://www.meadowcl
 
 ![Create API key](wildernesslabs-api-key.jpg)
 
-### Step 2 - Get Organization ID and Collection ID
+### Step 2 - Get your Organization and Collection IDs
 
 In your Meadow.Cloud site, go to the **Collections** section and copy the `Collections ID` and keep it somewhere handy.
 
@@ -32,11 +28,11 @@ You'll also need the `Organization ID`. Click on your profile and select **Your 
 
 ![Get organization ID](wildernesslabs-organization-id.png)
 
-### Step 3 - Create API Key and WIFI Secrets
+### Step 3 - Add Repository Secrets for your API Key and WiFi credentials
 
-So you dont check-in your WiFi credentials nor your API key, you can create your secrets and add them there. We'll need to reference them later on the GitHub Actions workflow script.
+So you dont check-in any WiFi credentials nor API keys, you can create repository secrets and add them there. We'll reference them later on the GitHub Actions workflow script.
 
-Head over to your repo, and go to the **Settings** tab, **Secrets and variables** under the **Security** section, and enter the repository secrets for your WiFi credentials and API Key.
+In the repo page, go to the **Settings** tab, look **Secrets and variables** settings under the **Security** section, and enter the repository secrets for WiFi credentials and API Key.
 
 ![Add WiFi and API Key secrets](wildernesslabs-secrets.jpg)
 
@@ -78,6 +74,10 @@ Make sure to paste your ``Organization ID`` and ``Collection ID`` in the corresp
 
 ### Step 5 - Publish an update
 
-If you configured your script properly, you can finally publish app updates from GitHub Actions. Head over to your repo, select the **Actions** tab, and select the workflow you just created. Click the **Run workflow** button to publish an update.
+If everything is configured properly, you can finally publish app updates from GitHub Actions. Head over to your repo, select the **Actions** tab, and select the workflow you just created. Click the **Run workflow** button to publish an update.
 
 ![Publish an update](wildernesslabs-publish.jpg)
+
+### End-To-End Sample Repo
+
+If you're having issues getting your publisher to work, you can refer to our [F7FeatherDemo](https://github.com/WildernessLabs/F7FeatherDemo) repo that has a basic Meadow F7 Feather application with OTA Updates enabled along with the GitHub Action Publisher properly configured.

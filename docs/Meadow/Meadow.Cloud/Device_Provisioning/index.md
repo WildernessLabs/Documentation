@@ -19,7 +19,7 @@ Install the [Meadow.CLI](https://www.nuget.org/packages/WildernessLabs.Meadow.CL
 dotnet tool install --global WildernessLabs.Meadow.CLI
 ```
 
-### Step 2 - Login to Meadow.Cloud via Meadow.CLI
+### Step 2 - Login to your Wilderness Labs account via Meadow.CLI
 
 Use Meadow.CLI to authenticate with Meadow.Cloud. You'll need to [register](https://identity.wildernesslabs.co/signin/register) an account with Wilderness Labs if you haven't already done so.
 
@@ -35,7 +35,13 @@ Select the Meadow device you wish to provision to send data to Meadow.Cloud.
 meadow port select
 ```
 
+### Step 4 - Provision the Meadow device
 
+Provision your device with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
+
+```console
+meadow device provision --name "my device"
+```
 
 
   </TabItem>
@@ -46,12 +52,12 @@ meadow port select
 Install the [Meadow.CLI](https://www.nuget.org/packages/WildernessLabs.Meadow.CLI) using the .NET CLI.
 
 ```console
-dotnet tool install --global WildernessLabs.Meadow.CLI
+dotnet tool install WildernessLabs.Meadow.CLI --global
 ```
 
-### Step 2 - Login to Meadow.Cloud via Meadow.CLI
+### Step 2 - Login to your Wilderness Labs account via Meadow.CLI
 
-Use Meadow.CLI to authenticate with Meadow.Cloud. You'll need to [register](https://identity.wildernesslabs.co/signin/register) an account with Wilderness Labs if you haven't already done so.
+Use Meadow.CLI to authenticate with your Wilderness Labs developer account. You'll need to [register](https://identity.wildernesslabs.co/signin/register) an account with Wilderness Labs if you haven't already done so.
 
 ```console
 meadow login
@@ -86,18 +92,20 @@ If you are provisioning your local development machine to send data to Meadow.Cl
 meadow config route local
 ```
 
+### Step 5 - Provision the Meadow device
+
+Provision your dev machine with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
+
+```console
+meadow device provision --name "my dev machine"
+```
+
   </TabItem>
 </Tabs>
 
+You can visit [Meadow.Cloud](https://www.meadowcloud.co) to verify your device has been successfully provisioned.
 
-
-1. Connect to your Meadow device and provision it with the Meadow CLI. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
-
-    ```console
-    meadow device provision --name "my device"
-    ```
-
-You can visit [https://www.meadowcloud.co](https://www.meadowcloud.co) to verify your device has been successfully provisioned.
+### Check out other Meadow.Cloud Features
 
 With a device provisioned, check out the other Meadow.Cloud features.
 
