@@ -18,11 +18,7 @@ The **Deploy and Upload Meadow MPAK** action combines building, testing, packagi
 
 ### Step 4 - Implement Meadow.Cloud events to download and apply incoming updates
 
-## Meadow.Cloud Uploader
-
-### Step 1 - Create a GitHub action Workflow
-
-In your repository, make a `.github` folder if you havent already and inside add a `workflows` folder. Finally, create a workflow file, `main.yml` for example.
+## Meadow.Cloud Uploader and Publisher
 
 ### Step 2 - Get a Meadow.Cloud API Key
 
@@ -32,19 +28,25 @@ To configure our Meadow.Cloud publisher, login to your Meadow.Cloud account, cli
 
 ### Step 3 - Get Organization ID and Collection ID
 
-get collection ID
+In your Meadow.Cloud account, go to your Collections section and copy the ID and keep it somewhere handy.
 
 ![Get collection ID](wildernesslabs-collection-id.png)
 
-get organization ID
+You'll also need your Organization ID. Click on your profile and select "Your Organizations", and copy the ID value there as well.
 
 ![Get organization ID](wildernesslabs-organization-id.png)
 
 ### Step 4 - Create API Key and WIFI Secrets
 
+So you dont check-in your WiFi credentials nor Meadow.Cloud API key, you can create your secrets and add them there, since we'll need to reference them later on when building the GitHub Actions workflow script.
+
 Head over to your repo, and go to the Settings tab
 
+![Add WiFi and API Key secrets](wildernesslabs-secrets.jpg)
 
+### Step 1 - Create a GitHub action Workflow
+
+In your repository, add a `.github` folder if you havent already and inside add a `workflows` folder. Finally, create a workflow file, `main.yml` for example.
 
 
 ```yml
