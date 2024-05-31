@@ -15,4 +15,5 @@ Next, check out the docs:
 * [Health Monitoring](Health_Monitoring/)
 * [Logs + Events](Logs_Events/)
 * [Command + Control](Command_Control/)
+* [Publishing w/ GitHub Actions](CI_CD/)
 * [Integrations](Integrations/)
