@@ -6,7 +6,7 @@ subtitle: Meadow.Foundation
 
 ## Hello, World!
 
-1. [Configure your Meadow development environment](/Meadow/Getting_Started/).
+1. [Configure your Meadow development environment](../../Getting_Started/MCUs/F7_Feather/index.md).
 1. Create a new C# Meadow Application project, name it `HelloPulsy`.
 1. Plug the longer leg (anode) of a blue LED into pin `13` and the other leg into `GND`:
 
