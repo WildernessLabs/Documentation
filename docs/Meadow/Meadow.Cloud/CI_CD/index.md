@@ -5,7 +5,7 @@ sidebar_label: GitHub Actions Publisher
 subtitle: Getting started
 ---
 
-With GitHub Actions, you can automate the complete process of building, uploading and publishing Meadow MPAK files to Meadow.Cloud using [`meadow-cloud-package-upload`](https://github.com/WildernessLabs/meadow-cloud-package-upload) and [`meadow-cloud-package-publish`](https://github.com/WildernessLabs/meadow-cloud-package-publish) actions. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
+With GitHub Actions, you can automate the complete process of building, uploading and publishing Meadow MPAK files to Meadow.Cloud using [`Meadow.Cloud Package Upload`](https://github.com/marketplace/actions/meadow-cloud-package-upload) and [`Meadow.Cloud Package Publish`](https://github.com/marketplace/actions/meadow-cloud-package-publish) GitHub Actions. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
 
 ## Ensure your Meadow device receives OTA Updates
 
@@ -29,15 +29,36 @@ You'll also need the `Organization ID`. Click on your profile and select **Your 
 
 ![Get organization ID](wildernesslabs-organization-id.png)
 
-### Step 3 - Add Repository Secrets for your API Key and WiFi credentials
+### Step 3 - Setting up WiFi config file (if using WiFi connectivity)
 
-So you dont check-in any WiFi credentials nor API keys, you can create repository secrets and add them there. We'll reference them later on the GitHub Actions workflow script.
+:::caution
+This guide is using an example thats using a WiFi network connection. If your project is using Ethernet or Cellular to listen for Over-the-Air Updates, you can skip this step and continue on Step 4.
+:::
 
-In the repo page, go to the **Settings** tab, look **Secrets and variables** settings under the **Security** section, and enter the repository secrets for WiFi credentials and API Key.
+Once you have your hardware and app deployed and connected to a WiFI network to listen for OTA updates, you need to update the `wifi.config.yml` and replace the credentials with GitHub Actions variables:
+
+```yml
+# WiFi network credentials
+Credentials:
+
+    # WiFi SSID
+    Ssid: {{CONFIG_WIFI_SSID}}
+
+    # WiFi Password
+    Password: {{CONFIG_WIFI_PASS}}
+```
+
+That way you dont need to have hard-coded WiFi credentials inside your application. Instead, you can create repository variables, and the **GitHub Actions Publisher** will replace them in the upload pipeline.
+
+### Step 4 - Add Repository Secrets for sensitive data
+
+Create repository secrets to store your sensitive information like WiFi credentials (if you're using WiFi), API Keys, etc. You'll reference them later when writing the GitHub Actions workflow script.
+
+In the repo page, go to the **Settings** tab, look **Secrets and variables** settings under the **Security** section, and enter the repository secrets for your private data such as WiFi credentials, API keys, etc.
 
 ![Add WiFi and API Key secrets](wildernesslabs-secrets.jpg)
 
-### Step 4 - Create a GitHub action Workflow
+### Step 5 - Create a GitHub action Workflow
 
 In your repository, add a `.github` folder if you havent already and inside add a `workflows` folder. Finally, create a workflow file, `main.yml` for example. Copy the following code block:
 
@@ -77,9 +98,15 @@ jobs:
         metadata: "metadata part of my publish" # Optional, set this to the desired metadata for publish if required
 ```
 
+:::info
+Things to note:
+ - You can access secrets variables by doing `${{ secrets.VARIABLE_NAME }}`
+ - In the `configs` field at the **Build + Upload** step, you can enter a list of repository variables along with values that will be replaced during the build and upload pipeline. In this example guide, we're referencing the SSID and Password variables names that match to the ones given in the `wifi.config.yml` file.
+:::
+
 Make sure to paste your ``Organization ID`` and ``Collection ID`` in the corresponding fields.
 
-### Step 5 - Publish an update
+### Step 6 - Publish an update
 
 If everything is configured properly, you can finally publish app updates from GitHub Actions. Head over to your repo, select the **Actions** tab, and select the workflow you just created. Click the **Run workflow** button to publish an update.
 
