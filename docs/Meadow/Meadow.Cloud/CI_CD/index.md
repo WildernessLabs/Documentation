@@ -5,7 +5,7 @@ sidebar_label: GitHub Actions Publisher
 subtitle: Getting started
 ---
 
-With GitHub Actions, you can automate the complete process of building, uploading and publishing Meadow MPAK files to Meadow.Cloud using [`meadow-cloud-package-upload`](https://github.com/WildernessLabs/meadow-cloud-package-upload) and [`meadow-cloud-package-publish`](https://github.com/WildernessLabs/meadow-cloud-package-publish) actions. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
+With GitHub Actions, you can automate the complete process of building, uploading and publishing Meadow MPAK files to Meadow.Cloud using [`Meadow.Cloud Package Upload`](https://github.com/marketplace/actions/meadow-cloud-package-upload) and [`Meadow.Cloud Package Publish`](https://github.com/marketplace/actions/meadow-cloud-package-publish) GitHub Actions. It provides an integrated solution for managing the deployment pipeline of Meadow-based applications.
 
 ## Ensure your Meadow device receives OTA Updates
 
@@ -29,9 +29,26 @@ You'll also need the `Organization ID`. Click on your profile and select **Your 
 
 ![Get organization ID](wildernesslabs-organization-id.png)
 
+### Step 3 - Setting up WiFi config file
+
+Once you have your hardware and app deployed and connected to a WiFI network to listen for OTA updates, you need to update the `wifi.config.yml` and replace the credentials with GitHub Actions variables:
+
+```yml
+# WiFi network credentials
+Credentials:
+
+    # WiFi SSID
+    Ssid: {{CONFIG_WIFI_SSID}}
+
+    # WiFi Password
+    Password: {{CONFIG_WIFI_PASS}}
+```
+
+That way you dont need to have hard-coded WiFi credentials inside your application. Instead, you can create repository variables, and the GitHub Actions Publisher will replace them in the upload pipeline.
+
 ### Step 3 - Add Repository Secrets for your API Key and WiFi credentials
 
-So you dont check-in any WiFi credentials nor API keys, you can create repository secrets and add them there. We'll reference them later on the GitHub Actions workflow script.
+Create repository secrets to store your WiFi credentials and the API Key. We'll reference them later on the GitHub Actions workflow script.
 
 In the repo page, go to the **Settings** tab, look **Secrets and variables** settings under the **Security** section, and enter the repository secrets for WiFi credentials and API Key.
 
@@ -76,6 +93,12 @@ jobs:
         collection_id: "<YOUR COLLECTION ID>" # Required, set this to an api key that has package scope        
         metadata: "metadata part of my publish" # Optional, set this to the desired metadata for publish if required
 ```
+
+:::info
+Things to note:
+ - You can access secrets variables by doing `${{ secrets.VARIABLE_NAME }}`
+ - In the `configs` at the **Build + Upload** step, make sure the SSID and Password variables names match to the ones given in the `wifi.config.yml` file.
+:::
 
 Make sure to paste your ``Organization ID`` and ``Collection ID`` in the corresponding fields.
 
