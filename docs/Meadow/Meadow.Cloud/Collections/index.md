@@ -35,3 +35,14 @@ Now your devices have moved to another Collection and you can confirm when you c
 To delete a Collection, you first need to either delete or move those devices to another Collection. Once the Collection is empty, select it to show the contextual menu on top and Click the **Delete** button.
 
 ![Delete a collection](wildernesslabs-collections-delete.png)
+
+### Check out other Meadow.Cloud Features
+
+Now that you've learned about Collections, check out the other Meadow.Cloud features.
+
+* [Over-the-Air (OtA) Updates](../OtA_Updates/)
+* [Health Monitoring](../Health_Monitoring/)
+* [Logs + Events](../Logs_Events/)
+* [Command + Control](../Command_Control/)
+* [GitHub Actions Publisher](../CI_CD/)
+* [Integrations](../Integrations/)
