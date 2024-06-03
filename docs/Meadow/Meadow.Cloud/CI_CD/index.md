@@ -32,7 +32,7 @@ You'll also need the `Organization ID`. Click on your profile and select **Your 
 ### Step 3 - Setting up WiFi config file (if using WiFi connectivity)
 
 :::caution
-This guide is using an example thats using a WiFi network connection. If your project is using Ethernet or Cellular to listen for Over-the-Air Updates, you can skip this step and continue on Step 3.
+This guide is using an example thats using a WiFi network connection. If your project is using Ethernet or Cellular to listen for Over-the-Air Updates, you can skip this step and continue on Step 4.
 :::
 
 Once you have your hardware and app deployed and connected to a WiFI network to listen for OTA updates, you need to update the `wifi.config.yml` and replace the credentials with GitHub Actions variables:
