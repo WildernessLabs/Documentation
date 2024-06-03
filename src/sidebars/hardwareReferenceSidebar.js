@@ -123,25 +123,32 @@ const hardwareReferenceSidebar = [
   {
     type: "category",
     label: "Meadow Hardware",
-    link: {
-      type: "doc",
-      id: "Hardware/Reference/Meadow_Hardware/Meadow_F7/index",
-    },
     items: [
-      "Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v1/index",
-      "Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v2/index",
       {
         type: "category",
-        label: "Core-Compute Module",
+        label: "Meadow F7",
         link: {
           type: "doc",
-          id: "Hardware/Reference/Meadow_Hardware/Getting_Started_Core-Compute_Module/index",
+          id: "Hardware/Reference/Meadow_Hardware/Meadow_F7/index",
         },
-        items: ["Hardware/Reference/Meadow_Hardware/Core-Compute_SD_Card/index"],
+        items: [
+          "Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v1/index",
+          "Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v2/index",
+          {
+            type: "category",
+            label: "Core-Compute Module",
+            link: {
+              type: "doc",
+              id: "Hardware/Reference/Meadow_Hardware/Getting_Started_Core-Compute_Module/index",
+            },
+            items: [
+              "Hardware/Reference/Meadow_Hardware/Core-Compute_SD_Card/index",
+            ],
+          },
+        ],
       },
     ],
   },
-
 ];
 
 module.exports = hardwareReferenceSidebar;
