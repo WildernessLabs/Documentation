@@ -29,7 +29,7 @@ You'll also need the `Organization ID`. Click on your profile and select **Your 
 
 ![Get organization ID](wildernesslabs-organization-id.png)
 
-### Step 3 - Setting up WiFi config file
+### Step 3 - Setting up WiFi config file (if using WiFi connectivity)
 
 :::caution
 This guide is using an example thats using a WiFi network connection. If your project is using Ethernet or Cellular to listen for Over-the-Air Updates, you can skip this step and continue on Step 3.
@@ -50,7 +50,7 @@ Credentials:
 
 That way you dont need to have hard-coded WiFi credentials inside your application. Instead, you can create repository variables, and the **GitHub Actions Publisher** will replace them in the upload pipeline.
 
-### Step 3 - Add Repository Secrets for sensitive data
+### Step 4 - Add Repository Secrets for sensitive data
 
 Create repository secrets to store your sensitive information like WiFi credentials (if you're using WiFi), API Keys, etc. You'll reference them later when writing the GitHub Actions workflow script.
 
@@ -58,7 +58,7 @@ In the repo page, go to the **Settings** tab, look **Secrets and variables** set
 
 ![Add WiFi and API Key secrets](wildernesslabs-secrets.jpg)
 
-### Step 4 - Create a GitHub action Workflow
+### Step 5 - Create a GitHub action Workflow
 
 In your repository, add a `.github` folder if you havent already and inside add a `workflows` folder. Finally, create a workflow file, `main.yml` for example. Copy the following code block:
 
@@ -106,7 +106,7 @@ Things to note:
 
 Make sure to paste your ``Organization ID`` and ``Collection ID`` in the corresponding fields.
 
-### Step 5 - Publish an update
+### Step 6 - Publish an update
 
 If everything is configured properly, you can finally publish app updates from GitHub Actions. Head over to your repo, select the **Actions** tab, and select the workflow you just created. Click the **Run workflow** button to publish an update.
 
