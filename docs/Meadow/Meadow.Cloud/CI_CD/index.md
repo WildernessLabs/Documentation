@@ -31,6 +31,10 @@ You'll also need the `Organization ID`. Click on your profile and select **Your 
 
 ### Step 3 - Setting up WiFi config file
 
+:::caution
+This guide is using an example thats using a WiFi network connection. If your project is using Ethernet or Cellular to listen for Over-the-Air Updates, you can skip this step and continue on Step 3.
+:::
+
 Once you have your hardware and app deployed and connected to a WiFI network to listen for OTA updates, you need to update the `wifi.config.yml` and replace the credentials with GitHub Actions variables:
 
 ```yml
@@ -44,13 +48,13 @@ Credentials:
     Password: {{CONFIG_WIFI_PASS}}
 ```
 
-That way you dont need to have hard-coded WiFi credentials inside your application. Instead, you can create repository variables, and the GitHub Actions Publisher will replace them in the upload pipeline.
+That way you dont need to have hard-coded WiFi credentials inside your application. Instead, you can create repository variables, and the **GitHub Actions Publisher** will replace them in the upload pipeline.
 
-### Step 3 - Add Repository Secrets for your API Key and WiFi credentials
+### Step 3 - Add Repository Secrets for sensitive data
 
-Create repository secrets to store your WiFi credentials and the API Key. We'll reference them later on the GitHub Actions workflow script.
+Create repository secrets to store your sensitive information like WiFi credentials (if you're using WiFi), API Keys, etc. You'll reference them later when writing the GitHub Actions workflow script.
 
-In the repo page, go to the **Settings** tab, look **Secrets and variables** settings under the **Security** section, and enter the repository secrets for WiFi credentials and API Key.
+In the repo page, go to the **Settings** tab, look **Secrets and variables** settings under the **Security** section, and enter the repository secrets for your private data such as WiFi credentials, API keys, etc.
 
 ![Add WiFi and API Key secrets](wildernesslabs-secrets.jpg)
 
@@ -97,7 +101,7 @@ jobs:
 :::info
 Things to note:
  - You can access secrets variables by doing `${{ secrets.VARIABLE_NAME }}`
- - In the `configs` at the **Build + Upload** step, make sure the SSID and Password variables names match to the ones given in the `wifi.config.yml` file.
+ - In the `configs` field at the **Build + Upload** step, you can enter a list of repository variables along with values that will be replaced during the build and upload pipeline. In this example guide, we're referencing the SSID and Password variables names that match to the ones given in the `wifi.config.yml` file.
 :::
 
 Make sure to paste your ``Organization ID`` and ``Collection ID`` in the corresponding fields.
