@@ -225,4 +225,4 @@ Your Meadow app should now be able to run on Meadow.Linux, calling into the usua
 
 ## Next steps
 
-Now that you have your Meadow.Linux device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Linux samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples/tree/main/Source/Linux).
+Now that you have your Meadow.Linux device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [Meadow.Linux samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Linux).

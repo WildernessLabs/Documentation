@@ -6,11 +6,13 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-## WiFi
+<Tabs groupId="ide">
+  <TabItem value="wifi" label="WiFi" default>
 
-### Connecting to a WiFi Network
 
-#### Option 1 - Programatically using C#
+## Connecting to a WiFi Network
+
+### Option 1 - Programatically using C#
 
 To connect to a Wi-Fi network, call the async function `Connect`, passing in the network name (SSID) and password. It will return a `Connection.Status` to verify if the connection was successful or if something went wrong, and allowing you to handle those situations.
 
@@ -41,7 +43,7 @@ wifi.NetworkConnected += (networkAdapter, networkConnectionEventArgs) =>
 };
 ```
 
-#### Option 2 - Using Config Files
+### Option 2 - Using Config Files
 
 Another option is you can make your Meadow device join a network at startup automatically using the app's configuration files.
 
@@ -79,7 +81,7 @@ Optionally you can set the `ClearDefaultCredentials: true` , to remove the last 
 
 It is important to note when the `ClearDefaultCredentials` is set, then the `SSID` and `Password` properties will be ignored.
 
-### Scanning for WiFi Networks
+## Scanning for WiFi Networks
 
 You can also scan for WiFi networks via the `Scan()` method on the `IWiFiNetworkAdapter`. This method will return a list of the discovered networks.
 
@@ -109,7 +111,10 @@ async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 }
 ```
 
-## Ethernet
+
+  </TabItem>
+  <TabItem value="ethernet" label="Ethernet" default>
+
 
 If you're using an [Dual, Switching Ethernet Add-on module](https://store.wildernesslabs.co/collections/meadow-core-compute/products/dual-ethernet-add-on), or a [Meadow F7v2 Core-Compute Dev Kit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board), you can easily use Ethernet network connectivity by switching the `DefaultInterface` setting in the meadow.config.yaml file:
 
@@ -130,6 +135,10 @@ Network:
 ...
 ```
 Optionally you can set the `UseDHCP: true` to get an IP Address automatically. If `DefaultInterface` is not set on the config file, it will default to WiFi.
+
+
+  </TabItem>
+</Tabs>
 
 ## Performing Requests
 
@@ -181,9 +190,9 @@ If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a ligh
 
 For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
 
-* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
-* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
-* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+* **[HttpListener](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/HttpListener_Basics)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/AntennaSwitching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
 
 ### Additional project samples
 

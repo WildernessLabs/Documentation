@@ -11,6 +11,7 @@ Meadow.Cloud brings a host of connected functionality to Meadow devices. From mo
 Next, check out the docs:
 
 * [Provision a Device](Device_Provisioning/)
+* [Understanding Collections](Collections/)
 * [Over-the-Air (OtA) Updates](OtA_Updates/)
 * [Health Monitoring](Health_Monitoring/)
 * [Logs + Events](Logs_Events/)

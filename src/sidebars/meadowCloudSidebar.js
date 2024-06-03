@@ -9,6 +9,7 @@ const meadowCloudSidebar = [
     },
     items: [
       "Meadow/Meadow.Cloud/Device_Provisioning/index",
+      "Meadow/Meadow.Cloud/Collections/index",
       "Meadow/Meadow.Cloud/OtA_Updates/index",
       "Meadow/Meadow.Cloud/Health_Monitoring/index",
       "Meadow/Meadow.Cloud/Logs_Events/index",

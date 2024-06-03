@@ -15,7 +15,7 @@ Before you continue with this guide, make sure your Meadow application has [over
 
 ### Step 1 - Get a Meadow.Cloud API Key
 
-Login to your Wilderness Labs account in the [Meadow.Cloud](https://www.meadowcloud.co/) site, click on your profile photo and select **Your API Keys**. Once there, create an API Key, and save it somewhere safe, as you'll need it further down when creating the GitHub Actions workflow script.
+Login to your Wilderness Labs account in the [Meadow.Cloud](https://www.meadowcloud.co/) site, click on your profile photo and select **Your API Keys**. Once there, create an API Key with **Package scope enabled**, and save it somewhere safe, as you'll need it further down when creating the GitHub Actions workflow script.
 
 ![Create API key](wildernesslabs-api-key.jpg)
 
@@ -55,17 +55,23 @@ jobs:
 
     steps:
 
+    - name: Checkout F7FeatherDemo
+      uses: actions/checkout@v3
+      with:
+        path: F7FeatherDemo
+
     - name: Build + Upload
-      uses: WildernessLabs/meadow-cloud-package-upload@v1.0.0
-      with:        
+      uses: WildernessLabs/meadow-cloud-package-upload@main
+      with:
+        project_path: "Source/F7FeatherDemo/"
         organization_id: "<YOUR ORGANIZATION ID>" # Required, set this to your organization
         api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
         os_version: "1.12.0.0" # Optional, set this to the OS version if required        
         configs : '{"CONFIG_WIFI_SSID": "${{ secrets.CONFIG_WIFI_SSID }}", "CONFIG_WIFI_PASS": "${{ secrets.CONFIG_WIFI_PASS }}"}' # Optional, set this to a matching token to replaced within your *.yaml files if required
         
     - name: Publish
-      uses: WildernessLabs/meadow-cloud-package-publish@v1.0.0
-      with:        
+      uses: WildernessLabs/meadow-cloud-package-publish@main
+      with:
         api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
         collection_id: "<YOUR COLLECTION ID>" # Required, set this to an api key that has package scope        
         metadata: "metadata part of my publish" # Optional, set this to the desired metadata for publish if required

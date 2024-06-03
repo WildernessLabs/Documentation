@@ -2,6 +2,7 @@
 layout: Meadow
 title: Mono Log Profiler
 subtitle: Profiling on Meadow OS
+sidebar_label: Profiler
 ---
 
 ## Mono Log Profiler
