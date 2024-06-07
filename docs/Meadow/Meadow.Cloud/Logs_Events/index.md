@@ -77,6 +77,8 @@ Recommendations
 
 Check out our [Integrations](../Integrations/) to ingest log and event data into your own infrastructure via webhooks, Azure Event Hubs, Azure Event Grid, Datacake and more.
 
+### Check out other Meadow.Cloud Features
+
 With your Meadow application logging events to Meadow.Cloud, check out the other Meadow.Cloud features.
 
 * [Provision more Devices](../Device_Provisioning/)

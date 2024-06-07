@@ -10,6 +10,12 @@
  */
 
 /* You can override the default Infima variables here. */
+body, html
+{
+  overflow-x: hidden !important;
+}
+
+
 :root {
   --ifm-color-primary: #ef7d3b;
   --ifm-color-primary-dark: var($color-brown);

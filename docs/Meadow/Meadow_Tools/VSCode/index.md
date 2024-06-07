@@ -38,5 +38,5 @@ Within the **Run and Debug** side bar, select the configuration drop-down and se
 ## Support
 
 Having trouble using this extension? 
-* File an [issue](https://github.com/WildernessLabs/Meadow.Desktop.Samples/issues) with a repro case to investigate, and/or
+* File an [issue](https://github.com/WildernessLabs/Meadow.Samples/issues) with a repro case to investigate, and/or
 * Join our [public Slack](http://slackinvite.wildernesslabs.co/), where we have an awesome community helping, sharing and building amazing things using Meadow.

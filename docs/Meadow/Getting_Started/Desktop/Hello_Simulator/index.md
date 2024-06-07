@@ -38,7 +38,7 @@ Right-click the new project and select **Set as Startup project**
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
@@ -114,7 +114,7 @@ A WinForm window should show up in the center of the screen saying `Hello, World
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
