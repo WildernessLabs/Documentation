@@ -67,7 +67,7 @@ You can now switch between the onboard chip antenna and an external antenna hook
 Device.SetAntenna(AntennaType.External);
 ```
 
-See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching) for more information.
+See the [Antenna Switching Sample app](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/AntennaSwitching) for more information.
 
 ## Introducing Maple Server for Meadow
 
