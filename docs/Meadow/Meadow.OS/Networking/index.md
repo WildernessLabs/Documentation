@@ -188,7 +188,7 @@ If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a ligh
 
 ### Core project samples
 
-For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
+For example code, see the following networking sample apps in the [Meadow.Samples repo](https://github.com/wildernesslabs/Meadow.Samples):
 
 * **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
 * **[HttpListener](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/HttpListener_Basics)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.

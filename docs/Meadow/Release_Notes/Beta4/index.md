@@ -47,7 +47,7 @@ The current battery charge level can be obtained via the `GetBatteryLevel()` API
 float voltage = Device.GetBatteryLevel();
 ```
 
-For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/BatteryLevel) in the [Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples).
+For more information, see the [BatteryLevel application sample](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/OS/BatteryLevel) in the [Meadow.Samples repo](https://github.com/WildernessLabs/Meadow.Samples).
 
 ## Network Updates
 
