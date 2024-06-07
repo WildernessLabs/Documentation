@@ -88,7 +88,7 @@ Meadow is already parsing `app.config.yaml` for its own settings, so retrieving 
 
 ## Sample Apps
 
-For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/OS/ConfigFiles) in the `Meadow.Samples` repo.
 
 <table>
   <tbody>
@@ -154,4 +154,3 @@ For an example of configuration in use, see the [Config Files sample App](https:
     </tr>
   </tbody>
 </table>
-
