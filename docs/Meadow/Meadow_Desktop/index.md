@@ -10,7 +10,7 @@ Meadow.Desktop offers quick-prototyping and high-responsiveness environments for
 
 You can also quickly prototype graphics using an emulated `IDisplay` object that renders to a standard window on your dev machine before deploying them to component displays. Additionally, running Meadow applications on more extensive hardware can also provide capabilities for intensive workloads requiring much more processing power.
 
-If you want to hit the ground running, go check our [Getting Started with Meadow.Desktop guide](../Getting_Started/Getting_Started_Meadow%2EDesktop) now.
+If you want to hit the ground running, check our [Getting Started with Meadow.Desktop guide](../Getting_Started/Getting_Started_Meadow%2EDesktop) now.
 
 * **[Cross-platform Display](Display_Silk)**
 * **[Connecting Hardware](Connecting_Hardware)**
