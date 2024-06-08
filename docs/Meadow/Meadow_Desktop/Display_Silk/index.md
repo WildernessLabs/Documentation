@@ -4,15 +4,13 @@ title: Cross-platform Display
 subtitle: Cross-platform Display
 ---
 
-Cross-platform Display
+Meadow.Desktop includes a built-in Window that can render MicroGraphics directly from your dev machine, which is perfect to rapidly build HMI screens before deploying them on a physical device. It's powered by [Silk.NET](https://dotnet.github.io/Silk.NET/), a high-speed, advanced graphics library that can run on Windows, macOS and varioud Linux distributions.
 
 ### Using Meadow.Desktop's Display
 
 ```csharp
 IResizablePixelDisplay display = Device.Display;
 ```
-
-
 
 ### Set Display dimensions and scaling
 
@@ -26,7 +24,7 @@ The code snippet above creates a pixel perfect 400x300 display (not accounting f
 
 ![Default display](wildernesslabs-display-400-300.jpg)
 
-However, if your monitor has a high pixel density, a 400x300 pixel window might look quite small, but you can use the `displayScale` to scale up the `Display`s buffer size, drawing bigger pixels:
+If your monitor has a high pixel density, a 400x300 window might look quite small, but you can use the `displayScale` to scale up the `Display`s buffer size, drawing bigger pixels:
 
 ```csharp
 Device.Display.Resize(width: 400, height: 300, displayScale: 2);
