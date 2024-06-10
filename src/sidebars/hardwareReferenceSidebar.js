@@ -136,7 +136,7 @@ const hardwareReferenceSidebar = [
           "Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v2/index",
           {
             type: "category",
-            label: "Core-Compute Module",
+            label: "Get Started with Meadow Core-Compute Module",
             link: {
               type: "doc",
               id: "Hardware/Reference/Meadow_Hardware/Getting_Started_Core-Compute_Module/index",

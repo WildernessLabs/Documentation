@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: SD Card use with Core-Compute module
+title: SD Card use with Core-Compute Module
 subtitle: Working with an SD card on the Meadow Core-Compute Development Kit
 ---
 
