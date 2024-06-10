@@ -78,7 +78,7 @@ Then, you'll need to create a file `private_key_pass.txt` carrying the client ce
 
 ### Step 6: Sending MQTT messages to an Azure IoT Hub
 
-Finally, you can use this [Meadow Sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/blob/main/Source/OS/TLS_Client_Authentication/MeadowApp.cs) to send messages to your Azure IoT Hub. Just remember to replace the variables `IOT_HUB_NAME` and `IOT_HUB_DEVICE_ID` with your Azure IoT Hub name and your device ID.
+Finally, you can use this [Meadow Sample App](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/TLS_Client_Authentication) to send messages to your Azure IoT Hub. Just remember to replace the variables `IOT_HUB_NAME` and `IOT_HUB_DEVICE_ID` with your Azure IoT Hub name and your device ID.
 
 ## Troubleshooting
 ### How to use .PFX certificate files

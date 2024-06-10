@@ -81,9 +81,7 @@ You can see the complete list of [additions and fixes here](https://github.com/W
 ## Meadow Samples
 
 As usual, all our samples repos and API docs have been updated to latest API changes:
-* [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
-* [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
-* [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
+* [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples)
 * [API Documentation](../../../docs/api/Meadow/)
 
 # RC-3 (v0.9.6.3)
