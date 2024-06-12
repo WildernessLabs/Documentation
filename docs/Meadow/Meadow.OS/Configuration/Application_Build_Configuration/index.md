@@ -1,6 +1,7 @@
 ---
 layout: Meadow
 title: Application Build Configuration
+sidebar_label: App Build Configuration
 subtitle: Adding build settings for F7-based hardware.
 ---
 

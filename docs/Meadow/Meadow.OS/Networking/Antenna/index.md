@@ -27,4 +27,4 @@ wifi.SetAntenna(AntennaType.External, persist: false);
 
 ## Antenna Sample
 
-For a more comprehensive example of using and changing the antenna, check out our [Antenna Switching sample](https://github.com/WildernessLabs/Meadow.Core.Samples/blob/main/Source/Network/Antenna_Switching/MeadowApp.cs).
+For a more comprehensive example of using and changing the antenna, check out our [Antenna Switching sample](https://github.com/WildernessLabs/Meadow.Samples/blob/main/Source/Meadow%20F7/Network/AntennaSwitching/MeadowApp.cs).

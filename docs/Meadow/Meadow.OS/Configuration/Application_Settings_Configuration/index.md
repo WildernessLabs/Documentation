@@ -1,14 +1,11 @@
 ---
 layout: Meadow
 title: Application Settings Configuration
+sidebar_label: App Settings Configuration
 subtitle: Adding application settings at build-time for lifecycle, logging, or custom settings.
 ---
 
-The `app.config.yaml` or `app.config.json` files can be used to configure application settings for logging and reboot configuration. You can also add custom developer application settings.
-
-Either an `app.config.yaml` or `app.config.json` file can be used to set application configuration settings and custom developer settings. The filenames are case sensitive.
-
-You can you one or the other, or both. If both application configuration files are used, the values in `app.config.yaml` are applied first and then any values in `app.config.json` are applied next. (Any settings provided in both will be overridden by the JSON file.)
+The `app.config.yaml` file can be used to configure application settings for logging, enabling Meadow.Cloud features and reboot configuration. You can also add custom developer application settings.
 
 Remember to set **Copy to Output Directory** to `Copy always` in the properties pane of any configuration files.
 
@@ -18,7 +15,7 @@ If you need Meadow to relaunch your app should it fail, the `Lifecycle` settings
 
 First, set `RestartOnAppFailure` to true. Then, you can optionally configure a delay, in seconds, before restart using the `AppFailureRestartDelaySeconds` setting.
 
-For example, to configure Meadow to wait 15 seconds after a failure before rebooting your application, here is the configuration in YAML.
+For example, to configure Meadow to wait 15 seconds after a failure before rebooting your application, the syntax should look like this:
 
 ```yml
 Lifecycle:
@@ -26,42 +23,21 @@ Lifecycle:
     AppFailureRestartDelaySeconds: 15
 ```
 
-And here is the same configuration in JSON.
-
-```json
-{
-    "Lifecycle": {
-        "RestartOnAppFailure": true,
-        "AppFailureRestartDelaySeconds": 15
-    }
-}
-```
-
 ### Logging Configuration
 
 Logging configuration allows you to customize the level of data your Meadow application will log to its output channel.
 
-The log level default aligns with the .NET options: Trace, Debug, Information, Warning, and Error.
+The log level default aligns with the .NET options: `Trace`, `Debug`, `Information`, `Warning`, and `Error`.
 
 ```yml
 Logging:
-  LogLevel:
-    Default: "Trace"
-```
-
-```json
-{
-    "Logging": {
-        "LogLevel": {
-            "Default": "Trace"
-        }
-    }
-}
+    LogLevel:
+        Default: "Trace"
 ```
 
 ### Enable Meadow.Cloud features and Over-the-Air (OtA) updates
 
-To allow Meadow.Cloud basic features (Logging, Events and Command + Control) and over-the-air (OtA) updates to your Meadow application, add the following configuration to your application's `app.config.yaml` or `app.config.json` file.
+To allow Meadow.Cloud basic features (Logging, Events and Command + Control) and over-the-air (OtA) updates to your Meadow application, add the following configuration to your application's `app.config.yaml` file:
 
 ```yaml
 # Meadow.Cloud configuration.
@@ -80,81 +56,39 @@ MeadowCloud:
     HealthMetricsIntervalMinutes: 15
 ```
 
-```json
-{
-    "MeadowCloud": {
-        "Enabled": true,
-        "EnableUpdates": true,
-        "EnableHealthMetrics": true,
-        "HealthMetricsIntervalMinutes": 15
-    }
-}
-```
-
 You can learn more about enabling and responding to OtA updates in your Meadow application from the [Over-the-Air Updates documentation](/Meadow/Meadow.OS/Updates/).
 
 ### Custom Developer Application Settings
 
-You can also configure custom application settings that can then be retrieved at runtime through a strongly-typed system.
-
-First, you need your settings added to the `app.config.yaml` or `app.config.json` file. You can name the container object whatever you want.
-
-```yml
-BlinkyApp:
-  DoAwesomeThings: true
-  TimeInSecondsBeforeAwesome: 3
-```
-
-```json
-{
-  "BlinkyApp": {
-    "DoAwesomeThings": true,
-    "TimeInSecondsBeforeAwesome": 3
-  }
-}
-```
-
-Make sure your configuration file is set to copy to the output directory.
-
-With the configuration settings included, you'll need a settings class to handle the setting retrieval and parsing. This is simplified by inheriting from the `ConfigurableObject` class, with a class name that matches the settings object name with `Settings` added. For the `BlinkyApp` example here, we need a class named `BlinkyAppSettings`.
+The `IApp` interface now has a `Settings` property which you can use to add your own custom settings.
 
 ```csharp
-public class BlinkyAppSettings : ConfigurableObject
-{
-    public bool DoAwesomeThings => GetConfiguredBool(nameof(DoAwesomeThings), true);
-    public int TimeInSecondsBeforeAwesome => GetConfiguredInt(nameof(TimeInSecondsBeforeAwesome), 60);
-}
+public Dictionary<string, string> Settings { get; }
 ```
 
-Then within your Meadow app, you can retrieve your settings by creating an instance of your settings class. After the settings object is created, you can access your custom values.
+This property gets populated by any settings found in `app.config.yaml` that are not used by Meadow.Core. You’ll notice that the property is a `Dictionary<string, string>`. How does that translate from your custom settings? The key is a dot-notated “path” to the property name, and the value is always the string representation directly from the settings file.
 
-Here's an example of doing that in the app's `Initialize` and `Run` overrides.
+So if you add the following section to your `app.config.yaml` file:
+
+```yaml
+MyApp:
+  PollInterval: 5
+  Network:
+    Name: MyDevice
+```
+
+You would end up with 2 items in the `Settings` property at run time:
 
 ```csharp
-public class MeadowApp : App<F7FeatherV2>
-{
-    MyCustomSettings customSettings;
-
-    public override Task Initialize()
-    {
-        customSettings = new MyCustomSettings();
-
-        return base.Initialize();
-    }
-
-    public override Task Run()
-    {
-        Console.WriteLine($"{nameof(customSettings.DoAwesomeThings)}: {customSettings.DoAwesomeThings}");
-        Console.WriteLine($"{nameof(customSettings.TimeInSecondsBeforeAwesome)}: {customSettings.TimeInSecondsBeforeAwesome}");
-
-        return base.Run();
-    }
-}
+"MyApp.PollInterval", "5"
+"MyApp.Network.Name", "MyDevice"
 ```
+
+Meadow is already parsing `app.config.yaml` for its own settings, so retrieving these values in this format is effectively free. Meadow, however, does not attempt to parse the values to any underlying type (like int, etc), nor does it support converting the values to a type-safe object because reflection on the F7 microcontroller can be a costly operation and we’d rather leave the decision to use it up to the user.
 
 ## Sample Apps
 
-For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/OS/Config_Files) in the `Meadow.Core.Samples` repo.
+For an example of configuration in use, see the [Config Files sample App](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/OS/ConfigFiles) in the `Meadow.Samples` repo.
 
 <table>
   <tbody>
@@ -169,8 +103,7 @@ For an example of configuration in use, see the [Config Files sample App](https:
         <p style={{ fontSize: 22 }}>
           <a
             style={{ fontSize: 25 }}
-            href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765"
-          >
+            href="https://www.hackster.io/wilderness-labs/weather-station-using-public-web-service-using-meadow-e47765">
             Weather Station Using Public Web Service Using Meadow
           </a>
           <br />
@@ -190,8 +123,7 @@ For an example of configuration in use, see the [Config Files sample App](https:
         <p style={{ fontSize: 22 }}>
           <a
             style={{ fontSize: 25 }}
-            href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6"
-          >
+            href="https://www.hackster.io/wilderness-labs/build-a-wifi-connected-clock-using-meadow-e0c6b6">
             Build a WIFI Connected Clock Using Meadow
           </a>
           <br />
@@ -211,8 +143,7 @@ For an example of configuration in use, see the [Config Files sample App](https:
         <p style={{ fontSize: 22 }}>
           <a
             style={{ fontSize: 25 }}
-            href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839"
-          >
+            href="https://www.hackster.io/wilderness-labs/make-a-meadow-indoor-outdoor-temperature-weather-desk-clock-463839">
             Make a Meadow indoor/outdoor temperature/weather desk clock
           </a>
           <br />
@@ -223,4 +154,3 @@ For an example of configuration in use, see the [Config Files sample App](https:
     </tr>
   </tbody>
 </table>
-

@@ -25,9 +25,7 @@ The following samples can be found in the [Wilderness Labs Netduino Samples repo
 
 These Wilderness Labs samples are distributed under the Apache 2 license. If you have a cool sample that you'd like to document and share, please submit a pull request! We love quality contributions.
 
-* [Meadow.Core.Samples](https://github.com/WildernessLabs/Meadow.Core.Samples)
-* [Meadow.Project.Samples](https://github.com/WildernessLabs/Meadow.Project.Samples)
-* [Meadow.ProjectLab.Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples)
+* [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples)
 
 ### Additional NETMF Samples
 

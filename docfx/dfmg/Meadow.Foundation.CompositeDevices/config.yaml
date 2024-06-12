@@ -1,0 +1,6 @@
+# DocFxMarkdownGen config file
+# Requires running `docfx docfx/docfx.json` first
+
+outputPath: ../../../api/Meadow.Foundation.CompositeDevices
+yamlPath: ../../api/Meadow.Foundation.CompositeDevices
+indexSlug: /docs/api/Meadow.Foundation.CompositeDevices

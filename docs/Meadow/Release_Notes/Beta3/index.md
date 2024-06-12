@@ -93,7 +93,7 @@ We did a major overhaul of the UART/Serial Port in Meadow for b4.0. Big changes 
    
 For more info, check out the awesome [Serial Communications Guide](/Meadow/Meadow_Basics/IO/Digital/Protocols/UART/).
 
-To see the new `ISerialMessagePort` class at work, check out the [`SerialMessagePort` Sample](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/IO/SerialMessagePort).
+To see the new `ISerialMessagePort` class at work, check out the [`SerialMessagePort` Sample](https://github.com/WildernessLabs/Meadow.Samples/tree/main?tab=readme-ov-file#meadow-f7).
 
 #### `FilterableObserver` Changes
 
@@ -108,7 +108,7 @@ had no meaning. In the next beta release we'll likely re-introduce a non-histrio
 #### Meadow.Core Samples
 
 We completely re-did the old `Meadow_Samples` repo and renamed it to 
-[`Meadow.Core.Samples`](https://github.com/wildernesslabs/Meadow.Core.Samples). The samples are now much better
+[`Meadow.Samples`](https://github.com/wildernesslabs/Meadow.Samples). The samples are now much better
 organized and all updated to the latest `.csproj` format.
 
 ### Meadow.Foundation
