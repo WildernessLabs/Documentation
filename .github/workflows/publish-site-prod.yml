@@ -134,6 +134,10 @@ jobs:
         working-directory: ./src/docfx/dfmg/Meadow.Foundation
         run: |
           dfmg
+      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.CompositeDevices
+        working-directory: ./src/docfx/dfmg/Meadow.Foundation.CompositeDevices
+        run: |
+          dfmg
       - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.FeatherWings
         working-directory: ./src/docfx/dfmg/Meadow.Foundation.FeatherWings
         run: |
