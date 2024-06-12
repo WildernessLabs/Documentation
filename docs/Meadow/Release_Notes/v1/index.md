@@ -10,6 +10,50 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.12.2
+
+### Meadow.OS
+
+* A critical memory leak affecting Meadow.Cloud authentication has been resolved.
+* Support for Internet Ping & the ICMP protocol via the `System.Net.NetworkInformation.Ping` class has been added.
+
+### Meadow.Core
+  
+* Improved error detection, capture and logging
+* `MeadowCloudConnection` service memory and stability improvements
+* Added `ReliabilityService`
+* Added Raspberry Pi access to `SPI1`
+* Bug fixes for Raspberry Pi serial port access
+
+### Meadow.Foundation
+  
+* Added TimeSpan support to `MicroJson`
+* Added ability to instantiate an Image using an `IPixelBuffer`
+* Added ability to invert TFT SPI displays
+* Fixed partial show on TFT SPI displays when using 12bpp color mode
+* Fixed port state when initializing digital output ports for `Mcp23xxx`
+
+#### Breaking changes
+
+* ProjectLab no longer exposes an I2C bus or SPI directly - use connector objects to access the correct bus for the specific physical connection.
+
+### Tooling
+
+#### Meadow.CLI v2
+
+* Fixed a flashing bug when specifying the OS binary file directly
+* Minor output formatting fixes
+
+#### Meadow Project Templates
+
+* We added a new Meadow Template called StartKit, and it’s a multiplatform project Solution consisting of a Core project where you can write all the common code like business logic, main controllers, Meadow.Cloud integration, etc. referenced to a set of platform specific head projects such as `Meadow.Desktop`, `Meadow.Linux` (Raspberry Pi) and Meadow F7 devices.
+
+Update your Meadow Templates with the command:
+
+```console
+dotnet new install WildernessLabs.Meadow.Template
+```
+
 ## v1.12.0
 
 ### Meadow.OS
