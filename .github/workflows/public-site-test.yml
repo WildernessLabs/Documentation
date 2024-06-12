@@ -5,16 +5,26 @@ on:
   pull_request:
     branches: [ "develop" ]
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: sandbox
     steps:
-      
+        # Post a comment on the pull request
+      - name: Post comment on pull request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            
+            script: |
+                github.rest.issues.createComment({
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    body: 'Thank you for having the patience of Asclepius. Your test site, https://developer-docusaurus-a8fqgrg9ecg3cxer.z03.azurefd.net/ is ready to view.'
+                })
+    
       # Clone current repo
       - name: Checkout
         uses: actions/checkout@v3
@@ -213,16 +223,4 @@ jobs:
           overwrite: 'true'
           #sync: 'true'
 
-        # Post a comment on the pull request
-      - name: Post comment on pull request
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6
-        with:
-            github-token: ${{ secrets.CI_ACCESS_TOKEN }}
-            script: |
-                github.rest.issues.createComment({
-                    issue_number: context.issue.number,
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    body: 'Thank you for having the patience of Asclepius. Your test site, https://developer-docusaurus-a8fqgrg9ecg3cxer.z03.azurefd.net/ is ready to view.'
-                })
+      
