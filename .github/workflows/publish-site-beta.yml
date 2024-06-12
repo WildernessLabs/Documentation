@@ -151,6 +151,11 @@ jobs:
         working-directory: ./src/docfx/dfmg/Meadow.Foundation
         run: |
           dfmg
+      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.CompositeDevices
+        if: contains(github.event.pull_request.title, '[build-api]')
+        working-directory: ./src/docfx/dfmg/Meadow.Foundation.CompositeDevices
+        run: |
+          dfmg
       - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.FeatherWings
         if: contains(github.event.pull_request.title, '[build-api]')
         working-directory: ./src/docfx/dfmg/Meadow.Foundation.FeatherWings
