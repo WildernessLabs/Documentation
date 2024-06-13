@@ -8,17 +8,17 @@ Meadow.Desktop includes a built-in Window that can render MicroGraphics directly
 
 ### Using Meadow.Desktop's Display
 
-When running a Meadow.Desktop app, you can immediately access its integrated Silk.NET display by referencing the `Display` property exponsed by `Device`:
+When running a Meadow.Desktop app, you can immediately access its integrated Silk.NET display by referencing the `Display` property exposed by `Device`:
 
 ```csharp
 IResizablePixelDisplay display = Device.Display;
 ```
 
-The default display says is 320x240, which is Project Lab's onboard display's resolution.
+The default display size is 320x240, which is the same as Project Lab's onboard display.
 
 ### Adjust `Display` dimensions and scaling
 
-Since that `Device.Display` is a `IResizablePixelDisplay`, you can change the resolution to whatever dimensions you want using the `Resize()` method:
+Since that `Device.Display` is a `IResizablePixelDisplay`, you can change the display's resolution to whatever you want using the `Resize()` method:
 
 ```csharp
 Device.Display.Resize(width: 400, height: 300);
