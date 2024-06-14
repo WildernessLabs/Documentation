@@ -105,6 +105,7 @@ jobs:
           path: Meadow.Foundation.Grove
           ref: main
       - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
+        if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation.FeatherWings
