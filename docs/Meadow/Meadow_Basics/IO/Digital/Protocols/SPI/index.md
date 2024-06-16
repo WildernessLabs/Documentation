@@ -71,8 +71,8 @@ Generally, you won't need to handle low-level SPI peripheral communication direc
 spiComms.WriteByte(0x01);
 ```
 
-These methods are also available via the SPI bus, but require the chip select port of the device to be explicitly passed:
+A similar `Write` method is also available via the SPI bus, but require the chip select port of the device to be explicitly passed:
 
 ```csharp
-spiBus.Write(spiCommsChipSelect, 0x01);
+spiBus.Write(spiCommsChipSelect, new byte[] { 0x01 });
 ```
