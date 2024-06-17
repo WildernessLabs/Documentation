@@ -6,25 +6,27 @@ subtitle: Getting started with logs and events
 
 ## Enabling CloudLogger
 
-Today, logging output through `Resolver.Log.Info("foo bar");` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, getting the same logs in Meadow.Cloud is really simple.
+Today, logging output through `Resolver.Log.Info("foo bar")` writes to the console. This is great if you are working locally, connected to the device, but not so much when the device is deployed out in the field. Fortunately, you can also send the same logs to Meadow.Cloud with a few extra steps.
 
-Setting up logs and events requires the following update in `app.config.yaml`:
+1. Install the [**Meadow.Logging.LogProviders** NuGet package](https://www.nuget.org/packages/Meadow.Logging.LogProviders) into your project for access to the `CloudLogger` class.
 
-```yaml
-MeadowCloud:
-    Enabled: true
-```
+1. Enable Meadow.Cloud logging in your project's `app.config.yaml`:
 
-Then, all you need to register a new `CloudLogger`:
+    ```yaml
+    MeadowCloud:
+        Enabled: true
+    ```
 
-```csharp
-public override async Task Initialize()
-{
-    var cloudLogger = new CloudLogger();
-    Resolver.Log.AddProvider(cloudLogger);
-    ...
-}
-```
+1. Register a new `CloudLogger` as a logging provider:
+
+    ```csharp
+    public override async Task Initialize()
+    {
+        var cloudLogger = new CloudLogger();
+        Resolver.Log.AddProvider(cloudLogger);
+        ...
+    }
+    ```
 
 Once `CloudLogger` is registered, any logging done through `Resolver.Log` automatically gets recorded in Meadow.Cloud. Any logging done while the device is disconnected get stored locally and sent to Meadow.Cloud once a network connected is established.
 
