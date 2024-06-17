@@ -56,11 +56,11 @@ ISpiBus spiBus = Device.CreateSpiBus();
 
 ## Working with SPI Peripherals
 
-Once the SPI Bus has been created, peripherals can be created by passing in the SPI Bus and the `IDigitalOutputPort` that is connected to the chip select on the peripheral:
+Once the SPI Bus has been created, peripherals can be created by passing in the SPI Bus, the `IDigitalOutputPort`, and the bus speed of the SPI bus that is connected to the chip select on the peripheral:
 
 ```csharp
-IDigitalOutputPort spiPeriphChipSelect = Device.CreateDigitalOutputPort(Device.Pins.D03);
-ISpiPeripheral spiPeriph = new SpiPeripheral(spiBus, spiPeriphChipSelect);
+IDigitalOutputPort spiCommsChipSelect = Device.CreateDigitalOutputPort(Device.Pins.D03);
+ISpiCommunications spiComms = new SpiCommunications(spiBus, spiPeriphChipSelect, new(10_000, Frequency.UnitType.Kilohertz));
 ```
 
 ### Peripheral Communication
@@ -68,11 +68,11 @@ ISpiPeripheral spiPeriph = new SpiPeripheral(spiBus, spiPeriphChipSelect);
 Generally, you won't need to handle low-level SPI peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](/docs/api/Meadow/Meadow.Hardware/IByteCommunications/) interface, which SPI peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
 
 ```csharp
-spiPeriph.WriteByte(0x01);
+spiComms.WriteByte(0x01);
 ```
 
-These methods are also available via the SPI bus, but require the chip select port of the device to be explicitly passed:
+A similar `Write` method is also available via the SPI bus, but require the chip select port of the device to be explicitly passed:
 
 ```csharp
-spiBus.WriteByte(spiPeriph.ChipSelect, 0x01);
+spiBus.Write(spiCommsChipSelect, new byte[] { 0x01 });
 ```
