@@ -33,17 +33,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
-Meadow.Windows + FT232H App    WinFormsHardware   [C#]            Meadow/Console
-Meadow.Windows App             WinForms           [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 4 - Add VS Linux Debugger Studio Extension
@@ -114,16 +114,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 4 - Create your first Meadow application
@@ -133,7 +134,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow.Linux project that will run on your Raspberry Pi:
 
 ```console
-dotnet new RaspberryPi --name RaspberryPiDemo
+dotnet new meadow-raspberry-pi --name RaspberryPiDemo
 ```
 
 This Meadow.Linux application shows a basic Meadow app structure with an `Initialize` and `Run` methods with logging strings to confirm in the output the application ran successfully.

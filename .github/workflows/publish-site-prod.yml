@@ -85,6 +85,12 @@ jobs:
           path: Meadow
           ref: main
       # Clone more Meadow-related repos for API docs generation (via DocFX).
+      - name: Checkout Meadow.Foundation.CompositeDevices into DocFX-expected Source location
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Foundation.CompositeDevices
+          path: Meadow.Foundation.CompositeDevices
+          ref: main
       - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
         uses: actions/checkout@v3
         with:
@@ -132,6 +138,10 @@ jobs:
           dfmg
       - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation
         working-directory: ./src/docfx/dfmg/Meadow.Foundation
+        run: |
+          dfmg
+      - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.CompositeDevices
+        working-directory: ./src/docfx/dfmg/Meadow.Foundation.CompositeDevices
         run: |
           dfmg
       - name: Run DocFxMarkdownGen (dfmg) to generate API .md files for Meadow.Foundation.FeatherWings

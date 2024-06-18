@@ -62,10 +62,10 @@ II2cBus i2cBus = Device.CreateI2cBus();
 
 ## Working with I2C Peripherals
 
-Once the I2C Bus has been created, peripherals can be created by passing in the I2C Bus and the address of the peripheral:
+Once the I2C Bus has been created, you create a communications object to send data through the I2C Bus on a specific address:
 
 ```csharp
-II2cPeripheral i2cPeripheral = new I2cPeripheral(i2cBus, 39);
+II2cCommunications i2cComms = new I2cCommunications(i2cBus, 39);
 ```
 
 ### Peripheral Communication
@@ -73,11 +73,11 @@ II2cPeripheral i2cPeripheral = new I2cPeripheral(i2cBus, 39);
 Generally, you won't need to handle low-level I2C peripheral communication directly, as the peripheral drivers in Meadow.Foundation expose high level APIs for working with their features. However, if you're creating a new driver, or want to talk to a peripheral directly, there are a number of communications methods exposed via the [`IByteCommunications`](/docs/api/Meadow/Meadow.Hardware/IByteCommunications/) interface, which I2C peripherals implement. Among these are methods to read and write bytes directly to the device as well as read and write to memory registers on the device:
 
 ```csharp
-i2cPeripheral.WriteByte(0x01);
+i2cComms.Write(0x01);
 ```
 
 These methods are also available via the I2C bus, but require the address of the device to be explicitly passed:
 
 ```csharp
-i2cBus.WriteByte(i2cPeripheral.Address, 0x01);
+i2cBus.Write(i2cComms.Address, new byte[] { 0x01 });
 ```

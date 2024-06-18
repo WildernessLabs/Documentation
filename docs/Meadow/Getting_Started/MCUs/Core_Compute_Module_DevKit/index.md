@@ -39,16 +39,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 5 - Deploy latest version of Meadow.OS
@@ -113,16 +114,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 6 - Create your first Meadow application
@@ -132,7 +134,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow F7 Feather project:
 
 ```console
-dotnet new CoreComputeModule --name CcmDemo
+dotnet new meadow-ccm --name CcmDemo
 ```
 
 What this Meadow application does is creates an `RgbPwmLed` object on the CCM Dev Kit's onboard RGB LED and cycles through different colors.
@@ -141,11 +143,13 @@ What this Meadow application does is creates an `RgbPwmLed` object on the CCM De
 
 ### Step 7 - Deploy your application
 
-With no code changes, let's deploy this app to your new board. 
+With no code changes, let's deploy this app to your new board.
 
-In the bottom toolbar, click on the COM port button that will open a drop down menu at the top, where you’ll select the corresponding port your board is using.
+In the Activity Bar on the side of the window, select the **Run and Debug** icon.
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.jpg)
+Within the **Run and Debug** side bar, select the configuration drop-down and select the port corresponding to your connected Meadow device.
+
+![Visual Studio Code screenshot showing Run and Debug activity with a highlight of the Meadow COM3 port selected.](../../Common_Assets/wildernesslabs_meadow_vscode_deploy.png)
 
 :::caution
 When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.

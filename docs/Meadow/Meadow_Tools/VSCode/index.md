@@ -16,18 +16,20 @@ If you havent, download and Install [Visual Studio Code](https://visualstudio.mi
 ## Installation
 
 1. In VSCode go to the Extensions tab (macOS: Cmd+Shift+X. Others: Ctrl+Shift+X)
-1. In the search bar type `VSCode Tools for Meadow`. It should be the first extension in the list.
+1. In the search bar type `VSCode Tools for Meadow`. It should be the first extension in the list, with an ID of `Wildernesslabs.meadow`.
 
   ![vscode meadow extension](vscode-extension-marketplace.png)
 
-1. Click it the **Install** button on the bottom right of the listed item.
+1. Click it the **Install** button on the bottom right of the listed extension.
 1. The extension should now be installed.
 
 ## Usage
 
-In the bottom toolbar, click on the COM port button that will open a drop down menu at the top, where you’ll select the corresponding port your board is using.
+In the Activity Bar on the side of the window, select the **Run and Debug** icon.
 
-![Create new Meadow Application](wildernesslabs_meadow_vscode_deploy.jpg)
+Within the **Run and Debug** side bar, select the configuration drop-down and select the port corresponding to your connected Meadow device.
+
+![Visual Studio Code screenshot showing Run and Debug activity with a highlight of the Meadow COM3 port selected.](../../Getting_Started/Common_Assets/wildernesslabs_meadow_vscode_deploy.png)
 
 ## References
 
@@ -36,5 +38,5 @@ In the bottom toolbar, click on the COM port button that will open a drop down m
 ## Support
 
 Having trouble using this extension? 
-* File an [issue](https://github.com/WildernessLabs/Meadow.Desktop.Samples/issues) with a repro case to investigate, and/or
+* File an [issue](https://github.com/WildernessLabs/Meadow.Samples/issues) with a repro case to investigate, and/or
 * Join our [public Slack](http://slackinvite.wildernesslabs.co/), where we have an awesome community helping, sharing and building amazing things using Meadow.

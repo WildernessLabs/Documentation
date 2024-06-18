@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-title: Get started with Meadow.Windows
-sidebar_label: Hello, Meadow.Windows
+title: Hello, Meadow.Desktop on Windows
+sidebar_label: Windows
 subtitle: "To get up and running with Meadow.Windows, follow these steps:"
 ---
 
@@ -28,17 +28,17 @@ In **Visual Studio**, open the **Create a new project** window. When you search 
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
 
-This project creates a Meadow.Desktop app that has a Windows Forms (WinForms) window showing a Hello World text using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md). 
+This Meadow.Desktop application creates a 320x240 pixel window saying `Hello, World` using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md).
 
 ### Step 5 - Run a Meadow Application
 
 Right-click the new project and select **Set as Startup project**
 
-![Meadow.Windows App running](wildernesslabs-meadow-windows-hello.jpg)
+![Meadow.Desktop App running](wildernesslabs-meadow-windows-hello.jpg)
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
@@ -68,16 +68,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 4 - Create your first Meadow application
@@ -87,10 +88,10 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new Desktop --name WindowsDemo --Framework net8.0-windows
+dotnet new meadow-desktop --name WindowsDemo
 ```
 
-This Meadow.Desktop application opens a 320x240 pixel WinForms window saying `Hello, World` using MicroLayout.
+This Meadow.Desktop application opens a 320x240 pixel window saying `Hello, World` using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md).
 
 ### Step 5 - Run a Meadow Application
 
@@ -114,7 +115,7 @@ A WinForm window should show up in the center of the screen saying `Hello, World
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 

@@ -44,7 +44,7 @@ And as for the FT232H with the RGB LED, you should see something like this:
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
@@ -74,16 +74,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 4 - Create your first Meadow application
@@ -126,7 +127,7 @@ And a WinForm window should show up in the center of the screen saying `Hello, W
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 

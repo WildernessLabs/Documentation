@@ -18,7 +18,7 @@ Note that analog ports provide a rich system for consuming analog inputs. The da
 
 ## Samples
 
-For sample Meadow applications that illustrate both the basic usage of analog ports and high-speed analog data acquisition using an analog input array, check out the [IO Sample apps in the Meadow.Core.Samples repo](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/IO).
+For sample Meadow applications that illustrate both the basic usage of analog ports and high-speed analog data acquisition using an analog input array, check out the [IO Sample apps in the Meadow.Samples repo](https://github.com/WildernessLabs/Meadow.Samples/tree/main?tab=readme-ov-file#meadow-f7).
 
 ## Analog Input
 

@@ -66,9 +66,9 @@ export default function GettingStarted(): JSX.Element {
                   <div className="card-content">
                     <h3>Meadow.Desktop + Simulator</h3>
                     <ul className="flat">
-                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/">Meadow.Windows</a></li>
-                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/">Meadow.Linux</a></li>
-                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Mac/">Meadow.Mac</a></li>
+                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/">Windows</a></li>
+                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/">Linux</a></li>
+                      <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Mac/">Mac</a></li>
                     </ul>
                   </div>
                 </div>

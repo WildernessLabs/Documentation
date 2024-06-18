@@ -118,7 +118,13 @@ To list serial ports, execute the following:
 meadow port list
 ```
 
-You can then specify which port to use with the `meadow config route` command. , replacing `{port}` with the port you found above.
+You can then specify which port to use with either the `meadow port select` command 
+
+```console
+meadow port select
+```
+
+or the `meadow config route` command. , replacing `{port}` with the port you found above.
 
 ```console
 meadow config route {port}
@@ -136,18 +142,54 @@ To download the latest Meadow.OS, execute the following:
 meadow firmware download
 ```
 
-Once it's downloaded, it can be deployed to the device by executing the following:
+Once it's downloaded, it can be deployed to the device by placing Meadow in bootloaders mode and executing the following:
 
 ```console
 meadow firmware write
 ```
 
-### Deploy a Meadow App
+### Build a Meadow App
 
-To deploy an app to the device, execute the following, replacing `{path}` with the path to your app's built `App.dll` file:
+To build a Meadow app, execute the following, replacing `{path}` with the path to the folder that contains your app csproj file.
 
 ```console
-meadow app deploy -f {path}/App.dll
+meadow app build {path}
+```
+
+### Trim a Meadow App
+
+You'll typically want to trim a built Meadow app to reduce the app size when stored on your Meadow. To trim a Meadow app, connect your Meadow device and execute the following, replacing `{path}` with the path to the folder that contains your app csproj file.
+
+```console
+meadow app trim {path}
+```
+
+### Deploy a Meadow App
+
+After your app is trimmeed, you can deploy your app by executing the following, replacing `{path}` with the path to the folder that contains your app csproj file.
+
+```console
+meadow app deploy {path}
+```
+
+### Run a Meadow App
+
+Once your app is deployed, run the following command to start the app by enabling the runtime on Meadow.
+
+```console
+meadow runtime enable
+```
+
+You can view console output from your running application by using the `listen` command.
+
+```console
+meadow runtime enable
+```
+
+There's also a convenience `run` command that will build, trim, deploy, run and start listening. Execute the following, replacing `{path}` with the path to the folder that contains your app csproj file. 
+
+```console
+meadow app run
 ```
 
 ### Working with Files
@@ -188,7 +230,7 @@ As with file uploading, multiple files can be specified with multiple `-f` param
 meadow file delete -f [Filename1] -f [Filename2]
 ```
 
-All of the files on the file system can be deleted without reformatting the flash:
+All of the files in the root of the file system can be deleted without reformatting the flash:
 
 ```console
 meadow file delete all
@@ -209,8 +251,8 @@ meadow device info
 * `meadow app build`  - Compile a Meadow application
 * `meadow app debug`  - Debug a running application
 * `meadow app deploy` - Deploy a built Meadow application to a target device
-* `meadow app run`    - Builds, trims and deploys a Meadow application to a target device
-* `meadow app trim`   - Runs an already-compiled Meadow application through reference trimming
+* `meadow app run`    - Builds, trims, deploys and starts a Meadow application on a target device
+* `meadow app trim`   - Trim the binaries of a Meadow applicatio
 
 ### Meadow.Cloud commands
 
@@ -272,5 +314,5 @@ meadow device info
 ## Support
 
 Having trouble using Meadow.CLI?
-* File an [issue](https://github.com/WildernessLabs/Meadow.Desktop.Samples/issues) with a repro case to investigate, and/or
+* File an [issue](https://github.com/WildernessLabs/Meadow.Samples/issues) with a repro case to investigate, and/or
 * Join our [public Slack](http://slackinvite.wildernesslabs.co/), where we have an awesome community helping, sharing and building amazing things using Meadow.

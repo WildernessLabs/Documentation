@@ -6,7 +6,9 @@ subtitle: Network options and operation.
 
 Both the Meadow F7 Feather development board and Core-Compute Module have Wi-Fi networking via the ESP32 co-processor. The Meadow Core-Compute Module also adds optional ethernet capabilities.
 
-# WiFi
+<Tabs groupId="ide">
+  <TabItem value="wifi" label="WiFi" default>
+
 
 ## Connecting to a WiFi Network
 
@@ -109,7 +111,10 @@ async Task ScanForAccessPoints(IWiFiNetworkAdapter wifi)
 }
 ```
 
-# Ethernet
+
+  </TabItem>
+  <TabItem value="ethernet" label="Ethernet" default>
+
 
 If you're using an [Dual, Switching Ethernet Add-on module](https://store.wildernesslabs.co/collections/meadow-core-compute/products/dual-ethernet-add-on), or a [Meadow F7v2 Core-Compute Dev Kit](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7v2-core-compute-breakout-board), you can easily use Ethernet network connectivity by switching the `DefaultInterface` setting in the meadow.config.yaml file:
 
@@ -131,13 +136,17 @@ Network:
 ```
 Optionally you can set the `UseDHCP: true` to get an IP Address automatically. If `DefaultInterface` is not set on the config file, it will default to WiFi.
 
-# Performing Requests
+
+  </TabItem>
+</Tabs>
+
+## Performing Requests
 
 Once the network is connected, you can generally use the built-in .NET network methods as usual.
 
 Note: SSL validation can sometimes fail if Meadow's clock is too far from the current time. This can be resolved by either [configuring Meadow to acquire the network time at startup](/Meadow/Meadow.OS/Configuration/OS_Device_Configuration/), or by [setting the clock manually](/Meadow/Meadow.OS/RTC/) at runtime.
 
-## HTTP Get Request Example
+### HTTP Get Request Example
 
 The following code illustrates making a request to a web page via the `HttpClient` class:
 
@@ -150,7 +159,7 @@ using (HttpClient client = new HttpClient()) {
 }
 ```
 
-## HTTP Post Request Example
+### HTTP Post Request Example
 
 You can also modify the request to `POST` data. For example, the following code posts a temperature reading to the Adafruit IO data platform:
 
@@ -165,27 +174,27 @@ using (HttpClient client = new HttpClient()) {
 }
 ```
 
-# Antenna
+## Antenna
 
 Both the Meadow development board and production module have an onboard ceramic chip antenna and a U.FL connector for an external antenna for the 2.4GHz WiFi and Bluetooth radio.
 
 For more information on getting the current antenna information and switching, see the [Antenna guide](Antenna).
 
-# Creating RESTful Web APIs with Maple Server
+## Creating RESTful Web APIs with Maple Server
 
 If you need to expose simple RESTful Web APIs, Meadow.Foundation includes a lightweight web server called `Maple Server` that may be useful. Check out the [Maple Server guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple%2EServer) for more information.
 
-# Sample projects
+## Sample projects
 
-## Core project samples
+### Core project samples
 
-For example code, see the following networking sample apps in the [Meadow.Core.Samples repo](https://github.com/wildernesslabs/Meadow.Core.Samples):
+For example code, see the following networking sample apps in the [Meadow.Samples repo](https://github.com/wildernesslabs/Meadow.Samples):
 
-* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
-* **[HttpListener](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/HttpListener)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
-* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Core.Samples/tree/main/Source/Network/Antenna_Switching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
+* **[WiFi_Basics](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/WiFi_Basics)** - Covers the basics of enumerating and connecting to WiFi networks.
+* **[HttpListener](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/HttpListener_Basics)** - Shows how to respond to HTTP requests with `HttpListenerContext`, `HttpListenerRequest`, and `HttpListenerResponse`.
+* **[Antenna_Switching](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/AntennaSwitching)** - Shows how to use the antenna API to switch between the onboard and external antenna connection.
 
-## Additional project samples
+### Additional project samples
 
 You can look through these practical projects available on [Hackster](https://www.hackster.io/WildernessLabs).
 

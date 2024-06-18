@@ -171,31 +171,8 @@ const meadowOsSidebar = [
       id: "Meadow/Meadow.OS/index",
     },
     items: [
+      "Meadow/Meadow.OS/Automatic_Restarts/index",
       "Meadow/Meadow.OS/Bluetooth/index",
-      {
-        type: "category",
-        label: "Configuration",
-        link: {
-          type: "doc",
-          id: "Meadow/Meadow.OS/Configuration/index",
-        },
-        items: [
-          "Meadow/Meadow.OS/Configuration/Application_Build_Configuration/index",
-          "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index",
-          "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index",
-          "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
-        ],
-      },
-      "Meadow/Meadow.OS/File_System/index",
-      {
-        type: "category",
-        label: "Networking",
-        link: {
-          type: "doc",
-          id: "Meadow/Meadow.OS/Networking/index",
-        },
-        items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
-      },
       {
         type: "category",
         label: "Cellular",
@@ -210,11 +187,36 @@ const meadowOsSidebar = [
           "Meadow/Meadow.OS/Cellular/Troubleshooting/index",
         ],
       },
-      "Meadow/Meadow.OS/Updates/index",
+      {
+        type: "category",
+        label: "Configuration",
+        link: {
+          type: "doc",
+          id: "Meadow/Meadow.OS/Configuration/index",
+        },
+        items: [
+          "Meadow/Meadow.OS/Configuration/Application_Build_Configuration/index",
+          "Meadow/Meadow.OS/Configuration/Application_Settings_Configuration/index",
+          "Meadow/Meadow.OS/Configuration/OS_Device_Configuration/index",
+          "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
+        ],
+      },
+      "Meadow/Meadow.OS/Core-Compute_SD_Card/index",
+      "Meadow/Meadow.OS/File_System/index",
+      {
+        type: "category",
+        label: "Networking",
+        link: {
+          type: "doc",
+          id: "Meadow/Meadow.OS/Networking/index",
+        },
+        items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
+      },
+      "Meadow/Meadow.OS/Profiler/index",
       "Meadow/Meadow.OS/RTC/index",
       "Meadow/Meadow.OS/SQLite/index",
       "Meadow/Meadow.OS/Threading/index",
-      "Meadow/Meadow.OS/Automatic_Restarts/index",
+      "Meadow/Meadow.OS/TLS_Client_Authentication/index",
     ],
   },
   {
@@ -236,6 +238,7 @@ const meadowOsSidebar = [
           id: "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index",
         },
         items: [
+          "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroJson/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index",

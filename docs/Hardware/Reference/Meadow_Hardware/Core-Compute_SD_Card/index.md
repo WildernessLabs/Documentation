@@ -2,6 +2,7 @@
 layout: Meadow
 title: SD Card use with Core-Compute Module
 subtitle: Working with an SD card on the Meadow Core-Compute Development Kit
+sidebar_label: SD Card on CCM
 ---
 
 The Meadow Core-Compute Development Kit includes an SD card add-on, and one can be connected to a Core-Compute module designs. You can use the SD card system for many tasks such as saving data to a removable card or providing configuration updates.

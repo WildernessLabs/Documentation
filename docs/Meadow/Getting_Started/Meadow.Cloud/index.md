@@ -20,7 +20,7 @@ Before a device can enjoy things like [Over-the-Air updates](../../Meadow.Cloud/
 1. Use the Meadow.CLI to authenticate with Meadow.Cloud:
 
     ```console
-    meadow cloud login
+    meadow login
     ```
 
     This opens a browser with the Wilderness Labs Login page. After authenticating, you can go back to the terminal and it should confirm you've successfully logged in.
@@ -34,7 +34,7 @@ Before a device can enjoy things like [Over-the-Air updates](../../Meadow.Cloud/
 1. Now lets provision the device for Meadow.Cloud. Use the following command below. Adding a device name with the `--name` parameter is optional, but will make it easier to identify your device later.
 
     ```console
-    meadow cloud device provision --name FeatherF7
+    meadow device provision --name FeatherF7
     ```
 
 1. After confirming that the Meadow device has been provisioned, you can go to [https://www.meadowcloud.co](https://www.meadowcloud.co) to verify your device has been successfully provisioned.
@@ -86,14 +86,17 @@ Lets verify that you have provisioned your device and interacts properly to Mead
     Finally, setting up health monitoring requires the following update in `app.config.yaml`:
 
     ```yaml
-    # Meadow.Cloud Health Metrics.
-    HealthMetrics:
+    # Meadow.Cloud configuration.
+    MeadowCloud:
 
-        # Enable Health Metrics
+        # Enable Logging, Events, Command + Control
         Enabled: true
 
-        # How often to send metrics to Meadow.Cloud (in minutes)
-        Interval: 3
+        # Enable Health Metrics
+        EnableHealthMetrics: true
+
+        # How often to send metrics to Meadow.Cloud
+        HealthMetricsIntervalMinutes: 1
     ```
 
 1. Now run the app and eventually logs into Meadow.Cloud, and it'll start sending device health metrics to your account. The app's output should look similar to this:
@@ -108,8 +111,6 @@ Lets verify that you have provisioned your device and interacts properly to Mead
     making cloud log httprequest with json: {"eventId":10,"description":"device.health","measurements":{"health.cpu_temp_celsius":42.6996336996337,"health.memory_used":574024,"health.disk_space_used":11646602,"info.os_version":"1.8.0.0","health.battery_percentage":0,"info.coprocessor_os_version":"1.8.0.0"},"timestamp":"2024-01-31T18:54:03.123871+00:00"}
     cloud send success
     health metrics sent
-    making cloud log httprequest with json: {"eventId":10,"description":"device.health","measurements":{"health.cpu_temp_celsius":39.7985347985348,"health.memory_used":911184,"health.disk_space_used":11646602,"info.os_version":"1.8.0.0","health.battery_percentage":0,"info.coprocessor_os_version":"1.8.0.0"},"timestamp":"2024-01-31T18:57:02.149871+00:00"}
-    cloud send success
     ...
     ```
 

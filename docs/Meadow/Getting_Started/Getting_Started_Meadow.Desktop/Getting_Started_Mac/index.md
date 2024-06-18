@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-title: Get started with Meadow.Mac
-sidebar_label: Hello, Meadow.Mac
+title: Hello, Meadow.Desktop on macOS
+sidebar_label: macOS
 subtitle: "To get up and running with Meadow.Mac, follow these steps:"
 ---
 
@@ -33,16 +33,17 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template installed the following templates:
-Template Name                  Short Name         Language        Tags
------------------------------  -----------------  --------------  --------------
-Meadow Core-Compute App        CoreComputeModule  [C#],F#,VB.NET  Meadow/Console
-Meadow F7 Feather App          F7Feather          [C#],F#,VB.NET  Meadow/Console
-Meadow Library                 Library            [C#],F#,VB.NET  Meadow/Library
-Meadow Project Lab App         ProjectLab         [C#]            Meadow/Console
-Meadow.Desktop App             Desktop            [C#]            Meadow/Console
-Meadow.Linux Jetson Nano App   JetsonNano         [C#]            Meadow/Console
-Meadow.Linux Raspberry Pi App  RaspberryPi        [C#]            Meadow/Console
-Meadow.Linux reTerminal App    reTerminal         [C#]            Meadow/Console
+Template Name            Short Name          Language        Tags
+-----------------------  ------------------  --------------  -------------------
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
+Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
 ### Step 4 - Create your first Meadow application
@@ -52,10 +53,10 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode in a new Terminal within enter the following command to create a new Meadow.Desktop project:
 
 ```console
-dotnet new Desktop --name macOSDemo --Framework net8.0
+dotnet new meadow-desktop --name MacDemo
 ```
 
-This Meadow.Desktop application opens a 320x240 pixel GTK window saying `Hello, World` using MicroLayout.
+This Meadow.Desktop application opens a 320x240 pixel window saying `Hello, World` using [MicroLayout](../../../Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index.md).
 
 ### Step 5 - Run a Meadow Application
 
@@ -73,13 +74,13 @@ And finally to run the Meadow application, use the command:
 dotnet run
 ```
 
-A GTK window should show up in the center of the screen saying `Hello, World`, like below:
+A window should show up in the center of the screen saying `Hello, World`, like below:
 
 ![Create new Meadow Application](wildernesslabs_desktop_winforms.png)
 
 ### Step 6 - Check out additional samples
 
-You can check more samples in our [Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Desktop.Samples) GitHub repo.
+You can check more samples in our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples) GitHub repo.
 
 ![Meadow.Desktop.Samples GitHub Repository](../../Common_Assets/wildernesslabs-meadow-desktop-samples.jpg)
 
