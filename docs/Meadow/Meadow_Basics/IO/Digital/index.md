@@ -54,10 +54,7 @@ _Reading_ the state of a _digital input_ is done using an implementation of the 
 ```csharp
 IDigitalInputPort CreateDigitalInputPort(
     IPin pin,
-    InterruptMode interruptMode = InterruptMode.None,
-    ResistorMode resistorMode = ResistorMode.Disabled,
-    double debounceDuration = 0,
-    double glitchDuration = 0);
+    ResistorMode resistorMode = ResistorMode.Disabled);
 ```
 
 The three most important arguments are:
@@ -94,7 +91,10 @@ For example, if you wanted your application to get notified when the `D03` input
 // create the InputPort with interrupts enabled
 var input = Device.CreateDigitalInputPort(
     Device.Pins.D03,
-    InterruptMode.EdgeRising);
+    InterruptMode.EdgeRising,
+    ResistorMode.Disabled,
+    TimeSpan.FromMilliseconds(5),
+    TimeSpan.FromMilliseconds(5));
 
 // add an event handler
 input.Changed += (s, e) =>
