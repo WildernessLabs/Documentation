@@ -60,7 +60,6 @@ IDigitalInputPort CreateDigitalInputPort(
 The three most important arguments are:
 
 * **`pin`** - The pin on the device of which to configure to be a digital input.
-* **`interruptMode`** - Whether or not the port should be configured to raise interrupt notifications, and what kind of change should trigger an interrupt.
 * **`resistorMode`** - The `ResistorMode` specifying whether an external pull-up/pull-down resistor is used, or an internal pull-up/pull-down resistor should be configured for default state.
 
 We'll examine debounce and glitch filtering in a moment.
