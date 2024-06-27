@@ -57,7 +57,7 @@ IDigitalInputPort CreateDigitalInputPort(
     ResistorMode resistorMode = ResistorMode.Disabled);
 ```
 
-The three most important arguments are:
+The arguments are:
 
 * **`pin`** - The pin on the device of which to configure to be a digital input.
 * **`resistorMode`** - The `ResistorMode` specifying whether an external pull-up/pull-down resistor is used, or an internal pull-up/pull-down resistor should be configured for default state.
