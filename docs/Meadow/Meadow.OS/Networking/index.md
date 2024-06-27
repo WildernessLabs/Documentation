@@ -124,17 +124,17 @@ If you're using an [Dual, Switching Ethernet Add-on module](https://store.wilder
 Network:
   Interfaces:
     - Name: Ethernet
-      UseDHCP: false
-      IPAddress: 192.168.1.60
-      NetMask: 255.255.255.0
-      Gateway: 192.168.1.254
-#    - Name: Ethernet
-#      UseDHCP: true
+      UseDHCP: true
+      # IPAddress: 192.168.1.60
+      # NetMask: 255.255.255.0
+      # Gateway: 192.168.1.254
 
   DefaultInterface: Ethernet
 ...
 ```
-Optionally you can set the `UseDHCP: true` to get an IP Address automatically. If `DefaultInterface` is not set on the config file, it will default to WiFi.
+Optionally you can set the `UseDHCP: false` to use an static IP Address. In this case, please configure your `IpAddress`, `NetMask`, and `Gateway` correctly, ensuring the `IPAddress` is within your local network and not already in use.
+
+If `DefaultInterface` is not set on the config file, it will default to WiFi.
 
 
   </TabItem>
