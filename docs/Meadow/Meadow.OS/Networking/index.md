@@ -132,9 +132,9 @@ Network:
   DefaultInterface: Ethernet
 ...
 ```
-Optionally you can set the `UseDHCP: false` to use an static IP Address, in this case, please configure your `IpAddress`, `NetMask`, and `Gateway` correctly, ensuring the `IPAddress` is within your local network and not already in use.
+Optionally you can set the `UseDHCP: false` to use an static IP Address. In this case, please configure your `IpAddress`, `NetMask`, and `Gateway` correctly, ensuring the `IPAddress` is within your local network and not already in use.
 
- If `DefaultInterface` is not set on the config file, it will default to WiFi.
+If `DefaultInterface` is not set on the config file, it will default to WiFi.
 
 
   </TabItem>
