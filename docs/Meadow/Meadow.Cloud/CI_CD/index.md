@@ -76,18 +76,12 @@ jobs:
 
     steps:
 
-    - name: Checkout F7FeatherDemo
-      uses: actions/checkout@v3
-      with:
-        path: F7FeatherDemo
-
     - name: Build + Upload
       uses: WildernessLabs/meadow-cloud-package-upload@main
       with:
-        project_path: "Source/F7FeatherDemo/"
+        project_path: "Source/<PROJECT PATH>/"
         organization_id: "<YOUR ORGANIZATION ID>" # Required, set this to your organization
         api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
-        os_version: "1.12.0.0" # Optional, set this to the OS version if required        
         configs : '{"CONFIG_WIFI_SSID": "${{ secrets.CONFIG_WIFI_SSID }}", "CONFIG_WIFI_PASS": "${{ secrets.CONFIG_WIFI_PASS }}"}' # Optional, set this to a matching token to replaced within your *.yaml files if required
         
     - name: Publish
