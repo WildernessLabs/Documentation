@@ -80,16 +80,15 @@ jobs:
       uses: WildernessLabs/meadow-cloud-package-upload@main
       with:
         project_path: "Source/<PROJECT PATH>/"
-        organization_id: "<YOUR ORGANIZATION ID>" # Required, set this to your organization
-        api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
-        configs : '{"CONFIG_WIFI_SSID": "${{ secrets.CONFIG_WIFI_SSID }}", "CONFIG_WIFI_PASS": "${{ secrets.CONFIG_WIFI_PASS }}"}' # Optional, set this to a matching token to replaced within your *.yaml files if required
+        organization_id: "<YOUR ORGANIZATION ID>" # Required
+        api_key: ${{ secrets.API_KEY }} # Required        
+        configs : '{"CONFIG_WIFI_SSID": "${{ secrets.CONFIG_WIFI_SSID }}", "CONFIG_WIFI_PASS": "${{ secrets.CONFIG_WIFI_PASS }}"}' # Optional
         
     - name: Publish
       uses: WildernessLabs/meadow-cloud-package-publish@main
       with:
-        api_key: ${{ secrets.API_KEY }} # Required, set this to an api key that has package scope        
-        collection_id: "<YOUR COLLECTION ID>" # Required, set this to an api key that has package scope        
-        metadata: "metadata part of my publish" # Optional, set this to the desired metadata for publish if required
+        api_key: ${{ secrets.API_KEY }} # Required  
+        collection_id: "<YOUR COLLECTION ID>" # Required
 ```
 
 :::info
