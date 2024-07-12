@@ -43,7 +43,7 @@ Meadow has battery connector on the right side of the device. For this reason, y
 
 ![Breadboard, Protoboard and Meadow](./MeadowDev_Places.jpg)
 
-Remove the plastic sticker cover under the breadboard and stick it to the protoboard as firm and straight as possible.
+Remove the plastic sticker cover under the breadboard and stick it to the protoboard as firm and straight as possible. If you plan to use the outer-most holes to mount your Meadow kit to something else, make sure to keep the holes clear with enough room to add screws or standoffs.
 
 ![Protoboard with breadboard mounted and Meadow adjacent with mounting hardware.](./MeadowDev_Breadboard.jpg)
 

@@ -10,6 +10,41 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.12.8.0
+
+### Meadow.OS
+
+* This is a managed stack release only. No OS changes.
+
+### Meadow.Core
+  
+* Added WiFi scanning support to Meadow.Linux
+* Bug fixes to I2C reads in Meadow.Linux
+* Improved app crash logging
+* Bug fixes in F7 PWMs
+* Added new `IApp<THardware>` pattern for platforms like ProjectLab
+* Bug fix in app.config parser
+* Bug fixes in MicroLayout (positioning inside a parent)
+* Bug fix in SpiComms ReadRegister
+* Bug fixes in Gnss parsing
+* Improved network adapter events for wired, cell, and wifi
+* Added NTP support to Cell adapter
+
+#### Breaking changes
+
+* PWMs now use Units for Duration and Frequency instead of the ambiguous float
+* Renamed [Ft232h](https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Ft232h/) nuget package to [Ftxxxx](https://www.nuget.org/packages/Meadow.Foundation.ICs.IOExpanders.Ftxxxx)
+
+### Meadow.Foundation
+  
+* Added `JsonPropertyName` to `MicroJson`
+* Added support for `TimeSpan`, nullables and `List<string>` to `MicroJson`
+* Added `ResistiveTankLevelSender`
+
+#### Breaking changes
+
+* [Servos](https://www.nuget.org/packages/Meadow.Foundation.Servos) have been refactored, fixed and improved. The previous Servo API was both confusing and likely not working. 
+
 ## v1.12.2
 
 ### Meadow.OS
