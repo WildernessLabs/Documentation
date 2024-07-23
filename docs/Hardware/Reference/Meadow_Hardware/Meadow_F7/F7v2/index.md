@@ -118,7 +118,7 @@ The enable pin (EN) serves as a power switch for the board. By default, it is pu
 
 The analog reference (AREF) pin provides a reference voltage for the Analog to Digital Converter (ADC) to compare against. Typically, this should be supplied with 3.3V, so as a convenience, the AREF pin is actually connected to the 3.3V rail via 0Ω resistor that is located next to the D08 pin, just below the main MCU:
 
-![Photo displaying the location of the analog reference resistor.](AREFresistor.png)
+![Photo displaying the location of the analog reference resistor, left of the board's D09 and D08 pin holes, below the ARM processor.](AREFresistor.png)
 
 ### Reset (RST) Pin
 
@@ -137,7 +137,7 @@ There is an onboard ceramic chip antenna and a U.FL connector for an external an
 
 Both Meadow F7v2 Feather and F7 Core-Compute share a nearly identical pinout which provides an easy upgrade path from low volume to high volume production - an application built on the F7 Feature can easily be upgraded to run on a Core-Compute module.
 
-![Pinout diagram for Meadow F7v2 Feather IO.](F7v2FeatherIOPinout.png)
+![Pinout diagram for Meadow F7v2 Feather IO, as described in the following table, with RST, 3.3V, AREF, and GND at the top left. The left side ends with D04, and D05 starts at the bottom right and incrementing to D15 before ending with 5V, Enable, and Battery pins.](F7v2FeatherIOPinout.png)
 
 ### Pinout Definitions
 
@@ -194,7 +194,7 @@ The following are direct links to specific schematics:
 
 Basic dimensions are as follows; for 3D CAD models and extended dimensional information, please see the [Wilderness Labs 3D Designs Git Repository](https://github.com/WildernessLabs/3D_Print_Designs/tree/master/Meadow/Reference_Models).
 
-![Dimensions model for F7v2 Feather.](featherDimensions.png)
+![Layout diagram model for F7v2 Feather showing a width of 22.86 millimeters (0.9 inches) and length of 73.66 millimeters (2.9 inches). Pin holes are 0.04 inches diameter (1.02 millimeters) and are 0.1 inches (2.54 millimeters) from center to center. And corner mounting holes are 0.1 inches (2.54 millimeters) from the sides.](featherDimensions.png)
 
 * Width = 0.9” [22.86mm]
 * Length = 2.9” [73.66mm]
@@ -202,11 +202,11 @@ Basic dimensions are as follows; for 3D CAD models and extended dimensional info
 
 ### Schematic Symbol - F7v2 Feather
 
-![Schematic Symbol for Meadow F7v2 Feather.](featherSchematicSymbol.png)
+![Schematic symbol diagram for Meadow F7v2 Feather with RST, 3.3V, AREF, and GND at the top left. The left side ends with ESP32_RST on pin 38. The bottom right starts with ESP32_MTMS at pin 39 and goes to the top right with D15 at pin 29 before ending with pins for 5V, Enable, and Battery.](featherSchematicSymbol.png)
 
 ### Dimensions and Weight - F7v2 Core-Compute Module
 
-![Dimensions model for F7v2 Core-Compute Module.](ccmDimensions.png)
+![Dimensions diagram for F7v2 Core-Compute Module. The board is 35.5 millimeters long and 24.5 millimeters wide.](ccmDimensions.png)
 
 * Width = 24.5mm
 * Length = 35.5mm
@@ -219,17 +219,17 @@ Basic dimensions are as follows; for 3D CAD models and extended dimensional info
 
 The following schematic symbol represents the physcial pin layout:
 
-![Schematic symbol of Meadow Core-Compute Module physical pin layout.](ccmPhysicalLayout.png)
+![Schematic symbol of Meadow Core-Compute Module physical pin layout, starting bottom left with GND at pin 90 up to GND at pin 57, the top with pin 56 (D15) over to OTG_VBUS at pin 35, then down the right starting at ETH_IRQ pin 34 to GND at pin 1.](ccmPhysicalLayout.png)
 
 #### Logical Layout
 
 The following schematic symbol provides a suggested logical layout of pins based on primary function:
 
-![Schematic symbol of Meadow Core-Compute Module using a suggested logical layout of pins.](ccmLogicalLayout.png)
+![Schematic symbol of Meadow Core-Compute Module using a suggested logical layout of pins, with sections for analog, SPI3, COM4, CAN1, ethernet, and SD card on the left, and debug, I2C1 COM1, SPI5, I2C3, and OTG USB on the right.](ccmLogicalLayout.png)
 
 #### Recommended PCB Footprint
 
-![Symbol of recommended PCB footprint for Meadow Core-Compute Module.](ccmPCBfootprint.png)
+![Diagram of recommended PCB footprint for Meadow Core-Compute Module, with an outside pad of 1.2 by 0.5 millimeters and PAD91 of 1.5 by 1.0 millimeters.](ccmPCBfootprint.png)
 
 ## Technical Specifications
 
