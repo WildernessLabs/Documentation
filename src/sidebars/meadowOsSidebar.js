@@ -22,6 +22,7 @@ const meadowOsSidebar = [
           "Meadow/Getting_Started/MCUs/F7_Feather/index",
           "Meadow/Getting_Started/MCUs/Core_Compute_Module_DevKit/index", 
           "Meadow/Getting_Started/MCUs/Project_Lab/index",
+          "Meadow/Getting_Started/MCUs/Project_Lab_Cellular/index",
         ],
       },
 
