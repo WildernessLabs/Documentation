@@ -45,15 +45,19 @@ After a few seconds or a minute, reset the site and you should see the card(s) *
 
 Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
 
-### Step 2 - Install Visual Studio
+### Step 2 - Deploy latest version of Meadow.OS
+
+Follow this quick guide to <a href="../../Deploying_Meadow%2EOS/" target="_blanc">Deploy Meadow.OS</a> to your board to ensure it’s running with the latest version available.
+
+### Step 3 - Install Visual Studio
 
 Download and Install [Visual Studio 2022](https://visualstudio.microsoft.com/) for either Windows or macOS to prepare your development machine. Community edition will work fine.
 
-### Step 3 - Add Meadow Visual Studio Extension
+### Step 4 - Add Meadow Visual Studio Extension
 
-Open Visual Studio’s Extensions Manager and install the [VS 2022 Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.vsmeadow2022) Extension.
+Follow this guide to install the <a href="../../../Meadow_Tools/VSWin/" target="_blanc">VS Tools for Meadow</a> Extension for Visual Studio 2022, to deploy applications to your Meadow devices.
 
-### Step 4 - Install Meadow Project Templates
+### Step 5 - Install Meadow Project Templates
 
 Open a console window and enter the following command to install a list of Meadow project templates:
 
@@ -81,21 +85,11 @@ Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
 Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
-### Step 5 - Deploy latest version of Meadow.OS
-
-Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
-
-### Step 6 - Create your first Meadow application
+### Step 6 - Validate your Project Lab + Cellular 
 
 In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow Project Lab App (Wilderness Labs)**:
 
 ![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
-
-Once the new project is loaded, right-click on the toolbar area and select the **Meadow Device List** item.
-
-![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs_meadow_toolbar.png)
-
-This is your device selector to deploy applications to Meadow devices.
 
 ### Step 7 - Deploy your application
 
@@ -108,8 +102,6 @@ When deploying a project for the first time, the transfer will take several minu
 :::
 
 Once all the files are transferred to your device, the app will start in debug mode and you should see Project Lab's screen turn on and show sensor readings every few seconds and pushing the buttons updates the states shown on the screen.
-
-![Project Lab app running](wildernesslabs_projectlab_blinky.gif)
 
 ### Step 8 - Check out additional samples
 
@@ -124,17 +116,17 @@ You can check more samples in our [Meadow.Samples](https://github.com/Wilderness
 
 Download and install the latest version of the [.NET runtime](https://dotnet.microsoft.com/en-us/download).
 
-### Step 2 - Install Visual Studio Code
+### Step 2 - Deploy latest version of Meadow.OS
+
+Follow this quick guide to <a href="../../Deploying_Meadow%2EOS/" target="_blanc">Deploy Meadow.OS</a> to your board to ensure it’s running with the latest version available.
+
+### Step 3 - Install Visual Studio Code
 
 Download and Install [Visual Studio Code](https://visualstudio.microsoft.com/) to prepare your development machine.
 
-### Step 3 - Add Meadow VSCode Extension
+### Step 4 - Add Meadow VSCode Extension
 
 Open VSCode’s Extensions Manager and install [VSCode Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow) Extension.
-
-### Step 4 - Deploy latest version of Meadow.OS
-
-Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
 
 ### Step 5 - Install Meadow Project Templates
 
@@ -191,8 +183,6 @@ When deploying a project for the first time, the transfer will take several minu
 :::
 
 Once all the files are transferred to your device, the app will start in debug mode and you should see your Project Lab loading up a screen with all the sensor values refreshing every few seconds. You can also press the push buttons and see their status change right away.
-
-![Project Lab app running](wildernesslabs_projectlab_blinky.gif)
 
 ### Step 8 - Check out additional samples
 
