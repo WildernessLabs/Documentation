@@ -36,7 +36,7 @@ Click on the **OneChip eUICC** tab where you will see your SIM Card(s). Select y
 
 After a few seconds or a minute, reset the site and you should see the card(s) **Network Status** changed to **Activated**.
 
-## Setting up Meadow.OS, Tooling and Deployment on the Project Lab
+## Setting up Project Lab + Cellular
 
 <Tabs groupId="ide">
   <TabItem value="visualstudio2022" label="Visual Studio 2022" default>
@@ -85,15 +85,21 @@ Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
 Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
-### Step 6 - Validate your Project Lab + Cellular 
+### Step 6 - Validate hardware 
 
-In **Visual Studio**, open the **Create a new project** window. When you search for **Meadow**, you will see a list of project templates, click on **Meadow Project Lab App (Wilderness Labs)**:
+To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/jorge-add-cellular-sample/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
 
-![Create new Meadow Application](../../Common_Assets/wildernesslabs_meadow_projects.png)
+![Meadow Cellular Sample](wildernesslabs-meadow-project-lab-cellular-top-board.jpg)
+
+Things to consider:
+
+* This sample doesnt need any modifications, you can just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
+* Its recommended to be close to a window to improve signal detection.
+* If signal is still not great, you might want to try switching Networks for your SIM card on the Teal Portal.
 
 ### Step 7 - Deploy your application
 
-Connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
+When your application is ready and builds, connect your board if disconnected, and in the **Meadow devices** drop down it should list its corresponding COM port. Once selected, click on the play **Debug button** to start transferring the application to your board.
 
 ![Display Meadow Devices Toolbar](../../Common_Assets/wildernesslabs-vswin-usage.jpg)
 
@@ -101,7 +107,7 @@ Connect your board if disconnected, and in the **Meadow devices** drop down it s
 When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
 :::
 
-Once all the files are transferred to your device, the app will start in debug mode and you should see Project Lab's screen turn on and show sensor readings every few seconds and pushing the buttons updates the states shown on the screen.
+Once all the files are transferred to your device, the app will start in debug mode and you should see Project Lab's screen turn on and it will indicate your Cellular connectivity status.
 
 ### Step 8 - Check out additional samples
 
@@ -126,7 +132,7 @@ Download and Install [Visual Studio Code](https://visualstudio.microsoft.com/) t
 
 ### Step 4 - Add Meadow VSCode Extension
 
-Open VSCode’s Extensions Manager and install [VSCode Tools for Meadow](https://marketplace.visualstudio.com/items?itemName=WildernessLabs.meadow) Extension.
+Follow this guide to install the <a href="../../../Meadow_Tools/VSCode/" target="_blanc">VSCode Tools for Meadow</a> Extension for Visual Studio Code, to deploy applications to your Meadow devices.
 
 ### Step 5 - Install Meadow Project Templates
 
@@ -156,17 +162,17 @@ Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
 Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
-### Step 6 - Create your first Meadow application
+### Step 6 - Validate Hardware
 
-Lets verify everything is set up by deploying your first Meadow application. 
+To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/jorge-add-cellular-sample/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
 
-Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
+![Meadow Cellular Sample](wildernesslabs-meadow-project-lab-cellular-top-board.jpg)
 
-```console
-dotnet new meadow-project-lab --name ProjectLabDemo
-```
+Things to consider:
 
-This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.
+* This sample doesnt need any modifications, you can just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
+* Its recommended to be close to a window to improve signal detection.
+* If signal is still not great, you might want to try switching Networks for your SIM card on the Teal Portal.
 
 ### Step 7 - Deploy your application
 
@@ -182,7 +188,7 @@ Within the **Run and Debug** side bar, select the configuration drop-down and se
 When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
 :::
 
-Once all the files are transferred to your device, the app will start in debug mode and you should see your Project Lab loading up a screen with all the sensor values refreshing every few seconds. You can also press the push buttons and see their status change right away.
+Once all the files are transferred to your device, the app will start in debug mode and you should see Project Lab's screen turn on and it will indicate your Cellular connectivity status.
 
 ### Step 8 - Check out additional samples
 
@@ -203,7 +209,7 @@ Download and Install [Meadow CLI](https://www.nuget.org/packages/WildernessLabs.
 
 ### Step 3 - Deploy latest version of Meadow.OS
 
-Use the [Meadow.CLI](../../../Meadow_Tools/Meadow_CLI/) to deploy [Meadow.OS](../../Deploying_Meadow%2EOS/) to your board to ensure it’s running with the latest version available.
+Follow this quick guide to <a href="../../Deploying_Meadow%2EOS/" target="_blanc">Deploy Meadow.OS</a> to your board to ensure it’s running with the latest version available.
 
 ### Step 4 - Install Meadow Project Templates
 
@@ -233,17 +239,17 @@ Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
 Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
-### Step 5 - Create your first Meadow application
+### Step 5 - Validate Hardware
 
-Lets verify everything is set up by deploying your first Meadow application. 
+To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/jorge-add-cellular-sample/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
 
-Open VSCode and in a new Terminal within, enter the following command to create a new Project Lab project:
+![Meadow Cellular Sample](wildernesslabs-meadow-project-lab-cellular-top-board.jpg)
 
-```console
-dotnet new meadow-project-lab --name ProjectLabDemo
-```
+Things to consider:
 
-This project creates a Project Lab demo app that will activate all its onboard sensors (environmental, light and motion sensors, button states) and show its readings periodically on its 320x240 SPI display.
+* This sample doesnt need any modifications, you can just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
+* Its recommended to be close to a window to improve signal detection.
+* If signal is still not great, you might want to try switching Networks for your SIM card on the Teal Portal.
 
 ### Step 6 - Deploy your application
 
@@ -255,7 +261,7 @@ Again in your console window, use the `meadow app run` command to build, trim, d
 When deploying a project for the first time, the transfer will take several minutes, since it's transferring all the necessary libraries to run the application. Once the app is running for the first time, deployment will be faster as it will transfer only the files that have been changed.
 :::
 
-Once all the files are transferred to your device, the app will start in debug mode and you should see your Project Lab loading up a screen with all the sensor values refreshing every few seconds. You can also press the push buttons and see their status change right away.
+Once all the files are transferred to your device, the app will start in debug mode and you should see Project Lab's screen turn on and it will indicate your Cellular connectivity status.
 
 ### Step 7 - Check out additional samples
 
