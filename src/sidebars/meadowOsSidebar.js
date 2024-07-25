@@ -170,22 +170,7 @@ const meadowOsSidebar = [
     },
     items: [
       "Meadow/Meadow.OS/Automatic_Restarts/index",
-      "Meadow/Meadow.OS/Automatic_Restarts/index",
       "Meadow/Meadow.OS/Bluetooth/index",
-      {
-        type: "category",
-        label: "Cellular",
-        link: {
-          type: "doc",
-          id: "Meadow/Meadow.OS/Cellular/index",
-        },
-        items: [
-          "Meadow/Meadow.OS/Cellular/Configuration/index",
-          "Meadow/Meadow.OS/Cellular/Develop_Cellular_Apps/index",
-          "Meadow/Meadow.OS/Cellular/Cellular_GNSS/index",
-          "Meadow/Meadow.OS/Cellular/Troubleshooting/index",
-        ],
-      },
       {
         type: "category",
         label: "Cellular",
@@ -214,6 +199,7 @@ const meadowOsSidebar = [
           "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
         ],
       },
+      "Meadow/Meadow.OS/Core-Compute_SD_Card/index",
       "Meadow/Meadow.OS/File_System/index",
       {
         type: "category",
@@ -225,11 +211,9 @@ const meadowOsSidebar = [
         items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
       },
       "Meadow/Meadow.OS/Profiler/index",
-      "Meadow/Meadow.OS/Profiler/index",
       "Meadow/Meadow.OS/RTC/index",
       "Meadow/Meadow.OS/SQLite/index",
       "Meadow/Meadow.OS/Threading/index",
-      "Meadow/Meadow.OS/TLS_Client_Authentication/index",
       "Meadow/Meadow.OS/TLS_Client_Authentication/index",
     ],
   },
@@ -252,7 +236,6 @@ const meadowOsSidebar = [
           id: "Meadow/Meadow.Foundation/Libraries_and_Frameworks/index",
         },
         items: [
-          "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroJson/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroJson/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroLayout/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/MicroGraphics/index",
