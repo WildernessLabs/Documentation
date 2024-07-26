@@ -7,7 +7,7 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 ![Meadow Project Lab Getting Started Guide](wildernesslabs_projectlab_getting_started.jpg)
 
-This guide shows you how to set up your [Meadow Project Lab + Cellular bundle](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) board from unboxing all the way to deploying your fist Meadow app from either Visual Studio 2022 or Visual Studio Code.
+This guide shows you how to set up your [Meadow Project Lab + Cellular bundle](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) board from unboxing all the way to deploying your first Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
 ## Adding the cellular module on a Project Lab
 
@@ -26,15 +26,15 @@ Once everything connected, it should look like this:
 
 ## Activating your Teal SIM Card
 
-First, you'll need to fill out their [Account Creation Form](https://forms.monday.com/forms/5610d871c689ea18cde677ca13f1922f?r=use1), which would submit a request to Teal to create an account for you. Once the account is created, they will provide you a link to the Teal Portal along with the login credentials.
+First, you'll need to fill out their [Account Creation Form](https://forms.monday.com/forms/5610d871c689ea18cde677ca13f1922f?r=use1), which would submit a request to Teal to create an account for you. As soon the account is created, they will send you and email with a link to the Teal Portal along with the login credentials.
 
-Once you have the credentials, login to your account and you will land on the **Dashboard** tab, showing basic metrics such as Data Consumption, Device Network Status, eSIM Operation Status, etc. 
+Once you have the credentials, login to your account and you will land on the **Dashboard** tab, showing basic metrics such as _Data Consumption_, _Device Network Status_, _eSIM Operation Status_, etc. 
 
-Click on the **OneChip eUICC** tab where you will see your SIM Card(s). Select your card(s) on the far left end of the row and click the **Actions** drop down menu, and select **Activate**.
+Click on the **OneChip eUICC** tab where you will see your SIM Card(s). Select your card(s) on the far left end of the row and click the **Actions** drop down menu, and click **Activate**.
 
 ![Meadow Activate Teal SIM Card](wildernesslabs-teal-sim-activate.jpg)
 
-After a few seconds or a minute, reset the site and you should see the card(s) **Network Status** changed to **Activated**.
+After a few seconds or a minute, refresh the site and you should see the card(s) **Network Status** changed to **Activated**.
 
 ## Setting up Project Lab + Cellular
 
@@ -93,7 +93,7 @@ To make sure you have your Project Lab up-to-date and the Cellular module is pro
 
 Things to consider:
 
-* This sample doesnt need any modifications, you can just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
+* This sample doesnt need any modifications, just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
 * Its recommended to be close to a window to improve signal detection.
 * If signal is still not great, you might want to try switching Networks for your SIM card on the Teal Portal.
 
@@ -170,7 +170,7 @@ To make sure you have your Project Lab up-to-date and the Cellular module is pro
 
 Things to consider:
 
-* This sample doesnt need any modifications, you can just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
+* This sample doesnt need any modifications, just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
 * Its recommended to be close to a window to improve signal detection.
 * If signal is still not great, you might want to try switching Networks for your SIM card on the Teal Portal.
 
@@ -247,7 +247,7 @@ To make sure you have your Project Lab up-to-date and the Cellular module is pro
 
 Things to consider:
 
-* This sample doesnt need any modifications, you can just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
+* This sample doesnt need any modifications, just build and deploy it and you should see the Project Lab picking up a cellular signal, showing you the IP Address, conexion status and a signal strength indicator.
 * Its recommended to be close to a window to improve signal detection.
 * If signal is still not great, you might want to try switching Networks for your SIM card on the Teal Portal.
 
