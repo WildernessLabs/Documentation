@@ -15,8 +15,8 @@ Your cellular bundle comes with these parts:
 
 ![Meadow Project Lab Getting Started Guide](wildernesslabs-meadow-project-lab-cellular-specs.jpg)
 
-- Connect the Skywire click adapter on the MicroBus 1 connector on the project lab.
-- Insert the Teal SIM card in the SIM Card slot under the BG95-M3 cellular module. 
+- Connect the [Skywire click](https://www.mikroe.com/skywire-click) adapter on the MicroBus 1 connector on the project lab.
+- Insert the [Teal SIM](https://tealcom.io/) card in the SIM Card slot under the [BG95-M3 cellular module](https://www.digikey.ca/en/products/detail/nimbelink,-llc/NL-SW-LTE-QBG95-D/21363405). 
 - Place the cellular module on the Skywire click adapter.
 - Finally, connect the Mini GSM Antenna on the Antenna connector marked with X1.
 
