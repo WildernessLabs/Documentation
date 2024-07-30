@@ -9,6 +9,13 @@ subtitle: Create, deploy, and understand your first Meadow application.
 
 This guide shows you how to set up your [Meadow Project Lab + Cellular bundle](https://store.wildernesslabs.co/collections/frontpage/products/project-lab-board) board from unboxing all the way to deploying your first Meadow app from either Visual Studio 2022 or Visual Studio Code.
 
+:::info important
+Meadow has multiple ways to provide connectivity capabilities to your IoT applications: **WiFi**, **Ethernet** & **Cellular**. Switching between network interfaces is a straightforward process, and we offer working samples for each use case:
+* WiFi Sample ([Code](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/WiFi_Basics) | [Config](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/WiFiConfig))
+* [Ethernet Sample](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/Ethernet_Basics)
+* [Cellular Sample](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Meadow%20F7/Network/Cell_Basics)
+:::
+
 ## Adding the cellular module on a Project Lab
 
 Your cellular bundle comes with these parts:
@@ -87,7 +94,7 @@ Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 
 ### Step 6 - Validate hardware 
 
-To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/jorge-add-cellular-sample/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
+To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
 
 ![Meadow Cellular Sample](wildernesslabs-meadow-project-lab-cellular-top-board.jpg)
 
@@ -164,7 +171,7 @@ Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 
 ### Step 6 - Validate Hardware
 
-To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/jorge-add-cellular-sample/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
+To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
 
 ![Meadow Cellular Sample](wildernesslabs-meadow-project-lab-cellular-top-board.jpg)
 
@@ -241,7 +248,7 @@ Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 
 ### Step 5 - Validate Hardware
 
-To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/jorge-add-cellular-sample/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
+To make sure you have your Project Lab up-to-date and the Cellular module is properly configured, try out our [CellularSample](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/ProjectLab/CellularSample) project from our [Meadow.Samples](https://github.com/WildernessLabs/Meadow.Samples/) repo:
 
 ![Meadow Cellular Sample](wildernesslabs-meadow-project-lab-cellular-top-board.jpg)
 
