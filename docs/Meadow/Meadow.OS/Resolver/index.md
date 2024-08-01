@@ -8,9 +8,10 @@ sidebar_label: Resolver
 <!-- TODO: Link back to here from https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Apps/#accessing-your-running-app-device-or-log -->
 
 <!-- TODO: Questions
-  * What sets up JsonSerializer?
   * All services are singleton? How to do an instance? (Mentioned in Slack at one point.)
 
+  * What sets up JsonSerializer?
+    -> MeadowOS.cs in Meadow.Core (https://github.com/WildernessLabs/Meadow.Core/blob/2ced159970a66741fca33c54def8fdffe597b496/Source/Meadow.Core/MeadowOS.cs#L584)
 -->
 
 * Accessing the currently running Meadow App, Device, Logger, and services at runtime
