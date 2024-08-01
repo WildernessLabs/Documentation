@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Get started with Meadow Core-Compute module
+title: Get Started with Meadow Core-Compute Module
 subtitle: "To get up and running with Meadow Core-Compute, follow these steps:"
 ---
 
