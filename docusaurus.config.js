@@ -87,6 +87,10 @@ const config = {
             to: "/Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v1/",
           },
           {
+            from: "/Meadow/Meadow_Basics/Hardware/F7v2/",
+            to: "/Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v2/",
+          },
+          {
             from: "/Meadow/Meadow_Basics/Hardware/",
             to: "/Hardware/Reference/Meadow_Hardware/",
           },
