@@ -143,20 +143,6 @@ const meadowOsSidebar = [
           "Meadow/Meadow_Basics/Troubleshooting/VisualStudio/index",
         ],
       },
-
-      {
-        type: "category",
-        label: "Meadow Hardware",
-        link: {
-          type: "doc",
-          id: "Meadow/Meadow_Basics/Hardware/index",
-        },
-        items: [
-          "Meadow/Meadow_Basics/Hardware/F7v1/index",
-          "Meadow/Meadow_Basics/Hardware/F7v2/index",
-          "Meadow/Getting_Started/Getting_Started_Core-Compute_Module/index",
-        ],
-      },
       "Meadow/Meadow_Basics/Status/index",
     ],
   },
@@ -213,7 +199,6 @@ const meadowOsSidebar = [
           "Meadow/Meadow.OS/Configuration/WiFi_Configuration/index",
         ],
       },
-      "Meadow/Meadow.OS/Core-Compute_SD_Card/index",
       "Meadow/Meadow.OS/File_System/index",
       {
         type: "category",

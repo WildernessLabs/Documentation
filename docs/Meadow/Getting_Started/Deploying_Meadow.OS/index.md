@@ -7,6 +7,10 @@ subtitle: Flashing the Meadow with the latest OS via Meadow.CLI
 
 When you receive your Meadow board, it will need to have the latest Meadow.OS uploaded, or _flashed_, to it.
 
+> NOTE: Communicating with the Meadow board for updates and deployments requires a quality USB cable with data lines. Some USB charging cables only have power lines connected internally or have poor construction that may not properly support communication. Power-only cables will not work for communicating with a device. And poorly constructed cables may fail during various updating and deploying attempts. Make sure to find a quality USB cable with data lines if your Meadow device is not recognized or communication errors occur.
+>
+> Additionally, if you have your Meadow device connected through a USB hub without a dedicated power supply, it may not provide enough power to the device. In this case, connect the Meadow device directly to your computer.
+
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows" default>
 
