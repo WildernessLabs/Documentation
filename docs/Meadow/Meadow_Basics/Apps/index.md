@@ -72,7 +72,7 @@ public class MeadowApp : App<F7FeatherV2>
 
     public override Task Initialize()
     {
-        Console.WriteLine("Initialize hardware...");
+        Resolver.Log.Info("Initialize hardware...");
 
         onboardLed = new RgbPwmLed(device: Device,
             redPwmPin: Device.Pins.OnboardLedRed,
@@ -91,7 +91,7 @@ public class MeadowApp : App<F7FeatherV2>
 
     void CycleColors(TimeSpan duration)
     {
-        Console.WriteLine("Cycle colors...");
+        Resolver.Log.Info("Cycle colors...");
 
         while (true)
         {
