@@ -5,8 +5,6 @@ subtitle: Accessing static services, app, and device at runtime in Meadow
 sidebar_label: Resolver
 ---
 
-<!-- TODO: Link back to here from https://developer.wildernesslabs.co/Meadow/Meadow_Basics/Apps/#accessing-your-running-app-device-or-log -->
-
 This guide will give you an overall view of how to use the static Resolver class to access the currently running Meadow App, Device, Logger, and any registered services at runtime.
 
 If you want to see entire API available through via the Resolver class, please look at the [Meadow Resolver API docs](/docs/api/Meadow/Meadow/Resolver/).
