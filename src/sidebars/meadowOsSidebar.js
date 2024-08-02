@@ -210,6 +210,7 @@ const meadowOsSidebar = [
         items: ["Meadow/Meadow.OS/Networking/Antenna/index"],
       },
       "Meadow/Meadow.OS/Profiler/index",
+      "Meadow/Meadow.OS/Resolver/index",
       "Meadow/Meadow.OS/RTC/index",
       "Meadow/Meadow.OS/SQLite/index",
       "Meadow/Meadow.OS/Threading/index",
