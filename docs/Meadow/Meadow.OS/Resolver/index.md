@@ -9,8 +9,6 @@ This guide will give you an overall view of how to use the static Resolver class
 
 If you want to see entire API available through via the Resolver class, please look at the [Meadow Resolver API docs](/docs/api/Meadow/Meadow/Resolver/).
 
-The main components of the Resolver class:
-
 ### Resolver.Device
 
 `Resolver.Device` accesses the currently running [Meadow device](/docs/api/Meadow/Meadow/IMeadowDevice/), where you can access device-specific details such as capabilities and pins that are available.
