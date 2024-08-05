@@ -74,6 +74,26 @@ const config = {
             from: "/Meadow/Getting_Started/Deploying_Meadow/",
             to: "/Meadow/Getting_Started/Deploying_Meadow.OS/",
           },
+          {
+            from: "/Meadow/Meadow.OS/Core-Compute_SD_Card/",
+            to: "/Hardware/Reference/Meadow_Hardware/Core-Compute_SD_Card/",
+          },
+          {
+            from: "/Meadow/Getting_Started/Getting_Started_Core-Compute_Module/",
+            to: "/Hardware/Reference/Meadow_Hardware/Getting_Started_Core-Compute_Module/",
+          },
+          {
+            from: "/Meadow/Meadow_Basics/Hardware/F7v1/",
+            to: "/Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v1/",
+          },
+          {
+            from: "/Meadow/Meadow_Basics/Hardware/F7v2/",
+            to: "/Hardware/Reference/Meadow_Hardware/Meadow_F7/F7v2/",
+          },
+          {
+            from: "/Meadow/Meadow_Basics/Hardware/",
+            to: "/Hardware/Reference/Meadow_Hardware/",
+          },
 
           // // Redirect from multiple old paths to the new path
           // {
