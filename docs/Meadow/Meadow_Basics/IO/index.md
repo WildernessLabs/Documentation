@@ -77,7 +77,7 @@ GPIO ports are available via pins (as well as the onboard LED) on the Meadow F7 
 
 #### Meadow F7v1 Feather Pinout
 
-![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![Meadow F7v1 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 The function that they serve depends on how they are configured when a _port_ is instantiated on one of the pins. For instance, pin `D00` can be configured to be used a digital input or output, or as the `RX` (receive) half of a Serial UART port available as "COM4".
 
@@ -185,8 +185,8 @@ The following table lists all the accessible pins on the Meadow F7 Feather dev b
 | D02             | PH10 | PH10 |           | 1 |    |
 | D03             | PB8  | PB8  |           | 3 | 8  |
 | D04             | PB9  | PB9  |           | 4 | 9  |
-| D05             | PB4  | PB4  |           | 1 | 4  |
-| D06             | PB13 | PB13 |           | 1 | 13 |
+| D05             | PB4  | PB4  |           |   | 4  |
+| D06             | PB13 | PB13 |           |   | 13 |
 | D07             | PB7  | PB7  |           | 2 | 7  |
 | D08             | PB6  | PB6  |           | 1 | 6  |
 | D09             | PC6  | PC6  |           | 1 | 6  |
