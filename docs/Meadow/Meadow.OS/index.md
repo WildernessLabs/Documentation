@@ -14,6 +14,7 @@ Meadow.OS offers a comprehensive operating system framework that includes featur
 * **[File System](File_System)**
 * **[Networking](Networking)**
 * **[Profiler](Profiler)**
+* **[Resolver](Resolver)**
 * **[Real-Time Clock](RTC)**
 * **[SQLite](SQLite)**
 * **[Threading](Threading)**
