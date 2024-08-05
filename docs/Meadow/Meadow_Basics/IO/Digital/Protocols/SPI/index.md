@@ -40,7 +40,7 @@ Note: SPI supports shared `CS` lines in a _daisy-chain_ configuration, but it's 
 
 The SPI pins on the F7 Feather are labeled `SCK`, `MOSI` (`COPI`), and `MISO` (`CIPO`) and can be found between `A05` and `D00`:
 
-![Illustration of a Meadow F7 Feather board with two peripherals (Chip Select 1 and Chip Select 2) connected via SPI using the SCK, MOSI, and MISO pins as well as D00 and D01 pins for chip select](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![Illustration of a Meadow F7v2 Feather board with two peripherals (Chip Select 1 and Chip Select 2) connected via SPI using the SCK, MOSI, and MISO pins as well as D00 and D01 pins for chip select](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 Any pin that supports digital output can be used as a chip select line.
 
