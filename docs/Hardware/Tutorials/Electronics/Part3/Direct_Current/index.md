@@ -9,14 +9,14 @@ subtitle: Constant polarity current.
 [Direct current (DC)](https://en.wikipedia.org/wiki/Direct_current) specifies a unidirectional flow of electrons; that is they flow in one direction only.
 
 The simple nature of direct current lends itself well to creating digital logic circuits, because it can represent binary `1` when `ON` (within a given voltage range), and binary `0` when `OFF` (at ground, or `0V`). It's also the type of current that batteries generate.
- 
+
 Because DC is used as the primary type of current in digital logic circuits, most of this tutorial will focus on DC circuits.
 
 Direct curent is also used in [long distance, high power, electrical transmission lines](https://en.wikipedia.org/wiki/High-voltage_direct_current) (usually `>250kV`) because of lower electrical losses.
 
 Meadow provides two _power rails_ that supply `5V` and `3.3V` direct current. The `3.3V` rail can be found on the left header, and the `5V` rail can be found on the right header:
 
-![Illustration of Meadow board pin headers, including 3.3 volts on the second left pin from the USB connector and 5 volts on the third right pin from the USB connector.](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![Illustration of Meadow board pin headers, including 3.3 volts on the second left pin from the USB connector and 5 volts on the third right pin from the USB connector.](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 ### DC Power Symbols
 
@@ -36,13 +36,13 @@ The logic level is based on what `HIGH` means in a circuit, and falls into two c
 
 #### Complementary Metal-Oxide-Semiconductor (CMOS)
 
-CMOS is the technology that nearly all modern integrated circuits use. CMOS `HIGH` signals can vary but they're defined as the `V`<sub>`DD`</sub> level, which is usually `3.3V` in most common circuits. In fact, for nearly all circuits we'll create, we'll use the CMOS standard with `V`<sub>`DD`</sub> = `3.3V` as the upper end of the voltage supply source. 
+CMOS is the technology that nearly all modern integrated circuits use. CMOS `HIGH` signals can vary but they're defined as the `V`<sub>`DD`</sub> level, which is usually `3.3V` in most common circuits. In fact, for nearly all circuits we'll create, we'll use the CMOS standard with `V`<sub>`DD`</sub> = `3.3V` as the upper end of the voltage supply source.
 
 Internally, most microcontrollers, CPUs, and other complex chips use a lower `V`<sub>`DD`</sub>, often `1.8V` or less, which allows them to operate at faster speeds. However, most microcontrollers use `3.3V` on their IO pins.
 
 #### Transistor-Transistor-Logic (TTL)
 
-TTL is based on older transistor technologies in which the `HIGH` signal is defined as `V`<sub>`CC`</sub>, which is usually `5V`. 
+TTL is based on older transistor technologies in which the `HIGH` signal is defined as `V`<sub>`CC`</sub>, which is usually `5V`.
 
 #### VCC/VDD
 

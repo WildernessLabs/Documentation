@@ -61,7 +61,7 @@ The Meadow F7 Feather has two exposed serial ports, named `COM4` and `COM1` with
 * **COM4** - `D00` = `RX`, `D01` = `TX`
 * **COM1** - `D13` = `RX`, `D12` = `TX`
 
-![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![Illustration of a Meadow F7 Feather board with COM4 on pins D00 and D01, and COM1 on pins D12 and D13](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 ## Using the Meadow Serial API
 

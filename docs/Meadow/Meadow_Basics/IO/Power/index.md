@@ -59,7 +59,7 @@ The STM32F7 is equipped with a real-time clock (RTC), which, when set, will reta
 
 ## Hardware Pins
 
-![Meadow F7 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7_Micro_Pinout.svg)
+![Meadow F7v2 pinout diagram showing pins used for multiple functions](/Common_Files/Meadow_F7v2_Micro_Pinout.svg)
 
 ### Reset (`RST`)
 
