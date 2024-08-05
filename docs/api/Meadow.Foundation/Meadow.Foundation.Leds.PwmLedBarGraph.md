@@ -26,19 +26,19 @@ public override Task Initialize()
 {
     Resolver.Log.Info("Initializing...");
 
-    // Using an array of Pins that support PWM (D02 - D13)
+    // Using an array of Pins that support PWM (F7v2: D02-D04, D07-D13)
     IPin[] pins =
     {
-         Device.Pins.D11,
-         Device.Pins.D10,
-         Device.Pins.D09,
-         Device.Pins.D08,
-         Device.Pins.D07,
-         Device.Pins.D06,
-         Device.Pins.D05,
-         Device.Pins.D04,
-         Device.Pins.D03,
-         Device.Pins.D02
+        Device.Pins.D11,
+        Device.Pins.D10,
+        Device.Pins.D09,
+        Device.Pins.D08,
+        Device.Pins.D07,
+        // Device.Pins.D06, // Only available for PWM on F7v1
+        // Device.Pins.D05, // Only available for PWM on F7v1
+        Device.Pins.D04,
+        Device.Pins.D03,
+        Device.Pins.D02
     };
 
     pwmLedBarGraph = new PwmLedBarGraph(pins, new Voltage(2.2));

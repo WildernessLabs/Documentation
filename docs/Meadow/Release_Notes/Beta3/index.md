@@ -654,7 +654,7 @@ In order to be compatible with the file system changes, the `Meadow.CLI` has als
 
 ### SPI
 
-We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merged. We’re excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you’ll need to flash your Meadow board with the [latest OS firmware binaries](http://wldrn.es/latestmeadowos).
+We got [SPI](/Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/) validated and merged. We're excited to get this out, as we know that several of you are working on integrations that require SPI. To use it, you'll need to flash your Meadow board with the [latest OS firmware binaries](http://wldrn.es/latestmeadowos).
 
 ### Visual Studio Extension
 
@@ -692,9 +692,9 @@ Say hello to productivity! That's right, we now have extensions for [Visual Stud
 
 PWM is now live! Along with it, PwmLed, RgbPwmLed, Servo Core, etc.
 
-```
+```csharp
 IPwmPort pwm = Device.CreatePwmPort(
-    pin: Device.Pins.D05, 
+    pin: Device.Pins.D04, 
     frequency: 100, 
     dutyCycle: 0.5f);
 pwm.Start();
@@ -704,7 +704,7 @@ pwm.Start();
 
 The I2C protocol is also available in our latest Meadow OS.
 
-```
+```csharp
 II2cBus i2c = Device.CreateI2cBus();
 GY521Test(i2c); // Pass i2c to an I2C capable device
 ```

@@ -185,8 +185,8 @@ The following table lists all the accessible pins on the Meadow F7 Feather dev b
 | D02             | PH10 | PH10 |           | 1 |    |
 | D03             | PB8  | PB8  |           | 3 | 8  |
 | D04             | PB9  | PB9  |           | 4 | 9  |
-| D05             | PB4  | PB4  |           | 1 | 4  |
-| D06             | PB13 | PB13 |           | 1 | 13 |
+| D05             | PB4  | PB4  |           |   | 4  |
+| D06             | PB13 | PB13 |           |   | 13 |
 | D07             | PB7  | PB7  |           | 2 | 7  |
 | D08             | PB6  | PB6  |           | 1 | 6  |
 | D09             | PC6  | PC6  |           | 1 | 6  |
