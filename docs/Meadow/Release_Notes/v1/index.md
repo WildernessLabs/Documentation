@@ -10,6 +10,38 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.13.0.0
+
+This is a managed stack only release that brings a highly requested feature - CAN Bus support! 
+
+You'll also see new peripheral drivers along with interface and abstraction improvements across the driver surface that continues to streamline and standardize the API surface.
+
+### Meadow.Core
+
+* Added `IDigitalPushButtonJoystick` interface 
+* Added `IBacklitDisplay` interface
+* Added `IColorSensor` interface
+* Added `IColorInvertableDisplay` interface
+* Add ability to set clock in Meadow.Linux
+* Added NTP client support to Meadow.Linux
+* Add implementation support for BeagleBone Black
+* Meadow.Linux can now create I2C bus by bus number
+* Bug fix for GPIOD interrupts
+* Improvements to cellular network events
+
+### Meadow.Foundation
+
+* Added CAN Bus support
+* New Voltaic v10x driver
+* Added `Tcs3472x` color sensor driver
+* Added `Ili9225` TFT SPI display driver
+* Added histogram control to MicroLayout
+* Added MicroGraphics APIs to invert colors on supported devices
+* `Tls2591` driver cleanup and fixes
+* `Xpt2046` driver cleanup and fixes
+* `Mcp2515` driver cleanup and fixes
+* Fixed `Pca9685` duty cycle calculation for PWM
+
 ## v1.12.8.0
 
 ### Meadow.OS
