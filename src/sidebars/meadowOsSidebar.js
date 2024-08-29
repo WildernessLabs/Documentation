@@ -121,6 +121,7 @@ const meadowOsSidebar = [
                   "Meadow/Meadow_Basics/IO/Digital/Protocols/I2C/index",
                   "Meadow/Meadow_Basics/IO/Digital/Protocols/SPI/index",
                   "Meadow/Meadow_Basics/IO/Digital/Protocols/UART/index",
+                  "Meadow/Meadow_Basics/IO/Digital/Protocols/CAN/index",
                 ],
               },
             ],
