@@ -10,6 +10,29 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.14.0.0
+
+This release delivers a major memory management upgrade that's the result of months of work. This new version of Meadow OS both reduces the total memory used and more efficiently manages freed memory.
+
+### Updating to v1.14.0
+
+This is a full stack release requiring an OS update and new nuget packages.
+
+### Meadow.OS
+
+* Greatly optimized memory usage for apps, mitigating out-of-memory issues
+* Enhanced network event handling for cellular connections
+
+### Meadow.Core
+
+* Improvements to Linux GPIOD interop
+* Added interfaces for CAN errors
+
+### Meadow.Foundation 
+
+* Added error support to `MCP2515`
+* Added error events to PCAN device
+
 ## v1.13.0.0
 
 This is a managed stack only release that brings a highly requested feature - CAN Bus support! 
