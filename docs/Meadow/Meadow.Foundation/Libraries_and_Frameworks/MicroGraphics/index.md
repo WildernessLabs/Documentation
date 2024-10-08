@@ -151,7 +151,7 @@ graphics.DrawTriangle(
     filled: true);
 ```
 
-The code sample above draws a red rectangle:
+The code sample above draws a red triangle:
 
 ![meadow micrographics line](micrographics_triangle.png)
 
