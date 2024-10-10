@@ -85,7 +85,7 @@ Console.WriteLine($"Predicted Class: {predictedClass}");
 
 # Best Practices
 
-* **Model Optimization**: Optimize your model for size and performance using quantization and pruning techniques.
-* **Resource Management**: Meadow devices have limited resources. Keep your models small and efficient.
-* **Input Validation**: Ensure that the input data matches the model's expected format and data types.
-* **Error Handling**: Implement error handling to manage issues with model loading and inference execution.
+* **Model Optimization** - Optimize your model for size and performance using quantization and pruning techniques.
+* **Resource Management** - Meadow devices have limited resources. Keep your models small and efficient.
+* **Input Validation** - Ensure that the input data matches the model's expected format and data types.
+* **Error Handling** - Implement error handling to manage issues with model loading and inference execution.
