@@ -17,7 +17,7 @@ TensorFlow Lite for Microcontrollers on Meadow provides a modern .NET API, allow
 
 To get started, you'll need to add the `Meadow.TensorFlowLiteForMicrocontrollers` library to your Meadow application. You can do this by adding the NuGet package to your project:
 
-```
+```csharp
 dotnet add package Meadow.TensorFlowLiteForMicrocontrollers
 ```
 
@@ -27,7 +27,7 @@ First, include your TensorFlow Lite model (.tflite file) in your Meadow project.
 
 To load the model, read it as a byte array from the embedded resources:
 
-```
+```csharp
 // Load the model from embedded resources
 var assembly = Assembly.GetExecutingAssembly();
 
@@ -49,7 +49,7 @@ The `GestureModel` class provides a `ModelInput` property to manage inputs. You 
 
 For example, if your model expects a float array of a specific size:
 
-```
+```csharp
 // Prepare your input data (e.g., sensor readings)
 float[] inputData = new float[] { /* your input data */ };
 
@@ -61,7 +61,7 @@ gestureModel.ModelInput.SetData(inputData);
 
 With the model loaded and input data prepared, you can run inference by calling the `Predict` method:
 
-```
+```csharp
 // Run the prediction
 var output = gestureModel.Predict();
 ```
@@ -72,7 +72,7 @@ The `ModelOutput` object contains the output data from the model, which you can 
 
 For example, if the model outputs probabilities for different classes:
 
-```
+```csharp
 // Assuming output contains a float array of probabilities
 float[] probabilities = output.GetOutputData();
 
