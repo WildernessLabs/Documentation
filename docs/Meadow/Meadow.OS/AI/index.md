@@ -20,8 +20,6 @@ Additionally, running AI at the edge rather than in the cloud has a number of im
 
 Meadow provides a productive and powerful, unified, multi-platform AI experience at the edge for .NET developers, whether it be an MCU-based device like a Meadow F7, Single-Board-Computer (SBC) such as a Raspberry Pi or Multi-GPU Jetson Nano, or desktop machine.
 
-Like most embedded development today, AI workloads are somewhat easier on SBCs, but more difficult on MCUs where specialized model execution engines/runtimes have to be built into OS/Applications, models have to be manually managed (often built directly into the executing assembly and not available dynamically), and model training requires specialized tooling and skills.
-
 Today Meadow enables AI across the following vectors:
 
 * **[TensorFlowLite for Microcontrollers](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TensorFlowLite/)** - TensorFlowLite is an model execution runtime that is baked into Meadow.OS as a first-class feature. Simply add the nuget package, load your model, feed it data, and get the results. For more information see the [TensorFlowLite for Microcontrollers guide](/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TensorFlowLite/).
