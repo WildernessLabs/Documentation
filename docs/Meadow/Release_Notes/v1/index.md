@@ -10,6 +10,30 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v1.15.0.0
+
+This release delivers some key optimizations to Meadow networking and sleep.
+
+### Meadow.OS
+
+* Fixed a critical issue that was affecting the reliability of Meadow Sleep/Wake
+* Added support for the Quectel EG21 modem
+* Minor improvements to edge-case network reliability
+
+### Meadow.Core
+
+* OtA download progress reporting fix
+* Improved reporting of deadlock conditions
+* Improved network compatibility
+
+### Meadow.Foundation
+
+* Renamed PCanBasic assembly to prevent OEM assembly name conflict
+* Added ADS1263 Driver
+* Added ChromaTek WS2812 momentary and latching button drivers
+* Improved WS2812 driver
+
+
 ## v1.14.0.0
 
 This release delivers a major memory management upgrade that's the result of months of work. This new version of Meadow OS both reduces the total memory used and more efficiently manages freed memory.

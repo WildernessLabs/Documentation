@@ -171,6 +171,7 @@ const meadowOsSidebar = [
       id: "Meadow/Meadow.OS/index",
     },
     items: [
+      "Meadow/Meadow.OS/AI/index",
       "Meadow/Meadow.OS/Automatic_Restarts/index",
       "Meadow/Meadow.OS/Bluetooth/index",
       {
@@ -244,6 +245,7 @@ const meadowOsSidebar = [
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Maple.Server/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TextDisplayMenu/index",
           "Meadow/Meadow.Foundation/Libraries_and_Frameworks/Gps_Gnss_Nmea_Processor/index",
+          "Meadow/Meadow.Foundation/Libraries_and_Frameworks/TensorFlowLite/index",
         ],
       },
       {
