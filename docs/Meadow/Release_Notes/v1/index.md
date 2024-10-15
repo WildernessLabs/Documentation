@@ -20,7 +20,7 @@ This release delivers some key optimizations to Meadow networking and sleep.
 * Added support for the Quectel EG21 modem
 * Minor improvements to edge-case network reliability
 
-### Meadow.OS
+### Meadow.Core
 
 * OtA download progress reporting fix
 * Improved reporting of deadlock conditions
