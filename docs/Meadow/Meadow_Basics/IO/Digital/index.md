@@ -54,16 +54,12 @@ _Reading_ the state of a _digital input_ is done using an implementation of the 
 ```csharp
 IDigitalInputPort CreateDigitalInputPort(
     IPin pin,
-    InterruptMode interruptMode = InterruptMode.None,
-    ResistorMode resistorMode = ResistorMode.Disabled,
-    double debounceDuration = 0,
-    double glitchDuration = 0);
+    ResistorMode resistorMode = ResistorMode.Disabled);
 ```
 
-The three most important arguments are:
+The arguments are:
 
 * **`pin`** - The pin on the device of which to configure to be a digital input.
-* **`interruptMode`** - Whether or not the port should be configured to raise interrupt notifications, and what kind of change should trigger an interrupt.
 * **`resistorMode`** - The `ResistorMode` specifying whether an external pull-up/pull-down resistor is used, or an internal pull-up/pull-down resistor should be configured for default state.
 
 We'll examine debounce and glitch filtering in a moment.
@@ -94,7 +90,10 @@ For example, if you wanted your application to get notified when the `D03` input
 // create the InputPort with interrupts enabled
 var input = Device.CreateDigitalInputPort(
     Device.Pins.D03,
-    InterruptMode.EdgeRising);
+    InterruptMode.EdgeRising,
+    ResistorMode.Disabled,
+    TimeSpan.FromMilliseconds(5),
+    TimeSpan.FromMilliseconds(5));
 
 // add an event handler
 input.Changed += (s, e) =>
