@@ -12,7 +12,7 @@ subtitle: Release Notes
 
 ## v1.15.0.0
 
-This release delivers some key optimizations to Meadow networking and sleep.
+This release delivers some key optimizations to Meadow networking and sleep and includes the first release of [TensorFlowLite for Microcontrollers](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TensorFlowLite/) support on the Meadow F7!
 
 ### Meadow.OS
 
@@ -28,6 +28,7 @@ This release delivers some key optimizations to Meadow networking and sleep.
 
 ### Meadow.Foundation
 
+* Added [TensorFlowLite for Microcontrollers](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/Libraries_and_Frameworks/TensorFlowLite/) support for Meadow F7
 * Renamed PCanBasic assembly to prevent OEM assembly name conflict
 * Added ADS1263 Driver
 * Added ChromaTek WS2812 momentary and latching button drivers
