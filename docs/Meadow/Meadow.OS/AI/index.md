@@ -1,6 +1,6 @@
 ---
 layout: Meadow
-title: Artificial Intellegence (AI)
+title: Artificial Intelligence (AI)
 subtitle: Artifical Intelligence (AI) at the edge with Meadow.
 ---
 
