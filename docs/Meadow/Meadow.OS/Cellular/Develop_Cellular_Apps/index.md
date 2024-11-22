@@ -127,6 +127,36 @@ Settings:
     EnablePin: H10         # (required) Enable MCU pin to power the module on/off
 ```
 
+### Configuring Project Lab v3 with EG21
+
+In the case that you're using a Project Lab v3 with the EG21-GL module on mikroBUS 1 you'll need this in your `meadow.config.yaml`:
+
+```yaml
+# Device specific config
+Device:
+    # Name of the device
+    Name: ProjectLabV3
+
+    # Corresponding MCU pin names for the reserved pins
+    # (COMX_RX pin, COM_TX pin, ENABLE pin)
+    ReservedPins: B15;B14;H10
+
+# Network configuration
+Network:
+    #  Which interface should be used?
+    DefaultInterface: Cell
+...
+```
+
+And your `EnablePin` and `Interface` in `cell.config.yaml` should be `H10` and `COM1`, respectively:
+
+```yaml
+Settings:
+...
+    Interface: COM1        # (required) Serial interface (COM1 (default), COM4 or COM6)
+    EnablePin: H10         # (required) Enable MCU pin to power the module on/off
+```
+
 ## Step 3: Handling Cell connection using a Meadow application
 
 To check if you established a connection, you can use the `meadow listen` CLI command, which should return a message like this:
