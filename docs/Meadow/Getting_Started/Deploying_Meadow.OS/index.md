@@ -29,6 +29,7 @@ Download and install version 8 [.NET SDK](https://dotnet.microsoft.com/en-us/dow
 The way we flash Meadow boards (among other things) is via our command-line-interface tool called [Meadow.CLI](../../Meadow_Tools/Meadow_CLI/). Make sure you have it installed to continue.
 
 ### Step 4 - Install dfu-util
+
 From a console with admin rights, execute following command:
 
 ```console
@@ -192,17 +193,10 @@ meadow firmware write
 This following will only work if you have a newer version of Meadow OS installed. It is recommended to try option 1 first.
 Reset the device (push the RST button or disconnect and reconnect) and identify the serial port name that the Meadow is connecting on.
 
-Execute the following Meadow CLI command in your terminal to determine the port your Meadow device is using.
+Execute the following Meadow CLI command in your terminal to determine the port your Meadow device is using and select the right one.
 
 ```console
-meadow list ports
-```
-
-On macOS, you should see a port like `/dev/tty.usbmodem336F336D30361`.
-Once you've identified the port name, run the following command in your console, replacing `{port}` with the serial port name to send all future `meadow` commands to that device.
-
-```console
-meadow config route {port}
+meadow port select
 ```
 
 **NOTE: If the process hangs on _Opening port '{PORT}'..._, hit the RST button on the device.**
