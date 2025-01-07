@@ -28,7 +28,7 @@ In addition to being a hugely important milepost in the development of Meadow, t
 
 ### Meadow.OS
 
-As part of the 2.0 effort, the OS and the entire Meadow platform has gone through more extensive and exhaustive planning and testing than any of our previous releases, and has been running our test devices and harnesses with perfect uptime for our model applications. In addition, several minor issues were resolved in OS and App OTA, as well as USB debugging.
+As part of the 2.0 effort, the OS and the entire Meadow platform has gone through more extensive and exhaustive planning and testing than any of our previous releases, and has been running our test devices and harnesses with perfect uptime for our model applications. As part of this release, several minor issues were resolved in OS and App OTA, as well as in USB debugging initialization.
 
 Finally, the bootloader no longer ‘flicks’ any F7 LED pins as indicator of an update in progress as those pins are user I/O in some Meadow form factors. 
 
