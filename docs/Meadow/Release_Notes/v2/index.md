@@ -40,7 +40,6 @@ Finally, the bootloader no longer ‘flicks’ any F7 LED pins as indicator of a
 * Bug fix - external storage insert and removal events.
 * Bug fix - internal resistors in Meadow.Linux.
 * Bug fix - ethernet adapter link status when the cable/link is already plugged in.
-* Bug fix - issues with SD card Injected/Ejected event triggering.
 * Bug fix - health monitoring cases where some OS failures and .NET exceptions were not being reported.
 
 
