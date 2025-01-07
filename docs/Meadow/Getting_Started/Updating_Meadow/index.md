@@ -45,13 +45,13 @@ At this point, your Meadow device should be good to go for a proper flash of **M
 Download the latest Meadow.OS binaries, by using the command:
 
 ```
-meadow download os
+firmware download
 ```
 
 To flash your Meadow board with the latest binaries, disconnect and reconnect your board holding the BOOT button to power it on in **Bootloader mode**. Now run the following command:
 
 ```
-meadow flash os
+firmware write
 ```
 
 Note: This process takes about 2-3 minutes, as it needs to erase the Flash memory of the STM32, then transfer the Meadow.OS.Runtime file along with the binaries for the ESP coprocessor. At times, this process might show exceptions and errors, failing to complete successfully. When that happens, disconnect and reconnect the board in bootloader mode, and try again.
