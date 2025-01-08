@@ -1,7 +1,7 @@
 ---
 layout: Meadow
-sidebar_label: Meadow v1.*
-title: Meadow v1.* Releases
+sidebar_label: Meadow v2.*
+title: Meadow v2.* Releases
 subtitle: Release Notes
 ---
 
