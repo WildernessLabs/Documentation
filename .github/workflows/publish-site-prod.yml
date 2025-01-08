@@ -120,7 +120,7 @@ jobs:
         uses: Nuget/setup-nuget@v1.2.0
       - name: Install DocFX globally
         run: |
-          dotnet tool install --global docfx
+          dotnet tool install --global docfx --version 2.77.0
       - name: Install DocFxMarkdownGen
         run: |
           dotnet tool install --global DocFxMarkdownGen
