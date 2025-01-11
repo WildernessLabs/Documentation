@@ -13,9 +13,9 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Y4000
 ### Code Example
 
 ```csharp
-Y4000 sensor;
+private Y4000 sensor;
 
-public async override Task Initialize()
+public override async Task Initialize()
 {
     Resolver.Log.Info("Initialize...");
     await Task.Delay(2000);
@@ -36,7 +36,7 @@ public override async Task Run()
     var supplyVoltage = await sensor.GetSupplyVoltage();
     Resolver.Log.Info($"Supply voltage: {supplyVoltage}");
 
-    var measurements = await sensor.Read();
+    var measurements = await sensor.ReadSensor();
 
     Resolver.Log.Info($"Sensor data: {measurements}");
 }

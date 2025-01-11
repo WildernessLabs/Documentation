@@ -24,7 +24,7 @@ public override Task Initialize()
     var consumer = Bmp280.CreateObserver(
         handler: result =>
         {
-            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N2}C, old: {result.Old?.Temperature?.Celsius:N2}C");
+            Resolver.Log.Info($"Observer: Temp changed by threshold; new temp: {result.New.Temperature?.Celsius:N1}C, old: {result.Old?.Temperature?.Celsius:N1}C");
         },
         filter: result =>
         {
@@ -42,8 +42,8 @@ public override Task Initialize()
     {
         try
         {
-            Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N2}C");
-            Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N2}mbar ({result.New.Pressure?.Pascal:N2}Pa)");
+            Resolver.Log.Info($"  Temperature: {result.New.Temperature?.Celsius:N1}C");
+            Resolver.Log.Info($"  Pressure: {result.New.Pressure?.Millibar:N1}mbar ({result.New.Pressure?.Pascal:N1}Pa)");
         }
         catch (Exception ex)
         {
@@ -58,8 +58,8 @@ public override async Task Run()
 {
     var conditions = await sensor.Read();
     Resolver.Log.Info("Initial Readings:");
-    Resolver.Log.Info($"  Temperature: {conditions.Temperature?.Celsius:N2}C");
-    Resolver.Log.Info($"  Pressure: {conditions.Pressure?.Bar:N2}hPa");
+    Resolver.Log.Info($"  Temperature: {conditions.Temperature?.Celsius:N1}C");
+    Resolver.Log.Info($"  Pressure: {conditions.Pressure?.Bar:N1}hPa");
 
     sensor.StartUpdating(TimeSpan.FromSeconds(1));
 }

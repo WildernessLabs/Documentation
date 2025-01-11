@@ -6,8 +6,8 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lis2Mdl
 | Lis2mdl | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2Mdl) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2Mdl/Datasheet) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2mdl) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2mdl/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Lis2Mdl/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Lis2Mdl.svg?label=Meadow.Foundation.Sensors.Motion.Lis2Mdl" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Lis2Mdl" /></a> |
 
 ### Code Example
@@ -49,5 +49,5 @@ void HandleResult(object sender,
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2Mdl/Samples/Lis2Mdl_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lis2mdl/Samples/Lis2mdl_Sample)
 

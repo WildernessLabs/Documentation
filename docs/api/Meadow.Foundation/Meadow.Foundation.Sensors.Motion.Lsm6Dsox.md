@@ -3,11 +3,11 @@ uid: Meadow.Foundation.Sensors.Motion.Lsm6Dsox
 slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Motion.Lsm6Dsox
 ---
 
-| Lsm6Dsox | |
+| Lsm6dsox | |
 |--------|--------|
 | Status | <img src="https://img.shields.io/badge/Working-brightgreen" style={{ width: "auto", height: "-webkit-fill-available" }} alt="Status badge: working" /> |
-| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6Dsox) |
-| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6Dsox/Datasheet) |
+| Source code | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6dsox) |
+| Datasheet(s) | [GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6dsox/Datasheet) |
 | NuGet package | <a href="https://www.nuget.org/packages/Meadow.Foundation.Sensors.Motion.Lsm6dsox/" target="_blank"><img src="https://img.shields.io/nuget/v/Meadow.Foundation.Sensors.Motion.Lsm6dsox.svg?label=Meadow.Foundation.Sensors.Motion.Lsm6dsox" alt="NuGet Gallery for Meadow.Foundation.Sensors.Motion.Lsm6dsox" /></a> |
 
 ### Code Example
@@ -51,5 +51,5 @@ void HandleResult(object sender,
 
 ```
 
-[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6Dsox/Samples/Lsm6Dsox_Sample)
+[Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Motion.Lsm6dsox/Samples/Lsm6dsox_Sample)
 
