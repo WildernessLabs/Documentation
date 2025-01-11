@@ -55,4 +55,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Color.Tcs3472x/Samples/Tcs3472x_Sample)
 
-

@@ -53,4 +53,3 @@ while (true)
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.CAN.PCanBasic/Samples/PCanBasic_Sample)
 
-

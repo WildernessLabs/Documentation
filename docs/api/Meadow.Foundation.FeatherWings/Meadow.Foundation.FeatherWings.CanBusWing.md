@@ -66,4 +66,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.FeatherWings/tree/main/Source/CanBusWing/Samples/CanBusWing_Sample)
 
-

@@ -70,4 +70,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/ICs.CAN.Mcp2515/Samples/Mcp2515_Sample)
 
-

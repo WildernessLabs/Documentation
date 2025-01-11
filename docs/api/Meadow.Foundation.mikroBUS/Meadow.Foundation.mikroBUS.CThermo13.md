@@ -56,4 +56,3 @@ private async Task ReadConditions()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation.MikroBus/tree/main/Source/CThermo13/Sample/CThermo13_Sample)
 
-

@@ -82,4 +82,3 @@ public class Program
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Displays.Silk/Samples/Silk_Sample)
 
-
