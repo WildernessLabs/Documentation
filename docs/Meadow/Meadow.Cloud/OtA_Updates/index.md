@@ -104,14 +104,14 @@ An .mpak file is an application bundle. We'll use the application we created in 
 1. Create your MPAK with the Meadow CLI, replacing `[target Meadow OS version]` with your target Meadow OS version (such as `1.10.0.2`) and give whatever name you want to provide.
 
     ```console
-    meadow package create application_path/your_app.csproj -n "name of MPAK".mpak
+    meadow cloud package create application_path/your_app.csproj -n "name of MPAK".mpak
     ```
 
     This command creates an .mpak file with the contents of your application and additional metadata.
 1. Upload your newly created .mpak bundle to Meadow.Cloud.
 
     ```console
-    meadow package upload [path to .mpak file]
+    meadow cloud package upload [path to .mpak file]
     ```
 
 1. Visit [https://www.meadowcloud.co/my/packages](https://www.meadowcloud.co/my/packages) to verify your package was successfully uploaded.
