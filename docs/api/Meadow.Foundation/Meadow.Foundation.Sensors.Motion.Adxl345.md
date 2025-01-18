@@ -21,9 +21,9 @@ The ADXL345 can operating in interrupt and polling mode. Polling applications ar
 ```csharp
 Adxl345 sensor;
 
-public MeadowApp()
+public override Task Initialize()
 {
-    Console.WriteLine("Initializing");
+    Resolver.Log.Info("Initialize...");
 
     sensor = new Adxl345(Device.CreateI2cBus());
     sensor.SetPowerState(false, false, true, false, Adxl345.Frequencies.TwoHz);
@@ -31,25 +31,23 @@ public MeadowApp()
     // classical .NET events can also be used:
     sensor.Updated += (sender, result) =>
     {
-        Console.WriteLine($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
+        Resolver.Log.Info($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
             $"Y:{result.New.Y.MetersPerSecondSquared:N2}," +
             $"Z:{result.New.Z.MetersPerSecondSquared:N2} (m/s^2)]");
     };
 
-    //==== one-off read
-    ReadConditions().Wait();
-
-    // start updating
-    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
+    return Task.CompletedTask;
 }
 
-protected async Task ReadConditions()
+public async override Task Run()
 {
     var result = await sensor.Read();
-    Console.WriteLine("Initial Readings:");
-    Console.WriteLine($"Accel: [X:{result.X.MetersPerSecondSquared:N2}," +
+    Resolver.Log.Info("Initial Readings:");
+    Resolver.Log.Info($"Accel: [X:{result.X.MetersPerSecondSquared:N2}," +
         $"Y:{result.Y.MetersPerSecondSquared:N2}," +
         $"Z:{result.Z.MetersPerSecondSquared:N2} (m/s^2)]");
+
+    sensor.StartUpdating(TimeSpan.FromMilliseconds(500));
 }
 
 ```

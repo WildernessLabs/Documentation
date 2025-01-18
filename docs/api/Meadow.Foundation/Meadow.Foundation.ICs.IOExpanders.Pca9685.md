@@ -13,7 +13,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Pca9685
 ### Code Example
 
 ```csharp
-Pca9685 pca9685;
+private Pca9685 pca9685;
 
 public override Task Initialize()
 {
@@ -21,15 +21,14 @@ public override Task Initialize()
     var i2CBus = Device.CreateI2cBus(I2cBusSpeed.FastPlus);
 
     pca9685 = new Pca9685(i2CBus, new Meadow.Units.Frequency(50, Meadow.Units.Frequency.UnitType.Hertz), (byte)Pca9685.Addresses.Default);
-    pca9685.Initialize();
 
     return base.Initialize();
 }
 
 public override Task Run()
 {
-    var port0 = pca9685.CreatePwmPort(0, 0.05f);
-    var port7 = pca9685.CreatePwmPort(7);
+    var port0 = pca9685.CreatePwmPort(pca9685.Pins.LED0, 0.05f);
+    var port7 = pca9685.CreatePwmPort(pca9685.Pins.LED7);
 
     port0.Start();
     port7.Start();
