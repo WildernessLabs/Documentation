@@ -10,6 +10,19 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v2.0.1
+
+This is a Nuget only release (no new OS binaries) that fixes a few high priority driver bugs.
+
+### Meadow.Foundation
+
+* Bug fixes for `RS485` regression.
+* Fixed `BME68x` reset.
+* Improved `BME68x` calibration.
+* Exposed 2nd temperature sensor on `ProjectLab`.
+* Added StepperOnline `BLD510B` controller and `F55B150_24GL_30S` motor
+* Rolled back System.IO.Ports references to 8.0.0
+
 ## v2.0.0.3
 
 Meadow.OS v2.0 - **the reliability release**, is here, and while only an incremental upgrade from v1.15, it’s the culmination of nearly two years of work of stability fixes and polishing to make Meadow an ultra-reliable, full-featured, IoT OS that you can rely on for your critical applications. In setting out goals for Meadow.OS v2.0, we defined our reliability metrics as having three critical components:

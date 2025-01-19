@@ -25,22 +25,22 @@ public override Task Initialize()
 
 public override async Task Run()
 {
-    await servo.RotateTo(new Angle(servo.Config.MinimumAngle.Degrees, AU.Degrees));
+    servo.RotateTo(servo.MaximumAngle);
 
     while (true)
     {
-        for (int i = 0; i <= servo.Config.MaximumAngle.Degrees; i++)
+        for (int i = 0; i <= servo.MaximumAngle.Degrees; i++)
         {
-            await servo.RotateTo(new Angle(i, AU.Degrees));
+            servo.RotateTo(new Angle(i, AU.Degrees));
             Resolver.Log.Info($"Rotating to {i}");
             await Task.Delay(40);
         }
 
         await Task.Delay(2000);
 
-        for (int i = 180; i >= servo.Config.MinimumAngle.Degrees; i--)
+        for (int i = 180; i >= servo.MinimumAngle.Degrees; i--)
         {
-            await servo.RotateTo(new Angle(i, AU.Degrees));
+            servo.RotateTo(new Angle(i, AU.Degrees));
             Resolver.Log.Info($"Rotating to {i}");
             await Task.Delay(40);
         }

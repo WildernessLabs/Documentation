@@ -15,7 +15,7 @@ The **DS1307** is a low-power realtime clock (RTC) controlled via I2C.
 ### Code Example
 
 ```csharp
-Ds1307 rtc;
+private Ds1307 rtc;
 
 public override Task Initialize()
 {
@@ -28,7 +28,7 @@ public override Task Initialize()
 
 public override Task Run()
 {
-    var dateTime = new DateTime();
+    var dateTime = new DateTimeOffset();
     var running = rtc.IsRunning;
 
     Resolver.Log.Info($"{(running ? "is running" : "is not running")}");
