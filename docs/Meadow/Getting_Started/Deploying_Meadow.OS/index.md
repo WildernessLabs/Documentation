@@ -195,7 +195,7 @@ Reset the device (push the RST button or disconnect and reconnect) and identify 
 Execute the following Meadow CLI command in your terminal to determine the port your Meadow device is using.
 
 ```console
-meadow list ports
+meadow port list
 ```
 
 On macOS, you should see a port like `/dev/tty.usbmodem336F336D30361`.
