@@ -10,6 +10,38 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v2.1.0.1
+
+This is a full stack release that brings WiFi and Bluetooth capability and API improvements along with a handful of new drivers and performance enhancements.
+
+### Meadow.OS
+
+* The default directory for your application is now “/meadow0/”, which represents the on-board flash
+* ESP firmware has had a vendor SDK uplift
+* Several bugs in the Bluetooth stack have been resolved making the system more robust
+* A regression has been resolved that was causing the EG21 cell modem to often not boot up properly
+
+### Meadow.Core
+
+* **BLE Start/Stop** - Added StopBluetoothServer method to IBluetoothAdapter. The Bluetooth service can now be stopped and started multiple times and has the ability for the service to be redefined (See the Bluetooth_Restart example in the Meadow.Samples repository for more information).
+* **BLE Notifications** - Bluetooth now implements notifications on characteristics.
+* **BLE Company UUID** - Bluetooth now accepts setting the company UUID (CompanyId) when constructing a service definition.  This will default to the debug company UUID (0xffff)on the ESP32 if omitted.
+* **Motor Upgrades** - Refactored IMotor, IPositionalMotor and IVariableSpeedMotor interfaces.
+* **Persistent MQTT** - MeadowCloudConnection now uses a persistent MQTT connection.
+* **New Sensor Interface** - Added `IStateOfCharge` interface.
+
+### Meadow.Foundation
+
+* Added `Arducam` Mini 2MP driver
+* Added `Max1704x` driver
+* Added `WaveShare 7.5” v2 ePaper` display driver with 4-color grey-scale
+* `FT232` SPI fixes
+* TFT SPI color display driver performance and memory optimizations
+* `APDS9960` gesture fixes
+* `StepperMotor` driver improvements
+* `MicroLayout` Circle layout fix
+* `SwitchingAnemometer` speed calculation improvements
+
 ## v2.0.1
 
 This is a Nuget only release (no new OS binaries) that fixes a few high priority driver bugs.
