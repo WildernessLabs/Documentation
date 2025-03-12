@@ -13,7 +13,7 @@ slug: /docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Silk
 ```csharp
 public class Program
 {
-    static Meadow.Foundation.Displays.Silk? display;
+    static SilkDisplay? display;
     static MicroGraphics graphics = default!;
 
     public static void Main()
@@ -26,7 +26,7 @@ public class Program
 
     public static void Initialize()
     {
-        display = new Meadow.Foundation.Displays.Silk(640, 480, displayScale: 1f);
+        display = new SilkDisplay(640, 480, displayScale: 1f);
 
         graphics = new MicroGraphics(display)
         {

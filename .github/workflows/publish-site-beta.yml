@@ -123,12 +123,12 @@ jobs:
           ref: main
 
       # # Set up for DocFX
-      - name: Setup .NET Core SDK 7.0.x
+      - name: Setup .NET Core SDK 8.0.x
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            7.0.x
+            8.0.x
       - name: Setup NuGet
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: Nuget/setup-nuget@v1.2.0
