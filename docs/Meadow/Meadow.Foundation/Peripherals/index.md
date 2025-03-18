@@ -152,6 +152,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2bc](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2bc) | Epd4in2bc display driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd4in2bV2](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd4in2bV2) | Epd4in2bV2 display driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd5in65f](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd5in65f) | Epd5in65f display driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Epd7in5V2](/docs/api/Meadow.Foundation/Meadow.Foundation.Displays.Epd7in5V2) | Epd7in5V2 display driver |
 
 #### Displays.Sh110x
 
@@ -391,11 +392,20 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Htu21d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu21d) | Htu21d atmospheric driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Htu31d](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Atmospheric.Htu31d) | Htu31d atmospheric driver |
 
+
+#### Sensors.Battery.Max1704x
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Max17043](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Battery.Max17043) | Max17043 battery driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Max17044](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Battery.Max17044) | Max17044 battery driver |
+
 ### Camera
 
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Camera.Amg8833](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Amg8833) | Grid-EYE Amg8833 I2C infrared array sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Camera.Arducam](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Arducam) | Arducam SPI CMOS camera |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Camera.Mlx90640](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Mlx90640) | Mlx90640 I2C far infrared thermal sensor array camera |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Camera.Vc0706](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Camera.Vc0706) | VC0706 serial VGA CMOS camera |
 
@@ -423,6 +433,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.AtlasScientificGravityDOMeter](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AtlasScientificGravityDOMeter) | Atlas Scientific analog gravity dissolved oxygen sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.DFRobotGravityDOMeter](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter) | DFRobot analog gravity dissolved oxygen sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ens160](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ens160) | ENS160 I2C C02, Ethanol and AQI sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.GroPoint](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint) | Driver for the EXO line of YSI Modbus Water Quality Sensors |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.MiniPID2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.MiniPID2) | MiniPID2 analog photoionisation (PID) VOC sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.NextPm](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.NextPm) | TERA Sensor NextPM serial particulate matter sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Pmsa003i](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Pmsa003i) | PMSA003I I2C particulate matter AQI sensor |
