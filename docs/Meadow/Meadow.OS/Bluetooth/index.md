@@ -55,8 +55,8 @@ BLE features have been added and improved since their introduction in beta-5 rel
 
 The Meadow BLE server must be initialized with a `Definition` tree which includes a graph of the following three things:
 
-* **`Device`** - This is the Meadow device that hosts the BLE server. A BLE definition should include a `deviceName` property that provides a friendly name to identify the device.
-* **`Services`** - A service is a high-level group of accessible endpoints points, identified by a _UUID_ that define a particular "feature" that can be interacted with in BLE. There are a number of pre-defined services such as _Battery_, _Blood Pressure_, and _Device Information_ that have known UUIDs, but you can also define your own, custom services.
+* **`Device`** - This is the Meadow device that hosts the BLE server. BLE definitions should include a `deviceName` property that provides a friendly name to identify the device.
+* **`Services`** - A service is a high-level group of accessible endpoints, identified by a _UUID_ that define a particular "feature" that can be interacted with in BLE. There are a number of predefined services such as _Battery_, _Blood Pressure_, and _Device Information_ that have known UUIDs, but you can also define your own, custom services.
 * **`Characteristics`** - These are properties within a given service (also identified by a UUID) exposed as data endpoints that can be read from, and optionally, written to, by clients. As with Services, there are known characteristics such as _Apparent Wind Speed_, or _Humidity_, but again, you can also define your own custom characteristics.
 
 ### Important Note about Known Services and Characteristics
