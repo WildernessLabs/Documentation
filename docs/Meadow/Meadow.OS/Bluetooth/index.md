@@ -129,6 +129,8 @@ Device.BluetoothAdapter.StopBluetoothServer();
 Device.BluetoothAdapter.StartBluetoothServer(newDefinition);
 ```
 
+For an sample that changes the Bluetooth server based on setting a characteristic to a specific value, see the [Bluetooth_Restart example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Restart).
+
 The `StopBluetoothServer` method was added as of Meadow OS v2.1.0.1. If you want to change BLE servers at runtime on a Meadow running an older OS, you will need to update to a newer Meadow OS and ESP32 firmware. See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
 
 ## Setting Data for a Client to Read
