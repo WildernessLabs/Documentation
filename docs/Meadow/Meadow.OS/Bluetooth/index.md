@@ -18,7 +18,7 @@ The following features are available in this release:
 * **BLE Server** - Start a Bluetooth server on the Meadow and initialize it with your BLE definition tree.
 * **Accept Client Connections** - Connect to the server from a _client_ device application such as a mobile phone.
 * **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
-* **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in you BLE tree.
+* **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in your BLE tree.
 
 #### Planned Features
 
