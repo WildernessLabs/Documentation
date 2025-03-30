@@ -19,6 +19,7 @@ The following features are available in this release:
 * **Accept Client Connections** - Connect to the server from a _client_ device application such as a mobile phone.
 * **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
 * **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in your BLE tree.
+* **`NOTIFY` Properties** - Once connected, _NOTIFY_ properties allow characteristics to _push_ values to the client from server.
 
 #### Planned Features
 
@@ -26,7 +27,6 @@ The following features are not available today, but are on-deck for implementati
 
 * **Pairing & Bonding** - The ability to pair a client to the server.
 * **Encrypted Communications** - Once paired and bonded, server and client will use encrypted transport for communications.
-* **`NOTIFY` Properties** - Once connected, _NOTIFY_ properties allow characteristics to _push_ values to the client from server.
 
 ## BLE Clients
 
@@ -108,7 +108,7 @@ Examining the previous code, there are some important details:
 * Service Names are for convenience only, they are not viewable by the client.
 * Characteristics are typed to try to make programming easier without passing `byte[]` around.
 * The Uuid in the Bluetooth spec can be either a `Guid` or a `ushort` but the `ushort` gets translated to a `Guid` anyway, so we've opted for just `Guid` support in this release.
-*	Permissions versus properties are nuanced. See the Bluetooth spec for details, but for general purposes just make them the same
+* Permissions versus properties are nuanced. See the Bluetooth spec for details, but for general purposes just make them the same
 * _Meadow currently only supports `Read` or `Write` even though the `enum`s have all of the BLE supported values_
 * Strings require a maxLength. Try not to exceed it. Client writes of larger than this length may be problematic (we need to do more testing)
 
@@ -119,6 +119,17 @@ Once you have a BLE tree definition you can start initialize the BLE server with
 ```csharp
 Device.BluetoothAdapter.StartBluetoothServer(definition);
 ```
+
+## Restarting the Bluetooth Server with New Definition
+
+If you want to offer a different BLE tree definition from your BLE server at runtime, you can stop the current server and start it with the new definition:
+
+```csharp
+Device.BluetoothAdapter.StopBluetoothServer();
+Device.BluetoothAdapter.StartBluetoothServer(newDefinition);
+```
+
+The `StopBluetoothServer` method was added as of Meadow OS v2.1.0.1. If you want to change BLE servers at runtime on a Meadow running an older OS, you will need to update to a newer Meadow OS and ESP32 firmware. See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
 
 ## Setting Data for a Client to Read
 
