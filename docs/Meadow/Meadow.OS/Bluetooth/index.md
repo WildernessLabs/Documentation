@@ -112,6 +112,23 @@ Examining the previous code, there are some important details:
 * _Meadow currently only supports `Read` or `Write` even though the `enum`s have all of the BLE supported values_
 * Strings require a maxLength. Try not to exceed it. Client writes of larger than this length may be problematic (we need to do more testing)
 
+## Notifying Subscribed Clients When Values Change
+
+You can also create Characteristics that will push updated values to a subscribed client as they change. These Characteristics use the Notify property. When a client subscribes to a Notify Characteristic, the server will push updates to the client as the value changes without waiting for any confirmation from the client.
+
+If we wanted to modify our example definition above, we could add a `Notify` property to the `My Number` characteristic.
+
+```csharp
+notifyCharacteristic = new CharacteristicInt32(
+    "My Number",
+    uuid: "017e99d6-8a61-11eb-8dcd-0242ac1300bb",
+    permissions: CharacteristicPermission.Write | CharacteristicPermission.Read,
+    properties: CharacteristicProperty.Write | CharacteristicProperty.Read | CharacteristicProperty.Notify
+    );
+```
+
+Now, when clients subscribe to this characteristic, they will receive notifications as the value changes.
+
 ## Initializing the Bluetooth Server
 
 Once you have a BLE tree definition you can start initialize the BLE server with the following code:
