@@ -129,6 +129,8 @@ notifyCharacteristic = new CharacteristicInt32(
 
 Now, when clients subscribe to this characteristic, they will receive notifications as the value changes.
 
+For an sample that changes the Bluetooth server based on setting a characteristic to a specific value, see the [Bluetooth_Restart example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Notify).
+
 ## Initializing the Bluetooth Server
 
 Once you have a BLE tree definition you can start initialize the BLE server with the following code:
