@@ -1,7 +1,7 @@
 ---
 layout: Meadow
 title: Bluetooth
-subtitle: Meadow b5.0 BLE Draft Implementation
+subtitle: Meadow BLE Implementation
 ---
 
 ![Bluetooth logo](Bluetooth_Logo.svg)
@@ -14,19 +14,19 @@ Meadow contains an initial subset of BLE features. While this covers a large num
 
 The following features are available in this release:
 
-- **User-Definable BLE Definition Tree** - You can create a BLE tree `Definition` of _services_ and _characteristics_ that contain primitive type values including; `int`, `double`, `string`, etc.
-- **BLE Server** - Start a Bluetooth server on the Meadow and initialize it with your BLE definition tree.
-- **Accept Client Connections** - Connect to the server from a _client_ device application such as a mobile phone.
-- **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
-- **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in you BLE tree.
+* **User-Definable BLE Definition Tree** - You can create a BLE tree `Definition` of _services_ and _characteristics_ that contain primitive type values including; `int`, `double`, `string`, etc.
+* **BLE Server** - Start a Bluetooth server on the Meadow and initialize it with your BLE definition tree.
+* **Accept Client Connections** - Connect to the server from a _client_ device application such as a mobile phone.
+* **Edit Values at Runtime** - Write values to the graph from your managed application. Those values can be read by a BLE Client app.
+* **Value Change Notifications** - Get notified in your Meadow application when a BLE client writes to a characteristic in your BLE tree.
+* **`NOTIFY` Properties** - Once connected, _NOTIFY_ properties allow characteristics to _push_ values to the client from server.
 
 #### Planned Features
 
 The following features are not available today, but are on-deck for implementation:
 
- * **Paring & Bonding** - The ability to pair a client to the server.
- * **Encrypted Communications** - Once paired and bonded, server and client will use encrypted transport for communications.
- * **`NOTIFY` Properties** - Once connected, _NOTIFY_ properties allow characteristics to _push_ values to the client from server.
+* **Pairing & Bonding** - The ability to pair a client to the server.
+* **Encrypted Communications** - Once paired and bonded, server and client will use encrypted transport for communications.
 
 ## BLE Clients
 
@@ -36,8 +36,8 @@ There are a variety of BLE client applications and libraries. When filing Blueto
 
 There are several good BLE mobile client applications available from iOS and Android app stores that can expedite testing and validation of BLE endpoints including:
 
- * Android: [BLE Scanner](https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner)
- * iOS: [BLE Scanner 4.0](https://apps.apple.com/us/app/ble-scanner-4-0/id1221763603#?platform=iphone)
+* Android: [BLE Scanner](https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner)
+* iOS: [BLE Scanner 4.0](https://apps.apple.com/us/app/ble-scanner-4-0/id1221763603#?platform=iphone)
 
 ### C# and Xamarin BLE Clients
 
@@ -45,19 +45,19 @@ There are several good BLE mobile client applications available from iOS and And
 * **Shiny** - Cross-platform device services (including BLE) project. [Nuget](https://www.nuget.org/packages/Shiny.BluetoothLE/), [GitHub Site](https://github.com/shinyorg/shiny).
 * **32feet.NET** - A project to make personal area networking technologies such as Bluetooth, Infrared (IrDA) and more, easily accessible from .NET code. [Nuget](https://www.nuget.org/packages/InTheHand.BluetoothLE), [GitHub Site](https://github.com/inthehand/32feet).
 
-# Using Meadow's BLE Server 
+# Using Meadow's BLE Server
 
 ## Pre-requisites
 
-BLE requires your meadow be updated to the latest b5.0 binaries.  This includes both a Meadow OS and new firmware for the ESP32.  See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
+BLE features have been added and improved since their introduction in beta-5 releases. Make sure you have updated your Meadow to the latest Meadow OS and ESP32 firmware to have access to all available BLE features. See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
 
 ## Defining a BLE Service Definition
 
 The Meadow BLE server must be initialized with a `Definition` tree which includes a graph of the following three things:
 
- * **`Device`** - This is the Meadow device that hosts the BLE server. A BLE definition should include a `deviceName` property that provides a friendly name to identify the device.
- * **`Services`** - A service is a high-level group of accessible endpoints points, identified by a _UUID_ that define a particular "feature" that can be interacted with in BLE. There are a number of pre-defined services such as _Battery_, _Blood Pressure_, and _Device Information_ that have known UUIDs, but you can also define your own, custom services.
- * **`Characteristics`** - These are properties within a given service (also identified by a UUID) exposed as data endpoints that can be read from, and optionally, written to, by clients. As with Services, there are known characteristics such as _Apparent Wind Speed_, or _Humidity_, but again, you can also define your own custom characteristics.
+* **`Device`** - This is the Meadow device that hosts the BLE server. BLE definitions should include a `deviceName` property that provides a friendly name to identify the device.
+* **`Services`** - A service is a high-level group of accessible endpoints, identified by a _UUID_ that define a particular "feature" that can be interacted with in BLE. There are a number of predefined services such as _Battery_, _Blood Pressure_, and _Device Information_ that have known UUIDs, but you can also define your own, custom services.
+* **`Characteristics`** - These are properties within a given service (also identified by a UUID) exposed as data endpoints that can be read from, and optionally, written to, by clients. As with Services, there are known characteristics such as _Apparent Wind Speed_, or _Humidity_, but again, you can also define your own custom characteristics.
 
 ### Important Note about Known Services and Characteristics
 
@@ -67,7 +67,7 @@ For a full list of known IDs for services and characteristics, see the [Bluetoot
 
 ### Creating a BLE `Definition` Tree
 
-To define your server's characteristic graph, you must create a BLE `Definition` object tree. 
+To define your server's characteristic graph, you must create a BLE `Definition` object tree.
 
 For example, the following code specifies a Meadow BLE server instance that advertises to BLE clients as a device named `MY MEADOW` and contains a single service with three simple properties:
 
@@ -103,14 +103,33 @@ var definition = new Definition(
 
 Examining the previous code, there are some important details:
 
- * The first property in the `Definition` tree is `deviceName`, which defines the name of the device/server.
- * The tree above creates a single service with a randomly chosen ID of `253`
- * Service Names are for convenience only, they are not viewable by the client.
- * Characteristics are typed to try to make programming easier without passing `byte[]` around.
- * The Uuid in the Bluetooth spec can be either a `Guid` or a `ushort` but the `ushort` gets translated to a `Guid` anyway, so we've opted for just `Guid` support in this release.
- *	Permissions versus properties are nuanced.  See the Bluetooth spec for details, but for general purposes just make them the same
- *  *Meadow currently only supports `Read` or `Write` even though the `enum`s have all of the BLE supported values*
- * Strings require a maxLength. Try not to exceed it.  Client writes of larger than this length may be problematic (we need to do more testing)
+* The first property in the `Definition` tree is `deviceName`, which defines the name of the device/server.
+* The tree above creates a single service with a randomly chosen ID of `253`
+* Service Names are for convenience only, they are not viewable by the client.
+* Characteristics are typed to try to make programming easier without passing `byte[]` around.
+* The Uuid in the Bluetooth spec can be either a `Guid` or a `ushort` but the `ushort` gets translated to a `Guid` anyway, so we've opted for just `Guid` support in this release.
+* Permissions versus properties are nuanced. See the Bluetooth spec for details, but for general purposes just make them the same
+* _Meadow currently only supports `Read`, `Write`, and `Notify`, even though the `enum`s have all of the BLE supported values_
+* Strings require a maxLength. Try not to exceed it. Client writes of larger than this length may be problematic (we need to do more testing)
+
+## Notifying Subscribed Clients When Values Change
+
+You can also create Characteristics that will push updated values to a subscribed client as they change. These Characteristics use the Notify property. When a client subscribes to a Notify Characteristic, the server will push updates to the client as the value changes without waiting for any confirmation from the client.
+
+If we wanted to modify our example definition above, we could add a `Notify` property to the `My Number` characteristic.
+
+```csharp
+notifyCharacteristic = new CharacteristicInt32(
+    "My Number",
+    uuid: "017e99d6-8a61-11eb-8dcd-0242ac1300bb",
+    permissions: CharacteristicPermission.Write | CharacteristicPermission.Read,
+    properties: CharacteristicProperty.Write | CharacteristicProperty.Read | CharacteristicProperty.Notify
+    );
+```
+
+Now, when clients subscribe to this characteristic, they will receive notifications as the value changes.
+
+For a sample using a Bluetooth server with a Notify characteristic, see the [Bluetooth_Notify example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Notify).
 
 ## Initializing the Bluetooth Server
 
@@ -120,9 +139,22 @@ Once you have a BLE tree definition you can start initialize the BLE server with
 Device.BluetoothAdapter.StartBluetoothServer(definition);
 ```
 
+## Restarting the Bluetooth Server with New Definition
+
+If you want to offer a different BLE tree definition from your BLE server at runtime, you can stop the current server and start it with the new definition:
+
+```csharp
+Device.BluetoothAdapter.StopBluetoothServer();
+Device.BluetoothAdapter.StartBluetoothServer(newDefinition);
+```
+
+For a sample that changes the Bluetooth server based on setting a characteristic to a specific value, see the [Bluetooth_Restart example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Restart).
+
+The `StopBluetoothServer` method was added as of Meadow OS v2.1.0.1. If you want to change BLE servers at runtime on a Meadow running an older OS, you will need to update to a newer Meadow OS and ESP32 firmware. See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
+
 ## Setting Data for a Client to Read
 
-Interacting with the Bluetooth Characteristics will be done through your `Definition`.  When you want to set a value for a Client to read, use the `SetValue()` method on a `Characteristic`.
+Interacting with the Bluetooth Characteristics will be done through your `Definition`. When you want to set a value for a Client to read, use the `SetValue()` method on a `Characteristic`.
 
 For example, with our example definition, we could set the boolean and integer Characteristics every two seconds with a loop like this:
 
@@ -149,7 +181,7 @@ Note that you can access a Characteristic by index, name or UUID (the latter two
 
 ## Knowing when a Client Writes a Value
 
-Your application can be notified when a Client sets a `Characteristic` value through the `ValueSet` event.  You can wire up any of the `Characteristics` you're interested in.
+Your application can be notified when a Client sets a `Characteristic` value through the `ValueSet` event. You can wire up any of the `Characteristics` you're interested in.
 
 To continue our example, if we wanted to wire up all of the Characteristics (yes, in this example even the read-only ones that will never actually get written to) we could use the following:
 
