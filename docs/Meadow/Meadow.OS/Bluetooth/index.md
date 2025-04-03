@@ -109,7 +109,7 @@ Examining the previous code, there are some important details:
 * Characteristics are typed to try to make programming easier without passing `byte[]` around.
 * The Uuid in the Bluetooth spec can be either a `Guid` or a `ushort` but the `ushort` gets translated to a `Guid` anyway, so we've opted for just `Guid` support in this release.
 * Permissions versus properties are nuanced. See the Bluetooth spec for details, but for general purposes just make them the same
-* _Meadow currently only supports `Read` or `Write` even though the `enum`s have all of the BLE supported values_
+* _Meadow currently only supports `Read`, `Write`, and `Notify`, even though the `enum`s have all of the BLE supported values_
 * Strings require a maxLength. Try not to exceed it. Client writes of larger than this length may be problematic (we need to do more testing)
 
 ## Notifying Subscribed Clients When Values Change
