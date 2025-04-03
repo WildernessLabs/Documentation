@@ -17,7 +17,7 @@ This is a full stack release that brings WiFi and Bluetooth capability and API i
 ### Meadow.OS
 
 * The default directory for your application is now “/meadow0/”, which represents the on-board flash
-* The ESP32 firmware build has been upgraded to the latest Espessif SDK (5.3.2)
+* The ESP32 firmware build has been upgraded to the latest Espressif SDK (5.3.2)
 * Major improvements and bug fixes in the Bluetooth stack
 * Improvements in power-up logic for the EG21 cell network module
 
@@ -25,7 +25,7 @@ This is a full stack release that brings WiFi and Bluetooth capability and API i
 
 * **BLE Start/Stop** - Added StopBluetoothServer method to IBluetoothAdapter. The Bluetooth service can now be stopped and started multiple times and has the ability for the service to be redefined (See the Bluetooth_Restart example in the Meadow.Samples repository for more information)
 * **BLE Notifications** - Bluetooth now implements notifications on characteristics
-* **BLE Company UUID** - Bluetooth now accepts setting the company UUID (CompanyId) when constructing a service definition - This will default to the debug company UUID (0xffff)on the ESP32 if omitted
+* **BLE Company UUID** - Bluetooth now accepts setting the company UUID (CompanyId) when constructing a service definition - This will default to the debug company UUID (0xffff) on the ESP32 if omitted
 * **Motor Upgrades** - Refactored IMotor, IPositionalMotor and IVariableSpeedMotor interfaces
 * **Persistent MQTT** - MeadowCloudConnection now uses a persistent MQTT connection
 * **New Sensor Interface** - Added `IStateOfCharge` interface
