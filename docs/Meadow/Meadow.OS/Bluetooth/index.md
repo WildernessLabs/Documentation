@@ -129,7 +129,7 @@ notifyCharacteristic = new CharacteristicInt32(
 
 Now, when clients subscribe to this characteristic, they will receive notifications as the value changes.
 
-For an sample that changes the Bluetooth server based on setting a characteristic to a specific value, see the [Bluetooth_Restart example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Notify).
+For a sample using a Bluetooth server with a Notify characteristic, see the [Bluetooth_Notify example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Notify).
 
 ## Initializing the Bluetooth Server
 
@@ -148,7 +148,7 @@ Device.BluetoothAdapter.StopBluetoothServer();
 Device.BluetoothAdapter.StartBluetoothServer(newDefinition);
 ```
 
-For an sample that changes the Bluetooth server based on setting a characteristic to a specific value, see the [Bluetooth_Restart example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Restart).
+For a sample that changes the Bluetooth server based on setting a characteristic to a specific value, see the [Bluetooth_Restart example in the Meadow.Samples repository](https://github.com/WildernessLabs/Meadow.Samples/tree/develop/Source/Meadow%20F7/Bluetooth/Bluetooth_Restart).
 
 The `StopBluetoothServer` method was added as of Meadow OS v2.1.0.1. If you want to change BLE servers at runtime on a Meadow running an older OS, you will need to update to a newer Meadow OS and ESP32 firmware. See the [Deploying Meadow.OS Guide](/Meadow/Getting_Started/Deploying_Meadow%2EOS/) for more information.
 
