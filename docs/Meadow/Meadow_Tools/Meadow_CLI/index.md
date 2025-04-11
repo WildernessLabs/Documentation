@@ -166,7 +166,7 @@ meadow app trim {path}
 
 ### Deploy a Meadow App
 
-After your app is trimmeed, you can deploy your app by executing the following, replacing `{path}` with the path to the folder that contains your app csproj file.
+After your app is trimmed, you can deploy your app by executing the following, replacing `{path}` with the path to the folder that contains your app csproj file.
 
 ```console
 meadow app deploy {path}
