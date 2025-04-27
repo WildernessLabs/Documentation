@@ -40,49 +40,49 @@ jobs:
         with:
           repository: WildernessLabs/Meadow.Units
           path: Meadow.Units
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Logging side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Logging
           path: Meadow.Logging
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Contracts side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Contracts
           path: Meadow.Contracts
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Modbus side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Modbus
           path: Meadow.Modbus
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Foundation side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation
           path: Meadow.Foundation
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Core side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Core
           path: Meadow.Core
-          ref: main
+          ref: develop
       - name: Checkout MQTTnet side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/MQTTnet
           path: MQTTnet
-          ref: master
+          ref: develop
       - name: Checkout Meadow side-by-side
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
@@ -99,28 +99,35 @@ jobs:
         with:
           repository: WildernessLabs/Meadow.Foundation.CompositeDevices
           path: Meadow.Foundation.CompositeDevices
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Foundation.Grove into DocFX-expected Source location
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation.Grove
           path: Meadow.Foundation.Grove
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Foundation.FeatherWings into DocFX-expected Source location
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation.FeatherWings
           path: Meadow.Foundation.FeatherWings
-          ref: main
+          ref: develop
       - name: Checkout Meadow.Foundation.mikroBUS into DocFX-expected Source location
         if: contains(github.event.pull_request.title, '[build-api]')
         uses: actions/checkout@v3
         with:
           repository: WildernessLabs/Meadow.Foundation.mikroBUS
           path: Meadow.Foundation.mikroBUS
-          ref: main
+          ref: develop
+      - name: Checkout Meadow.Foundation.MBus into DocFX-expected Source location
+        if: contains(github.event.pull_request.title, '[build-api]')
+        uses: actions/checkout@v3
+        with:
+          repository: WildernessLabs/Meadow.Foundation.MBus
+          path: Meadow.Foundation.MBus
+          ref: develop
 
       # # Set up for DocFX
       - name: Setup .NET Core SDK 8.0.x
