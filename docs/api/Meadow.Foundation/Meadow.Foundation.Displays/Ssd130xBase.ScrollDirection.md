@@ -1,0 +1,40 @@
+---
+title: Enum Ssd130xBase.ScrollDirection
+sidebar_label: Ssd130xBase.ScrollDirection
+description: Allow the programmer to set the scroll direction
+slug: >-
+  /docs/api/Meadow.Foundation/Meadow.Foundation.Displays/Ssd130xBase.ScrollDirection
+---
+# Enum Ssd130xBase.ScrollDirection
+Allow the programmer to set the scroll direction
+
+###### **Assembly**: Ssd130x.dll
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation.git/blob/develop/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/SSd130xBase.Enums.cs#L27)
+```csharp title="Declaration"
+public enum Ssd130xBase.ScrollDirection
+```
+## Fields
+### Left
+Scroll the display to the left
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation.git/blob/develop/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/SSd130xBase.Enums.cs#L32)
+```csharp title="Declaration"
+Left = 0
+```
+### Right
+Scroll the display to the right
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation.git/blob/develop/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/SSd130xBase.Enums.cs#L36)
+```csharp title="Declaration"
+Right = 1
+```
+### RightAndVertical
+Scroll the display from the bottom left and vertically
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation.git/blob/develop/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/SSd130xBase.Enums.cs#L40)
+```csharp title="Declaration"
+RightAndVertical = 2
+```
+### LeftAndVertical
+Scroll the display from the bottom right and vertically
+###### [View Source](https://github.com/WildernessLabs/Meadow.Foundation.git/blob/develop/Source/Meadow.Foundation.Peripherals/Displays.Ssd130x/Driver/SSd130xBase.Enums.cs#L44)
+```csharp title="Declaration"
+LeftAndVertical = 3
+```
