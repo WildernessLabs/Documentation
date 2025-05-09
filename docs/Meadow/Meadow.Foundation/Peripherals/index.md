@@ -193,6 +193,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.ADC.Ads7128](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads7128) | TI ADS7128 I2C analog to digital converter |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.CAN.Mcp2515](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.CAN.Mcp2515) | Microchip MCP2515 CAN Controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.CAN.PCanBasic](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.CAN.PCanBasic) | PCAN-Basic USB CAN Controller for Windows |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [ICs.DAC.Mcp4728](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.DAC.Mcp4728) | Microchip MCP4728 I2C digital to analog converter |
@@ -305,6 +306,13 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sc16is752](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Sc16is752) | Sc16is752 IO expander driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sc16is762](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Sc16is762) | Sc16is762 IO expander driver |
 
+#### ICs.IOExpanders.Tca95x5
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Tca9535](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Tca9535) | Tca9535 IO expander driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Tca9555](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Tca9555) | Tca9555 IO expander driver |
+
 ### Leds
 
 | Status | Driver | Description |
@@ -317,12 +325,19 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.CerusXDrive](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.CerusXDrive) | RS485 Driver for Franklin Electric's Cerus X-Drive series of VFDs |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.ElectronicSpeedController](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.ElectronicSpeedController) | PWM Electronic speed controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.A4988](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.A4988) | A4988 digital input stepper motor controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.GpioStepper](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.GpioStepper) | Digital input stepper motor controller |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Stepper.Uln2003](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Stepper.Uln2003) | ULN2003 digital input stepper motor controller |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.StepperOnline](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.StepperOnline) | Drivers for motors and moto controllers from Stepper Online |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Motors.Tb67h420ftg](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.Tb67h420ftg) | Tb67h420ftg digital input motor controller |
+
+#### Motors.StepperOnline
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [BLD510B](/docs/api/Meadow.Foundation/Meadow.Foundation.MotorControllers.StepperOnline.BLD510B) | BLD510B motor driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [F55B150_24GL_30S](/docs/api/Meadow.Foundation/Meadow.Foundation.Motors.StepperOnline.F55B150_24GL_30S) | F55B150_24GL_30S motor driver |
 
 ### RTCs
 
@@ -433,12 +448,29 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.AtlasScientificGravityDOMeter](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.AtlasScientificGravityDOMeter) | Atlas Scientific analog gravity dissolved oxygen sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.DFRobotGravityDOMeter](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.DFRobotGravityDOMeter) | DFRobot analog gravity dissolved oxygen sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ens160](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ens160) | ENS160 I2C C02, Ethanol and AQI sensor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.GroPoint](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint) | Driver for the EXO line of YSI Modbus Water Quality Sensors |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.MiniPID2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.MiniPID2) | MiniPID2 analog photoionisation (PID) VOC sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.NextPm](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.NextPm) | TERA Sensor NextPM serial particulate matter sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Pmsa003i](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Pmsa003i) | PMSA003I I2C particulate matter AQI sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Scd30](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd30) | SCD30 I2C C02, temperature, and relative humidity sensor |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Y4000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Y4000) | Y4000 Sonde RS485 Modbus water quality sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Environmental.Ysi.Exo](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Ysi.Exo) | Driver for the EXO line of YSI Modbus Water Quality Sensors |
+
+#### Sensors.Environmental.GroPoint
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625) | Gplp2625 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_2) | Gplp2625_S_2 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_3](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_3) | Gplp2625_S_3 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_4](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_4) | Gplp2625_S_4 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_5](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_5) | Gplp2625_S_5 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_6](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_6) | Gplp2625_S_6 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_8](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_8) | Gplp2625_S_8 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_T_2](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_T_2) | Gplp2625_S_T_2 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_T_3](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_T_3) | Gplp2625_S_T_3 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_T_4](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_T_4) | Gplp2625_S_T_4 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_T_5](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_T_5) | Gplp2625_S_T_5 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_T_6](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_T_6) | Gplp2625_S_T_6 environmental driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Gplp2625_S_T_8](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.GroPoint.Gplp2625_S_T_8) | Gplp2625_S_T_8 environmental driver |
 
 #### Sensors.Environmental.Keller.XLine
 
@@ -452,6 +484,12 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd40](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd40) | Scd40 environmental driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Scd41](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Scd41) | Scd41 environmental driver |
+
+#### Sensors.Environmental.Y4000
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Y4000](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Environmental.Y4000) | Y4000 environmental driver |
 
 ### Flow
 
@@ -592,7 +630,9 @@ External peripheral drivers can be added to Meadow projects individually and are
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Adt7410](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Adt7410) | Adt7410 I2C temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Lm75](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Lm75) | Lm75 I2C temperature sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Max6675](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Max6675) | Max6675 SPI thermocouple temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Mcp9808](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mcp9808) | MCP9808 I2C temperature sensor |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Mlx90614](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Mlx90614) | Mlx90614 I2C temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Pct2075](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Pct2075) | Pct2075 I2C temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Thermistor](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Thermistor) | Thermistor analog temperature sensor |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Temperature.Tmp102](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Temperature.Tmp102) | TMP102 I2C temperature sensor |
