@@ -10,6 +10,33 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v2.2.0.0
+
+This is a full stack release that brings general stability improvements and fixes to the Meadow platform.
+
+### Meadow.OS
+
+* A startup fix on the NTP service removes intermittent unreliable delivery of network connection/disconnection events in some cases
+* Improvements to the .NET core library build have resolved issues with [dynamic code execution](https://github.com/WildernessLabs/Meadow_Issues/issues/241) and fix other edge cases
+
+### Meadow.Core
+
+* Added support for Blazor Server
+* Sequential OTA update packages are now correctly cleared from local store after being applied
+* Analog inputs have been refactored and separated into `IAnalogInputPort` and `IObservableAnalogInputPort` interfaces.  If you were using `IAnalogInputPort` before and no longer compile due to missing polling methods, swap to the `IObservalbleAnalogInputPort` interface.
+* `Meadow.Units` can now be serialized to  and deserialized from JSON(`MicroJson` and `System.Text.Json` are supported)
+* `Meadow.Units` are undergoing a refactor.  New interfaces have appeared in this release on some unit types and will roll across all units over the coming releases.
+
+### Meadow.Foundation
+
+* Added **Arducam Mini 2MP** camera driver
+* Added **MLX90614** infrared thermometer driver
+* Added **ADS7128** 12-bit analog-to-digital converter driver
+* Added **GroPoint GLP** driver
+* Added **YSI EXO** driver
+* Added three (3) new **MicroLayout** layouts: Dock, Stack and Grid
+General performance, stability and usability improvements
+
 ## v2.1.0.1
 
 This is a full stack release that brings WiFi and Bluetooth capability and API improvements along with a handful of new drivers and performance enhancements.
