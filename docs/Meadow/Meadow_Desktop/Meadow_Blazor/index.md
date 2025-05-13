@@ -108,13 +108,13 @@ With an FTDI breakout board like the [FT232H](https://www.adafruit.com/product/2
     app.Run();
     ```
 
-1. Build the app for your development machine using either Visual Studio or the `dotnet` tool.
+1. Build the app:
 
     ```command
     dotnet build
     ```
 
-1. Run the app.
+1. Run the app:
 
     ```command
     dotnet run

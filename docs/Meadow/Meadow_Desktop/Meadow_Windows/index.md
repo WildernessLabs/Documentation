@@ -12,17 +12,17 @@ You can also quickly prototype graphics using an emulated IDisplay object that r
 
 ## Prerequisites
 
-Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
+Before starting with Meadow.Windows, ensure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
 
-If not installed already, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
+If you haven't already, install the .NET 8.0 SDK for macOS. You can find the latest version on the [.NET downloads page](https://dotnet.microsoft.com/download/dotnet/).
 
 ### Using GPIO and SPI
 
-With an additional accessory, you can add GPIO and SPI capabilities to your Windows device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities. (The FT232H also supports I2C, but in this early stage, Meadow.Windows does not yet support it.)
+To add GPIO and SPI capabilities to your Windows PC, you can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264).
 
 ## Create your first Meadow.Windows app
 
-1. Create a new dotnet app on your development machine and navigate to that new project.
+1. Create a new .NET console application:
 
     ```command
     dotnet new console --output MeadowWindowsSampleApp
@@ -31,13 +31,13 @@ With an additional accessory, you can add GPIO and SPI capabilities to your Wind
 
     This will ensure the Meadow app has the project settings that will work within Meadow.Windows.
 
-1. Add the Meadow.Windows NuGet reference to your project.
+1. Add the Meadow.Windows NuGet package:
 
     ```command
     dotnet add package Meadow.Windows
     ```
 
-1. Replace the contents of the `Program.cs` file in your project with the following.
+1. Replace the contents of the `Program.cs` file:
 
     ```csharp
     using Meadow;
@@ -68,21 +68,21 @@ With an additional accessory, you can add GPIO and SPI capabilities to your Wind
     }
     ```
 
-    This is a simple Meadow.Windows app that will output some messages to the console at various stages of the Meadow app.
+    This simple app logs messages at various stages of the Meadow application.
 
-1. Build the app for your development machine using either Visual Studio or the `dotnet` tool.
+1. Build the app:
 
     ```command
     dotnet build
     ```
 
-1. Run the app.
+1. Run the app:
 
     ```command
     dotnet run
     ```
 
-    At the end of the Meadow app launch output, you should see the following output from your app.
+    The console output should display:
 
     ```console
     Initialize...
@@ -90,21 +90,19 @@ With an additional accessory, you can add GPIO and SPI capabilities to your Wind
     Hello, Meadow.Windows!
     ```
 
-You have a Meadow.Windows app running on your Windows development machine. You can continue to develop and test your Meadow app on your development machine. When you are ready, you can deploy your Meadow app to other Windows device like any other .NET app.
+You now have a Meadow.Windows app running on your Windows development machine.
 
 ## Adapt a Meadow app for Meadow.Windows
 
-You can also modify an existing Meadow app to run on Meadow.Windows by adjusting the `App` type and adding the following static `Main` method to your `MeadowApp` class.
+To update an existing Meadow app to target a Windows PC, adjust the app’s structure as follows:
 
-For example, here are the changes to make the MeadowApp class work on Meadow.Windows, configured for Windows.
-
-1. Configure the project type to be an executable by changing the project output type to a .NET 7 executable in the project file.
+1. Update the project file to target an executable:
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
         <PropertyGroup>
             <OutputType>Exe</OutputType>
-            <TargetFramework>net7.0</TargetFramework>
+            <TargetFramework>net8.0</TargetFramework>
             <ImplicitUsings>enable</ImplicitUsings>
             <Nullable>enable</Nullable>
         </PropertyGroup>
@@ -113,7 +111,7 @@ For example, here are the changes to make the MeadowApp class work on Meadow.Win
     </Project>
     ```
 
-1. Within the Meadow app's class file, change the `App` type to align with your target Meadow.Windows device: `App<Windows>`.
+1. Change the app type to Meadow.Windows:
 
     ```csharp
     public class MeadowApp : App<Windows>
@@ -122,7 +120,7 @@ For example, here are the changes to make the MeadowApp class work on Meadow.Win
     }
     ```
 
-1. Within the `MeadowApp` class, or whatever your app's class name is, add a new `Main` method to give the app a target to launch when the app is run.
+1. Add the Main method to the MeadowApp class:
 
     ```csharp
     public static async Task Main(string[] args)
@@ -131,7 +129,7 @@ For example, here are the changes to make the MeadowApp class work on Meadow.Win
     }
     ```
 
-Your Meadow app should now be able to run on Meadow.Windows, calling into the usual `Initialize` and `Run` methods of your app.
+Your Meadow app should now be able to run on Windows, calling into the usual `Initialize` and `Run` methods of your app.
 
 ## Next steps
 
