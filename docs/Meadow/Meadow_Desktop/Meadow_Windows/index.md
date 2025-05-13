@@ -14,7 +14,7 @@ You can also quickly prototype graphics using an emulated IDisplay object that r
 
 Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](../../Hello_World/).
 
-If you don't already have it, you may want to install the .NET 7.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/). (Currently, all Meadow.Windows samples are targeting .NET 7.0, though they also support targeting .NET 6.0.)
+If not installed already, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
 
 ### Using GPIO and SPI
 
