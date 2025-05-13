@@ -16,7 +16,7 @@ If not installed already, install the .NET 8.0 SDK. You can find the latest vers
 
 ### Using GPIO and SPI
 
-With an additional accessory, you can add GPIO and SPI capabilities to your desktop device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities. (The FT232H also supports I2C, but in this early stage, Meadow.Blazor does not yet support it.)
+With an additional accessory, you can add GPIO and SPI capabilities to your desktop device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities.
 
 ## Create your first Meadow.Blazor app
 
