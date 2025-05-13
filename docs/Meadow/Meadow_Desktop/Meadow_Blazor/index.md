@@ -123,7 +123,11 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
 
 You'll decide on the architecture of your Blazor application but a common pattern is to create view models to support razor pages.
 
-Here's an example view model that presents sensor data via `string` properties for a `BME680` atmospheric sensor. Note the `StateChanged?.Invoke()` call to notify the UI of updates. 
+Below is example code to present sensor for a `BME680` atmospheric sensor. 
+
+![Meadow.Blazor running in a web browser](meadow_blazor.jpg)
+
+1. Create a view model that exposes your data as public properties along with a `StateChanged` `Action`. Note the use `Resolver.Services` to access the peripherals you registed in `MeadowApplication`. 
 
     ```csharp
     using Meadow.Foundation.Sensors.Atmospheric;
@@ -137,13 +141,14 @@ Here's an example view model that presents sensor data via `string` properties f
             private readonly Bme680 _bme680;
 
             public string TemperatureValue { get; private set; } = "0°C";
+            public string HumidityValue { get; private set; } = "0%";
             public string PressureValue { get; private set; } = "0atm";
 
             public event Action? StateChanged;
 
             public SensorViewModel()
             {
-                _bme680 = Resolver.Services.Get<Bme680>() ?? throw new Exception("BME68x not found");
+                _bme680 = Resolver.Services.Get<Bme680>() ?? throw new Exception("BME680 not found");
                 _bme680.Updated += Bme680Updated;
                 _bme680.StartUpdating(TimeSpan.FromSeconds(2));
             }
@@ -151,9 +156,8 @@ Here's an example view model that presents sensor data via `string` properties f
             private void Bme680Updated(object? sender, IChangeResult<(Temperature? Temperature, RelativeHumidity? Humidity, Pressure? Pressure, Resistance? GasResistance)> e)
             {
                 TemperatureValue = $"{e.New.Temperature?.Celsius:n0}°C";
+                HumidityValue = $"{e.New.Humidity?.Percent:n0}%";
                 PressureValue = $"{e.New.Pressure?.StandardAtmosphere:n2}atm";
-
-                _led.IsOn = false;
 
                 StateChanged?.Invoke();
             }
@@ -166,9 +170,9 @@ Here's an example view model that presents sensor data via `string` properties f
     }
     ```
 
-And here's example razor page that uses the view model above:
+2. Create a razor page that uses the view model:
 
-    ```
+    ```razor
     @page "/"
     @inject Meadow.Blazor.Services.SensorViewModel ViewModel
 
@@ -177,18 +181,22 @@ And here's example razor page that uses the view model above:
             <div class="image-container">
                 <img src="Assets/meadow.png" alt="Meadow" />
             </div>
-            <h1>Meadow on Blazor</h1>
+            <h1>Meadow Blazor</h1>
             <h2>Atmospheric readings from a BME680</h2>
 
             <div class="readings">
-                <div class="reading">
-                    <span>Temperature:</span>
-                    <span>@ViewModel.TemperatureValue</span>
-                </div>
-                <div class="reading">
-                    <span>Pressure:</span>
-                    <span>@ViewModel.PressureValue</span>
-                </div>
+            <div class="reading">
+                <span>Temperature:</span>
+                <span>@ViewModel.TemperatureValue</span>
+            </div>
+            <div class="reading">
+                <span>Pressure:</span>
+                <span>@ViewModel.PressureValue</span>
+            </div>
+            <div class="reading">
+                <span>Humidity:</span>
+                <span>@ViewModel.HumidityValue</span>
+            </div>
             </div>
         </div>
     </div>
