@@ -69,6 +69,7 @@ export default function GettingStarted(): JSX.Element {
                       <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Windows/">Windows</a></li>
                       <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Linux/">Linux</a></li>
                       <li><a href="/Meadow/Getting_Started/Getting_Started_Meadow.Desktop/Getting_Started_Mac/">Mac</a></li>
+                      <li><a href="/Meadow/Meadow_Desktop/Meadow_Blazor/">Blazor</a></li>
                     </ul>
                   </div>
                 </div>

@@ -4,7 +4,6 @@ title: Get started with Meadow.Blazor
 subtitle: "To get up and running with Meadow.Blazor, follow these steps:"
 ---
 
-
 Meadow.Blazor in combination with Meadow.Desktop offers an environment for developing Meadow applications that can run on Windows, Mac and Linux. Developing with Meadow.Blazor requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.
 
 Meadow Blazor enables you to combine a Blazor front-end while accessing physical components by way of an FTDI breakout board such as FT232H that provide GPIO, SPI, and I2C.
@@ -87,6 +86,27 @@ With an additional accessory, you can add GPIO and SPI capabilities to your Wind
     }
     ```
 
+1. Meadow.Desktop is initialized via an extension method on `WebApplication` included with Meadow.Blazor method named `UseMeadow`. Add `UseMethod` to your program.cs file.
+
+    ```csharp
+    using Meadow.Blazor;
+    using Meadow.Blazor.Services;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    ...
+
+    var app = builder.Build();
+
+    ...
+
+    app.UseMeadow<MeadowApplication>();
+
+    ...
+
+    app.Run();
+```
+
 1. Build the app for your development machine using either Visual Studio or the `dotnet` tool.
 
     ```command
@@ -99,11 +119,11 @@ With an additional accessory, you can add GPIO and SPI capabilities to your Wind
     dotnet run
     ```
 
-## Access Meadow drivers from a Blazor server app
+## Access peripherals from a Blazor server app
 
 You'll decide on the architecture of your Blazor application but a common pattern is to create view models to support razor pages.
 
-Here's an example view model that presents sensor data via `string` properties from a `BME680` atmospheric sensor. Note the `StateChanged?.Invoke()` call to notify the UI of updates. 
+Here's an example view model that presents sensor data via `string` properties for a `BME680` atmospheric sensor. Note the `StateChanged?.Invoke()` call to notify the UI of updates. 
 
     ```csharp
     using Meadow.Foundation.Sensors.Atmospheric;
@@ -146,7 +166,7 @@ Here's an example view model that presents sensor data via `string` properties f
     }
     ```
 
-An example razor page is shown below:
+And here's example razor page that uses the view model above:
 
     ```
     @page "/"
