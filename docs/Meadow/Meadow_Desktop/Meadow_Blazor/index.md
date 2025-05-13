@@ -105,7 +105,7 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
     ...
 
     app.Run();
-```
+    ```
 
 1. Build the app for your development machine using either Visual Studio or the `dotnet` tool.
 
