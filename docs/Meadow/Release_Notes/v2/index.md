@@ -12,7 +12,7 @@ subtitle: Release Notes
 
 ## v2.2.0.0
 
-This is a full stack release that brings general stability improvements and fixes to the Meadow platform.
+This is a full stack release that brings general stability improvements and fixes to the Meadow platform along with Blazor Server support via [Meadow.Blazor](https://developer.wildernesslabs.dev/Meadow/Meadow_Desktop/Meadow_Blazor/)!
 
 ### Meadow.OS
 
@@ -21,7 +21,7 @@ This is a full stack release that brings general stability improvements and fixe
 
 ### Meadow.Core
 
-* Added support for Blazor Server
+* Added [Meadow.Blazor](https://developer.wildernesslabs.dev/Meadow/Meadow_Desktop/Meadow_Blazor/) which brings support for Meadow with Blazor Server 
 * Sequential OTA update packages are now correctly cleared from local store after being applied
 * Analog inputs have been refactored and separated into `IAnalogInputPort` and `IObservableAnalogInputPort` interfaces.  If you were using `IAnalogInputPort` before and no longer compile due to missing polling methods, swap to the `IObservalbleAnalogInputPort` interface.
 * `Meadow.Units` can now be serialized to  and deserialized from JSON(`MicroJson` and `System.Text.Json` are supported)
