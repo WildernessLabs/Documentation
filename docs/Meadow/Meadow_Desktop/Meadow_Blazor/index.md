@@ -42,7 +42,7 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
     {
         public override Task Initialize()
         {
-            //initialize hardware here and add to sensor serivce
+            //initialize hardware here and add to sensor service
             return base.Initialize();
         }
 
@@ -123,7 +123,7 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
 
 You'll decide on the architecture of your Blazor application but a common pattern is to create view models to support razor pages.
 
-Below is example code to present sensor for a `BME680` atmospheric sensor. 
+Below is example code to present sensor data for a `BME680` atmospheric sensor. 
 
 ![Meadow.Blazor running in a web browser](meadow_blazor.jpg)
 
@@ -172,7 +172,7 @@ Below is example code to present sensor for a `BME680` atmospheric sensor.
 
 2. Create a razor page that uses the view model:
 
-    ```razor
+    ```csharp
     @page "/"
     @inject Meadow.Blazor.Services.SensorViewModel ViewModel
 
@@ -221,4 +221,4 @@ Below is example code to present sensor for a `BME680` atmospheric sensor.
 
 ## Next steps
 
-Now that you have your Meadow.Blazor device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/).
+Now that you have your Meadow.Blazor project and hardware set up and app running, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add additional functionality to your Meadow app. Check out the other [samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/).
