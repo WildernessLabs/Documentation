@@ -27,7 +27,7 @@ You can also find any supported boards in the [Meadow.Linux implementation pinou
 
 ## Prerequisites
 
-Before you can get started with Meadow.Linux, make sure your [development machine is set up for Meadow development](../../Hello_World/).
+Before you can get started with Meadow.Linux, make sure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
 
 To get started with Meadow.Linux, you will need to install the following prerequisites on your host Linux machine.
 

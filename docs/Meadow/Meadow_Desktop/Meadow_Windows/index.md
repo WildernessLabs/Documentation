@@ -12,7 +12,7 @@ You can also quickly prototype graphics using an emulated IDisplay object that r
 
 ## Prerequisites
 
-Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](../../Hello_World/).
+Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
 
 If not installed already, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
 
