@@ -6,28 +6,28 @@ subtitle: "To get up and running with Meadow.Blazor, follow these steps:"
 
 Meadow.Blazor in combination with Meadow.Desktop offers an environment for developing Meadow applications that can run on Windows, Mac and Linux. Developing with Meadow.Blazor requires setting up your development machine with some prerequisites. Then, after connecting any external components, you can deploy and run your Meadow application.
 
-Meadow Blazor enables you to combine a Blazor front-end while accessing physical components by way of an FTDI breakout board such as FT232H that provide GPIO, SPI, and I2C.
+Meadow Blazor enables you to combine a Blazor front-end using Blazor Server while accessing physical components by way of an FTDI breakout board such as FT232H that provides GPIO, SPI, and I2C.
 
 ## Prerequisites
 
 Before you can get started with Meadow.Blazor, make sure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
 
-If not installed already, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
+If it is not already installed, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
 
 ### Using GPIO and SPI
 
-With an additional accessory, you can add GPIO and SPI capabilities to your desktop device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities.
+With an FTDI breakout board like the [FT232H](https://www.adafruit.com/product/2264), you can add GPIO and SPI capabilities to your desktop device.
 
 ## Create your first Meadow.Blazor app
 
-1. Create a new dotnet app on your development machine and navigate to that new project.
+1. Create a new Blazor Server dotnet app on your development machine and navigate to the project folder.
 
     ```command
     dotnet new blazorserver -n MeadowBlazorSampleApp
     cd MeadowBlazorSampleApp
     ```
 
-1. Add the Meadow.Blazor NuGet reference to your project.
+1. Add the Meadow.Blazor NuGet package to your project.
 
     ```command
     dotnet add package Meadow.Blazor
@@ -51,8 +51,9 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
             return base.Run();
         }
     }
+    ```
 
-1. If using external hardware, you'll need to add the relevant Meadow nuget packages and initialize the drivers in the `Initialize` method - for example:
+1. If using external hardware, you'll need to add the relevant Meadow nuget packages and initialize the drivers in the `Initialize` method:
 
     ```csharp
     using Meadow;
@@ -86,7 +87,7 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
     }
     ```
 
-1. Meadow.Desktop is initialized via an extension method on `WebApplication` included with Meadow.Blazor method named `UseMeadow`. Add `UseMethod` to your program.cs file.
+1. Meadow.Desktop is initialized via an extension method on `WebApplication` included with Meadow.Blazor named `UseMeadow`. Call `UseMeadow` in your program.cs.
 
     ```csharp
     using Meadow.Blazor;
@@ -119,15 +120,15 @@ With an additional accessory, you can add GPIO and SPI capabilities to your desk
     dotnet run
     ```
 
-## Access peripherals from a Blazor server app
+## Access peripherals from a Blazor Server app
 
-You'll decide on the architecture of your Blazor application but a common pattern is to create view models to support razor pages.
+When structuring your Blazor Server application, a common pattern is to create view models to support Razor pages.
 
-Below is example code to present sensor data for a `BME680` atmospheric sensor. 
+Below is an example to present sensor data for a `BME680` atmospheric sensor. 
 
 ![Meadow.Blazor running in a web browser](meadow_blazor.jpg)
 
-1. Create a view model that exposes your data as public properties along with a `StateChanged` `Action`. Note the use `Resolver.Services` to access the peripherals you registed in `MeadowApplication`. 
+1. Create a view model that exposes sensor data as public properties and includes a `StateChanged` `Action`. Note the use of `Resolver.Services` to access the peripherals you registered in `MeadowApplication`. 
 
     ```csharp
     using Meadow.Foundation.Sensors.Atmospheric;
@@ -221,4 +222,4 @@ Below is example code to present sensor data for a `BME680` atmospheric sensor.
 
 ## Next steps
 
-Now that you have your Meadow.Blazor project and hardware set up and app running, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add additional functionality to your Meadow app. Check out the other [samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/).
+Now that you have your Meadow.Blazor project and hardware set up and your app running, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add additional functionality to your Meadow app. Check out the other [samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/).
