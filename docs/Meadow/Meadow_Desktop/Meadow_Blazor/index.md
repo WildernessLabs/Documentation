@@ -10,13 +10,13 @@ Meadow Blazor enables you to combine a Blazor front-end while accessing physical
 
 ## Prerequisites
 
-Before you can get started with Meadow.Windows, make sure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
+Before you can get started with Meadow.Blazor, make sure your [development machine is set up for Meadow development](/Meadow/Getting_Started/Hello_World/).
 
-If not installed already, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK for Windows from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
+If not installed already, install the .NET 8.0 SDK. You can find the latest version of the .NET SDK from the [.NET downloads](https://dotnet.microsoft.com/download/dotnet/).
 
 ### Using GPIO and SPI
 
-With an additional accessory, you can add GPIO and SPI capabilities to your Windows device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities. (The FT232H also supports I2C, but in this early stage, Meadow.Windows does not yet support it.)
+With an additional accessory, you can add GPIO and SPI capabilities to your desktop device. You can use an [FTDI breakout board such as FT232H](https://www.adafruit.com/product/2264) to provide GPIO and SPI capabilities. (The FT232H also supports I2C, but in this early stage, Meadow.Blazor does not yet support it.)
 
 ## Create your first Meadow.Blazor app
 
@@ -213,4 +213,4 @@ And here's example razor page that uses the view model above:
 
 ## Next steps
 
-Now that you have your Meadow.Blazor device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/Windows).
+Now that you have your Meadow.Blazor device set up and your first Meadow app running on it, you can start working with the [Meadow.Foundation](../../../Meadow.Foundation/Getting_Started/) libraries to add functionality to your Meadow app. Check out the other [samples in the Meadow.Desktop.Samples](https://github.com/WildernessLabs/Meadow.Samples/tree/main/Source/).
