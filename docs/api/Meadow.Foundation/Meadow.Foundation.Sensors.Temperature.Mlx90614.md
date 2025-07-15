@@ -30,4 +30,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Mlx90614/Samples/Mlx90614_Sample)
 
-

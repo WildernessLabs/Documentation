@@ -45,4 +45,3 @@ public override async Task Run()
 
 [Sample project(s) available on GitHub](https://github.com/WildernessLabs/Meadow.Foundation/tree/main/Source/Meadow.Foundation.Peripherals/Sensors.Temperature.Max6675/Samples/Max6675_Sample)
 
-
