@@ -10,6 +10,40 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v2.3.0.0
+
+This is a full-stack (Meadow.OS + managed stack) that includes a huge rework of the OtA functionality of Meadow.OS, making it far simpler and easier to use. It also includes a number of performance enhancements, bug fixes, and a host of new industrial peripheral drivers. Some of the major improvements include:
+
+* **Automatic OtA** - Over-the-Air (OtA) updates just got a whole lot simpler to use. Instead of having to opt-in to updates and approve the update notification in app code, when you send an update now, it will automatically be applied as long as the device is registered with Meadow.Cloud and has cloud integration turned on. The device can still opt out, or apply the update at a later time, but by default, they will now get applied. This reduces the amount of code needed to integrate OtA into your application to effectively zero.
+* **Performance Updates** - Both the file system and TCP/IP stack got big performance updates. 
+* **Industrial Peripheral Drivers** - A number of peripheral drivers for industrial applications have been added.
+
+### Meadow.OS
+
+* TCP/IP write buffering is now also enabled for non-WiFi adapters, bringing enhanced performance.
+* `Path.GetTempPath()` and `Path.GetTempFileName()` now work correctly on Meadow.
+* `File.Move` now uses `Rename()` instead of doing a copy+delete.
+* Fixed “Unable to monitor frequency on pins PB14 or PB15” issue.
+* Flash storage driver was improved for better system responsiveness while writing to the filesystem.
+* Removed extraneous platform support in the .NET BCL port resolving several runtime issues and reducing the size of the runtime.
+
+### Meadow.Core
+
+* Fully reworked the Meadow.Cloud update service logic for improved reliability and resiliency and updates by default
+* Fixed F7 CPU temp occasionally wildly wrong
+* Separated and extracted `IAnalogInput` port and `IObservableAnalogInputPort`
+* Added new Bluetooth events for `ClientConnected` and `ClientDisconnected`
+
+### Meadow.Foundation
+
+* Added **Temco SPM1-X** driver
+* Added **Temco T3-22i** driver
+* Added **AB0805** RTC driver
+* Added **MicroScheduler** library
+* **MicroGraphics** performance optimizations
+* **MicroLayout** API cleanup
+* **FT232H** API fixes
+
 ## v2.2.0.0
 
 This is a full stack release that brings general stability improvements and fixes to the Meadow platform along with Blazor Server support via [Meadow.Blazor](https://developer.wildernesslabs.dev/Meadow/Meadow_Desktop/Meadow_Blazor/)!
