@@ -218,18 +218,18 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ads1015](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1015) | Ads1015 analog digital converter driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Ads1115](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Ads1115) | Ads1115 analog digital converter driver |
 
-#### ICs.ADCs.Mcp3xxx
+#### ICs.ADC.Mcp3xxx
 
 | Status | Driver | Description |
 |--------|--------|-------------|
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3001](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3001) | Mcp3001 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3002](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3002) | Mcp3002 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3004](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3004) | Mcp3004 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3008](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3008) | Mcp3008 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3201](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3201) | Mcp3201 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3202](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3202) | Mcp3202 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3204](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3204) | Mcp3204 analog digital converter driver |
-| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3208](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Mcp3208) | Mcp3208 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3001](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3001) | Mcp3001 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3002](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3002) | Mcp3002 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3004](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3004) | Mcp3004 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3008](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3008) | Mcp3008 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3201](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3201) | Mcp3201 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3202](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3202) | Mcp3202 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3204](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3204) | Mcp3204 analog digital converter driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Mcp3208](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.ADC.Mcp3208) | Mcp3208 analog digital converter driver |
 
 #### ICs.DAC.Mcp492x
 
@@ -313,6 +313,14 @@ External peripheral drivers can be added to Meadow projects individually and are
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Tca9535](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Tca9535) | Tca9535 IO expander driver |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Tca9555](/docs/api/Meadow.Foundation/Meadow.Foundation.ICs.IOExpanders.Tca9555) | Tca9555 IO expander driver |
 
+
+#### IOExpanders.Temco.T3xxx
+
+| Status | Driver | Description |
+|--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [T322ai](/docs/api/Meadow.Foundation/Meadow.Foundation.IOExpanders.T322ai) | T322ai temco driver |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [T38i8o6do](/docs/api/Meadow.Foundation/Meadow.Foundation.IOExpanders.T38i8o6do) | T38i8o6do temco driver |
+
 ### Leds
 
 | Status | Driver | Description |
@@ -343,6 +351,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 
 | Status | Driver | Description |
 |--------|--------|-------------|
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [RTCs.Ab0805](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ab0805) | Ab0805 I2C real time clock |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [RTCs.Ds1307](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Ds1307) | DS1307 I2C real time clock |
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [RTCs.Pcf8523](/docs/api/Meadow.Foundation/Meadow.Foundation.RTCs.Pcf8523) | Pcf8523 I2C real time clock |
 
@@ -603,6 +612,7 @@ External peripheral drivers can be added to Meadow projects individually and are
 | Status | Driver | Description |
 |--------|--------|-------------|
 | <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Power.CurrentTransducer](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.CurrentTransducer) | Current transducer library |
+| <img alt="Status badge: working" src="https://img.shields.io/badge/Working-brightgreen"/> | [Sensors.Power.Spm1x](/docs/api/Meadow.Foundation/Meadow.Foundation.Sensors.Power.Spm1x) | Temco Controls' SPM1-X Modbus Single-Phase Power Meter library |
 
 #### Sensors.Power.Ina2xx
 
