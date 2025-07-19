@@ -10,7 +10,7 @@ Meadow.Cloud provides secure, automatic, Over-the-Air (OtA) updates, which enabl
 
 ### Opt-out Model
 
-OtA updates in Meadow follow an opt-out model, in the sense that if a device is provisioned with Meadow.Cloud, and OtA updates are set to `true` in its configuration file, an update that is pushed to the device from Meadow.Cloud will automatically install upon receipt fo notification, unless the application chooses not to install it.
+OtA updates in Meadow follow an opt-out model, in the sense that if a device is provisioned with Meadow.Cloud, and OtA updates are set to `true` in its configuration file, an update that is pushed to the device from Meadow.Cloud will automatically install upon receipt of notification, unless the application chooses not to install it.
 
 ### Sending an OtA Update
 
