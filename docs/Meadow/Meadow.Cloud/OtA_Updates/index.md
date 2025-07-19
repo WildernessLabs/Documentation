@@ -99,7 +99,7 @@ public override async Task Run()
 }
 ```
 
-This code adds event handlers to monitor state changes during the update process (`StateChanged`), get download progress info (`RetrieveProgress`), download the new package, `updateService.RetrieveUpdate(info)`. and send the new file(s) to the bootloader, `updateService.ApplyUpdate(info)`.
+This code adds event handlers to monitor state changes during the update process (`StateChanged`), get download progress info (`RetrieveProgress`), download the new package (`updateService.RetrieveUpdate(info)`), and send the new file(s) to the bootloader (`updateService.ApplyUpdate(info)`).
 
 Additionally, you can also monitor State changes on a Meadow.Cloud connection
 
