@@ -53,7 +53,7 @@ You can, optionally, tie into the update notification to either cancel an update
 
 For example, the following code listens for an update and manually applies it:
 
- ```csharp
+```csharp
 using Meadow.Update;
 ...
 public override async Task Run()
