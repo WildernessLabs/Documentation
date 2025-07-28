@@ -60,46 +60,34 @@ public override async Task Run()
 {
     var svc = Resolver.UpdateService;
     
-    // Uncomment to clear any persisted update info. This allows installing 
-    // the same update multiple times, such as you might do during development.
-    // svc.ClearUpdates();
-
-    svc.StateChanged += (sender, updateState) =>
+    svc.StateChanged += (sender, updateState, token) =>
     {
         Resolver.Log.Info($"UpdateState {updateState}");
     };
 
-    svc.RetrieveProgress += (updateService, info) =>
+    svc.RetrieveProgress += (updateService, info, token) =>
     {
         short percentage = (short)((double)info.DownloadProgress / info.FileSize * 100);
-
         Resolver.Log.Info($"Downloading... {percentage}%");
     };
 
-    svc.UpdateAvailable += async (updateService, info) =>
+    svc.UpdateAvailable += async (updateService, info, token) =>
     {
         Resolver.Log.Info($"Update available!");
-
         // Queue update for retrieval "later"
         await Task.Delay(5000);
-
-        updateService.RetrieveUpdate(info);
     };
 
-    svc.UpdateRetrieved += async (updateService, info) =>
+    svc.UpdateRetrieved += async (updateService, info, token) =>
     {
         Resolver.Log.Info($"Update retrieved!");
-
-        await Task.Delay(5000);
-
-        updateService.ApplyUpdate(info);
     };
     ...
 
 }
 ```
 
-This code adds event handlers to monitor state changes during the update process (`StateChanged`), get download progress info (`RetrieveProgress`), download the new package (`updateService.RetrieveUpdate(info)`), and send the new file(s) to the bootloader (`updateService.ApplyUpdate(info)`).
+This code adds event handlers to monitor state changes during the update process (`StateChanged`), get download progress info (`RetrieveProgress`), be notified where an update is available, and be notified when an update is fully downloaded.
 
 Additionally, you can also monitor State changes on a Meadow.Cloud connection
 
