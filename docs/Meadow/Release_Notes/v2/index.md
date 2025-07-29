@@ -10,7 +10,7 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
-## v2.3.0.0
+## v2.3.0.1
 
 This is a full-stack (Meadow.OS + managed stack) that includes a huge rework of the OtA functionality of Meadow.OS, making it far simpler and easier to use. It also includes a number of performance enhancements, bug fixes, and a host of new industrial peripheral drivers. Some of the major improvements include:
 
