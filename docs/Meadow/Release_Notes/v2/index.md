@@ -10,6 +10,29 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v2.4.0.0
+
+This is a full-stack (Meadow.OS + managed stack) release that adds device reset logic when connection to the cloud is lost. It also includes a number of new Meadow.Foundation MicroLayout controls, as well as sundry fixes and cleanups.
+
+
+### Meadow.OS
+
+* Fixed issue 842, [Unable to monitor frequency on pins PB14 or PB15](https://github.com/WildernessLabs/Meadow_Issues/issues/842) 
+* A software reset is now performed on cell modems whenever connectivity is lost, to improve modem reliability
+
+### Meadow.Core
+
+* PlatformOS now has a `TimeChanged` event
+* Lack of connectivity to Meadow.Cloud for over 3 hours (configurable) will now reset the device
+
+### Meadow.Foundation
+
+* General layout and performance improvements in `MicroLayout`
+* Added `DataGrid` control to `MicroLayout`
+* Added `DoubleLabel` control to `MicroLayout`
+* `MicroScheduler` library improvements
+* Fixed SPI for Neo8 GPS
+
 ## v2.3.0.1
 
 This is a full-stack (Meadow.OS + managed stack) that includes a huge rework of the OtA functionality of Meadow.OS, making it far simpler and easier to use. It also includes a number of performance enhancements, bug fixes, and a host of new industrial peripheral drivers. Some of the major improvements include:

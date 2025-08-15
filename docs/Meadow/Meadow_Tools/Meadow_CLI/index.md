@@ -85,6 +85,14 @@ dotnet tool update WildernessLabs.Meadow.CLI --global
   </TabItem>
 </Tabs>
 
+> While you are installing Meadow CLI via `dotnet`, you may also want to install the Meadow project templates. This will allow you to create new Meadow projects quickly from the command-line. 
+> 
+> ```
+> dotnet new install WildernessLabs.Meadow.Template
+> ```
+> 
+> For more details, see the [Getting Started page for your desired target device or platform](../../Getting_Started/).
+
 
 ## Executing Commands
 
