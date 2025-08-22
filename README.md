@@ -58,7 +58,7 @@ Rules include a `from` location(s) and a desired `to` destination. If you need a
 
 ### Tabs
 
-In several places, we want to present similar variations of instructions based on operating system (OS) or development environment without requiring the user to scroll through other options. This is handled by using tabs with a special XML syntax of `Tabs` and `TabItem`, where the user will select their choice and be presented with just those instructions. This [tab functionality is built into Docusaurus](https://docusaurus.io/docs/next/markdown-features/tabs) and is also documented there.
+In several places, we want to present similar variations of instructions based on operating system (OS) or development environment without requiring the user to scroll through other options. This is handled by using tabs with a special XML syntax of `Tabs` and `TabItem`, where the user will select their choice and be presented with just those instructions. This [tab functionality is built into Docusaurus](https://docusaurus.io/docs/next/markdown-features/tabs) and is also documented.
 
 Currently, we use tabs with the `groupId` of `os` and `ide`. Here's an example use, separated by OS. If the user hasn't selected a tab, the `default` attribute indicates which TabItem is shown.
 

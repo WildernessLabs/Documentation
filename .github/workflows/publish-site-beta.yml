@@ -135,7 +135,7 @@ jobs:
       - name: Install DocFX globally
         if: contains(github.event.pull_request.title, '[build-api]')
         run: |
-          dotnet tool install --global docfx
+          dotnet tool install --global docfx --version 2.77.0
       - name: Install DocFxMarkdownGen
         run: |
           dotnet tool install --global DocFxMarkdownGen
