@@ -19,7 +19,7 @@ displayScreen = new DisplayScreen(display)
 displayScreen.Controls.Add(
     new Box(0, 0, displayScreen.Width / 2, displayScreen.Height / 2)
     {
-        ForeColor = Color.Red
+        ForegroundColor = Color.Red
     },
     new Label(0, 0, displayScreen.Width / 2, displayScreen.Height / 2)
     {
@@ -47,7 +47,7 @@ displayScreen.Controls.Add(new Box(
     width: displayScreen.Width - 40, 
     height: displayScreen.Height - 40)
 {
-    ForeColor = Color.Red
+    ForegroundColor = Color.Red
 });
 ```
 
@@ -86,7 +86,7 @@ displayScreen.Controls.Add(new Circle(
     centerY: displayScreen.Height / 2,
     radius: displayScreen.Height / 3)
 {
-    ForeColor = Color.Red,
+    ForegroundColor = Color.Red,
     IsFilled = true
 });
 ```
@@ -264,7 +264,7 @@ var button = new Button(
 {
     Text = "Hello World",
     TextColor = Color.Red,
-    ForeColor = Color.DarkBlue,
+    ForegroundColor = Color.DarkBlue,
     ShadowColor = Color.DarkGray,
     HighlightColor = Color.Red,
     PressedColor = Color.Green,
@@ -290,7 +290,7 @@ You can move, resize or recolor the controls at run time to easily create effect
 // we compose the screen from the back forward, so put the box on first
 _highlightBox = new Box(0, -1, screen.Width, ItemHeight + 2)
 {
-    ForeColor = SelectionColor,
+    ForegroundColor = SelectionColor,
     Filled = true,
 };
 screen.Controls.Add(_highlightBox);
@@ -332,5 +332,6 @@ The project running should look like this:
 ![meadow microlayout button](meadow-microlayout-menu.gif)
 
 The full source for the Menu sample is available in the [Project Lab Samples](https://github.com/WildernessLabs/Meadow.ProjectLab.Samples) repository.
+
 
 If you would like to try out MicroLayout or would like to contribute, the full source code is available in the [Meadow.Foundation](https://github.com/WildernessLabs/Meadow.Foundation) repository. If you have any questions or feature requests, reach out to us on our [public Slack](http://slackinvite.wildernesslabs.co/) channel.
