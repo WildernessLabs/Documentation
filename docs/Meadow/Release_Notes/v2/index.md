@@ -10,10 +10,32 @@ subtitle: Release Notes
 * [Meadow.CLI](/Meadow/Meadow_Tools/Meadow_CLI/)
 * [Meadow.OS](/Meadow/Getting_Started/Deploying_Meadow%2EOS/)
 
+## v2.5.0.0
+
+This is a full-stack (Meadow.OS + managed stack) release that brings important fixes to the WiFi and OTA components.
+
+### Meadow.OS
+
+* A regression in OTA was fixed where the part of the OS update would fail
+* Low-level fixes and performance improvements in the TLS layer
+* The TLS root certificate store has been brought to date
+
+### Meadow.Core
+
+* MQTTNet library has been upgraded to 4.3.7 
+
+### Meadow.Foundation
+
+* Virtual display support
+* Added virtual display drivers for most supported TFT SPI and ePaper displays
+* Added C4001 motion sensor driver
+* MicroGraphics drawing speed improvements
+* Tca9548A I2C muxor fixes
+* MicroJson hash table support
+
 ## v2.4.0.0
 
 This is a full-stack (Meadow.OS + managed stack) release that adds device reset logic when connection to the cloud is lost. It also includes a number of new Meadow.Foundation MicroLayout controls, as well as sundry fixes and cleanups.
-
 
 ### Meadow.OS
 
