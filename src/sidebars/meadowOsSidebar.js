@@ -149,7 +149,7 @@ const meadowOsSidebar = [
     ],
   },
   {
-    // Release Notes
+    // Meadow Tools
     type: "category",
     label: "Meadow Tools",
     link: {
@@ -221,6 +221,20 @@ const meadowOsSidebar = [
     ],
   },
   {
+    // Meadow.Desktop
+    type: "category",
+    label: "Meadow.Desktop",
+    link: {
+      type: "doc",
+      id: "Meadow/Meadow_Desktop/index",
+    },
+    items: [
+      "Meadow/Meadow_Desktop/Display_Silk/index",
+      "Meadow/Meadow_Desktop/Connecting_Hardware/index",
+      "Meadow/Meadow_Desktop/Meadow_Cloud_Integration/index",
+    ],
+  },
+  {
     // Meadow.Foundation
     type: "category",
     label: "Meadow.Foundation",
@@ -275,7 +289,6 @@ const meadowOsSidebar = [
       "Meadow/Release_Notes/v1/index",
       "Meadow/Release_Notes/Release-Candidates/index",
       {
-        // Release Notes
         type: "category",
         label: "Meadow Betas",
         link: {
