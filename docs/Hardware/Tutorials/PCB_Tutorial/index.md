@@ -16,9 +16,13 @@ Along the way, we're going to cover the following:
    * Creating Custom Schematic Symbols & PCB Footrpints
    * Laying out a circuit in a logical drawing
  * **[PCB Layout/Design](PCB_Layout)** - Designing the physical PCB layout, including:
-   * Layer Stackups
-   * Component Placement
-   * Routing
+  * Layer Stackups
+  * Component Placement
+  * Routing *(Tip: Use a free [PCB Trace Width Calculator](https://circuitslab.wiki/pcb-trace-width/) to ensure your traces can safely handle your circuit's     
+   current without overheating)*
+  * Sizing and placing Vias *(See: [Via Calculator](https://circuitslab.wiki/via-calculator/))*
+  *
+     
  * **[PCB Assembly](PCB_Assembly)** - Practical, at-home assembly of SMT and PTH PCBs.
 
 This tutorial will take a hybrid approach, with most content in the form of a three-part video, along with reference textual content.
