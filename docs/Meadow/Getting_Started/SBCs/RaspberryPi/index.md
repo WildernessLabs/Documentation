@@ -33,16 +33,16 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template@2.0.1 installed the following templates:
-Template Name            Short Name          Language        Tags               
+Template Name            Short Name          Language        Tags
 -----------------------  ------------------  --------------  -------------------
-Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console     
-Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console     
-Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console     
-Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console     
-Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library     
-Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console     
-Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console     
-Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console     
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
 Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
@@ -114,16 +114,16 @@ The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
 Success: WildernessLabs.Meadow.Template@2.0.1 installed the following templates:
-Template Name            Short Name          Language        Tags               
+Template Name            Short Name          Language        Tags
 -----------------------  ------------------  --------------  -------------------
-Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console     
-Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console     
-Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console     
-Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console     
-Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library     
-Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console     
-Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console     
-Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console     
+Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
+Meadow Desktop App       meadow-desktop      [C#]            Meadow/Console
+Meadow F7 Feather App    meadow-feather      [C#],F#,VB.NET  Meadow/Console
+Meadow Jetson Nano App   meadow-jetson-nano  [C#]            Meadow/Console
+Meadow Library           meadow-library      [C#],F#,VB.NET  Meadow/Library
+Meadow Project Lab App   meadow-project-lab  [C#]            Meadow/Console
+Meadow Raspberry Pi App  meadow-rpi          [C#]            Meadow/Console
+Meadow reTerminal App    meadow-reterminal   [C#]            Meadow/Console
 Meadow StartKit App      meadow-startkit     [C#]            Meadow/App/StartKit
 ```
 
