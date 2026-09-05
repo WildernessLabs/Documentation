@@ -32,7 +32,7 @@ When installed, you’ll see a list of templates available:
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template::1.8.0.1 installed the following templates:
+Success: WildernessLabs.Meadow.Template@2.0.1 installed the following templates:
 Template Name            Short Name          Language        Tags
 -----------------------  ------------------  --------------  -------------------
 Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
@@ -113,7 +113,7 @@ When installed, you’ll see a list of templates available:
 The following template packages will be installed:
    WildernessLabs.Meadow.Template
 
-Success: WildernessLabs.Meadow.Template installed the following templates:
+Success: WildernessLabs.Meadow.Template@2.0.1 installed the following templates:
 Template Name            Short Name          Language        Tags
 -----------------------  ------------------  --------------  -------------------
 Meadow Core-Compute App  meadow-ccm          [C#],F#,VB.NET  Meadow/Console
@@ -134,7 +134,7 @@ Lets verify everything is set up by deploying your first Meadow application.
 Open VSCode and in a new Terminal within, enter the following command to create a new Meadow.Linux project that will run on your Raspberry Pi:
 
 ```console
-dotnet new meadow-raspberry-pi --name RaspberryPiDemo
+dotnet new meadow-rpi --name RaspberryPiDemo
 ```
 
 This Meadow.Linux application shows a basic Meadow app structure with an `Initialize` and `Run` methods with logging strings to confirm in the output the application ran successfully.
