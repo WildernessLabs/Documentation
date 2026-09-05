@@ -6,6 +6,7 @@ subtitle: Guides and documentation for Meadow
 
 # Release Notes
 
+ * [Meadow v3.*](v3)
  * [Meadow v2.*](v2)
  * [Meadow v1.*](v1)
  * [Meadow v1.0 Release-Candidates](Release-Candidates)
