@@ -14,7 +14,7 @@ subtitle: Release Notes
 OS v. 3.0.0.0, ESP32 v. 2.5.0.0
 
 This is a full-stack (Meadow.OS + managed stack) **beta** release that brings complete support for the latest .NET platform version (.NET 11 Preview and C# 15 Preview).
-Note: You do not have update any of your source code unless you want to use the latest .NET and C# features. This release is not binary-compatible with apps built from Meadow.OS 2.5.21 and earlier. The source code of your app must be rebuilt and re-deployed for Meadow.OS 3.0 devices even if the project has not targeted .NET 11 yet. **Meadow.CLI version 3.0 or greater is required for deployment.** 
+Note: You do not have to update any of your source code unless you want to use the latest .NET and C# features. This release is not binary-compatible with apps built from Meadow.OS 2.5.21 and earlier. The source code of your app must be rebuilt and re-deployed for Meadow.OS 3.0 devices even if the project has not targeted .NET 11 yet. **Meadow.CLI version 3.0 or greater is required for deployment.** 
 
 ### Meadow.OS
 
